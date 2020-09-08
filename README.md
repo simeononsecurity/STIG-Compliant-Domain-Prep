@@ -56,7 +56,7 @@ Import all the GPOs provided by SimeonOnSecurity to assist in making your domain
 
 - [Oracle JRE 8 V1R5](https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_Oracle_JRE_8_Windows_V1R5_STIG.zip)
 
-## How to run the script
+## How to run the script:
 
 **The script may be launched from the extracted GitHub download like this:**
 ```
