@@ -1,4 +1,4 @@
-######Script for Import and Setup of GPOs and WMI Filters on Domain Controllers#####
+######Script for Import and Setup of GPOs and Policy Definitons on Domain Controllers#####
 #Continue on error
 $ErrorActionPreference= 'silentlycontinue'
 
@@ -9,7 +9,13 @@ do {} until (Elevate-Privileges SeTakeOwnershipPrivilege)
 
 
 #Import PolicyDefinitions
+    #Import Locally
 start-job -ScriptBlock {takeown /f C:\WINDOWS\PolicyDefinitions /r /a; icacls C:\WINDOWS\PolicyDefinitions /grant Administrators:(OI)(CI)F /t; Copy-Item -Path .\Files\PolicyDefinitions\* -Destination C:\Windows\PolicyDefinitions -Force -Recurse -ErrorAction SilentlyContinue}
+    #Import to Central Store
+Foreach ($sysvolpath in Get-ChildItem "C:\Windows\SYSVOL\sysvol") {
+    Mkdir "C:\Windows\SYSVOL\sysvol\$sysvolpath\Policies\PolicyDefinitions\"
+    Copy-Item -Path "$(Get-Location)\Files\PolicyDefinitions\" -Destination "C:\Windows\SYSVOL\sysvol\$sysvolpath\Policies\PolicyDefinitions\" -Force -Recurse
+}
 
 #Import GPOS into GPMC
 $gposdir "$(Get-Location)\Files\GPOs"
