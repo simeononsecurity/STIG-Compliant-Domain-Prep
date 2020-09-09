@@ -7,6 +7,11 @@ $ErrorActionPreference= 'silentlycontinue'
 Write-Output "Elevating priviledges for this process"
 do {} until (Elevate-Privileges SeTakeOwnershipPrivilege)
 
+
+#Import PolicyDefinitions
+start-job -ScriptBlock {takeown /f C:\WINDOWS\PolicyDefinitions /r /a; icacls C:\WINDOWS\PolicyDefinitions /grant Administrators:(OI)(CI)F /t; Copy-Item -Path .\Files\PolicyDefinitions\* -Destination C:\Windows\PolicyDefinitions -Force -Recurse -ErrorAction SilentlyContinue}
+
+#Import GPOS into GPMC
 $gposdir "$(Get-Location)\Files\GPOs"
 Foreach ($gpocategory in Get-ChildItem "$(Get-Location)\Files\GPOs") {
     
