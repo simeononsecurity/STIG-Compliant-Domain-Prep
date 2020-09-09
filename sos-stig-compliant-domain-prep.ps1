@@ -7,7 +7,8 @@ $ErrorActionPreference= 'silentlycontinue'
 Write-Output "Elevating priviledges for this process"
 do {} until (Elevate-Privileges SeTakeOwnershipPrivilege)
 
-foreach ($gpocategory in Get-ChildItem "$(Get-Location)\Files\GPOs") {
+$gposdir "$(Get-Location)\Files\GPOs"
+Foreach ($gpocategory in Get-ChildItem "$(Get-Location)\Files\GPOs") {
     
     Write-Output "Importing $gpocategory GPOs"
 
