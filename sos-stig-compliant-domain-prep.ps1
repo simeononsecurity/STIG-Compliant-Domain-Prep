@@ -19,11 +19,11 @@ Foreach ($sysvolpath in Get-ChildItem "C:\Windows\SYSVOL\sysvol") {
 
 #Import GPOS into GPMC
 $gposdir "$(Get-Location)\Files\GPOs"
-Foreach ($gpocategory in Get-ChildItem "$(Get-Location)\Files\GPOs") {
+Foreach ($gpocategory in Get-ChildItem $gposdir) {
     
     Write-Output "Importing $gpocategory GPOs"
 
-    Foreach ($gpo in (Get-ChildItem "$(Get-Location)\Files\GPOs\$gpocategory")) {
+    Foreach ($gpo in (Get-ChildItem "$gposdir\$gpocategory")) {
         $gpopath = "$gposdir\$gpocategory\$gpo"
         Write-Output "Importing $gpo"
         New-GPO -Name "$gpo" -Comment "Created by simeononsecurity.ch" 
