@@ -18,7 +18,7 @@ Foreach ($sysvolpath in Get-ChildItem "C:\Windows\SYSVOL\sysvol") {
 }
 
 #Import GPOS into GPMC
-$gposdir "$(Get-Location)\Files\GPOs"
+$gposdir = "$(Get-Location)\Files\GPOs"
 Foreach ($gpocategory in Get-ChildItem $gposdir) {
     
     Write-Output "Importing $gpocategory GPOs"
