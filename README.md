@@ -29,6 +29,12 @@ Import all the GPOs provided by SimeonOnSecurity to assist in making your domain
 
 
 ## STIGS/SRGs Applied:
+
+- [Windows Server 2012(R2)](https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Windows_2012_and_2012_R2_MS_V2R19_STIG_SCAP_1-2_Benchmark.zip) 
+
+- [Windows Server 2016](https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Windows_Server_2016_V1R12_STIG.zip)
+
+- [Windows Server 2019](#)
  
 - [Windows 10 V1R23](https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Windows_10_V1R23_STIG.zip)
 
