@@ -27,6 +27,7 @@ Import all the GPOs provided by SimeonOnSecurity to assist in making your domain
 
 - [Microsoft - Windows 10 VDI Recomendations](https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds_vdi-recommendations-1909)
 
+- [Microsoft - Windows Defender Application Control](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-design-guide)
 
 ## STIGS/SRGs Applied:
 
