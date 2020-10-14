@@ -14,7 +14,7 @@ start-job -ScriptBlock {takeown /f C:\WINDOWS\PolicyDefinitions /r /a; icacls C:
     #Import to Central Store
 Foreach ($sysvolpath in Get-ChildItem "C:\Windows\SYSVOL\sysvol") {
     Mkdir "C:\Windows\SYSVOL\sysvol\$sysvolpath\Policies\PolicyDefinitions\"
-    Copy-Item -Path "$(Get-Location)\Files\PolicyDefinitions\" -Destination "C:\Windows\SYSVOL\sysvol\$sysvolpath\Policies\PolicyDefinitions\" -Force -Recurse
+    Copy-Item -Path "$(Get-Location)\Files\PolicyDefinitions\*" -Destination "C:\Windows\SYSVOL\sysvol\$sysvolpath\Policies\PolicyDefinitions\" -Force -Recurse
 }
 
 #Import GPOS into GPMC
