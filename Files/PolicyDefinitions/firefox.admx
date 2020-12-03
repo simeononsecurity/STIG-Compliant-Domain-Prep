@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<policyDefinitions revision="2.2" schemaVersion="1.0">
+<policyDefinitions revision="2.5" schemaVersion="1.0">
   <policyNamespaces>
     <target prefix="firefox" namespace="Mozilla.Policies.Firefox"/>
     <using prefix="Mozilla" namespace="Mozilla.Policies"/>
   </policyNamespaces>
-  <resources minRequiredRevision="2.2"/>
+  <resources minRequiredRevision="2.5"/>
   <supportedOn>
     <definitions>
       <definition name="UNSUPPORTED" displayName="$(string.UNSUPPORTED)"/>
@@ -34,6 +34,11 @@
       <definition name="SUPPORTED_FF79" displayName="$(string.SUPPORTED_FF79)"/>
       <definition name="SUPPORTED_FF80" displayName="$(string.SUPPORTED_FF80)"/>
       <definition name="SUPPORTED_FF81" displayName="$(string.SUPPORTED_FF81)"/>
+      <definition name="SUPPORTED_FF82" displayName="$(string.SUPPORTED_FF82)"/>
+      <definition name="SUPPORTED_FF83" displayName="$(string.SUPPORTED_FF83)"/>
+      <definition name="SUPPORTED_FF84" displayName="$(string.SUPPORTED_FF84)"/>
+      <definition name="SUPPORTED_FF85" displayName="$(string.SUPPORTED_FF85)"/>
+      <definition name="SUPPORTED_FF86" displayName="$(string.SUPPORTED_FF86)"/>
     </definitions>
   </supportedOn>
   <categories>
@@ -3686,6 +3691,20 @@
       <supportedOn ref="SUPPORTED_FF78"/>
       <elements>
         <multiText id="Handlers" valueName="Handlers"  maxLength="2048"/>
+      </elements>
+    </policy>
+    <policy name="Preferences" class="Both" displayName="$(string.Preferences)"  key="Software\Policies\Mozilla\Firefox" explainText="$(string.Preferences_Explain)"  presentation="$(presentation.JSON)">">
+      <parentCategory ref="firefox"/>
+      <supportedOn ref="SUPPORTED_FF81"/>
+      <elements>
+        <multiText id="JSON" valueName="Preferences"  maxLength="2048"/>
+      </elements>
+    </policy>
+    <policy name="ManagedBookmarks" class="Both" displayName="$(string.ManagedBookmarks)"  key="Software\Policies\Mozilla\Firefox" explainText="$(string.ManagedBookmarks_Explain)"  presentation="$(presentation.JSON)">">
+      <parentCategory ref="firefox"/>
+      <supportedOn ref="SUPPORTED_FF83"/>
+      <elements>
+        <multiText id="JSON" valueName="ManagedBookmarks"  maxLength="16384"/>
       </elements>
     </policy>
   </policies>

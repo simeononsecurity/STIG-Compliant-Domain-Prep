@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<policyDefinitionResources revision="2.2" schemaVersion="1.0" >
+<policyDefinitionResources revision="2.5" schemaVersion="1.0" >
   <displayName/>
   <description/>
   <resources >
@@ -32,6 +32,11 @@
       <string id="SUPPORTED_FF79">Firefox 79 or later, Firefox 78.1 ESR or later</string>
       <string id="SUPPORTED_FF80">Firefox 80 or later, Firefox 78.2 ESR or later</string>
       <string id="SUPPORTED_FF81">Firefox 81 or later, Firefox 78.3 ESR or later</string>
+      <string id="SUPPORTED_FF82">Firefox 82 or later, Firefox 78.4 ESR or later</string>
+      <string id="SUPPORTED_FF83">Firefox 83 or later, Firefox 78.5 ESR or later</string>
+      <string id="SUPPORTED_FF84">Firefox 84 or later, Firefox 78.6 ESR or later</string>
+      <string id="SUPPORTED_FF85">Firefox 85 or later, Firefox 78.7 ESR or later</string>
+      <string id="SUPPORTED_FF86">Firefox 86 or later, Firefox 78.8 ESR or later</string>
       <string id="firefox">Firefox</string>
       <string id="Permissions_group">Permissions</string>
       <string id="Camera_group">Camera</string>
@@ -50,7 +55,7 @@
       <string id="Flash_group">Flash</string>
       <string id="Homepage_group">Home page</string>
       <string id="Search_group">Search</string>
-      <string id="Preferences_group">Preferences</string>
+      <string id="Preferences_group">Preferences (Deprecated)</string>
       <string id="UserMessaging_group">User Messaging</string>
       <string id="DisabledCiphers_group">Disabled Ciphers</string>
       <string id="EncryptedMediaExtensions_group">Encrypted Media Extensions</string>
@@ -176,7 +181,7 @@ If this policy is disabled or not configured, the browser receives updates.</str
       <string id="DisableBuiltinPDFViewer_Explain">If this policy is enabled, PDF files are not viewed within Firefox.
 
 If this policy is disabled or not configured, PDF files are viewed within Firefox.</string>
-      <string id="DisableDefaultBrowserAgent">Disable the default browser agent.</string>
+      <string id="DisableDefaultBrowserAgent">Disable the default browser agent</string>
       <string id="DisableDefaultBrowserAgent_Explain">If this policy is enabled, the default browser agent is disabled.
 
 If this policy is disabled or not configured, the default browser agent is enabled.
@@ -490,6 +495,8 @@ If this policy is disabled or not configured, the user can change their Flash pr
       <string id="OverrideFirstRunPage">Override the first run page</string>
       <string id="OverrideFirstRunPage_Explain">If this policy is enabled, you can specify a URL to be used as the first run page. If you leave the URL blank, no first run page will be shown.
 
+Starting with Firefox 83, Firefox ESR 78.5, you can also specify multiple URLS separated by a vertical bar (|).
+
 If this policy is disabled or not configured, the first run page is displayed.</string>
       <string id="OverridePostUpdatePage">Override the upgrade page</string>
       <string id="OverridePostUpdatePage_Explain">If this policy is enabled, you can specify a URL to be displayed after Firefox is updated. If you leave the URL blank, no upgrade page will be shown.
@@ -540,11 +547,11 @@ If this policy is enabled, any shutdown preferences explicitly set via policy ca
 
 If this policy is not configured, no shutdown preferences can be changed by the user (previous behavior).</string>
       <string id="WebsiteFilter_Block">Blocked websites</string>
-      <string id="WebsiteFilter_Block_Explain">If this policy is enabled, you can specify match patterns that indicate sites to be blocked. The match patterns are documented at https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Match_patterns. Only http/https addresses are supported at the moment. There is a 1000 entry limit.
+      <string id="WebsiteFilter_Block_Explain">If this policy is enabled, you can specify match patterns that indicate sites to be blocked. The match patterns are documented at https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Match_patterns. There is a 1000 entry limit.
 
 If this policy is disabled or not configured, no websites are blocked.</string>
       <string id="WebsiteFilter_Exceptions">Exceptions to blocked websites</string>
-      <string id="WebsiteFilter_Exceptions_Explain">If this policy is enabled, and the website filter is enabled, you can specify match patterns for sites you do not want to block. The match patterns are documented at https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Match_patterns. Only http/https addresses are supported at the moment. There is a 1000 entry limit.
+      <string id="WebsiteFilter_Exceptions_Explain">If this policy is enabled, and the website filter is enabled, you can specify match patterns for sites you do not want to block. The match patterns are documented at https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Match_patterns. There is a 1000 entry limit.
 
 If this policy is disabled or not configured, there are no exceptions to the website filter.</string>
       <string id="Bookmark01">Bookmark 01</string>
@@ -804,6 +811,20 @@ If this policy is not configured, users can choose to create a primary password.
 If this policy is disabled or not configured, Firefox defaults are used.
 
 For detailed information on creating the policy, see https://github.com/mozilla/policy-templates/blob/master/README.md#handlers.</string>
+      <string id="Preferences">Preferences</string>
+      <string id="Preferences_Explain">Note: In order to use this policy, you must clear all settings in the old Preferences (Deprecated) section.
+
+If this policy is enabled, you can use JSON to configure preferences.
+
+If this policy is disabled or not configured, preferences are not modified.
+
+For detailed information on creating the policy, see https://github.com/mozilla/policy-templates/blob/master/README.md#preferences.</string>
+      <string id="ManagedBookmarks">Managed Bookmarks</string>
+      <string id="ManagedBookmarks_Explain">If this policy is enabled, you can use JSON to configure managed bookmarks.
+
+If this policy is disabled or not configured, managed bookmarks are not added.
+
+For detailed information on creating the policy, see https://github.com/mozilla/policy-templates/blob/master/README.md#managedbookmarks.</string>
       <string id="Preferences_Boolean_Explain">If this policy is enabled, the preference is locked to true. If this policy is disabled, the preference is locked to false.
 
 For a description of the preference, see:
@@ -1107,6 +1128,9 @@ https://github.com/mozilla/policy-templates/blob/master/README.md#preferences.</
       </presentation>
       <presentation id="Autoplay_Default">
         <dropdownList refId="Autoplay_Default"/>
+      </presentation>
+      <presentation id="JSON">
+        <multiTextBox refId="JSON"/>
       </presentation>
     </presentationTable>
   </resources>
