@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<policyDefinitions revision="2.5" schemaVersion="1.0">
+<policyDefinitions revision="2.6" schemaVersion="1.0">
   <policyNamespaces>
     <target prefix="firefox" namespace="Mozilla.Policies.Firefox"/>
     <using prefix="Mozilla" namespace="Mozilla.Policies"/>
   </policyNamespaces>
-  <resources minRequiredRevision="2.5"/>
+  <resources minRequiredRevision="2.6"/>
   <supportedOn>
     <definitions>
       <definition name="UNSUPPORTED" displayName="$(string.UNSUPPORTED)"/>
@@ -118,6 +118,9 @@
       <parentCategory ref="firefox"/>
     </category>
     <category displayName="$(string.PDFjs_group)" name="PDFjs">
+      <parentCategory ref="firefox"/>
+    </category>
+    <category displayName="$(string.PictureInPicture_group)" name="PictureInPicture">
       <parentCategory ref="firefox"/>
     </category>
   </categories>
@@ -3666,8 +3669,18 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="PictureInPicture" class="Both" displayName="$(string.PictureInPicture)" explainText="$(string.PictureInPicture_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="PictureInPicture">
-      <parentCategory ref="firefox"/>
+    <policy name="PictureInPicture_Enabled" class="Both" displayName="$(string.PictureInPicture_Enabled)" explainText="$(string.PictureInPicture_Enabled_Explain)" key="Software\Policies\Mozilla\Firefox\PictureInPicture" valueName="Enabled">
+      <parentCategory ref="PictureInPicture"/>
+      <supportedOn ref="SUPPORTED_FF78"/>
+      <enabledValue>
+        <decimal value="1"/>
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0"/>
+      </disabledValue>
+    </policy>
+    <policy name="PictureInPicture_Locked" class="Both" displayName="$(string.PictureInPicture_Locked)" explainText="$(string.PictureInPicture_Enabled_Explain)" key="Software\Policies\Mozilla\Firefox\PictureInPicture" valueName="Locked">
+      <parentCategory ref="PictureInPicture"/>
       <supportedOn ref="SUPPORTED_FF78"/>
       <enabledValue>
         <decimal value="1"/>
