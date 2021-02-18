@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0" >
+  <displayName/>
+  <description/>
+  <resources >
+    <stringTable >
+      <string id="SUPPORTED_WINXPSP2">Microsoft Windows XP SP2 oder neuer</string>
+      <string id="SUPPORTED_TB68">Thunderbird 68 oder neuer</string>
+      <string id="thunderbird">Thunderbird</string>
+      <string id="Extensions_group">Erweiterungen</string>
+      <string id="Addons_group">Addons</string>
+      <string id="Certificates_group">Zertifikate</string>
+      <string id="BlockAboutAddons">Add-ons Manager blockieren</string>
+      <string id="BlockAboutAddons_Explain">Wenn diese Gruppenrichtlinieneinstellung aktiviert ist, kann der Nutzer nicht auf den Add-ons Manager oder about:addons zugreifen.
+
+Wenn diese Gruppenrichtlinieneinstellung deaktiviert oder nicht konfiguriert ist, kann der Nutzer auf den Add-ons Manager oder about:addons zugreifen.</string>
+      <string id="BlockAboutConfig">about:config blockieren</string>
+      <string id="BlockAboutConfig_Explain">Wenn diese Gruppenrichtlinieneinstellung aktiviert ist, kann der Nutzer nicht auf about:config zugreifen.
+
+Wenn diese Gruppenrichtlinieneinstellung deaktiviert oder nicht konfiguriert ist, kann der Nutzer auf about:config zugreifen.</string>
+      <string id="BlockAboutProfiles">about:profiles blockieren</string>
+      <string id="BlockAboutProfiles_Explain">Wenn diese Gruppenrichtlinieneinstellung aktiviert ist, kann der Nutzer nicht auf about:profiles zugreifen.
+
+Wenn diese Gruppenrichtlinieneinstellung deaktiviert oder nicht konfiguriert ist, kann der Nutzer auf about:profiles zugreifen.</string>
+      <string id="AppUpdateURL">Vorgegebene Update-URL</string>
+      <string id="AppUpdateURL_Explain">Wenn diese Gruppenrichtlinieneinstellung aktiviert ist, wird eine vorgegebene URL als Update-Server anstelle des standardmäßigen Update-Servers festgelegt. Dies ist hilfreich, wenn man seinen eigenen Updateserver im Firmennetzwerk einsetzt.
+
+Wenn diese Gruppenrichtlinieneinstellung deaktiviert oder nicht konfiguriert ist, verwendet Thunderbird die standardmäßige Update-URL.</string>
+      <string id="Certificates_ImportEnterpriseRoots">Enterprise Root-Zertifikate importieren</string>
+      <string id="Certificates_ImportEnterpriseRoots_Explain">Wenn diese Gruppenrichtlinieneinstellung aktiviert ist, wird Thunderbird Zertifikate vom Windows-eigenen Zertifikatsspeicher importieren.
+
+Wenn diese Gruppenrichtlinieneinstellung deaktiviert oder nicht konfiguriert ist, wird Thunderbird keine Zertifikate vom Windows-eigenen Zertifikatsspeicher importieren.</string>
+      <string id="Certificates_Install">Zertifikate installieren</string>
+      <string id="Certificates_Install_Explain">Wenn diese Gruppenrichtlinieneinstellung aktiviert ist, wird Thunderbird die aufgelisteten Zertifikate installieren. Die Zertifikate müssen sich in %USERPROFILE%\AppData\Local\Thunderbird\Certificates und %USERPROFILE%\AppData\Roaming\Thunderbird\Certificates befinden.
+
+Wenn diese Gruppenrichtlinieneinstellung deaktiviert oder nicht konfiguriert ist, wird Thunderbird keine Zertifikate installieren.</string>
+      <string id="DisableAppUpdate">Updates deaktvieren</string>
+      <string id="DisableAppUpdate_Explain">Wenn diese Gruppenrichtlinieneinstellung aktiviert ist, wird Thunderbird keine Updates installieren.
+
+Wenn diese Gruppenrichtlinieneinstellung deaktiviert oder nicht konfiguriert ist, wird Thunderbird Updates erhalten.</string>
+      <string id="DisableDeveloperTools">Developer Tools deaktivieren</string>
+      <string id="DisableDeveloperTools_Explain">Wenn diese Gruppenrichtlinieneinstellung aktiviert ist, sind Developer Tools in Thunderbird deaktiviert.
+
+Wenn diese Gruppenrichtlinieneinstellung deaktiviert oder nicht konfiguriert ist, sind Developer Tools in Thunderbird weiterhin vorhanden.</string>
+      <string id="DisableMasterPasswordCreation">Masterpasswort Erstellung deaktivieren</string>
+      <string id="DisableMasterPasswordCreation_Explain">Wenn diese Gruppenrichtlinieneinstellung aktiviert ist, sind Nutzer nicht in der Lage Masterpasswörter einzurichten.
+
+Wenn diese Gruppenrichtlinieneinstellung deaktiviert oder nicht konfiguriert ist, können Nutzer nach wie vor Masterpasswörter einrichten.</string>
+      <string id="DisableSecurityBypass_InvalidCertificate">Nutzer abhalten, Zertifikatsfehler zu ignorieren</string>
+      <string id="DisableSecurityBypass_InvalidCertificate_Explain">Wenn diese Gruppenrichtlinieneinstellung aktiviert ist, können Nutzer die Schaltfläche &quot;Ausnahme hinzufügen...&quot; nicht verwenden.
+
+Wenn diese Gruppenrichtlinieneinstellung deaktiviert oder nicht konfiguriert ist, können Ausnahmen bei auftretenden Zertifikatsfehlern hinzugefügt werden.</string>
+      <string id="DisableSecurityBypass_SafeBrowsing">Betrugsversuch- und Schadprogrammschutz ändern</string>
+      <string id="DisableSecurityBypass_SafeBrowsing_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, können Benutzer Warnungen zu Betrugsversuch- und Schadprogrammschutz nicht umgehen um eine schädliche Webseite zu besuchen.
+
+Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, können Benutzer Warnungen zu Betrugsversuch- und Schadprogrammschutz umgehen um eine schädliche Webseite zu besuchen.</string>
+      <string id="Extensions_Install">Erweiterungen installieren</string>
+      <string id="Extensions_Install_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, können Sie eine Liste mit Erweiterungs-URLs oder -pfaden angeben, die beim Start von Thunderbird installiert werden.
+Jedes Mal, wenn diese Liste geändert wird, werden die Erweiterungen erneut installiert.
+
+Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werden keine Erweiterungen installiert.</string>
+      <string id="Extensions_Uninstall">Erweiterungen deinstallieren</string>
+      <string id="Extensions_Uninstall_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, können Sie eine Liste mit Erweiterungs-IDs angeben, die beim Start deinstalliert werden.
+Jedes Mal, wenn diese Liste geändert wird, werden die Erweiterungen deinstalliert.
+
+Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werden keine Erweiterungen deinstalliert.</string>
+      <string id="Extensions_Locked">Verhindern, dass Erweiterungen deaktiviert oder gelöscht werden</string>
+      <string id="Extensions_Locked_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, können Sie eine Liste mit Erweiterungs-IDs angeben, die den Benutzer hindert die angegebenen Erweiterungen zu deinstallieren oder zu deaktivieren.
+
+Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werden keine Erweiterungen gesperrt.</string>
+      <string id="ExtensionUpdate">Extension Update</string>
+      <string id="ExtensionUpdate_Explain">Wenn Sie die Richtlinieneinstellung deaktivieren, werden Add-ons nicht automatisch aktualisiert.
+
+Wenn Sie die Richtlinieneinstellung aktivieren oder nicht konfigurieren, werden Add-ons automatisch aktualisiert.</string>
+      <string id="ExtensionSettings">Extension Management</string>
+      <string id="ExtensionSettings_Explain">If this policy is enabled, you can use JSON to describe the extension management policy.
+
+If this policy is disabled or not configured, extensions will not be managed.</string>
+      <string id="Proxy">Proxy Settings</string>
+      <string id="Proxy_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, können Sie die Netzwerkeinstellungen ändern und sperren.
+
+Wählen Sie den Verbindungstyp und füllen Sie die entsprechenden Abschnitte aus. Aufgrund eines Fehlers müssen Sie einen Wert für die SOCKS-Proxy-Version auswählen.
+
+Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werden die Standard Netzwerk-Einstellungen verwenden. Diese können vom Benutzer verändert werden.</string>
+      <string id="SOCKSVersion4">SOCKS v4</string>
+      <string id="SOCKSVersion5">SOCKS v5</string>
+      <string id="AutoConfigURL">Automatische Proxy Konfigurations-URL</string>
+      <string id="AutoConfigURL_Explain">Diese Richtlinieneinstellung sollte nur gewählt werden, wenn autoConfig aktiviert ist.</string>
+      <string id="Passthrough">Proxy bypass URLs</string>
+      <string id="Passthrough_Explain">These should only be set if you selected manual proxy</string>
+      <string id="Connection">Verbindungsart</string>
+      <string id="NoProxy">Kein Proxy</string>
+      <string id="SystemProxy">System Proxy verwenden</string>
+      <string id="ManualProxy">Manuelle Proxy Konfiguration</string>
+      <string id="AutoDetectProxy">Automatisch Proxy erkennen</string>
+      <string id="AutoConfigProxy">Automatisch Proxy-Einstellungen setzen</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="AppUpdateURL">
+        <textBox refId="AppUpdateURL">
+          <label>URL:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Proxy">
+        <checkBox refId="ProxyLocked">Änderungen an den Proxy-Einstellungen verbieten.</checkBox>
+        <text>Verbindungsart:</text>
+        <dropdownList refId="ConnectionType"/>
+        <text>HTTP Proxy:</text>
+        <textBox refId="HTTPProxy">
+          <label/>
+        </textBox>
+        <checkBox refId="UseHTTPProxyForAllProtocols">Diesen Proxy für alle Protokolle verwenden.</checkBox>
+        <text>SSL Proxy:</text>
+        <textBox refId="SSLProxy">
+          <label/>
+        </textBox>
+        <text>FTP Proxy:</text>
+        <textBox refId="FTPProxy">
+          <label/>
+        </textBox>
+        <text>SOCKS Host:</text>
+        <textBox refId="SOCKSProxy">
+          <label/>
+        </textBox>
+        <text>SOCKS Version:</text>
+        <dropdownList refId="SOCKSVersion"/>
+        <text>Kein Proxy für:</text>
+        <textBox refId="Passthrough">
+          <label/>
+        </textBox>
+        <text>Beispiele: .mozilla.org, .net.nz, 192.168.1.0/24</text>
+        <text>Automatische Proxy Konfigurations-URL:</text>
+        <textBox refId="AutoConfigURL">
+          <label/>
+        </textBox>
+        <checkBox refId="AutoLogin">Keine Authentifizierungsanfrage bei gespeichertem Passwort.</checkBox>
+        <checkBox refId="UseProxyForDNS">Bei Verwendung von SOCKS v5 den Proxy für DNS-Anfragen verwenden.</checkBox>
+      </presentation>
+      <presentation id="Certificates_Install">
+        <listBox refId="Certificates_Install"/>
+      </presentation>
+      <presentation id="Extensions">
+        <listBox refId="Extensions"/>
+      </presentation>
+      <presentation id="ExtensionSettings">
+        <multiTextBox refId="ExtensionSettings"/>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

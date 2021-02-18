@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0" >
+  <displayName/>
+  <description/>
+  <resources >
+    <stringTable >
+      <string id="SUPPORTED_WINXPSP2">Microsoft Windows XP SP2 o posterior</string>
+      <string id="SUPPORTED_TB68">Thunderbird 68 o posterior</string>
+      <string id="thunderbird">Thunderbird</string>
+      <string id="Extensions_group">Extensiones</string>
+      <string id="Addons_group">Complementos</string>
+      <string id="Certificates_group">Certificados</string>
+      <string id="BlockAboutAddons">Bloquear el administrador de complementos</string>
+      <string id="BlockAboutAddons_Explain" >Si esta política está habilitada, el usuario no podrá acceder al administrador de complementos o en about:addons.
+
+Si esta política está deshabilitada o no está configurada, el usuario podrá acceder al administrador de complementos o en about:addons.</string>
+      <string id="BlockAboutConfig">Bloquear about:config</string>
+      <string id="BlockAboutConfig_Explain">Si esta política está habilitada, el usuario no podrá acceder en about:config.
+
+Si esta política está deshabilitada o no está configurada, el usuario podrá acceder en about:config.</string>
+      <string id="BlockAboutProfiles">Bloquear about:profiles</string>
+      <string id="BlockAboutProfiles_Explain">Si esta política está habilitada, el usuario no podrá acceder en about:profiles.
+
+Si esta política está deshabilitada o no está configurada, el usuario podrá acceder en about:profiles.</string>
+      <string id="AppUpdateURL">URL de actualización personalizada</string>
+      <string id="AppUpdateURL_Explain">Si esta política está habilitada, podrá establecer una URL para un servidor de actualización que no sea el predeterminado. Esto podría ser útil si ejecuta su propio servidor de actualización en su red.
+
+Si esta política está deshabilitada o no está configurada, se utilizará la URL de actualización predeterminada.</string>
+      <string id="Certificates_ImportEnterpriseRoots">Importar certificados raíces</string>
+      <string id="Certificates_ImportEnterpriseRoots_Explain">Si esta política está habilitada, Thunderbird leerá los certificados del almacén de certificados de Windows.
+
+Si esta política está deshabilitada o no está configurada, Thunderbird no leerá los certificados del almacén de certificados de Windows.</string>
+      <string id="Certificates_Install">Instalar certificados</string>
+      <string id="Certificates_Install_Explain">Si esta política está habilitada, Thunderbird instalará los certificados listados en Thunderbird. Se verá en %USERPROFILE%\AppData\Local\Thunderbird\Certificates and %USERPROFILE%\AppData\Roaming\Thunderbird\Certificates.
+
+Si esta política está deshabilitada o no está configurada, Thunderbird no instalará certificados adicionales.</string>
+      <string id="DisableAppUpdate">Deshabilitar actualización</string>
+      <string id="DisableAppUpdate_Explain">Si esta política está habilitada, Thunderbird no recibirá actualizaciones.
+
+Si esta política está deshabilitada o no está configurada, Thunderbird recibirá actualizaciones.</string>
+      <string id="DisableDeveloperTools">Deshabilitar herramientas para desarrolladores</string>
+      <string id="DisableDeveloperTools_Explain">Si esta política está habilitada, las herramientas para desarrolladores web no están disponibles dentro de Thunderbird.
+
+Si esta política está deshabilitada o no está configurada, las herramientas para desarrolladores web estarán disponibles dentro de Thunderbird.</string>
+      <string id="DisableMasterPasswordCreation">Deshabilitar la creación de contraseña maestra</string>
+      <string id="DisableMasterPasswordCreation_Explain">Si esta política está habilitada, los usuarios no podrán crear una contraseña maestra.
+
+Si esta política está deshabilitada o no está configurada, los usuarios podrán crear una contraseña maestra.</string>
+      <string id="DisableSecurityBypass_InvalidCertificate">Evitar anular los errores de certificado</string>
+      <string id="DisableSecurityBypass_InvalidCertificate_Explain">Si esta política está habilitada, el botón &quot;Añadir excepción&quot; no estará disponible cuando un certificado no es válido. Esto evita que el usuario anule el error de certificado.
+
+Si esta política está deshabilitada o no está configurada, los errores de certificado pueden anularse.</string>
+      <string id="DisableSecurityBypass_SafeBrowsing">Evitar anular los errores de navegación segura</string>
+      <string id="DisableSecurityBypass_SafeBrowsing_Explain">Si esta política está habilitada, un usuario no podrá eludir la advertencia y visitar un sitio dañino.
+
+Si esta política está deshabilitada o no está configurada, un usuario podrá elegir visitar un sitio dañino.</string>
+      <string id="Extensions_Install">Extensiones para instalar</string>
+      <string id="Extensions_Install_Explain">Si esta política está habilitada, podrá especificar una lista de URL de extensiones o rutas que se instalarán cuando se inicie Thunderbird.
+Cada vez que se cambie esta lista, las extensiones se reinstalarán.
+
+Si esta política está deshabilitada o no está configurada, no se instalarán extensiones.</string>
+      <string id="Extensions_Uninstall">Extensiones para desinstalar</string>
+      <string id="Extensions_Uninstall_Explain">Si esta política está habilitada, podrá especificar una lista de ID de extensiones que se desinstalarán.
+Cada vez que se cambie esta lista, las extensiones se desinstalarán.
+
+Si esta política está deshabilitada o no está configurada, no se desinstalarán las extensiones.</string>
+      <string id="Extensions_Locked">Evitar que las extensiones se deshabiliten o se borrén</string>
+      <string id="Extensions_Locked_Explain">Si esta política está habilitada, podrá especificar una lista de ID de extensiones que el usuario no podrá desinstalar o deshabilitar.
+
+Si esta política está deshabilitada o no está configurada, no se bloquearán las extensiones.</string>
+      <string id="ExtensionUpdate">Actualización de extensiones</string>
+      <string id="ExtensionUpdate_Explain">Si esta política está deshabilitada, las extensiones no se actualizarán automáticamente.
+
+Si esta política está habilitada o no está configurada, las extensiones se actualizarán automáticamente.</string>
+      <string id="ExtensionSettings">Gestión de extensiones</string>
+      <string id="ExtensionSettings_Explain">Si esta política está habilitada, podrá utilizar JSON para describir la política de gestión de extensiones.
+
+Si esta política está deshabilitada o no está configurada, las extensiones no se gestionarán.</string>
+      <string id="Proxy">Configuración del proxy</string>
+      <string id="Proxy_Explain">Si esta política está habilitada, podrá configurar y bloquear la configuración de red.
+
+Seleccione el tipo de conexión y luego complete las secciones correspondientes. Debido a un error, debe seleccionar un valor para la versión proxy de SOCKS.
+
+Si esta política está deshabilitada o no está configurada, se usa la configuración de red predeterminada y el usuario podrá cambiarla.</string>
+      <string id="SOCKSVersion4">SOCKS v4</string>
+      <string id="SOCKSVersion5">SOCKS v5</string>
+      <string id="AutoConfigURL">Configuración automática de URL del proxy</string>
+      <string id="AutoConfigURL_Explain">Esto solo debería establecerse si seleccionó autoConfig</string>
+      <string id="Passthrough">URL omitidas por proxy</string>
+      <string id="Passthrough_Explain">Esto solo debe configurarse si seleccionó proxy manual</string>
+      <string id="Connection">Tipo de conexión</string>
+      <string id="NoProxy">Sin Proxy</string>
+      <string id="SystemProxy">Usar la configuración de proxy del sistema</string>
+      <string id="ManualProxy">Configuración manual del proxy</string>
+      <string id="AutoDetectProxy">Detección automática de la configuración del proxy</string>
+      <string id="AutoConfigProxy">Configuración automática de proxy</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="AppUpdateURL">
+        <textBox refId="AppUpdateURL">
+          <label>URL:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Proxy">
+        <checkBox refId="ProxyLocked">No permitir que se cambie la configuración del proxy.</checkBox>
+        <text>Tipo de conexión:</text>
+        <dropdownList refId="ConnectionType"/>
+        <text>Prosy HTTP:</text>
+        <textBox refId="HTTPProxy">
+          <label/>
+        </textBox>
+        <checkBox refId="UseHTTPProxyForAllProtocols">Utilizar este servidor proxy para todos los protocolos.</checkBox>
+        <text>Proxy SSL:</text>
+        <textBox refId="SSLProxy">
+          <label/>
+        </textBox>
+        <text>Proxy FTP:</text>
+        <textBox refId="FTPProxy">
+          <label/>
+        </textBox>
+        <text>Servidor SOCKS:</text>
+        <textBox refId="SOCKSProxy">
+          <label/>
+        </textBox>
+        <text>Versión de SOCKS:</text>
+        <dropdownList refId="SOCKSVersion"/>
+        <text>No usar proxy para</text>
+        <textBox refId="Passthrough">
+          <label/>
+        </textBox>
+        <text>Ejemplo: .mozilla.org, .net.nz, 192.168.1.0/24</text>
+        <text>Configuración automática de URL del proxy:</text>
+        <textBox refId="AutoConfigURL">
+          <label/>
+        </textBox>
+        <checkBox refId="AutoLogin">No solicitar la autenticación si se guarda la contraseña.</checkBox>
+        <checkBox refId="UseProxyForDNS">DNS proxy cuando se utiliza SOCKS v5.</checkBox>
+      </presentation>
+      <presentation id="Certificates_Install">
+        <listBox refId="Certificates_Install"/>
+      </presentation>
+      <presentation id="Extensions">
+        <listBox refId="Extensions"/>
+      </presentation>
+      <presentation id="ExtensionSettings">
+        <multiTextBox refId="ExtensionSettings"/>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

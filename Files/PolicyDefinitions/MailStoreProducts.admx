@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--  Copyright (c) MailStore Software GmbH  -->
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" revision="9.6" schemaVersion="1.0">
+  <policyNamespaces>
+    <target prefix="mailstoreproducts" namespace="MailStore.Policies.Products" />
+  </policyNamespaces>
+  <resources minRequiredRevision="9.6" />
+  <supportedOn>
+    <products>
+
+      <!-- MailStore Server -->
+      <product name="MailStore_Server" displayName="$(string.PROD_MailStore_Server)">
+
+        <!-- Only versions relevant to GPO changes are included -->
+        <majorVersion name="MailStore_Server_9" displayName="$(string.VER_MailStore_Server_9)" versionIndex="9">
+          <minorVersion name="MailStore_Server_900" displayName="$(string.VER_MailStore_Server_900)" versionIndex="900" />
+          <minorVersion name="MailStore_Server_960" displayName="$(string.VER_MailStore_Server_960)" versionIndex="960" />
+        </majorVersion>
+
+        <majorVersion name="MailStore_Server_12" displayName="$(string.VER_MailStore_Server_12)" versionIndex="12">
+          <minorVersion name="MailStore_Server_1213" displayName="$(string.VER_MailStore_Server_1213)" versionIndex="1213" />
+        </majorVersion>
+      </product>
+    </products>
+  </supportedOn>
+</policyDefinitions>

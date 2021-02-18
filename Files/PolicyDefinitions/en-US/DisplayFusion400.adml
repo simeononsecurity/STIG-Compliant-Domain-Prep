@@ -1,0 +1,1511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName>DisplayFusion 7.2.0</displayName>
+  <description>DisplayFusion 7.2.0</description>
+  <resources>
+    <stringTable>
+			<!-- Category names -->
+      <string id="DisplayFusion">DisplayFusion</string>
+			<string id="DisplayFusion_General">General Policies</string>
+			<string id="DisplayFusion_DesktopWallpaper">Desktop Wallpaper</string>
+			<string id="DisplayFusion_Settings">Settings</string>
+			<string id="DisplayFusion_Settings_Options">Options</string>
+			<string id="DisplayFusion_Settings_Functions">Functions</string>
+			<string id="DisplayFusion_Settings_Taskbar">Taskbar</string>
+			<string id="DisplayFusion_Settings_WindowsLockScreen">Windows Lock Screen</string>
+			<string id="DisplayFusion_Settings_ScreenSaver">Screen Saver</string>
+			<string id="DisplayFusion_Settings_WindowSnapping">Window Snapping</string>
+			<string id="DisplayFusion_Settings_WindowManagement">Window Management</string>
+			<string id="DisplayFusion_Settings_AltTab">Alt+Tab</string>
+			<string id="DisplayFusion_Settings_MouseManagement">Mouse Management</string>			
+			<string id="DisplayFusion_Settings_Triggers">Triggers</string>
+			<string id="DisplayFusion_Settings_RemoteControl">Remote Control</string>			
+			<string id="DisplayFusion_Settings_LicenseKey">License Key</string>
+			<string id="DisplayFusion_Settings_Troubleshooting">Troubleshooting</string>
+			<string id="DisplayFusion_Settings_MonitorFading">Monitor Fading</string>
+			<!-- General policy settings -->
+			<string id="BlockUI-DesktopIconProfiles">Disable Desktop Icon Profiles feature</string>
+			<string id="BlockUI-DesktopIconProfilesExplain">This policy setting controls whether or not the Desktop Icon Profiles feature will be disabled. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the Desktop Icon Profiles feature is not available to the user.
+  
+If you disable this policy setting, the Desktop Icon Profiles feature is available to the user, allowing them to save and restore Desktop Icon Layouts.
+  
+If you do not configure this policy setting, the Desktop Icon Profiles feature is available to the user, allowing them to save and restore Desktop Icon Layouts.
+			</string>
+			<string id="BlockUI-WindowPositionProfiles">Disable Window Position Profiles feature</string>
+			<string id="BlockUI-WindowPositionProfilesExplain">This policy setting controls whether or not the Window Position Profiles tab will be accessible in the DisplayFusion Settings. This policy setting does not require a restart of DisplayFusion to take effect.
+
+If you enable this policy setting, the Window Position Profiles tab is not available to the user.
+
+If you disable this policy setting, the Window Position Profiles tab is available to the user, allowing them to configure features like mouse wrapping and inactive scrolling.
+
+If you do not configure this policy setting, the Window Position Profiles tab is available to the user, allowing them to configure the Window Position Profiles feature.
+			</string>	
+			<string id="BlockUI-Wallpaper">Disable Desktop Wallpaper Configuration window</string>
+			<string id="BlockUI-WallpaperExplain">This policy setting controls whether or not the Desktop Wallpaper Configuration window will be disabled. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the Desktop Wallpaper Configuration window is not available to the user.
+  
+If you disable this policy setting, the Desktop Wallpaper Configuration window is available to the user, allowing them to customize their Desktop Wallpaper settings.
+  
+If you do not configure this policy setting, the Desktop Wallpaper Configuration window is available to the user, allowing them to customize their Desktop Wallpaper settings.
+			</string>
+			<string id="BlockUI-MonitorConfig">Disable Monitor Configuration window</string>
+			<string id="BlockUI-MonitorConfigExplain">This policy setting controls whether or not the Monitor Configuration window will be disabled. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the Monitor Configuration window is not available to the user.
+  
+If you disable this policy setting, the Monitor Configuration window is available to the user, allowing them to modify their display settings (screen resolution, etc).
+  
+If you do not configure this policy setting, the Monitor Configuration window is available to the user, allowing them to modify their display settings (screen resolution, etc).
+			</string>
+			<string id="BlockUI-MonitorProfiles">Disable Monitor Profiles</string>
+			<string id="BlockUI-MonitorProfilesExplain">This policy setting controls whether or not the Monitor Profiles feature will be disabled. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be able to save, load, or manage Monitor Profiles.
+  
+If you disable this policy setting, the user will be able to save, load, or manage Monitor Profiles.
+  
+If you do not configure this policy setting, the user will be able to save, load, or manage Monitor Profiles.
+			</string>			
+			<string id="BlockUI-Settings">Disable Settings window</string>
+			<string id="BlockUI-SettingsExplain">This policy setting controls whether or not the Settings window will be disabled. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the Settings window is not available to the user.
+  
+If you disable this policy setting, the Settings window is available to the user, allowing them to modify any DisplayFusion Settings that are not enforced by Group Policy.
+  
+If you do not configure this policy setting, the Settings window is available to the user, allowing them to modify any DisplayFusion Settings that are not enforced by Group Policy.
+			</string>
+			<string id="BlockUI-Settings-CheckForUpdates">Disable the "Check for Updates Now" button</string>
+			<string id="BlockUI-Settings-CheckForUpdatesExplain">This policy setting controls whether or not the user will be able to check for updates using the "Check for Updates Now" button on the DisplayFusion Settings > Options tab. This policy setting requires a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the "Check for Updates Now" button will be disabled.
+  
+If you disable this policy setting, the "Check for Updates Now" button will be enabled.
+  
+If you do not configure this policy setting, the "Check for Updates Now" button will be enabled.
+			</string>		
+			<string id="BlockUI-Settings-InternetConnectionSettings">Disable the "Internet Connection Settings" button</string>
+			<string id="BlockUI-Settings-InternetConnectionSettingsExplain">This policy setting controls whether or not the user will be able to configure the options in the "Internet Connection Settings" button on the DisplayFusion Settings > Options tab. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the "Internet Connection Settings" button will be disabled.
+  
+If you disable this policy setting, the "Internet Connection Settings" button will be enabled.
+  
+If you do not configure this policy setting, the "Internet Connection Settings" button will be enabled.
+			</string>				
+			<string id="BlockUI-Settings-Functions">Disable Functions tab</string>
+			<string id="BlockUI-Settings-FunctionsExplain">This policy setting controls whether or not DisplayFusion will allow the user to configure the DisplayFusion Functions. This policy setting does not require a restart of DisplayFusion to take effect.
+			
+If you enable this policy setting, the Functions tab is not available to the user.
+
+If you disable this policy setting, the Functions tab is available to the user, allowing them to customize the DisplayFusion Functions.
+
+If you do not configure this policy setting, the Functions tab is available to the user, allowing them to customize the DisplayFusion Functions.
+			</string>			
+			<string id="BlockUI-Settings-Taskbar">Disable Taskbar tab</string>
+			<string id="BlockUI-Settings-TaskbarExplain">This policy setting controls whether or not DisplayFusion will allow the user to configure the DisplayFusion Taskbar. This policy setting does not require a restart of DisplayFusion to take effect.
+			
+If you enable this policy setting, the Taskbar tab is not available to the user.
+
+If you disable this policy setting, the Taskbar tab is available to the user, allowing them to customize the DisplayFusion Taskbar.
+
+If you do not configure this policy setting, the Taskbar tab is available to the user, allowing them to customize the DisplayFusion Taskbar.
+			</string>				
+			<string id="BlockUI-Settings-WindowsLockScreen">Disable Windows Lock Screen tab</string>
+			<string id="BlockUI-Settings-WindowsLockScreenExplain">This policy setting controls whether or not DisplayFusion will allow the user to configure the Windows Lock Screen Background. Note: In order to change the settings on the Windows Lock Screen tab, the user needs to be a member of the local Administrators group. This policy setting does not require a restart of DisplayFusion to take effect.
+			
+If you enable this policy setting, the Windows Lock Screen tab is not available to the user.
+
+If you disable this policy setting, the Windows Lock Screen tab is available to the user, allowing them to customize the Windows Lock Screen background.
+
+If you do not configure this policy setting, the Windows Lock Screen tab is available to the user, allowing them to customize the Windows Lock Screen background.
+			</string>
+			<string id="BlockUI-Settings-ScreenSavers">Disable Screen Saver tab</string>
+			<string id="BlockUI-Settings-ScreenSaversExplain">This policy setting controls whether or not DisplayFusion will allow the user to configure the Screen Saver. This policy setting does not require a restart of DisplayFusion to take effect.
+			
+If you enable this policy setting, the Screen Saver tab is not available to the user.
+
+If you disable this policy setting, the Screen Saver tab is available to the user, allowing them to customize the Screen Saver.
+
+If you do not configure this policy setting, the Screen Saver tab is available to the user, allowing them to customize the Screen Saver.
+			</string>	
+			<string id="BlockUI-Settings-WindowSnapping">Disable Window Snapping tab</string>
+			<string id="BlockUI-Settings-WindowSnappingExplain">This policy setting controls whether or not DisplayFusion will allow the user to configure the Window Snapping feature. This policy setting does not require a restart of DisplayFusion to take effect.
+			
+If you enable this policy setting, the Window Snapping tab is not available to the user.
+
+If you disable this policy setting, the Window Snapping tab is available to the user, allowing them to customize the Window Snapping feature.
+
+If you do not configure this policy setting, the Window Snapping tab is available to the user, allowing them to customize the Window Snapping feature.
+			</string>	
+			<string id="BlockUI-Settings-WindowManagement">Disable Window Management tab</string>
+			<string id="BlockUI-Settings-WindowManagementExplain">This policy setting controls whether or not DisplayFusion will allow the user to configure the Window Management features. This policy setting does not require a restart of DisplayFusion to take effect.
+			
+If you enable this policy setting, the Window Management tab is not available to the user.
+
+If you disable this policy setting, the Window Management tab is available to the user, allowing them to customize the Window Management features.
+
+If you do not configure this policy setting, the Window Management tab is available to the user, allowing them to customize the Window Management features.
+			</string>			
+			<string id="BlockUI-Settings-Triggers">Disable Triggers tab</string>
+			<string id="BlockUI-Settings-TriggersExplain">This policy setting controls whether or not DisplayFusion will allow the user to configure the Triggers feature. This policy setting does not require a restart of DisplayFusion to take effect.
+			
+If you enable this policy setting, the Triggers tab is not available to the user.
+
+If you disable this policy setting, the Triggers tab is available to the user, allowing them to customize the Window Location feature.
+
+If you do not configure this policy setting, the Triggers tab is available to the user, allowing them to customize the Triggers feature.
+			</string>
+			<string id="BlockUI-Settings-Compatibility">Disable Compatibility Tab</string>
+			<string id="BlockUI-Settings-CompatibilityExplain">This policy setting controls whether or not the Compatibility tab will be accessible in the DisplayFusion settings. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the Compatibility tab is not available to the user.
+  
+If you disable this policy setting, the Compatibility tab is available to the user, allowing them to create or modify Application Compatibility rules.
+  
+If you do not configure this policy setting, the Compatibility tab is available to the user, allowing them to create or modify Application Compatibility rules.
+			</string>
+			<string id="BlockUI-Settings-LicenseKey">Disable License Key Tab</string>
+			<string id="BlockUI-Settings-LicenseKeyExplain">This policy setting controls whether or not the License Key tab will be accessible in the DisplayFusion settings. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the License Key tab is not available to the user.
+  
+If you disable this policy setting, the License Key tab is available to the user, allowing them to view or modify the License Key.
+  
+If you do not configure this policy setting, the License Key tab is available to the user, allowing them to view or modify the License Key.
+			</string>			
+			<string id="BlockUI-Settings-Troubleshooting">Disable Troubleshooting Tab</string>
+			<string id="BlockUI-Settings-TroubleshootingExplain">This policy setting controls whether or not the Troubleshooting tab will be accessible in the DisplayFusion settings. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the Troubleshooting tab is not available to the user.
+  
+If you disable this policy setting, the Troubleshooting tab is available to the user, allowing them to view DisplayFusion's Troubleshooting information and configure Debug Logging levels.
+  
+If you do not configure this policy setting, the Troubleshooting tab is available to the user, allowing them to view DisplayFusion's Troubleshooting information and configure Debug Logging levels.
+			</string>
+			<string id="BlockUI-Settings-Languages">Disable Languages Tab</string>
+			<string id="BlockUI-Settings-LanguagesExplain">This policy setting controls whether or not the Languages tab will be accessible in the DisplayFusion settings. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the Languages tab is not available to the user.
+  
+If you disable this policy setting, the Languages tab is available to the user, allowing them to view and change the language that DisplayFusion will use in the Settings and other windows.
+  
+If you do not configure this policy setting, the Languages tab is available to the user, allowing them to view and change the language that DisplayFusion will use in the Settings and other windows.
+			</string>	
+			<string id="BlockUI-Settings-Win8">Disable Windows 8 Tab</string>
+			<string id="BlockUI-Settings-Win8Explain">This policy setting controls whether or not the Windows 8 tab will be accessible in the DisplayFusion settings. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the Windows 8 tab is not available to the user.
+  
+If you disable this policy setting, the Windows 8 tab is available to the user, allowing them to enable or disable the various Windows 8 Tweaks.
+  
+If you do not configure this policy setting, the Windows 8 tab is available to the user, allowing them to enable or disable the various Windows 8 Tweaks.
+			</string>
+			<string id="BlockUI-Settings-Win10">Disable Windows 10 Tab</string>
+			<string id="BlockUI-Settings-Win10Explain">This policy setting controls whether or not the Windows 10 tab will be accessible in the DisplayFusion settings. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the Windows 10 tab is not available to the user.
+  
+If you disable this policy setting, the Windows 10 tab is available to the user, allowing them to enable or disable the various Windows 10 Tweaks.
+  
+If you do not configure this policy setting, the Windows 10 tab is available to the user, allowing them to enable or disable the various Windows 10 Tweaks.
+			</string>			
+			<string id="BlockUI-Settings-RemoteControl">Disable Remote Control Tab</string>
+			<string id="BlockUI-Settings-RemoteControlExplain">This policy setting controls whether or not the Remote Control tab will be accessible in the DisplayFusion settings. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the Remote Control tab is not available to the user.
+  
+If you disable this policy setting, the Remote Control tab is available to the user, allowing them to enable or disable the ability to run DisplayFusion Functions from DisplayFusion Remote mobile apps.
+  
+If you do not configure this policy setting, the Remote Control tab is available to the user, allowing them to enable or disable the ability to run DisplayFusion Functions from DisplayFusion Remote mobile apps.
+			</string>	
+			<string id="BlockUI-Settings-AltTab">Disable Alt+Tab Handler Tab</string>
+			<string id="BlockUI-Settings-AltTabExplain">This policy setting controls whether or not the Alt+Tab Handler tab will be accessible in the DisplayFusion Settings. This policy setting does not require a restart of DisplayFusion to take effect.
+
+If you enable this policy setting, the Alt+Tab Handler tab is not available to the user.
+
+If you disable this policy setting, the Alt+Tab Handler tab is available to the user, allowing them to configure DisplayFusion's Alt+Tab handler.
+
+If you do not configure this policy setting, the Alt+Tab Handler tab is available to the user, allowing them to configure DisplayFusion's Alt+Tab handler.
+			</string>
+			<string id="BlockUI-Settings-MouseManagement">Disable Mouse Management Tab</string>
+			<string id="BlockUI-Settings-MouseManagementExplain">This policy setting controls whether or not the Mouse Management tab will be accessible in the DisplayFusion Settings. This policy setting does not require a restart of DisplayFusion to take effect.
+
+If you enable this policy setting, the Mouse Management tab is not available to the user.
+
+If you disable this policy setting, the Mouse Management tab is available to the user, allowing them to configure features like mouse wrapping and inactive scrolling.
+
+If you do not configure this policy setting, the Mouse Management tab is available to the user, allowing them to configure features like mouse wrapping and inactive scrolling.
+			</string>
+			<string id="BlockUI-Settings-MonitorFading">Disable Monitor Fading Tab</string>
+			<string id="BlockUI-Settings-MonitorFadingExplain">This policy setting controls whether or not the Monitor Fading tab will be accessible in the DisplayFusion Settings. This policy setting does not require a restart of DisplayFusion to take effect.
+
+If you enable this policy setting, the Monitor Fading tab is not available to the user.
+
+If you disable this policy setting, the Monitor Fading tab is available to the user, allowing them to configure features like mouse wrapping and inactive scrolling.
+
+If you do not configure this policy setting, the Monitor Fading tab is available to the user, allowing them to configure the Monitor Fading feature.
+			</string>
+			<string id="DisableOurAppsTab">Disable Our Apps Tab</string>
+			<string id="DisableOurAppsTabExplain">This policy setting controls whether or not the Our Apps tab will be accessible in the DisplayFusion settings. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the Our Apps tab is not available to the user.
+  
+If you disable this policy setting, the Our Apps tab is available to the user, allowing them to view short descriptions of our other products.
+  
+If you do not configure this policy setting, the Our Apps tab is available to the user, allowing them to view short descriptions of our other products.
+			</string>				
+			<string id="BlockUI-SupportRequest">Disable Support Request Button</string>
+			<string id="BlockUI-SupportRequestExplain">This policy setting controls whether or not the Support Request Button will be accessible in the DisplayFusion settings. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the Support Request Button is not available to the user.
+  
+If you disable this policy setting, the Support Request Button is available to the user, allowing them to submit issues and Troubleshooting/Debug information to the Binary Fortress Software Ltd. Support Department.
+  
+If you do not configure this policy setting, the Support Request Button is available to the user, allowing them to submit issues and Troubleshooting/Debug information to Binary Fortress Software Ltd. Support Department.
+			</string>
+			<string id="BlockUI-HelpButton">Disable Help Button</string>
+			<string id="BlockUI-HelpButtonExplain">This policy setting controls whether or not the Help Button will be accessible in the DisplayFusion settings. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the Help Button is not available to the user.
+  
+If you disable this policy setting, the Help Button is available to the user, allowing them to launch the Online Help in their default web browser.
+  
+If you disable this policy setting, the Help Button is available to the user, allowing them to launch the Online Help in their default web browser.
+			</string>			
+			<string id="BlockUI-Settings-ContextMenuItems">Disable access to the "Show in Windows desktop context menu" option</string>
+			<string id="BlockUI-Settings-ContextMenuItemsExplain">This policy setting controls whether or not the "Show in Windows Desktop context menu" option will be accessible in the DisplayFusion settings. This option requires administrative permissions to enable or disable. In corporate environments, it is highly recommended to use the DisplayFusion silent install switch for disabling the "Show in Windows Desktop context menu" during installation, and then Enable this policy setting to prevent the user from trying to enable it. This policy setting requires a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the "Show in Windows Desktop context menu" option is not available to the user.
+  
+If you disable this policy setting, the "Show in Windows Desktop context menu" option is available to the user, allowing them to enable or disable the option.
+  
+If you do not configure this policy setting, the "Show in Windows Desktop context menu" option is available to the user, allowing them to enable or disable the option.
+			</string>			
+			<string id="HideTrayIcon">Hide system tray icon</string>
+			<string id="HideTrayIconExplain">This policy setting controls whether or not the DisplayFusion icon will be shown in the system tray (notification area). This policy setting requires a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the DisplayFusion system tray icon will be hidden.
+  
+If you disable this policy setting, the DisplayFusion system tray icon will be visible.
+  
+If you do not configure this policy setting, the DisplayFusion system tray icon will be visible.
+			</string>
+			<string id="IgnoreFirstRun">Ignore First Run</string>
+			<string id="IgnoreFirstRunExplain">This policy setting controls whether or not DisplayFusion will be allowed to show the Welcome Wizard and reset the settings to the defaults when it starts up. Enabling this policy setting is recommended for corporate deployments. This policy setting must be enabled before DisplayFusion is run for the first time.
+	  
+If you enable this policy setting, DisplayFusion will never show the Welcome Wizard or reset the settings to the defaults.
+  
+If you disable this policy setting, DisplayFusion will show the Welcome Wizard and reset the settings to the defaults the first time it starts up.
+  
+If you do not configure this policy setting, DisplayFusion will show the Welcome Wizard and reset the settings to the defaults the first time it starts up.
+			</string>			
+			<string id="BlockUI-Settings-Advanced">Disable Advanced Settings button</string>
+			<string id="BlockUI-Settings-AdvancedExplain">This policy setting controls whether or not the Advanced Settings button will be disabled. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the Advanced Settings button is not available to the user.
+  
+If you disable this policy setting, the Advanced Settings button is available to the user, allowing them to view and edit the DisplayFusion Advanced Settings.
+  
+If you do not configure this policy setting, the Advanced Settings button is available to the user, allowing them to view and edit the DisplayFusion Advanced Settings.
+			</string>	
+			<string id="BlockUI-MenuExit">Remove "Exit" from context (tray and taskbar) menu</string>
+			<string id="BlockUI-MenuExitExplain">This policy setting controls whether or not the "Exit" entry will be removed from the context (tray and taskbar) menu. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the "Exit" entry is not available to the user.
+  
+If you disable this policy setting, the "Exit" entry is available to the user, allowing them to exit DisplayFusion.
+  
+If you do not configure this policy setting, the "Exit" entry is available to the user, allowing them to exit DisplayFusion.
+			</string>
+			<string id="BlockUI-MenuTaskManager">Remove "Task Manager" from context (tray and taskbar) menu</string>
+			<string id="BlockUI-MenuTaskManagerExplain">This policy setting controls whether or not the "Task Manager" entry will be removed from the context (tray and taskbar) menu. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the "Task Manager" entry is not available to the user.
+  
+If you disable this policy setting, the "Task Manager" entry is available to the user, allowing them to open the Windows Task Manager.
+  
+If you do not configure this policy setting, the "Task Manager" entry is available to the user, allowing them to exit Windows Task Manager.
+			</string>
+			<string id="BlockUI-AudioDevices">Remove "Audio Devices" from context (tray and taskbar) menu</string>
+			<string id="BlockUI-AudioDevicesExplain">This policy setting controls whether or not the "Audio Devices" entry will be removed from the context (tray and taskbar) menu. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the "Audio Devices" entry is not available to the user.
+  
+If you disable this policy setting, the "Audio Devices" entry is available to the user, allowing them to switch Audio Devices using DisplayFusion.
+  
+If you do not configure this policy setting, the "Audio Devices" entry is available to the user, allowing them to switch Audio Devices using DisplayFusion.
+			</string>
+			<string id="BlockUI-SocialButtons">Remove Social Buttons from Settings Window</string>
+			<string id="BlockUI-SocialButtonsExplain">This policy setting controls whether or not the social buttons (Facebook, Twitter, etc) will show up in the Settings window. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the social buttons will not show up in the Settings window.
+  
+If you disable this policy setting, the social buttons will show up in the Settings window, allowing the user to click them to access our social pages.
+  
+If you do not configure this policy setting, the social buttons will show up in the Settings window, allowing the user to click them to access our social pages.
+			</string>			
+			<string id="DisableBackupAuto">Disable Automatic Settings Backup</string>
+			<string id="DisableBackupAutoExplain">This policy setting controls whether or not DisplayFusion will automatically backup its settings when a new version is installed. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, DisplayFusion will not automatically backup its settings when a new version is installed.
+  
+If you disable this policy setting, DisplayFusion will automatically backup its settings when a new version is installed.
+  
+If you do not configure this policy setting, DisplayFusion will automatically backup its settings when a new version is installed.
+			</string>
+			<string id="DisableMonitorIDs">Disable Monitor IDs in Monitor Selector Window</string>
+			<string id="DisableMonitorIDsExplain">This policy setting controls whether or not DisplayFusion will show monitor ID numbers in the monitor selector window when running Functions that use it. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, DisplayFusion will not show monitor ID numbers in the monitor selector window.
+  
+If you disable this policy setting, DisplayFusion will show monitor ID numbers in the monitor selector window.
+  
+If you do not configure this policy setting, DisplayFusion will show monitor ID numbers in the monitor selector window.
+			</string>			
+			<string id="TrayIconActionByName">Default Tray Icon Double-Click Action</string>
+			<string id="TrayIconActionByNameExplain">This policy setting allows you to specify the Function name that should run when a user double-clicks the DisplayFusion Tray Icon (e.g. "Open DisplayFusion Settings"). This policy setting requires a restart of DisplayFusion to take effect.
+			
+If you enable this policy setting, you must specify the Function name exactly as it's written in the list on the DisplayFusion Settings > Functions tab.
+
+If you disable this policy setting, the default tray icon double-click behaviour will be used (Open DisplayFusion Desktop Wallpaper).
+
+If you do not configure this policy setting, the "Default Tray Icon Behaviour" option is configurable from within DisplayFusion.			
+			</string>
+			<string id="DisableCrashReportingAndTelemetry">Disable Crash Reporting and Telemetry</string>
+			<string id="DisableCrashReportingAndTelemetryExplain">This policy setting controls whether or not DisplayFusion will send anonymous crash reports to Binary Fortress Software. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, DisplayFusion will not send crash reports to Binary Fortress Software.
+  
+If you disable this policy setting, DisplayFusion will send anonymous crash reports to Binary Fortress Software.
+  
+If you do not configure this policy setting, DisplayFusion will send anonymous crash reports to Binary Fortress Software.
+			</string>
+			<!-- Desktop Wallpaper settings -->
+			<string id="WallpaperEnabled">Allow DisplayFusion to manage the Desktop Wallpaper</string>
+			<string id="WallpaperEnabledExplain">This policy setting controls whether or not DisplayFusion will be allowed to manage the desktop wallpaper. This policy setting requires a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, DisplayFusion will be allowed to manage the desktop wallpaper.
+  
+If you disable this policy setting, DisplayFusion will not be allowed to manage the desktop wallpaper.
+  
+If you do not configure this policy setting, the "Allow DisplayFusion to manage the Desktop Wallpaper" option is configurable from within DisplayFusion (disabled in a default installation).
+			</string>	
+			<string id="WallpaperAutoFixImages">Autofix wallpaper images when Wallpaper feature is enabled</string>
+			<string id="WallpaperAutoFixImagesExplain">This policy setting controls whether or not DisplayFusion will automatically adjust the wallpaper when needed (resolution changes, etc). This policy setting requires a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, DisplayFusion will automatically adjust the wallpaper when needed.
+  
+If you disable this policy setting, DisplayFusion will not automatically adjust the wallpaper when needed.
+  
+If you do not configure this policy setting, the "Autofix wallpaper images when Wallpaper feature is enabled" option is configurable from within DisplayFusion (enabled in a default installation).
+			</string>	
+			<string id="WallpaperBlockOnlineManual">Disable All Online Image Providers (Single Image)</string>
+			<string id="WallpaperBlockOnlineManualExplain">This policy setting controls whether or not the user will be allowed to load images from the online image providers when using the "Single Image" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from any online image provider when using the "Single Image" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from any online image provider when using the "Single Image" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from any online image provider when using the "Single Image" wallpaper mode.
+			</string>			
+			<string id="WallpaperBlockOnlineRandom">Disable All Online Image Providers (Random)</string>
+			<string id="WallpaperBlockOnlineRandomExplain">This policy setting controls whether or not the user will be allowed to load images from the online image providers when using the "Randomly Load from Online Provider" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from any online image provider when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from any online image provider when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from any online image provider when using the "Randomly Load from Online Provider" wallpaper mode.
+			</string>						
+			<string id="WallpaperBlockFlickrManual">Disable Wallpaper Provider: Flickr (Single Image)</string>
+			<string id="WallpaperBlockFlickrManualExplain">This policy setting controls whether or not the user will be allowed to load images from Flickr when using the "Single Image" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from Flickr when using the "Single Image" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from Flickr when using the "Single Image" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from Flickr when using the "Single Image" wallpaper mode.
+			</string>			
+			<string id="WallpaperBlockFlickrRandom">Disable Wallpaper Provider: Flickr (Random)</string>
+			<string id="WallpaperBlockFlickrRandomExplain">This policy setting controls whether or not the user will be allowed to load images from Flickr when using the "Randomly Load from Online Provider" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from Flickr when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from Flickr when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from Flickr when using the "Randomly Load from Online Provider" wallpaper mode.
+			</string>			
+			<string id="WallpaperBlockVladstudioManual">Disable Wallpaper Provider: Vladstudio (Single Image)</string>
+			<string id="WallpaperBlockVladstudioManualExplain">This policy setting controls whether or not the user will be allowed to load images from Vladstudio when using the "Single Image" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from Vladstudio when using the "Single Image" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from Vladstudio when using the "Single Image" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from Vladstudio when using the "Single Image" wallpaper mode.
+			</string>			
+			<string id="WallpaperBlockVladstudioRandom">Disable Wallpaper Provider: Vladstudio (Random)</string>
+			<string id="WallpaperBlockVladstudioRandomExplain">This policy setting controls whether or not the user will be allowed to load images from Vladstudio when using the "Randomly Load from Online Provider" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from Vladstudio when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from Vladstudio when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from Vladstudio when using the "Randomly Load from Online Provider" wallpaper mode.
+			</string>		
+			<string id="WallpaperBlockBingImageSearchManual">Disable Wallpaper Provider: Bing Image Search (Single Image)</string>
+			<string id="WallpaperBlockBingImageSearchManualExplain">This policy setting controls whether or not the user will be allowed to load images from Bing Image Search when using the "Single Image" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from Bing Image Search when using the "Single Image" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from Bing Image Search when using the "Single Image" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from Bing Image Search when using the "Single Image" wallpaper mode.
+			</string>			
+			<string id="WallpaperBlockBingImageSearchRandom">Disable Wallpaper Provider: Bing Image Search (Random)</string>
+			<string id="WallpaperBlockBingImageSearchRandomExplain">This policy setting controls whether or not the user will be allowed to load images from Bing Image Search when using the "Randomly Load from Online Provider" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from Bing Image Search when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from Bing Image Search when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from Bing Image Search when using the "Randomly Load from Online Provider" wallpaper mode.
+			</string>				
+			<string id="WallpaperBlockdeviantARTAPIManual">Disable Wallpaper Provider: deviantART API (Single Image)</string>
+			<string id="WallpaperBlockdeviantARTAPIManualExplain">This policy setting controls whether or not the user will be allowed to load images from deviantART API when using the "Single Image" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from deviantART API when using the "Single Image" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from deviantART API when using the "Single Image" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from deviantART API when using the "Single Image" wallpaper mode.
+			</string>			
+			<string id="WallpaperBlockdeviantARTAPIRandom">Disable Wallpaper Provider: deviantART API (Random)</string>
+			<string id="WallpaperBlockdeviantARTAPIRandomExplain">This policy setting controls whether or not the user will be allowed to load images from deviantART API when using the "Randomly Load from Online Provider" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from deviantART API when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from deviantART API when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from deviantART API when using the "Randomly Load from Online Provider" wallpaper mode.
+			</string>	
+			<string id="WallpaperBlockdeviantARTRSSManual">Disable Wallpaper Provider: deviantART RSS (Single Image)</string>
+			<string id="WallpaperBlockdeviantARTRSSManualExplain">This policy setting controls whether or not the user will be allowed to load images from deviantART RSS feeds when using the "Single Image" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from deviantART RSS feeds when using the "Single Image" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from deviantART RSS feeds when using the "Single Image" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from deviantART RSS feeds when using the "Single Image" wallpaper mode.
+			</string>			
+			<string id="WallpaperBlockdeviantARTRSSRandom">Disable Wallpaper Provider: deviantART RSS feeds (Random)</string>
+			<string id="WallpaperBlockdeviantARTRSSRandomExplain">This policy setting controls whether or not the user will be allowed to load images from deviantART RSS feeds when using the "Randomly Load from Online Provider" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from deviantART RSS feeds when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from deviantART RSS feeds when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from deviantART RSS feeds when using the "Randomly Load from Online Provider" wallpaper mode.
+			</string>	
+			<string id="WallpaperBlockGoogleImageSearchManual">Disable Wallpaper Provider: Google Image Search (Single Image)</string>
+			<string id="WallpaperBlockGoogleImageSearchManualExplain">This policy setting controls whether or not the user will be allowed to load images from Google Image Search when using the "Single Image" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from Google Image Search when using the "Single Image" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from Google Image Search when using the "Single Image" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from Google Image Search when using the "Single Image" wallpaper mode.
+			</string>			
+			<string id="WallpaperBlockGoogleImageSearchRandom">Disable Wallpaper Provider: Google Image Search (Random)</string>
+			<string id="WallpaperBlockGoogleImageSearchRandomExplain">This policy setting controls whether or not the user will be allowed to load images from Google Image Search when using the "Randomly Load from Online Provider" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from Google Image Search when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from Google Image Search when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from Google Image Search when using the "Randomly Load from Online Provider" wallpaper mode.
+			</string>
+			<string id="WallpaperBlock500pxManual">Disable Wallpaper Provider: 500px (Single Image)</string>
+			<string id="WallpaperBlock500pxManualExplain">This policy setting controls whether or not the user will be allowed to load images from 500px when using the "Single Image" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from 500px when using the "Single Image" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from 500px when using the "Single Image" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from 500px when using the "Single Image" wallpaper mode.
+			</string>			
+			<string id="WallpaperBlock500pxRandom">Disable Wallpaper Provider: 500px (Random)</string>
+			<string id="WallpaperBlock500pxRandomExplain">This policy setting controls whether or not the user will be allowed to load images from 500px when using the "Randomly Load from Online Provider" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from 500px when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from 500px when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from 500px when using the "Randomly Load from Online Provider" wallpaper mode.
+			</string>			
+			<string id="WallpaperBlockWallpaperFusionManual">Disable Wallpaper Provider: WallpaperFusion (Single Image)</string>
+			<string id="WallpaperBlockWallpaperFusionManualExplain">This policy setting controls whether or not the user will be allowed to load images from WallpaperFusion when using the "Single Image" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from WallpaperFusion when using the "Single Image" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from WallpaperFusion when using the "Single Image" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from WallpaperFusion when using the "Single Image" wallpaper mode.
+			</string>			
+			<string id="WallpaperBlockWallpaperFusionRandom">Disable Wallpaper Provider: WallpaperFusion (Random)</string>
+			<string id="WallpaperBlockWallpaperFusionRandomExplain">This policy setting controls whether or not the user will be allowed to load images from WallpaperFusion when using the "Randomly Load from Online Provider" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from WallpaperFusion when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from WallpaperFusion when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from WallpaperFusion when using the "Randomly Load from Online Provider" wallpaper mode.
+			</string>
+			<string id="WallpaperBlockZenfolioManual">Disable Wallpaper Provider: Zenfolio (Single Image)</string>
+			<string id="WallpaperBlockZenfolioManualExplain">This policy setting controls whether or not the user will be allowed to load images from Zenfolio when using the "Single Image" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from Zenfolio when using the "Single Image" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from Zenfolio when using the "Single Image" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from Zenfolio when using the "Single Image" wallpaper mode.
+			</string>			
+			<string id="WallpaperBlockZenfolioRandom">Disable Wallpaper Provider: Zenfolio (Random)</string>
+			<string id="WallpaperBlockZenfolioRandomExplain">This policy setting controls whether or not the user will be allowed to load images from Zenfolio when using the "Randomly Load from Online Provider" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from Zenfolio when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from Zenfolio when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from Zenfolio when using the "Randomly Load from Online Provider" wallpaper mode.
+			</string>
+			<string id="WallpaperBlockFacebookManual">Disable Wallpaper Provider: Facebook (Single Image)</string>
+			<string id="WallpaperBlockFacebookManualExplain">This policy setting controls whether or not the user will be allowed to load images from Facebook when using the "Single Image" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from Facebook when using the "Single Image" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from Facebook when using the "Single Image" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from Facebook when using the "Single Image" wallpaper mode.
+			</string>
+			<string id="WallpaperBlockFacebookRandom">Disable Wallpaper Provider: Facebook (Random)</string>
+			<string id="WallpaperBlockFacebookRandomExplain">This policy setting controls whether or not the user will be allowed to load images from Facebook when using the "Randomly Load from Online Provider" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from Facebook when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from Facebook when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from Facebook when using the "Randomly Load from Online Provider" wallpaper mode.
+			</string>			
+			<string id="WallpaperBlockGooglePlusManual">Disable Wallpaper Provider: Google+ (Single Image)</string>
+			<string id="WallpaperBlockGooglePlusManualExplain">This policy setting controls whether or not the user will be allowed to load images from Google+ when using the "Single Image" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from Google+ when using the "Single Image" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from Google+ when using the "Single Image" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from Google+ when using the "Single Image" wallpaper mode.
+			</string>
+			<string id="WallpaperBlockGooglePlusRandom">Disable Wallpaper Provider: Google+ (Random)</string>
+			<string id="WallpaperBlockGooglePlusRandomExplain">This policy setting controls whether or not the user will be allowed to load images from Google+ when using the "Randomly Load from Online Provider" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from Google+ when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from Google+ when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from Google+ when using the "Randomly Load from Online Provider" wallpaper mode.
+			</string>
+			<string id="WallpaperBlockAPODManual">Disable Wallpaper Provider: Astronomy Picture of the Day (Single Image)</string>
+			<string id="WallpaperBlockAPODManualExplain">This policy setting controls whether or not the user will be allowed to load images from Astronomy Picture of the Day when using the "Single Image" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from Astronomy Picture of the Day when using the "Single Image" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from Astronomy Picture of the Day when using the "Single Image" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from Astronomy Picture of the Day when using the "Single Image" wallpaper mode.
+			</string>
+			<string id="WallpaperBlockAPODRandom">Disable Wallpaper Provider: Astronomy Picture of the Day (Random)</string>
+			<string id="WallpaperBlockAPODRandomExplain">This policy setting controls whether or not the user will be allowed to load images from Astronomy Picture of the Day when using the "Randomly Load from Online Provider" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from Astronomy Picture of the Day when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from Astronomy Picture of the Day when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from Astronomy Picture of the Day when using the "Randomly Load from Online Provider" wallpaper mode.
+			</string>		
+			<string id="WallpaperBlockSpecialWeatherManual">Disable Wallpaper Provider: Current Weather (Single Image)</string>
+			<string id="WallpaperBlockSpecialWeatherManualExplain">This policy setting controls whether or not the user will be allowed to load images from Current Weather when using the "Single Image" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from Current Weather when using the "Single Image" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from Current Weather when using the "Single Image" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from Current Weather when using the "Single Image" wallpaper mode.
+			</string>
+			<string id="WallpaperBlockSpecialWeatherRandom">Disable Wallpaper Provider: Current Weather (Random)</string>
+			<string id="WallpaperBlockSpecialWeatherRandomExplain">This policy setting controls whether or not the user will be allowed to load images from Current Weather when using the "Randomly Load from Online Provider" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from Current Weather when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from Current Weather when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from Current Weather when using the "Randomly Load from Online Provider" wallpaper mode.
+			</string>				
+			<string id="WallpaperBlockSpecialTimeOfDayManual">Disable Wallpaper Provider: Current Time of Day (Single Image)</string>
+			<string id="WallpaperBlockSpecialTimeOfDayManualExplain">This policy setting controls whether or not the user will be allowed to load images from Current Time of Day when using the "Single Image" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from Current Time of Day when using the "Single Image" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from Current Time of Day when using the "Single Image" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from Current Time of Day when using the "Single Image" wallpaper mode.
+			</string>
+			<string id="WallpaperBlockSpecialTimeOfDayRandom">Disable Wallpaper Provider: Current Time of Day (Random)</string>
+			<string id="WallpaperBlockSpecialTimeOfDayRandomExplain">This policy setting controls whether or not the user will be allowed to load images from Current Time of Day when using the "Randomly Load from Online Provider" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from Current Time of Day when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from Current Time of Day when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from Current Time of Day when using the "Randomly Load from Online Provider" wallpaper mode.
+			</string>	
+			<string id="WallpaperBlockImgurManual">Disable Wallpaper Provider: Imgur (Single Image)</string>
+			<string id="WallpaperBlockImgurManualExplain">This policy setting controls whether or not the user will be allowed to load images from Imgur when using the "Single Image" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from Imgur when using the "Single Image" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from Imgur when using the "Single Image" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from Imgur when using the "Single Image" wallpaper mode.
+			</string>
+			<string id="WallpaperBlockImgurRandom">Disable Wallpaper Provider: Imgur (Random)</string>
+			<string id="WallpaperBlockImgurRandomExplain">This policy setting controls whether or not the user will be allowed to load images from Imgur when using the "Randomly Load from Online Provider" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from Imgur when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from Imgur when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from Imgur when using the "Randomly Load from Online Provider" wallpaper mode.
+			</string>
+			<string id="WallpaperBlockInstagramManual">Disable Wallpaper Provider: Instagram (Single Image)</string>
+			<string id="WallpaperBlockInstagramManualExplain">This policy setting controls whether or not the user will be allowed to load images from Instagram when using the "Single Image" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from Instagram when using the "Single Image" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from Instagram when using the "Single Image" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from Instagram when using the "Single Image" wallpaper mode.
+			</string>
+			<string id="WallpaperBlockInstagramRandom">Disable Wallpaper Provider: Instagram (Random)</string>
+			<string id="WallpaperBlockInstagramRandomExplain">This policy setting controls whether or not the user will be allowed to load images from Instagram when using the "Randomly Load from Online Provider" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from Instagram when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from Instagram when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from Instagram when using the "Randomly Load from Online Provider" wallpaper mode.
+			</string>
+			<string id="WallpaperBlockPixabayManual">Disable Wallpaper Provider: Pixabay (Single Image)</string>
+			<string id="WallpaperBlockPixabayManualExplain">This policy setting controls whether or not the user will be allowed to load images from Pixabay when using the "Single Image" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from Pixabay when using the "Single Image" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from Pixabay when using the "Single Image" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from Pixabay when using the "Single Image" wallpaper mode.
+			</string>
+			<string id="WallpaperBlockPixabayRandom">Disable Wallpaper Provider: Pixabay (Random)</string>
+			<string id="WallpaperBlockPixabayRandomExplain">This policy setting controls whether or not the user will be allowed to load images from Pixabay when using the "Randomly Load from Online Provider" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from Pixabay when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from Pixabay when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from Pixabay when using the "Randomly Load from Online Provider" wallpaper mode.
+			</string>			
+			<string id="WallpaperBlockSmugmugManual">Disable Wallpaper Provider: Smugmug (Single Image)</string>
+			<string id="WallpaperBlockSmugmugManualExplain">This policy setting controls whether or not the user will be allowed to load images from Smugmug when using the "Single Image" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from Smugmug when using the "Single Image" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from Smugmug when using the "Single Image" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from Smugmug when using the "Single Image" wallpaper mode.
+			</string>
+			<string id="WallpaperBlockSmugmugRandom">Disable Wallpaper Provider: Smugmug (Random)</string>
+			<string id="WallpaperBlockSmugmugRandomExplain">This policy setting controls whether or not the user will be allowed to load images from Smugmug when using the "Randomly Load from Online Provider" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from Smugmug when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from Smugmug when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from Smugmug when using the "Randomly Load from Online Provider" wallpaper mode.
+			</string>
+			<string id="WallpaperBlockLoadFromURLManual">Disable Wallpaper Provider: Load From URL (Single Image)</string>
+			<string id="WallpaperBlockLoadFromURLManualExplain">This policy setting controls whether or not the user will be allowed to load images from Load From URL when using the "Single Image" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from Load From URL when using the "Single Image" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from Load From URL when using the "Single Image" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from Load From URL when using the "Single Image" wallpaper mode.
+			</string>
+			<string id="WallpaperBlockLoadFromURLRandom">Disable Wallpaper Provider: Load From URL (Random)</string>
+			<string id="WallpaperBlockLoadFromURLRandomExplain">This policy setting controls whether or not the user will be allowed to load images from Load From URL when using the "Randomly Load from Online Provider" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the user will not be allowed to load images from Load From URL when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you disable this policy setting, the user will be allowed to load images from Load From URL when using the "Randomly Load from Online Provider" wallpaper mode.
+  
+If you do not configure this policy setting, the user will be allowed to load images from Load From URL when using the "Randomly Load from Online Provider" wallpaper mode.
+			</string>			
+			<string id="WallpaperBlockDigitalBlasphemyManual">Disable Wallpaper Provider: Digital Blasphemy (Single Image)</string>
+			<string id="WallpaperBlockDigitalBlasphemyManualExplain">This policy setting controls whether or not the user will be allowed to load images from Digital Blasphemy when using the "Single Image" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+
+If you enable this policy setting, the user will not be allowed to load images from Digital Blasphemy when using the "Single Image" wallpaper mode.
+
+If you disable this policy setting, the user will be allowed to load images from Digital Blasphemy when using the "Single Image" wallpaper mode.
+
+If you do not configure this policy setting, the user will be allowed to load images from Digital Blasphemy when using the "Single Image" wallpaper mode.
+			</string>
+			<string id="WallpaperBlockDigitalBlasphemyRandom">Disable Wallpaper Provider: Digital Blasphemy (Random)</string>
+			<string id="WallpaperBlockDigitalBlasphemyRandomExplain">This policy setting controls whether or not the user will be allowed to load images from Digital Blasphemy when using the "Randomly Load from Online Provider" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+
+If you enable this policy setting, the user will not be allowed to load images from Digital Blasphemy when using the "Randomly Load from Online Provider" wallpaper mode.
+
+If you disable this policy setting, the user will be allowed to load images from Digital Blasphemy when using the "Randomly Load from Online Provider" wallpaper mode.
+
+If you do not configure this policy setting, the user will be allowed to load images from Digital Blasphemy when using the "Randomly Load from Online Provider" wallpaper mode.
+			</string>
+			<string id="WallpaperBlockWallpaperAbyssManual">Disable Wallpaper Provider: Wallpaper Abyss (Single Image)</string>
+			<string id="WallpaperBlockWallpaperAbyssManualExplain">This policy setting controls whether or not the user will be allowed to load images from Wallpaper Abyss when using the "Single Image" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+
+If you enable this policy setting, the user will not be allowed to load images from Wallpaper Abyss when using the "Single Image" wallpaper mode.
+
+If you disable this policy setting, the user will be allowed to load images from Wallpaper Abyss when using the "Single Image" wallpaper mode.
+
+If you do not configure this policy setting, the user will be allowed to load images from Wallpaper Abyss when using the "Single Image" wallpaper mode.
+			</string>
+			<string id="WallpaperBlockWallpaperAbyssRandom">Disable Wallpaper Provider: Wallpaper Abyss (Random)</string>
+			<string id="WallpaperBlockWallpaperAbyssRandomExplain">This policy setting controls whether or not the user will be allowed to load images from Wallpaper Abyss when using the "Randomly Load from Online Provider" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+
+If you enable this policy setting, the user will not be allowed to load images from Wallpaper Abyss when using the "Randomly Load from Online Provider" wallpaper mode.
+
+If you disable this policy setting, the user will be allowed to load images from Wallpaper Abyss when using the "Randomly Load from Online Provider" wallpaper mode.
+
+If you do not configure this policy setting, the user will be allowed to load images from Wallpaper Abyss when using the "Randomly Load from Online Provider" wallpaper mode.
+			</string>
+			<string id="WallpaperBlockWebsiteManual">Disable Wallpaper Provider: Website Wallpaper (Single Website)</string>
+			<string id="WallpaperBlockWebsiteManualExplain">This policy setting controls whether or not the user will be allowed to use a website as a wallpaper when using the "Single Image" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+
+If you enable this policy setting, the user will not be allowed to use a website as a wallpaper when using the "Single Image" wallpaper mode.
+
+If you disable this policy setting, the user will be allowed to use a website as a wallpaper when using the "Single Image" wallpaper mode.
+
+If you do not configure this policy setting, the user will be allowed to use a website as a wallpaper when using the "Single Image" wallpaper mode.
+			</string>
+			<string id="WallpaperBlockWebsiteRandom">Disable Wallpaper Provider: Website Wallpaper (Random)</string>
+			<string id="WallpaperBlockWebsiteRandomExplain">This policy setting controls whether or not the user will be allowed to use a website as a wallpaper when using the "Randomly Load from Online Provider" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+
+If you enable this policy setting, the user will not be allowed to use a website as a wallpaper when using the "Randomly Load from Online Provider" wallpaper mode.
+
+If you disable this policy setting, the user will be allowed to use a website as a wallpaper when using the "Randomly Load from Online Provider" wallpaper mode.
+
+If you do not configure this policy setting, the user will be allowed to use a website as a wallpaper when using the "Randomly Load from Online Provider" wallpaper mode.
+			</string>
+			<string id="WallpaperBlockMyVideosManual">Disable Wallpaper Provider: My Videos (Single Video)</string>
+			<string id="WallpaperBlockMyVideosManualExplain">This policy setting controls whether or not the user will be allowed to use local video files as a wallpaper when using the "Single Image" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+
+If you enable this policy setting, the user will not be allowed to use local video files as a wallpaper when using the "Single Image" wallpaper mode.
+
+If you disable this policy setting, the user will be allowed to use local video files as a wallpaper when using the "Single Image" wallpaper mode.
+
+If you do not configure this policy setting, the user will be allowed to use local video files as a wallpaper when using the "Single Image" wallpaper mode.
+			</string>
+			<string id="WallpaperBlockMyVideosRandom">Disable Wallpaper Provider: My Videos (Random)</string>
+			<string id="WallpaperBlockMyVideosRandomExplain">This policy setting controls whether or not the user will be allowed to use local video files as a wallpaper when using the "Randomly Load from Online Provider" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+
+If you enable this policy setting, the user will not be allowed to use local video files as a wallpaper when using the "Randomly Load from Online Provider" wallpaper mode.
+
+If you disable this policy setting, the user will be allowed to use local video files as a wallpaper when using the "Randomly Load from Online Provider" wallpaper mode.
+
+If you do not configure this policy setting, the user will be allowed to use local video files as a wallpaper when using the "Randomly Load from Online Provider" wallpaper mode.
+			</string>			
+			<string id="WallpaperBlockTumblrManual">Disable Wallpaper Provider: Tumblr (Single Image)</string>
+			<string id="WallpaperBlockTumblrManualExplain">This policy setting controls whether or not the user will be allowed to load images from Tumblr when using the "Single Image" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+
+If you enable this policy setting, the user will not be allowed to load images from Tumblr when using the "Single Image" wallpaper mode.
+
+If you disable this policy setting, the user will be allowed to load images from Tumblr when using the "Single Image" wallpaper mode.
+
+If you do not configure this policy setting, the user will be allowed to load images from Tumblr when using the "Single Image" wallpaper mode.
+			</string>
+			<string id="WallpaperBlockTumblrRandom">Disable Wallpaper Provider: Tumblr (Random)</string>
+			<string id="WallpaperBlockTumblrRandomExplain">This policy setting controls whether or not the user will be allowed to load images from Tumblr when using the "Randomly Load from Online Provider" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+
+If you enable this policy setting, the user will not be allowed to load images from Tumblr when using the "Randomly Load from Online Provider" wallpaper mode.
+
+If you disable this policy setting, the user will be allowed to load images from Tumblr when using the "Randomly Load from Online Provider" wallpaper mode.
+
+If you do not configure this policy setting, the user will be allowed to load images from Tumblr when using the "Randomly Load from Online Provider" wallpaper mode.
+			</string>
+			<string id="WallpaperBlockPinterestManual">Disable Wallpaper Provider: Pinterest (Single Image)</string>
+			<string id="WallpaperBlockPinterestManualExplain">This policy setting controls whether or not the user will be allowed to load images from Pinterest when using the "Single Image" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+
+If you enable this policy setting, the user will not be allowed to load images from Pinterest when using the "Single Image" wallpaper mode.
+
+If you disable this policy setting, the user will be allowed to load images from Pinterest when using the "Single Image" wallpaper mode.
+
+If you do not configure this policy setting, the user will be allowed to load images from Pinterest when using the "Single Image" wallpaper mode.
+			</string>
+			<string id="WallpaperBlockPinterestRandom">Disable Wallpaper Provider: Pinterest (Random)</string>
+			<string id="WallpaperBlockPinterestRandomExplain">This policy setting controls whether or not the user will be allowed to load images from Pinterest when using the "Randomly Load from Online Provider" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+
+If you enable this policy setting, the user will not be allowed to load images from Pinterest when using the "Randomly Load from Online Provider" wallpaper mode.
+
+If you disable this policy setting, the user will be allowed to load images from Pinterest when using the "Randomly Load from Online Provider" wallpaper mode.
+
+If you do not configure this policy setting, the user will be allowed to load images from Pinterest when using the "Randomly Load from Online Provider" wallpaper mode.
+			</string>
+			<string id="WallpaperBlockUnsplashManual">Disable Wallpaper Provider: Unsplash (Single Image)</string>
+			<string id="WallpaperBlockUnsplashManualExplain">This policy setting controls whether or not the user will be allowed to load images from Unsplash when using the "Single Image" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+
+If you enable this policy setting, the user will not be allowed to load images from Unsplash when using the "Single Image" wallpaper mode.
+
+If you disable this policy setting, the user will be allowed to load images from Unsplash when using the "Single Image" wallpaper mode.
+
+If you do not configure this policy setting, the user will be allowed to load images from Unsplash when using the "Single Image" wallpaper mode.
+			</string>
+			<string id="WallpaperBlockUnsplashRandom">Disable Wallpaper Provider: Unsplash (Random)</string>
+			<string id="WallpaperBlockUnsplashRandomExplain">This policy setting controls whether or not the user will be allowed to load images from Unsplash when using the "Randomly Load from Online Provider" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+
+If you enable this policy setting, the user will not be allowed to load images from Unsplash when using the "Randomly Load from Online Provider" wallpaper mode.
+
+If you disable this policy setting, the user will be allowed to load images from Unsplash when using the "Randomly Load from Online Provider" wallpaper mode.
+
+If you do not configure this policy setting, the user will be allowed to load images from Unsplash when using the "Randomly Load from Online Provider" wallpaper mode.
+			</string>
+			<string id="WallpaperBlockDropboxManual">Disable Wallpaper Provider: Dropbox (Single Image)</string>
+			<string id="WallpaperBlockDropboxManualExplain">This policy setting controls whether or not the user will be allowed to load images from Dropbox when using the "Single Image" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+
+If you enable this policy setting, the user will not be allowed to load images from Dropbox when using the "Single Image" wallpaper mode.
+
+If you disable this policy setting, the user will be allowed to load images from Dropbox when using the "Single Image" wallpaper mode.
+
+If you do not configure this policy setting, the user will be allowed to load images from Dropbox when using the "Single Image" wallpaper mode.
+			</string>
+			<string id="WallpaperBlockDropboxRandom">Disable Wallpaper Provider: Dropbox (Random)</string>
+			<string id="WallpaperBlockDropboxRandomExplain">This policy setting controls whether or not the user will be allowed to load images from Dropbox when using the "Randomly Load from Online Provider" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+
+If you enable this policy setting, the user will not be allowed to load images from Dropbox when using the "Randomly Load from Online Provider" wallpaper mode.
+
+If you disable this policy setting, the user will be allowed to load images from Dropbox when using the "Randomly Load from Online Provider" wallpaper mode.
+
+If you do not configure this policy setting, the user will be allowed to load images from Dropbox when using the "Randomly Load from Online Provider" wallpaper mode.
+			</string>			
+			<string id="WallpaperBlockRedditManual">Disable Wallpaper Provider: Reddit (Single Image)</string>
+			<string id="WallpaperBlockRedditManualExplain">This policy setting controls whether or not the user will be allowed to load images from Reddit when using the "Single Image" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+
+If you enable this policy setting, the user will not be allowed to load images from Reddit when using the "Single Image" wallpaper mode.
+
+If you disable this policy setting, the user will be allowed to load images from Reddit when using the "Single Image" wallpaper mode.
+
+If you do not configure this policy setting, the user will be allowed to load images from Reddit when using the "Single Image" wallpaper mode.
+			</string>
+			<string id="WallpaperBlockRedditRandom">Disable Wallpaper Provider: Reddit (Random)</string>
+			<string id="WallpaperBlockRedditRandomExplain">This policy setting controls whether or not the user will be allowed to load images from Reddit when using the "Randomly Load from Online Provider" wallpaper mode. This policy setting does not require a restart of DisplayFusion to take effect.
+
+If you enable this policy setting, the user will not be allowed to load images from Reddit when using the "Randomly Load from Online Provider" wallpaper mode.
+
+If you disable this policy setting, the user will be allowed to load images from Reddit when using the "Randomly Load from Online Provider" wallpaper mode.
+
+If you do not configure this policy setting, the user will be allowed to load images from Reddit when using the "Randomly Load from Online Provider" wallpaper mode.
+			</string>
+			<string id="CleanImageFolders">Remove unused temporary image files automatically</string>
+			<string id="CleanImageFoldersExplain">This policy setting controls whether or not DisplayFusion will clean up the Pictures\DisplayFusion\Web Images folder each time the wallpaper changes. This policy setting requires a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, DisplayFusion will clean up the Pictures\DisplayFusion\Web Images folder each time the wallpaper changes.
+  
+If you disable this policy setting, DisplayFusion will not clean up the Pictures\DisplayFusion\Web Images folder each time the wallpaper changes.
+  
+If you do not configure this policy setting, the "Remove unused temporary image files automatically" option is configurable from within DisplayFusion (enabled in a default installation).
+			</string>
+			<string id="PauseWhenFullScreen">Pause wallpaper changes while a full screen application is running</string>
+			<string id="PauseWhenFullScreenExplain">This policy setting controls whether or not DisplayFusion will pause wallpaper changes (if the wallpaper is set to load random images) while a full screen application is running. This policy setting requires a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, DisplayFusion will pause wallpaper changes while a full screen application is running.
+  
+If you disable this policy setting, DisplayFusion will not pause wallpaper changes while a full screen application is running.
+  
+If you do not configure this policy setting, the "Pause wallpaper changes while a full screen application is running" option is configurable from within DisplayFusion (disabled in a default installation).
+			</string>
+			<string id="IgnoreRDPChanges">Pause wallpaper changes while in a remote desktop session (RDP)</string>
+			<string id="IgnoreRDPChangesExplain">This policy setting controls whether or not DisplayFusion will pause wallpaper changes (if the wallpaper is set to load random images) when you're connected to the machine via remote desktop. This policy setting requires a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, DisplayFusion will pause wallpaper changes when you're connected to the machine via remote desktop.
+  
+If you disable this policy setting, DisplayFusion will not pause wallpaper changes when you're connected to the machine via remote desktop.
+  
+If you do not configure this policy setting, the "Pause wallpaper changes while in a remote desktop session (RDP)" option is configurable from within DisplayFusion (disabled in a default installation).
+			</string>
+			<string id="WallpaperPauseBattery">Pause wallpaper changes while computer is running on battery power</string>
+			<string id="WallpaperPauseBatteryExplain">This policy setting controls whether or not DisplayFusion will pause wallpaper changes (if the wallpaper is set to load random images) while the computer is on battery power. This policy setting requires a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, DisplayFusion will pause wallpaper changes while the computer is on battery power.
+  
+If you disable this policy setting, DisplayFusion will not pause wallpaper changes while the computer is on battery power.
+  
+If you do not configure this policy setting, the "Pause wallpaper changes while computer is running on battery power" option is configurable from within DisplayFusion (disabled in a default installation).
+			</string>	
+			<string id="WallpaperAutoRotate">Rotate wallpaper images automatically using JPEG EXIF information</string>
+			<string id="WallpaperAutoRotateExplain">This policy setting controls whether or not DisplayFusion will rotate the wallpaper image based on the EXIF Orientation tag in the source image. This policy setting requires a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, DisplayFusion will rotate the wallpaper image based on the EXIF Orientation tag in the source image.
+  
+If you disable this policy setting, DisplayFusion will not rotate the wallpaper image based on the EXIF Orientation tag in the source image.
+  
+If you do not configure this policy setting, the "Rotate wallpaper images automatically using JPEG EXIF information" option is configurable from within DisplayFusion (enabled in a default installation).
+			</string>	
+			<string id="WallpaperIgnoreHiddenFiles">Random wallpaper changer ignores hidden files and folders</string>
+			<string id="WallpaperIgnoreHiddenFilesExplain">This policy setting controls whether or not DisplayFusion will ignore hidden files and folders when using the "My Computer" wallpaper source with the "Load random images" checkbox enabled. This policy setting requires a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, DisplayFusion will ignore hidden files and folders.
+  
+If you disable this policy setting, DisplayFusion will not ignore hidden files and folders.
+  
+If you do not configure this policy setting, the "Random wallpaper changer ignores hidden files and folders" option is configurable from within DisplayFusion (enabled in a default installation).
+			</string>	
+			<string id="WallpaperUseTransitions">Use transitions when changing wallpaper</string>
+			<string id="WallpaperUseTransitionsExplain">This policy setting controls whether or not DisplayFusion will show a fade transition when the wallpaper changes. This policy setting requires a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, DisplayFusion will show a fade transition when the wallpaper changes.
+  
+If you disable this policy setting, DisplayFusion will not show a fade transition when the wallpaper changes.
+  
+If you do not configure this policy setting, the "Use transitions when changing wallpaper" option is configurable from within DisplayFusion (enabled in a default installation).
+			</string>				
+			<string id="CheckWallpaper">Warn me if my wallpaper needs adjusting</string>
+			<string id="CheckWallpaperExplain">This policy setting controls whether or not DisplayFusion will show a tray balloon when the wallpaper needs to be re-applied (for example, if the screen resolution changes), and whether or not to re-apply the wallpaper automatically. This policy setting requires a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, DisplayFusion will show a tray balloon when the wallpaper needs to be re-applied. Additionally, if you enable the "Fix my wallpaper without prompting" checkbox, DisplayFusion will re-apply the wallpaper without showing the tray balloon.
+  
+If you disable this policy setting, DisplayFusion will not show a tray balloon when the wallpaper needs to be re-applied.
+ 
+If you do not configure this policy setting, the "Warn me if my wallpaper needs adjusting" and "Fix my wallpaper without prompting" options are configurable from within DisplayFusion (both disabled in a default installation).
+			</string>
+			<string id="WallpaperLocalImagePathRestrict">Allowed Paths for Local Images</string>
+			<string id="WallpaperLocalImagePathRestrictExplain">This policy setting allows you to specify the path(s) that users will be allowed to choose wallpaper images from.
+			
+If you enable this policy setting, you must specify the path(s) to the folders where you want to allow the user to select wallpaper images from. Separate multiple paths using the pipe (|) symbol.
+
+If you disable this policy setting, the user will be allowed to choose wallpaper images from any folder.
+
+If you do not configure this policy setting, the user will be allowed to choose wallpaper images from any folder.
+			</string>			
+			<!-- Settings: Options tab -->
+			<string id="StartWithWindows">Start with Windows</string>
+			<string id="StartWithWindowsExplain">This policy setting controls whether DisplayFusion will startup when Windows starts up. Note that changes to this policy will only take effect on the client once DisplayFusion has been restarted. If DisplayFusion is currently not set to startup, and you enable this setting, it will need to be manually launched on the client the first time. Also note that this setting only affects the HKCU\Software\Microsoft\Windows\CurrentVersion\Run value. If you've deployed it with the option to run for all users, this policy will not remove that setting from the clients. This policy setting requires a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, DisplayFusion will enable the "Start with Windows" option the next time it is restarted.
+  
+If you disable this policy setting, DisplayFusion will disable the "Start with Windows" option the next time it is restarted.
+ 
+If you do not configure this policy setting, the "Start with Windows" option is configurable from within DisplayFusion (enabled in a default installation).
+			</string>			
+			<string id="AutoUpdate">Check for updates automatically</string>
+			<string id="AutoUpdateExplain">This policy setting controls whether or not DisplayFusion will check for new versions automatically. Automatic update checks are performed when DisplayFusion starts up, and every 24 hours after startup. This policy setting requires a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting and enable the "Check for updates automatically" checkbox, DisplayFusion will check for new stable versions automatically. Additionally, if you enable the "Check for new Beta versions" checkbox, DisplayFusion will also check for new Beta versions during the automatic update checks.
+  
+If you disable this policy setting, DisplayFusion will not check for new versions automatically.
+ 
+If you do not configure this policy setting, the "Check for updates automatically" and "Check for new Beta versions" options are configurable from within DisplayFusion ("Check for updates automatically" is enabled in a default installation, but "Check for new Beta versions" is not).
+			</string>			
+			<string id="AeroColourMode">Aero Colour Settings (Windows 7 and higher)</string>
+			<string id="AeroColourModeExplain">This policy setting controls whether or not DisplayFusion will change the Aero colour based on the focused application, or the current wallpaper. This policy setting requires a restart of DisplayFusion to take effect.
+
+If you enable this policy setting, you can select the Aero Colour Mode (Disabled, Change with Focused Application, or Change with Wallpaper).
+
+If you disable this policy setting, the Aero Colour Settings option will be configurable from within DisplayFusion (disabled in a default installation).
+
+If you do not configure this policy setting, the Aero Colour Settings option will be configurable from within DisplayFusion (disabled in a default installation).
+			</string>
+			<string id="AeroColourMode_Disabled">Don't change the Aero colour</string>
+			<string id="AeroColourMode_ChangeWithApp">Change the Aero colour based on the current application window</string>
+			<string id="AeroColourMode_ChangeWithWallpaper">Change the Aero colour based on the current wallpaper image</string>
+			<string id="BlockUI-BackupSettings">Disable Export Settings button</string>
+			<string id="BlockUI-BackupSettingsExplain">This policy setting controls whether or not the Export Settings button will be disabled. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the Export Settings button is not available to the user.
+  
+If you disable this policy setting, the Export Settings button is available to the user, allowing them to export their DisplayFusion Settings to a .reg file.
+  
+If you do not configure this policy setting, the Export Settings button is available to the user, allowing them to export their DisplayFusion Settings to a .reg file.
+			</string>
+			<string id="BlockUI-RestoreSettings">Disable Restore Settings button</string>
+			<string id="BlockUI-RestoreSettingsExplain">This policy setting controls whether or not the Restore Settings button will be disabled. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the Restore Settings button is not available to the user.
+  
+If you disable this policy setting, the Restore Settings button is available to the user, allowing them to restore their DisplayFusion Settings from a .reg file.
+  
+If you do not configure this policy setting, the Restore Settings button is available to the user, allowing them to restore their DisplayFusion Settings from a .reg file.
+			</string>
+			<string id="BlockUI-BFLogin">Disable Binary Fortress Account Login</string>
+			<string id="BlockUI-BFLoginExplain">This policy setting controls whether or not the user will be able to login to their Binary Fortress Account from within the DisplayFusion Settings window. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the "Binary Fortress Account login controls are not available to the user.
+  
+If you disable this policy setting, the Binary Fortress Account login controls are available to the user, allowing them to login to their Binary Fortress Account from within the DisplayFusion Settings window.
+  
+If you do not configure this policy setting, the Binary Fortress Account login controls are available to the user, allowing them to login to their Binary Fortress Account from within the DisplayFusion Settings window.
+			</string>
+			<!-- Settings: Functions tab -->
+			<string id="EnableHotKeys">Enable Key Combinations</string>
+			<string id="EnableHotKeysExplain">This policy setting controls whether or not the Key Combinations feature will be enabled. This policy setting requires a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the Key Combinations feature will be enabled, allowing application windows and DisplayFusion features to be manipulated via the keyboard shortcuts defined in DisplayFusion.
+  
+If you disable this policy setting, the Key Combinations feature will be disabled, preventing application windows and DisplayFusion features from being manipulated via the keyboard shortcuts defined in DisplayFusion.
+ 
+If you do not configure this policy setting, the "Enable Key Combinations" option is configurable from within DisplayFusion (enabled in a default installation).
+			</string>
+			<string id="TitleBarDisableContextMenu">Disable TitleBar Buttons Context Menu</string>
+			<string id="TitleBarDisableContextMenuExplain">This policy setting controls whether or not the DisplayFusion context menu will be shown when right-clicking a TitleBar Button. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the DisplayFusion context menu will not be shown when right-clicking a TitleBar Button.
+  
+If you disable this policy setting, the DisplayFusion context menu will be shown when right-clicking a TitleBar Button, allowing the user to run any DisplayFusion Function, exit DisplayFusion, access DisplayFusion Settings, etc.
+ 
+If you do not configure this policy setting, the DisplayFusion context menu will be shown when right-clicking a TitleBar Button (enabled in a default installation).
+			</string>			
+			<string id="BlockUI-Settings-FunctionDownload">Disable Download Scripted Button</string>
+			<string id="BlockUI-Settings-FunctionDownloadExplain">This policy setting controls whether or not the "Download Scripted" button will be disabled on the Settings > Functions tab. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the "Download Scripted" button will be disabled.
+  
+If you disable this policy setting, the "Download Scripted" button will be enabled, allowing the customer to download pre-made Scripted Functions.
+ 
+If you do not configure this policy setting, the "Download Scripted" button will be enabled (enabled in a default installation).
+			</string>			
+			<string id="BlockUI-Settings-FunctionAddScripted">Disable Add Scripted Button</string>
+			<string id="BlockUI-Settings-FunctionAddScriptedExplain">This policy setting controls whether or not the "Add Scripted" button will be disabled on the Settings > Functions tab. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the "Add Scripted" button will be disabled.
+  
+If you disable this policy setting, the "Add Scripted" button will be enabled, allowing the user to create Scripted Functions.
+ 
+If you do not configure this policy setting, the "Add Scripted" button will be enabled (enabled in a default installation).
+			</string>
+			<string id="TitleBarButtonsEnabled">Enable TitleBar Buttons</string>
+			<string id="TitleBarButtonsEnabledExplain">This policy setting controls whether or not the TitleBar Buttons feature will be enabled. This policy setting requires a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the TitleBar Buttons feature will be enabled, making the TitleBar Buttons visible on the top-right of each application window.
+  
+If you disable this policy setting, the TitleBar Buttons feature will be disabled, preventing the TitleBar Buttons from being visible on the top-right of each application window.
+ 
+If you do not configure this policy setting, the "Enable TitleBar Buttons" option is configurable from within DisplayFusion (enabled in a default installation).
+			</string>
+			<!-- Settings: Taskbar tab -->
+			<string id="TaskbarsEnabled">Enable Multi-Monitor Taskbars</string>
+			<string id="TaskbarsEnabledExplain">This policy setting controls whether or not the Multi-Monitor Taskbar feature will be enabled. The Multi-Monitor Taskbar feature places a taskbar on each monitor that doesn't already have the native Windows taskbar on it. This policy setting requires a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the Multi-Monitor Taskbar feature will be enabled, making the taskbars visible on each monitor.
+  
+If you disable this policy setting, the Multi-Monitor Taskbar feature will be disabled, preventing the taskbars from being visible on each monitor.
+ 
+If you do not configure this policy setting, the "Enable Multi-Monitor Taskbars" option is configurable from within DisplayFusion (enabled in a default installation).
+			</string>
+			<string id="BlockUI-Settings-StartMenuReplacements">Disable Start Menu Replacement Links</string>
+			<string id="BlockUI-Settings-StartMenuReplacementsExplain">This policy setting controls whether or not the links to third-party Start Menu replacements will be shown on the Settings > Taskbar tab. This policy setting does not apply to DisplayFusion 9.0+ as this list was removed from the Settings window. This policy setting does not require a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the links to third-party Start Menu replacements will not be shown on the Settings > Taskbars tab.
+  
+If you disable this policy setting, the links to third-party Start Menu replacements will be shown on the Settings > Taskbars tab.
+ 
+If you do not configure this policy setting, the links to third-party Start Menu replacements will be shown on the Settings > Taskbars tab (visible in a default installation).
+			</string>			
+			<string id="TaskbarsUseJumpLists">Use Jump Lists</string>
+			<string id="TaskbarsUseJumpListsExplain">This policy setting controls whether or not the DisplayFusion Taskbars will use basic Jump Lists (allows for Functions to be run on windows) for the right-click menus of Taskbar buttons. This policy setting requires a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the DisplayFusion Taskbars will use basic Jump Lists.
+  
+If you disable this policy setting, the DisplayFusion Taskbars will not use basic Jump Lists.
+ 
+If you do not configure this policy setting, the "Use Jump Lists" option is configurable from within DisplayFusion (enabled in a default installation).
+			</string>							
+			<string id="TaskbarsDisableAeroTransparency">Disable transparency on all taskbars (Win7+)</string>
+			<string id="TaskbarsDisableAeroTransparencyExplain">This policy setting controls whether or not DisplayFusion will disable the Aero transparency effects on all Taskbars. This policy setting requires a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, DisplayFusion will disable the Aero transparency effects on all Taskbars.
+  
+If you disable this policy setting, DisplayFusion will not disable the Aero transparency effects on all Taskbars.
+ 
+If you do not configure this policy setting, the "Disable transparency on all taskbars" option is configurable from within DisplayFusion (disabled in a default installation).
+			</string>				
+			<string id="TaskbarsShowOverFullScreen">Show taskbar in front of full screen applications when they lose focus</string>
+			<string id="TaskbarsShowOverFullScreenExplain">This policy setting controls whether or not DisplayFusion will bring the Taskbar (does not affect Windows taskbar) to the front of a full screen window when the window loses focus. This policy setting requires a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, DisplayFusion will bring the Taskbar to the front when the full screen window loses focus.
+  
+If you disable this policy setting, DisplayFusion will not bring the Taskbar to the front when the full screen window loses focus.
+ 
+If you do not configure this policy setting, the "Show taskbar in front of full screen applications when they lose focus" option is configurable from within DisplayFusion (enabled in a default installation).
+			</string>				
+			<string id="TaskbarFocusWindowOnDragOver">Focus window when mouse is dragged over Taskbar button</string>
+			<string id="TaskbarFocusWindowOnDragOverExplain">This policy setting controls whether or not DisplayFusion will focus an application when dragging a file over its Taskbar button. This policy setting requires a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, DisplayFusion DisplayFusion will focus an application when dragging a file over its Taskbar button.
+  
+If you disable this policy setting, DisplayFusion will not focus an application when dragging a file over its Taskbar button.
+ 
+If you do not configure this policy setting, the "Focus window when mouse is dragged over Taskbar button" option is configurable from within DisplayFusion (enabled in a default installation).
+			</string>				
+			<string id="TaskbarStartMenuOpenOnMonitor">Launch Start Menu shortcuts on current monitor</string>
+			<string id="TaskbarStartMenuOpenOnMonitorExplain">This policy setting controls whether or not DisplayFusion will attempt to move an application to the monitor that the program was launched from. This policy setting requires a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, DisplayFusion will attempt to move the application to the monitor that it was launched from.
+  
+If you disable this policy setting, DisplayFusion will not attempt to move the application to the monitor that it was launched from.
+ 
+If you do not configure this policy setting, the "Launch Start Menu shortcuts on current monitor" option is configurable from within DisplayFusion (enabled in a default installation).
+			</string>				      
+			<string id="TaskbarsPreview">Window Preview Style</string>
+			<string id="TaskbarsPreviewExplain">This policy setting controls which window preview style the buttons on the DisplayFusion taskbar will use. The Windows taskbar is not affected by this setting. This policy setting requires a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, you can choose the window preview style in the policy.
+  
+If you disable this policy setting, the "Window Preview Style" option is configurable from within DisplayFusion ("Windows Default" in a default installation).
+ 
+If you do not configure this policy setting, the "Window Preview Style" option is configurable from within DisplayFusion ("Windows Default" in a default installation).
+			</string>
+			<string id="TaskbarsPreview_DisabledWithToolTip">Previews disabled, show tooltip on hover</string>
+			<string id="TaskbarsPreview_WindowsDefault">Windows Default style</string>
+			<string id="TaskbarsPreview_WindowsVista">Windows Vista style</string>
+			<string id="TaskbarsPreview_DisabledWithGroupList">Previews disabled, show group list on hover</string>
+			<string id="TaskbarsMode">Taskbar Mode</string>
+			<string id="TaskbarsModeExplain">This policy setting controls which taskbar mode the DisplayFusion taskbar will use. This policy setting requires a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, you can choose the taskbar mode in the policy.
+  
+If you disable this policy setting, the "Taskbar Mode" option is configurable from within DisplayFusion ("All taskbars show relevant windows" in a default installation).
+ 
+If you do not configure this policy setting, the "Taskbar Mode" option is configurable from within DisplayFusion ("All taskbars show relevant windows" in a default installation).
+			</string>
+			<string id="TaskbarsMode_AllShowRelevant">All taskbars show relevant windows</string>
+			<string id="TaskbarsMode_WindowsShowsAllDFShowsRelevant">Windows taskbar shows all windows, DisplayFusion shows relevant windows</string>
+			<string id="TaskbarsMode_AllShowAll">All taskbars show all windows</string>
+			<string id="TaskbarsMode_WindowsShowsNoneDFShowsAll">Windows taskbar shows no windows, DisplayFusion shows all windows</string>			
+			<string id="TaskbarsMiddleClick">Taskbar Button Middle-Click Behaviour</string>
+			<string id="TaskbarsMiddleClickExplain">This policy setting controls what DisplayFusion will do when a button on a DisplayFusion taskbar is middle-clicked. The Windows taskbar is not affected by this setting. This policy setting requires a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, you can choose the taskbar button middle-click behaviour in the policy.
+  
+If you disable this policy setting, the "Taskbar Button Middle-Click Behaviour" option is configurable from within DisplayFusion ("Open a new instance" in a default installation).
+ 
+If you do not configure this policy setting, the "Taskbar Button Middle-Click Behaviour" option is configurable from within DisplayFusion ("Open a new instance" in a default installation).
+			</string>
+			<string id="TaskbarsMiddleClick_DoNothing">Do nothing</string>
+			<string id="TaskbarsMiddleClick_NewInstance">Open a new instance</string>
+			<string id="TaskbarsMiddleClick_CloseApplication">Close application</string>
+			<string id="TaskbarsMiddleClick_MoveToNextMonitor">Move to next monitor</string>
+			<string id="TaskbarsMiddleClick_MoveToPreviousMonitor">Move to previous monitor</string>
+			<!-- Settings: Monitor Fading tab -->
+			<string id="MonitorFadingEnabled">Enable Monitor Fading</string>
+			<string id="MonitorFadingEnabledExplain">This policy setting controls whether or not the Monitor Fading feature will be enabled. The Monitor Fading feature can dim all monitors, or specific monitors only. This policy setting requires a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the Monitor Fading feature will be enabled, making the taskbars visible on each monitor.
+  
+If you disable this policy setting, the Monitor Fading feature will be disabled, allowing some or all monitors to be dimmed.
+ 
+If you do not configure this policy setting, the "Enable Monitor Fading" option is configurable from within DisplayFusion (disabled in a default installation).
+			</string>
+			<string id="MonitorFadingMode">Monitor Fading Mode</string>
+			<string id="MonitorFadingModeExplain">This policy setting controls which mode the Monitor Fading feature will use. This policy setting requires a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, you can choose the taskbar mode in the policy.
+  
+If you disable this policy setting, the "Monitor Fading Mode" option is configurable from within DisplayFusion ("Fade Non-Current Monitors" in a default installation).
+ 
+If you do not configure this policy setting, the "Taskbar Mode" option is configurable from within DisplayFusion ("Fade Non-Current Monitors" in a default installation).
+			</string>
+			<string id="MonitorFadingMode_FadeAllMonitors">Fade All Monitors</string>
+			<string id="MonitorFadingMode_FadeNonPrimaryMonitors">Fade Non-Primary Monitors</string>
+			<string id="MonitorFadingMode_FadeNonCurrentMonitors">Fade Non-Current Monitors</string>
+			<string id="MonitorFadingMode_FadeAllExceptCurrentWindow">Fade Everything Except Current Window</string>
+			<string id="MonitorFadingOpacity">Monitor Fading Opacity</string>
+			<string id="MonitorFadingOpacityExplain">This policy setting controls how dark the Monitor Fading will be. This policy setting requires a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, the Monitor Fading you can choose the opacity level in the policy (1-100).
+  
+If you disable this policy setting, the Monitor Fading opacity is configurable within DisplayFusion (60 in a default installation).
+ 
+If you do not configure this policy setting, the Monitor Fading opacity is configurable within DisplayFusion (60 in a default installation).
+			</string>
+			<!-- Settings: Screen Saver tab -->
+			<string id="ScreenSaversEnabled">Allow DisplayFusion to manage the Screen Saver</string>
+			<string id="ScreenSaversEnabledExplain">This policy setting controls whether or not DisplayFusion will allow the user to configure the Screen Saver. This policy setting requires a restart of DisplayFusion to take effect.
+			
+If you enable this policy setting, DisplayFusion will allow the user to configure the Screen Saver.
+
+If you disable this policy setting, DisplayFusion will not allow the user to configure the Screen Saver.
+
+If you do not configure this policy setting, the "Allow DisplayFusion to manage the Screen Saver" option is configurable from within DisplayFusion (disabled in a default installation).			
+			</string>
+			<!-- Settings: Window Snapping tab -->
+			<string id="WindowSnappingMonitors">Enable Window Edge Snapping to edges of Monitors</string>
+			<string id="WindowSnappingMonitorsExplain">This policy setting controls whether or not DisplayFusion will snap windows to monitor edges. This policy setting requires a restart of DisplayFusion to take effect.
+			
+If you enable this policy setting, DisplayFusion will snap windows to monitor edges.
+
+If you disable this policy setting, DisplayFusion will not snap windows to monitor edges.
+
+If you do not configure this policy setting, the "Enable Window Edge Snapping to edges of Monitors" option is configurable from within DisplayFusion (enabled in a default installation).			
+			</string>
+			<string id="WindowSnappingOtherApplications">Enable Window Edge Snapping to edges of other Application Windows</string>
+			<string id="WindowSnappingOtherApplicationsExplain">This policy setting controls whether or not DisplayFusion will snap windows to the edges of other windows. This policy setting requires a restart of DisplayFusion to take effect.
+			
+If you enable this policy setting, DisplayFusion will snap windows to the edges of other windows.
+
+If you disable this policy setting, DisplayFusion will not snap windows to the edges of other windows.
+
+If you do not configure this policy setting, the "Enable Window Edge Snapping to edges of other Application Windows" option is configurable from within DisplayFusion (enabled in a default installation).			
+			</string>
+			<!-- Settings: Window Management tab -->
+			<string id="MaximizedWindowDragging">Enable maximized window dragging between monitors</string>
+			<string id="MaximizedWindowDraggingExplain">This policy setting controls whether or not DisplayFusion will handle the dragging of maximized windows between monitors. This policy setting requires a restart of DisplayFusion to take effect.
+			
+If you enable this policy setting, DisplayFusion will handle the dragging of maximized windows between monitors. You can also choose whether the monitor selector will be shown while dragging, and whether non-maximized windows will be maximized when dragged over splits using the checkboxes in this policy setting.
+
+If you disable this policy setting, DisplayFusion will not handle the dragging of maximized windows between monitors.
+
+If you do not configure this policy setting, the "Enable maximized window dragging between monitors" option is configurable from within DisplayFusion (enabled in a default installation).			
+			</string>
+			<string id="WindowMoveMiddleClick">Enable middle-click window moving</string>
+			<string id="WindowMoveMiddleClickExplain">This policy setting controls whether or not DisplayFusion will move Application windows to the next monitor when their titlebar is middle-clicked. This policy setting requires a restart of DisplayFusion to take effect.
+			
+If you enable this policy setting, DisplayFusion will allow middle-click window moving.
+
+If you disable this policy setting, DisplayFusion will not allow middle-click window moving.
+
+If you do not configure this policy setting, the "Enable middle-click window moving" option is configurable from within DisplayFusion (enabled in a default installation).			
+			</string>
+			<string id="MouseWheelScrolling">Enable mouse wheel scrolling on inactive windows</string>
+			<string id="MouseWheelScrollingExplain">This policy setting controls whether or not DisplayFusion will allow the user to use the mouse wheel to scroll on inactive windows. This policy setting requires a restart of DisplayFusion to take effect.
+			
+If you enable this policy setting, DisplayFusion will allow mouse wheel scrolling on inactive windows.
+
+If you disable this policy setting, DisplayFusion will not allow mouse wheel scrolling on inactive windows.
+
+If you do not configure this policy setting, the "Allow the mouse wheel to scroll windows under the mouse cursor that aren't focused" option is configurable from within DisplayFusion (enabled in a default installation).			
+			</string>
+			<string id="MouseWrapX">Enable mouse cursor wrapping on left/right monitor edges</string>
+			<string id="MouseWrapXExplain">This policy setting controls whether or not DisplayFusion will wrap the mouse cursor on the left/right edges. For example, moving your mouse cursor off the right edge of the right screen would cause it to wrap over to the left edge of the left monitor. This policy setting requires a restart of DisplayFusion to take effect.
+			
+If you enable this policy setting, DisplayFusion will wrap the mouse cursor on the left/right edges.
+
+If you disable this policy setting, DisplayFusion will not wrap the mouse cursor on the left/right edges.
+
+If you do not configure this policy setting, the "Wrap mouse cursor around left/right monitor edges" option is configurable from within DisplayFusion (disabled in a default installation).			
+			</string>
+			<string id="MouseWrapY">Enable mouse cursor wrapping on top/bottom monitor edges</string>
+			<string id="MouseWrapYExplain">This policy setting controls whether or not DisplayFusion will wrap the mouse cursor on the top/bottom edges. For example, moving your mouse cursor off the top edge of the top screen would cause it to wrap over to the bottom edge of the bottom monitor. This policy setting requires a restart of DisplayFusion to take effect.
+			
+If you enable this policy setting, DisplayFusion will wrap the mouse cursor on the top/bottom edges.
+
+If you disable this policy setting, DisplayFusion will not wrap the mouse cursor on the top/bottom edges.
+
+If you do not configure this policy setting, the "Wrap mouse cursor around top/bottom monitor edges" option is configurable from within DisplayFusion (disabled in a default installation).			
+			</string>
+			<string id="MouseWrapNoSnag">Enable mouse cursor snag prevention on unaligned monitor edges</string>
+			<string id="MouseWrapNoSnagExplain">This policy setting controls whether or not DisplayFusion will move the mouse to the next screen, even when the monitor edges aren't perfectly aligned, usually in cases where the monitors are different resolutions. This policy setting requires a restart of DisplayFusion to take effect.
+			
+If you enable this policy setting, DisplayFusion will move the mouse to the next monitor, preventing it from snagging on an unaligned monitor edge.
+
+If you disable this policy setting, DisplayFusion will not move the mouse to the next monitor, allowing it to snag on an unaligned monitor edge.
+
+If you do not configure this policy setting, the "Prevent mouse cursor from snagging on unaligned monitor edges" option is configurable from within DisplayFusion (disabled in a default installation).			
+			</string>
+			<string id="MouseWrapNoStickyCorners">Prevent mouse cursor from sticking in Sticky Corners (Windows 10 only)</string>
+			<string id="MouseWrapNoStickyCornersExplain">This policy setting controls whether or not DisplayFusion will move the mouse to the next screen, even when attempting to cross at a monitor corner. This policy setting requires a restart of DisplayFusion to take effect.
+			
+If you enable this policy setting, DisplayFusion will move the mouse to the next monitor, preventing it from snagging on the monitor corner.
+
+If you disable this policy setting, DisplayFusion will not move the mouse to the next monitor, allowing it to snag on on the monitor corner.
+
+If you do not configure this policy setting, the "Prevent mouse cursor from sticking in Sticky Corners" option is configurable from within DisplayFusion (disabled in a default installation).			
+			</string>			
+			<string id="MoveChildWindows">Centre child windows over the parent window</string>
+			<string id="MoveChildWindowsExplain">This policy setting controls whether or not DisplayFusion will force child windows to centre over the parent window for the application. This policy setting requires a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, DisplayFusion will force child windows to centre over the parent window for the application, and you can also choose whether it should only apply to modal windows, and whether DisplayFusion should centre the child window over the parent window.
+  
+If you disable this policy setting, DisplayFusion will not force child windows to centre over the parent window for the application.
+ 
+If you do not configure this policy setting, the "Centre child windows over the parent window," "Move only modal windows," and "Move child windows that are on the same monitor as the parent window" options are configurable from within DisplayFusion (disabled in a default installation).
+			</string>
+			<string id="WindowMoveNewProcessWindowsToCurrentMonitor">Move newly opened application windows to the current monitor</string>
+			<string id="WindowMoveNewProcessWindowsToCurrentMonitorExplain">This policy setting controls whether or not DisplayFusion will move newly opened application windows to the current monitor. This policy setting requires a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, and enable the "Move newly opened application windows to the current monitor" checkbox in this policy, DisplayFusion will move newly opened application windows to the current monitor, and you can also choose whether it should only apply to windows opened from the Start menu.
+  
+If you disable this policy setting, DisplayFusion will not move newly opened application windows to the current monitor.
+ 
+If you do not configure this policy setting, the "Move newly opened application windows to the current monitor," and "Only move windows opened from the Start Menu" options are configurable from within DisplayFusion (disabled in a default installation).
+			</string>			
+			<string id="AltTabEnabled">Alt+Tab Handler</string>
+			<string id="AltTabEnabledExplain">This policy setting controls whether or not DisplayFusion will replace the Windows Alt+Tab with its own Alt+Tab Handler. This policy setting requires a restart of DisplayFusion to take effect.
+	  
+If you enable this policy setting, DisplayFusion will replace the Windows Alt+Tab with its own Alt+Tab Handler, and you can also from a few different modes for the Alt+Tab Handler.
+  
+If you disable this policy setting, the "Alt+Tab Handler," "Show window text below each Alt+Tab item," and "Show the Desktop window" options are configurable from within DisplayFusion (disabled in a default installation on Windows 7, enabled in a default installation on Windows 8).
+ 
+If you do not configure this policy setting, the "Alt+Tab Handler," "Show window text below each Alt+Tab item," and "Show the Desktop window" options are configurable from within DisplayFusion (disabled in a default installation on Windows 7, enabled in a default installation on Windows 8).
+			</string>			
+			<string id="AltTabEnabled_Disabled">Disabled</string>
+			<string id="AltTabEnabled_PrimaryMonitorAllWindows">Show on Primary Monitor Only, Show All Windows</string>
+			<string id="AltTabEnabled_AllMonitorsAllWindows">Show on All Monitors, Show All Windows</string>
+			<string id="AltTabEnabled_CurrentMonitorAllWindows">Show on Current Monitor Only, Show All Windows</string>
+			<string id="AltTabEnabled_CurrentMonitorCurrentWindows">Show on Current Monitor Only, Show Current Windows Only</string>
+			<string id="AltTabShowItemText">Show window text below each Alt+Tab item</string>
+			<string id="AltTabShowItemTextExplain">This policy setting controls whether or not DisplayFusion will show the window title below each thumbnail in the Alt+Tab Handler. This policy setting only applies when the DisplayFusion Alt+Tab Handler is enabled. This policy setting requires a restart of DisplayFusion to take effect.
+
+If you enable this policy setting, DisplayFusion will show the window title below each thumbnail in the Alt+Tab Handler.
+
+If you disable this policy setting, DisplayFusion will not show the window title below each thumbnail in the Alt+Tab Handler.
+
+If you do not configure this policy setting, the "Show window text below each Alt+Tab item" option is configurable from within DisplayFusion (enabled in a default installation).
+			</string>
+			<string id="AltTabShowDesktopWindow">Show the Desktop window</string>
+			<string id="AltTabShowDesktopWindowExplain">This policy setting controls whether or not DisplayFusion will show the Desktop thumbnail at the end of the Alt+Tab Handler. This policy setting only applies when the DisplayFusion Alt+Tab Handler is enabled. This policy setting requires a restart of DisplayFusion to take effect.
+
+If you enable this policy setting, DisplayFusion will show the Desktop thumbnail at the end of the Alt+Tab Handler.
+
+If you disable this policy setting, DisplayFusion will not show the Desktop thumbnail at the end of the Alt+Tab Handler.
+
+If you do not configure this policy setting, the "Show the Desktop window" option is configurable from within DisplayFusion (enabled in a default installation).
+			</string>
+			<!-- Settings: Triggers tab -->
+			<string id="TriggersEnabled">Enable Triggers</string>
+			<string id="TriggersEnabledExplain">This policy setting controls whether or not the Triggers feature will be enabled, allowing the user to create rules that specify which monitor certain applications should open on. This policy setting requires a restart of DisplayFusion to take effect.
+			
+If you enable this policy setting, the Triggers feature will be enabled and the user will be able to create Triggers rules.
+
+If you disable this policy setting, the Triggers feature will be disabled, and the user will not be able to create Triggers rules.
+
+If you do not configure this policy setting, the "Enable Triggers" option is configurable from within DisplayFusion (disabled in a default installation).			
+			</string>
+			<!-- Settings: Remote Control tab -->
+			<string id="RemoteControlEnabled">Enable DisplayFusion Remote Control</string>
+			<string id="RemoteControlEnabledExplain">This policy setting controls whether or not DisplayFusion will allow connection requests from the DisplayFusion Remote mobile app. DisplayFusion Remote allows the user to run DisplayFusion Functions (the ones on the Settings > Functions tab) remotely from their smartphone or tablet.
+	  
+If you enable this policy setting and enable the "Enable DisplayFusion Remote Control" checkbox, DisplayFusion will allow connection requests from DisplayFusion Remote mobile apps. You'll also be able to choose whether or not the computer should show a popup dialog when a security code is requested from a DisplayFusion Remote mobile app.
+  
+If you disable this policy setting, DisplayFusion will not allow connection requests from DisplayFusion Remote mobile apps.
+ 
+If you do not configure this policy setting, the "Enable DisplayFusion Remote Control" and "Allow security code request popups" options are configurable from within DisplayFusion (both disabled in a default installation).
+			</string>
+			<!-- Settings: License Key tab -->
+			<string id="LicenseKey">License Key</string>
+			<string id="LicenseKeyExplain">This policy setting allows you to specify the License Key that the clients will use (Site or Enterprise license required). It is recommended that the "General Policies > Disable License Key tab" policy be enabled in conjunction with this policy to prevent the user from being able to view the license key in the Settings window. This policy setting requires a restart of DisplayFusion to take effect.
+			
+If you enable this policy setting, you must specify the License Key in this policy that the clients should use.
+
+If you disable this policy setting, the License Key on the client will not be modified by this policy, and the user will not be allowed to modify the License Key.
+
+If you do not configure this policy setting, the License Key is configurable from within DisplayFusion.			
+			</string>
+			<!-- Settings: Troubleshooting tab -->
+		</stringTable>
+		<presentationTable>
+			<!-- Desktop Wallpaper settings -->
+			<presentation id="WallpaperLocalImagePathRestrict">
+				<textBox refId="WallpaperLocalImagePathRestrict">
+					<label>Allowed wallpaper path(s):</label>
+				</textBox>
+			</presentation>			
+			<presentation id="CheckWallpaper">
+				<checkBox refId="CheckWallpaper">Warn me if my wallpaper needs adjusting</checkBox>
+				<text>The option to fix the wallpaper without prompting only applies if the automatic updates option is enabled above.</text>
+				<checkBox refId="CheckWallpaperNoPrompt">Fix my wallpaper without prompting</checkBox>
+			</presentation>
+			<!-- Settings: Options tab -->
+			<presentation id="AutoUpdate">
+				<checkBox refId="AutoUpdate">Check for updates automatically</checkBox>
+				<text>The option to check for beta versions only applies if the automatic updates option is enabled above.</text>
+				<checkBox refId="AutoUpdateBeta">Check for new Beta versions</checkBox>
+			</presentation>
+			<presentation id="AeroColourMode">
+				<dropdownList refId="AeroColourMode" defaultItem="2">Aero Colour Mode:</dropdownList>
+			</presentation>
+			<!-- Settings: Taskbar tab -->
+			<presentation id="TaskbarsPreview">
+				<dropdownList refId="TaskbarsPreview" defaultItem="0">Window Preview Style:</dropdownList>
+			</presentation>
+			<presentation id="TaskbarsMode">
+				<dropdownList refId="TaskbarsMode" defaultItem="0">Taskbar Mode:</dropdownList>
+			</presentation> 			
+			<presentation id="TaskbarsMiddleClick">
+				<dropdownList refId="TaskbarsMiddleClick" defaultItem="0">Taskbar Button Middle-Click Behaviour:</dropdownList>
+			</presentation>
+			<!-- Settings: Monitor Fading tab -->
+			<presentation id="MonitorFadingMode">
+				<dropdownList refId="MonitorFadingMode" defaultItem="0">Monitor Fading Mode:</dropdownList>
+			</presentation>			
+			<!-- Settings: Window Snapping tab -->
+			<presentation id="WindowSnappingMode">
+				<dropdownList refId="WindowSnappingMode" defaultItem="0">Snapping Mode:</dropdownList>
+			</presentation>
+			<presentation id="WindowSnappingModifier">
+				<dropdownList refId="WindowSnappingModifier" defaultItem="2">Snapping Modifier Key:</dropdownList>
+			</presentation>
+			<presentation id="WindowSnapping">
+				<textBox refId="WindowSnapping">
+					<label>Window Snap Distance:</label>
+				</textBox>
+			</presentation>
+			<!-- Settings: Window Management tab -->
+			<presentation id="MaximizedWindowDragging">
+				<checkBox refId="MaximizedWindowDraggingOverlay" defaultChecked="true">Show monitor selector while dragging</checkBox>
+				<checkBox refId="MaximizedWindowDraggingForNonMaxed" defaultChecked="false">Show monitor selector when dragging non-maximized windows to split monitors</checkBox>
+			</presentation>
+			<presentation id="MoveChildWindows">
+				<checkBox refId="MoveChildWindows">Move child windows to the same monitor as the parent window</checkBox>
+				<text>The options for modal only, and centre child window only apply if the "Move child windows" option is enabled.</text>
+				<checkBox refId="MoveChildWindowsModalOnly">Only move modal windows</checkBox>
+        <checkBox refId="MoveChildWindowsCentre">Centre the child window over the parent</checkBox>
+			</presentation>
+			<presentation id="WindowMoveNewProcessWindowsToCurrentMonitor">
+				<checkBox refId="WindowMoveNewProcessWindowsToCurrentMonitor">Move newly opened application windows to the current monitor</checkBox>
+				<text>The option for only moving windows opened from the Start Menu will only apply if the "Move newly opened application windows to the current monitor" option is enabled.</text>
+				<checkBox refId="WindowMoveNewProcessWindowsToCurrentMonitorOnlyFromStartMenu">Only move windows opened from the Start Menu</checkBox>
+			</presentation>			
+			<presentation id="AltTabEnabled">
+				<dropdownList refId="AltTabEnabled" defaultItem="0">Alt+Tab Handler:</dropdownList>
+			</presentation>      
+			<!-- Settings: Remote Control tab -->
+			<presentation id="RemoteControlEnabled">
+				<checkBox refId="RemoteControlEnabled">Enable DisplayFusion Remote Control</checkBox>
+				<text>The option to allow security code popups only applies if the Remote Control option is enabled above.</text>
+				<checkBox refId="RemoteControlAllowCodePopup">Allow security code request popups</checkBox>
+			</presentation>
+			<!-- Settings: License Key tab -->
+			<presentation id="LicenseKey">
+				<textBox refId="LicenseKey">
+					<label>License Key:</label>
+				</textBox>
+			</presentation>
+			<!-- General -->
+			<presentation id="TrayIconActionByName">
+				<textBox refId="TrayIconActionByName">
+					<label>Default tray icon double-click action:</label>
+				</textBox>
+			</presentation>			
+			<!-- Settings: Troubleshooting tab -->
+		</presentationTable>
+  </resources>
+</policyDefinitionResources>

@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+		<policyNamespaces>
+			<target prefix="LyncWizard_v4" namespace="Microsoft.Policies.LyncWizard_v4" />
+		</policyNamespaces>
+		<resources minRequiredRevision="1.0" />
+		<supportedOn>
+			<definitions>
+				<definition name="SUPPORTED_LyncWizard200" displayName="$(string.SUPPORTED_LyncWizard200)" />
+				<definition name="SUPPORTED_LyncWizard204" displayName="$(string.SUPPORTED_LyncWizard204)" />
+				<definition name="SUPPORTED_LyncWizard300" displayName="$(string.SUPPORTED_LyncWizard300)" />
+				<definition name="SUPPORTED_LyncWizard30x" displayName="$(string.SUPPORTED_LyncWizard30x)" />
+				<definition name="SUPPORTED_LyncWizard40x" displayName="$(string.SUPPORTED_LyncWizard40x)" />
+			</definitions>
+		</supportedOn>
+		<categories> 
+			<category name="CAT_LyncWizard" displayName="$(string.CAT_LyncWizard)"/>
+			<category name="CAT_General" displayName="$(string.CAT_General)">  
+				<parentCategory ref="CAT_LyncWizard" />
+			</category>
+			<category name="CAT_ContactLookup" displayName="$(string.CAT_ContactLookup)"> 
+				<parentCategory ref="CAT_LyncWizard" />
+			</category>
+			<category name="CAT_BusyCalls" displayName="$(string.CAT_BusyCalls)"> 
+				<parentCategory ref="CAT_LyncWizard" />
+			</category>
+			<category name="CAT_HotkeyDialer" displayName="$(string.CAT_HotkeyDialer)"> 
+				<parentCategory ref="CAT_LyncWizard" />
+			</category>
+			<category name="CAT_RunCmd" displayName="$(string.CAT_RunCmd)"> 
+				<parentCategory ref="CAT_LyncWizard" />
+			</category>
+			<category name="CAT_POR" displayName="$(string.CAT_POR)"> 
+				<parentCategory ref="CAT_LyncWizard" />
+			</category>			
+			<category name="CAT_License" displayName="$(string.CAT_License)"> 
+				<parentCategory ref="CAT_LyncWizard" />
+			</category>
+			<category name="CAT_GUI" displayName="$(string.CAT_GUI)"> 
+				<parentCategory ref="CAT_LyncWizard" />
+			</category>
+		</categories>
+		<policies>
+			<policy name="CultureInfo" class="Machine" displayName="$(string.PDN_CultureInfo)" explainText="$(string.PET_CultureInfo)" presentation="$(presentation.PRES_CultureInfo)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="GPO_CultureInfo">
+				<parentCategory ref="CAT_General" />
+				<supportedOn ref="SUPPORTED_LyncWizard200" />
+      			<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+				<elements>
+					<enum id="PRES_CultureInfoDropDown" valueName="CultureInfo" required="true">
+					  <item displayName="$(string.PDN_CultureInfo_DE)">
+						<value>
+						  <string>de</string>
+						</value>
+					  </item>
+					  <item displayName="$(string.PDN_CultureInfo_EN)">
+						<value>
+						  <string>en</string>
+						</value>
+					  </item>
+					  <item displayName="$(string.PDN_CultureInfo_FR)">
+						<value>
+						  <string>fr</string>
+						</value>
+					  </item>
+					  <item displayName="$(string.PDN_CultureInfo_ES)">
+						<value>
+						  <string>es</string>
+						</value>
+					  </item>
+					  <item displayName="$(string.PDN_CultureInfo_PT)">
+						<value>
+						  <string>pt</string>
+						</value>
+					  </item>
+					  <item displayName="$(string.PDN_CultureInfo_IT)">
+						<value>
+						  <string>it</string>
+						</value>
+					  </item>
+					  <item displayName="$(string.PDN_CultureInfo_ZH)">
+						<value>
+						  <string>zh</string>
+						</value>
+					  </item>
+					  <item displayName="$(string.PDN_CultureInfo_SYS)">
+						<value>
+						  <string>system</string>
+						</value>
+					  </item>
+					</enum>
+				</elements>
+			</policy>
+			<policy name="CustomBalloon" class="Machine" displayName="$(string.PDN_CustomBalloon)" explainText="$(string.PET_CustomBalloon)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="CustomBalloon">
+				<parentCategory ref="CAT_General" />
+				<supportedOn ref="SUPPORTED_LyncWizard200" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+			</policy>
+			<policy name="CustomBalloonOffset" class="Machine" displayName="$(string.PDN_CustomBalloonOffset)" explainText="$(string.PET_CustomBalloonOffset)" presentation="$(presentation.PRES_CustomBalloonOffset)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="GPO_CustomBalloonOffset">
+				<parentCategory ref="CAT_General" />
+				<supportedOn ref="SUPPORTED_LyncWizard200" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+				<elements>
+					<decimal id="DTB_CustomBalloonOffsetX" valueName="CustomBalloonOffsetX" maxValue="4294967295" required="true"/>
+					<decimal id="DTB_CustomBalloonOffsetY" valueName="CustomBalloonOffsetY" maxValue="4294967295" required="true"/>
+				</elements>
+			</policy>
+			<policy name="CustomBalloonDisplayTime" class="Machine" displayName="$(string.PDN_CustomBalloonDisplayTime)" explainText="$(string.PET_CustomBalloonDisplayTime)" presentation="$(presentation.PRES_CustomBalloonDisplayTime)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="GPO_CustomBalloonDisplayTime">
+				<parentCategory ref="CAT_General" />
+				<supportedOn ref="SUPPORTED_LyncWizard200" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+				<elements>
+					<decimal id="DTB_CustomBalloonDisplayTime" valueName="CustomBalloonDisplayTime" maxValue="4294967295" required="true"/>
+				</elements>
+			</policy>
+			<policy name="DebugLogging" class="Machine" displayName="$(string.PDN_DebugLogging)" explainText="$(string.PET_DebugLogging)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="DebugLogging">
+				<parentCategory ref="CAT_General" />
+				<supportedOn ref="SUPPORTED_LyncWizard200" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+			</policy>
+			<policy name="DisableUpdateCheck" class="Machine" displayName="$(string.PDN_DisableUpdateCheck)" explainText="$(string.PET_DisableUpdateCheck)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="DisableUpdateCheck">
+				<parentCategory ref="CAT_General" />
+				<supportedOn ref="SUPPORTED_LyncWizard200" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+			</policy>
+			<policy name="DisableUserConfig" class="Machine" displayName="$(string.PDN_DisableUserConfig)" explainText="$(string.PET_DisableUserConfig)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="DisableUserConfig">
+				<parentCategory ref="CAT_General" />
+				<supportedOn ref="SUPPORTED_LyncWizard200" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+			</policy>			
+			<policy name="EnableContactLookup" class="Machine" displayName="$(string.PDN_EnableContactLookup)" explainText="$(string.PET_EnableContactLookup)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="EnableContactLookup">
+				<parentCategory ref="CAT_ContactLookup" />
+				<supportedOn ref="SUPPORTED_LyncWizard200" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+			</policy>
+			<policy name="ContactLookupPatterns" class="Machine" displayName="$(string.PDN_ContactLookupPatterns)" explainText="$(string.PET_ContactLookupPatterns)" presentation="$(presentation.PRES_ContactLookupPatterns)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="GPO_ContactLookupPatterns">
+				<parentCategory ref="CAT_ContactLookup" />
+				<supportedOn ref="SUPPORTED_LyncWizard200" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+				<elements>
+					<multiText id="TXT_ContactLookupPatterns" valueName="ContactLookupPatterns" required="true" maxStrings="50" maxLength="1024"/>
+				</elements> 
+			</policy>
+			<policy name="SearchKnownContact" class="Machine" displayName="$(string.PDN_SearchKnownContact)" explainText="$(string.PET_SearchKnownContact)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="SearchKnownContact">
+				<parentCategory ref="CAT_ContactLookup" />
+				<supportedOn ref="SUPPORTED_LyncWizard200" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+			</policy>
+			<policy name="ContactLookupCopyToClipboard" class="Machine" displayName="$(string.PDN_ContactLookupCopyToClipboard)" explainText="$(string.PET_ContactLookupCopyToClipboard)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="ContactLookupCopyToClipboard">
+				<parentCategory ref="CAT_ContactLookup" />
+				<supportedOn ref="SUPPORTED_LyncWizard300" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+			</policy>
+			<policy name="APIKey" class="Machine" displayName="$(string.PDN_APIKey)" explainText="$(string.PET_APIKey)" presentation="$(presentation.PRES_APIKey)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="GPO_APIKey">
+				<parentCategory ref="CAT_ContactLookup" />
+				<supportedOn ref="SUPPORTED_LyncWizard200" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+				<elements>
+					<text id="TXT_APIKey" valueName="APIKey" required="true" expandable="false" />
+				</elements> 
+			</policy>
+			<policy name="ContactLookupLDAP" class="Machine" displayName="$(string.PDN_ContactLookupLDAP)" explainText="$(string.PET_ContactLookupLDAP)" presentation="$(presentation.PRES_ContactLookupLDAP)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="GPO_ContactLookupLDAP">
+				<parentCategory ref="CAT_ContactLookup" />
+				<supportedOn ref="SUPPORTED_LyncWizard200" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+				<elements>
+					<text id="TXT_ContactLookupLDAPServer" valueName="ContactLookupLDAPServer" required="true" expandable="false" />
+					<decimal id="DTB_ContactLookupLDAPServerPort" valueName="ContactLookupLDAPServerPort" minValue="1" maxValue="65535" required="true"/>
+					<text id="TXT_ContactLookupLDAPUser" valueName="ContactLookupLDAPUser" required="false" expandable="false" />
+					<text id="TXT_ContactLookupLDAPPassword" valueName="ContactLookupLDAPPassword" required="false" expandable="false" />
+					<text id="TXT_ContactLookupLDAPBaseDN" valueName="ContactLookupLDAPBaseDN" required="true" expandable="false" />
+					<text id="TXT_ContactLookupLDAPFilter" valueName="ContactLookupLDAPFilter" required="false" expandable="false" />
+				</elements> 
+			</policy>
+			<policy name="EnableBusyCalls" class="Machine" displayName="$(string.PDN_EnableBusyCalls)" explainText="$(string.PET_EnableBusyCalls)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="EnableBusyCalls">
+				<parentCategory ref="CAT_BusyCalls" />
+				<supportedOn ref="SUPPORTED_LyncWizard200" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+			</policy>
+			<policy name="BusyBehavior" class="Machine" displayName="$(string.PDN_BusyBehavior)" explainText="$(string.PET_BusyBehavior)" presentation="$(presentation.PRES_BusyBehavior)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="GPO_BusyBehavior">
+				<parentCategory ref="CAT_BusyCalls" />
+				<supportedOn ref="SUPPORTED_LyncWizard200" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+				<elements>
+					<enum id="PRES_BusyBehaviorDropDown" valueName="BusyBehavior" required="true">
+					  <item displayName="$(string.PDN_BusyBehavior_TurnOff)">
+						<value>
+						  <decimal value="0" />
+						</value>
+					  </item>
+					  <item displayName="$(string.PDN_BusyBehavior_RejectCall)">
+						<value>
+						  <decimal value="1" />
+						</value>
+					  </item>
+					  <item displayName="$(string.PDN_BusyBehavior_HandledUnanswered)">
+						<value>
+						  <decimal value="2" />
+						</value>
+					  </item>
+					  <item displayName="$(string.PDN_BusyBehavior_ForwardCall)">
+						<value>
+						  <decimal value="3" />
+						</value>
+					  </item>
+					</enum>
+				</elements>				
+			</policy>
+			<policy name="BusyIMAnswer" class="Machine" displayName="$(string.PDN_BusyIMAnswer)" explainText="$(string.PET_BusyIMAnswer)" presentation="$(presentation.PRES_BusyIMAnswer)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="GPO_BusyIMAnswer">>
+				<parentCategory ref="CAT_BusyCalls" />
+				<supportedOn ref="SUPPORTED_LyncWizard200" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+				<elements>
+					<text id="TXT_BusyIMAnswer" valueName="BusyIMAnswer" required="true" expandable="false" />
+				</elements>
+			</policy>
+			<policy name="BusyDisconnectReason" class="Machine" displayName="$(string.PDN_BusyDisconnectReason)" explainText="$(string.PET_BusyDisconnectReason)" presentation="$(presentation.PRES_BusyDisconnectReason)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="GPO_BusyDisconnectReason">
+				<parentCategory ref="CAT_BusyCalls" />
+				<supportedOn ref="SUPPORTED_LyncWizard200" />
+      			<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+				<elements>
+					<enum id="PRES_BusyDisconnectReasonDropDown" valueName="BusyDisconnectReason" required="true">
+					  <item displayName="$(string.PDN_BusyDisconnectReason_None)">
+						<value>
+						  <decimal value="0" />
+						</value>
+					  </item>
+					  <item displayName="$(string.PDN_BusyDisconnectReason_Timeout)">
+						<value>
+						  <decimal value="1" />
+						</value>
+					  </item>
+					  <item displayName="$(string.PDN_BusyDisconnectReason_Busy)">
+						<value>
+						  <decimal value="2" />
+						</value>
+					  </item>
+					  <item displayName="$(string.PDN_BusyDisconnectReason_NotAcceptableHere)">
+						<value>
+						  <decimal value="3" />
+						</value>
+					  </item>
+					  <item displayName="$(string.PDN_BusyDisconnectReason_Decline)">
+						<value>
+						  <decimal value="4" />
+						</value>
+					  </item>
+					  <item displayName="$(string.PDN_BusyDisconnectReason_DeclineEverywhere)">
+						<value>
+						  <decimal value="5" />
+						</value>
+					  </item>
+					  <item displayName="$(string.PDN_BusyDisconnectReason_ReplyOther)">
+						<value>
+						  <decimal value="6" />
+						</value>
+					  </item>
+					</enum>
+				</elements>
+			</policy>
+			<policy name="BusyDisconnectReasonDelegated" class="Machine" displayName="$(string.PDN_BusyDisconnectReasonDelegated)" explainText="$(string.PET_BusyDisconnectReasonDelegated)" presentation="$(presentation.PRES_BusyDisconnectReasonDelegated)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="GPO_BusyDisconnectReasonDelegated">
+				<parentCategory ref="CAT_BusyCalls" />
+				<supportedOn ref="SUPPORTED_LyncWizard200" />
+      			<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+				<elements>
+					<enum id="PRES_BusyDisconnectReasonDelegatedDropDown" valueName="BusyDisconnectReasonDelegated" required="true">
+					  <item displayName="$(string.PDN_BusyDisconnectReason_None)">
+						<value>
+						  <decimal value="0" />
+						</value>
+					  </item>
+					  <item displayName="$(string.PDN_BusyDisconnectReason_Timeout)">
+						<value>
+						  <decimal value="1" />
+						</value>
+					  </item>
+					  <item displayName="$(string.PDN_BusyDisconnectReason_Busy)">
+						<value>
+						  <decimal value="2" />
+						</value>
+					  </item>
+					  <item displayName="$(string.PDN_BusyDisconnectReason_NotAcceptableHere)">
+						<value>
+						  <decimal value="3" />
+						</value>
+					  </item>
+					  <item displayName="$(string.PDN_BusyDisconnectReason_Decline)">
+						<value>
+						  <decimal value="4" />
+						</value>
+					  </item>
+					  <item displayName="$(string.PDN_BusyDisconnectReason_DeclineEverywhere)">
+						<value>
+						  <decimal value="5" />
+						</value>
+					  </item>
+					  <item displayName="$(string.PDN_BusyDisconnectReason_ReplyOther)">
+						<value>
+						  <decimal value="6" />
+						</value>
+					  </item>
+					</enum>
+				</elements>
+			</policy>
+			<policy name="BusyDisconnectReasonForwarded" class="Machine" displayName="$(string.PDN_BusyDisconnectReasonForwarded)" explainText="$(string.PET_BusyDisconnectReasonForwarded)" presentation="$(presentation.PRES_BusyDisconnectReasonForwarded)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="GPO_BusyDisconnectReasonForwarded">
+				<parentCategory ref="CAT_BusyCalls" />
+				<supportedOn ref="SUPPORTED_LyncWizard200" />
+      			<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+				<elements>
+					<enum id="PRES_BusyDisconnectReasonForwardedDropDown" valueName="BusyDisconnectReasonForwarded" required="true">
+					  <item displayName="$(string.PDN_BusyDisconnectReason_None)">
+						<value>
+						  <decimal value="0" />
+						</value>
+					  </item>
+					  <item displayName="$(string.PDN_BusyDisconnectReason_Timeout)">
+						<value>
+						  <decimal value="1" />
+						</value>
+					  </item>
+					  <item displayName="$(string.PDN_BusyDisconnectReason_Busy)">
+						<value>
+						  <decimal value="2" />
+						</value>
+					  </item>
+					  <item displayName="$(string.PDN_BusyDisconnectReason_NotAcceptableHere)">
+						<value>
+						  <decimal value="3" />
+						</value>
+					  </item>
+					  <item displayName="$(string.PDN_BusyDisconnectReason_Decline)">
+						<value>
+						  <decimal value="4" />
+						</value>
+					  </item>
+					  <item displayName="$(string.PDN_BusyDisconnectReason_DeclineEverywhere)">
+						<value>
+						  <decimal value="5" />
+						</value>
+					  </item>
+					  <item displayName="$(string.PDN_BusyDisconnectReason_ReplyOther)">
+						<value>
+						  <decimal value="6" />
+						</value>
+					  </item>
+					</enum>
+				</elements>
+			</policy>
+			<policy name="BusyContactURI" class="Machine" displayName="$(string.PDN_BusyContactURI)" explainText="$(string.PET_BusyContactURI)" presentation="$(presentation.PRES_BusyContactURI)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="GPO_BusyContactURI">
+				<parentCategory ref="CAT_BusyCalls" />
+				<supportedOn ref="SUPPORTED_LyncWizard200" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+				<elements>
+					<text id="TXT_BusyContactURI" valueName="BusyContactURI" required="true" expandable="false" />
+				</elements>
+			</policy>
+			<policy name="EnableHotkeyDialer" class="Machine" displayName="$(string.PDN_EnableHotkeyDialer)" explainText="$(string.PET_EnableHotkeyDialer)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="EnableHotkeyDialer">
+				<parentCategory ref="CAT_HotkeyDialer" />
+				<supportedOn ref="SUPPORTED_LyncWizard200" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+			</policy>			
+			<policy name="HotkeyDialPrompt" class="Machine" displayName="$(string.PDN_HotkeyDialPrompt)" explainText="$(string.PET_HotkeyDialPrompt)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="HotkeyDialPrompt">
+				<parentCategory ref="CAT_HotkeyDialer" />
+				<supportedOn ref="SUPPORTED_LyncWizard200" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+			</policy>			
+			<policy name="HotKeyDialKey" class="Machine" displayName="$(string.PDN_HotKeyDialKey)" explainText="$(string.PET_HotKeyDialKey)" presentation="$(presentation.PRES_HotKeyDialKey)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="GPO_HotKeyDialKey">
+				<parentCategory ref="CAT_HotkeyDialer" />
+				<supportedOn ref="SUPPORTED_LyncWizard200" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+				<elements>
+					<decimal id="DTB_HotKeyDialKey" valueName="HotKeyDialKey" maxValue="4294967295" required="true"/>
+				</elements>
+			</policy>
+			<policy name="HotKeyDialModifier" class="Machine" displayName="$(string.PDN_HotKeyDialModifier)" explainText="$(string.PET_HotKeyDialModifier)" presentation="$(presentation.PRES_HotKeyDialModifier)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="GPO_HotKeyDialModifier">
+				<parentCategory ref="CAT_HotkeyDialer" />
+				<supportedOn ref="SUPPORTED_LyncWizard200" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+				<elements>
+					<decimal id="DTB_HotKeyDialModifier" valueName="HotKeyDialModifier" maxValue="4294967295" required="true"/>
+				</elements>
+			</policy>
+			<policy name="HotkeyDialNormalization" class="Machine" displayName="$(string.PDN_HotkeyDialNormalization)" explainText="$(string.PET_HotkeyDialNormalization)" presentation="$(presentation.PRES_HotkeyDialNormalization)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="GPO_HotkeyDialNormalization">
+				<parentCategory ref="CAT_HotkeyDialer" />
+				<supportedOn ref="SUPPORTED_LyncWizard200" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+				<elements>
+					<text id="TXT_HotkeyDialNormalization" valueName="HotkeyDialNormalization" required="true" expandable="false" />
+				</elements> 
+			</policy>
+
+			<policy name="EnableRunCmd" class="Machine" displayName="$(string.PDN_EnableRunCmd)" explainText="$(string.PET_EnableRunCmd)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="EnableRunCmd">
+				<parentCategory ref="CAT_RunCmd" />
+				<supportedOn ref="SUPPORTED_LyncWizard200" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+			</policy>
+			<policy name="RunCmdItems" class="Machine" displayName="$(string.PDN_RunCmdItems)" explainText="$(string.PET_RunCmdItems)" presentation="$(presentation.PRES_RunCmdItems)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="GPO_RunCmdItems">
+				<parentCategory ref="CAT_RunCmd" />
+				<supportedOn ref="SUPPORTED_LyncWizard200" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+				<elements>
+					<multiText id="TXT_RunCmdItems" valueName="RunCmdItems" required="true" maxStrings="50" maxLength="1024"/>
+				</elements> 
+			</policy>
+
+			<policy name="EnablePOR" class="Machine" displayName="$(string.PDN_EnablePOR)" explainText="$(string.PET_EnablePOR)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="EnablePOR">
+				<parentCategory ref="CAT_POR" />
+				<supportedOn ref="SUPPORTED_LyncWizard300" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+			</policy>
+			<policy name="PORItems" class="Machine" displayName="$(string.PDN_PORItems)" explainText="$(string.PET_PORItems)" presentation="$(presentation.PRES_PORItems)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="GPO_PORItems">
+				<parentCategory ref="CAT_POR" />
+				<supportedOn ref="SUPPORTED_LyncWizard300" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+				<elements>
+					<multiText id="TXT_PORItems" valueName="PORItems" required="true" maxStrings="50" maxLength="1024"/>
+				</elements> 
+			</policy>
+			
+			
+			<policy name="LicenseKey" class="Machine" displayName="$(string.PDN_LicenseKey)" explainText="$(string.PET_LicenseKey)" presentation="$(presentation.PRES_LicenseKey)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="GPO_License">
+				<parentCategory ref="CAT_License" />
+				<supportedOn ref="SUPPORTED_LyncWizard200" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+				<elements>
+					<text id="TXT_LicenseKey" valueName="LicenseKey" required="true" expandable="false" />
+				</elements>
+			</policy>
+			<policy name="SIPDomains" class="Machine" displayName="$(string.PDN_SIPDomains)" explainText="$(string.PET_SIPDomains)" presentation="$(presentation.PRES_SIPDomains)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="GPO_SIPDomains">
+				<parentCategory ref="CAT_License" />
+				<supportedOn ref="SUPPORTED_LyncWizard200" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+				<elements>
+					<multiText id="TXT_SIPDomains" valueName="SIPDomains" required="true" expandable="true" />
+				</elements>
+			</policy>	
+			<policy name="HideMenuCallHistory" class="Machine" displayName="$(string.PDN_HideMenuCallHistory)" explainText="$(string.PET_HideMenuCallHistory)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="HideMenuCallHistory">
+				<parentCategory ref="CAT_GUI" />
+				<supportedOn ref="SUPPORTED_LyncWizard204" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+			</policy>			
+			<policy name="HideMenuRunCmd" class="Machine" displayName="$(string.PDN_HideMenuRunCmd)" explainText="$(string.PET_HideMenuRunCmd)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="HideMenuRunCmd">
+				<parentCategory ref="CAT_GUI" />
+				<supportedOn ref="SUPPORTED_LyncWizard204" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+			</policy>
+			<policy name="HideMenuBusyCalls" class="Machine" displayName="$(string.PDN_HideMenuBusyCalls)" explainText="$(string.PET_HideMenuBusyCalls)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="HideMenuBusyCalls">
+				<parentCategory ref="CAT_GUI" />
+				<supportedOn ref="SUPPORTED_LyncWizard204" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+			</policy>
+			<policy name="HideMenuBusyCallsNone" class="Machine" displayName="$(string.PDN_HideMenuBusyCallsNone)" explainText="$(string.PET_HideMenuBusyCallsNone)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="HideMenuBusyCallsNone">
+				<parentCategory ref="CAT_GUI" />
+				<supportedOn ref="SUPPORTED_LyncWizard204" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+			</policy>
+			<policy name="HideMenuBusyCallsBusy" class="Machine" displayName="$(string.PDN_HideMenuBusyCallsBusy)" explainText="$(string.PET_HideMenuBusyCallsBusy)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="HideMenuBusyCallsBusy">
+				<parentCategory ref="CAT_GUI" />
+				<supportedOn ref="SUPPORTED_LyncWizard204" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+			</policy>
+			<policy name="HideMenuBusyCallsIgnore" class="Machine" displayName="$(string.PDN_HideMenuBusyCallsIgnore)" explainText="$(string.PET_HideMenuBusyCallsIgnore)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="HideMenuBusyCallsIgnore">
+				<parentCategory ref="CAT_GUI" />
+				<supportedOn ref="SUPPORTED_LyncWizard204" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+			</policy>
+			<policy name="HideMenuBusyCallsForward" class="Machine" displayName="$(string.PDN_HideMenuBusyCallsForward)" explainText="$(string.PET_HideMenuBusyCallsForward)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="HideMenuBusyCallsForward">
+				<parentCategory ref="CAT_GUI" />
+				<supportedOn ref="SUPPORTED_LyncWizard204" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+			</policy>
+			<policy name="HideMenuBusyCallsTarget" class="Machine" displayName="$(string.PDN_HideMenuBusyCallsTarget)" explainText="$(string.PET_HideMenuBusyCallsTarget)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="HideMenuBusyCallsTarget">
+				<parentCategory ref="CAT_GUI" />
+				<supportedOn ref="SUPPORTED_LyncWizard204" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+			</policy>
+			<policy name="HideMenuConfig" class="Machine" displayName="$(string.PDN_HideMenuConfig)" explainText="$(string.PET_HideMenuConfig)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="HideMenuConfig">
+				<parentCategory ref="CAT_GUI" />
+				<supportedOn ref="SUPPORTED_LyncWizard204" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+			</policy>
+			<policy name="HideMenuExit" class="Machine" displayName="$(string.PDN_HideMenuExit)" explainText="$(string.PET_HideMenuExit)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="HideMenuExit">
+				<parentCategory ref="CAT_GUI" />
+				<supportedOn ref="SUPPORTED_LyncWizard204" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+			</policy>
+			
+			<policy name="HideConfigTabGeneral" class="Machine" displayName="$(string.PDN_HideConfigTabGeneral)" explainText="$(string.PET_HideConfigTabGeneral)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="HideConfigTabGeneral">
+				<parentCategory ref="CAT_GUI" />
+				<supportedOn ref="SUPPORTED_LyncWizard204" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+			</policy>
+			<policy name="HideConfigTabContactLookup" class="Machine" displayName="$(string.PDN_HideConfigTabContactLookup)" explainText="$(string.PET_HideConfigTabContactLookup)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="HideConfigTabContactLookup">
+				<parentCategory ref="CAT_GUI" />
+				<supportedOn ref="SUPPORTED_LyncWizard204" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+			</policy>
+			<policy name="HideConfigTabBusyCalls" class="Machine" displayName="$(string.PDN_HideConfigTabBusyCalls)" explainText="$(string.PET_HideConfigTabBusyCalls)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="HideConfigTabBusyCalls">
+				<parentCategory ref="CAT_GUI" />
+				<supportedOn ref="SUPPORTED_LyncWizard204" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+			</policy>
+			<policy name="HideConfigTabHotkeyDialer" class="Machine" displayName="$(string.PDN_HideConfigTabHotkeyDialer)" explainText="$(string.PET_HideConfigTabHotkeyDialer)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="HideConfigTabHotkeyDialer">
+				<parentCategory ref="CAT_GUI" />
+				<supportedOn ref="SUPPORTED_LyncWizard204" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+			</policy>
+			<policy name="HideConfigTabRunCmd" class="Machine" displayName="$(string.PDN_HideConfigTabRunCmd)" explainText="$(string.PET_HideConfigTabRunCmd)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="HideConfigTabRunCmd">
+				<parentCategory ref="CAT_GUI" />
+				<supportedOn ref="SUPPORTED_LyncWizard204" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+			</policy>
+			<policy name="HideConfigTabPOR" class="Machine" displayName="$(string.PDN_HideConfigTabPOR)" explainText="$(string.PET_HideConfigTabPOR)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="HideConfigTabPOR">
+				<parentCategory ref="CAT_GUI" />
+				<supportedOn ref="SUPPORTED_LyncWizard300" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+			</policy>
+			<policy name="HideConfigTabLicense" class="Machine" displayName="$(string.PDN_HideConfigTabLicense)" explainText="$(string.PET_HideConfigTabLicense)" key="Software\Policies\LyncWizard.com\Lync Wizard\v4.0" valueName="HideConfigTabLicense">
+				<parentCategory ref="CAT_GUI" />
+				<supportedOn ref="SUPPORTED_LyncWizard204" />
+				<enabledValue> 
+					<decimal value="1" /> 
+				</enabledValue> 
+				<disabledValue> 
+					<decimal value="0" /> 
+				</disabledValue> 
+			</policy>
+		</policies>
+	</policyDefinitions>

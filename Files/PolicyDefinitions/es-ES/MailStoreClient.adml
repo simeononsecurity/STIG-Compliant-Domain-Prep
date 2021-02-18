@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--  Copyright (c) MailStore Software GmbH  --><policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" revision="9.6" schemaVersion="1.0">
+  <displayName/>
+  <description>MailStore Client Group Policy ADMX Template</description>
+  <resources>
+    <stringTable>
+      <string id="CAT_MailStore_Client">MailStore Client</string>
+      <string id="CAT_MailStore_Client_Help">Contiene los ajustes para configurar el MailStore Client.</string>
+      <string id="POL_MailStore_Client_Server_Name">Nombre del servidor</string>
+      <string id="POL_MailStore_Client_Authentication">Autenticación</string>
+      <string id="POL_MailStore_Client_Remember_Password">Recuerde la contraseña</string>
+      <string id="POL_MailStore_Client_Accept_Thumbprint">Aceptar la huella digital</string>
+      <string id="POL_MailStore_Client_Language">Idioma</string>
+      <string id="POL_MailStore_Client_Server_Name_Help">Esta configuración de la política se utiliza para establecer el nombre de la MailStore Server que se MailStore Client conecta.
+      
+Si se habilita este ajuste de política, el MailStore Client siempre se conecta a la especificada MailStore Server. Un nombre de servidor que puede haber sido guardado localmente en los clientes será ignorado.
+
+Si se desactiva o no se configura este ajuste de política, los usuarios pueden especificar ellos mismos el nombre del servidor al iniciar el MailStore Client.
+
+Nota: Para habilitar el inicio de sesión único (SSO), el método de autenticación tiene que estar configurado como "Autenticación de Windows" a través de la configuración de la política de grupo correspondiente, además de especificar el nombre del servidor.</string>
+      <string id="POL_MailStore_Client_Authentication_Help">Este ajuste de política se utiliza para especificar el método de autenticación que se MailStore Client utiliza cuando un usuario se conecta a MailStore Server.
+
+Si habilita este ajuste de política, la autenticación se limitará al método especificado.
+
+Si se desactiva o no se configura este ajuste de política, los usuarios pueden elegir el método de autenticación en el diálogo de inicio de sesión del MailStore Client por sí mismos.
+
+Nota: Para habilitar el inicio de sesión único (SSO), establezca el método de autenticación en "Autenticación de Windows". Además, el nombre del servidor debe especificarse a través de la correspondiente configuración de la política de grupo.</string>
+      <string id="POL_MailStore_Client_Remember_Password_Help">Esta configuración de la política determina si las contraseñas de los usuarios se guardarán o podrán guardarse en el registro local después de haber iniciado con éxito la sesión utilizando la "autenticación estándar".
+
+Si se habilita este ajuste de política, la contraseña de usuario introducida en el diálogo de inicio de sesión se guardará en el registro local después de un inicio de sesión satisfactorio.
+
+Si se desactiva esta configuración de la política, las contraseñas de los usuarios no se guardarán en el registro local y los usuarios tendrán que introducir su contraseña cada vez que quieran conectarse.
+
+Si no se configura esta política, los usuarios pueden configurar esta opción en el diálogo de inicio de sesión.
+
+Importante: Si el método de autenticación se ha configurado como "Autenticación de Windows", este ajuste se ignora.</string>
+      <string id="POL_MailStore_Client_Accept_Thumbprint_Help">Con esta política se puede especificar una huella digital del certificado de manera que se confíe en él MailStore Client de forma explícita e independiente de su validez.
+
+Si se habilita este ajuste de política, el certificado del servidor tiene que ser válido o su huella digital tiene que ser igual a la especificada aquí; de lo contrario, la conexión fallará con un error. Las huellas del certificado que se hayan guardado localmente en los clientes serán ignoradas.
+
+Si desactiva o no configura esta configuración de política, los usuarios reciben una advertencia de certificado si se está utilizando un certificado de servidor no fiable. A continuación, pueden elegir si desean confiar en el certificado de todas formas.
+
+Importante: Si se está utilizando un certificado de confianza en el MailStore Server, este ajuste se ignora.</string>
+      <string id="POL_MailStore_Client_Language_Help">Esta configuración de la política se utiliza para especificar el idioma de visualización del MailStore Client.
+
+Si habilita esta configuración de la política, el MailStore Client siempre utilizará el idioma seleccionado.
+
+Si desactiva o no configura esta configuración de política, los usuarios pueden elegir el idioma al iniciar el MailStore Client.</string>
+      <string id="ITM_MailStore_Client_Authentication_1">Autenticación estándar</string>
+      <string id="ITM_MailStore_Client_Authentication_2">Autenticación de Windows</string>
+      <string id="ITM_MailStore_Client_Remember_Password_1">Sí</string>
+      <string id="ITM_MailStore_Client_Remember_Password_0">No</string>
+      <string id="ITM_MailStore_Client_Language_System">Lenguaje del sistema</string>
+      <string id="ITM_MailStore_Client_Language_zhcn">Chino (simplificado)</string>
+      <string id="ITM_MailStore_Client_Language_zhhk">Chino (Tradicional)</string>
+      <string id="ITM_MailStore_Client_Language_cs">Checo</string>
+      <string id="ITM_MailStore_Client_Language_nl">Holandés</string>
+      <string id="ITM_MailStore_Client_Language_en">Inglés</string>
+      <string id="ITM_MailStore_Client_Language_fr">Francés</string>
+      <string id="ITM_MailStore_Client_Language_de">Alemán</string>
+      <string id="ITM_MailStore_Client_Language_hu">Húngaro</string>
+      <string id="ITM_MailStore_Client_Language_it">Italiano</string>
+      <string id="ITM_MailStore_Client_Language_ja">Japonés</string>
+      <string id="ITM_MailStore_Client_Language_ko">Coreano</string>
+      <string id="ITM_MailStore_Client_Language_pl">Polaco</string>
+      <string id="ITM_MailStore_Client_Language_pt">Portugués</string>
+      <string id="ITM_MailStore_Client_Language_ru">Ruso</string>
+      <string id="ITM_MailStore_Client_Language_sl">Esloveno</string>
+      <string id="ITM_MailStore_Client_Language_es">Español</string>
+      <string id="ITM_MailStore_Client_Language_tr">Turco</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="POL_MailStore_Client_Authentication">
+        <dropdownList refId="DST_MailStore_Client_Authentication" defaultItem="1">Método de autenticación:</dropdownList>
+      </presentation>
+      <presentation id="POL_MailStore_Client_Server_Name">
+        <text>Dependiendo de la configuración de su red, puede introducir el nombre DNS, el nombre NetBIOS o la dirección IP del MailStore Server.</text>
+        <text>Si utiliza un puerto diferente del puerto estándar para conectarse al MailStore Server, debe especificar el puerto en el formulario "servername:port".</text>
+        <textBox refId="TXT_MailStore_Client_Server_Name">
+          <label>Nombre del servidor:</label>
+        </textBox>
+      </presentation>
+      <presentation id="POL_MailStore_Client_Accept_Thumbprint">
+        <textBox refId="TXT_MailStore_Client_Accept_Thumbprint">
+          <label>Huella del certificado:</label>
+        </textBox>
+      </presentation>
+      <presentation id="POL_MailStore_Client_Language">
+        <text>Seleccione "Idioma del sistema" para que se MailStore Client utilice el idioma del sistema operativo del cliente.</text>
+        <dropdownList refId="DST_MailStore_Client_Language" noSort="true" defaultItem="0">Idioma:</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

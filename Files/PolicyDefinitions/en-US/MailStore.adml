@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--  Copyright (c) MailStore Software GmbH  --><policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" revision="9.6" schemaVersion="1.0">
+  <displayName/>
+  <description>MailStore Base Group Policy ADMX Template</description>
+  <resources>
+    <stringTable>
+      <string id="SUPPORTED_MailStore9">At least MailStore Server 9</string>
+      <string id="SUPPORTED_MailStore96">At least MailStore Server 9.6</string>
+      <string id="SUPPORTED_MailStore9to12">MailStore Server 9, MailStore Server 10, MailStore Server 11 and MailStore Server 12 only</string>
+      <string id="SUPPORTED_MailStore1213">MailStore Server 12.1.3 only</string>
+      <string id="CAT_MailStore_Root">MailStore</string>
+      <string id="CAT_MailStore_Root_Help">Allows configuration of components used by a client computer to connect to MailStore Server. This includes the MailStore Client and the MailStore Outlook Add-in.</string>
+    </stringTable>
+  </resources>
+</policyDefinitionResources>

@@ -1,0 +1,3465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="0.9" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+  <policyNamespaces>
+    <target prefix="softmaker_policies" namespace="SoftMaker.Policies.SoftMaker" />
+    <using prefix="windows" namespace="Microsoft.Policies.Windows" />
+  </policyNamespaces>
+  <resources minRequiredRevision="1.0" fallbackCulture="en-US"/>
+  <supportedOn>
+    <definitions>
+      <definition name="SUPPORTED_ProductOnly"
+                       displayName="$(string.SUPPORTED_ProductOnly)"/>
+    </definitions>
+  </supportedOn>
+  <categories>
+    <category name="SoftMaker_Presentations_2021" displayName="$(string.SoftMaker_Presentations_2021)" explainText="$(string.SoftMaker_Presentations_2021_help)">  
+       <parentCategory ref="SoftMaker" />
+    </category>
+    <category name="SoftMaker_SoftMaker_Office_2021" displayName="$(string.SoftMaker_SoftMaker_Office_2021)" explainText="$(string.SoftMaker_SoftMaker_Office_2021_help)">  
+       <parentCategory ref="SoftMaker" />
+    </category>
+    <category name="SoftMaker_TextMaker_2021" displayName="$(string.SoftMaker_TextMaker_2021)" explainText="$(string.SoftMaker_TextMaker_2021_help)">  
+       <parentCategory ref="SoftMaker" />
+    </category>
+    <category name="SoftMaker_PlanMaker_2021" displayName="$(string.SoftMaker_PlanMaker_2021)" explainText="$(string.SoftMaker_PlanMaker_2021_help)">  
+       <parentCategory ref="SoftMaker" />
+    </category>
+    <category name="SoftMaker" displayName="$(string.SoftMaker)" explainText="$(string.SoftMaker_help)">  
+    </category>
+  </categories>
+  <policies>
+    <policy name="SoftMaker_Presentations_2021_ToolTips" class="Both" displayName="$(string.SoftMaker_Presentations_2021_ToolTips_name)" explainText="$(string.SoftMaker_Presentations_2021_ToolTips_help)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="ToolTips">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+     <policy name="SoftMaker_Presentations_2021_SpellCheckColor" class="Both" displayName="$(string.SoftMaker_Presentations_2021_SpellCheckColor_name)" explainText="$(string.SoftMaker_Presentations_2021_SpellCheckColor_help)" presentation="$(presentation.SoftMaker_Presentations_2021_SpellCheckColor)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021">
+       <parentCategory ref="SoftMaker_Presentations_2021" />
+       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+       <elements>
+         <decimal id="SoftMaker_Presentations_2021_SpellCheckColor" valueName="SpellCheckColor" maxValue="16777215" minValue="0" />
+       </elements>
+     </policy>
+    <policy name="SoftMaker_Presentations_2021_Documents" class="Both" displayName="$(string.SoftMaker_Presentations_2021_Documents_name)" explainText="$(string.SoftMaker_Presentations_2021_Documents_help)" presentation="$(presentation.SoftMaker_Presentations_2021_Documents)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_Presentations_2021_Documents" valueName="Documents" maxLength="254" />
+      </elements>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_ShowBreaks" class="Both" displayName="$(string.SoftMaker_Presentations_2021_ShowBreaks_name)" explainText="$(string.SoftMaker_Presentations_2021_ShowBreaks_help)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="ShowBreaks">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+     <policy name="SoftMaker_Presentations_2021_WSColorRGBValue" class="Both" displayName="$(string.SoftMaker_Presentations_2021_WSColorRGBValue_name)" explainText="$(string.SoftMaker_Presentations_2021_WSColorRGBValue_help)" presentation="$(presentation.SoftMaker_Presentations_2021_WSColorRGBValue)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021">
+       <parentCategory ref="SoftMaker_Presentations_2021" />
+       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+       <elements>
+         <decimal id="SoftMaker_Presentations_2021_WSColorRGBValue" valueName="WSColorRGBValue" maxValue="16777215" minValue="0" />
+       </elements>
+     </policy>
+    <policy name="SoftMaker_Presentations_2021_Pictures" class="Both" displayName="$(string.SoftMaker_Presentations_2021_Pictures_name)" explainText="$(string.SoftMaker_Presentations_2021_Pictures_help)" presentation="$(presentation.SoftMaker_Presentations_2021_Pictures)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_Presentations_2021_Pictures" valueName="Pictures" maxLength="254" />
+      </elements>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_SpellCheckColorEnable" class="Both" displayName="$(string.SoftMaker_Presentations_2021_SpellCheckColorEnable_name)" explainText="$(string.SoftMaker_Presentations_2021_SpellCheckColorEnable_help)" presentation="$(presentation.SoftMaker_Presentations_2021_SpellCheckColorEnable)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <enum id="SoftMaker_Presentations_2021_SpellCheckColorEnable" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="SpellCheckColorEnable">
+          <item displayName="$(string.SoftMaker_Presentations_2021_SpellCheckColorEnable_0)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_SpellCheckColorEnable_1)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_RibbonMinimizeFS" class="Both" displayName="$(string.SoftMaker_Presentations_2021_RibbonMinimizeFS_name)" explainText="$(string.SoftMaker_Presentations_2021_RibbonMinimizeFS_help)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="RibbonMinimizeFS">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_HorzScroll" class="Both" displayName="$(string.SoftMaker_Presentations_2021_HorzScroll_name)" explainText="$(string.SoftMaker_Presentations_2021_HorzScroll_help)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="HorzScroll">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_FormatWholeWord" class="Both" displayName="$(string.SoftMaker_Presentations_2021_FormatWholeWord_name)" explainText="$(string.SoftMaker_Presentations_2021_FormatWholeWord_help)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="FormatWholeWord">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_ImmediateObjectInsert" class="Both" displayName="$(string.SoftMaker_Presentations_2021_ImmediateObjectInsert_name)" explainText="$(string.SoftMaker_Presentations_2021_ImmediateObjectInsert_help)" presentation="$(presentation.SoftMaker_Presentations_2021_ImmediateObjectInsert)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <enum id="SoftMaker_Presentations_2021_ImmediateObjectInsert" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="ImmediateObjectInsert">
+          <item displayName="$(string.SoftMaker_Presentations_2021_ImmediateObjectInsert_2)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_ImmediateObjectInsert_1)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_ImmediateObjectInsert_0)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+     <policy name="SoftMaker_Presentations_2021_BackupFilesNumber" class="Both" displayName="$(string.SoftMaker_Presentations_2021_BackupFilesNumber_name)" explainText="$(string.SoftMaker_Presentations_2021_BackupFilesNumber_help)" presentation="$(presentation.SoftMaker_Presentations_2021_BackupFilesNumber)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021">
+       <parentCategory ref="SoftMaker_Presentations_2021" />
+       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+       <elements>
+         <decimal id="SoftMaker_Presentations_2021_BackupFilesNumber" valueName="BackupFilesNumber" maxValue="99" minValue="1" />
+       </elements>
+     </policy>
+    <policy name="SoftMaker_Presentations_2021_PicBulletPath" class="Both" displayName="$(string.SoftMaker_Presentations_2021_PicBulletPath_name)" explainText="$(string.SoftMaker_Presentations_2021_PicBulletPath_help)" presentation="$(presentation.SoftMaker_Presentations_2021_PicBulletPath)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_Presentations_2021_PicBulletPath" valueName="PicBulletPath" maxLength="254" />
+      </elements>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_CheckHtmlLinks" class="Both" displayName="$(string.SoftMaker_Presentations_2021_CheckHtmlLinks_name)" explainText="$(string.SoftMaker_Presentations_2021_CheckHtmlLinks_help)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="CheckHtmlLinks">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_DocInfo" class="Both" displayName="$(string.SoftMaker_Presentations_2021_DocInfo_name)" explainText="$(string.SoftMaker_Presentations_2021_DocInfo_help)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="DocInfo">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_WSColorEnabled" class="Both" displayName="$(string.SoftMaker_Presentations_2021_WSColorEnabled_name)" explainText="$(string.SoftMaker_Presentations_2021_WSColorEnabled_help)" presentation="$(presentation.SoftMaker_Presentations_2021_WSColorEnabled)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <enum id="SoftMaker_Presentations_2021_WSColorEnabled" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="WSColorEnabled">
+          <item displayName="$(string.SoftMaker_Presentations_2021_WSColorEnabled_0)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_WSColorEnabled_1)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_Designs" class="Both" displayName="$(string.SoftMaker_Presentations_2021_Designs_name)" explainText="$(string.SoftMaker_Presentations_2021_Designs_help)" presentation="$(presentation.SoftMaker_Presentations_2021_Designs)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_Presentations_2021_Designs" valueName="Designs" maxLength="254" />
+      </elements>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_FontShow" class="Both" displayName="$(string.SoftMaker_Presentations_2021_FontShow_name)" explainText="$(string.SoftMaker_Presentations_2021_FontShow_help)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="FontShow">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_Explorer" class="Both" displayName="$(string.SoftMaker_Presentations_2021_Explorer_name)" explainText="$(string.SoftMaker_Presentations_2021_Explorer_help)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="Explorer">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_WordSelection" class="Both" displayName="$(string.SoftMaker_Presentations_2021_WordSelection_name)" explainText="$(string.SoftMaker_Presentations_2021_WordSelection_help)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="WordSelection">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_OptionsHunspell" class="Both" displayName="$(string.SoftMaker_Presentations_2021_OptionsHunspell_name)" explainText="$(string.SoftMaker_Presentations_2021_OptionsHunspell_help)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="OptionsHunspell">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+     <policy name="SoftMaker_Presentations_2021_SnapshotNumber" class="Both" displayName="$(string.SoftMaker_Presentations_2021_SnapshotNumber_name)" explainText="$(string.SoftMaker_Presentations_2021_SnapshotNumber_help)" presentation="$(presentation.SoftMaker_Presentations_2021_SnapshotNumber)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021">
+       <parentCategory ref="SoftMaker_Presentations_2021" />
+       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+       <elements>
+         <decimal id="SoftMaker_Presentations_2021_SnapshotNumber" valueName="SnapshotNumber" maxValue="99" minValue="1" />
+       </elements>
+     </policy>
+    <policy name="SoftMaker_Presentations_2021_ShowObjectBoundaries" class="Both" displayName="$(string.SoftMaker_Presentations_2021_ShowObjectBoundaries_name)" explainText="$(string.SoftMaker_Presentations_2021_ShowObjectBoundaries_help)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="ShowObjectBoundaries">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+     <policy name="SoftMaker_Presentations_2021_Undo" class="Both" displayName="$(string.SoftMaker_Presentations_2021_Undo_name)" explainText="$(string.SoftMaker_Presentations_2021_Undo_help)" presentation="$(presentation.SoftMaker_Presentations_2021_Undo)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021">
+       <parentCategory ref="SoftMaker_Presentations_2021" />
+       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+       <elements>
+         <decimal id="SoftMaker_Presentations_2021_Undo" valueName="Undo" maxValue="999" minValue="1" />
+       </elements>
+     </policy>
+    <policy name="SoftMaker_Presentations_2021_SpellIgnoreWordsWithStartingDigits" class="Both" displayName="$(string.SoftMaker_Presentations_2021_SpellIgnoreWordsWithStartingDigits_name)" explainText="$(string.SoftMaker_Presentations_2021_SpellIgnoreWordsWithStartingDigits_help)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="SpellIgnoreWordsWithStartingDigits">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+     <policy name="SoftMaker_Presentations_2021_ShowDisplay" class="Both" displayName="$(string.SoftMaker_Presentations_2021_ShowDisplay_name)" explainText="$(string.SoftMaker_Presentations_2021_ShowDisplay_help)" presentation="$(presentation.SoftMaker_Presentations_2021_ShowDisplay)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021">
+       <parentCategory ref="SoftMaker_Presentations_2021" />
+       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+       <elements>
+         <decimal id="SoftMaker_Presentations_2021_ShowDisplay" valueName="ShowDisplay" maxValue="16777215" minValue="0" />
+       </elements>
+     </policy>
+    <policy name="SoftMaker_Presentations_2021_PdfFiles" class="Both" displayName="$(string.SoftMaker_Presentations_2021_PdfFiles_name)" explainText="$(string.SoftMaker_Presentations_2021_PdfFiles_help)" presentation="$(presentation.SoftMaker_Presentations_2021_PdfFiles)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_Presentations_2021_PdfFiles" valueName="PdfFiles" maxLength="254" />
+      </elements>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_DefaultFormat" class="Both" displayName="$(string.SoftMaker_Presentations_2021_DefaultFormat_name)" explainText="$(string.SoftMaker_Presentations_2021_DefaultFormat_help)" presentation="$(presentation.SoftMaker_Presentations_2021_DefaultFormat)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <enum id="SoftMaker_Presentations_2021_DefaultFormat" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="DefaultFormat">
+          <item displayName="$(string.SoftMaker_Presentations_2021_DefaultFormat_0)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_DefaultFormat_4)">
+            <value>
+              <decimal value="4" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_DefaultFormat_3)">
+            <value>
+              <decimal value="3" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_DefaultFormat_1)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_DefaultFormat_2)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+     <policy name="SoftMaker_Presentations_2021_AutoTime" class="Both" displayName="$(string.SoftMaker_Presentations_2021_AutoTime_name)" explainText="$(string.SoftMaker_Presentations_2021_AutoTime_help)" presentation="$(presentation.SoftMaker_Presentations_2021_AutoTime)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021">
+       <parentCategory ref="SoftMaker_Presentations_2021" />
+       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+       <elements>
+         <decimal id="SoftMaker_Presentations_2021_AutoTime" valueName="AutoTime" maxValue="100" minValue="1" />
+       </elements>
+     </policy>
+    <policy name="SoftMaker_Presentations_2021_Capitalize" class="Both" displayName="$(string.SoftMaker_Presentations_2021_Capitalize_name)" explainText="$(string.SoftMaker_Presentations_2021_Capitalize_help)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="Capitalize">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_BkgndCorrection" class="Both" displayName="$(string.SoftMaker_Presentations_2021_BkgndCorrection_name)" explainText="$(string.SoftMaker_Presentations_2021_BkgndCorrection_help)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="BkgndCorrection">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_BackupNoCleanup" class="Both" displayName="$(string.SoftMaker_Presentations_2021_BackupNoCleanup_name)" explainText="$(string.SoftMaker_Presentations_2021_BackupNoCleanup_help)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="BackupNoCleanup">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_LargeIcons" class="Both" displayName="$(string.SoftMaker_Presentations_2021_LargeIcons_name)" explainText="$(string.SoftMaker_Presentations_2021_LargeIcons_help)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="LargeIcons">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_Glossary" class="Both" displayName="$(string.SoftMaker_Presentations_2021_Glossary_name)" explainText="$(string.SoftMaker_Presentations_2021_Glossary_help)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="Glossary">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_SpaceCorrection" class="Both" displayName="$(string.SoftMaker_Presentations_2021_SpaceCorrection_name)" explainText="$(string.SoftMaker_Presentations_2021_SpaceCorrection_help)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="SpaceCorrection">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_RaiseOrdinals" class="Both" displayName="$(string.SoftMaker_Presentations_2021_RaiseOrdinals_name)" explainText="$(string.SoftMaker_Presentations_2021_RaiseOrdinals_help)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="RaiseOrdinals">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_OptionsFontsSheet" class="Both" displayName="$(string.SoftMaker_Presentations_2021_OptionsFontsSheet_name)" explainText="$(string.SoftMaker_Presentations_2021_OptionsFontsSheet_help)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="OptionsFontsSheet">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_AutoSave" class="Both" displayName="$(string.SoftMaker_Presentations_2021_AutoSave_name)" explainText="$(string.SoftMaker_Presentations_2021_AutoSave_help)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="AutoSave">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_WarningBeep" class="Both" displayName="$(string.SoftMaker_Presentations_2021_WarningBeep_name)" explainText="$(string.SoftMaker_Presentations_2021_WarningBeep_help)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="WarningBeep">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_ViewColorMode" class="Both" displayName="$(string.SoftMaker_Presentations_2021_ViewColorMode_name)" explainText="$(string.SoftMaker_Presentations_2021_ViewColorMode_help)" presentation="$(presentation.SoftMaker_Presentations_2021_ViewColorMode)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <enum id="SoftMaker_Presentations_2021_ViewColorMode" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="ViewColorMode">
+          <item displayName="$(string.SoftMaker_Presentations_2021_ViewColorMode_0)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_ViewColorMode_1)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_ViewColorMode_2)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_VertScroll" class="Both" displayName="$(string.SoftMaker_Presentations_2021_VertScroll_name)" explainText="$(string.SoftMaker_Presentations_2021_VertScroll_help)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="VertScroll">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_ShowRulers" class="Both" displayName="$(string.SoftMaker_Presentations_2021_ShowRulers_name)" explainText="$(string.SoftMaker_Presentations_2021_ShowRulers_help)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="ShowRulers">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_Databases" class="Both" displayName="$(string.SoftMaker_Presentations_2021_Databases_name)" explainText="$(string.SoftMaker_Presentations_2021_Databases_help)" presentation="$(presentation.SoftMaker_Presentations_2021_Databases)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_Presentations_2021_Databases" valueName="Databases" maxLength="254" />
+      </elements>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_PresenterMode" class="Both" displayName="$(string.SoftMaker_Presentations_2021_PresenterMode_name)" explainText="$(string.SoftMaker_Presentations_2021_PresenterMode_help)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="PresenterMode">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_BiCapitals" class="Both" displayName="$(string.SoftMaker_Presentations_2021_BiCapitals_name)" explainText="$(string.SoftMaker_Presentations_2021_BiCapitals_help)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="BiCapitals">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_ShowFormattedOutline" class="Both" displayName="$(string.SoftMaker_Presentations_2021_ShowFormattedOutline_name)" explainText="$(string.SoftMaker_Presentations_2021_ShowFormattedOutline_help)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="ShowFormattedOutline">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_SmartQuotes" class="Both" displayName="$(string.SoftMaker_Presentations_2021_SmartQuotes_name)" explainText="$(string.SoftMaker_Presentations_2021_SmartQuotes_help)" presentation="$(presentation.SoftMaker_Presentations_2021_SmartQuotes)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <enum id="SoftMaker_Presentations_2021_SmartQuotes" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="SmartQuotes">
+          <item displayName="$(string.SoftMaker_Presentations_2021_SmartQuotes_0)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_SmartQuotes_1)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_SmartQuotes_2)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_SmartQuotes_3)">
+            <value>
+              <decimal value="3" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_SmartQuotes_4)">
+            <value>
+              <decimal value="4" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_SmartQuotes_6)">
+            <value>
+              <decimal value="6" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_SmartQuotes_7)">
+            <value>
+              <decimal value="7" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_SmartQuotes_5)">
+            <value>
+              <decimal value="5" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_DesignPath" class="Both" displayName="$(string.SoftMaker_Presentations_2021_DesignPath_name)" explainText="$(string.SoftMaker_Presentations_2021_DesignPath_help)" presentation="$(presentation.SoftMaker_Presentations_2021_DesignPath)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_Presentations_2021_DesignPath" valueName="DesignPath" maxLength="254" />
+      </elements>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_RibbonMinimize" class="Both" displayName="$(string.SoftMaker_Presentations_2021_RibbonMinimize_name)" explainText="$(string.SoftMaker_Presentations_2021_RibbonMinimize_help)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="RibbonMinimize">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_Macros" class="Both" displayName="$(string.SoftMaker_Presentations_2021_Macros_name)" explainText="$(string.SoftMaker_Presentations_2021_Macros_help)" presentation="$(presentation.SoftMaker_Presentations_2021_Macros)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_Presentations_2021_Macros" valueName="Macros" maxLength="254" />
+      </elements>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_LanguageID" class="Both" displayName="$(string.SoftMaker_Presentations_2021_LanguageID_name)" explainText="$(string.SoftMaker_Presentations_2021_LanguageID_help)" presentation="$(presentation.SoftMaker_Presentations_2021_LanguageID)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <enum id="SoftMaker_Presentations_2021_LanguageID" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="LanguageID">
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1031)">
+            <value>
+              <decimal value="1031" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_29703)">
+            <value>
+              <decimal value="29703" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_5127)">
+            <value>
+              <decimal value="5127" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_4103)">
+            <value>
+              <decimal value="4103" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_3079)">
+            <value>
+              <decimal value="3079" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_31751)">
+            <value>
+              <decimal value="31751" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_2055)">
+            <value>
+              <decimal value="2055" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_30727)">
+            <value>
+              <decimal value="30727" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1033)">
+            <value>
+              <decimal value="1033" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_2057)">
+            <value>
+              <decimal value="2057" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1036)">
+            <value>
+              <decimal value="1036" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_3084)">
+            <value>
+              <decimal value="3084" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_3082)">
+            <value>
+              <decimal value="3082" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_2058)">
+            <value>
+              <decimal value="2058" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_2070)">
+            <value>
+              <decimal value="2070" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1046)">
+            <value>
+              <decimal value="1046" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1040)">
+            <value>
+              <decimal value="1040" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1043)">
+            <value>
+              <decimal value="1043" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1030)">
+            <value>
+              <decimal value="1030" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1044)">
+            <value>
+              <decimal value="1044" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1053)">
+            <value>
+              <decimal value="1053" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1035)">
+            <value>
+              <decimal value="1035" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1061)">
+            <value>
+              <decimal value="1061" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1062)">
+            <value>
+              <decimal value="1062" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1063)">
+            <value>
+              <decimal value="1063" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1060)">
+            <value>
+              <decimal value="1060" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1045)">
+            <value>
+              <decimal value="1045" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1029)">
+            <value>
+              <decimal value="1029" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1051)">
+            <value>
+              <decimal value="1051" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1050)">
+            <value>
+              <decimal value="1050" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_2074)">
+            <value>
+              <decimal value="2074" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_3098)">
+            <value>
+              <decimal value="3098" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1038)">
+            <value>
+              <decimal value="1038" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1048)">
+            <value>
+              <decimal value="1048" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1032)">
+            <value>
+              <decimal value="1032" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1055)">
+            <value>
+              <decimal value="1055" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1049)">
+            <value>
+              <decimal value="1049" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1026)">
+            <value>
+              <decimal value="1026" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1058)">
+            <value>
+              <decimal value="1058" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1087)">
+            <value>
+              <decimal value="1087" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_2052)">
+            <value>
+              <decimal value="2052" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1028)">
+            <value>
+              <decimal value="1028" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1041)">
+            <value>
+              <decimal value="1041" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1042)">
+            <value>
+              <decimal value="1042" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1057)">
+            <value>
+              <decimal value="1057" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1086)">
+            <value>
+              <decimal value="1086" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1025)">
+            <value>
+              <decimal value="1025" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1109)">
+            <value>
+              <decimal value="1109" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1081)">
+            <value>
+              <decimal value="1081" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1054)">
+            <value>
+              <decimal value="1054" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1107)">
+            <value>
+              <decimal value="1107" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1108)">
+            <value>
+              <decimal value="1108" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_LanguageID_1066)">
+            <value>
+              <decimal value="1066" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_LivePreview" class="Both" displayName="$(string.SoftMaker_Presentations_2021_LivePreview_name)" explainText="$(string.SoftMaker_Presentations_2021_LivePreview_help)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="LivePreview">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_BackupFilesPath" class="Both" displayName="$(string.SoftMaker_Presentations_2021_BackupFilesPath_name)" explainText="$(string.SoftMaker_Presentations_2021_BackupFilesPath_help)" presentation="$(presentation.SoftMaker_Presentations_2021_BackupFilesPath)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_Presentations_2021_BackupFilesPath" valueName="BackupFilesPath" maxLength="254" />
+      </elements>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_OptionsAssociateFiles" class="Both" displayName="$(string.SoftMaker_Presentations_2021_OptionsAssociateFiles_name)" explainText="$(string.SoftMaker_Presentations_2021_OptionsAssociateFiles_help)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="OptionsAssociateFiles">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+     <policy name="SoftMaker_Presentations_2021_HistoryEntries" class="Both" displayName="$(string.SoftMaker_Presentations_2021_HistoryEntries_name)" explainText="$(string.SoftMaker_Presentations_2021_HistoryEntries_help)" presentation="$(presentation.SoftMaker_Presentations_2021_HistoryEntries)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021">
+       <parentCategory ref="SoftMaker_Presentations_2021" />
+       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+       <elements>
+         <decimal id="SoftMaker_Presentations_2021_HistoryEntries" valueName="HistoryEntries" maxValue="100" minValue="0" />
+       </elements>
+     </policy>
+    <policy name="SoftMaker_Presentations_2021_SeparateQuickAccess" class="Both" displayName="$(string.SoftMaker_Presentations_2021_SeparateQuickAccess_name)" explainText="$(string.SoftMaker_Presentations_2021_SeparateQuickAccess_help)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="SeparateQuickAccess">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_DiffCorrections" class="Both" displayName="$(string.SoftMaker_Presentations_2021_DiffCorrections_name)" explainText="$(string.SoftMaker_Presentations_2021_DiffCorrections_help)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="DiffCorrections">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_Guides" class="Both" displayName="$(string.SoftMaker_Presentations_2021_Guides_name)" explainText="$(string.SoftMaker_Presentations_2021_Guides_help)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="Guides">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_ClearType" class="Both" displayName="$(string.SoftMaker_Presentations_2021_ClearType_name)" explainText="$(string.SoftMaker_Presentations_2021_ClearType_help)" presentation="$(presentation.SoftMaker_Presentations_2021_ClearType)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <enum id="SoftMaker_Presentations_2021_ClearType" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="ClearType">
+          <item displayName="$(string.SoftMaker_Presentations_2021_ClearType_0)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_ClearType_1)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_ClearType_2)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_Presentations_2021_ClearType_3)">
+            <value>
+              <decimal value="3" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="SoftMaker_Presentations_2021_FrenchSpaces" class="Both" displayName="$(string.SoftMaker_Presentations_2021_FrenchSpaces_name)" explainText="$(string.SoftMaker_Presentations_2021_FrenchSpaces_help)" key="SOFTWARE\Policies\SoftMaker\Presentations 2021" valueName="FrenchSpaces">
+      <parentCategory ref="SoftMaker_Presentations_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_SoftMaker_Office_2021_UserDataTitle" class="Both" displayName="$(string.SoftMaker_SoftMaker_Office_2021_UserDataTitle_name)" explainText="$(string.SoftMaker_SoftMaker_Office_2021_UserDataTitle_help)" presentation="$(presentation.SoftMaker_SoftMaker_Office_2021_UserDataTitle)" key="SOFTWARE\Policies\SoftMaker\SoftMaker Office 2021">
+      <parentCategory ref="SoftMaker_SoftMaker_Office_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_SoftMaker_Office_2021_UserDataTitle" valueName="UserDataTitle" maxLength="63" />
+      </elements>
+    </policy>
+    <policy name="SoftMaker_SoftMaker_Office_2021_UserDataPhone2" class="Both" displayName="$(string.SoftMaker_SoftMaker_Office_2021_UserDataPhone2_name)" explainText="$(string.SoftMaker_SoftMaker_Office_2021_UserDataPhone2_help)" presentation="$(presentation.SoftMaker_SoftMaker_Office_2021_UserDataPhone2)" key="SOFTWARE\Policies\SoftMaker\SoftMaker Office 2021">
+      <parentCategory ref="SoftMaker_SoftMaker_Office_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_SoftMaker_Office_2021_UserDataPhone2" valueName="UserDataHandy" maxLength="31" />
+      </elements>
+    </policy>
+    <policy name="SoftMaker_SoftMaker_Office_2021_UserDataInitials" class="Both" displayName="$(string.SoftMaker_SoftMaker_Office_2021_UserDataInitials_name)" explainText="$(string.SoftMaker_SoftMaker_Office_2021_UserDataInitials_help)" presentation="$(presentation.SoftMaker_SoftMaker_Office_2021_UserDataInitials)" key="SOFTWARE\Policies\SoftMaker\SoftMaker Office 2021">
+      <parentCategory ref="SoftMaker_SoftMaker_Office_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_SoftMaker_Office_2021_UserDataInitials" valueName="UserDataInitials" maxLength="7" />
+      </elements>
+    </policy>
+    <policy name="SoftMaker_SoftMaker_Office_2021_UserDataCountry" class="Both" displayName="$(string.SoftMaker_SoftMaker_Office_2021_UserDataCountry_name)" explainText="$(string.SoftMaker_SoftMaker_Office_2021_UserDataCountry_help)" presentation="$(presentation.SoftMaker_SoftMaker_Office_2021_UserDataCountry)" key="SOFTWARE\Policies\SoftMaker\SoftMaker Office 2021">
+      <parentCategory ref="SoftMaker_SoftMaker_Office_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_SoftMaker_Office_2021_UserDataCountry" valueName="UserDataCounry" maxLength="63" />
+      </elements>
+    </policy>
+    <policy name="SoftMaker_SoftMaker_Office_2021_UserDataEmail3" class="Both" displayName="$(string.SoftMaker_SoftMaker_Office_2021_UserDataEmail3_name)" explainText="$(string.SoftMaker_SoftMaker_Office_2021_UserDataEmail3_help)" presentation="$(presentation.SoftMaker_SoftMaker_Office_2021_UserDataEmail3)" key="SOFTWARE\Policies\SoftMaker\SoftMaker Office 2021">
+      <parentCategory ref="SoftMaker_SoftMaker_Office_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_SoftMaker_Office_2021_UserDataEmail3" valueName="UserDataEmail3" maxLength="63" />
+      </elements>
+    </policy>
+    <policy name="SoftMaker_SoftMaker_Office_2021_UserDataEmail2" class="Both" displayName="$(string.SoftMaker_SoftMaker_Office_2021_UserDataEmail2_name)" explainText="$(string.SoftMaker_SoftMaker_Office_2021_UserDataEmail2_help)" presentation="$(presentation.SoftMaker_SoftMaker_Office_2021_UserDataEmail2)" key="SOFTWARE\Policies\SoftMaker\SoftMaker Office 2021">
+      <parentCategory ref="SoftMaker_SoftMaker_Office_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_SoftMaker_Office_2021_UserDataEmail2" valueName="UserDataEmail2" maxLength="63" />
+      </elements>
+    </policy>
+    <policy name="SoftMaker_SoftMaker_Office_2021_UserDataAddress1" class="Both" displayName="$(string.SoftMaker_SoftMaker_Office_2021_UserDataAddress1_name)" explainText="$(string.SoftMaker_SoftMaker_Office_2021_UserDataAddress1_help)" presentation="$(presentation.SoftMaker_SoftMaker_Office_2021_UserDataAddress1)" key="SOFTWARE\Policies\SoftMaker\SoftMaker Office 2021">
+      <parentCategory ref="SoftMaker_SoftMaker_Office_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_SoftMaker_Office_2021_UserDataAddress1" valueName="UserDataAddress1" maxLength="63" />
+      </elements>
+    </policy>
+    <policy name="SoftMaker_SoftMaker_Office_2021_UserDataPhone3" class="Both" displayName="$(string.SoftMaker_SoftMaker_Office_2021_UserDataPhone3_name)" explainText="$(string.SoftMaker_SoftMaker_Office_2021_UserDataPhone3_help)" presentation="$(presentation.SoftMaker_SoftMaker_Office_2021_UserDataPhone3)" key="SOFTWARE\Policies\SoftMaker\SoftMaker Office 2021">
+      <parentCategory ref="SoftMaker_SoftMaker_Office_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_SoftMaker_Office_2021_UserDataPhone3" valueName="UserDataHandy2" maxLength="31" />
+      </elements>
+    </policy>
+    <policy name="SoftMaker_SoftMaker_Office_2021_UserDataAddress2" class="Both" displayName="$(string.SoftMaker_SoftMaker_Office_2021_UserDataAddress2_name)" explainText="$(string.SoftMaker_SoftMaker_Office_2021_UserDataAddress2_help)" presentation="$(presentation.SoftMaker_SoftMaker_Office_2021_UserDataAddress2)" key="SOFTWARE\Policies\SoftMaker\SoftMaker Office 2021">
+      <parentCategory ref="SoftMaker_SoftMaker_Office_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_SoftMaker_Office_2021_UserDataAddress2" valueName="UserDataAddress2" maxLength="63" />
+      </elements>
+    </policy>
+    <policy name="SoftMaker_SoftMaker_Office_2021_UserDataDepartment" class="Both" displayName="$(string.SoftMaker_SoftMaker_Office_2021_UserDataDepartment_name)" explainText="$(string.SoftMaker_SoftMaker_Office_2021_UserDataDepartment_help)" presentation="$(presentation.SoftMaker_SoftMaker_Office_2021_UserDataDepartment)" key="SOFTWARE\Policies\SoftMaker\SoftMaker Office 2021">
+      <parentCategory ref="SoftMaker_SoftMaker_Office_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_SoftMaker_Office_2021_UserDataDepartment" valueName="UserDataDepartment" maxLength="63" />
+      </elements>
+    </policy>
+    <policy name="SoftMaker_SoftMaker_Office_2021_UpdateCheckEnabled" class="Both" displayName="$(string.SoftMaker_SoftMaker_Office_2021_UpdateCheckEnabled_name)" explainText="$(string.SoftMaker_SoftMaker_Office_2021_UpdateCheckEnabled_help)" presentation="$(presentation.SoftMaker_SoftMaker_Office_2021_UpdateCheckEnabled)" key="SOFTWARE\Policies\SoftMaker\SoftMaker Office 2021">
+      <parentCategory ref="SoftMaker_SoftMaker_Office_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <enum id="SoftMaker_SoftMaker_Office_2021_UpdateCheckEnabled" key="SOFTWARE\Policies\SoftMaker\SoftMaker Office 2021" valueName="UpdateCheckEnabled">
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_UpdateCheckEnabled_0)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_UpdateCheckEnabled_1)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_UpdateCheckEnabled_2)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_UpdateCheckEnabled_3)">
+            <value>
+              <decimal value="3" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="SoftMaker_SoftMaker_Office_2021_UserDataName" class="Both" displayName="$(string.SoftMaker_SoftMaker_Office_2021_UserDataName_name)" explainText="$(string.SoftMaker_SoftMaker_Office_2021_UserDataName_help)" presentation="$(presentation.SoftMaker_SoftMaker_Office_2021_UserDataName)" key="SOFTWARE\Policies\SoftMaker\SoftMaker Office 2021">
+      <parentCategory ref="SoftMaker_SoftMaker_Office_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_SoftMaker_Office_2021_UserDataName" valueName="UserDataName" maxLength="63" />
+      </elements>
+    </policy>
+    <policy name="SoftMaker_SoftMaker_Office_2021_UserDataEmail" class="Both" displayName="$(string.SoftMaker_SoftMaker_Office_2021_UserDataEmail_name)" explainText="$(string.SoftMaker_SoftMaker_Office_2021_UserDataEmail_help)" presentation="$(presentation.SoftMaker_SoftMaker_Office_2021_UserDataEmail)" key="SOFTWARE\Policies\SoftMaker\SoftMaker Office 2021">
+      <parentCategory ref="SoftMaker_SoftMaker_Office_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_SoftMaker_Office_2021_UserDataEmail" valueName="UserDataEmail" maxLength="63" />
+      </elements>
+    </policy>
+    <policy name="SoftMaker_SoftMaker_Office_2021_UserDataFax" class="Both" displayName="$(string.SoftMaker_SoftMaker_Office_2021_UserDataFax_name)" explainText="$(string.SoftMaker_SoftMaker_Office_2021_UserDataFax_help)" presentation="$(presentation.SoftMaker_SoftMaker_Office_2021_UserDataFax)" key="SOFTWARE\Policies\SoftMaker\SoftMaker Office 2021">
+      <parentCategory ref="SoftMaker_SoftMaker_Office_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_SoftMaker_Office_2021_UserDataFax" valueName="UserDataFax" maxLength="31" />
+      </elements>
+    </policy>
+    <policy name="SoftMaker_SoftMaker_Office_2021_UITheme" class="Both" displayName="$(string.SoftMaker_SoftMaker_Office_2021_UITheme_name)" explainText="$(string.SoftMaker_SoftMaker_Office_2021_UITheme_help)" presentation="$(presentation.SoftMaker_SoftMaker_Office_2021_UITheme)" key="SOFTWARE\Policies\SoftMaker\SoftMaker Office 2021">
+      <parentCategory ref="SoftMaker_SoftMaker_Office_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <enum id="SoftMaker_SoftMaker_Office_2021_UITheme" key="SOFTWARE\Policies\SoftMaker\SoftMaker Office 2021" valueName="UITheme">
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_UITheme_0)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_UITheme_1)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_UITheme_2)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_UITheme_3)">
+            <value>
+              <decimal value="3" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_UITheme_4)">
+            <value>
+              <decimal value="4" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="SoftMaker_SoftMaker_Office_2021_UserDataZipCode" class="Both" displayName="$(string.SoftMaker_SoftMaker_Office_2021_UserDataZipCode_name)" explainText="$(string.SoftMaker_SoftMaker_Office_2021_UserDataZipCode_help)" presentation="$(presentation.SoftMaker_SoftMaker_Office_2021_UserDataZipCode)" key="SOFTWARE\Policies\SoftMaker\SoftMaker Office 2021">
+      <parentCategory ref="SoftMaker_SoftMaker_Office_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_SoftMaker_Office_2021_UserDataZipCode" valueName="UserDataZipCode" maxLength="15" />
+      </elements>
+    </policy>
+    <policy name="SoftMaker_SoftMaker_Office_2021_HelpManage" class="Both" displayName="$(string.SoftMaker_SoftMaker_Office_2021_HelpManage_name)" explainText="$(string.SoftMaker_SoftMaker_Office_2021_HelpManage_help)" key="SOFTWARE\Policies\SoftMaker\SoftMaker Office 2021" valueName="HelpManage">
+      <parentCategory ref="SoftMaker_SoftMaker_Office_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_SoftMaker_Office_2021_UserDataCompany" class="Both" displayName="$(string.SoftMaker_SoftMaker_Office_2021_UserDataCompany_name)" explainText="$(string.SoftMaker_SoftMaker_Office_2021_UserDataCompany_help)" presentation="$(presentation.SoftMaker_SoftMaker_Office_2021_UserDataCompany)" key="SOFTWARE\Policies\SoftMaker\SoftMaker Office 2021">
+      <parentCategory ref="SoftMaker_SoftMaker_Office_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_SoftMaker_Office_2021_UserDataCompany" valueName="UserDataCompany" maxLength="63" />
+      </elements>
+    </policy>
+    <policy name="SoftMaker_SoftMaker_Office_2021_UserDataCity" class="Both" displayName="$(string.SoftMaker_SoftMaker_Office_2021_UserDataCity_name)" explainText="$(string.SoftMaker_SoftMaker_Office_2021_UserDataCity_help)" presentation="$(presentation.SoftMaker_SoftMaker_Office_2021_UserDataCity)" key="SOFTWARE\Policies\SoftMaker\SoftMaker Office 2021">
+      <parentCategory ref="SoftMaker_SoftMaker_Office_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_SoftMaker_Office_2021_UserDataCity" valueName="UserDataCity" maxLength="63" />
+      </elements>
+    </policy>
+    <policy name="SoftMaker_SoftMaker_Office_2021_UserDataPhone" class="Both" displayName="$(string.SoftMaker_SoftMaker_Office_2021_UserDataPhone_name)" explainText="$(string.SoftMaker_SoftMaker_Office_2021_UserDataPhone_help)" presentation="$(presentation.SoftMaker_SoftMaker_Office_2021_UserDataPhone)" key="SOFTWARE\Policies\SoftMaker\SoftMaker Office 2021">
+      <parentCategory ref="SoftMaker_SoftMaker_Office_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_SoftMaker_Office_2021_UserDataPhone" valueName="UserDataPhone" maxLength="31" />
+      </elements>
+    </policy>
+    <policy name="SoftMaker_SoftMaker_Office_2021_AskUserInfo" class="Both" displayName="$(string.SoftMaker_SoftMaker_Office_2021_AskUserInfo_name)" explainText="$(string.SoftMaker_SoftMaker_Office_2021_AskUserInfo_help)" key="SOFTWARE\Policies\SoftMaker\SoftMaker Office 2021" valueName="AskUserInfo">
+      <parentCategory ref="SoftMaker_SoftMaker_Office_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_SoftMaker_Office_2021_HelpSoftMaker" class="Both" displayName="$(string.SoftMaker_SoftMaker_Office_2021_HelpSoftMaker_name)" explainText="$(string.SoftMaker_SoftMaker_Office_2021_HelpSoftMaker_help)" key="SOFTWARE\Policies\SoftMaker\SoftMaker Office 2021" valueName="HelpSoftMaker">
+      <parentCategory ref="SoftMaker_SoftMaker_Office_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_SoftMaker_Office_2021_UserDataWWW" class="Both" displayName="$(string.SoftMaker_SoftMaker_Office_2021_UserDataWWW_name)" explainText="$(string.SoftMaker_SoftMaker_Office_2021_UserDataWWW_help)" presentation="$(presentation.SoftMaker_SoftMaker_Office_2021_UserDataWWW)" key="SOFTWARE\Policies\SoftMaker\SoftMaker Office 2021">
+      <parentCategory ref="SoftMaker_SoftMaker_Office_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_SoftMaker_Office_2021_UserDataWWW" valueName="UserDataWWW" maxLength="95" />
+      </elements>
+    </policy>
+    <policy name="SoftMaker_SoftMaker_Office_2021_ProductKey" class="Both" displayName="$(string.SoftMaker_SoftMaker_Office_2021_ProductKey_name)" explainText="$(string.SoftMaker_SoftMaker_Office_2021_ProductKey_help)" presentation="$(presentation.SoftMaker_SoftMaker_Office_2021_ProductKey)" key="SOFTWARE\Policies\SoftMaker\SoftMaker Office 2021">
+      <parentCategory ref="SoftMaker_SoftMaker_Office_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_SoftMaker_Office_2021_ProductKey" valueName="ProductKey" maxLength="12" />
+      </elements>
+    </policy>
+    <policy name="SoftMaker_SoftMaker_Office_2021_DlgLID" class="Both" displayName="$(string.SoftMaker_SoftMaker_Office_2021_DlgLID_name)" explainText="$(string.SoftMaker_SoftMaker_Office_2021_DlgLID_help)" presentation="$(presentation.SoftMaker_SoftMaker_Office_2021_DlgLID)" key="SOFTWARE\Policies\SoftMaker\SoftMaker Office 2021">
+      <parentCategory ref="SoftMaker_SoftMaker_Office_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <enum id="SoftMaker_SoftMaker_Office_2021_DlgLID" key="SOFTWARE\Policies\SoftMaker\SoftMaker Office 2021" valueName="DlgLID">
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_DlgLID_1031)">
+            <value>
+              <decimal value="1031" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_DlgLID_1033)">
+            <value>
+              <decimal value="1033" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_DlgLID_2057)">
+            <value>
+              <decimal value="2057" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_DlgLID_1036)">
+            <value>
+              <decimal value="1036" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_DlgLID_3082)">
+            <value>
+              <decimal value="3082" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_DlgLID_2070)">
+            <value>
+              <decimal value="2070" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_DlgLID_1046)">
+            <value>
+              <decimal value="1046" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_DlgLID_1040)">
+            <value>
+              <decimal value="1040" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_DlgLID_1043)">
+            <value>
+              <decimal value="1043" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_DlgLID_1030)">
+            <value>
+              <decimal value="1030" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_DlgLID_1053)">
+            <value>
+              <decimal value="1053" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_DlgLID_1035)">
+            <value>
+              <decimal value="1035" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_DlgLID_1061)">
+            <value>
+              <decimal value="1061" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_DlgLID_1062)">
+            <value>
+              <decimal value="1062" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_DlgLID_1063)">
+            <value>
+              <decimal value="1063" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_DlgLID_1060)">
+            <value>
+              <decimal value="1060" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_DlgLID_1038)">
+            <value>
+              <decimal value="1038" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_DlgLID_1048)">
+            <value>
+              <decimal value="1048" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_DlgLID_1032)">
+            <value>
+              <decimal value="1032" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_DlgLID_1055)">
+            <value>
+              <decimal value="1055" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_DlgLID_1049)">
+            <value>
+              <decimal value="1049" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_DlgLID_1026)">
+            <value>
+              <decimal value="1026" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_DlgLID_1058)">
+            <value>
+              <decimal value="1058" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_DlgLID_1087)">
+            <value>
+              <decimal value="1087" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_DlgLID_2052)">
+            <value>
+              <decimal value="2052" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_DlgLID_1041)">
+            <value>
+              <decimal value="1041" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_DlgLID_1042)">
+            <value>
+              <decimal value="1042" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_DlgLID_1057)">
+            <value>
+              <decimal value="1057" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_SoftMaker_Office_2021_DlgLID_1025)">
+            <value>
+              <decimal value="1025" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_ToolTips" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_ToolTips_name)" explainText="$(string.SoftMaker_TextMaker_2021_ToolTips_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="ToolTips">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+     <policy name="SoftMaker_TextMaker_2021_SpellCheckColor" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_SpellCheckColor_name)" explainText="$(string.SoftMaker_TextMaker_2021_SpellCheckColor_help)" presentation="$(presentation.SoftMaker_TextMaker_2021_SpellCheckColor)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021">
+       <parentCategory ref="SoftMaker_TextMaker_2021" />
+       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+       <elements>
+         <decimal id="SoftMaker_TextMaker_2021_SpellCheckColor" valueName="SpellCheckColor" maxValue="16777215" minValue="0" />
+       </elements>
+     </policy>
+    <policy name="SoftMaker_TextMaker_2021_Documents" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_Documents_name)" explainText="$(string.SoftMaker_TextMaker_2021_Documents_help)" presentation="$(presentation.SoftMaker_TextMaker_2021_Documents)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_TextMaker_2021_Documents" valueName="Documents" maxLength="254" />
+      </elements>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_PgfBreaks" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_PgfBreaks_name)" explainText="$(string.SoftMaker_TextMaker_2021_PgfBreaks_help)" presentation="$(presentation.SoftMaker_TextMaker_2021_PgfBreaks)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <enum id="SoftMaker_TextMaker_2021_PgfBreaks" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="PgfBreaks">
+          <item displayName="$(string.SoftMaker_TextMaker_2021_PgfBreaks_0)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_PgfBreaks_256)">
+            <value>
+              <decimal value="256" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_PgfBreaks_2048)">
+            <value>
+              <decimal value="2048" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+     <policy name="SoftMaker_TextMaker_2021_WSColorRGBValue" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_WSColorRGBValue_name)" explainText="$(string.SoftMaker_TextMaker_2021_WSColorRGBValue_help)" presentation="$(presentation.SoftMaker_TextMaker_2021_WSColorRGBValue)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021">
+       <parentCategory ref="SoftMaker_TextMaker_2021" />
+       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+       <elements>
+         <decimal id="SoftMaker_TextMaker_2021_WSColorRGBValue" valueName="WSColorRGBValue" maxValue="16777215" minValue="0" />
+       </elements>
+     </policy>
+    <policy name="SoftMaker_TextMaker_2021_Pictures" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_Pictures_name)" explainText="$(string.SoftMaker_TextMaker_2021_Pictures_help)" presentation="$(presentation.SoftMaker_TextMaker_2021_Pictures)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_TextMaker_2021_Pictures" valueName="Pictures" maxLength="254" />
+      </elements>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_Databases" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_Databases_name)" explainText="$(string.SoftMaker_TextMaker_2021_Databases_help)" presentation="$(presentation.SoftMaker_TextMaker_2021_Databases)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_TextMaker_2021_Databases" valueName="Databases" maxLength="254" />
+      </elements>
+    </policy>
+     <policy name="SoftMaker_TextMaker_2021_GrammarCheckColor" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_GrammarCheckColor_name)" explainText="$(string.SoftMaker_TextMaker_2021_GrammarCheckColor_help)" presentation="$(presentation.SoftMaker_TextMaker_2021_GrammarCheckColor)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021">
+       <parentCategory ref="SoftMaker_TextMaker_2021" />
+       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+       <elements>
+         <decimal id="SoftMaker_TextMaker_2021_GrammarCheckColor" valueName="GrammarCheckColor" maxValue="16777215" minValue="0" />
+       </elements>
+     </policy>
+    <policy name="SoftMaker_TextMaker_2021_VRuler" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_VRuler_name)" explainText="$(string.SoftMaker_TextMaker_2021_VRuler_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="VRuler">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_FormatWholeWord" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_FormatWholeWord_name)" explainText="$(string.SoftMaker_TextMaker_2021_FormatWholeWord_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="FormatWholeWord">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_WindowWrap" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_WindowWrap_name)" explainText="$(string.SoftMaker_TextMaker_2021_WindowWrap_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="WindowWrap">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_ImmediateObjectInsert" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_ImmediateObjectInsert_name)" explainText="$(string.SoftMaker_TextMaker_2021_ImmediateObjectInsert_help)" presentation="$(presentation.SoftMaker_TextMaker_2021_ImmediateObjectInsert)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <enum id="SoftMaker_TextMaker_2021_ImmediateObjectInsert" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="ImmediateObjectInsert">
+          <item displayName="$(string.SoftMaker_TextMaker_2021_ImmediateObjectInsert_2)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_ImmediateObjectInsert_1)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_ImmediateObjectInsert_0)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_TableGrid" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_TableGrid_name)" explainText="$(string.SoftMaker_TextMaker_2021_TableGrid_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="TableGrid">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_IndentParagraphsWithTab" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_IndentParagraphsWithTab_name)" explainText="$(string.SoftMaker_TextMaker_2021_IndentParagraphsWithTab_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="IndentParagraphsWithTab">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_CheckHtmlLinks" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_CheckHtmlLinks_name)" explainText="$(string.SoftMaker_TextMaker_2021_CheckHtmlLinks_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="CheckHtmlLinks">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_DocInfo" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_DocInfo_name)" explainText="$(string.SoftMaker_TextMaker_2021_DocInfo_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="DocInfo">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_PageBorders" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_PageBorders_name)" explainText="$(string.SoftMaker_TextMaker_2021_PageBorders_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="PageBorders">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_WSColorEnabled" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_WSColorEnabled_name)" explainText="$(string.SoftMaker_TextMaker_2021_WSColorEnabled_help)" presentation="$(presentation.SoftMaker_TextMaker_2021_WSColorEnabled)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <enum id="SoftMaker_TextMaker_2021_WSColorEnabled" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="WSColorEnabled">
+          <item displayName="$(string.SoftMaker_TextMaker_2021_WSColorEnabled_0)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_WSColorEnabled_1)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+     <policy name="SoftMaker_TextMaker_2021_AutoTime" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_AutoTime_name)" explainText="$(string.SoftMaker_TextMaker_2021_AutoTime_help)" presentation="$(presentation.SoftMaker_TextMaker_2021_AutoTime)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021">
+       <parentCategory ref="SoftMaker_TextMaker_2021" />
+       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+       <elements>
+         <decimal id="SoftMaker_TextMaker_2021_AutoTime" valueName="AutoTime" maxValue="100" minValue="1" />
+       </elements>
+     </policy>
+    <policy name="SoftMaker_TextMaker_2021_FontShow" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_FontShow_name)" explainText="$(string.SoftMaker_TextMaker_2021_FontShow_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="FontShow">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_Explorer" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_Explorer_name)" explainText="$(string.SoftMaker_TextMaker_2021_Explorer_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="Explorer">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_WordSelection" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_WordSelection_name)" explainText="$(string.SoftMaker_TextMaker_2021_WordSelection_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="WordSelection">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_OptionsHunspell" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_OptionsHunspell_name)" explainText="$(string.SoftMaker_TextMaker_2021_OptionsHunspell_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="OptionsHunspell">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+     <policy name="SoftMaker_TextMaker_2021_SnapshotNumber" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_SnapshotNumber_name)" explainText="$(string.SoftMaker_TextMaker_2021_SnapshotNumber_help)" presentation="$(presentation.SoftMaker_TextMaker_2021_SnapshotNumber)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021">
+       <parentCategory ref="SoftMaker_TextMaker_2021" />
+       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+       <elements>
+         <decimal id="SoftMaker_TextMaker_2021_SnapshotNumber" valueName="SnapshotNumber" maxValue="99" minValue="1" />
+       </elements>
+     </policy>
+    <policy name="SoftMaker_TextMaker_2021_LargeIcons" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_LargeIcons_name)" explainText="$(string.SoftMaker_TextMaker_2021_LargeIcons_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="LargeIcons">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+     <policy name="SoftMaker_TextMaker_2021_Undo" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_Undo_name)" explainText="$(string.SoftMaker_TextMaker_2021_Undo_help)" presentation="$(presentation.SoftMaker_TextMaker_2021_Undo)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021">
+       <parentCategory ref="SoftMaker_TextMaker_2021" />
+       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+       <elements>
+         <decimal id="SoftMaker_TextMaker_2021_Undo" valueName="Undo" maxValue="999" minValue="1" />
+       </elements>
+     </policy>
+    <policy name="SoftMaker_TextMaker_2021_SpellIgnoreWordsWithStartingDigits" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_SpellIgnoreWordsWithStartingDigits_name)" explainText="$(string.SoftMaker_TextMaker_2021_SpellIgnoreWordsWithStartingDigits_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="SpellIgnoreWordsWithStartingDigits">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+     <policy name="SoftMaker_TextMaker_2021_BackupFilesNumber" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_BackupFilesNumber_name)" explainText="$(string.SoftMaker_TextMaker_2021_BackupFilesNumber_help)" presentation="$(presentation.SoftMaker_TextMaker_2021_BackupFilesNumber)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021">
+       <parentCategory ref="SoftMaker_TextMaker_2021" />
+       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+       <elements>
+         <decimal id="SoftMaker_TextMaker_2021_BackupFilesNumber" valueName="BackupFilesNumber" maxValue="99" minValue="1" />
+       </elements>
+     </policy>
+    <policy name="SoftMaker_TextMaker_2021_PdfFiles" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_PdfFiles_name)" explainText="$(string.SoftMaker_TextMaker_2021_PdfFiles_help)" presentation="$(presentation.SoftMaker_TextMaker_2021_PdfFiles)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_TextMaker_2021_PdfFiles" valueName="PdfFiles" maxLength="254" />
+      </elements>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_JumpToLastPosition" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_JumpToLastPosition_name)" explainText="$(string.SoftMaker_TextMaker_2021_JumpToLastPosition_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="JumpToLastPosition">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_SpellCheckColorEnable" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_SpellCheckColorEnable_name)" explainText="$(string.SoftMaker_TextMaker_2021_SpellCheckColorEnable_help)" presentation="$(presentation.SoftMaker_TextMaker_2021_SpellCheckColorEnable)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <enum id="SoftMaker_TextMaker_2021_SpellCheckColorEnable" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="SpellCheckColorEnable">
+          <item displayName="$(string.SoftMaker_TextMaker_2021_SpellCheckColorEnable_0)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_SpellCheckColorEnable_1)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_DefaultFormat" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_DefaultFormat_name)" explainText="$(string.SoftMaker_TextMaker_2021_DefaultFormat_help)" presentation="$(presentation.SoftMaker_TextMaker_2021_DefaultFormat)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <enum id="SoftMaker_TextMaker_2021_DefaultFormat" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="DefaultFormat">
+          <item displayName="$(string.SoftMaker_TextMaker_2021_DefaultFormat_0)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_DefaultFormat_7)">
+            <value>
+              <decimal value="7" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_DefaultFormat_6)">
+            <value>
+              <decimal value="6" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_DefaultFormat_1)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_DefaultFormat_3)">
+            <value>
+              <decimal value="3" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_DefaultFormat_4)">
+            <value>
+              <decimal value="4" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_DefaultFormat_5)">
+            <value>
+              <decimal value="5" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_BiCapitals" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_BiCapitals_name)" explainText="$(string.SoftMaker_TextMaker_2021_BiCapitals_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="BiCapitals">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_Capitalize" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_Capitalize_name)" explainText="$(string.SoftMaker_TextMaker_2021_Capitalize_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="Capitalize">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_GrammarCheckColorEnable" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_GrammarCheckColorEnable_name)" explainText="$(string.SoftMaker_TextMaker_2021_GrammarCheckColorEnable_help)" presentation="$(presentation.SoftMaker_TextMaker_2021_GrammarCheckColorEnable)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <enum id="SoftMaker_TextMaker_2021_GrammarCheckColorEnable" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="GrammarCheckColorEnable">
+          <item displayName="$(string.SoftMaker_TextMaker_2021_GrammarCheckColorEnable_0)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_GrammarCheckColorEnable_1)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_OptionsDudenKorrektor" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_OptionsDudenKorrektor_name)" explainText="$(string.SoftMaker_TextMaker_2021_OptionsDudenKorrektor_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="OptionsDudenKorrektor">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_BkgndCorrection" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_BkgndCorrection_name)" explainText="$(string.SoftMaker_TextMaker_2021_BkgndCorrection_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="BkgndCorrection">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_BackupNoCleanup" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_BackupNoCleanup_name)" explainText="$(string.SoftMaker_TextMaker_2021_BackupNoCleanup_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="BackupNoCleanup">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_HorizontalPages" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_HorizontalPages_name)" explainText="$(string.SoftMaker_TextMaker_2021_HorizontalPages_help)" presentation="$(presentation.SoftMaker_TextMaker_2021_HorizontalPages)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <enum id="SoftMaker_TextMaker_2021_HorizontalPages" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="HorizontalPages">
+          <item displayName="$(string.SoftMaker_TextMaker_2021_HorizontalPages_1)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_HorizontalPages_32)">
+            <value>
+              <decimal value="32" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_Glossary" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_Glossary_name)" explainText="$(string.SoftMaker_TextMaker_2021_Glossary_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="Glossary">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_SpaceCorrection" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_SpaceCorrection_name)" explainText="$(string.SoftMaker_TextMaker_2021_SpaceCorrection_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="SpaceCorrection">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_RaiseOrdinals" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_RaiseOrdinals_name)" explainText="$(string.SoftMaker_TextMaker_2021_RaiseOrdinals_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="RaiseOrdinals">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_OptionsFontsSheet" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_OptionsFontsSheet_name)" explainText="$(string.SoftMaker_TextMaker_2021_OptionsFontsSheet_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="OptionsFontsSheet">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_AutoSave" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_AutoSave_name)" explainText="$(string.SoftMaker_TextMaker_2021_AutoSave_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="AutoSave">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_WarningBeep" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_WarningBeep_name)" explainText="$(string.SoftMaker_TextMaker_2021_WarningBeep_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="WarningBeep">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_HRuler" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_HRuler_name)" explainText="$(string.SoftMaker_TextMaker_2021_HRuler_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="HRuler">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_HorzScroll" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_HorzScroll_name)" explainText="$(string.SoftMaker_TextMaker_2021_HorzScroll_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="HorzScroll">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_AsianFonts" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_AsianFonts_name)" explainText="$(string.SoftMaker_TextMaker_2021_AsianFonts_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="AsianFonts">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_RibbonMinimizeFS" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_RibbonMinimizeFS_name)" explainText="$(string.SoftMaker_TextMaker_2021_RibbonMinimizeFS_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="RibbonMinimizeFS">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_ArabicDigits" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_ArabicDigits_name)" explainText="$(string.SoftMaker_TextMaker_2021_ArabicDigits_help)" presentation="$(presentation.SoftMaker_TextMaker_2021_ArabicDigits)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <enum id="SoftMaker_TextMaker_2021_ArabicDigits" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="ArabicDigits">
+          <item displayName="$(string.SoftMaker_TextMaker_2021_ArabicDigits_0)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_ArabicDigits_1)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_ArabicDigits_2)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_DisplayGrid" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_DisplayGrid_name)" explainText="$(string.SoftMaker_TextMaker_2021_DisplayGrid_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="DisplayGrid">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_EnableGrammarcheck" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_EnableGrammarcheck_name)" explainText="$(string.SoftMaker_TextMaker_2021_EnableGrammarcheck_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="EnableGrammarcheck">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_EnableHyphenation" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_EnableHyphenation_name)" explainText="$(string.SoftMaker_TextMaker_2021_EnableHyphenation_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="EnableHyphenation">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_ShowOverflowMarker" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_ShowOverflowMarker_name)" explainText="$(string.SoftMaker_TextMaker_2021_ShowOverflowMarker_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="ShowOverflowMarker">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_TxtFormat" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_TxtFormat_name)" explainText="$(string.SoftMaker_TextMaker_2021_TxtFormat_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="TxtFormat">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_SmartQuotes" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_SmartQuotes_name)" explainText="$(string.SoftMaker_TextMaker_2021_SmartQuotes_help)" presentation="$(presentation.SoftMaker_TextMaker_2021_SmartQuotes)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <enum id="SoftMaker_TextMaker_2021_SmartQuotes" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="SmartQuotes">
+          <item displayName="$(string.SoftMaker_TextMaker_2021_SmartQuotes_0)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_SmartQuotes_1)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_SmartQuotes_2)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_SmartQuotes_3)">
+            <value>
+              <decimal value="3" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_SmartQuotes_4)">
+            <value>
+              <decimal value="4" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_SmartQuotes_6)">
+            <value>
+              <decimal value="6" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_SmartQuotes_7)">
+            <value>
+              <decimal value="7" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_SmartQuotes_5)">
+            <value>
+              <decimal value="5" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_RibbonMinimize" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_RibbonMinimize_name)" explainText="$(string.SoftMaker_TextMaker_2021_RibbonMinimize_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="RibbonMinimize">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_Macros" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_Macros_name)" explainText="$(string.SoftMaker_TextMaker_2021_Macros_help)" presentation="$(presentation.SoftMaker_TextMaker_2021_Macros)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_TextMaker_2021_Macros" valueName="Macros" maxLength="254" />
+      </elements>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_OleBounds" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_OleBounds_name)" explainText="$(string.SoftMaker_TextMaker_2021_OleBounds_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="OleBounds">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_FrameGrid" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_FrameGrid_name)" explainText="$(string.SoftMaker_TextMaker_2021_FrameGrid_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="FrameGrid">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_LanguageID" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_name)" explainText="$(string.SoftMaker_TextMaker_2021_LanguageID_help)" presentation="$(presentation.SoftMaker_TextMaker_2021_LanguageID)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <enum id="SoftMaker_TextMaker_2021_LanguageID" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="LanguageID">
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1031)">
+            <value>
+              <decimal value="1031" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_29703)">
+            <value>
+              <decimal value="29703" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_5127)">
+            <value>
+              <decimal value="5127" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_4103)">
+            <value>
+              <decimal value="4103" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_3079)">
+            <value>
+              <decimal value="3079" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_31751)">
+            <value>
+              <decimal value="31751" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_2055)">
+            <value>
+              <decimal value="2055" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_30727)">
+            <value>
+              <decimal value="30727" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1033)">
+            <value>
+              <decimal value="1033" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_2057)">
+            <value>
+              <decimal value="2057" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1036)">
+            <value>
+              <decimal value="1036" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_3084)">
+            <value>
+              <decimal value="3084" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_3082)">
+            <value>
+              <decimal value="3082" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_2058)">
+            <value>
+              <decimal value="2058" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_2070)">
+            <value>
+              <decimal value="2070" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1046)">
+            <value>
+              <decimal value="1046" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1040)">
+            <value>
+              <decimal value="1040" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1043)">
+            <value>
+              <decimal value="1043" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1030)">
+            <value>
+              <decimal value="1030" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1044)">
+            <value>
+              <decimal value="1044" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1053)">
+            <value>
+              <decimal value="1053" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1035)">
+            <value>
+              <decimal value="1035" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1061)">
+            <value>
+              <decimal value="1061" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1062)">
+            <value>
+              <decimal value="1062" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1063)">
+            <value>
+              <decimal value="1063" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1060)">
+            <value>
+              <decimal value="1060" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1045)">
+            <value>
+              <decimal value="1045" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1029)">
+            <value>
+              <decimal value="1029" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1051)">
+            <value>
+              <decimal value="1051" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1050)">
+            <value>
+              <decimal value="1050" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_2074)">
+            <value>
+              <decimal value="2074" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_3098)">
+            <value>
+              <decimal value="3098" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1038)">
+            <value>
+              <decimal value="1038" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1048)">
+            <value>
+              <decimal value="1048" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1032)">
+            <value>
+              <decimal value="1032" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1055)">
+            <value>
+              <decimal value="1055" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1049)">
+            <value>
+              <decimal value="1049" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1026)">
+            <value>
+              <decimal value="1026" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1058)">
+            <value>
+              <decimal value="1058" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1087)">
+            <value>
+              <decimal value="1087" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_2052)">
+            <value>
+              <decimal value="2052" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1028)">
+            <value>
+              <decimal value="1028" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1041)">
+            <value>
+              <decimal value="1041" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1042)">
+            <value>
+              <decimal value="1042" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1057)">
+            <value>
+              <decimal value="1057" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1086)">
+            <value>
+              <decimal value="1086" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1025)">
+            <value>
+              <decimal value="1025" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1109)">
+            <value>
+              <decimal value="1109" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1081)">
+            <value>
+              <decimal value="1081" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1054)">
+            <value>
+              <decimal value="1054" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1107)">
+            <value>
+              <decimal value="1107" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1108)">
+            <value>
+              <decimal value="1108" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_LanguageID_1066)">
+            <value>
+              <decimal value="1066" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_LivePreview" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_LivePreview_name)" explainText="$(string.SoftMaker_TextMaker_2021_LivePreview_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="LivePreview">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_FrenchSpaces" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_FrenchSpaces_name)" explainText="$(string.SoftMaker_TextMaker_2021_FrenchSpaces_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="FrenchSpaces">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_BackupFilesPath" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_BackupFilesPath_name)" explainText="$(string.SoftMaker_TextMaker_2021_BackupFilesPath_help)" presentation="$(presentation.SoftMaker_TextMaker_2021_BackupFilesPath)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_TextMaker_2021_BackupFilesPath" valueName="BackupFilesPath" maxLength="254" />
+      </elements>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_ArabicSupport" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_ArabicSupport_name)" explainText="$(string.SoftMaker_TextMaker_2021_ArabicSupport_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="ArabicSupport">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_OptionsAssociateFiles" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_OptionsAssociateFiles_name)" explainText="$(string.SoftMaker_TextMaker_2021_OptionsAssociateFiles_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="OptionsAssociateFiles">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_DiffCorrections" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_DiffCorrections_name)" explainText="$(string.SoftMaker_TextMaker_2021_DiffCorrections_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="DiffCorrections">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+     <policy name="SoftMaker_TextMaker_2021_HistoryEntries" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_HistoryEntries_name)" explainText="$(string.SoftMaker_TextMaker_2021_HistoryEntries_help)" presentation="$(presentation.SoftMaker_TextMaker_2021_HistoryEntries)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021">
+       <parentCategory ref="SoftMaker_TextMaker_2021" />
+       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+       <elements>
+         <decimal id="SoftMaker_TextMaker_2021_HistoryEntries" valueName="HistoryEntries" maxValue="100" minValue="0" />
+       </elements>
+     </policy>
+    <policy name="SoftMaker_TextMaker_2021_SeparateQuickAccess" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_SeparateQuickAccess_name)" explainText="$(string.SoftMaker_TextMaker_2021_SeparateQuickAccess_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="SeparateQuickAccess">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_TemplatePath" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_TemplatePath_name)" explainText="$(string.SoftMaker_TextMaker_2021_TemplatePath_help)" presentation="$(presentation.SoftMaker_TextMaker_2021_TemplatePath)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_TextMaker_2021_TemplatePath" valueName="TemplatePath" maxLength="254" />
+      </elements>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_VertScroll" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_VertScroll_name)" explainText="$(string.SoftMaker_TextMaker_2021_VertScroll_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="VertScroll">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_Guides" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_Guides_name)" explainText="$(string.SoftMaker_TextMaker_2021_Guides_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="Guides">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_ClearType" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_ClearType_name)" explainText="$(string.SoftMaker_TextMaker_2021_ClearType_help)" presentation="$(presentation.SoftMaker_TextMaker_2021_ClearType)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <enum id="SoftMaker_TextMaker_2021_ClearType" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="ClearType">
+          <item displayName="$(string.SoftMaker_TextMaker_2021_ClearType_0)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_ClearType_1)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_ClearType_2)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_TextMaker_2021_ClearType_3)">
+            <value>
+              <decimal value="3" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="SoftMaker_TextMaker_2021_EnableSpellcheck" class="Both" displayName="$(string.SoftMaker_TextMaker_2021_EnableSpellcheck_name)" explainText="$(string.SoftMaker_TextMaker_2021_EnableSpellcheck_help)" key="SOFTWARE\Policies\SoftMaker\TextMaker 2021" valueName="EnableSpellcheck">
+      <parentCategory ref="SoftMaker_TextMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_ToolTips" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_ToolTips_name)" explainText="$(string.SoftMaker_PlanMaker_2021_ToolTips_help)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="ToolTips">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_ExpandTables" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_ExpandTables_name)" explainText="$(string.SoftMaker_PlanMaker_2021_ExpandTables_help)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="ExpandTables">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+     <policy name="SoftMaker_PlanMaker_2021_DecimalSeparator" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_DecimalSeparator_name)" explainText="$(string.SoftMaker_PlanMaker_2021_DecimalSeparator_help)" presentation="$(presentation.SoftMaker_PlanMaker_2021_DecimalSeparator)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021">
+       <parentCategory ref="SoftMaker_PlanMaker_2021" />
+       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+       <elements>
+         <decimal id="SoftMaker_PlanMaker_2021_DecimalSeparator" valueName="DecimalSeparator" maxValue="16777215" minValue="0" />
+       </elements>
+     </policy>
+     <policy name="SoftMaker_PlanMaker_2021_RegBarFontSize" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_RegBarFontSize_name)" explainText="$(string.SoftMaker_PlanMaker_2021_RegBarFontSize_help)" presentation="$(presentation.SoftMaker_PlanMaker_2021_RegBarFontSize)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021">
+       <parentCategory ref="SoftMaker_PlanMaker_2021" />
+       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+       <elements>
+         <decimal id="SoftMaker_PlanMaker_2021_RegBarFontSize" valueName="RegBarFontSize" maxValue="72" minValue="1" />
+       </elements>
+     </policy>
+     <policy name="SoftMaker_PlanMaker_2021_WSColorRGBValue" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_WSColorRGBValue_name)" explainText="$(string.SoftMaker_PlanMaker_2021_WSColorRGBValue_help)" presentation="$(presentation.SoftMaker_PlanMaker_2021_WSColorRGBValue)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021">
+       <parentCategory ref="SoftMaker_PlanMaker_2021" />
+       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+       <elements>
+         <decimal id="SoftMaker_PlanMaker_2021_WSColorRGBValue" valueName="WSColorRGBValue" maxValue="16777215" minValue="0" />
+       </elements>
+     </policy>
+    <policy name="SoftMaker_PlanMaker_2021_Pictures" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_Pictures_name)" explainText="$(string.SoftMaker_PlanMaker_2021_Pictures_help)" presentation="$(presentation.SoftMaker_PlanMaker_2021_Pictures)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_PlanMaker_2021_Pictures" valueName="Pictures" maxLength="254" />
+      </elements>
+    </policy>
+     <policy name="SoftMaker_PlanMaker_2021_ThousandsSeparator" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_ThousandsSeparator_name)" explainText="$(string.SoftMaker_PlanMaker_2021_ThousandsSeparator_help)" presentation="$(presentation.SoftMaker_PlanMaker_2021_ThousandsSeparator)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021">
+       <parentCategory ref="SoftMaker_PlanMaker_2021" />
+       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+       <elements>
+         <decimal id="SoftMaker_PlanMaker_2021_ThousandsSeparator" valueName="ThousandsSeparator" maxValue="16777215" minValue="0" />
+       </elements>
+     </policy>
+    <policy name="SoftMaker_PlanMaker_2021_DirectEdit" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_DirectEdit_name)" explainText="$(string.SoftMaker_PlanMaker_2021_DirectEdit_help)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="DirectEdit">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_FormatWholeWord" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_FormatWholeWord_name)" explainText="$(string.SoftMaker_PlanMaker_2021_FormatWholeWord_help)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="FormatWholeWord">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_Documents" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_Documents_name)" explainText="$(string.SoftMaker_PlanMaker_2021_Documents_help)" presentation="$(presentation.SoftMaker_PlanMaker_2021_Documents)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_PlanMaker_2021_Documents" valueName="Documents" maxLength="254" />
+      </elements>
+    </policy>
+     <policy name="SoftMaker_PlanMaker_2021_CommentColor" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_CommentColor_name)" explainText="$(string.SoftMaker_PlanMaker_2021_CommentColor_help)" presentation="$(presentation.SoftMaker_PlanMaker_2021_CommentColor)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021">
+       <parentCategory ref="SoftMaker_PlanMaker_2021" />
+       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+       <elements>
+         <decimal id="SoftMaker_PlanMaker_2021_CommentColor" valueName="CommentColor" maxValue="16777215" minValue="0" />
+       </elements>
+     </policy>
+     <policy name="SoftMaker_PlanMaker_2021_BackupFilesNumber" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_BackupFilesNumber_name)" explainText="$(string.SoftMaker_PlanMaker_2021_BackupFilesNumber_help)" presentation="$(presentation.SoftMaker_PlanMaker_2021_BackupFilesNumber)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021">
+       <parentCategory ref="SoftMaker_PlanMaker_2021" />
+       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+       <elements>
+         <decimal id="SoftMaker_PlanMaker_2021_BackupFilesNumber" valueName="BackupFilesNumber" maxValue="99" minValue="1" />
+       </elements>
+     </policy>
+    <policy name="SoftMaker_PlanMaker_2021_DocInfo" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_DocInfo_name)" explainText="$(string.SoftMaker_PlanMaker_2021_DocInfo_help)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="DocInfo">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_WSColorEnabled" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_WSColorEnabled_name)" explainText="$(string.SoftMaker_PlanMaker_2021_WSColorEnabled_help)" presentation="$(presentation.SoftMaker_PlanMaker_2021_WSColorEnabled)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <enum id="SoftMaker_PlanMaker_2021_WSColorEnabled" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="WSColorEnabled">
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_WSColorEnabled_0)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_WSColorEnabled_1)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+     <policy name="SoftMaker_PlanMaker_2021_CellMarkerThickness" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_CellMarkerThickness_name)" explainText="$(string.SoftMaker_PlanMaker_2021_CellMarkerThickness_help)" presentation="$(presentation.SoftMaker_PlanMaker_2021_CellMarkerThickness)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021">
+       <parentCategory ref="SoftMaker_PlanMaker_2021" />
+       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+       <elements>
+         <decimal id="SoftMaker_PlanMaker_2021_CellMarkerThickness" valueName="CellMarkerThickness" maxValue="5" minValue="1" />
+       </elements>
+     </policy>
+    <policy name="SoftMaker_PlanMaker_2021_FontShow" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_FontShow_name)" explainText="$(string.SoftMaker_PlanMaker_2021_FontShow_help)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="FontShow">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_Explorer" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_Explorer_name)" explainText="$(string.SoftMaker_PlanMaker_2021_Explorer_help)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="Explorer">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_OptionsHunspell" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_OptionsHunspell_name)" explainText="$(string.SoftMaker_PlanMaker_2021_OptionsHunspell_help)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="OptionsHunspell">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+     <policy name="SoftMaker_PlanMaker_2021_SnapshotNumber" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_SnapshotNumber_name)" explainText="$(string.SoftMaker_PlanMaker_2021_SnapshotNumber_help)" presentation="$(presentation.SoftMaker_PlanMaker_2021_SnapshotNumber)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021">
+       <parentCategory ref="SoftMaker_PlanMaker_2021" />
+       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+       <elements>
+         <decimal id="SoftMaker_PlanMaker_2021_SnapshotNumber" valueName="SnapshotNumber" maxValue="99" minValue="1" />
+       </elements>
+     </policy>
+     <policy name="SoftMaker_PlanMaker_2021_Undo" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_Undo_name)" explainText="$(string.SoftMaker_PlanMaker_2021_Undo_help)" presentation="$(presentation.SoftMaker_PlanMaker_2021_Undo)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021">
+       <parentCategory ref="SoftMaker_PlanMaker_2021" />
+       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+       <elements>
+         <decimal id="SoftMaker_PlanMaker_2021_Undo" valueName="Undo" maxValue="999" minValue="1" />
+       </elements>
+     </policy>
+    <policy name="SoftMaker_PlanMaker_2021_SpellIgnoreWordsWithStartingDigits" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_SpellIgnoreWordsWithStartingDigits_name)" explainText="$(string.SoftMaker_PlanMaker_2021_SpellIgnoreWordsWithStartingDigits_help)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="SpellIgnoreWordsWithStartingDigits">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_AutoComplete" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_AutoComplete_name)" explainText="$(string.SoftMaker_PlanMaker_2021_AutoComplete_help)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="AutoComplete">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_DefaultFormat" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_DefaultFormat_name)" explainText="$(string.SoftMaker_PlanMaker_2021_DefaultFormat_help)" presentation="$(presentation.SoftMaker_PlanMaker_2021_DefaultFormat)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <enum id="SoftMaker_PlanMaker_2021_DefaultFormat" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="DefaultFormat">
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_DefaultFormat_0)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_DefaultFormat_4)">
+            <value>
+              <decimal value="4" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_DefaultFormat_3)">
+            <value>
+              <decimal value="3" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_DefaultFormat_1)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_DefaultFormat_2)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_CaretLeftBehaviour" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_CaretLeftBehaviour_name)" explainText="$(string.SoftMaker_PlanMaker_2021_CaretLeftBehaviour_help)" presentation="$(presentation.SoftMaker_PlanMaker_2021_CaretLeftBehaviour)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <enum id="SoftMaker_PlanMaker_2021_CaretLeftBehaviour" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="CaretLeftBehaviour">
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_CaretLeftBehaviour_1)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_CaretLeftBehaviour_0)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_RibbonMinimizeFS" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_RibbonMinimizeFS_name)" explainText="$(string.SoftMaker_PlanMaker_2021_RibbonMinimizeFS_help)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="RibbonMinimizeFS">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+     <policy name="SoftMaker_PlanMaker_2021_AutoTime" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_AutoTime_name)" explainText="$(string.SoftMaker_PlanMaker_2021_AutoTime_help)" presentation="$(presentation.SoftMaker_PlanMaker_2021_AutoTime)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021">
+       <parentCategory ref="SoftMaker_PlanMaker_2021" />
+       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+       <elements>
+         <decimal id="SoftMaker_PlanMaker_2021_AutoTime" valueName="AutoTime" maxValue="100" minValue="1" />
+       </elements>
+     </policy>
+     <policy name="SoftMaker_PlanMaker_2021_CellMarkerColor" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_CellMarkerColor_name)" explainText="$(string.SoftMaker_PlanMaker_2021_CellMarkerColor_help)" presentation="$(presentation.SoftMaker_PlanMaker_2021_CellMarkerColor)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021">
+       <parentCategory ref="SoftMaker_PlanMaker_2021" />
+       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+       <elements>
+         <decimal id="SoftMaker_PlanMaker_2021_CellMarkerColor" valueName="CellMarkerColor" maxValue="16777215" minValue="0" />
+       </elements>
+     </policy>
+    <policy name="SoftMaker_PlanMaker_2021_CellMarkerColorAuto" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_CellMarkerColorAuto_name)" explainText="$(string.SoftMaker_PlanMaker_2021_CellMarkerColorAuto_help)" presentation="$(presentation.SoftMaker_PlanMaker_2021_CellMarkerColorAuto)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <enum id="SoftMaker_PlanMaker_2021_CellMarkerColorAuto" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="CellMarkerColorAuto">
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_CellMarkerColorAuto_1)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_CellMarkerColorAuto_0)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_CellJump" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_CellJump_name)" explainText="$(string.SoftMaker_PlanMaker_2021_CellJump_help)" presentation="$(presentation.SoftMaker_PlanMaker_2021_CellJump)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <enum id="SoftMaker_PlanMaker_2021_CellJump" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="CellJump">
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_CellJump_0)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_CellJump_1)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_CellJump_2)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_CellJump_3)">
+            <value>
+              <decimal value="3" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_CellJump_4)">
+            <value>
+              <decimal value="4" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_LivePreview" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_LivePreview_name)" explainText="$(string.SoftMaker_PlanMaker_2021_LivePreview_help)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="LivePreview">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+     <policy name="SoftMaker_PlanMaker_2021_SnapToOtherObjectsTolerance" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_SnapToOtherObjectsTolerance_name)" explainText="$(string.SoftMaker_PlanMaker_2021_SnapToOtherObjectsTolerance_help)" presentation="$(presentation.SoftMaker_PlanMaker_2021_SnapToOtherObjectsTolerance)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021">
+       <parentCategory ref="SoftMaker_PlanMaker_2021" />
+       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+       <elements>
+         <decimal id="SoftMaker_PlanMaker_2021_SnapToOtherObjectsTolerance" valueName="SnapToOtherObjectsTolerance" maxValue="20" minValue="2" />
+       </elements>
+     </policy>
+    <policy name="SoftMaker_PlanMaker_2021_BackupNoCleanup" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_BackupNoCleanup_name)" explainText="$(string.SoftMaker_PlanMaker_2021_BackupNoCleanup_help)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="BackupNoCleanup">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_LargeIcons" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_LargeIcons_name)" explainText="$(string.SoftMaker_PlanMaker_2021_LargeIcons_help)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="LargeIcons">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_Glossary" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_Glossary_name)" explainText="$(string.SoftMaker_PlanMaker_2021_Glossary_help)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="Glossary">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_PdfFiles" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_PdfFiles_name)" explainText="$(string.SoftMaker_PlanMaker_2021_PdfFiles_help)" presentation="$(presentation.SoftMaker_PlanMaker_2021_PdfFiles)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_PlanMaker_2021_PdfFiles" valueName="PdfFiles" maxLength="254" />
+      </elements>
+    </policy>
+     <policy name="SoftMaker_PlanMaker_2021_MarkerSize" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_MarkerSize_name)" explainText="$(string.SoftMaker_PlanMaker_2021_MarkerSize_help)" presentation="$(presentation.SoftMaker_PlanMaker_2021_MarkerSize)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021">
+       <parentCategory ref="SoftMaker_PlanMaker_2021" />
+       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+       <elements>
+         <decimal id="SoftMaker_PlanMaker_2021_MarkerSize" valueName="MarkerSize" maxValue="16777215" minValue="0" />
+       </elements>
+     </policy>
+    <policy name="SoftMaker_PlanMaker_2021_OptionsFontsSheet" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_OptionsFontsSheet_name)" explainText="$(string.SoftMaker_PlanMaker_2021_OptionsFontsSheet_help)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="OptionsFontsSheet">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_SnapToCells" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_SnapToCells_name)" explainText="$(string.SoftMaker_PlanMaker_2021_SnapToCells_help)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="SnapToCells">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_AutoSave" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_AutoSave_name)" explainText="$(string.SoftMaker_PlanMaker_2021_AutoSave_help)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="AutoSave">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_FormulaNotify" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_FormulaNotify_name)" explainText="$(string.SoftMaker_PlanMaker_2021_FormulaNotify_help)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="FormulaNotify">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_AsianFonts" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_AsianFonts_name)" explainText="$(string.SoftMaker_PlanMaker_2021_AsianFonts_help)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="AsianFonts">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_OnlineCheck" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_OnlineCheck_name)" explainText="$(string.SoftMaker_PlanMaker_2021_OnlineCheck_help)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="OnlineCheck">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_Databases" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_Databases_name)" explainText="$(string.SoftMaker_PlanMaker_2021_Databases_help)" presentation="$(presentation.SoftMaker_PlanMaker_2021_Databases)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_PlanMaker_2021_Databases" valueName="Databases" maxLength="254" />
+      </elements>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_ComMarkerColorAuto" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_ComMarkerColorAuto_name)" explainText="$(string.SoftMaker_PlanMaker_2021_ComMarkerColorAuto_help)" presentation="$(presentation.SoftMaker_PlanMaker_2021_ComMarkerColorAuto)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <enum id="SoftMaker_PlanMaker_2021_ComMarkerColorAuto" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="ComMarkerColorAuto">
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_ComMarkerColorAuto_1)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_ComMarkerColorAuto_0)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_SnapToOtherObjects" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_SnapToOtherObjects_name)" explainText="$(string.SoftMaker_PlanMaker_2021_SnapToOtherObjects_help)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="SnapToOtherObjects">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_RibbonMinimize" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_RibbonMinimize_name)" explainText="$(string.SoftMaker_PlanMaker_2021_RibbonMinimize_help)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="RibbonMinimize">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+     <policy name="SoftMaker_PlanMaker_2021_ProtectColor" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_ProtectColor_name)" explainText="$(string.SoftMaker_PlanMaker_2021_ProtectColor_help)" presentation="$(presentation.SoftMaker_PlanMaker_2021_ProtectColor)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021">
+       <parentCategory ref="SoftMaker_PlanMaker_2021" />
+       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+       <elements>
+         <decimal id="SoftMaker_PlanMaker_2021_ProtectColor" valueName="ProtectColor" maxValue="16777215" minValue="0" />
+       </elements>
+     </policy>
+    <policy name="SoftMaker_PlanMaker_2021_Macros" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_Macros_name)" explainText="$(string.SoftMaker_PlanMaker_2021_Macros_help)" presentation="$(presentation.SoftMaker_PlanMaker_2021_Macros)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_PlanMaker_2021_Macros" valueName="Macros" maxLength="254" />
+      </elements>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_ProtMarkerColorAuto" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_ProtMarkerColorAuto_name)" explainText="$(string.SoftMaker_PlanMaker_2021_ProtMarkerColorAuto_help)" presentation="$(presentation.SoftMaker_PlanMaker_2021_ProtMarkerColorAuto)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <enum id="SoftMaker_PlanMaker_2021_ProtMarkerColorAuto" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="ProtMarkerColorAuto">
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_ProtMarkerColorAuto_1)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_ProtMarkerColorAuto_0)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_LanguageID" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_name)" explainText="$(string.SoftMaker_PlanMaker_2021_LanguageID_help)" presentation="$(presentation.SoftMaker_PlanMaker_2021_LanguageID)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <enum id="SoftMaker_PlanMaker_2021_LanguageID" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="LanguageID">
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1031)">
+            <value>
+              <decimal value="1031" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_29703)">
+            <value>
+              <decimal value="29703" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_5127)">
+            <value>
+              <decimal value="5127" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_4103)">
+            <value>
+              <decimal value="4103" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_3079)">
+            <value>
+              <decimal value="3079" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_31751)">
+            <value>
+              <decimal value="31751" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_2055)">
+            <value>
+              <decimal value="2055" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_30727)">
+            <value>
+              <decimal value="30727" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1033)">
+            <value>
+              <decimal value="1033" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_2057)">
+            <value>
+              <decimal value="2057" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1036)">
+            <value>
+              <decimal value="1036" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_3084)">
+            <value>
+              <decimal value="3084" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_3082)">
+            <value>
+              <decimal value="3082" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_2058)">
+            <value>
+              <decimal value="2058" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_2070)">
+            <value>
+              <decimal value="2070" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1046)">
+            <value>
+              <decimal value="1046" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1040)">
+            <value>
+              <decimal value="1040" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1043)">
+            <value>
+              <decimal value="1043" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1030)">
+            <value>
+              <decimal value="1030" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1044)">
+            <value>
+              <decimal value="1044" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1053)">
+            <value>
+              <decimal value="1053" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1035)">
+            <value>
+              <decimal value="1035" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1061)">
+            <value>
+              <decimal value="1061" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1062)">
+            <value>
+              <decimal value="1062" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1063)">
+            <value>
+              <decimal value="1063" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1060)">
+            <value>
+              <decimal value="1060" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1045)">
+            <value>
+              <decimal value="1045" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1029)">
+            <value>
+              <decimal value="1029" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1051)">
+            <value>
+              <decimal value="1051" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1050)">
+            <value>
+              <decimal value="1050" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_2074)">
+            <value>
+              <decimal value="2074" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_3098)">
+            <value>
+              <decimal value="3098" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1038)">
+            <value>
+              <decimal value="1038" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1048)">
+            <value>
+              <decimal value="1048" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1032)">
+            <value>
+              <decimal value="1032" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1055)">
+            <value>
+              <decimal value="1055" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1049)">
+            <value>
+              <decimal value="1049" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1026)">
+            <value>
+              <decimal value="1026" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1058)">
+            <value>
+              <decimal value="1058" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1087)">
+            <value>
+              <decimal value="1087" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_2052)">
+            <value>
+              <decimal value="2052" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1028)">
+            <value>
+              <decimal value="1028" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1041)">
+            <value>
+              <decimal value="1041" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1042)">
+            <value>
+              <decimal value="1042" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1057)">
+            <value>
+              <decimal value="1057" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1086)">
+            <value>
+              <decimal value="1086" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1025)">
+            <value>
+              <decimal value="1025" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1109)">
+            <value>
+              <decimal value="1109" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1081)">
+            <value>
+              <decimal value="1081" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1054)">
+            <value>
+              <decimal value="1054" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1107)">
+            <value>
+              <decimal value="1107" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1108)">
+            <value>
+              <decimal value="1108" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_LanguageID_1066)">
+            <value>
+              <decimal value="1066" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_PercentEdit" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_PercentEdit_name)" explainText="$(string.SoftMaker_PlanMaker_2021_PercentEdit_help)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="PercentEdit">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_UseSystemSeparator" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_UseSystemSeparator_name)" explainText="$(string.SoftMaker_PlanMaker_2021_UseSystemSeparator_help)" presentation="$(presentation.SoftMaker_PlanMaker_2021_UseSystemSeparator)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <enum id="SoftMaker_PlanMaker_2021_UseSystemSeparator" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="UseSystemSeparator">
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_UseSystemSeparator_0)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_UseSystemSeparator_1)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_OnlineCalc" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_OnlineCalc_name)" explainText="$(string.SoftMaker_PlanMaker_2021_OnlineCalc_help)" presentation="$(presentation.SoftMaker_PlanMaker_2021_OnlineCalc)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <enum id="SoftMaker_PlanMaker_2021_OnlineCalc" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="OnlineCalc">
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_OnlineCalc_0)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_OnlineCalc_1)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_OnlineCalc_2)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_OnlineCalc_3)">
+            <value>
+              <decimal value="3" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_OnlineCalc_4)">
+            <value>
+              <decimal value="4" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_OnlineCalc_5)">
+            <value>
+              <decimal value="5" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_OnlineCalc_6)">
+            <value>
+              <decimal value="6" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_OnlineBeep" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_OnlineBeep_name)" explainText="$(string.SoftMaker_PlanMaker_2021_OnlineBeep_help)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="OnlineBeep">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_BackupFilesPath" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_BackupFilesPath_name)" explainText="$(string.SoftMaker_PlanMaker_2021_BackupFilesPath_help)" presentation="$(presentation.SoftMaker_PlanMaker_2021_BackupFilesPath)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_PlanMaker_2021_BackupFilesPath" valueName="BackupFilesPath" maxLength="254" />
+      </elements>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_ArabicSupport" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_ArabicSupport_name)" explainText="$(string.SoftMaker_PlanMaker_2021_ArabicSupport_help)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="ArabicSupport">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_OptionsAssociateFiles" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_OptionsAssociateFiles_name)" explainText="$(string.SoftMaker_PlanMaker_2021_OptionsAssociateFiles_help)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="OptionsAssociateFiles">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_SeparateQuickAccess" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_SeparateQuickAccess_name)" explainText="$(string.SoftMaker_PlanMaker_2021_SeparateQuickAccess_help)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="SeparateQuickAccess">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+     <policy name="SoftMaker_PlanMaker_2021_HistoryEntries" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_HistoryEntries_name)" explainText="$(string.SoftMaker_PlanMaker_2021_HistoryEntries_help)" presentation="$(presentation.SoftMaker_PlanMaker_2021_HistoryEntries)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021">
+       <parentCategory ref="SoftMaker_PlanMaker_2021" />
+       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+       <elements>
+         <decimal id="SoftMaker_PlanMaker_2021_HistoryEntries" valueName="HistoryEntries" maxValue="100" minValue="0" />
+       </elements>
+     </policy>
+    <policy name="SoftMaker_PlanMaker_2021_ImmediateObjectInsert" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_ImmediateObjectInsert_name)" explainText="$(string.SoftMaker_PlanMaker_2021_ImmediateObjectInsert_help)" presentation="$(presentation.SoftMaker_PlanMaker_2021_ImmediateObjectInsert)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <enum id="SoftMaker_PlanMaker_2021_ImmediateObjectInsert" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="ImmediateObjectInsert">
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_ImmediateObjectInsert_2)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_ImmediateObjectInsert_1)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_ImmediateObjectInsert_0)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_FormulaTip" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_FormulaTip_name)" explainText="$(string.SoftMaker_PlanMaker_2021_FormulaTip_help)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="FormulaTip">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_BackGrid" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_BackGrid_name)" explainText="$(string.SoftMaker_PlanMaker_2021_BackGrid_help)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="BackGrid">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_WarningBeep" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_WarningBeep_name)" explainText="$(string.SoftMaker_PlanMaker_2021_WarningBeep_help)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="WarningBeep">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_ClearType" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_ClearType_name)" explainText="$(string.SoftMaker_PlanMaker_2021_ClearType_help)" presentation="$(presentation.SoftMaker_PlanMaker_2021_ClearType)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <enum id="SoftMaker_PlanMaker_2021_ClearType" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021" valueName="ClearType">
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_ClearType_0)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_ClearType_1)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_ClearType_2)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.SoftMaker_PlanMaker_2021_ClearType_3)">
+            <value>
+              <decimal value="3" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="SoftMaker_PlanMaker_2021_TemplatePath" class="Both" displayName="$(string.SoftMaker_PlanMaker_2021_TemplatePath_name)" explainText="$(string.SoftMaker_PlanMaker_2021_TemplatePath_help)" presentation="$(presentation.SoftMaker_PlanMaker_2021_TemplatePath)" key="SOFTWARE\Policies\SoftMaker\PlanMaker 2021">
+      <parentCategory ref="SoftMaker_PlanMaker_2021" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="SoftMaker_PlanMaker_2021_TemplatePath" valueName="TemplatePath" maxLength="254" />
+      </elements>
+    </policy>
+  </policies>
+</policyDefinitions>

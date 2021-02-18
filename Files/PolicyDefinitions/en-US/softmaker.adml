@@ -1,0 +1,1210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns=
+   "http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions"
+   revision="1.0" schemaVersion="1.0">
+  <displayName>SoftMaker language file</displayName>
+  <description>This file contains the translated strings
+  </description>
+  <resources>
+    <stringTable>
+      <string id="SUPPORTED_ProductOnly">Only works on placeholder product</string>
+      <string id="SoftMaker">SoftMaker</string>
+      <string id="SoftMaker_help"></string>
+      <string id="SoftMaker_Presentations_2021">Presentations 2021</string>
+      <string id="SoftMaker_Presentations_2021_help"></string>
+      <string id="SoftMaker_Presentations_2021_ToolTips_name">Configure the option "Show tooltips" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_ToolTips_help">Here you can configure if Presentations shows tooltips when the mouse hovers over a toolbar button.</string>
+      <string id="SoftMaker_Presentations_2021_SpellCheckColor_name">Configure the option "Spell-checking color" (set the color; File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_SpellCheckColor_help">Here you can configure the color that Presentations uses to paint the line under misspelled words. Note that you must also set the option to use a user-defined color.</string>
+      <string id="SoftMaker_Presentations_2021_Documents_name">Configure the folder for documents</string>
+      <string id="SoftMaker_Presentations_2021_Documents_help">Here you can configure the document folder for Presentations.</string>
+      <string id="SoftMaker_Presentations_2021_ShowBreaks_name">Configure the option "Show unprintable characters" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_ShowBreaks_help">Here you can configure if Presentations shows unprintable characters.</string>
+      <string id="SoftMaker_Presentations_2021_WSColorRGBValue_name">Configure the option "Workspace color" (set the color; File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_WSColorRGBValue_help">Here you can configure the color that Presentations uses to paint the area outside the page. Note that you must also set the option to use a user-defined color.</string>
+      <string id="SoftMaker_Presentations_2021_Pictures_name">Configure the folder for pictures</string>
+      <string id="SoftMaker_Presentations_2021_Pictures_help">Here you can configure the picture folder for Presentations.</string>
+      <string id="SoftMaker_Presentations_2021_SpellCheckColorEnable_name">Configure the option "Spell-checking color" (toggle between standard and user-defined; File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_SpellCheckColorEnable_help">Here you can configure if Presentations paints the line under misspelled words in a user-defined color (value ON) or not (value OFF).</string>
+      <string id="SoftMaker_Presentations_2021_SpellCheckColorEnable_0">Off</string>
+      <string id="SoftMaker_Presentations_2021_SpellCheckColorEnable_1">On</string>
+      <string id="SoftMaker_Presentations_2021_RibbonMinimizeFS_name">Configures if the ribbon should be hidden by default in full-screen mode.</string>
+      <string id="SoftMaker_Presentations_2021_RibbonMinimizeFS_help">Here you can configure if the ribbon should be shown closed by Presentations in full-screen mode.</string>
+      <string id="SoftMaker_Presentations_2021_HorzScroll_name">Configure the option "Scrollbars: Horizontal" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_HorzScroll_help">Here you can configure if Presentations shows a horizontal scrollbar for the document.</string>
+      <string id="SoftMaker_Presentations_2021_FormatWholeWord_name">Configure the option "Apply character formatting to entire words" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_FormatWholeWord_help">Here you can configure if Presentations applies character formatting to whole words when the caret is inside or near them.</string>
+      <string id="SoftMaker_Presentations_2021_ImmediateObjectInsert_name">Configure the option "Insert frames and drawings immediately" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_ImmediateObjectInsert_help">Here you can configure if Presentations inserts object frames and drawings immediately, or only after the user draws a selection rectangle with the mouse.</string>
+      <string id="SoftMaker_Presentations_2021_ImmediateObjectInsert_2">Auto</string>
+      <string id="SoftMaker_Presentations_2021_ImmediateObjectInsert_1">Always</string>
+      <string id="SoftMaker_Presentations_2021_ImmediateObjectInsert_0">Never</string>
+      <string id="SoftMaker_Presentations_2021_BackupFilesNumber_name">Configure the option "Number of backup files per document" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_BackupFilesNumber_help">Here you can configure how many backup files Presentations creates per document.</string>
+      <string id="SoftMaker_Presentations_2021_PicBulletPath_name">Configure the option "Bullets folder" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_PicBulletPath_help">Here you can configure the folder for picture bullets for Presentations.</string>
+      <string id="SoftMaker_Presentations_2021_CheckHtmlLinks_name">Configure the option "Format URLs as hyperlinks" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_CheckHtmlLinks_help">Here you can configure if Presentations converts text that looks like an URL to a clickable link.</string>
+      <string id="SoftMaker_Presentations_2021_DocInfo_name">Configure the option "Prompt for summary information when saving" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_DocInfo_help">Here you can configure if Presentations asks the user for a document summary when saving a file for the first time.</string>
+      <string id="SoftMaker_Presentations_2021_WSColorEnabled_name">Configure the option "Workspace color" (toggle between standard and user-defined; File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_WSColorEnabled_help">Here you can configure if Presentations paints the area outside the page in a user-defined color (value ON) or not (value OFF).</string>
+      <string id="SoftMaker_Presentations_2021_WSColorEnabled_0">Off</string>
+      <string id="SoftMaker_Presentations_2021_WSColorEnabled_1">On</string>
+      <string id="SoftMaker_Presentations_2021_Designs_name">Configure the folder for designs</string>
+      <string id="SoftMaker_Presentations_2021_Designs_help">Here you can configure the design folder for Presentations.</string>
+      <string id="SoftMaker_Presentations_2021_FontShow_name">Configure the option "Show fonts in font list" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_FontShow_help">Here you can configure if Presentations shows real fonts in its font lists.</string>
+      <string id="SoftMaker_Presentations_2021_Explorer_name">Configure the option "Use system file dialogs" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_Explorer_help">Here you can configure if Presentations uses the system file dialogs or its own.</string>
+      <string id="SoftMaker_Presentations_2021_WordSelection_name">Configure the option "Select whole words when selecting" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_WordSelection_help">Here you can configure if Presentations selects word-by-word, instead of character-by-character.</string>
+      <string id="SoftMaker_Presentations_2021_OptionsHunspell_name">Configure the availability of the button "Hunspell dictionaries" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_OptionsHunspell_help">Here you can configure if the button "Hunspell dictionaries" is available in Presentations's File | Options dialog box.</string>
+      <string id="SoftMaker_Presentations_2021_SnapshotNumber_name">Configure the option "Number of snapshots to keep" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_SnapshotNumber_help">Here you can configure how many automatically saved file versions Presentations keeps per document.</string>
+      <string id="SoftMaker_Presentations_2021_ShowObjectBoundaries_name">Configure the option "Show object boundaries" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_ShowObjectBoundaries_help">Here you can configure if Presentations shows borders around objects.</string>
+      <string id="SoftMaker_Presentations_2021_Undo_name">Configure the option "Maximum number of undo steps" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_Undo_help">Here you can configure how many levels of undo are possible in Presentations.</string>
+      <string id="SoftMaker_Presentations_2021_SpellIgnoreWordsWithStartingDigits_name">Configure the option "Ignore words that start with a number" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_SpellIgnoreWordsWithStartingDigits_help">Here you can configure if Presentations checks the spelling of words that start with digits.</string>
+      <string id="SoftMaker_Presentations_2021_ShowDisplay_name">Configure the option "Full-screen show mode: Display" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_ShowDisplay_help">Here you can configure on which monitor Presentations shows full-screen shows slide shows.</string>
+      <string id="SoftMaker_Presentations_2021_PdfFiles_name">Configure the folder for PDF files</string>
+      <string id="SoftMaker_Presentations_2021_PdfFiles_help">Here you can configure the PDF file folder for Presentations.</string>
+      <string id="SoftMaker_Presentations_2021_DefaultFormat_name">Configure the default file format</string>
+      <string id="SoftMaker_Presentations_2021_DefaultFormat_help">Here you can set the file format in which Presentations saves documents by default.</string>
+      <string id="SoftMaker_Presentations_2021_DefaultFormat_0">Presentations 2018-2021 (.prdx)</string>
+      <string id="SoftMaker_Presentations_2021_DefaultFormat_4">Presentations 2016 (.prd)</string>
+      <string id="SoftMaker_Presentations_2021_DefaultFormat_3">Microsoft PowerPoint 2007-2019 (.pptx)</string>
+      <string id="SoftMaker_Presentations_2021_DefaultFormat_1">Microsoft PowerPoint 2000-2003 (.ppt)</string>
+      <string id="SoftMaker_Presentations_2021_DefaultFormat_2">Microsoft PowerPoint 97 (.ppt)</string>
+      <string id="SoftMaker_Presentations_2021_AutoTime_name">Configure the interval in minutes for "Save unsaved changes every ... minutes" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_AutoTime_help">Here you can configure the interval in minutes in which Presentations makes automatic backups of all open documents. The related option "AutoSave" must be activated.</string>
+      <string id="SoftMaker_Presentations_2021_Capitalize_name">Configure the option "Capitalize first letter of sentences" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_Capitalize_help">Here you can configure if Presentations automatically uppercases the first letters in sentencens.</string>
+      <string id="SoftMaker_Presentations_2021_BkgndCorrection_name">Configure the option "Check spelling as you type" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_BkgndCorrection_help">Here you can configure if Presentations checks the spelling by marking errors with a red underline.</string>
+      <string id="SoftMaker_Presentations_2021_BackupNoCleanup_name">Configure the availability of the button "Clean up backup files" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_BackupNoCleanup_help">Here you can configure if the button "Clean up back files" is hidden in Presentations's File | Options dialog box.</string>
+      <string id="SoftMaker_Presentations_2021_LargeIcons_name">Configure the option "Touch mode" (File | Options | User interface)</string>
+      <string id="SoftMaker_Presentations_2021_LargeIcons_help">Here you can configure touch mode for Presentations (large icons and more generous spacing).</string>
+      <string id="SoftMaker_Presentations_2021_Glossary_name">Configure the option "Expand SmartText entries" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_Glossary_help">Here you can configure if Presentations expands SmartText entries that it discovers while the user types.</string>
+      <string id="SoftMaker_Presentations_2021_SpaceCorrection_name">Configure the option "Add or remove spaces when pasting" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_SpaceCorrection_help">Here you can configure if Presentations adds or removes spaces when pasting text.</string>
+      <string id="SoftMaker_Presentations_2021_RaiseOrdinals_name">Configure the option "Superscript ordinal numbers" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_RaiseOrdinals_help">Here you can configure if Presentations automatically superscripts the letters of ordinal numbers (such as 1st, 2nd).</string>
+      <string id="SoftMaker_Presentations_2021_OptionsFontsSheet_name">Configure the visibility of the property sheet "Fonts" in File | Options</string>
+      <string id="SoftMaker_Presentations_2021_OptionsFontsSheet_help">Here you can configure if Presentations shows the property sheet "Fonts" in File | Options.</string>
+      <string id="SoftMaker_Presentations_2021_AutoSave_name">Configure the option "Save unsaved changes every ... minutes" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_AutoSave_help">Here you can configure if Presentations makes automatic backups of all open documents in regular intervals.</string>
+      <string id="SoftMaker_Presentations_2021_WarningBeep_name">Configure the option "Beep on errors" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_WarningBeep_help">Here you can configure if Presentations beeps when an error message is shown.</string>
+      <string id="SoftMaker_Presentations_2021_ViewColorMode_name">Configure the option "Color mode" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_ViewColorMode_help">Here you can configure the color mode (full color, gray scale, black &amp; white) in which Presentations shows presentations.</string>
+      <string id="SoftMaker_Presentations_2021_ViewColorMode_0">Full color</string>
+      <string id="SoftMaker_Presentations_2021_ViewColorMode_1">Grayscale</string>
+      <string id="SoftMaker_Presentations_2021_ViewColorMode_2">Black &amp; white</string>
+      <string id="SoftMaker_Presentations_2021_VertScroll_name">Configure the option "Scrollbars: Vertical" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_VertScroll_help">Here you can configure if Presentations shows a vertical scrollbar for the document.</string>
+      <string id="SoftMaker_Presentations_2021_ShowRulers_name">Configure the option "Show rulers" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_ShowRulers_help">Here you can configure if Presentations shows rulers.</string>
+      <string id="SoftMaker_Presentations_2021_Databases_name">Configure the folder for databases</string>
+      <string id="SoftMaker_Presentations_2021_Databases_help">Here you can configure the database folder for Presentations.</string>
+      <string id="SoftMaker_Presentations_2021_PresenterMode_name">Configure the option "Use Presenter mode"</string>
+      <string id="SoftMaker_Presentations_2021_PresenterMode_help">Here you can configure if presenter mode is active when running a slide show.</string>
+      <string id="SoftMaker_Presentations_2021_BiCapitals_name">Configure the option "Correct first Wo UPpercase LEtters" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_BiCapitals_help">Here you can configure if Presentations automatically fixes words with two uppercase letters at their beginnings.</string>
+      <string id="SoftMaker_Presentations_2021_ShowFormattedOutline_name">Configure the option "Show formatted text in outline view" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_ShowFormattedOutline_help">Here you can configure if the outline view in Presentations shows formatted text.</string>
+      <string id="SoftMaker_Presentations_2021_SmartQuotes_name">Configure the option "Smart quotes" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_SmartQuotes_help">Here you can configure if (and how) Presentations replaces straight quotation marks with typographical ones.</string>
+      <string id="SoftMaker_Presentations_2021_SmartQuotes_0">No smart quotes</string>
+      <string id="SoftMaker_Presentations_2021_SmartQuotes_1">German smart quotes</string>
+      <string id="SoftMaker_Presentations_2021_SmartQuotes_2">Swiss smart quotes</string>
+      <string id="SoftMaker_Presentations_2021_SmartQuotes_3">English smart quotes</string>
+      <string id="SoftMaker_Presentations_2021_SmartQuotes_4">French smart quotes</string>
+      <string id="SoftMaker_Presentations_2021_SmartQuotes_6">Swedish smart quotes</string>
+      <string id="SoftMaker_Presentations_2021_SmartQuotes_7">Polish smart quotes</string>
+      <string id="SoftMaker_Presentations_2021_SmartQuotes_5">Automatic smart quotes (chosen by detected language)</string>
+      <string id="SoftMaker_Presentations_2021_DesignPath_name">Configure the option "Template folder" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_DesignPath_help">Here you can configure the template (designs) folder for Presentations.</string>
+      <string id="SoftMaker_Presentations_2021_RibbonMinimize_name">Configures if the ribbon should be hidden by default during regular editing.</string>
+      <string id="SoftMaker_Presentations_2021_RibbonMinimize_help">Here you can configure if the ribbon should be shown closed by Presentations by default during normal editing.</string>
+      <string id="SoftMaker_Presentations_2021_Macros_name">Configure the folder for macros</string>
+      <string id="SoftMaker_Presentations_2021_Macros_help">Here you can configure the macro folder for Presentations.</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_name">Configure the option "Default language" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_help">Here you can configure the default language for Presentations' spell checker, hyphenation and thesaurus.</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1031">German (Germany)</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_29703">German (old spelling)</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_5127">German (Liechtenstein)</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_4103">German (Luxembourg)</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_3079">German (Austria)</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_31751">German (Austria, old spelling)</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_2055">German (Switzerland)</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_30727">German (Switzerland, old spelling)</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1033">English (US)</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_2057">English (UK)</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1036">French (France)</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_3084">French (Canada)</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_3082">Spanish (Europe)</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_2058">Spanish (Mexico)</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_2070">Portuguese (Portugal)</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1046">Portuguese (Brazil)</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1040">Italian</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1043">Dutch</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1030">Danish</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1044">Norwegian (Bokmal)</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1053">Swedish</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1035">Finnish</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1061">Estonian</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1062">Latvian</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1063">Lithuanian</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1060">Slovenian</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1045">Polish</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1029">Czech</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1051">Slovak</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1050">Croatian</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_2074">Serbian (Latin)</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_3098">Serbian (Cyrillic)</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1038">Hungarian</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1048">Romanian</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1032">Greek</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1055">Turkish</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1049">Russian</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1026">Bulgarian</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1058">Ukrainian</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1087">Kazakh</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_2052">Chinese (PRC)</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1028">Chinese (Taiwan)</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1041">Japanese</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1042">Korean</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1057">Indonesian</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1086">Malayian</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1025">Arabic</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1109">Myanmar</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1081">Hindi</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1054">Thai</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1107">Khmer</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1108">Lao</string>
+      <string id="SoftMaker_Presentations_2021_LanguageID_1066">Vietnamese</string>
+      <string id="SoftMaker_Presentations_2021_LivePreview_name">Configure the option "Live Preview" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_LivePreview_help">Here you can configure if Presentations shows formatting changes immediately in the document.</string>
+      <string id="SoftMaker_Presentations_2021_BackupFilesPath_name">Configure the option "Folder for backup files" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_BackupFilesPath_help">Here you can configure the folder in which Presentations stores backup files (only used when Advanced Backup is on).</string>
+      <string id="SoftMaker_Presentations_2021_OptionsAssociateFiles_name">Configure the availability of the button "Associate files" and the related checkbox (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_OptionsAssociateFiles_help">Here you can configure if the button "Associate files" and the related checkbox are available in Presentations's File | Options dialog box.</string>
+      <string id="SoftMaker_Presentations_2021_HistoryEntries_name">Configure the option "Recently used files in File menu" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_HistoryEntries_help">Here you can configure how many files are kept in Presentations' history of recently used files.</string>
+      <string id="SoftMaker_Presentations_2021_SeparateQuickAccess_name">Configures if the Quick Access toolbar is on a line separate from the document tabs.</string>
+      <string id="SoftMaker_Presentations_2021_SeparateQuickAccess_help">Here you can configure if the Quick Access toolbar is on a line separate from the document tabs.</string>
+      <string id="SoftMaker_Presentations_2021_DiffCorrections_name">Configure the option "Underline 'old' German spelling in blue" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_DiffCorrections_help">Here you can configure if Presentations marks with a blue underline those words that do not follow the current German spelling.</string>
+      <string id="SoftMaker_Presentations_2021_Guides_name">Configure the option "Show guides" (View | Grid and guides)</string>
+      <string id="SoftMaker_Presentations_2021_Guides_help">Here you can configure if Presentations shows guides.</string>
+      <string id="SoftMaker_Presentations_2021_ClearType_name">Configure the option "Smooth edges of screen fonts" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_ClearType_help">Here you can configure which type of font smoothing is used by Presentations for screen fonts.</string>
+      <string id="SoftMaker_Presentations_2021_ClearType_0">Control-panel settings</string>
+      <string id="SoftMaker_Presentations_2021_ClearType_1">Off</string>
+      <string id="SoftMaker_Presentations_2021_ClearType_2">Standard</string>
+      <string id="SoftMaker_Presentations_2021_ClearType_3">ClearType</string>
+      <string id="SoftMaker_Presentations_2021_FrenchSpaces_name">Configure the option "Automatically add spacing around punctuation marks (French only)" (File | Options)</string>
+      <string id="SoftMaker_Presentations_2021_FrenchSpaces_help">Here you can configure if Presentations adds spacing around punctuation marks in French text.</string>
+      <string id="SoftMaker_SoftMaker_Office_2021">SoftMaker Office 2021</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_help"></string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UserDataTitle_name">Configure the field "User address: Title"</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UserDataTitle_help">Here you can configure the content of the field "User address: Title" (see File | Options | General | User info)</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UserDataPhone2_name">Configure the field "User address: Phone number #2"</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UserDataPhone2_help">Here you can configure the content of the field "User address: Phone number #2" (see File | Options | General | User info)</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UserDataInitials_name">Configure the field "User address: Initials"</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UserDataInitials_help">Here you can configure the content of the field "User address: Initials" (see File | Options | General | User info)</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UserDataCountry_name">Configure the field "User address: Country"</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UserDataCountry_help">Here you can configure the content of the field "User address: Country" (see File | Options | General | User info)</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UserDataEmail3_name">Configure the field "User address: E-mail address #3"</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UserDataEmail3_help">Here you can configure the content of the field "User address: E-mail address #3" (see File | Options | General | User info)</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UserDataEmail2_name">Configure the field "User address: E-mail address #2"</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UserDataEmail2_help">Here you can configure the content of the field "User address: E-mail address #1" (see File | Options | General | User info)</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UserDataAddress1_name">Configure the field "User address: Address 1"</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UserDataAddress1_help">Here you can configure the content of the field "User address: Address 1" (see File | Options | General | User info)</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UserDataPhone3_name">Configure the field "User address: Phone number #3"</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UserDataPhone3_help">Here you can configure the content of the field "User address: Phone number #3" (see File | Options | General | User info)</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UserDataAddress2_name">Configure the field "User address: Address 2"</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UserDataAddress2_help">Here you can configure the content of the field "User address: Address 2" (see File | Options | General | User info)</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UserDataDepartment_name">Configure the field "User address: Department"</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UserDataDepartment_help">Here you can configure the content of the field "User address: Department" (see File | Options | General | User info)</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UpdateCheckEnabled_name">Configure the automatic update checker</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UpdateCheckEnabled_help">Here you can configure how often SoftMaker Office checks for updates on the internet. Disabling the update checker also removes the menu entry for manually checking for updates.</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UpdateCheckEnabled_0">Never</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UpdateCheckEnabled_1">Every week</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UpdateCheckEnabled_2">Every second week</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UpdateCheckEnabled_3">Every month</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UserDataName_name">Configure the field "User address: Name"</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UserDataName_help">Here you can configure the content of the field "User address: Name" (see File | Options | General | User info)</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UserDataEmail_name">Configure the field "User address: E-mail address #1"</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UserDataEmail_help">Here you can configure the content of the field "User address: E-mail address #1" (see File | Options | General | User info)</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UserDataFax_name">Configure the field "User address: Fax number"</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UserDataFax_help">Here you can configure the content of the field "User address: Fax number" (see File | Options | General | User info)</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UITheme_name">Configure the option "User interface" (File | Options)</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UITheme_help">Here you can configure if SoftMaker Office uses ribbons or toolbars.</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UITheme_0">Colorful ribbon</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UITheme_1">Gray ribbon</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UITheme_2">Dark ribbon</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UITheme_3">Menus and toolbars</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UITheme_4">Dark menus and toolbars</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UserDataZipCode_name">Configure the field "User address: Postal code"</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UserDataZipCode_help">Here you can configure the content of the field "User address: Postal code" (see File | Options | General | User info)</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_HelpManage_name">Configure if the command ? | Manage license is visible</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_HelpManage_help">Here you can configure if the commands ? | Manage license (ribbon) and Help > Manage license (menus) are shown to the user.</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UserDataCompany_name">Configure the field "User address: Company"</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UserDataCompany_help">Here you can configure the content of the field "User address: Company" (see File | Options | General | User info)</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UserDataCity_name">Configure the field "User address: City"</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UserDataCity_help">Here you can configure the content of the field "User address: City" (see File | Options | General | User info)</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UserDataPhone_name">Configure the field "User address: Phone number #1"</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UserDataPhone_help">Here you can configure the content of the field "User address: Phone number #1" (see File | Options | General | User info)</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_AskUserInfo_name">Ask for the user's name and address upon the first start of TextMaker or PlanMaker</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_AskUserInfo_help">Here you can configure if TextMaker and PlanMaker asks for the user's name and address during its first start.</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_HelpSoftMaker_name">Configure if the command ? | SoftMaker web site is visible</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_HelpSoftMaker_help">Here you can configure if the commands ? | SoftMaker web site (ribbon) and Help > SoftMaker web site (menus) are shown to the user.</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UserDataWWW_name">Configure the field "User address: Web site"</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_UserDataWWW_help">Here you can configure the content of the field "User address: Web site" (see File | Options | General | User info)</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_ProductKey_name">Set the SoftMaker Office 2021 product key</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_ProductKey_help">Here you can set the SoftMaker Office 2021 product key.</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_DlgLID_name">Configure the option "Dialog language" (File | Options)</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_DlgLID_help">Here you can configure the language which SoftMaker Office uses for its user interface.</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_DlgLID_1031">German</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_DlgLID_1033">English (US)</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_DlgLID_2057">English (UK)</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_DlgLID_1036">French</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_DlgLID_3082">Spanish</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_DlgLID_2070">Portuguese (Portugal)</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_DlgLID_1046">Portuguese (Brazil)</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_DlgLID_1040">Italian</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_DlgLID_1043">Dutch</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_DlgLID_1030">Danish</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_DlgLID_1053">Swedish</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_DlgLID_1035">Finnish</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_DlgLID_1061">Estonian</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_DlgLID_1062">Latvian</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_DlgLID_1063">Lithuanian</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_DlgLID_1060">Slovenian</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_DlgLID_1038">Hungarian</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_DlgLID_1048">Romanian</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_DlgLID_1032">Greek</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_DlgLID_1055">Turkish</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_DlgLID_1049">Russian</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_DlgLID_1026">Bulgarian</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_DlgLID_1058">Ukrainian</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_DlgLID_1087">Kazakh</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_DlgLID_2052">Chinese (Simplified)</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_DlgLID_1041">Japanese</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_DlgLID_1042">Korean</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_DlgLID_1057">Indonesian</string>
+      <string id="SoftMaker_SoftMaker_Office_2021_DlgLID_1025">Arabic</string>
+      <string id="SoftMaker_TextMaker_2021">TextMaker 2021</string>
+      <string id="SoftMaker_TextMaker_2021_help"></string>
+      <string id="SoftMaker_TextMaker_2021_ToolTips_name">Configure the option "Show tooltips" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_ToolTips_help">Here you can configure if TextMaker shows tooltips when the mouse hovers over a toolbar button.</string>
+      <string id="SoftMaker_TextMaker_2021_SpellCheckColor_name">Configure the option "Spell-checking color" (set the color; File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_SpellCheckColor_help">Here you can configure the color that TextMaker uses to paint the line under misspelled words. Note that you must also set the option to use a user-defined color.</string>
+      <string id="SoftMaker_TextMaker_2021_Documents_name">Configure the folder for documents</string>
+      <string id="SoftMaker_TextMaker_2021_Documents_help">Here you can configure the document folder for TextMaker.</string>
+      <string id="SoftMaker_TextMaker_2021_PgfBreaks_name">Configure the option "Show unprintable characters" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_PgfBreaks_help">Here you can configure which unprintable characters TextMaker shows during editing.</string>
+      <string id="SoftMaker_TextMaker_2021_PgfBreaks_0">No unprintable characters shown</string>
+      <string id="SoftMaker_TextMaker_2021_PgfBreaks_256">Only paragraph breaks shown</string>
+      <string id="SoftMaker_TextMaker_2021_PgfBreaks_2048">All unprintable characters shown</string>
+      <string id="SoftMaker_TextMaker_2021_WSColorRGBValue_name">Configure the option "Workspace color" (set the color; File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_WSColorRGBValue_help">Here you can configure the color that TextMaker uses to paint the area outside the page. Note that you must also set the option to use a user-defined color.</string>
+      <string id="SoftMaker_TextMaker_2021_Pictures_name">Configure the folder for pictures</string>
+      <string id="SoftMaker_TextMaker_2021_Pictures_help">Here you can configure the picture folder for TextMaker.</string>
+      <string id="SoftMaker_TextMaker_2021_Databases_name">Configure the folder for databases</string>
+      <string id="SoftMaker_TextMaker_2021_Databases_help">Here you can configure the database folder for TextMaker.</string>
+      <string id="SoftMaker_TextMaker_2021_GrammarCheckColor_name">Configure the option "Grammar-checking color" (set the color; File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_GrammarCheckColor_help">Here you can configure the color that TextMaker uses to paint the line under words with wrong grammar. Note that you must also set the option to use a user-defined color.</string>
+      <string id="SoftMaker_TextMaker_2021_VRuler_name">Configure the option "Vertical ruler" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_VRuler_help">Here you can configure if TextMaker shows a vertical ruler in documents.</string>
+      <string id="SoftMaker_TextMaker_2021_FormatWholeWord_name">Configure the option "Apply character formatting to entire words" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_FormatWholeWord_help">Here you can configure if TextMaker applies character formatting to whole words when the caret is inside or near them.</string>
+      <string id="SoftMaker_TextMaker_2021_WindowWrap_name">Configure the option "Wrap text to window (in continuous and outline view)" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_WindowWrap_help">Here you can configure if TextMaker breaks lines at the window border, instead of formatting the lines for the printed page.</string>
+      <string id="SoftMaker_TextMaker_2021_ImmediateObjectInsert_name">Configure the option "Insert frames and drawings immediately" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_ImmediateObjectInsert_help">Here you can configure if TextMaker inserts object frames and drawings immediately, or only after the user draws a selection rectangle with the mouse.</string>
+      <string id="SoftMaker_TextMaker_2021_ImmediateObjectInsert_2">Auto</string>
+      <string id="SoftMaker_TextMaker_2021_ImmediateObjectInsert_1">Always</string>
+      <string id="SoftMaker_TextMaker_2021_ImmediateObjectInsert_0">Never</string>
+      <string id="SoftMaker_TextMaker_2021_TableGrid_name">Configure the option "Table guidelines" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_TableGrid_help">Here you can configure if TextMaker shows borders around and inside tables.</string>
+      <string id="SoftMaker_TextMaker_2021_IndentParagraphsWithTab_name">Configure the option "Set left and first-line indent with Tab and Backspace keys" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_IndentParagraphsWithTab_help">Here you can configure if the user can indent/unindent paragraphs with the Tab and Backspace keys.</string>
+      <string id="SoftMaker_TextMaker_2021_CheckHtmlLinks_name">Configure the option "Format URLs as hyperlinks" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_CheckHtmlLinks_help">Here you can configure if TextMaker converts text that looks like an URL to a clickable link.</string>
+      <string id="SoftMaker_TextMaker_2021_DocInfo_name">Configure the option "Prompt for summary information when saving" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_DocInfo_help">Here you can configure if TextMaker asks the user for a document summary when saving a file for the first time.</string>
+      <string id="SoftMaker_TextMaker_2021_PageBorders_name">Configure the option "PageBorders" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_PageBorders_help">Here you can configure if TextMaker shows borders around the margins of the pages.</string>
+      <string id="SoftMaker_TextMaker_2021_WSColorEnabled_name">Configure the option "Workspace color" (toggle between standard and user-defined; File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_WSColorEnabled_help">Here you can configure if TextMaker paints the area outside the page in a user-defined color (value ON) or not (value OFF).</string>
+      <string id="SoftMaker_TextMaker_2021_WSColorEnabled_0">Off</string>
+      <string id="SoftMaker_TextMaker_2021_WSColorEnabled_1">On</string>
+      <string id="SoftMaker_TextMaker_2021_AutoTime_name">Configure the interval in minutes for "Save unsaved changes every ... minutes" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_AutoTime_help">Here you can configure the interval in minutes in which TextMaker makes automatic backups of all open documents. The related option "AutoSave" must be activated.</string>
+      <string id="SoftMaker_TextMaker_2021_FontShow_name">Configure the option "Show fonts in font list" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_FontShow_help">Here you can configure if TextMaker shows real fonts in its font lists.</string>
+      <string id="SoftMaker_TextMaker_2021_Explorer_name">Configure the option "Use system file dialogs" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_Explorer_help">Here you can configure if TextMaker uses the system file dialogs or its own.</string>
+      <string id="SoftMaker_TextMaker_2021_WordSelection_name">Configure the option "Select whole words when selecting" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_WordSelection_help">Here you can configure if TextMaker selects word-by-word, instead of character-by-character.</string>
+      <string id="SoftMaker_TextMaker_2021_OptionsHunspell_name">Configure the availability of the button "Hunspell dictionaries" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_OptionsHunspell_help">Here you can configure if the button "Hunspell dictionaries" is available in TextMaker's File | Options dialog box.</string>
+      <string id="SoftMaker_TextMaker_2021_SnapshotNumber_name">Configure the option "Number of snapshots to keep" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_SnapshotNumber_help">Here you can configure how many automatically saved file versions TextMaker keeps per document.</string>
+      <string id="SoftMaker_TextMaker_2021_LargeIcons_name">Configure the option "Touch mode" (File | Options | User interface)</string>
+      <string id="SoftMaker_TextMaker_2021_LargeIcons_help">Here you can configure touch mode for TextMaker (large icons and more generous spacing).</string>
+      <string id="SoftMaker_TextMaker_2021_Undo_name">Configure the option "Maximum number of undo steps" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_Undo_help">Here you can configure how many levels of undo are possible in TextMaker.</string>
+      <string id="SoftMaker_TextMaker_2021_SpellIgnoreWordsWithStartingDigits_name">Configure the option "Ignore words that start with a number" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_SpellIgnoreWordsWithStartingDigits_help">Here you can configure if TextMaker checks the spelling of words that start with digits.</string>
+      <string id="SoftMaker_TextMaker_2021_BackupFilesNumber_name">Configure the option "Number of versions to keep" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_BackupFilesNumber_help">Here you can configure how many manually saved file versions TextMaker keeps per document.</string>
+      <string id="SoftMaker_TextMaker_2021_PdfFiles_name">Configure the folder for PDF files</string>
+      <string id="SoftMaker_TextMaker_2021_PdfFiles_help">Here you can configure the PDF file folder for TextMaker.</string>
+      <string id="SoftMaker_TextMaker_2021_JumpToLastPosition_name">Configure the option "Return to the last editing position when a document has been opened" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_JumpToLastPosition_help">Here you can configure if TextMaker sets the caret in the last editing position when a document is opened again.</string>
+      <string id="SoftMaker_TextMaker_2021_SpellCheckColorEnable_name">Configure the option "Spell-checking color" (toggle between standard and user-defined; File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_SpellCheckColorEnable_help">Here you can configure if TextMaker paints the line under misspelled words in a user-defined color (value ON) or not (value OFF).</string>
+      <string id="SoftMaker_TextMaker_2021_SpellCheckColorEnable_0">Off</string>
+      <string id="SoftMaker_TextMaker_2021_SpellCheckColorEnable_1">On</string>
+      <string id="SoftMaker_TextMaker_2021_DefaultFormat_name">Configure the default file format</string>
+      <string id="SoftMaker_TextMaker_2021_DefaultFormat_help">Here you can set the file format in which TextMaker saves documents by default.</string>
+      <string id="SoftMaker_TextMaker_2021_DefaultFormat_0">TextMaker 2018-2021 (.tmdx)</string>
+      <string id="SoftMaker_TextMaker_2021_DefaultFormat_7">TextMaker 2016 (.tmd)</string>
+      <string id="SoftMaker_TextMaker_2021_DefaultFormat_6">Microsoft Word 2007-2019 (.docx)</string>
+      <string id="SoftMaker_TextMaker_2021_DefaultFormat_1">Microsoft Word 97-2003 (.doc)</string>
+      <string id="SoftMaker_TextMaker_2021_DefaultFormat_3">Microsoft Word 6.0/95 (.doc)</string>
+      <string id="SoftMaker_TextMaker_2021_DefaultFormat_4">OpenDocument Text (.odt)</string>
+      <string id="SoftMaker_TextMaker_2021_DefaultFormat_5">Rich Text Format (.rtf)</string>
+      <string id="SoftMaker_TextMaker_2021_BiCapitals_name">Configure the option "Correct first Wo UPpercase LEtters" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_BiCapitals_help">Here you can configure if TextMaker automatically fixes words with two uppercase letters at their beginnings.</string>
+      <string id="SoftMaker_TextMaker_2021_Capitalize_name">Configure the option "Capitalize first letter of sentences" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_Capitalize_help">Here you can configure if TextMaker automatically uppercases the first letters in sentencens.</string>
+      <string id="SoftMaker_TextMaker_2021_GrammarCheckColorEnable_name">Configure the option "Grammar-checking color" (toggle between standard and user-defined; File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_GrammarCheckColorEnable_help">Here you can configure if TextMaker paints the line under words with wrong grammar in a user-defined color (value ON) or not (value OFF).</string>
+      <string id="SoftMaker_TextMaker_2021_GrammarCheckColorEnable_0">Off</string>
+      <string id="SoftMaker_TextMaker_2021_GrammarCheckColorEnable_1">On</string>
+      <string id="SoftMaker_TextMaker_2021_OptionsDudenKorrektor_name">Configure the availability of the button "Duden Korrektor options" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_OptionsDudenKorrektor_help">Here you can configure if the button "Duden Korrektor options" is available in TextMaker's File | Options dialog box.</string>
+      <string id="SoftMaker_TextMaker_2021_BkgndCorrection_name">Configure the option "Check spelling as you type" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_BkgndCorrection_help">Here you can configure if TextMaker checks the spelling by marking errors with a red underline.</string>
+      <string id="SoftMaker_TextMaker_2021_BackupNoCleanup_name">Configure the availability of the button "Clean up backup files" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_BackupNoCleanup_help">Here you can configure if the button "Clean up back files" is hidden in TextMaker's File | Options dialog box.</string>
+      <string id="SoftMaker_TextMaker_2021_HorizontalPages_name">Configure the option "Show multiple pages side by side" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_HorizontalPages_help">Here you can configure if TextMaker shows multiple pages side by side.</string>
+      <string id="SoftMaker_TextMaker_2021_HorizontalPages_1">Off</string>
+      <string id="SoftMaker_TextMaker_2021_HorizontalPages_32">On</string>
+      <string id="SoftMaker_TextMaker_2021_Glossary_name">Configure the option "Expand SmartText entries" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_Glossary_help">Here you can configure if TextMaker expands SmartText entries that it discovers while the user types.</string>
+      <string id="SoftMaker_TextMaker_2021_SpaceCorrection_name">Configure the option "Add or remove spaces when pasting" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_SpaceCorrection_help">Here you can configure if TextMaker adds or removes spaces when pasting text.</string>
+      <string id="SoftMaker_TextMaker_2021_RaiseOrdinals_name">Configure the option "Superscript ordinal numbers" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_RaiseOrdinals_help">Here you can configure if TextMaker automatically superscripts the letters of ordinal numbers (such as 1st, 2nd).</string>
+      <string id="SoftMaker_TextMaker_2021_OptionsFontsSheet_name">Configure the visibility of the property sheet "Fonts" in File | Options</string>
+      <string id="SoftMaker_TextMaker_2021_OptionsFontsSheet_help">Here you can configure if TextMaker shows the property sheet "Fonts" in File | Options.</string>
+      <string id="SoftMaker_TextMaker_2021_AutoSave_name">Configure the option "Save unsaved changes every ... minutes" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_AutoSave_help">Here you can configure if TextMaker makes automatic backups of all open documents in regular intervals.</string>
+      <string id="SoftMaker_TextMaker_2021_WarningBeep_name">Configure the option "Beep on errors" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_WarningBeep_help">Here you can configure if TextMaker beeps when an error message is shown.</string>
+      <string id="SoftMaker_TextMaker_2021_HRuler_name">Configure the option "Horizontal ruler" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_HRuler_help">Here you can configure if TextMaker shows a horizontal ruler in documents.</string>
+      <string id="SoftMaker_TextMaker_2021_HorzScroll_name">Configure the option "Scrollbars: Horizontal" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_HorzScroll_help">Here you can configure if TextMaker shows a horizontal scrollbar for the document.</string>
+      <string id="SoftMaker_TextMaker_2021_AsianFonts_name">Configure the option "Extended support for Asian fonts" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_AsianFonts_help">Here you can configure if TextMaker offers extended support for Asian fonts.</string>
+      <string id="SoftMaker_TextMaker_2021_RibbonMinimizeFS_name">Configures if the ribbon should be hidden by default in full-screen mode.</string>
+      <string id="SoftMaker_TextMaker_2021_RibbonMinimizeFS_help">Here you can configure if the ribbon should be shown closed by TextMaker in full-screen mode.</string>
+      <string id="SoftMaker_TextMaker_2021_ArabicDigits_name">Configure the option "Arabic digits" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_ArabicDigits_help">Here you can configure if TextMaker uses Arabic, Hindi or context-dependent digits in documents.</string>
+      <string id="SoftMaker_TextMaker_2021_ArabicDigits_0">Arabic</string>
+      <string id="SoftMaker_TextMaker_2021_ArabicDigits_1">Hindi</string>
+      <string id="SoftMaker_TextMaker_2021_ArabicDigits_2">Context</string>
+      <string id="SoftMaker_TextMaker_2021_DisplayGrid_name">Configure the option "Show grid" (Layout | Guides and Grid)</string>
+      <string id="SoftMaker_TextMaker_2021_DisplayGrid_help">Here you can configure if TextMaker shows a grid behind the page for aligning objects.</string>
+      <string id="SoftMaker_TextMaker_2021_EnableGrammarcheck_name">Configure the option "Use Duden Korrektor grammar-checking for German language" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_EnableGrammarcheck_help">Here you can configure if TextMaker uses Duden Korrektor to check the grammar of German text.</string>
+      <string id="SoftMaker_TextMaker_2021_EnableHyphenation_name">Configure the option "Use Duden Korrektor for German hyphenation" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_EnableHyphenation_help">Here you can configure if TextMaker uses Duden Korrektor instead of SoftMaker hyphenation for auto-hyphenating German text.</string>
+      <string id="SoftMaker_TextMaker_2021_ShowOverflowMarker_name">Configure the option "Overflow mark" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_ShowOverflowMarker_help">Here you can configure if TextMaker shows a red marker when a text frame contains too much text.</string>
+      <string id="SoftMaker_TextMaker_2021_TxtFormat_name">Configure the option "Display warning when saving documents in text format" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_TxtFormat_help">Here you can configure if TextMaker warns about lost formatting when a document is saved as a plain-text file.</string>
+      <string id="SoftMaker_TextMaker_2021_SmartQuotes_name">Configure the option "Smart quotes" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_SmartQuotes_help">Here you can configure if (and how) TextMaker replaces straight quotation marks with typographical ones.</string>
+      <string id="SoftMaker_TextMaker_2021_SmartQuotes_0">No smart quotes</string>
+      <string id="SoftMaker_TextMaker_2021_SmartQuotes_1">German smart quotes</string>
+      <string id="SoftMaker_TextMaker_2021_SmartQuotes_2">Swiss smart quotes</string>
+      <string id="SoftMaker_TextMaker_2021_SmartQuotes_3">English smart quotes</string>
+      <string id="SoftMaker_TextMaker_2021_SmartQuotes_4">French smart quotes</string>
+      <string id="SoftMaker_TextMaker_2021_SmartQuotes_6">Swedish smart quotes</string>
+      <string id="SoftMaker_TextMaker_2021_SmartQuotes_7">Polish smart quotes</string>
+      <string id="SoftMaker_TextMaker_2021_SmartQuotes_5">Automatic smart quotes (chosen by detected language)</string>
+      <string id="SoftMaker_TextMaker_2021_RibbonMinimize_name">Configures if the ribbon should be hidden by default during regular editing.</string>
+      <string id="SoftMaker_TextMaker_2021_RibbonMinimize_help">Here you can configure if the ribbon should be shown closed by TextMaker by default during normal editing.</string>
+      <string id="SoftMaker_TextMaker_2021_Macros_name">Configure the folder for macros</string>
+      <string id="SoftMaker_TextMaker_2021_Macros_help">Here you can configure the macro folder for TextMaker.</string>
+      <string id="SoftMaker_TextMaker_2021_OleBounds_name">Configure the option "OLE object guidelines" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_OleBounds_help">Here you can configure if TextMaker shows borders around OLE objects.</string>
+      <string id="SoftMaker_TextMaker_2021_FrameGrid_name">Configure the option "Frame guidelines" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_FrameGrid_help">Here you can configure if TextMaker shows borders around frame objects.</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_name">Configure the option "Default language" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_help">Here you can configure the default language for TextMaker's spell checker, hyphenation, thesaurus and date formatting.</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1031">German (Germany)</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_29703">German (old spelling)</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_5127">German (Liechtenstein)</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_4103">German (Luxembourg)</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_3079">German (Austria)</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_31751">German (Austria, old spelling)</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_2055">German (Switzerland)</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_30727">German (Switzerland, old spelling)</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1033">English (US)</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_2057">English (UK)</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1036">French (France)</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_3084">French (Canada)</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_3082">Spanish (Europe)</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_2058">Spanish (Mexico)</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_2070">Portuguese (Portugal)</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1046">Portuguese (Brazil)</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1040">Italian</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1043">Dutch</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1030">Danish</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1044">Norwegian (Bokmal)</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1053">Swedish</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1035">Finnish</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1061">Estonian</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1062">Latvian</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1063">Lithuanian</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1060">Slovenian</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1045">Polish</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1029">Czech</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1051">Slovak</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1050">Croatian</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_2074">Serbian (Latin)</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_3098">Serbian (Cyrillic)</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1038">Hungarian</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1048">Romanian</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1032">Greek</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1055">Turkish</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1049">Russian</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1026">Bulgarian</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1058">Ukrainian</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1087">Kazakh</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_2052">Chinese (PRC)</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1028">Chinese (Taiwan)</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1041">Japanese</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1042">Korean</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1057">Indonesian</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1086">Malayian</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1025">Arabic</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1109">Myanmar</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1081">Hindi</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1054">Thai</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1107">Khmer</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1108">Lao</string>
+      <string id="SoftMaker_TextMaker_2021_LanguageID_1066">Vietnamese</string>
+      <string id="SoftMaker_TextMaker_2021_LivePreview_name">Configure the option "Live Preview" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_LivePreview_help">Here you can configure if TextMaker shows formatting changes immediately in the document.</string>
+      <string id="SoftMaker_TextMaker_2021_FrenchSpaces_name">Configure the option "Automatically add spacing around punctuation marks (French only)" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_FrenchSpaces_help">Here you can configure if TextMaker adds spacing around punctuation marks in French text.</string>
+      <string id="SoftMaker_TextMaker_2021_BackupFilesPath_name">Configure the option "Folder for backup files" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_BackupFilesPath_help">Here you can configure the folder in which TextMaker stores backup files (only used when Advanced Backup is on).</string>
+      <string id="SoftMaker_TextMaker_2021_ArabicSupport_name">Configure the option "Extended support for Arabic text" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_ArabicSupport_help">Here you can configure if TextMaker offers extended support for Arabic.</string>
+      <string id="SoftMaker_TextMaker_2021_OptionsAssociateFiles_name">Configure the availability of the button "Associate files" and the related checkbox (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_OptionsAssociateFiles_help">Here you can configure if the button "Associate files" and the related checkbox are available in TextMaker's File | Options dialog box.</string>
+      <string id="SoftMaker_TextMaker_2021_DiffCorrections_name">Configure the option "Underline 'old' German spelling in blue" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_DiffCorrections_help">Here you can configure if TextMaker marks with a blue underline those words that do not follow the current German spelling.</string>
+      <string id="SoftMaker_TextMaker_2021_HistoryEntries_name">Configure the option "Recently used files in File menu" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_HistoryEntries_help">Here you can configure how many files are kept in TextMaker's history of recently used files.</string>
+      <string id="SoftMaker_TextMaker_2021_SeparateQuickAccess_name">Configures if the Quick Access toolbar is on a line separate from the document tabs.</string>
+      <string id="SoftMaker_TextMaker_2021_SeparateQuickAccess_help">Here you can configure if the Quick Access toolbar is on a line separate from the document tabs.</string>
+      <string id="SoftMaker_TextMaker_2021_TemplatePath_name">Configure the option "Template folder" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_TemplatePath_help">Here you can configure the template folder for TextMaker.</string>
+      <string id="SoftMaker_TextMaker_2021_VertScroll_name">Configure the option "Scrollbars: Vertical" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_VertScroll_help">Here you can configure if TextMaker shows a vertical scrollbar for the document.</string>
+      <string id="SoftMaker_TextMaker_2021_Guides_name">Configure the option "Guides" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_Guides_help">Here you can configure if TextMaker shows object guides in documents.</string>
+      <string id="SoftMaker_TextMaker_2021_ClearType_name">Configure the option "Smooth edges of screen fonts" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_ClearType_help">Here you can configure which type of font smoothing is used by TextMaker for screen fonts.</string>
+      <string id="SoftMaker_TextMaker_2021_ClearType_0">Control-panel settings</string>
+      <string id="SoftMaker_TextMaker_2021_ClearType_1">Off</string>
+      <string id="SoftMaker_TextMaker_2021_ClearType_2">Standard</string>
+      <string id="SoftMaker_TextMaker_2021_ClearType_3">ClearType</string>
+      <string id="SoftMaker_TextMaker_2021_EnableSpellcheck_name">Configure the option "Use Duden Korrektor for German spell-checking" (File | Options)</string>
+      <string id="SoftMaker_TextMaker_2021_EnableSpellcheck_help">Here you can configure if TextMaker uses Duden Korrektor instead of the SoftMaker spell checker for checking the spelling in German.</string>
+      <string id="SoftMaker_PlanMaker_2021">PlanMaker 2021</string>
+      <string id="SoftMaker_PlanMaker_2021_help"></string>
+      <string id="SoftMaker_PlanMaker_2021_ToolTips_name">Configure the option "Show tooltips" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_ToolTips_help">Here you can configure if PlanMaker shows tooltips when the mouse hovers over a toolbar button.</string>
+      <string id="SoftMaker_PlanMaker_2021_ExpandTables_name">Configure the option "Expand tables automatically" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_ExpandTables_help">Here you can configure if PlanMaker expands tables automatically when the user adds data.</string>
+      <string id="SoftMaker_PlanMaker_2021_DecimalSeparator_name">Configure the option "Decimal separator" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_DecimalSeparator_help">Here you can set the decimal separator that PlanMaker uses.&#13;&#10;&#13;&#10;Enter the Unicode value of the desired character (44 for a comma, 46 for a period).</string>
+      <string id="SoftMaker_PlanMaker_2021_RegBarFontSize_name">Configure the option "Worksheet tabs: Font size" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_RegBarFontSize_help">Here you can configure how large the font is for the worksheet tabs. The tabs grow larger automatically to accommodate the new font height.</string>
+      <string id="SoftMaker_PlanMaker_2021_WSColorRGBValue_name">Configure the option "Workspace color" (set the color; File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_WSColorRGBValue_help">Here you can configure the color that PlanMaker uses to paint the area outside the page. Note that you must also set the option to use a user-defined color.</string>
+      <string id="SoftMaker_PlanMaker_2021_Pictures_name">Configure the folder for pictures</string>
+      <string id="SoftMaker_PlanMaker_2021_Pictures_help">Here you can configure the picture folder for PlanMaker.</string>
+      <string id="SoftMaker_PlanMaker_2021_ThousandsSeparator_name">Configure the option "Thousands separator" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_ThousandsSeparator_help">Here you can set the thousands separator that PlanMaker uses.&#13;&#10;&#13;&#10;Enter the Unicode value of the desired character (44 for a comma, 46 for a period).</string>
+      <string id="SoftMaker_PlanMaker_2021_DirectEdit_name">Configure the option "In-cell editing" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_DirectEdit_help">Here you can configure if PlanMaker offers to edit a cell directly in the worksheet when you press F2.</string>
+      <string id="SoftMaker_PlanMaker_2021_FormatWholeWord_name">Configure the option "Apply character formatting to entire words" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_FormatWholeWord_help">Here you can configure if PlanMaker applies character formatting to whole words when the caret is inside or near them.</string>
+      <string id="SoftMaker_PlanMaker_2021_Documents_name">Configure the folder for documents</string>
+      <string id="SoftMaker_PlanMaker_2021_Documents_help">Here you can configure the document folder for PlanMaker.</string>
+      <string id="SoftMaker_PlanMaker_2021_CommentColor_name">Configure the option "Marker: Color of comment markers" (set the color; File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_CommentColor_help">Here you can configure the color that PlanMaker uses to paint comment markers. Note that you must also set the option to use a user-defined color.</string>
+      <string id="SoftMaker_PlanMaker_2021_BackupFilesNumber_name">Configure the option "Number of backup files per document" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_BackupFilesNumber_help">Here you can configure how many backup files PlanMaker creates per document.</string>
+      <string id="SoftMaker_PlanMaker_2021_DocInfo_name">Configure the option "Prompt for summary information when saving" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_DocInfo_help">Here you can configure if PlanMaker asks the user for a document summary when saving a file for the first time.</string>
+      <string id="SoftMaker_PlanMaker_2021_WSColorEnabled_name">Configure the option "Workspace color" (toggle between standard and user-defined; File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_WSColorEnabled_help">Here you can configure if PlanMaker paints the area outside the page in a user-defined color (value ON) or not (value OFF).</string>
+      <string id="SoftMaker_PlanMaker_2021_WSColorEnabled_0">Off</string>
+      <string id="SoftMaker_PlanMaker_2021_WSColorEnabled_1">On</string>
+      <string id="SoftMaker_PlanMaker_2021_CellMarkerThickness_name">Configure the option "Cell marker: Thickness" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_CellMarkerThickness_help">Here you can configure the thickness of the border around the active cell.</string>
+      <string id="SoftMaker_PlanMaker_2021_FontShow_name">Configure the option "Show fonts in font list" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_FontShow_help">Here you can configure if PlanMaker shows real fonts in its font lists.</string>
+      <string id="SoftMaker_PlanMaker_2021_Explorer_name">Configure the option "Use system file dialogs" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_Explorer_help">Here you can configure if PlanMaker uses the system file dialogs or its own.</string>
+      <string id="SoftMaker_PlanMaker_2021_OptionsHunspell_name">Configure the availability of the button "Hunspell dictionaries" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_OptionsHunspell_help">Here you can configure if the button "Hunspell dictionaries" is available in PlanMaker's File | Options dialog box.</string>
+      <string id="SoftMaker_PlanMaker_2021_SnapshotNumber_name">Configure the option "Number of snapshots to keep" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_SnapshotNumber_help">Here you can configure how many automatically saved file versions PlanMaker keeps per document.</string>
+      <string id="SoftMaker_PlanMaker_2021_Undo_name">Configure the option "Maximum number of undo steps" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_Undo_help">Here you can configure how many levels of undo are possible in PlanMaker.</string>
+      <string id="SoftMaker_PlanMaker_2021_SpellIgnoreWordsWithStartingDigits_name">Configure the option "Ignore words that start with a number" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_SpellIgnoreWordsWithStartingDigits_help">Here you can configure if PlanMaker checks the spelling of words that start with digits.</string>
+      <string id="SoftMaker_PlanMaker_2021_AutoComplete_name">Configure the option "Autocomplete cells" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_AutoComplete_help">Here you can configure if PlanMaker autocompletes partial cell input from cell content found above the current cell.</string>
+      <string id="SoftMaker_PlanMaker_2021_DefaultFormat_name">Configure the default file format</string>
+      <string id="SoftMaker_PlanMaker_2021_DefaultFormat_help">Here you can set the file format in which PlanMaker saves documents by default.</string>
+      <string id="SoftMaker_PlanMaker_2021_DefaultFormat_0">PlanMaker 2016-2021 (.pmdx)</string>
+      <string id="SoftMaker_PlanMaker_2021_DefaultFormat_4">PlanMaker 2012 (.pmd)</string>
+      <string id="SoftMaker_PlanMaker_2021_DefaultFormat_3">Microsoft Excel 2007-2019 (.xlsx)</string>
+      <string id="SoftMaker_PlanMaker_2021_DefaultFormat_1">Microsoft Excel 97-2003 (.xls)</string>
+      <string id="SoftMaker_PlanMaker_2021_DefaultFormat_2">Microsoft Excel 5.0-7.0 (.xls)</string>
+      <string id="SoftMaker_PlanMaker_2021_CaretLeftBehaviour_name">Configure the option "Left arrow key never exits cell editing" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_CaretLeftBehaviour_help">Here you can configure if PlanMaker allows the user to exit from cells using the Cursor Left key.</string>
+      <string id="SoftMaker_PlanMaker_2021_CaretLeftBehaviour_1">Off</string>
+      <string id="SoftMaker_PlanMaker_2021_CaretLeftBehaviour_0">On</string>
+      <string id="SoftMaker_PlanMaker_2021_RibbonMinimizeFS_name">Configures if the ribbon should be hidden by default in full-screen mode.</string>
+      <string id="SoftMaker_PlanMaker_2021_RibbonMinimizeFS_help">Here you can configure if the ribbon should be shown closed by PlanMaker in full-screen mode.</string>
+      <string id="SoftMaker_PlanMaker_2021_AutoTime_name">Configure the interval in minutes for "Save unsaved changes every ... minutes" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_AutoTime_help">Here you can configure the interval in minutes in which PlanMaker makes automatic backups of all open documents. The related option "AutoSave" must be activated.</string>
+      <string id="SoftMaker_PlanMaker_2021_CellMarkerColor_name">Configure the option "Cell marker: Color" (set the color; File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_CellMarkerColor_help">Here you can configure the color that PlanMaker uses to paint the border around the active cell. Note that you must also set the option to use a user-defined color.</string>
+      <string id="SoftMaker_PlanMaker_2021_CellMarkerColorAuto_name">Configure the option "Cell marker: Color" (toggle between automatic and user-defined; File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_CellMarkerColorAuto_help">Here you can configure if PlanMaker paints the border around the active cell in an automatically determined color or a user-defined one.</string>
+      <string id="SoftMaker_PlanMaker_2021_CellMarkerColorAuto_1">Automatic</string>
+      <string id="SoftMaker_PlanMaker_2021_CellMarkerColorAuto_0">User-defined</string>
+      <string id="SoftMaker_PlanMaker_2021_CellJump_name">Configure the option "After input, move selection" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_CellJump_help">Here you can configure in which selection the active cell is moved when the user presses Enter.</string>
+      <string id="SoftMaker_PlanMaker_2021_CellJump_0">Do not move</string>
+      <string id="SoftMaker_PlanMaker_2021_CellJump_1">Down</string>
+      <string id="SoftMaker_PlanMaker_2021_CellJump_2">Up</string>
+      <string id="SoftMaker_PlanMaker_2021_CellJump_3">Right</string>
+      <string id="SoftMaker_PlanMaker_2021_CellJump_4">Left</string>
+      <string id="SoftMaker_PlanMaker_2021_LivePreview_name">Configure the option "Live Preview" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_LivePreview_help">Here you can configure if PlanMaker shows formatting changes immediately in the document.</string>
+      <string id="SoftMaker_PlanMaker_2021_SnapToOtherObjectsTolerance_name">Configures the snap tolerance of objects.</string>
+      <string id="SoftMaker_PlanMaker_2021_SnapToOtherObjectsTolerance_help">Here you can configure the snap tolerance of objects.</string>
+      <string id="SoftMaker_PlanMaker_2021_BackupNoCleanup_name">Configure the availability of the button "Clean up backup files" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_BackupNoCleanup_help">Here you can configure if the button "Clean up back files" is hidden in PlanMaker's File | Options dialog box.</string>
+      <string id="SoftMaker_PlanMaker_2021_LargeIcons_name">Configure the option "Touch mode" (File | Options | User interface)</string>
+      <string id="SoftMaker_PlanMaker_2021_LargeIcons_help">Here you can configure touch mode for PlantMaker (large icons and more generous spacing).</string>
+      <string id="SoftMaker_PlanMaker_2021_Glossary_name">Configure the option "Expand SmartText entries" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_Glossary_help">Here you can configure if PlanMaker expands SmartText entries that it discovers while the user types.</string>
+      <string id="SoftMaker_PlanMaker_2021_PdfFiles_name">Configure the folder for PDF files</string>
+      <string id="SoftMaker_PlanMaker_2021_PdfFiles_help">Here you can configure the PDF file folder for PlanMaker.</string>
+      <string id="SoftMaker_PlanMaker_2021_MarkerSize_name">Configure the option "Markers: Size" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_MarkerSize_help">Here you can configure the size of comment and protection markers in PlanMaker worksheets.</string>
+      <string id="SoftMaker_PlanMaker_2021_OptionsFontsSheet_name">Configure the visibility of the property sheet "Fonts" in File | Options</string>
+      <string id="SoftMaker_PlanMaker_2021_OptionsFontsSheet_help">Here you can configure if PlanMaker shows the property sheet "Fonts" in File | Options.</string>
+      <string id="SoftMaker_PlanMaker_2021_SnapToCells_name">Configures if objects snap to cells.</string>
+      <string id="SoftMaker_PlanMaker_2021_SnapToCells_help">Here you can configure if objects snap to cells.</string>
+      <string id="SoftMaker_PlanMaker_2021_AutoSave_name">Configure the option "Save unsaved changes every ... minutes" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_AutoSave_help">Here you can configure if PlanMaker makes automatic backups of all open documents in regular intervals.</string>
+      <string id="SoftMaker_PlanMaker_2021_FormulaNotify_name">Configure the option "Warning if a formula contains errors" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_FormulaNotify_help">Here you can configure if PlanMaker shows a warning message when it detects a formula with errors.</string>
+      <string id="SoftMaker_PlanMaker_2021_AsianFonts_name">Configure the option "Extended support for Asian fonts" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_AsianFonts_help">Here you can configure if PlanMaker offers extended support for Asian fonts.</string>
+      <string id="SoftMaker_PlanMaker_2021_OnlineCheck_name">Configure the option "Check spelling as you type" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_OnlineCheck_help">Here you can configure if PlanMaker checks the spelling as you type.</string>
+      <string id="SoftMaker_PlanMaker_2021_Databases_name">Configure the folder for databases</string>
+      <string id="SoftMaker_PlanMaker_2021_Databases_help">Here you can configure the database folder for PlanMaker.</string>
+      <string id="SoftMaker_PlanMaker_2021_ComMarkerColorAuto_name">Configure the option "Marker: Color of comment markers" (toggle between automatic and user-defined; File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_ComMarkerColorAuto_help">Here you can configure if PlanMaker paints comment markers in an automatically determined color or a user-defined one.</string>
+      <string id="SoftMaker_PlanMaker_2021_ComMarkerColorAuto_1">Automatic</string>
+      <string id="SoftMaker_PlanMaker_2021_ComMarkerColorAuto_0">User-defined</string>
+      <string id="SoftMaker_PlanMaker_2021_SnapToOtherObjects_name">Configures if objects snap to other objects.</string>
+      <string id="SoftMaker_PlanMaker_2021_SnapToOtherObjects_help">Here you can configure if objects snap to other objects.</string>
+      <string id="SoftMaker_PlanMaker_2021_RibbonMinimize_name">Configures if the ribbon should be hidden by default during regular editing.</string>
+      <string id="SoftMaker_PlanMaker_2021_RibbonMinimize_help">Here you can configure if the ribbon should be shown closed by PlanMaker by default during normal editing.</string>
+      <string id="SoftMaker_PlanMaker_2021_ProtectColor_name">Configure the option "Marker: Color of protection markers" (set the color; File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_ProtectColor_help">Here you can configure the color that PlanMaker uses to paint protection markers. Note that you must also set the option to use a user-defined color.</string>
+      <string id="SoftMaker_PlanMaker_2021_Macros_name">Configure the folder for macros</string>
+      <string id="SoftMaker_PlanMaker_2021_Macros_help">Here you can configure the macro folder for PlanMaker.</string>
+      <string id="SoftMaker_PlanMaker_2021_ProtMarkerColorAuto_name">Configure the option "Marker: Color of protection markers" (toggle between automatic and user-defined; File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_ProtMarkerColorAuto_help">Here you can configure if PlanMaker paints protection markers in an automatically determined color or a user-defined one.</string>
+      <string id="SoftMaker_PlanMaker_2021_ProtMarkerColorAuto_1">Automatic</string>
+      <string id="SoftMaker_PlanMaker_2021_ProtMarkerColorAuto_0">User-defined</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_name">Configure the option "Default language" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_help">Here you can configure the default language for PlanMaker's spell checker and hyphenation.</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1031">German (Germany)</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_29703">German (old spelling)</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_5127">German (Liechtenstein)</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_4103">German (Luxembourg)</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_3079">German (Austria)</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_31751">German (Austria, old spelling)</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_2055">German (Switzerland)</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_30727">German (Switzerland, old spelling)</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1033">English (US)</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_2057">English (UK)</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1036">French (France)</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_3084">French (Canada)</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_3082">Spanish (Europe)</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_2058">Spanish (Mexico)</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_2070">Portuguese (Portugal)</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1046">Portuguese (Brazil)</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1040">Italian</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1043">Dutch</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1030">Danish</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1044">Norwegian (Bokmal)</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1053">Swedish</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1035">Finnish</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1061">Estonian</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1062">Latvian</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1063">Lithuanian</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1060">Slovenian</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1045">Polish</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1029">Czech</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1051">Slovak</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1050">Croatian</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_2074">Serbian (Latin)</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_3098">Serbian (Cyrillic)</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1038">Hungarian</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1048">Romanian</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1032">Greek</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1055">Turkish</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1049">Russian</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1026">Bulgarian</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1058">Ukrainian</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1087">Kazakh</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_2052">Chinese (PRC)</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1028">Chinese (Taiwan)</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1041">Japanese</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1042">Korean</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1057">Indonesian</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1086">Malayian</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1025">Arabic</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1109">Myanmar</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1081">Hindi</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1054">Thai</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1107">Khmer</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1108">Lao</string>
+      <string id="SoftMaker_PlanMaker_2021_LanguageID_1066">Vietnamese</string>
+      <string id="SoftMaker_PlanMaker_2021_PercentEdit_name">Configure the option "Automatic percent input" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_PercentEdit_help">Here you can configure if PlanMaker automatically adds a percent sign when you enter a value in a cell that is formatted as 'Percent'.</string>
+      <string id="SoftMaker_PlanMaker_2021_UseSystemSeparator_name">Configure the option "Number separators" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_UseSystemSeparator_help">Here you can configure if PlanMaker uses the decimal and thousands separator from the operating system, or user-defined ones.</string>
+      <string id="SoftMaker_PlanMaker_2021_UseSystemSeparator_0">Use separators from the operating system</string>
+      <string id="SoftMaker_PlanMaker_2021_UseSystemSeparator_1">User-defined separators</string>
+      <string id="SoftMaker_PlanMaker_2021_OnlineCalc_name">Configure the option "Calculation in status bar" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_OnlineCalc_help">Here you can configure which calculation result is shown in the status bar.</string>
+      <string id="SoftMaker_PlanMaker_2021_OnlineCalc_0">None</string>
+      <string id="SoftMaker_PlanMaker_2021_OnlineCalc_1">Sum</string>
+      <string id="SoftMaker_PlanMaker_2021_OnlineCalc_2">Count</string>
+      <string id="SoftMaker_PlanMaker_2021_OnlineCalc_3">Product</string>
+      <string id="SoftMaker_PlanMaker_2021_OnlineCalc_4">Average</string>
+      <string id="SoftMaker_PlanMaker_2021_OnlineCalc_5">Maximum</string>
+      <string id="SoftMaker_PlanMaker_2021_OnlineCalc_6">Minimum</string>
+      <string id="SoftMaker_PlanMaker_2021_OnlineBeep_name">Configure the option "Beep on errors" during spell checking (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_OnlineBeep_help">Here you can configure if PlanMaker emits a sound when it detects a spelling error while you type.</string>
+      <string id="SoftMaker_PlanMaker_2021_BackupFilesPath_name">Configure the option "Folder for backup files" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_BackupFilesPath_help">Here you can configure the folder in which PlanMaker stores backup files (only used when Advanced Backup is on).</string>
+      <string id="SoftMaker_PlanMaker_2021_ArabicSupport_name">Configure the option "Extended support for Arabic text" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_ArabicSupport_help">Here you can configure if PlanMaker offers extended support for Arabic.</string>
+      <string id="SoftMaker_PlanMaker_2021_OptionsAssociateFiles_name">Configure the availability of the button "Associate files" and the related checkbox (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_OptionsAssociateFiles_help">Here you can configure if the button "Associate files" and the related checkbox are available in PlanMaker's File | Options dialog box.</string>
+      <string id="SoftMaker_PlanMaker_2021_SeparateQuickAccess_name">Configures if the Quick Access toolbar is on a line separate from the document tabs.</string>
+      <string id="SoftMaker_PlanMaker_2021_SeparateQuickAccess_help">Here you can configure if the Quick Access toolbar is on a line separate from the document tabs.</string>
+      <string id="SoftMaker_PlanMaker_2021_HistoryEntries_name">Configure the option "Recently used files in File menu" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_HistoryEntries_help">Here you can configure how many files are kept in PlanMaker's history of recently used files.</string>
+      <string id="SoftMaker_PlanMaker_2021_ImmediateObjectInsert_name">Configure the option "Insert frames and drawings immediately" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_ImmediateObjectInsert_help">Here you can configure if PlanMaker inserts object frames and drawings immediately, or only after the user draws a selection rectangle with the mouse.</string>
+      <string id="SoftMaker_PlanMaker_2021_ImmediateObjectInsert_2">Auto</string>
+      <string id="SoftMaker_PlanMaker_2021_ImmediateObjectInsert_1">Always</string>
+      <string id="SoftMaker_PlanMaker_2021_ImmediateObjectInsert_0">Never</string>
+      <string id="SoftMaker_PlanMaker_2021_FormulaTip_name">Configure the option "Formula tooltip" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_FormulaTip_help">Here you can configure if PlanMaker shows tooltips with the syntax of a formula while you type.</string>
+      <string id="SoftMaker_PlanMaker_2021_BackGrid_name">Configure the option "Paint grid behind cells" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_BackGrid_help">Here you can configure if PlanMaker paints the cell grid behind the cells.</string>
+      <string id="SoftMaker_PlanMaker_2021_WarningBeep_name">Configure the option "Beep on errors" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_WarningBeep_help">Here you can configure if PlanMaker beeps when an error message is shown.</string>
+      <string id="SoftMaker_PlanMaker_2021_ClearType_name">Configure the option "Smooth edges of screen fonts" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_ClearType_help">Here you can configure which type of font smoothing is used by PlanMaker for screen fonts.</string>
+      <string id="SoftMaker_PlanMaker_2021_ClearType_0">Control-panel settings</string>
+      <string id="SoftMaker_PlanMaker_2021_ClearType_1">Off</string>
+      <string id="SoftMaker_PlanMaker_2021_ClearType_2">Standard</string>
+      <string id="SoftMaker_PlanMaker_2021_ClearType_3">ClearType</string>
+      <string id="SoftMaker_PlanMaker_2021_TemplatePath_name">Configure the option "Template folder" (File | Options)</string>
+      <string id="SoftMaker_PlanMaker_2021_TemplatePath_help">Here you can configure the template folder for PlanMaker.</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="SoftMaker_Presentations_2021_SpellCheckColor">
+        <decimalTextBox refId="SoftMaker_Presentations_2021_SpellCheckColor" defaultValue="8421504" spinStep="1">SpellCheckColor</decimalTextBox>
+      </presentation>
+      <presentation id="SoftMaker_Presentations_2021_Documents">
+        <textBox refId="SoftMaker_Presentations_2021_Documents">
+          <label>Documents</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_Presentations_2021_WSColorRGBValue">
+        <decimalTextBox refId="SoftMaker_Presentations_2021_WSColorRGBValue" defaultValue="8421504" spinStep="1">WSColorRGBValue</decimalTextBox>
+      </presentation>
+      <presentation id="SoftMaker_Presentations_2021_Pictures">
+        <textBox refId="SoftMaker_Presentations_2021_Pictures">
+          <label>Pictures</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_Presentations_2021_SpellCheckColorEnable">
+        <dropdownList refId="SoftMaker_Presentations_2021_SpellCheckColorEnable" defaultItem="0">SpellCheckColorEnable
+        </dropdownList>
+      </presentation>
+      <presentation id="SoftMaker_Presentations_2021_ImmediateObjectInsert">
+        <dropdownList refId="SoftMaker_Presentations_2021_ImmediateObjectInsert" defaultItem="0">ImmediateObjectInsert
+        </dropdownList>
+      </presentation>
+      <presentation id="SoftMaker_Presentations_2021_BackupFilesNumber">
+        <decimalTextBox refId="SoftMaker_Presentations_2021_BackupFilesNumber" defaultValue="9" spinStep="1">BackupFilesNumber</decimalTextBox>
+      </presentation>
+      <presentation id="SoftMaker_Presentations_2021_PicBulletPath">
+        <textBox refId="SoftMaker_Presentations_2021_PicBulletPath">
+          <label>PicBulletPath</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_Presentations_2021_WSColorEnabled">
+        <dropdownList refId="SoftMaker_Presentations_2021_WSColorEnabled" defaultItem="0">WSColorEnabled
+        </dropdownList>
+      </presentation>
+      <presentation id="SoftMaker_Presentations_2021_Designs">
+        <textBox refId="SoftMaker_Presentations_2021_Designs">
+          <label>Designs</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_Presentations_2021_SnapshotNumber">
+        <decimalTextBox refId="SoftMaker_Presentations_2021_SnapshotNumber" defaultValue="9" spinStep="1">SnapshotNumber</decimalTextBox>
+      </presentation>
+      <presentation id="SoftMaker_Presentations_2021_Undo">
+        <decimalTextBox refId="SoftMaker_Presentations_2021_Undo" defaultValue="99" spinStep="1">Undo</decimalTextBox>
+      </presentation>
+      <presentation id="SoftMaker_Presentations_2021_ShowDisplay">
+        <decimalTextBox refId="SoftMaker_Presentations_2021_ShowDisplay" defaultValue="0" spinStep="1">ShowDisplay</decimalTextBox>
+      </presentation>
+      <presentation id="SoftMaker_Presentations_2021_PdfFiles">
+        <textBox refId="SoftMaker_Presentations_2021_PdfFiles">
+          <label>PdfFiles</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_Presentations_2021_DefaultFormat">
+        <dropdownList refId="SoftMaker_Presentations_2021_DefaultFormat" defaultItem="0">DefaultFormat
+        </dropdownList>
+      </presentation>
+      <presentation id="SoftMaker_Presentations_2021_AutoTime">
+        <decimalTextBox refId="SoftMaker_Presentations_2021_AutoTime" defaultValue="8" spinStep="1">AutoTime</decimalTextBox>
+      </presentation>
+      <presentation id="SoftMaker_Presentations_2021_ViewColorMode">
+        <dropdownList refId="SoftMaker_Presentations_2021_ViewColorMode" defaultItem="0">ViewColorMode
+        </dropdownList>
+      </presentation>
+      <presentation id="SoftMaker_Presentations_2021_Databases">
+        <textBox refId="SoftMaker_Presentations_2021_Databases">
+          <label>Databases</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_Presentations_2021_SmartQuotes">
+        <dropdownList refId="SoftMaker_Presentations_2021_SmartQuotes" defaultItem="0">SmartQuotes
+        </dropdownList>
+      </presentation>
+      <presentation id="SoftMaker_Presentations_2021_DesignPath">
+        <textBox refId="SoftMaker_Presentations_2021_DesignPath">
+          <label>DesignPath</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_Presentations_2021_Macros">
+        <textBox refId="SoftMaker_Presentations_2021_Macros">
+          <label>Macros</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_Presentations_2021_LanguageID">
+        <dropdownList refId="SoftMaker_Presentations_2021_LanguageID" defaultItem="0">LanguageID
+        </dropdownList>
+      </presentation>
+      <presentation id="SoftMaker_Presentations_2021_BackupFilesPath">
+        <textBox refId="SoftMaker_Presentations_2021_BackupFilesPath">
+          <label>BackupFilesPath</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_Presentations_2021_HistoryEntries">
+        <decimalTextBox refId="SoftMaker_Presentations_2021_HistoryEntries" defaultValue="10" spinStep="1">HistoryEntries</decimalTextBox>
+      </presentation>
+      <presentation id="SoftMaker_Presentations_2021_ClearType">
+        <dropdownList refId="SoftMaker_Presentations_2021_ClearType" defaultItem="0">ClearType
+        </dropdownList>
+      </presentation>
+      <presentation id="SoftMaker_SoftMaker_Office_2021_UserDataTitle">
+        <textBox refId="SoftMaker_SoftMaker_Office_2021_UserDataTitle">
+          <label>UserDataTitle</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_SoftMaker_Office_2021_UserDataPhone2">
+        <textBox refId="SoftMaker_SoftMaker_Office_2021_UserDataPhone2">
+          <label>UserDataPhone2</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_SoftMaker_Office_2021_UserDataInitials">
+        <textBox refId="SoftMaker_SoftMaker_Office_2021_UserDataInitials">
+          <label>UserDataInitials</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_SoftMaker_Office_2021_UserDataCountry">
+        <textBox refId="SoftMaker_SoftMaker_Office_2021_UserDataCountry">
+          <label>UserDataCountry</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_SoftMaker_Office_2021_UserDataEmail3">
+        <textBox refId="SoftMaker_SoftMaker_Office_2021_UserDataEmail3">
+          <label>UserDataEmail3</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_SoftMaker_Office_2021_UserDataEmail2">
+        <textBox refId="SoftMaker_SoftMaker_Office_2021_UserDataEmail2">
+          <label>UserDataEmail2</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_SoftMaker_Office_2021_UserDataAddress1">
+        <textBox refId="SoftMaker_SoftMaker_Office_2021_UserDataAddress1">
+          <label>UserDataAddress1</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_SoftMaker_Office_2021_UserDataPhone3">
+        <textBox refId="SoftMaker_SoftMaker_Office_2021_UserDataPhone3">
+          <label>UserDataPhone3</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_SoftMaker_Office_2021_UserDataAddress2">
+        <textBox refId="SoftMaker_SoftMaker_Office_2021_UserDataAddress2">
+          <label>UserDataAddress2</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_SoftMaker_Office_2021_UserDataDepartment">
+        <textBox refId="SoftMaker_SoftMaker_Office_2021_UserDataDepartment">
+          <label>UserDataDepartment</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_SoftMaker_Office_2021_UpdateCheckEnabled">
+        <dropdownList refId="SoftMaker_SoftMaker_Office_2021_UpdateCheckEnabled" defaultItem="0">UpdateCheckEnabled
+        </dropdownList>
+      </presentation>
+      <presentation id="SoftMaker_SoftMaker_Office_2021_UserDataName">
+        <textBox refId="SoftMaker_SoftMaker_Office_2021_UserDataName">
+          <label>UserDataName</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_SoftMaker_Office_2021_UserDataEmail">
+        <textBox refId="SoftMaker_SoftMaker_Office_2021_UserDataEmail">
+          <label>UserDataEmail</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_SoftMaker_Office_2021_UserDataFax">
+        <textBox refId="SoftMaker_SoftMaker_Office_2021_UserDataFax">
+          <label>UserDataFax</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_SoftMaker_Office_2021_UITheme">
+        <dropdownList refId="SoftMaker_SoftMaker_Office_2021_UITheme" defaultItem="0">UITheme
+        </dropdownList>
+      </presentation>
+      <presentation id="SoftMaker_SoftMaker_Office_2021_UserDataZipCode">
+        <textBox refId="SoftMaker_SoftMaker_Office_2021_UserDataZipCode">
+          <label>UserDataZipCode</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_SoftMaker_Office_2021_UserDataCompany">
+        <textBox refId="SoftMaker_SoftMaker_Office_2021_UserDataCompany">
+          <label>UserDataCompany</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_SoftMaker_Office_2021_UserDataCity">
+        <textBox refId="SoftMaker_SoftMaker_Office_2021_UserDataCity">
+          <label>UserDataCity</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_SoftMaker_Office_2021_UserDataPhone">
+        <textBox refId="SoftMaker_SoftMaker_Office_2021_UserDataPhone">
+          <label>UserDataPhone</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_SoftMaker_Office_2021_UserDataWWW">
+        <textBox refId="SoftMaker_SoftMaker_Office_2021_UserDataWWW">
+          <label>UserDataWWW</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_SoftMaker_Office_2021_ProductKey">
+        <textBox refId="SoftMaker_SoftMaker_Office_2021_ProductKey">
+          <label>ProductKey</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_SoftMaker_Office_2021_DlgLID">
+        <dropdownList refId="SoftMaker_SoftMaker_Office_2021_DlgLID" defaultItem="0">DlgLID
+        </dropdownList>
+      </presentation>
+      <presentation id="SoftMaker_TextMaker_2021_SpellCheckColor">
+        <decimalTextBox refId="SoftMaker_TextMaker_2021_SpellCheckColor" defaultValue="8421504" spinStep="1">SpellCheckColor</decimalTextBox>
+      </presentation>
+      <presentation id="SoftMaker_TextMaker_2021_Documents">
+        <textBox refId="SoftMaker_TextMaker_2021_Documents">
+          <label>Documents</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_TextMaker_2021_PgfBreaks">
+        <dropdownList refId="SoftMaker_TextMaker_2021_PgfBreaks" defaultItem="0">PgfBreaks
+        </dropdownList>
+      </presentation>
+      <presentation id="SoftMaker_TextMaker_2021_WSColorRGBValue">
+        <decimalTextBox refId="SoftMaker_TextMaker_2021_WSColorRGBValue" defaultValue="8421504" spinStep="1">WSColorRGBValue</decimalTextBox>
+      </presentation>
+      <presentation id="SoftMaker_TextMaker_2021_Pictures">
+        <textBox refId="SoftMaker_TextMaker_2021_Pictures">
+          <label>Pictures</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_TextMaker_2021_Databases">
+        <textBox refId="SoftMaker_TextMaker_2021_Databases">
+          <label>Databases</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_TextMaker_2021_GrammarCheckColor">
+        <decimalTextBox refId="SoftMaker_TextMaker_2021_GrammarCheckColor" defaultValue="8421504" spinStep="1">GrammarCheckColor</decimalTextBox>
+      </presentation>
+      <presentation id="SoftMaker_TextMaker_2021_ImmediateObjectInsert">
+        <dropdownList refId="SoftMaker_TextMaker_2021_ImmediateObjectInsert" defaultItem="0">ImmediateObjectInsert
+        </dropdownList>
+      </presentation>
+      <presentation id="SoftMaker_TextMaker_2021_WSColorEnabled">
+        <dropdownList refId="SoftMaker_TextMaker_2021_WSColorEnabled" defaultItem="0">WSColorEnabled
+        </dropdownList>
+      </presentation>
+      <presentation id="SoftMaker_TextMaker_2021_AutoTime">
+        <decimalTextBox refId="SoftMaker_TextMaker_2021_AutoTime" defaultValue="8" spinStep="1">AutoTime</decimalTextBox>
+      </presentation>
+      <presentation id="SoftMaker_TextMaker_2021_SnapshotNumber">
+        <decimalTextBox refId="SoftMaker_TextMaker_2021_SnapshotNumber" defaultValue="9" spinStep="1">SnapshotNumber</decimalTextBox>
+      </presentation>
+      <presentation id="SoftMaker_TextMaker_2021_Undo">
+        <decimalTextBox refId="SoftMaker_TextMaker_2021_Undo" defaultValue="99" spinStep="1">Undo</decimalTextBox>
+      </presentation>
+      <presentation id="SoftMaker_TextMaker_2021_BackupFilesNumber">
+        <decimalTextBox refId="SoftMaker_TextMaker_2021_BackupFilesNumber" defaultValue="9" spinStep="1">BackupFilesNumber</decimalTextBox>
+      </presentation>
+      <presentation id="SoftMaker_TextMaker_2021_PdfFiles">
+        <textBox refId="SoftMaker_TextMaker_2021_PdfFiles">
+          <label>PdfFiles</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_TextMaker_2021_SpellCheckColorEnable">
+        <dropdownList refId="SoftMaker_TextMaker_2021_SpellCheckColorEnable" defaultItem="0">SpellCheckColorEnable
+        </dropdownList>
+      </presentation>
+      <presentation id="SoftMaker_TextMaker_2021_DefaultFormat">
+        <dropdownList refId="SoftMaker_TextMaker_2021_DefaultFormat" defaultItem="0">DefaultFormat
+        </dropdownList>
+      </presentation>
+      <presentation id="SoftMaker_TextMaker_2021_GrammarCheckColorEnable">
+        <dropdownList refId="SoftMaker_TextMaker_2021_GrammarCheckColorEnable" defaultItem="0">GrammarCheckColorEnable
+        </dropdownList>
+      </presentation>
+      <presentation id="SoftMaker_TextMaker_2021_HorizontalPages">
+        <dropdownList refId="SoftMaker_TextMaker_2021_HorizontalPages" defaultItem="0">HorizontalPages
+        </dropdownList>
+      </presentation>
+      <presentation id="SoftMaker_TextMaker_2021_ArabicDigits">
+        <dropdownList refId="SoftMaker_TextMaker_2021_ArabicDigits" defaultItem="0">ArabicDigits
+        </dropdownList>
+      </presentation>
+      <presentation id="SoftMaker_TextMaker_2021_SmartQuotes">
+        <dropdownList refId="SoftMaker_TextMaker_2021_SmartQuotes" defaultItem="0">SmartQuotes
+        </dropdownList>
+      </presentation>
+      <presentation id="SoftMaker_TextMaker_2021_Macros">
+        <textBox refId="SoftMaker_TextMaker_2021_Macros">
+          <label>Macros</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_TextMaker_2021_LanguageID">
+        <dropdownList refId="SoftMaker_TextMaker_2021_LanguageID" defaultItem="0">LanguageID
+        </dropdownList>
+      </presentation>
+      <presentation id="SoftMaker_TextMaker_2021_BackupFilesPath">
+        <textBox refId="SoftMaker_TextMaker_2021_BackupFilesPath">
+          <label>BackupFilesPath</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_TextMaker_2021_HistoryEntries">
+        <decimalTextBox refId="SoftMaker_TextMaker_2021_HistoryEntries" defaultValue="10" spinStep="1">HistoryEntries</decimalTextBox>
+      </presentation>
+      <presentation id="SoftMaker_TextMaker_2021_TemplatePath">
+        <textBox refId="SoftMaker_TextMaker_2021_TemplatePath">
+          <label>TemplatePath</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_TextMaker_2021_ClearType">
+        <dropdownList refId="SoftMaker_TextMaker_2021_ClearType" defaultItem="0">ClearType
+        </dropdownList>
+      </presentation>
+      <presentation id="SoftMaker_PlanMaker_2021_DecimalSeparator">
+        <decimalTextBox refId="SoftMaker_PlanMaker_2021_DecimalSeparator" defaultValue="44" spinStep="1">DecimalSeparator</decimalTextBox>
+      </presentation>
+      <presentation id="SoftMaker_PlanMaker_2021_RegBarFontSize">
+        <decimalTextBox refId="SoftMaker_PlanMaker_2021_RegBarFontSize" defaultValue="11" spinStep="1">RegBarFontSize</decimalTextBox>
+      </presentation>
+      <presentation id="SoftMaker_PlanMaker_2021_WSColorRGBValue">
+        <decimalTextBox refId="SoftMaker_PlanMaker_2021_WSColorRGBValue" defaultValue="8421504" spinStep="1">WSColorRGBValue</decimalTextBox>
+      </presentation>
+      <presentation id="SoftMaker_PlanMaker_2021_Pictures">
+        <textBox refId="SoftMaker_PlanMaker_2021_Pictures">
+          <label>Pictures</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_PlanMaker_2021_ThousandsSeparator">
+        <decimalTextBox refId="SoftMaker_PlanMaker_2021_ThousandsSeparator" defaultValue="46" spinStep="1">ThousandsSeparator</decimalTextBox>
+      </presentation>
+      <presentation id="SoftMaker_PlanMaker_2021_Documents">
+        <textBox refId="SoftMaker_PlanMaker_2021_Documents">
+          <label>Documents</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_PlanMaker_2021_CommentColor">
+        <decimalTextBox refId="SoftMaker_PlanMaker_2021_CommentColor" defaultValue="8421504" spinStep="1">CommentColor</decimalTextBox>
+      </presentation>
+      <presentation id="SoftMaker_PlanMaker_2021_BackupFilesNumber">
+        <decimalTextBox refId="SoftMaker_PlanMaker_2021_BackupFilesNumber" defaultValue="9" spinStep="1">BackupFilesNumber</decimalTextBox>
+      </presentation>
+      <presentation id="SoftMaker_PlanMaker_2021_WSColorEnabled">
+        <dropdownList refId="SoftMaker_PlanMaker_2021_WSColorEnabled" defaultItem="0">WSColorEnabled
+        </dropdownList>
+      </presentation>
+      <presentation id="SoftMaker_PlanMaker_2021_CellMarkerThickness">
+        <decimalTextBox refId="SoftMaker_PlanMaker_2021_CellMarkerThickness" defaultValue="2" spinStep="1">CellMarkerThickness</decimalTextBox>
+      </presentation>
+      <presentation id="SoftMaker_PlanMaker_2021_SnapshotNumber">
+        <decimalTextBox refId="SoftMaker_PlanMaker_2021_SnapshotNumber" defaultValue="9" spinStep="1">SnapshotNumber</decimalTextBox>
+      </presentation>
+      <presentation id="SoftMaker_PlanMaker_2021_Undo">
+        <decimalTextBox refId="SoftMaker_PlanMaker_2021_Undo" defaultValue="99" spinStep="1">Undo</decimalTextBox>
+      </presentation>
+      <presentation id="SoftMaker_PlanMaker_2021_DefaultFormat">
+        <dropdownList refId="SoftMaker_PlanMaker_2021_DefaultFormat" defaultItem="0">DefaultFormat
+        </dropdownList>
+      </presentation>
+      <presentation id="SoftMaker_PlanMaker_2021_CaretLeftBehaviour">
+        <dropdownList refId="SoftMaker_PlanMaker_2021_CaretLeftBehaviour" defaultItem="0">CaretLeftBehaviour
+        </dropdownList>
+      </presentation>
+      <presentation id="SoftMaker_PlanMaker_2021_AutoTime">
+        <decimalTextBox refId="SoftMaker_PlanMaker_2021_AutoTime" defaultValue="8" spinStep="1">AutoTime</decimalTextBox>
+      </presentation>
+      <presentation id="SoftMaker_PlanMaker_2021_CellMarkerColor">
+        <decimalTextBox refId="SoftMaker_PlanMaker_2021_CellMarkerColor" defaultValue="80000" spinStep="1">CellMarkerColor</decimalTextBox>
+      </presentation>
+      <presentation id="SoftMaker_PlanMaker_2021_CellMarkerColorAuto">
+        <dropdownList refId="SoftMaker_PlanMaker_2021_CellMarkerColorAuto" defaultItem="0">CellMarkerColorAuto
+        </dropdownList>
+      </presentation>
+      <presentation id="SoftMaker_PlanMaker_2021_CellJump">
+        <dropdownList refId="SoftMaker_PlanMaker_2021_CellJump" defaultItem="0">CellJump
+        </dropdownList>
+      </presentation>
+      <presentation id="SoftMaker_PlanMaker_2021_SnapToOtherObjectsTolerance">
+        <decimalTextBox refId="SoftMaker_PlanMaker_2021_SnapToOtherObjectsTolerance" defaultValue="8" spinStep="1">SnapToOtherObjectsTolerance</decimalTextBox>
+      </presentation>
+      <presentation id="SoftMaker_PlanMaker_2021_PdfFiles">
+        <textBox refId="SoftMaker_PlanMaker_2021_PdfFiles">
+          <label>PdfFiles</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_PlanMaker_2021_MarkerSize">
+        <decimalTextBox refId="SoftMaker_PlanMaker_2021_MarkerSize" defaultValue="5" spinStep="1">MarkerSize</decimalTextBox>
+      </presentation>
+      <presentation id="SoftMaker_PlanMaker_2021_Databases">
+        <textBox refId="SoftMaker_PlanMaker_2021_Databases">
+          <label>Databases</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_PlanMaker_2021_ComMarkerColorAuto">
+        <dropdownList refId="SoftMaker_PlanMaker_2021_ComMarkerColorAuto" defaultItem="0">ComMarkerColorAuto
+        </dropdownList>
+      </presentation>
+      <presentation id="SoftMaker_PlanMaker_2021_ProtectColor">
+        <decimalTextBox refId="SoftMaker_PlanMaker_2021_ProtectColor" defaultValue="8421504" spinStep="1">ProtectColor</decimalTextBox>
+      </presentation>
+      <presentation id="SoftMaker_PlanMaker_2021_Macros">
+        <textBox refId="SoftMaker_PlanMaker_2021_Macros">
+          <label>Macros</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_PlanMaker_2021_ProtMarkerColorAuto">
+        <dropdownList refId="SoftMaker_PlanMaker_2021_ProtMarkerColorAuto" defaultItem="0">ProtMarkerColorAuto
+        </dropdownList>
+      </presentation>
+      <presentation id="SoftMaker_PlanMaker_2021_LanguageID">
+        <dropdownList refId="SoftMaker_PlanMaker_2021_LanguageID" defaultItem="0">LanguageID
+        </dropdownList>
+      </presentation>
+      <presentation id="SoftMaker_PlanMaker_2021_UseSystemSeparator">
+        <dropdownList refId="SoftMaker_PlanMaker_2021_UseSystemSeparator" defaultItem="0">UseSystemSeparator
+        </dropdownList>
+      </presentation>
+      <presentation id="SoftMaker_PlanMaker_2021_OnlineCalc">
+        <dropdownList refId="SoftMaker_PlanMaker_2021_OnlineCalc" defaultItem="0">OnlineCalc
+        </dropdownList>
+      </presentation>
+      <presentation id="SoftMaker_PlanMaker_2021_BackupFilesPath">
+        <textBox refId="SoftMaker_PlanMaker_2021_BackupFilesPath">
+          <label>BackupFilesPath</label>
+        </textBox>
+      </presentation>
+      <presentation id="SoftMaker_PlanMaker_2021_HistoryEntries">
+        <decimalTextBox refId="SoftMaker_PlanMaker_2021_HistoryEntries" defaultValue="10" spinStep="1">HistoryEntries</decimalTextBox>
+      </presentation>
+      <presentation id="SoftMaker_PlanMaker_2021_ImmediateObjectInsert">
+        <dropdownList refId="SoftMaker_PlanMaker_2021_ImmediateObjectInsert" defaultItem="0">ImmediateObjectInsert
+        </dropdownList>
+      </presentation>
+      <presentation id="SoftMaker_PlanMaker_2021_ClearType">
+        <dropdownList refId="SoftMaker_PlanMaker_2021_ClearType" defaultItem="0">ClearType
+        </dropdownList>
+      </presentation>
+      <presentation id="SoftMaker_PlanMaker_2021_TemplatePath">
+        <textBox refId="SoftMaker_PlanMaker_2021_TemplatePath">
+          <label>TemplatePath</label>
+        </textBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

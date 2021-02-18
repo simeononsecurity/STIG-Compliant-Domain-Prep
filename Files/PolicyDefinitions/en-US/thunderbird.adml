@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0" >
+  <displayName/>
+  <description/>
+  <resources >
+    <stringTable >
+      <string id="SUPPORTED_WINXPSP2">Microsoft Windows XP SP2 or later</string>
+      <string id="SUPPORTED_TB68">Thunderbird 68 or later</string>
+      <string id="thunderbird">Thunderbird</string>
+      <string id="Extensions_group">Extensions</string>
+      <string id="Addons_group">Addons</string>
+      <string id="Certificates_group">Certificates</string>
+      <string id="BlockAboutAddons">Block Add-ons Manager</string>
+      <string id="BlockAboutAddons_Explain" >If this policy is enabled, the user cannot access the Add-ons Manager or about:addons.
+
+If this policy is disabled or not configured, the user can access the Add-ons Manager and about:addons.</string>
+      <string id="BlockAboutConfig">Block about:config</string>
+      <string id="BlockAboutConfig_Explain">If this policy is enabled, the user cannot access about:config.
+
+If this policy is disabled or not configured, the user can access about:config.</string>
+      <string id="BlockAboutProfiles">Block about:profiles</string>
+      <string id="BlockAboutProfiles_Explain">If this policy is enabled, the user cannot access about:profiles.
+
+If this policy is disabled or not configured, the user can access about:profiles.</string>
+      <string id="AppUpdateURL">Custom Update URL</string>
+      <string id="AppUpdateURL_Explain">If this policy is enabled, you can set a URL to an update server other than the default. This could be helpful if you run your own update server on your network.
+
+If this policy is disabled or not configured, the default update URL is used.</string>
+      <string id="Certificates_ImportEnterpriseRoots">Import Enterprise Roots</string>
+      <string id="Certificates_ImportEnterpriseRoots_Explain">If this policy is enabled, Thunderbird will read certificates from the Windows certificate store.
+
+If this policy is disabled or not configured, Thunderbird will not read certificates from the Windows certificate store.</string>
+      <string id="Certificates_Install">Install Certificates</string>
+      <string id="Certificates_Install_Explain">If this policy is enabled, Thunderbird will install the listed certificates into Thunderbird. It will look in %USERPROFILE%\AppData\Local\Thunderbird\Certificates and %USERPROFILE%\AppData\Roaming\Thunderbird\Certificates.
+
+If this policy is disabled or not configured, Thunderbird will not install additional certificates.</string>
+      <string id="DisableAppUpdate">Disable Update</string>
+      <string id="DisableAppUpdate_Explain">If this policy is enabled, Thunderbird does not receive updates.
+
+If this policy is disabled or not configured, Thunderbird receives updates.</string>
+      <string id="DisableDeveloperTools">Disable Developer Tools</string>
+      <string id="DisableDeveloperTools_Explain">If this policy is enabled, developer tools are not available within Thunderbird.
+
+If this policy is disabled or not configured, developer tools are available within Thunderbird.</string>
+      <string id="DisableMasterPasswordCreation">Disable Master Password Creation</string>
+      <string id="DisableMasterPasswordCreation_Explain">If this policy is enabled, users cannot create a master password.
+
+If this policy is disabled or not configured, users can create a master password.</string>
+      <string id="DisableSecurityBypass_InvalidCertificate">Prevent overriding certificate errors</string>
+      <string id="DisableSecurityBypass_InvalidCertificate_Explain">If this policy is enabled, the &quot;Add Exception&quot; button is not available when a certificate is invalid. This prevents the user from overriding the certificate error.
+
+If this policy is disabled or not configured, certificate errors can be overridden.</string>
+      <string id="DisableSecurityBypass_SafeBrowsing">Prevent overriding safe browsing errors</string>
+      <string id="DisableSecurityBypass_SafeBrowsing_Explain">If this policy is enabled, a user cannot bypass the warning and visit a harmful site.
+
+If this policy is disabled or not configured, a user can choose to visit a harmful site.</string>
+      <string id="Extensions_Install">Extensions to Install</string>
+      <string id="Extensions_Install_Explain">If this policy is enabled, you can specify a list of extension URLs or paths that will be installed when Thunderbird is started.
+Anytime this list is changed, the extensions will be reinstalled.
+
+If this policy is disabled or not configured, no extensions are installed.</string>
+      <string id="Extensions_Uninstall">Extensions to Uninstall</string>
+      <string id="Extensions_Uninstall_Explain">If this policy is enabled, you can specify a list of extension IDs that will be uninstalled.
+Anytime this list is changed, the extensions will be uninstalled.
+
+If this policy is disabled or not configured, no extensions are uninstalled.</string>
+      <string id="Extensions_Locked">Prevent extensions from being disabled or removed</string>
+      <string id="Extensions_Locked_Explain">If this policy is enabled, you can specify a list of extension IDs that the user will be unable to uninstall or disable.
+
+If this policy is disabled or not configured, no extensions are locked</string>
+      <string id="ExtensionUpdate">Extension Update</string>
+      <string id="ExtensionUpdate_Explain">If this policy is disabled, extensions will not be updated automatically.
+
+If this policy is enabled or not configured, extensions will be updated automatically.</string>
+      <string id="ExtensionSettings">Extension Management</string>
+      <string id="ExtensionSettings_Explain">If this policy is enabled, you can use JSON to describe the extension management policy.
+
+If this policy is disabled or not configured, extensions will not be managed.</string>
+      <string id="Proxy">Proxy Settings</string>
+      <string id="Proxy_Explain">If this policy is enabled, you can configure and lock network settings.
+
+Select the connection type and then fill in the appropriate sections. Due to a bug, you must select a value for the SOCKS proxy version.
+
+If this policy is disabled or not configured, the default network settings are used and user can change them.</string>
+      <string id="SOCKSVersion4">SOCKS v4</string>
+      <string id="SOCKSVersion5">SOCKS v5</string>
+      <string id="AutoConfigURL">Automatic proxy configuration URL</string>
+      <string id="AutoConfigURL_Explain">These should only be set if you selected autoConfig</string>
+      <string id="Passthrough">Proxy bypass URLs</string>
+      <string id="Passthrough_Explain">These should only be set if you selected manual proxy</string>
+      <string id="Connection">Connection Type</string>
+      <string id="NoProxy">No Proxy</string>
+      <string id="SystemProxy">Use system proxy settings</string>
+      <string id="ManualProxy">Manual proxy configuration</string>
+      <string id="AutoDetectProxy">Auto-detect proxy settings</string>
+      <string id="AutoConfigProxy">Automatic proxy configuration</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="AppUpdateURL">
+        <textBox refId="AppUpdateURL">
+          <label>URL:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Proxy">
+        <checkBox refId="ProxyLocked">Don't allow proxy settings to be changed.</checkBox>
+        <text>Connection Type:</text>
+        <dropdownList refId="ConnectionType"/>
+        <text>HTTP Proxy:</text>
+        <textBox refId="HTTPProxy">
+          <label/>
+        </textBox>
+        <checkBox refId="UseHTTPProxyForAllProtocols">Use this proxy server for all protocols.</checkBox>
+        <text>SSL Proxy:</text>
+        <textBox refId="SSLProxy">
+          <label/>
+        </textBox>
+        <text>FTP Proxy:</text>
+        <textBox refId="FTPProxy">
+          <label/>
+        </textBox>
+        <text>SOCKS Host:</text>
+        <textBox refId="SOCKSProxy">
+          <label/>
+        </textBox>
+        <text>SOCKS Version:</text>
+        <dropdownList refId="SOCKSVersion"/>
+        <text>No proxy for</text>
+        <textBox refId="Passthrough">
+          <label/>
+        </textBox>
+        <text>Example: .mozilla.org, .net.nz, 192.168.1.0/24</text>
+        <text>Automatic proxy configuration URL:</text>
+        <textBox refId="AutoConfigURL">
+          <label/>
+        </textBox>
+        <checkBox refId="AutoLogin">Do not prompt for authentication if password is saved.</checkBox>
+        <checkBox refId="UseProxyForDNS">Proxy DNS when using SOCKS v5.</checkBox>
+      </presentation>
+      <presentation id="Certificates_Install">
+        <listBox refId="Certificates_Install"/>
+      </presentation>
+      <presentation id="Extensions">
+        <listBox refId="Extensions"/>
+      </presentation>
+      <presentation id="ExtensionSettings">
+        <multiTextBox refId="ExtensionSettings"/>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

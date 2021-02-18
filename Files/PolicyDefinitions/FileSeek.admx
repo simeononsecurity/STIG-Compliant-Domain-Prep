@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitions revision="1.0" schemaVersion="1.0">
+	<policyNamespaces>
+    <target prefix="FileSeek" namespace="FileSeek.BinaryFortressSoftware" />
+		<using prefix="BinaryFortress" namespace="BinaryFortress.Policies.BinaryFortress" />
+		<using prefix="windows" namespace="Microsoft.Policies.Windows" />
+  </policyNamespaces>
+  <resources minRequiredRevision="1.0" />
+<!-- The category hierarchy is designed to match the UI as follows: Window, Tab, Setting -->
+  <categories>
+		<category name="FileSeek" displayName="$(string.FileSeek)">
+			<parentCategory ref="BinaryFortress:BinaryFortress" />
+		</category>
+		<category name="FileSeek_General" displayName="$(string.FileSeek_General)">		
+			<parentCategory ref="FileSeek" />
+		</category>
+		<category name="FileSeek_Settings" displayName="$(string.FileSeek_Settings)">		
+			<parentCategory ref="FileSeek" />
+		</category>
+		<category name="FileSeek_Settings_Options" displayName="$(string.FileSeek_Settings_Options)">		
+			<parentCategory ref="FileSeek_Settings" />
+		</category>		
+		<category name="FileSeek_Settings_Search" displayName="$(string.FileSeek_Settings_Search)">		
+			<parentCategory ref="FileSeek_Settings" />
+		</category>			
+		<category name="FileSeek_Settings_LicenseKey" displayName="$(string.FileSeek_Settings_LicenseKey)">		
+			<parentCategory ref="FileSeek_Settings" />
+		</category>
+		<category name="FileSeek_Settings_ResultViewSettings" displayName="$(string.FileSeek_Settings_ResultViewSettings)">
+			<parentCategory ref="FileSeek_Settings" />
+		</category>
+		<category name="FileSeek_Settings_PreviewHandlers" displayName="$(string.FileSeek_Settings_PreviewHandlers)">
+			<parentCategory ref="FileSeek_Settings" />
+		</category>
+	</categories>
+  <policies>
+		<!-- General policy settings -->
+		<policy name="BlockUI-Settings-LicenseKey" class="Both" displayName="$(string.BlockUI-Settings-LicenseKey)" explainText="$(string.BlockUI-Settings-LicenseKeyExplain)" key="Software\Policies\Binary Fortress Software\FileSeek" valueName="BlockUI-Settings-LicenseKey">
+      <parentCategory ref="FileSeek_General" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>					
+		<!-- Settings: Options tab -->
+		<policy name="AutoUpdate" class="Both" displayName="$(string.AutoUpdate)" explainText="$(string.AutoUpdateExplain)" presentation="$(presentation.AutoUpdate)" key="Software\Policies\Binary Fortress Software\FileSeek">
+			<parentCategory ref="FileSeek_Settings_Options" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<elements>
+				<boolean id="AutoUpdate" valueName="AutoUpdate">
+					<trueValue>
+						<string>1</string>
+					</trueValue>
+					<falseValue>
+						<string>0</string>
+					</falseValue>
+				</boolean>
+				<boolean id="AutoUpdateBeta" valueName="AutoUpdateBeta">
+					<trueValue>
+						<string>1</string>
+					</trueValue>
+					<falseValue>
+						<string>0</string>
+					</falseValue>
+				</boolean>
+			</elements>
+		</policy>
+		<policy name="ShowContextMenuItems" class="Both" displayName="$(string.ShowContextMenuItems)" explainText="$(string.ShowContextMenuItemsExplain)" key="Software\Policies\Binary Fortress Software\FileSeek" valueName="ShowContextMenuItems">
+			<parentCategory ref="FileSeek_Settings_Options" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="ShowToolTips" class="Both" displayName="$(string.ShowToolTips)" explainText="$(string.ShowToolTipsExplain)" key="Software\Policies\Binary Fortress Software\FileSeek" valueName="ShowToolTips">
+			<parentCategory ref="FileSeek_Settings_Options" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>		
+		<policy name="StartWithBlankProfile" class="Both" displayName="$(string.StartWithBlankProfile)" explainText="$(string.StartWithBlankProfileExplain)" key="Software\Policies\Binary Fortress Software\FileSeek" valueName="StartWithBlankProfile">
+			<parentCategory ref="FileSeek_Settings_Options" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>		
+		<policy name="IsMinimizingToTray" class="Both" displayName="$(string.IsMinimizingToTray)" explainText="$(string.IsMinimizingToTrayExplain)" key="Software\Policies\Binary Fortress Software\FileSeek" valueName="IsMinimizingToTray">
+			<parentCategory ref="FileSeek_Settings_Options" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>		
+		<policy name="IsClosingToTray" class="Both" displayName="$(string.IsClosingToTray)" explainText="$(string.IsClosingToTrayExplain)" key="Software\Policies\Binary Fortress Software\FileSeek" valueName="IsClosingToTray">
+			<parentCategory ref="FileSeek_Settings_Options" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="SingleInstanceMode" class="Both" displayName="$(string.SingleInstanceMode)" explainText="$(string.SingleInstanceModeExplain)" key="Software\Policies\Binary Fortress Software\FileSeek" valueName="SingleInstanceMode">
+			<parentCategory ref="FileSeek_Settings_Options" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<!-- Settings: Search tab -->
+		<policy name="ShowFileErrors" class="Both" displayName="$(string.ShowFileErrors)" explainText="$(string.ShowFileErrorsExplain)" key="Software\Policies\Binary Fortress Software\FileSeek" valueName="ShowFileErrors">
+			<parentCategory ref="FileSeek_Settings_Search" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="ShowErrorForLongPaths" class="Both" displayName="$(string.ShowErrorForLongPaths)" explainText="$(string.ShowErrorForLongPathsExplain)" key="Software\Policies\Binary Fortress Software\FileSeek" valueName="ShowErrorForLongPaths">
+			<parentCategory ref="FileSeek_Settings_Search" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>		
+		<policy name="ShowIFilterErrors" class="Both" displayName="$(string.ShowIFilterErrors)" explainText="$(string.ShowIFilterErrorsExplain)" key="Software\Policies\Binary Fortress Software\FileSeek" valueName="ShowIFilterErrors">
+			<parentCategory ref="FileSeek_Settings_Search" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>		
+		<policy name="ShowEmptyPDFErrors" class="Both" displayName="$(string.ShowEmptyPDFErrors)" explainText="$(string.ShowEmptyPDFErrorsExplain)" key="Software\Policies\Binary Fortress Software\FileSeek" valueName="ShowEmptyPDFErrors">
+			<parentCategory ref="FileSeek_Settings_Search" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="HiddenFolderSearch" class="Both" displayName="$(string.HiddenFolderSearch)" explainText="$(string.HiddenFolderSearchExplain)" key="Software\Policies\Binary Fortress Software\FileSeek" valueName="HiddenFolderSearch">
+			<parentCategory ref="FileSeek_Settings_Search" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="SystemFolderSearch" class="Both" displayName="$(string.SystemFolderSearch)" explainText="$(string.SystemFolderSearchExplain)" key="Software\Policies\Binary Fortress Software\FileSeek" valueName="SystemFolderSearch">
+			<parentCategory ref="FileSeek_Settings_Search" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="LinkedFoldersSearch" class="Both" displayName="$(string.LinkedFoldersSearch)" explainText="$(string.LinkedFoldersSearchExplain)" key="Software\Policies\Binary Fortress Software\FileSeek" valueName="LinkedFoldersSearch">
+			<parentCategory ref="FileSeek_Settings_Search" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="HiddenFolderSearchShowErrorOnSkip" class="Both" displayName="$(string.HiddenFolderSearchShowErrorOnSkip)" explainText="$(string.HiddenFolderSearchShowErrorOnSkipExplain)" key="Software\Policies\Binary Fortress Software\FileSeek" valueName="HiddenFolderSearchShowErrorOnSkip">
+			<parentCategory ref="FileSeek_Settings_Search" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="SystemFolderSearchShowErrorOnSkip" class="Both" displayName="$(string.SystemFolderSearchShowErrorOnSkip)" explainText="$(string.SystemFolderSearchShowErrorOnSkipExplain)" key="Software\Policies\Binary Fortress Software\FileSeek" valueName="SystemFolderSearchShowErrorOnSkip">
+			<parentCategory ref="FileSeek_Settings_Search" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="LinkedFoldersSearchShowErrorOnSkip" class="Both" displayName="$(string.LinkedFoldersSearchShowErrorOnSkip)" explainText="$(string.LinkedFoldersSearchShowErrorOnSkipExplain)" key="Software\Policies\Binary Fortress Software\FileSeek" valueName="LinkedFoldersSearchShowErrorOnSkip">
+			<parentCategory ref="FileSeek_Settings_Search" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="ShowEmptyDirectoryErrors" class="Both" displayName="$(string.ShowEmptyDirectoryErrors)" explainText="$(string.ShowEmptyDirectoryErrorsExplain)" key="Software\Policies\Binary Fortress Software\FileSeek" valueName="ShowEmptyDirectoryErrors">
+			<parentCategory ref="FileSeek_Settings_Search" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="TreatAllExcludePathFiltersAsWildcards" class="Both" displayName="$(string.TreatAllExcludePathFiltersAsWildcards)" explainText="$(string.TreatAllExcludePathFiltersAsWildcardsExplain)" key="Software\Policies\Binary Fortress Software\FileSeek" valueName="TreatAllExcludePathFiltersAsWildcards">
+			<parentCategory ref="FileSeek_Settings_Search" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="TreatAllIncludeFiltersAsWildcards" class="Both" displayName="$(string.TreatAllIncludeFiltersAsWildcards)" explainText="$(string.TreatAllIncludeFiltersAsWildcardsExplain)" key="Software\Policies\Binary Fortress Software\FileSeek" valueName="TreatAllIncludeFiltersAsWildcards">
+			<parentCategory ref="FileSeek_Settings_Search" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="IsQueryFullString" class="Both" displayName="$(string.IsQueryFullString)" explainText="$(string.IsQueryFullStringExplain)" key="Software\Policies\Binary Fortress Software\FileSeek" valueName="IsQueryFullString">
+			<parentCategory ref="FileSeek_Settings_Search" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="IsSavingExtraLines" class="Both" displayName="$(string.IsSavingExtraLines)" explainText="$(string.IsSavingExtraLinesExplain)" key="Software\Policies\Binary Fortress Software\FileSeek" valueName="IsSavingExtraLines">
+			<parentCategory ref="FileSeek_Settings_Search" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="FileTimeout" class="Both" displayName="$(string.FileTimeout)" explainText="$(string.FileTimeoutExplain)" presentation="$(presentation.FileTimeout)" key="Software\Policies\Binary Fortress Software\FileSeek">
+			<parentCategory ref="FileSeek_Settings_Search" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<elements>
+				<text id="FileTimeout" valueName="FileTimeout" />
+			</elements>
+		</policy>			
+		<!-- Settings: Result View Settings tab -->
+		<policy name="IsOnlyShowingMatchedText" class="Both" displayName="$(string.IsOnlyShowingMatchedText)" explainText="$(string.IsOnlyShowingMatchedTextExplain)" key="Software\Policies\Binary Fortress Software\FileSeek" valueName="IsOnlyShowingMatchedText">
+			<parentCategory ref="FileSeek_Settings_ResultViewSettings" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="ResultWordWrap" class="Both" displayName="$(string.ResultWordWrap)" explainText="$(string.ResultWordWrapExplain)" key="Software\Policies\Binary Fortress Software\FileSeek" valueName="ResultWordWrap">
+			<parentCategory ref="FileSeek_Settings_ResultViewSettings" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="DefaultDoubleClickOperation" class="Both" displayName="$(string.DefaultDoubleClickOperation)" explainText="$(string.DefaultDoubleClickOperationExplain)" presentation="$(presentation.DefaultDoubleClickOperation)" key="Software\Policies\Binary Fortress Software\FileSeek">
+			<parentCategory ref="FileSeek_Settings_ResultViewSettings" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<elements>
+				<enum id="DefaultDoubleClickOperation" valueName="DefaultDoubleClickOperation" required="true">
+					<item displayName="$(string.DefaultDoubleClickOperation_OpenWithDefaultHandler)">
+						<value>
+							<string>0</string>
+						</value>
+					</item>
+					<item displayName="$(string.DefaultDoubleClickOperation_OpenWithNotepad)">
+						<value>
+							<string>1</string>
+						</value>
+					</item>
+					<item displayName="$(string.DefaultDoubleClickOperation_OpenWithOtherApplication)">
+						<value>
+							<string>2</string>
+						</value>
+					</item>
+					<item displayName="$(string.DefaultDoubleClickOperation_OpenContainingFolder)">
+						<value>
+							<string>3</string>
+						</value>
+					</item>     
+					<item displayName="$(string.DefaultDoubleClickOperation_ExportAllToCSV)">
+						<value>
+							<string>4</string>
+						</value>
+					</item>     
+					<item displayName="$(string.DefaultDoubleClickOperation_ExportSelectedToCSV)">
+						<value>
+							<string>5</string>
+						</value>
+					</item>     
+					<item displayName="$(string.DefaultDoubleClickOperation_ExportAllToHTML)">
+						<value>
+							<string>6</string>
+						</value>
+					</item>     
+					<item displayName="$(string.DefaultDoubleClickOperation_ExportSelectedToHTML)">
+						<value>
+							<string>7</string>
+						</value>
+					</item>     					
+					</enum>
+			</elements>
+		</policy>		
+		<policy name="ShowCharCount" class="Both" displayName="$(string.ShowCharCount)" explainText="$(string.ShowCharCountExplain)" presentation="$(presentation.ShowCharCount)" key="Software\Policies\Binary Fortress Software\FileSeek">
+			<parentCategory ref="FileSeek_Settings_ResultViewSettings" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<elements>
+				<text id="ShowCharCount" valueName="ShowCharCount" />
+			</elements>
+		</policy>
+		<policy name="IsUsingCustomDateFormat" class="Both" displayName="$(string.IsUsingCustomDateFormat)" explainText="$(string.IsUsingCustomDateFormatExplain)" presentation="$(presentation.IsUsingCustomDateFormat)" key="Software\Policies\Binary Fortress Software\FileSeek" valueName="IsUsingCustomDateFormat">
+			<parentCategory ref="FileSeek_Settings_ResultViewSettings" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+			<elements>
+				<text id="CustomDateFormat" valueName="CustomDateFormat" />
+			</elements>
+		</policy>
+		<!-- Settings: Preview Handlers tab -->
+		<policy name="UsePreviewHandlers" class="Both" displayName="$(string.UsePreviewHandlers)" explainText="$(string.UsePreviewHandlersExplain)" key="Software\Policies\Binary Fortress Software\FileSeek" valueName="UsePreviewHandlers">
+			<parentCategory ref="FileSeek_Settings_PreviewHandlers" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>		
+		<!-- Settings: License Key tab -->
+		<policy name="LicenseKey" class="Both" displayName="$(string.LicenseKey)" explainText="$(string.LicenseKeyExplain)" presentation="$(presentation.LicenseKey)" key="Software\Policies\Binary Fortress Software\FileSeek">
+			<parentCategory ref="FileSeek_Settings_LicenseKey" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<elements>
+				<text id="LicenseKey" valueName="LicenseKey" />
+			</elements>
+		</policy>
+	</policies>
+</policyDefinitions>

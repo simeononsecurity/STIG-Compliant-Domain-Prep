@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--  Copyright (c) MailStore Software GmbH  --><policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" revision="9.6" schemaVersion="1.0">
+  <displayName/>
+  <description>MailStore Outlook Add-in Group Policy ADMX Template</description>
+  <resources>
+    <stringTable>
+      <string id="CAT_MailStore_OutlookAddin">MailStore Outlook Add-in</string>
+      <string id="CAT_MailStore_OutlookAddin_Help">Contiene los ajustes para configurar elMailStore Outlook Add-in.</string>
+      <string id="POL_MailStore_OutlookAddin_Server_Name">Nombre del servidor</string>
+      <string id="POL_MailStore_OutlookAddin_Authentication">Autenticación</string>
+      <string id="POL_MailStore_OutlookAddin_Secure">Habilitar la encriptación TLS/SSL</string>
+      <string id="POL_MailStore_OutlookAddin_Language">Idioma</string>
+      <string id="POL_MailStore_OutlookAddin_WebAccessCulture">Formato de fecha, hora o número</string>
+      <string id="POL_MailStore_OutlookAddin_Accept_Thumbprint">Aceptar la huella digital</string>
+      <string id="POL_MailStore_OutlookAddin_Toolbar_Visible">Habilitar de forma predeterminada la barra de herramientas del MailStore Outlook Add-in</string>
+      <string id="POL_MailStore_OutlookAddin_Server_Name_Help">Esta configuración de la política se utiliza para establecer el nombre de la MailStore Server que se MailStore Outlook Add-in conecta.
+      
+Si se habilita este ajuste de política, el MailStore Outlook Add-in siempre se conecta a la especificada MailStore Server . Un nombre de servidor que puede haber sido guardado localmente en los clientes será ignorado.
+
+Si se desactiva o no se configura este ajuste de política, los usuarios pueden especificar ellos mismos el nombre del servidor en el cuadro de diálogo de inicio de sesión del MailStore Outlook Add-in.
+
+Nota: Para habilitar el inicio de sesión único (SSO), el método de autenticación tiene que estar configurado como "Autenticación de Windows" a través de la configuración de la política de grupo correspondiente, además de especificar el nombre del servidor.</string>
+      <string id="POL_MailStore_OutlookAddin_Authentication_Help">Este ajuste de política se utiliza para especificar el método de autenticación que se MailStore Outlook Add-in utiliza cuando un usuario se conecta a MailStore Server.
+
+Si habilita este ajuste de política, la autenticación se limitará al método especificado.
+
+Si se desactiva o no se configura este ajuste de política, los usuarios pueden elegir el método de autenticación en el diálogo de inicio de sesión del MailStore Outlook Add-in por sí mismos.
+
+Nota: Para habilitar el inicio de sesión único (SSO), establezca el método de autenticación en "Autenticación de Windows". Además, el nombre del servidor debe especificarse a través de la correspondiente configuración de la política de grupo.</string>
+      <string id="POL_MailStore_OutlookAddin_Secure_Help">Nota: A partir del MailStore Server 13, la comunicación entre el MailStore Outlook Add-in y el MailStore Server es siempre TLS/SSL encriptado y esta configuración de la política no tiene ningún efecto.
+
+Esta configuración de la política determina si la comunicación entre el MailStore Outlook Add-in y el MailStore Server será cifrada por TLS/SSL.
+
+Si habilita esta configuración de la política, la comunicación entre el MailStore Outlook Add-in y el MailStore Server se enviará TLS/SSL cifrada a través de HTTPS.
+
+Si desactiva esta configuración de la política, la comunicación entre el MailStore Outlook Add-in y el MailStore Server se enviará sin cifrar a través de HTTP.
+
+Si no se configura este ajuste de política, los usuarios pueden elegir en el diálogo de configuración de la MailStore Outlook Add-in si la comunicación debe ser encriptada o no.
+
+Importante: Si la comunicación entre el MailStore Outlook Add-in y el MailStore Server está encriptada, el certificado del servidor del MailStore Server tiene que ser fiable para evitar que se muestren las advertencias del certificado.</string>
+      <string id="POL_MailStore_OutlookAddin_Language_Help">Este ajuste de política se utiliza para especificar el idioma de visualización del MailStore Outlook Add-in.
+
+Si habilita este ajuste de política, el MailStore Outlook Add-in usará siempre el idioma seleccionado.
+
+Si se desactiva o no se configura este ajuste de política, los usuarios pueden elegir el idioma en el diálogo de configuración del MailStore Outlook Add-in.</string>
+      <string id="POL_MailStore_OutlookAddin_WebAccessCulture_Help">Este ajuste de política se utiliza para especificar el formato de fecha, hora o número del MailStore Outlook Add-in.
+
+Si habilita esta configuración de la política, el MailStore Outlook Add-in usará siempre el formato seleccionado.
+
+Si se desactiva o no se configura este ajuste de política, los usuarios pueden elegir el formato de fecha, hora o número en el diálogo de configuración del MailStore Outlook Add-in.
+
+Importante: El sistema operativo de la MailStore Server máquina debe soportar también el formato configurado de fecha, hora o número para que esta configuración de la política funcione como se espera.</string>
+      <string id="POL_MailStore_OutlookAddin_Accept_Thumbprint_Help">Con esta política se puede especificar una huella digital del certificado de manera que se confíe en él MailStore Outlook Add-in de forma explícita e independiente de su validez.
+
+Si se habilita este ajuste de política, el certificado del servidor tiene que ser válido o su huella digital tiene que ser igual a la especificada aquí; de lo contrario, la conexión fallará con un error. Las huellas del certificado que se hayan guardado localmente en los clientes serán ignoradas.
+
+Si desactiva o no configura esta configuración de política, los usuarios reciben una advertencia de certificado si se está utilizando un certificado de servidor no fiable. A continuación, pueden elegir si desean confiar en el certificado de todas formas.
+
+Importante: Si se está utilizando un certificado de confianza en el MailStore Server, este ajuste se ignora.</string>
+      <string id="POL_MailStore_OutlookAddin_Toolbar_Visible_Help">Esta configuración de la política determina si la barra de herramientas de la MailStore Outlook Add-in está habilitada en Outlook.
+
+Si habilita o no configura esta configuración de política, la barra de herramientas de la MailStore Outlook Add-in se habilitará en Outlook de forma predeterminada.
+
+Si desactiva esta configuración de la política, la barra de herramientas de la MailStore Outlook Add-in se desactivará en Outlook y los usuarios no podrán activarla.
+
+Nota: Especialmente en los entornos de servidores de terminales, esta configuración de la política se puede utilizar para desactivar la barra de herramientas de la MailStore Outlook Add-in para ciertos usuarios.</string>
+      <string id="ITM_MailStore_OutlookAddin_Authentication_1">Autenticación estándar</string>
+      <string id="ITM_MailStore_OutlookAddin_Authentication_2">Autenticación de Windows</string>
+      <string id="ITM_MailStore_OutlookAddin_Language_System">Lenguaje del sistema</string>
+      <string id="ITM_MailStore_OutlookAddin_Language_zhcn">Chino (simplificado)</string>
+      <string id="ITM_MailStore_OutlookAddin_Language_zhhk">Chino (Tradicional)</string>
+      <string id="ITM_MailStore_OutlookAddin_Language_cs">Checo</string>
+      <string id="ITM_MailStore_OutlookAddin_Language_nl">Holandés</string>
+      <string id="ITM_MailStore_OutlookAddin_Language_en">Inglés</string>
+      <string id="ITM_MailStore_OutlookAddin_Language_fr">Francés</string>
+      <string id="ITM_MailStore_OutlookAddin_Language_de">Alemán</string>
+      <string id="ITM_MailStore_OutlookAddin_Language_hu">Húngaro</string>
+      <string id="ITM_MailStore_OutlookAddin_Language_it">Italiano</string>
+      <string id="ITM_MailStore_OutlookAddin_Language_ja">Japonés</string>
+      <string id="ITM_MailStore_OutlookAddin_Language_ko">Coreano</string>
+      <string id="ITM_MailStore_OutlookAddin_Language_pl">Polaco</string>
+      <string id="ITM_MailStore_OutlookAddin_Language_pt">Portugués</string>
+      <string id="ITM_MailStore_OutlookAddin_Language_ru">Ruso</string>
+      <string id="ITM_MailStore_OutlookAddin_Language_sl">Esloveno</string>
+      <string id="ITM_MailStore_OutlookAddin_Language_es">Español</string>
+      <string id="ITM_MailStore_OutlookAddin_Language_tr">Turco</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="POL_MailStore_OutlookAddin_Authentication">
+        <dropdownList refId="DST_MailStore_OutlookAddin_Authentication" defaultItem="1">Método de autenticación:</dropdownList>
+      </presentation>
+      <presentation id="POL_MailStore_OutlookAddin_Server_Name">
+        <text>Dependiendo de la configuración de su red, puede introducir el nombre DNS, el nombre NetBIOS o la dirección IP del MailStore Server.</text>
+        <text>Si utiliza un puerto diferente del puerto estándar para conectarse al MailStore Server, debe especificar el puerto en el formulario "servername:port".</text>
+        <textBox refId="TXT_MailStore_OutlookAddin_Server_Name">
+          <label>Nombre del servidor:</label>
+        </textBox>
+      </presentation>
+      <presentation id="POL_MailStore_OutlookAddin_Language">
+        <text>Seleccione "Idioma del sistema" para que el MailStore Outlook Add-in utilice el idioma del sistema operativo del cliente.</text>
+        <dropdownList refId="DST_MailStore_OutlookAddin_Language" noSort="true" defaultItem="0">Idioma:</dropdownList>
+      </presentation>
+      <presentation id="POL_MailStore_OutlookAddin_WebAccessCulture">
+        <text>La forma esperada es "de-DE", "en-US", "fr-FR" etc.</text>
+        <text>Si está configurado como "(Sistema)", el MailStore Outlook Add-in utilizará el formato de fecha, hora o número del sistema operativo del cliente.</text>
+        <textBox refId="TXT_MailStore_OutlookAddin_WebAccessCulture">
+          <label>Formato de fecha, hora o número:</label>
+          <defaultValue>(Sistema)</defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="POL_MailStore_OutlookAddin_Accept_Thumbprint">
+        <textBox refId="TXT_MailStore_OutlookAddin_Accept_Thumbprint">
+          <label>Huella del certificado:</label>
+        </textBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

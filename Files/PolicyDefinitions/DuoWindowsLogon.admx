@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2020 Duo Security, Inc.  -->
+<!--  /policyDefinitions@schemaVersion is the version of the schema used by this file and must be 1.0 per Microsoft.
+    The revision of this ADMX file is /policyDefinitions@schema. -->
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   schemaVersion="1.0" revision="1.0" >
+  <policyNamespaces>
+    <target prefix="DuoWindowsLogon" namespace="logon.windows.duosecurity.com" />
+    <using prefix="windows" namespace="Microsoft.Policies.Windows" />
+  </policyNamespaces>
+
+  <resources minRequiredRevision="1.0" />
+
+  <categories>
+    <!-- Root Computer Configuration\Policies\Administrative Templates -->
+    <category name="Duo" displayName="$(string.CategoryDuo_Display)" explainText="$(string.CategoryDuo_Explain)" />
+    <category name="Basic" displayName="$(string.CategoryBasic_Display)" explainText="$(string.CategoryBasic_Explain)" >
+      <parentCategory ref="Duo" />
+    </category>
+    <category name="Client" displayName="$(string.CategoryClient_Display)" explainText="$(string.CategoryClient_Explain)" >
+      <parentCategory ref="Duo" />
+    </category>
+  </categories>
+
+  <policies>
+
+    <!-- Notes:
+    1.  The supportedOn element with ref="windows:SUPPORTED_WindowsXP" indicates XP *and above*.
+    2.  Each policy element may be mapped to a presentation element in the ADML.  Any element that defines more or different than enabledValue/disabledValue must
+        define presentation.
+    3.  Each value under a policy element is mapped to a corresponding child element within that presentation element.  This is done via mapping the ID attribute in this file to the refId in the ADML.
+    4.  All refs are case sensitive.  If a setting has no parentCategory ref, it is not displayed.
+    -->
+    <!-- BASIC -->
+    <policy class="Machine" key="SOFTWARE\Policies\Duo Security\DuoCredProv" name="Host" displayName="$(string.ApiHostname_Display)" explainText="$(string.ApiHostname_Explain)" presentation="$(presentation.ApiHostname)" >
+      <parentCategory ref="Basic"/>
+      <supportedOn ref="windows:SUPPORTED_WindowsXP"/>
+      <elements>
+        <text id="ApiHostname_TextBox" valueName="Host" required="true" />
+      </elements>
+    </policy>
+    <policy class="Machine" key="SOFTWARE\Policies\Duo Security\DuoCredProv" name="SKey" displayName="$(string.IntegrationSecret_Display)" explainText="$(string.IntegrationSecret_Explain)" presentation="$(presentation.IntegrationSecret)" >
+      <parentCategory ref="Basic"/>
+      <supportedOn ref="windows:SUPPORTED_WindowsXP"/>
+      <elements>
+        <text id="IntegrationSecret_TextBox" valueName="SKey" required="true" />
+      </elements>
+    </policy>
+    <policy class="Machine" key="SOFTWARE\Policies\Duo Security\DuoCredProv" name="IKey" displayName="$(string.IntegrationId_Display)" explainText="$(string.IntegrationId_Explain)" presentation="$(presentation.IntegrationId)" >
+      <parentCategory ref="Basic"/>
+      <supportedOn ref="windows:SUPPORTED_WindowsXP"/>
+      <elements>
+        <text id="IntegrationId_TextBox" valueName="IKey" required="true" />
+      </elements>
+    </policy>
+    <policy class="Machine" key="SOFTWARE\Policies\Duo Security\DuoCredProv" name="HttpProxyHost" displayName="$(string.HttpProxyHost_Display)" explainText="$(string.HttpProxyHost_Explain)" presentation="$(presentation.HttpProxyHost)" >
+      <parentCategory ref="Basic"/>
+      <supportedOn ref="windows:SUPPORTED_WindowsXP"/>
+      <elements>
+        <text id="HttpProxyHost_TextBox" valueName="HttpProxyHost" required="true" />
+      </elements>
+    </policy>
+    <policy class="Machine" key="SOFTWARE\Policies\Duo Security\DuoCredProv" name="HttpProxyPort" displayName="$(string.HttpProxyPort_Display)" explainText="$(string.HttpProxyPort_Explain)" presentation="$(presentation.HttpProxyPort)" >
+      <parentCategory ref="Basic"/>
+      <supportedOn ref="windows:SUPPORTED_WindowsXP"/>
+      <elements>
+        <decimal id="HttpProxyPort_DecTextBox" valueName="HttpProxyPort" minValue="0" maxValue="65536" />
+      </elements>
+    </policy>
+    <policy class="Machine" key="SOFTWARE\Policies\Duo Security\DuoCredProv" name="LogFileMaxCount" displayName="$(string.LogFileMaxCount_Display)" explainText="$(string.LogFileMaxCount_Explain)" presentation="$(presentation.LogFileMaxCount)" >
+      <parentCategory ref="Basic"/>
+      <supportedOn ref="windows:SUPPORTED_WindowsXP"/>
+      <elements>
+        <decimal id="LogFileMaxCount_DecTextBox" valueName="LogFileMaxCount" minValue="1" maxValue="100" />
+      </elements>
+    </policy>
+    <policy class="Machine" key="SOFTWARE\Policies\Duo Security\DuoCredProv" name="OfflineAvailable" displayName="$(string.OfflineAvailable_Display)" explainText="$(string.OfflineAvailable_Explain)" valueName="OfflineAvailable" >
+      <parentCategory ref="Client"/>
+      <supportedOn ref="windows:SUPPORTED_WindowsXP"/>
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+        <policy class="Machine" key="SOFTWARE\Policies\Duo Security\DuoCredProv" name="OfflineMaxUsers" displayName="$(string.OfflineMaxUsers_Display)" explainText="$(string.OfflineMaxUsers_Explain)" presentation="$(presentation.OfflineMaxUsers)" >
+      <parentCategory ref="Client"/>
+      <supportedOn ref="windows:SUPPORTED_WindowsXP"/>
+      <elements>
+        <decimal id="OfflineMaxUsers_DecTextBox" valueName="OfflineMaxUsers" minValue="1" maxValue="50" />
+      </elements>
+    </policy>
+    <policy class="Machine" key="SOFTWARE\Policies\Duo Security\DuoCredProv" name="ElevationProtectionMode" displayName="$(string.ElevationProtectionMode_Display)" explainText="$(string.ElevationProtectionMode_Explain)" valueName="ElevationProtectionMode" presentation="$(presentation.ElevationProtectionMode)" >
+          <parentCategory ref="Client"/>
+          <supportedOn ref="windows:SUPPORTED_WindowsXP"/>
+          <elements>
+            <enum id="ElevationProtectionMode_Enum" valueName="ElevationProtectionMode" >
+              <item displayName="$(string.ElevationProtectionMode_Logon)">
+                <value>
+                  <decimal value="0" />
+                </value>
+              </item>
+              <item displayName="$(string.ElevationProtectionMode_UACElevation)">
+                <value>
+                  <decimal value="1" />
+                </value>
+              </item>
+              <item displayName="$(string.ElevationProtectionMode_LogonUACElevation)">
+                <value>
+                  <decimal value="2" />
+                </value>
+              </item>
+            </enum>
+          </elements>
+        </policy>
+          <policy class="Machine" key="SOFTWARE\Policies\Duo Security\DuoCredProv" name="ElevationOfflineEnable" displayName="$(string.ElevationOfflineEnable_Display)" explainText="$(string.ElevationOfflineEnable_Explain)" valueName="ElevationOfflineEnable" >
+      <parentCategory ref="Client"/>
+      <supportedOn ref="windows:SUPPORTED_WindowsXP"/>
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+        <policy class="Machine" key="SOFTWARE\Policies\Duo Security\DuoCredProv" name="ElevationOfflineEnrollment" displayName="$(string.ElevationOfflineEnrollment_Display)" explainText="$(string.ElevationOfflineEnrollment_Explain)" valueName="ElevationOfflineEnrollment" >
+      <parentCategory ref="Client"/>
+      <supportedOn ref="windows:SUPPORTED_WindowsXP"/>
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy class="Machine" key="SOFTWARE\Policies\Duo Security\DuoCredProv" name="LogFileMaxSizeMB" displayName="$(string.LogFileMaxSizeMB_Display)" explainText="$(string.LogFileMaxSizeMB_Explain)" presentation="$(presentation.LogFileMaxSizeMB)" >
+      <parentCategory ref="Basic"/>
+      <supportedOn ref="windows:SUPPORTED_WindowsXP"/>
+      <elements>
+        <decimal id="LogFileMaxSizeMB_DecTextBox" valueName="LogFileMaxSizeMB" minValue="1" maxValue="4096" />
+      </elements>
+    </policy>
+    <policy class="Machine" key="SOFTWARE\Policies\Duo Security\DuoCredProv" name="AutoPush" displayName="$(string.AutoPush_Display)" explainText="$(string.AutoPush_Explain)" valueName="AutoPush" >
+      <parentCategory ref="Client"/>
+      <supportedOn ref="windows:SUPPORTED_WindowsXP"/>
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy class="Machine" key="SOFTWARE\Policies\Duo Security\DuoCredProv" name="Debug" displayName="$(string.GuiEnableDebugLogging_Display)" explainText="$(string.GuiEnableDebugLogging_Explain)" valueName="Debug" >
+      <parentCategory ref="Client"/>
+      <supportedOn ref="windows:SUPPORTED_WindowsXP"/>
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy class="Machine" key="SOFTWARE\Policies\Duo Security\DuoCredProv" name="RdpOnly" displayName="$(string.RdpOnly_Display)" explainText="$(string.RdpOnly_Explain)" valueName="RdpOnly" >
+      <parentCategory ref="Client"/>
+      <supportedOn ref="windows:SUPPORTED_WindowsXP"/>
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy class="Machine" key="SOFTWARE\Policies\Duo Security\DuoCredProv" name="FailOpen" displayName="$(string.FailOpen_Display)" explainText="$(string.FailOpen_Explain)" valueName="FailOpen" >
+      <parentCategory ref="Basic"/>
+      <supportedOn ref="windows:SUPPORTED_WindowsXP"/>
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy class="Machine" key="SOFTWARE\Policies\Duo Security\DuoCredProv" name="EnableSmartCards" displayName="$(string.EnableSmartCards_Display)" explainText="$(string.EnableSmartCards_Explain)" valueName="EnableSmartCards" >
+      <parentCategory ref="Basic"/>
+      <supportedOn ref="windows:SUPPORTED_WindowsXP"/>
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy class="Machine" key="SOFTWARE\Policies\Duo Security\DuoCredProv" name="WrapSmartCards" displayName="$(string.WrapSmartCards_Display)" explainText="$(string.WrapSmartCards_Explain)" valueName="WrapSmartCards" >
+      <parentCategory ref="Basic"/>
+      <supportedOn ref="windows:SUPPORTED_WindowsXP"/>
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy class="Machine" key="SOFTWARE\Policies\Duo Security\DuoCredProv" name="UsernameFormatForService" displayName="$(string.UsernameFormatForService_Display)" explainText="$(string.UsernameFormatForService_Explain)" valueName="UsernameFormatForService" presentation="$(presentation.UsernameFormatForService)" >
+      <parentCategory ref="Basic"/>
+      <supportedOn ref="windows:SUPPORTED_WindowsXP"/>
+      <elements>
+        <enum id="UsernameFormatForService_Enum" valueName="UsernameFormatForService" >
+          <item displayName="$(string.UsernameFormatForService_UsernameOnly)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.UsernameFormatForService_SAM)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.UsernameFormatForService_UPN)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+  </policies>
+</policyDefinitions>

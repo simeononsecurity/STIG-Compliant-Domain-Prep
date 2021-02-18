@@ -1,0 +1,133 @@
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+	<displayName>
+	</displayName>
+	<description>
+	</description>
+	<resources>
+		<stringTable>
+		<string id="RemoteDesktopPlus">Remote Desktop Plus</string>
+		
+		<string id="RDP_AllowedTargets">List of allowed target computers</string>
+		<string id="RDP_DisableDriveRedirection">Disable local drive redirection</string>
+		<string id="RDP_DisablePrinterRedirection">Disable printer redirection</string>
+		<string id="RDP_DrivesToRedirect">Set drives for local drive redirection</string>
+		<string id="RDP_ForceEventLog">Force writing a session event to the event log</string>
+		<string id="RDP_ForceKioskMode">Force kiosk mode</string>
+		<string id="RDP_ForceNoClose">Force removal of close button and close menu option</string>
+		<string id="RDP_ForceOnTop">Force session window always on top</string>
+		<string id="RDP_MaxMRU">Maximum number of entries in the MRU list</string>
+		<string id="RDP_RestrictServerField">List only the allowed computers in the GUI</string>
+		<string id="RDP_SortMRU">Sort the MRU list alphabetically</string>
+		
+		<string id="SUPPORTED_RDP381">At least Remote Desktop Plus 3.8.1</string>
+		<string id="SUPPORTED_RDP391">At least Remote Desktop Plus 3.9.1</string>
+		<string id="SUPPORTED_RDP3102">At least Remote Desktop Plus 3.10.2</string>
+		<string id="SUPPORTED_RDP40">At least Remote Desktop Plus 4.0</string>
+		<string id="SUPPORTED_RDP50">At least Remote Desktop Plus 5.0</string>
+		<string id="SUPPORTED_RDP60">At least Remote Desktop Plus 6.0</string>
+		
+		<string id="RDP_AllowedTargets_HELP">This setting allows you to specify a range of computernames or IP addresses, separated by commas, to which connections are allowed to be made.
+
+If you enable this setting, Remote Desktop Plus will only allow connections to be made to computers which match the list. Wildcards are allowed, as are regular expressions when enclosed by parentheses.
+Example: 10.10.*.*,dtp-*,(nl(app|db)\d{2}(.%USERDNSDOMAIN%|))
+
+If you disable or do not configure this setting, Remote Desktop Plus will either allow connections to all computers, or use the list from the /allowed command line parameter.</string>
+		<string id="RDP_DisableDriveRedirection_HELP">This setting allows you to disable the redirection of local drives on a global basis for all sessions started with Remote Desktop Plus.
+		
+If you enable this setting, Remote Desktop Plus will not redirect the local drives, even when the command line switch /drives is used. Furthermore, the option to select drive redirection will be disabled in the GUI.
+
+If you disable or do not configure this setting, Remote Desktop Plus will either use or not use local drive redirection based on the content of the .rdp file or the command line switches used.</string> 
+		<string id="RDP_DisablePrinterRedirection_HELP">This setting allows you to disable the printer redirection on a global basis for all sessions started with Remote Desktop Plus.
+		
+If you enable this setting, Remote Desktop Plus will not use printer redirection, even when the command line switch /printers is used. Furthermore, the option to select printer redirection will be disabled in the GUI.
+
+If you disable or do not configure this setting, Remote Desktop Plus will either use or not use printer redirection based on the content of the .rdp file or the command line switches used.</string> 
+		<string id="RDP_DrivesToRedirect_HELP">This setting allows you to specify which local drives should be redirected.
+		
+If you enable this setting, Remote Desktop Plus will only redirect the drives you specify (separated by commas). Drives can be specified either by name or by drive type (Fixed, Removable, Network, CD-ROM). To redirect drives that get plugged in later, you can use the drive type Dynamic. You can also exclude certain drives by preceding them with the minus sign. 
+For example, setting this setting to Fixed,-C:,P: will redirect drive P: and all fixed drives except C:.
+
+If you disable or do not configure this setting, Remote Desktop Plus will redirect drives based on the content of the .rdp file or the command line switches used.
+
+Note: This setting has no effect if the "Disable drive redirection" setting is enabled.</string> 
+		<string id="RDP_ForceEventLog_HELP">This setting allows you to force writing an event to the Application event log for every session started through Remote Desktop Plus. 
+
+The written event will contain information about both the local computer and user, and about the session which was started.
+
+If you enable this setting, Remote Desktop Plus will write an event for every session. 
+
+If you disable or do not configure this setting, Remote Desktop Plus will not write an event, unless the command line parameter /eventlog was used.</string>
+		<string id="RDP_ForceKioskMode_HELP">This setting allows you to force all Remote Desktop Plus sessions to use the restricted kiosk mode.
+
+The kiosk mode is the stripped-down GUI in which users can only enter or modify the computername, the username, the password or any combination thereof, thus restricting them to the settings you have specified in the command line or .rdp file.
+
+If you enable this setting, Remote Desktop Plus will always use the kiosk mode.
+
+Use the kiosk mode mask to specify which fields are editable for the user. Each character in the mask stands for one of the three fields (computername, username, password). 1 enables the field, 0 disables it.
+Example: 011 will disable the computername field and only allow the user to enter the username and password.
+
+If you disable or do not configure this setting, Remote Desktop Plus will use either the normal GUI or the kiosk mode, depending on what command line parameters were used.</string>
+		<string id="RDP_ForceNoClose_HELP">This setting allows you to disable the close button in the title bar and remove the close option in the system menu for all sessions started with Remote Desktop Plus.
+		
+With this setting you can help ensure users will always gracefully log off and not just disconnect the session by closing the session window. This setting has no effect when connecting to RemoteApps.
+
+If you enable this setting, Remote Desktop Plus will remove/disable both the close button and the close menu option. 
+
+If you disable or do not configure this setting, Remote Desktop Plus will only disable the options to close the session window when using /noclose from the command line.</string>
+		<string id="RDP_ForceOnTop_HELP">This setting allows you to force the Remote Desktop session window to be always on top.
+		
+This setting also disables the minimize button and will thus ensure that users remain working in the session until they close it. When connecting to RemoteApps, this setting will be ignored.
+
+If you enable this setting, the Remote Desktop session will be started as 'Always on top' and the minimize button in the title bar will be disabled. 
+
+If you disable or do not configure this setting, the session will be started normally, unless the /ontop command line parameter was used.</string>
+		<string id="RDP_MaxMRU_HELP">This setting allows you to set the maximum number of entries to be saved in the MRU list. 
+
+The MRU list contains the names of the computers the user has most recently connected to. Valid values are 0 through 99.
+
+If you disable or do not configure this setting, Remote Desktop Plus will remember the last 20 used computers.</string>
+		<string id="RDP_RestrictServerField_HELP">This setting allows you to change the editable target computer textbox in the GUI to a listbox containing only the allowed computers.
+
+This setting requires the /allowed command line option or the 'List of allowed target computers' policy setting to be set.
+
+If you enable this setting, only the allowed computers will be show in the target computer listbox. 
+
+If you disable or do not configure this setting, the target computer field remains a textbox.</string>
+		<string id="RDP_SortMRU_HELP">This setting allows you to sort the MRU list maintained by Remote Desktop Plus. 
+
+If you enable this setting, the MRU list will be sorted alphabetically.
+
+If you disable or do not configure this setting, the MRU list will be sorted chronologically.</string>
+		</stringTable>
+		<presentationTable>
+			<presentation id="RDP_AllowedTargets">
+				<textBox refId="RDP_AllowedTargets">
+					<label>List of allowed targets:</label>
+					<defaultValue>*</defaultValue>
+				</textBox>
+			</presentation>
+			<presentation id="RDP_DisableDriveRedirection" />
+			<presentation id="RDP_DisablePrinterRedirection" />
+			<presentation id="RDP_DrivesToRedirect">
+				<textBox refId="RDP_DrivesToRedirect">
+					<label>List of drives to redirect:</label>
+					<defaultValue>*</defaultValue>
+				</textBox>
+			</presentation>
+			<presentation id="RDP_ForceEventLog" />
+			<presentation id="RDP_ForceKioskMode">
+				<textBox refId="RDP_KioskModeMask">
+					<label>Kiosk mode mask:</label>
+					<defaultValue>100</defaultValue>
+				</textBox>
+			</presentation>
+			<presentation id="RDP_ForceNoClose" />
+			<presentation id="RDP_ForceOnTop" />
+			<presentation id="RDP_MaxMRU_Elements">
+				<decimalTextBox refId="RDP_MaxMRU_Value" defaultValue="20">Maximum number of entries:</decimalTextBox>
+			</presentation>
+			<presentation id="RDP_RestrictServerField" />
+			<presentation id="RDP_SortMRU" />
+		</presentationTable>
+	</resources>
+</policyDefinitionResources>

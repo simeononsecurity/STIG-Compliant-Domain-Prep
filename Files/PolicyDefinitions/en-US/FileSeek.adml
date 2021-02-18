@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName>FileSeek 3.1.1</displayName>
+  <description>FileSeek 3.1.1</description>
+  <resources>
+    <stringTable>
+			<!-- Category names -->
+      <string id="FileSeek">FileSeek</string>
+			<string id="FileSeek_General">General Policies</string>
+			<string id="FileSeek_Settings">Settings</string>
+			<string id="FileSeek_Settings_Options">Options</string>
+			<string id="FileSeek_Settings_Search">Search</string>
+			<string id="FileSeek_Settings_LicenseKey">License Key</string>
+			<string id="FileSeek_Settings_ResultViewSettings">Result View Settings</string>
+			<string id="FileSeek_Settings_PreviewHandlers">Preview Handlers</string>
+			<!-- General policy settings -->
+			<string id="BlockUI-Settings-LicenseKey">Disable License Key Tab</string>
+      <string id="BlockUI-Settings-LicenseKeyExplain">This policy setting controls whether or not the License Key tab will be accessible in the FileSeek settings. This policy setting does not require a restart of FileSeek to take effect.
+	  
+If you enable this policy setting, the License Key tab is not available to the user.
+  
+If you disable this policy setting, the License Key tab is available to the user, allowing them to view or modify the License Key.
+  
+If you do not configure this policy setting, the License Key tab is available to the user, allowing them to view or modify the License Key.
+			</string>			
+			<!-- Settings: Options tab -->
+			<string id="AutoUpdate">Check for updates automatically</string>
+			<string id="AutoUpdateExplain">This policy setting controls whether or not FileSeek will check for new versions automatically. Automatic update checks are performed when FileSeek starts up, and every 24 hours after startup. This policy setting requires a restart of FileSeek to take effect.
+	  
+If you enable this policy setting and enable the "Check for updates automatically" checkbox, FileSeek will check for new stable versions automatically. Additionally, if you enable the "Check for new Beta versions" checkbox, FileSeek will also check for new Beta versions during the automatic update checks.
+  
+If you disable this policy setting, FileSeek will not check for new versions automatically.
+ 
+If you do not configure this policy setting, the "Check for updates automatically" and "Check for new Beta versions" options are configurable from within FileSeek ("Check for updates automatically" is enabled in a default installation, but "Check for new Beta versions" is not).
+			</string>
+			<string id="ShowContextMenuItems">Show FileSeek in the Windows Context Menu</string>
+			<string id="ShowContextMenuItemsExplain">This policy setting controls whether or not FileSeek will show entries in the context menu when right-clicking files/folders in Explorer. This policy setting requires the user to manually apply the FileSeek settings before the change will take effect. Note: This option requires elevation to enable or disable.
+	  
+If you enable this policy setting, the "Show FileSeek in the Windows Context Menu" option will be enabled, and will be applied the next time the user applies the settings.
+  
+If you disable this policy setting, the "Show FileSeek in the Windows Context Menu" option will not be enabled, and will be applied the next time the user applies the settings.
+ 
+If you do not configure this policy setting, the "Show FileSeek in the Windows Context Menu" option is configurable from within FileSeek (enabled in a default installation).
+			</string>
+			<string id="ShowToolTips">Show ToolTips</string>
+			<string id="ShowToolTipsExplain">This policy setting controls whether or not FileSeek will show tooltips in the interface to offer further explanation on each field. This policy setting requires a restart of FileSeek to take effect.
+	  
+If you enable this policy setting, the "Show ToolTips" option will be enabled.
+  
+If you disable this policy setting, the "Show ToolTips" option will not be enabled.
+ 
+If you do not configure this policy setting, the "Show ToolTips" option is configurable from within FileSeek (enabled in a default installation).
+			</string>			
+			<string id="StartWithBlankProfile">Always start FileSeek with blank search criteria</string>
+			<string id="StartWithBlankProfileExplain">This policy setting controls whether or not FileSeek will autofill the last used search values on startup. This policy setting requires a restart of FileSeek to take effect.
+
+If you enable this policy setting, FileSeek will autofill the last used search values on startup.
+
+If you disable this policy setting, FileSeek will not autofill the last used search values on startup.
+
+If you do not configure this policy setting, the "Always start FileSeek with blank search criteria" option is configurable from within FileSeek (disabled in a default installation).
+			</string>
+			<string id="IsMinimizingToTray">Minimize FileSeek to the system tray</string>
+			<string id="IsMinimizingToTrayExplain">This policy setting controls whether or not FileSeek will hide in the system tray when minimized. This policy setting requires a restart of FileSeek to take effect.
+
+If you enable this policy setting, FileSeek will hide in the system tray when minimized.
+
+If you disable this policy setting, FileSeek will not hide in the system tray when minimized.
+
+If you do not configure this policy setting, the "Minimize FileSeek to the system tray" option is configurable from within FileSeek (disabled in a default installation).
+			</string>
+			<string id="IsClosingToTray">Close FileSeek to the system tray</string>
+			<string id="IsClosingToTrayExplain">This policy setting controls whether or not FileSeek will hide in the system tray when closing (instead of actually exiting). This policy setting requires a restart of FileSeek to take effect.
+
+If you enable this policy setting, FileSeek will hide in the system tray when closing.
+
+If you disable this policy setting, FileSeek will not hide in the system tray when closing.
+
+If you do not configure this policy setting, the "Close FileSeek to the system tray" option is configurable from within FileSeek (disabled in a default installation).
+			</string>
+			<string id="SingleInstanceMode">Force FileSeek to only open one instance</string>
+			<string id="SingleInstanceModeExplain">This policy setting controls whether or not FileSeek will allow multiple FileSeek instances (windows) to run at the same time. This policy setting requires a restart of FileSeek to take effect.
+
+If you enable this policy setting, FileSeek will not allow multiple FileSeek instances (windows) to run at the same time.
+
+If you disable this policy setting, FileSeek will allow multiple FileSeek instances (windows) to run at the same time.
+
+If you do not configure this policy setting, the "Force FileSeek to only open one instance" option is configurable from within FileSeek (disabled in a default installation).
+			</string>
+			<!-- Settings: Search tab -->
+			<string id="ShowFileErrors">Show an error when a file/folder can't be accessed</string>
+			<string id="ShowFileErrorsExplain">This policy setting controls whether or not FileSeek will show an error when a file/folder can't be accessed. This policy setting requires a restart of FileSeek to take effect.
+
+If you enable this policy setting, FileSeek will show an error when a file/folder can't be accessed.
+
+If you disable this policy setting, FileSeek will not show an error when a file/folder can't be accessed.
+
+If you do not configure this policy setting, the "Show an error when a file/folder can't be accessed" option is configurable from within FileSeek (enabled in a default installation).
+			</string>
+			<string id="ShowErrorForLongPaths">Show an error and skip path when longer than 260 characters</string>
+			<string id="ShowErrorForLongPathsExplain">This policy setting controls whether or not FileSeek will show an error and skip the path when it is longer than 260 characters. This policy setting requires a restart of FileSeek to take effect.
+
+If you enable this policy setting, FileSeek will show an error and skip the path when it is longer than 260 characters.
+
+If you disable this policy setting, FileSeek will not show an error and skip the path when it is longer than 260 characters.
+
+If you do not configure this policy setting, the "Show an error and skip path when longer than 260 characters" option is configurable from within FileSeek (disabled in a default installation).
+			</string>
+			<string id="ShowIFilterErrors">Show an error for files with no File Handler</string>
+			<string id="ShowIFilterErrorsExplain">This policy setting controls whether or not FileSeek will show an error when it can't find a File Handler (iFilter) for the searched file. This policy setting requires a restart of FileSeek to take effect.
+
+If you enable this policy setting, FileSeek will show an error when it can't find a File Handler (iFilter) for the searched file.
+
+If you disable this policy setting, FileSeek will not show an error when it can't find a File Handler (iFilter) for the searched file.
+
+If you do not configure this policy setting, the "Show an error for files with no File Handler" option is configurable from within FileSeek (enabled in a default installation).
+			</string>
+			<string id="ShowEmptyPDFErrors">Show an error when an empty PDF file is found</string>
+			<string id="ShowEmptyPDFErrorsExplain">This policy setting controls whether or not FileSeek will show an error when a PDF with no text is found. This policy setting requires a restart of FileSeek to take effect.
+
+If you enable this policy setting, FileSeek will show an error when a PDF with no text is found.
+
+If you disable this policy setting, FileSeek will not show an error when a PDF with no text is found.
+
+If you do not configure this policy setting, the "Show an error when an empty PDF file is found" option is configurable from within FileSeek (disabled in a default installation).
+			</string>			
+			<string id="HiddenFolderSearch">Search files and folders that are hidden</string>
+			<string id="HiddenFolderSearchExplain">This policy setting controls whether or not FileSeek will search files and folders that are hidden. This policy setting requires a restart of FileSeek to take effect.
+
+If you enable this policy setting, FileSeek will search files and folders that are hidden.
+
+If you disable this policy setting, FileSeek will not search files and folders that are hidden.
+
+If you do not configure this policy setting, the "Search files and folders that are hidden" option is configurable from within FileSeek (enabled in a default installation).
+			</string>
+			<string id="SystemFolderSearch">Search system files and folders</string>
+			<string id="SystemFolderSearchExplain">This policy setting controls whether or not FileSeek will search system files and folders. This policy setting requires a restart of FileSeek to take effect.
+
+If you enable this policy setting, FileSeek will search system files and folders.
+
+If you disable this policy setting, FileSeek will not search system files and folders.
+
+If you do not configure this policy setting, the "Search system files and folders" option is configurable from within FileSeek (enabled in a default installation).
+			</string>
+			<string id="LinkedFoldersSearch">Search files and folders that are a link/junction</string>
+			<string id="LinkedFoldersSearchExplain">This policy setting controls whether or not FileSeek will search folder links/junctions. This policy setting requires a restart of FileSeek to take effect.
+
+If you enable this policy setting, FileSeek will search folder links/junctions.
+
+If you disable this policy setting, FileSeek will not search folder links/junctions.
+
+If you do not configure this policy setting, the "Search files and folders that are a link/junction" option is configurable from within FileSeek (enabled in a default installation).
+			</string>
+			<string id="HiddenFolderSearchShowErrorOnSkip">Show an error when skipping hidden files and folders</string>
+			<string id="HiddenFolderSearchShowErrorOnSkipExplain">This policy setting controls whether or not FileSeek will show an error when skipping a hidden file or folder. This policy setting requires a restart of FileSeek to take effect.
+
+If you enable this policy setting, FileSeek will show an error when skipping a hidden file or folder.
+
+If you disable this policy setting, FileSeek will not show an error when skipping a hidden file or folder.
+
+If you do not configure this policy setting, the "Show an error when skipping hidden files and folders" option is configurable from within FileSeek (enabled in a default installation).
+			</string>
+			<string id="SystemFolderSearchShowErrorOnSkip">Show an error when skipping system files and folders</string>
+			<string id="SystemFolderSearchShowErrorOnSkipExplain">This policy setting controls whether or not FileSeek will show an error when skipping a system file or folder. This policy setting requires a restart of FileSeek to take effect.
+
+If you enable this policy setting, FileSeek will show an error when skipping a system file or folder.
+
+If you disable this policy setting, FileSeek will not show an error when skipping a system file or folder.
+
+If you do not configure this policy setting, the "Show an error when skipping system files and folders" option is configurable from within FileSeek (enabled in a default installation).
+			</string>
+			<string id="LinkedFoldersSearchShowErrorOnSkip">Show an error when skipping a link/junction</string>
+			<string id="LinkedFoldersSearchShowErrorOnSkipExplain">This policy setting controls whether or not FileSeek will show an error when skipping a link/junction. This policy setting requires a restart of FileSeek to take effect.
+
+If you enable this policy setting, FileSeek will show an error when skipping a link/junction.
+
+If you disable this policy setting, FileSeek will not show an error when skipping a link/junction.
+
+If you do not configure this policy setting, the "Show an error when skipping a link/junction" option is configurable from within FileSeek (enabled in a default installation).
+			</string>
+			<string id="ShowEmptyDirectoryErrors">Show an error when an empty folder is found</string>
+			<string id="ShowEmptyDirectoryErrorsExplain">This policy setting controls whether or not FileSeek will show an error when an empty folder is found. This policy setting requires a restart of FileSeek to take effect.
+
+If you enable this policy setting, FileSeek will show an error when an empty folder is found.
+
+If you disable this policy setting, FileSeek will not show an error when an empty folder is found.
+
+If you do not configure this policy setting, the "Show an error when an empty folder is found" option is configurable from within FileSeek (disabled in a default installation).
+			</string>
+			<string id="TreatAllExcludePathFiltersAsWildcards">Treat all Exclude Path filters as wildcards</string>
+			<string id="TreatAllExcludePathFiltersAsWildcardsExplain">This policy setting controls whether or not FileSeek will treat the text in the Exclude Path box as a wildcard. This policy setting requires a restart of FileSeek to take effect.
+
+If you enable this policy setting, FileSeek will treat the text in the Exclude Path box as a wildcard search.
+
+If you disable this policy setting, FileSeek will treat the text in the Exclude Path box as an exact search.
+
+If you do not configure this policy setting, the "Treat all Exclude Path filters as wildcards" option is configurable from within FileSeek (enabled in a default installation).
+			</string>
+			<string id="TreatAllIncludeFiltersAsWildcards">Treat all Include Files filters as wildcards</string>
+			<string id="TreatAllIncludeFiltersAsWildcardsExplain">This policy setting controls whether or not FileSeek will treat all Include Files filters as wildcards. This policy setting requires a restart of FileSeek to take effect.
+
+If you enable this policy setting, FileSeek will treat the text in the Include Path box as a wildcard search.
+
+If you disable this policy setting, FileSeek will treat the text in the Include Files box as an exact search.
+
+If you do not configure this policy setting, the "Treat all Include Files filters as wildcards" option is configurable from within FileSeek (disabled in a default installation).
+			</string>			
+			<string id="IsQueryFullString">Treat query text as one large query item</string>
+			<string id="IsQueryFullStringExplain">This policy setting controls whether or not FileSeek will treat the text in the Query box as if it were wrapped in quotes. This policy setting requires a restart of FileSeek to take effect.
+
+If you enable this policy setting, FileSeek will treat the text in the Query box as if it were wrapped in quotes.
+
+If you disable this policy setting, FileSeek will treat each word in the Query box as a separate search (implicit OR).
+
+If you do not configure this policy setting, the "Treat query text as one large query item" option is configurable from within FileSeek (disabled in a default installation).
+			</string>
+			<string id="IsSavingExtraLines">Also export extra lines when saving search results</string>
+			<string id="IsSavingExtraLinesExplain">This policy setting controls whether or not FileSeek will include the lines before and after the matched line when exporting the search results to a file. This policy setting requires a restart of FileSeek to take effect.
+
+If you enable this policy setting, FileSeek will include the lines before and after the matched line when exporting the search results to a file.
+
+If you disable this policy setting, FileSeek will not include the lines before and after the matched line when exporting the search results to a file.
+
+If you do not configure this policy setting, the "Also export extra lines when saving search results" option is configurable from within FileSeek (disabled in a default installation).
+			</string>
+			<string id="FileTimeout">Maximium search time allowed per file</string>
+			<string id="FileTimeoutExplain">This policy setting controls whether or not FileSeek will skip a file if the search is taking longer than the specified timeout. This policy setting requires a restart of FileSeek to take effect.
+
+If you enable this policy setting, FileSeek will skip a file if the search is taking longer than the specified timeout.
+
+If you disable this policy setting, FileSeek will use the last value it was set to (0 in a default installation).
+
+If you do not configure this policy setting, the "Maximium search time allowed per file" option is configurable from within FileSeek (0 in a default installation).
+			</string>			
+			<!-- Settings: Result View Settings -->
+			<string id="IsOnlyShowingMatchedText">Only show matched text in a search result</string>
+			<string id="IsOnlyShowingMatchedTextExplain">This policy setting controls whether or not FileSeek will show a portion of the text before and after the matched text. This policy setting requires a restart of FileSeek to take effect.
+
+If you enable this policy setting, FileSeek will show only the matched text, and no text before or after the match.
+
+If you disable this policy setting, FileSeek will show a portion of the text before and after the matched text (number of characters to show is controlled with the "Show this many characters for each search result" option).
+
+If you do not configure this policy setting, the "Only show matched text in a search result" option is configurable from within FileSeek (disabled in a default installation).
+			</string>			
+			<string id="ResultWordWrap">Wrap the text that is shown in a search result</string>
+			<string id="ResultWordWrapExplain">This policy setting controls whether or not FileSeek will wrap the text in the results pane. This policy setting requires a restart of FileSeek to take effect.
+
+If you enable this policy setting, FileSeek will wrap the text in the results pane.
+
+If you disable this policy setting, FileSeek will not wrap the text in the results pane.
+
+If you do not configure this policy setting, the "Wrap the text that is shown in a search result" option is configurable from within FileSeek (enabled in a default installation).
+			</string>
+			<string id="DefaultDoubleClickOperation">Default operation for double-clicking on a search result</string>
+			<string id="DefaultDoubleClickOperationExplain">This policy setting controls what FileSeek will do when double-clicking on result(s) in the search pane. This policy setting requires a restart of FileSeek to take effect.
+
+If you enable this policy setting, FileSeek will perform the action selected from the drop-down in this policy setting.
+
+If you disable this policy setting, FileSeek will open the file(s) in the default handler for that file type.
+
+If you do not configure this policy setting, the "Default operation for double-clicking on a search result" option is configurable from within FileSeek ("Open with Default Handler" in a default installation).
+			</string>		
+			<string id="DefaultDoubleClickOperation_OpenWithDefaultHandler">Open with Default Handler</string>
+			<string id="DefaultDoubleClickOperation_OpenWithNotepad">Open with Notepad</string>			
+			<string id="DefaultDoubleClickOperation_OpenWithOtherApplication">Open with Other Application</string>
+			<string id="DefaultDoubleClickOperation_OpenContainingFolder">Open Containing Folder</string>
+			<string id="DefaultDoubleClickOperation_ExportAllToCSV">Export all results to CSV</string>
+			<string id="DefaultDoubleClickOperation_ExportSelectedToCSV">Export selected results to CSV</string>
+			<string id="DefaultDoubleClickOperation_ExportAllToHTML">Export all results to HTML</string>
+			<string id="DefaultDoubleClickOperation_ExportSelectedToHTML">Export selected results to HTML</string>
+			<string id="ShowCharCount">Show this many characters for each search result</string>
+			<string id="ShowCharCountExplain">This policy setting controls how many characters will be shown before and after the search result. This policy setting requires a restart of FileSeek to take effect.
+
+If you enable this policy setting, you can configure the number of characters to show in the search results using the text box in the policy setting. Note: The "Only show matched text" option needs to be disabled for this option to take effect.
+
+If you disable this policy setting, FileSeek will show the default number of characters (1000).
+
+If you do not configure this policy setting, the "Show this many characters for each search result" option is configurable from within FileSeek (1000 in a default installation).
+			</string>			
+			<string id="IsUsingCustomDateFormat">Use a custom date format</string>
+			<string id="IsUsingCustomDateFormatExplain">This policy setting controls whether or not FileSeek will use the specified custom date format. This policy setting requires a restart of FileSeek to take effect.
+
+If you enable this policy setting, FileSeek will use the date format specified in the text box in this policy setting. Refer to this page for details on custom date strings: http://msdn.microsoft.com/en-us/library/8kb3ddd4%28v=vs.110%29.aspx
+
+If you disable this policy setting, FileSeek will use the date format as specified in the Windows OS settings.
+
+If you do not configure this policy setting, the "Use a custom date format" option is configurable from within FileSeek (disabled in a default installation).
+			</string>
+			<!-- Settings: Preview Handlers tab -->
+			<string id="UsePreviewHandlers">Use Preview Handlers in the results pane</string>
+			<string id="UsePreviewHandlersExplain">This policy setting controls whether or not FileSeek will show previews of files when clicking on them. Note: It will only show previews for file types that have preview handlers installed in Windows already. Also note that some preview handlers are buggy, so this option is best left disabled unless thoroughly tested in your environment. This policy setting requires a restart of FileSeek to take effect.
+
+If you enable this policy setting, FileSeek will show previews for files in the results pane.
+
+If you disable this policy setting, FileSeek will not show previews for files in the results pane.
+
+If you do not configure this policy setting, the "Use Preview Handlers in the results pane" option is configurable from within FileSeek (disabled in a default installation).
+			</string>			
+			<!-- Settings: License Key tab -->
+			<string id="LicenseKey">License Key</string>
+			<string id="LicenseKeyExplain">This policy setting allows you to specify the License Key that the clients will use (Site or Enterprise license required). It is recommended that the "General Policies > Disable License Key tab" policy be enabled in conjunction with this policy to prevent the user from being able to view the license key in the Settings window. This policy setting requires a restart of FileSeek to take effect.
+			
+If you enable this policy setting, you must specify the License Key in this policy that the clients should use.
+
+If you disable this policy setting, the License Key on the client will not be modified by this policy, and the user will not be allowed to modify the License Key.
+
+If you do not configure this policy setting, the License Key is configurable from within FileSeek.			
+			</string>
+		</stringTable>
+		<presentationTable>
+			<!-- Settings: Options tab -->
+			<presentation id="AutoUpdate">
+				<checkBox refId="AutoUpdate">Check for updates automatically</checkBox>
+				<text>The option to check for beta versions only applies if the automatic updates option is enabled above.</text>
+				<checkBox refId="AutoUpdateBeta">Check for new Beta versions</checkBox>
+			</presentation>
+			<!-- Settings: Search tab -->
+			<presentation id="FileTimeout">
+				<textBox refId="FileTimeout">
+					<label>Max search time allowed per file:</label>
+				</textBox>
+			</presentation>			
+			<!-- Settings: Result View Settings -->
+			<presentation id="DefaultDoubleClickOperation">
+				<dropdownList refId="DefaultDoubleClickOperation" defaultItem="0">Default double-click operation:</dropdownList>
+			</presentation>		
+			<presentation id="ShowCharCount">
+				<textBox refId="ShowCharCount">
+					<label>Number of characters to show:</label>
+				</textBox>
+			</presentation>
+			<presentation id="IsUsingCustomDateFormat">
+				<textBox refId="CustomDateFormat">
+					<label>Custom date format:</label>
+				</textBox>
+			</presentation>			
+			<!-- Settings: License Key tab -->
+			<presentation id="LicenseKey">
+				<textBox refId="LicenseKey">
+					<label>License Key:</label>
+				</textBox>
+			</presentation>
+		</presentationTable>
+  </resources>
+</policyDefinitionResources>

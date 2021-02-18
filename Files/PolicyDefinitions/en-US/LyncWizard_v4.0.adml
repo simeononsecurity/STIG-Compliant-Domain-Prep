@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?> 
+	<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions"> 
+		<displayName>SfB Wizard v4.0</displayName> 
+		<description>SfB Wizard v4.0 Group Policy Template v4.0</description> 
+		<resources> 
+			<stringTable> 
+				<string id="SUPPORTED_LyncWizard200">Setting will be supported since LyncWizard 2.0.0</string>
+				<string id="SUPPORTED_LyncWizard204">Setting will be supported since LyncWizard 2.0.4</string>
+				<string id="SUPPORTED_LyncWizard300">Setting will be supported since LyncWizard 3.0.0</string>
+				<string id="SUPPORTED_LyncWizard30x">Setting will be supported since LyncWizard 3.0.x</string>
+				<string id="SUPPORTED_LyncWizard40x">Setting will be supported since LyncWizard 4.0.x</string>
+				<string id="CAT_LyncWizard">SfB Wizard v4.0</string> 
+				<string id="CAT_General">General</string>
+				<string id="CAT_ContactLookup">Contact Lookup</string>
+				<string id="CAT_BusyCalls">Call Waiting</string>
+				<string id="CAT_HotkeyDialer">Hotkey Dialer</string>
+				<string id="CAT_RunCmd">Actions</string>
+				<string id="CAT_POR">Presence based Routing</string>
+				<string id="CAT_License">License</string>
+				<string id="CAT_GUI">User Interface</string>
+				<string id="PDN_CultureInfo">Application languagae</string>
+				<string id="PET_CultureInfo">Configure the language used by Lync Wizard.
+
+If this setting is not configured, Lync Wizard uses the system language.
+				</string>
+				<string id="PDN_CultureInfo_DE">German</string>
+				<string id="PDN_CultureInfo_EN">English</string>
+				<string id="PDN_CultureInfo_FR">French</string>
+				<string id="PDN_CultureInfo_ES">Spanish</string>
+				<string id="PDN_CultureInfo_PT">Portuguese</string>
+				<string id="PDN_CultureInfo_IT">Italian</string>
+				<string id="PDN_CultureInfo_ZH">Chinese</string>
+				<string id="PDN_CultureInfo_SYS">System language</string>
+				<string id="PDN_CustomBalloon">Modern popup for notification</string>
+				<string id="PET_CustomBalloon">Allows to use alternative ballons for notifications.</string>
+				<string id="PDN_CustomBalloonOffset">Position of modern popup</string>
+				<string id="PET_CustomBalloonOffset">Allows to define coordinates of the modern popup.</string>
+				<string id="PDN_CustomBalloonDisplayTime">Display time of modern popup</string>
+				<string id="PET_CustomBalloonDisplayTime">Allows to configure the display time of the modern popup.</string>
+				<string id="PDN_DebugLogging">Debug logging</string>
+				<string id="PET_DebugLogging">Enable/disable debug logging. The log file will be created in users Temp folder.</string>
+				<string id="PDN_DisableUpdateCheck">Disable update check</string>
+				<string id="PET_DisableUpdateCheck">Disable update check.
+				
+You need a valid license to disable the update check.
+				</string>
+				<string id="PDN_DisableUserConfig">Prohibit user configuration</string>
+				<string id="PET_DisableUserConfig">Prohibit user can change configuration.
+
+If this setting is enabled, the user cannot change settings in the configuration window. Only Call Waiting handling can be modified.
+				</string>
+				<string id="PDN_EnableContactLookup">Enable feature Contact Lookup</string>
+				<string id="PET_EnableContactLookup">Enable or disable the feature Contact Lookup.</string>
+				<string id="PDN_ContactLookupPatterns">Data source: RegExp phone number</string>
+				<string id="PET_ContactLookupPatterns">Configure data sources and matching phone number pattern as RegExp for Contact Lookup. Syntax: DatasourceID:RegExp
+DatasourceIDs:
+1=tel.search.ch
+2=LDAP
+				</string>
+
+				<string id="PDN_EnableRunCmd">Enable feature Actions</string>
+				<string id="PET_EnableRunCmd">Enable or disable the feature Actions.</string>
+				<string id="PDN_RunCmdItems">Configure Action Items</string>
+				<string id="PET_RunCmdItems">Configure Actions for matching phone number pattern as RegExp. Syntax: "contact":"RegExp":"Cmd line/URL":"Arguments":Type
+Type:
+1=Command Line
+2=URL
+				</string>
+
+				<string id="PDN_EnablePOR">Enable feature "Presence Based Routing"</string>
+				<string id="PET_EnablePOR">Enable or disable the feature "Presence Based Routing".</string>
+				<string id="PDN_PORItems">Configure Routing Items</string>
+				<string id="PET_PORItems">Configure Routings for matching number parrtern as RegExp. Syntax: "Presence key":"RegExp":"Reaction type":"Argument"
+Presence key:
+3500 - Available
+5000 - Available but inactive
+6500 - Busy
+7500 - Busy but inactive
+12500 - TemporaryAway
+15500 - Away
+18500 - Appear Offline (have to be activated in SfB Policy)
+
+"Offline" and "DND" cannot be used, because LyncWizard do not get the calls.
+
+Reaction type:
+1 - Busy
+2 - VoiceMail
+3 - Forward
+
+Argument:
+Reaction type "Busy": Enter the IM answer text (optional)
+Reaction type "Weiterleiten": Enter the E.164 destination phone number
+				</string>
+				
+				<string id="PDN_ContactLookupLDAP">Configure LDAP data source</string>
+				<string id="PET_ContactLookupLDAP">Configure LDAP server.</string>
+				<string id="PDN_SearchKnownContact">Search already known contacts</string>
+				<string id="PET_SearchKnownContact">Should already known contacts (AD or Outlook) also searched online.</string>
+				<string id="PDN_ContactLookupCopyToClipboard">Copy found contact to clipboard</string>
+				<string id="PET_ContactLookupCopyToClipboard">If this setting is enabled, a found contact will be copied to clipboard.</string>
+				<string id="PDN_APIKey">API-Key for tel.search.ch</string>
+				<string id="PET_APIKey">Define the API-Key used by Contact Lookup for searching by tel.search.ch.</string>
+				<string id="PDN_EnableBusyCalls">Enable feature Call Waiting</string>
+				<string id="PET_EnableBusyCalls">Enable or disable the feature Call Waiting</string>
+				<string id="PDN_BusyBehavior">Configure Call Waiting handling</string>
+				<string id="PET_BusyBehavior">Configure the default behavior for 2nd calls.</string>
+				<string id="PDN_BusyBehavior_TurnOff">Do nothing</string>
+				<string id="PDN_BusyBehavior_RejectCall">Reject (busy tone)</string>
+				<string id="PDN_BusyBehavior_HandledUnanswered">Handle immediatly as unaswered call</string>
+				<string id="PDN_BusyBehavior_ForwardCall">Forward call to the defined destination</string>
+				<string id="PDN_BusyIMAnswer">Configure IM response if call has been rejected.</string>
+				<string id="PET_BusyIMAnswer">Configure IM response, which will be sended if a 2nd call has been rejected and the caller is IM capable.</string>
+				<string id="PDN_BusyDisconnectReason">Configure behavior for 2nd call</string>
+				<string id="PET_BusyDisconnectReason">Configure the technical behaviour in case of "Reject (busy tone)" for a normal 2nd call.</string>
+				<string id="PDN_BusyDisconnectReasonDelegated">Configure behaviour for 2nd call from a delegator or RGS with option "Agent Anonymity" enabled.</string>
+				<string id="PET_BusyDisconnectReasonDelegated">Configure the technical behaviour in case of "Reject (busy tone)" for a 2nd call from a delegator or RGS with option "Agent Anonymity" enabled.</string>
+				<string id="PDN_BusyDisconnectReasonForwarded">Configure behaviour for 2nd call from your team-call group or if the call has been transferred or forwarded to you.</string>
+				<string id="PET_BusyDisconnectReasonForwarded">Configure the technical behaviour in case of "Reject (busy tone)" for a 2nd call from your team-call group or if the call has been transferred or forwarded to you.</string>
+				<string id="PDN_BusyDisconnectReason_None">None</string>
+				<string id="PDN_BusyDisconnectReason_Timeout">Timeout</string>
+				<string id="PDN_BusyDisconnectReason_Busy">Busy</string>
+				<string id="PDN_BusyDisconnectReason_NotAcceptableHere">NotAcceptableHere</string>
+				<string id="PDN_BusyDisconnectReason_Decline">Decline</string>
+				<string id="PDN_BusyDisconnectReason_DeclineEverywhere">DeclineEveryhwere</string>
+				<string id="PDN_BusyDisconnectReason_ReplyOther">ReplyOther</string>
+				<string id="PDN_BusyContactURI">Configure the call forward destination</string>
+				<string id="PET_BusyContactURI">Configure the call forward destination for the option "Forward calls to".
+				
+The destination address must be in format "tel:%E164%".
+				</string>
+				<string id="PDN_EnableHotkeyDialer">Enable feature Hotkey Dialer</string>
+				<string id="PET_EnableHotkeyDialer">Enable or disable the feature Hotkey Dialer</string>
+				<string id="PDN_HotKeyDialKey">Configure the short cut key</string>
+				<string id="PET_HotKeyDialKey">Enter the value for the hotkey.
+				
+Define the key in GUI and search the value in the registry key HotKeyDialKey.</string>
+				<string id="PDN_HotKeyDialModifier">Configure the modifier for the hotkey</string>
+				<string id="PET_HotKeyDialModifier">Enter the modifier key value for the hotkey.
+				
+Define the modifier(s) in GUI and search the value in the registry key HotKeyDialModifier.
+				</string>
+				<string id="PDN_HotkeyDialNormalization">Configure phone number normalisation</string>
+				<string id="PET_HotkeyDialNormalization">Enter the normalisation rules as RegExp for hotkey phone number normalisation.</string>
+				<string id="PDN_HotkeyDialPrompt">Show Hotkey Dialer dialog before dialing</string>
+				<string id="PET_HotkeyDialPrompt">Configure, if the Hotkey Dialer feature will show a dialog with the normalised number and the possibility for a Contact Lookup before dialing (Enabled) or if the phone number will be dialed directly (Disabled).</string>
+
+				<string id="PDN_LicenseKey">Configure the License key</string>
+				<string id="PET_LicenseKey">Enter your license key.</string>
+				<string id="PDN_SIPDomains">Configure SIP domains</string>
+				<string id="PET_SIPDomains">Enter the SIP domains matching to your license key</string>
+				
+				<string id="PDN_HideMenuCallHistory">Menu: Call History</string>
+				<string id="PET_HideMenuCallHistory">Hide menu item Call Hitsory</string>
+				<string id="PDN_HideMenuRunCmd">Menu: Actions on incoming call</string>
+				<string id="PET_HideMenuRunCmd">Hide menu item Action on incoming call</string>
+				<string id="PDN_HideMenuBusyCalls">Menu: Call Waiting</string>
+				<string id="PET_HideMenuBusyCalls">Hide menu item Call Waiting</string>
+				<string id="PDN_HideMenuBusyCallsNone">Menu Call Waiting: Allow Call Waiting</string>
+				<string id="PET_HideMenuBusyCallsNone">Hide sub menu item Allow Call Waiting</string>
+				<string id="PDN_HideMenuBusyCallsBusy">Menu Call Waiting: Reject Call</string>
+				<string id="PET_HideMenuBusyCallsBusy">Hide sub menu item Reject Call</string>
+				<string id="PDN_HideMenuBusyCallsIgnore">Menu Call Waiting: Handle as unanswered call</string>
+				<string id="PET_HideMenuBusyCallsIgnore">Hide sub menu item Handle As Unanswered Call</string>
+				<string id="PDN_HideMenuBusyCallsForward">Menu Call Waiting: Forward calls to</string>
+				<string id="PET_HideMenuBusyCallsForward">Hide sub menu item Forward Calls To</string>
+				<string id="PDN_HideMenuBusyCallsTarget">Menu Call Waiting: Select forward destination</string>
+				<string id="PET_HideMenuBusyCallsTarget">Hide sub menu item Select Forward Destination</string>
+				<string id="PDN_HideMenuConfig">Menu: Configuration</string>
+				<string id="PET_HideMenuConfig">Hide menu item Configuration</string>
+				<string id="PDN_HideMenuExit">Menu: Exit</string>
+				<string id="PET_HideMenuExit">Hide menu item Exit</string>
+				<string id="PDN_HideConfigTabGeneral">Configuration Window: General</string>
+				<string id="PET_HideConfigTabGeneral">Hide tab General in configuration window</string>
+				<string id="PDN_HideConfigTabContactLookup">Configuration Window: Contact Lookup</string>
+				<string id="PET_HideConfigTabContactLookup">Hide tab Contact Lookup in configuration window</string>
+				<string id="PDN_HideConfigTabBusyCalls">Configuration Window: Call Waiting</string>
+				<string id="PET_HideConfigTabBusyCalls">Hide tab Call Waiting in configuration window</string>
+				<string id="PDN_HideConfigTabHotkeyDialer">Configuration Window: Hotkey Dialer</string>
+				<string id="PET_HideConfigTabHotkeyDialer">Hide tab Hotkey Dialer in configuration window</string>
+				<string id="PDN_HideConfigTabRunCmd">Configuration Window: Actions</string>
+				<string id="PET_HideConfigTabRunCmd">Hide tab Actions in configuration window</string>
+				<string id="PDN_HideConfigTabPOR">Configuration Window: Presence based Routing</string>
+				<string id="PET_HideConfigTabPOR">Hide tab "Presence based Routing" in configuration window</string>
+				<string id="PDN_HideConfigTabLicense">Configuration Window: License</string>
+				<string id="PET_HideConfigTabLicense">Hide tab License in configuration window</string>
+			</stringTable>
+			
+			<presentationTable>
+				<presentation id="PRES_CultureInfo">
+					<dropdownList refId="PRES_CultureInfoDropDown" noSort="true" defaultItem="1">Language</dropdownList>
+				</presentation>				
+				<presentation id="PRES_CustomBalloonOffset">
+					<decimalTextBox refId="DTB_CustomBalloonOffsetX">X position:</decimalTextBox>
+					<decimalTextBox refId="DTB_CustomBalloonOffsetY">Y position:</decimalTextBox>
+				</presentation>
+				<presentation id="PRES_CustomBalloonDisplayTime">
+					<decimalTextBox refId="DTB_CustomBalloonDisplayTime">Display time of the popup/balloon [ms]:</decimalTextBox>
+				</presentation>
+				<presentation id="PRES_TelPattern">
+					<textBox refId="TXT_TelPattern">
+						<label>RegExp for phone numbers:</label>
+					</textBox>
+				</presentation>
+				<presentation id="PRES_ContactLookupPatterns">
+					<multiTextBox refId="TXT_ContactLookupPatterns">
+						Enter the DatasourceID, RegExp and the max. count of digits, which can be cut off if no record can be found in the data source. Format: DatasourceID:RegExp:CutDigits
+					</multiTextBox>
+				</presentation>
+				<presentation id="PRES_RunCmdItems">
+					<multiTextBox refId="TXT_RunCmdItems">
+						Enter Actions configuration items one per line ("contact":"RegExp":"Cmd Line/URL":"Argumente":Typ):
+					</multiTextBox>
+				</presentation>
+				<presentation id="PRES_PORItems">
+					<multiTextBox refId="TXT_PORItems">
+						Enter "Presence Based Routing" configuration items one per line ("Presence key":"RegExp":"Reaction type":"Argument"):
+					</multiTextBox>
+				</presentation>
+				<presentation id="PRES_ContactLookupLDAP">
+					<textBox refId="TXT_ContactLookupLDAPServer">
+						<label>Enter the FQDN oder IP address of the LDAP server</label>
+					</textBox>
+					<decimalTextBox refId="DTB_ContactLookupLDAPServerPort" defaultValue="389">Enter the port of the LDAP server. Default 389</decimalTextBox>
+					<textBox refId="TXT_ContactLookupLDAPUser">
+						<label>Enter the user name for authentication at the LDAP server. Without a user name, Lync Wizard will try with windows integrated authentication and anonymous.</label>
+					</textBox>
+					<textBox refId="TXT_ContactLookupLDAPPassword">
+						<label>Enter the password of the LDAP user.</label>
+					</textBox>
+					<textBox refId="TXT_ContactLookupLDAPBaseDN">
+						<label>Enter the Base DN. Sample: OU=Contacts,DC=LynWizard,DC=com</label>
+					</textBox>
+					<textBox refId="TXT_ContactLookupLDAPFilter">
+						<label>Enter the LDAP filter. Leave empty to use a default LDAP filter.</label>
+					</textBox>
+				</presentation>
+				
+				
+				<presentation id="PRES_APIKey">
+					<textBox refId="TXT_APIKey">
+						<label>Enter the API-Key for tel.search.ch:</label>
+					</textBox>
+				</presentation>
+				<presentation id="PRES_BusyBehavior">
+					<dropdownList refId="PRES_BusyBehaviorDropDown" noSort="true" defaultItem="1">Handling of 2nd call:</dropdownList>
+				</presentation>
+				<presentation id="PRES_BusyContactURI">
+					<textBox refId="TXT_BusyContactURI">
+						<label>Enter the forward destination</label>
+					</textBox>
+				</presentation>
+				<presentation id="PRES_BusyIMAnswer">
+					<textBox refId="TXT_BusyIMAnswer">
+						<label>Enter the IM text</label>
+					</textBox>
+				</presentation>
+				<presentation id="PRES_BusyDisconnectReason">
+					<dropdownList refId="PRES_BusyDisconnectReasonDropDown" noSort="true" defaultItem="6">Reject reason</dropdownList>
+				</presentation>
+				<presentation id="PRES_BusyDisconnectReasonDelegated">
+					<dropdownList refId="PRES_BusyDisconnectReasonDelegatedDropDown" noSort="true" defaultItem="4">Reject reason</dropdownList>
+				</presentation>
+				<presentation id="PRES_BusyDisconnectReasonForwarded">
+					<dropdownList refId="PRES_BusyDisconnectReasonForwardedDropDown" noSort="true" defaultItem="4">Reject reason</dropdownList>
+				</presentation>
+				<presentation id="PRES_HotKeyDialKey" >
+					<decimalTextBox refId="DTB_HotKeyDialKey">Enter the HotKeyDialKey value:</decimalTextBox>
+				</presentation>
+				<presentation id="PRES_HotKeyDialModifier" >
+					<decimalTextBox refId="DTB_HotKeyDialModifier">Enter the HotKeyDialModifier value:</decimalTextBox>
+				</presentation>
+				<presentation id="PRES_HotkeyDialNormalization">
+					<textBox refId="TXT_HotkeyDialNormalization">
+						<label>Enter the normalisation RegExps:</label>
+					</textBox>
+				</presentation>				
+				<presentation id="PRES_LicenseKey">
+					<textBox refId="TXT_LicenseKey">
+						<label>Enter the license key:</label>
+					</textBox>
+				</presentation>
+				<presentation id="PRES_SIPDomains">
+					<multiTextBox refId="TXT_SIPDomains">
+						Enter the SIP domains:
+					</multiTextBox>
+				</presentation>
+			</presentationTable>
+			
+		</resources>
+	</policyDefinitionResources>

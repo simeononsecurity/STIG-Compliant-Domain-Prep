@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0" >
+  <displayName/>
+  <description/>
+  <resources >
+    <stringTable >
+      <string id="SUPPORTED_WINXPSP2">Microsoft Windows XP SP2 o versione successiva</string>
+      <string id="SUPPORTED_TB68">Thunderbird 68 o versione successiva</string>
+      <string id="thunderbird">Thunderbird</string>
+      <string id="Extensions_group">Estensioni</string>
+      <string id="Addons_group">Componenti aggiuntivi</string>
+      <string id="Certificates_group">Certificati</string>
+      <string id="BlockAboutAddons">Blocca Gestore componenti aggiuntivi</string>
+      <string id="BlockAboutAddons_Explain">Se questo criterio è abilitato, l'utente non può accedere al Gestore componenti aggiuntivi o ad about:addons.
+
+Se questo criterio è disabilitato o non configurato, l'utente può accedere al Gestore componenti aggiuntivi e ad about:addons.</string>
+      <string id="BlockAboutConfig">Blocca about:config</string>
+      <string id="BlockAboutConfig_Explain">Se questo criterio è abilitato, l'utente non può accedere ad about:config.
+
+Se questo criterio è disabilitato o non configurato, l'utente può accedere ad about:config.</string>
+      <string id="BlockAboutProfiles">Blocca about:profiles</string>
+      <string id="BlockAboutProfiles_Explain">Se questo criterio è abilitato, l'utente non può accedere ad about:profiles.
+
+Se questo criterio è disabilitato o non configurato, l'utente può accedere ad about:profiles.</string>
+      <string id="AppUpdateURL">URL aggiornamento personalizzato</string>
+      <string id="AppUpdateURL_Explain">Se questo criterio è abilitato, è possibile impostare un URL diverso da quello predefinito per il server di aggiornamento. Ciò potrebbe essere utile se si dispone di un server di aggiornamento sulla propria rete.
+
+Se questo criterio è disabilitato o non utilizzato, verrà utilizzato l'URL di aggiornamento predefinito.</string>
+      <string id="Certificates_ImportEnterpriseRoots">Importa Autorità di certificazione radice enterprise</string>
+      <string id="Certificates_ImportEnterpriseRoots_Explain">Se questo criterio è abilitato, Thunderbird utilizzerà i certificati radice nell'Archivio certificati di Windows.
+
+Se questo criterio è disabilitato o non configurato, Thunderbird non utilizzerà i certificati radice nell'Archivio certificati di Windows.</string>
+      <string id="Certificates_Install">Installa certificati</string>
+      <string id="Certificates_Install_Explain">Se questo criterio è abilitato, Thunderbird installerà i certificati elencati in Thunderbird. Questi saranno cercati in %USERPROFILE%\AppData\Local\Thunderbird\Certificates e in %USERPROFILE%\AppData\Roaming\Thunderbird\Certificates.
+
+Se questo criterio è disabilitato o non configurato, Thunderbird non installerà certificati aggiuntivi.</string>
+      <string id="DisableAppUpdate">Disabilita aggiornamenti</string>
+      <string id="DisableAppUpdate_Explain">Se questo criterio è abilitato, Thunderbird non riceverà aggiornamenti.
+
+Se questo criterio è disabilitato o non configurato, Thunderbird riceverà aggiornamenti.</string>
+      <string id="DisableDeveloperTools">Disabilita Strumenti di sviluppo</string>
+      <string id="DisableDeveloperTools_Explain">Se questo criterio è abilitato, gli strumenti di sviluppo non saranno disponibili in Thunderbird.
+
+Se questo criterio è disabilitato o non configurato, gli strumenti di sviluppo saranno disponibili in Thunderbird.</string>
+      <string id="DisableMasterPasswordCreation">Disabilita creazione password principale</string>
+      <string id="DisableMasterPasswordCreation_Explain">Se questo criterio è abilitato, gli utenti non possono creare una password principale.
+
+Se questo criterio è disabilitato o non configurato, gli utenti possono creare una password principale.</string>
+      <string id="DisableSecurityBypass_InvalidCertificate">Impedisci l'override degli errori certificato</string>
+      <string id="DisableSecurityBypass_InvalidCertificate_Explain">Se questo criterio è abilitato, il pulsante &quot;Aggiungi eccezione&quot; non è disponibile se un certificato non è valido. Ciò impedisce all'utente di eseguire l'override dell'errore del certificato.
+
+Se questo criterio è disabilitato o non configurato, è possibile eseguire l'override degli errori certificato.</string>
+      <string id="DisableSecurityBypass_SafeBrowsing">Impedisci l'override degli errori Protezione phishing e malware</string>
+      <string id="DisableSecurityBypass_SafeBrowsing_Explain">Se questo criterio è abilitato, un utente non può ignorare l'avvertimento e visitare un sito malevolo.
+
+Se questo criterio è disabilitato o non configurato, un utente può decidere di visitare un sito malevolo.</string>
+      <string id="Extensions_Install">Estensioni da installare</string>
+      <string id="Extensions_Install_Explain">Se questo criterio è abilitato, è possibile specificare un elenco di URL o percorsi a estensioni che saranno installate all'avvio di Thunderbird.
+Le estensioni saranno reinstallate a ogni modifica dell'elenco.
+
+Se questo criterio è disabilitato o non configurato, non sarà installata alcuna estensione.</string>
+      <string id="Extensions_Uninstall">Estensioni da disinstallare</string>
+      <string id="Extensions_Uninstall_Explain">Se questo criterio è abilitato, è possibile specificare un elenco di ID di estensioni da disinstallare.
+Le estensioni saranno disinstallate a ogni modifica dell'elenco.
+
+Se questo criterio è disabilitato o non configurato, non sarà disinstallata alcuna estensione.</string>
+      <string id="Extensions_Locked">Impedisci la disabilitazione o la rimozione delle estensioni</string>
+      <string id="Extensions_Locked_Explain">Se questo criterio è abilitato, è possibile specificare un elenco di ID delle estensioni che l'utente non sarà in grado di disinstallare o disabilitare.
+
+Se questo criterio è disabilitato o non configurato, non sarà bloccata nessuna estensione.</string>
+      <string id="ExtensionUpdate">Aggiornamento estensioni</string>
+      <string id="ExtensionUpdate_Explain">Se questo criterio è disabilitato, le estensioni non saranno aggiornate automaticamente.
+
+Se questo criterio è abilitato o non configurato, le estensioni saranno aggiornate automaticamente.</string>
+      <string id="ExtensionSettings">Gestione estensioni</string>
+      <string id="ExtensionSettings_Explain">Se questo criterio è abilitato, è possibile utilizzare JSON per descrivere la politica di gestione delle estensioni.
+
+Se questo criterio è disabilitato o non configurato, le estensioni non saranno gestite.</string>
+      <string id="Proxy">Impostazioni proxy</string>
+      <string id="Proxy_Explain">Se questo criterio è abilitato, è possibile configurare e bloccare le impostazioni di rete.
+
+Selezionare il tipo di connessione e quindi compilare le sezioni appropriate. A causa di un bug, è necessario selezionare un valore per la versione del proxy SOCKS.
+
+Se questo criterio è disabilitato o non configurato, saranno utilizzate le impostazioni di rete predefinite e l'utente potrà modificarle.</string>
+      <string id="SOCKSVersion4">SOCKS v4</string>
+      <string id="SOCKSVersion5">SOCKS v5</string>
+      <string id="AutoConfigURL">URL configurazione automatica proxy</string>
+      <string id="AutoConfigURL_Explain">Queste opzioni devono essere impostate solo se è stata selezionata la configurazione automatica</string>
+      <string id="Passthrough">Nessun proxy per</string>
+      <string id="Passthrough_Explain">Queste opzioni devono essere impostate solo se è stata selezionata la configurazione manuale dei proxy</string>
+      <string id="Connection">Tipo connessione</string>
+      <string id="NoProxy">Nessun proxy</string>
+      <string id="SystemProxy">Utilizza le impostazioni proxy del sistemas</string>
+      <string id="ManualProxy">Configurazione manuale dei proxy</string>
+      <string id="AutoDetectProxy">Individua automaticamente le impostazioni proxy</string>
+      <string id="AutoConfigProxy">Configurazione automatica proxy</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="AppUpdateURL">
+        <textBox refId="AppUpdateURL">
+          <label>URL:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Proxy">
+        <checkBox refId="ProxyLocked">Non consentire la modifica delle impostazioni del proxy.</checkBox>
+        <text>Tipo connessione:</text>
+        <dropdownList refId="ConnectionType"/>
+        <text>Proxy HTTP:</text>
+        <textBox refId="HTTPProxy">
+          <label/>
+        </textBox>
+        <checkBox refId="UseHTTPProxyForAllProtocols">Use this proxy server for all protocols.</checkBox>
+        <text>Proxy SSL:</text>
+        <textBox refId="SSLProxy">
+          <label/>
+        </textBox>
+        <text>Proxy FTP:</text>
+        <textBox refId="FTPProxy">
+          <label/>
+        </textBox>
+        <text>Host SOCKS:</text>
+        <textBox refId="SOCKSProxy">
+          <label/>
+        </textBox>
+        <text>Versione SOCKS:</text>
+        <dropdownList refId="SOCKSVersion"/>
+        <text>Nessun proxy per</text>
+        <textBox refId="Passthrough">
+          <label/>
+        </textBox>
+        <text>Esempio: .mozilla.org, .net.nz, 192.168.1.0/24</text>
+        <text>URL configurazione automatica proxy:</text>
+        <textBox refId="AutoConfigURL">
+          <label/>
+        </textBox>
+        <checkBox refId="AutoLogin">Non richiedere l'autenticazione se la password è salvata.</checkBox>
+        <checkBox refId="UseProxyForDNS">DNS proxy per SOCKS v5.</checkBox>
+      </presentation>
+      <presentation id="Certificates_Install">
+        <listBox refId="Certificates_Install"/>
+      </presentation>
+      <presentation id="Extensions">
+        <listBox refId="Extensions"/>
+      </presentation>
+      <presentation id="ExtensionSettings">
+        <multiTextBox refId="ExtensionSettings"/>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

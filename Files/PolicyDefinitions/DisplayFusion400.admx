@@ -1,0 +1,1773 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitions revision="1.0" schemaVersion="1.0">
+	<policyNamespaces>
+    <target prefix="DisplayFusion" namespace="DisplayFusion400.BinaryFortressSoftware" />
+		<using prefix="BinaryFortress" namespace="BinaryFortress.Policies.BinaryFortress" />
+		<using prefix="windows" namespace="Microsoft.Policies.Windows" />
+  </policyNamespaces>
+  <resources minRequiredRevision="1.0" />
+<!-- The category hierarchy is designed to match the UI as follows: Window, Tab, Setting -->
+  <categories>
+		<category name="DisplayFusion" displayName="$(string.DisplayFusion)">
+			<parentCategory ref="BinaryFortress:BinaryFortress" />
+		</category>		
+		<category name="DisplayFusion_General" displayName="$(string.DisplayFusion_General)">		
+			<parentCategory ref="DisplayFusion" />
+		</category>
+		<category name="DisplayFusion_DesktopWallpaper" displayName="$(string.DisplayFusion_DesktopWallpaper)">		
+			<parentCategory ref="DisplayFusion" />
+		</category>		
+		<category name="DisplayFusion_Settings" displayName="$(string.DisplayFusion_Settings)">
+			<parentCategory ref="DisplayFusion" />
+		</category>
+		<category name="DisplayFusion_Settings_Options" displayName="$(string.DisplayFusion_Settings_Options)">
+			<parentCategory ref="DisplayFusion_Settings" />
+		</category>
+		<category name="DisplayFusion_Settings_Functions" displayName="$(string.DisplayFusion_Settings_Functions)">
+			<parentCategory ref="DisplayFusion_Settings" />
+		</category>
+		<category name="DisplayFusion_Settings_Taskbar" displayName="$(string.DisplayFusion_Settings_Taskbar)">
+			<parentCategory ref="DisplayFusion_Settings" />
+		</category>
+		<category name="DisplayFusion_Settings_WindowsLockScreen" displayName="$(string.DisplayFusion_Settings_WindowsLockScreen)">
+			<parentCategory ref="DisplayFusion_Settings" />
+		</category>
+		<category name="DisplayFusion_Settings_ScreenSaver" displayName="$(string.DisplayFusion_Settings_ScreenSaver)">
+			<parentCategory ref="DisplayFusion_Settings" />
+		</category>
+		<category name="DisplayFusion_Settings_WindowSnapping" displayName="$(string.DisplayFusion_Settings_WindowSnapping)">
+			<parentCategory ref="DisplayFusion_Settings" />
+		</category>
+		<category name="DisplayFusion_Settings_WindowManagement" displayName="$(string.DisplayFusion_Settings_WindowManagement)">
+			<parentCategory ref="DisplayFusion_Settings" />
+		</category>
+		<category name="DisplayFusion_Settings_AltTab" displayName="$(string.DisplayFusion_Settings_AltTab)">
+			<parentCategory ref="DisplayFusion_Settings" />
+		</category>
+		<category name="DisplayFusion_Settings_MouseManagement" displayName="$(string.DisplayFusion_Settings_MouseManagement)">
+			<parentCategory ref="DisplayFusion_Settings" />
+		</category>		
+		<category name="DisplayFusion_Settings_Triggers" displayName="$(string.DisplayFusion_Settings_Triggers)">		
+			<parentCategory ref="DisplayFusion_Settings" />
+		</category>
+		<category name="DisplayFusion_Settings_RemoteControl" displayName="$(string.DisplayFusion_Settings_RemoteControl)">		
+			<parentCategory ref="DisplayFusion_Settings" />
+		</category>
+		<category name="DisplayFusion_Settings_LicenseKey" displayName="$(string.DisplayFusion_Settings_LicenseKey)">		
+			<parentCategory ref="DisplayFusion_Settings" />
+		</category>
+		<category name="DisplayFusion_Settings_Troubleshooting" displayName="$(string.DisplayFusion_Settings_Troubleshooting)">		
+			<parentCategory ref="DisplayFusion_Settings" />
+		</category>
+		<category name="DisplayFusion_Settings_MonitorFading" displayName="$(string.DisplayFusion_Settings_MonitorFading)">		
+			<parentCategory ref="DisplayFusion_Settings" />
+		</category>		
+  </categories>
+  <policies>
+		<!-- General policy settings -->
+		<policy name="BlockUI-DesktopIconProfiles" class="Both" displayName="$(string.BlockUI-DesktopIconProfiles)" explainText="$(string.BlockUI-DesktopIconProfilesExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-DesktopIconProfiles">
+      <parentCategory ref="DisplayFusion_General" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="BlockUI-WindowPositionProfiles" class="Both" displayName="$(string.BlockUI-WindowPositionProfiles)" explainText="$(string.BlockUI-WindowPositionProfilesExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-WindowPositionProfiles">
+			<parentCategory ref="DisplayFusion_General" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>		
+		<policy name="BlockUI-Wallpaper" class="Both" displayName="$(string.BlockUI-Wallpaper)" explainText="$(string.BlockUI-WallpaperExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-Wallpaper">
+      <parentCategory ref="DisplayFusion_General" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="BlockUI-MonitorConfig" class="Both" displayName="$(string.BlockUI-MonitorConfig)" explainText="$(string.BlockUI-MonitorConfigExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-MonitorConfig">
+      <parentCategory ref="DisplayFusion_General" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="BlockUI-MonitorProfiles" class="Both" displayName="$(string.BlockUI-MonitorProfiles)" explainText="$(string.BlockUI-MonitorProfilesExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-MonitorProfiles">
+      <parentCategory ref="DisplayFusion_General" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>		
+		<policy name="BlockUI-Settings" class="Both" displayName="$(string.BlockUI-Settings)" explainText="$(string.BlockUI-SettingsExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-Settings">
+      <parentCategory ref="DisplayFusion_General" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="BlockUI-Settings-CheckForUpdates" class="Both" displayName="$(string.BlockUI-Settings-CheckForUpdates)" explainText="$(string.BlockUI-Settings-CheckForUpdatesExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-Settings-CheckForUpdates">
+      <parentCategory ref="DisplayFusion_General" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="BlockUI-Settings-InternetConnectionSettings" class="Both" displayName="$(string.BlockUI-Settings-InternetConnectionSettings)" explainText="$(string.BlockUI-Settings-InternetConnectionSettingsExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-Settings-InternetConnectionSettings">
+      <parentCategory ref="DisplayFusion_General" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>	
+		<policy name="BlockUI-Settings-Functions" class="Both" displayName="$(string.BlockUI-Settings-Functions)" explainText="$(string.BlockUI-Settings-FunctionsExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-Settings-Functions">
+      <parentCategory ref="DisplayFusion_General" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+	</policy>
+		<policy name="BlockUI-Settings-Taskbar" class="Both" displayName="$(string.BlockUI-Settings-Taskbar)" explainText="$(string.BlockUI-Settings-TaskbarExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-Settings-Taskbar">
+      <parentCategory ref="DisplayFusion_General" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>		
+		<policy name="BlockUI-Settings-WindowsLockScreen" class="Both" displayName="$(string.BlockUI-Settings-WindowsLockScreen)" explainText="$(string.BlockUI-Settings-WindowsLockScreenExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-Settings-WindowsLockScreen">
+      <parentCategory ref="DisplayFusion_General" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="BlockUI-Settings-ScreenSavers" class="Both" displayName="$(string.BlockUI-Settings-ScreenSavers)" explainText="$(string.BlockUI-Settings-ScreenSaversExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-Settings-ScreenSavers">
+      <parentCategory ref="DisplayFusion_General" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>		
+		<policy name="BlockUI-Settings-WindowSnapping" class="Both" displayName="$(string.BlockUI-Settings-WindowSnapping)" explainText="$(string.BlockUI-Settings-WindowSnappingExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-Settings-WindowSnapping">
+      <parentCategory ref="DisplayFusion_General" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>		
+		<policy name="BlockUI-Settings-WindowManagement" class="Both" displayName="$(string.BlockUI-Settings-WindowManagement)" explainText="$(string.BlockUI-Settings-WindowManagementExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-Settings-WindowManagement">
+      <parentCategory ref="DisplayFusion_General" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>		
+		<policy name="BlockUI-Settings-Triggers" class="Both" displayName="$(string.BlockUI-Settings-Triggers)" explainText="$(string.BlockUI-Settings-TriggersExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-Settings-Triggers">
+      <parentCategory ref="DisplayFusion_General" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>			
+		<policy name="BlockUI-Settings-Compatibility" class="Both" displayName="$(string.BlockUI-Settings-Compatibility)" explainText="$(string.BlockUI-Settings-CompatibilityExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-Settings-Compatibility">
+      <parentCategory ref="DisplayFusion_General" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="BlockUI-Settings-LicenseKey" class="Both" displayName="$(string.BlockUI-Settings-LicenseKey)" explainText="$(string.BlockUI-Settings-LicenseKeyExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-Settings-LicenseKey">
+      <parentCategory ref="DisplayFusion_General" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>					
+		<policy name="BlockUI-Settings-Troubleshooting" class="Both" displayName="$(string.BlockUI-Settings-Troubleshooting)" explainText="$(string.BlockUI-Settings-TroubleshootingExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-Settings-Troubleshooting">
+      <parentCategory ref="DisplayFusion_General" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="BlockUI-Settings-Languages" class="Both" displayName="$(string.BlockUI-Settings-Languages)" explainText="$(string.BlockUI-Settings-LanguagesExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-Settings-Languages">
+      <parentCategory ref="DisplayFusion_General" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="BlockUI-Settings-RemoteControl" class="Both" displayName="$(string.BlockUI-Settings-RemoteControl)" explainText="$(string.BlockUI-Settings-RemoteControlExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-Settings-RemoteControl">
+      <parentCategory ref="DisplayFusion_General" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="BlockUI-Settings-AltTab" class="Both" displayName="$(string.BlockUI-Settings-AltTab)" explainText="$(string.BlockUI-Settings-AltTabExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-Settings-AltTab">
+			<parentCategory ref="DisplayFusion_General" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="BlockUI-Settings-MouseManagement" class="Both" displayName="$(string.BlockUI-Settings-MouseManagement)" explainText="$(string.BlockUI-Settings-MouseManagementExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-Settings-MouseManagement">
+			<parentCategory ref="DisplayFusion_General" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="BlockUI-Settings-Win8" class="Both" displayName="$(string.BlockUI-Settings-Win8)" explainText="$(string.BlockUI-Settings-Win8Explain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-Settings-Win8">
+			<parentCategory ref="DisplayFusion_General" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="BlockUI-Settings-Win10" class="Both" displayName="$(string.BlockUI-Settings-Win10)" explainText="$(string.BlockUI-Settings-Win10Explain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-Settings-Win10">
+			<parentCategory ref="DisplayFusion_General" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>		
+		<policy name="BlockUI-Settings-MonitorFading" class="Both" displayName="$(string.BlockUI-Settings-MonitorFading)" explainText="$(string.BlockUI-Settings-MonitorFadingExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-Settings-MonitorFading">
+			<parentCategory ref="DisplayFusion_General" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="DisableOurAppsTab" class="Both" displayName="$(string.DisableOurAppsTab)" explainText="$(string.DisableOurAppsTabExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="DisableOurAppsTab">
+      <parentCategory ref="DisplayFusion_General" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>		
+		<policy name="BlockUI-SupportRequest" class="Both" displayName="$(string.BlockUI-SupportRequest)" explainText="$(string.BlockUI-SupportRequestExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-SupportRequest">
+      <parentCategory ref="DisplayFusion_General" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="BlockUI-HelpButton" class="Both" displayName="$(string.BlockUI-HelpButton)" explainText="$(string.BlockUI-HelpButtonExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-HelpButton">
+      <parentCategory ref="DisplayFusion_General" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>		
+		<policy name="BlockUI-Settings-ContextMenuItems" class="Both" displayName="$(string.BlockUI-Settings-ContextMenuItems)" explainText="$(string.BlockUI-Settings-ContextMenuItemsExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-Settings-ContextMenuItems">
+      <parentCategory ref="DisplayFusion_Settings_Options" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>		
+		<policy name="HideTrayIcon" class="Both" displayName="$(string.HideTrayIcon)" explainText="$(string.HideTrayIconExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="HideTrayIcon">
+      <parentCategory ref="DisplayFusion_General" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="IgnoreFirstRun" class="Both" displayName="$(string.IgnoreFirstRun)" explainText="$(string.IgnoreFirstRunExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="IgnoreFirstRun">
+      <parentCategory ref="DisplayFusion_General" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+		<enabledValue>
+			<string>1</string>
+		</enabledValue>
+		<disabledValue>
+			<string>0</string>
+		</disabledValue>
+    </policy>
+		<policy name="BlockUI-Settings-Advanced" class="Both" displayName="$(string.BlockUI-Settings-Advanced)" explainText="$(string.BlockUI-Settings-AdvancedExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-Settings-Advanced">
+      <parentCategory ref="DisplayFusion_General" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>		
+		<policy name="BlockUI-MenuExit" class="Both" displayName="$(string.BlockUI-MenuExit)" explainText="$(string.BlockUI-MenuExitExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-MenuExit">
+		  <parentCategory ref="DisplayFusion_General" />
+		  <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+				<enabledValue>
+					<string>1</string>
+				</enabledValue>
+				<disabledValue>
+					<string>0</string>
+				</disabledValue>
+		</policy>    
+		<policy name="BlockUI-MenuTaskManager" class="Both" displayName="$(string.BlockUI-MenuTaskManager)" explainText="$(string.BlockUI-MenuTaskManagerExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-MenuTaskManager">
+		  <parentCategory ref="DisplayFusion_General" />
+		  <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+				<enabledValue>
+					<string>1</string>
+				</enabledValue>
+				<disabledValue>
+					<string>0</string>
+				</disabledValue>
+		</policy>
+		<policy name="BlockUI-AudioDevices" class="Both" displayName="$(string.BlockUI-AudioDevices)" explainText="$(string.BlockUI-AudioDevicesExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-AudioDevices">
+		  <parentCategory ref="DisplayFusion_General" />
+		  <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+				<enabledValue>
+					<string>1</string>
+				</enabledValue>
+				<disabledValue>
+					<string>0</string>
+				</disabledValue>
+		</policy>
+		<policy name="BlockUI-SocialButtons" class="Both" displayName="$(string.BlockUI-SocialButtons)" explainText="$(string.BlockUI-SocialButtonsExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-SocialButtons">
+		  <parentCategory ref="DisplayFusion_General" />
+		  <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+				<enabledValue>
+					<string>1</string>
+				</enabledValue>
+				<disabledValue>
+					<string>0</string>
+				</disabledValue>
+		</policy>		
+		<policy name="DisableBackupAuto" class="Both" displayName="$(string.DisableBackupAuto)" explainText="$(string.DisableBackupAutoExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="DisableBackupAuto">
+      <parentCategory ref="DisplayFusion_General" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="DisableMonitorIDs" class="Both" displayName="$(string.DisableMonitorIDs)" explainText="$(string.DisableMonitorIDsExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="DisableMonitorIDs">
+		  <parentCategory ref="DisplayFusion_General" />
+		  <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>	
+		<policy name="TrayIconActionByName" class="Both" displayName="$(string.TrayIconActionByName)" explainText="$(string.TrayIconActionByNameExplain)" presentation="$(presentation.TrayIconActionByName)" key="Software\Policies\Binary Fortress Software\DisplayFusion">
+			<parentCategory ref="DisplayFusion_General" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<elements>
+				<text id="TrayIconActionByName" valueName="TrayIconActionByName" />
+			</elements>
+		</policy>
+		<policy name="DisableCrashReportingAndTelemetry" class="Both" displayName="$(string.DisableCrashReportingAndTelemetry)" explainText="$(string.DisableCrashReportingAndTelemetryExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="DisableCrashReportingAndTelemetry">
+      <parentCategory ref="DisplayFusion_General" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<!-- Desktop Wallpaper settings -->
+		<policy name="WallpaperEnabled" class="Both" displayName="$(string.WallpaperEnabled)" explainText="$(string.WallpaperEnabledExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperEnabled">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>	
+		<policy name="WallpaperAutoFixImages" class="Both" displayName="$(string.WallpaperAutoFixImages)" explainText="$(string.WallpaperAutoFixImagesExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperAutoFixImages">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="WallpaperBlockOnlineManual" class="Both" displayName="$(string.WallpaperBlockOnlineManual)" explainText="$(string.WallpaperBlockOnlineManualExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockOnlineManual">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="WallpaperBlockOnlineRandom" class="Both" displayName="$(string.WallpaperBlockOnlineRandom)" explainText="$(string.WallpaperBlockOnlineRandomExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockOnlineRandom">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>		
+		<policy name="WallpaperBlockFlickrManual" class="Both" displayName="$(string.WallpaperBlockFlickrManual)" explainText="$(string.WallpaperBlockFlickrManualExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockFlickrManual">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="WallpaperBlockFlickrRandom" class="Both" displayName="$(string.WallpaperBlockFlickrRandom)" explainText="$(string.WallpaperBlockFlickrRandomExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockFlickrRandom">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="WallpaperBlockVladstudioManual" class="Both" displayName="$(string.WallpaperBlockVladstudioManual)" explainText="$(string.WallpaperBlockVladstudioManualExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockVladstudioManual">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="WallpaperBlockVladstudioRandom" class="Both" displayName="$(string.WallpaperBlockVladstudioRandom)" explainText="$(string.WallpaperBlockVladstudioRandomExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockVladstudioRandom">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>		
+		<policy name="WallpaperBlockBingImageSearchManual" class="Both" displayName="$(string.WallpaperBlockBingImageSearchManual)" explainText="$(string.WallpaperBlockBingImageSearchManualExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockBingImageSearchManual">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="WallpaperBlockBingImageSearchRandom" class="Both" displayName="$(string.WallpaperBlockBingImageSearchRandom)" explainText="$(string.WallpaperBlockBingImageSearchRandomExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockBingImageSearchRandom">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="WallpaperBlockdeviantARTAPIManual" class="Both" displayName="$(string.WallpaperBlockdeviantARTAPIManual)" explainText="$(string.WallpaperBlockdeviantARTAPIManualExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockdeviantARTAPIManual">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="WallpaperBlockdeviantARTAPIRandom" class="Both" displayName="$(string.WallpaperBlockdeviantARTAPIRandom)" explainText="$(string.WallpaperBlockdeviantARTAPIRandomExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockdeviantARTAPIRandom">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>		
+		<policy name="WallpaperBlockdeviantARTRSSManual" class="Both" displayName="$(string.WallpaperBlockdeviantARTRSSManual)" explainText="$(string.WallpaperBlockdeviantARTRSSManualExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockdeviantARTRSSManual">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="WallpaperBlockdeviantARTRSSRandom" class="Both" displayName="$(string.WallpaperBlockdeviantARTRSSRandom)" explainText="$(string.WallpaperBlockdeviantARTRSSRandomExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockdeviantARTRSSRandom">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>		
+		<policy name="WallpaperBlockGoogleImageSearchManual" class="Both" displayName="$(string.WallpaperBlockGoogleImageSearchManual)" explainText="$(string.WallpaperBlockGoogleImageSearchManualExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockGoogleImageSearchManual">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="WallpaperBlockGoogleImageSearchRandom" class="Both" displayName="$(string.WallpaperBlockGoogleImageSearchRandom)" explainText="$(string.WallpaperBlockGoogleImageSearchRandomExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockGoogleImageSearchRandom">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="WallpaperBlock500pxManual" class="Both" displayName="$(string.WallpaperBlock500pxManual)" explainText="$(string.WallpaperBlock500pxManualExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlock500pxManual">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>		
+		<policy name="WallpaperBlock500pxRandom" class="Both" displayName="$(string.WallpaperBlock500pxRandom)" explainText="$(string.WallpaperBlock500pxRandomExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlock500pxRandom">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="WallpaperBlockWallpaperFusionManual" class="Both" displayName="$(string.WallpaperBlockWallpaperFusionManual)" explainText="$(string.WallpaperBlockWallpaperFusionManualExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockWallpaperFusionManual">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>		
+		<policy name="WallpaperBlockWallpaperFusionRandom" class="Both" displayName="$(string.WallpaperBlockWallpaperFusionRandom)" explainText="$(string.WallpaperBlockWallpaperFusionRandomExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockWallpaperFusionRandom">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="WallpaperBlockZenfolioManual" class="Both" displayName="$(string.WallpaperBlockZenfolioManual)" explainText="$(string.WallpaperBlockZenfolioManualExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockZenfolioManual">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>		
+		<policy name="WallpaperBlockZenfolioRandom" class="Both" displayName="$(string.WallpaperBlockZenfolioRandom)" explainText="$(string.WallpaperBlockZenfolioRandomExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockZenfolioRandom">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="WallpaperBlockFacebookManual" class="Both" displayName="$(string.WallpaperBlockFacebookManual)" explainText="$(string.WallpaperBlockFacebookManualExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockFacebookManual">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>	
+		<policy name="WallpaperBlockFacebookRandom" class="Both" displayName="$(string.WallpaperBlockFacebookRandom)" explainText="$(string.WallpaperBlockFacebookRandomExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockFacebookRandom">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="WallpaperBlockGooglePlusManual" class="Both" displayName="$(string.WallpaperBlockGooglePlusManual)" explainText="$(string.WallpaperBlockGooglePlusManualExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockGooglePlusManual">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>	
+		<policy name="WallpaperBlockGooglePlusRandom" class="Both" displayName="$(string.WallpaperBlockGooglePlusRandom)" explainText="$(string.WallpaperBlockGooglePlusRandomExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockGooglePlusRandom">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>		
+		<policy name="WallpaperBlockAPODManual" class="Both" displayName="$(string.WallpaperBlockAPODManual)" explainText="$(string.WallpaperBlockAPODManualExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockAPODManual">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>	
+		<policy name="WallpaperBlockAPODRandom" class="Both" displayName="$(string.WallpaperBlockAPODRandom)" explainText="$(string.WallpaperBlockAPODRandomExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockAPODRandom">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>	
+		<policy name="WallpaperBlockSpecialWeatherManual" class="Both" displayName="$(string.WallpaperBlockSpecialWeatherManual)" explainText="$(string.WallpaperBlockSpecialWeatherManualExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockSpecialWeatherManual">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>	
+		<policy name="WallpaperBlockSpecialWeatherRandom" class="Both" displayName="$(string.WallpaperBlockSpecialWeatherRandom)" explainText="$(string.WallpaperBlockSpecialWeatherRandomExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockSpecialWeatherRandom">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>	
+		<policy name="WallpaperBlockSpecialTimeOfDayManual" class="Both" displayName="$(string.WallpaperBlockSpecialTimeOfDayManual)" explainText="$(string.WallpaperBlockSpecialTimeOfDayManualExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockSpecialTimeOfDayManual">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>	
+		<policy name="WallpaperBlockSpecialTimeOfDayRandom" class="Both" displayName="$(string.WallpaperBlockSpecialTimeOfDayRandom)" explainText="$(string.WallpaperBlockSpecialTimeOfDayRandomExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockSpecialTimeOfDayRandom">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="WallpaperBlockImgurManual" class="Both" displayName="$(string.WallpaperBlockImgurManual)" explainText="$(string.WallpaperBlockImgurManualExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockImgurManual">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>	
+		<policy name="WallpaperBlockImgurRandom" class="Both" displayName="$(string.WallpaperBlockImgurRandom)" explainText="$(string.WallpaperBlockImgurRandomExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockImgurRandom">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>	
+		<policy name="WallpaperBlockInstagramManual" class="Both" displayName="$(string.WallpaperBlockInstagramManual)" explainText="$(string.WallpaperBlockInstagramManualExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockInstagramManual">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>	
+		<policy name="WallpaperBlockInstagramRandom" class="Both" displayName="$(string.WallpaperBlockInstagramRandom)" explainText="$(string.WallpaperBlockInstagramRandomExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockInstagramRandom">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="WallpaperBlockPixabayManual" class="Both" displayName="$(string.WallpaperBlockPixabayManual)" explainText="$(string.WallpaperBlockPixabayManualExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockPixabayManual">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>	
+		<policy name="WallpaperBlockPixabayRandom" class="Both" displayName="$(string.WallpaperBlockPixabayRandom)" explainText="$(string.WallpaperBlockPixabayRandomExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockPixabayRandom">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>	
+		<policy name="WallpaperBlockSmugmugManual" class="Both" displayName="$(string.WallpaperBlockSmugmugManual)" explainText="$(string.WallpaperBlockSmugmugManualExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockSmugmugManual">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>	
+		<policy name="WallpaperBlockSmugmugRandom" class="Both" displayName="$(string.WallpaperBlockSmugmugRandom)" explainText="$(string.WallpaperBlockSmugmugRandomExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockSmugmugRandom">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="WallpaperBlockLoadFromURLManual" class="Both" displayName="$(string.WallpaperBlockLoadFromURLManual)" explainText="$(string.WallpaperBlockLoadFromURLManualExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockLoadFromURLManual">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>		
+		<policy name="WallpaperBlockLoadFromURLRandom" class="Both" displayName="$(string.WallpaperBlockLoadFromURLRandom)" explainText="$(string.WallpaperBlockLoadFromURLRandomExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockLoadFromURLRandom">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>	
+		<policy name="WallpaperBlockDigitalBlasphemyManual" class="Both" displayName="$(string.WallpaperBlockDigitalBlasphemyManual)" explainText="$(string.WallpaperBlockDigitalBlasphemyManualExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockDigital&#032;BlasphemyManual">
+			<parentCategory ref="DisplayFusion_DesktopWallpaper" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="WallpaperBlockDigitalBlasphemyRandom" class="Both" displayName="$(string.WallpaperBlockDigitalBlasphemyRandom)" explainText="$(string.WallpaperBlockDigitalBlasphemyRandomExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockDigital&#032;BlasphemyRandom">
+			<parentCategory ref="DisplayFusion_DesktopWallpaper" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="WallpaperBlockWallpaperAbyssManual" class="Both" displayName="$(string.WallpaperBlockWallpaperAbyssManual)" explainText="$(string.WallpaperBlockWallpaperAbyssManualExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockWallpaper&#032;AbyssManual">
+			<parentCategory ref="DisplayFusion_DesktopWallpaper" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="WallpaperBlockWallpaperAbyssRandom" class="Both" displayName="$(string.WallpaperBlockWallpaperAbyssRandom)" explainText="$(string.WallpaperBlockWallpaperAbyssRandomExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockWallpaper&#032;AbyssRandom">
+			<parentCategory ref="DisplayFusion_DesktopWallpaper" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="WallpaperBlockWebsiteManual" class="Both" displayName="$(string.WallpaperBlockWebsiteManual)" explainText="$(string.WallpaperBlockWebsiteManualExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockWebsiteManual">
+			<parentCategory ref="DisplayFusion_DesktopWallpaper" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="WallpaperBlockWebsiteRandom" class="Both" displayName="$(string.WallpaperBlockWebsiteRandom)" explainText="$(string.WallpaperBlockWebsiteRandomExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockWebsiteRandom">
+			<parentCategory ref="DisplayFusion_DesktopWallpaper" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="WallpaperBlockMyVideosManual" class="Both" displayName="$(string.WallpaperBlockMyVideosManual)" explainText="$(string.WallpaperBlockMyVideosManualExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockMyVideosManual">
+			<parentCategory ref="DisplayFusion_DesktopWallpaper" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="WallpaperBlockMyVideosRandom" class="Both" displayName="$(string.WallpaperBlockMyVideosRandom)" explainText="$(string.WallpaperBlockMyVideosRandomExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockMyVideosRandom">
+			<parentCategory ref="DisplayFusion_DesktopWallpaper" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="WallpaperBlockTumblrManual" class="Both" displayName="$(string.WallpaperBlockTumblrManual)" explainText="$(string.WallpaperBlockTumblrManualExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockTumblrManual">
+			<parentCategory ref="DisplayFusion_DesktopWallpaper" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="WallpaperBlockTumblrRandom" class="Both" displayName="$(string.WallpaperBlockTumblrRandom)" explainText="$(string.WallpaperBlockTumblrRandomExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockTumblrRandom">
+			<parentCategory ref="DisplayFusion_DesktopWallpaper" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="WallpaperBlockPinterestManual" class="Both" displayName="$(string.WallpaperBlockPinterestManual)" explainText="$(string.WallpaperBlockPinterestManualExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockPinterestManual">
+			<parentCategory ref="DisplayFusion_DesktopWallpaper" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="WallpaperBlockPinterestRandom" class="Both" displayName="$(string.WallpaperBlockPinterestRandom)" explainText="$(string.WallpaperBlockPinterestRandomExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockPinterestRandom">
+			<parentCategory ref="DisplayFusion_DesktopWallpaper" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="WallpaperBlockUnsplashManual" class="Both" displayName="$(string.WallpaperBlockUnsplashManual)" explainText="$(string.WallpaperBlockUnsplashManualExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockUnsplashManual">
+			<parentCategory ref="DisplayFusion_DesktopWallpaper" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="WallpaperBlockUnsplashRandom" class="Both" displayName="$(string.WallpaperBlockUnsplashRandom)" explainText="$(string.WallpaperBlockUnsplashRandomExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockUnsplashRandom">
+			<parentCategory ref="DisplayFusion_DesktopWallpaper" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="WallpaperBlockDropboxManual" class="Both" displayName="$(string.WallpaperBlockDropboxManual)" explainText="$(string.WallpaperBlockDropboxManualExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockDropboxManual">
+			<parentCategory ref="DisplayFusion_DesktopWallpaper" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="WallpaperBlockDropboxRandom" class="Both" displayName="$(string.WallpaperBlockDropboxRandom)" explainText="$(string.WallpaperBlockDropboxRandomExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockDropboxRandom">
+			<parentCategory ref="DisplayFusion_DesktopWallpaper" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="WallpaperBlockRedditManual" class="Both" displayName="$(string.WallpaperBlockRedditManual)" explainText="$(string.WallpaperBlockRedditManualExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockRedditManual">
+			<parentCategory ref="DisplayFusion_DesktopWallpaper" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="WallpaperBlockRedditRandom" class="Both" displayName="$(string.WallpaperBlockRedditRandom)" explainText="$(string.WallpaperBlockRedditRandomExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperBlockRedditRandom">
+			<parentCategory ref="DisplayFusion_DesktopWallpaper" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>		
+		<policy name="CleanImageFolders" class="Both" displayName="$(string.CleanImageFolders)" explainText="$(string.CleanImageFoldersExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="CleanImageFolders">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="PauseWhenFullScreen" class="Both" displayName="$(string.PauseWhenFullScreen)" explainText="$(string.PauseWhenFullScreenExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="PauseWhenFullScreen">
+		  <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+		  <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="IgnoreRDPChanges" class="Both" displayName="$(string.IgnoreRDPChanges)" explainText="$(string.IgnoreRDPChangesExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="IgnoreRDPChanges">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="WallpaperPauseBattery" class="Both" displayName="$(string.WallpaperPauseBattery)" explainText="$(string.WallpaperPauseBatteryExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperPauseBattery">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="WallpaperAutoRotate" class="Both" displayName="$(string.WallpaperAutoRotate)" explainText="$(string.WallpaperAutoRotateExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperAutoRotate">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="WallpaperIgnoreHiddenFiles" class="Both" displayName="$(string.WallpaperIgnoreHiddenFiles)" explainText="$(string.WallpaperIgnoreHiddenFilesExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperIgnoreHiddenFiles">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="WallpaperUseTransitions" class="Both" displayName="$(string.WallpaperUseTransitions)" explainText="$(string.WallpaperUseTransitionsExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WallpaperUseTransitions">
+      <parentCategory ref="DisplayFusion_DesktopWallpaper" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>			
+		<policy name="CheckWallpaper" class="Both" displayName="$(string.CheckWallpaper)" explainText="$(string.CheckWallpaperExplain)" presentation="$(presentation.CheckWallpaper)" key="Software\Policies\Binary Fortress Software\DisplayFusion">
+			<parentCategory ref="DisplayFusion_DesktopWallpaper" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<elements>
+				<boolean id="CheckWallpaper" valueName="CheckWallpaper">
+					<trueValue>
+						<string>1</string>
+					</trueValue>
+					<falseValue>
+						<string>0</string>
+					</falseValue>
+				</boolean>
+				<boolean id="CheckWallpaperNoPrompt" valueName="CheckWallpaperNoPrompt">
+					<trueValue>
+						<string>1</string>
+					</trueValue>
+					<falseValue>
+						<string>0</string>
+					</falseValue>
+				</boolean>
+			</elements>
+		</policy>
+		<policy name="WallpaperLocalImagePathRestrict" class="Both" displayName="$(string.WallpaperLocalImagePathRestrict)" explainText="$(string.WallpaperLocalImagePathRestrictExplain)" presentation="$(presentation.WallpaperLocalImagePathRestrict)" key="Software\Policies\Binary Fortress Software\DisplayFusion">
+			<parentCategory ref="DisplayFusion_DesktopWallpaper" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<elements>
+				<text id="WallpaperLocalImagePathRestrict" valueName="WallpaperLocalImagePathRestrict" />
+			</elements>
+		</policy>		
+		<!-- Settings: Options tab -->
+		<policy name="StartWithWindows" class="Both" displayName="$(string.StartWithWindows)" explainText="$(string.StartWithWindowsExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="StartWithWindows">
+      <parentCategory ref="DisplayFusion_Settings_Options" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+		<enabledValue>
+			<string>1</string>
+		</enabledValue>
+		<disabledValue>
+			<string>0</string>
+		</disabledValue>
+    </policy>		
+		<policy name="AutoUpdate" class="Both" displayName="$(string.AutoUpdate)" explainText="$(string.AutoUpdateExplain)" presentation="$(presentation.AutoUpdate)" key="Software\Policies\Binary Fortress Software\DisplayFusion">
+			<parentCategory ref="DisplayFusion_Settings_Options" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<elements>
+				<boolean id="AutoUpdate" valueName="AutoUpdate">
+					<trueValue>
+						<string>1</string>
+					</trueValue>
+					<falseValue>
+						<string>0</string>
+					</falseValue>
+				</boolean>
+				<boolean id="AutoUpdateBeta" valueName="AutoUpdateBeta">
+					<trueValue>
+						<string>1</string>
+					</trueValue>
+					<falseValue>
+						<string>0</string>
+					</falseValue>
+				</boolean>
+			</elements>
+		</policy>
+		<policy name="AeroColourMode" class="Both" displayName="$(string.AeroColourMode)" explainText="$(string.AeroColourModeExplain)" presentation="$(presentation.AeroColourMode)" key="Software\Policies\Binary Fortress Software\DisplayFusion">
+			<parentCategory ref="DisplayFusion_Settings_Options" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<elements>
+				<enum id="AeroColourMode" valueName="AeroColourMode" required="true">
+					<item displayName="$(string.AeroColourMode_Disabled)">
+						<value>
+							<string>0</string>
+						</value>
+					</item>
+					<item displayName="$(string.AeroColourMode_ChangeWithWallpaper)">
+						<value>
+							<string>1</string>
+						</value>
+					</item>
+					<item displayName="$(string.AeroColourMode_ChangeWithApp)">
+						<value>
+							<string>2</string>
+						</value>
+					</item>
+				</enum>
+			</elements>
+		</policy>		
+		<policy name="BlockUI-BackupSettings" class="Both" displayName="$(string.BlockUI-BackupSettings)" explainText="$(string.BlockUI-BackupSettingsExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-BackupSettings">
+      <parentCategory ref="DisplayFusion_Settings_Options" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+		<enabledValue>
+			<string>1</string>
+		</enabledValue>
+		<disabledValue>
+			<string>0</string>
+		</disabledValue>
+    </policy>
+		<policy name="BlockUI-RestoreSettings" class="Both" displayName="$(string.BlockUI-RestoreSettings)" explainText="$(string.BlockUI-RestoreSettingsExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-RestoreSettings">
+      <parentCategory ref="DisplayFusion_Settings_Options" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+		<enabledValue>
+			<string>1</string>
+		</enabledValue>
+		<disabledValue>
+			<string>0</string>
+		</disabledValue>
+    </policy>    
+		<policy name="BlockUI-BFLogin" class="Both" displayName="$(string.BlockUI-BFLogin)" explainText="$(string.BlockUI-BFLoginExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-BFLogin">
+      <parentCategory ref="DisplayFusion_Settings_Options" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<!-- Settings: Functions tab -->
+		<policy name="EnableHotKeys" class="Both" displayName="$(string.EnableHotKeys)" explainText="$(string.EnableHotKeysExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="EnableHotKeys">
+			<parentCategory ref="DisplayFusion_Settings_Functions" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="TitleBarButtonsEnabled" class="Both" displayName="$(string.TitleBarButtonsEnabled)" explainText="$(string.TitleBarButtonsEnabledExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="TitleBarButtonsEnabled">
+			<parentCategory ref="DisplayFusion_Settings_Functions" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="TitleBarDisableContextMenu" class="Both" displayName="$(string.TitleBarDisableContextMenu)" explainText="$(string.TitleBarDisableContextMenuExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="TitleBarDisableContextMenu">
+			<parentCategory ref="DisplayFusion_Settings_Functions" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>		
+		<policy name="BlockUI-Settings-FunctionDownload" class="Both" displayName="$(string.BlockUI-Settings-FunctionDownload)" explainText="$(string.BlockUI-Settings-FunctionDownloadExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-Settings-FunctionDownload">
+			<parentCategory ref="DisplayFusion_Settings_Functions" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="BlockUI-Settings-FunctionAddScripted" class="Both" displayName="$(string.BlockUI-Settings-FunctionAddScripted)" explainText="$(string.BlockUI-Settings-FunctionAddScriptedExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-Settings-FunctionAddScripted">
+			<parentCategory ref="DisplayFusion_Settings_Functions" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<!-- Settings: Taskbar tab -->
+		<policy name="TaskbarsEnabled" class="Both" displayName="$(string.TaskbarsEnabled)" explainText="$(string.TaskbarsEnabledExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="TaskbarsEnabled">
+			<parentCategory ref="DisplayFusion_Settings_Taskbar" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>				
+		<policy name="TaskbarsUseJumpLists" class="Both" displayName="$(string.TaskbarsUseJumpLists)" explainText="$(string.TaskbarsUseJumpListsExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="TaskbarsUseJumpLists">
+			<parentCategory ref="DisplayFusion_Settings_Taskbar" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>			
+		<policy name="TaskbarsDisableAeroTransparency" class="Both" displayName="$(string.TaskbarsDisableAeroTransparency)" explainText="$(string.TaskbarsDisableAeroTransparencyExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="TaskbarsDisableAeroTransparency">
+			<parentCategory ref="DisplayFusion_Settings_Taskbar" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>		
+		<policy name="TaskbarsShowOverFullScreen" class="Both" displayName="$(string.TaskbarsShowOverFullScreen)" explainText="$(string.TaskbarsShowOverFullScreenExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="TaskbarsShowOverFullScreen">
+			<parentCategory ref="DisplayFusion_Settings_Taskbar" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="TaskbarFocusWindowOnDragOver" class="Both" displayName="$(string.TaskbarFocusWindowOnDragOver)" explainText="$(string.TaskbarFocusWindowOnDragOverExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="TaskbarFocusWindowOnDragOver">
+			<parentCategory ref="DisplayFusion_Settings_Taskbar" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="TaskbarStartMenuOpenOnMonitor" class="Both" displayName="$(string.TaskbarStartMenuOpenOnMonitor)" explainText="$(string.TaskbarStartMenuOpenOnMonitorExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="TaskbarStartMenuOpenOnMonitor">
+			<parentCategory ref="DisplayFusion_Settings_Taskbar" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>    
+		<policy name="TaskbarsPreview" class="Both" displayName="$(string.TaskbarsPreview)" explainText="$(string.TaskbarsPreviewExplain)" presentation="$(presentation.TaskbarsPreview)" key="Software\Policies\Binary Fortress Software\DisplayFusion">
+			<parentCategory ref="DisplayFusion_Settings_Taskbar" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<elements>
+				<enum id="TaskbarsPreview" valueName="TaskbarsPreview" required="true">
+					<item displayName="$(string.TaskbarsPreview_DisabledWithToolTip)">
+						<value>
+							<string>0</string>
+						</value>
+					</item>
+					<item displayName="$(string.TaskbarsPreview_WindowsDefault)">
+						<value>
+							<string>1</string>
+						</value>
+					</item>
+					<item displayName="$(string.TaskbarsPreview_WindowsVista)">
+						<value>
+							<string>2</string>
+						</value>
+					</item>
+					<item displayName="$(string.TaskbarsPreview_DisabledWithGroupList)">
+						<value>
+							<string>3</string>
+						</value>
+					</item>     
+				</enum>
+			</elements>
+		</policy>	
+		<policy name="TaskbarsMode" class="Both" displayName="$(string.TaskbarsMode)" explainText="$(string.TaskbarsModeExplain)" presentation="$(presentation.TaskbarsMode)" key="Software\Policies\Binary Fortress Software\DisplayFusion">
+			<parentCategory ref="DisplayFusion_Settings_Taskbar" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<elements>
+				<enum id="TaskbarsMode" valueName="TaskbarsMode" required="true">
+					<item displayName="$(string.TaskbarsMode_AllShowRelevant)">
+						<value>
+							<string>0</string>
+						</value>
+					</item>
+					<item displayName="$(string.TaskbarsMode_WindowsShowsAllDFShowsRelevant)">
+						<value>
+							<string>1</string>
+						</value>
+					</item>
+					<item displayName="$(string.TaskbarsMode_AllShowAll)">
+						<value>
+							<string>2</string>
+						</value>
+					</item>
+					<item displayName="$(string.TaskbarsMode_WindowsShowsNoneDFShowsAll)">
+						<value>
+							<string>3</string>
+						</value>
+					</item>     
+				</enum>
+			</elements>
+		</policy>
+		<policy name="TaskbarsMiddleClick" class="Both" displayName="$(string.TaskbarsMiddleClick)" explainText="$(string.TaskbarsMiddleClickExplain)" presentation="$(presentation.TaskbarsMiddleClick)" key="Software\Policies\Binary Fortress Software\DisplayFusion">
+			<parentCategory ref="DisplayFusion_Settings_Taskbar" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<elements>
+				<enum id="TaskbarsMiddleClick" valueName="TaskbarsMiddleClick" required="true">
+					<item displayName="$(string.TaskbarsMiddleClick_DoNothing)">
+						<value>
+							<string>0</string>
+						</value>
+					</item>
+					<item displayName="$(string.TaskbarsMiddleClick_NewInstance)">
+						<value>
+							<string>1</string>
+						</value>
+					</item>
+					<item displayName="$(string.TaskbarsMiddleClick_CloseApplication)">
+						<value>
+							<string>2</string>
+						</value>
+					</item>
+					<item displayName="$(string.TaskbarsMiddleClick_MoveToNextMonitor)">
+						<value>
+							<string>3</string>
+						</value>
+					</item>
+					<item displayName="$(string.TaskbarsMiddleClick_MoveToPreviousMonitor)">
+						<value>
+							<string>4</string>
+						</value>
+					</item>					
+				</enum>
+			</elements>
+		</policy>
+		<policy name="BlockUI-Settings-StartMenuReplacements" class="Both" displayName="$(string.BlockUI-Settings-StartMenuReplacements)" explainText="$(string.BlockUI-Settings-StartMenuReplacementsExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="BlockUI-Settings-StartMenuReplacements">
+			<parentCategory ref="DisplayFusion_Settings_Taskbar" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>			
+		<!-- Settings: Monitor Fading tab -->
+		<policy name="MonitorFadingEnabled" class="Both" displayName="$(string.MonitorFadingEnabled)" explainText="$(string.MonitorFadingEnabledExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="MonitorFadingEnabled">
+			<parentCategory ref="DisplayFusion_Settings_MonitorFading" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>		
+		<policy name="MonitorFadingMode" class="Both" displayName="$(string.MonitorFadingMode)" explainText="$(string.MonitorFadingModeExplain)" presentation="$(presentation.MonitorFadingMode)" key="Software\Policies\Binary Fortress Software\DisplayFusion">
+			<parentCategory ref="DisplayFusion_Settings_MonitorFading" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<elements>
+				<enum id="MonitorFadingMode" valueName="MonitorFadingMode" required="true">
+					<item displayName="$(string.MonitorFadingMode_FadeAllMonitors)">
+						<value>
+							<string>1</string>
+						</value>
+					</item>
+					<item displayName="$(string.MonitorFadingMode_FadeNonPrimaryMonitors)">
+						<value>
+							<string>2</string>
+						</value>
+					</item>
+					<item displayName="$(string.MonitorFadingMode_FadeNonCurrentMonitors)">
+						<value>
+							<string>3</string>
+						</value>
+					</item>
+					<item displayName="$(string.MonitorFadingMode_FadeAllExceptCurrentWindow)">
+						<value>
+							<string>4</string>
+						</value>
+					</item>     
+				</enum>
+			</elements>
+		</policy>
+		<!-- Settings: Screen Saver tab -->
+		<policy name="ScreenSaversEnabled" class="Both" displayName="$(string.ScreenSaversEnabled)" explainText="$(string.ScreenSaversEnabledExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion\ScreenSavers" valueName="ScreenSaversEnabled">
+      <parentCategory ref="DisplayFusion_Settings_ScreenSaver" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<!-- Settings: Window Snapping tab -->
+		<policy name="WindowSnappingMonitors" class="Both" displayName="$(string.WindowSnappingMonitors)" explainText="$(string.WindowSnappingMonitorsExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WindowSnappingMonitors">
+      <parentCategory ref="DisplayFusion_Settings_WindowSnapping" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="WindowSnappingOtherApplications" class="Both" displayName="$(string.WindowSnappingOtherApplications)" explainText="$(string.WindowSnappingOtherApplicationsExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WindowSnappingOtherApplications">
+      <parentCategory ref="DisplayFusion_Settings_WindowSnapping" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<!-- Settings: Window Management tab -->
+		<policy name="MaximizedWindowDragging" class="Both" displayName="$(string.MaximizedWindowDragging)" explainText="$(string.MaximizedWindowDraggingExplain)" presentation="$(presentation.MaximizedWindowDragging)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="MaximizedWindowDragging">
+			<parentCategory ref="DisplayFusion_Settings_WindowManagement" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+			<elements>
+				<boolean id="MaximizedWindowDraggingOverlay" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="MaximizedWindowDraggingOverlay">
+				  <trueValue>
+					<string>1</string>
+				  </trueValue>
+				  <falseValue>
+					<string>0</string>
+				  </falseValue>
+				</boolean>
+				<boolean id="MaximizedWindowDraggingForNonMaxed" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="MaximizedWindowDraggingForNonMaxed">
+				  <trueValue>
+					<string>1</string>
+				  </trueValue>
+				  <falseValue>
+					<string>0</string>
+				  </falseValue>
+				</boolean>				
+			</elements>
+    </policy>
+		<policy name="WindowMoveMiddleClick" class="Both" displayName="$(string.WindowMoveMiddleClick)" explainText="$(string.WindowMoveMiddleClickExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="WindowMoveMiddleClick">
+      <parentCategory ref="DisplayFusion_Settings_WindowManagement" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="MoveChildWindows" class="Both" displayName="$(string.MoveChildWindows)" explainText="$(string.MoveChildWindowsExplain)" presentation="$(presentation.MoveChildWindows)" key="Software\Policies\Binary Fortress Software\DisplayFusion">
+			<parentCategory ref="DisplayFusion_Settings_WindowManagement" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<elements>
+				<boolean id="MoveChildWindows" valueName="MoveChildWindows">
+					<trueValue>
+						<string>1</string>
+					</trueValue>
+					<falseValue>
+						<string>0</string>
+					</falseValue>
+				</boolean>
+				<boolean id="MoveChildWindowsModalOnly" valueName="MoveChildWindowsModalOnly">
+					<trueValue>
+						<string>1</string>
+					</trueValue>
+					<falseValue>
+						<string>0</string>
+					</falseValue>
+				</boolean>
+				<boolean id="MoveChildWindowsCentre" valueName="MoveChildWindowsCentre">
+					<trueValue>
+						<string>1</string>
+					</trueValue>
+					<falseValue>
+						<string>0</string>
+					</falseValue>
+				</boolean>        
+			</elements>
+		</policy>
+		<policy name="WindowMoveNewProcessWindowsToCurrentMonitor" class="Both" displayName="$(string.WindowMoveNewProcessWindowsToCurrentMonitor)" explainText="$(string.WindowMoveNewProcessWindowsToCurrentMonitorExplain)" presentation="$(presentation.WindowMoveNewProcessWindowsToCurrentMonitor)" key="Software\Policies\Binary Fortress Software\DisplayFusion">
+			<parentCategory ref="DisplayFusion_Settings_WindowManagement" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<elements>
+				<boolean id="WindowMoveNewProcessWindowsToCurrentMonitor" valueName="WindowMoveNewProcessWindowsToCurrentMonitor">
+					<trueValue>
+						<string>1</string>
+					</trueValue>
+					<falseValue>
+						<string>0</string>
+					</falseValue>
+				</boolean>
+				<boolean id="WindowMoveNewProcessWindowsToCurrentMonitorOnlyFromStartMenu" valueName="WindowMoveNewProcessWindowsToCurrentMonitorOnlyFromStartMenu">
+					<trueValue>
+						<string>1</string>
+					</trueValue>
+					<falseValue>
+						<string>0</string>
+					</falseValue>
+				</boolean>
+			</elements>
+		</policy>    
+		<!-- Settings: Mouse Management tab -->
+		<policy name="MouseWheelScrolling" class="Both" displayName="$(string.MouseWheelScrolling)" explainText="$(string.MouseWheelScrollingExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="MouseWheelScrolling">
+      <parentCategory ref="DisplayFusion_Settings_MouseManagement" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="MouseWrapX" class="Both" displayName="$(string.MouseWrapX)" explainText="$(string.MouseWrapXExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="MouseWrapX">
+      <parentCategory ref="DisplayFusion_Settings_MouseManagement" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<policy name="MouseWrapY" class="Both" displayName="$(string.MouseWrapY)" explainText="$(string.MouseWrapYExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="MouseWrapY">
+      <parentCategory ref="DisplayFusion_Settings_MouseManagement" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>		
+		<policy name="MouseWrapNoSnag" class="Both" displayName="$(string.MouseWrapNoSnag)" explainText="$(string.MouseWrapNoSnagExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="MouseWrapNoSnag">
+		<parentCategory ref="DisplayFusion_Settings_MouseManagement" />
+		<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="MouseWrapNoStickyCorners" class="Both" displayName="$(string.MouseWrapNoStickyCorners)" explainText="$(string.MouseWrapNoStickyCornersExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="MouseWrapNoStickyCorners">
+		<parentCategory ref="DisplayFusion_Settings_MouseManagement" />
+		<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>	
+		<!-- Settings: Alt+Tab tab -->
+		<policy name="AltTabEnabled" class="Both" displayName="$(string.AltTabEnabled)" explainText="$(string.AltTabEnabledExplain)" presentation="$(presentation.AltTabEnabled)" key="Software\Policies\Binary Fortress Software\DisplayFusion">
+			<parentCategory ref="DisplayFusion_Settings_WindowManagement" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<elements>
+				<enum id="AltTabEnabled" valueName="AltTabEnabled" required="true">
+					<item displayName="$(string.AltTabEnabled_Disabled)">
+						<value>
+							<string>0</string>
+						</value>
+					</item>
+					<item displayName="$(string.AltTabEnabled_PrimaryMonitorAllWindows)">
+						<value>
+							<string>1</string>
+						</value>
+					</item>
+					<item displayName="$(string.AltTabEnabled_AllMonitorsAllWindows)">
+						<value>
+							<string>2</string>
+						</value>
+					</item>
+					<item displayName="$(string.AltTabEnabled_CurrentMonitorAllWindows)">
+						<value>
+							<string>3</string>
+						</value>
+					</item>     
+					<item displayName="$(string.AltTabEnabled_CurrentMonitorCurrentWindows)">
+						<value>
+							<string>4</string>
+						</value>
+					</item>            
+				</enum>
+			</elements>
+		</policy>		
+		<policy name="AltTabShowItemText" class="Both" displayName="$(string.AltTabShowItemText)" explainText="$(string.AltTabShowItemTextExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="AltTabShowItemText">
+			<parentCategory ref="DisplayFusion_Settings_WindowManagement" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>
+		<policy name="AltTabShowDesktopWindow" class="Both" displayName="$(string.AltTabShowDesktopWindow)" explainText="$(string.AltTabShowDesktopWindowExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="AltTabShowDesktopWindow">
+			<parentCategory ref="DisplayFusion_Settings_WindowManagement" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+		</policy>		
+		<!-- Settings: Triggers tab -->
+		<policy name="TriggersEnabled" class="Both" displayName="$(string.TriggersEnabled)" explainText="$(string.TriggersEnabledExplain)" key="Software\Policies\Binary Fortress Software\DisplayFusion" valueName="TriggersEnabled">
+      <parentCategory ref="DisplayFusion_Settings_Triggers" />
+      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<enabledValue>
+				<string>1</string>
+			</enabledValue>
+			<disabledValue>
+				<string>0</string>
+			</disabledValue>
+    </policy>
+		<!-- Settings: Remote Control tab -->
+		<policy name="RemoteControlEnabled" class="Both" displayName="$(string.RemoteControlEnabled)" explainText="$(string.RemoteControlEnabledExplain)" presentation="$(presentation.RemoteControlEnabled)" key="Software\Policies\Binary Fortress Software\DisplayFusion">
+			<parentCategory ref="DisplayFusion_Settings_RemoteControl" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<elements>
+				<boolean id="RemoteControlEnabled" valueName="RemoteControlEnabled">
+					<trueValue>
+						<string>1</string>
+					</trueValue>
+					<falseValue>
+						<string>0</string>
+					</falseValue>
+				</boolean>
+				<boolean id="RemoteControlAllowCodePopup" valueName="RemoteControlAllowCodePopup">
+					<trueValue>
+						<string>1</string>
+					</trueValue>
+					<falseValue>
+						<string>0</string>
+					</falseValue>
+				</boolean>
+			</elements>
+		</policy>
+		<!-- Settings: License Key tab -->
+		<policy name="LicenseKey" class="Both" displayName="$(string.LicenseKey)" explainText="$(string.LicenseKeyExplain)" presentation="$(presentation.LicenseKey)" key="Software\Policies\Binary Fortress Software\DisplayFusion">
+			<parentCategory ref="DisplayFusion_Settings_LicenseKey" />
+			<supportedOn ref="windows:SUPPORTED_WindowsXP" />
+			<elements>
+				<text id="LicenseKey" valueName="LicenseKey" />
+			</elements>
+		</policy>
+		<!-- Settings: Troubleshooting tab -->
+	</policies>
+</policyDefinitions>

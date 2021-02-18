@@ -1,0 +1,126 @@
+<policyDefinitions revision="1.0" schemaVersion="1.0">
+	<policyNamespaces>
+		<target prefix="remotedesktopplus" namespace="Donkz.Policies.RemoteDesktopPlus" />
+		<using prefix="windows" namespace="Microsoft.Policies.Windows" />
+	</policyNamespaces>
+	<resources minRequiredRevision="1.0" />
+	<supportedOn>
+		<definitions>
+		<definition name="SUPPORTED_RDP381" displayName="$(string.SUPPORTED_RDP381)" />
+		<definition name="SUPPORTED_RDP391" displayName="$(string.SUPPORTED_RDP391)" />
+		<definition name="SUPPORTED_RDP3102" displayName="$(string.SUPPORTED_RDP3102)" />
+		<definition name="SUPPORTED_RDP40" displayName="$(string.SUPPORTED_RDP40)" />
+		<definition name="SUPPORTED_RDP50" displayName="$(string.SUPPORTED_RDP50)" />
+		<definition name="SUPPORTED_RDP60" displayName="$(string.SUPPORTED_RDP60)" />
+		</definitions>
+	</supportedOn>
+	<categories>
+		<category name="RemoteDesktopPlus" displayName="$(string.RemoteDesktopPlus)" />
+	</categories>
+	<policies>
+		<policy name="RDP_AllowedTargets" class="Both" displayName="$(string.RDP_AllowedTargets)" explainText="$(string.RDP_AllowedTargets_HELP)" presentation="$(presentation.RDP_AllowedTargets)" key="SOFTWARE\Policies\Remote Desktop Plus" valueName="AllowedTargets">
+			<parentCategory ref="RemoteDesktopPlus" />
+			<supportedOn ref="SUPPORTED_RDP391" />
+      			<elements>
+        			<text id="RDP_AllowedTargets" valueName="AllowedTargets" required="true" />
+      			</elements>
+		</policy>
+		<policy name="RDP_DisableDriveRedirection" class="Both" displayName="$(string.RDP_DisableDriveRedirection)" explainText="$(string.RDP_DisableDriveRedirection_HELP)" presentation="$(presentation.RDP_DisableDriveRedirection)" key="SOFTWARE\Policies\Remote Desktop Plus" valueName="DisableDriveRedirection">
+			<parentCategory ref="RemoteDesktopPlus" />
+			<supportedOn ref="SUPPORTED_RDP381" />
+			<enabledValue>
+				<decimal value="1" />
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="RDP_DisablePrinterRedirection" class="Both" displayName="$(string.RDP_DisablePrinterRedirection)" explainText="$(string.RDP_DisablePrinterRedirection_HELP)" presentation="$(presentation.RDP_DisablePrinterRedirection)" key="SOFTWARE\Policies\Remote Desktop Plus" valueName="DisablePrinterRedirection">
+			<parentCategory ref="RemoteDesktopPlus" />
+			<supportedOn ref="SUPPORTED_RDP381" />
+			<enabledValue>
+				<decimal value="1" />
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="RDP_DrivesToRedirect" class="Both" displayName="$(string.RDP_DrivesToRedirect)" explainText="$(string.RDP_DrivesToRedirect_HELP)" presentation="$(presentation.RDP_DrivesToRedirect)" key="SOFTWARE\Policies\Remote Desktop Plus" valueName="DrivesToRedirect">
+			<parentCategory ref="RemoteDesktopPlus" />
+			<supportedOn ref="SUPPORTED_RDP3102" />
+      			<elements>
+        			<text id="RDP_DrivesToRedirect" valueName="DrivesToRedirect" required="true" />
+      			</elements>
+		</policy>
+		<policy name="RDP_ForceEventLog" class="Both" displayName="$(string.RDP_ForceEventLog)" explainText="$(string.RDP_ForceEventLog_HELP)" presentation="$(presentation.RDP_ForceEventLog)" key="SOFTWARE\Policies\Remote Desktop Plus" valueName="ForceEventLog">
+			<parentCategory ref="RemoteDesktopPlus" />
+			<supportedOn ref="SUPPORTED_RDP50" />
+			<enabledValue>
+				<decimal value="1" />
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="RDP_ForceKioskMode" class="Both" displayName="$(string.RDP_ForceKioskMode)" explainText="$(string.RDP_ForceKioskMode_HELP)" presentation="$(presentation.RDP_ForceKioskMode)" key="SOFTWARE\Policies\Remote Desktop Plus" valueName="ForceKioskMode">
+			<parentCategory ref="RemoteDesktopPlus" />
+			<supportedOn ref="SUPPORTED_RDP391" />
+			<enabledValue>
+				<decimal value="1" />
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0" />
+			</disabledValue>
+      			<elements>
+				<text id="RDP_KioskModeMask" valueName="KioskModeMask" maxLength="3" required="true" />
+      			</elements>
+		</policy>
+		<policy name="RDP_ForceNoClose" class="Both" displayName="$(string.RDP_ForceNoClose)" explainText="$(string.RDP_ForceNoClose_HELP)" presentation="$(presentation.RDP_ForceNoClose)" key="SOFTWARE\Policies\Remote Desktop Plus" valueName="ForceNoClose">
+			<parentCategory ref="RemoteDesktopPlus" />
+			<supportedOn ref="SUPPORTED_RDP381" />
+			<enabledValue>
+				<decimal value="1" />
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="RDP_ForceOnTop" class="Both" displayName="$(string.RDP_ForceOnTop)" explainText="$(string.RDP_ForceOnTop_HELP)" presentation="$(presentation.RDP_ForceOnTop)" key="SOFTWARE\Policies\Remote Desktop Plus" valueName="ForceOnTop">
+			<parentCategory ref="RemoteDesktopPlus" />
+			<supportedOn ref="SUPPORTED_RDP60" />
+			<enabledValue>
+				<decimal value="1" />
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="RDP_MaxMRU" class="Both" displayName="$(string.RDP_MaxMRU)" explainText="$(string.RDP_MaxMRU_HELP)" presentation="$(presentation.RDP_MaxMRU_Elements)" key="SOFTWARE\Policies\Remote Desktop Plus" valueName="MaxMRU">
+			<parentCategory ref="RemoteDesktopPlus" />
+			<supportedOn ref="SUPPORTED_RDP381" />
+			<elements>
+				<decimal id="RDP_MaxMRU_Value" valueName="MaxMRU" required="true" defaultValue="20" maxValue="99" />
+			</elements>
+		</policy>
+		<policy name="RDP_RestrictServerField" class="Both" displayName="$(string.RDP_RestrictServerField)" explainText="$(string.RDP_RestrictServerField_HELP)" presentation="$(presentation.RDP_RestrictServerField)" key="SOFTWARE\Policies\Remote Desktop Plus" valueName="RestrictServerField">
+			<parentCategory ref="RemoteDesktopPlus" />
+			<supportedOn ref="SUPPORTED_RDP60" />
+			<enabledValue>
+				<decimal value="1" />
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="RDP_SortMRU" class="Both" displayName="$(string.RDP_SortMRU)" explainText="$(string.RDP_SortMRU_HELP)" presentation="$(presentation.RDP_SortMRU)" key="SOFTWARE\Policies\Remote Desktop Plus" valueName="SortMRU">
+			<parentCategory ref="RemoteDesktopPlus" />
+			<supportedOn ref="SUPPORTED_RDP381" />
+			<enabledValue>
+				<decimal value="1" />
+			</enabledValue>
+			<disabledValue>
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+	</policies>
+</policyDefinitions>

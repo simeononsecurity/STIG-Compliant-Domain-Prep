@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--  Copyright (c) MailStore Software GmbH  -->
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" revision="9.6" schemaVersion="1.0">
+  <policyNamespaces>
+    <target prefix="mailstoreoutlookaddin" namespace="MailStore.Policies.OutlookAddin" />
+    <using prefix="mailstore" namespace="MailStore.Policies" />
+  </policyNamespaces>
+  <resources minRequiredRevision="9.6" />
+  <categories>
+    <category name="CAT_MailStore_OutlookAddin" displayName="$(string.CAT_MailStore_OutlookAddin)" explainText="$(string.CAT_MailStore_OutlookAddin_Help)">
+      <parentCategory ref="mailstore:CAT_MailStore_Root" />
+    </category>
+  </categories>
+  <policies>
+    <policy name="POL_MailStore_OutlookAddin_Server_Name" class="User" displayName="$(string.POL_MailStore_OutlookAddin_Server_Name)" explainText="$(string.POL_MailStore_OutlookAddin_Server_Name_Help)" presentation="$(presentation.POL_MailStore_OutlookAddin_Server_Name)" key="Software\Policies\deepinvent\MailStore Outlook Add-in 2">
+      <parentCategory ref="CAT_MailStore_OutlookAddin" />
+      <supportedOn ref="mailstore:SUPPORTED_MailStore9" />
+      <elements>
+        <text id="TXT_MailStore_OutlookAddin_Server_Name" key="Software\Policies\deepinvent\MailStore Outlook Add-in 2" valueName="Server Name" maxLength="255" required="true"/>
+      </elements>
+    </policy>
+    <policy name="POL_MailStore_OutlookAddin_Authentication" class="User" displayName="$(string.POL_MailStore_OutlookAddin_Authentication)" explainText="$(string.POL_MailStore_OutlookAddin_Authentication_Help)" presentation="$(presentation.POL_MailStore_OutlookAddin_Authentication)" key="Software\Policies\deepinvent\MailStore Outlook Add-in 2">
+      <parentCategory ref="CAT_MailStore_OutlookAddin" />
+      <supportedOn ref="mailstore:SUPPORTED_MailStore9" />
+      <elements>
+        <enum id="DST_MailStore_OutlookAddin_Authentication" key="Software\Policies\deepinvent\MailStore Outlook Add-in 2" valueName="Auth" required="true">
+          <item displayName="$(string.ITM_MailStore_OutlookAddin_Authentication_1)">
+            <value>
+              <string>1</string>
+            </value>
+          </item>
+          <item displayName="$(string.ITM_MailStore_OutlookAddin_Authentication_2)">
+            <value>
+              <string>2</string>
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="POL_MailStore_OutlookAddin_Language" class="User" displayName="$(string.POL_MailStore_OutlookAddin_Language)" explainText="$(string.POL_MailStore_OutlookAddin_Language_Help)" presentation="$(presentation.POL_MailStore_OutlookAddin_Language)" key="Software\Policies\deepinvent\MailStore Outlook Add-in 2">
+      <parentCategory ref="CAT_MailStore_OutlookAddin" />
+      <supportedOn ref="mailstore:SUPPORTED_MailStore96" />
+      <elements>
+        <enum id="DST_MailStore_OutlookAddin_Language" key="Software\Policies\deepinvent\MailStore Outlook Add-in 2" valueName="Language" required="true">
+          <item displayName="$(string.ITM_MailStore_OutlookAddin_Language_System)">
+            <value>
+              <string>(System)</string>
+            </value>
+          </item>
+          <item displayName="$(string.ITM_MailStore_OutlookAddin_Language_zhcn)">
+            <value>
+              <string>zh-CN</string>
+            </value>
+          </item>
+          <item displayName="$(string.ITM_MailStore_OutlookAddin_Language_zhhk)">
+            <value>
+              <string>zh-HK</string>
+            </value>
+          </item>
+          <item displayName="$(string.ITM_MailStore_OutlookAddin_Language_cs)">
+            <value>
+              <string>cs</string>
+            </value>
+          </item>
+          <item displayName="$(string.ITM_MailStore_OutlookAddin_Language_nl)">
+            <value>
+              <string>nl</string>
+            </value>
+          </item>
+          <item displayName="$(string.ITM_MailStore_OutlookAddin_Language_en)">
+            <value>
+              <string>en</string>
+            </value>
+          </item>
+          <item displayName="$(string.ITM_MailStore_OutlookAddin_Language_fr)">
+            <value>
+              <string>fr</string>
+            </value>
+          </item>
+          <item displayName="$(string.ITM_MailStore_OutlookAddin_Language_de)">
+            <value>
+              <string>de</string>
+            </value>
+          </item>
+          <item displayName="$(string.ITM_MailStore_OutlookAddin_Language_hu)">
+            <value>
+              <string>hu</string>
+            </value>
+          </item>
+          <item displayName="$(string.ITM_MailStore_OutlookAddin_Language_it)">
+            <value>
+              <string>it</string>
+            </value>
+          </item>
+          <item displayName="$(string.ITM_MailStore_OutlookAddin_Language_ja)">
+            <value>
+              <string>ja</string>
+            </value>
+          </item>
+          <item displayName="$(string.ITM_MailStore_OutlookAddin_Language_ko)">
+            <value>
+              <string>ko</string>
+            </value>
+          </item>
+          <item displayName="$(string.ITM_MailStore_OutlookAddin_Language_pl)">
+            <value>
+              <string>pl</string>
+            </value>
+          </item>
+          <item displayName="$(string.ITM_MailStore_OutlookAddin_Language_pt)">
+            <value>
+              <string>pt</string>
+            </value>
+          </item>
+          <item displayName="$(string.ITM_MailStore_OutlookAddin_Language_ru)">
+            <value>
+              <string>ru</string>
+            </value>
+          </item>
+          <item displayName="$(string.ITM_MailStore_OutlookAddin_Language_sl)">
+            <value>
+              <string>sl</string>
+            </value>
+          </item>
+          <item displayName="$(string.ITM_MailStore_OutlookAddin_Language_es)">
+            <value>
+              <string>es</string>
+            </value>
+          </item>
+          <item displayName="$(string.ITM_MailStore_OutlookAddin_Language_tr)">
+            <value>
+              <string>tr</string>
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="POL_MailStore_OutlookAddin_WebAccessCulture" class="User" displayName="$(string.POL_MailStore_OutlookAddin_WebAccessCulture)" explainText="$(string.POL_MailStore_OutlookAddin_WebAccessCulture_Help)" presentation="$(presentation.POL_MailStore_OutlookAddin_WebAccessCulture)" key="Software\Policies\deepinvent\MailStore Outlook Add-in 2">
+      <parentCategory ref="CAT_MailStore_OutlookAddin" />
+      <supportedOn ref="mailstore:SUPPORTED_MailStore96" />
+      <elements>
+        <text id="TXT_MailStore_OutlookAddin_WebAccessCulture" key="Software\Policies\deepinvent\MailStore Outlook Add-in 2" valueName="Web Access Culture" maxLength="30" required="true"/>
+      </elements>
+    </policy>
+    <policy name="POL_MailStore_OutlookAddin_Secure" class="User" displayName="$(string.POL_MailStore_OutlookAddin_Secure)" explainText="$(string.POL_MailStore_OutlookAddin_Secure_Help)" key="Software\Policies\deepinvent\MailStore Outlook Add-in 2" valueName="Secure">
+      <parentCategory ref="CAT_MailStore_OutlookAddin" />
+      <supportedOn ref="mailstore:SUPPORTED_MailStore9to12" />
+      <enabledValue>
+        <string>1</string>
+      </enabledValue>
+      <disabledValue>
+        <string>0</string>
+      </disabledValue>
+    </policy>
+    <policy name="POL_MailStore_OutlookAddin_Accept_Thumbprint" class="User" displayName="$(string.POL_MailStore_OutlookAddin_Accept_Thumbprint)" explainText="$(string.POL_MailStore_OutlookAddin_Accept_Thumbprint_Help)" presentation="$(presentation.POL_MailStore_OutlookAddin_Accept_Thumbprint)" key="Software\Policies\deepinvent\MailStore Outlook Add-in 2">
+      <parentCategory ref="CAT_MailStore_OutlookAddin" />
+      <supportedOn ref="mailstore:SUPPORTED_MailStore1213" />
+      <elements>
+        <text id="TXT_MailStore_OutlookAddin_Accept_Thumbprint" key="Software\Policies\deepinvent\MailStore Outlook Add-in 2" valueName="Accept Thumbprint" maxLength="255" required="true"/>
+      </elements>
+    </policy>
+    <policy name="POL_MailStore_OutlookAddin_Toolbar_Visible" class="User" displayName="$(string.POL_MailStore_OutlookAddin_Toolbar_Visible)" explainText="$(string.POL_MailStore_OutlookAddin_Toolbar_Visible_Help)" key="Software\Policies\deepinvent\MailStore Outlook Add-in 2" valueName="Toolbar Visible">
+      <parentCategory ref="CAT_MailStore_OutlookAddin" />
+      <supportedOn ref="mailstore:SUPPORTED_MailStore9" />
+      <enabledValue>
+        <string>1</string>
+      </enabledValue>
+      <disabledValue>
+        <string>0</string>
+      </disabledValue>
+    </policy>
+  </policies>
+</policyDefinitions>

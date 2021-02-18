@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2020 Duo Security, Inc.  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions"
+                           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <displayName>Unused</displayName>
+  <description>Unused</description>
+  <resources>
+    <stringTable>
+      <!-- Category descriptions -->
+      <string id="CategoryDuo_Display">Duo Authentication for Windows Logon</string>
+      <string id="CategoryDuo_Explain">Duo Authentication for Windows Logon policy settings</string>
+      <string id="CategoryBasic_Display">Duo Service Settings</string>
+      <string id="CategoryBasic_Explain">Duo cloud service settings</string>
+      <string id="CategoryClient_Display">Client Settings</string>
+      <string id="CategoryClient_Explain">Windows authentication client settings</string>
+
+
+      <!-- DUO SERVICE -->
+      <string id="ApiHostname_Display">Duo Service: Duo API Hostname</string>
+      <string id="ApiHostname_Explain">The DNS name of the Duo API host as shown on the application's properties page in the Duo Admin Panel.
+
+Required.</string>
+      <string id="IntegrationId_Display">Duo Service: Duo Integration Key</string>
+      <string id="IntegrationId_Explain">The Duo integration key (ikey) as shown on the application's properties page in the Duo Admin Panel.
+
+Required.</string>
+      <string id="IntegrationSecret_Display">Duo Service: Duo Secret Key</string>
+      <string id="IntegrationSecret_Explain">The Duo secret key (skey) as shown on the application's properties page in the Duo Admin Panel.
+
+Required.</string>
+      <string id="HttpProxyHost_Display">Duo Service: HTTP Proxy Hostname</string>
+      <string id="HttpProxyHost_Explain">If specified, all Duo web requests are sent via this HTTP proxy.  This does not affect web browsing or any other application.
+
+Default: Disabled.</string>
+
+      <string id="HttpProxyPort_Display">Duo Service: HTTP Proxy Port</string>
+      <string id="HttpProxyPort_Explain">If HTTP Proxy Hostname is specified, the port used to connect to the HTTP proxy.
+
+Default: 80.</string>
+
+      <string id="LogFileMaxCount_Display">Duo Service: Log File Max Count</string>
+      <string id="LogFileMaxCount_Explain">If enabled, allows a maximum number of backup logs to be maintained.  This must be used in conjuction with &quot;LogFileMaxSizeMB &quot;.  Minimum value 1.  Maximum value 100.
+
+Default: 1.</string>
+
+      <string id="LogFileMaxSizeMB_Display">Duo Service: Log File Max Size MB</string>
+      <string id="LogFileMaxSizeMB_Explain">If enabled, allows for a maximum size in Megabytes (MB) of &quot;Duo.log&quot;.  This must be used in conjuction with &quot;LogFileMaxSizeMB &quot;.  Minimum log size 1MB.  Maximum log size 4096MB
+
+Default: 1.</string>
+
+      <string id="OfflineAvailable_Display">Client: Offline Access Available</string>
+      <string id="OfflineAvailable_Explain">If enabled, Duo Authentication for Windows Logon allows for Offline Access. If disabled, users cannot logon utilizing Offline Access.
+
+Default: Enabled.</string>
+      <string id="OfflineMaxUsers_Display">Client: Enable Max Offline Users</string>
+      <string id="OfflineMaxUsers_Explain">If enabled, allows for the configuration of Max number of Offline Users of Duo Authentication for Windows Logon allows for Offline Access.
+
+Default: 5.</string>
+
+      <string id="ElevationProtectionMode_Display">Client: Specifies the Protection Mode for User Elevation</string>
+      <string id="ElevationProtectionMode_Explain">Specifies the Protection Mode for a system. UAC credential prompt must be enabled. Configuration values are:
+
+      0 = Respect existing Duo authentication control around logon.
+      1 = Disable Duo at logon and only prompt during UAC User Elevation
+      2 = Enforce Duo at logon and UAC elevation.
+
+Default: 0</string>
+
+      <string id="ElevationProtectionMode_UACElevation">Disable Duo at logon and only prompt during UAC User Elevation</string>
+      <string id="ElevationProtectionMode_Logon">Respect existing Duo authentication control around logon.</string>
+      <string id="ElevationProtectionMode_LogonUACElevation">Enforce Duo at logon and UAC elevation.</string>
+
+      <string id="ElevationOfflineEnable_Display">Client: Enable Offline Access for User Elevation</string>
+      <string id="ElevationOfflineEnable_Explain">If enabled, allows Offline Access during User Elevation.
+
+Default: Enabled.</string>
+
+      <string id="ElevationOfflineEnrollment_Display">Client: Enable Offline Enrollment during User Elevation</string>
+      <string id="ElevationOfflineEnrollment_Explain">If enabled, allows for Offline Access enrollment during User Elevation attempts. This must be used in conjuction with &quot;ElevationOfflineEnable &quot;
+
+Default: Enabled.</string>
+
+      <!-- CLIENT -->
+      <string id="AutoPush_Display">Client: Enable Auto Push</string>
+      <string id="AutoPush_Explain">When enabled, Duo Authentication for Windows Logon sends a Duo authentication request to the user's primary device as soon as the window is displayed instead of waiting for the user to click Login. The user must have at least one push-capable device for AutoPush to work.
+
+Default: Disabled.</string>
+      <string id="GuiEnableDebugLogging_Display">Client: Enable Debug Logging</string>
+      <string id="GuiEnableDebugLogging_Explain">Enables diagnostic logging, describing all interaction with the Duo cloud service.  The file is named &quot;Duo.log&quot; and is saved to the Duo Security subdirectory of the machine's Application Data directory, typically c:\ProgramData.  Support for rollover or size capping availible with &quot;LogFileMaxCount&quot; and &quot;LogFileMaxSizeMB&quot;.  No sensitive data is written to the log.
+
+Default: Disabled.</string>
+      <string id="FailOpen_Display">Duo Service: Fail Open if Unable to Contact Duo</string>
+      <string id="FailOpen_Explain">If enabled, permits device access if unable to contact the Duo service, or any communication errors occur.  If disabled, users cannot logon to Windows unless they have Internet access at the logon screen and can contact the Duo service.
+
+Default: Enabled.</string>
+      <string id="EnableSmartCards_Display">Duo Service: Enable Smart Cards</string>
+      <string id="EnableSmartCards_Explain">If enabled, allows logon using the Windows smart card provider as an alternative to Duo authentication.  If disabled, only Duo's credential provider is available, and all other credential providers, including the smart card credential provider, are unavailable.
+
+Default: Disabled.</string>
+      <string id="WrapSmartCards_Display">Duo Service: Wrap Smart Cards</string>
+      <string id="WrapSmartCards_Explain">If enabled, Windows smart card provider is followed by Duo authentication.  If disabled, smart card authentication and Duo authentication are mutually exclusive. Requires Duo Service: Enable Smart Cards to be enabled.
+
+Default: Disabled.</string>
+      <string id="UsernameFormatForService_Display">Duo Service: Specify format of username sent to Duo service</string>
+      <string id="UsernameFormatForService_Explain">Specifies the username format to be sent to Duo. Configuration values are:
+
+      sAMAccountName (e.g. "narroway")
+      NTLM domain and username (e.g. "ACME\narroway")
+      userPrincipalName (e.g. "narroway@acme.local")
+
+Default: sAMAccountName.</string>
+      <string id="UsernameFormatForService_Application">Duo WinLogon application</string>
+      <string id="UsernameFormatForService_UsernameOnly">Send the sAMAccountName only, removing any domain specifier (e.g. "narroway")</string>
+      <string id="UsernameFormatForService_SAM">Send the NTLM domain and username (e.g. "ACME\narroway")</string>
+      <string id="UsernameFormatForService_UPN">Use userPrincipalName (e.g. "narroway@acme.local")</string>
+      <string id="RdpOnly_Display">Client: Limit Two-Factor to RDP Logons Only</string>
+      <string id="RdpOnly_Explain">If enabled, uses Duo two-factor authentication only for Remote Desktop logons.  Otherwise, it is used for both local and remote logons.
+
+Default: Disabled.</string>
+    </stringTable>
+
+    <presentationTable>
+      <!-- DUO SERVICE -->
+      <presentation id="ApiHostname" >
+        <textBox refId="ApiHostname_TextBox">
+          <label>Enter the Duo API Hostname:</label>
+        </textBox>
+      </presentation>
+      <presentation id="IntegrationId" >
+        <textBox refId="IntegrationId_TextBox">
+          <label>Enter the integration key:</label>
+        </textBox>
+      </presentation>
+      <presentation id="IntegrationSecret" >
+        <textBox refId="IntegrationSecret_TextBox">
+          <label>Enter the secret key:</label>
+        </textBox>
+      </presentation>
+       <presentation id="OfflineMaxUsers" >
+        <decimalTextBox refId="OfflineMaxUsers_DecTextBox" defaultValue="5">Enter the maximum number of Offline Users:</decimalTextBox>
+      </presentation>
+      <presentation id="HttpProxyHost" >
+        <textBox refId="HttpProxyHost_TextBox">
+          <label>Enter the HTTP proxy hostname:</label>
+        </textBox>
+      </presentation>
+      <presentation id="HttpProxyPort" >
+        <decimalTextBox refId="HttpProxyPort_DecTextBox" defaultValue="80">Enter the port number to use for the HTTP proxy:</decimalTextBox>
+      </presentation>
+      <presentation id="LogFileMaxCount" >
+        <decimalTextBox refId="LogFileMaxCount_DecTextBox" defaultValue="1">Enter the number of log files to be maintained:</decimalTextBox>
+      </presentation>
+      <presentation id="LogFileMaxSizeMB" >
+        <decimalTextBox refId="LogFileMaxSizeMB_DecTextBox" defaultValue="1">Enter the size (in MB) of log files to be maintained:</decimalTextBox>
+      </presentation>
+      <presentation id="UsernameFormatForService">
+        <dropdownList refId="UsernameFormatForService_Enum" noSort="true" defaultItem="0">Use this format for usernames sent to the Duo service:</dropdownList>
+      </presentation>
+            <presentation id="ElevationProtectionMode">
+        <dropdownList refId="ElevationProtectionMode_Enum" noSort="true" defaultItem="0">Specifies the Protection Level for User Elevation:</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

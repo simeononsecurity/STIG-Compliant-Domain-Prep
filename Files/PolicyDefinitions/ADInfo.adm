@@ -1,0 +1,204 @@
+; Last Updated 6th December 2012
+;
+; Allows Cjwdev AD Info user preferences to be configured via Group Policy
+;
+; Released with AD Info Version 1.6.0
+;
+
+
+;
+; — USER POLICIES –
+;
+
+CLASS USER
+
+CATEGORY "Cjwdev"
+
+CATEGORY "AD Info"
+
+KEYNAME "Software\Policies\Cjwdev\ADInfo\Settings"
+
+POLICY "Get current user's domain on launch"
+
+  EXPLAIN !!DefaultDomainExplain
+  VALUENAME "GetDomainAtStartup"
+  VALUEON NUMERIC 1
+  VALUEOFF NUMERIC 0 
+ 
+END POLICY
+
+POLICY "Ask if user would like to copy existing query when creating a new query"
+
+  EXPLAIN !!NewQueryExplain
+  VALUENAME "ShowNewQueryOptionsDialog"
+  VALUEON NUMERIC 1
+  VALUEOFF NUMERIC 0 
+ 
+END POLICY
+
+POLICY "Default query file location"
+
+  EXPLAIN !!DefaultLocationExplain
+  PART "Default query file directory: "EDITTEXT
+    VALUENAME "DefaultQueryFileLocation"
+  END PART
+ 
+END POLICY
+
+POLICY "Check for updates on launch"
+
+  EXPLAIN !!UpdatesExplain
+  VALUENAME "CheckForUpdates"
+  VALUEON NUMERIC 1
+  VALUEOFF NUMERIC 0 
+ 
+END POLICY
+
+POLICY "Show full distinguished names for AD objects in query properties"
+
+  EXPLAIN !!FullDNsExplain
+  VALUENAME "ShowFullDNs"
+  VALUEON NUMERIC 1
+  VALUEOFF NUMERIC 0 
+ 
+END POLICY
+
+POLICY "By default stop query when a non replicated attribute cannot be retrieved from one Domain Controller"
+
+  EXPLAIN !!StopOnSingleDCFailureExplain
+  VALUENAME "StopOnSinglDCFailure"
+  VALUEON NUMERIC 1
+  VALUEOFF NUMERIC 0 
+ 
+END POLICY
+
+POLICY "Query file locations"
+
+  KEYNAME "Software\Policies\Cjwdev\ADInfo\Settings\QueryFileLocations\List"
+  EXPLAIN !!LocationsExplain
+  PART "Query file locations: " LISTBOX
+    VALUEPREFIX "Location"
+  END PART
+ 
+END POLICY
+
+POLICY "Remember attribute selections"
+
+  EXPLAIN !!RememberAttributesExplain
+  VALUENAME "RememberAttributeSelections"
+  VALUEON NUMERIC 1
+  VALUEOFF NUMERIC 0 
+  #if version >= 4
+    SUPPORTED !!Version1-5-0
+  #endif
+
+END POLICY
+
+POLICY "Group attributes into categories"
+
+  EXPLAIN !!GroupAttributesExplain
+  VALUENAME "GroupAttributes"
+  VALUEON NUMERIC 1
+  VALUEOFF NUMERIC 0 
+  #if version >= 4
+    SUPPORTED !!Version1-5-0
+  #endif
+
+END POLICY
+
+POLICY "Show multiple values on separate lines"
+
+  EXPLAIN !!SeparateLinesExplain
+  VALUENAME "SeparateLines"
+  VALUEON NUMERIC 1
+  VALUEOFF NUMERIC 0 
+  #if version >= 4
+    SUPPORTED !!Version1-5-0
+  #endif
+
+END POLICY
+
+POLICY "Default search location - Container path"
+
+  EXPLAIN !!DefaultSearchLocationExplain
+  PART "By default, queries search the following location: "EDITTEXT
+    VALUENAME "DefaultContainer"
+  END PART
+  #if version >= 4
+    SUPPORTED !!Version1-5-0
+  #endif
+
+END POLICY
+
+POLICY "Default search location - Include sub containers"
+
+  EXPLAIN !!DefaultContainerSubExplain
+  VALUENAME "DefaultContainerIncludeSub"
+  VALUEON NUMERIC 1
+  VALUEOFF NUMERIC 0 
+  #if version >= 4
+    SUPPORTED !!Version1-5-0
+  #endif
+
+END POLICY
+
+POLICY "Do not allow user to choose search location when running a query"
+
+  EXPLAIN !!ForceDefaultSearchLocationExplain
+  VALUENAME "ForceDefaultSearchLocation"
+  VALUEON NUMERIC 1
+  VALUEOFF NUMERIC 0 
+  #if version >= 4
+    SUPPORTED !!Version1-5-7
+  #endif
+
+END POLICY
+
+POLICY "Show parent containers next to group member names"
+
+  EXPLAIN !!AppendParentContainersExplain
+  VALUENAME "AppendParentContainers"
+  VALUEON NUMERIC 1
+  VALUEOFF NUMERIC 0 
+  #if version >= 4
+    SUPPORTED !!Version1-6-0
+  #endif
+
+END POLICY
+
+POLICY "Custom attribute definitions file path"
+
+  EXPLAIN !!CustomAttributeFilePathExplain
+  PART "Store custom attribute definitions in the following XML file: "EDITTEXT
+    VALUENAME "CustomAttributeFilePath"
+  END PART
+  #if version >= 4
+    SUPPORTED !!Version1-6-0
+  #endif
+
+END POLICY
+
+
+END CATEGORY
+
+END CATEGORY
+
+[strings]
+Version1-5-0="At least AD Info version 1.5.0"
+Version1-5-7="At least AD Info version 1.5.7"
+Version1-6-0="At least AD Info version 1.6.0"
+DefaultDomainExplain="If this setting is Enabled then when AD Info is launched it will attempt to bind to the current user's domain and run queries against this domain by default. Once the application has connected to the user's domain, the user can still specify another domain via the Domain Settings window.\n \nIf this setting is disabled then the application will not attempt to bind to the user's domain when launched.\n \nIf this setting is not configured, the setting that the user has configured in the Options window will take effect."
+NewQueryExplain="If this setting is enabled then each time a user creates a new query they will be asked if they would like to copy parameters from an existing query.\n \nIf this setting is disabled then the user will never be prompted to copy parameters from an existing query when creating a new query.\n \nIf this setting is not configured, the setting that the user has configured in the Options window will take effect."
+DefaultLocationExplain="If this setting is enabled then the path specified will be used as the user's default query file location, which is the location where any custom queries that they create will be saved to by default. When a user creates a new query they will still have the option of choosing to save it to a different location, this setting just controls the default setting. This directory will also be searched for query files each time the application is launched. \n \nIf this setting is disabled or not configured, the default directory that the user has configured in the Options window will be used."
+UpdatesExplain="If this setting is enabled then each time AD Info is launched it will query a file on the www.cjwdev.co.uk web server to see if a newer version of AD Info is available, if there is then the user will be notified and asked if they want to download the new version now.\n \nIf this setting is disabled the application will only check for updates if the user selects the Check For Updates option from the Help menu.\n \nIf this setting is not configured, the setting that the user has configured in the Options window will take effect."
+FullDNsExplain="If this setting is enabled then any Active Directory objects specified in a query's definition will be shown as a full distinguished name when the user views the query's properties.\n \nIf this setting is disabled then just the object's name (e.g a Group's name, or a GPO's display name) will be shown. \n \nIf this setting is not configured, the setting that the user has configured in the Options window will take effect."
+StopOnSingleDCFailureExplain="If this setting is enabled then by default any queries that use non-replicated values will fail if the attribute could not be retrieved from one domain controller. The user can still change this option in the Domain Settings window, this setting just controls the default behavior.\n \nIf this setting is disabled then by default a query will not fail if one or more domain controllers cannot be contacted but a warning message will be shown in the query progress log.\n \nIf this setting is not configured, the setting that the user has configured in the Options window will take effect."
+LocationsExplain="If this setting is enabled then the directories specified will be added to the user's query file locations list. Each of these directories will be searched for XML files when AD Info is launched and any XML files found will be parsed as query definitions and loaded into the program as available queries. Note that any directories within the specified directories will also be searched. With this setting enabled, users can still add their own additional query file locations but they cannot remove any locations that are specified here. \n \nIf this setting is disabld or not configured then only the built in query file locations and locations that the user has added themselves will be used."
+RememberAttributesExplain="If this setting is enabled then the attributes that are selected to be included in a query's results will automatically be selected the next time that query is run.\n \nIf this setting is disabled then attribute selections will not be remembered.\n \nIf this setting is not configured then the settings that the user has configured in the Options window will take effect."
+GroupAttributesExplain="If this setting is enabled then when the user is prompted to select which attributes they would like to include in a query's results, the attributes will be grouped together into categories (such as Account, Organization, Address, Group Membership, System, etc) instead of being in one long list.\n \nIf this setting is disabled then attributes will not be grouped into categories and will just be displayed in a single list.\n \nIf this setting is not configured, the setting that the user has configured in the Options window will take effect."
+SeparateLinesExplain="If this setting is enabled then any attribute values shown in the results grid that contain multiple values (such as Group Membership, or Managed Accounts) will have each value shown on its own line within the same cell, rather than all being on one line separated by semi colons.\n \nIf this setting is disabled then multiple values will all be displayed on a single line.\n \nIf this setting is not configured then the settings that the user has configured in the Options window will take effect."
+DefaultSearchLocationExplain="If this setting is enabled then the specified container will be used as the default root search location for any queries. The container path should be specified in the form of a distinguished name (for example: OU=Users,OU=UK,DC=cjwdev,DC=local). This setting only controls the default, it does not prevent the user from selecting another container when they actually run a query.\n \nIf this setting is disabled or not configured then the settings that the user has configured in the Options window will take effect."
+DefaultContainerSubExplain="If this setting is enabled then sub containers of the specified default root search location will also be searched by default. This setting only controls the default - the user can still choose to include/exclude sub containers when they actually run a query.\n \nIf this setting is disabled then sub containers will not be searched by default.\n \nIf this setting is not configured then the settings that the user has configured in the Options window will take effect."
+ForceDefaultSearchLocationExplain="If this setting is enabled then the user will not be able to select the OU that a query will search when they run it and queries will always use the default search location that has been specified (either via Group Policy or by the user in the Options window). If no default search location has been specified then queries will always search the entire domain. If a default search location has been set then all queries will search that location and the user will not be able to change this (this also applies to the Include Sub Containers option). NOTE: Unless the default search location has been specified via Group Policy then there is nothing stopping the user changing the default search location in the Options window, so this policy is only really useful when used in conjunction with the Default Search Location policy. \n \nIf this setting is disabled or not configured then the user can choose the container that a query will search when they run it."
+AppendParentContainersExplain="If this setting is enabled then the user will always see parent container names next to group member names when querying group membership attributes.\n \nIf this setting is disabled then the user will never see parent container names next to group member names.\n \nIf this setting is not configured, the setting that the user has configured in the Options window will take effect."
+CustomAttributeFilePathExplain="If this setting is enabled then custom attribute definitions will be loaded from the specified file on program launch and new custom attributes defined by the user will be saved to this file as well. Multiple users can share the same XML file.\n \nIf this setting is disabled or not configured, the setting that the user has configured in the Options window will take effect."

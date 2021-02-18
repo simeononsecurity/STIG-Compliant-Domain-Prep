@@ -1,0 +1,2045 @@
+﻿<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName>
+  </displayName>
+  <description>
+  </description>
+  <resources>      
+    <stringTable>
+      <string id="AboutDialog_Explain">Enable this option to set the new contents in 'About Foxit Reader' dialog.
+
+Copyright: Change the content of copyright. The default is Foxit information.
+
+Copyright Content: Change the contents under copyright information. The default lists the technology built in Foxit Reader.
+
+BackGroundPath: Set the path of the logo.</string>
+      <string id="Advertise_Explain">Enable this option to change the settings of advertisement in right corner of the tab bar.
+
+Check 'Remove Advertisement' to hide advertisements in the right corner of the tab bar and disable the setting in 'Preferences > General > Application Startup'.
+
+Check 'Scroll'  to scroll the ads circularly and set the Rolling Time. The default time is 10 seconds.
+
+Folder Path: Change the folder path of advertisements in order to change the advertisements. There should be a 'Profile.xml' file in the new advertisement folder. This file defines the ad image, message and link address. Please refer to the xml file in the Foxit Reader application folder ('..\Foxit Reader\Advertisement\Profile.xml') to get the format of  'Profile.xml' file.</string>
+      <string id="Cate_6400Pa">6400%</string>
+	  <string id="Cate_3200Pa">3200%</string>
+	  <string id="Cate_1600Pa">1600%</string>
+      <string id="Cate_800Pa">800%</string> 
+      <string id="Cate_600Pa">600%</string>
+      <string id="Cate_400Pa">400%</string>
+      <string id="Cate_200Pa">200%</string>
+      <string id="Cate_150Pa">150%</string>
+      <string id="Cate_125Pa">125%</string>
+      <string id="Cate_100Pa">100%</string>
+      <string id="Cate_75Pa">75%</string>
+      <string id="Cate_66Pa">66.67%</string>
+      <string id="Cate_50Pa">50%</string>
+      <string id="Cate_33Pa">33.33%</string>
+      <string id="Cate_25Pa">25%</string>
+      <string id="Cate_12Pa">12.5%</string>
+      <string id="Cate_8Pa">8.33%</string> 	  
+	  <string id="Cate_1Pa">1%</string> 	 
+      <string id="Cate__Account">Account</string>
+      <string id="Cate__ParaClose">Close</string>
+      <string id="Cate_About">About Foxit Reader</string>
+      <string id="Cate_Accessibilityreport">Accessibility report</string>
+      <string id="Cate_ActionWizard">Action Wizard</string>
+      <string id="Cate_ActivatePlugins">Activate Plugins</string>
+      <string id="Cate_Activation">Activate</string>
+      <string id="Cate_Activation_1">Activation</string>
+      <string id="Cate_Add">Add</string>
+      <string id="Cate_ADDAPlace">Add a place</string>
+      <string id="Cate_AddcDocID">Convert to CPDF</string>
+      <string id="Cate_AddFiles">Add Files</string>
+      <string id="Cate_AddFolder">Add Folder</string>
+      <string id="Cate_ADRMSProtect">AD RMS Protect</string>
+      <string id="Cate_AdvancedSettings">Advanced Settings</string>
+      <string id="Cate_AlignLeft">Align Left</string>
+      <string id="Cate_Alignment">Alignment</string>
+      <string id="Cate_AlignRight">Align Right</string>
+      <string id="Cate_AllSuspects">All Suspects</string>
+      <string id="Cate_Annotation"></string>
+      <string id="Cate_AnnotationFormat">Add Label:</string>
+      <string id="Cate_AnnotLabel">Annot Label</string>
+      <string id="Cate_Append">Append to an Existing Sheet</string>
+      <string id="Cate_AppendtoanExistingSheet">Append to an Existing Sheet</string>
+      <string id="Cate_ApplyAllSignature">Apply All Signatures</string>
+      <string id="Cate_ApplyChanges">Apply Changes</string>
+      <string id="Cate_Apps">Apps</string>
+      <string id="Cate_Area">Area</string>
+      <string id="Cate_Assistant">Assistant</string>
+      <string id="Cate_Assistant_Open">Cloud Reading</string>
+      <string id="Cate_Attachments">Attachments</string>
+      <string id="Cate_Attendees">Attendees</string>
+      <string id="Cate_AudioVideo">Audio &amp; Video</string>
+      <string id="Cate_AutoHide">Auto-hide Status Bar</string>
+      <string id="Cate_AutoScroll">AutoScroll</string>
+      <string id="Cate_BandAid">Spot Healing Brush</string>
+      <string id="Cate_Bevel">Bevel</string>
+      <string id="Cate_Bezier">Append Bezier</string>
+      <string id="Cate_BezierClose">Append Close Bezier</string>
+      <string id="Cate_BMP">BMP</string>
+      <string id="Cate_Bold">Bold</string>
+      <string id="Cate_Border">Dash Type</string>
+      <string id="Cate_Border_1">Border</string>
+      <string id="Cate_Both">Both</string>
+      <string id="Cate_Bottom">Bottom</string>
+      <string id="Cate_BringtoFront">Bring to Front</string>
+      <string id="Cate_Brush16">Brush</string>
+      <string id="Cate_BTApplyAll">Apply All Signatures</string>
+      <string id="Cate_BTClose">Close</string>
+      <string id="Cate_BTCreateSign">Create Signature</string>
+      <string id="Cate_BTManage">Manage Signatures</string>
+      <string id="Cate_BTSetting">Preferences</string>
+      <string id="Cate_BTSignature">Signature List</string>
+      <string id="Cate_Bullets">Bullets</string>
+      <string id="Cate_Center">Center</string>
+      <string id="Cate_CertifywithoutVisibleSignature">Certify without Visible Signature...</string>
+      <string id="Cate_CertifywithVisibleSignature">Certify with Visible Signature...</string>
+      <string id="Cate_ChangeSkin">Change Skin</string>
+      <string id="Cate_ChangeToolbarMode">Change Toolbar Mode</string>
+      <string id="Cate_CharacterScale">Character Scale</string>
+      <string id="Cate_CharacterSpacing">Character Spacing</string>
+      <string id="Cate_CheckforUpdate">Check for Update</string>
+      <string id="Cate_Clipboard">Clipboard</string>
+      <string id="Cate_Clockwise">Clockwise</string>
+      <string id="Cate_CloneStamp">Clone Stamp</string>
+      <string id="Cate_Close">Close</string>
+      <string id="Cate_CloseAll">Close All</string>
+      <string id="Cate_Cloudy">Cloudy</string>
+      <string id="Cate_ColorFill">Paint Bucker</string>
+      <string id="Cate_CombineForms">Combine Forms to a Sheet</string>
+      <string id="Cate_CombineFormstoaSheet">Combine Forms to a Sheet</string>
+      <string id="Cate_COMMENT">comment</string>
+      <string id="Cate_Comment_Home">Comment</string>
+      <string id="Cate_COMMENTFORMAT">Comment Format</string>
+      <string id="Cate_Compare">Compare</string>
+      <string id="Cate_Compliance">Compliance</string>
+      <string id="Cate_Computer">Computer</string>
+      <string id="Cate_Connect">Connect</string>
+      <string id="Cate_ConnectedPDFDRM">CPDF Protection</string>
+      <string id="Cate_ConnectedPDFProtection">ConnectedPDF Protection</string>
+      <string id="Cate_ConnectedReview">Connected Review</string>
+      <string id="Cate_ConnecttoDigitalRightManagementServersandGetTemplates">Connect to Digital Right Management Servers and Get Templates</string>
+      <string id="Cate_CONVERT">Convert</string>
+      <string id="Cate_ConvertSelectedTextToPDF">Convert To Shape</string>
+      <string id="Cate_Counterclockwise">Counter-clockwise</string>
+      <string id="Cate_CoverSheet">Cover Sheet</string>
+      <string id="Cate_CPDDRMOffline">Save Offline Copy</string>
+      <string id="Cate_CPDDRMOfflineDevice">Base On Device</string>
+      <string id="Cate_CPDDRMOfflinePSW">Base On Password</string>
+      <string id="Cate_CPDF_Message">Add CPDF Message</string>
+      <string id="Cate_CPDF_Message_1">Advanced Setting</string>
+      <string id="Cate_CreateblankPDFPortfolio">Create a blank PDF Portfolio</string>
+      <string id="Cate_CreateConnectedPDF">Create ConnectedPDF</string>
+      <string id="Cate_CreateCustomDynamicStamp">Create Custom Dynamic Stamp</string>
+      <string id="Cate_CreateCustomStamp">Create Custom Stamp</string>
+      <string id="Cate_CreateFolder">Create Folder</string>
+      <string id="Cate_CreatenewPDFPortfolio">Create a new PDF Portfolio</string>
+      <string id="Cate_CreateSignature">Create Signature</string>
+      <string id="Cate_CredentialManagement">Credential Management</string>
+      <string id="Cate_CurrentFile">Current File</string>
+      <string id="Cate_CustomTemplates">Custom Templates</string>
+      <string id="Cate_Darken">Burn</string>
+      <string id="Cate_DecreaseIndent">Decrease Indent</string>
+      <string id="Cate_Delete">Delete</string>
+      <string id="Cate_Description">Description</string>
+      <string id="Cate_Details">Details</string>
+      <string id="Cate_DigitalIDs">Digital IDs</string>
+      <string id="Cate_DigitalSignatures">Digital Signature</string>
+      <string id="Cate_DigitalSignatures_1">Digital Signatures</string>
+      <string id="Cate_Discover">Discover</string>
+      <string id="Cate_Distance">Distance</string>
+      <string id="Cate_Distribute">Distribute</string>
+      <string id="Cate_DocumentAction">Document Action</string>
+      <string id="Cate_DocumentProperties">Document Properties</string>
+      <string id="Cate_DocumentViews">Document Views</string>
+      <string id="Cate_Dodge">Dodge</string>
+      <string id="Cate_Duplicate">Duplicate Pages</string>
+      <string id="Cate_EditDocumentInformation">Edit Document Information</string>
+      <string id="Cate_EditObject">Edit Object</string>
+      <string id="Cate_Effect">Effect</string>
+      <string id="Cate_Ellipse">Append Ellipse</string>
+      <string id="Cate_End">End of line</string>
+      <string id="Cate_Endofline">End of line</string>
+      <string id="Cate_equal">=</string>
+      <string id="Cate_Eraser">Eraser</string>
+      <string id="Cate_ExitImageEditor">Exit Image Editor</string>
+      <string id="Cate_Export">Export</string>
+      <string id="Cate_ExportCombine">Combine Forms to a Sheet</string>
+      <string id="Cate_Extract">Extract Pages</string>
+      <string id="Cate_FDFviaEmail">FDF via Email</string>
+      <string id="Cate_Fields">Fields</string>
+      <string id="Cate_FILE">File</string>
+      <string id="Cate_File_Pin">File</string>
+      <string id="Cate_FilePageChangeSkin">Change Skin</string>
+      <string id="Cate_Fill">Fill</string>
+      <string id="Cate_FillColor">Fill Color</string>
+      <string id="Cate_FillColor_1">Fill Color</string>
+      <string id="Cate_FillnSign">Fill-n-Sign</string>
+      <string id="Cate_Filter">Filter</string>
+      <string id="Cate_FirstSuspect">First Suspect</string>
+      <string id="Cate_Flat">Butt</string>
+      <string id="Cate_Flatten">Flatten</string>
+      <string id="Cate_Font">Font</string>
+      <string id="Cate_FontColor">Font Color</string>
+      <string id="Cate_FontSize">Font Size</string>
+      <string id="Cate_FORM">Form</string>
+      <string id="Cate_FormatPageNumbering">Format Page Numbers</string>
+      <string id="Cate_FormData">Form Data</string>
+      <string id="Cate_FormFields">Form Fields</string>
+      <string id="Cate_FormRecognition">Form Recognition</string>
+      <string id="Cate_FoxitHomepage">Foxit Homepage</string>
+      <string id="Cate_FoxitPlugIns">Foxit Plug-Ins</string>
+      <string id="Cate_FreeDraw">Append Free Paint</string>
+      <string id="Cate_FromBlankPage">From Blank Page</string>
+      <string id="Cate_FromBlankPage1">Blank</string>
+      <string id="Cate_FromFiles">From Files</string>
+      <string id="Cate_FromFolder">From Folder</string>
+      <string id="Cate_FromOpenFiles">From Open Files</string>
+      <string id="Cate_Gallery">Change Shape Style</string>
+      <string id="Cate_GeneralPrefs">Preferences</string>
+      <string id="Cate_GetBusiness">Evaluation</string>
+      <string id="Cate_GradientStops">Gradient Stops</string>
+      <string id="Cate_Hand">Hand</string>
+      <string id="Cate_HeaderFooter">Header &amp; Footer</string>
+      <string id="Cate_HELP">Help</string>
+      <string id="Cate_HiddenInformation">Hidden Data</string>
+      <string id="Cate_HideAll">Hide All</string>
+      <string id="Cate_HideStatusBar">Hide Status Bar</string>
+      <string id="Cate_Home">Home</string>
+      <string id="Cate_HomepagePrivateControl">Document Homepage</string>
+      <string id="Cate_Horizontally">Horizontally</string>
+      <string id="Cate_IMAGE">Image</string>
+      <string id="Cate_Import">Import</string>
+      <string id="Cate_IncreaseIndent">Increase Indent</string>
+      <string id="Cate_IndustryStandard">Industry Standard</string>
+      <string id="Cate_Info">Document Info</string>
+      <string id="Cate_insert">Insert</string>
+      <string id="Cate_InsertShapes">Insert Shapes</string>
+      <string id="Cate_InstallUpdate">Install Update</string>
+      <string id="Cate_IntoFile">Into File</string>
+      <string id="Cate_Italic">Italic</string>
+      <string id="Cate_Itself">Itself</string>
+      <string id="Cate_JavaScript">JavaScript</string>
+      <string id="Cate_JavaScriptConsole">JavaScript Console</string>
+      <string id="Cate_Join">Join</string>
+      <string id="Cate_JoinReview">Join</string>
+      <string id="Cate_JoinSplit">Join &amp; Split</string>
+      <string id="Cate_JOINSPLITFORMAT">JOIN &amp; SPLIT Tool</string>
+      <string id="Cate_JoinSplitText">Link &amp; Join Text</string>
+      <string id="Cate_JPEG">JPEG</string>
+      <string id="Cate_JPEG2000">JPEG2000</string>
+      <string id="Cate_Layout">Layout</string>
+      <string id="Cate_LeaveReview">Leave</string>
+      <string id="Cate_Lefttoright">Left to right</string>
+      <string id="Cate_Line">Append Line</string>
+      <string id="Cate_LineCapStyle">Line Cap</string>
+      <string id="Cate_LineColor">Line Color</string>
+      <string id="Cate_LineJoinStyle">Line Join</string>
+      <string id="Cate_LineSpacing">Line Spacing</string>
+      <string id="Cate_LineStyle">Dash Pattern</string>
+      <string id="Cate_LineWeights">Line Weights</string>
+      <string id="Cate_LineWidth">Line Width</string>
+      <string id="Cate_Link">Link</string>
+      <string id="Cate_Links">Links</string>
+      <string id="Cate_LinkUnlink">Link &amp; Unlink</string>
+      <string id="Cate_Login">Cate_Login</string>
+      <string id="Cate_Login_1">Login</string>
+      <string id="Cate_LogintoDocuSign">Login to DocuSign</string>
+      <string id="Cate_Magic">Magic Wand</string>
+      <string id="Cate_MainPanel">Main Panel</string>
+      <string id="Cate_ManageComments">Manage Comments</string>
+      <string id="Cate_ManageSignature">Manage Signatures</string>
+      <string id="Cate_ManageStamps">Manage Stamps</string>
+      <string id="Cate_Marquee">Marquee</string>
+      <string id="Cate_Measure">Measure</string>
+      <string id="Cate_Measurementmarkup">Measurement markup</string>
+      <string id="Cate_MergeText">Merge Text</string>
+      <string id="Cate_Miter">Miter</string>
+      <string id="Cate_MiterLimit">Miter Limit</string>
+      <string id="Cate_Model">Change Comment Style</string>
+      <string id="Cate_Move">Move Pages</string>
+      <string id="Cate_Mulit">Mulit-page rotate</string>
+      <string id="Cate_MultipleFiles">Multiple Files</string>
+      <string id="Cate_Number1">Number1</string>
+      <string id="Cate_Number2">Number2</string>
+      <string id="Cate_OBJECTFORMAT">SHAPE TOOL</string>
+      <string id="Cate_OCRCurrentFile">OCR Current File</string>
+      <string id="Cate_OneColumn">Continuous</string>
+      <string id="Cate_OneColumn_1">One Column</string>
+      <string id="Cate_OnlineTutorial">Online Tutorial</string>
+      <string id="Cate_Opacity">Opacity</string>
+      <string id="Cate_OpacitySlider">Opacity Slider</string>
+      <string id="Cate_Open">Open</string>
+      <string id="Cate_OpenAll">Open All</string>
+      <string id="Cate_OptimizeScannedPDF">Optimize Scanned PDF</string>
+      <string id="Cate_ORGANIZE">ORGANIZE</string>
+      <string id="Cate_Page">Page</string>
+      <string id="Cate_PageCenter">Page Center</string>
+      <string id="Cate_PageMarks">Page Marks</string>
+      <string id="Cate_PageOrganization">Page Organization</string>
+      <string id="Cate_PageOrganize">Page Organize</string>
+      <string id="Cate_Pages">Pages</string>
+      <string id="Cate_PageTransitions">Page Transitions</string>
+      <string id="Cate_ParaEdit">Edit Text</string>
+      <string id="Cate_Paragraph">Paragraph</string>
+      <string id="Cate_ParaSignature">Sign</string>
+      <string id="Cate_Participants">Participants</string>
+      <string id="Cate_PasteClipboardImageasStampTool">Paste Clipboard Image as Stamp Tool</string>
+      <string id="Cate_Pause">Pause</string>
+      <string id="Cate_PDFOptimizer">PDF Optimizer</string>
+      <string id="Cate_PDFPortfolio">PDF Portfolio</string>
+      <string id="Cate_PDFSign">Fill &amp; Sign</string>
+      <string id="Cate_Perimeter">Perimeter</string>
+      <string id="Cate_Perset">Perset Shading Style</string>
+      <string id="Cate_Pin">Pin</string>
+      <string id="Cate_Pin_File">File</string>
+      <string id="Cate_Pipette">Eyedropper</string>
+      <string id="Cate_PlaceSignature">Place Signature...</string>
+      <string id="Cate_PNG">PNG</string>
+      <string id="Cate_Polygan">Polygon</string>
+      <string id="Cate_Polygon">Append Polygon</string>
+      <string id="Cate_Polygonal">Polygonal Lasso</string>
+      <string id="Cate_Polyline">Polyline</string>
+      <string id="Cate_PolyLine">Append Polyline</string>
+      <string id="Cate_PopupNotes">Popup Notes</string>
+      <string id="Cate_Predefine">Predefined Text</string>
+      <string id="Cate_Preferences">Preferences</string>
+      <string id="Cate_Print">Print</string>
+      <string id="FL_BATCHPRINT">Batch print</string>	  
+      <string id="Cate_Product">Product</string>
+      <string id="Cate_ProductInfo">Product Info</string>
+      <string id="Cate_Proofing">Proofing</string>
+      <string id="Cate_Propertions_Font">Fonts</string>
+      <string id="Cate_PROTECT">Protect</string>
+      <string id="Cate_ProtectRedactions">Protect Redactions</string>
+      <string id="Cate_Publish">Register New Version</string>
+      <string id="Cate_PurchaseNow">Purchase Now</string>
+      <string id="Cate_QuickOCR">Quick OCR</string>
+      <string id="Cate_Rate">Rate</string>
+      <string id="Cate_Recentfile">Recent Documents</string>
+      <string id="Cate_Rectangle">Append Rectangle</string>
+      <string id="Cate_Rectangular">Rectangular Marquee</string>
+      <string id="Cate_ReduceFileSize">Reduce File Size</string>
+      <string id="Cate_ReferenceLine">Reference Line</string>
+      <string id="Cate_Register">Register</string>
+      <string id="Cate_RegisterUnregister">Register/Unregister</string>
+      <string id="Cate_RelatedPeople">Related People</string>
+      <string id="Cate_Remove">Remove All</string>
+      <string id="Cate_RemoveAllLinks">Remove All Links</string>
+      <string id="Cate_RemoveKerning">Remove Kerning</string>
+      <string id="Cate_Review">Review</string>
+      <string id="Cate_RighttoLeft">Right to Left</string>
+      <string id="Cate_RMSEncrypt">RMS Protect</string>
+      <string id="Cate_Rotate">Rotate</string>
+      <string id="Cate_RotatePages">Rotate Pages</string>
+      <string id="Cate_Round">Round</string>
+      <string id="Cate_RoundRect">Append Round Rectangle</string>
+      <string id="Cate_SanitizeDocument">Sanitize Document</string>
+      <string id="Cate_Save">Save</string>
+      <string id="Cate_SaveAs_Computer">Computer</string>
+      <string id="Cate_SavetoFile">Save to File</string>
+      <string id="Cate_ScaleRatio">Calibration</string>
+      <string id="Cate_Scan">Scan</string>
+      <string id="Cate_SearchRedact">Search &amp; Redact</string>
+      <string id="Cate_SecureDocument">Secure Document</string>
+      <string id="Cate_Security">Security</string>
+      <string id="Cate_SecurityWatermark">Security Watermark</string>
+      <string id="Cate_SecurityWatermarkManagement">Security Watermark</string>
+      <string id="Cate_SecurityWatermarkManagement_1">Security Watermark Management</string>
+      <string id="Cate_Select">Select</string>
+      <string id="Cate_SelectAnnotation">Select Annotation</string>
+      <string id="Cate_SelectNone">Select None</string>
+      <string id="Cate_SelectText">Select Text</string>
+      <string id="Cate_SelfCategory">Self Category</string>
+      <string id="Cate_SelfPanel">Self Panel</string>
+      <string id="Cate_SendforEmailReview">Send for Email Review</string>
+      <string id="Cate_SendforSharedReview">Send for Shared Review</string>
+      <string id="Cate_SendTo">Send To</string>
+      <string id="Cate_SendtoBack">Send to Back</string>
+      <string id="Cate_SendviaDocuSign">Send via DocuSign</string>
+      <string id="Cate_SeparateCoverPage">Separate Cover Page</string>
+      <string id="Cate_ServerSetting">Server Setting</string>
+      <string id="Cate_SetBrushAttribute">Set Brush Attribute</string>
+      <string id="Cate_SetFavoriteStamps">Set Favorite Stamps</string>
+      <string id="Cate_SetPaintColor">Set Paint Color</string>
+      <string id="Cate_SetPredefinedText">Set Predefined Text</string>
+      <string id="Cate_Setting">Setting</string>
+      <string id="Cate_Shading">Shading</string>
+      <string id="Cate_SHADINGFORMAT">SHADING FORMAT</string>
+      <string id="Cate_Shape">Shape Style</string>
+      <string id="Cate_ShapeStyle">Shape Style</string>
+      <string id="Cate_SHARE">Share</string>
+      <string id="Cate_SharePointIntegration">SharePoint Integration</string>
+      <string id="Cate_Shear">Shear</string>
+      <string id="Cate_Sheet">Form to sheet</string>
+      <string id="Cate_ShowAll">Show All</string>
+      <string id="Cate_ShowHidden">Hide Navigation Panels</string>
+      <string id="Cate_Showresultinformation">Show result information</string>
+      <string id="Cate_ShowStampsPalette">Show Stamps Palette</string>
+      <string id="Cate_ShowStatusBar">Show Status Bar</string>
+      <string id="Cate_Signature">Signature</string>
+      <string id="Cate_SignCertify">Sign &amp; Certify</string>
+      <string id="Cate_SignDoc">Sign Document...</string>
+      <string id="Cate_SignDocument">Sign Document...</string>
+      <string id="Cate_SignVertify">Sign &amp; Certify</string>
+      <string id="Cate_SignwithDocuSign">Sign with DocuSign</string>
+      <string id="Cate_SinglePage">Single Page</string>
+      <string id="Cate_SinglePage_1">Single Page</string>
+      <string id="Cate_Slice">Cut Out</string>
+      <string id="Cate_Snap">Snap</string>
+	  <string id="Cate_FormatExport">Export</string>
+      <string id="Cate_SnapEndpoint">Snap to Endpoints</string>
+      <string id="Cate_SnapIntersection">Snap to Intersections</string>
+	  <string id="Cate_ExportToExcel">Export to Excel</string>
+      <string id="Cate_SnapMidpoint">Snap to Midpoints</string>
+      <string id="Cate_SnapNearest">Snap to Paths</string>
+      <string id="Cate_Split">Split</string>
+      <string id="Cate_SplitText">Split Text</string>
+      <string id="Cate_SpreadsheetSplit">Spreadsheet Split</string>
+      <string id="Cate_Square">Projecting Square Cap</string>
+      <string id="Cate_Stamp">Stamp</string>
+      <string id="Cate_Stamps">Stamps</string>
+      <string id="Cate_Stamps_1">Stamps </string>
+      <string id="Cate_Start">Start of line</string>
+      <string id="Cate_Startofline">Start of line</string>
+      <string id="Cate_StatusBar">Status Bar</string>
+      <string id="Cate_Strikethrough">Strikethrough</string>
+      <string id="Cate_SubItem">Subitem</string>
+      <string id="Cate_Subscript">Subscript</string>
+      <string id="Cate_Superscript">Superscript</string>
+      <string id="Cate_SuspectResults">Suspect Results</string>
+      <string id="Cate_Swap">Swap two Pages</string>
+      <string id="Cate_TemplateManagement">Template Management</string>
+      <string id="Cate_TextMarkup">Text Markup</string>
+      <string id="Cate_TIFF">TIFF</string>
+      <string id="Cate_TimeStampDocument">Time Stamp Document</string>
+      <string id="Cate_ToaNewFile">To a New File</string>
+      <string id="Cate_ToExcel">To Excel</string>
+      <string id="Cate_ToExcel97-2003">To Excel 97-2003</string>
+      <string id="Cate_ToFile">To File</string>
+      <string id="Cate_ToHTML">To HTML</string>
+      <string id="Cate_ToImage">To Image</string>
+      <string id="Cate_ToMSOffice">To MS Office</string>
+      <string id="Cate_Tools_HOME">Tools</string>
+      <string id="Cate_ToOther">To Other</string>
+      <string id="Cate_Top">Top</string>
+      <string id="Cate_ToPlainText">To Plain Text</string>
+      <string id="Cate_ToPowerPoint">To PowerPoint</string>
+      <string id="Cate_ToRichText">To Rich Text</string>
+      <string id="Cate_ToWord">To Word</string>
+      <string id="Cate_ToWord97-2003">To Word 97-2003</string>
+      <string id="Cate_Tracker">Tracker</string>
+      <string id="Cate_Transform">Transform</string>
+      <string id="Cate_Translate">Translate</string>
+      <string id="Cate_TrustCertificates">Trusted Certificates</string>
+      <string id="Cate_Tutorial">Tutorial</string>
+      <string id="Cate_Tutorials">Tutorials</string>
+      <string id="Cate_Typewriter">Typewriter</string>
+      <string id="Cate_UIOptions">UI Options</string>
+      <string id="Cate_Underline">Underline</string>
+      <string id="Cate_Unit1">Unit1</string>
+      <string id="Cate_Unit2">Unit2</string>
+      <string id="Cate_ScaleAaalyCurrent">Apply to Current Page</string>
+      <string id="Cate_ScaleAaalyAll">Apply to All Pages</string>	  
+      <string id="Cate_Unlink">Unlink</string>
+      <string id="Cate_UnrestrictedAccess">Unrestricted Access</string>
+      <string id="Cate_Update">Update</string>
+      <string id="Cate_Validate">Validate</string>
+      <string id="Cate_VersionHistory">Version History</string>
+      <string id="Cate_Vertically">Vertically</string>
+      <string id="Cate_Via_Email">Via Email</string>
+      <string id="Cate_VIEW">View</string>
+      <string id="Cate_ViewPermission">View Permissions</string>
+      <string id="Cate_ViewSetting">View Setting</string>
+      <string id="Cate_Volume">Volume</string>
+      <string id="Cate_WebLinks">Web Links</string>
+      <string id="Cate_Width">Line Width</string>
+      <string id="Cate_Width_1">Width</string>
+      <string id="Cate_WordCount">Word Count</string>
+      <string id="Cate_WordCount_1">Word Count</string>
+      <string id="Cate_WordSpacing">Word Spacing</string>
+      <string id="Cate_WritingDirecting">Writing Directing</string>
+      <string id="Cate_Zorder">Z-order</string>
+      <string id="Category_ARRANGE">Arrange</string>
+      <string id="Category_CloudReading">Extras</string>
+      <string id="Category_CloudReading_1">EXTRAS</string>
+      <string id="Category_COMMENT">COMMENT</string>
+      <string id="Category_CONVERT">CONVERT</string>
+      <string id="Category_EDIT">EDIT</string>
+      <string id="Category_FILE">FILE</string>
+      <string id="Category_PDFSIGN">PDF Sign</string>
+      <string id="Category_PORTFOLIO">Portfolio</string>
+      <string id="Category_POSTSCANOPTIONS">POST-SCAN OPTIONS</string>
+      <string id="CHANGE_TO_RMS1">Use AD RMS Plugin Version 1</string>
+      <string id="CHANGE_TO_RMSV1">Use AD RMS Plug-in V1</string>
+      <string id="COM_AreaHighlight">Area Highlight</string>
+      <string id="COM_ARROW">Arrow</string>
+      <string id="COM_CALLOUT">Callout</string>
+      <string id="COM_CLOUDY">Cloud</string>
+      <string id="COM_FileAttachment">File Attachment</string>
+      <string id="COM_HIGHLIGHTTEXT">Highlight</string>
+      <string id="COM_INSERTTEXT">Insert Text</string>
+      <string id="Com_KeepToolsSelected">Keep Tool Selected</string>
+      <string id="COM_LINE">Line</string>
+      <string id="COM_NOTE">Note</string>
+      <string id="COM_OVAL">Oval</string>
+      <string id="COM_PENCIL">Pencil</string>
+      <string id="COM_POLYGON">Polygon</string>
+      <string id="COM_POLYLINE">Polyline</string>
+      <string id="COM_RECTANGLE">Rectangle</string>
+      <string id="COM_REPLACETEXT">Replace Text</string>
+      <string id="COM_RUBBER">Eraser</string>
+      <string id="COM_SQUIGGLYTEXT">Squiggly Underline</string>
+      <string id="COM_STRIKEOUTTEXT">Strikeout</string>
+      <string id="COM_SUMMARIZEDATA">Comments Summary</string>
+      <string id="COM_TEXTBOX">Textbox</string>
+      <string id="COM_TYPEWRITER">Typewriter</string>
+      <string id="COM_UNDERLINETEXT">Underline</string>
+      <string id="CPDF_AutoConvertConnectedPDF">Disable "Automatically save PDF files in ConnectedPDF format (including those created from plugins) only when signed in"</string>
+      <string id="CPDF_AutoConvertConnectedPDF_Explain">Enabled this option to forbid the application from automatically saving PDF files in ConnectedPDF format.</string>
+      <string id="CPDF_DISABLE">Enable this setting to disable all ConnectedPDF features.</string>
+      <string id="CPDF_disableConnectedPDF">Disable ConnectedPDF features</string>
+      <string id="CT_ADRMSProtectV1">AD RMS Protect V1</string>
+      <string id="CT_ADRMSProtectV2">AD RMS Protect V2</string>
+      <string id="CT_CertificateEncrypt">Certificate Protect</string>
+      <string id="CT_CropPages">Crop Pages</string>
+      <string id="CT_Email">Email</string>
+      <string id="CT_Evernote">Evernote</string>
+      <string id="CT_OneNote">OneNote</string>
+      <string id="CT_FromFile">From File</string>
+      <string id="CT_FromMultipleFiles">From Multiple Files</string>
+      <string id="CT_FromScanner">From Scanner</string>
+      <string id="CT_OCR">OCR</string>
+      <string id="CT_PasswordEncrypt">Password Protect</string>
+      <string id="CT_RemoveSecurity">Remove Security</string>
+      <string id="CT_RotatePages">Rotate Pages</string>
+      <string id="CT_SecurityPolicies">Security Policies</string>
+      <string id="CT_SecurityProperties">Security Properties</string>
+      <string id="DEFAULT_READER_SETTING_EXPLAIN">Enable this option to hide the 'Set to Default PDF Reader' dialog when Foxit Reader isn't the default PDF viewer.</string>
+      <string id="DEFAULT_READER_SETTING_SUPPORTED">Microsoft Windows 7 or later</string>
+      <string id="DefaultReaderMode">System PDF Viewer</string>
+      <string id="DisablePlugins_Explain">Enable this option to remove selected plugins.</string>
+      <string id="DisablePluginsList_Explain">Enable this option and input the plugin name which needs to be removed.
+
+Only applications with .fpi extensions can be removed from Foxit Reader. You can find the plugins in the program folder of Foxit Reader (..\Foxit Reader\plugins).</string>
+      <string id="DRAWING">Drawing</string>
+      <string id="ED_AddImages">Add Images Object</string>
+      <string id="ED_AddShapes">Add Shapes Object</string>
+      <string id="ED_AddText">Add Text Object</string>
+      <string id="ED_All">All</string>
+      <string id="ED_ApplyRedactions">Apply Redactions</string>
+      <string id="ED_Background">Background</string>
+      <string id="ED_BatesNumbering">Bates Numbering</string>
+      <string id="ED_BOOKMARK">Bookmark</string>
+      <string id="ED_ClearClipping">Clear Clipping</string>
+      <string id="ED_Clipping">Clipping</string>
+      <string id="ED_COPY">Copy</string>
+      <string id="ED_CUT">Cut</string>
+      <string id="ED_DELETE">Delete Pages</string>
+      <string id="ED_DocumentProcessing">Links</string>
+      <string id="ED_ED_Text">Text</string>
+      <string id="ED_EditClipping">Edit Clipping</string>
+      <string id="ED_EditContent">Edit Content</string>
+      <string id="ED_EditObject">Edit Object</string>
+      <string id="ED_EditText">Edit Text</string>
+      <string id="ED_FileAttachment">File Attachment</string>
+      <string id="ED_Image">Image Annotation</string>
+      <string id="ED_IMAGE">Image Annotation</string>
+      <string id="ED_ImageAnnotation">Image Annotation</string>
+      <string id="ED_ImageObjectFromFile">Image From File</string>
+      <string id="ED_MarkforRedaction">Mark for Redaction</string>
+      <string id="ED_NewImageObject">Draw New Image</string>
+      <string id="ED_PASTE">Paste</string>
+      <string id="ED_Redaction">Redaction</string>
+      <string id="ED_REDO">Redo</string>
+      <string id="ED_SELECTALL">Select All</string>
+      <string id="ED_Shape">Shape</string>
+      <string id="ED_SpellCheck">SpellCheck</string>
+      <string id="ED_UNDO">Undo</string>
+      <string id="ED_Watermark">Watermark</string>
+      <string id="FL__GeneralInfo">Properties</string>
+      <string id="FL_AccessibilityChecker">Accessibility Checker</string>
+      <string id="FL_CLOSE">Close</string>
+      <string id="FL_ExportAllImages">Export All Images</string>
+      <string id="FL_FilePageCreate">Create</string>
+      <string id="FL_FilePageOpen">Open</string>
+      <string id="FL_FilePageSaveAs">Save As</string>
+      <string id="FL_FromBlankPage">Blank Page</string>
+      <string id="FL_FromClipboard">From Clipboard</string>
+      <string id="FL_FROMCLIPBOARD">From Clipboard</string>
+      <string id="FL_FromFile">From File</string>
+      <string id="FL_FROMFILE">From File</string>
+      <string id="FL_FromScanner">From Scanner</string>
+      <string id="FL_Images">Images</string>
+      <string id="FL_OPEN">Open</string>
+      <string id="FL_PRINT">Print</string>
+      <string id="FL_PROPERTIES">Properties</string>
+      <string id="FL_RESTRICTEDACCESS">Restricted Access</string>
+      <string id="FL_SAVE">Save</string>
+      <string id="FL_SAVEAS">Save As</string>
+      <string id="FL_SENDTOEVERNOTE">Evernote</string>
+      <string id="FM_CalculationOrder">Calculation Order</string>
+      <string id="FM_CheckBox">Check Box</string>
+      <string id="FM_ComboBox">Combo Box</string>
+      <string id="FM_DesignerAssistant">Designer Assistant</string>
+      <string id="FM_DocumentJavaScript">Document JavaScript</string>
+      <string id="FM_EditStaticXFAForm">Edit Static XFA Form</string>
+      <string id="FM_ListBox">List Box</string>
+      <string id="FM_PushButton">Push Button</string>
+      <string id="FM_RadioButton">Radio Button</string>
+      <string id="FM_RESETFORM">Reset Form</string>
+      <string id="FM_RunFormFieldRecognition">Run Form Field Recognition</string>
+      <string id="FM_SignatureField">Signature Field</string>
+      <string id="FM_TextField">Text Field</string>
+      <string id="FOXIT">Foxit Reader 10.0</string>
+      <string id="FoxitVersion">Foxit Reader Version 10.0</string>
+      <string id="GOTO">Go To</string>
+      <string id="HomePagePath">URL:</string>
+      <string id="HomePageSetting_Explain">Enable this option to set the new contents of 'Help > Foxit Homepage'.
+
+Name: Set the new name of this item. The original is 'Foxit Homepage'.
+
+URL: Set the new link address when clicking this button. The default directs to the Foxit website.</string>
+      <string id="HomePageTitle">Name:</string>
+      <string id="HP_AboutFoxitPhantomPDF">About Foxit Reader</string>
+      <string id="HP_AboutFoxitPlugIns">About Foxit Plug-Ins</string>
+      <string id="HP_CHECKUPDATES">Check for Updates</string>
+      <string id="HP_CMDLINEHELP">Command Line Help</string>
+      <string id="HP_SETDEFAULTREADER">Set to Default PDF Reader</string>
+      <string id="HP_USERMANUAL">User Manual</string>
+      <string id="IE_Copy">Copy</string>
+      <string id="IE_FlipHorizontally">Flip Horizontally</string>
+      <string id="IE_FlipVertically">Flip Vertically</string>
+      <string id="IE_HideFunctionPanel">Hide Function Panel</string>
+      <string id="IE_Replace">Replace Pages</string>
+      <string id="LINKS">Insert Pages</string>
+      <string id="MainFrameName_Explain">Enable this option to change the program's name. The default is 'Foxit Reader'.</string>
+      <string id="MEMU_COMMENTS">Comments</string>
+      <string id="MEMU_EDIT">Edit</string>
+      <string id="MEMU_HELP">Help</string>
+      <string id="MEMU_VIEW">View</string>
+      <string id="MENU_COM_DRAW_AREAHIGHLIGHT">Area Highlight</string>
+      <string id="MENU_COM_OTHER_KEEPTOOLSEL">Keep Tool Selected</string>
+      <string id="MENU_PROTECT">Protect</string>
+      <string id="NAVPANELS">Navigation Panels</string>
+      <string id="NOT_SHOW_CUSLAN">Not Show Community Language</string>
+      <string id="NOT_SHOW_CUSLAN_EXPLAIN">Enable this option to change the application language settings.
+
+Check 'Don't Show Community Languages' to hide community languages. Otherwise community-translated languages will be listed under official languages.
+
+Default Application Language: Input a language file name, such as 'lang_en-us.xml', to set this language as default application language. This will remove the setting item in 'Preferences > Languages'.</string>
+      <string id="ORG_Compare">Compare</string>
+      <string id="PAGEDISPLAY">Page Display</string>
+      <string id="Panel_Tools">Tools</string>
+      <string id="Phantom_RMS">RMS</string>
+      <string id="PL_CommentsSummary">CommentsSummary</string>
+      <string id="PL_ComparePDF">ComparePDF</string>
+      <string id="PL_GDP">GoogleDrivePlugin</string>
+      <string id="PL_ODP">OneDrivePlugin</string>
+      <string id="PL_PageEditor">PageEditor</string>
+      <string id="PL_Speech">Speech</string>
+      <string id="Plugin_ShareReview">ShareReview</string>
+      <string id="PL_BPP">BoxPlugin</string>
+      <string id="PL_U3DBP">U3DBrowser</string>
+	  <string id="PL_WIPP">WIP</string>
+      <string id="PLUGIN">Plugins</string>
+      <string id="plugin">Plugin</string>
+      <string id="PLUGIN_ConnectedPDF">ConnectedPDF</string>
+      <string id="PLUGIN_ConnectedPDFDRM">ConnectedPDFDRM</string>
+      <string id="PLUGIN_CS">CommentsSummary</string>
+      <string id="Plugin_DocuSign">DocuSign</string>
+      <string id="PLUGIN_DropboxPlugin">DropboxPlugin</string>
+      <string id="PLUGIN_EpubViewer">EpubViewer</string> 
+      <string id="PLUGIN_FoxitCloudLogin_1">FoxitAccountManagement</string>
+      <string id="PLUGIN_GoogleDrivePlugin">GoogleDrivePlugin</string>
+      <string id="Plugin_Licensemanager">LicenseManager</string>
+      <string id="PLUGIN_OneDrivePlugin">OneDrivePlugin</string>
+      <string id="PLUGIN_PDFOCLink">CPDFOCLink</string>
+      <string id="Plugin_RMS">RMS Version 1</string>
+      <string id="Plugin_SharePoint">SharePoint</string>
+      <string id="Plugin_Speech">Speech</string>
+      <string id="Plugin_Updater">Updater</string>
+      <string id="PRE_NOTSHOWCUSLAN">Do Not Show Community Languages</string>
+      <string id="PREF_AboutDialog">'About Foxit Reader' Dialog</string>
+      <string id="PREF_Advertise">Advertisement</string>
+      <string id="PREF_AdvertiseFolderPath">Folder Path:</string>
+      <string id="PREF_Application_Language_Explain">Enable this option to change the application language settings.
+
+Check 'Don't Show Community Languages' to hide community languages. Otherwise community-translated languages will be listed under official languages.
+
+Default Application Language: Input a language file name, such as 'lang_en-us.xml', to set this language as default application language. This will remove the setting item in 'Preferences > Languages'.</string>
+      <string id="PREF_ApplicationLanguage">Application Language</string>
+      <string id="PREF_AutoHideStatusBar">Auto-hide Status Bar</string>
+      <string id="PREF_BackGroundPath">Back Ground Path:</string>
+      <string id="PREF_Copyright">Copyright:</string>
+      <string id="PREF_CopyrightContent">Copyright Content:</string>
+      <string id="PREF_DefaultApplicationLanguage">Default Application Language:</string>
+      <string id="PREF_DefaultEmbedReaderMode">Web Browser PDF Viewer</string>
+      <string id="PREF_DefaultPDFViewer">Default PDF Viewer</string>
+      <string id="PREF_DefaultPDFViewer_Explain">Enable this options to set Foxit Reader as your default PDF viewer. This option will take effect under the administrator account.
+
+Check 'System PDF Viewer' to set Foxit Reader as system default PDF viewer.
+
+Check 'Web Browser PDF Viewer' to set Foxit Reader as the default PDF viewer in web browsers and remove the corresponding setting under Preferences > File Associations > Advanced.</string>
+      <string id="PREF_DisableSecurity_Explain">Enable this option to disable the security warning when Foxit Reader is launched by a third-party application without a valid digital signature.</string>
+      <string id="PREF_DisableSecurityWarning">Disable Security Warning</string>
+      <string id="PREF_DisableUpdater">Disable the Automatically Update</string>
+      <string id="PREF_DisableUpdater_Explain">Enable this option to disable the automatically update.</string>
+      <string id="PREF_EnableUserManualLink">Change The Link For User Manual</string>
+      <string id="PREF_Hide_Status_Bar">Hide Status Bar</string>
+      <string id="PREF_HomepageSetting">Home Page Settings</string>
+      <string id="PREF_InsertPrintedPDF">Insert Printed PDF into Previously Generated PDF</string>
+      <string id="PREF_InsertPrintedPDF_Explain">Enable this option to check the option of 'Preferences > Create PDF > Insert printed PDFs into previously generated one, except those created by PhantomPDF'.
+
+With this option checked, you can append PDF files generated with Foxit Reader Printer to previously generated files
+
+If you disable this option, you cannot append files generated with Foxit Reader Printer to previously generated files.</string>
+      <string id="PREF_MainframeName">Program Name</string>
+      <string id="PREF_MainframeNameStatic">Program Name:</string>
+      <string id="PREF_RemoveAdvertise">Remove Advertisement</string>
+      <string id="PREF_RoolMode">Scroll</string>
+      <string id="PREF_RoolTime">Rolling Time: (1-60000s)</string>
+      <string id="PREF_SafeReadingMode">Enable Safe Reading Mode</string>
+      <string id="PREF_Settings">Settings</string>
+      <string id="PREF_Show_StatusBar">Show Status Bar</string>
+      <string id="PREF_Startpage">Show Start Page</string>
+	  <string id="PREF_Startpage_Explain">Enable this option to show the Start Page.
+
+Disable this option to hide the Start Page.</string>
+      <string id="PREF_StatusBar">Status Bar</string>
+      <string id="PREF_StatusBar_Explain">Enable this option to change the settings of Status Bar.
+
+Choose whether or not the Status Bar will be shown. If you choose 'Auto-hide Status Bar', the Status Bar will only appear when you put the cursor near the bottom of the page.</string>
+      <string id="PREF_UserManualPath">User Manual Path</string>
+      <string id="PREF_UserManualPath_Explain">Enable this option to change the link of User Manual to the local link you want.</string>
+      <string id="PREFERENCES">Preferences</string>
+      <string id="Preferences">Preferences</string>
+      <string id="Reader_ConnectedPDF">Admin Console</string>
+      <string id="Reader_ConnectedPDF_Explain">Settings for Admin Console features.</string>
+      <string id="Reader_RMS">RMS</string>
+      <string id="Registration">Remove 'Registration'</string>
+      <string id="Registration_Explain">Enable this option to forbid 'Registration' dialog and remove 'Registration' item from 'Help' tab.</string>
+      <string id="Remove_RMS2">FRMSPlgV2</string>
+      <string id="Remove_RMSV1">RMSV1</string>
+      <string id="Remove_RMSV2">RMSV2</string>
+      <string id="RemovePlugins">Remove Plugins</string>
+      <string id="RemoveSpecificalPlugins">Remove Specific Plugins</string>
+      <string id="RemoveSpecificPlugins">Remove Specific Plugins</string>
+      <string id="RIBBON">Ribbon</string>
+      <string id="Ribbon_Category">Ribbon Category</string>
+      <string id="Ribbon_Explain">Enable any configuration item of this Ribbon, the corresponding Ribbon will be hidden.
+
+Self Category: Enable this configuration item, the whole Tab will be hidden.
+SelfPanel: Enable this configuration item, the corresponding panel will be hidden.
+Itself: Enable this configuration item, the corresponding button will be hidden.</string>
+      <string id="Ribbon_TabElements">Tab Elements</string>
+      <string id="RMS_Add">Add 'protected' to the name of encrypted files</string>
+      <string id="RMS_Add_Explain">Enable this option to append (protected) to the end of the file name of encrypted files.</string>
+      <string id="RMS_DR">Dynamic Revocation</string>
+      <string id="RMS_DR_Explain">Enable this option to turn on the dynamic revocation feature in the client. Please refer to the user manual to configure the web service when trying using this feature.
+Revocation is a mechanism that revokes a PDF document that has already been issued. The primary purpose of revocation is to prevent entities that are no longer trusted from participating in an RMS system.</string>
+      <string id="RMS_ENCRYPT_METADATA">Encrypt Metadata</string>
+      <string id="RMS_EncryptionIntensity_Explain">Enable this option to use deprecated encryption algorithms (RSA 1024 encryption algorithm) to be compatible with the previous version and disable the setting in 'Preferences > RMS Setting'.
+
+If not defined, AD RMS cryptographic implementation, which supports RSA 2048 for encryption, is the default setting.
+
+'RSA 2048 encryption algorithm' requires one of the following operating systems:
+1. AD RMS servers: Windows Server® 2008 R2 with Service Pack 1 (SP1).
+2. AD RMS clients:
+Windows® 8
+Windows® 7 with Service Pack 1 (SP1)
+Windows Vista® with Service Pack 2 (SP2)
+Windows Server® 2008 with Service Pack 2 (SP2)
+Windows Server® 2008 R2 with Service Pack 1 (SP1)</string>
+      <string id="RMS_ER">Extended Rights</string>
+      <string id="RMS_ER_Explain">Enable this option to turn on the extended rights feature in the client. Please refer to the user manual to configure the web service when using this feature.
+Extended rights allow the document owner to control the following items:
+Access times: Limit times that users can access a document
+Print times: Limit times that users can print a document</string>
+      <string id="RMS_Interoperability">RMS Interoperability</string>
+      <string id="RMS_Interoperability_Explain">Enable this option, all encrypted PDF will conform to Microsoft IRM Protection for PDF Specification and hence be able to be decrypted by other RMS Viewer. </string>
+      <string id="RMS_IRM_Explain">Choose Microsoft IRM Protection Version for document encryption. If not defined, Microsoft IRM Protection V2 is used.</string>
+      <string id="RMS_IRMV1">Microsoft IRM Protection</string>
+      <string id="RMS_Restricted">Restrict Access</string>
+      <string id="RMS_SaveAs">Save As</string>
+      <string id="RMS_SaveAs_Explain">Enable this option to turn on the Save As feature for RMS protected files.</string>
+      <string id="RMS_SETTING">Rights Management Services</string>
+      <string id="RMS_UseDeprecatedEncryptionAlgorithms">Use Deprecated Encryption Algorithms</string>
+      <string id="RMSEncryptMetadata_Explain">Enable this option to encrypt document metadata. This disables the setting in 'Preferences > RMS Setting'.</string>
+      <string id="ROTATEVIEW">Rotate View</string>
+      <string id="SafeReadingMode_Explain">Enable this option to check the option of 'Preferences > Trust Manager > Enable safe Reading Mode'
+
+Check this option for controlling unauthorized action and date transmissions; including URL connection, launching external files and running JavaScript functions to efficiently avoid attacks from malicious documents. 
+
+If you disable this option, you can open any files.</string>
+      <string id="SH_CheckIn">Check In</string>
+      <string id="SH_CheckOut">Check Out</string>
+      <string id="SH_DiscardCheckout">Discard Check Out</string>
+      <string id="SH_PrepareDocProperty">Prepare Document Properties</string>
+      <string id="SUPPORTED_WINXP">Microsoft Windows 7 or later</string>
+      <string id="SUPPORTED_WINXPSP2">Microsoft Windows 7 or later</string>
+      <string id="SUPPRESS_DLG">Forbid Checking of Default PDF Viewer</string>
+      <string id="SUPPRESS_DLG_EXPLAIN">Enable this option to hide the 'Set to Default PDF Reader' dialog when Foxit Reader isn't the default PDF viewer.</string>
+      <string id="Tab__ID_User">Sign in to a Foxit account</string>
+      <string id="Tab_CaseSensitive">Case-Sensitive</string>
+      <string id="Tab_ChangeRibbonStatus">Change Ribbon Status</string>
+      <string id="Tab_Filter">Filter</string>
+      <string id="Tab_FindEditBox">Find Box</string>
+      <string id="Tab_FindNext">Find Next</string>
+      <string id="Tab_FindPrevious">Find Previous</string>
+      <string id="Tab_IncludeBookmarks">Include Bookmarks</string>
+      <string id="Tab_IncludeComments">Include Comments</string>
+      <string id="Tab_IncludeFormData">Include Form Data</string>
+      <string id="Tab_InputMode">Mouse/Touch</string>
+      <string id="Tab_Mouse">Mouse Mode</string>
+      <string id="Tab_Properties">Properties</string>
+      <string id="Tab_Saveas">Save as</string>
+      <string id="Tab_Search">Search</string>
+      <string id="Tab_SignintoaFoxitaccount">Sign in to a Foxit account.</string>
+      <string id="Tab_Touch">Touch Mode</string>
+      <string id="Tab_WholeWordsOnly">Whole Words Only</string>
+      <string id="TabElements_Explain">Enable any configuration item of this Ribbon, the corresponding Ribbon will be hidden.</string>
+      <string id="TL_CHANGESKIN">Change Skin</string>
+      <string id="TL_PDFSign">PDF Sign</string>
+      <string id="TL_SNAPSHOT">SnapShot</string>
+      <string id="Toolbar_ED_CreateLinks">Create links from URLs</string>
+      <string id="ToolBar_Email">Email</string>
+      <string id="ToolBar_PolyLine">Polyline</string>
+      <string id="TYPEWRITES">Typewriter</string>
+      <string id="USERMS1_EXPALIN">If you enable this option, it will use the RMS Plug-in V1 to support Windows XP. The PDF file protected by RMS Plug-in V1 will be saved in Foxit protected PDF format and can only be opened by Foxit product. RMS Plug-in V1 only supports SHA-1/RSA 1024 for encryption and decryption.
+
+If you disable this option, it will use the RMS Plug-in V2 and support Windows Vista SP2 and later. The RMS Plug-in V2 supports SHA-1/RSA 1024 and SHA-2/RSA 2048 for encryption and decryption.</string>
+      <string id="USERMS1_EXPLAIN">Enable this option to use the AD RMS plugin version 1, which supports Windows XP. The protected PDF files will be saved in Foxit protected PDF format and can only be opened by Foxit products. RMS plugin version 1 only supports SHA-1/RSA 1024 algorithm for encryption and decryption.
+
+If not defined, RMS plugin version 2 is used, which requires Windows Vista SP2 or later.  RMS plugin version 2 supports SHA-1/RSA 1024 and SHA-2/RSA 2048 for encryption and decryption.</string>
+      <string id="VW_ACTUALSIZE">Actual Size</string>
+      <string id="VW_ATTACHMENT">Attachments</string>
+      <string id="VW_AUTOHIDESTATUSBAR">Auto-hide Status Bar</string>
+      <string id="VW_AUTOSCROLL">AutoScroll</string>
+      <string id="VW_BOOKMARKS">Bookmarks</string>
+      <string id="VW_ChangeSkin">Change Skin</string>
+      <string id="VW_ChangeToolbarMode">Change Toolbar Mode</string>
+      <string id="VW_CLOCKWISE">Rotate Right</string>
+      <string id="VW_CONTINUOUSFACING">Continuous Facing</string>
+      <string id="VW_Convert">Convert</string>
+      <string id="VW_COUNTERCLOCKWISE">Rotate Left</string>
+      <string id="VW_CoverSheet">Cover Sheet</string>
+      <string id="VW_Details">Details</string>
+      <string id="VW_DOCUSIGN">DocuSign</string>
+      <string id="VW_EDIT">Edit</string>
+      <string id="VW_FACING">Facing</string>
+      <string id="VW_FIRSTPAGE">First Page</string>
+      <string id="VW_FITPAGE">Fit Page</string>
+      <string id="VW_FITVISIBLE">Fit Visible</string>
+      <string id="VW_FITWIDTH">Fit Width</string>
+      <string id="VW_Grid">Grid</string>
+      <string id="VW_GUIDES">Guides</string>
+      <string id="VW_HIDESTATUSBAR">Hide Status Bar</string>
+      <string id="VW_HIDESTATUSBAR_1">Show Navigation Panels</string>
+      <string id="VW_LASTPAGE">Last Page</string>
+      <string id="VW_LAYERS">Layers</string>
+      <string id="VW_Layout">Layout</string>
+      <string id="VW_LEFT">Left</string>
+      <string id="VW_Left">Left</string>
+      <string id="VW_LOUPE">Loupe</string>
+      <string id="VW_MAGNIFIER">Magnifier</string>
+      <string id="VW_NEXTPAGE">Next Page</string>
+      <string id="VW_NEXTVIEW">Next View</string>
+      <string id="VW_Page">Page</string>
+      <string id="VW_PageDisplaysHSplit">Horizontally Split</string>
+      <string id="VW_PageDisplaysVSplit">Vertically Split</string>
+      <string id="VW_Pages">Pages</string>
+      <string id="VW_PAGES">Pages</string>
+      <string id="VW_Portfolio">Portfolio</string>
+      <string id="VW_PREVIOUSPAGE">Previous Page</string>
+      <string id="VW_PREVIOUSVIEW">Previous View</string>
+      <string id="VW_READ">Read</string>
+      <string id="VW_READFROMCURRENTPAGE">Read from Current Page</string>
+      <string id="VW_READMODE">Read Mode</string>
+      <string id="VW_READTHISPAGE">Read Current Page</string>
+      <string id="VW_ResetAllPanels">Reset All Panels</string>
+      <string id="VW_REVERSEVIEW">Reverse View</string>
+      <string id="VW_Right">Right</string>
+      <string id="VW_RIGHT">Right</string>
+      <string id="VW_RULERS">Rulers</string>
+      <string id="VW_SecuritySettings">Security Settings</string>
+      <string id="VW_SHOWNAVPANELBUTTONS">Show Navigation Panels</string>
+      <string id="VW_SHOWSTATUSBAR">Show Status Bar</string>
+      <string id="VW_SIGNATURES">Digital Signature</string>
+      <string id="VW_SnaptoGrid">Snap to Grid</string>
+      <string id="VW_SPLIT">Split Pages</string>
+      <string id="VW_SPREADSHEETSPLIT">Spreadsheet Split</string>
+      <string id="VW_STOP">Stop</string>
+      <string id="VW_TEXTVIEWER">Text Viewer</string>
+      <string id="VW_UIOptions">UI Options</string>
+      <string id="VW_VSSPLIT">Vertically Split</string>
+      <string id="VW_ZOOMIN">Zoom In</string>
+      <string id="VW_ZOOMOUT">Zoom Out</string>
+      <string id="VW_ZOOMTO">Zoom To</string>
+      <string id="ZOOM">Zoom</string>
+      <string id="ZOOM_Marquee">Marquee</string>
+      <string id="Cate_HighlightFields">Highlight Fields</string>
+      <string id="Cate_CommentFormat">Comment Format</string>
+      <string id="Cate_SummarizeComments">Summarize Comments</string>
+        <string id="Cate_Itself_1">Itself</string>
+      <string id="Cate_SubItem_1">Subitem</string>
+      <string id="Cate_Itself_2">Itself</string>
+      <string id="Cate_SubItem_2">Subitem</string>
+      <string id="Cate_Itself_4">Itself</string>
+      <string id="Cate_SubItem_4">Subitem</string>
+      <string id="Cate_Itself_5">Itself</string>
+      <string id="Cate_SubItem_5">Subitem</string>
+      <string id="Cate_Save_1">Save</string>
+      <string id="Cate_Itself_6">Itself</string>
+      <string id="Cate_SubItem_6">Subitem</string>
+      <string id="Cate_Itself_7">Itself</string>
+      <string id="Cate_SubItem_7">Subitem</string>
+      <string id="Cate_SelfPanel_1">Self Panel</string>
+      <string id="Cate_SelfPanel_2">Self Panel</string>
+      <string id="Cate_SelfPanel_3">Self Panel</string>
+      <string id="Cate_SelfPanel_5">Self Panel</string>
+      <string id="Cate_SelfPanel_6">Self Panel</string>
+      <string id="Cate_SelfPanel_7">Self Panel</string>
+      <string id="Cate_SelfCategory_1">Self Category</string>
+      <string id="Cate_Comment_Home_RibbonCategory">Comment</string>
+      <string id="Cate_Tools_HOME_RibbonCategory">Tools</string>
+      <string id="Cate_Select_RibbonCategory">Select</string>
+      <string id="Cate_Itself_8">Itself</string>
+      <string id="Cate_SubItem_8">Subitem</string>
+      <string id="Cate_Itself_9">Itself</string>
+      <string id="Cate_SubItem_9">Subitem</string>
+      <string id="Cate_SelfPanel_8">Self Panel</string>
+      <string id="Cate_Hand_8">Hand</string>
+      <string id="Cate_SelfPanel_9">Self Panel</string>
+      <string id="COM_HIGHLIGHTTEXT_9">Highlight</string>
+      <string id="Cate_SelfPanel_10">Self Panel</string>
+      <string id="Cate_SelfPanel_11">Self Panel</string>
+      <string id="Cate_Typewriter_11">Typewriter</string>
+      <string id="Cate_SelfPanel_12">Self Panel</string>
+      <string id="Cate_SelfPanel_13">Self Panel</string>
+      <string id="Cate_Create_RibbonCategory">Create</string>
+      <string id="Cate_Itself_10">Itself</string>
+      <string id="Cate_SubItem_10">Subitem</string>
+      <string id="Cate_SelfPanel_14">Self Panel</string>
+      <string id="Cate_Itself_11">Itself</string>
+      <string id="Cate_SubItem_11">Subitem</string>
+      <string id="Cate_Itself_12">Itself</string>
+      <string id="Cate_SubItem_12">Subitem</string>
+      <string id="Cate_SelfPanel_15">Self Panel</string>
+      <string id="Cate_SelfCategory_2">Self Category</string>
+      <string id="Cate_VIEW_RibbonCategory">View</string>
+      <string id="Cate_Tools_HOME_RibbonCategory_1">Tools</string>
+      <string id="Cate_Select_RibbonCategory_1">Select</string>
+      <string id="Cate_Itself_13">Itself</string>
+      <string id="Cate_SubItem_13">Subitem</string>
+      <string id="ZOOM_RibbonCategory">Zoom</string>
+      <string id="Cate_Itself_14">Itself</string>
+      <string id="Cate_SubItem_14">Subitem</string>
+      <string id="Cate_SelfPanel_16">Self Panel</string>
+      <string id="Cate_Hand_9">Hand</string>
+      <string id="Cate_SelfPanel_17">Self Panel</string>
+      <string id="Cate_Itself_15">Itself</string>
+      <string id="Cate_SubItem_15">Subitem</string>
+      <string id="Cate_SelfPanel_18">Self Panel</string>
+      <string id="Cate_Itself_16">Itself</string>
+      <string id="Cate_SubItem_16">Subitem</string>
+      <string id="Cate_Itself_17">Itself</string>
+      <string id="Cate_SubItem_17">Subitem</string>
+      <string id="Cate_SelfPanel_19">Self Panel</string>
+      <string id="Cate_Itself_18">Itself</string>
+      <string id="Cate_SubItem_18">Subitem</string>
+      <string id="Cate_Itself_19">Itself</string>
+      <string id="Cate_SubItem_19">Subitem</string>
+      <string id="Cate_Itself_20">Itself</string>
+      <string id="Cate_SubItem_20">Subitem</string>
+      <string id="Cate_SelfPanel_20">Self Panel</string>
+      <string id="Cate_Itself_21">Itself</string>
+      <string id="Cate_SubItem_21">Subitem</string>
+      <string id="Cate_Itself_22">Itself</string>
+      <string id="Cate_SubItem_22">Subitem</string>
+      <string id="Cate_SelfPanel_21">Self Panel</string>
+      <string id="Cate_SelfPanel_22">Self Panel</string>
+      <string id="Cate_SelfCategory_3">Self Category</string>
+      <string id="Cate_Tools_HOME_Form">Tools</string>
+      <string id="Cate_Select_Form">Select</string>
+      <string id="Cate_Itself_23">Itself</string>
+      <string id="Cate_SubItem_23">Subitem</string>
+      <string id="ZOOM_Form">Zoom</string>
+      <string id="Cate_Itself_24">Itself</string>
+      <string id="Cate_SubItem_24">Subitem</string>
+      <string id="Cate_SelfPanel_23">Self Panel</string>
+      <string id="Cate_Hand_10">Hand</string>
+      <string id="Cate_Itself_25">Itself</string>
+      <string id="Cate_SubItem_25">Subitem</string>
+      <string id="Cate_Itself_26">Itself</string>
+      <string id="Cate_SubItem_26">Subitem</string>
+      <string id="Cate_SelfPanel_24">Self Panel</string>
+      <string id="Cate_Import_24">Import</string>
+      <string id="Cate_SelfCategory_4">Self Category</string>
+      <string id="Cate_PROTECT_RibbonCategory">Protect</string>
+      <string id="Cate_Tools_HOME_RibbonCategory_2">Tools</string>
+      <string id="Cate_Select_RibbonCategory_2">Select</string>
+      <string id="Cate_Itself_27">Itself</string>
+      <string id="Cate_SubItem_27">Subitem</string>
+      <string id="ZOOM_RibbonCategory_1">Zoom</string>
+      <string id="Cate_Itself_28">Itself</string>
+      <string id="Cate_SubItem_28">Subitem</string>
+      <string id="Cate_SelfPanel_25">Self Panel</string>
+      <string id="Cate_Hand_11">Hand</string>
+      <string id="Cate_Itself_29">Itself</string>
+      <string id="Cate_SubItem_29">Subitem</string>
+      <string id="Cate_Itself_30">Itself</string>
+      <string id="Cate_SubItem_30">Subitem</string>
+      <string id="Cate_SelfPanel_26">Self Panel</string>
+      <string id="Cate_PROTECT_RibbonCategory_1">Protect</string>
+      <string id="Cate_Itself_31">Itself</string>
+      <string id="Cate_SubItem_31">Subitem</string>
+      <string id="Cate_Itself_32">Itself</string>
+      <string id="Cate_SubItem_32">Subitem</string>
+      <string id="Cate_SelfPanel_27">Self Panel</string>
+      <string id="Cate_PDFSign_27">PDF Sign</string>
+      <string id="Cate_SelfCategory_5">Self Category</string>
+      <string id="Cate_Tools_HOME_Share">Tools</string>
+      <string id="Cate_Select_Share">Select</string>
+      <string id="Cate_Itself_33">Itself</string>
+      <string id="Cate_SubItem_33">Subitem</string>
+      <string id="ZOOM_Share">Zoom</string>
+      <string id="Cate_Itself_34">Itself</string>
+      <string id="Cate_SubItem_34">Subitem</string>
+      <string id="Cate_SelfPanel_28">Self Panel</string>
+      <string id="Cate_Hand_12">Hand</string>
+      <string id="Cate_SelfPanel_29">Self Panel</string>
+      <string id="Cate_Review_Share">Review</string>
+      <string id="Cate_SelfPanel_30">Self Panel</string>
+      <string id="Cate_SelfPanel_31">Self Panel</string>
+      <string id="Cate_SelfCategory_6">Self Category</string>
+      <string id="Cate_Tools_HOME_Connect">Tools</string>
+      <string id="Cate_Select_Connect">Select</string>
+      <string id="Cate_Itself_35">Itself</string>
+      <string id="Cate_SubItem_35">Subitem</string>
+      <string id="ZOOM_Connect">Zoom</string>
+      <string id="Cate_Itself_36">Itself</string>
+      <string id="Cate_SubItem_36">Subitem</string>
+      <string id="Cate_SelfPanel_32">Self Panel</string>
+      <string id="Cate_Hand_13">Hand</string>
+      <string id="Cate_SelfPanel_33">Self Panel</string>
+      <string id="Cate_Itself_37">Itself</string>
+      <string id="Cate_SubItem_37">Subitem</string>
+      <string id="Cate_SelfPanel_34">Self Panel</string>
+      <string id="Cate_SelfPanel_35">Self Panel</string>
+      <string id="Cate_SelfPanel_36">Self Panel</string>
+      <string id="Cate_SelfPanel_37">Self Panel</string>
+      <string id="Cate_SelfCategory_7">Self Category</string>
+      <string id="Cate_HELP_Connect">Help</string>
+      <string id="Cate_SelfPanel_38">Self Panel</string>
+      <string id="Cate_SelfPanel_39">Self Panel</string>
+      <string id="Cate_SelfPanel_40">Self Panel</string>
+      <string id="Cate_SelfCategory_8">Self Category</string>
+      <string id="Cate_Itself_38">Itself</string>
+      <string id="Cate_SubItem_38">Subitem</string>
+      <string id="Cate_SelfPanel_41">Self Panel</string>
+      <string id="Cate_Underline_41">Underline</string>
+      <string id="Cate_SelfPanel_42">Self Panel</string>
+      <string id="Cate_Itself_39">Itself</string>
+      <string id="Cate_SubItem_39">Subitem</string>
+      <string id="Cate_SelfPanel_43">Self Panel</string>
+      <string id="Cate_SelfPanel_44">Self Panel</string>
+      <string id="Cate_SelfPanel_45">Self Panel</string>
+      <string id="VW_RULERS_45">Rulers</string>
+      <string id="Cate_SelfPanel_46">Self Panel</string>
+      <string id="Cate_SelfCategory_9">Self Category</string>
+      <string id="Cate_SelfPanel_47">Self Panel</string>
+      <string id="Cate_SelfPanel_48">Self Panel</string>
+      <string id="Cate_Vertically_48">Vertically</string>
+      <string id="Cate_Horizontally_48">Horizontally</string>
+      <string id="Cate_SelfPanel_49">Self Panel</string>
+      <string id="Cate_Vertically_49">Vertically</string>
+      <string id="Cate_Horizontally_49">Horizontally</string>
+      <string id="Cate_SelfCategory_10">Self Category</string>
+      <string id="Cate_Tools_HOME_PDFSign">Tools</string>
+      <string id="Cate_Select_PDFSign">Select</string>
+      <string id="Cate_Itself_40">Itself</string>
+      <string id="Cate_SubItem_40">Subitem</string>
+      <string id="ZOOM_PDFSign">Zoom</string>
+      <string id="Cate_Itself_41">Itself</string>
+      <string id="Cate_SubItem_41">Subitem</string>
+      <string id="Cate_SelfPanel_50">Self Panel</string>
+      <string id="Cate_Hand_14">Hand</string>
+      <string id="Cate_Itself_42">Itself</string>
+      <string id="Cate_SubItem_42">Subitem</string>
+      <string id="Cate_SelfPanel_51">Self Panel</string>
+      <string id="Cate_Itself_43">Itself</string>
+      <string id="Cate_SubItem_43">Subitem</string>
+      <string id="Cate_SelfPanel_52">Self Panel</string>
+      <string id="Cate_Typewriter_12">Typewriter</string>
+      <string id="Cate_SelfPanel_53">Self Panel</string>
+      <string id="Cate_Close_53">Close</string>
+      <string id="Cate_SelfCategory_11">Self Category</string>
+      <string id="PREFERENCES_RMS">Preferences</string>
+      <string id="PREFERENCES_ConnectedPDF">Preferences</string>
+      <string id="HP_COMMANDLINE">Command Line Help</string>
+      <string id="HP_REPORTIDEA">Post Your Idea</string>
+      <string id="Cate_Help_Checkupdate">Check for Updates</string>
+      <string id="Cate_Help_InstallUpdate">Install Update</string>
+      <string id="Cate_Help_DefaultReader">Set to Default PDF Reader</string>
+      <string id="Cate_Help_Register">Register</string>
+      <string id="Cate_SelfPanel_54">Self Panel</string>
+      <string id="PREF_READMODE">Lock Read Mode in web browsers </string>
+      <string id="PREF_READMODE_Help">Enable this option to use Read Mode by default in Foxit Reader browser plugins, and disallow users from exiting this mode. 
+
+Disable this option to not use Read Mode by default and allow users to freely enter and exit Read Mode. 
+
+This setting will change the corresponding setting in Preferences > Documents> Open Settings. </string>
+      <string id="PL_CLOUDREADING">Foxit Drive</string>
+      <string id="PREF_COLLECTDATA">User Experience Improvement</string>
+      <string id="PREF_COLLECTDATA_Help">Enable this option to allow anonymous data collection.
+
+Disable this option to turn off anonymous data collection.
+
+This will change the corresponding setting in Preferences > General.</string>
+
+  	<string id="PREF_COMMENTSFILTER">Filter Comments by the original author only</string>
+  	<string id="PREF_COMMENTSFILTER_Help">Enable this option to filter comments by the original author only.
+
+Disable this option to filter comments by all participants.
+
+This will change the corresponding setting in Comment > Filter window.
+</string>
+
+ 	<string id="CPDF_ConnectedPDFServer">Admin Console Server</string>
+ 	<string id="CPDF_ConnectedPDFServer_Explain">Set the Admin Console Server, the end user can use this server URL to connect your enterprise Admin Console Server.</string>
+    	<string id="CPDF_Server">Server URL:</string>
+
+ 	<string id="PREF_SendCrashDocument">Share the PDF file that caused crash</string>
+ 	<string id="PREF_SendCrashDocument_Explain">Enable this option to always share the PDF file that caused crash.
+
+Disable this option to not share the PDF file that caused crash.
+
+This will change and grey out the corresponding setting of ‘Share the PDF file that caused this crash’ option in Crash Report.
+</string>
+      <string id="Tab_Share">Share with Friends</string>
+      <string id="Tab_MenuHighlightAll">Highlight All Text</string>
+      <string id="Tab_ConnectedNotifi">Open Notifications</string>
+      <string id="Cate_ShareFoxit">Share with Friends</string>
+      <string id="VW_VIEWREFLOW">Reflow</string>
+      <string id="Cate_Itself_44">Itself</string>
+      <string id="Cate_SubItem_44">Subitem</string>
+      <string id="MEMU_EXPORT">Export</string>
+      <string id="VW_HOMEREFLOW">Reflow</string>
+      <string id="VW_ViewNightMode">Night Mode</string>
+      <string id="Cate_Itself_45">Itself</string>
+      <string id="Cate_SubItem_45">Subitem</string>
+      <string id="Main_AcroSendMail">Email</string>
+      <string id="VW_READSTART">Activate Read</string>
+      <string id="HP_HELPCENTER">Help Center</string>
+      <string id="Cate_FoxitBrowser">FOXIT BROWSER</string>
+      <string id="Hidden_SaveAs">Save As</string>
+     <string id="AppTrustManager">Trusted Applications</string>
+     <string id="AppTrustManagerList">Trusted Application List: </string>
+     <string id="AppTrustManagerDesc">Enable this option and input the name of the trusted application in the list. The listed application will be added in Preferences > Trusted Manager > Change settings(2nd) > Apps in Foxit Reader.</string>
+     <string id="RMS_IRM_PROTECTION_V1">Microsoft IRM Protection V1</string>
+     <string id="RMS_IRM_PROTECTION_V2">Microsoft IRM Protection V2</string>
+     <string id="RMS_IRM_PROTECTION_PFile">Microsoft IRM PFile Protection</string>
+     <string id="RMS_IRM_PROTECTION_SETTING">Setting</string>
+     <string id="PREF_ShowBulbAffects">Show the message which affects the next step</string>
+	 <string id="PREF_ShowBulbNotification">Show the notification related message</string>
+	 <string id="PREF_ShowBulbPDFA">Show PDF/A message again</string>
+	 <string id="PREF_NotificationMsg">Notification Messages</string>	  
+	 <string id="PREF_NotificationMsg_Explain">Enable the option and choose how to deal with the different notification messages. If you uncheck all the options, the notification messages will never be shown.
+
+This will change the corresponding setting in Preferences > General.</string>
+	  <string id="PREF_RequirePasswordSignatures">Require password to use signatures</string>
+	  <string id="PREF_RequirePasswordSignatures_Explain">Choose 'Enabled' to require to create and use new signatures with passwords.
+  
+Choose 'Disabled' to not require to create or use new signatures with passwords.
+
+This will change the setting of 'Require password to use this signature' in PDF Sign > Create Signature > Options.</string>
+	 <string id="PREF_ProtectedView">Protected View</string>	  
+	 <string id="PREF_ProtectedView_Explain">Choose 'Enabled' and select 'Files from potentially unsafe locations' or 'All Files' to turn on protected view in order to protect your computers from being harmed by files originated from potentially unsafe locations.
+
+Choose 'Enabled' and select 'Off' to turn off protected view.
+
+This will change the setting in Preferences > Security > Protected View.</string>
+	 <string id="PREF_ProtectedViewUnsafe">Files from potentially unsafe locations</string>
+	 <string id="PREF_ProtectedViewAllFiles">All Files</string>
+	 <string id="PREF_ProtectedViewOff">Off</string>
+	 <string id="PREF_ProtectedViewOpt">Settings:</string>
+     <string id="PREF_MultipleInstances">Multiple Instances</string>
+	 <string id="PREF_MultipleInstances_Explain">Enable this option to allow multiple instances. 
+Disable this option to not allow multiple instances. 
+This will change the corresponding setting in Preferences > Documents. </string>
+	 <string id="Cate_Justify">Justify</string>
+     <string id="PREF_PrintGDIOutput">Use GDI+ Output for all types of printer</string>
+     <string id="PREF_PrintGDIOutput_Explain">Check 'Use GDI+ Output for all types of printer' to use GDI+ Output for PS driver printer, PCL drvier printer will not change.
+
+This will change the setting in Preferences > Print > Use GDI+ Output for all types of printer.</string>
+	 <string id="PREF_DPISetting">Change high DPI settings</string>	  
+	 <string id="PREF_DPISetting_Explain">Choose 'Application' to render correctly whenever the DPI of the display that they are running on changes.
+	 
+Choose 'System' to automatically being DPI scaled by Windows.
+	 
+Choose 'System(Enhanced)' to render correctly at a single display scale factor and become blurry whenever the DPI changes.</string>
+	 <string id="PREF_DPISettingApp">Application</string>
+	 <string id="PREF_DPISettingSystem">System</string>
+	 <string id="PREF_DPISettingSysEnhanced">System(Enhanced)</string>
+	 <string id="PREF_DPISettingOpt">Settings:</string>	 
+ 	 <string id="CPDF_InternalUpdateServer">Update Server</string>
+ 	 <string id="CPDF_InternalUpdateServer_Explain">Set the path of Update Server.</string>
+     <string id="CPDF_InternalUpdateServer_URL">Server URL:</string>
+     <string id="PREF_TellMeWhat">Show TELL ME WHAT YOU WANT TO DO</string>
+     <string id="PREF_TellMeWhat_Explain">Enable this option to show TELL ME WHAT YOU WANT TO DO.
+
+Disable this option to not show TELL ME WHAT YOU WANT TO DO.</string>
+     <string id="PREF_DisablePDFviewerSwitching">Disable default PDF viewer switching</string>
+     <string id="PREF_DisablePDFviewerSwitching_Explain">Enable this option to disable the ability to change the specified default handler (PDF viewer).</string>
+	 <string id="PREF_LockAutoCompleteInForm_Explain">Enable this option to lock the Auto-Complete feature and disable the corresponding setting in Preferences > Forms.</string>
+	 <string id="PREF_LockAutoCompleteInForm">Locks the Auto-Complete in Form Filling</string>
+	 <string id="PREF_DisablePrivilegedLocations_Explain">Enable this option to disable and lock the end user's ability to add files, folders, and hosts as a privileged location prevents them from assigning trust and thereby exempting that location from enhanced security restrictions.</string>
+	 <string id="PREF_DisablePrivilegedLocations">Disable Privileged Locations</string> 
+	   <string id="INTERNETCONNECTION">Features which require internet connection</string>
+	   <string id="INTERNETCONNECTION_Explain">This will change the corresponding setting in Preferences > General.</string>
+	   <string id="Cate_Itself_94">Itself</string>
+	   <string id="Cate_SubItem_94">SubItem</string>
+	   <string id="Cate_Itself_94_Explain">Enable this option to enable all the features which require internet connection.
+
+	Disable this option to disable all the features which require internet connection.
+
+	This will change the corresponding setting in Preferences > General.</string>
+	   <string id="Cate_SubItem_94_Explain">Specify features to allow internet connection: check the items to add into a whitelist, they will be allowed to access internet even though disabling all features which require internet connection.</string>
+	   <string id="ECMPlugin_Sharepoint">Sharepoint</string>
+	   <string id="ECMPlugin_OneDrive">OneDrive</string>
+	   <string id="ECMPlugin_Box">Box</string>
+	   <string id="ECMPlugin_DropBox">DropBox</string>
+	   <string id="ECMPlugin_GoogleDrive">Google Drive</string>
+	   <string id="ECMPlugin_DMSforLegal">DMSforLegal</string>	 
+	   <string id="ECMPlugin_Alfresco">Alfresco</string>  
+	   <string id="ECMPlugin_RMSV2">RMSV2</string>
+	   <string id="ECMPlugin_FileOpen">FileOpen</string>
+	   <string id="ECMPlugin_DocuSign">DocuSign</string>
+	   <string id="ECMPlugin_ShareReview">ShareReview</string>
+	   <string id="PREF_NotUseQuickTimePlayer">Do not use QuickTime Player for multimedia items</string>
+	   <string id="PREF_NotUseQuickTimePlayer_Explain">Enable this option to disable using QuickTime Player for multimedia items.</string>
+	   <string id="PREF_ManageSites">Disable editing Manage Sites</string>	  
+	   <string id="PREF_ManageSites_Explain">Enable this option to disable and lock the end user's ability to specify the default behavior for accessing the Internet from PDFs
+
+Choose "Always ask" to ask before opening every URL.
+
+Choose "Allow access" to allow access to all URLs.
+
+Choose "Block access" to restrict access to all URLs.</string>
+	   <string id="PREF_ManageSitesAsk">Always Ask</string>
+	   <string id="PREF_ManageSitesAllow">Allow access</string>
+	   <string id="PREF_ManageSitesBlock">Block access</string>
+	   <string id="PREF_ManageSitesOpt">Settings:</string>
+	   <string id="PREF_CreateDigitalIDs">Enable creating self signed digital IDs</string>
+	   <string id="PREF_CreateDigitalIDs_Explain">Disable this option to forbid the end user's ability to select Create a new Digital ID option in Add ID workflows.</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="RemoveSpecificalPlugins">
+        <listBox refId="RemoveSpecificalPlugins">Remove Specific Plugins</listBox>
+      </presentation>
+      <presentation id="AppTrustManager">
+        <listBox refId="AppTrustManagerList">Trusted Application List: </listBox>
+      </presentation>
+      <presentation id="RemovePlugins">
+        <checkBox refId="Plugin_Updater">Updater</checkBox>
+        <checkBox refId="Plugin_Licensemanager">LicenseManager</checkBox>
+        <checkBox refId="Plugin_Speech">Speech</checkBox>
+        <checkBox refId="Remove_RMS2">FRMSPlgV2</checkBox>
+        <checkBox refId="Plugin_SharePoint">SharePoint</checkBox>
+        <checkBox refId="Plugin_DocuSign">DocuSign</checkBox>
+        <checkBox refId="PLUGIN_CS">CommentsSummary</checkBox>
+        <checkBox refId="PLUGIN_DropboxPlugin">DropboxPlugin</checkBox>
+        <checkBox refId="PLUGIN_EpubViewer">EpubViewer</checkBox>
+        <checkBox refId="PLUGIN_FoxitCloudLogin_1">FoxitAccountManagement</checkBox>
+        <checkBox refId="PLUGIN_OneDrivePlugin">OneDrivePlugin</checkBox>
+        <checkBox refId="PLUGIN_GoogleDrivePlugin">GoogleDrivePlugin</checkBox>
+        <checkBox refId="PL_BPP">BoxPlugin</checkBox>
+        <checkBox refId="PL_U3DBP">U3DBrowser</checkBox>
+		<checkBox refId="Plugin_ShareReview">Share Review</checkBox>
+		<checkBox refId="PL_CLOUDREADING">Foxit Drive</checkBox>
+		<checkBox refId="PL_WIPP">WIP</checkBox>
+      </presentation>
+      <presentation id="PREF_AboutDialog">
+        <textBox refId="PREF_Copyright">
+          <label>Copyright:</label>
+          <defaultValue></defaultValue>
+        </textBox>
+        <textBox refId="PREF_CopyrightContent">
+          <label>Copyright Content:</label>
+          <defaultValue></defaultValue>
+        </textBox>
+        <textBox refId="PREF_BackGroundPath">
+          <label>BackGroundPath:</label>
+          <defaultValue></defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="PREF_DefaultPDFViewer">
+        <checkBox refId="DefaultReaderMode">System PDF Viewer</checkBox>
+        <checkBox refId="PREF_DefaultEmbedReaderMode">Web Browser PDF Viewer</checkBox>
+      </presentation>
+      <presentation id="SUPPRESS_DLG" />
+      <presentation id="PREF_MainframeName">
+        <textBox refId="PREF_MainframeNameStatic">
+          <label>Program Name:</label>
+          <defaultValue></defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="Registration" />
+      <presentation id="PREF_Advertise">
+        <checkBox refId="PREF_RemoveAdvertise">Remove Advertisement</checkBox>
+        <checkBox refId="PREF_RoolMode">Scroll</checkBox>
+        <textBox refId="PREF_RoolTime">
+          <label>Rolling Time: (1-60000s)</label>
+          <defaultValue></defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="PREF_Startpage" />
+      <presentation id="PREF_SafeReadingMode" />
+      <presentation id="PREF_StatusBar">
+        <dropdownList refId="PREF_Settings" defaultItem="2">Settings</dropdownList>
+      </presentation>
+      <presentation id="PREF_ApplicationLanguage">
+        <checkBox refId="PRE_NOTSHOWCUSLAN">Do Not Show Community Languages</checkBox>
+        <textBox refId="PREF_DefaultApplicationLanguage">
+          <label>Default Application Language:</label>
+          <defaultValue></defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="PREF_EnableUserManualLink">
+        <textBox refId="PREF_UserManualPath">
+          <label>UserManualPath</label>
+          <defaultValue></defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="PREF_DisableUpdater" />
+      <presentation id="PREF_DisableSecurityWarning" />
+      <presentation id="Cate_Itself" />
+      <presentation id="Cate_SubItem">
+        <checkBox refId="Tab_WholeWordsOnly">Whole Words Only</checkBox>
+        <checkBox refId="Tab_CaseSensitive">Case-Sensitive</checkBox>
+        <checkBox refId="Tab_IncludeBookmarks">Include Bookmarks</checkBox>
+        <checkBox refId="Tab_IncludeComments">Include Comments</checkBox>
+        <checkBox refId="Tab_IncludeFormData">Include Form Data</checkBox>
+        <checkBox refId="Tab_Properties">Properties</checkBox>
+        <checkBox refId="Tab_MenuHighlightAll">Highlight All Text</checkBox>
+      </presentation>
+      <presentation id="Cate_Itself_1" />
+      <presentation id="Cate_SubItem_1">
+        <checkBox refId="Tab_Touch">Touch Mode</checkBox>
+        <checkBox refId="Tab_Mouse">Mouse Mode</checkBox>
+      </presentation>
+      <presentation id="Tab_Search" />
+      <presentation id="Cate_Save" />
+      <presentation id="Tab_FindEditBox" />
+      <presentation id="Cate_Open" />
+      <presentation id="ED_UNDO" />
+      <presentation id="ED_REDO" />
+      <presentation id="Tab_FindPrevious" />
+      <presentation id="Tab_FindNext" />
+      <presentation id="Tab__ID_User" />
+      <presentation id="Cate_Itself_2" />
+      <presentation id="Cate_SubItem_2">
+        <checkBox refId="Cate_Description">Description</checkBox>
+        <checkBox refId="Cate_Security">Security</checkBox>
+        <checkBox refId="Cate_Propertions_Font">Fonts</checkBox>
+      </presentation>
+      <presentation id="Cate_Itself_4" />
+      <presentation id="Cate_SubItem_4">
+        <checkBox refId="Cate_Computer">Computer</checkBox>
+        <checkBox refId="Cate_Recentfile">Recent Documents</checkBox>
+        <checkBox refId="Cate_ADDAPlace">Add a place</checkBox>
+      </presentation>
+      <presentation id="Cate_Itself_5" />
+      <presentation id="Cate_SubItem_5">
+        <checkBox refId="Cate_Computer">Computer</checkBox>
+        <checkBox refId="Cate_ADDAPlace">Add a place</checkBox>
+      </presentation>
+      <presentation id="Cate_SelfPanel" />
+      <presentation id="Cate_Save_1" />
+      <presentation id="Cate_Print" />
+      <presentation id="FL_BATCHPRINT" />	  
+      <presentation id="Cate_Close" />
+      <presentation id="Cate_Preferences" />
+      <presentation id="Cate_ChangeSkin" />
+      <presentation id="Cate_SelfCategory" />
+      <presentation id="Cate_Itself_6" />
+      <presentation id="Cate_SubItem_6">
+        <checkBox refId="Cate_SelectText">Select Text</checkBox>
+        <checkBox refId="Cate_SelectAnnotation">Select Annotation</checkBox>
+      </presentation>
+      <presentation id="Cate_Itself_7" />
+      <presentation id="Cate_SubItem_7">
+        <checkBox refId="ED_CUT">Cut</checkBox>
+        <checkBox refId="ED_COPY">Copy</checkBox>
+        <checkBox refId="ED_PASTE">Paste</checkBox>
+        <checkBox refId="ED_SELECTALL">Select All</checkBox>
+      </presentation>
+      <presentation id="Cate_SelfPanel_1" />
+      <presentation id="Cate_Hand" />
+      <presentation id="TL_SNAPSHOT" />
+      <presentation id="Cate_SelfPanel_2" />
+      <presentation id="VW_ACTUALSIZE" />
+      <presentation id="VW_FITPAGE" />
+      <presentation id="VW_FITWIDTH" />
+      <presentation id="VW_FITVISIBLE" />
+      <presentation id="VW_COUNTERCLOCKWISE" />
+      <presentation id="VW_CLOCKWISE" />
+      <presentation id="VW_ZOOMOUT" />
+      <presentation id="VW_ZOOMTO" />
+      <presentation id="VW_ZOOMIN" />
+      <presentation id="Cate_SelfPanel_3" />
+      <presentation id="Cate_Typewriter" />
+      <presentation id="COM_HIGHLIGHTTEXT" />
+      <presentation id="Cate_SelfPanel_5" />
+      <presentation id="Cate_PDFSign" />
+      <presentation id="Cate_SelfPanel_6" />
+      <presentation id="Cate_Link" />
+      <presentation id="ED_BOOKMARK" />
+      <presentation id="Cate_SelfPanel_7" />
+      <presentation id="COM_FileAttachment" />
+      <presentation id="ED_IMAGE" />
+      <presentation id="Cate_AudioVideo" />
+      <presentation id="Cate_SelfCategory_1" />
+      <presentation id="Cate_Itself_8" />
+      <presentation id="Cate_SubItem_8">
+        <checkBox refId="Cate_SelectText">Select Text</checkBox>
+        <checkBox refId="Cate_SelectAnnotation">Select Annotation</checkBox>
+      </presentation>
+      <presentation id="Cate_Itself_9" />
+      <presentation id="Cate_SubItem_9">
+        <checkBox refId="VW_ZOOMIN">Zoom In</checkBox>
+        <checkBox refId="VW_ZOOMOUT">Zoom Out</checkBox>
+        <checkBox refId="VW_ACTUALSIZE">Actual Size</checkBox>
+        <checkBox refId="VW_FITPAGE">Fit Page</checkBox>
+        <checkBox refId="VW_FITWIDTH">Fit Width</checkBox>
+        <checkBox refId="VW_FITVISIBLE">Fit Visible</checkBox>
+        <checkBox refId="Cate_6400Pa">6400%</checkBox>
+        <checkBox refId="Cate_3200Pa">3200%</checkBox>
+        <checkBox refId="Cate_1600Pa">1600%</checkBox>
+        <checkBox refId="Cate_800Pa">800%</checkBox>
+        <checkBox refId="Cate_600Pa">600%</checkBox>
+        <checkBox refId="Cate_400Pa">400%</checkBox>
+        <checkBox refId="Cate_200Pa">200%</checkBox>
+        <checkBox refId="Cate_150Pa">150%</checkBox>
+        <checkBox refId="Cate_125Pa">125%</checkBox>
+        <checkBox refId="Cate_100Pa">100%</checkBox>
+        <checkBox refId="Cate_75Pa">75%</checkBox>
+        <checkBox refId="Cate_66Pa">66.67%</checkBox>
+        <checkBox refId="Cate_50Pa">50%</checkBox>
+        <checkBox refId="Cate_33Pa">33.33%</checkBox>
+        <checkBox refId="Cate_25Pa">25%</checkBox>
+        <checkBox refId="Cate_12Pa">12.5%</checkBox>
+        <checkBox refId="Cate_8Pa">8.33%</checkBox>
+		<checkBox refId="Cate_1Pa">1%</checkBox>
+      </presentation>
+      <presentation id="Cate_SelfPanel_8" />
+      <presentation id="Cate_Hand_8" />
+      <presentation id="Cate_SelfPanel_9" />
+      <presentation id="COM_HIGHLIGHTTEXT_9" />
+      <presentation id="COM_SQUIGGLYTEXT" />
+      <presentation id="Cate_Underline" />
+      <presentation id="COM_STRIKEOUTTEXT" />
+      <presentation id="COM_REPLACETEXT" />
+      <presentation id="COM_INSERTTEXT" />
+      <presentation id="Cate_SelfPanel_10" />
+      <presentation id="COM_NOTE" />
+      <presentation id="Cate_FILE" />
+      <presentation id="Cate_SelfPanel_11" />
+      <presentation id="Cate_Typewriter_11" />
+      <presentation id="COM_CALLOUT" />
+      <presentation id="COM_TEXTBOX" />
+      <presentation id="Cate_SelfPanel_12" />
+      <presentation id="COM_RECTANGLE" />
+      <presentation id="COM_OVAL" />
+      <presentation id="COM_POLYGON" />
+      <presentation id="COM_CLOUDY" />
+      <presentation id="COM_ARROW" />
+      <presentation id="COM_LINE" />
+      <presentation id="COM_POLYLINE" />
+      <presentation id="COM_PENCIL" />
+      <presentation id="Cate_Eraser" />
+      <presentation id="COM_AreaHighlight" />
+      <presentation id="Cate_SelfPanel_13" />
+      <presentation id="Cate_Distance" />
+      <presentation id="Cate_Perimeter" />
+      <presentation id="Cate_Area" />
+      <presentation id="Cate_Itself_10" />
+      <presentation id="Cate_SubItem_10">
+        <checkBox refId="Cate_CreateCustomStamp">Create Custom Stamp</checkBox>
+        <checkBox refId="Cate_CreateCustomDynamicStamp">Create Custom Dynamic Stamp</checkBox>
+        <checkBox refId="Cate_ManageStamps">Manage Stamps</checkBox>
+        <checkBox refId="Cate_PasteClipboardImageasStampTool">Paste Clipboard Image as Stamp Tool</checkBox>
+        <checkBox refId="Cate_ShowStampsPalette">Show Stamps Palette</checkBox>
+        <checkBox refId="Cate_SetFavoriteStamps">Set Favorite Stamps</checkBox>
+      </presentation>
+      <presentation id="Cate_SelfPanel_14" />
+      <presentation id="Cate_Stamp" />
+      <presentation id="Cate_Itself_11" />
+      <presentation id="Cate_SubItem_11">
+        <checkBox refId="Cate_ShowAll">Show All</checkBox>
+        <checkBox refId="Cate_HideAll">Hide All</checkBox>
+      </presentation>
+      <presentation id="Cate_Itself_12" />
+      <presentation id="Cate_SubItem_12">
+        <checkBox refId="Cate_OpenAll">Open All</checkBox>
+        <checkBox refId="Cate_CloseAll">Close All</checkBox>
+      </presentation>
+      <presentation id="Cate_SelfPanel_15" />
+      <presentation id="Cate_SummarizeComments" />
+      <presentation id="Cate_Import" />
+      <presentation id="Cate_Export" />
+      <presentation id="Cate_FDFviaEmail" />
+      <presentation id="Com_KeepToolsSelected" />
+      <presentation id="Cate_SelfCategory_2" />
+      <presentation id="Cate_Itself_13" />
+      <presentation id="Cate_SubItem_13">
+        <checkBox refId="Cate_SelectText">Select Text</checkBox>
+        <checkBox refId="Cate_SelectAnnotation">Select Annotation</checkBox>
+      </presentation>
+      <presentation id="Cate_Itself_14" />
+      <presentation id="Cate_SubItem_14">
+        <checkBox refId="VW_ZOOMIN">Zoom In</checkBox>
+        <checkBox refId="VW_ZOOMOUT">Zoom Out</checkBox>
+        <checkBox refId="VW_ACTUALSIZE">Actual Size</checkBox>
+        <checkBox refId="VW_FITPAGE">Fit Page</checkBox>
+        <checkBox refId="VW_FITWIDTH">Fit Width</checkBox>
+        <checkBox refId="VW_FITVISIBLE">Fit Visible</checkBox>
+        <checkBox refId="Cate_6400Pa">6400%</checkBox>
+        <checkBox refId="Cate_3200Pa">3200%</checkBox>
+        <checkBox refId="Cate_1600Pa">1600%</checkBox>
+        <checkBox refId="Cate_800Pa">800%</checkBox>
+        <checkBox refId="Cate_600Pa">600%</checkBox>
+        <checkBox refId="Cate_400Pa">400%</checkBox>
+        <checkBox refId="Cate_200Pa">200%</checkBox>
+        <checkBox refId="Cate_150Pa">150%</checkBox>
+        <checkBox refId="Cate_125Pa">125%</checkBox>
+        <checkBox refId="Cate_100Pa">100%</checkBox>
+        <checkBox refId="Cate_75Pa">75%</checkBox>
+        <checkBox refId="Cate_66Pa">66.67%</checkBox>
+        <checkBox refId="Cate_50Pa">50%</checkBox>
+        <checkBox refId="Cate_33Pa">33.33%</checkBox>
+        <checkBox refId="Cate_25Pa">25%</checkBox>
+        <checkBox refId="Cate_12Pa">12.5%</checkBox>
+        <checkBox refId="Cate_8Pa">8.33%</checkBox>
+		<checkBox refId="Cate_1Pa">1%</checkBox>
+      </presentation>
+      <presentation id="Cate_SelfPanel_16" />
+      <presentation id="Cate_Hand_9" />
+      <presentation id="Cate_SelfPanel_17" />
+      <presentation id="VW_PREVIOUSVIEW" />
+      <presentation id="VW_NEXTVIEW" />
+      <presentation id="VW_FIRSTPAGE" />
+      <presentation id="VW_PREVIOUSPAGE" />
+      <presentation id="Cate_Page" />
+      <presentation id="VW_NEXTPAGE" />
+      <presentation id="VW_LASTPAGE" />
+      <presentation id="Cate_Itself_15" />
+      <presentation id="Cate_SubItem_15">
+        <checkBox refId="Cate_Layout">Layout</checkBox>
+        <checkBox refId="Cate_Details">Details</checkBox>
+        <checkBox refId="Cate_CoverSheet">Cover Sheet</checkBox>
+      </presentation>
+      <presentation id="Cate_SelfPanel_18" />
+      <presentation id="VW_READMODE" />
+      <presentation id="VW_REVERSEVIEW" />
+      <presentation id="VW_TEXTVIEWER" />
+      <presentation id="Cate_Itself_16" />
+      <presentation id="Cate_SubItem_16">
+        <checkBox refId="VW_COUNTERCLOCKWISE">Rotate Left</checkBox>
+        <checkBox refId="VW_CLOCKWISE">Rotate Right</checkBox>
+      </presentation>
+      <presentation id="Cate_Itself_17" />
+      <presentation id="Cate_SubItem_17">
+        <checkBox refId="VW_PageDisplaysVSplit">Vertically Split</checkBox>
+        <checkBox refId="VW_PageDisplaysHSplit">Horizontally Split</checkBox>
+        <checkBox refId="Cate_SpreadsheetSplit">Spreadsheet Split</checkBox>
+      </presentation>
+      <presentation id="Cate_SelfPanel_19" />
+      <presentation id="Cate_SinglePage" />
+      <presentation id="Cate_OneColumn" />
+      <presentation id="VW_FACING" />
+      <presentation id="VW_CONTINUOUSFACING" />
+      <presentation id="Cate_SeparateCoverPage" />
+      <presentation id="VW_GUIDES" />
+      <presentation id="VW_RULERS" />
+      <presentation id="Cate_LineWeights" />
+      <presentation id="Cate_Itself_18" />
+      <presentation id="Cate_SubItem_18">
+        <checkBox refId="VW_READSTART">Activate Read</checkBox>
+        <checkBox refId="VW_READTHISPAGE">Read Current Page</checkBox>
+        <checkBox refId="VW_READFROMCURRENTPAGE">Read from Current Page</checkBox>
+        <checkBox refId="VW_STOP">Stop</checkBox>
+      </presentation>
+      <presentation id="Cate_Itself_19" />
+      <presentation id="Cate_SubItem_19">
+        <checkBox refId="Cate_Rate">Rate</checkBox>
+      </presentation>
+      <presentation id="Cate_Itself_20" />
+      <presentation id="Cate_SubItem_20">
+        <checkBox refId="Cate_Volume">Volume</checkBox>
+      </presentation>
+      <presentation id="Cate_SelfPanel_20" />
+      <presentation id="Cate_AutoScroll" />
+      <presentation id="Cate_Marquee" />
+      <presentation id="VW_LOUPE" />
+      <presentation id="VW_MAGNIFIER" />
+      <presentation id="Cate_Pause" />
+      <presentation id="Cate_Itself_21" />
+      <presentation id="Cate_SubItem_21">
+        <checkBox refId="VW_BOOKMARKS">Bookmarks</checkBox>
+        <checkBox refId="Cate_Pages">Pages</checkBox>
+        <checkBox refId="VW_LAYERS">Layers</checkBox>
+        <checkBox refId="MEMU_COMMENTS">Comments</checkBox>
+        <checkBox refId="Cate_Attachments">Attachments</checkBox>
+        <checkBox refId="VW_SecuritySettings">Security Settings</checkBox>
+        <checkBox refId="Cate_DigitalSignatures_1">Digital Signatures</checkBox>
+        <checkBox refId="VW_HIDESTATUSBAR_1">Show Navigation Panels</checkBox>
+        <checkBox refId="VW_ResetAllPanels">Reset All Panels</checkBox>
+      </presentation>
+      <presentation id="Cate_Itself_22" />
+      <presentation id="Cate_SubItem_22">
+        <checkBox refId="Cate_ShowStatusBar">Show Status Bar</checkBox>
+        <checkBox refId="Cate_AutoHide">Auto-hide Status Bar</checkBox>
+        <checkBox refId="Cate_HideStatusBar">Hide Status Bar</checkBox>
+      </presentation>
+      <presentation id="Cate_SelfPanel_21" />
+      <presentation id="Cate_SelfPanel_22" />
+      <presentation id="Cate_WordCount_1" />
+      <presentation id="Cate_SelfCategory_3" />
+      <presentation id="Cate_Itself_23" />
+      <presentation id="Cate_SubItem_23">
+        <checkBox refId="Cate_SelectText">Select Text</checkBox>
+        <checkBox refId="Cate_SelectAnnotation">Select Annotation</checkBox>
+      </presentation>
+      <presentation id="Cate_Itself_24" />
+      <presentation id="Cate_SubItem_24">
+        <checkBox refId="VW_ZOOMIN">Zoom In</checkBox>
+        <checkBox refId="VW_ZOOMOUT">Zoom Out</checkBox>
+        <checkBox refId="VW_ACTUALSIZE">Actual Size</checkBox>
+        <checkBox refId="VW_FITPAGE">Fit Page</checkBox>
+        <checkBox refId="VW_FITWIDTH">Fit Width</checkBox>
+        <checkBox refId="VW_FITVISIBLE">Fit Visible</checkBox>
+        <checkBox refId="Cate_6400Pa">6400%</checkBox>
+        <checkBox refId="Cate_3200Pa">3200%</checkBox>
+        <checkBox refId="Cate_1600Pa">1600%</checkBox>
+        <checkBox refId="Cate_800Pa">800%</checkBox>
+        <checkBox refId="Cate_600Pa">600%</checkBox>
+        <checkBox refId="Cate_400Pa">400%</checkBox>
+        <checkBox refId="Cate_200Pa">200%</checkBox>
+        <checkBox refId="Cate_150Pa">150%</checkBox>
+        <checkBox refId="Cate_125Pa">125%</checkBox>
+        <checkBox refId="Cate_100Pa">100%</checkBox>
+        <checkBox refId="Cate_75Pa">75%</checkBox>
+        <checkBox refId="Cate_66Pa">66.67%</checkBox>
+        <checkBox refId="Cate_50Pa">50%</checkBox>
+        <checkBox refId="Cate_33Pa">33.33%</checkBox>
+        <checkBox refId="Cate_25Pa">25%</checkBox>
+        <checkBox refId="Cate_12Pa">12.5%</checkBox>
+        <checkBox refId="Cate_8Pa">8.33%</checkBox>
+		<checkBox refId="Cate_1Pa">1%</checkBox>
+      </presentation>
+      <presentation id="Cate_SelfPanel_23" />
+      <presentation id="Cate_Hand_10" />
+      <presentation id="Cate_Itself_25" />
+      <presentation id="Cate_SubItem_25">
+        <checkBox refId="Cate_AppendtoanExistingSheet">Append to an Existing Sheet</checkBox>
+        <checkBox refId="Cate_CombineFormstoaSheet">Combine Forms to a Sheet</checkBox>
+      </presentation>
+      <presentation id="Cate_Itself_26" />
+      <presentation id="Cate_SubItem_26">
+        <checkBox refId="Cate_ToFile">To File</checkBox>
+        <checkBox refId="Cate_Via_Email">Via Email</checkBox>
+      </presentation>
+      <presentation id="Cate_SelfPanel_24" />
+      <presentation id="FM_RESETFORM" />
+      <presentation id="Cate_Import_24" />
+      <presentation id="Cate_HighlightFields" />
+      <presentation id="Cate_SelfCategory_4" />
+      <presentation id="Cate_Itself_27" />
+      <presentation id="Cate_SubItem_27">
+        <checkBox refId="Cate_SelectText">Select Text</checkBox>
+        <checkBox refId="Cate_SelectAnnotation">Select Annotation</checkBox>
+      </presentation>
+      <presentation id="Cate_Itself_28" />
+      <presentation id="Cate_SubItem_28">
+        <checkBox refId="VW_ZOOMIN">Zoom In</checkBox>
+        <checkBox refId="VW_ZOOMOUT">Zoom Out</checkBox>
+        <checkBox refId="VW_ACTUALSIZE">Actual Size</checkBox>
+        <checkBox refId="VW_FITPAGE">Fit Page</checkBox>
+        <checkBox refId="VW_FITWIDTH">Fit Width</checkBox>
+        <checkBox refId="VW_FITVISIBLE">Fit Visible</checkBox>
+        <checkBox refId="Cate_6400Pa">6400%</checkBox>
+        <checkBox refId="Cate_3200Pa">3200%</checkBox>
+        <checkBox refId="Cate_1600Pa">1600%</checkBox>
+        <checkBox refId="Cate_800Pa">800%</checkBox>
+        <checkBox refId="Cate_600Pa">600%</checkBox>
+        <checkBox refId="Cate_400Pa">400%</checkBox>
+        <checkBox refId="Cate_200Pa">200%</checkBox>
+        <checkBox refId="Cate_150Pa">150%</checkBox>
+        <checkBox refId="Cate_125Pa">125%</checkBox>
+        <checkBox refId="Cate_100Pa">100%</checkBox>
+        <checkBox refId="Cate_75Pa">75%</checkBox>
+        <checkBox refId="Cate_66Pa">66.67%</checkBox>
+        <checkBox refId="Cate_50Pa">50%</checkBox>
+        <checkBox refId="Cate_33Pa">33.33%</checkBox>
+        <checkBox refId="Cate_25Pa">25%</checkBox>
+        <checkBox refId="Cate_12Pa">12.5%</checkBox>
+        <checkBox refId="Cate_8Pa">8.33%</checkBox>
+		<checkBox refId="Cate_1Pa">1%</checkBox>
+      </presentation>
+      <presentation id="Cate_SelfPanel_25" />
+      <presentation id="Cate_Hand_11" />
+      <presentation id="Cate_Itself_29" />
+      <presentation id="Cate_SubItem_29">
+        <checkBox refId="Cate_UnrestrictedAccess">Unrestricted Access</checkBox>
+        <checkBox refId="Cate_ConnecttoDigitalRightManagementServersandGetTemplates">Connect to Digital Right Management Servers and Get Templates</checkBox>
+      </presentation>
+      <presentation id="Cate_Itself_30" />
+      <presentation id="Cate_SubItem_30">
+        <checkBox refId="Cate_CustomTemplates">Custom Templates</checkBox>
+        <checkBox refId="Cate_SecurityWatermark">Security Watermark</checkBox>
+      </presentation>
+      <presentation id="Cate_SelfPanel_26" />
+      <presentation id="Cate_Itself_31" />
+      <presentation id="Cate_SubItem_31">
+        <checkBox refId="Cate_LogintoDocuSign">Login to DocuSign</checkBox>
+        <checkBox refId="Cate_SignwithDocuSign">Sign with DocuSign</checkBox>
+        <checkBox refId="Cate_SendviaDocuSign">Send via DocuSign</checkBox>
+      </presentation>
+      <presentation id="Cate_Itself_32" />
+      <presentation id="Cate_SubItem_32">
+        <checkBox refId="Cate_PlaceSignature">Place Signature...</checkBox>
+        <checkBox refId="Cate_SignDoc">Sign Document...</checkBox>
+      </presentation>
+      <presentation id="Cate_SelfPanel_27" />
+      <presentation id="Cate_PDFSign_27" />
+      <presentation id="Cate_Validate" />
+      <presentation id="Cate_TimeStampDocument" />
+      <presentation id="Cate_DigitalIDs" />
+      <presentation id="Cate_TrustCertificates" />
+      <presentation id="Cate_SelfCategory_5" />
+      <presentation id="Cate_Itself_33" />
+      <presentation id="Cate_SubItem_33">
+        <checkBox refId="Cate_SelectText">Select Text</checkBox>
+        <checkBox refId="Cate_SelectAnnotation">Select Annotation</checkBox>
+      </presentation>
+      <presentation id="Cate_Itself_34" />
+      <presentation id="Cate_SubItem_34">
+        <checkBox refId="VW_ZOOMIN">Zoom In</checkBox>
+        <checkBox refId="VW_ZOOMOUT">Zoom Out</checkBox>
+        <checkBox refId="VW_ACTUALSIZE">Actual Size</checkBox>
+        <checkBox refId="VW_FITPAGE">Fit Page</checkBox>
+        <checkBox refId="VW_FITWIDTH">Fit Width</checkBox>
+        <checkBox refId="VW_FITVISIBLE">Fit Visible</checkBox>
+        <checkBox refId="Cate_6400Pa">6400%</checkBox>
+        <checkBox refId="Cate_3200Pa">3200%</checkBox>
+        <checkBox refId="Cate_1600Pa">1600%</checkBox>
+        <checkBox refId="Cate_800Pa">800%</checkBox>
+        <checkBox refId="Cate_600Pa">600%</checkBox>
+        <checkBox refId="Cate_400Pa">400%</checkBox>
+        <checkBox refId="Cate_200Pa">200%</checkBox>
+        <checkBox refId="Cate_150Pa">150%</checkBox>
+        <checkBox refId="Cate_125Pa">125%</checkBox>
+        <checkBox refId="Cate_100Pa">100%</checkBox>
+        <checkBox refId="Cate_75Pa">75%</checkBox>
+        <checkBox refId="Cate_66Pa">66.67%</checkBox>
+        <checkBox refId="Cate_50Pa">50%</checkBox>
+        <checkBox refId="Cate_33Pa">33.33%</checkBox>
+        <checkBox refId="Cate_25Pa">25%</checkBox>
+        <checkBox refId="Cate_12Pa">12.5%</checkBox>
+        <checkBox refId="Cate_8Pa">8.33%</checkBox>
+		<checkBox refId="Cate_1Pa">1%</checkBox>
+      </presentation>
+      <presentation id="Cate_SelfPanel_28" />
+      <presentation id="Cate_Hand_12" />
+      <presentation id="Cate_SelfPanel_29" />
+      <presentation id="CT_Evernote" />
+      <presentation id="CT_OneNote" />
+      <presentation id="Cate_SelfPanel_30" />
+      <presentation id="Cate_Tracker" />
+      <presentation id="Cate_SelfPanel_31" />
+      <presentation id="SH_CheckIn" />
+      <presentation id="SH_CheckOut" />
+      <presentation id="SH_DiscardCheckout" />
+      <presentation id="Cate_DocumentProperties" />
+      <presentation id="Cate_SelfCategory_6" />
+      <presentation id="Cate_Itself_35" />
+      <presentation id="Cate_SubItem_35">
+        <checkBox refId="Cate_SelectText">Select Text</checkBox>
+        <checkBox refId="Cate_SelectAnnotation">Select Annotation</checkBox>
+      </presentation>
+      <presentation id="Cate_Itself_36" />
+      <presentation id="Cate_SubItem_36">
+        <checkBox refId="VW_ZOOMIN">Zoom In</checkBox>
+        <checkBox refId="VW_ZOOMOUT">Zoom Out</checkBox>
+        <checkBox refId="VW_ACTUALSIZE">Actual Size</checkBox>
+        <checkBox refId="VW_FITPAGE">Fit Page</checkBox>
+        <checkBox refId="VW_FITWIDTH">Fit Width</checkBox>
+        <checkBox refId="VW_FITVISIBLE">Fit Visible</checkBox>
+        <checkBox refId="Cate_6400Pa">6400%</checkBox>
+        <checkBox refId="Cate_3200Pa">3200%</checkBox>
+        <checkBox refId="Cate_1600Pa">1600%</checkBox>
+        <checkBox refId="Cate_800Pa">800%</checkBox>
+        <checkBox refId="Cate_600Pa">600%</checkBox>
+        <checkBox refId="Cate_400Pa">400%</checkBox>
+        <checkBox refId="Cate_200Pa">200%</checkBox>
+        <checkBox refId="Cate_150Pa">150%</checkBox>
+        <checkBox refId="Cate_125Pa">125%</checkBox>
+        <checkBox refId="Cate_100Pa">100%</checkBox>
+        <checkBox refId="Cate_75Pa">75%</checkBox>
+        <checkBox refId="Cate_66Pa">66.67%</checkBox>
+        <checkBox refId="Cate_50Pa">50%</checkBox>
+        <checkBox refId="Cate_33Pa">33.33%</checkBox>
+        <checkBox refId="Cate_25Pa">25%</checkBox>
+        <checkBox refId="Cate_12Pa">12.5%</checkBox>
+        <checkBox refId="Cate_8Pa">8.33%</checkBox>
+		<checkBox refId="Cate_1Pa">1%</checkBox>
+      </presentation>
+      <presentation id="Cate_SelfPanel_32" />
+      <presentation id="Cate_Hand_13" />
+      <presentation id="Cate_SelfPanel_33" />
+      <presentation id="Cate_AddcDocID" />
+      <presentation id="Cate_Publish" />
+      <presentation id="Cate_AdvancedSettings" />
+      <presentation id="Cate_Itself_37" />
+      <presentation id="Cate_SubItem_37">
+        <checkBox refId="Cate_CPDDRMOfflineDevice">Base On Device</checkBox>
+        <checkBox refId="Cate_CPDDRMOfflinePSW">Base On Password</checkBox>
+      </presentation>
+      <presentation id="Cate_SelfPanel_34" />
+      <presentation id="Cate_ViewPermission" />
+      <presentation id="Cate_SelfPanel_35" />
+      <presentation id="Cate_Join" />
+      <presentation id="Cate_LeaveReview" />
+      <presentation id="Cate_Dashboard" />
+      <presentation id="Cate_SelfPanel_36" />
+      <presentation id="Cate_Tutorials" />
+      <presentation id="Cate_SelfPanel_37" />
+      <presentation id="Cate_HomepagePrivateControl" />
+      <presentation id="Cate_VersionHistory" />
+      <presentation id="Cate_RelatedPeople" />
+      <presentation id="Cate_SelfCategory_7" />
+      <presentation id="Cate_SelfPanel_38" />
+      <presentation id="HP_USERMANUAL" />
+      <presentation id="Cate_SelfPanel_39" />
+      <presentation id="Cate_FoxitPlugIns" />
+      <presentation id="Cate_About" />
+      <presentation id="Cate_SelfPanel_40" />
+      <presentation id="Cate_ActivatePlugins" />
+      <presentation id="Cate_SelfCategory_8" />
+      <presentation id="Cate_Itself_38" />
+      <presentation id="Cate_SubItem_38">
+        <checkBox refId="Cate_Lefttoright">Left to right</checkBox>
+        <checkBox refId="Cate_RighttoLeft">Right to Left</checkBox>
+      </presentation>
+      <presentation id="Cate_SelfPanel_41" />
+      <presentation id="Cate_Font" />
+      <presentation id="Cate_FontSize" />
+      <presentation id="Cate_Bold" />
+      <presentation id="Cate_Italic" />
+      <presentation id="Cate_Underline_41" />
+      <presentation id="Cate_Strikethrough" />
+      <presentation id="Cate_Superscript" />
+      <presentation id="Cate_Subscript" />
+      <presentation id="Cate_FontColor" />
+      <presentation id="Cate_CharacterSpacing" />
+      <presentation id="Cate_SelfPanel_42" />
+      <presentation id="Cate_Bullets" />
+      <presentation id="Cate_AlignLeft" />
+      <presentation id="Cate_Center" />
+      <presentation id="Cate_AlignRight" />
+      <presentation id="Cate_CharacterScale" />
+      <presentation id="Cate_IncreaseIndent" />
+      <presentation id="Cate_DecreaseIndent" />
+      <presentation id="Cate_WordSpacing" />
+      <presentation id="Cate_LineSpacing" />
+      <presentation id="Cate_Itself_39" />
+      <presentation id="Cate_SubItem_39">
+        <checkBox refId="Cate_OpacitySlider">Opacity Slider</checkBox>
+      </presentation>
+      <presentation id="Cate_SelfPanel_43" />
+      <presentation id="Cate_Model" />
+      <presentation id="Cate_LineColor" />
+      <presentation id="Cate_FillColor" />
+      <presentation id="Cate_LineWidth" />
+      <presentation id="Cate_Border" />
+      <presentation id="Cate_Startofline" />
+      <presentation id="Cate_Endofline" />
+      <presentation id="Cate_SelfPanel_44" />
+      <presentation id="Cate_Number1" />
+      <presentation id="Cate_Unit1" />
+      <presentation id="Cate_equal" />
+      <presentation id="Cate_Number2" />
+      <presentation id="Cate_Unit2" />
+      <presentation id="Cate_ScaleAaalyCurrent" />
+      <presentation id="Cate_ScaleAaalyAll" />
+      <presentation id="Cate_SelfPanel_45" />
+      <presentation id="Cate_Showresultinformation" />
+      <presentation id="Cate_Measurementmarkup" />
+      <presentation id="VW_RULERS_45" />
+      <presentation id="Cate_Annotation" />
+      <presentation id="Cate_AnnotationFormat" />
+      <presentation id="Cate_SelfPanel_46" />
+      <presentation id="Cate_SnapEndpoint" />
+      <presentation id="Cate_SnapMidpoint" />
+      <presentation id="Cate_SnapNearest" />
+      <presentation id="Cate_SnapIntersection" />
+	  <presentation id="Cate_ExportToExcel" />
+	  <presentation id="Cate_FormatExport" />	  
+      <presentation id="Cate_SelfCategory_9" />
+      <presentation id="Cate_SelfPanel_47" />
+      <presentation id="Cate_Vertically" />
+      <presentation id="Cate_Horizontally" />
+      <presentation id="Cate_Both" />
+      <presentation id="Cate_SelfPanel_48" />
+      <presentation id="Cate_Vertically_48" />
+      <presentation id="Cate_Horizontally_48" />
+      <presentation id="VW_LEFT" />
+      <presentation id="VW_Right" />
+      <presentation id="Cate_Top" />
+      <presentation id="Cate_Bottom" />
+      <presentation id="Cate_SelfPanel_49" />
+      <presentation id="Cate_Vertically_49" />
+      <presentation id="Cate_Horizontally_49" />
+      <presentation id="Cate_SelfCategory_10" />
+      <presentation id="Cate_Itself_40" />
+      <presentation id="Cate_SubItem_40">
+        <checkBox refId="Cate_SelectText">Select Text</checkBox>
+        <checkBox refId="Cate_SelectAnnotation">Select Annotation</checkBox>
+      </presentation>
+      <presentation id="Cate_Itself_41" />
+      <presentation id="Cate_SubItem_41">
+        <checkBox refId="VW_ZOOMIN">Zoom In</checkBox>
+        <checkBox refId="VW_ZOOMOUT">Zoom Out</checkBox>
+        <checkBox refId="VW_ACTUALSIZE">Actual Size</checkBox>
+        <checkBox refId="VW_FITPAGE">Fit Page</checkBox>
+        <checkBox refId="VW_FITWIDTH">Fit Width</checkBox>
+        <checkBox refId="VW_FITVISIBLE">Fit Visible</checkBox>
+        <checkBox refId="Cate_6400Pa">6400%</checkBox>
+        <checkBox refId="Cate_3200Pa">3200%</checkBox>
+        <checkBox refId="Cate_1600Pa">1600%</checkBox>
+        <checkBox refId="Cate_800Pa">800%</checkBox>
+        <checkBox refId="Cate_600Pa">600%</checkBox>
+        <checkBox refId="Cate_400Pa">400%</checkBox>
+        <checkBox refId="Cate_200Pa">200%</checkBox>
+        <checkBox refId="Cate_150Pa">150%</checkBox>
+        <checkBox refId="Cate_125Pa">125%</checkBox>
+        <checkBox refId="Cate_100Pa">100%</checkBox>
+        <checkBox refId="Cate_75Pa">75%</checkBox>
+        <checkBox refId="Cate_66Pa">66.67%</checkBox>
+        <checkBox refId="Cate_50Pa">50%</checkBox>
+        <checkBox refId="Cate_33Pa">33.33%</checkBox>
+        <checkBox refId="Cate_25Pa">25%</checkBox>
+        <checkBox refId="Cate_12Pa">12.5%</checkBox>
+        <checkBox refId="Cate_8Pa">8.33%</checkBox>
+		<checkBox refId="Cate_1Pa">1%</checkBox>
+      </presentation>
+      <presentation id="Cate_SelfPanel_50" />
+      <presentation id="Cate_Hand_14" />
+      <presentation id="Cate_Itself_42" />
+      <presentation id="Cate_SubItem_42">
+        <checkBox refId="Cate_CreateSignature">Create Signature</checkBox>
+        <checkBox refId="Cate_BTManage">Manage Signatures</checkBox>
+        <checkBox refId="Cate_Preferences">Preferences</checkBox>
+      </presentation>
+      <presentation id="Cate_SelfPanel_51" />
+      <presentation id="Cate_ApplyAllSignature" />
+      <presentation id="Cate_Itself_43" />
+      <presentation id="Cate_SubItem_43">
+        <checkBox refId="Cate_SetPredefinedText">Set Predefined Text</checkBox>
+      </presentation>
+      <presentation id="Cate_SelfPanel_52" />
+      <presentation id="Cate_Typewriter_12" />
+      <presentation id="Cate_SelfPanel_53" />
+      <presentation id="Cate_Close_53" />
+      <presentation id="Cate_SelfCategory_11" />
+      <presentation id="RMS_ENCRYPT_METADATA" />
+      <presentation id="RMS_Add" />
+      <presentation id="RMS_SaveAs" />
+      <presentation id="RMS_Interoperability" />
+      <presentation id="CPDF_AutoConvertConnectedPDF" />
+      <presentation id="CPDF_disableConnectedPDF" />
+      <presentation id="Cate_SelfPanel_54" />
+      <presentation id="HP_COMMANDLINE" />
+      <presentation id="HP_REPORTIDEA" />
+      <presentation id="Cate_Help_Checkupdate" />
+      <presentation id="Cate_Help_InstallUpdate" />
+      <presentation id="Cate_Help_DefaultReader" />
+      <presentation id="Cate_Help_Register" />
+      <presentation id="Cate_Register" />
+      <presentation id="CPDF_ConnectedPDFServer">
+        <textBox refId="CPDF_Server">
+          <label>Server:</label>
+          <defaultValue></defaultValue>
+        </textBox>        
+      </presentation>
+      <presentation id="PREF_SendCrashDocument"/>
+      <presentation id="Tab_Share" />
+      <presentation id="Tab_ConnectedNotifi" />
+      <presentation id="Cate_ShareFoxit" />
+      <presentation id="VW_VIEWREFLOW" />
+      <presentation id="Cate_Itself_44" />
+      <presentation id="Cate_SubItem_44">
+        <checkBox refId="Cate_ExportAll">All Comments</checkBox>
+        <checkBox refId="Cate_ExportHighlight">Highlighted Text</checkBox>
+      </presentation>
+      <presentation id="VW_HOMEREFLOW" />
+      <presentation id="VW_ViewNightMode" />	  
+      <presentation id="Cate_Itself_45" />
+      <presentation id="Cate_SubItem_45">
+        <checkBox refId="Cate_SendMail">Email Current Tab</checkBox>
+        <checkBox refId="Cate_SendAllTal">Email All Open Tabs</checkBox>
+      </presentation>
+      <presentation id="HP_HELPCENTER" />
+      <presentation id="Hidden_SaveAs" />
+      <presentation id="RMS_IRMV1">
+        <dropdownList refId="RMS_IRM_PROTECTION_SETTING" noSort="true" defaultItem="0">Setting</dropdownList>
+      </presentation>
+      <presentation id="PREF_NotificationMsg">
+        <checkBox refId="PREF_ShowBulbAffects" defaultChecked="true">Show the message which affects the next step</checkBox>
+        <checkBox refId="PREF_ShowBulbNotification" defaultChecked="true">Show the notification related message</checkBox>
+        <checkBox refId="PREF_ShowBulbPDFA" defaultChecked="true">Show PDF/A message again</checkBox>
+	  </presentation>
+	  <presentation id="PREF_RequirePasswordSignatures" />
+	  <presentation id="PREF_ProtectedView">
+        <dropdownList refId="PREF_ProtectedViewOpt" noSort="true" defaultItem="0">Settings:</dropdownList>
+      </presentation>	
+      <presentation id="PREF_MultipleInstances" />
+      <presentation id="Cate_Justify" />
+      <presentation id="PREF_PrintGDIOutput" />
+	  <presentation id="PREF_DPISetting">
+        <dropdownList refId="PREF_DPISettingOpt" noSort="true" defaultItem="0">Settings:</dropdownList>
+      </presentation>	
+      <presentation id="CPDF_InternalUpdateServer">
+        <textBox refId="CPDF_InternalUpdateServer_URL">
+          <label>Server URL:</label>
+          <defaultValue></defaultValue>
+        </textBox>        
+      </presentation>
+      <presentation id="PREF_TellMeWhat" />
+      <presentation id="PREF_DisablePDFviewerSwitching" />
+	  <presentation id="PREF_LockAutoCompleteInForm" />
+	  <presentation id="PREF_DisablePrivilegedLocations" /> 
+      <presentation id="Cate_Itself_94" />
+      <presentation id="Cate_SubItem_94">
+		<checkBox refId="ECMPlugin_Sharepoint">Sharepoint</checkBox>
+		<checkBox refId="ECMPlugin_OneDrive">OneDrive</checkBox>
+		<checkBox refId="ECMPlugin_Box">Box</checkBox>
+		<checkBox refId="ECMPlugin_DropBox">DropBox</checkBox>
+		<checkBox refId="ECMPlugin_GoogleDrive">Google Drive</checkBox>
+		<checkBox refId="ECMPlugin_DMSforLegal">DMSforLegal</checkBox>
+		<checkBox refId="ECMPlugin_Alfresco">Alfresco</checkBox>
+		<checkBox refId="ECMPlugin_RMSV2">RMSV2</checkBox>
+		<checkBox refId="ECMPlugin_FileOpen">FileOpen</checkBox>
+		<checkBox refId="ECMPlugin_DocuSign">DocuSign</checkBox>
+		<checkBox refId="ECMPlugin_ShareReview">ShareReview</checkBox>
+      </presentation>  	 
+	  <presentation id="PREF_NotUseQuickTimePlayer" />	
+	  <presentation id="PREF_ManageSites">
+        <dropdownList refId="PREF_ManageSitesOpt" noSort="true" defaultItem="0">Settings:</dropdownList>
+      </presentation> 	 
+	  <presentation id="PREF_CreateDigitalIDs" />		  
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

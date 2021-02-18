@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?> 
+	<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions"> 
+		<displayName>SfB Wizard v4.0</displayName> 
+		<description>SfB Wizard v4.0 Gruppenrichtlinien Vorlagendateien v4.0</description> 
+		<resources> 
+			<stringTable> 
+				<string id="SUPPORTED_LyncWizard200">Gruppenrichtlinieneinstellung wird ab LyncWizard 2.0.0 unterstuetzt</string>
+				<string id="SUPPORTED_LyncWizard204">Gruppenrichtlinieneinstellung wird ab LyncWizard 2.0.4 unterstuetzt</string>
+				<string id="SUPPORTED_LyncWizard300">Gruppenrichtlinieneinstellung wird ab SfB Wizard 3.0.0 unterstuetzt</string>
+				<string id="SUPPORTED_LyncWizard30x">Gruppenrichtlinieneinstellung wird ab SfB Wizard 3.0.x unterstuetzt</string>
+				<string id="SUPPORTED_LyncWizard40x">Gruppenrichtlinieneinstellung wird ab SfB Wizard 4.0.x unterstuetzt</string>
+				<string id="CAT_LyncWizard">SfB Wizard v4.0</string> 
+				<string id="CAT_General">Allgemein</string>
+				<string id="CAT_ContactLookup">Kontaktsuche</string>
+				<string id="CAT_BusyCalls">Zweitanruf</string>
+				<string id="CAT_HotkeyDialer">Kurztastenwahl</string>
+				<string id="CAT_RunCmd">Aktionen</string>
+				<string id="CAT_POR">Praesenz basiertes Routing</string>
+				<string id="CAT_License">Lizenz</string>
+				<string id="CAT_GUI">Benutzer Interface</string>
+				<string id="PDN_CultureInfo">Definition der Programmsprache</string>
+				<string id="PET_CultureInfo">Definieren Sie die vom Lync Wizard verwendete Sprache.
+
+Wenn Sie nichts konfigurieren wird die Systemsprache erkannt und verwendet.
+				</string>
+				<string id="PDN_CultureInfo_DE">Deutsch</string>
+				<string id="PDN_CultureInfo_EN">Englisch</string>
+				<string id="PDN_CultureInfo_FR">Franzoesisch</string>
+				<string id="PDN_CultureInfo_ES">Spanisch</string>
+				<string id="PDN_CultureInfo_PT">Portugisisch</string>
+				<string id="PDN_CultureInfo_IT">Italienisch</string>
+				<string id="PDN_CultureInfo_ZH">Chinesisch</string>
+				<string id="PDN_CultureInfo_SYS">Systemsprache</string>
+				<string id="PDN_CustomBalloon">Konfiguration des Modernes Popup fuer Benachrichtigungen</string>
+				<string id="PET_CustomBalloon">Ermoeglicht Ihnen festzulegen, ob fuer Benachrichtigungen ein modernes Popup verwendet wird.</string>
+				<string id="PDN_CustomBalloonOffset">Konfiguration der Position des modernen PopUp</string>
+				<string id="PET_CustomBalloonOffset">Ermoeglicht die Definition der X/Y-Position des modernen PopUps.</string>
+				<string id="PDN_CustomBalloonDisplayTime">Konfiguration der Einblenddauer des modernen PopUp</string>
+				<string id="PET_CustomBalloonDisplayTime">Ermoeglicht die Definition der Einblenddauer des modernen PopUps.</string>
+				<string id="PDN_DebugLogging">Protokollierung</string>
+				<string id="PET_DebugLogging">Konfigurieren Sie die Protokollierung fuer das Debugging.</string>
+				<string id="PDN_DisableUpdateCheck">Deaktivieren der Updatepruefung</string>
+				<string id="PET_DisableUpdateCheck">Deaktivieren Sie die automatische Update-Pruefung.
+				
+Die Update-Pruefung laesst sich nur deaktivieren, wenn eine gueltige Lizenz konfiguriert ist.
+				</string>
+				<string id="PDN_DisableUserConfig">Deaktivieren der Benutzerkonfiguration</string>
+				<string id="PET_DisableUserConfig">Deaktivieren Sie die Konfigurationsmoeglichkeit fuer den Benutzer.
+
+Wird diese Option aktiviert, kann der Benutzer die Optionen des Einstellungen-Dialogs nicht mehr konfigurieren.
+				</string>
+				<string id="PDN_EnableContactLookup">Konfiguration der Option Kontaktsuche</string>
+				<string id="PET_EnableContactLookup">Aktivieren/Deaktivieren Sie die Funktionalitaet Kontaktsuche.</string>
+				<string id="PDN_ContactLookupPatterns">Datenquelle: RegExp der Telefonnummer</string>
+				<string id="PET_ContactLookupPatterns">Konfigurieren Sie die Datenquelle und das dazu passende Telefonnummer-Muster, welches fuer die Kontaktsuche verwendet werden soll. Syntax: Datequelle:RegExp
+Datequellen:
+1=tel.search.ch
+2=LDAP
+				</string>
+				
+				<string id="PDN_EnableRunCmd">Konfiguration der Option Aktionen</string>
+				<string id="PET_EnableRunCmd">Aktivieren/Deaktivieren Sie die Funktionalitaet Aktionen.</string>
+				<string id="PDN_RunCmdItems">Konfiguration der Aktionen</string>
+				<string id="PET_RunCmdItems">Konfigurieren Sie die Aktionen und das dazu passende Telefonnummer-Muster, fuer welche die Aktionen ausgefuehrt werden soll. Syntax: "contact":"RegExp":"Cmd line/URL":"Argumente":Typ
+Typ:
+1=Command Line
+2=URL
+				</string>
+				
+				<string id="PDN_EnablePOR">Konfiguration der Option Praesenz basiertes Routing</string>
+				<string id="PET_EnablePOR">Aktivieren/Deaktivieren Sie die Funktionalitaet Praesenz basiertes Routing.</string>
+				<string id="PDN_PORItems">Konfiguration des Routings</string>
+				<string id="PET_PORItems">Konfigurieren Sie die Routings und das dazu passende Telefonnummer-Muster, fuer welche das Routing ausgefuehrt werden soll. Syntax: "Praesenzkey":"RegExp":"Reaktionsart":"Argumente"
+Praesenzkey:
+3500 - Available
+5000 - Available but inactive
+6500 - Busy
+7500 - Busy but inactive
+12500 - TemporaryAway
+15500 - Away
+18500 - Offline anzeigen (Muss in Policy aktiviert werden)
+
+"Offline" und "Nicht stoeren" können nicht verwendet werden, da LyncWizard diese Calls nicht erhaelt.
+
+Reaktionsart:
+1 - Besetzt
+2 - VoiceMail
+3 - Weiterleiten
+
+Argumente:
+Bei "Besetzt" kann der Antworttext eingetragen werden.
+Bei "Weiterleiten" muss die Zielrufnummer als E.164 eingetragen werden.
+				</string>
+
+				<string id="PDN_ContactLookupLDAP">Konfiguration der LDAP Datenquelle</string>
+				<string id="PET_ContactLookupLDAP">Konfigurieren Sie die LDAP Datenquelle.</string>
+				<string id="PDN_SearchKnownContact">Bekannte Kontakte zusaetzlich online suchen</string>
+				<string id="PET_SearchKnownContact">Konfigurieren Sie, ob bereits bekannte Kontakte zusaetzlich Online gesucht werden.</string>
+				<string id="PDN_ContactLookupCopyToClipboard">Gefundener Kontakt in die Zwischenablage kopieren</string>
+				<string id="PET_ContactLookupCopyToClipboard">Wenn dieser Wert aktiviert ist, wird ein gefundener Kontakt in die Zwischenablage kopiert.</string>
+				<string id="PDN_APIKey">API-Key von tel.search.ch</string>
+				<string id="PET_APIKey">Konfigurieren Sie den fuer die Kontaktsuche zu verwendende API-Key.</string>
+				<string id="PDN_EnableBusyCalls">Konfigurieren der Option Zweitanruf</string>
+				<string id="PET_EnableBusyCalls">Aktivieren/Deaktivieren Sie die Funktionalitaet Zweitanruf</string>
+				<string id="PDN_BusyBehavior">Konfigurieren der Option "Zweitanrufe"</string>
+				<string id="PET_BusyBehavior">Konfigurieren Sie das allgemeine Verhalten des LyncWizard bei einem Zweitanruf.</string>
+				<string id="PDN_BusyBehavior_TurnOff">Zweitanrufe ausschalten</string>
+				<string id="PDN_BusyBehavior_RejectCall">Anruf abweisen (Besetztton)</string>
+				<string id="PDN_BusyBehavior_HandledUnanswered">Als unbeantworteter Anruf behandeln</string>
+				<string id="PDN_BusyBehavior_ForwardCall">Anrufe weiterleiten an Weiterleitungsziel</string>
+				<string id="PDN_BusyIMAnswer">Konfigurieren der Instant Messaging Antwort im Status Besetzt</string>
+				<string id="PET_BusyIMAnswer">Konfigurieren Sie eine Instant Message, welche dem Lync-Anrufer beim Status Besetzt gesendet wird.</string>
+				<string id="PDN_BusyDisconnectReason">Konfigurieren des Verhaltens beim Status Besetzt</string>
+				<string id="PET_BusyDisconnectReason">Konfigurieren Sie das exakte technische Verhalten des LyncWizard bei aktivierter Funktion "Anruf abweisen (Besetztton)" bei einem Zweitanruf.
+
+Die Konfigurierbaren Optionen sind auf dem MSDN dokumentiert.
+				</string>
+				<string id="PDN_BusyDisconnectReasonDelegated">Konfigurieren des Verhaltens beim Status Besetzt durch einen Stellvertreter oder einer Reaktionsgruppe mit der aktivierten Funktion Agent Anonymity</string>
+				<string id="PET_BusyDisconnectReasonDelegated">Konfigurieren Sie das exakte technische Verhalten des LyncWizard bei aktivierter Funktion "Anruf abweisen (Besetztton)" bei einem Zweitanruf durch einen Stellvertreter oder einer Reaktionsgruppe mit der aktivierten Funktion Agent Anonymity.
+
+Die Konfigurierbaren Optionen sind auf dem MSDN dokumentiert.
+				</string>
+				<string id="PDN_BusyDisconnectReasonForwarded">Konfigurieren des Verhaltens beim Status Besetzt bei einer Team-Anrufgruppe oder einem angekuendigt bzw. vermittelten Anruf</string>
+				<string id="PET_BusyDisconnectReasonForwarded">Konfigurieren Sie das exakte teschnische Verhalten des LyncWizard bei aktivierter Funktion "Anruf abweisen (Besetztton)" bei einem Zweitanruf von einer Team-Anrufgruppe oder einem angekuendigt bzw. vermittelten Anruf.
+
+Die Konfigurierbaren Optionen sind auf dem MSDN dokumentiert.
+				</string>
+				<string id="PDN_BusyDisconnectReason_None">None</string>
+				<string id="PDN_BusyDisconnectReason_Timeout">Timeout</string>
+				<string id="PDN_BusyDisconnectReason_Busy">Busy</string>
+				<string id="PDN_BusyDisconnectReason_NotAcceptableHere">NotAcceptableHere</string>
+				<string id="PDN_BusyDisconnectReason_Decline">Decline</string>
+				<string id="PDN_BusyDisconnectReason_DeclineEverywhere">DeclineEveryhwere</string>
+				<string id="PDN_BusyDisconnectReason_ReplyOther">ReplyOther</string>
+				<string id="PDN_BusyContactURI">Konfigurieren des Weiterleitungsziel</string>
+				<string id="PET_BusyContactURI">Konfigurieren Sie das Weiterleitungsziel fuer die Weiterleitungsoption Anrufe weiterleiten an Weiterleitungsziel.
+				
+Das Weiterleitungszielt muss im Format "tel:%E164%" eingegeben werden.
+				</string>
+				<string id="PDN_EnableHotkeyDialer">Konfiguration der Option Kurztastenwahl</string>
+				<string id="PET_EnableHotkeyDialer">Aktivieren/Deaktivieren Sie die Funktionalitaet Kurztastenwahl</string>
+				<string id="PDN_HotKeyDialKey">Konfiguration der Kurzwahltaste</string>
+				<string id="PET_HotKeyDialKey">Definieren Sie die Kurzwahltaste fuer den Aufruf der Funktion Kurztastenwahl.
+				
+Uebernehmen Sie den vom GUI konfigurierten Registrierungsschluessel HotKeyDialKey.</string>
+				<string id="PDN_HotKeyDialModifier">Konfigurieren der Steuertasten</string>
+				<string id="PET_HotKeyDialModifier">Definieren Sie die Kurzwahltaste fuer den Aufruf der Funktion Kurztastenwahl.
+				
+Uebernehmen Sie den vom GUI konfigurierten Regestrierungsschluessel HotKeyDialModifier.
+				</string>
+				<string id="PDN_HotkeyDialNormalization">Konfigurieren der Normalisation</string>
+				<string id="PET_HotkeyDialNormalization">Konfigurieren Sie die Normalisation fuer die Hotkey-Funktionalitaet im Regex-Format.</string>
+				<string id="PDN_HotkeyDialPrompt">Hotkey Dialog anzeigen</string>
+				<string id="PET_HotkeyDialPrompt">Konfigurieren Sie, ob beim Druecken des Hotkeys vor dem Waehlen ein Bestaetigungs-Dialog angezeigt werden soll.</string>
+
+				<string id="PDN_LicenseKey">Konfiguriation Lizenzschluessel</string>
+				<string id="PET_LicenseKey">Konfigurieren Sie den Lizenzschluessel fuer Lync Wizard.</string>
+				<string id="PDN_SIPDomains">Konfiguration SIP-Domaenen</string>
+				<string id="PET_SIPDomains">Konfigurieren Sie die zum Lizenzschluessel passenden SIP-Domaenen.</string>
+
+				<string id="PDN_HideMenuCallHistory">Menu: Call History</string>
+				<string id="PET_HideMenuCallHistory">Ausblenden des Menu-Punktes Call Hitsory</string>
+				<string id="PDN_HideMenuRunCmd">Menu: Aktionen bei eingehendem Anruf</string>
+				<string id="PET_HideMenuRunCmd">Ausblenden des Menu-Punktes Aktionen bei eingehendem Anruf</string>
+				<string id="PDN_HideMenuBusyCalls">Menu: Zweitanruf</string>
+				<string id="PET_HideMenuBusyCalls">Ausblenden des Menu-Punktes Zweitanruf</string>
+				<string id="PDN_HideMenuBusyCallsNone">Menu Zweitanruf: Zweitanruf zulassen</string>
+				<string id="PET_HideMenuBusyCallsNone">Ausblenden des Submenu-Punktes Zweitanruf Zulassen</string>
+				<string id="PDN_HideMenuBusyCallsBusy">Menu Zweitanruf: Anruf Abweisen</string>
+				<string id="PET_HideMenuBusyCallsBusy">Ausblenden des Submenu-Punktes Anruf Abweisen</string>
+				<string id="PDN_HideMenuBusyCallsIgnore">Menu Zweitanruf: Als unbeantworteter Anruf behandeln</string>
+				<string id="PET_HideMenuBusyCallsIgnore">Ausblenden des Submenu-Punktes Als Unbeantworteter Anruf behandeln</string>
+				<string id="PDN_HideMenuBusyCallsForward">Menu Zweitanruf: Anruf Weiterleiten an</string>
+				<string id="PET_HideMenuBusyCallsForward">Ausblenden des Submenu-Punktes Anruf Weiterleiten an</string>
+				<string id="PDN_HideMenuBusyCallsTarget">Menu Zweitanruf: Weiterleitungsziel waehlen</string>
+				<string id="PET_HideMenuBusyCallsTarget">Ausblenden des Submenu-Punktes Weiterleitungsziel waehlen</string>
+				<string id="PDN_HideMenuConfig">Menu: Einstellungen</string>
+				<string id="PET_HideMenuConfig">Ausblenden des Menu-Punktes Einstellungen</string>
+				<string id="PDN_HideMenuExit">Menu: Exit</string>
+				<string id="PET_HideMenuExit">Ausblenden des Menu-Punktes Exit</string>
+				<string id="PDN_HideConfigTabGeneral">Einstellungsfenster: General</string>
+				<string id="PET_HideConfigTabGeneral">Register Allgemein im Fenster Einstellungen ausblenden</string>
+				<string id="PDN_HideConfigTabContactLookup">Einstellungsfenster: Contact Lookup</string>
+				<string id="PET_HideConfigTabContactLookup">Register Kontaktsuche im Fenster Einstellungen ausblenden</string>
+				<string id="PDN_HideConfigTabBusyCalls">Einstellungsfenster: Zweitanruf</string>
+				<string id="PET_HideConfigTabBusyCalls">Register Zweitanruf im Fenster Einstellungen ausblenden</string>
+				<string id="PDN_HideConfigTabHotkeyDialer">Einstellungsfenster: Kurztastenwahl</string>
+				<string id="PET_HideConfigTabHotkeyDialer">Register Kurztastenwahl im Fenster Einstellungen ausblenden</string>
+				<string id="PDN_HideConfigTabRunCmd">Einstellungsfenster: Aktionen</string>
+				<string id="PET_HideConfigTabRunCmd">Register Aktionen im Fenster Einstellungen ausblenden</string>
+				<string id="PDN_HideConfigTabPOR">Einstellungsfenster: Praesenz basiertes Routing</string>
+				<string id="PET_HideConfigTabPOR">Register "Praesenz basiertes Routing" im Fenster Einstellungen ausblenden</string>
+				<string id="PDN_HideConfigTabLicense">Einstellungsfenster: Lizenz</string>
+				<string id="PET_HideConfigTabLicense">Register "Lizenz" im Fenster Einstellungen ausblenden</string>
+			</stringTable>
+			
+			<presentationTable>
+				<presentation id="PRES_CultureInfo">
+					<dropdownList refId="PRES_CultureInfoDropDown" noSort="true" defaultItem="1">Sprache</dropdownList>
+				</presentation>				
+				<presentation id="PRES_CustomBalloonOffset">
+					<decimalTextBox refId="DTB_CustomBalloonOffsetX">Position X-Achse:</decimalTextBox>
+					<decimalTextBox refId="DTB_CustomBalloonOffsetY">Position Y-Achse:</decimalTextBox>
+				</presentation>
+				<presentation id="PRES_CustomBalloonDisplayTime">
+					<decimalTextBox refId="DTB_CustomBalloonDisplayTime">Anzeigedauer des Balloon in [ms]:</decimalTextBox>
+				</presentation>
+				<presentation id="PRES_TelPattern">
+					<textBox refId="TXT_TelPattern">
+						<label>Diese Textbox erlaubt die Eingabe des TelPattern:</label>
+					</textBox>
+				</presentation>
+				<presentation id="PRES_ContactLookupPatterns">
+					<multiTextBox refId="TXT_ContactLookupPatterns">
+						Diese Textbox erlaubt die Eingabe der Datenquelle mit der passenden RegExp fuer die Telefonnummer. Der Parameter CutDigits definiert, wieviele Stellen der Rufnummer maximal von rechts abgeschnitten werden, wenn die Suche nach der Rufnummer kein Ergebnis bringt. (Datenquelle:RegExp:CutDigits):
+					</multiTextBox>
+				</presentation>
+				<presentation id="PRES_RunCmdItems">
+					<multiTextBox refId="TXT_RunCmdItems">
+						Diese Textbox erlaubt die Eingabe der Aktionskonfiguration. ("contact":"RegExp":"Cmd Line/URL":"Argumente":Typ):
+					</multiTextBox>
+				</presentation>
+				<presentation id="PRES_PORItems">
+					<multiTextBox refId="TXT_PORItems">
+						Diese Textbox erlaubt die Eingabe der Konfiguration fuer "Praesenz basiertes Routing" ("Presence key":"RegExp":"Reaction type":"Argument"):
+					</multiTextBox>
+				</presentation>
+				<presentation id="PRES_ContactLookupLDAP">
+					<textBox refId="TXT_ContactLookupLDAPServer">
+						<label>Geben Sie hier den FQDN oder die IP-Adresse des LDAP-Servers an</label>
+					</textBox>
+					<decimalTextBox refId="DTB_ContactLookupLDAPServerPort" defaultValue="389">Geben Sie hier den Port des LDAP-Servers an. Default 389</decimalTextBox>
+					<textBox refId="TXT_ContactLookupLDAPUser">
+						<label>Geben Sie hier den Benutzername fuer den Zugriff auf den LDAP-Servers an. Ohne Benutzername wird ohne Authentifizierung oder mit der Windows integrierten Authentifizierung verbunden.</label>
+					</textBox>
+					<textBox refId="TXT_ContactLookupLDAPPassword">
+						<label>Geben Sie hier das Passwort zum Benutzer fuer den Zugriff auf den LDAP-Servers an.</label>
+					</textBox>
+					<textBox refId="TXT_ContactLookupLDAPBaseDN">
+						<label>Geben Sie hier die Base DN an. Beispiel: OU=Contacts,DC=LynWizard,DC=com</label>
+					</textBox>
+					<textBox refId="TXT_ContactLookupLDAPFilter">
+						<label>Geben Sie hier den LDAP-Filter an. Ohne Angabe wird der Standard-Filter verwendet.</label>
+					</textBox>
+				</presentation>
+				
+				
+				<presentation id="PRES_APIKey">
+					<textBox refId="TXT_APIKey">
+						<label>Diese Textbox erlaubt die Eingabe des API-Keys fuer tel.search.ch:</label>
+					</textBox>
+				</presentation>
+				<presentation id="PRES_BusyBehavior">
+					<dropdownList refId="PRES_BusyBehaviorDropDown" noSort="true" defaultItem="1">Anruf-Handling bei besetzt:</dropdownList>
+				</presentation>
+				<presentation id="PRES_BusyContactURI">
+					<textBox refId="TXT_BusyContactURI">
+						<label>Diese Textbox erlaubt die Eingabe des Weiterleitungsziel</label>
+					</textBox>
+				</presentation>
+				<presentation id="PRES_BusyIMAnswer">
+					<textBox refId="TXT_BusyIMAnswer">
+						<label>Diese Textbox erlaubt die Eingabe der IM-Antwort</label>
+					</textBox>
+				</presentation>
+				<presentation id="PRES_BusyDisconnectReason">
+					<dropdownList refId="PRES_BusyDisconnectReasonDropDown" noSort="true" defaultItem="6">Abweisungsgrund</dropdownList>
+				</presentation>
+				<presentation id="PRES_BusyDisconnectReasonDelegated">
+					<dropdownList refId="PRES_BusyDisconnectReasonDelegatedDropDown" noSort="true" defaultItem="4">Abweisungsgrund</dropdownList>
+				</presentation>
+				<presentation id="PRES_BusyDisconnectReasonForwarded">
+					<dropdownList refId="PRES_BusyDisconnectReasonForwardedDropDown" noSort="true" defaultItem="4">Abweisungsgrund</dropdownList>
+				</presentation>
+				<presentation id="PRES_HotKeyDialKey" >
+					<decimalTextBox refId="DTB_HotKeyDialKey">Diese Textbox erlaubt die Eingabe des Reg-Keys HotKeyDialKey:</decimalTextBox>
+				</presentation>
+				<presentation id="PRES_HotKeyDialModifier" >
+					<decimalTextBox refId="DTB_HotKeyDialModifier">Diese Textbox erlaubt die Eingabe des Reg-Keys HotKeyDialModifier:</decimalTextBox>
+				</presentation>
+				<presentation id="PRES_HotkeyDialNormalization">
+					<textBox refId="TXT_HotkeyDialNormalization">
+						<label>Diese Textbox erlaubt die Eingabe des Normailisierungs-Regex:</label>
+					</textBox>
+				</presentation>				
+				<presentation id="PRES_LicenseKey">
+					<textBox refId="TXT_LicenseKey">
+						<label>Diese Textbox erlaubt die Eingabe des Lizenzschluessels:</label>
+					</textBox>
+				</presentation>
+				<presentation id="PRES_SIPDomains">
+					<multiTextBox refId="TXT_SIPDomains">
+						Diese Textbox erlaubt die Eingabe der SIP-Domaenen:
+					</multiTextBox>
+				</presentation>
+			</presentationTable>
+			
+		</resources>
+	</policyDefinitionResources>

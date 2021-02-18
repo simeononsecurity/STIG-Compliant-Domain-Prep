@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <policyDefinitions revision="1.0" schemaVersion="1.0">
   <policyNamespaces>
-    <target prefix="fullarmor" namespace="ZoomMeetings" />
+    <target prefix="fullarmor" namespace="ZoomMeetings_HKCU" />
     <using prefix="windows" namespace="Microsoft.Policies.Windows" />
   </policyNamespaces>
   <supersededAdm fileName="ZoomMeetings_HKCU.adm" />
@@ -215,15 +215,12 @@
         <decimal value="0" />
       </disabledValue>
     </policy>
-    <policy name="SetWebDomain_Policy" class="User" displayName="$(string.SetWebDomain_Policy)" explainText="$(string.SetWebDomain_Explain)" presentation="$(presentation.SetWebDomain_Policy)" key="Software\Policies\Zoom\Zoom Meetings\General" valueName="SetWebDomain">
+    <policy name="SetWebDomain_Policy" class="User" displayName="$(string.SetWebDomain_Policy)" explainText="$(string.SetWebDomain_Explain)" presentation="$(presentation.SetWebDomain_Policy)" key="Software\Policies\Zoom\Zoom Meetings\General">
       <parentCategory ref="zoomgeneral" />
       <supportedOn ref="SUPPORTED_WINXPSP2" />
-      <enabledValue>
-        <decimal value="1" />
-      </enabledValue>
-      <disabledValue>
-        <decimal value="0" />
-      </disabledValue>
+      <elements>
+        <text id="SetWebDomain_Part" valueName="SetWebDomain" />
+      </elements>
     </policy>
     <policy name="EnforceSignInToJoin_Policy" class="User" displayName="$(string.EnforceSignInToJoin_Policy)" explainText="$(string.EnforceSignInToJoin_Explain)" presentation="$(presentation.EnforceSignInToJoin_Policy)" key="Software\Policies\Zoom\Zoom Meetings\General" valueName="EnforceSignInToJoin">
       <parentCategory ref="zoomgeneral" />
@@ -285,15 +282,19 @@
         <decimal value="0" />
       </disabledValue>
     </policy>
-    <policy name="EmbedUserAgentString_Policy" class="User" displayName="$(string.EmbedUserAgentString_Policy)" explainText="$(string.EmbedUserAgentString_Explain)" presentation="$(presentation.EmbedUserAgentString_Policy)" key="Software\Policies\Zoom\Zoom Meetings\General" valueName="EmbedUserAgentString">
+    <policy name="EmbedUserAgentString_Policy" class="User" displayName="$(string.EmbedUserAgentString_Policy)" explainText="$(string.EmbedUserAgentString_Explain)" presentation="$(presentation.EmbedUserAgentString_Policy)" key="Software\Policies\Zoom\Zoom Meetings\General">
       <parentCategory ref="zoomgeneral" />
       <supportedOn ref="SUPPORTED_WINXPSP2" />
-      <enabledValue>
-        <decimal value="1" />
-      </enabledValue>
-      <disabledValue>
-        <decimal value="0" />
-      </disabledValue>
+      <elements>
+        <text id="EmbedUserAgentString_Part" valueName="EmbedUserAgentString" />
+      </elements>
+    </policy>
+    <policy name="EmbedDeviceTag_Policy" class="User" displayName="$(string.EmbedDeviceTag_Policy)" explainText="$(string.EmbedDeviceTag_Explain)" presentation="$(presentation.EmbedDeviceTag_Policy)" key="Software\Policies\Zoom\Zoom Meetings\General">
+      <parentCategory ref="zoomgeneral" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <elements>
+        <text id="EmbedDeviceTag_Part" valueName="EmbedDeviceTag" />
+      </elements>
     </policy>
     <policy name="EnableAutoUploadDumps_Policy" class="User" displayName="$(string.EnableAutoUploadDumps_Policy)" explainText="$(string.EnableAutoUploadDumps_Explain)" presentation="$(presentation.EnableAutoUploadDumps_Policy)" key="Software\Policies\Zoom\Zoom Meetings\General" valueName="EnableAutoUploadDumps">
       <parentCategory ref="zoomgeneral" />
@@ -305,7 +306,132 @@
         <decimal value="0" />
       </disabledValue>
     </policy>
+    <policy name="EnableAutoUploadMemlogs_Policy" class="User" displayName="$(string.EnableAutoUploadMemlogs_Policy)" explainText="$(string.EnableAutoUploadMemlogs_Explain)" presentation="$(presentation.EnableAutoUploadMemlogs_Policy)" key="Software\Policies\Zoom\Zoom Meetings\General" valueName="EnableAutoUploadMemlogs">
+      <parentCategory ref="zoomgeneral" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SetAccEventsOptions_Policy" class="User" displayName="$(string.SetAccEventsOptions_Policy)" explainText="$(string.SetAccEventsOptions_Explain)" presentation="$(presentation.SetAccEventsOptions_Policy)" key="Software\Policies\Zoom\Zoom Meetings\General">
+      <parentCategory ref="zoomgeneral" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <elements>
+        <text id="SetAccEventsOptions_Part" valueName="SetAccEventsOptions" />
+      </elements>
+    </policy>
+    <policy name="IntegrateZoomWithOutlook_Policy" class="User" displayName="$(string.IntegrateZoomWithOutlook_Policy)" explainText="$(string.IntegrateZoomWithOutlook_Explain)" presentation="$(presentation.IntegrateZoomWithOutlook_Policy)" key="Software\Policies\Zoom\Zoom Meetings\General" valueName="IntegrateZoomWithOutlook">
+      <parentCategory ref="zoomgeneral" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="DisableDirectConnectionPK_Policy" class="User" displayName="$(string.DisableDirectConnectionPK_Policy)" explainText="$(string.DisableDirectConnectionPK_Explain)" presentation="$(presentation.DisableDirectConnectionPK_Policy)" key="Software\Policies\Zoom\Zoom Meetings\General" valueName="DisableDirectConnectionPK">
+      <parentCategory ref="zoomgeneral" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="DisableDirectConnection2Web_Policy" class="User" displayName="$(string.DisableDirectConnection2Web_Policy)" explainText="$(string.DisableDirectConnection2Web_Explain)" presentation="$(presentation.DisableDirectConnection2Web_Policy)" key="Software\Policies\Zoom\Zoom Meetings\General" valueName="DisableDirectConnection2Web">
+      <parentCategory ref="zoomgeneral" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="ProxyPac_Policy" class="User" displayName="$(string.ProxyPac_Policy)" explainText="$(string.ProxyPac_Explain)" presentation="$(presentation.ProxyPac_Policy)" key="Software\Policies\Zoom\Zoom Meetings\General">
+      <parentCategory ref="zoomgeneral" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <elements>
+        <text id="ProxyPac_Part" valueName="ProxyPAC" />
+      </elements>
+    </policy>
+    <policy name="ProxyServer_Policy" class="User" displayName="$(string.ProxyServer_Policy)" explainText="$(string.ProxyServer_Explain)" presentation="$(presentation.ProxyServer_Policy)" key="Software\Policies\Zoom\Zoom Meetings\General">
+      <parentCategory ref="zoomgeneral" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <elements>
+        <text id="ProxyServer_Part" valueName="ProxyServer" />
+      </elements>
+    </policy>
+    <policy name="ProxyBypass_Policy" class="User" displayName="$(string.ProxyBypass_Policy)" explainText="$(string.ProxyBypass_Explain)" presentation="$(presentation.ProxyBypass_Policy)" key="Software\Policies\Zoom\Zoom Meetings\General">
+      <parentCategory ref="zoomgeneral" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <elements>
+        <text id="ProxyBypass_Part" valueName="ProxyBypass" />
+      </elements>
+    </policy>
+    <policy name="SetDevicePolicyToken_Policy" class="User" displayName="$(string.SetDevicePolicyToken_Policy)" explainText="$(string.SetDevicePolicyToken_Explain)" presentation="$(presentation.SetDevicePolicyToken_Policy)" key="Software\Policies\Zoom\Zoom Meetings\General">
+      <parentCategory ref="zoomgeneral" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <elements>
+        <text id="SetDevicePolicyToken_Part" valueName="SetDevicePolicyToken" />
+      </elements>
+    </policy>
+    <policy name="DisableKeepSignedInWithSSO_Policy" class="User" displayName="$(string.DisableKeepSignedInWithSSO_Policy)" explainText="$(string.DisableKeepSignedInWithSSO_Explain)" presentation="$(presentation.DisableKeepSignedInWithSSO_Policy)" key="Software\Policies\Zoom\Zoom Meetings\General" valueName="DisableKeepSignedInWithSSO">
+      <parentCategory ref="zoomgeneral" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="DisableKeepSignedInWithGoogle_Policy" class="User" displayName="$(string.DisableKeepSignedInWithGoogle_Policy)" explainText="$(string.DisableKeepSignedInWithGoogle_Explain)" presentation="$(presentation.DisableKeepSignedInWithGoogle_Policy)" key="Software\Policies\Zoom\Zoom Meetings\General" valueName="DisableKeepSignedInWithGoogle">
+      <parentCategory ref="zoomgeneral" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="DisableKeepSignedInWithFacebook_Policy" class="User" displayName="$(string.DisableKeepSignedInWithFacebook_Policy)" explainText="$(string.DisableKeepSignedInWithFacebook_Explain)" presentation="$(presentation.DisableKeepSignedInWithFacebook_Policy)" key="Software\Policies\Zoom\Zoom Meetings\General" valueName="DisableKeepSignedInWithFacebook">
+      <parentCategory ref="zoomgeneral" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
     <policy name="DisableLinkPreviewInChat_Policy" class="User" displayName="$(string.DisableLinkPreviewInChat_Policy)" explainText="$(string.DisableLinkPreviewInChat_Explain)" presentation="$(presentation.DisableLinkPreviewInChat_Policy)" key="Software\Policies\Zoom\Zoom Meetings\Chat" valueName="DisableLinkPreviewInChat">
+      <parentCategory ref="zoomchat" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SetMessengerDoNotDropThread_Policy" class="User" displayName="$(string.SetMessengerDoNotDropThread_Policy)" explainText="$(string.SetMessengerDoNotDropThread_Explain)" presentation="$(presentation.SetMessengerDoNotDropThread_Policy)" key="Software\Policies\Zoom\Zoom Meetings\Chat" valueName="SetMessengerDoNotDropThread">
+      <parentCategory ref="zoomchat" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="0" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="1" />
+      </disabledValue>
+    </policy>
+    <policy name="ShowVoiceMessageButton_Policy" class="User" displayName="$(string.ShowVoiceMessageButton_Policy)" explainText="$(string.ShowVoiceMessageButton_Explain)" presentation="$(presentation.ShowVoiceMessageButton_Policy)" key="Software\Policies\Zoom\Zoom Meetings\Chat" valueName="ShowVoiceMessageButton">
       <parentCategory ref="zoomchat" />
       <supportedOn ref="SUPPORTED_WINXPSP2" />
       <enabledValue>
@@ -493,6 +619,16 @@
       </disabledValue>
     </policy>
     <policy name="DisableMeetingFileTransfer_Policy" class="User" displayName="$(string.DisableMeetingFileTransfer_Policy)" explainText="$(string.DisableMeetingFileTransfer_Explain)" presentation="$(presentation.DisableMeetingFileTransfer_Policy)" key="Software\Policies\Zoom\Zoom Meetings\Meetings" valueName="DisableMeetingFileTransfer">
+      <parentCategory ref="zoommeetings" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="DisableMeeting3rdPartyFileStorage_Policy" class="User" displayName="$(string.DisableMeeting3rdPartyFileStorage_Policy)" explainText="$(string.DisableMeeting3rdPartyFileStorage_Explain)" presentation="$(presentation.DisableMeeting3rdPartyFileStorage_Policy)" key="Software\Policies\Zoom\Zoom Meetings\Meetings" valueName="DisableMeeting3rdPartyFileStorage">
       <parentCategory ref="zoommeetings" />
       <supportedOn ref="SUPPORTED_WINXPSP2" />
       <enabledValue>
@@ -752,7 +888,17 @@
         <decimal value="0" />
       </disabledValue>
     </policy>
-    <policy name="SetUseSystemDefaultSpeakerForRing_Policy" class="User" displayName="$(string.SetUseSystemDefaultSpeakerForRing_Policy)" explainText="$(string.SetUseSystemDefaultSpeakerForRing_Explain)" presentation="$(presentation.SetUseSystemDefaultSpeakerForRing_Policy)" key="Software\Policies\Zoom\Zoom Meetings\Meetings" valueName="SetUseSystemDefaultSpeakerForRing">
+    <policy name="SetUseSystemCommunicationSpeakerForVOIP_Policy" class="User" displayName="$(string.SetUseSystemCommunicationSpeakerForVOIP_Policy)" explainText="$(string.SetUseSystemCommunicationSpeakerForVOIP_Explain)" presentation="$(presentation.SetUseSystemCommunicationSpeakerForVOIP_Policy)" key="Software\Policies\Zoom\Zoom Meetings\Meetings" valueName="SetUseSystemCommunicationSpeakerForVOIP">
+      <parentCategory ref="zoommeetings" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SetUseSystemCommunicationMicForVOIP_Policy" class="User" displayName="$(string.SetUseSystemCommunicationMicForVOIP_Policy)" explainText="$(string.SetUseSystemCommunicationMicForVOIP_Explain)" presentation="$(presentation.SetUseSystemCommunicationMicForVOIP_Policy)" key="Software\Policies\Zoom\Zoom Meetings\Meetings" valueName="SetUseSystemCommunicationMicForVOIP">
       <parentCategory ref="zoommeetings" />
       <supportedOn ref="SUPPORTED_WINXPSP2" />
       <enabledValue>
@@ -845,6 +991,158 @@
       <disabledValue>
         <decimal value="0" />
       </disabledValue>
+    </policy>
+    <policy name="EnableTemporalDeNoise_Policy" class="User" displayName="$(string.EnableTemporalDeNoise_Policy)" explainText="$(string.EnableTemporalDeNoise_Explain)" presentation="$(presentation.EnableTemporalDeNoise_Policy)" key="Software\Policies\Zoom\Zoom Meetings\Meetings" valueName="EnableTemporalDeNoise">
+      <parentCategory ref="zoommeetings" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="EnableGPUComputeUtilization_Policy" class="User" displayName="$(string.EnableGPUComputeUtilization_Policy)" explainText="$(string.EnableGPUComputeUtilization_Explain)" presentation="$(presentation.EnableGPUComputeUtilization_Policy)" key="Software\Policies\Zoom\Zoom Meetings\Meetings" valueName="EnableGPUComputeUtilization">
+      <parentCategory ref="zoommeetings" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="EnableHardwareAccForVideoSend_Policy" class="User" displayName="$(string.EnableHardwareAccForVideoSend_Policy)" explainText="$(string.EnableHardwareAccForVideoSend_Explain)" presentation="$(presentation.EnableHardwareAccForVideoSend_Policy)" key="Software\Policies\Zoom\Zoom Meetings\Meetings" valueName="EnableHardwareAccForVideoSend">
+      <parentCategory ref="zoommeetings" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="EnableHardwareAccForVideoReceive_Policy" class="User" displayName="$(string.EnableHardwareAccForVideoReceive_Policy)" explainText="$(string.EnableHardwareAccForVideoReceive_Explain)" presentation="$(presentation.EnableHardwareAccForVideoReceive_Policy)" key="Software\Policies\Zoom\Zoom Meetings\Meetings" valueName="EnableHardwareAccForVideoReceive">
+      <parentCategory ref="zoommeetings" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="ShareSessionDisableUDP_Policy" class="User" displayName="$(string.ShareSessionDisableUDP_Policy)" explainText="$(string.ShareSessionDisableUDP_Explain)" presentation="$(presentation.ShareSessionDisableUDP_Policy)" key="Software\Policies\Zoom\Zoom Meetings\Meetings" valueName="ShareSessionDisableUDP">
+      <parentCategory ref="zoommeetings" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="EnableSpotlightSelf_Policy" class="User" displayName="$(string.EnableSpotlightSelf_Policy)" explainText="$(string.EnableSpotlightSelf_Explain)" presentation="$(presentation.EnableSpotlightSelf_Policy)" key="Software\Policies\Zoom\Zoom Meetings\Meetings" valueName="EnableSpotlightSelf">
+      <parentCategory ref="zoommeetings" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Enable49video_Policy" class="User" displayName="$(string.Enable49video_Policy)" explainText="$(string.Enable49video_Explain)" presentation="$(presentation.Enable49video_Policy)" key="Software\Policies\Zoom\Zoom Meetings\Meetings" valueName="Enable49video">
+      <parentCategory ref="zoommeetings" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="EnableRemindMeetingTime_Policy" class="User" displayName="$(string.EnableRemindMeetingTime_Policy)" explainText="$(string.EnableRemindMeetingTime_Explain)" presentation="$(presentation.EnableRemindMeetingTime_Policy)" key="Software\Policies\Zoom\Zoom Meetings\Meetings" valueName="EnableRemindMeetingTime">
+      <parentCategory ref="zoommeetings" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="VideoRenderMethod_Policy" class="User" displayName="$(string.VideoRenderMethod_Policy)" explainText="$(string.VideoRenderMethod_Explain)" presentation="$(presentation.VideoRenderMethod_Policy)" key="Software\Policies\Zoom\Zoom Meetings\Meetings">
+      <parentCategory ref="zoommeetings" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <elements>
+        <decimal id="VideoRenderMethod_Part" valueName="VideoRenderMethod" required="true" minValue="0" maxValue="4" />
+      </elements>
+    </policy>
+    <policy name="PresentToRoomOptimizeVideo_Policy" class="User" displayName="$(string.PresentToRoomOptimizeVideo_Policy)" explainText="$(string.PresentToRoomOptimizeVideo_Explain)" presentation="$(presentation.PresentToRoomOptimizeVideo_Policy)" key="Software\Policies\Zoom\Zoom Meetings\Meetings" valueName="PresentToRoomOptimizeVideo">
+      <parentCategory ref="zoommeetings" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="PresentToRoomOption_Policy" class="User" displayName="$(string.PresentToRoomOption_Policy)" explainText="$(string.PresentToRoomOption_Explain)" presentation="$(presentation.PresentToRoomOption_Policy)" key="Software\Policies\Zoom\Zoom Meetings\Meetings">
+      <parentCategory ref="zoommeetings" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <elements>
+        <decimal id="PresentToRoomOption_Part" valueName="PresentToRoomOption" required="true" minValue="0" maxValue="1" />
+      </elements>
+    </policy>
+    <policy name="PresentInMeetingOption_Policy" class="User" displayName="$(string.PresentInMeetingOption_Policy)" explainText="$(string.PresentInMeetingOption_Explain)" presentation="$(presentation.PresentInMeetingOption_Policy)" key="Software\Policies\Zoom\Zoom Meetings\Meetings">
+      <parentCategory ref="zoommeetings" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <elements>
+        <decimal id="PresentInMeetingOption_Part" valueName="PresentInMeetingOption" required="true" minValue="0" maxValue="1" />
+      </elements>
+    </policy>
+    <policy name="SetScreenCaptureMode_Policy" class="User" displayName="$(string.SetScreenCaptureMode_Policy)" explainText="$(string.SetScreenCaptureMode_Explain)" presentation="$(presentation.SetScreenCaptureMode_Policy)" key="Software\Policies\Zoom\Zoom Meetings\Meetings">
+      <parentCategory ref="zoommeetings" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <elements>
+        <decimal id="SetScreenCaptureMode_Part" valueName="SetScreenCaptureMode" required="true" minValue="0" maxValue="4" />
+      </elements>
+    </policy>
+    <policy name="DisableVideoFilters_Policy" class="User" displayName="$(string.DisableVideoFilters_Policy)" explainText="$(string.DisableVideoFilters_Explain)" presentation="$(presentation.DisableVideoFilters_Policy)" key="Software\Policies\Zoom\Zoom Meetings\Meetings" valueName="DisableVideoFilters">
+      <parentCategory ref="zoommeetings" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="EnableDoNotDisturbInSharing_Policy" class="User" displayName="$(string.EnableDoNotDisturbInSharing_Policy)" explainText="$(string.EnableDoNotDisturbInSharing_Explain)" presentation="$(presentation.EnableDoNotDisturbInSharing_Policy)" key="Software\Policies\Zoom\Zoom Meetings\Meetings" valueName="EnableDoNotDisturbInSharing">
+      <parentCategory ref="zoommeetings" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SetSuppressBackgroundNoiseLevel_Policy" class="User" displayName="$(string.SetSuppressBackgroundNoiseLevel_Policy)" explainText="$(string.SetSuppressBackgroundNoiseLevel_Explain)" presentation="$(presentation.SetSuppressBackgroundNoiseLevel_Policy)" key="Software\Policies\Zoom\Zoom Meetings\Meetings">
+      <parentCategory ref="zoommeetings" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <elements>
+        <decimal id="SetSuppressBackgroundNoiseLevel_Part" valueName="SetSuppressBackgroundNoiseLevel" required="true" minValue="0" maxValue="3" />
+      </elements>
+    </policy>
+    <policy name="SetAudioSignalProcessType_Policy" class="User" displayName="$(string.SetAudioSignalProcessType_Policy)" explainText="$(string.SetAudioSignalProcessType_Explain)" presentation="$(presentation.SetAudioSignalProcessType_Policy)" key="Software\Policies\Zoom\Zoom Meetings\Meetings">
+      <parentCategory ref="zoommeetings" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <elements>
+        <decimal id="SetAudioSignalProcessType_Part" valueName="SetAudioSignalProcessType" required="true" minValue="0" maxValue="2" />
+      </elements>
     </policy>
     <policy name="EnableClientAutoUpdate_Policy_Recommand" class="User" displayName="$(string.EnableClientAutoUpdate_Policy_Recommand)" explainText="$(string.EnableClientAutoUpdate_Explain)" presentation="$(presentation.EnableClientAutoUpdate_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\General" valueName="EnableClientAutoUpdate">
       <parentCategory ref="zoomgeneral_recommend" />
@@ -1024,15 +1322,12 @@
         <decimal value="0" />
       </disabledValue>
     </policy>
-    <policy name="SetWebDomain_Policy_Recommand" class="User" displayName="$(string.SetWebDomain_Policy_Recommand)" explainText="$(string.SetWebDomain_Explain)" presentation="$(presentation.SetWebDomain_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\General" valueName="SetWebDomain">
+    <policy name="SetWebDomain_Policy_Recommand" class="User" displayName="$(string.SetWebDomain_Policy_Recommand)" explainText="$(string.SetWebDomain_Explain)" presentation="$(presentation.SetWebDomain_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\General">
       <parentCategory ref="zoomgeneral_recommend" />
       <supportedOn ref="SUPPORTED_WINXPSP2" />
-      <enabledValue>
-        <decimal value="1" />
-      </enabledValue>
-      <disabledValue>
-        <decimal value="0" />
-      </disabledValue>
+      <elements>
+        <text id="SetWebDomain_Part" valueName="SetWebDomain" />
+      </elements>
     </policy>
     <policy name="EnforceSignInToJoin_Policy_Recommand" class="User" displayName="$(string.EnforceSignInToJoin_Policy_Recommand)" explainText="$(string.EnforceSignInToJoin_Explain)" presentation="$(presentation.EnforceSignInToJoin_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\General" valueName="EnforceSignInToJoin">
       <parentCategory ref="zoomgeneral_recommend" />
@@ -1094,15 +1389,19 @@
         <decimal value="0" />
       </disabledValue>
     </policy>
-    <policy name="EmbedUserAgentString_Policy_Recommand" class="User" displayName="$(string.EmbedUserAgentString_Policy_Recommand)" explainText="$(string.EmbedUserAgentString_Explain)" presentation="$(presentation.EmbedUserAgentString_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\General" valueName="EmbedUserAgentString">
+    <policy name="EmbedUserAgentString_Policy_Recommand" class="User" displayName="$(string.EmbedUserAgentString_Policy_Recommand)" explainText="$(string.EmbedUserAgentString_Explain)" presentation="$(presentation.EmbedUserAgentString_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\General">
       <parentCategory ref="zoomgeneral_recommend" />
       <supportedOn ref="SUPPORTED_WINXPSP2" />
-      <enabledValue>
-        <decimal value="1" />
-      </enabledValue>
-      <disabledValue>
-        <decimal value="0" />
-      </disabledValue>
+      <elements>
+        <text id="EmbedUserAgentString_Part" valueName="EmbedUserAgentString" />
+      </elements>
+    </policy>
+    <policy name="EmbedDeviceTag_Policy_Recommand" class="User" displayName="$(string.EmbedDeviceTag_Policy_Recommand)" explainText="$(string.EmbedDeviceTag_Explain)" presentation="$(presentation.EmbedDeviceTag_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\General">
+      <parentCategory ref="zoomgeneral_recommend" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <elements>
+        <text id="EmbedDeviceTag_Part" valueName="EmbedDeviceTag" />
+      </elements>
     </policy>
     <policy name="EnableAutoUploadDumps_Policy_Recommand" class="User" displayName="$(string.EnableAutoUploadDumps_Policy_Recommand)" explainText="$(string.EnableAutoUploadDumps_Explain)" presentation="$(presentation.EnableAutoUploadDumps_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\General" valueName="EnableAutoUploadDumps">
       <parentCategory ref="zoomgeneral_recommend" />
@@ -1114,7 +1413,132 @@
         <decimal value="0" />
       </disabledValue>
     </policy>
+    <policy name="EnableAutoUploadMemlogs_Policy_Recommand" class="User" displayName="$(string.EnableAutoUploadMemlogs_Policy_Recommand)" explainText="$(string.EnableAutoUploadMemlogs_Explain)" presentation="$(presentation.EnableAutoUploadMemlogs_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\General" valueName="EnableAutoUploadMemlogs">
+      <parentCategory ref="zoomgeneral_recommend" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SetAccEventsOptions_Policy_Recommand" class="User" displayName="$(string.SetAccEventsOptions_Policy_Recommand)" explainText="$(string.SetAccEventsOptions_Explain)" presentation="$(presentation.SetAccEventsOptions_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\General">
+      <parentCategory ref="zoomgeneral_recommend" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <elements>
+        <text id="SetAccEventsOptions_Part" valueName="SetAccEventsOptions" />
+      </elements>
+    </policy>
+    <policy name="IntegrateZoomWithOutlook_Policy_Recommand" class="User" displayName="$(string.IntegrateZoomWithOutlook_Policy_Recommand)" explainText="$(string.IntegrateZoomWithOutlook_Explain)" presentation="$(presentation.IntegrateZoomWithOutlook_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\General" valueName="IntegrateZoomWithOutlook">
+      <parentCategory ref="zoomgeneral_recommend" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="DisableDirectConnectionPK_Policy_Recommand" class="User" displayName="$(string.DisableDirectConnectionPK_Policy_Recommand)" explainText="$(string.DisableDirectConnectionPK_Explain)" presentation="$(presentation.DisableDirectConnectionPK_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\General" valueName="DisableDirectConnectionPK">
+      <parentCategory ref="zoomgeneral_recommend" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="DisableDirectConnection2Web_Policy_Recommand" class="User" displayName="$(string.DisableDirectConnection2Web_Policy_Recommand)" explainText="$(string.DisableDirectConnection2Web_Explain)" presentation="$(presentation.DisableDirectConnection2Web_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\General" valueName="DisableDirectConnection2Web">
+      <parentCategory ref="zoomgeneral_recommend" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="ProxyPac_Policy_Recommand" class="User" displayName="$(string.ProxyPac_Policy_Recommand)" explainText="$(string.ProxyPac_Explain)" presentation="$(presentation.ProxyPac_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\General">
+      <parentCategory ref="zoomgeneral_recommend" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <elements>
+        <text id="ProxyPac_Part" valueName="ProxyPAC" />
+      </elements>
+    </policy>
+    <policy name="ProxyServer_Policy_Recommand" class="User" displayName="$(string.ProxyServer_Policy_Recommand)" explainText="$(string.ProxyServer_Explain)" presentation="$(presentation.ProxyServer_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\General">
+      <parentCategory ref="zoomgeneral_recommend" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <elements>
+        <text id="ProxyServer_Part" valueName="ProxyServer" />
+      </elements>
+    </policy>
+    <policy name="ProxyBypass_Policy_Recommand" class="User" displayName="$(string.ProxyBypass_Policy_Recommand)" explainText="$(string.ProxyBypass_Explain)" presentation="$(presentation.ProxyBypass_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\General">
+      <parentCategory ref="zoomgeneral_recommend" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <elements>
+        <text id="ProxyBypass_Part" valueName="ProxyBypass" />
+      </elements>
+    </policy>
+    <policy name="SetDevicePolicyToken_Policy_Recommand" class="User" displayName="$(string.SetDevicePolicyToken_Policy_Recommand)" explainText="$(string.SetDevicePolicyToken_Explain)" presentation="$(presentation.SetDevicePolicyToken_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\General">
+      <parentCategory ref="zoomgeneral_recommend" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <elements>
+        <text id="SetDevicePolicyToken_Part" valueName="SetDevicePolicyToken" />
+      </elements>
+    </policy>
+    <policy name="DisableKeepSignedInWithSSO_Policy_Recommand" class="User" displayName="$(string.DisableKeepSignedInWithSSO_Policy_Recommand)" explainText="$(string.DisableKeepSignedInWithSSO_Explain)" presentation="$(presentation.DisableKeepSignedInWithSSO_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\General" valueName="DisableKeepSignedInWithSSO">
+      <parentCategory ref="zoomgeneral_recommend" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="DisableKeepSignedInWithGoogle_Policy_Recommand" class="User" displayName="$(string.DisableKeepSignedInWithGoogle_Policy_Recommand)" explainText="$(string.DisableKeepSignedInWithGoogle_Explain)" presentation="$(presentation.DisableKeepSignedInWithGoogle_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\General" valueName="DisableKeepSignedInWithGoogle">
+      <parentCategory ref="zoomgeneral_recommend" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="DisableKeepSignedInWithFacebook_Policy_Recommand" class="User" displayName="$(string.DisableKeepSignedInWithFacebook_Policy_Recommand)" explainText="$(string.DisableKeepSignedInWithFacebook_Explain)" presentation="$(presentation.DisableKeepSignedInWithFacebook_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\General" valueName="DisableKeepSignedInWithFacebook">
+      <parentCategory ref="zoomgeneral_recommend" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
     <policy name="DisableLinkPreviewInChat_Policy_Recommand" class="User" displayName="$(string.DisableLinkPreviewInChat_Policy_Recommand)" explainText="$(string.DisableLinkPreviewInChat_Explain)" presentation="$(presentation.DisableLinkPreviewInChat_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\Chat" valueName="DisableLinkPreviewInChat">
+      <parentCategory ref="zoomchat_recommend" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SetMessengerDoNotDropThread_Policy_Recommand" class="User" displayName="$(string.SetMessengerDoNotDropThread_Policy_Recommand)" explainText="$(string.SetMessengerDoNotDropThread_Explain)" presentation="$(presentation.SetMessengerDoNotDropThread_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\Chat" valueName="SetMessengerDoNotDropThread">
+      <parentCategory ref="zoomchat_recommend" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="0" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="1" />
+      </disabledValue>
+    </policy>
+    <policy name="ShowVoiceMessageButton_Policy_Recommand" class="User" displayName="$(string.ShowVoiceMessageButton_Policy_Recommand)" explainText="$(string.ShowVoiceMessageButton_Explain)" presentation="$(presentation.ShowVoiceMessageButton_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\Chat" valueName="ShowVoiceMessageButton">
       <parentCategory ref="zoomchat_recommend" />
       <supportedOn ref="SUPPORTED_WINXPSP2" />
       <enabledValue>
@@ -1292,6 +1716,16 @@
       </disabledValue>
     </policy>
     <policy name="DisableMeetingChat_Policy_Recommand" class="User" displayName="$(string.DisableMeetingChat_Policy_Recommand)" explainText="$(string.DisableMeetingChat_Explain)" presentation="$(presentation.DisableMeetingChat_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\Meetings" valueName="DisableMeetingChat">
+      <parentCategory ref="zoommeetings_recommend" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="DisableMeeting3rdPartyFileStorage_Policy_Recommand" class="User" displayName="$(string.DisableMeeting3rdPartyFileStorage_Policy_Recommand)" explainText="$(string.DisableMeeting3rdPartyFileStorage_Explain)" presentation="$(presentation.DisableMeeting3rdPartyFileStorage_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\Meetings" valueName="DisableMeeting3rdPartyFileStorage">
       <parentCategory ref="zoommeetings_recommend" />
       <supportedOn ref="SUPPORTED_WINXPSP2" />
       <enabledValue>
@@ -1561,7 +1995,17 @@
         <decimal value="0" />
       </disabledValue>
     </policy>
-    <policy name="SetUseSystemDefaultSpeakerForRing_Policy_Recommand" class="User" displayName="$(string.SetUseSystemDefaultSpeakerForRing_Policy_Recommand)" explainText="$(string.SetUseSystemDefaultSpeakerForRing_Explain)" presentation="$(presentation.SetUseSystemDefaultSpeakerForRing_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\Meetings" valueName="SetUseSystemDefaultSpeakerForRing">
+    <policy name="SetUseSystemCommunicationSpeakerForVOIP_Policy_Recommand" class="User" displayName="$(string.SetUseSystemCommunicationSpeakerForVOIP_Policy_Recommand)" explainText="$(string.SetUseSystemCommunicationSpeakerForVOIP_Explain)" presentation="$(presentation.SetUseSystemCommunicationSpeakerForVOIP_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\Meetings" valueName="SetUseSystemCommunicationSpeakerForVOIP">
+      <parentCategory ref="zoommeetings_recommend" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SetUseSystemCommunicationMicForVOIP_Policy_Recommand" class="User" displayName="$(string.SetUseSystemCommunicationMicForVOIP_Policy_Recommand)" explainText="$(string.SetUseSystemCommunicationMicForVOIP_Explain)" presentation="$(presentation.SetUseSystemCommunicationMicForVOIP_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\Meetings" valueName="SetUseSystemCommunicationMicForVOIP">
       <parentCategory ref="zoommeetings_recommend" />
       <supportedOn ref="SUPPORTED_WINXPSP2" />
       <enabledValue>
@@ -1654,6 +2098,158 @@
       <disabledValue>
         <decimal value="0" />
       </disabledValue>
+    </policy>
+    <policy name="EnableTemporalDeNoise_Policy_Recommand" class="User" displayName="$(string.EnableTemporalDeNoise_Policy_Recommand)" explainText="$(string.EnableTemporalDeNoise_Explain)" presentation="$(presentation.EnableTemporalDeNoise_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\Meetings" valueName="EnableTemporalDeNoise">
+      <parentCategory ref="zoommeetings_recommend" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="EnableGPUComputeUtilization_Policy_Recommand" class="User" displayName="$(string.EnableGPUComputeUtilization_Policy_Recommand)" explainText="$(string.EnableGPUComputeUtilization_Explain)" presentation="$(presentation.EnableGPUComputeUtilization_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\Meetings" valueName="EnableGPUComputeUtilization">
+      <parentCategory ref="zoommeetings_recommend" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="EnableHardwareAccForVideoSend_Policy_Recommand" class="User" displayName="$(string.EnableHardwareAccForVideoSend_Policy_Recommand)" explainText="$(string.EnableHardwareAccForVideoSend_Explain)" presentation="$(presentation.EnableHardwareAccForVideoSend_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\Meetings" valueName="EnableHardwareAccForVideoSend">
+      <parentCategory ref="zoommeetings_recommend" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="EnableHardwareAccForVideoReceive_Policy_Recommand" class="User" displayName="$(string.EnableHardwareAccForVideoReceive_Policy_Recommand)" explainText="$(string.EnableHardwareAccForVideoReceive_Explain)" presentation="$(presentation.EnableHardwareAccForVideoReceive_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\Meetings" valueName="EnableHardwareAccForVideoReceive">
+      <parentCategory ref="zoommeetings_recommend" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="ShareSessionDisableUDP_Policy_Recommand" class="User" displayName="$(string.ShareSessionDisableUDP_Policy_Recommand)" explainText="$(string.ShareSessionDisableUDP_Explain)" presentation="$(presentation.ShareSessionDisableUDP_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\Meetings" valueName="ShareSessionDisableUDP">
+      <parentCategory ref="zoommeetings_recommend" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="EnableSpotlightSelf_Policy_Recommand" class="User" displayName="$(string.EnableSpotlightSelf_Policy_Recommand)" explainText="$(string.EnableSpotlightSelf_Explain)" presentation="$(presentation.EnableSpotlightSelf_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\Meetings" valueName="EnableSpotlightSelf">
+      <parentCategory ref="zoommeetings_recommend" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Enable49video_Policy_Recommand" class="User" displayName="$(string.Enable49video_Policy_Recommand)" explainText="$(string.Enable49video_Explain)" presentation="$(presentation.Enable49video_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\Meetings" valueName="Enable49video">
+      <parentCategory ref="zoommeetings_recommend" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="EnableRemindMeetingTime_Policy_Recommand" class="User" displayName="$(string.EnableRemindMeetingTime_Policy_Recommand)" explainText="$(string.EnableRemindMeetingTime_Explain)" presentation="$(presentation.EnableRemindMeetingTime_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\Meetings" valueName="EnableRemindMeetingTime">
+      <parentCategory ref="zoommeetings_recommend" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="VideoRenderMethod_Policy_Recommand" class="User" displayName="$(string.VideoRenderMethod_Policy_Recommand)" explainText="$(string.VideoRenderMethod_Explain)" presentation="$(presentation.VideoRenderMethod_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\Meetings">
+      <parentCategory ref="zoommeetings_recommend" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <elements>
+        <decimal id="VideoRenderMethod_Part" valueName="VideoRenderMethod" required="true" minValue="0" maxValue="4" />
+      </elements>
+    </policy>
+    <policy name="PresentToRoomOptimizeVideo_Policy_Recommand" class="User" displayName="$(string.PresentToRoomOptimizeVideo_Policy_Recommand)" explainText="$(string.PresentToRoomOptimizeVideo_Explain)" presentation="$(presentation.PresentToRoomOptimizeVideo_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\Meetings" valueName="PresentToRoomOptimizeVideo">
+      <parentCategory ref="zoommeetings_recommend" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="PresentToRoomOption_Policy_Recommand" class="User" displayName="$(string.PresentToRoomOption_Policy_Recommand)" explainText="$(string.PresentToRoomOption_Explain)" presentation="$(presentation.PresentToRoomOption_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\Meetings">
+      <parentCategory ref="zoommeetings_recommend" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <elements>
+        <decimal id="PresentToRoomOption_Part" valueName="PresentToRoomOption" required="true" minValue="0" maxValue="1" />
+      </elements>
+    </policy>
+    <policy name="PresentInMeetingOption_Policy_Recommand" class="User" displayName="$(string.PresentInMeetingOption_Policy_Recommand)" explainText="$(string.PresentInMeetingOption_Explain)" presentation="$(presentation.PresentInMeetingOption_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\Meetings">
+      <parentCategory ref="zoommeetings_recommend" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <elements>
+        <decimal id="PresentInMeetingOption_Part" valueName="PresentInMeetingOption" required="true" minValue="0" maxValue="1" />
+      </elements>
+    </policy>
+    <policy name="SetScreenCaptureMode_Policy_Recommand" class="User" displayName="$(string.SetScreenCaptureMode_Policy_Recommand)" explainText="$(string.SetScreenCaptureMode_Explain)" presentation="$(presentation.SetScreenCaptureMode_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\Meetings">
+      <parentCategory ref="zoommeetings_recommend" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <elements>
+        <decimal id="SetScreenCaptureMode_Part" valueName="SetScreenCaptureMode" required="true" minValue="0" maxValue="4" />
+      </elements>
+    </policy>
+    <policy name="DisableVideoFilters_Policy_Recommand" class="User" displayName="$(string.DisableVideoFilters_Policy_Recommand)" explainText="$(string.DisableVideoFilters_Explain)" presentation="$(presentation.DisableVideoFilters_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\Meetings" valueName="DisableVideoFilters">
+      <parentCategory ref="zoommeetings_recommend" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="EnableDoNotDisturbInSharing_Policy_Recommand" class="User" displayName="$(string.EnableDoNotDisturbInSharing_Policy_Recommand)" explainText="$(string.EnableDoNotDisturbInSharing_Explain)" presentation="$(presentation.EnableDoNotDisturbInSharing_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\Meetings" valueName="EnableDoNotDisturbInSharing">
+      <parentCategory ref="zoommeetings_recommend" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="SetSuppressBackgroundNoiseLevel_Policy_Recommand" class="User" displayName="$(string.SetSuppressBackgroundNoiseLevel_Policy_Recommand)" explainText="$(string.SetSuppressBackgroundNoiseLevel_Explain)" presentation="$(presentation.SetSuppressBackgroundNoiseLevel_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\Meetings">
+      <parentCategory ref="zoommeetings_recommend" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <elements>
+        <decimal id="SetSuppressBackgroundNoiseLevel_Part" valueName="SetSuppressBackgroundNoiseLevel" required="true" minValue="0" maxValue="3" />
+      </elements>
+    </policy>
+    <policy name="SetAudioSignalProcessType_Policy_Recommand" class="User" displayName="$(string.SetAudioSignalProcessType_Policy_Recommand)" explainText="$(string.SetAudioSignalProcessType_Explain)" presentation="$(presentation.SetAudioSignalProcessType_Policy_Recommand)" key="Software\Policies\Zoom\Zoom Meetings\Recommended\Meetings">
+      <parentCategory ref="zoommeetings_recommend" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <elements>
+        <decimal id="SetAudioSignalProcessType_Part" valueName="SetAudioSignalProcessType" required="true" minValue="0" maxValue="2" />
+      </elements>
     </policy>
   </policies>
 </policyDefinitions>

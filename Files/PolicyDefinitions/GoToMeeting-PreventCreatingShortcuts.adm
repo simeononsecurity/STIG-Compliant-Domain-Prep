@@ -1,0 +1,52 @@
+CLASS USER
+
+CATEGORY "Citrix"
+    CATEGORY "GoToMeeting"
+
+        KEYNAME "Software\Policies\Citrix\GoToMeeting"
+
+        POLICY !!PreventCreatingShortcuts_PolicyName
+            EXPLAIN !!PreventCreatingShortcuts_Explain
+            PART !!PreventCreatingShortcuts DROPDOWNLIST REQUIRED NOSORT
+                VALUENAME "PreventCreatingShortcutsSetting"
+                    ITEMLIST
+                    NAME !!PreventCreatingDesktopShortcuts VALUE NUMERIC 1
+                    NAME !!PreventCreatingStartMenuShortcuts VALUE NUMERIC 2
+                    NAME !!PreventCreatingDesktopAndStartMenuShortcuts VALUE NUMERIC 3 DEFAULT
+                END ITEMLIST
+            END PART
+        END POLICY
+
+    END CATEGORY
+END CATEGORY
+
+CLASS MACHINE
+
+CATEGORY "Citrix"
+    CATEGORY "GoToMeeting"
+
+        KEYNAME "Software\Policies\Citrix\GoToMeeting"
+
+        POLICY !!PreventCreatingShortcuts_PolicyName
+            EXPLAIN !!PreventCreatingShortcuts_Explain
+            PART !!PreventCreatingShortcuts DROPDOWNLIST REQUIRED NOSORT
+                VALUENAME "PreventCreatingShortcutsSetting"
+                    ITEMLIST
+                    NAME !!PreventCreatingDesktopShortcuts VALUE NUMERIC 1
+                    NAME !!PreventCreatingStartMenuShortcuts VALUE NUMERIC 2
+                    NAME !!PreventCreatingDesktopAndStartMenuShortcuts VALUE NUMERIC 3 DEFAULT
+                END ITEMLIST
+            END PART
+        END POLICY
+
+    END CATEGORY
+END CATEGORY
+
+
+[strings]
+PreventCreatingShortcuts_PolicyName="Prevent creating desktop and Start menu shortcuts"
+PreventCreatingShortcuts_Explain="This policy setting prevents the GoToMeeting, GoToTraining and GoToWebinar desktop application from creating shortcuts on the desktop or in the Start menu.\n\nWhen the policy is disabled or not configured, shortcuts will be created on both the desktop and in the Start menu during installation or first use of the product.\n\nIf you enable this policy, you can choose to prevent shortcuts from being created on the desktop, in the Start menu, or both. This will prevent shortcuts from being created during future installations, but will not remove shortcuts from existing installations.\n\nIf the policy is enabled both per machine and per user, the policy setting per machine takes effect."
+PreventCreatingShortcuts="Prevent creating shortcuts"
+PreventCreatingDesktopShortcuts="Prevent creating desktop shortcuts"
+PreventCreatingStartMenuShortcuts="Prevent creating start menu shortcuts"
+PreventCreatingDesktopAndStartMenuShortcuts="Prevent creating desktop and start menu shortcuts"

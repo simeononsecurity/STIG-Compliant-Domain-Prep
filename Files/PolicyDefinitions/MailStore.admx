@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--  Copyright (c) MailStore Software GmbH  -->
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" revision="9.6" schemaVersion="1.0">
+  <policyNamespaces>
+    <target prefix="mailstore" namespace="MailStore.Policies" />
+    <using prefix="mailstoreproducts" namespace="MailStore.Policies.Products" />
+  </policyNamespaces>
+  <resources minRequiredRevision="9.6" />
+  <supportedOn>
+    <definitions>
+
+      <!-- At least MailStore Server 9 -->
+      <definition name="SUPPORTED_MailStore9" displayName="$(string.SUPPORTED_MailStore9)" >
+        <or>
+          <range ref="mailstoreproducts:MailStore_Server" minVersionIndex="9" />
+        </or>
+      </definition>
+
+      <!-- At least MailStore Server 9.6 -->
+      <definition name="SUPPORTED_MailStore96" displayName="$(string.SUPPORTED_MailStore96)" >
+        <or>
+          <range ref="mailstoreproducts:MailStore_Server_960" minVersionIndex="960" />
+        </or>
+      </definition>
+
+      <!-- MailStore Server 9 to MailStore Server 12 only -->
+      <definition name="SUPPORTED_MailStore9to12" displayName="$(string.SUPPORTED_MailStore9to12)" >
+        <or>
+          <range ref="mailstoreproducts:MailStore_Server" minVersionIndex="9" maxVersionIndex="12"/>
+        </or>
+      </definition>
+
+      <!-- MailStore Server 12.1.3 only -->
+      <definition name="SUPPORTED_MailStore1213" displayName="$(string.SUPPORTED_MailStore1213)" >
+        <or>
+          <range ref="mailstoreproducts:MailStore_Server_1213" minVersionIndex="1213" maxVersionIndex="1213" />
+        </or>
+      </definition>
+
+    </definitions>
+  </supportedOn>
+  <categories>
+    <category name="CAT_MailStore_Root" displayName="$(string.CAT_MailStore_Root)" explainText="$(string.CAT_MailStore_Root_Help)" />
+  </categories>
+</policyDefinitions>

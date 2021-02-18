@@ -316,6 +316,14 @@ Users will be prompted with options to help free up space.</string>
 
 Users will be prompted with options to help free up space.</string>
 
+    <!-- EnableODIgnoreListFromGPO -->
+    <string id="EnableODIgnoreListFromGPO">Exclude specific kinds of files from being uploaded</string>
+    <string id="EnableODIgnoreListFromGPO_help">This setting lets you enter keywords to prevent the OneDrive sync app (OneDrive.exe) from uploading certain files to OneDrive or SharePoint. You can enter complete names, such as "setup.exe" or use the asterisk (*) as a wildcard character to represent a series of characters.  
+
+If you enable this setting, the sync app doesn't upload new files that match the keywords you specified. No errors appear for the skipped files, and the files remain in the local OneDrive folder. The OneDrive sync app must be restarted after this setting is enabled for the setting to take effect. 
+
+If you disable or do not configure this setting, the sync app uploads all supported files in all synced folders.</string>
+
     </stringTable>
     <presentationTable>
       <presentation id="GPOSetUpdateRing_Pres">
@@ -436,6 +444,14 @@ Click "Show", and then enter a friendly name to identify the library in the Valu
         <text>Valid values are from 1 to 100000.</text>
         <decimalTextBox refId="LMDFileDeleteThresholdBox" defaultValue="200">Number of files:</decimalTextBox>
       </presentation>
+
+      <presentation id="EnableODIgnoreListFromGPO_Pres">
+        <text>To specify keywords, select "Show," and then enter the keywords in the Value field.</text>
+        <text>For example, enter "*.pst" to block all files with the .pst extension. Enter "expense*" to block files that have names beginning with "expense". Enter "*sales*" to block all files that have "sales" in their name. Keywords aren't case sensitive. For example, if you enter "icons.JPEG," it will also block "icons.jpeg." </text>
+        <text> </text>
+        <listBox refId="EnableODIgnoreListFromGPOListBox">Keywords: </listBox>
+      </presentation>
+
     </presentationTable>
   </resources>
 </policyDefinitionResources>
