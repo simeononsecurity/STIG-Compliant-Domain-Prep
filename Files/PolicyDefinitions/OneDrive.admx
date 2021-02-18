@@ -355,5 +355,15 @@
         <decimal id="LMDFileDeleteThresholdBox" valueName="LocalMassDeleteFileDeleteThreshold" minValue="0" maxValue="100000" />
       </elements>
     </policy>
+
+    <!-- Enable ODIgnore -->
+        <policy name="EnableODIgnoreListFromGPO" class="Machine" displayName="$(string.EnableODIgnoreListFromGPO)" explainText="$(string.EnableODIgnoreListFromGPO_help)" presentation="$(presentation.EnableODIgnoreListFromGPO_Pres)" key="SOFTWARE\Policies\Microsoft\OneDrive">
+      <parentCategory ref="OneDriveNGSC" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
+        <elements>
+          <list id="EnableODIgnoreListFromGPOListBox" key="Software\Policies\Microsoft\OneDrive\EnableODIgnoreListFromGPO" additive="true"/>
+        </elements>
+    </policy>
+    
   </policies>
 </policyDefinitions>

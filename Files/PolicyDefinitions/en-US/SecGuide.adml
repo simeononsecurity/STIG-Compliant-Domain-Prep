@@ -47,12 +47,8 @@ Disabled: Restores the Windows default behavior for "Run As Different User."
       </string>
 
       <string id="Pol_SecGuide_WDPUA">Turn on Windows Defender protection against Potentially Unwanted Applications (DEPRECATED)</string>
-      <string id="Pol_SecGuide_WDPUA_Help">If this setting is enabled, Windows Defender protects against Potentially Unwanted Applications. For more information, see https://blogs.technet.microsoft.com/mmpc/2015/11/25/shields-up-on-potentially-unwanted-applications-in-your-enterprise/.
-
-If this setting is disabled or not configured, Potentially Unwanted Application protection is disabled.
-
-Beginning with Windows 10 v1809 and Windows Server 2019, this functionality should instead be configured through the following Group Policy setting:
-Computer Configuration\Administrative Templates\Windows Components\Windows Defender Antivirus, Configure detection for potentially unwanted applications.
+      <string id="Pol_SecGuide_WDPUA_Help">Beginning with Windows 10 v1809 and Windows Server v1809, this functionality should instead be configured through the following Group Policy setting:
+Computer Configuration\Administrative Templates\Windows Components\Windows Defender Antivirus\Configure detection for potentially unwanted applications.
 </string>
 
       <string id="Pol_SecGuide_SEHOP">Enable Structured Exception Handling Overwrite Protection (SEHOP)</string>
@@ -133,11 +129,8 @@ If neither NodeType nor DhcpNodeType is present, the computer uses B-node if the
 
 
 <!-- LdapEnforceChannelBinding -->
-<string id="Pol_SecGuide_LdapEnforceChannelBinding">Extended Protection for LDAP Authentication (Domain Controllers only)</string>
-<string id="Pol_SecGuide_LdapEnforceChannelBinding_Help">Configures the LdapEnforceChannelBinding registry value to increase protection against "man-in-the-middle" attack.
-For more information, see https://support.microsoft.com/help/4034879 . Some important points:
-* Before configuring this setting to "Enabled, always," all clients must have installed the security update described in CVE-2017-8563 (https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2017-8563).
-* See additional support requirements for Windows Server 2008 in linked pages.
+<string id="Pol_SecGuide_LdapEnforceChannelBinding">Extended Protection for LDAP Authentication (Domain Controllers only) (DEPRECATED)</string>
+<string id="Pol_SecGuide_LdapEnforceChannelBinding_Help">Beginning with the Windows 10 and Windows Server v2004 security baseline this setting has been moved to Security Options\Domain controller: LDAP server channel binding token requirements.
 </string>
 <string id="LdapEnforce_Always">Enabled, always (recommended)</string>
 <string id="LdapEnforce_WhenSupported">Enabled, when supported</string>
