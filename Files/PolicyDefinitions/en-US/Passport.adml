@@ -10,6 +10,8 @@
         <string id="MSPassport_UsePassportForWork">Use Windows Hello for Business</string>
         <!-- Add support for certificate trust deployments -->
         <string id="WHFB_UseCertificateForOnPremAuth">Use certificate for on-premises authentication</string>
+        <!-- Add support for cloud trust deployments -->
+        <string id="WHFB_UseCloudTrustForOnPremAuth">Use cloud trust for on-premises authentication</string>
         <!-- DropdownList Button strings -->
         <string id="MSPassport_UsePassportForWorkExplain">Windows Hello for Business is an alternative method for signing into Windows using your Active Directory or Azure Active Directory account that can replace passwords, Smart Cards, and Virtual Smart Cards.
 
@@ -122,9 +124,18 @@ NOTE: This policy is only applicable to devices which are registered with Azure 
 
 If you enable this policy setting, Windows Hello for Business enrolls a sign-in certificate that is used for on-premises authentication.
 
-If you disable or do not configure this policy setting, Windows Hello for Business enrolls a key that is used for on-premises authentication.
+If you disable or do not configure this policy setting, Windows Hello for Business will use a key or a Kerberos ticket (depending on other policy settings) for on-premises authentication.
 
 NOTE: Disabling or not configuring this policy setting and enabling the "Use Windows Hello for Business" policy setting requires the environment to have one or more Windows Server 2016 domain controllers to prevent Windows Hello for Business authentication from failing.
+        </string>
+        <!-- Explain Text for UseCloudTrustForOnPremAuth -->
+        <string id="WHFB_UseCloudTrustForOnPremAuthExplain">Use this policy setting to configure Windows Hello for Business to use Azure AD Kerberos for on-premises authentication.
+
+If you enable this policy setting, Windows Hello for Business will use a Kerberos ticket retrieved from authenticating to Azure for on-premises authentication.
+
+If you disable or do not configure this policy setting, Windows Hello for Business will use a key or certificate (depending on other policy settings) for on-premises authentication. 
+ 
+NOTE: An environment that enables both this policy setting, and the "Use Windows Hello for Business" policy setting requires one or more Windows Server 2016 domain controllers. Otherwise, Windows Hello for Business authentication will fail.
         </string>
         <!-- Explain text for device unlock policy -->
         <string id="MSPassport_UseDeviceUnlock">Configure device unlock factors</string>

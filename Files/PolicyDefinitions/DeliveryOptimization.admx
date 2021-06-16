@@ -65,11 +65,6 @@
               <decimal value="99"/>
             </value>
           </item>
-          <item displayName="$(string.DownloadMode_Bypass)">
-            <value>
-              <decimal value="100"/>
-            </value>
-          </item>
         </enum>
       </elements>
     </policy>
@@ -570,6 +565,11 @@
           <item displayName="$(string.RestrictPeerSelectionBy_Subnet)">
             <value>
               <decimal value="1"/>
+            </value>
+          </item>
+          <item displayName="$(string.RestrictPeerSelectionBy_LinkLocal)">
+            <value>
+              <decimal value="2"/>
             </value>
           </item>
         </enum>

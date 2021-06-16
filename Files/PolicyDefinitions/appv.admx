@@ -35,8 +35,24 @@ revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPoli
     <category name="CAT_Virtualization" displayName="$(string.Virtualization)">
       <parentCategory ref="CAT_AppV"/>
     </category>
+    <category name="CAT_PackageManagement" displayName="$(string.PackageManagement)">
+      <parentCategory ref="CAT_AppV"/>
+    </category>
+    <category name="CAT_PowerManagement" displayName="$(string.PowerManagement)">
+      <parentCategory ref="CAT_AppV"/>
+    </category>
   </categories>
   <policies>
+    <policy name="EnableAppV" clientExtension="{2BFCC077-22D2-48DE-BDE1-2F618D9B476D}" class="Machine" displayName="$(string.EnableAppV)" explainText="$(string.EnableAppV_Help)" key="Software\Policies\Microsoft\AppV\Client" valueName="Enabled">
+      <parentCategory ref="CAT_AppV" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
+        <enabledValue>
+          <decimal value="1" />
+        </enabledValue>
+        <disabledValue>
+          <decimal value="0" />
+        </disabledValue>
+    </policy>
     <policy name="Streaming_Package_Installation_Root" class="Machine" displayName="$(string.Streaming_Package_Installation_Root)" 
             explainText="$(string.Streaming_Package_Installation_Root_Help)" presentation="$(presentation.Streaming_Package_Installation_Root)" 
             key="SOFTWARE\Policies\Microsoft\AppV\Client\Streaming">
@@ -707,14 +723,14 @@ revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPoli
         <decimal value="0" />
       </disabledValue>
     </policy>
-      <policy name="Virtualization_JITVWhitelist" class="Machine" displayName="$(string.Virtualization_JITVWhitelist)"
-            explainText="$(string.Virtualization_JITVWhitelist_Help)" presentation="$(presentation.Virtualization_JITVWhitelist)"
+      <policy name="Virtualization_JITVAllowList" class="Machine" displayName="$(string.Virtualization_JITVAllowList)"
+            explainText="$(string.Virtualization_JITVAllowList_Help)" presentation="$(presentation.Virtualization_JITVAllowList)"
               key="SOFTWARE\Policies\Microsoft\AppV\Client\Virtualization"
               valueName="ProcessesUsingVirtualComponents">
         <parentCategory ref="CAT_Virtualization" />
       <supportedOn ref="windows:SUPPORTED_Windows7" />
       <elements>
-        <multiText id="Virtualization_JITVWhitelist_Prompt" valueName="ProcessesUsingVirtualComponents" />
+        <multiText id="Virtualization_JITVAllowList_Prompt" valueName="ProcessesUsingVirtualComponents" />
       </elements>
     </policy>
     <policy name="Virtualization_JITVEnable" class="Machine" displayName="$(string.Virtualization_JITVEnable)"
@@ -723,6 +739,32 @@ revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPoli
             valueName="EnableDynamicVirtualization">
       <parentCategory ref="CAT_Virtualization" />
       <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="PackageManagement_AutoCleanupEnable" class="Machine" displayName="$(string.PackageManagement_AutoCleanupEnable)"
+          explainText="$(string.PackageManagement_AutoCleanupEnable_Help)"
+            key="SOFTWARE\Policies\Microsoft\AppV\Client\PackageManagement"
+            valueName="AutoCleanupEnabled">
+      <parentCategory ref="CAT_PackageManagement" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM"/>
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="PowerManagement_SyncOnBatteriesEnable" class="Machine" displayName="$(string.PowerManagement_SyncOnBatteriesEnable)"
+          explainText="$(string.PowerManagement_SyncOnBatteriesEnable_Help)"
+            key="SOFTWARE\Policies\Microsoft\AppV\Client\PowerManagement"
+            valueName="SyncOnBatteriesEnabled">
+      <parentCategory ref="CAT_PowerManagement" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM"/>
       <enabledValue>
         <decimal value="1" />
       </enabledValue>

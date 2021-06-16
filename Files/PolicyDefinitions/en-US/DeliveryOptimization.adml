@@ -18,15 +18,12 @@ The following list shows the supported values:
 
 3 = HTTP blended with Internet Peering.
 
-99 = Simple download mode with no peering. Delivery Optimization downloads using HTTP only and does not attempt to contact the Delivery Optimization cloud services.
-
-100 = Bypass mode. Do not use Delivery Optimization and use BITS instead.</string>
+99 = Simple download mode with no peering. Delivery Optimization downloads using HTTP only and does not attempt to contact the Delivery Optimization cloud services.</string>
       <string id="DownloadMode_CdnOnly">HTTP only (0)</string>
       <string id="DownloadMode_Lan">LAN (1)</string>
       <string id="DownloadMode_Group">Group (2)</string>
       <string id="DownloadMode_Internet">Internet (3)</string>
       <string id="DownloadMode_Simple">Simple (99)</string>
-      <string id="DownloadMode_Bypass">Bypass (100)</string>
       <string id="GroupId">Group ID</string>
       <string id="GroupId_Help">Group ID must be set as a GUID. This Policy specifies an arbitrary group ID that the device belongs to.
 
@@ -172,11 +169,16 @@ Note: if you set the policy to delay foreground download from http, it will appl
       <string id="RestrictPeerSelectionBy_Help">Set this policy to restrict peer selection via selected option.
 
 Options available are:
-1 = Subnet mask (more options will be added in a future release).
+0 = NAT.
+1 = Subnet mask.
+2 = Local discovery (DNS-SD).
 
-Option 1 (Subnet mask) applies to both Download Mode LAN (1) and Group (2).</string>
-      <string id="RestrictPeerSelectionBy_None">None</string>
+The default value has changed from 0 (no restriction) to 1 (restrict to the subnet).
+
+These options apply to both Download Mode LAN (1) and Group (2).</string>
+      <string id="RestrictPeerSelectionBy_None">NAT</string>
       <string id="RestrictPeerSelectionBy_Subnet">Subnet</string>
+      <string id="RestrictPeerSelectionBy_LinkLocal">Local discovery</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth">Set Business Hours to Limit Background Download Bandwidth</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth_Help">Specifies the maximum background download bandwidth that Delivery Optimization uses during and outside business hours across all concurrent download activities as a percentage of available download bandwidth.</string>
       <string id="SetHoursToLimitForegroundDownloadBandwidth">Set Business Hours to Limit Foreground Download Bandwidth</string>
@@ -303,7 +305,7 @@ Option 1 (Subnet mask) applies to both Download Mode LAN (1) and Group (2).</str
         <text>The default value is 0 (no delay)</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">
-        <dropdownList defaultItem="0" noSort="true" refId="RestrictPeerSelectionBy">Restrict Peer Selection By:</dropdownList>
+        <dropdownList defaultItem="1" noSort="true" refId="RestrictPeerSelectionBy">Restrict Peer Selection By:</dropdownList>
       </presentation>
       <presentation id="SetHoursToLimitBackgroundDownloadBandwidth">
         <text/>

@@ -138,7 +138,7 @@ If you do not configure this policy setting, it is not applied to any DCs, and D
 
 To specify the expected dial-up delay at logon, click Enabled, and then enter the desired value in seconds (for example, the value "60" is 1 minute).
 
-If you do not confihgure this policy setting, it is not applied to any computers, and computers use their local configuration.</string>
+If you do not configure this policy setting, it is not applied to any computers, and computers use their local configuration.</string>
       <string id="Netlogon_GcSiteCoverage">Specify sites covered by the GC Locator DNS SRV Records</string>
       <string id="Netlogon_GcSiteCoverage_Help">This policy setting specifies the sites for which the global catalogs (GC) should register site-specific GC locator DNS SRV resource records. These records are registered in addition to the site-specific SRV records registered for the site where the GC resides, and records registered by a GC configured to register GC Locator DNS SRV records for those sites without a GC that are closest to it. 
 
@@ -336,6 +336,22 @@ The allowable values for this setting result in the following behaviors:
 To specify this behavior, click Enabled and then enter a value. The range of values is from 1 to 2.
 
 If you do not configure this policy setting, it is not applied to any computers, and computers use their local configuration.</string>
+
+      <string id="Netlogon_DnsSrvRecordUseLowerCaseHostNames">Use lowercase DNS host names when registering domain controller SRV records</string>
+      <string id="Netlogon_DnsSrvRecordUseLowerCaseHostNames_Help">This policy setting configures whether the domain controllers to which this setting is applied will lowercase their DNS host name when registering SRV records.
+
+If enabled, domain controllers will lowercase their DNS host name when registering domain controller SRV records. A best-effort attempt will be made to delete any previously registered SRV records that contain mixed-case DNS host names. For more information and potential manual cleanup procedures, see the link below.
+
+If disabled, domain controllers will use their configured DNS host name as-is when registering domain controller SRV records.
+
+If not configured, domain controllers will default to using their local configuration.
+
+The default local configuration is enabled.
+
+A reboot is not required for changes to this setting to take effect.
+
+More information is available at https://aka.ms/lowercasehostnamesrvrecord
+      </string>
 
     </stringTable>
     <presentationTable>

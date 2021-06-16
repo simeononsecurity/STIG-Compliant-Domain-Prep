@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema"
                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                    revision="1.0" schemaVersion="1.0"
@@ -202,6 +202,14 @@
             valueName="NoChangingLockScreen">
       <parentCategory ref="Personalization" />
       <supportedOn ref="windows:SUPPORTED_Windows8" />
+    </policy>   
+    <policy name="CPL_Personalization_AnimateLockScreenBackground" class="Machine"
+            displayName="$(string.CPL_Personalization_AnimateLockScreenBackground)"
+            explainText="$(string.CPL_Personalization_AnimateLockScreenBackground_Help)"
+            key="Software\Policies\Microsoft\Windows\Personalization"
+            valueName="AnimateLockScreenBackground">
+       <parentCategory ref="Personalization" />
+       <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOSERVER" />
     </policy>
     <policy name="CPL_Personalization_NoLockScreenSlideshow" class="Machine"
             displayName="$(string.CPL_Personalization_NoLockScreenSlideshow)"

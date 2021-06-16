@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <!--  (c) 2013 Microsoft Corporation  -->
-<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-    revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
   <displayName></displayName>
   <description></description>
   <resources>
@@ -21,6 +20,8 @@
       <string id="Integration">Integration</string>
       <string id="CEIP">CEIP</string>
       <string id="Virtualization">Virtualization</string>
+      <string id="PackageManagement">PackageManagement</string>
+      <string id="PowerManagement">PowerManagement</string>
       <string id="True">True</string>
       <string id="False">False</string>    
       <string id="Hour">Hour</string>
@@ -54,11 +55,11 @@
       <string id="Streaming_Support_Branch_Cache">Enable Support for BranchCache</string>
       <string id="Streaming_Support_Branch_Cache_Help">If enabled, the App-V client will support BrancheCache compatible HTTP streaming. If BranchCache support is not desired, this should be disabled. The client can then apply HTTP optimizations which are incompatible with BranchCache</string>
       <string id="Client_Coexistence_Enable_Migration_mode">Enable Migration Mode</string>
-      <string id="Client_Coexistence_Enable_Migration_mode_Help">Migration mode allows the App-V client to modify shortcuts and FTA&apos;s for packages created using a previous version of App-V.</string>
+      <string id="Client_Coexistence_Enable_Migration_mode_Help">Migration mode allows the App-V client to modify shortcuts and FTA's for packages created using a previous version of App-V.</string>
       <string id="Scripting_Enable_Package_Scripts">Enable Package Scripts</string>
       <string id="Scripting_Enable_Package_Scripts_Help">Enables scripts defined in the package manifest of configuration files that should run.</string>
       <string id="Integration_Roaming_File_Exclusions">Roaming File Exclusions</string>
-      <string id="Integration_Roaming_File_Exclusions_Help">Specifies the file paths relative to %userprofile% that do not roam with a user&apos;s profile. Example usage: /FILEEXCLUSIONLIST=&apos;desktop;my pictures&apos;.</string>
+      <string id="Integration_Roaming_File_Exclusions_Help">Specifies the file paths relative to %userprofile% that do not roam with a user's profile. Example usage: /FILEEXCLUSIONLIST='desktop;my pictures'.</string>
       <string id="Integration_Roaming_Registry_Exclusions">Roaming Registry Exclusions</string>
       <string id="Integration_Roaming_Registry_Exclusions_Help">Specifies the registry paths that do not roam with a user profile. Example usage: /REGISTRYEXCLUSIONLIST=software\classes;software\clients.</string>
       <string id="Integration_Root_User">Integration Root User</string>
@@ -102,12 +103,18 @@
       <string id="CEIP_Enable_Help">The program collects information about computer hardware and how you use Microsoft Application Virtualization without interrupting you. This helps Microsoft identify which Microsoft Application Virtualization features to improve. No information collected is used to identify or contact you. 
 
 For more details, read about the program online at http://go.microsoft.com/fwlink/?LinkID=184686.</string>
-      <string id="Virtualization_JITVWhitelist">Virtual Component Process Whitelist</string>
-      <string id="Virtualization_JITVWhitelist_Help">Specifies a list of process paths (may contain wildcards) which are candidates for using virtual components (shell extensions, browser helper objects, etc). Only processes whose full path matches one of these items can use virtual components.</string>
+      <string id="Virtualization_JITVAllowList">Virtual Component Process Allow List</string>
+      <string id="Virtualization_JITVAllowList_Help">Specifies a list of process paths (may contain wildcards) which are candidates for using virtual components (shell extensions, browser helper objects, etc). Only processes whose full path matches one of these items can use virtual components.</string>
       <string id="Virtualization_JITVEnable">Enable Dynamic Virtualization</string>
       <string id="Virtualization_JITVEnable_Help">Enables Dynamic Virtualization of supported shell extensions, browser helper objects, and ActiveX controls.</string>
+      <string id="PackageManagement_AutoCleanupEnable">Enable automatic cleanup of unused appv packages</string>
+      <string id="PackageManagement_AutoCleanupEnable_Help">Enables automatic cleanup of appv packages that were added after Windows10 anniversary release.</string>
+      <string id="PowerManagement_SyncOnBatteriesEnable">Enable background sync to server when on battery power</string>
+      <string id="PowerManagement_SyncOnBatteriesEnable_Help">Enables background sync to server when on battery power.</string>
       <string id="Publishing_Enable_Refresh_UX">Enable Publishing Refresh UX</string>
       <string id="Publishing_Enable_Refresh_UX_Help">Enables a UX to display to the user when a publishing refresh is performed on the client.</string>
+      <string id="EnableAppV">Enable App-V Client</string>
+      <string id="EnableAppV_Help">This policy setting allows you to enable or disable Microsoft Application Virtualization (App-V) feature. Reboot is needed for disable to take effect.</string>
     </stringTable>
     
     <presentationTable>
@@ -271,8 +278,8 @@ For more details, read about the program online at http://go.microsoft.com/fwlin
           <defaultValue>%allusersprofile%\Microsoft\AppV\Client\Integration</defaultValue>
         </textBox>
       </presentation>
-      <presentation id="Virtualization_JITVWhitelist">
-        <multiTextBox refId="Virtualization_JITVWhitelist_Prompt">
+      <presentation id="Virtualization_JITVAllowList">
+        <multiTextBox refId="Virtualization_JITVAllowList_Prompt">
         </multiTextBox>
       </presentation>
     </presentationTable>

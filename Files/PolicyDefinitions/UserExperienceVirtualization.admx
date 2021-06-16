@@ -17,6 +17,33 @@
     </category>
   </categories>
   <policies>
+    <policy name="EnableUEV" clientExtension="{169EBF44-942F-4C43-87CE-13C93996EBBE}" class="Machine" displayName="$(string.EnableUEV)" explainText="$(string.EnableUEV_Help)" presentation="$(presentation.EnableUEV)" key="Software\Policies\Microsoft\UEV\Agent" valueName="Enabled">
+      <parentCategory ref="UEV" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
+        <enabledValue>
+          <decimal value="1" />
+        </enabledValue>
+        <disabledValue>
+          <decimal value="0" />
+        </disabledValue>
+        <enabledList>
+          <item key="Software\Policies\Microsoft\Windows\UEV\Agent" valueName="Enabled">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+        </enabledList>
+        <disabledList>
+        <item key="Software\Policies\Microsoft\Windows\UEV\Agent" valueName="Enabled">
+          <value>
+            <decimal value="0" />
+          </value>
+        </item>
+      </disabledList>
+      <elements>
+        <boolean id="RegisterInboxTemplates" valueName="RegisterInboxTemplates" />
+      </elements>
+    </policy>
     <policy name="RepositoryTimeout" class="Both" displayName="$(string.RepositoryTimeout)" explainText="$(string.RepositoryTimeout_Help)" presentation="$(presentation.RepositoryTimeout)" key="Software\Policies\Microsoft\UEV\Agent\Configuration">
       <parentCategory ref="UEV" />
       <supportedOn ref="windows:SUPPORTED_Windows7" />
@@ -138,7 +165,7 @@
     </policy>
     <policy name="MicrosoftOffice2016Common" class="Both" displayName="$(string.MicrosoftOffice2016Common)" explainText="$(string.MicrosoftOffice2016Common_Help)" key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications">
       <parentCategory ref="Applications" />
-      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledList>
         <item key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications" valueName="MicrosoftOffice2016Win32.Common">
           <value>
@@ -166,7 +193,7 @@
     </policy>
     <policy name="MicrosoftOffice2016Access" class="Both" displayName="$(string.MicrosoftOffice2016Access)" explainText="$(string.MicrosoftOffice2016Access_Help)" key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications">
       <parentCategory ref="Applications" />
-      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledList>
         <item key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications" valueName="MicrosoftOffice2016Win32.Access">
           <value>
@@ -194,7 +221,7 @@
     </policy>
     <policy name="MicrosoftOffice2016Excel" class="Both" displayName="$(string.MicrosoftOffice2016Excel)" explainText="$(string.MicrosoftOffice2016Excel_Help)" key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications">
       <parentCategory ref="Applications" />
-      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledList>
         <item key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications" valueName="MicrosoftOffice2016Win32.Excel">
           <value>
@@ -222,7 +249,7 @@
     </policy>
     <policy name="MicrosoftOffice2016Lync" class="Both" displayName="$(string.MicrosoftOffice2016Lync)" explainText="$(string.MicrosoftOffice2016Lync_Help)" key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications">
       <parentCategory ref="Applications" />
-      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledList>
         <item key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications" valueName="MicrosoftLync2016Win32">
           <value>
@@ -250,7 +277,7 @@
     </policy>
     <policy name="MicrosoftOffice2016UploadCenter" class="Both" displayName="$(string.MicrosoftOffice2016UploadCenter)" explainText="$(string.MicrosoftOffice2016UploadCenter_Help)" key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications">
       <parentCategory ref="Applications" />
-      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledList>
         <item key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications" valueName="MicrosoftOffice2016Win32.UploadCenter">
           <value>
@@ -278,7 +305,7 @@
     </policy>
     <policy name="MicrosoftOffice2016OneDriveForBusiness" class="Both" displayName="$(string.MicrosoftOffice2016OneDriveForBusiness)" explainText="$(string.MicrosoftOffice2016OneDriveForBusiness_Help)" key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications">
       <parentCategory ref="Applications" />
-      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledList>
         <item key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications" valueName="MicrosoftOffice2016Win32.OneDrive">
           <value>
@@ -306,7 +333,7 @@
     </policy>
     <policy name="MicrosoftOffice2016OneNote" class="Both" displayName="$(string.MicrosoftOffice2016OneNote)" explainText="$(string.MicrosoftOffice2016OneNote_Help)" key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications">
       <parentCategory ref="Applications" />
-      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledList>
         <item key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications" valueName="MicrosoftOffice2016Win32.OneNote">
           <value>
@@ -334,7 +361,7 @@
     </policy>
     <policy name="MicrosoftOffice2016Outlook" class="Both" displayName="$(string.MicrosoftOffice2016Outlook)" explainText="$(string.MicrosoftOffice2016Outlook_Help)" key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications">
       <parentCategory ref="Applications" />
-      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledList>
         <item key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications" valueName="MicrosoftOffice2016Win32.Outlook">
           <value>
@@ -362,7 +389,7 @@
     </policy>
     <policy name="MicrosoftOffice2016PowerPoint" class="Both" displayName="$(string.MicrosoftOffice2016PowerPoint)" explainText="$(string.MicrosoftOffice2016PowerPoint_Help)" key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications">
       <parentCategory ref="Applications" />
-      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledList>
         <item key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications" valueName="MicrosoftOffice2016Win32.PowerPoint">
           <value>
@@ -390,7 +417,7 @@
     </policy>
     <policy name="MicrosoftOffice2016Project" class="Both" displayName="$(string.MicrosoftOffice2016Project)" explainText="$(string.MicrosoftOffice2016Project_Help)" key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications">
       <parentCategory ref="Applications" />
-      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledList>
         <item key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications" valueName="MicrosoftOffice2016Win32.Project">
           <value>
@@ -418,7 +445,7 @@
     </policy>
     <policy name="MicrosoftOffice2016Publisher" class="Both" displayName="$(string.MicrosoftOffice2016Publisher)" explainText="$(string.MicrosoftOffice2016Publisher_Help)" key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications">
       <parentCategory ref="Applications" />
-      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledList>
         <item key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications" valueName="MicrosoftOffice2016Win32.Publisher">
           <value>
@@ -446,7 +473,7 @@
     </policy>
     <policy name="MicrosoftOffice2016Visio" class="Both" displayName="$(string.MicrosoftOffice2016Visio)" explainText="$(string.MicrosoftOffice2016Visio_Help)" key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications">
       <parentCategory ref="Applications" />
-      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledList>
         <item key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications" valueName="MicrosoftOffice2016Win32.Visio">
           <value>
@@ -474,7 +501,7 @@
     </policy>
     <policy name="MicrosoftOffice2016Word" class="Both" displayName="$(string.MicrosoftOffice2016Word)" explainText="$(string.MicrosoftOffice2016Word_Help)" key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications">
       <parentCategory ref="Applications" />
-      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledList>
         <item key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications" valueName="MicrosoftOffice2016Win32.Word">
           <value>
@@ -502,7 +529,7 @@
     </policy>
     <policy name="MicrosoftOffice2016CommonBackup" class="Both" displayName="$(string.MicrosoftOffice2016CommonBackup)" explainText="$(string.MicrosoftOffice2016CommonBackup_Help)" key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications">
       <parentCategory ref="Applications" />
-      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledList>
         <item key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications" valueName="MicrosoftOffice2016BackupWin32.Common">
           <value>
@@ -530,7 +557,7 @@
     </policy>
     <policy name="MicrosoftOffice2016AccessBackup" class="Both" displayName="$(string.MicrosoftOffice2016AccessBackup)" explainText="$(string.MicrosoftOffice2016AccessBackup_Help)" key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications">
       <parentCategory ref="Applications" />
-      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledList>
         <item key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications" valueName="MicrosoftOffice2016BackupWin32.Access">
           <value>
@@ -558,7 +585,7 @@
     </policy>
     <policy name="MicrosoftOffice2016ExcelBackup" class="Both" displayName="$(string.MicrosoftOffice2016ExcelBackup)" explainText="$(string.MicrosoftOffice2016ExcelBackup_Help)" key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications">
       <parentCategory ref="Applications" />
-      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledList>
         <item key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications" valueName="MicrosoftOffice2016BackupWin32.Excel">
           <value>
@@ -586,7 +613,7 @@
     </policy>
     <policy name="MicrosoftOffice2016LyncBackup" class="Both" displayName="$(string.MicrosoftOffice2016LyncBackup)" explainText="$(string.MicrosoftOffice2016LyncBackup_Help)" key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications">
       <parentCategory ref="Applications" />
-      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledList>
         <item key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications" valueName="MicrosoftLync2016BackupWin32">
           <value>
@@ -614,7 +641,7 @@
     </policy>
     <policy name="MicrosoftOffice2016OneNoteBackup" class="Both" displayName="$(string.MicrosoftOffice2016OneNoteBackup)" explainText="$(string.MicrosoftOffice2016OneNoteBackup_Help)" key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications">
       <parentCategory ref="Applications" />
-      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledList>
         <item key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications" valueName="MicrosoftOffice2016BackupWin32.OneNote">
           <value>
@@ -642,7 +669,7 @@
     </policy>
     <policy name="MicrosoftOffice2016OutlookBackup" class="Both" displayName="$(string.MicrosoftOffice2016OutlookBackup)" explainText="$(string.MicrosoftOffice2016OutlookBackup_Help)" key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications">
       <parentCategory ref="Applications" />
-      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledList>
         <item key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications" valueName="MicrosoftOffice2016BackupWin32.Outlook">
           <value>
@@ -670,7 +697,7 @@
     </policy>
     <policy name="MicrosoftOffice2016PowerPointBackup" class="Both" displayName="$(string.MicrosoftOffice2016PowerPointBackup)" explainText="$(string.MicrosoftOffice2016PowerPointBackup_Help)" key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications">
       <parentCategory ref="Applications" />
-      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledList>
         <item key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications" valueName="MicrosoftOffice2016BackupWin32.PowerPoint">
           <value>
@@ -698,7 +725,7 @@
     </policy>
     <policy name="MicrosoftOffice2016ProjectBackup" class="Both" displayName="$(string.MicrosoftOffice2016ProjectBackup)" explainText="$(string.MicrosoftOffice2016ProjectBackup_Help)" key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications">
       <parentCategory ref="Applications" />
-      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledList>
         <item key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications" valueName="MicrosoftOffice2016BackupWin32.Project">
           <value>
@@ -726,7 +753,7 @@
     </policy>
     <policy name="MicrosoftOffice2016PublisherBackup" class="Both" displayName="$(string.MicrosoftOffice2016PublisherBackup)" explainText="$(string.MicrosoftOffice2016PublisherBackup_Help)" key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications">
       <parentCategory ref="Applications" />
-      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledList>
         <item key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications" valueName="MicrosoftOffice2016BackupWin32.Publisher">
           <value>
@@ -754,7 +781,7 @@
     </policy>
     <policy name="MicrosoftOffice2016VisioBackup" class="Both" displayName="$(string.MicrosoftOffice2016VisioBackup)" explainText="$(string.MicrosoftOffice2016VisioBackup_Help)" key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications">
       <parentCategory ref="Applications" />
-      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledList>
         <item key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications" valueName="MicrosoftOffice2016BackupWin32.Visio">
           <value>
@@ -782,7 +809,7 @@
     </policy>
     <policy name="MicrosoftOffice2016WordBackup" class="Both" displayName="$(string.MicrosoftOffice2016WordBackup)" explainText="$(string.MicrosoftOffice2016WordBackup_Help)" key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications">
       <parentCategory ref="Applications" />
-      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledList>
         <item key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications" valueName="MicrosoftOffice2016BackupWin32.Word">
           <value>
@@ -810,7 +837,7 @@
     </policy>
     <policy name="MicrosoftOffice365Common2016" class="Both" displayName="$(string.MicrosoftOffice365Common2016)" explainText="$(string.MicrosoftOffice365Common2016_Help)" key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications">
       <parentCategory ref="Applications" />
-      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledList>
         <item key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications" valueName="MicrosoftOffice2016Office365Win32.Common">
           <value>
@@ -838,7 +865,7 @@
     </policy>
     <policy name="MicrosoftOffice365Access2016" class="Both" displayName="$(string.MicrosoftOffice365Access2016)" explainText="$(string.MicrosoftOffice365Access2016_Help)" key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications">
       <parentCategory ref="Applications" />
-      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledList>
         <item key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications" valueName="MicrosoftOffice2016Office365Win32.Access">
           <value>
@@ -866,7 +893,7 @@
     </policy>
     <policy name="MicrosoftOffice365Excel2016" class="Both" displayName="$(string.MicrosoftOffice365Excel2016)" explainText="$(string.MicrosoftOffice365Excel2016_Help)" key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications">
       <parentCategory ref="Applications" />
-      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledList>
         <item key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications" valueName="MicrosoftOffice2016Office365Win32.Excel">
           <value>
@@ -894,7 +921,7 @@
     </policy>
     <policy name="MicrosoftOffice365Lync2016" class="Both" displayName="$(string.MicrosoftOffice365Lync2016)" explainText="$(string.MicrosoftOffice365Lync2016_Help)" key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications">
       <parentCategory ref="Applications" />
-      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledList>
         <item key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications" valueName="MicrosoftLync2016Office365Win32">
           <value>
@@ -922,7 +949,7 @@
     </policy>
     <policy name="MicrosoftOffice365OneNote2016" class="Both" displayName="$(string.MicrosoftOffice365OneNote2016)" explainText="$(string.MicrosoftOffice365OneNote2016_Help)" key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications">
       <parentCategory ref="Applications" />
-      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledList>
         <item key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications" valueName="MicrosoftOffice2016Office365Win32.OneNote">
           <value>
@@ -950,7 +977,7 @@
     </policy>
     <policy name="MicrosoftOffice365Outlook2016" class="Both" displayName="$(string.MicrosoftOffice365Outlook2016)" explainText="$(string.MicrosoftOffice365Outlook2016_Help)" key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications">
       <parentCategory ref="Applications" />
-      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledList>
         <item key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications" valueName="MicrosoftOffice2016Office365Win32.Outlook">
           <value>
@@ -978,7 +1005,7 @@
     </policy>
     <policy name="MicrosoftOffice365PowerPoint2016" class="Both" displayName="$(string.MicrosoftOffice365PowerPoint2016)" explainText="$(string.MicrosoftOffice365PowerPoint2016_Help)" key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications">
       <parentCategory ref="Applications" />
-      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledList>
         <item key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications" valueName="MicrosoftOffice2016Office365Win32.PowerPoint">
           <value>
@@ -1006,7 +1033,7 @@
     </policy>
     <policy name="MicrosoftOffice365Project2016" class="Both" displayName="$(string.MicrosoftOffice365Project2016)" explainText="$(string.MicrosoftOffice365Project2016_Help)" key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications">
       <parentCategory ref="Applications" />
-      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledList>
         <item key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications" valueName="MicrosoftOffice2016Office365Win32.Project">
           <value>
@@ -1034,7 +1061,7 @@
     </policy>
     <policy name="MicrosoftOffice365Publisher2016" class="Both" displayName="$(string.MicrosoftOffice365Publisher2016)" explainText="$(string.MicrosoftOffice365Publisher2016_Help)" key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications">
       <parentCategory ref="Applications" />
-      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledList>
         <item key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications" valueName="MicrosoftOffice2016Office365Win32.Publisher">
           <value>
@@ -1062,7 +1089,7 @@
     </policy>
     <policy name="MicrosoftOffice365Visio2016" class="Both" displayName="$(string.MicrosoftOffice365Visio2016)" explainText="$(string.MicrosoftOffice365Visio2016_Help)" key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications">
       <parentCategory ref="Applications" />
-      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledList>
         <item key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications" valueName="MicrosoftOffice2016Office365Win32.Visio">
           <value>
@@ -1090,7 +1117,7 @@
     </policy>
     <policy name="MicrosoftOffice365Word2016" class="Both" displayName="$(string.MicrosoftOffice365Word2016)" explainText="$(string.MicrosoftOffice365Word2016_Help)" key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications">
       <parentCategory ref="Applications" />
-      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledList>
         <item key="Software\Policies\Microsoft\UEV\Agent\Configuration\Applications" valueName="MicrosoftOffice2016Office365Win32.Word">
           <value>

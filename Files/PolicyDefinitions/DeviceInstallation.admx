@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!--  (c) 2006 Microsoft Corporation  -->
 <policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
   <policyNamespaces>
@@ -186,6 +186,16 @@
       <disabledValue>
         <decimal value="0" />
       </disabledValue>
+    </policy>
+    <policy name="DeviceInstall_Allow_Deny_Layered" class="Machine" displayName="$(string.DeviceInstall_Allow_Deny_Layered)" explainText="$(string.DeviceInstall_Allow_Deny_Layered_Help)" key="Software\Policies\Microsoft\Windows\DeviceInstall\Restrictions" valueName="AllowDenyLayered">
+        <parentCategory ref="DeviceInstall_Restrictions_Category" />
+        <supportedOn ref="windows:SUPPORTED_Windows_10_0_21H2" />
+        <enabledValue>
+            <decimal value="1" />
+        </enabledValue>
+        <disabledValue>
+            <decimal value="0" />
+        </disabledValue>
     </policy>
     <policy name="DeviceInstall_Policy_RebootTime" class="Machine" displayName="$(string.DeviceInstall_Policy_RebootTime)" presentation="$(presentation.DeviceInstall_Policy_RebootTime)" explainText="$(string.DeviceInstall_Policy_RebootTime_Help)" key="Software\Policies\Microsoft\Windows\DeviceInstall\Restrictions" valueName="ForceReboot">
       <parentCategory ref="DeviceInstall_Restrictions_Category" />

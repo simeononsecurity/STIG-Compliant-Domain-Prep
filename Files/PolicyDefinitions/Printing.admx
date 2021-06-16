@@ -1,4 +1,4 @@
-﻿<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
 
 <!--  (c) 2006 Microsoft Corporation  --><policyDefinitions
     xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions"
@@ -739,6 +739,76 @@
       <disabledValue>
         <decimal value="0"/>
       </disabledValue>
+    </policy>
+    <policy
+        class="Machine"
+        displayName="$(string.EnableDeviceControl)"
+        explainText="$(string.EnableDeviceControl_Help)"
+        key="Software\Policies\Microsoft\Windows NT\Printers"
+        name="EnableDeviceControl"
+        valueName="EnableDeviceControl"
+      >
+      <parentCategory ref="windows:Printers"/>
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0"/>
+      <enabledValue>
+        <decimal value="1"/>
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0"/>
+      </disabledValue>
+    </policy>
+    <policy
+        class="Machine"
+        displayName="$(string.ApprovedUsbPrintDevices)"
+        explainText="$(string.ApprovedUsbPrintDevices_Help)"
+        key="Software\Policies\Microsoft\Windows NT\Printers"
+        name="ApprovedUsbPrintDevices"
+        presentation="$(presentation.ApprovedUsbPrintDevices)"
+      >
+      <parentCategory ref="windows:Printers"/>
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0"/>
+      <elements>
+        <text
+            id="ApprovedUsbPrintDevices_List"
+            maxLength="1024"
+            valueName="ApprovedUsbPrintDevices"
+            />
+      </elements>
+    </policy>
+    <policy
+        class="User"
+        displayName="$(string.EnableDeviceControl)"
+        explainText="$(string.EnableDeviceControl_Help)"
+        key="Software\Policies\Microsoft\Windows NT\Printers"
+        name="EnableDeviceControlUser"
+        valueName="EnableDeviceControl"
+      >
+      <parentCategory ref="CplPrinters"/>
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0"/>
+      <enabledValue>
+        <decimal value="1"/>
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0"/>
+      </disabledValue>
+    </policy>
+    <policy
+        class="User"
+        displayName="$(string.ApprovedUsbPrintDevices)"
+        explainText="$(string.ApprovedUsbPrintDevices_Help)"
+        key="Software\Policies\Microsoft\Windows NT\Printers"
+        name="ApprovedUsbPrintDevicesUser"
+        presentation="$(presentation.ApprovedUsbPrintDevices)"
+      >
+      <parentCategory ref="CplPrinters"/>
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0"/>
+      <elements>
+        <text
+            id="ApprovedUsbPrintDevices_List"
+            maxLength="1024"
+            valueName="ApprovedUsbPrintDevices"
+            />
+      </elements>
     </policy>
   </policies>
 </policyDefinitions>

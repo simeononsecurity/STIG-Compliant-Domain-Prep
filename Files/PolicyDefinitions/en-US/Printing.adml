@@ -278,7 +278,7 @@ By default, Windows Ultimate, Professional and Home SKUs will continue to search
 
         If you disable this policy setting or do not configure it, then all printer extensions that have been installed will be allowed to run.</string>
       <string id="MXDWUseLegacyOutputFormatMSXPS">Change Microsoft XPS Document Writer (MXDW) default output format to the legacy Microsoft XPS format (*.xps)</string>
-      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">Microsoft XPS Document Writer (MXDW) generates OpenXPS (*.oxps) files by default in Windows 10, Windows 10 and Windows Server 2019.
+      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">Microsoft XPS Document Writer (MXDW) generates OpenXPS (*.oxps) files by default in Windows 10, Windows 10 and Windows Server 2022.
 
           If you enable this group policy setting, the default MXDW output format is the legacy Microsoft XPS (*.xps).
 
@@ -291,6 +291,24 @@ If you enable this setting, Windows will not manage the default printer.
 If you disable this setting, Windows will manage the default printer.
 
 If you do not configure this setting, default printer management will not change. </string>
+      <string id="EnableDeviceControl">Enable Device Control Printing Restrictions</string>
+      <string id="EnableDeviceControl_Help">
+          Determines whether Device Control Printing Restrictions are enforced for printing on this computer.
+
+          By default, there are no restrictions to printing based on connection type or printer Make/Model.
+
+          If you enable this setting, the computer will restrict printing to printer connections on the corporate network or approved USB-connected printers.
+
+          If you disable this setting or do not configure it, there are no restrictions to printing based on connection type or printer Make/Model.</string>
+        <string id="ApprovedUsbPrintDevices">List of Approved USB-connected print devices</string>
+        <string id="ApprovedUsbPrintDevices_Help">
+
+            This setting is a component of the Device Control Printing Restrictions. To use this setting, enable Device Control Printing by enabling the "Enable Device Control Printing Restrictions" setting.
+
+            When Device Control Printing is enabled, the system uses the specified list of vid/pid values to determine if the current USB connected printer is approved for local printing.
+
+            Type all the approved vid/pid combinations (separated by commas) that correspond to approved USB printer models. When a user tries to print to a USB printer queue the device vid/pid will be compared to the approved list.
+        </string>
     </stringTable>
     <presentationTable>
       <presentation id="CustomizedSupportUrl">
@@ -350,6 +368,13 @@ If you do not configure this setting, default printer management will not change
           <label>Default Active Directory path</label>
         </textBox>
         <text>example --&gt; LDAP://DC=Domain1,DC=MyCompany,DC=com.</text>
+      </presentation>
+      <presentation id="ApprovedUsbPrintDevices">
+        <text>Specify the list of approved USB-connected printer devices.</text>
+        <text>The list is a comma separated list of USB vid/pid values. Example: 0351/0872,135E/2179</text>
+        <textBox refId="ApprovedUsbPrintDevices_List">
+          <label>vid/pid</label>
+        </textBox>
       </presentation>
     </presentationTable>
   </resources>

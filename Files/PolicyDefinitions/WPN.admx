@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!--  (c) 2006 Microsoft Corporation  -->
 <policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
   <policyNamespaces>
@@ -12,6 +12,14 @@
     </category>
   </categories>
   <policies>
+    <policy name="WnsEndpoint_Policy" class="Machine" displayName="$(string.WnsEndpoint)" explainText="$(string.WnsEndpointExplain)" presentation="$(presentation.WnsEndpoint)" key="SOFTWARE\Policies\Microsoft\Windows\CurrentVersion\PushNotifications">
+      <parentCategory ref="NotificationsCategory" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+      <elements>
+        <text id="WnsEndpoint_FQDN" valueName="WnsEndpoint" />
+      </elements>
+    </policy>
+
     <policy name="NoTileNotification" class="User" displayName="$(string.NoTileNotification)" explainText="$(string.NoTileNotificationExplain)"  key="SOFTWARE\Policies\Microsoft\Windows\CurrentVersion\PushNotifications" valueName="NoTileApplicationNotification">
       <parentCategory ref="NotificationsCategory" />
       <supportedOn ref="windows:SUPPORTED_Windows8" />

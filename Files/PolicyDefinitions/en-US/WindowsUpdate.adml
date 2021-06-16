@@ -152,7 +152,25 @@ If the status is set to Not Configured, use of Automatic Updates is not specifie
 
         Note: The option to "Download files with no Url..." is only used if the "Alternate Download Server" is set.
 
-        Note: This policy is not supported on Windows RT. Setting this policy will not have any effect on Windows RT PCs.</string>
+        Note: This policy is not supported on Windows RT. Setting this policy will not have any effect on Windows RT PCs.
+
+        To ensure the highest level of security, Microsoft recommends securing WSUS with TLS/SSL protocol, thereby using HTTPS based intranet servers to keep systems secure. If a proxy is required, we recommend configuring system proxy. To ensure highest levels of security, additionally leverage WSUS TLS certificate pinning on all devices.
+
+        In order to keep clients inherently secure, we are no longer allowing intranet servers to leverage user proxy by default for detecting updates. If you need to leverage user proxy for detecting updates while using an intranet server despite the vulnerabilities it presents, you must configure the proxy behavior to "Allow user proxy to be used as a fallback if detection using system proxy fails".
+
+        Detection for updates against intranet servers will fail when user proxy is needed as a fallback and the alternate proxy behavior is not configured.</string>
+      <string id="OnlyUseSystemProxyForUpdateDetection">Only use system proxy for detecting updates (default)</string>
+      <string id="AllowUserProxyAsFallbackForUpdateDetection">Allow user proxy to be used as a fallback if detection using system proxy fails</string>
+      <string id="UpdateClassPolicySource_Title">Specify source service for specific classes of Windows Updates</string>
+      <string id="UpdateClassPolicySource_Help">When this policy is enabled, devices will receive Windows updates for the classes listed from the specified update source: either Windows Update or Windows Server Update Service. 
+
+        Note: To receive any updates from the Windows Server Update Service you must have properly configured an intranet Microsoft update service location via the “Specify intranet Microsoft update service location” policy.
+
+        If this policy is not configured or is disabled, the device will continue to detect updates per your other policy configurations. 
+
+        Note: If you are using “Do not allow deferral policies to cause scans against Windows Update” currently to ensure devices only scan against your specified server, we recommend configuring this policy instead or in addition to such.</string>
+      <string id="UpdateClassPolicySourceSelectionWU">Windows Update</string>
+      <string id="UpdateClassPolicySourceSelectionWSUS">Windows Server Update Services</string>
       <string id="DetectionFrequency_Help">Specifies the hours that Windows will use to determine how long to wait before checking for available updates. The exact wait time is a sum of the specific value and a random variant of 0-4 hours.
 
         If the status is set to Enabled, Windows will check for available updates at the specified interval.
@@ -311,46 +329,29 @@ Enabling this policy will disable that functionality, and may cause connection t
 Note: This policy applies only when this PC is configured to connect to an intranet update service using the "Specify intranet Microsoft update service location" policy.</string>
       <string id="DeferUpdateCat">Windows Update for Business</string>
       <string id="ManagePreviewBuilds_Title">Manage preview builds</string>
-      <string id="ManagePreviewBuilds_Help">Selecting "Disable preview builds" will prevent preview builds from installing on the device. This will prevent users from opting into the Windows Insider Program, through Settings -&gt; Update and Security.
+      <string id="ManagePreviewBuilds_Help">Enable this policy to manage which updates you receive prior to the update being released to the world.
 
-Selecting "Disable preview builds once next release is public" will prevent preview builds from installing once the next Windows release is public. This option is useful when your device is set up to install preview and you want to gracefully opt out the device for flighting. This option will provide preview builds until devices reaches the next public release.
+Dev Channel
+Ideal for highly technical users. Insiders in the Dev Channel will receive builds from our active development branch that is earliest in a development cycle. These builds are not matched to a specific Windows 10 release.
 
-Selecting "Enable preview builds" will enable preview builds installation on the device. Users can download and install Windows preview builds on their devices by opting-in through Settings -&gt; Update and Security -&gt; Windows Insider Program. Admins can also use other policies to manage flight settings on behalf of users when this value is set.</string>
-      <string id="DisablePreviewBuilds">Disable preview builds</string>
-      <string id="DisablePreviewBuildsAndOptOut">Disable preview builds once next release is public</string>
-      <string id="EnablePreviewBuilds">Enable preview builds</string>
-      <string id="PreviewBuildFastFeatureUpdates">Preview Build - Fast</string>
-      <string id="PreviewBuildSlowFeatureUpdates">Preview Build - Slow</string>
-      <string id="ReleasePreviewBranchFeatureUpdates">Release Preview</string>
-      <string id="SemiAnnualChannelFeatureUpdates">Semi-Annual Channel</string>
-      <string id="SemiAnnualChannelFeatureUpdatesDeprecated">Semi-Annual Channel for 1809 and below (Deprecated)</string>
-      <string id="SemiAnnualChannelFeatureUpdatesTargetedDeprecated">Semi-Annual Channel (Targeted) for 1809 and below (Deprecated)</string>
+Beta Channel
+Ideal for feature explorers who want to see upcoming Windows 10 features. Your feedback will be especially important here as it will help our engineers ensure key issues are fixed before a major release.
+
+Release Preview Channel (default)
+Insiders in the Release Preview Channel will have access to the upcoming release of Windows 10 prior to it being released to the world. These builds are supported by Microsoft. The Release Preview Channel is where we recommend companies preview and validate upcoming Windows 10 releases before broad deployment within their organization.
+
+Note: Preview Build enrollment requires a telemetry level setting of 2 or higher and your domain registered on insider.windows.com. For additional information on Preview Builds, see: https://aka.ms/wipforbiz
+
+If you disable or do not configure this policy, Windows Update will not offer you any pre-release updates and you will receive such content once released to the world. Disabling this policy will cause any devices currently on a pre-release build to opt out and stay on the latest Feature Update once released.</string>
+      <string id="DevChannel">Dev Channel</string>
+      <string id="BetaChannel">Beta Channel</string>
+      <string id="ReleasePreviewChannel">Release Preview Channel</string>
       <string id="DeferFeatureUpdates_Title">Select when Preview Builds and Feature Updates are received</string>
-      <string id="DeferFeatureUpdates_Help">Enable this policy to specify the level of Preview Build or Feature Updates to receive, and when.
+      <string id="DeferFeatureUpdates_Help">Enable this policy to specify when to receive Feature Updates.
 
-* Preview Build - Fast: Devices set to this level will be the first to receive new builds of Windows with features not yet available to the general public. Select Fast to participate in identifying and reporting issues to Microsoft, and provide suggestions on new functionality.
-* Preview Build - Slow: Devices set to this level receive new builds of Windows before they are available to the general public, but at a slower cadence than those set to Fast, and with changes and fixes identified in earlier builds.
-* Release Preview: Receive builds of Windows just before Microsoft releases them to the general public.
-* Semi-Annual Channel: Receive feature updates when they are released to the general public.
+Defer Updates | This enables devices to defer taking the next Feature Update available to your channel for up to 14 days for all the pre-release channels and up to 365 days for the Semi-Annual Channel. Or, if the device is updating from the Semi-Annual Channel, a version for the device to move to and/or stay on until the policy is updated or the device reaches end of service can be specified. Note: If you set both policies, the version specified will take precedence and the deferrals will not be in effect. Please see the Windows Release Information page for OS version information.
 
-The following Windows Readiness levels have been deprecated and are only applicable to 1809 and below:
-* Semi-Annual Channel (Targeted) for 1809 and below: Feature updates have been released.
-* Semi-Annual Channel for 1809 and below: Feature updates have been declared Semi-Annual Channel, a designation indicating the release is ready for broad deployment.
-Please review the release information page at http://aka.ms/ReleaseInformationPage for the Semi-Annual Channel (Targeted) and Semi-Annual Channel release dates.
-
-When selecting a Preview Build:
-    - You can defer receiving Preview Builds for up to 14 days.
-    - To prevent Preview Builds from being received on their scheduled time, you can temporarily pause them. The pause will remain in effect for 35 days from the start time provided.
-    - To resume receiving Feature Updates which are paused, clear the start date field.
-
-Preview Build enrollment requires a telemetry level setting of 2 or higher and your domain registered on insider.windows.com. For additional information on Preview Builds, see: https://aka.ms/wipforbiz
-
-When Selecting Semi-Annual Channel:
-    - You can defer receiving Feature Updates for up to 365 days.
-    - To prevent Feature Updates from being received on their scheduled time, you can temporarily pause them. The pause will remain in effect for 35 days from the start time provided.
-    - To resume receiving Feature Updates which are paused, clear the start date field.
-
-If you disable or do not configure this policy, Windows Update will not alter its behavior.</string>
+Pause Updates | To prevent Feature Updates from being received on their scheduled time, you can temporarily pause Feature Updates. The pause will remain in effect for 35 days from the specified start date or until the field is cleared (Quality Updates will still be offered).</string>
       <string id="DeferQualityUpdates_Title">Select when Quality Updates are received</string>
       <string id="DeferQualityUpdates_Help">Enable this policy to specify when to receive quality updates.
 
@@ -365,6 +366,10 @@ If you disable or do not configure this policy, Windows Update will not alter it
       <string id="TargetReleaseVersion_Help">Enable this policy to specify a Feature Update version to be requested in subsequent scans.
 
 Enter version as listed in the Windows Release Information page aka.ms/ReleaseInformationPage</string>
+      <string id="DisableWUfBSafeguards">Disable safeguards for Feature Updates</string>
+      <string id="DisableWUfBSafeguards_Help">
+          Enable this setting when Feature Updates should be deployed to devices without blocking on any safeguard holds. Safeguard holds are known compatibility issues that block the upgrade from being deployed to affected devices until the issue is resolved. Enabling this policy can allow an organization to deploy the Feature Update to devices for testing, or to deploy the Feature Update without blocking on safeguard holds.
+      </string>
       <string id="ExcludeWUDriversInQualityUpdate_Title">Do not include drivers with Windows Updates</string>
       <string id="ExcludeWUDriversInQualityUpdate_Help">Enable this policy to not include drivers with Windows quality updates.
 
@@ -602,11 +607,13 @@ Important: if you choose not to get update notifications and also define other G
       <string id="ExcludingRebootWarnings">1 – Disable all notifications, excluding restart warnings</string>
       <string id="IncludingRebootWarnings">2 – Disable all notifications, including restart warnings</string>
       <string id="ComplianceDeadline_Title">Specify deadlines for automatic updates and restarts</string>
-      <string id="ComplianceDeadline_Help">This policy lets you specify the number of days that a user has before quality and feature updates are installed on their devices automatically, and a grace period after which required restarts occur automatically.  Updates and restarts will occur regardless of active hours, and the user will not be able to reschedule.
+      <string id="ComplianceDeadline_Help">This policy lets you specify the number of days before quality and feature updates are installed on devices automatically, and a grace period after which required restarts occur automatically.
 
-Deadlines for feature updates and quality updates can be up to 30 days.  The auto-restart grace period can be from 0 to 7 days.
+Set deadlines for feature updates and quality updates to meet your compliance goals. Updates will be downloaded and installed as soon as they are offered and automatic restarts will be attempted outside of active hours. Once the deadline has passed, restarts will occur regardless of active hours, and users will not be able to reschedule. If the deadline is set to 0 days, the update will be installed immediately upon offering, but might not finish within the day due to device availability and network connectivity.
 
-You can also disable auto-restarts until the end of the auto-restart grace period.
+Set a grace period for feature updates and quality updates to guarantee users a minimum time to manage their restarts once updates are installed. Users will be able to schedule restarts during the grace period and Windows can still automatically restart outside of active hours if users choose not to schedule restarts. The grace period might not take effect if users already have more than the number of days set as grace period to manage their restart, based on deadline configurations.
+
+You can set the device to delay restarting until both the deadline and grace period have expired.
 
 If you disable or do not configure this policy, devices will get updates and will restart according to the default schedule.
 
@@ -614,7 +621,7 @@ This policy will override the following policies:
 1.  Specify deadline before auto restart for update installation
 2.  Specify Engaged restart transition and notification schedule for updates
 3.  Always automatically restart at the scheduled time
-4.  No auto-restart with logged on users for scheduled automatic updates installation
+4.  Configure Automatic Updates
       </string>
       <string id="ComplianceDeadlineDay0">0</string>
       <string id="ComplianceDeadlineDay1">1</string>
@@ -678,21 +685,28 @@ This policy will override the following policies:
         <textBox refId="CorpWUContentHost_Name">
           <label>Set the alternate download server:</label>
         </textBox>
-        <text>(example: http://IntranetUpd01)</text>
+        <text>(example: https://IntranetUpd01)</text>
         <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">Download files with no Url in the metadata if alternate download server is set.</checkBox>
+        <checkBox refId="CorpWUDoNotEnforceEnterpriseTLSCertPinningForUpdateDetection" defaultChecked="false">Do not enforce TLS certificate pinning for Windows Update client for detecting updates.</checkBox>
+        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Select the proxy behavior for Windows Update client for detecting updates:</dropdownList>
+      </presentation>
+      <presentation id="UpdateClassPolicySource_Title">
+        <text>Specify source service for the following classes of Windows updates:</text>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForFeatureUpdates" noSort="true" defaultItem="0">Feature Updates</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForQualityUpdates" noSort="true" defaultItem="0">Quality Updates</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForDriverUpdates" noSort="true" defaultItem="0">Driver Updates</dropdownList>
+        <dropdownList refId="CorpWUSetPolicyDrivenUpdateSourceForOtherUpdates" noSort="true" defaultItem="0">Other Updates</dropdownList>
       </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Check for updates at the following</text>
         <decimalTextBox refId="DetectionFrequency_Hour2" defaultValue="22">interval (hours): </decimalTextBox>
       </presentation>
       <presentation id="RebootRelaunchTimeout_Title">
-        <text>Wait the following period before</text>
-        <text>prompting again with a scheduled</text>
+        <text>Wait the following period before prompting again with a scheduled</text>
         <decimalTextBox refId="RebootRelaunchTimeout_Minutes3" defaultValue="10">restart (minutes): </decimalTextBox>
       </presentation>
       <presentation id="RebootWarningTimeout_Title">
-        <text>Wait the following period before</text>
-        <text>proceeding with a scheduled</text>
+        <text>Wait the following period before proceeding with a scheduled</text>
         <decimalTextBox refId="RebootWarningTimeout_Minutes3" defaultValue="5">restart (minutes): </decimalTextBox>
       </presentation>
       <presentation id="RescheduleWaitTime_Title">
@@ -704,27 +718,20 @@ This policy will override the following policies:
           <label>Target group name for this computer</label>
         </textBox>
       </presentation>
-      <presentation id="IdleShutdownTimerDuration_Title">
-        <text>Wait the following period before</text>
-        <text>shutting down the service when</text>
-        <decimalTextBox refId="IdleShutdownTimerDuration_Minutes" defaultValue="10">idle (minutes): </decimalTextBox>
-      </presentation>
       <presentation id="AlwaysAutoRebootAtScheduledTime_Presentation">
-        <text>The restart timer will give users</text>
-        <text>this much time to save their</text>
+        <text>The restart timer will give users this much time to save their</text>
         <decimalTextBox refId="AlwaysAutoRebootAtScheduledTime_Minutes" defaultValue="15">work (minutes): </decimalTextBox>
       </presentation>
       <presentation id="TargetReleaseVersion">
         <textBox refId="TargetReleaseVersionId">
           <label>Target Version for Feature Updates</label>
         </textBox>
-      </presentation>      
+      </presentation>
       <presentation id="ManagePreviewBuilds">
-        <dropdownList refId="ManagePreviewBuildsId" noSort="true" defaultItem="2">Set the behavior for receiving preview builds:</dropdownList>
+        <dropdownList refId="BranchReadinessLevelId" noSort="true" defaultItem="0">Select the Windows readiness level for the updates you want to receive:</dropdownList>
       </presentation>
       <presentation id="DeferFeatureUpdates">
-        <dropdownList refId="BranchReadinessLevelId" noSort="true" defaultItem="0">Select the Windows readiness level for the updates you want to receive:</dropdownList>
-        <decimalTextBox refId="DeferFeatureUpdatesPeriodId" defaultValue="0">After a Preview Build or Feature Update is released, defer receiving it for this many days:</decimalTextBox>
+       <decimalTextBox refId="DeferFeatureUpdatesPeriodId" defaultValue="0">How many days after a Feature Update is released would you like to defer the update before it is offered to the device?</decimalTextBox>
         <textBox refId="PauseFeatureUpdatesStartId">
           <label>Pause Preview Builds or Feature Updates starting:</label>
         </textBox>
@@ -784,12 +791,13 @@ This policy will override the following policies:
         <dropdownList refId="UpdateNotificationLevel" noSort="true" defaultItem="0">Specify the update notifications display options :</dropdownList>
       </presentation>
       <presentation id="ComplianceDeadline_Title">
-        <text>Specify the number of days (up to 30 days) that a user has before updates run automatically, regardless of active hours, with no ability to reschedule.</text>
-        <dropdownList refId="ConfigureDeadlineForQualityUpdates" noSort="true" defaultItem="5">Quality updates (days):</dropdownList>
-        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="5">Feature updates (days):</dropdownList>
+        <text>Quality Updates</text>
+        <dropdownList refId="ConfigureDeadlineForQualityUpdates" noSort="true" defaultItem="7">Deadline (days):</dropdownList>
+        <dropdownList refId="ConfigureDeadlineGracePeriod" noSort="true" defaultItem="2">Grace period (days):</dropdownList>
         <text></text>
-        <text>Specify an auto-restart grace period (0 to 7 days), from the time a restart is required until the device automatically restarts.  Devices will restart regardless of active hours, with no ability to reschedule.</text>
-        <dropdownList refId="ConfigureDeadlineGracePeriod" noSort="true" defaultItem="2">Grace period (days)</dropdownList>
+        <text>Feature Updates</text>
+        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="7">Deadline (days):</dropdownList>
+        <dropdownList refId="ConfigureDeadlineGracePeriodForFeatureUpdates" noSort="true" defaultItem="2">Grace Period (days):</dropdownList>
         <text></text>
         <checkBox refId="ConfigureDeadlineNoAutoReboot" defaultChecked="false">Don't auto-restart until end of grace period</checkBox>
       </presentation>

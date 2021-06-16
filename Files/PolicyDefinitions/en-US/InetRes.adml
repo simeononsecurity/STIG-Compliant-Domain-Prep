@@ -298,7 +298,6 @@ If you disable this policy setting for an application or process in the list, a 
 If you do not configure this policy setting, current values of the URL action for an application or process in the list prevail.</string>
       <string id="FavImportExport">Disable Import/Export Settings wizard</string>
       <string id="GeolocationDisable">Turn off browser geolocation</string>
-      <string id="DisableFlashInIE">Turn off Adobe Flash in Internet Explorer and prevent applications from using Internet Explorer technology to instantiate Flash objects</string>
       <string id="File_NoBrowserClose">File menu: Disable closing the browser and Explorer windows</string>
       <string id="File_NoBrowserSaveAs">File menu: Disable Save As... menu option</string>
       <string id="File_NoBrowserSaveWebComplete">File menu: Disable Save As Web Page Complete</string>
@@ -726,13 +725,6 @@ If you enable this policy setting, browser geolocation support is turned off.
 If you disable this policy setting, browser geolocation support is turned on.
 
 If you do not configure this policy setting, browser geolocation support can be turned on or off in Internet Options on the Privacy tab.</string>
-      <string id="IE_ExplainDisableFlashInIE">This policy setting turns off Adobe Flash in Internet Explorer and prevents applications from using Internet Explorer technology to instantiate Flash objects.
-
-If you enable this policy setting, Flash is turned off for Internet Explorer, and applications cannot use Internet Explorer technology to instantiate Flash objects. In the Manage Add-ons dialog box, the Flash status will be 'Disabled', and users cannot enable Flash. If you enable this policy setting, Internet Explorer will ignore settings made for Adobe Flash through the "Add-on List" and "Deny all add-ons unless specifically allowed in the Add-on List" policy settings.
-
-If you disable, or do not configure this policy setting, Flash is turned on for Internet Explorer, and applications can use Internet Explorer technology to instantiate Flash objects. Users can enable or disable Flash in the Manage Add-ons dialog box.
-
-Note that Adobe Flash can still be disabled through the "Add-on List" and "Deny all add-ons unless specifically allowed in the Add-on List" policy settings, even if this policy setting is disabled, or not configured. However, if Adobe Flash is disabled through the "Add-on List" and "Deny all add-ons unless specifically allowed in the Add-on List" policy settings and not through this policy setting, all applications that use Internet Explorer technology to instantiate Flash object can still do so. For more information, see "Group Policy Settings in Internet Explorer 10" in the Internet Explorer TechNet library.</string>
       <string id="IE_ExplainFile_NoBrowserClose">Prevents users from closing Microsoft Internet Explorer and File Explorer.
 
 If you enable this policy, the Close command on the File menu will appear dimmed.
@@ -3903,7 +3895,7 @@ If you disable or do not configure this policy setting, users can pin sites.</st
 If you turn this setting on, users can see and use the Enterprise Mode option from the Tools menu. If you turn this setting on, but don't specify a report location, Enterprise Mode will still be available to your users, but you won't get any reports.
 
 If you disable or don't configure this policy setting, the menu option won't appear and users won't be able to run websites in Enterprise Mode.</string>
-      <string id="RestrictInternetExplorer">Send all sites not included in the Enterprise Mode Site List to Microsoft Edge.</string>
+      <string id="RestrictInternetExplorer">Send all sites not included in the Enterprise Mode Site List to Microsoft Edge</string>
       <string id="IE_ExplainRestrictInternetExplorer">This setting lets you decide whether to open all sites not included in the Enterprise Mode Site List in Microsoft Edge. If you use this setting, you must also turn on the Administrative Templates\Windows Components\Internet Explorer\Use the Enterprise Mode IE website list policy setting and you must include at least one site in the Enterprise Mode Site List.
 
 Enabling this setting automatically opens all sites not included in the Enterprise Mode Site List in Microsoft Edge.
@@ -3958,6 +3950,41 @@ Related policies:
 - Send all sites not included in the Enterprise Mode Site List to Microsoft Edge (‘RestrictIE’)
 
 For more info about how to use this policy together with other related policies to create the optimal configuration for your organization, see https://go.microsoft.com/fwlink/?linkid=2094210.</string>
+      <string id="AllowSaveTargetAsInIEMode">Allow "Save Target As" in Internet Explorer mode</string>
+      <string id="IE_ExplainAllowSaveTargetAsInIEMode">This policy setting allows admins to enable "Save Target As" context menu in Internet Explorer mode.
+
+If you enable this policy, "Save Target As" will show up in the Internet Explorer mode context menu and work the same as Internet Explorer.
+
+If you disable or do not configure this policy setting, "Save Target As" will not show up in the Internet Explorer mode context menu.
+
+For more information, see https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="EnableExtendedIEModeHotkeys">Enable extended hot keys in Internet Explorer mode</string>
+      <string id="IE_ExplainEnableExtendedIEModeHotkeys">This policy setting lets admins enable extended Microsoft Edge Internet Explorer mode hotkeys, such as "Ctrl+S" to have "Save as" functionality.
+
+If you enable this policy, extended hotkey functionality is enabled in Internet Explorer mode and work the same as Internet Explorer.
+
+If you disable, or don't configure this policy, extended hotkeys will not work in Internet Explorer mode.
+
+For more information, see https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="DisableInternetExplorerApp">Disable Internet Explorer 11 as a standalone browser</string>
+      <string id="IE_ExplainDisableInternetExplorerApp">This policy lets you restrict launching of Internet Explorer as a standalone browser.
+
+If you enable this policy, it:
+- Prevents Internet Explorer 11 from launching as a standalone browser.
+- Restricts Internet Explorer's usage to Microsoft Edge's native 'Internet Explorer mode'.
+- Redirects all attempts at launching Internet Explorer 11 to Microsoft Edge Stable Channel browser.
+- Overrides any other policies that redirect to Internet Explorer 11.
+
+If you disable, or don’t configure this policy, all sites are opened using the current active browser settings. Note: Microsoft Edge Stable Channel must be installed for this policy to take effect.</string>
+      <string id="NotifyDisableIEOptions_Never">Never</string>
+      <string id="NotifyDisableIEOptions_Always">Always</string>
+      <string id="NotifyDisableIEOptions_OncePerUser">Once per user</string>
+      <string id="JScriptReplacement">Replace JScript by loading JScript9Legacy in place of JScript via MSHTML/WebOC.</string>
+      <string id="IE_ExplainJScriptReplacement">This policy setting specifies whether JScript or JScript9Legacy is loaded for MSHTML/WebOC based invocations.
+      
+If you enable this policy setting, JScript9Legacy will be loaded in situations where JScript is instantiated.
+
+If you disable this policy or do not configure it, then JScript will be utilized.</string>
       <string id="VerMgmtDisable">Turn off blocking of outdated ActiveX controls for Internet Explorer</string>
       <string id="IE_ExplainVerMgmtDisable">This policy setting determines whether Internet Explorer blocks specific outdated ActiveX controls. Outdated ActiveX controls are never blocked in the Intranet Zone.
 
@@ -4833,6 +4860,9 @@ For more information, see "Out-of-date ActiveX control blocking" in the Internet
         <dropdownList refId="NeedEdgeBrowser" noSort="true" defaultItem="0">First choice</dropdownList>
         <dropdownList refId="NeedEdgeBrowser2" noSort="true" defaultItem="0">Second choice</dropdownList>
         <dropdownList refId="NeedEdgeBrowser3" noSort="true" defaultItem="0">Third choice</dropdownList>
+      </presentation>
+      <presentation id="NotifyDisableIEOptions">
+        <dropdownList refId="NotifyDisableIEOptions" noSort="true" defaultItem="0">Notify that Internet Explorer 11 browser is disabled</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

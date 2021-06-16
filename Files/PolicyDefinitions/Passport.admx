@@ -171,6 +171,17 @@
           <decimal value="0" />
         </disabledValue>
     </policy>
+    <!-- UseCloudTrustForOnPremAuth Policy -->
+    <policy name="WHFB_UseCloudTrustForOnPremAuth" class="Machine" displayName="$(string.WHFB_UseCloudTrustForOnPremAuth)" explainText="$(string.WHFB_UseCloudTrustForOnPremAuthExplain)" key="SOFTWARE\Policies\Microsoft\PassportForWork" valueName="UseCloudTrustForOnPremAuth">
+        <parentCategory ref="MSPassportForWorkCategory" />
+        <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOSERVER" />
+        <enabledValue>
+          <decimal value="1" />
+        </enabledValue>
+        <disabledValue>
+          <decimal value="0" />
+        </disabledValue>
+    </policy>
     <!-- Device unlock policy -->
     <policy name="MSPassport_UseDeviceUnlock" class="Machine" displayName="$(string.MSPassport_UseDeviceUnlock)" explainText="$(string.MSPassport_UseDeviceUnlock_Explain)"
             presentation="$(presentation.MSPassport_UseDeviceUnlock_Control)"

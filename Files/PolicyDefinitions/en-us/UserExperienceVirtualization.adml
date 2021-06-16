@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
   <displayName>Microsoft User Experience Virtualization policy settings</displayName>
   <description>Group policy settings for Microsoft User Experience Virtualization</description>
@@ -193,13 +193,13 @@ By default, the user settings of Microsoft Word 2016 synchronize between compute
 If you enable this policy setting, Microsoft Word 2016 user settings continue to synchronize.
 If you disable this policy setting, Microsoft Word 2016 user settings are excluded from the synchronization settings.
 If you do not configure this policy setting, any defined values will be deleted.
-      </string>
+      </string>  
       <string id="MicrosoftOffice2016CommonBackup">Common 2016 backup only</string>
       <string id="MicrosoftOffice2016CommonBackup_Help">
 This policy setting configures the backup of certain user settings which are common between the Microsoft Office Suite 2016 applications.
 Microsoft Office Suite 2016 has user settings which are common between applications and are backed up instead of synchronizing between computers. Use the policy setting to suppress the backup of specific common Microsoft Office Suite 2016 applications.
 If you enable this policy setting, certain user settings which are common between the Microsoft Office Suite 2016 applications will continue to be backed up.
-If you disable this policy setting, certain user settings which are common between the Microsoft Office Suite 2016 applications will not be backed up.
+If you disable this policy setting, certain user settings which are common between the Microsoft Office Suite 2016 applications will not be backed up. 
 If you do not configure this policy setting, any defined values will be deleted.
       </string>
       <string id="MicrosoftOffice2016AccessBackup">Access 2016 backup only</string>
@@ -281,7 +281,7 @@ Microsoft Word 2016 has user settings that are backed up instead of synchronizin
 If you enable this policy setting, certain user settings of Microsoft Word 2016 will continue to be backed up.
 If you disable this policy setting, certain user settings of Microsoft Word 2016 will not be backed up.
 If you do not configure this policy setting, any defined values will be deleted.
-      </string>
+      </string>  
       <string id="MicrosoftOffice365Common2016">Microsoft Office 365 Common 2016</string>
       <string id="MicrosoftOffice365Common2016_Help">
 This policy setting configures the synchronization of user settings which are common between the Microsoft Office Suite 2016 applications.
@@ -910,12 +910,7 @@ If you disable this policy setting, all Windows Settings are excluded from the s
 If you do not configure this policy setting, any defined values will be deleted.
       </string>
       <string id="SyncEnabled">Use User Experience Virtualization (UE-V)</string>
-      <string id="SyncEnabled_Help">This policy setting allows you to enable or disable User Experience Virtualization (UE-V).
-By default, UE-V synchronizes user settings between computers. Use this policy setting to prevent the synchronization of user settings. 
-If you enable this policy setting, UE-V synchronizes user settings.
-If you disable this policy setting, UE-V does not synchronize user settings.
-If you do not configure this policy setting, any defined values will be deleted.
-      </string>
+      <string id="SyncEnabled_Help">This policy setting allows you to enable or disable User Experience Virtualization (UE-V). Only applies to Windows 10 or earlier.</string>
       <string id="ConfigureSyncMethod">Configure Sync Method</string>
       <string id="ConfigureSyncMethod_Help">This policy setting configures the sync provider used by User Experience Virtualization (UE-V) to sync settings between users’ computers. With Sync Method set to ”SyncProvider,” the UE-V Agent uses a built-in sync provider to keep user settings synchronized between the computer and the settings storage location. This is the default value. You can disable the sync provider on computers that never go offline and are always connected to the settings storage location.
 When SyncMethod is set to “None,” the UE-V Agent uses no sync provider. Settings are written directly to the settings storage location rather than being cached to sync later. 
@@ -1012,7 +1007,8 @@ If you do not configure this policy, no UE-V rollback state is copied to the set
       <string id="SyncMethodSyncProvider">SyncProvider</string>
       <string id="SyncMethodNone">None</string>
       <string id="SyncMethodExternal">External</string>
-
+      <string id="EnableUEV">Enable UEV</string>
+      <string id="EnableUEV_Help">This policy setting allows you to enable or disable User Experience Virtualization (UE-V) feature. Reboot is needed for enable to take effect. With Auto-register inbox templates enabled, the UE-V inbox templates such as Office 2016 will be automatically registered when the UE-V Service is enabled. If this option is changed, it will only take effect when UE-V service is re-enabled.</string>
     </stringTable>
     <presentationTable>
       <presentation id="RepositoryTimeout">
@@ -1053,7 +1049,7 @@ If you do not configure this policy, no UE-V rollback state is copied to the set
       </presentation>
       <presentation id="Win8AppsList">
         <text>Type the synchronized Windows app package family names in the text box type.</text>
-        <multiTextBox refId="Win8AppsList" />
+        <multiTextBox refId="Win8AppsList"/>
       </presentation>
       <presentation id="SyncProviderName">
         <text>In the text box type a universal naming convention (UNC) path, such as \\servername\sharename\syncprovider.dll.</text>
@@ -1070,6 +1066,9 @@ If you do not configure this policy, no UE-V rollback state is copied to the set
         <textBox refId="ContactITURL">
           <label>Contact IT URL</label>
         </textBox>
+      </presentation>
+      <presentation id="EnableUEV">
+        <checkBox refId="RegisterInboxTemplates" defaultChecked="true">Auto-register inbox templates</checkBox>
       </presentation>
     </presentationTable>
   </resources>
