@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<policyDefinitionResources revision="2.7" schemaVersion="1.0" >
+<policyDefinitionResources revision="2.11" schemaVersion="1.0" >
   <displayName/>
   <description/>
   <resources >
@@ -37,6 +37,9 @@
       <string id="SUPPORTED_FF84">Firefox 84 o posterior, Firefox 78.6 ESR o posterior</string>
       <string id="SUPPORTED_FF85">Firefox 85 o posterior, Firefox 78.7 ESR o posterior</string>
       <string id="SUPPORTED_FF86">Firefox 86 o posterior, Firefox 78.8 ESR o posterior</string>
+      <string id="SUPPORTED_FF88">Firefox 88 o posterior, Firefox 78.10 ESR o posterior</string>
+      <string id="SUPPORTED_FF89">Firefox 89 o posterior, Firefox 78.11 ESR o posterior</string>
+      <string id="SUPPORTED_FF90">Firefox 90 o posterior, Firefox 78.12 ESR o posterior</string>
       <string id="firefox">Firefox</string>
       <string id="Permissions_group">Permisos</string>
       <string id="Camera_group">Cámara</string>
@@ -632,6 +635,12 @@ Si esta política está deshabilitada o no está configurada, la página de inic
       <string id="Homepage">Página de inicio</string>
       <string id="PreviousSession">Sesión anterior</string>
       <string id="HomepageLocked">Homepage (Locked)</string>
+      <string id="Homepage_ShowHomeButton">Show Home button on toolbar</string>
+      <string id="Homepage_ShowHomeButton_Explain">If this policy is enabled, the home button will appear on the toolbar by default.
+
+If this policy is disabled, the home button will not appear on the toolbar by default.
+
+If this policy is not configured, Firefox will determine whether or not the home button appears on the toolbar by default.</string>
       <string id="PasswordManagerEnabled">Administrador de contraseñas</string>
       <string id="PasswordManagerEnabled_Explain">Si esta política está deshabilitada, el administrador de contraseñas no estará disponible a través de las preferencias.
 
@@ -764,6 +773,10 @@ Si esta política está habilitada o no está configurada, se recomendarán las 
       <string id="UserMessaging_UrlbarInterventions_Explain">Si esta política está deshabilitada, no se recomendarán acciones en función de lo que el usuario escriba en la barra de URL.
 
 Si esta política está habilitada o no está configurada, se recomendarán acciones en función de lo que el usuario escriba en la barra de URL.</string>
+      <string id="UserMessaging_SkipOnboarding">Skip Onboarding</string>
+      <string id="UserMessaging_SkipOnboarding_Explain">If this policy is enabled, onboarding messages will not be shown on the new tab page.
+
+If this policy is disabled or not configured, onboarding messages will be shown on the new tab page.</string>
       <string id="DisabledCiphers_TLS_DHE_RSA_WITH_AES_128_CBC_SHA">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</string>
       <string id="DisabledCiphers_TLS_DHE_RSA_WITH_AES_256_CBC_SHA">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</string>
       <string id="DisabledCiphers_TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</string>
@@ -830,6 +843,10 @@ For detailed information on creating the policy, see https://github.com/mozilla/
 If this policy is disabled or not configured, managed bookmarks are not added.
 
 For detailed information on creating the policy, see https://github.com/mozilla/policy-templates/blob/master/README.md#managedbookmarks.</string>
+      <string id="AllowedDomainsForApps">Define domains allowed to access Google Workspace</string>
+      <string id="AllowedDomainsForApps_Explain">If this policy is enabled, users can only access Google Workspace for the specified domains (separated by a comma). To allow access to Gmail, you can add consumer_accounts.
+
+If this policy is disabled or not configured, users can access any account on Google Workspace as well as Gmail.</string>
       <string id="Preferences_Boolean_Explain">Si esta política está habilitada, la preferencia se bloquea en true. Si esta política está deshabilitada, la preferencia está bloqueada en false.
 
 Para una descripción de la preferencia, visita:

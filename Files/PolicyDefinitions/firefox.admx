@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<policyDefinitions revision="2.7" schemaVersion="1.0">
+<policyDefinitions revision="2.11" schemaVersion="1.0">
   <policyNamespaces>
     <target prefix="firefox" namespace="Mozilla.Policies.Firefox"/>
     <using prefix="Mozilla" namespace="Mozilla.Policies"/>
   </policyNamespaces>
-  <resources minRequiredRevision="2.7"/>
+  <resources minRequiredRevision="2.11"/>
   <supportedOn>
     <definitions>
       <definition name="UNSUPPORTED" displayName="$(string.UNSUPPORTED)"/>
@@ -39,6 +39,9 @@
       <definition name="SUPPORTED_FF84" displayName="$(string.SUPPORTED_FF84)"/>
       <definition name="SUPPORTED_FF85" displayName="$(string.SUPPORTED_FF85)"/>
       <definition name="SUPPORTED_FF86" displayName="$(string.SUPPORTED_FF86)"/>
+      <definition name="SUPPORTED_FF88" displayName="$(string.SUPPORTED_FF88)"/>
+      <definition name="SUPPORTED_FF89" displayName="$(string.SUPPORTED_FF89)"/>
+      <definition name="SUPPORTED_FF90" displayName="$(string.SUPPORTED_FF90)"/>
     </definitions>
   </supportedOn>
   <categories>
@@ -942,7 +945,7 @@
       <parentCategory ref="Extensions"/>
       <supportedOn ref="SUPPORTED_FF69"/>
       <elements>
-        <multiText id="ExtensionSettings" valueName="ExtensionSettings"  maxLength="2048"/>
+        <multiText id="ExtensionSettings" valueName="ExtensionSettings"  maxLength="16384"/>
       </elements>
     </policy>
     <policy name="NoDefaultBookmarks" class="Both" displayName="$(string.NoDefaultBookmarks)" explainText="$(string.NoDefaultBookmarks_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="NoDefaultBookmarks">
@@ -1336,6 +1339,16 @@
           </item>
         </enum>
       </elements>
+    </policy>
+    <policy name="Homepage_ShowHomeButton" class="Both" displayName="$(string.Homepage_ShowHomeButton)" explainText="$(string.Homepage_ShowHomeButton_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="ShowHomeButton">
+      <parentCategory ref="Homepage"/>
+      <supportedOn ref="SUPPORTED_FF88"/>
+      <enabledValue>
+        <decimal value="1"/>
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0"/>
+      </disabledValue>
     </policy>
     <policy name="Bookmark01" class="Both" displayName="$(string.Bookmark01)" explainText="$(string.Bookmark_Explain)" key="Software\Policies\Mozilla\Firefox\Bookmarks\1" presentation="$(presentation.Bookmark)" >
       <parentCategory ref="Bookmarks" />
@@ -3519,6 +3532,16 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
+    <policy name="UserMessaging_SkipOnboarding" class="Both" displayName="$(string.UserMessaging_SkipOnboarding)" explainText="$(string.UserMessaging_SkipOnboarding_Explain)" key="Software\Policies\Mozilla\Firefox\UserMessaging" valueName="SkipOnboarding">
+      <parentCategory ref="UserMessaging"/>
+      <supportedOn ref="SUPPORTED_FF88"/>
+      <enabledValue>
+        <decimal value="1"/>
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0"/>
+      </disabledValue>
+    </policy>
     <policy name="DisabledCiphers_TLS_DHE_RSA_WITH_AES_128_CBC_SHA" class="Both" displayName="$(string.DisabledCiphers_TLS_DHE_RSA_WITH_AES_128_CBC_SHA)" explainText="$(string.DisabledCiphers_Explain)" key="Software\Policies\Mozilla\Firefox\DisabledCiphers" valueName="TLS_DHE_RSA_WITH_AES_128_CBC_SHA">
       <parentCategory ref="DisabledCiphers"/>
       <supportedOn ref="SUPPORTED_FF76_ONLY"/>
@@ -3699,25 +3722,32 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
-    <policy name="Handlers" class="Both" displayName="$(string.Handlers)"  key="Software\Policies\Mozilla\Firefox" explainText="$(string.Handlers_Explain)"  presentation="$(presentation.Handlers)">">
+    <policy name="Handlers" class="Both" displayName="$(string.Handlers)" key="Software\Policies\Mozilla\Firefox" explainText="$(string.Handlers_Explain)" presentation="$(presentation.Handlers)">
       <parentCategory ref="firefox"/>
       <supportedOn ref="SUPPORTED_FF78"/>
       <elements>
-        <multiText id="Handlers" valueName="Handlers"  maxLength="2048"/>
+        <multiText id="Handlers" valueName="Handlers"  maxLength="16384"/>
       </elements>
     </policy>
-    <policy name="Preferences" class="Both" displayName="$(string.Preferences)"  key="Software\Policies\Mozilla\Firefox" explainText="$(string.Preferences_Explain)"  presentation="$(presentation.JSON)">">
+    <policy name="Preferences" class="Both" displayName="$(string.Preferences)"  key="Software\Policies\Mozilla\Firefox" explainText="$(string.Preferences_Explain)" presentation="$(presentation.JSON)">
       <parentCategory ref="firefox"/>
       <supportedOn ref="SUPPORTED_FF81"/>
       <elements>
-        <multiText id="JSON" valueName="Preferences"  maxLength="2048"/>
+        <multiText id="JSON" valueName="Preferences"  maxLength="16384"/>
       </elements>
     </policy>
-    <policy name="ManagedBookmarks" class="Both" displayName="$(string.ManagedBookmarks)"  key="Software\Policies\Mozilla\Firefox" explainText="$(string.ManagedBookmarks_Explain)"  presentation="$(presentation.JSON)">">
+    <policy name="ManagedBookmarks" class="Both" displayName="$(string.ManagedBookmarks)" key="Software\Policies\Mozilla\Firefox" explainText="$(string.ManagedBookmarks_Explain)" presentation="$(presentation.JSON)">
       <parentCategory ref="firefox"/>
       <supportedOn ref="SUPPORTED_FF83"/>
       <elements>
         <multiText id="JSON" valueName="ManagedBookmarks"  maxLength="16384"/>
+      </elements>
+    </policy>
+    <policy name="AllowedDomainsForApps" class="Both" displayName="$(string.AllowedDomainsForApps)" key="Software\Policies\Mozilla\Firefox" explainText="$(string.AllowedDomainsForApps_Explain)" presentation="$(presentation.String)">
+      <parentCategory ref="firefox"/>
+      <supportedOn ref="SUPPORTED_FF89"/>
+      <elements>
+        <text id="String" valueName="AllowedDomainsForApps"/>
       </elements>
     </policy>
   </policies>
