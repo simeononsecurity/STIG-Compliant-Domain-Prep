@@ -14,10 +14,11 @@
       <string id="WU_SUPPORTED_Windows7_To_Win2kSP3_Or_XPSP1">Windows 7, Windows Server 2008 R2, Windows Vista, Windows Server 2003, Windows XP SP2, Windows XP SP1 , Windows 2000 SP4, Windows 2000 SP3</string>
       <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_NoWinRT">At least Windows XP Professional Service Pack 1 or Windows 2000 Service Pack 3, excluding Windows RT</string>
       <string id="WU_SUPPORTED_WindowsXPSP1_NoWinRT">At least Windows Server 2003 operating systems or Windows XP Professional with SP1, excluding Windows RT</string>
-      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">At least Windows XP Professional Service Pack 1 or At least Windows 2000 Service Pack 3 through Windows 8.1 or Windows Server 2012 R2 with most current service pack</string>
-      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">At least Windows Vista through Windows 8.1 or Windows Server 2012 R2 with most current service pack</string>
+      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">At least Windows XP Professional Service Pack 1 or At least Windows 2000 Service Pack 3 through Windows 8.1 or Windows Server 2012 R2 with most current service pack. Not supported on Windows 10 and above.</string>
+      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">At least Windows Vista through Windows 8.1 or Windows Server 2012 R2 with most current service pack. Not supported on Windows 10 and above.</string>
       <string id="WU_SUPPORTED_XPSP1_or_Win2kSP3_AUOption7_SUPPORTED_Server2016">Windows XP Professional Service Pack 1 or At least Windows 2000 Service Pack 3
 Option 7 only supported on servers of at least Windows Server 2016 edition​</string>
+      <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">Windows Server 2016 through Windows Server 2022, or Windows 10​</string>
       <string id="AUDontShowUasHelp">This policy setting allows you to manage whether the 'Install Updates and Shut Down' option is displayed in the Shut Down Windows dialog box.
 
 If you enable this policy setting, 'Install Updates and Shut Down' will not appear as a choice in the Shut Down Windows dialog box, even if updates are available for installation when the user selects the Shut Down option in the Start menu.
@@ -312,6 +313,12 @@ Note: This policy applies only when the intranet Microsoft update service this c
 Note: This policy is not supported on Windows RT. Setting this policy will not have any effect on Windows RT PCs.</string>
       <string id="TargetGroup_Title">Enable client-side targeting</string>
       <string id="WindowsUpdateCat">Windows Update</string>
+      <!--Category sub-folders-->
+      <string id="WindowsUpdateOffering">Manage updates offered from Windows Update</string>
+      <string id="WSUSOffering">Manage updates offered from Windows Server Update Service</string>
+      <string id="WindowsUpdateExperience">Manage end user experience</string>
+      <string id="PreSV">Legacy Policies</string>
+
       <string id="TrustedPublisher_Title">Allow signed updates from an intranet Microsoft update service location </string>
       <string id="TrustedPublisher_Help">This policy setting allows you to manage whether Automatic Updates accepts updates signed by entities other than Microsoft when the update is found on an intranet Microsoft update service location.
 
@@ -327,7 +334,6 @@ Note: This policy is not supported on Windows RT. Setting this policy will not h
 Enabling this policy will disable that functionality, and may cause connection to public services such as the Windows Store to stop working.
 
 Note: This policy applies only when this PC is configured to connect to an intranet update service using the "Specify intranet Microsoft update service location" policy.</string>
-      <string id="DeferUpdateCat">Windows Update for Business</string>
       <string id="ManagePreviewBuilds_Title">Manage preview builds</string>
       <string id="ManagePreviewBuilds_Help">Enable this policy to manage which updates you receive prior to the update being released to the world.
 
@@ -363,9 +369,15 @@ To resume receiving Quality Updates which are paused, clear the start date field
 
 If you disable or do not configure this policy, Windows Update will not alter its behavior.</string>
       <string id="TargetReleaseVersion_Title">Select the target Feature Update version</string>
-      <string id="TargetReleaseVersion_Help">Enable this policy to specify a Feature Update version to be requested in subsequent scans.
+      <string id="TargetReleaseVersion_Help">Enter the product and version as listed on the Windows Update target version page:
 
-Enter version as listed in the Windows Release Information page aka.ms/ReleaseInformationPage</string>
+                        aka.ms/WindowsTargetVersioninfo
+
+The device will request that Windows Update product and version in subsequent scans.
+
+Entering a target product and clicking OK or Apply means I accept the Microsoft Software License Terms for it found at aka.ms/WindowsTargetVersioninfo. If an organization is licensing the software, I am authorized to bind the organization.
+
+If you enter an invalid value, you will remain on your current version until you correct the values to a supported product and version.</string>
       <string id="DisableWUfBSafeguards">Disable safeguards for Feature Updates</string>
       <string id="DisableWUfBSafeguards_Help">
           Enable this setting when Feature Updates should be deployed to devices without blocking on any safeguard holds. Safeguard holds are known compatibility issues that block the upgrade from being deployed to affected devices until the issue is resolved. Enabling this policy can allow an organization to deploy the Feature Update to devices for testing, or to deploy the Feature Update without blocking on safeguard holds.
@@ -723,6 +735,9 @@ This policy will override the following policies:
         <decimalTextBox refId="AlwaysAutoRebootAtScheduledTime_Minutes" defaultValue="15">work (minutes): </decimalTextBox>
       </presentation>
       <presentation id="TargetReleaseVersion">
+        <textBox refId="ProductVersionId">
+          <label>Which Windows product version would you like to receive feature updates for? e.g., Windows 10</label>
+        </textBox>
         <textBox refId="TargetReleaseVersionId">
           <label>Target Version for Feature Updates</label>
         </textBox>
