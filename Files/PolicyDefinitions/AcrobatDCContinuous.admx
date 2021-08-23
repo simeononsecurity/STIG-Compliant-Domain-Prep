@@ -130,10 +130,10 @@
 			<parentCategory ref="Cat_Preferences" />
 			<supportedOn ref="SupportedOn_1" />
 			<enabledValue >
-				<decimal value="1" />
+				<decimal value="0" />
 			</enabledValue>
 			<disabledValue >
-				<decimal value="0" />
+				<decimal value="1" />
 			</disabledValue>
 		</policy>
 			<policy name="Privilege_folder_location" class="Machine" displayName="$(string.Privilege_folder_location)" explainText="$(string.Explain_Privilege_folder_location)" key="SOFTWARE\Policies\Adobe\Acrobat Reader\DC\FeatureLockdown" valueName="bDisableTrustedFolders">

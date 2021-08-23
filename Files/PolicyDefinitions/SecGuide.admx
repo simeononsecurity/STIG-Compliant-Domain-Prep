@@ -26,7 +26,6 @@
     <policies>
 
         <!-- Configure SMBv1 -->
-
         <policy name="Pol_SecGuide_0001_SMBv1_Server"
                 class="Machine"
                 displayName="$(string.Pol_SecGuide_SMBv1Server)"
@@ -98,7 +97,7 @@
             presentation="$(presentation.Pol_SecGuide_NetbtNodeTypeCfg)"
                 >
             <parentCategory ref="Cat_SecGuide" />
-            <supportedOn ref="windows:SUPPORTED_Windows7" />
+            <supportedOn ref="SUPPORTED_Windows_10_0_RS4" />
             <elements>
                 <enum id="Pol_SecGuide_SecGuide_NetbtNodeTypeCfg" key="SYSTEM\CurrentControlSet\Services\NetBT\Parameters" valueName="NodeType">
                     <item displayName="$(string.NetBtNodeTypeB)">
@@ -137,7 +136,7 @@
                 presentation="$(presentation.Pol_SecGuide_LdapEnforceChannelBinding)"
                 >
             <parentCategory ref="Cat_SecGuide" />
-            <supportedOn ref="SUPPORTED_WindowsServer2008AndNewer" />
+            <supportedOn ref="SUPPORTED_Windows_10_0_RS4" />
             <elements>
                 <enum id="Pol_SecGuide_LdapEnforceChannelBinding" key="System\CurrentControlSet\Services\NTDS\Parameters" valueName="LdapEnforceChannelBinding">
                     <item displayName="$(string.LdapEnforce_Always)">
@@ -196,7 +195,6 @@
         </policy>
 
         <!-- Credential theft protections -->
-
         <policy name="Pol_SecGuide_0201_LATFP"
                 class="Machine"
                 displayName="$(string.Pol_SecGuide_LATFP)"
@@ -503,5 +501,28 @@
             </elements>
         </policy>
 
-    </policies>
+        <!-- Legacy JScript Block for Internet Explorer -->
+        <policy name="Pol_SecGuide_Legacy_JScript"
+            class="Machine"
+            displayName="$(string.Pol_SecGuide_Legacy_JScript)"
+            explainText="$(string.Pol_SecGuide_Legacy_JScript_Help)"
+            key="software\policies\microsoft\internet explorer\main\featurecontrol\FEATURE_RESTRICT_LEGACY_JSCRIPT_PER_SECURITY_ZONE"
+            presentation="$(presentation.Pol_SecGuide_Legacy_JScript)"
+                >
+            <parentCategory ref="Cat_SecGuide" />
+            <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS4" />
+                  <elements>
+					<decimal id="POL_SG_excel" valueName="excel.exe" maxValue="99999" storeAsText="false" />
+					<decimal id="POL_SG_mspub" valueName="mspub.exe" maxValue="99999" storeAsText="false" />
+					<decimal id="POL_SG_powerpnt" valueName="powerpnt.exe" maxValue="99999" storeAsText="false" />
+					<decimal id="POL_SG_onenote" valueName="onenote.exe" maxValue="99999" storeAsText="false" />
+					<decimal id="POL_SG_visio" valueName="visio.exe" maxValue="99999" storeAsText="false" />
+					<decimal id="POL_SG_winproj" valueName="winproj.exe" maxValue="99999" storeAsText="false" />
+					<decimal id="POL_SG_winword" valueName="winword.exe" maxValue="99999" storeAsText="false" />
+					<decimal id="POL_SG_outlook" valueName="outlook.exe" maxValue="99999" storeAsText="false" />
+					<decimal id="POL_SG_msaccess" valueName="msaccess.exe" maxValue="99999" storeAsText="false" />
+				 </elements>
+        </policy>
+		
+	</policies>
 </policyDefinitions>
