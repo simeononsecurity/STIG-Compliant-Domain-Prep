@@ -27,7 +27,8 @@ Foreach ($gpocategory in Get-ChildItem $gposdir) {
         $gpopath = "$gposdir\$gpocategory\$gpo"
         Write-Output "Importing $gpo"
         New-GPO -Name "$gpo" -Comment "Created by simeononsecurity.ch" 
-        Import-GPO -BackupGpoName "$gpo" -Path "$gpopath" -TargetName "$gpo" -MigrationTable '.\Files\Migration Table\importtable.migtable' -CreateIfNeeded 
+        Import-GPO -BackupGpoName "$gpo" -Path "$gpopath" -TargetName "$gpo" -CreateIfNeeded 
+        #Import-GPO -BackupGpoName "$gpo" -Path "$gpopath" -TargetName "$gpo" -MigrationTable ".\Files\Migration Table\importtable.migtable" -CreateIfNeeded 
     }
 }
 
