@@ -22,8 +22,8 @@
 
 ## STIGS/SRGs Applied:
 - [Adobe Acrobat Pro DC Continuous V2R1](https://public.cyber.mil/stigs/downloads/)
-- [DoD Adobe Acrobat Reader DC Continuous V2R1](https://public.cyber.mil/stigs/downloads/)
-- [Firefox V4R29](https://public.cyber.mil/stigs/downloads/)
+- [Adobe Acrobat Reader DC Continuous V2R1](https://public.cyber.mil/stigs/downloads/)
+- [Firefox V5R2](https://public.cyber.mil/stigs/downloads/) - **[Requires Separate Script](https://github.com/simeononsecurity/FireFox-STIG-Script)**
 - [Google Chrome V2R4](https://public.cyber.mil/stigs/downloads/)
 - [Internet Explorer 11 V1R19](https://public.cyber.mil/stigs/downloads/)
 - [Microsoft Edge V1R2](https://public.cyber.mil/stigs/downloads/)
@@ -32,9 +32,8 @@
 - [Microsoft Office 2016 V2R1](https://public.cyber.mil/stigs/downloads/)
 - [Microsoft Office 2019/Office 365 Pro Plus V2R3](https://public.cyber.mil/stigs/downloads/)
 - [Microsoft OneDrive STIG V2R1](https://public.cyber.mil/stigs/downloads/)
-- [Oracle JRE 8 V1R5](https://public.cyber.mil/stigs/downloads/)
-- [Windows 10 V2R2](https://public.cyber.mil/stigs/downloads/)
-- [Windows Defender Antivirus V2R2](https://public.cyber.mil/stigs/downloads/)
+- [Oracle JRE 8 V1R5](https://public.cyber.mil/stigs/downloads/) - **[Requires Separate Script](https://github.com/simeononsecurity/Oracle-JRE-8-STIG-Script)**
+- [Windows Defender Antivirus V2R2](https://public.cyber.mil/stigs/downloads/) - **[Requires Separate Script](https://github.com/simeononsecurity/Windows-Defender-STIG-Script)**
 - [Windows Firewall V1R7](https://public.cyber.mil/stigs/downloads/)
 - [Windows Server 2012(R2) V3R2](https://public.cyber.mil/stigs/downloads/)
 - [Windows Server 2016 V2R2](https://public.cyber.mil/stigs/downloads/)
