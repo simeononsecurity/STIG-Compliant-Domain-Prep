@@ -7,18 +7,18 @@
     <stringTable>
       <string id="AllowTelemetry">Permitir telemetría</string>
       <string id="AllowTelemetry_0">0: seguridad [solo empresas]</string>
-      <string id="AllowTelemetry_1">1: básico</string>
+      <string id="AllowTelemetry_1">1 - Requerido</string>
       <string id="AllowTelemetry_2">2: mejorado</string>
-      <string id="AllowTelemetry_3">3: completo</string>
-      <string id="AllowTelemetry_Explain">Al establecer esta configuración en Windows 10, los usuarios finales no podrán optar a un nivel de recopilación de datos de telemetría más alto que el que has establecido para tu organización. Esta limitación solo se aplica al sistema operativo Windows y a las aplicaciones incluidas con Windows, pero no a las aplicaciones de terceros que se ejecutan en Windows 10.
+      <string id="AllowTelemetry_3">3 - Opcional</string>
+      <string id="AllowTelemetry_Explain">Al establecer esta configuración en Windows 10, los usuarios finales no podrán optar a un nivel de recopilación de datos de telemetría más alto que el establecido para la organización. Esta limitación solo se aplica al sistema operativo Windows y a las aplicaciones incluidas con Windows, pero no a las aplicaciones de terceros que se ejecutan en Windows 10.
 
 Los datos de diagnóstico se clasifican en cuatro niveles, de la forma siguiente:
-  - 0 (Seguridad). Información necesaria para ayudar a proteger Windows, Windows Server y System Center, incluidos los datos sobre la configuración del componente Experiencias del usuario y telemetría asociadas, la Herramienta de eliminación de software malintencionado y Microsoft Defender.
-  - 1 (Básico). Información básica del dispositivo, incluidos: datos relacionados con la calidad y con la compatibilidad de las aplicaciones, y datos del nivel de seguridad.
-  - 2 (Mejorado). Información adicional, como por ejemplo: cómo se usa Windows, Windows Server, System Center y otras aplicaciones, cómo funcionan, datos avanzados de confiabilidad y los datos de los niveles básico y de seguridad.
-  - 3 (Completo). Todos los datos necesarios para identificar y ayudar a solucionar los problemas, además de los datos de los niveles de seguridad, básico y mejorado.
+  - 0 (Seguridad). Información necesaria para ayudar a proteger Windows, Windows Server y System Center, incluidos los datos sobre la configuración del componente Experiencias del usuario y telemetría asociadas, la Herramienta de eliminación de software malintencionado y Windows Defender.
+  - 1 (Requerido). Información básica del dispositivo, incluidos datos relacionados con la calidad y con la compatibilidad de las aplicaciones, y datos del nivel de seguridad.
+  - 2 (Mejorado). Información adicional, incluyendo cómo se usan Windows, Windows Server, System Center y otras aplicaciones, cómo funcionan, datos avanzados de confiabilidad y los datos de los niveles requerido y de seguridad.
+  - 3 (Opcional). Todos los datos necesarios para identificar y ayudar a solucionar  problemas, además de los datos de los niveles de seguridad, requerido y mejorado.
 
-Las opciones disponibles para los usuarios en la aplicación Configuración se modifican con esta configuración y, aunque no se establezca, pueden verse afectadas por otras configuraciones de la directiva de grupo. Ten en cuenta que, si esta directiva está configurada para permitir la configuración de telemetría de seguridad o básica, los usuarios finales no podrán seleccionar un nivel superior.
+Las opciones disponibles para los usuarios en la aplicación Configuración se modifican con esta configuración y, aunque no se establezca, pueden verse afectadas por otras configuraciones de la directiva de grupo. Tenga en cuenta que, si esta directiva está configurada para permitir la configuración de telemetría de seguridad o básica, los usuarios finales no podrán seleccionar un nivel superior.
       </string>
 
       <string id="TelemetryProxy">Configurar Experiencias del usuario y telemetría asociadas</string>
@@ -43,18 +43,18 @@ Si deshabilitas o no configuras esta configuración de directiva, Microsoft no p
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics">Limitar los datos de diagnóstico de nivel Mejorado al valor mínimo requerido por Windows Analytics</string>
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_1">Habilitar la recopilación de análisis de Windows</string>
       <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_2">Deshabilitar la recopilación de análisis de Windows</string>
-      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">Esta configuración de directiva, en combinación con la configuración de directiva Permitir telemetría, hacen posible que las organizaciones envíen a Microsoft un conjunto específico de datos de diagnóstico para disponer de información detallada de TI a través de los servicios de Windows Analytics. Al configurar este ajuste, no evitas que las personas cambien su configuración de telemetría; sin embargo, les impides elegir un nivel superior al que estableciste para la organización.
+      <string id="LimitEnhancedDiagnosticDataWindowsAnalytics_Explain">Esta configuración de directiva, en combinación con la configuración de directiva Permitir telemetría, permite a las organizaciones enviar a Microsoft un conjunto específico de datos de diagnóstico para disponer de información detallada de TI a través de los servicios de Windows Analytics.
 
-Para habilitar este comportamiento, debes completar dos pasos:
+Para habilitar este comportamiento, debe completar dos pasos:
 
     1. Habilitar esta configuración de directiva
-    2. Establecer Permitir telemetría en el nivel 2 (Mejorado)
+    2. Establecer Permitir telemetría en el nivel 2 (mejorado)
 
-Si estableces ambas configuraciones de directiva en conjunto, se enviarán a Microsoft los datos de diagnóstico del nivel Básico, además de cualquier evento adicional que se requiera para Windows Analytics. Los eventos adicionales se documentan aquí: https://go.Microsoft.com/fwlink/?linked=847594.
+Esta configuración no tiene efecto en dispositivos configurados para enviar datos de diagnóstico de seguridad o requeridos a Microsoft. 
 
-Si habilitas los datos de diagnóstico de nivel Mejorado en la configuración de directiva Permitir telemetría, pero no defines esta configuración de directiva, se enviarán a Microsoft los eventos requeridos para Windows Analytics, además de cualquier dato adicional de telemetría correspondiente al nivel Mejorado. Este ajuste no tiene efecto alguno en los equipos configurados para enviar a Microsoft datos de diagnóstico de los niveles Completo, Básico o Seguridad.
+Cuando estas directivas están configuradas, la recopilación de datos de diagnóstico se limitará a datos de diagnóstico requeridos y a los eventos requeridos por Análisis de escritorio.  Estos eventos se pueden ver en https://go.microsoft.com/fwlink/?linkid=2116020.
 
-Si deshabilitas o no estableces esta configuración de directiva, los datos de diagnóstico enviados a Microsoft se determinan mediante la configuración de directiva Permitir telemetría.
+Si deshabilita o no configura esta configuración de directiva, el nivel de datos de diagnóstico enviados a Microsoft es determinado por la configuración de directiva Permitir telemetría si está configurada (p. ej. si habilita datos de diagnóstico mejorados mediante la configuración de directiva Permitir telemetría, pero no configura esta configuración de directiva, enviará los eventos requeridos por Windows Analytics, más cualquier dato adicional de diagnóstico del nivel mejorado a Microsoft).
       </string>
 
       <string id="AllowDeviceNameInDiagnosticData">Permitir que el nombre del dispositivo se envíe junto a los datos de diagnóstico de Windows</string>
@@ -104,6 +104,33 @@ Para establecer un límite en el nivel de datos de diagnóstico que tu organizac
           Esta directiva establece el punto de conexión de carga para los datos de diagnóstico de este dispositivo como parte del programa Análisis de escritorio.
           Si la organización participa en el programa y se le ha indicado que configure un punto de conexión de carga personalizado, use esta opción para definir dicho punto de conexión.
           Microsoft proporcionará el valor de esta configuración como parte del proceso de incorporación del programa. 
+      </string>
+
+      <string id="AllowUpdateComplianceProcessing">Permitir el procesamiento de comprobación de actualizaciones</string>
+      <string id="AllowUpdateComplianceProcessing_Explain">
+          Ofrece a los administradores de TI la opción de permitir que Update Compliance procese los datos de diagnóstico de este dispositivo. 
+            La lista siguiente muestra los valores compatibles:  
+              0 (predeterminado): Update Compliance no procesa los datos de diagnóstico. 
+              16: Update Compliance puede procesar los datos de diagnóstico. 
+            Si deshabilita o no configura esta opción de directiva, Update Compliance no procesará los datos de diagnóstico de este dispositivo.
+      </string>
+
+      <string id="AllowDesktopAnalyticsProcessing">Permitir el procesamiento de Análisis de escritorio</string>
+      <string id="AllowDesktopAnalyticsProcessing_Explain">
+          Ofrece a los administradores de TI la opción de permitir que Desktop Analytics procese los datos de diagnóstico de este dispositivo. 
+            La lista siguiente muestra los valores admitidos:  
+              0 (predeterminado): Desktop Analytics no procesa los datos de diagnóstico.
+              2: Desktop Analytics puede procesar los datos de diagnóstico. 
+            Si deshabilita o no configura esta opción de directiva, Desktop Analytics no procesará los datos de diagnóstico de este dispositivo. 
+      </string>
+
+      <string id="AllowWUfBCloudProcessing">Permitir procesamiento de nube de WUfB</string>
+      <string id="AllowWUfBCloudProcessing_Explain">
+          Permite a los administradores de ti habilitar los datos de diagnóstico de este dispositivo para que se procesen mediante Windows Update para la nube de la empresa. 
+            La siguiente lista muestra los valores admitidos:  
+              0 (valor predeterminado): Windows Update for Business Cloud no procesa los datos de diagnóstico. 
+              8: se permite que los datos de diagnóstico se procesen mediante Windows Update para la nube de empresa. 
+          Si deshabilitas o no estableces esta configuración de Directiva, los datos de diagnóstico de este dispositivo no se procesarán con Windows Update para la nube de empresa. 
       </string>
 
       <string id="AllowCommercialDataPipeline">Permitir canalización de datos comerciales</string>

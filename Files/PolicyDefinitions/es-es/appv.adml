@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <!--  (c) 2013 Microsoft Corporation  -->
 <policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
   <displayName></displayName>
@@ -20,6 +20,8 @@
       <string id="Integration">Integración</string>
       <string id="CEIP">CEIP</string>
       <string id="Virtualization">Virtualización</string>
+      <string id="PackageManagement">PackageManagement</string>
+      <string id="PowerManagement">PowerManagement</string>
       <string id="True">Verdadero</string>
       <string id="False">Falso</string>    
       <string id="Hour">Hora</string>
@@ -81,32 +83,38 @@
       
       Dirección URL del servidor de publicación: muestra la dirección URL del servidor de publicación.
       
-      Actualización de publicación global: habilita la actualización de publicación global (booleana).
+      Actualización de publicaciones globales: habilita la actualización de publicaciones globales (booleana).
       
-      Actualización de publicación global al iniciar sesión: desencadena una actualización de publicación global al iniciarse la sesión (booleana).
+      Actualización de publicaciones globales al iniciar sesión: desencadena una operación de actualización de publicaciones globales al iniciar sesión (booleana)
       
-      Intervalo de actualización de publicación global: especifica el intervalo de actualización de publicación usando GlobalRefreshIntervalUnit. Para deshabilitar la actualización de paquetes, seleccione 0.
+      Intervalo de actualización de publicaciones globales: especifica el intervalo de actualización de publicaciones mediante el elemento GlobalRefreshIntervalUnit. Para deshabilitar la actualización del paquete, selecciona 0.
       
-      Unidad de intervalo de actualización de publicación global: especifica la unidad usada para el intervalo (Hora 0-23, Día 0-31).
+      Unidad de intervalo de actualización de publicaciones globales: especifica la unidad de intervalo (hora: 0-23; día: 0-31).
       
-      Actualización de publicación de usuario: habilita la actualización de publicación de usuario (booleana).
+      Actualización de publicaciones de usuario: habilita la actualización de publicaciones de usuario (booleana).
       
-      Actualización de publicación de usuario al iniciar sesión: desencadena una actualización de publicación de usuario al iniciarse la sesión (booleana).
+      Actualización de publicaciones de usuario al iniciar sesión: desencadena una operación de actualización de publicaciones de usuario al iniciar sesión (booleana).
       
-      Intervalo de actualización de publicación de usuario: especifica el intervalo de actualización de publicación de usuario usando UserRefreshIntervalUnit. Para deshabilitar la actualización de paquetes, seleccione 0.
+      Intervalo de actualización de publicaciones de usuario: especifica el intervalo de actualización de publicaciones mediante el elemento UserRefreshIntervalUnit. Para deshabilitar la actualización del paquete, selecciona 0.
       
-      Unidad de intervalo de actualización de publicación de usuario: especifica la unidad usada para el intervalo (Hora 0-23, Día 0-31).
+      Unidad de intervalo de actualización de publicaciones de usuario: especifica la unidad de intervalo (hora: 0-23; día: 0-31).
       </string>
       <string id="CEIP_Enable">Programa para la mejora de la experiencia del usuario (CEIP)</string>
       <string id="CEIP_Enable_Help">El programa recopila información sobre el hardware informático y sobre la forma en la que usa Microsoft Application Virtualization sin causar interrupciones. La información recopilada ayudará a Microsoft a identificar qué características de Microsoft Application Virtualization deben mejorarse; Microsoft no utilizará esta información para identificarlo ni para ponerse en contacto con usted. 
 
 Para conocer más detalles, lea sobre el programa en línea en  http://go.microsoft.com/fwlink/?LinkID=184686.</string>
-      <string id="Virtualization_JITVWhitelist">Lista blanca de procesos de componentes virtuales</string>
-      <string id="Virtualization_JITVWhitelist_Help">Especifica una lista de rutas de procesos (puede contener caracteres comodines) que son candidatos para utilizar componentes virtuales (extensiones de shell, objetos auxiliares de explorador, etc.). Solo los procesos cuya ruta completa coincida con uno de estos elementos puede usar componentes virtuales.</string>
+      <string id="Virtualization_JITVAllowList">Lista de permitidos para procesos de componentes virtuales</string>
+      <string id="Virtualization_JITVAllowList_Help">Especifica una lista de rutas de procesos (puede contener caracteres comodines) que son candidatos para utilizar componentes virtuales (extensiones de shell, objetos auxiliares de explorador, etc.). Solo los procesos cuya ruta completa coincida con uno de estos elementos puede usar componentes virtuales.</string>
       <string id="Virtualization_JITVEnable">Habilitar virtualización dinámica</string>
       <string id="Virtualization_JITVEnable_Help">Habilita la virtualización dinámica de extensiones de shell, objetos de ayuda del explorador y controles ActiveX admitidos.</string>
+      <string id="PackageManagement_AutoCleanupEnable">Habilitar la limpieza automática de los paquetes de appv sin usar</string>
+      <string id="PackageManagement_AutoCleanupEnable_Help">Habilita la limpieza automática de paquetes de appv que se agregaron después del lanzamiento de aniversario de Windows 10.</string>
+      <string id="PowerManagement_SyncOnBatteriesEnable">Habilitar la sincronización en segundo plano al servidor cuando se use la energía de la batería</string>
+      <string id="PowerManagement_SyncOnBatteriesEnable_Help">Habilita la sincronización en segundo plano al servidor cuando se usa la energía de la batería.</string>
       <string id="Publishing_Enable_Refresh_UX">Habilitar experiencia de usuario de actualización de publicación</string>
       <string id="Publishing_Enable_Refresh_UX_Help">Habilita la visualización de una experiencia de usuario para el usuario cuando se realiza una actualización de publicación en el cliente.</string>
+      <string id="EnableAppV">Habilitar el cliente de App-V.</string>
+      <string id="EnableAppV_Help">Esta configuración de directiva permite habilitar o deshabilitar la característica Microsoft Application Virtualization (App-V). Es necesario reiniciar el equipo para que la deshabilitación surta efecto.</string>
     </stringTable>
     
     <presentationTable>
@@ -149,10 +157,10 @@ Para conocer más detalles, lea sobre el programa en línea en  http://go.micros
         <textBox refId="Reporting_Server_URL_Prompt">
           <label xml:space="preserve">Dirección URL del servidor de informes                                  </label>
         </textBox>
-        <decimalTextBox refId="Start_Time" defaultValue="3" spinStep="1" xml:space="preserve">Hora de informe               </decimalTextBox>
-        <decimalTextBox refId="Random_Delay" defaultValue="30" spinStep="10" xml:space="preserve">Retrasar el informe por una cantidad aleatoria de minutos              </decimalTextBox>
-        <decimalTextBox refId="Interval" defaultValue="1" spinStep="1" xml:space="preserve">Repetir informe cada (días)              </decimalTextBox>
-        <decimalTextBox refId="Data_Cache_Limit" defaultValue="20" spinStep="10" xml:space="preserve">Límite de memoria caché de datos               </decimalTextBox>
+        <decimalTextBox refId="Start_Time" defaultValue="3" spinStep="1" xml:space="preserve">Hora para la creación de informes               </decimalTextBox>
+        <decimalTextBox refId="Random_Delay" defaultValue="30" spinStep="10" xml:space="preserve">Retrasar la creación de informes establecida según minutos aleatorios              </decimalTextBox>
+        <decimalTextBox refId="Interval" defaultValue="1" spinStep="1" xml:space="preserve">Repetir la creación de informes cada (día)              </decimalTextBox>
+        <decimalTextBox refId="Data_Cache_Limit" defaultValue="20" spinStep="10" xml:space="preserve">Límite de caché de datos               </decimalTextBox>
         <decimalTextBox refId="Data_Block_Size" defaultValue="65536" spinStep="10" xml:space="preserve">Tamaño del bloque de datos               </decimalTextBox>
       </presentation>
 
@@ -165,14 +173,14 @@ Para conocer más detalles, lea sobre el programa en línea en  http://go.micros
         <textBox refId="Publishing_Server_URL_Prompt">
           <label xml:space="preserve">Dirección URL del servidor de publicación                                  </label>
         </textBox>
-        <dropdownList refId="Global_Publishing_Refresh_Options" noSort="true" defaultItem="0" xml:space="preserve">Actualización de publicación global                            </dropdownList>
-        <dropdownList refId="Global_Refresh_OnLogon_Options" noSort="true" defaultItem="0" xml:space="preserve">Actualización de publicación global al iniciar sesión           </dropdownList>
-        <decimalTextBox refId="Global_Refresh_Interval_Prompt" defaultValue="0" spinStep="3" xml:space="preserve">Intervalo de actualización de publicación global               </decimalTextBox>
-        <dropdownList refId="Global_Refresh_Unit_Options" noSort="true" defaultItem="1" xml:space="preserve">Unidad de intervalo de actualización de publicación global       </dropdownList>
-        <dropdownList refId="User_Publishing_Refresh_Options" noSort="true" defaultItem="1" xml:space="preserve">Actualización de publicación de usuario                               </dropdownList>
-        <dropdownList refId="User_Refresh_OnLogon_Options" noSort="true" defaultItem="1" xml:space="preserve">Actualización de publicación de usuario al iniciar sesión              </dropdownList>
-        <decimalTextBox refId="User_Refresh_Interval_Prompt" defaultValue="1" spinStep="3" xml:space="preserve">Intervalo de actualización de publicación de usuario                  </decimalTextBox>
-        <dropdownList refId="User_Refresh_Unit_Options" noSort="true" defaultItem="1" xml:space="preserve">Unidad de intervalo de actualización de publicación de usuario          </dropdownList>
+        <dropdownList refId="Global_Publishing_Refresh_Options" noSort="true" defaultItem="0" xml:space="preserve">Actualización de publicaciones globales                            </dropdownList>
+        <dropdownList refId="Global_Refresh_OnLogon_Options" noSort="true" defaultItem="0" xml:space="preserve">Actualización de publicaciones globales al iniciar sesión           </dropdownList>
+        <decimalTextBox refId="Global_Refresh_Interval_Prompt" defaultValue="0" spinStep="3" xml:space="preserve">Intervalo de actualización de publicaciones globales               </decimalTextBox>
+        <dropdownList refId="Global_Refresh_Unit_Options" noSort="true" defaultItem="1" xml:space="preserve">Unidad de intervalo de actualización de publicaciones globales       </dropdownList>
+        <dropdownList refId="User_Publishing_Refresh_Options" noSort="true" defaultItem="1" xml:space="preserve">Actualización de publicaciones de usuario                               </dropdownList>
+        <dropdownList refId="User_Refresh_OnLogon_Options" noSort="true" defaultItem="1" xml:space="preserve">Actualización de publicaciones de usuario al iniciar sesión              </dropdownList>
+        <decimalTextBox refId="User_Refresh_Interval_Prompt" defaultValue="1" spinStep="3" xml:space="preserve">Intervalo de actualización de publicaciones de usuario                  </decimalTextBox>
+        <dropdownList refId="User_Refresh_Unit_Options" noSort="true" defaultItem="1" xml:space="preserve">Unidad de intervalo de actualización de publicaciones de usuario          </dropdownList>
       </presentation>
       <!--  Publishing Server 2 -->      
       <presentation id="Publishing_Server2">
@@ -183,14 +191,14 @@ Para conocer más detalles, lea sobre el programa en línea en  http://go.micros
         <textBox refId="Publishing_Server_URL_Prompt">
           <label xml:space="preserve">Dirección URL del servidor de publicación                                  </label>
         </textBox>
-        <dropdownList refId="Global_Publishing_Refresh_Options" noSort="true" defaultItem="0" xml:space="preserve">Actualización de publicación global                            </dropdownList>
-        <dropdownList refId="Global_Refresh_OnLogon_Options" noSort="true" defaultItem="0" xml:space="preserve">Actualización de publicación global al iniciar sesión           </dropdownList>
-        <decimalTextBox refId="Global_Refresh_Interval_Prompt" defaultValue="0" spinStep="3" xml:space="preserve">Intervalo de actualización de publicación global               </decimalTextBox>
-        <dropdownList refId="Global_Refresh_Unit_Options" noSort="true" defaultItem="1" xml:space="preserve">Unidad de intervalo de actualización de publicación global       </dropdownList>
-        <dropdownList refId="User_Publishing_Refresh_Options" noSort="true" defaultItem="1" xml:space="preserve">Actualización de publicación de usuario                               </dropdownList>
-        <dropdownList refId="User_Refresh_OnLogon_Options" noSort="true" defaultItem="1" xml:space="preserve">Actualización de publicación de usuario al iniciar sesión              </dropdownList>
-        <decimalTextBox refId="User_Refresh_Interval_Prompt" defaultValue="1" spinStep="3" xml:space="preserve">Intervalo de actualización de publicación de usuario                  </decimalTextBox>
-        <dropdownList refId="User_Refresh_Unit_Options" noSort="true" defaultItem="1" xml:space="preserve">Unidad de intervalo de actualización de publicación de usuario          </dropdownList>
+        <dropdownList refId="Global_Publishing_Refresh_Options" noSort="true" defaultItem="0" xml:space="preserve">Actualización de publicaciones globales                            </dropdownList>
+        <dropdownList refId="Global_Refresh_OnLogon_Options" noSort="true" defaultItem="0" xml:space="preserve">Actualización de publicaciones globales al iniciar sesión           </dropdownList>
+        <decimalTextBox refId="Global_Refresh_Interval_Prompt" defaultValue="0" spinStep="3" xml:space="preserve">Intervalo de actualización de publicaciones globales               </decimalTextBox>
+        <dropdownList refId="Global_Refresh_Unit_Options" noSort="true" defaultItem="1" xml:space="preserve">Unidad de intervalo de actualización de publicaciones globales       </dropdownList>
+        <dropdownList refId="User_Publishing_Refresh_Options" noSort="true" defaultItem="1" xml:space="preserve">Actualización de publicaciones de usuario                               </dropdownList>
+        <dropdownList refId="User_Refresh_OnLogon_Options" noSort="true" defaultItem="1" xml:space="preserve">Actualización de publicaciones de usuario al iniciar sesión              </dropdownList>
+        <decimalTextBox refId="User_Refresh_Interval_Prompt" defaultValue="1" spinStep="3" xml:space="preserve">Intervalo de actualización de publicaciones de usuario                  </decimalTextBox>
+        <dropdownList refId="User_Refresh_Unit_Options" noSort="true" defaultItem="1" xml:space="preserve">Unidad de intervalo de actualización de publicaciones de usuario          </dropdownList>
       </presentation>
       <!--  Publishing Server 3 -->      
       <presentation id="Publishing_Server3">
@@ -201,14 +209,14 @@ Para conocer más detalles, lea sobre el programa en línea en  http://go.micros
         <textBox refId="Publishing_Server_URL_Prompt">
           <label xml:space="preserve">Dirección URL del servidor de publicación                                  </label>
         </textBox>
-        <dropdownList refId="Global_Publishing_Refresh_Options" noSort="true" defaultItem="0" xml:space="preserve">Actualización de publicación global                            </dropdownList>
-        <dropdownList refId="Global_Refresh_OnLogon_Options" noSort="true" defaultItem="0" xml:space="preserve">Actualización de publicación global al iniciar sesión           </dropdownList>
-        <decimalTextBox refId="Global_Refresh_Interval_Prompt" defaultValue="0" spinStep="3" xml:space="preserve">Intervalo de actualización de publicación global               </decimalTextBox>
-        <dropdownList refId="Global_Refresh_Unit_Options" noSort="true" defaultItem="1" xml:space="preserve">Unidad de intervalo de actualización de publicación global       </dropdownList>
-        <dropdownList refId="User_Publishing_Refresh_Options" noSort="true" defaultItem="1" xml:space="preserve">Actualización de publicación de usuario                               </dropdownList>
-        <dropdownList refId="User_Refresh_OnLogon_Options" noSort="true" defaultItem="1" xml:space="preserve">Actualización de publicación de usuario al iniciar sesión              </dropdownList>
-        <decimalTextBox refId="User_Refresh_Interval_Prompt" defaultValue="1" spinStep="3" xml:space="preserve">Intervalo de actualización de publicación de usuario                  </decimalTextBox>
-        <dropdownList refId="User_Refresh_Unit_Options" noSort="true" defaultItem="1" xml:space="preserve">Unidad de intervalo de actualización de publicación de usuario          </dropdownList>
+        <dropdownList refId="Global_Publishing_Refresh_Options" noSort="true" defaultItem="0" xml:space="preserve">Actualización de publicaciones globales                            </dropdownList>
+        <dropdownList refId="Global_Refresh_OnLogon_Options" noSort="true" defaultItem="0" xml:space="preserve">Actualización de publicaciones globales al iniciar sesión           </dropdownList>
+        <decimalTextBox refId="Global_Refresh_Interval_Prompt" defaultValue="0" spinStep="3" xml:space="preserve">Intervalo de actualización de publicaciones globales               </decimalTextBox>
+        <dropdownList refId="Global_Refresh_Unit_Options" noSort="true" defaultItem="1" xml:space="preserve">Unidad de intervalo de actualización de publicaciones globales       </dropdownList>
+        <dropdownList refId="User_Publishing_Refresh_Options" noSort="true" defaultItem="1" xml:space="preserve">Actualización de publicaciones de usuario                               </dropdownList>
+        <dropdownList refId="User_Refresh_OnLogon_Options" noSort="true" defaultItem="1" xml:space="preserve">Actualización de publicaciones de usuario al iniciar sesión              </dropdownList>
+        <decimalTextBox refId="User_Refresh_Interval_Prompt" defaultValue="1" spinStep="3" xml:space="preserve">Intervalo de actualización de publicaciones de usuario                  </decimalTextBox>
+        <dropdownList refId="User_Refresh_Unit_Options" noSort="true" defaultItem="1" xml:space="preserve">Unidad de intervalo de actualización de publicaciones de usuario          </dropdownList>
       </presentation>
       <!--  Publishing Server 4 -->      
       <presentation id="Publishing_Server4">
@@ -219,14 +227,14 @@ Para conocer más detalles, lea sobre el programa en línea en  http://go.micros
         <textBox refId="Publishing_Server_URL_Prompt">
           <label xml:space="preserve">Dirección URL del servidor de publicación                                  </label>
         </textBox>
-        <dropdownList refId="Global_Publishing_Refresh_Options" noSort="true" defaultItem="0" xml:space="preserve">Actualización de publicación global                            </dropdownList>
-        <dropdownList refId="Global_Refresh_OnLogon_Options" noSort="true" defaultItem="0" xml:space="preserve">Actualización de publicación global al iniciar sesión           </dropdownList>
-        <decimalTextBox refId="Global_Refresh_Interval_Prompt" defaultValue="0" spinStep="3" xml:space="preserve">Intervalo de actualización de publicación global               </decimalTextBox>
-        <dropdownList refId="Global_Refresh_Unit_Options" noSort="true" defaultItem="1" xml:space="preserve">Unidad de intervalo de actualización de publicación global       </dropdownList>
-        <dropdownList refId="User_Publishing_Refresh_Options" noSort="true" defaultItem="1" xml:space="preserve">Actualización de publicación de usuario                               </dropdownList>
-        <dropdownList refId="User_Refresh_OnLogon_Options" noSort="true" defaultItem="1" xml:space="preserve">Actualización de publicación de usuario al iniciar sesión              </dropdownList>
-        <decimalTextBox refId="User_Refresh_Interval_Prompt" defaultValue="1" spinStep="3" xml:space="preserve">Intervalo de actualización de publicación de usuario                  </decimalTextBox>
-        <dropdownList refId="User_Refresh_Unit_Options" noSort="true" defaultItem="1" xml:space="preserve">Unidad de intervalo de actualización de publicación de usuario          </dropdownList>
+        <dropdownList refId="Global_Publishing_Refresh_Options" noSort="true" defaultItem="0" xml:space="preserve">Actualización de publicaciones globales                            </dropdownList>
+        <dropdownList refId="Global_Refresh_OnLogon_Options" noSort="true" defaultItem="0" xml:space="preserve">Actualización de publicaciones globales al iniciar sesión           </dropdownList>
+        <decimalTextBox refId="Global_Refresh_Interval_Prompt" defaultValue="0" spinStep="3" xml:space="preserve">Intervalo de actualización de publicaciones globales               </decimalTextBox>
+        <dropdownList refId="Global_Refresh_Unit_Options" noSort="true" defaultItem="1" xml:space="preserve">Unidad de intervalo de actualización de publicaciones globales       </dropdownList>
+        <dropdownList refId="User_Publishing_Refresh_Options" noSort="true" defaultItem="1" xml:space="preserve">Actualización de publicaciones de usuario                               </dropdownList>
+        <dropdownList refId="User_Refresh_OnLogon_Options" noSort="true" defaultItem="1" xml:space="preserve">Actualización de publicaciones de usuario al iniciar sesión              </dropdownList>
+        <decimalTextBox refId="User_Refresh_Interval_Prompt" defaultValue="1" spinStep="3" xml:space="preserve">Intervalo de actualización de publicaciones de usuario                  </decimalTextBox>
+        <dropdownList refId="User_Refresh_Unit_Options" noSort="true" defaultItem="1" xml:space="preserve">Unidad de intervalo de actualización de publicaciones de usuario          </dropdownList>
       </presentation>
       <!--  Publishing Server 5 -->      
       <presentation id="Publishing_Server5">
@@ -237,14 +245,14 @@ Para conocer más detalles, lea sobre el programa en línea en  http://go.micros
         <textBox refId="Publishing_Server_URL_Prompt">
           <label xml:space="preserve">Dirección URL del servidor de publicación                                  </label>
         </textBox>
-        <dropdownList refId="Global_Publishing_Refresh_Options" noSort="true" defaultItem="0" xml:space="preserve">Actualización de publicación global                            </dropdownList>
-        <dropdownList refId="Global_Refresh_OnLogon_Options" noSort="true" defaultItem="0" xml:space="preserve">Actualización de publicación global al iniciar sesión           </dropdownList>
-        <decimalTextBox refId="Global_Refresh_Interval_Prompt" defaultValue="0" spinStep="3" xml:space="preserve">Intervalo de actualización de publicación global               </decimalTextBox>
-        <dropdownList refId="Global_Refresh_Unit_Options" noSort="true" defaultItem="1" xml:space="preserve">Unidad de intervalo de actualización de publicación global       </dropdownList>
-        <dropdownList refId="User_Publishing_Refresh_Options" noSort="true" defaultItem="1" xml:space="preserve">Actualización de publicación de usuario                               </dropdownList>
-        <dropdownList refId="User_Refresh_OnLogon_Options" noSort="true" defaultItem="1" xml:space="preserve">Actualización de publicación de usuario al iniciar sesión              </dropdownList>
-        <decimalTextBox refId="User_Refresh_Interval_Prompt" defaultValue="1" spinStep="3" xml:space="preserve">Intervalo de actualización de publicación de usuario                  </decimalTextBox>
-        <dropdownList refId="User_Refresh_Unit_Options" noSort="true" defaultItem="1" xml:space="preserve">Unidad de intervalo de actualización de publicación de usuario          </dropdownList>
+        <dropdownList refId="Global_Publishing_Refresh_Options" noSort="true" defaultItem="0" xml:space="preserve">Actualización de publicaciones globales                            </dropdownList>
+        <dropdownList refId="Global_Refresh_OnLogon_Options" noSort="true" defaultItem="0" xml:space="preserve">Actualización de publicaciones globales al iniciar sesión           </dropdownList>
+        <decimalTextBox refId="Global_Refresh_Interval_Prompt" defaultValue="0" spinStep="3" xml:space="preserve">Intervalo de actualización de publicaciones globales               </decimalTextBox>
+        <dropdownList refId="Global_Refresh_Unit_Options" noSort="true" defaultItem="1" xml:space="preserve">Unidad de intervalo de actualización de publicaciones globales       </dropdownList>
+        <dropdownList refId="User_Publishing_Refresh_Options" noSort="true" defaultItem="1" xml:space="preserve">Actualización de publicaciones de usuario                               </dropdownList>
+        <dropdownList refId="User_Refresh_OnLogon_Options" noSort="true" defaultItem="1" xml:space="preserve">Actualización de publicaciones de usuario al iniciar sesión              </dropdownList>
+        <decimalTextBox refId="User_Refresh_Interval_Prompt" defaultValue="1" spinStep="3" xml:space="preserve">Intervalo de actualización de publicaciones de usuario                  </decimalTextBox>
+        <dropdownList refId="User_Refresh_Unit_Options" noSort="true" defaultItem="1" xml:space="preserve">Unidad de intervalo de actualización de publicaciones de usuario          </dropdownList>
       </presentation>
       <!--  Integration -->
       <presentation id="Integration_Roaming_File_Exclusions">
@@ -270,8 +278,8 @@ Para conocer más detalles, lea sobre el programa en línea en  http://go.micros
           <defaultValue>%allusersprofile%\Microsoft\AppV\Cliente\Integración</defaultValue>
         </textBox>
       </presentation>
-      <presentation id="Virtualization_JITVWhitelist">
-        <multiTextBox refId="Virtualization_JITVWhitelist_Prompt">
+      <presentation id="Virtualization_JITVAllowList">
+        <multiTextBox refId="Virtualization_JITVAllowList_Prompt">
         </multiTextBox>
       </presentation>
     </presentationTable>

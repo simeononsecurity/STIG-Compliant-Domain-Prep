@@ -136,7 +136,7 @@ Si el estado se establece en No configurado, el uso de la característica Actual
 
         Esta opción te permite especificar un servidor en la red para que funcione como un servicio de actualización interno. El cliente Actualizaciones automáticas buscará en este servicio actualizaciones que se apliquen a los equipos de la red.
 
-        Para usar esta opción, debes establecer dos valores de nombre de servidor: el servidor desde el que el cliente Actualizaciones automáticas detecta y descarga las actualizaciones y el servidor en el que las estaciones de trabajo actualizadas cargan las estadísticas. Puedes establecer ambos valores en el mismo servidor. Se puede especificar un valor de nombre de servidor opcional para configurar el agente de Windows Update para que descargue actualizaciones desde un servidor de descargas alternativo, en lugar del servicio de actualización de la intranet.
+        Para usar esta opción, debes establecer dos valores de nombre de servidor: el servidor desde el que el cliente de Actualizaciones automáticas detecta y descarga las actualizaciones y el servidor en el que las estaciones de trabajo actualizadas cargan las estadísticas. Puedes establecer ambos valores en el mismo servidor. Se puede especificar un valor de nombre de servidor opcional para configurar el agente de Windows Update para que descargue actualizaciones desde un servidor de descargas alternativo, en lugar del servicio de actualización de la intranet.
 
         Si el estado se establece en Habilitado, el cliente Actualizaciones automáticas se conecta al servicio Microsoft Update de la intranet especificado (o al servidor de descargas alternativo), en lugar de Windows Update, para buscar y descargar las actualizaciones. Si habilitas esta configuración, los usuarios finales de la organización no tendrán que usar un firewall para obtener actualizaciones y, además, podrán probar las actualizaciones antes de implementarlas.
 
@@ -144,15 +144,25 @@ Si el estado se establece en No configurado, el uso de la característica Actual
 
         El servidor de descargas alternativo configura el agente de Windows Update para descargar archivos desde un servidor de descargas alternativo, en lugar del servicio de actualización de la intranet.
 
-        La opción Download files with no Url permite descargar contenido desde el servidor de descargas alternativo cuando no haya ninguna URL de descarga para los archivos de los metadatos de la actualización. Esta opción solo se debe usar cuando el servicio de actualización de la intranet no proporciona las URL de descarga en los metadatos de actualización para los archivos del servidor de descargas alternativo.
+        La opción para descargar archivos con URL faltantes permite descargar contenido desde el servidor de descargas alternativo cuando no haya ninguna URL de descarga para los archivos de los metadatos de la actualización. Esta opción solo se debe usar cuando el servicio de actualización de la intranet no proporciona las URL de descarga en los metadatos de actualización para los archivos del servidor de descargas alternativo.
 
-        Nota: Si la directiva "Configurar Actualizaciones automáticas" está deshabilitada, esta directiva no tiene ningún efecto.
+        Nota: si la directiva "Configurar Actualizaciones automáticas" está deshabilitada, esta directiva no tiene ningún efecto.
 
-        Nota: Si no está establecida la opción "Definir el servidor de descargas alternativo", se usará el servicio de actualización de la intranet de forma predeterminada para la descarga de actualizaciones.
+        Nota: si no está establecida la opción "Definir el servidor de descargas alternativo", se usará el servicio de actualización de la intranet de forma predeterminada para la descarga de actualizaciones.
 
-        Nota: La opción "Download files with no Url..." solo se usa si se establece la opción "Definir el servidor de descargas alternativo".
+        Nota: la opción "Descargar archivos sin Url..." solo se usa si se establece la opción "Definir el servidor de descargas alternativo".
 
-        Nota: Esta directiva no es compatible con Windows RT. Si estableces esta directiva, no tendrá ningún efecto en equipos con Windows RT.</string>
+        Nota: esta directiva no es compatible con Windows RT. Si estableces esta directiva, no tendrá ningún efecto en equipos con Windows RT.
+
+        Nota sobre los servidores proxy: para garantizar el más alto nivel de seguridad, Microsoft recomienda proteger WSUS con el protocolo TLS/SSL, utilizando de este modo servidores de intranet basados ​​en HTTPS para mantener los sistemas seguros. Si se requiere un proxy, recomendamos configurar el proxy del sistema. 
+
+        Seleccionar un comportamiento de proxy no tendrá ningún efecto en los clientes que usan servidores de intranet basados en HTTPS para detectar actualizaciones. 
+
+        Para mantener a los clientes inherentemente seguros, ya no permitimos que los servidores de intranet basados en HTTP aprovechen el proxy del usuario de forma predeterminada para detectar actualizaciones. Si necesitas aprovechar el proxy de usuario para detectar actualizaciones mientras usas un servidor de intranet basado en HTTP a pesar de las vulnerabilidades que presenta, debes configurar el comportamiento del proxy para "Permitir que el proxy de usuario se use como reserva si falla la detección usando el proxy del sistema".
+
+        La detección de actualizaciones fallará cuando los servidores de intranet basados en HTTP se usen sin un proxy del sistema configurado si la directiva para usar un comportamiento de proxy alternativo no está configurada.</string>
+      <string id="OnlyUseSystemProxyForUpdateDetection">Usar solo el proxy del sistema para detectar actualizaciones (predeterminado)</string>
+      <string id="AllowUserProxyAsFallbackForUpdateDetection">Permitir que el proxy del usuario se utilice como reserva si se produce un error en la detección con el proxy del sistema</string>
       <string id="DetectionFrequency_Help">Especifica las horas que Windows usará para determinar cuánto debe esperar antes de comprobar si existen actualizaciones disponibles. El tiempo de espera exacto se obtiene al sumar el valor específico y una variante aleatoria de entre 0 y 4 horas.
 
         Si el estado se establece en Habilitado, Windows buscará actualizaciones disponibles en el intervalo especificado.
@@ -680,8 +690,9 @@ Esta directiva invalidará las siguientes directivas:
         <textBox refId="CorpWUContentHost_Name">
           <label>Definir el servidor de descargas alternativo:</label>
         </textBox>
-        <text>(por ejemplo, http://IntranetUpd01)</text>
+        <text>(ejemplo: https://IntranetUpd01)</text>
         <checkBox refId="CorpWUFillEmptyContentUrls" defaultChecked="false">Descarga archivos sin URL en los metadatos si se estableció un servidor de descargas alternativo.</checkBox>
+        <dropdownList refId="SetProxyBehaviorForUpdateDetection" noSort="true" defaultItem="0">Seleccione el comportamiento del proxy para el cliente de Windows Update para detectar actualizaciones con el servicio basado en no TLS (HTTP):</dropdownList>
       </presentation>
       <presentation id="DetectionFrequency_Title">
         <text>Comprobar actualizaciones con el siguiente</text>

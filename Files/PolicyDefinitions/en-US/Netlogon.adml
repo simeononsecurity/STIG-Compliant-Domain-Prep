@@ -340,15 +340,11 @@ If you do not configure this policy setting, it is not applied to any computers,
       <string id="Netlogon_DnsSrvRecordUseLowerCaseHostNames">Use lowercase DNS host names when registering domain controller SRV records</string>
       <string id="Netlogon_DnsSrvRecordUseLowerCaseHostNames_Help">This policy setting configures whether the domain controllers to which this setting is applied will lowercase their DNS host name when registering SRV records.
 
-If enabled, domain controllers will lowercase their DNS host name when registering domain controller SRV records. A best-effort attempt will be made to delete any previously registered SRV records that contain mixed-case DNS host names. For more information and potential manual cleanup procedures, see the link below.
+If enabled, domain controllers will lowercase their DNS host name when registering domain controller SRV records.
 
 If disabled, domain controllers will use their configured DNS host name as-is when registering domain controller SRV records.
 
-If not configured, domain controllers will default to using their local configuration.
-
-The default local configuration is enabled.
-
-A reboot is not required for changes to this setting to take effect.
+If not configured, domain controllers will default to using their local configuration. The default local configuration is enabled.
 
 More information is available at https://aka.ms/lowercasehostnamesrvrecord
       </string>

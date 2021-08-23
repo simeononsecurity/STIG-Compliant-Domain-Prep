@@ -67,6 +67,13 @@ Si se deshabilita esta directiva o no se configura, en el contenido destacado de
 Si habilitas esta directiva, la experiencia de bienvenida de Windows dejará de mostrar la existencia de nuevos cambios y actualizaciones para Windows y sus aplicaciones.
 
 Si deshabilitas esta directiva o no la configuras, la experiencia de bienvenida de Windows se iniciará para facilitar la presentación de Windows a los usuarios y proporcionarles información sobre novedades, cambios y sugerencias.</string>
+      <string id="DisableCloudOptimizedContent">Desactivar el contenido optimizado en la nube</string>
+      <string id="DisableCloudOptimizedContent_Help">Esta configuración de directiva permite desactivar el contenido optimizado en la nube en todas las experiencias de Windows.
+
+Si habilitas esta Directiva, las experiencias de Windows que usan el componente de cliente de contenido optimizado en la nube, en su lugar, presentarán el contenido de reserva predeterminado.
+
+Si deshabilitas o no configuras esta Directiva, las experiencias de Windows podrán usar contenido optimizado en la nube.
+      </string>
     </stringTable>
     <presentationTable>
       <presentation id="ConfigureWindowsSpotlight">

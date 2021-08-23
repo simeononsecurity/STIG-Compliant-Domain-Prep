@@ -249,23 +249,6 @@ If this policy setting is disabled, or if this policy setting is not configured,
 If this policy setting is enabled, IDNs are converted to the Nameprep form.
 
 If this policy setting is disabled, or if this policy setting is not configured, IDNs are not converted to the Nameprep form.</string>
-      <string id="DNS_Doh">Configure DNS over HTTPS (DoH) name resolution</string>
-      <string id="DNS_Doh_Disabled">Prohibit DoH</string>
-      <string id="DNS_Doh_Auto">Allow DoH</string>
-      <string id="DNS_Doh_Force">Require DoH</string>
-      <string id="DNS_Doh_Help">Specifies if the DNS client will perform name resolution over DNS over HTTPS (DoH).
-
-By default, the DNS client will do classic DNS name resolution (over UDP or TCP). This setting can enhance the DNS client to use DoH protocol to resolve domain names.
-
-To use this policy setting, click Enabled, and then select one of the following options from the drop-down list:
-
-Prohibit DoH: No DoH name resolution will be performed.
-
-Allow DoH: Perform DoH queries if the configured DNS servers support it. If they don't support it, try classic name resolution.
-
-Require DoH: Allow only DoH name resolution. If there are no DoH capable DNS servers configured, name resolution will fail.
-
-If you disable this policy setting, or if you do not configure this policy setting, computers will use locally configured settings.</string>
     </stringTable>
     <presentationTable>
       <presentation id="DNS_Domain">
@@ -302,9 +285,6 @@ If you disable this policy setting, or if you do not configure this policy setti
       </presentation>
       <presentation id="DNS_UpdateSecurityLevel">
         <dropdownList refId="DNS_UpdateSecurityLevel_Box" defaultItem="2">Update security level:</dropdownList>
-      </presentation>
-      <presentation id="DNS_Doh">
-        <dropdownList refId="DNS_Doh_Box" defaultItem="1">Configure DoH options:</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

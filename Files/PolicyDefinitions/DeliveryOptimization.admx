@@ -65,6 +65,11 @@
               <decimal value="99"/>
             </value>
           </item>
+          <item displayName="$(string.DownloadMode_Bypass)">
+            <value>
+              <decimal value="100"/>
+            </value>
+          </item>
         </enum>
       </elements>
     </policy>
@@ -82,6 +87,25 @@
         <text
             id="GroupId"
             valueName="DOGroupId"
+            />
+      </elements>
+    </policy>
+    <policy
+        class="Machine"
+        displayName="$(string.MaxUploadBandwidth)"
+        explainText="$(string.MaxUploadBandwidth_Help)"
+        key="SOFTWARE\Policies\Microsoft\Windows\DeliveryOptimization"
+        name="MaxUploadBandwidth"
+        presentation="$(presentation.MaxUploadBandwidth)"
+        >
+      <parentCategory ref="DeliveryOptimizationCat"/>
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0"/>
+      <elements>
+        <decimal
+            id="MaxUploadBandwidth"
+            maxValue="4000000"
+            minValue="0"
+            valueName="DOMaxUploadBandwidth"
             />
       </elements>
     </policy>
@@ -199,39 +223,39 @@
     </policy>
     <policy
         class="Machine"
-        displayName="$(string.MaxBackgroundDownloadBandwidth)"
-        explainText="$(string.MaxBackgroundDownloadBandwidth_Help)"
+        displayName="$(string.MaxDownloadBandwidth)"
+        explainText="$(string.MaxDownloadBandwidth_Help)"
         key="SOFTWARE\Policies\Microsoft\Windows\DeliveryOptimization"
-        name="MaxBackgroundDownloadBandwidth"
-        presentation="$(presentation.MaxBackgroundDownloadBandwidth)"
+        name="MaxDownloadBandwidth"
+        presentation="$(presentation.MaxDownloadBandwidth)"
         >
       <parentCategory ref="DeliveryOptimizationCat"/>
       <supportedOn ref="windows:SUPPORTED_Windows_10_0"/>
       <elements>
         <decimal
-            id="MaxBackgroundDownloadBandwidth"
+            id="MaxDownloadBandwidth"
             maxValue="4294967295"
             minValue="0"
-            valueName="DOMaxBackgroundDownloadBandwidth"
+            valueName="DOMaxDownloadBandwidth"
             />
       </elements>
     </policy>
     <policy
         class="Machine"
-        displayName="$(string.MaxForegroundDownloadBandwidth)"
-        explainText="$(string.MaxForegroundDownloadBandwidth_Help)"
+        displayName="$(string.PercentageMaxDownloadBandwidth)"
+        explainText="$(string.PercentageMaxDownloadBandwidth_Help)"
         key="SOFTWARE\Policies\Microsoft\Windows\DeliveryOptimization"
-        name="MaxForegroundDownloadBandwidth"
-        presentation="$(presentation.MaxForegroundDownloadBandwidth)"
+        name="PercentageMaxDownloadBandwidth"
+        presentation="$(presentation.PercentageMaxDownloadBandwidth)"
         >
       <parentCategory ref="DeliveryOptimizationCat"/>
       <supportedOn ref="windows:SUPPORTED_Windows_10_0"/>
       <elements>
         <decimal
-            id="MaxForegroundDownloadBandwidth"
-            maxValue="4294967295"
+            id="PercentageMaxDownloadBandwidth"
+            maxValue="100"
             minValue="0"
-            valueName="DOMaxForegroundDownloadBandwidth"
+            valueName="DOPercentageMaxDownloadBandwidth"
             />
       </elements>
     </policy>
@@ -392,34 +416,6 @@
     </policy>
     <policy
         class="Machine"
-        displayName="$(string.CacheHostSource)"
-        explainText="$(string.CacheHostSource_Help)"
-        key="SOFTWARE\Policies\Microsoft\Windows\DeliveryOptimization"
-        name="CacheHostSource"
-        presentation="$(presentation.CacheHostSource)"
-        >
-      <parentCategory ref="DeliveryOptimizationCat"/>
-      <supportedOn ref="windows:SUPPORTED_Windows_10_0"/>
-      <elements>
-        <enum
-            id="CacheHostSource"
-            valueName="DOCacheHostSource"
-            >
-          <item displayName="$(string.CacheHostSource_DHCP)">
-            <value>
-              <decimal value="1"/>
-            </value>
-          </item>
-          <item displayName="$(string.CacheHostSource_DHCP_Force)">
-            <value>
-              <decimal value="2"/>
-            </value>
-          </item>
-        </enum>
-      </elements>
-    </policy>
-    <policy
-        class="Machine"
         displayName="$(string.GroupIdSource)"
         explainText="$(string.GroupIdSource_Help)"
         key="SOFTWARE\Policies\Microsoft\Windows\DeliveryOptimization"
@@ -456,11 +452,6 @@
           <item displayName="$(string.GroupIdSource_DNS)">
             <value>
               <decimal value="4"/>
-            </value>
-          </item>
-          <item displayName="$(string.GroupIdSource_AAD)">
-            <value>
-              <decimal value="5"/>
             </value>
           </item>
         </enum>
@@ -506,44 +497,6 @@
     </policy>
     <policy
         class="Machine"
-        displayName="$(string.DelayCacheServerFallbackBackground)"
-        explainText="$(string.DelayCacheServerFallbackBackground_Help)"
-        key="SOFTWARE\Policies\Microsoft\Windows\DeliveryOptimization"
-        name="DelayCacheServerFallbackBackground"
-        presentation="$(presentation.DelayCacheServerFallbackBackground)"
-        >
-      <parentCategory ref="DeliveryOptimizationCat"/>
-      <supportedOn ref="windows:SUPPORTED_Windows_10_0"/>
-      <elements>
-        <decimal
-            id="DelayCacheServerFallbackBackground"
-            maxValue="2592000"
-            minValue="0"
-            valueName="DODelayCacheServerFallbackBackground"
-            />
-      </elements>
-    </policy>
-    <policy
-        class="Machine"
-        displayName="$(string.DelayCacheServerFallbackForeground)"
-        explainText="$(string.DelayCacheServerFallbackForeground_Help)"
-        key="SOFTWARE\Policies\Microsoft\Windows\DeliveryOptimization"
-        name="DelayCacheServerFallbackForeground"
-        presentation="$(presentation.DelayCacheServerFallbackForeground)"
-        >
-      <parentCategory ref="DeliveryOptimizationCat"/>
-      <supportedOn ref="windows:SUPPORTED_Windows_10_0"/>
-      <elements>
-        <decimal
-            id="DelayCacheServerFallbackForeground"
-            maxValue="2592000"
-            minValue="0"
-            valueName="DODelayCacheServerFallbackForeground"
-            />
-      </elements>
-    </policy>
-    <policy
-        class="Machine"
         displayName="$(string.RestrictPeerSelectionBy)"
         explainText="$(string.RestrictPeerSelectionBy_Help)"
         key="SOFTWARE\Policies\Microsoft\Windows\DeliveryOptimization"
@@ -565,11 +518,6 @@
           <item displayName="$(string.RestrictPeerSelectionBy_Subnet)">
             <value>
               <decimal value="1"/>
-            </value>
-          </item>
-          <item displayName="$(string.RestrictPeerSelectionBy_LinkLocal)">
-            <value>
-              <decimal value="2"/>
             </value>
           </item>
         </enum>

@@ -268,7 +268,7 @@
     </policy>
     <policy name="NC_ShowSharedAccessUI" class="Machine" displayName="$(string.NC_ShowSharedAccessUI)" explainText="$(string.NC_ShowSharedAccessUI_Help)" key="Software\Policies\Microsoft\Windows\Network Connections" valueName="NC_ShowSharedAccessUI">
       <parentCategory ref="NetworkConnections" />
-      <supportedOn ref="windows:SUPPORTED_WindowsXP" />
+      <supportedOn ref="SUPPORTED_Win2kSP1_WindowsPreVista" />
       <enabledValue>
         <decimal value="0" />
       </enabledValue>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!--  (c) 2006 Microsoft Corporation  -->
 <policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
   <policyNamespaces>
@@ -180,13 +180,12 @@
         <list id="StartPinAppsWhenInstalled_Name" key="Software\Policies\Microsoft\Windows\Explorer\StartPinAppsWhenInstalled" valuePrefix="" additive="true" />
       </elements>
     </policy>
-    <policy name="LockedStartLayout" clientExtension="{8472C2C4-6B70-4301-A20D-A6CEA5F82B7E}" class="Both" displayName="$(string.LockedStartLayout)" explainText="$(string.LockedStartLayout_Help)" presentation="$(presentation.LockedStartLayout)" key="Software\Policies\Microsoft\Windows\Explorer" valueName="LockedStartLayout">
+    <policy name="LockedStartLayout" class="Both" displayName="$(string.LockedStartLayout)" explainText="$(string.LockedStartLayout_Help)" presentation="$(presentation.LockedStartLayout)" key="Software\Policies\Microsoft\Windows\Explorer" valueName="LockedStartLayout">
       <parentCategory ref="windows:StartMenu" />
       <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
       <elements>
          <!--This value will be stored as a REG_EXPAND_SZ. Drop the expandable attrib for a REG_SZ-->
         <text id="LockedStartLayout_Name" valueName="StartLayoutFile" expandable="true"/>
-        <boolean id="LockedStartLayout_ReapplyEveryLogon" valueName="ReapplyStartLayoutEveryLogon"/>
       </elements>
     </policy>
     <!-- Per user policy to hide power options from start and hide power button on logon UI-->
@@ -211,29 +210,6 @@
       <parentCategory ref="windows:StartMenu" />
       <supportedOn ref="windows:SUPPORTED_WindowsXPOrServerOnly" />
     </policy>
-    <policy name="ShowOrHideMostUsedApps" class="Both" displayName="$(string.ShowOrHideMostUsedApps)" explainText="$(string.ShowOrHideMostUsedApps_Help)" presentation="$(presentation.ShowOrHideMostUsedApps)" key="Software\Policies\Microsoft\Windows\Explorer">
-      <parentCategory ref="windows:StartMenu" />
-      <supportedOn ref="windows:SUPPORTED_Windows_10_0_21H2" />
-      <elements>
-        <enum id="ShowOrHideMostUsedAppsDropdown" valueName="ShowOrHideMostUsedApps" required="true">
-          <item displayName="$(string.MFU_NotConfigured)">
-            <value>
-              <decimal value="0" />
-            </value>
-          </item>
-          <item displayName="$(string.MFU_Show)">
-            <value>
-              <decimal value="1" />
-            </value>
-          </item>
-          <item displayName="$(string.MFU_Hide)">
-            <value>
-              <decimal value="2" />
-            </value>
-          </item>
-        </enum>
-      </elements>        
-    </policy>      
     <policy name="NoFrequentUsedPrograms" class="Both" displayName="$(string.NoFrequentUsedPrograms)" explainText="$(string.NoFrequentUsedPrograms_Help)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoStartMenuMFUprogramsList">
       <parentCategory ref="windows:StartMenu" />
       <supportedOn ref="windows:SUPPORTED_Windows7ToXPAndWindows10" />
