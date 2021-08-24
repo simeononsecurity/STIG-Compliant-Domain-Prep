@@ -1,0 +1,903 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitions revision="1.0" schemaVersion="1.0">
+  <policyNamespaces>
+    <target prefix="fullarmor" namespace="FullArmor.52979ffe-8944-44b7-b364-69ab373170c3" />
+    <using prefix="windows" namespace="Microsoft.Policies.Windows" />
+  </policyNamespaces>
+  <supersededAdm fileName="e:\MicrosoftWindowsSysinternals.adm" />
+  <resources minRequiredRevision="1.0" />
+  <supportedOn>
+    <definitions>
+      <definition name="SUPPORTED_NotSpecified" displayName="$(string.ADMXMigrator_NoSupportedOn)" />
+    </definitions>
+  </supportedOn>
+  <categories>
+    <category name="MWS" displayName="$(string.ADMXMigrator_UnresolvedString)" />
+    <category name="AccessChk" displayName="$(string.unknown_0)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="AccessEnum" displayName="$(string.unknown_1)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="ActiveDirectoryExplorer" displayName="$(string.unknown_2)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="AdRestore" displayName="$(string.unknown_3)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="Autologon" displayName="$(string.unknown_4)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="AutoRuns" displayName="$(string.unknown_5)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="BGInfo" displayName="$(string.unknown_6)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="BlueScreen" displayName="$(string.unknown_7)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="CacheSet" displayName="$(string.unknown_8)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="ClockRes" displayName="$(string.unknown_9)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="Contig" displayName="$(string.unknown_10)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="Coreinfo" displayName="$(string.unknown_11)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="DebugView" displayName="$(string.unknown_12)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="Desktops" displayName="$(string.unknown_13)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="Disk2Vhd" displayName="$(string.unknown_14)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="DiskExt" displayName="$(string.unknown_15)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="DiskView" displayName="$(string.unknown_16)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="EFSDump" displayName="$(string.unknown_17)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="Handle" displayName="$(string.unknown_18)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="Hex2Dec" displayName="$(string.unknown_19)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="InsightforActiveDirectory" displayName="$(string.unknown_20)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="Junction" displayName="$(string.unknown_21)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="LdmDump" displayName="$(string.unknown_22)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="ListDLLs" displayName="$(string.unknown_23)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="LiveKd" displayName="$(string.unknown_24)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="LoadOrder" displayName="$(string.unknown_25)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="LogonSessions" displayName="$(string.unknown_26)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="NotMyFault" displayName="$(string.unknown_27)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="NTFSInfo" displayName="$(string.unknown_28)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="PageDefrag" displayName="$(string.unknown_29)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="MoveFile" displayName="$(string.unknown_30)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="PendMoves" displayName="$(string.unknown_31)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="Portmon" displayName="$(string.unknown_32)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="ProcDump" displayName="$(string.unknown_33)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="ProcessExplorer" displayName="$(string.unknown_34)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="ProcessMonitor" displayName="$(string.unknown_35)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="PsExec" displayName="$(string.unknown_36)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="PsFile" displayName="$(string.unknown_37)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="PsGetSid" displayName="$(string.unknown_38)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="PsInfo" displayName="$(string.unknown_39)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="PsKill" displayName="$(string.unknown_40)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="PsList" displayName="$(string.unknown_41)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="PsLoggedon" displayName="$(string.unknown_42)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="PsLoglist" displayName="$(string.unknown_43)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="PsPasswd" displayName="$(string.unknown_44)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="PsPing" displayName="$(string.unknown_45)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="PsService" displayName="$(string.unknown_46)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="PsShutdown" displayName="$(string.unknown_47)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="PsSuspend" displayName="$(string.unknown_48)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="RamMap" displayName="$(string.unknown_49)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="RegDelNull" displayName="$(string.unknown_50)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="Reghide" displayName="$(string.unknown_51)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="RegistryUsageRU" displayName="$(string.unknown_52)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="Regjump" displayName="$(string.unknown_53)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="RootkitRevealer" displayName="$(string.unknown_54)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="SDelete" displayName="$(string.unknown_55)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="ShareEnum" displayName="$(string.unknown_56)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="ShellRunas" displayName="$(string.unknown_57)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="Sigcheck" displayName="$(string.unknown_58)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="Streams" displayName="$(string.unknown_59)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="Strings" displayName="$(string.unknown_60)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="Sync" displayName="$(string.unknown_61)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="TCPView" displayName="$(string.unknown_62)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="VMMap" displayName="$(string.unknown_63)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="VolumeId" displayName="$(string.unknown_64)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="Whois" displayName="$(string.unknown_65)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="Winobj" displayName="$(string.unknown_66)">
+      <parentCategory ref="MWS" />
+    </category>
+    <category name="ZoomIt" displayName="$(string.unknown_67)">
+      <parentCategory ref="MWS" />
+    </category>
+  </categories>
+  <policies>
+    <policy name="Eula" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula)" key="Software\Sysinternals\AccessChk" valueName="EulaAccepted">
+      <parentCategory ref="AccessChk" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_1" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_1)" key="Software\Sysinternals\Share Enum" valueName="EulaAccepted">
+      <parentCategory ref="AccessEnum" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_2" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_2)" key="Software\Sysinternals\A" valueName="EulaAccepted">
+      <parentCategory ref="AdRestore" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_3" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_3)" key="Software\Sysinternals\Autologon" valueName="EulaAccepted">
+      <parentCategory ref="Autologon" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_4" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_4)" key="Software\Sysinternals\AutoRuns" valueName="EulaAccepted">
+      <parentCategory ref="AutoRuns" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_5" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_5)" key="Software\Sysinternals\BGInfo" valueName="EulaAccepted">
+      <parentCategory ref="BGInfo" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_6" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_6)" key="Software\Sysinternals\Bluescreen Screen Saver" valueName="EulaAccepted">
+      <parentCategory ref="BlueScreen" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_7" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_7)" key="Software\Sysinternals\CacheSet" valueName="EulaAccepted">
+      <parentCategory ref="CacheSet" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_8" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_8)" key="Software\Sysinternals\ClockRes" valueName="EulaAccepted">
+      <parentCategory ref="ClockRes" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_9" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_9)" key="Software\Sysinternals\Contig" valueName="EulaAccepted">
+      <parentCategory ref="Contig" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_10" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_10)" key="Software\Sysinternals\Coreinfo" valueName="EulaAccepted">
+      <parentCategory ref="Coreinfo" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_11" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_11)" key="Software\Sysinternals\DbgView" valueName="EulaAccepted">
+      <parentCategory ref="DebugView" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_12" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_12)" key="Software\Sysinternals\Desktops" valueName="EulaAccepted">
+      <parentCategory ref="Desktops" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_13" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_13)" key="Software\Sysinternals\Disk2Vhd" valueName="EulaAccepted">
+      <parentCategory ref="Disk2Vhd" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_14" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_14)" key="Software\Sysinternals\DiskExt" valueName="EulaAccepted">
+      <parentCategory ref="DiskExt" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_15" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_15)" key="Software\Sysinternals\DiskView" valueName="EulaAccepted">
+      <parentCategory ref="DiskView" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_16" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_16)" key="Software\Sysinternals\EFSDump" valueName="EulaAccepted">
+      <parentCategory ref="EFSDump" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_17" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_17)" key="Software\Sysinternals\Handle" valueName="EulaAccepted">
+      <parentCategory ref="Handle" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_18" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_18)" key="Software\Sysinternals\Hex2Dec" valueName="EulaAccepted">
+      <parentCategory ref="Hex2Dec" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_19" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_19)" key="Software\Sysinternals\ADInsight" valueName="EulaAccepted">
+      <parentCategory ref="InsightforActiveDirectory" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_20" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_20)" key="Software\Sysinternals\Junction" valueName="EulaAccepted">
+      <parentCategory ref="Junction" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_21" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_21)" key="Software\Sysinternals\LdmDump" valueName="EulaAccepted">
+      <parentCategory ref="LdmDump" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_22" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_22)" key="Software\Sysinternals\ListDLLs" valueName="EulaAccepted">
+      <parentCategory ref="ListDLLs" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_23" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_23)" key="Software\Sysinternals\LiveKd" valueName="EulaAccepted">
+      <parentCategory ref="LiveKd" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_24" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_24)" key="Software\Sysinternals\LoadOrder" valueName="EulaAccepted">
+      <parentCategory ref="LoadOrder" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_25" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_25)" key="Software\Sysinternals\LogonSessions" valueName="EulaAccepted">
+      <parentCategory ref="LogonSessions" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_26" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_26)" key="Software\Sysinternals\NotMyFault" valueName="EulaAccepted">
+      <parentCategory ref="NotMyFault" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_27" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_27)" key="Software\Sysinternals\NTFSInfo" valueName="EulaAccepted">
+      <parentCategory ref="NTFSInfo" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_28" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_28)" key="Software\Sysinternals\PageDefrag" valueName="EulaAccepted">
+      <parentCategory ref="PageDefrag" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_29" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_29)" key="Software\Sysinternals\Movefile" valueName="EulaAccepted">
+      <parentCategory ref="MoveFile" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_30" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_30)" key="Software\Sysinternals\PendMove" valueName="EulaAccepted">
+      <parentCategory ref="PendMoves" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_31" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_31)" key="Software\Sysinternals\Portmon" valueName="EulaAccepted">
+      <parentCategory ref="Portmon" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_32" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_32)" key="Software\Sysinternals\ProcDump" valueName="EulaAccepted">
+      <parentCategory ref="ProcDump" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_33" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_33)" key="Software\Sysinternals\Process Explorer" valueName="EulaAccepted">
+      <parentCategory ref="ProcessExplorer" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_34" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_34)" key="Software\Sysinternals\Process Monitor" valueName="EulaAccepted">
+      <parentCategory ref="ProcessMonitor" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_35" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_35)" key="Software\Sysinternals\PsExec" valueName="EulaAccepted">
+      <parentCategory ref="PsExec" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_36" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_36)" key="Software\Sysinternals\PsFile" valueName="EulaAccepted">
+      <parentCategory ref="PsFile" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_37" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_37)" key="Software\Sysinternals\PsGetSid" valueName="EulaAccepted">
+      <parentCategory ref="PsGetSid" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_38" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_38)" key="Software\Sysinternals\PsInfo" valueName="EulaAccepted">
+      <parentCategory ref="PsInfo" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_39" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_39)" key="Software\Sysinternals\PsKill" valueName="EulaAccepted">
+      <parentCategory ref="PsKill" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_40" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_40)" key="Software\Sysinternals\PsList" valueName="EulaAccepted">
+      <parentCategory ref="PsList" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_41" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_41)" key="Software\Sysinternals\PsLoggedon" valueName="EulaAccepted">
+      <parentCategory ref="PsLoggedon" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_42" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_42)" key="Software\Sysinternals\PsLoglist" valueName="EulaAccepted">
+      <parentCategory ref="PsLoglist" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_43" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_43)" key="Software\Sysinternals\PsPasswd" valueName="EulaAccepted">
+      <parentCategory ref="PsPasswd" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_44" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_44)" key="Software\Sysinternals\PsPing" valueName="EulaAccepted">
+      <parentCategory ref="PsPing" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_45" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_45)" key="Software\Sysinternals\PsService" valueName="EulaAccepted">
+      <parentCategory ref="PsService" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_46" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_46)" key="Software\Sysinternals\PsShutdown" valueName="EulaAccepted">
+      <parentCategory ref="PsShutdown" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_47" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_47)" key="Software\Sysinternals\PsSuspend" valueName="EulaAccepted">
+      <parentCategory ref="PsSuspend" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_48" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_48)" key="Software\Sysinternals\RamMap" valueName="EulaAccepted">
+      <parentCategory ref="RamMap" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_49" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_49)" key="Software\Sysinternals\RegDelNull" valueName="EulaAccepted">
+      <parentCategory ref="RegDelNull" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_50" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_50)" key="Software\Sysinternals\Reghide" valueName="EulaAccepted">
+      <parentCategory ref="Reghide" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_51" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_51)" key="Software\Sysinternals\Regsize" valueName="EulaAccepted">
+      <parentCategory ref="RegistryUsageRU" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_52" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_52)" key="Software\Sysinternals\Regjump" valueName="EulaAccepted">
+      <parentCategory ref="Regjump" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_53" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_53)" key="Software\Sysinternals\RootkitRevealer" valueName="EulaAccepted">
+      <parentCategory ref="RootkitRevealer" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_54" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_54)" key="Software\Sysinternals\SDelete" valueName="EulaAccepted">
+      <parentCategory ref="SDelete" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_55" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_55)" key="Software\Sysinternals\Share Enum" valueName="EulaAccepted">
+      <parentCategory ref="ShareEnum" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_56" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_56)" key="Software\Sysinternals\ShareEnum" valueName="EulaAccepted">
+      <parentCategory ref="ShareEnum" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_57" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_57)" key="Software\Sysinternals\ShellRunas - Sysinternals: www.sysinternals.com" valueName="EulaAccepted">
+      <parentCategory ref="ShellRunas" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_58" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_58)" key="Software\Sysinternals\Sigcheck" valueName="EulaAccepted">
+      <parentCategory ref="Sigcheck" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_59" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_59)" key="Software\Sysinternals\Streams" valueName="EulaAccepted">
+      <parentCategory ref="Streams" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_60" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_60)" key="Software\Sysinternals\Strings" valueName="EulaAccepted">
+      <parentCategory ref="Strings" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_61" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_61)" key="Software\Sysinternals\Sync" valueName="EulaAccepted">
+      <parentCategory ref="Sync" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_62" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_62)" key="Software\Sysinternals\TCPView" valueName="EulaAccepted">
+      <parentCategory ref="TCPView" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_63" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_63)" key="Software\Sysinternals\VMMap" valueName="EulaAccepted">
+      <parentCategory ref="VMMap" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_64" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_64)" key="Software\Sysinternals\VolumeID" valueName="EulaAccepted">
+      <parentCategory ref="VolumeId" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_65" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_65)" key="Software\Sysinternals\Whois" valueName="EulaAccepted">
+      <parentCategory ref="Whois" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_66" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_66)" key="Software\Sysinternals\Winobj" valueName="EulaAccepted">
+      <parentCategory ref="Winobj" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="Eula_67" class="User" displayName="$(string.Eula)" explainText="$(string.Help)" presentation="$(presentation.Eula_67)" key="Software\Sysinternals\ZoomIt" valueName="EulaAccepted">
+      <parentCategory ref="ZoomIt" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+  </policies>
+</policyDefinitions>
