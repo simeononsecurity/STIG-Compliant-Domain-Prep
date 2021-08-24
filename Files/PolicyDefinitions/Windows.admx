@@ -139,11 +139,25 @@
               <range ref="products:MicrosoftWindows" minVersionIndex="13"/>
           </or>
       </definition>
-      
+
       <!--Windows 10 RS2 to Windows Vista-->
       <definition name="SUPPORTED_Windows_10_0_RS2ToVista" displayName="$(string.SUPPORTED_Windows_10_0_RS2ToVista)">
           <or>
               <range ref="products:MicrosoftWindows" minVersionIndex="4" maxVersionIndex="13"/>
+          </or>
+      </definition>
+
+      <!--Windows 10 RS3 to Windows Vista-->
+      <definition name="SUPPORTED_Windows_10_0_RS3ToVista" displayName="$(string.SUPPORTED_Windows_10_0_RS3ToVista)">
+          <or>
+              <range ref="products:MicrosoftWindows" minVersionIndex="4" maxVersionIndex="13"/>
+          </or>
+      </definition>
+
+      <!--Windows 10 RS3 to Windows 7-->
+      <definition name="SUPPORTED_Windows_10_0_RS3ToWindows7" displayName="$(string.SUPPORTED_Windows_10_0_RS3ToWindows7)">
+          <or>
+              <range ref="products:MicrosoftWindows" minVersionIndex="6" maxVersionIndex="13"/>
           </or>
       </definition>
 
@@ -196,8 +210,29 @@
           </or>
       </definition>
 
+      <!--At least Windows 10 RS6 no SERVER-->
+      <definition name="SUPPORTED_Windows_10_0_RS6_NOSERVER" displayName="$(string.SUPPORTED_Windows_10_0_RS6_NOSERVER)">
+        <or>
+          <range ref="products:MicrosoftWindows" minVersionIndex="14" maxVersionIndex="15"/>
+        </or>
+      </definition>
+
       <!--At least Windows 10 RS7-->
       <definition name="SUPPORTED_Windows_10_0_RS7" displayName="$(string.SUPPORTED_Windows_10_0_RS7)">
+          <or>
+              <range ref="products:MicrosoftWindows" minVersionIndex="13"/>
+          </or>
+      </definition>
+
+      <!--At least Windows 10 RS7 no SERVER-->
+      <definition name="SUPPORTED_Windows_10_0_RS7_NOSERVER" displayName="$(string.SUPPORTED_Windows_10_0_RS7_NOSERVER)">
+        <or>
+          <range ref="products:MicrosoftWindows" minVersionIndex="14" maxVersionIndex="15"/>
+        </or>
+      </definition>
+
+      <!--At least Windows 10 21H2-->
+      <definition name="SUPPORTED_Windows_10_0_21H2" displayName="$(string.SUPPORTED_Windows_10_0_21H2)">
           <or>
               <range ref="products:MicrosoftWindows" minVersionIndex="13"/>
           </or>
@@ -218,7 +253,21 @@
       </definition>
 
       <!--At least Windows Threshold no SERVER Enterprise-->
-      <definition name="SUPPORTED_Windows_10_0_NOSERVER_ENTERPRISE" displayName="$(string.SUPPORTED_Windows_10_0_NOSERVER_ENTERPRISE)">
+      <definition name="SUPPORTED_Windows_10_0_NOSERVER_ENTERPRISE_EDUCATION" displayName="$(string.SUPPORTED_Windows_10_0_NOSERVER_ENTERPRISE_EDUCATION)">
+        <or>
+          <range ref="products:MicrosoftWindows" minVersionIndex="14" maxVersionIndex="14"/>
+        </or>
+      </definition>
+
+      <!--At least Windows Threshold no SERVER Enterprise with Microsoft Defender Application Guard in Enterprise mode-->
+      <definition name="SUPPORTED_Windows_10_0_NOSERVER_ENTERPRISE_EDUCATION_MDAG" displayName="$(string.SUPPORTED_Windows_10_0_NOSERVER_ENTERPRISE_EDUCATION_MDAG)">
+        <or>
+          <range ref="products:MicrosoftWindows" minVersionIndex="14" maxVersionIndex="14"/>
+        </or>
+      </definition>
+
+      <!--At least Windows Threshold no SERVER Enterprise with Microsoft Defender Application Guard in Enterprise mode for Microsoft Edge-->
+      <definition name="SUPPORTED_Windows_10_0_NOSERVER_ENTERPRISE_EDUCATION_MDAG_EDGE" displayName="$(string.SUPPORTED_Windows_10_0_NOSERVER_ENTERPRISE_EDUCATION_MDAG_EDGE)">
         <or>
           <range ref="products:MicrosoftWindows" minVersionIndex="14" maxVersionIndex="14"/>
         </or>

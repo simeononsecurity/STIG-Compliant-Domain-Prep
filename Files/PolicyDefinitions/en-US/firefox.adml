@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<policyDefinitionResources revision="2.11" schemaVersion="1.0" >
+<policyDefinitionResources revision="3.0" schemaVersion="1.0" >
   <displayName/>
   <description/>
   <resources >
@@ -40,6 +40,7 @@
       <string id="SUPPORTED_FF88">Firefox 88 or later, Firefox 78.10 ESR or later</string>
       <string id="SUPPORTED_FF89">Firefox 89 or later, Firefox 78.11 ESR or later</string>
       <string id="SUPPORTED_FF90">Firefox 90 or later, Firefox 78.12 ESR or later</string>
+      <string id="SUPPORTED_FF91">Firefox 91 or later</string>
       <string id="firefox">Firefox</string>
       <string id="Permissions_group">Permissions</string>
       <string id="Camera_group">Camera</string>
@@ -847,6 +848,20 @@ For detailed information on creating the policy, see https://github.com/mozilla/
       <string id="AllowedDomainsForApps_Explain">If this policy is enabled, users can only access Google Workspace for the specified domains (separated by a comma). To allow access to Gmail, you can add consumer_accounts.
 
 If this policy is disabled or not configured, users can access any account on Google Workspace as well as Gmail.</string>
+      <string id="BackgroundAppUpdate">Background updater</string>
+      <string id="BackgroundAppUpdate_Explain">If this policy disabled, the application will not try to install updates when the application is not running.
+
+If this policy is enabled or not configured, application updates may be installed (without user approval) in the background, even when the application is not running. The operating system might still require approval.</string>
+      <string id="AutoLaunchProtocolsFromOrigins">Auto Launch Protocols From Origins</string>
+      <string id="AutoLaunchProtocolsFromOrigins_Explain">If this policy is enabled, you can define a list of external protocols that can be used from listed origins without prompting the user.
+
+If this policy is disabled or not configured, any site that invokes an external protocol will ask the user for permission.
+
+For detailed information on creating the policy, see https://github.com/mozilla/policy-templates/blob/master/README.md#autolaunchprotocolsfromorigins.</string>
+      <string id="WindowsSSO">Windows SSO</string>
+      <string id="WindowsSSO_Explain">If this policy is enabled, Firefox will use credentials stored in Windows to sign in to Microsoft, work, and school accounts.
+
+If this policy is disabled or not configured, credentials must be entered manually.</string>
       <string id="Preferences_Boolean_Explain">If this policy is enabled, the preference is locked to true. If this policy is disabled, the preference is locked to false.
 
 For a description of the preference, see:
@@ -1029,6 +1044,9 @@ https://github.com/mozilla/policy-templates/blob/master/README.md#preferences.</
         </textBox>
         <textBox refId="SearchEngine_PostData">
           <label>POST data:</label>
+        </textBox>
+        <textBox refId="SearchEngine_Encoding">
+          <label>Encoding:</label>
         </textBox>
       </presentation>
       <presentation id="SearchEngines_Default">

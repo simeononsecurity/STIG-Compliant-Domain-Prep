@@ -850,5 +850,25 @@
         </item>
       </disabledList>
     </policy>
+    <policy name="RestrictLanguagePacksAndFeaturesInstall_1" class="User" displayName="$(string.RestrictLanguagePacksAndFeaturesInstall)" explainText="$(string.RestrictLanguagePacksAndFeaturesInstall_User_Help)" key="Software\Policies\Microsoft\Control Panel\International" valueName="RestrictLanguagePacksAndFeaturesInstall">
+        <parentCategory ref="RegionalOptions" />
+        <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+        <enabledValue>
+            <decimal value="1" />
+        </enabledValue>
+        <disabledValue>
+            <decimal value="0" />
+        </disabledValue>
+    </policy>
+    <policy name="RestrictLanguagePacksAndFeaturesInstall_2" class="Machine" displayName="$(string.RestrictLanguagePacksAndFeaturesInstall)" explainText="$(string.RestrictLanguagePacksAndFeaturesInstall_Machine_Help)" key="Software\Policies\Microsoft\Control Panel\International" valueName="RestrictLanguagePacksAndFeaturesInstall">
+        <parentCategory ref="RegionalOptions" />
+        <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+        <enabledValue>
+            <decimal value="1" />
+        </enabledValue>
+        <disabledValue>
+            <decimal value="0" />
+        </disabledValue>
+    </policy>
   </policies>
 </policyDefinitions>

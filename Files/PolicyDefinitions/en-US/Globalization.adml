@@ -274,6 +274,21 @@ If you disable or do not configure this policy setting, Windows does not interpr
         
         If this policy is disabled, speech services will be disabled, and users cannot enable speech services via settings.
       </string>
+      <string id="RestrictLanguagePacksAndFeaturesInstall">Restrict Language Pack and Language Feature Installation</string>
+      <string id="RestrictLanguagePacksAndFeaturesInstall_Machine_Help">
+        This policy setting restricts all users from installing language packs and language features on demand packages. This policy does not restrict switching the Windows language, if you want to restrict the Windows language use the following policy: "Restricts the UI languages Windows uses for all logged users."  
+
+        If you enable this policy setting, the installation of language packs and language features is prevented for all users.
+
+        If you disable or do not configure this policy setting, there is no language packs or feature installation restriction for any user.  
+      </string>
+      <string id="RestrictLanguagePacksAndFeaturesInstall_User_Help">
+        This policy setting restricts the user from installing language packs and language features on demand. This policy does not restrict switching the Windows language, if you want to restrict the Windows language use the following policy: "Restricts the UI languages Windows should use for the selected user."  
+
+        If you enable this policy setting, the installation of language packs and language features is prevented for the user.  
+
+        If you disable or do not configure this policy setting, there is no language packs or language features installation restriction for the user.  
+      </string>
     </stringTable>
     <presentationTable>
       <presentation id="LocaleSystemRestrict">

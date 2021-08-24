@@ -15,7 +15,12 @@
     </category>
   </categories>
   <policies>
-    <policy name="SymlinkEvaluation" class="Machine" displayName="$(string.SymlinkEvaluation)" explainText="$(string.SymlinkEvalExplain)" presentation="$(presentation.SymlinkEvaluation)" key="Software\Policies\Microsoft\Windows\Filesystems\NTFS" valueName="SymLinkState">
+    <policy name="SymlinkEvaluation" class="Machine"
+     displayName="$(string.SymlinkEvaluation)"
+     explainText="$(string.SymlinkEvalExplain)"
+     presentation="$(presentation.SymlinkEvaluation)"
+     key="Software\Policies\Microsoft\Windows\Filesystems\NTFS"
+     valueName="SymLinkState">
       <parentCategory ref="Filesystem" />
       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
       <enabledValue>
@@ -59,11 +64,11 @@
         </boolean>
       </elements>
     </policy>
-    <policy name="LongPathsEnabled" class="Machine" 
-    displayName="$(string.LongPathsEnabled)" 
-    explainText="$(string.LongPathsEnabledText)" 
-    presentation="$(presentation.LongPathsEnabledOptions)" 
-    key="System\CurrentControlSet\Control\FileSystem" 
+    <policy name="LongPathsEnabled" class="Machine"
+    displayName="$(string.LongPathsEnabled)"
+    explainText="$(string.LongPathsEnabledText)"
+    presentation="$(presentation.LongPathsEnabledOptions)"
+    key="System\CurrentControlSet\Control\FileSystem"
     valueName="LongPathsEnabled">
       <parentCategory ref="Filesystem" />
       <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
@@ -74,11 +79,11 @@
         <decimal value="0" />
       </disabledValue>
     </policy>
-    <policy name="DisableCompression" class="Machine" 
-    displayName="$(string.DisableCompression)" 
-    explainText="$(string.DisableCompressionText)" 
-    presentation="$(presentation.CompressionOptions)" 
-    key="System\CurrentControlSet\Policies" 
+    <policy name="DisableCompression" class="Machine"
+    displayName="$(string.DisableCompression)"
+    explainText="$(string.DisableCompressionText)"
+    presentation="$(presentation.CompressionOptions)"
+    key="System\CurrentControlSet\Policies"
     valueName="NtfsDisableCompression">
       <parentCategory ref="NTFS" />
       <supportedOn ref="windows:SUPPORTED_Windows7" />
@@ -89,11 +94,11 @@
         <decimal value="0" />
       </disabledValue>
     </policy>
-    <policy name="DisableEncryption" class="Machine" 
-    displayName="$(string.DisableEncryption)" 
-    explainText="$(string.DisableEncryptionText)" 
-    presentation="$(presentation.EncryptionOptions)" 
-    key="System\CurrentControlSet\Policies" 
+    <policy name="DisableEncryption" class="Machine"
+    displayName="$(string.DisableEncryption)"
+    explainText="$(string.DisableEncryptionText)"
+    presentation="$(presentation.EncryptionOptions)"
+    key="System\CurrentControlSet\Policies"
     valueName="NtfsDisableEncryption">
       <parentCategory ref="NTFS" />
       <supportedOn ref="windows:SUPPORTED_Windows7" />
@@ -104,11 +109,11 @@
         <decimal value="0" />
       </disabledValue>
     </policy>
-    <policy name="EnablePagefileEncryption" class="Machine" 
-    displayName="$(string.EnablePagefileEncryption)" 
-    explainText="$(string.EnablePagefileEncryptionText)" 
-    presentation="$(presentation.PagefileEncryptionOptions)" 
-    key="System\CurrentControlSet\Policies" 
+    <policy name="EnablePagefileEncryption" class="Machine"
+    displayName="$(string.EnablePagefileEncryption)"
+    explainText="$(string.EnablePagefileEncryptionText)"
+    presentation="$(presentation.PagefileEncryptionOptions)"
+    key="System\CurrentControlSet\Policies"
     valueName="NtfsEncryptPagingFile">
       <parentCategory ref="NTFS" />
       <supportedOn ref="windows:SUPPORTED_Windows7" />
@@ -155,7 +160,7 @@
     displayName="$(string.DisableDeleteNotification)"
     explainText="$(string.DisableDeleteNotificationText)"
     presentation="$(presentation.DeleteNotificationOptions)"
-    key="System\CurrentControlSet\Policies" 
+    key="System\CurrentControlSet\Policies"
     valueName="DisableDeleteNotification">
         <parentCategory ref="Filesystem" />
         <supportedOn ref="windows:SUPPORTED_Windows7" />
@@ -166,11 +171,12 @@
             <decimal value="0" />
         </disabledValue>
     </policy>
-    <policy name="TxfDeprecatedFunctionality" class="Machine" 
-    displayName="$(string.TxfDeprecatedFunctionality)" 
-    explainText="$(string.TxfDeprecatedFunctionalityText)" 
-    presentation="$(presentation.TxfDeprecatedFunctionalityOptions)" 
-    key="System\CurrentControlSet\Policies" 
+
+    <policy name="TxfDeprecatedFunctionality" class="Machine"
+    displayName="$(string.TxfDeprecatedFunctionality)"
+    explainText="$(string.TxfDeprecatedFunctionalityText)"
+    presentation="$(presentation.TxfDeprecatedFunctionalityOptions)"
+    key="System\CurrentControlSet\Policies"
     valueName="NtfsEnableTxfDeprecatedFunctionality">
       <parentCategory ref="NTFS" />
       <supportedOn ref="windows:SUPPORTED_Windows8" />
@@ -181,6 +187,70 @@
         <decimal value="0" />
       </disabledValue>
     </policy>
+
+    <policy name="NtfsForceNonPagedPoolAllocation" class="Machine"
+    displayName="$(string.NtfsForceNonPagedPoolAllocation)"
+    explainText="$(string.NtfsForceNonPagedPoolAllocationExplain)"
+    presentation="$(presentation.NtfsForceNonPagedPoolAllocationOptions)"
+    key="System\CurrentControlSet\Policies"
+    valueName="NtfsForceNonPagedPoolAllocation">
+      <parentCategory ref="NTFS" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+
+    <policy name="NtfsParallelFlushThreshold" class="Machine"
+    displayName="$(string.NtfsParallelFlushThreshold)"
+    explainText="$(string.NtfsParallelFlushThresholdExplain)"
+    presentation="$(presentation.NtfsParallelFlushThresholdOptions)"
+    key="System\CurrentControlSet\Policies">
+      <parentCategory ref="NTFS" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+      <elements>
+        <decimal id="NtfsParallelFlushThresholdID" valueName="NtfsParallelFlushThreshold" minValue="100" maxValue="1000000" />
+      </elements>
+    </policy>
+
+    <policy name="NtfsParallelFlushWorkers" class="Machine"
+    displayName="$(string.NtfsParallelFlushWorkers)"
+    explainText="$(string.NtfsParallelFlushWorkersExplain)"
+    presentation="$(presentation.NtfsParallelFlushWorkersOptions)"
+    key="System\CurrentControlSet\Policies">
+      <parentCategory ref="NTFS" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+      <elements>
+        <decimal id="NtfsParallelFlushWorkersID" valueName="NtfsParallelFlushWorkers" minValue="0" maxValue="1024" />
+      </elements>
+    </policy>
+
+    <policy name="NtfsDefaultTier" class="Machine"
+    displayName="$(string.NtfsDefaultTier)"
+    explainText="$(string.NtfsDefaultTierExplain)"
+    presentation="$(presentation.NtfsDefaultTierOptions)"
+    key="System\CurrentControlSet\Policies">
+      <parentCategory ref="NTFS" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+      <elements>
+          <enum id="NtfsDefaultTier_Levels" valueName="NtfsDefaultTier">
+              <item displayName="$(string.DefaultTierSetting_1)">
+                  <value>
+                      <decimal value="1" />
+                  </value>
+              </item>
+              <item displayName="$(string.DefaultTierSetting_2)">
+                  <value>
+                      <decimal value="2" />
+                  </value>
+              </item>
+          </enum>
+      </elements>
+    </policy>
+
   </policies>
 </policyDefinitions>
 

@@ -10,6 +10,8 @@
         <string id="MSPassport_UsePassportForWork">Use Windows Hello for Business</string>
         <!-- Add support for certificate trust deployments -->
         <string id="WHFB_UseCertificateForOnPremAuth">Use certificate for on-premises authentication</string>
+        <!-- Add support for cloud trust deployments -->
+        <string id="WHFB_UseCloudTrustForOnPremAuth">Use cloud trust for on-premises authentication</string>
         <!-- DropdownList Button strings -->
         <string id="MSPassport_UsePassportForWorkExplain">Windows Hello for Business is an alternative method for signing into Windows using your Active Directory or Azure Active Directory account that can replace passwords, Smart Cards, and Virtual Smart Cards.
 
@@ -54,30 +56,38 @@ NOTE: If the above specified conditions for the maximum PIN length are not met, 
         <string id="MSPassport_UppercaseLetters">Require uppercase letters</string>
         <string id="MSPassport_UppercaseLettersExplain">Use this policy setting to configure the use of uppercase letters in the PIN.
 
-If you enable this policy setting, Windows requires users to include at least one uppercase letter in their PIN.
+If you enable this policy setting, Windows requires the user to include at least one uppercase letter in their PIN.
 
-If you disable or do not configure this policy setting, Windows does not allow users to use uppercase letters in their PIN.
+If you disable this policy setting, Windows does not allow the user to include uppercase letters in their PIN.
+
+If you do not configure this policy setting, Windows allows, but does not require, uppercase letters in the PIN.
         </string>
         <string id="MSPassport_LowercaseLetters">Require lowercase letters</string>
         <string id="MSPassport_LowercaseLettersExplain">Use this policy setting to configure the use of lowercase letters in the PIN.
 
-If you enable this policy setting, Windows requires users to include at least one lowercase letter in their PIN.
+If you enable this policy setting, Windows requires the user to include at least one lowercase letter in their PIN.
 
-If you disable or do not configure this policy setting, Windows does not allow users to use lowercase letters in their PIN.
+If you disable this policy setting, Windows does not allow the user to include lowercase letters in their PIN.
+
+If you do not configure this policy setting, Windows allows, but does not require, lowercase letters in the PIN.
         </string>
         <string id="MSPassport_SpecialCharacters">Require special characters</string>
         <string id="MSPassport_SpecialCharactersExplain"><![CDATA[Use this policy setting to configure the use of special characters in the PIN.  Allowable special characters are: ! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _ ` { | } ~ .
 
-If you enable this policy setting, Windows requires users to include at least one special character in their PIN.
+If you enable this policy setting, Windows requires the user to include at least one special character in their PIN.
 
-If you disable or do not configure this policy setting, Windows does not allow users to use special characters in their PIN.]]>
+If you disable this policy setting, Windows does not allow the user to include special characters in their PIN.
+
+If you do not configure this policy setting, Windows allows, but does not require, special characters in the PIN.]]>
         </string>
         <string id="MSPassport_Digits">Require digits</string>
         <string id="MSPassport_DigitsExplain">Use this policy setting to configure the use of digits in the PIN.
 
-If you enable or do not configure this policy setting, Windows requires users to include at least one digit in their PIN.
+If you enable this policy setting, Windows requires the user to include at least one digit in their PIN.
 
-If you disable this policy setting, Windows does not allow users to use digits in their PIN.
+If you disable this policy setting, Windows does not allow the user to include digits in their PINs.
+
+If you do not configure this policy setting, Windows allows, but does not require, digits in the PIN.
         </string>
         <string id="MSPassport_PINHistory">History</string>
         <string id="MSPassport_PINHistoryExplain">This setting specifies the number of past PINs that can be associated to a user account that can’t be reused. This policy enables administrators to enhance security by ensuring that old PINs are not reused continually. PIN history is not preserved through PIN reset.
@@ -114,9 +124,18 @@ NOTE: This policy is only applicable to devices which are registered with Azure 
 
 If you enable this policy setting, Windows Hello for Business enrolls a sign-in certificate that is used for on-premises authentication.
 
-If you disable or do not configure this policy setting, Windows Hello for Business enrolls a key that is used for on-premises authentication.
+If you disable or do not configure this policy setting, Windows Hello for Business will use a key or a Kerberos ticket (depending on other policy settings) for on-premises authentication.
 
 NOTE: Disabling or not configuring this policy setting and enabling the "Use Windows Hello for Business" policy setting requires the environment to have one or more Windows Server 2016 domain controllers to prevent Windows Hello for Business authentication from failing.
+        </string>
+        <!-- Explain Text for UseCloudTrustForOnPremAuth -->
+        <string id="WHFB_UseCloudTrustForOnPremAuthExplain">Use this policy setting to configure Windows Hello for Business to use Azure AD Kerberos for on-premises authentication.
+
+If you enable this policy setting, Windows Hello for Business will use a Kerberos ticket retrieved from authenticating to Azure for on-premises authentication.
+
+If you disable or do not configure this policy setting, Windows Hello for Business will use a key or certificate (depending on other policy settings) for on-premises authentication. 
+ 
+NOTE: An environment that enables both this policy setting, and the "Use Windows Hello for Business" policy setting requires one or more Windows Server 2016 domain controllers. Otherwise, Windows Hello for Business authentication will fail.
         </string>
         <!-- Explain text for device unlock policy -->
         <string id="MSPassport_UseDeviceUnlock">Configure device unlock factors</string>

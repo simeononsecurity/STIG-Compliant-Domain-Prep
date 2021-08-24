@@ -172,5 +172,15 @@
         </enum>
       </elements>
     </policy>
+    <policy name="CloudKerberosTicketRetrievalEnabled" class="Machine" displayName="$(string.CloudKerberosTicketRetrievalEnabled)" explainText="$(string.CloudKerberosTicketRetrievalEnabled_explain)" key="Software\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters" valueName="CloudKerberosTicketRetrievalEnabled">
+        <parentCategory ref="kerberos" />
+        <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+        <enabledValue>
+          <decimal value="1" />
+        </enabledValue>
+        <disabledValue>
+          <decimal value="0" />
+        </disabledValue>
+    </policy>
   </policies>
 </policyDefinitions>
