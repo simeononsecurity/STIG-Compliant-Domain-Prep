@@ -33,6 +33,7 @@
 - [Microsoft Office 2019/Office 365 Pro Plus V2R3](https://public.cyber.mil/stigs/downloads/)
 - [Microsoft OneDrive STIG V2R1](https://public.cyber.mil/stigs/downloads/)
 - [Oracle JRE 8 V1R5](https://public.cyber.mil/stigs/downloads/) - **[Requires Separate Script](https://github.com/simeononsecurity/Oracle-JRE-8-STIG-Script)**
+- [Windows 10 V2R2](https://public.cyber.mil/stigs/downloads/)
 - [Windows Defender Antivirus V2R2](https://public.cyber.mil/stigs/downloads/) - **[Requires Separate Script](https://github.com/simeononsecurity/Windows-Defender-STIG-Script)**
 - [Windows Firewall V1R7](https://public.cyber.mil/stigs/downloads/)
 - [Windows Server 2012(R2) V3R2](https://public.cyber.mil/stigs/downloads/)
