@@ -9,6 +9,12 @@
 
          <string id="Agent_Direct_Connect_Config">View Agent Direct-Connection Configuration</string>
 
+         <string id="Agent_Direct_Connect_Authentication">Authentication</string>
+
+         <string id="Agent_Direct_Connect_Authentication_lacu">Log On As Current User</string>
+
+         <string id="Agent_Direct_Connect_Protocols">Protocol and Network Settings</string>
+
          <string id="HTTPS_Port">HTTPS Port Number</string>
 
          <string id="HTTPS_Port_Desc">The TCP port number on which View Agent Connect listens for incoming View client HTTPS connections. If this policy is not configured or disabled the default of 443 is used.
@@ -114,6 +120,28 @@ MMR does not work correctly if the client system's video display hardware does n
          <string id="Default_Protocol">Default Protocol</string>
 
          <string id="Default_Protocol_Desc">Default display protocol used by View client to connect to desktop, if the value is not set then default is BLAST.</string>
+
+<!-- begin: log on as current user -->
+
+         <string id="gssapi_allow_legacy_clients">Allow Legacy Clients</string>
+         <string id="gssapi_allow_legacy_clients_Desc">If disabled, clients prior to version 5.5 will not be able to authenticate using Logon as Current User.
+
+If not set, older clients are allowed.</string>
+
+         <string id="gssapi_allow_ntlm">Allow NTLM fallback</string>
+         <string id="gssapi_allow_ntlm_Desc">If enabled, fallback from Kerberos to NTLM authentication is allowed if the client is unable to reach a domain controller.
+
+If not set, NTLM fallback is not allowed.</string>
+
+         <string id="gssapi_require_cbt">Require Channel Bindings</string>
+         <string id="gssapi_require_cbt_Desc">If disabled, channel bindings are not required.
+
+NOTE: Channel-bindings are not supported by legacy clients, If support for legacy clients is enabled, channel-bindings will not be used by clients prior to version 5.5.
+
+If not set, channel bindings are required.</string>
+
+<!-- end: log on as current user -->
+
       </stringTable>
 
       <presentationTable>

@@ -1,0 +1,867 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+
+   <displayName>VMware Horizon View Agent</displayName>
+   <description>Paramètres de configuration de VMware Horizon View Agent</description>
+   <resources>
+      <stringTable>
+
+         <string id="SUPPORTED_Windows10_1607_VM">Machine virtuelle avec au moins Windows 10/Windows Server 2016 VDI Version 1607</string>
+
+         <string id="Agent_Configuration">Configuration de l'agent</string>
+
+         <string id="Collaboration">Collaboration</string>
+
+         <string id="Agent_Security">Sécurité de l'agent</string>
+
+         <string id="Unity_Touch_Hosted_Apps">Unity Touch et applications hébergées</string>
+
+         <string id="Unity_Filter">Liste des règles de filtre Unity</string>
+
+         <string id="Unity_Filter_Rules_Desc">Cette stratégie spécifie les règles de filtre pour la fenêtre lors de l'accès à distance aux applications hébergées. Les règles de filtres sont utilisées par Horizon Agent pour prendre en charge les applications personnalisées. Cet objet de stratégie de groupe doit être utilisé en cas de problème d'affichage de fenêtre. Par exemple, une fenêtre déroulante ayant un arrière-plan noir ou une fenêtre déroulante de taille incorrecte.
+
+La première étape de définition d'une règle consiste à déterminer les caractéristiques de la ou des fenêtres auxquelles appliquer la règle. Plusieurs caractéristiques possibles peuvent être identifiées :
+
+1. Nom de classe fenêtre, identifié dans une règle personnalisée comme classname=XYZ
+2. Société du produit, identifié comme company=XYZ
+3. Nom du produit, identifié comme product=XYZ
+4. Version majeure du produit identifiée comme major=XYZ
+5. Version mineure du produit identifiée comme minor=XYZ
+6. Numéro de build du produit, identifié comme build=XYZ
+7. Numéro de révision du produit identifié comme revision=XYZ
+
+Il est plus courant d'utiliser uniquement « Nom de classe fenêtre » comme la caractéristique préférée (par exemple : classname=CustomClassName). En revanche, les autres caractéristiques sont fournies au cas où vous auriez besoin de limiter les règles à un produit spécifique. Ces caractéristiques sont disponibles dans la fenêtre Propriétés du fichier d'un exécutable et elles doivent être une correspondance exacte sensible à la casse incluant des caractères spéciaux. Lorsque plusieurs caractéristiques sont fournies, toutes doivent correspondre afin que la règle s'applique à cette fenêtre.
+
+Une fois que les caractéristiques sont identifiées, l'étape suivante consiste à choisir une action. L'action doit être soit action=block, soit action=map. action=block indique à Horizon Agent de ne pas relier à distance la fenêtre au client. Cette option est utilisée lorsqu'une fenêtre s'affiche sur le client, qui est trop grande ou qui interfère avec le comportement normal d'activation de la fenêtre. action=map indique à Horizon Agent de traiter la fenêtre comme un certain type codé en dur.
+
+Si vos définissez action=map, vous devez également spécifier le type auquel mapper la fenêtre. Cela s'effectue en incluant type=XYZ. Voici une liste de toutes les valeurs de types disponibles : normal, panel, dialog, tooltip, splash, toolbar, dock, desktop, widget, combobox, startscreen, sidepanel, taskbar, metrofullscreen, metrodocked.
+
+Voici deux exemples de règles que vous pouvez définir pour résoudre une application ayant un mauvais comportement :
+
+1. Vous pouvez exclure une fenêtre à laquelle les utilisateurs ne doivent pas accéder à distance.   - Pour bloquer toutes les fenêtres avec le nom de classe MyClassName, utilisez la règle « classname=MyClassName;action=block »
+   - Pour bloquer toutes les fenêtres du produit MyProduct, utilisez la règle « product=MyProduct;action=block ».
+2. Vous pouvez mapper une fenêtre sur le type correct. En général, cela est uniquement nécessaire si le support VMware vous demande de le faire, car il est difficile de déterminer si une fenêtre est mappée sur un type incorrect.
+   - Pour mapper une classe personnalisée sur le type combo box, utilisez la règle « classname=MyClassName;action=map;type=combobox »
+
+Remarque : cet objet de stratégie de groupe a une priorité inférieure aux règles de filtrage installées dans %ProgramData%\VMware\RdeServer\Unity Filters</string>
+
+         <string id="Smartcard_Redirection">Redirection de carte à puce</string>
+
+         <string id="Local_Reader_Access">Accès au lecteur local</string>
+
+         <string id="True_SSO_Configuration">Configuration de l'authentification unique réelle</string>
+
+         <string id="View_USB_Configuration">Configuration USB de View</string>
+
+         <string id="Client_Downloadable_only_settings">Paramètres téléchargeables uniquement par le client</string>
+
+         <string id="VMware_CIT">Transparence IP de VMware Client</string>
+
+         <string id="VMware_FlashMMR">VMware FlashMMR</string>
+
+         <string id="VMware_MediaProviderProxy">Pack de virtualisation VMware pour Skype Entreprise</string>
+
+         <string id="Recursive_Domain_Enumeration">Énumération récursive de domaines approuvés</string>
+
+         <string id="Recursive_Domain_Enumeration_Desc">Détermine si le domaine dans lequel le serveur réside énumère chaque domaine approuvé. Pour établir une chaîne de confiance complète, les domaines approuvés par chaque domaine approuvé sont aussi énumérés et le processus continue de manière récursive jusqu'à ce que tous les domaines approuvés soient détectés. Ces informations sont transmises au Serveur de connexion View pour s'assurer que le client dispose de tous les domaines approuvés lors des ouvertures de session.
+
+Cette propriété est activée par défaut. Lorsqu'elle est désactivée, seuls les domaines approuvés directement sont énumérés et la connexion aux contrôleurs de domaine distants n'est pas assurée.
+
+Remarque : dans des environnements contenant des relations de domaine complexes (telles que celles utilisant plusieurs structures de forêt avec approbations entre domaines de leurs forêts), ce processus peut prendre plusieurs minutes.</string>
+
+         <string id="Force_MMR_to_use_overlay">Forcer MMR à utiliser la superposition logicielle</string>
+
+         <string id="Force_MMR_to_use_overlay_Desc">MMR tentera d'utiliser la superposition matérielle pour lire la vidéo pour de meilleures performances. Toutefois, lorsque vous utilisez plusieurs écrans, la superposition matérielle n'existe que sur l'un des écrans : le principal ou celui sur lequel WMP a été démarré. Si WMP est glissé sur un autre écran, la vidéo s'affiche sous la forme d'un rectangle noir. Utilisez cette option pour forcer MMR à utiliser une superposition logicielle qui fonctionnera sur tous les écrans.</string>
+
+         <string id="Enable_multi_media_acceleration">Activer l'accélération multimédia</string>
+
+         <string id="Enable_multi_media_acceleration_Desc">Spécifie si la redirection multimédia (MMR) est activée sur l'agent. MMR est un filtre de Microsoft DirectShow qui permet de transférer des données multimédia de codecs spécifiques sur le système distant au client directement via un socket TCP. Les données sont ensuite décodées directement sur le client, lorsqu'elles sont lues. Les administrateurs peuvent désactiver MMR si le client ne dispose pas de ressources suffisantes pour gérer le décodage multimédia local.
+
+Remarque : MMR ne fonctionnera pas correctement si le matériel d'affichage vidéo de View Client ne prend pas en charge la superposition. La stratégie MMR ne s'applique pas aux sessions de poste de travail hors ligne.</string>
+
+         <string id="AllowDirectRDP">AllowDirectRDP</string>
+
+         <string id="AllowDirectRDP_Desc">Détermine si les clients non-View peuvent se connecter directement à des postes de travail View avec RDP. Lorsque cette propriété est désactivée, l'agent n'autorisera que les connexions gérées par View via View Client ou View Portal.
+
+Cette propriété est activée par défaut.</string>
+
+         <string id="AllowSingleSignon">AllowSingleSignon</string>
+
+         <string id="AllowSingleSignon_Desc">Détermine si l'authentification unique (SSO) est utilisée pour connecter des utilisateurs à des postes de travail View. Lorsque cette propriété est activée, les utilisateurs ne doivent entrer leurs informations d'identification que lors de la connexion avec View Client ou View Portal. Lorsque cette propriété est désactivée, les utilisateurs doivent s'authentifier de nouveau lorsque la connexion à distance est effectuée.
+
+Cette propriété nécessite que le composant Secure Authentication de View Agent soit installé sur le poste de travail. Elle est activée par défaut.</string>
+
+         <string id="ConnectionTicketTimeout">ConnectionTicketTimeout</string>
+
+         <string id="ConnectionTicketTimeout_Desc">Spécifie la durée en secondes pendant laquelle le ticket de connexion View est valide. Le ticket de connexion est utilisé par les clients View Client lors de la connexion à View Agent et est utilisé à des fins de vérification et d'authentification unique.
+
+Pour des raisons de sécurité, ces tickets ne sont valides que dans la période spécifiée. Si cette propriété n'est pas définie explicitement, une valeur par défaut de 900 secondes s'applique.</string>
+
+         <string id="CredentialFilterExceptions">CredentialFilterExceptions</string>
+
+         <string id="CredentialFilterExceptions_Desc">Liste de noms de fichier exécutable séparés par des points-virgules non autorisés à charger l'agent CredentialFilter. Les noms de fichier ne doivent pas comporter de chemin d'accès ou de suffixe.</string>
+
+         <string id="Disable_Time_Zone_sync">Désactiver la synchronisation du fuseau horaire</string>
+
+         <string id="Disable_Time_Zone_sync_Desc">Détermine si le fuseau horaire du poste de travail View est synchronisé avec celui du client connecté. Lorsqu'elle est activée, cette propriété ne s'applique que si le paramètre Désactiver le transfert de fuseau horaire de la stratégie Configuration de View Client n'est pas définie sur désactivé.
+
+Cette propriété est désactivée par défaut.</string>
+
+         <string id="Toggle_Display_Settings_Control">Basculer le contrôle des paramètres d'affichage</string>
+
+         <string id="Toggle_Display_Settings_Control_Desc">Détermine s'il faut désactiver la page Paramètres de l'applet Panneau de configuration d'affichage lorsqu'un client View Client est connecté.
+
+Cette propriété ne s'applique qu'aux sessions utilisant le protocole PCoIP. Cette propriété est activée par défaut.</string>
+
+         <string id="DpiSync">Synchronisation DPI</string>
+
+         <string id="DpiSync_Desc">Ajuste le paramètre DPI à l'échelle du système de la session distante. Lorsque cette propriété est activée ou non configurée, définit le paramètre DPI à l'échelle du système de la session distante pour qu'il corresponde au paramètre DPI correspondant sur le système d'exploitation client. Lorsque la propriété est désactivée, ne change jamais le paramètre DPI à l'échelle du système de la session distante.</string>
+
+         <string id="DpiSyncPerConnection">Synchronisation DPI par connexion</string>
+
+         <string id="DpiSyncPerConnection_Desc">Ajuste le paramètre DPI de moniteur pour la reconnexion à la session distante. Lorsque cette propriété est activée, définit le paramètre DPI de moniteur pour la reconnexion à la session distante pour qu'il corresponde au paramètre DPI correspondant sur le système d'exploitation client. Lorsque la propriété est désactivée ou non configurée, ne change jamais le paramètre DPI de moniteur pour la reconnexion à la session distante.</string>
+
+         <string id="DisallowCollaboration">Désactiver la collaboration</string>
+
+         <string id="DisallowCollaboration_Desc">Ce paramètre configure si la collaboration est autorisée sur la machine virtuelle View Agent. Si elle est activée, la fonctionnalité de collaboration est désactivée complètement. Si elle est désactivée ou non configurée, la fonctionnalité est contrôlée au niveau d'un pool. Les machines View Agent doivent être redémarrées pour que ce paramètre prenne effet.</string>
+
+         <string id="AllowCollaborationInviteByIM">Autoriser l'invitation de collaborateurs par messagerie instantanée</string>
+
+         <string id="AllowCollaborationInviteByIM_Desc">Ce paramètre configure l'octroi aux utilisateurs de l'autorisation d'envoyer des invitations de collaboration à l'aide d'une application de messagerie instantanée installée. S'il est désactivé, l'utilisateur n'est pas autorisé à inviter à l'aide d'une messagerie instantanée, même si une application de messagerie instantanée est installée. Ce paramètre est activé par défaut.</string>
+
+         <string id="AllowCollaborationInviteByEmail">Autoriser l'invitation de collaborateurs par e-mail</string>
+
+         <string id="AllowCollaborationInviteByEmail_Desc">Ce paramètre configure l'octroi aux utilisateurs de l'autorisation d'envoyer des invitations de collaboration à l'aide d'une application de messagerie électronique installée. S'il est désactivé, l'utilisateur n'est pas autorisé à envoyer des invitations à l'aide d'un e-mail, même si une application de messagerie électronique est installée. Ce paramètre est activé par défaut.</string>
+
+         <string id="AllowCollaborationControlPassing">Autoriser le contrôle de transmission à des collaborateurs</string>
+
+         <string id="AllowCollaborationControlPassing_Desc">Ce paramètre configure si les utilisateurs sont autorisés à transmettre le contrôle d'entrée à d'autres collaborateurs lors de la collaboration. Ce paramètre est activé par défaut.</string>
+
+         <string id="MaxCollaboratorCount">Nombre maximal de collaborateurs invités</string>
+
+         <string id="MaxCollaboratorCount_Desc">Ce paramètre configure le nombre maximal de collaborateurs qu'un utilisateur peut inviter à rejoindre sa session. La valeur par défaut maximale est de 5.</string>
+
+         <string id="CollaborationEmailInviteDelimiter">Séparateur utilisé pour plusieurs adresses électroniques dans les liens mailto:</string>
+
+         <string id="CollaborationEmailInviteDelimiter_Desc">Ce paramètre configure le séparateur utilisé pour plusieurs adresses électroniques dans les liens mailto:. Lorsque cette stratégie n'est pas configurée, la valeur est définie par défaut sur « ; » (un point-virgule sans espace) pour séparer les adresses électroniques afin de garantir la meilleure compatibilité avec les clients de messagerie traditionnels.
+
+Si votre client de messagerie par défaut a des problèmes avec ce séparateur, vous pouvez essayer d'autres combinaisons telles que « ,  » (une virgule et un espace) ou « ;  » (un point-virgule et un espace). Cette valeur sera codée par URI avant d'être placée dans le lien mailto:. Par conséquent, ne définissez pas cette entrée sur une valeur codée par URI.</string>
+
+         <string id="CollaborationServerURLs">URL de serveur à inclure dans un message d'invitation</string>
+
+         <string id="CollaborationServerURLs_Desc">Ce paramètre vous permet de remplacer l'URL par défaut incluse dans les invitations de collaboration. Il vous est recommandé de définir cette valeur si votre déploiement utilise plusieurs URL de serveur (par exemple, différentes URL internes et externes ou des URL par espace).
+
+Lors de la définition des valeurs, la première colonne doit comporter l'URL avec un port facultatif (par exemple, « horizon-ca.corp.int » ou « horizon-ca.corp.int:2323 ») et la seconde colonne doit inclure une courte description de l'URL (par exemple, « Espace Californie » ou « Réseau d'entreprise »). La description n'est utilisée que si la liste contient plusieurs serveurs.</string>
+
+         <string id="UnAuthenticatedAccessEnabled">Activer l'accès non authentifié</string>
+
+         <string id="UnAuthenticatedAccessEnabled_Desc">Ce paramètre active la fonctionnalité Accès non authentifié. Le système doit être redémarré pour que ce changement prenne effet. Accès non authentifié est activé par défaut.</string>
+
+         <string id="CommandsToRunOnConnect">CommandsToRunOnConnect</string>
+
+         <string id="CommandsToRunOnConnect_Desc">Liste de commandes à exécuter lorsqu'une session est connectée pour la première fois.</string>
+
+         <string id="CommandsToRunOnReconnect">CommandsToRunOnReconnect</string>
+
+         <string id="CommandsToRunOnReconnect_Desc">Liste de commandes à exécuter lorsqu'une session est reconnectée après une déconnexion.</string>
+
+         <string id="CommandsToRunOnDisconnect">CommandsToRunOnDisconnect</string>
+
+         <string id="CommandsToRunOnDisconnect_Desc">Liste de commandes à exécuter lorsqu'une session est déconnectée.</string>
+
+         <string id="ShowDiskActivityIcon">ShowDiskActivityIcon</string>
+
+         <string id="ShowDiskActivityIcon_Desc">Affiche une icône d'activité du disque dans la barre d'état système. Utilise « Suivi du noyau NT de trace système » qui ne peut être utilisé que par un processus unique ; désactivez-le si nécessaire pour d'autres fins. La valeur par défaut est Activé.</string>
+
+         <string id="SSO_retry_timeout">Délai de nouvelle tentative de l'authentification unique</string>
+
+         <string id="SSO_retry_timeout_Desc">Spécifie la durée en millisecondes après laquelle l'authentification unique est de nouveau tentée. Définissez la valeur sur 0 pour désactiver la nouvelle tentative d'authentification unique. La valeur par défaut est de 5 000 millisecondes.</string>
+
+         <string id="VDI_idle_time_till_disconnect">Durée d'inactivité jusqu'à la déconnexion (VDI)</string>
+
+         <string id="VDI_idle_time_till_disconnect_Desc">Spécifie la durée après laquelle une session de poste de travail VDI se déconnecte en raison de l'inactivité de l'utilisateur.
+Si ce paramètre est désactivé ou n'est pas configuré, les sessions de poste de travail VDI ne seront jamais déconnectées. La sélection de « Jamais » aura le même effet.
+Remarque : si le pool de postes de travail ou la machine est configuré pour fermer automatiquement sa session après une déconnexion, ces paramètres seront respectés.</string>
+
+         <string id="Accept_SSL_encr_framework_channel">Accepter le canal d'infrastructure chiffré SSL</string>
+
+         <string id="Accept_SSL_encr_framework_channel_Desc">Accepter le canal d'infrastructure chiffré SSL 
+
+Activer : activez SSL, autorisez les clients hérités à se connecter sans SSL
+Désactiver : désactivez SSL
+Appliquer : activez SSL, refusez les connexions des clients hérités</string>
+
+         <string id="Enable">Activer</string>
+
+         <string id="Disable">Désactiver</string>
+
+         <string id="Enforce">Appliquer</string>
+
+         <string id="Allow_smartcard_local_access">Autoriser les applications à accéder aux lecteurs de carte à puce locaux</string>
+
+         <string id="Allow_smartcard_local_access_Desc">Si cette option est activée, les applications pourront accéder à tous les lecteurs de carte à puce « locaux » même si la fonctionnalité Redirection de carte à puce est installée.
+
+Ce paramètre ne s'applique pas à RDP ou aux hôtes RDSH lorsque le rôle Services Bureau à distance est activé.
+
+Lorsque ce paramètre est activé, le poste de travail sera surveillé pour détecter la présence d'un lecteur local. Lorsqu'un lecteur local est détecté, la redirection de carte à puce désactive l'autorisation d'accès aux lecteurs locaux. La redirection reste désactivée jusqu'à ce qu'un utilisateur se connecte de nouveau à la session.
+
+REMARQUE : lorsque l'accès local est activé, les applications ne peuvent plus accéder aux lecteurs distants présents sur le client.
+
+Ce paramètre est désactivé par défaut.</string>
+
+         <string id="Local_Reader_Name">Nom du lecteur local</string>
+
+         <string id="Local_Reader_Name_Desc">Spécifie le nom d'un lecteur local à surveiller pour activer l'accès local. Par défaut, une carte à puce doit être insérée dans le lecteur pour activer l'accès local. Vous pouvez désactiver cette exigence avec le paramètre « Exiger une carte à puce insérée ».
+
+
+La valeur par défaut est que cette fonctionnalité est activée pour tous les lecteurs</string>
+
+         <string id="Require_an_inserted_smart_card">Exiger une carte à puce insérée</string>
+
+         <string id="Require_an_inserted_smart_card_Desc">Si ce paramètre est activé, l'accès au lecteur local n'est activé que si une carte est insérée dans le lecteur local. Si ce paramètre est désactivé, l'accès local est activé tant qu'un lecteur local est détecté.
+
+Ce paramètre est activé par défaut.</string>
+
+         <string id="Disable_true_SSO">Désactiver l'authentification unique réelle</string>
+
+         <string id="Disable_true_SSO_Desc">Désactive la fonctionnalité sur l'agent si cette option est activée</string>
+
+         <string id="Cert_wait_timeout">Délai d'attente de certificat</string>
+
+         <string id="Cert_wait_timeout_Desc">Spécifie le délai d'expiration des certificats pour arriver sur l'agent, en secondes</string>
+
+         <string id="Min_key_size">Taille de clé minimale</string>
+
+         <string id="Min_key_size_Desc">Clés de taille minimale utilisées</string>
+
+         <string id="All_key_sizes">Toutes les tailles de clé</string>
+
+         <string id="All_key_sizes_Desc">Toutes les tailles de clé pouvant être utilisées. 5 tailles au maximum peuvent être spécifiées. Exemple : 1024,2048,3072,4096</string>
+
+         <string id="Keys_to_precreate">Nombre de clés à créer au préalable</string>
+
+         <string id="Keys_to_precreate_Desc">Nombre de clés à créer au préalable sur un environnement RDSH</string>
+
+         <string id="Cert_min_validity">Période de validité minimale requise pour un certificat</string>
+
+         <string id="Cert_min_validity_Desc">Période de validité minimale (en minutes) requise pour un certificat réutilisé pour reconnecter un utilisateur</string>
+
+         <string id="Enable_Unity_Touch">Activer Unity Touch</string>
+
+         <string id="Enable_Unity_Touch_Desc">Cette stratégie spécifie si la fonctionnalité Unity Touch est activée sur View Agent. La valeur par défaut de ce paramètre est qu'Unity Touch est activé.
+
+Sous Windows 10, si Unity Touch est activé, la sous-stratégie spécifie si la prise en charge de l'application de plateforme Windows universelle (UWP) pour Unity Touch est activée sur View Agent. Par défaut, la prise en charge d'UWP est activée pour Unity Touch. Si la stratégie Unity Touch n'est pas configurée, la prise en charge d'UWP pour Unity Touch est activée sur Windows 10.</string>
+
+         <string id="Enable_system_tray_redir">Activer la redirection de la barre d'état système pour les applications hébergées</string>
+
+         <string id="Enable_system_tray_redir_Desc">Cette stratégie spécifie si la redirection de la barre d'état système doit être activée lors de l'utilisation à distance d'applications hébergées. La valeur par défaut de ce paramètre est que la redirection de la barre d'état système est activée.</string>
+
+         <string id="Enable_user_prof_customization">Activer la personnalisation de profil d'utilisateur pour les applications hébergées</string>
+
+         <string id="Enable_user_prof_customization_Desc">Cette stratégie spécifie s'il faut exécuter la personnalisation de profil d'utilisateur lors de l'utilisation à distance d'applications hébergées. Cela générera un profil d'utilisateur, personnalisera le thème Windows et exécutera des applications de démarrage enregistrées. La valeur par défaut est désactivé.</string>
+
+         <string id="AllowTinyOrOffscreenWindows">Envoyer des mises à jour pour les fenêtres vides ou en dehors de l'écran</string>
+
+         <string id="AllowTinyOrOffscreenWindows_Desc">Cette stratégie spécifie si Horizon Client doit recevoir des mises à jour sur les fenêtres vides ou en dehors de l'écran. Lorsque cette valeur est désactivée, les informations sur les fenêtres inférieures à 2 x 2 pixels ou se trouvant en dehors de l'écran ne sont pas envoyées à Horizon Client. Elle est désactivée par défaut.</string>
+
+         <string id="MinimalHookingModeEnabled">Limiter l'utilisation de hooks Windows</string>
+
+         <string id="MinimalHookingModeEnabled_Desc">Cette stratégie désactive la plupart des hooks lors de l'utilisation à distance d'applications hébergées ou lors de l'utilisation d'Unity Touch. Elle est conçue pour être utilisée pour des applications ayant des problèmes de compatibilité ou de performances lorsque des hooks de niveau système d'exploitation sont définis. Par exemple, ce paramètre désactive l'utilisation de la plupart des hooks d'accessibilité et contenus dans un processus actifs de Windows. Cette stratégie est désactivée par défaut, ce qui signifie que nous utilisons tous nos hooks préférés par défaut.</string>
+
+         <string id="LaunchAppWhenArgsAreDifferent">Ne lancer que de nouvelles instances d'applications hébergées si des arguments sont différents</string>
+
+         <string id="LaunchAppWhenArgsAreDifferent_Desc">Cette stratégie contrôle le comportement lorsqu'une application hébergée est lancée, mais qu'une instance existante de l'application est déjà en cours d'exécution dans une session de protocole déconnectée. Si cette option est désactivée, l'instance existante de l'application sera activée. Si cette option est activée, l'instance existante de l'application ne sera activée que si les paramètres de ligne de commande correspondent. La valeur par défaut de cette stratégie est Désactivé.</string>
+
+         <string id="Exclude_Vid_Pid">Exclure un périphérique Vid/Pid</string>
+
+         <string id="Exclude_Vid_Pid_Desc">Excluez un périphérique avec des ID de fournisseur et de produit spécifiés de la transmission.
+
+Syntaxe : {m|o}:&lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx|*&gt;&gt;[;...]
+merge-flag:
+m=le paramètre client fusionnera avec le paramètre agent
+o=le paramètre agent remplacera le paramètre client
+
+Par exemple : m:vid-0781_pid-554c;vid-0781_pid-9999</string>
+
+         <string id="Include_Vid_Pid">Inclure un périphérique Vid/Pid</string>
+
+         <string id="Include_Vid_Pid_Desc">Incluez un périphérique avec des ID de fournisseur et de produit spécifiés pouvant être transmis.
+
+Syntaxe : {m|o}:&lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx|*&gt;&gt;[;...]
+merge-flag:
+m=le paramètre client fusionnera avec le paramètre agent
+o=le paramètre agent fusionnera avec le paramètre client
+
+Par exemple : o:vid-0781_pid-554c;vid-0781_pid-9999</string>
+
+         <string id="Exclude_device_family">Exclure une famille de périphériques</string>
+
+         <string id="Exclude_device_family_Desc">Excluez une famille de périphériques de la transmission.
+
+Syntaxe : {m|o}:&lt;family-name&gt;[;...]
+
+merge-flag:
+m=le paramètre client fusionnera avec le paramètre agent
+o=le paramètre agent fusionnera avec le paramètre client
+
+Par exemple : o:bluetooth;audio-in</string>
+
+         <string id="Include_device_family">Inclure une famille de périphériques</string>
+
+         <string id="Include_device_family_Desc">Incluez une famille de périphériques pouvant être transmise.
+
+Syntaxe : {m|o}:&lt;family-name&gt;[;...]
+
+merge-flag:
+m=le paramètre client fusionnera avec le paramètre agent
+o=le paramètre agent fusionnera avec le paramètre client
+
+Par exemple : m:storage;audio-out</string>
+
+         <string id="Exclude_all">Exclure tous les périphériques</string>
+
+         <string id="Exclude_all_Desc">Bloquez tous les périphériques, sauf s'ils sont inclus via la règle Inclure un filtre.
+
+Par défaut : Autoriser tous les périphériques</string>
+
+         <string id="Exclude_Vid_Pid_from_Split">Exclure un périphérique Vid/Pid du fractionnement</string>
+
+         <string id="Exclude_Vid_Pid_from_Split_Desc">Excluez les périphériques de composant d'un périphérique composite spécifié par ses ID de fournisseur et de produit d'être traités comme des périphériques distincts pour le filtrage.
+
+Syntaxe : {m|o}:&lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx|*&gt;&gt;[;...]
+merge-flag:
+m=le paramètre client fusionnera avec le paramètre agent
+o=le paramètre agent fusionnera avec le paramètre client
+
+Par exemple : o:vid-0781_pid-554c;vid-0781_pid-9999</string>
+
+         <string id="Split_Vid_Pid_Device">Fractionner un périphérique Vid/Pid</string>
+
+         <string id="Split_Vid_Pid_Device_Desc">Traitez les périphériques de composant d'un périphérique composite spécifié par ses ID de fournisseur et de produit comme des périphériques distincts pour le filtrage.
+
+Syntaxe : {m|o}:&lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx|*&gt;(exintf:xx[;exintf:xx])&gt;[;...]
+merge-flag:
+m=le paramètre client fusionnera avec le paramètre agent
+o=le paramètre agent fusionnera avec le paramètre client
+
+Par exemple : o:vid-0781_pid-554c(exintf:01;exintf:02);vid-0781_pid-9999(exintf:02)</string>
+
+         <string id="Allow_other_input_devices">Autoriser d'autres périphériques d'entrée</string>
+
+         <string id="Allow_other_input_devices_Desc">Autorisez le transfert des périphériques d'entrée autres que les périphériques HID démarrables, les claviers et les souris.
+
+Par défaut : Autoriser le transfert</string>
+
+         <string id="Allow_Default">Autoriser - Paramètre client par défaut</string>
+
+         <string id="Allow_Override">Autoriser - Remplacer le paramètre client</string>
+
+         <string id="Disable_Default">Désactiver - Paramètre client par défaut</string>
+
+         <string id="Disable_Override">Désactiver - Remplacer le paramètre client</string>
+
+         <string id="Allow_HID_Bootable">Autoriser les périphériques HID démarrables</string>
+
+         <string id="Allow_HID_Bootable_Desc">Autorisez le transfert des périphériques d'entrée démarrables (aussi appelés périphériques HID démarrables).
+
+Par défaut : Autoriser le transfert</string>
+
+         <string id="Allow_Audio_Input_devices">Autoriser les périphériques d'entrée audio</string>
+
+         <string id="Allow_Audio_Input_devices_Desc">Autorisez le transfert des périphériques d'entrée audio.
+
+Par défaut : Autoriser le transfert</string>
+
+         <string id="Allow_Audio_Output_devices">Autoriser les périphériques de sortie audio</string>
+
+         <string id="Allow_Audio_Output_devices_Desc">Autorisez le transfert des périphériques de sortie audio.
+
+Par défaut : Bloquer le transfert</string>
+
+         <string id="Allow_keyboard_mouse">Autoriser les périphériques clavier et souris</string>
+
+         <string id="Allow_keyboard_mouse_Desc">Autorisez le transfert des périphériques clavier et souris.
+
+Par défaut : Bloquer le transfert</string>
+
+         <string id="Allow_Video_Devices">Autoriser les périphériques vidéo</string>
+
+         <string id="Allow_Video_Devices_Desc">Autorisez le transfert des périphériques vidéo.
+
+Par défaut : Autoriser le transfert</string>
+
+         <string id="Allow_Smart_Cards">Autoriser les périphériques de carte à puce</string>
+
+         <string id="Allow_Smart_Cards_Desc">Autorisez le transfert des périphériques de carte à puce.
+
+Par défaut : Bloquer le transfert</string>
+
+         <string id="Allow_Auto_Device_Splitting">Autoriser le fractionnement automatique de périphérique</string>
+
+         <string id="Allow_Auto_Device_Splitting_Desc">Excluez les périphériques de composant d'un périphérique composite d'être traités automatiquement comme des périphériques distincts.</string>
+
+         <string id="Enable_flash_MMR">Activer la redirection multimédia Flash</string>
+
+         <string id="Enable_flash_MMR_Desc">Spécifie si la redirection multimédia Flash (FlashMMR) est activée sur l'agent. FlashMMR transmet les données multimédia Flash depuis des URL spécifiques via un canal TCP au client, et appelle le Flash Player local pour qu'il lise directement du côté client. Avec FlashMMR activé, le CPU et la bande passante réseau seront grandement réduits du côté agent lors de la lecture Flash.</string>
+
+         <string id="Min_rect_size_to_enable_flash_MMR">Taille de rectangle minimale pour activer FlashMMR</string>
+
+         <string id="Min_rect_size_to_enable_flash_MMR_Desc">Taille de rectangle minimale pour activer FlashMMR, la taille sera représentée par la chaîne « largeur,hauteur », par exemple « 200,300 ». L'unité de taille est le pixel. La redirection Flash est activée uniquement lorsque la largeur et la hauteur sont égales ou supérieures à la valeur dans le GPO. Si ce GPO n'est pas configuré, la taille (320,200) est utilisée.</string>
+
+         <string id="FlashMMRUrlList">Liste d'URL d'hôtes pour activer FlashMMR</string>
+
+         <string id="FlashMMRUrlList_Desc">Spécifie les listes d'URL pour activer FlashMMR. Les noms d'hôte doivent être organisés avec le préfixe http:// ou https://, par exemple : http://www.youtube.com ; ou avec le caractère générique (*), par exemple : https://*.youtube.com. Indiquez l'URL d'hôte dans la colonne de nom de valeur ; la colonne de valeur sera ignorée.</string>
+
+         <string id="ShowVMWMediaProviderProxyIcon">Afficher l'icône</string>
+
+         <string id="ShowVMWMediaProviderProxyIcon_Desc">Affiche l'icône du pack de virtualisation VMware pour Skype Entreprise. Cette stratégie est activée par défaut. L'icône n'apparaît pas si la stratégie Afficher l'icône du pack de virtualisation VMware pour Skype Entreprise est désactivée et que vous ne pouvez pas afficher les statistiques des appels ou les messages.</string>
+
+         <string id="ShowVMWMediaProviderProxyMessages">Afficher les messages</string>
+
+         <string id="ShowVMWMediaProviderProxyMessages_Desc">Affiche les messages du pack de virtualisation VMware pour Skype Entreprise. Cette stratégie est activée par défaut. Les messages ne s'affichent pas si les stratégies Afficher l'icône et Afficher les messages sont désactivées pour le pack de virtualisation VMware pour Skype Entreprise.</string>
+
+         <string id="SetVMWMediaProviderProxyForceNonOptimizedEnvVar">Forcer Skype Entreprise en mode non optimisé</string>
+
+         <string id="SetVMWMediaProviderProxyForceNonOptimizedOptions_Desc">Vous pouvez forcer Skype Entreprise à s'exécuter en mode non optimisé pour les connexions d'Horizon Client en détectant automatiquement les connexions externes. Les connexions sont déterminées comme étant externes lorsqu'Horizon Client se connecte via une passerelle externe. Dans ce scénario, la variable d'environnement « ViewClient_Broker_GatewayType » est présente et « ViewClient_Broker_GatewayLocation » est définie sur Externe. Si l'option « Détecter automatiquement les connexions externes » est définie, le Pack de virtualisation pour Skype Entreprise revient au mode de secours si la connexion est déterminée comme étant externe.
+
+Vous pouvez également forcer Skype Entreprise à s'exécuter en mode non optimisé pour les connexions d'Horizon Client en définissant le nom de la variable d'environnement qui est présente lors de la connexion sur la machine sur laquelle Horizon Agent est installé. Si le nom de la variable est défini, le pack de virtualisation pour Skype Entreprise repasse en mode de secours. Par exemple, si la variable d'environnement « ViewClient_F5_APM » est définie sur la machine agent de poste de travail distant lorsque la machine Horizon Client se connecte depuis l'extérieur du réseau à l'aide de l'équilibrage de charge F5 et si vous voulez forcer le mode non optimisé, définissez cette valeur sur ViewClient_F5_APM.
+
+Le Pack de virtualisation pour Skype Entreprise revient au mode de secours si l'un des deux paramètres est configuré et si les conditions sont remplies.
+
+Cette stratégie n'est pas configurée par défaut. </string>
+
+         <string id="EnableDetectProxySettings">EnableDetectProxySettings</string>
+
+         <string id="EnableDetectProxySettings_Desc">Lorsqu'il est activé, le pack de virtualisation VMware pour Skype Entreprise détecte les paramètres de proxy sur le système Horizon Client et les utilise pour le trafic média. Si les paramètres de proxy sont absents du système Horizon Client, le pack de virtualisation VMware pour Skype Entreprise utilise une connexion directe. L'activation de cette stratégie permet de réduire les retards lorsque le système Horizon Client doit utiliser un serveur proxy.</string>
+
+         <string id="SuppressMinorVersionMismatchWarning">Supprimer l'avertissement de discordance de version mineure</string>
+
+         <string id="SuppressMinorVersionMismatchWarning_Desc">La zone de notification affiche un avertissement si le pack de virtualisation VMware pour Skype Entreprise n'a pas la même version mineure de l'API sur le système Horizon Client et sur le poste de travail Horizon. Lorsque cet objet de stratégie de groupe est activé, l'avertissement est supprimé. Notez que s'il existe une discordance de version mineure de l'API, les appels Skype Entreprise sont optimisés, mais le Pack de virtualisation ne dispose pas nécessairement des dernières fonctionnalités.</string>
+
+         <string id="DisableAECExtendedFilter">Désactiver le filtre étendu pour l'annulation de l'écho acoustique dans le pack de virtualisation VMware pour Skype Entreprise</string>
+
+         <string id="DisableAECExtendedFilter_Desc">Lorsque cette option est activée, le pack de virtualisation VMware pour Skype Entreprise n'utilise pas le filtre étendu pour l'annulation de l'écho acoustique. Par défaut, le pack de virtualisation VMware pour Skype Entreprise utilise le filtre étendu pour l'annulation de l'écho acoustique. Ce filtre offre une meilleure annulation de l'écho et du retour. Cela est particulièrement efficace lorsque le microphone et le haut-parleur du système Horizon Client sont proches les uns des autres.</string>
+
+         <string id="Enable_CIT">Activer</string>
+
+         <string id="Enable_CIT_Desc">Activez la transparence IP de VMware Client. Le paramètre prend effet lors de la prochaine connexion.</string>
+
+         <string id="Proxy_default_ie_autodetect">Détection automatique par défaut du proxy</string>
+
+         <string id="Proxy_default_ie_autodetect_Desc">Paramètre de connexion IE par défaut. Active Détecter automatiquement les paramètres dans Propriétés Internet, Paramètres de réseau local</string>
+
+         <string id="Default_proxy_server">Serveur proxy par défaut</string>
+
+         <string id="Default_proxy_server_Desc">Paramètre de connexion IE par défaut pour le serveur proxy. Spécifie le serveur proxy à utiliser dans Propriétés Internet, Paramètres de réseau local</string>
+
+         <string id="Update_Java_Proxy">Définir le proxy pour l'applet Java</string>
+
+         <string id="Update_Java_Proxy_Desc">Définition du proxy Java pour se connecter directement et contourner le paramètre du navigateur. Définition du proxy Java pour utiliser Transparence IP de client afin de rediriger le réseau pour l'applet Java. Définissez la restauration par défaut des paramètres du proxy Java aux paramètres d'origine.</string>
+
+         <string id="Use_Client_IP">Utiliser Transparence IP de Client pour le proxy Java</string>
+
+         <string id="Use_Direct_Connect">Utiliser la connexion directe pour le proxy Java</string>
+
+         <string id="Use_Default">Utiliser la valeur par défaut pour le proxy Java</string>
+
+         <string id="FlashMMRUrlListEnableType">Définition pour l'utilisation de la liste d'URL FlashMMR</string>
+
+         <string id="FlashMMRUrlListEnableType_Desc">Définissez la règle de liste blanche/noire pour activer/désactiver FlashMMR. Si la règle de liste blanche prend effet, seules les URL dans la liste d'URL de FlashMMR seront activées ; si la règle de liste noire est utilisée, seules les URL dans la liste d'URL de FlashMMR sont désactivées. Par défaut, la règle de liste blanche est effective.</string>
+
+         <string id="Enable_white_list">Activer la liste blanche</string>
+
+         <string id="Enable_black_list">Activer la liste noire</string>
+
+         <string id="VMware_HTML5_FEATURES">Fonctionnalités HTML5 de VMware</string>
+
+         <string id="Enable_HTML5_FEATURES">Activer les fonctionnalités HTML5 de VMware</string>
+
+         <string id="Enable_HTML5_FEATURES_Desc">Activez les fonctionnalités HTML5 de VMware. Il est nécessaire de définir la stratégie sur «–Activée » ou « Non configurée » pour utiliser la redirection multimédia HTML5 de VMware, la redirection de géolocalisation, la redirection de navigateur ou l'optimisation des supports pour Microsoft Teams.  Si cette stratégie est définie sur « Désactivée », vous ne pouvez utiliser aucune des fonctionnalités HTML5 de VMware. Le paramètre prend effet lors de la prochaine connexion.</string>
+
+         <string id="HTML5FEATURES_Disable_AudoDetect_Intranet">Désactiver la détection automatique du réseau intranet</string>
+
+         <string id="HTML5FEATURES_Disable_AudoDetect_Intranet_Desc">Lorsque la stratégie est définie sur Activé, les paramètres d'intranet « Inclure tous les sites locaux (intranet) non mentionnés dans d'autres zones » et « Inclure tous les sites qui n'utilisent pas de serveur proxy » seront désactivés lors de la prochaine connexion. Lorsque la stratégie est définie sur Désactivé, la zone intranet local IE n'est pas modifiée.
+
+Remarque : il est nécessaire que cette stratégie soit définie sur « Activé » lorsque (1) le navigateur Edge est activé pour la redirection multimédia HTML5 de VMware ou (2) la redirection de géolocalisation est activée.</string>
+
+         <string id="VMware_HTML5MMR">Redirection multimédia HTML5 de VMware</string>
+
+         <string id="Enable_HTML5_MMR">Activer la redirection multimédia HTML5 de VMware</string>
+
+         <string id="Enable_HTML5_MMR_Desc">Activez la redirection multimédia HTML5 de VMware. Le paramètre prend effet lors de la prochaine connexion.</string>
+
+         <string id="HTML5MMRUrlList">Activez la liste d'URL pour la redirection multimédia HTML5 de VMware.</string>
+
+         <string id="HTML5MMRUrlList_Desc">Spécifie la liste d'URL permettant d'activer la redirection multimédia HTML5 de VMware. Spécifiez le modèle d'URL dans la colonne Nom de valeur, par ex. « https://www.youtube.com/* ». La colonne Valeur doit être vide. Elle est réservée pour une future utilisation.</string>
+
+         <string id="HTML5MMR_Enable_Chrome">Activer le navigateur Chrome pour la redirection multimédia HTML5 de VMware</string>
+
+         <string id="HTML5MMR_Enable_Chrome_Desc">Cette stratégie n'est utilisée que lorsque la redirection multimédia HTML5 de VMware est activée. Si elle n'est pas configurée, la valeur par défaut sera la même que pour « Activer la redirection multimédia HTML5 de VMware ».</string>
+
+         <string id="HTML5MMR_Enable_Edge">Activer la version héritée du navigateur Microsoft Edge pour la redirection multimédia HTML5 de VMware</string>
+
+         <string id="HTML5MMR_Enable_Edge_Desc">Cette stratégie n'est utilisée que lorsque la redirection multimédia HTML5 de VMware est activée. Si elle n'est pas configurée, la valeur par défaut sera la même que pour « Activer la redirection multimédia HTML5 de VMware ». </string>
+
+         <string id="HTML5MMR_Enable_Edge_Chromium">Activer le navigateur Microsoft Edge (Chromium) pour la redirection multimédia HTML5 de VMware</string>
+
+         <string id="HTML5MMR_Enable_Edge_Chromium_Desc">Cette stratégie n'est utilisée que lorsque la redirection multimédia HTML5 de VMware est activée. Si elle n'est pas configurée, la valeur par défaut sera la même que pour « Activer la redirection multimédia HTML5 de VMware ». </string>
+
+         <string id="VMware_GEO_REDIR">Redirection de géolocalisation de VMware</string>
+
+         <string id="Enable_GEO_REDIR">Activer la redirection de géolocalisation de VMware</string>
+
+         <string id="Enable_GEO_REDIR_Desc">Activez la fonctionnalité de redirection de géolocalisation de VMware. Le paramètre prend effet lors de la prochaine connexion.</string>
+
+         <string id="GeoRedirUrlList">Activez la liste d'URL pour la redirection de géolocalisation de VMware.</string>
+
+         <string id="GeoRedirUrlList_Desc">Spécifie la liste d'URL pour activer la fonctionnalité de redirection de géolocalisation. Spécifiez le modèle d'URL dans la colonne Nom de valeur, par ex. « https://www.youtube.com/* ». La colonne Valeur doit être vide. Elle est réservée pour une future utilisation. Cette liste d'URL est utilisée par (1) l'extension VMware Horizon Geolocation Redirection du navigateur Chrome sur tous les environnements RDSH et VDI et par (2) le plug-in VMware Horizon Geolocation Redirection pour Internet Explorer sur les environnements VDI RDSH et Windows 7.</string>
+
+         <string id="GeoRedirDistanceDelta">Définir la distance minimale pour laquelle signaler des mises à jour d'emplacement</string>
+
+         <string id="GeoRedirDistanceDelta_Desc">Spécifie la distance minimale entre une mise à jour d'emplacement dans le client et la dernière mise à jour signalée à l'agent, dont le nouvel emplacement doit être signalé à l'agent. Par défaut, la distance minimale utilisée est de 75 mètres.</string>
+
+         <string id="VMware_BROWSER_REDIR">Redirection de VMware Browser</string>
+
+         <string id="Enable_BROWSER_REDIR">Activer la redirection de VMware Browser</string>
+
+         <string id="Enable_BROWSER_REDIR_Desc">Activez la fonctionnalité de redirection de VMware Browser. Le paramètre prend effet lors de la prochaine connexion.</string>
+
+         <string id="BrowserRedirFallbackWhitelistErr">Activer le secours automatique après une violation de la liste blanche</string>
+
+         <string id="BrowserRedirFallbackWhitelistErr_Desc">Lorsque cette option est activée, l'accès d'un onglet à une URL, en l'entrant dans la barre d'adresses personnalisée ou en y accédant à partir de l'URL dans l'une des deux listes blanches, qui ne se trouve pas dans l'une des deux listes arrête la redirection pour cet onglet, et extraie et affiche à la place l'URL dans l'agent. Notez que la tentative d'accès à une URL non définie sous « Activer la liste d'URL pour la redirection de VMware Browser » reviendra immédiatement à l'extraction et au rendu dans l'agent, indépendamment de ce paramètre.</string>
+
+         <string id="BrowserRedirShowErrPage">Afficher une page contenant des informations d'erreur avant le secours automatique</string>
+
+         <string id="BrowserRedirShowErrPage_Desc">Ce paramètre n'est activé que si l'option « Activer le secours automatique après une violation de la liste blanche » est activée et qu'il existe une violation de la liste blanche. Dans ce cas, si ce paramètre est activé, une page s'affichera avec un compte à rebours de 5 secondes après lequel l'onglet reviendra automatiquement à l'extraction et au rendu de l'URL qui a entraîné la violation dans l'agent. Si ce paramètre est désactivé, l'onglet reviendra directement au rendu côté agent, sans fournir à l'utilisateur un avertissement de 5 secondes.</string>
+
+         <string id="BrowserRedirUrlList">Activer la liste d'URL pour la redirection de VMware Browser</string>
+
+         <string id="BrowserRedirUrlList_Desc">Spécifie toutes les URL de la fonctionnalité de redirection de navigateur. Vous pouvez consulter ces URL en les entrant dans la barre d'adresses de Chrome ou dans la barre d'adresses personnalisée. Vous pouvez également consulter ces URL en y accédant à partir d'une autre URL de la liste ou à partir de n'importe quelle page rendue côté agent. Spécifiez le modèle d'URL dans la colonne Nom de valeur, par ex. « https://www.youtube.com/* ». La colonne Valeur doit être vide. Elle est réservée pour une future utilisation.</string>
+
+         <string id="BrowserRedirNavUrlList">Activer la liste d'URL de navigation pour la redirection de VMware Browser</string>
+
+         <string id="BrowserRedirNavUrlList_Desc">Spécifie les URL auxquelles un utilisateur est autorisé à accéder, en les entrant directement dans la barre d'adresses personnalisée ou en y accédant à partir d'une URL de l'autre liste. Vous ne pouvez pas consulter ces URL en les entrant directement dans la barre d'adresses de Chrome ou en y accédant à partir de n'importe quelle page rendue côté agent. Spécifiez le modèle d'URL dans la colonne Nom de valeur, par ex. « https://www.youtube.com/* ». La colonne Valeur doit être vide. Elle est réservée pour une future utilisation.</string>
+
+         <string id="VMware_WebRTC_REDIR_FEATURES">Fonctionnalités de redirection de VMware WebRTC</string>
+
+         <string id="Enable_Teams_Redir">Activer l'optimisation des supports pour Microsoft Teams</string>
+
+         <string id="Enable_Teams_Redir_Desc">Activez l'optimisation des supports pour Microsoft Teams. Il est nécessaire que la stratégie soit définie sur « Activé » pour appliquer l'optimisation des supports pour Microsoft Teams. Le paramètre prend effet lors de la prochaine connexion.</string>
+
+         <string id="Enable_AEC_Teams_Redir">Activer l'annulation de l'écho acoustique du logiciel pour l'optimisation des supports pour Microsoft Teams</string>
+
+         <string id="Enable_AEC_Teams_Redir_Desc">Ce paramètre est utilisé pour activer ou désactiver l'annulation de l'écho acoustique du logiciel pour l'optimisation des supports pour Microsoft Teams.
+
+S'il est défini sur Activé, l'annulation de l'écho acoustique est activée dans le logiciel, qu'elle soit ou non disponible dans le matériel.
+
+S'il est défini sur Désactivé, l'annulation de l'écho acoustique est désactivée dans le logiciel, qu'elle soit ou non disponible dans le matériel.
+
+S'il est défini sur Non configuré, l'annulation de l'écho acoustique est activée dans le logiciel lorsqu'elle n'est pas disponible dans le matériel.</string>
+
+         <string id="Enable_Sharing_Client_Screen_InAppSession">Activez le partage d'écran du poste de travail client lors de l'accès à distance à l'application Microsoft Teams en mode de partage d'applications.</string>
+
+         <string id="Enable_Sharing_Client_Screen_InAppSession_Desc">Lors de l'accès à distance à l'application Microsoft Teams, la fonctionnalité de partage d'écran partage l'écran du poste de travail client au lieu de l'écran du poste de travail distant. Sélectionnez « Désactivé » pour désactiver la fonctionnalité de partage d'écran dans le mode de partage d'applications. Si vous sélectionnez « Non configuré », le partage d'écran partage par défaut l'écran du poste de travail client.</string>
+
+         <string id="VMware_DeviceBridge">Pont de périphérique VMware</string>
+
+         <string id="Disable_DeviceBridge_BAS">Désactiver le plug-in BAS de pont de périphérique</string>
+
+         <string id="Disable_DeviceBridge_BAS_Desc">Désactive les lecteurs d'empreinte digitale pris en charge par le système BAS. Le paramètre prend effet lors de la prochaine connexion.</string>
+
+         <string id="VMware_AppTap_Config">Configuration de VMware AppTap</string>
+
+         <string id="ProcessIgnoreList">Processus à ignorer lors de la détection d'une session d'application vide</string>
+
+         <string id="ProcessIgnoreList_Desc">Spécifie la liste des processus à ignorer lors de la détection des sessions d'application vides. Vous pouvez spécifier un nom de fichier de processus ou un chemin d'accès complet. Ces valeurs sont évaluées sans tenir compte de la casse. Les variables d'environnement ne sont pas autorisées dans les chemins d'accès. Les chemins d'accès réseau UNC sont autorisés (par exemple, \\vmware\temp\app.exe).</string>
+
+         <string id="VDI_disconnect_time_till_logoff">Limite de durée de session déconnectée (VDI)</string>
+
+         <string id="VDI_disconnect_time_till_logoff_Desc">Spécifie la durée après laquelle une session de poste de travail VDI déconnectée se ferme automatiquement.
+Si « Jamais » est sélectionné, les sessions de poste de travail VDI déconnectées sur cette machine ne se ferment jamais. Si « Immédiatement » est sélectionné, les sessions déconnectées sont immédiatement fermées.
+
+Un paramètre similaire existe dans Administrateur du Serveur de connexion View. Il se trouve dans Paramètres du pool de postes de travail et s'appelle « Fermeture de session automatique après la déconnexion ». Si ce paramètre et le paramètre Administrateur du Serveur de connexion View sont configurés, la valeur sélectionnée ici est prioritaire.
+Par exemple, si vous sélectionnez « Jamais », une session déconnectée (sur cette machine) ne se fermera jamais, quel que soit le réglage du paramètre Administrateur du Serveur de connexion View.</string>
+
+         <string id="Prewarm_disconnect_time_till_logoff">Limite de temps de la session de préchauffage</string>
+
+         <string id="Prewarm_disconnect_time_till_logoff_Desc">Spécifie la durée après laquelle une session de préchauffage sera automatiquement fermée.</string>
+
+         <string id="EnableUWPOnRDSH">Activer la prise en charge UWP sur les plates-formes RDSH</string>
+
+         <string id="EnableUWPOnRDSH_Desc">Cette stratégie contrôle si les applications UWP peuvent être analysées et lancées sur des batteries de serveurs RDSH avec une version du système d'exploitation qui prend en charge les applications UWP. Cette stratégie ne s'applique pas aux plateformes de système d'exploitation de poste de travail, telles que l'accès distant à l'application VDI. Lorsqu'elles sont activées, les applications UWP peuvent être utilisées comme des applications hébergées depuis des batteries de serveurs RDSH. Vous devez redémarrer le service wsnm ou redémarrer le serveur RDSH pour que le GPO prenne effet. Pour en savoir plus sur les plates-formes prises en charge et déterminer si ce paramètre est activé ou désactivé par défaut, reportez-vous à la documentation VMware.</string>
+
+         <string id="TIME_NEVER">Jamais</string>
+
+         <string id="TIME_1MIN">1 minute</string>
+
+         <string id="TIME_5MIN">5 minutes</string>
+
+         <string id="TIME_10MIN">10 minutes</string>
+
+         <string id="TIME_15MIN">15 minutes</string>
+
+         <string id="TIME_30MIN">30 minutes</string>
+
+         <string id="TIME_1HR">1 heure</string>
+
+         <string id="TIME_2HR">2 heures</string>
+
+         <string id="TIME_3HR">3 heures</string>
+
+         <string id="TIME_6HR">6 heures</string>
+
+         <string id="TIME_8HR">8 heures</string>
+
+         <string id="TIME_10HR">10 heures</string>
+
+         <string id="TIME_12HR">12 heures</string>
+
+         <string id="TIME_18HR">18 heures</string>
+
+         <string id="TIME_1D">1 jour</string>
+
+         <string id="TIME_2D">2 jours</string>
+
+         <string id="TIME_3D">3 jours</string>
+
+         <string id="TIME_4D">4 jours</string>
+
+         <string id="TIME_5D">5 jours</string>
+
+         <string id="TIME_1W">1 semaine</string>
+
+         <string id="TIME_IMMEDIATELY">Immédiatement</string>
+
+         <string id="EnableBatStatRedir">Activer la redirection de l'état de la batterie</string>
+
+         <string id="EnableBatStatRedir_Desc">Cette stratégie contrôle si la redirection de l'état de la batterie est activée. Lorsque cette stratégie n'est pas configurée, la redirection de l'état de la batterie est activée.</string>
+
+      </stringTable>
+
+      <presentationTable>
+
+         <presentation id="MaxCollaboratorCount">
+            <decimalTextBox refId="MaxCollaboratorCount_DB" defaultValue="5">Maximum</decimalTextBox>
+         </presentation>
+
+         <presentation id="CollaborationEmailInviteDelimiter">
+            <textBox refId="CollaborationEmailInviteDelimiter_TB">
+               <label>Séparateur entre les adresses électroniques</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="CollaborationServerURLs">
+            <listBox refId="CollaborationServerURLs_list">Liste des URL et des noms des serveurs externes</listBox>
+         </presentation>
+
+         <presentation id="ConnectionTicketTimeout">
+            <decimalTextBox refId="ConnectionTicketTimeout_DB" defaultValue="120">ConnectionTicketTimeout</decimalTextBox>
+         </presentation>
+
+         <presentation id="CredentialFilterExceptions">
+            <textBox refId="CredentialFilterExceptions_TB">
+               <label>CredentialFilterExceptions</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="CommandsToRunOnConnect">
+            <listBox refId="CommandsToRunOnConnect_list">Commandes</listBox>
+         </presentation>
+
+         <presentation id="CommandsToRunOnReconnect">
+            <listBox refId="CommandsToRunOnReconnect_list">Commandes</listBox>
+         </presentation>
+
+         <presentation id="CommandsToRunOnDisconnect">
+            <listBox refId="CommandsToRunOnDisconnect_list">Commandes</listBox>
+         </presentation>
+
+         <presentation id="SSO_retry_timeout">
+            <decimalTextBox refId="SSO_retry_timeout_DB" defaultValue="5000">Délai de nouvelle tentative de l'authentification unique</decimalTextBox>
+         </presentation>
+
+         <presentation id="Accept_SSL_encr_framework_channel">
+            <dropdownList refId="Accept_SSL_encr_framework_channel_DDL" defaultItem="0">Accepter le canal d'infrastructure chiffré SSL</dropdownList>
+         </presentation>
+
+         <presentation id="Local_Reader_Name">
+            <textBox refId="Local_Reader_Name_TB">
+               <label>Nom du lecteur local</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Cert_wait_timeout">
+            <decimalTextBox refId="Cert_wait_timeout_DB" defaultValue="40">Délai d'attente de certificat</decimalTextBox>
+         </presentation>
+
+         <presentation id="Min_key_size">
+            <decimalTextBox refId="Min_key_size_DB" defaultValue="1024">Taille de clé minimale</decimalTextBox>
+         </presentation>
+
+         <presentation id="All_key_sizes">
+            <textBox refId="All_key_sizes_TB">
+               <label>Toutes les tailles de clé</label>
+                  <defaultValue>2048</defaultValue>
+            </textBox>
+         </presentation>
+
+         <presentation id="Keys_to_precreate">
+            <decimalTextBox refId="Keys_to_precreate_DB" defaultValue="5">Nombre de clés à créer au préalable</decimalTextBox>
+         </presentation>
+
+         <presentation id="Cert_min_validity">
+            <decimalTextBox refId="Cert_min_validity_DB" defaultValue="10">Période de validité minimale requise pour un certificat</decimalTextBox>
+         </presentation>
+
+         <presentation id="Exclude_Vid_Pid">
+            <textBox refId="Exclude_Vid_Pid_TB">
+               <label>Exclure un périphérique Vid/Pid</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Include_Vid_Pid">
+            <textBox refId="Include_Vid_Pid_TB">
+               <label>Inclure un périphérique Vid/Pid</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Exclude_device_family">
+            <textBox refId="Exclude_device_family_TB">
+               <label>Exclure une famille de périphériques</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Include_device_family">
+            <textBox refId="Include_device_family_TB">
+               <label>Inclure une famille de périphériques</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Exclude_Vid_Pid_from_Split">
+            <textBox refId="Exclude_Vid_Pid_from_Split_TB">
+               <label>Exclure un périphérique Vid/Pid du fractionnement</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Split_Vid_Pid_Device">
+            <textBox refId="Split_Vid_Pid_Device_TB">
+               <label>Fractionner un périphérique Vid/Pid</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Allow_other_input_devices">
+            <dropdownList refId="Allow_other_input_devices_DDL" defaultItem="0">Autoriser d'autres périphériques d'entrée</dropdownList>
+         </presentation>
+
+         <presentation id="Allow_HID_Bootable">
+            <dropdownList refId="Allow_HID_Bootable_DDL" defaultItem="0">Autoriser les périphériques HID démarrables</dropdownList>
+         </presentation>
+
+         <presentation id="Allow_Audio_Input_devices">
+            <dropdownList refId="Allow_Audio_Input_devices_DDL" defaultItem="0">Autoriser les périphériques d'entrée audio</dropdownList>
+         </presentation>
+
+         <presentation id="Allow_Audio_Output_devices">
+            <dropdownList refId="Allow_Audio_Output_devices_DDL" defaultItem="0">Autoriser les périphériques de sortie audio</dropdownList>
+         </presentation>
+
+         <presentation id="Allow_keyboard_mouse">
+            <dropdownList refId="Allow_keyboard_mouse_DDL" defaultItem="0">Autoriser les périphériques clavier et souris</dropdownList>
+         </presentation>
+
+         <presentation id="Allow_Video_Devices">
+            <dropdownList refId="Allow_Video_Devices_DDL" defaultItem="0">Autoriser les périphériques vidéo</dropdownList>
+         </presentation>
+
+         <presentation id="Allow_Smart_Cards">
+            <dropdownList refId="Allow_Smart_Cards_DDL" defaultItem="0">Autoriser les périphériques de carte à puce</dropdownList>
+         </presentation>
+
+         <presentation id="Allow_Auto_Device_Splitting">
+            <dropdownList refId="Allow_Auto_Device_Splitting_DDL" defaultItem="0">Autoriser le fractionnement automatique de périphérique</dropdownList>
+         </presentation>
+
+         <presentation id="Min_rect_size_to_enable_flash_MMR">
+            <textBox refId="Min_rect_size_to_enable_flash_MMR_TB">
+               <label>Taille de rectangle minimale pour activer FlashMMR</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Accept_SSL_encr_framework_channel_2">
+            <dropdownList refId="Accept_SSL_encr_framework_channel_2_DDL" defaultItem="0">Accepter le canal d'infrastructure chiffré SSL</dropdownList>
+         </presentation>
+
+         <presentation id="FlashMMRUrlList">
+            <listBox refId="FlashMMRUrlList_list">Liste d'URL d'hôtes pour activer FlashMMR</listBox>
+         </presentation>
+
+         <presentation id="Default_proxy_server">
+            <textBox refId="Default_proxy_server_TB">
+               <label>Serveur proxy par défaut</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Update_Java_Proxy">
+            <dropdownList refId="Update_Java_Proxy_DDL" defaultItem="2">Définir le proxy pour l'applet Java</dropdownList>
+         </presentation>
+
+         <presentation id="FlashMMRUrlListEnableType">
+            <dropdownList refId="FlashMMRUrlListEnableType_DDL" defaultItem="1">Définition pour l'utilisation de la liste d'URL FlashMMR</dropdownList>
+         </presentation>
+
+         <presentation id="HTML5MMRUrlList">
+            <listBox refId="HTML5MMRUrlList_list">Liste d'URL à activer pour la redirection multimédia HTML5 de VMware.</listBox>
+         </presentation>
+
+         <presentation id="GeoRedirUrlList">
+            <listBox refId="GeoRedirUrlList_list">Liste d'URL pour activer la fonctionnalité de redirection de géolocalisation de VMware.</listBox>
+         </presentation>
+
+         <presentation id="GeoRedirDistanceDelta">
+            <textBox refId="GeoRedirDistanceDelta_value">
+               <label>Distance minimale en mètres</label>
+               <defaultValue>75</defaultValue>
+            </textBox>
+         </presentation>
+
+         <presentation id="BrowserRedirUrlList">
+            <listBox refId="BrowserRedirUrlList_list">Liste d'URL pour activer la fonctionnalité de redirection de VMware Browser.</listBox>
+         </presentation>
+
+         <presentation id="BrowserRedirNavUrlList">
+            <listBox refId="BrowserRedirNavUrlList_list">Liste d'URL pour activer la navigation de la fonctionnalité de redirection de VMware Browser.</listBox>
+         </presentation>
+
+         <presentation id="SetForceNonOptimizedOptions">
+            <checkBox refId="AUTO_DETECT_EXTERNAL_CONNECTIONS_CHKBOX">Détecter automatiquement les connexions externes</checkBox>
+            <textBox refId="SetForceNonOptimizedEnvVar_TB">
+               <label>Nom de la variable d'environnement :</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="UnityFilterRules_Filter">
+            <listBox refId="UnityFilterRules_FilterList">Règles de filtre Unity</listBox>
+         </presentation>
+
+         <presentation id="Enable_Unity_Touch">
+            <checkBox refId="Enabled_UWP_For_UnityTouch_CB" defaultChecked="true">Activer la prise en charge de l'application de plateforme Windows universelle (UWP) pour Unity Touch sur Windows 10.</checkBox>
+         </presentation>
+
+         <presentation id="ProcessIgnoreList">
+            <multiTextBox refId="ProcessIgnoreList_TB">Processus à ignorer lors de la détection des sessions d'application vides</multiTextBox>
+         </presentation>
+
+         <presentation id="VDI_idle_time_till_disconnect">
+            <dropdownList refId="VDI_idle_time_till_disconnect_minutes" noSort="true" defaultItem="0">Délai d'inactivité</dropdownList>
+         </presentation>
+
+         <presentation id="VDI_disconnect_time_till_logoff">
+            <dropdownList refId="VDI_disconnect_time_till_logoff_minutes" noSort="true" defaultItem="0">Délai de déconnexion</dropdownList>
+         </presentation>
+
+         <presentation id="Prewarm_disconnect_time_till_logoff">
+            <dropdownList refId="Prewarm_disconnect_time_till_logoff_minutes" noSort="true" defaultItem="5">Délai d'expiration du préchauffage</dropdownList>
+         </presentation>
+      </presentationTable>
+   </resources>
+</policyDefinitionResources>

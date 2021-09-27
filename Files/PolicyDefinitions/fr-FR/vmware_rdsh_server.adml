@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<policyDefinitionResources
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	revision="1.0"
+	schemaVersion="1.0"
+	xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+
+<displayName>entrer le nom d'affichage ici</displayName>
+
+<description>entrer la description ici</description>
+
+<resources>
+
+<stringTable>
+
+<string id="CASCADIA_APP_COMPATIBILITY">Compatibilité des applications</string>
+
+<string id="CASCADIA_APP_COMPATIBILITY_Help">Contrôle les paramètres de compatibilité des applications sur un serveur Hôte de session Bureau à distance</string>
+
+<string id="CASCADIA_ENABLE_IP_VIRTUALIZATION">Activer la virtualisation IP des services Bureau à distance</string>
+
+<string id="CASCADIA_ENABLE_IP_VIRTUALIZATION_EXPLAIN">Ce paramètre de stratégie spécifie si la virtualisation des adresses IP des services Bureau à distance est activée.
+Par défaut, la virtualisation IP des services Bureau à distance est désactivée.
+
+Si vous activez ce paramètre de stratégie, la virtualisation IP des services Bureau à distance est activée. Vous pouvez sélectionner le mode d'application de ce paramètre. Si vous utilisez le mode Par programme, vous devez entrer la liste des programmes pour utiliser des adresses IP virtuelles. Répertoriez chaque programme sur une ligne distincte (n'insérez pas de ligne vierge entre les programmes). Par exemple :
+
+explorer.exe
+mstsc.exe
+
+Si vous désactivez ou ne configurez pas ce paramètre de stratégie, la virtualisation des adresses IP des services Bureau à distance est désactivée.
+</string>
+
+<string id="CASCADIA_ENABLE_SESSION_MODE_IP_VIRTUALIZATION">Par session</string>
+
+<string id="CASCADIA_ENABLE_PRPGRAM_MODE_IP_VIRTUALIZATION">Par programme</string>
+
+<string id="CASCADIA_NET_ID_IP_VIRTUALIZATION">Sélectionner la carte réseau à utiliser pour la virtualisation IP des services Bureau à distance</string>
+
+<string id="CASCADIA_NET_ID_IP_VIRTUALIZATION_EXPLAIN">Ce paramètre de stratégie spécifie l'adresse IP et le masque réseau correspondant à la carte réseau utilisée pour les adresses IP virtuelles. L'adresse IP et le masque réseau doivent être entrés conformément à la notation CIDR (Classless Inter-Domain Routing) ; par exemple, 192.0.2.96/24.
+
+Si vous activez ce paramètre de stratégie, l'adresse IP et le masque réseau spécifiés sont utilisés pour sélectionner la carte réseau employée pour les adresses IP virtuelles.
+
+Si vous désactivez ou si vous ne configurez pas ce paramètre de stratégie, la virtualisation IP des services Bureau à distance est désactivée. Un adaptateur réseau doit être configuré pour que la virtualisation IP des services Bureau à distance fonctionne.
+</string>
+
+<string id="CASCADIA_NOT_USE_SERVER_IP_WITH_IP_VIRTUALIZATION">Ne pas utiliser l'adresse IP du serveur Hôte de session Bureau à distance lorsque l'adresse IP virtuelle n'est pas disponible</string>
+
+<string id="CASCADIA_NOT_USE_SERVER_IP_WITH_IP_VIRTUALIZATION_EXPLAIN">Ce paramètre de stratégie spécifie si une session utilise l'adresse IP du serveur Hôte de session Bureau à distance si aucune adresse IP virtuelle n'est disponible.
+
+Si vous activez ce paramètre de stratégie, l'adresse IP du serveur Hôte de session Bureau à distance n'est pas utilisée si aucune adresse IP virtuelle n'est disponible. La session ne disposera pas de connectivité réseau.
+
+Si vous désactivez ou ne configurez pas ce paramètre de stratégie, l'adresse IP du serveur Hôte de session Bureau à distance est utilisée si aucune adresse IP virtuelle n'est disponible.
+</string>
+
+<string id="CASCADIA_ENABLE_DFSS">Désactiver la planification de répartition de charge équilibrée du temps processeur</string>
+
+<string id="CASCADIA_ENABLE_DFSS_EXPLAIN">La planification de répartition de charge équilibrée du temps processeur distribue dynamiquement le temps processeur entre toutes les sessions de services Bureau à distance sur le même serveur d'hôtes RDS, en fonction du nombre de sessions et de la demande de temps processeur dans chaque session.
+
+Si vous activez ce paramètre de stratégie, la planification de répartition de charge équilibrée du temps processeur est désactivée.
+
+Si vous désactivez ou ne configurez pas ce paramètre de stratégie, la planification de répartition de charge équilibrée du temps processeur est activée.
+</string>
+
+<string id="CASCADIA_DISABLE_MSI">Désactiver la compatibilité des services Bureau à distance de Windows Installer</string>
+
+<string id="CASCADIA_DISABLE_MSI_EXPLAIN">Ce paramètre de stratégie indique si la compatibilité des services Bureau à distance de Windows Installer est exécutée en fonction d'une stratégie par utilisateur pour les applications entièrement installées. Windows Installer ne permet qu'à une seule instance du processus msiexec de s'exécuter à la fois. Par défaut, la compatibilité des services Bureau à distance de Windows Installer est activée.
+
+Si vous activez ce paramètre de stratégie, la compatibilité des services Bureau à distance de Windows Installer est désactivée et une seule instance du processus msiexec peut s'exécuter à la fois.
+
+Si vous ne désactivez pas ou ne configurez pas ce paramètre de stratégie, la compatibilité des services Bureau à distance de Windows Installer est activée et plusieurs demandes d'installation d'application par utilisateur sont placées en file d'attente et gérées par le processus msiexec selon leur ordre de réception.
+</string>
+
+</stringTable>
+
+<presentationTable>
+	<presentation id="CASCADIA_NET_ID_IP_VIRTUALIZATION">
+		<textBox refId="CASCADIA_NET_ID_IP_VIRTUALIZATION">
+		<label>Définir l'adresse IP et le masque de réseau correspondant à la carte réseau à utiliser pour la virtualisation IP des services Bureau à distance :</label>
+		</textBox>
+		<text>Le format est [adresse IP]/[masque de réseau]. Par exemple : 192.0.2.96/24</text>
+		</presentation>
+		<presentation id="CASCADIA_ENABLE_IP_VIRTUALIZATION">
+		<dropdownList refId="CASCADIA_ENABLE_IP_VIRTUALIZATION" noSort="true" defaultItem="0">Activer le mode Virtualisation IP des services Bureau à distance :</dropdownList>
+		<multiTextBox refId="CASCADIA_ENABLE_IP_VIRTUALIZATION_EDIT">Attribuer des adresses IP virtuelles à ces programmes :</multiTextBox>
+		<text>Si vous indiquez plusieurs programmes, indiquez chacun d'eux sur une ligne distincte (n'insérez pas de ligne vide entre les programmes). Par exemple :</text>
+		<text>explorer.exe
+		mstsc.exe</text>
+	</presentation>
+</presentationTable>
+</resources>
+</policyDefinitionResources>

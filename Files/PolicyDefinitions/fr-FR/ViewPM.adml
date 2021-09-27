@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                           revision="1.0"
+                           schemaVersion="1.0"
+                           xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" >
+
+  <!-- Copyright 2005-2016 VMware, Inc.  All rights reserved. -->
+
+  <displayName >Gestion de persona</displayName>
+  <description >Stratégie de gestion de persona</description>
+  <resources >
+    <stringTable ><!--Storage for String Definitions-->
+      <string id="String_Category_Persona_Management" >Gestion de persona</string>
+      <string id="String_Category_Desktop_UI" >Interface utilisateur de poste de travail</string>
+      <string id="String_Category_Folder_Redirection" >Redirection de dossiers</string>
+      <string id="String_Category_Logging" >Journalisation</string>
+      <string id="String_Category_Roaming_Synchronization" >Itinérance et synchronisation</string>
+      <string id="String_Policy_Hide_local_offline" >Masquer les icônes des fichiers hors ligne locaux</string>
+      <string id="String_Explain_Hide_local_offline" >Lorsque ce paramètre est activé, l'icône hors ligne est masquée lors de l'affichage en local de la plupart des fichiers de persona hors ligne. Cela masque l'icône hors ligne dans l'Explorateur de fichiers Windows ainsi que dans les boîtes de dialogue les plus courantes. Par défaut, l'icône hors ligne est masquée.</string>
+      <string id="String_Policy_Show_progress" >Afficher la progression lors du téléchargement de fichiers volumineux</string>
+      <string id="String_Explain_Show_progress" >Lorsque ce paramètre est activé, une fenêtre de progression s'affiche lors du téléchargement de fichiers volumineux à partir du référentiel de persona. La taille de fichier minimale pour afficher la fenêtre de progression peut également être spécifiée. Par défaut, la fenêtre de progression ne s'affiche pas.</string>
+      <string id="String_Policy_Show_critical_errors" >Afficher des erreurs critiques aux utilisateurs via des alertes d'icône de la barre d'état</string>
+      <string id="String_Explain_Show_critical_errors" >Lorsque ce paramètre est activé, des alertes d'icône de barre d'état critiques relatives à un échec de connectivité de réplication ou réseau s'affichent sur l'écran de l'utilisateur. Par défaut, ces alertes sont masquées.</string>
+      <string id="String_Policy_Add_the_administrators" >Ajouter le groupe d'administrateurs aux dossiers redirigés</string>
+      <string id="String_Explain_Add_the_administrators" >Lorsque ce paramètre est activé, le groupe d'administrateurs est ajouté à chaque dossier redirigé. Par défaut, l'utilisateur reçoit des droits exclusifs.</string>
+      <string id="String_Policy_Files_and_folders_excluded_from_redirection" >Fichiers et dossiers exclus de la redirection de dossier</string>
+      <string id="String_Explain_Files_and_folders_excluded_from_redirection" >Lorsque ce paramètre est activé, les chemins de fichier et de dossier sélectionnés ne sont pas redirigés. Vous pouvez également spécifier des exceptions dans ces chemins dans la stratégie « Fichiers et dossiers exclus de la redirection de dossier (exceptions) ». Certains scénarios d'utilisation requièrent que des fichiers et des dossiers spécifiques soient conservés dans le profil. Tous les chemins de fichier et de dossier doivent être liés à la racine du profil local de l'utilisateur.</string>
+      <string id="String_Policy_Files_and_folders_excluded_from_redirection_exception" >Fichiers et dossiers exclus de la redirection de dossier (exceptions)</string>
+      <string id="String_Explain_Files_and_folders_excluded_from_redirection_exception" >Lorsque ce paramètre est activé, les chemins de fichier et de dossier sélectionnés sont des exceptions aux chemins spécifiés dans la stratégie « Fichiers et dossiers exclus de la redirection de dossier ». Tous les chemins de fichier et de dossier doivent être liés à la racine du profil local de l'utilisateur et exister dans un dossier spécifié dans la stratégie « Fichiers et dossiers exclus de la redirection de dossier ».</string>
+      <string id="String_Policy_Application_Data" >Données d'application (itinérantes)</string>
+      <string id="String_Explain_Application_Data" >Lorsque ce paramètre est activé, le dossier Données d'application itinérantes de l'utilisateur est redirigé vers le chemin UNC configuré.</string>
+      <string id="String_Policy_Contacts" >Contacts</string>
+      <string id="String_Explain_Contacts" >Lorsque ce paramètre est activé, le dossier Contacts de l'utilisateur est redirigé vers le chemin UNC configuré. Ce dossier n'est disponible que dans Vista et version supérieure.</string>
+      <string id="String_Policy_Cookies" >Cookies</string>
+      <string id="String_Explain_Cookies" >Lorsque ce paramètre est activé, le dossier Cookies de l'utilisateur est redirigé vers le chemin UNC configuré.</string>
+      <string id="String_Policy_Desktop" >Poste de travail</string>
+      <string id="String_Explain_Desktop" >Lorsque ce paramètre est activé, le dossier Poste de travail de l'utilisateur est redirigé vers le chemin UNC configuré.</string>
+      <string id="String_Policy_Downloads" >Téléchargements</string>
+      <string id="String_Explain_Downloads" >Lorsque ce paramètre est activé, le dossier Téléchargements de l'utilisateur est redirigé vers le chemin UNC configuré. Ce dossier n'est disponible que dans Vista et version supérieure.</string>
+      <string id="String_Policy_Favorites" >Favoris</string>
+      <string id="String_Explain_Favorites" >Lorsque ce paramètre est activé, le dossier Favoris de l'utilisateur est redirigé vers le chemin UNC configuré.</string>
+      <string id="String_Policy_History" >Historique</string>
+      <string id="String_Explain_History" >Lorsque ce paramètre est activé, le dossier Historique de l'utilisateur est redirigé vers le chemin UNC configuré.</string>
+      <string id="String_Policy_Links" >Liens</string>
+      <string id="String_Explain_Links" >Lorsque ce paramètre est activé, le dossier Liens de l'utilisateur est redirigé vers le chemin UNC configuré. Ce dossier n'est disponible que dans Vista et version supérieure.</string>
+      <string id="String_Policy_My_Documents" >Mes documents</string>
+      <string id="String_Explain_My_Documents" >Lorsque ce paramètre est activé, le dossier Mes documents de l'utilisateur est redirigé vers le chemin UNC configuré.</string>
+      <string id="String_Policy_My_Music" >Ma musique</string>
+      <string id="String_Explain_My_Music" >Lorsque ce paramètre est activé, le dossier Ma musique de l'utilisateur est redirigé vers le chemin UNC configuré.</string>
+      <string id="String_Policy_My_Pictures" >Mes images</string>
+      <string id="String_Explain_My_Pictures" >Lorsque ce paramètre est activé, le dossier Mes images de l'utilisateur est redirigé vers le chemin UNC configuré.</string>
+      <string id="String_Policy_My_Videos" >Mes vidéos</string>
+      <string id="String_Explain_My_Videos" >Lorsque ce paramètre est activé, le dossier Mes vidéos de l'utilisateur est redirigé vers le chemin UNC configuré.</string>
+      <string id="String_Policy_Network_Neighborhood" >Voisinage réseau</string>
+      <string id="String_Explain_Network_Neighborhood" >Lorsque ce paramètre est activé, le dossier Voisinage réseau de l'utilisateur est redirigé vers le chemin UNC configuré.</string>
+      <string id="String_Policy_Printer_Neighborhood" >Voisinage imprimante</string>
+      <string id="String_Explain_Printer_Neighborhood" >Lorsque ce paramètre est activé, le dossier Voisinage imprimante de l'utilisateur est redirigé vers le chemin UNC configuré.</string>
+      <string id="String_Policy_Recent_Items" >Éléments récents</string>
+      <string id="String_Explain_Recent_Items" >Lorsque ce paramètre est activé, le dossier Éléments récents de l'utilisateur est redirigé vers le chemin UNC configuré.</string>
+      <string id="String_Policy_Saved_Games" >Jeux sauvegardés</string>
+      <string id="String_Explain_Saved_Games" >Lorsque ce paramètre est activé, le dossier Jeux sauvegardés de l'utilisateur est redirigé vers le chemin UNC configuré. Ce dossier n'est disponible que dans Vista et version supérieure.</string>
+      <string id="String_Policy_Searches" >Recherches</string>
+      <string id="String_Explain_Searches" >Lorsque ce paramètre est activé, le dossier Recherches de l'utilisateur est redirigé vers le chemin UNC configuré. Ce dossier n'est disponible que dans Vista et version supérieure.</string>
+      <string id="String_Policy_Send_To" >Envoyer à</string>
+      <string id="String_Explain_Send_To" >Lorsque ce paramètre est activé, le dossier Envoyer à de l'utilisateur est redirigé vers le chemin UNC configuré.</string>
+      <string id="String_Policy_Start_Menu" >Menu Démarrer</string>
+      <string id="String_Explain_Start_Menu" >Lorsque ce paramètre est activé, le dossier Menu Démarrer de l'utilisateur est redirigé vers le chemin UNC configuré.</string>
+      <string id="String_Policy_Startup_Items" >Éléments de démarrage</string>
+      <string id="String_Explain_Startup_Items" >Lorsque ce paramètre est activé, le dossier Éléments de démarrage de l'utilisateur est redirigé vers le chemin UNC configuré.</string>
+      <string id="String_Policy_Templates" >Modèles</string>
+      <string id="String_Explain_Templates" >Lorsque ce paramètre est activé, le dossier Modèles de l'utilisateur est redirigé vers le chemin UNC configuré.</string>
+      <string id="String_Policy_Temporary_Internet" >Fichiers Internet temporaires</string>
+      <string id="String_Explain_Temporary_Internet" >Lorsque ce paramètre est activé, le dossier Cache Internet temporaire de l'utilisateur est redirigé vers le chemin UNC configuré.</string>
+      <string id="String_Policy_Logging_filename" >Nom de fichier de journalisation</string>
+      <string id="String_Explain_Logging_filename" >Nom de chemin complet du fichier journal de View Persona Management local. Ce chemin doit inclure le nom de fichier et ne peut pas être un chemin UNC. Par défaut, les messages de journalisation sont écrits dans &lt;Common Application Data&gt;\VMware\VDM\logs\VMWVvp.txt.</string>
+      <string id="String_Policy_Logging_destination" >Destination de journalisation</string>
+      <string id="String_Explain_Logging_destination" >Spécifie l'emplacement d'envoi des messages de journalisation. Les messages de journalisation peuvent être envoyés à un fichier journal local et au port de débogage. Par défaut, les messages de journalisation sont envoyés vers le fichier journal.</string>
+      <string id="String_Policy_Logging_flags" >Indicateurs de journalisation</string>
+      <string id="String_Explain_Logging_flags" >Spécifie le type de messages de journalisation générés. Si ce paramètre est désactivé ou n'est pas configuré, les messages de journalisation sont définis au niveau des informations. Par défaut, les messages de journalisation sont définis au niveau des informations.</string>
+      <string id="String_Policy_DropList_Select_Logging_flags" >7 - Déboguer</string>
+      <string id="String_Policy_Log_History_Depth" >Profondeur d'historique des journaux</string>
+      <string id="String_Explain_Log_History_Depth" >Lorsque ce paramètre est activé, le persona conserve une archive de fichiers journaux historiques. La valeur par défaut est 1, le minimum est 1 et le maximum est 10. S'il est désactivé ou n'est pas configuré, un journal historique est conservé par défaut.</string>
+      <string id="String_Policy_Log_File_Size" >Taille du fichier journal</string>
+      <string id="String_Explain_Log_File_Size" >Lorsque ce paramètre est activé, le persona conserve la taille des fichiers journaux. La valeur par défaut est 100 Mo, le minimum est 10 Mo et le maximum est 1 024 Mo. S'il est désactivé ou n'est pas configuré, la valeur par défaut 100 Mo est utilisée.</string>
+      <string id="String_Policy_Upload_log_to_network" >Télécharger le journal sur le réseau</string>
+      <string id="String_Explain_Upload_log_to_network" >Télécharge le fichier journal de persona sur le partage de réseau spécifié lors de la fermeture de session. Le chemin du partage réseau doit être un chemin UNC. Le persona ne crée pas le partage réseau.</string>
+      <string id="String_Policy_Manage_user_persona" >Gérer un persona d'utilisateur</string>
+      <string id="String_Explain_Manage_user_persona" >Lorsque ce paramètre est activé, le persona de l'utilisateur est géré de manière dynamique. Lorsqu'il est désactivé, le persona de l'utilisateur est géré par Windows. L'intervalle de téléchargement de profil est utilisé pour déterminer la fréquence de téléchargement des modifications du persona sur le réseau.</string>
+      <string id="String_Policy_DSVA" >Interopérabilité de DSVA (Deep Security Virtual Appliance)</string>
+      <string id="String_Explain_DSVA" >Lorsque cette option est activée, le persona exécute l'interopérabilité avec DSVA. Si DSVA est en cours d'exécution sur la machine, vous devez l'activer. Dans le cas contraire, des problèmes de connexion peuvent se produire. Si cette option n'est pas définie ou est désactivée, le persona s'exécute sans prendre en compte DSVA.</string>
+      <string id="String_Policy_Persona_repository" >Emplacement du référentiel de persona</string>
+      <string id="String_Explain_Persona_repository" >Chemin UNC vers le référentiel où les personas d'utilisateur sont stockés. Si ce chemin est laissé vide, le chemin du profil d'utilisateur dans Active Directory est utilisé.</string>
+      <string id="String_Policy_Remove_local_persona" >Supprimer le persona local à la fermeture de session</string>
+      <string id="String_Explain_Remove_local_persona" >Lorsque ce paramètre est activé, le persona stocké localement de chaque utilisateur est supprimé lors de la fermeture de session. Vous pouvez également choisir de supprimer les dossiers de paramètres locaux d'un utilisateur lorsque le persona est supprimé. Pour Windows XP, ce paramètre fait référence au dossier Paramètres locaux. Pour Windows Vista et versions supérieures, ce paramètre fait référence au dossier AppData\Local. Par défaut, le persona stocké localement n'est pas supprimé lorsqu'un utilisateur ferme sa session.</string>
+      <string id="String_Policy_Roam_local_settings" >Déplacer des dossiers de paramètres locaux</string>
+      <string id="String_Explain_Roam_local_settings" >Lorsque ce paramètre est activé, les dossiers Paramètres locaux sont déplacés avec le reste du persona de l'utilisateur. Pour Windows XP, ce paramètre fait référence au dossier Paramètres locaux. Pour Windows Vista et versions supérieures, ce paramètre fait référence au dossier AppData\Local. Par défaut, les dossiers Paramètres locaux ne sont pas déplacés.</string>
+      <string id="String_Policy_Files_and_folders_preload" >Fichiers et dossiers à précharger</string>
+      <string id="String_Explain_Files_and_folders_preload" >Lorsque ce paramètre est activé, les chemins de fichier et de dossier sélectionnés sont téléchargés lorsque l'utilisateur ouvre sa session et répliqués lorsque les fichiers sont modifiés. Vous pouvez également spécifier des exceptions dans ces chemins dans la stratégie « Fichiers et dossiers à précharger (exceptions) ». Certains scénarios d'utilisation requièrent que des fichiers et des dossiers spécifiques soient préchargés dans le persona stocké localement de l'utilisateur. Ces fichiers sont téléchargés à partir du référentiel de persona lors de la connexion de l'utilisateur et les modifications sont répliquées à distance lorsqu'elles se produisent. Tous les chemins de dossier doivent être liés à la racine du profil local de l'utilisateur.</string>
+      <string id="String_Policy_Files_and_folders_preload_exceptions" >Fichiers et dossiers à précharger (exceptions)</string>
+      <string id="String_Explain_Files_and_folders_preload_exceptions" >Lorsque ce paramètre est activé, les chemins de fichier et de dossier sélectionnés sont des exceptions aux chemins spécifiés dans la stratégie « Fichiers et dossiers à précharger ». Tous les chemins de dossier doivent être liés à la racine du profil local de l'utilisateur et exister dans un dossier spécifié dans la stratégie « Fichiers et dossiers à précharger ».</string>
+      <string id="String_Policy_Windows_roaming" >Synchronisation de profils itinérants de Windows</string>
+      <string id="String_Explain_Windows_roaming" >Lorsque ce paramètre est activé, les chemins de fichier et de dossier sélectionnés sont téléchargés lorsque l'utilisateur ouvre sa session et répliqués lors de la fermeture de session. Vous pouvez également spécifier des exceptions dans ces chemins dans la stratégie « Synchronisation de profils itinérants de Windows ». Certains scénarios d'utilisation requièrent que des fichiers et des dossiers spécifiques soient gérés avec la fonctionnalité traditionnelle des profils itinérants de Windows. Ces éléments sont téléchargés lorsque l'utilisateur ouvre une session, mais ils ne sont pas synchronisés avec le référentiel tant que l'utilisateur ne ferme pas sa session. Tous les chemins de dossier doivent être liés à la racine du profil local de l'utilisateur.</string>
+      <string id="String_Policy_Windows_roaming_exceptions" >Synchronisation de profils itinérants de Windows (exceptions)</string>
+      <string id="String_Explain_Windows_roaming_exceptions" >Lorsque ce paramètre est activé, les chemins de fichier et de dossier sélectionnés sont des exceptions aux chemins spécifiés dans la stratégie « Synchronisation de profils itinérants de Windows ». Tous les chemins de dossier doivent être liés à la racine du profil local de l'utilisateur et exister dans un dossier spécifié dans la stratégie « Synchronisation de profils itinérants de Windows ».</string>
+      <string id="String_Policy_Files_and_folders_excluded_from_roaming" >Fichiers et dossiers exclus du déplacement</string>
+      <string id="String_Explain_Files_and_folders_excluded_from_roaming" >Lorsque ce paramètre est activé, les chemins de fichier et de dossier sélectionnés ne sont pas répliqués avec le reste du persona de l'utilisateur. Vous pouvez également spécifier des exceptions dans ces chemins dans la stratégie « Fichiers et dossiers exclus du déplacement ». Certains scénarios d'utilisation requièrent que des dossiers et des fichiers spécifiques dans le persona d'un utilisateur n'existent que sur la machine locale. C'est le cas avec la plupart des fichiers temporaires ou en cache qui n'ont pas à être répliqués vers le référentiel distant. Tous les chemins de dossier doivent être liés à la racine du profil local de l'utilisateur.</string>
+      <string id="String_Policy_Files_and_folders_excluded_from_roaming_exceptions" >Fichiers et dossiers exclus du déplacement (exceptions)</string>
+      <string id="String_Explain_Files_and_folders_excluded_from_roaming_exceptions" >Lorsque ce paramètre est activé, les chemins de fichier et de dossier sélectionnés sont des exceptions aux chemins spécifiés dans la stratégie « Fichiers et dossiers exclus du déplacement ». Tous les chemins de dossier doivent être liés à la racine du profil local de l'utilisateur et exister dans un dossier spécifié dans la stratégie « Fichiers et dossiers exclus du déplacement ».</string>
+      <string id="String_Policy_Enable_background_download" >Activer le téléchargement en arrière-plan pour les ordinateurs portables</string>
+      <string id="String_Explain_Enable_background_download" >Lorsque ce paramètre est activé, tous les fichiers dans le profil local sont téléchargés lorsqu'un utilisateur ouvre une session sur un ordinateur portable.</string>
+      <string id="String_Policy_Folders_to_background" >Dossiers à télécharger en arrière-plan</string>
+      <string id="String_Explain_Folders_to_background" >Lorsque ce paramètre est activé, les chemins de dossier sélectionnés sont téléchargés en arrière-plan lorsqu'un utilisateur ouvre une session. Vous pouvez également spécifier des exceptions dans ces chemins dans la stratégie « Dossiers à télécharger en arrière-plan (exceptions) ». Certains scénarios d'utilisation peuvent être optimisés en téléchargeant le contenu de dossiers spécifiques en arrière-plan. Cela peut aider les utilisateurs à éviter d'attendre des téléchargements importants lors de l'ouverture de session ou lorsqu'une application démarre. Par exemple, le fait d'inclure les dossiers de sandbox VMware ThinApp peut améliorer les temps de démarrage des applications en vérifiant que tous les fichiers de persona nécessaires ont déjà été téléchargés avant le démarrage. Tous les chemins de dossier doivent être liés à la racine du profil local de l'utilisateur.</string>
+      <string id="String_Policy_Folders_to_background_exceptions" >Dossiers à télécharger en arrière-plan (exceptions)</string>
+      <string id="String_Explain_Folders_to_background_exceptions" >Lorsque ce paramètre est activé, les chemins de dossier sélectionnés sont des exceptions aux chemins spécifiés dans la stratégie « Dossiers à télécharger en arrière-plan ». Tous les chemins de dossier doivent être liés à la racine du profil local de l'utilisateur et exister dans un dossier spécifié dans la stratégie « Dossiers à télécharger en arrière-plan ».</string>
+      <string id="String_Policy_Excluded_Processes" >Processus exclus</string>
+      <string id="String_Explain_Excluded_processes" >Il s'agit des processus dont les E/S sont ignorées par le persona. Il peut être nécessaire d'ajouter certaines applications antivirus pour éviter les problèmes de performances. Si une application antivirus ne dispose pas d'une fonctionnalité pour désactiver la récupération des fichiers hors ligne lors de ses analyses à la demande, ce paramètre empêche l'application de récupérer les fichiers inutilement. Toutefois, les modifications apportées aux fichiers et paramètres dans les profils des utilisateurs qui sont réalisés par des processus exclus sont toujours répliquées.</string>
+      <string id="String_Policy_Cleanup_CLFS_Files" >Nettoyer des fichiers CLFS</string>
+      <string id="String_Explain_Cleanup_CLFS_Files" >Supprime les fichiers générés par le service CLFS pour ntuser.dat et usrclass.dat du profil itinérant à l'ouverture de session. Ce paramètre ne doit être utilisé que pour réparer des profils qui rencontrent un problème avec ces fichiers et doit donc être désactivé.</string>
+
+      <string id="Enforce_AD_Wallpaper" >Applique le paramètre de papier peint du GPO</string>
+
+      <string id="Enforce_AD_Wallpaper_Desc" >Lorsqu'elle est définie, cette stratégie applique le papier peint du poste de travail à mettre à jour en fonction de la définition du paramètre du GPO. Notez que cette stratégie ne s'applique pas si le papier peint du poste de travail n'est pas défini via le GPO.</string>
+    </stringTable>
+    <presentationTable ><!--Storage for Presentation Definitions-->
+
+      <presentation id="Present_Hide_local_offline" >
+        <text >Masquez l'icône hors ligne pour les fichiers de persona stockés localement.</text>
+      </presentation>
+      <presentation id="Present_Show_progress" >
+        <text >Affichez la progression lors du téléchargement de fichiers volumineux à partir du référentiel de persona.</text>
+        <decimalTextBox refId="Policy_Numeric_Show_progress" defaultValue="50" >Taille de fichier minimale pour afficher la fenêtre de progression (Mo) :</decimalTextBox>
+      </presentation>
+      <presentation id="Present_Show_critical_errors" >
+        <text >Afficher des erreurs critiques aux utilisateurs via des alertes d'icône de la barre d'état</text>
+      </presentation>
+      <presentation id="Present_Add_the_administrators" >
+        <text >Ajoutez le groupe d'administrateurs aux dossiers redirigés.</text>
+      </presentation>
+      <presentation id="Present_Files_and_folders_excluded_from_redirection" >
+        <text >Spécifiez des fichiers et des dossiers qui ne seront pas redirigés.</text>
+        <text >Tous les chemins doivent être liés à la racine du profil local.</text>
+        <listBox refId="Present_ListBox_Files_and_folders_excluded_from_redirection" >Fichiers et dossiers :</listBox>
+        <text >Par exemple : Poste de travail\Nouveau dossier</text>
+        <text >Mes documents\Nouveau dossier</text>
+      </presentation>
+      <presentation id="Present_Files_and_folders_excluded_from_redirection_exception" >
+        <text >Spécifiez des fichiers et des dossiers qui sont des exceptions à la liste de fichiers et de dossiers inclus</text>
+        <text >dans la stratégie « Fichiers et dossiers exclus de la redirection de dossier ».</text>
+        <listBox refId="Present_ListBox_Policy_Files_and_folders_excluded_from_redirection_exception" >Exceptions de fichier et de dossier :</listBox>
+        <text >Par exemple : Poste de travail\Nouveau dossier</text>
+        <text >Mes documents\Nouveau dossier</text>
+      </presentation>
+      <presentation id="Present_Application_Data" >
+        <textBox refId="Present_TextBox_Application_Data" >
+          <label >Rediriger vers l'emplacement suivant :</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Contacts" >
+        <textBox refId="Present_TextBox_Policy_Contacts" >
+          <label >Rediriger vers l'emplacement suivant :</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Cookies" >
+        <textBox refId="Present_TextBox_Cookies" >
+          <label >Rediriger vers l'emplacement suivant :</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Desktop" >
+        <textBox refId="Present_TextBox_Desktop" >
+          <label >Rediriger vers l'emplacement suivant :</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Downloads" >
+        <textBox refId="Present_TextBox_Downloads" >
+          <label >Rediriger vers l'emplacement suivant :</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Favorites" >
+        <textBox refId="Present_TextBox_Favorites" >
+          <label >Rediriger vers l'emplacement suivant :</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_History" >
+        <textBox refId="Present_TextBox_History" >
+          <label >Rediriger vers l'emplacement suivant :</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Links" >
+        <textBox refId="Present_TextBox_Links" >
+          <label >Rediriger vers l'emplacement suivant :</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_My_Documents" >
+        <textBox refId="Present_TextBox_My_Documents" >
+          <label >Rediriger vers l'emplacement suivant :</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_My_Music" >
+        <textBox refId="Present_TextBox_My_Music" >
+          <label >Rediriger vers l'emplacement suivant :</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_My_Pictures" >
+        <textBox refId="Present_TextBox_My_Pictures" >
+          <label >Rediriger vers l'emplacement suivant :</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_My_Videos" >
+        <textBox refId="Present_TextBox_My_Videos" >
+          <label >Rediriger vers l'emplacement suivant :</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Network_Neighborhood" >
+        <textBox refId="Present_TextBox_Network_Neighborhood" >
+          <label >Rediriger vers l'emplacement suivant :</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Printer_Neighborhood" >
+        <textBox refId="Present_TextBox_Printer_Neighborhood" >
+          <label >Rediriger vers l'emplacement suivant :</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Recent_Items" >
+        <textBox refId="Present_TextBox_Recent_Items" >
+          <label >Rediriger vers l'emplacement suivant :</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Saved_Games" >
+        <textBox refId="Present_TextBox_Saved_Games" >
+          <label >Rediriger vers l'emplacement suivant :</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Searches" >
+        <textBox refId="Present_TextBox_Searches" >
+          <label >Rediriger vers l'emplacement suivant :</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Send_To" >
+        <textBox refId="Present_TextBox_Send_To" >
+          <label >Rediriger vers l'emplacement suivant :</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Start_Menu" >
+        <textBox refId="Present_TextBox_Start_Menu" >
+          <label >Rediriger vers l'emplacement suivant :</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Startup_Items" >
+        <textBox refId="Present_TextBox_Startup_Items" >
+          <label >Rediriger vers l'emplacement suivant :</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Templates" >
+        <textBox refId="Present_TextBox_Templates" >
+          <label >Rediriger vers l'emplacement suivant :</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Temporary_Internet" >
+        <textBox refId="Present_TextBox_Temporary_Internet" >
+          <label >Rediriger vers l'emplacement suivant :</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Logging_filename" >
+        <textBox refId="Present_TextBox_Logging_filename" >
+          <label >Nom de chemin du fichier journal local :</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Logging_destination" >
+        <checkBox refId="Present_CheckBox_Logging_destination_file" defaultChecked="true" >Envoyez des messages de journalisation au fichier journal.</checkBox>
+        <checkBox refId="Present_CheckBox_Logging_destination_port" >Envoyez des messages de journalisation au port de débogage.</checkBox>
+      </presentation>
+      <presentation id="Present_Logging_flags" >
+        <dropdownList refId="Present_DropList_Logging_flags" >Sélectionner le niveau de journal :</dropdownList>
+      </presentation>
+      <presentation id="Present_Log_History_Depth" >
+        <decimalTextBox refId="Present_Numeric_Log_History_Depth" defaultValue="1" >Nombre de journaux à conserver :</decimalTextBox>
+      </presentation>
+      <presentation id="Present_Log_File_Size" >
+        <decimalTextBox refId="Present_Numeric_Log_File_Size" defaultValue="100" >Taille du fichier journal à conserver :</decimalTextBox>
+      </presentation>
+      <presentation id="Present_Upload_log_to_network" >
+        <textBox refId="Present_TextBox_Upload_log_to_network" >
+          <label >Chemin du partage réseau :</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Manage_user_persona" >
+        <decimalTextBox refId="Present_Numeric_Manage_user_persona" defaultValue="10" >Intervalle de téléchargement de profil (en minutes) :</decimalTextBox>
+      </presentation>
+      <presentation id="Present_Persona_repository" >
+        <textBox refId="Present_TextBox_Persona_repository" >
+          <label >Partager un chemin d'accès :</label>
+        </textBox>
+        <checkBox refId="Present_CheckBox_Persona_repository" >Remplacer le chemin de profil d'utilisateur Active Directory s'il est configuré.</checkBox>
+      </presentation>
+      <presentation id="Present_Remove_local_persona" >
+        <text >Supprimer le persona stocké en local quand les utilisateurs ferment une session.</text>
+        <checkBox refId="Present_CheckBox_Remove_local_persona" defaultChecked="true" >Supprimer le dossier « Local Settings » ou « AppData\Local » quand un persona est supprimé.</checkBox>
+      </presentation>
+      <presentation id="Present_Roam_local_settings" >
+        <text >Déplacer « Local Settings » ou « AppData\Local » avec le persona de l'utilisateur.</text>
+      </presentation>
+      <presentation id="Present_Files_and_folders_preload" >
+        <text >Spécifier les fichiers qui seront téléchargés depuis le référentiel de persona</text>
+        <text >lorsqu'un utilisateur ouvre une session.</text>
+        <listBox refId="Present_ListBox_Files_and_folders_preload" >Fichiers et dossiers à précharger :</listBox>
+        <text >Tous les chemins doivent être liés à la racine du profil local.</text>
+        <text >Par exemple : Poste de travail\Nouveau dossier</text>
+        <text >Mes documents\Nouveau dossier</text>
+      </presentation>
+      <presentation id="Present_Files_and_folders_preload_exceptions" >
+        <text >Spécifiez des dossiers qui sont des exceptions à la liste de dossiers inclus</text>
+        <text >dans la stratégie « Fichiers et dossiers à précharger ».</text>
+        <listBox refId="Present_ListBox_Files_and_folders_preload_exceptions" >Exceptions de fichier et de dossier :</listBox>
+        <text >Tous les chemins doivent être liés à la racine du profil local.</text>
+        <text >Par exemple : Poste de travail\Nouveau dossier</text>
+        <text >Mes documents\Nouveau dossier</text>
+      </presentation>
+      <presentation id="Present_Windows_roaming" >
+        <text >Spécifier les fichiers qui seront gérés avec la fonctionnalité</text>
+        <text >traditionnelle des profils itinérants de Windows.</text>
+        <listBox refId="Present_ListBox_Windows_roaming" >Fichiers et dossiers :</listBox>
+        <text >Tous les chemins doivent être liés à la racine du profil local.</text>
+        <text >Par exemple : Poste de travail\Nouveau dossier</text>
+        <text >Mes documents\Nouveau dossier</text>
+      </presentation>
+      <presentation id="Present_Windows_roaming_exceptions" >
+        <text >Spécifiez des dossiers qui sont des exceptions à la liste de dossiers inclus</text>
+        <text >dans la stratégie « Synchronisation de profils itinérants de Windows ».</text>
+        <listBox refId="Present_ListBox_Windows_roaming_exceptions" >Exceptions de fichier et de dossier :</listBox>
+        <text >Tous les chemins doivent être liés à la racine du profil local.</text>
+        <text >Par exemple : Poste de travail\Nouveau dossier</text>
+        <text >Mes documents\Nouveau dossier</text>
+      </presentation>
+      <presentation id="Present_Files_and_folders_excluded_from_roaming" >
+        <text >Spécifier des dossiers qui ne seront pas déplacés avec le persona de l'utilisateur.</text>
+        <text >(Ces dossiers n'existent que dans le persona stocké localement de l'utilisateur.)</text>
+        <listBox refId="Present_ListBox_Files_and_folders_excluded_from_roaming" >Fichiers et dossiers :</listBox>
+        <text >Tous les chemins doivent être liés à la racine du profil local.</text>
+        <text >Par exemple : Poste de travail\Nouveau dossier</text>
+        <text >Mes documents\Nouveau dossier</text>
+      </presentation>
+      <presentation id="Present_Files_and_folders_excluded_from_roaming_exceptions" >
+        <text >Spécifiez des dossiers qui sont des exceptions à la liste de dossiers inclus</text>
+        <text >dans la stratégie « Fichiers et dossiers exclus du déplacement ».</text>
+        <listBox refId="Present_ListBox_Files_and_folders_excluded_from_roaming_exceptions" >Exceptions de fichier et de dossier :</listBox>
+        <text >Tous les chemins doivent être liés à la racine du profil local.</text>
+        <text >Par exemple : Poste de travail\Nouveau dossier</text>
+        <text >Mes documents\Nouveau dossier</text>
+      </presentation>
+      <presentation id="Present_Enable_background_download" >
+        <text >Activer le téléchargement en arrière-plan pour les ordinateurs portables.</text>
+      </presentation>
+      <presentation id="Present_Folders_to_background" >
+        <text >Spécifiez des dossiers qui seront téléchargés en arrière-plan</text>
+        <text >lorsqu'un utilisateur ouvre une session.</text>
+        <listBox refId="Present_ListBox_Folders_to_background" >Dossiers à télécharger :</listBox>
+        <text >Tous les chemins doivent être liés à la racine du profil local.</text>
+        <text >Exemple : Application Data\Thinstall</text>
+        <text >Poste de travail\Nouveau dossier</text>
+      </presentation>
+      <presentation id="Present_Folders_to_background_exceptions" >
+        <text >Spécifiez des dossiers qui sont des exceptions à la liste de dossiers inclus</text>
+        <text >dans la stratégie « Dossiers à télécharger en arrière-plan ».</text>
+        <listBox refId="Present_ListBox_Folders_to_background_exceptions" >Exceptions de dossier :</listBox>
+        <text >Tous les chemins doivent être liés à la racine du profil local.</text>
+        <text >Exemple : Application Data\Thinstall</text>
+        <text >Poste de travail\Nouveau dossier</text>
+      </presentation>
+      <presentation id="Present_Excluded_Processes" >
+        <text >Spécifiez des noms de processus qui doivent être exclus par le persona.</text>
+        <text >Exemple : process.exe</text>
+        <listBox refId="Present_ListBox_Element_Excluded_Processes" >Processus exclus :</listBox>
+      </presentation>
+      <presentation id="Present_Cleanup_CLFS_Files" >
+        <text >Supprimer des fichiers CLFS du profil itinérant lors de l'ouverture de session.</text>
+      </presentation>
+
+      <presentation id="Enforce_AD_Wallpaper" >
+        <text >Applique le paramètre de papier peint du GPO.</text>
+      </presentation>
+      <presentation id="Present_DSVA" >
+        <text >Interopérabilité avec DSVA (Deep Security Virtual Appliance)</text>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

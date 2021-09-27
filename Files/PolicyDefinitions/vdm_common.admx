@@ -65,6 +65,15 @@
 
 		</policy>
 
+		<policy name="Global_Max_Dump_Count" class="Machine" displayName="$(string.Global_Max_Dump_Count)" explainText="$(string.Global_Max_Dump_Count_Desc)" key="Software\Policies\VMware, Inc.\VMware VDM\Dump" presentation="$(presentation.Global_Max_Dump_Count)" >
+				<parentCategory ref="View_Common_Config" />
+				<supportedOn ref="SupportedOn" />
+				<elements >
+					<decimal id="Global_Max_Dump_Count_DecimalBox" key="Software\Policies\VMware, Inc.\VMware VDM\Dump" valueName="GlobalMaxDumpCount" />
+				</elements>
+
+		</policy>
+
 		<policy name="Production_Logs_Duration" class="Machine" displayName="$(string.Production_Logs_Duration)" explainText="$(string.Production_Logs_Duration_Desc)" key="Software\Policies\VMware, Inc.\VMware VDM\Log" presentation="$(presentation.Production_Logs_Duration)" >
 				<parentCategory ref="Log_Config" />
 				<supportedOn ref="SupportedOn" />

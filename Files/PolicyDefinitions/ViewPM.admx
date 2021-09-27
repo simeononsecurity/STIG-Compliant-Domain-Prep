@@ -1001,5 +1001,23 @@
       <disabledValue >
         <decimal value="0" />
       </disabledValue>
-    </policy>  </policies>
+    </policy>
+    <policy name="Policy_DSVA"
+            class="Machine"
+            displayName="$(string.String_Policy_DSVA)"
+            explainText="$(string.String_Explain_DSVA)"
+            clientExtension="{13334EA7-F4F6-4382-9493-CF7717811A23}"
+            key="SOFTWARE\Policies\VMware, Inc.\VMware VDM\Persona Management\Driver"
+            valueName="DSVAInterop"
+            presentation="$(presentation.Present_DSVA)" >
+      <parentCategory ref="Category_Roaming_Synchronization" />
+      <supportedOn ref="SupportedOn" />
+      <enabledValue >
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue >
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+  </policies>
 </policyDefinitions>

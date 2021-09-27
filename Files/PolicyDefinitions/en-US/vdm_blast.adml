@@ -17,6 +17,8 @@
       <string id="BLAST_MAX_FPS_EXPLAIN">Maximum Frame Rate value to manage the average bandwidth consumed per user by limiting the number of screen updates per second.</string>
       <string id="BLAST_UDP_LABEL">UDP Protocol</string>
       <string id="BLAST_UDP_EXPLAIN">When this setting is enabled or not configured, UDP protocol is used. If the setting is disabled, TCP protocol is used.</string>
+      <string id="BLAST_CURSOR_WARPING_LABEL">Cursor Warping</string>
+      <string id="BLAST_CURSOR_WARPING_EXPLAIN">When this setting is enabled, the cursor warping feature is enabled. If this feature is enabled and the mouse is in absolute mode, the remote agent will detect sudden cursor movements and reflect them to the client by moving the local cursor, otherwise the sudden cursor movements in the remote agent will be ignored by the client. The cursor warping feature is disabled by default.</string>
       <!--
         NOTE FOR TRANSLATORS: the collection of BLAST_DSCP_..._EXPLAIN strings that follow
 	BLAST_DSP_ACTIVATE_LABEL all cite this "DSCP Marking" string in their second paragraph.
@@ -107,6 +109,14 @@ The higher the quality the more bandwidth used and potentially higher latency wh
       <string id="BLAST_DISPLAY_QUALITY_JPEG_QUAL_LOW">Low JPEG Quality</string>
       <string id="BLAST_DISPLAY_QUALITY_JPEG_QUAL_MID">Mid JPEG Quality</string>
       <string id="BLAST_DISPLAY_QUALITY_JPEG_QUAL_HIGH">High JPEG Quality</string>
+      <string id="BLAST_CODEC_QUALITY_LABEL">Blast Codec Quality</string>
+      <string id="BLAST_CODEC_QUALITY_EXPLAIN">These settings control the image quality of the remoted display when using Blast Codec compression. The Quantization Parameter (QP) controls how much the resulting image is quantized, i.e. lossily compressed:
+- the minimum QP sets the lower bound for quantization, i.e. the best quality.
+- the maximum QP sets the upper bound for quantization, i.e. the lowest quality.
+These quantization values occupy the range [1, 8] and map roughly to a JPEG quality value in the range of [20, 88]. This quantization is applied only to non-text regions, and so has no bearing on text compression.
+A value of zero for either the maximum or minimum QP will cause the config to be overridden by the Low and High JPEG quality configs, respectively. This is the default behavior.</string>
+      <string id="BLAST_CODEC_QP_MAX">Blast Codec Maximum QP</string>
+      <string id="BLAST_CODEC_QP_MIN">Blast Codec Minimum QP</string>
       <string id="BLAST_H264_QUALITY_LABEL">H.264 Quality</string>
       <string id="BLAST_H264_QUALITY_EXPLAIN">These settings control the image quality of the remoted display when using H.264 compression. The Quantization Parameter (QP) controls how much the resulting image is quantized, i.e. lossily compressed:
 - the minimum QP sets the lower bound for quantization, i.e. the best quality.
@@ -284,6 +294,7 @@ When the setting is not configured or disabled, a default threshold 1 megabytes 
         <decimalTextBox refId="BLAST_MAX_FPS_LABEL" defaultValue="30">Max Frame Rate</decimalTextBox>
       </presentation>
       <presentation id="BLAST_UDP_LABEL" />
+      <presentation id="BLAST_CURSOR_WARPING_LABEL" />
       <presentation id="BLAST_DSCP_ACTIVATE_LABEL" />
       <presentation id="BLAST_DSCP_AGENT_OUT_TCP4_LABEL">
         <decimalTextBox refId="BLAST_DSCP_AGENT_OUT_TCP4_LABEL" defaultValue="">DSCP Value</decimalTextBox>
@@ -344,6 +355,10 @@ When the setting is not configured or disabled, a default threshold 1 megabytes 
         <decimalTextBox refId="BLAST_DISPLAY_QUALITY_JPEG_QUAL_LOW" defaultValue="25">Low JPEG Quality</decimalTextBox>
         <decimalTextBox refId="BLAST_DISPLAY_QUALITY_JPEG_QUAL_MID" defaultValue="35">Mid JPEG Quality</decimalTextBox>
         <decimalTextBox refId="BLAST_DISPLAY_QUALITY_JPEG_QUAL_HIGH" defaultValue="90">High JPEG Quality</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_CODEC_QUALITY_LABEL">
+        <decimalTextBox refId="BLAST_CODEC_QP_MAX" defaultValue="0">Blast Codec Maximum QP</decimalTextBox>
+        <decimalTextBox refId="BLAST_CODEC_QP_MIN" defaultValue="0">Blast Codec Minimum QP</decimalTextBox>
       </presentation>
       <presentation id="BLAST_H264_QUALITY_LABEL">
         <decimalTextBox refId="BLAST_H264_QUALITY_MAX_QP" defaultValue="36">H.264 Maximum QP</decimalTextBox>

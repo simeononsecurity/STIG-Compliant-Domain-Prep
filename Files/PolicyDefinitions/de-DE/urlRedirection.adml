@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="unknown_0">VMware Horizon-URL-Umleitung</string>
+      <string id="unknown_2">IE-Richtlinie: Verhindern, dass Benutzer das Ladeverhalten des URL-Umleitungs-Plug-In ändern</string>
+      <string id="unknown_6">IE-Richtlinie: Automatisch das URL-Umleitungs-Plug-In aktivieren</string>
+      <string id="unknown_4">URL-Umleitungs-IP-Regeln aktiviert</string>
+      <string id="unknown_8">URL-Umleitung aktiviert</string>
+      <string id="unknown_12">URL-Umleitungsprotokoll „https“</string>
+      <string id="unknown_10">URL-Umleitungs-Protokoll „http“</string>
+      <string id="unknown_15">URL-Umleitungs-Protokoll „...“</string>
+      <string id="unknown_3">Legt fest, ob Benutzer die URL-Inhaltsumleitung deaktivieren können.</string>
+      <string id="unknown_5">Diese Einstellung legt fest, ob die IP-Regeln aktiviert oder deaktiviert sind. Sie ist standardmäßig nicht konfiguriert. Wenn die IP-Regeln aktiviert sind, werden die angegebene IP-/IP-Bereichsfilterung und DNS-Resolve unterstützt. Das heißt, Sie können IP/IP-Bereich in Clientregeln oder Agent-Regeln hinzufügen, und die eingegebene URL-Adresse, die nicht mit den URL-Regeln übereinstimmt, wird als IP-Adresse aufgelöst, die der IP/dem IP-Bereich entspricht.
+Beispiel: Sie aktivieren die IP-Regeln und setzen die Agent-Regeln auf „.*\.mycompany\.com;22.22.22.22;10.10.1.2-10.10.12.20“ in HTTPS. In diesem Fall werden die IP-Adresse „https://22.22.22.22“, alle IPs im IP-Bereich „10.10.1.2-10.10.12.20“ und alle URLs, die im IP-Bereich „10.10.1.2-10.10.12.20“ oder als IP „22.22.22.22“ aufgelöst werden, umgeleitet.
+
+Hinweis
+
+Die IP-Regeln gelten derzeit nur für Internet Explorer.</string>
+      <string id="unknown_7">Legt fest, ob neu installierte Internet Explorer Plug-Ins automatisch aktiviert werden.</string>
+      <string id="unknown_9">Legt fest, ob diese Funktion aktiviert ist. Diese Einstellung ist standardmäßig nicht konfiguriert. Sie können durch Deaktivierung dieser Option die Funktion deaktivieren, auch wenn die Komponente installiert wurde.</string>
+      <string id="HelpString">Legt für alle URLs, die dieses Protokoll verwenden, fest, welche URLs umgeleitet werden.
+Beispiel: Sie setzen Agent-Regeln auf .*\.mycompany\.com“. In diesem Fall werden alle URLs mit „mycompany.com“ an einen Remote-Desktop oder eine Remoteanwendung umgeleitet. Sie können außerdem mit der Einstellung „Broker-Hostname“ den verwendeten Verbindungsserver bestimmen und festlegen, welcher Desktop- oder Anwendungspool benutzt wird. Dazu geben Sie für Remote-Element den Anzeigenamen des Pools an, der in View Administrator dargestellt wird.
+Wenn Sie Clientregeln auf „.*\.mycompany\.com“ festlegen, werden alle URLs mit der Zeichenfolge „mycompany.com“ zum Windows-basierten Client umgeleitet und im Standardbrowser auf dem Client geöffnet.
+
+Hinweis
+
+Es wird empfohlen, für das HTTP-Protokoll und das HTTPS-Protokoll die gleichen Regeln festzulegen. Wenn ein Benutzer die URL in Internet Explorer teilweise eingibt (z. B. „.mycompany.com“) und diese Site dann automatisch von HTTP nach HTTPS umgeleitet wird, wird die Funktion der URL-Inhaltsumleitung wie erforderlich ausgeführt. Eine eingegebene Teil-URL wird nicht umgeleitet, wenn Sie eine Regel für HTTPS, aber nicht für HTTP festlegen. Wenn Sie mehrere Regeln festlegen, trennen Sie die einzelnen Regeln mit einem Semikolon voneinander. Der manuelle Umbruch wird nicht unterstützt.</string>
+      <string id="ADMXMigrator_UnresolvedString">ADMX-Migrator hat eine Zeichenfolge ermittelt, die in der Quell-ADM-Zeichenfolgentabelle nicht vorhanden ist.</string>
+      <string id="ADMXMigrator_NoSupportedOn">ADMX-Migrator hat eine Richtlinie ohne den Wert supportedOn ermittelt.</string>
+      <string id="ExtensionInstallForcelist">Installieren Sie die Chrome-Erweiterung, die für die URL-Inhaltsumleitungsfunktion erforderlich ist.</string>
+      <string id="ExtensionInstallForcelist_Explain">Wenn diese Richtlinie aktiviert ist, wird die Chrome-Erweiterung, die für die URL-Inhaltsumleitungsfunktion erforderlich ist, automatisch im Hintergrund installiert. Diese Installation umfasst auch das Gewähren der erforderlichen Berechtigungen. Diese Installation kann ohne Administratorrechte nicht rückgängig gemacht werden.
+
+Wenn diese Richtlinie deaktiviert oder nicht konfiguriert ist, wird die Chrome-Erweiterung, die für die URL-Inhaltsumleitungsfunktion erforderlich ist, nicht automatisch installiert. In diesem Fall funktioniert die URL-Inhaltsumleitung im Chrome-Browser, auch wenn die Umleitungsregeln festgelegt sind, erst dann, wenn die Erweiterung im Google Chrome Web Store manuell installiert wird. 
+
+Standardmäßig ist diese Richtlinie nicht konfiguriert.</string>
+      <string id="UrlRedirectionProtocol_WhitelistSring">Whitelist-Konfiguration für URL-Umleitung</string>
+      <string id="UrlRedirectionProtocol_WhitelistExplain">Diese Einstellung bestimmt die Anwendungen, die für das Protokoll in der URL unterstützt werden, die in der Whitelist aufgerufen wird.
+Die folgenden Anwendungen werden standardmäßig unterstützt:
+– iexplore.exe: Internet Explorer Browser
+– chrome.exe: Chrome-Browser
+– firefox.exe: Firefox-Browser
+- msedge.exe: Microsoft Edge (Chromium)
+– outlook.exe: Microsoft Outlook
+– lync.exe: Skype for Business
+– skype.exe: Skype
+– wmplayer.exe: Windows Media Player
+
+Sie können die standardmäßig unterstützten Anwendungen über die Whitelist-Konfiguration für URL-Umleitung ändern.
+
+Beispiel: Die Whitelist ist folgendermaßen festgelegt:
+chrome.exe
+outlook.exe
+skype.exe
+
+Daher werden nur der Chrome-Browser, Microsoft Outlook und Skype bei der URL-Inhaltsumleitung unterstützt.</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="IEpolicyPreventusersfromchangingURLRedirectionpluginloadingbehavior" />
+      <presentation id="IEpolicyAutomaticallyenableURLRedirectionplugin" />
+      <presentation id="UrlRedirectionEnabled" />
+      <presentation id="UrlRedirectionIPRulesEnabled" />
+      <presentation id="UrlRedirectionProtocol_http">
+        <textBox refId="brokerHostname">
+          <label>Broker-Hostname</label>
+        </textBox>
+        <textBox refId="remoteItem">
+          <label>Remote-Element</label>
+        </textBox>
+        <text>Clientregeln</text>
+          <multiTextBox refId="clientRules" />
+        <text>Agent-Regeln</text>
+          <multiTextBox refId="agentRules" />
+      </presentation>
+      <presentation id="UrlRedirectionProtocol_https">
+        <textBox refId="brokerHostname">
+          <label>Broker-Hostname</label>
+        </textBox>
+        <textBox refId="remoteItem">
+          <label>Remote-Element</label>
+        </textBox>
+        <text>Clientregeln</text>
+          <multiTextBox refId="clientRules" />
+        <text>Agent-Regeln</text>
+          <multiTextBox refId="agentRules" />
+      </presentation>
+      <presentation id="UrlRedirectionProtocol_">
+        <textBox refId="brokerHostname">
+          <label>Broker-Hostname</label>
+        </textBox>
+        <textBox refId="remoteItem">
+          <label>Remote-Element</label>
+        </textBox>
+        <text>Clientregeln</text>
+          <multiTextBox refId="clientRules" />
+        <text>Agent-Regeln</text>
+          <multiTextBox refId="agentRules" />
+      </presentation>
+      <presentation id="UrlRedirectionProtocol_Whitelist">
+        <text>Whitelist</text>
+        <multiTextBox refId="whitelist" />
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

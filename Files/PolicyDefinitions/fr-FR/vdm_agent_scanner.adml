@@ -1,0 +1,204 @@
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName>
+  </displayName>
+  <description>
+  </description>
+  <resources>
+    <stringTable>
+      <string id="Root_CatName">Redirection de scanner</string>
+      <string id="DisableFunctionality_PolicyName">Désactiver la fonctionnalité</string>
+      <string id="DisableFunctionality_PolicyExplain">Ce paramètre de stratégie est utilisé pour désactiver la fonctionnalité de redirection de scanner.
+
+Si ce paramètre de stratégie est activé, les scanners ne peuvent pas être redirigés et ils n'apparaissent pas dans le menu Scanner.
+
+Si ce paramètre de stratégie est désactivé ou non configuré, la redirection de scanner fonctionne et les scanners apparaissent dans le menu Scanner.</string>
+      <string id="LockConfig_PolicyName">Configuration de verrouillage</string>
+      <string id="LockConfig_PolicyExplain">Ce paramètre de stratégie est utilisé pour verrouiller les paramètres de l'interface utilisateur du programme.
+
+Si ce paramètre de stratégie est activé, l'interface utilisateur contenant les paramètres de programme est verrouillée et l'utilisateur ne peut pas modifier les paramètres dans le menu de la barre d'état.
+
+Si ce paramètre de stratégie est désactivé ou non configuré, l'interface utilisateur contenant les paramètres de programme est accessible aux utilisateurs.</string>
+      <string id="HideWebcam_PolicyName">Masquer la webcam</string>
+      <string id="HideWebcam_PolicyExplain_COMP">Actuellement, les webcams peuvent être redirigées vers le côté VMware Agent et être utilisées comme scanner virtuel pour capturer des images.
+Ce paramètre de stratégie empêche les webcams d'apparaître dans le menu de sélection de scanner de l'interface utilisateur.
+
+Si ce paramètre de stratégie est activé, le mode de masquage de la webcam sera activé pour tous les utilisateurs de cet ordinateur.
+
+Si ce paramètre de stratégie est désactivé, le mode de masquage de la webcam sera désactivé pour tous les utilisateurs de cet ordinateur.
+
+De plus, ce paramètre de stratégie remplace le paramètre de stratégie semblable pour tous les utilisateurs de cet ordinateur et les utilisateurs ne pourront pas modifier le mode de masquage de la webcam via l'interface des paramètres.
+
+Si ce paramètre de stratégie n'est pas configuré, le mode de masquage de la webcam est déterminé par le paramètre de stratégie d'utilisateur semblable ou via l'interface des paramètres.</string>
+      <string id="HideWebcam_PolicyExplain_USER">Actuellement, les webcams peuvent être redirigées vers le côté VMware Agent et être utilisées comme scanner virtuel pour capturer des images.
+Ce paramètre de stratégie empêche les webcams d'apparaître dans le menu de sélection de scanner de l'interface utilisateur.
+
+Si ce paramètre de stratégie est activé, le mode de masquage de la webcam pour les utilisateurs sera attribué par ce paramètre de stratégie.
+
+Si ce paramètre de stratégie est désactivé ou non configuré, le mode de masquage de la webcam sera désactivé.
+
+L'utilisateur a la possibilité de modifier le mode de masquage de la webcam à tout moment via l'interface des paramètres, même si le paramètre de stratégie est activé.
+
+Si ce paramètre de stratégie est utilisé pour l'ordinateur, il remplace le paramètre de stratégie pour tous les utilisateurs de cet ordinateur. Dans ce cas, l'utilisateur n'aura pas la possibilité de modifier le mode de masquage de la webcam via l'interface des paramètres.</string>
+      <string id="DefaultColorMode_PolicyName">Mode de couleur par défaut</string>
+      <string id="DefaultColorMode_PolicyExplain">Cette stratégie permet de remplacer le mode de couleur de l'analyse par défaut (par exemple, Couleur ou Nuances de gris).
+Elle est très utile lorsque l'application d'analyse s'exécute sans afficher la boîte de dialogue Préférences de l'analyse et qu'elle ne permet pas de configurer le mode de couleur en interne.
+      </string>
+      <string id="DefaultColorMode_DropDownListName">Mode de couleur :</string>
+      <string id="DefaultColorMode_BlackAndWhite">Noir et blanc</string>
+      <string id="DefaultColorMode_Grayscale">Échelle de gris</string>
+      <string id="DefaultColorMode_Color">Couleur</string>
+      <string id="DefaultDuplex_PolicyName">Duplex par défaut</string>
+      <string id="DefaultDuplex_PolicyExplain">Cette stratégie permet de remplacer le mode d'analyse par défaut (Simplex ou Duplex).
+Faites attention lorsque vous configurez le paramètre « Duplex », car l'application d'analyse doit être capable de prendre en charge l'analyse Duplex et la demande de deux pages émanant du scanner.
+      </string>
+      <string id="DefaultDuplex_DropDownListName">Mode duplex :</string>
+      <string id="DefaultDuplex_Simplex">Simplex</string>
+      <string id="DefaultDuplex_Duplex">Duplex</string>
+      <string id="DefaultScanner_PolicyName">Scanner par défaut</string>
+      <string id="DefaultScanners_PolicyExplain_COMP">Ce paramètre de stratégie est utilisé pour la gestion centralisée de sélection automatique de scanner.
+Les modes de sélection automatique suivants sont utilisés :
+Aucun - Ne pas sélectionner de scanner automatiquement ;
+Sélection automatique - Sélectionner automatiquement le scanner connecté ;
+Dernier utilisé - Sélectionner automatiquement le dernier scanner utilisé ;
+Spécifié - Le scanner sélectionné est déterminé par le contenu du champ Scanner spécifié.
+
+Si ce paramètre de stratégie est activé, le mode de sélection automatique de scanner pour tous les utilisateurs de cet ordinateur sera remplacé par ce paramètre de stratégie et les utilisateurs ne pourront pas modifier le mode de sélection automatique via l'interface des paramètres.
+De plus, ce paramètre de stratégie remplace le paramètre de stratégie semblable pour tous les utilisateurs de cet ordinateur.
+
+Si ce paramètre de stratégie est désactivé ou non configuré, le mode de sélection automatique est déterminé via le paramètre de stratégie semblable pour l'utilisateur ou via l'interface des paramètres.</string>
+      <string id="DefaultScanners_PolicyExplain_USER">Ce paramètre de stratégie est utilisé pour la gestion centralisée de sélection automatique de scanner.
+Les modes de sélection automatique suivants sont utilisés :
+Aucun - Ne pas sélectionner de scanner automatiquement ;
+Sélection automatique - Sélectionner automatiquement le scanner connecté ;
+Dernier utilisé - Sélectionner automatiquement le dernier scanner connecté utilisé ;
+Spécifié - Le scanner sélectionné est déterminé par le contenu du champ Scanner spécifié.
+
+Si ce paramètre de stratégie est activé, le mode de sélection automatique de scanner pour l'utilisateur sera défini par ce paramètre de stratégie.
+
+Si ce paramètre de stratégie est désactivé ou non configuré, le mode Sélection automatique sera utilisé.
+
+L'utilisateur a la possibilité de modifier le mode de sélection automatique à tout moment via l'interface des paramètres, même si le paramètre de stratégie est activé.
+
+Si ce paramètre de stratégie est utilisé pour l'ordinateur, il remplace le paramètre de stratégie pour tous les utilisateurs de cet ordinateur. Dans ce cas, l'utilisateur n'aura pas la possibilité de modifier le mode de sélection automatique via l'interface des paramètres.</string>
+      <string id="TWAINScanners_Caption">Pour les scanners TWAIN :
+
+</string>
+      <string id="WIAScanners_Caption">Pour les scanners WIA :
+
+</string>
+      <string id="Scanners_SelectionMode_DropDownListName">Mode de sélection :</string>
+      <string id="Scanners_SelectionMode_None">Aucun</string>
+      <string id="Scanners_SelectionMode_Auto">Sélection automatique</string>
+      <string id="Scanners_SelectionMode_Last">Dernier utilisé</string>
+      <string id="Scanners_SelectionMode_Specified">Spécifié</string>
+      <string id="Scanners_Specified_EditName">Scanner spécifié :</string>
+      <string id="Compression_PolicyName">Compression</string>
+      <string id="Compression_PolicyExplain">Ce paramètre de stratégie est utilisé pour définir le taux de compression d'image lors de son transfert vers le côté agent.
+Les modes de compression suivants sont utilisés :
+Désactiver - La compression d'image est désactivée ;
+Sans perte - La compression sans perte (zlib) est utilisée sans perte de la qualité d'image ;
+JPEG - La compression JPEG est utilisée avec perte de la qualité. Le niveau de qualité d'image est spécifié dans le champ Qualité de compression JPEG.
+
+Si ce paramètre de stratégie est activé, le mode de compression pour l'utilisateur sera défini par ce paramètre de stratégie.
+
+Si ce paramètre de stratégie est désactivé ou non configuré, le mode de compression JPEG sera utilisé.
+
+L'utilisateur a la possibilité de modifier le mode de compression à tout moment via l'interface des paramètres, même si le paramètre de stratégie est activé.</string>
+      <string id="Compression_Mode_DropDownListName">Mode de compression :</string>
+      <string id="Compression_Mode_Disable">Désactiver</string>
+      <string id="Compression_Mode_Lossless">Sans perte</string>
+      <string id="Compression_Mode_JPEG">JPEG</string>
+      <string id="Compression_JPEGQuality_NumericName">Qualité de compression JPEG :</string>
+      <string id="ADMXMigrator_UnresolvedString">ADMX Migrator a rencontré une chaîne qui n'est pas présente dans le tableau de chaînes ADM source.</string>
+      <string id="ADMXMigrator_NoSupportedOn">ADMX Migrator a rencontré une stratégie sans valeur supportedOn.</string>
+      <string id="SUPPORTED_WindowsXP">Au minimum la famille Microsoft Windows XP Professionnel ou Windows Server 2003</string>
+	  <string id="BandwidthLimit_PolicyName">Limite de bande passante</string>
+	  <string id="BandwidthLimit_PolicyExplain">Ce paramètre de stratégie spécifie la bande passante maximale autorisée, en kilo-octets par seconde, pour le transfert des données analysées vers une session utilisateur. 
+Si le paramètre est égal à zéro ou n'est pas spécifié, il n'y a aucune limite.</string>
+	  <string id="BandwidthLimit_NumericName">Limite de kilo-octets/s :</string>
+	  <string id="UseVendorUI_PolicyName">Emplacement de la boîte de dialogue des propriétés du scanner TWAIN</string>
+      <string id="UseVendorUI_PolicyExplain">Cette stratégie permet de spécifier si la boîte de dialogue des propriétés de numérisation TWAIN s'affichera côté agent ou côté client.
+Si vous sélectionnez Agent, la boîte de dialogue Propriétés de scanner VMware s'affiche côté agent.
+Si vous sélectionnez Client, la boîte de dialogue TWAIN du scanner fournisseur natif s'affiche côté client.
+      </string>
+      <string id="UseVendorUI_DropDownListName">Emplacement de la boîte de dialogue des propriétés du scanner TWAIN :</string>
+      <string id="UseVendorUI_Server">Agent</string>
+      <string id="UseVendorUI_Wks">Client</string>
+	  <string id="ForceTwainDialog_PolicyName">Forcer la boîte de dialogue des propriétés de numérisation TWAIN</string>
+      <string id="ForceTwainDialog_PolicyExplain_USER">Cette stratégie permet de forcer l'affichage de la boîte de dialogue des propriétés de numérisation TWAIN, même si une application de numérisation n'affiche pas la boîte de dialogue de numérisation.</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="DisableFunctionality_PolicyName" />
+      <presentation id="LockConfig_PolicyName" />
+      <presentation id="HideWebcam_PolicyName" />
+      <presentation id="DefaultColorMode_PolicyName">
+        <dropdownList refId="DefaultColorMode_DropDownListName" noSort="true" defaultItem="2">Mode de couleur :</dropdownList>
+      </presentation>
+      <presentation id="DefaultDuplex_PolicyName">
+        <dropdownList refId="DefaultDuplex_DropDownListName" noSort="true" defaultItem="1">Mode duplex :</dropdownList>
+      </presentation>
+      <presentation id="DefaultScanner_PolicyName">
+        <text>Pour les scanners TWAIN :
+
+</text>
+        <dropdownList refId="Scanners_SelectionMode_DropDownListName" noSort="true" defaultItem="1">Mode de sélection :</dropdownList>
+        <textBox refId="Scanners_Specified_EditName">
+          <label>Scanner spécifié :</label>
+          <defaultValue>
+          </defaultValue>
+        </textBox>
+        <text>
+        </text>
+        <text>Pour les scanners WIA :
+
+</text>
+        <dropdownList refId="Scanners_SelectionMode_DropDownListName_1" noSort="true" defaultItem="1">Mode de sélection :</dropdownList>
+        <textBox refId="Scanners_Specified_EditName_1">
+          <label>Scanner spécifié :</label>
+          <defaultValue>
+          </defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="Compression_PolicyName">
+        <dropdownList refId="Compression_Mode_DropDownListName" noSort="true" defaultItem="2">Mode de compression :</dropdownList>
+        <decimalTextBox refId="Compression_JPEGQuality_NumericName" defaultValue="80">Qualité de compression JPEG :</decimalTextBox>
+      </presentation>
+      <presentation id="HideWebcam_PolicyName_1" />
+      <presentation id="DefaultColorMode_PolicyName_1">
+        <dropdownList refId="DefaultColorMode_DropDownListName" noSort="true" defaultItem="2">Mode de couleur :</dropdownList>
+      </presentation>
+      <presentation id="DefaultDuplex_PolicyName_1">
+        <dropdownList refId="DefaultDuplex_DropDownListName" noSort="true" defaultItem="1">Mode duplex :</dropdownList>
+      </presentation>
+      <presentation id="DefaultScanner_PolicyName_1">
+        <text>Pour les scanners TWAIN :
+
+</text>
+        <dropdownList refId="Scanners_SelectionMode_DropDownListName" noSort="true" defaultItem="1">Mode de sélection :</dropdownList>
+        <textBox refId="Scanners_Specified_EditName">
+          <label>Scanner spécifié :</label>
+          <defaultValue>
+          </defaultValue>
+        </textBox>
+        <text>
+        </text>
+        <text>Pour les scanners WIA :
+
+</text>
+        <dropdownList refId="Scanners_SelectionMode_DropDownListName_1" noSort="true" defaultItem="1">Mode de sélection :</dropdownList>
+        <textBox refId="Scanners_Specified_EditName_1">
+          <label>Scanner spécifié :</label>
+          <defaultValue>
+          </defaultValue>
+        </textBox>
+      </presentation>
+	   <presentation id="BandwidthLimit_PolicyName">
+        <decimalTextBox refId="BandwidthLimit_NumericName" defaultValue="0">Limite de kilo-octets/s :</decimalTextBox>
+      </presentation>
+	  <presentation id="UseVendorUI_PolicyName">
+        <dropdownList refId="UseVendorUI_DropDownListName" noSort="true" defaultItem="0">Emplacement de la boîte de dialogue :</dropdownList>
+      </presentation>
+	  <presentation id="ForceTwainDialog_PolicyName" />
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

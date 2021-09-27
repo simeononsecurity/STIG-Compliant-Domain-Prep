@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="print_redir">VMware Integrated Printing</string>
+      <string id="SUPPORTED_NotSpecified">Nicht angegeben</string>
+      <string id="persistence_setting">Persistenz der Druckereigenschaft deaktivieren</string>
+      <string id="persistence_setting_detail">Diese Einstellung legt fest, ob die Druckereigenschaftseinstellungen beibehalten werden oder nicht.
+
+Wenn sie aktiviert ist, wird die Änderung der Druckereigenschaft auf der Agent-Seite nicht beibehalten, nachdem der Benutzer die Verbindung getrennt oder sich von der Sitzung abgemeldet hat, und ist daher nicht persistent.
+Wenn z. B. ein Benutzer die Druckerpapiergröße während der Sitzung von „Brief“ in „A4“ ändert, wird die Papiergröße bei der nächsten erneuten Verbindungsherstellung auf „Brief“ zurückgesetzt und die Änderung „A4“ ist nicht persistent. 
+
+Wenn sie nicht konfiguriert oder deaktiviert ist, wird die Änderung der Druckereigenschaft auf der Agent-Seite beibehalten, nachdem der Benutzer die Verbindung getrennt oder sich von der Sitzung abgemeldet hat, und ist daher persistent.
+Wenn z. B. ein Benutzer die Druckerpapiergröße während der Sitzung von „Brief“ in „A4“ ändert, ist die Papiergröße bei der nächsten erneuten Verbindungsherstellung weiterhin auf „A4“ festgelegt, da die Änderung beibehalten wird.
+
+Dieses GPO ist standardmäßig nicht konfiguriert.
+</string>
+      <string id="nondesktopclient_setting">Druckerumleitung für Nicht-Desktop-Client deaktivieren</string>
+      <string id="nondesktopclient_setting_detail">Diese Einstellung legt fest, ob VMware Integrated Printing für den Nicht-Desktop-Client-Endpoint unterstützt wird.
+
+Wenn diese Option aktiviert ist, wird VMware Integrated Printing für den Nicht-Desktop-Client-Endpoint nicht unterstützt.
+Wenn sie nicht konfiguriert oder deaktiviert ist, wird VMware Integrated Printing für den Nicht-Desktop-Client-Endpoint unterstützt.
+
+Diese Einstellung ist standardmäßig nicht konfiguriert.
+</string>
+      <string id="lbp_setting">Standortbasiertes Drucken deaktivieren</string>
+      <string id="lbp_setting_detail">Mit dieser Richtlinieneinstellung können Sie verwalten, ob standortbasiertes Drucken verwendet werden soll oder nicht.
+
+Wenn Sie diese Richtlinieneinstellung aktivieren, kann das standortbasierte Drucken nicht verwendet werden.
+Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, kann standortbasiertes Drucken verwendet werden.</string>
+	  <string id="lp_setting">Clientdrucker nicht umleiten</string>
+      <string id="lp_setting_detail">Mit dieser Richtlinieneinstellung können Sie verwalten, ob (ein) Clientdrucker umgeleitet wird/werden oder nicht.
+
+Wenn Sie diese Richtlinieneinstellung aktivieren, werden keine Clientdrucker umgeleitet.
+Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werden alle Clientdrucker umgeleitet.
+
+Diese Einstellung ist standardmäßig nicht konfiguriert.
+</string>
+      <string id="printer_creation_setting">Auswahl des Druckertreibers</string>
+      <string id="printer_creation_setting_detail">Auswahl des Druckertreibers.
+
+Auswahlmöglichkeiten für die Druckererstellung:
+Optionen für den verwendeten Druckertreiber, Universal-Druckertreiber (UPD) oder nativen Druckertreiber (NPD).
+
+Wenn Sie die erste Option „NPD immer verwenden“ auswählen, wird für den umgeleiteten Drucker immer der native Druckertreiber verwendet.
+
+Wenn Sie die zweite Option „UPD immer verwenden“ auswählen, wird für den umgeleiteten Drucker immer der Universal-Druckertreiber verwendet.
+
+Wenn Sie die dritte Option „Erst NPD, dann UPD verwenden“ auswählen, wird zunächst der native Druckertreiber verwendet, und wenn der native Druckertreiber nicht vorhanden ist, wird der Universal-Druckertreiber verwendet.
+
+Wenn Sie die vierte Option „Erst UPD, dann NPD verwenden“ auswählen, wird zunächst der Universal-Druckertreiber verwendet, und wenn der Universal-Druckertreiber nicht vorhanden ist, wird der native Druckertreiber verwendet.
+
+</string>
+      <string id="printer_creation_setting_npd">NPD immer verwenden</string>
+      <string id="printer_creation_setting_upd">UPD immer verwenden</string>
+      <string id="printer_creation_setting_npd_upd">Erst NPD, dann UPD verwenden</string>
+      <string id="printer_creation_setting_upd_npd">Erst UPD, dann NPD verwenden</string>
+      <string id="printer_filter">Geben Sie beim Umleiten von Client-Druckern einen Filter an</string>
+      <string id="printer_filter_desc">Eine Regel zum Herausfiltern von Clientdruckern, die in der Druckerumleitung übereinstimmen. Unterstützte Attribute sind Druckernamen, Druckertreibernamen und Treiberanbieternamen. Unterstützte Operatoren sind AND, OR und NOT. Das unterstützte Suchmuster sind reguläre Ausdrücke in JavaScript-Dialekt (ECMAScript).
+Standardmäßig ist die Regel leer. Demnach werden alle Client-Drucker umgeleitet.
+
+Beispiel:
+(DriverName= &quot;DrName1&quot; OR VendorName=&quot;VeName1&quot;) AND NOT PrinterName= &quot;PrNa.?e&quot;</string>
+      <string id="print_preview_setting">Druckvorschau-Einstellung</string>
+      <string id="print_preview_setting_detail">Es gibt zwei Einstellungen für die Druckvorschau.
+
+Die erste Einstellung bestimmt, ob das Druckziel aktiviert ist oder nicht. Sie ist standardmäßig nicht konfiguriert.
+
+Wenn diese Einstellung aktiviert ist, können Endbenutzer das Druckziel nicht auswählen.
+
+Wenn diese Einstellung deaktiviert oder nicht konfiguriert ist, können Endbenutzer das Druckziel, die Druckvorschau oder den Direktdruck auswählen.
+
+
+Die zweite Einstellung bestimmt die Standardoption für das Druckziel. Sie ist standardmäßig nicht konfiguriert. Das bedeutet, dass der Direktdruck ausgewählt werden kann.
+
+Wenn die Option „Direkt drucken“ ausgewählt ist, lautet die Standarddruckoption in der Benutzeroberfläche zum Drucken „Direkt drucken“.
+
+Wenn die Option „Druckvorschau“ ausgewählt ist, lautet die Standarddruckoption in der Benutzeroberfläche zum Drucken „Druckvorschau“.
+</string>
+
+      <string id="print_directly">Direkt drucken</string>
+      <string id="print_to_preview">Druckvorschau</string>
+      <string id="printer_name_schema">Druckername für RDSH-Agents</string>
+      <string id="printer_name_schema_desc">Diese Einstellung bestimmt die Druckerbenennungskonvention, wenn Sie VMware Integrated Printing in RDSH verwenden.
+Wenn diese Richtlinie aktiviert ist, sollte von „%P“ ein gültiges Druckernamenschema gestartet werden. Außerdem werden nur die folgenden Suffixe unterstützt.
+%S: Sitzungs-ID
+%C: Name des Clientcomputers
+
+Wenn diese Richtlinie nicht konfiguriert oder deaktiviert ist, verwenden die virtuellen Drucker in RDSH die Sitzungs-ID als Suffix.
+Beispiel: PDFCreator (v2). Hier ist PDFCreator der Clientdruckername, 2 ist die Sitzungs-ID.
+Wenn diese Richtlinie aktiviert ist, kann der Benutzer das Druckernamensschema in RDSH in „%P (%C)“ ändern. Dann wird der Name des Clientcomputers als Suffix des Druckernamens verwendet.
+Beispiel: PDFCreator (Client-PC). PDFCreator ist hier der Clientdruckername, und Client-PC ist der Name des Clientcomputers.
+
+Diese Einstellung ist standardmäßig nicht konfiguriert.
+      </string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="PrinterCreationSetting">
+          <dropdownList refId="printer_creation_setting_list" defaultItem="2" noSort="true">Auswahlmöglichkeiten für die Druckererstellung:</dropdownList>
+      </presentation>
+      <presentation id="PrintPreviewSetting">
+        <checkBox refId="disable_print_choice">Druckauswahl deaktivieren</checkBox>
+        <dropdownList refId="default_choice_list" defaultItem="0" noSort="true">Standardoptionen für Druckziel:</dropdownList>
+      </presentation>
+      <presentation id="printer_filter">
+        <textBox refId="printer_filter_textbox">
+          <label>Druckerfilter</label>
+          <defaultValue></defaultValue>
+        </textBox>
+      </presentation>
+       <presentation id="printer_name_schema">
+          <textBox refId="printer_name_schema_textbox">
+             <label>Druckernamenschema</label>
+             <defaultValue>%P (v%S)</defaultValue>
+          </textBox>
+       </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

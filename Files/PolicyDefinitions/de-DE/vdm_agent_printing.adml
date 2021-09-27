@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+  <!--Revision: 4.1-->
+  <!--Comment: Copyright (c) 2017 ThinPrint GmbH-->
+  <!--revision 11.0 build 26.2-->
+  <displayName>VMware Horizon-Druckerumleitung</displayName>
+  <description>Ermöglicht die Konfiguration der VMware Horizon-Druckerumleitung.</description>
+  <resources>
+    <stringTable>
+      <string id="THINPRINT">ThinPrint</string>
+      <string id="ID_ThinPrint_AutoConnect_VMware">VMware Horizon-Druckerumleitung</string>
+      <string id="SUPPORTED_ON">Mindestens Windows Server 2008/Windows 7</string>
+      <string id="ID_ThinPrint_AutoConnect_VMware_explainText">Ermöglicht die Konfiguration der VMware Horizon-Druckerumleitung.</string>
+      <string id="ID_Name_PrinterFilterString">Geben Sie beim Umleiten von Client-Druckern einen Filter an</string>
+      <string id="ID_Name_PrinterFilterString_Help">Eine Regel zum Herausfiltern von Druckern, die in der Druckerumleitung übereinstimmen. Unterstützte Attribute sind Druckernamen, Druckertreibernamen und Anbieternamen. Unterstützte Operatoren sind AND, OR und NOT. Das unterstützte Suchmuster sind reguläre Ausdrücke mit JavaScript-Dialekt (ECMAScript).
+Standardmäßig ist die Regel leer. Demnach werden alle Client-Drucker umgeleitet.
+
+Beispiel:
+(DriverName= &quot;DrName1&quot; OR VendorName=&quot;VeName1&quot;) AND NOT PrinterName= &quot;PrNa.?e&quot;
+</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="ID_Name_PrinterFilterString">
+        <textBox refId="ID_ELE_PrinterFilterString">
+          <label>Name des Registrierungswerts: PrinterFilterString</label>
+          <defaultValue></defaultValue>
+        </textBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

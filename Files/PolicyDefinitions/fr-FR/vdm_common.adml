@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" >
+
+	<displayName >Entrer le nom d'affichage ici</displayName>
+	<description >Paramètres de configuration communs de VMware Horizon View pour Client, Server et Agent</description>
+	<resources >
+		<stringTable ><!--Storage for String Definitions-->
+
+			<string id="Undefined" >Non défini</string>
+
+			<string id="View_Common_Config" >Configuration commune de VMware View</string>
+
+			<string id="Log_Config" >Configuration du journal</string>
+
+			<string id="Perf_alarms" >Alarmes de performance</string>
+
+			<string id="Security_Config" >Configuration de sécurité</string>
+
+			<string id="Enable_extended_logging" >Activer la journalisation étendue</string>
+
+			<string id="Enable_extended_logging_Desc" >Détermine si les événements de suivi et de débogage sont inclus dans les fichiers journaux</string>
+
+			<string id="Log_event_disk_threshhold" >Seuil de disque pour les journaux et les événements en mégaoctets</string>
+
+			<string id="Log_event_disk_threshhold_Desc" >Spécifie le seuil minimal d'espace disque restant pour les journaux et les événements. Si aucune valeur n'est spécifiée, la valeur par défaut est 200. Lorsque cette valeur est atteinte, la journalisation des événements s'arrête.</string>
+
+			<string id="Override_the_default_Windows_Event_Gen" >Remplacer la génération d'événements View Windows par défaut</string>
+
+			<string id="Override_the_default_Windows_Event_Gen_Desc" >Les valeurs suivantes sont prises en charge :
+    0 = Des entrées de journal des événements ne sont produites que pour des événements d'affichage (aucune entrée de journal des événements n'est générée pour les messages de journal)
+    1 = Des entrées de journal des événements sont produites en mode de compatibilité 4.5 (et antérieur). Des entrées de journal des événements ne sont pas produites pour les événements d'affichage standard. Les entrées de journal des événements sont basées uniquement sur le texte du fichier journal.
+    2 = Des entrées de journal des événements sont produites en mode de compatibilité 4.5 (et antérieur) avec des événements d'affichage également inclus.</string>
+
+			<string id="Production_Logs_Duration" >Nombre de jours de conservation des journaux de production</string>
+
+			<string id="Production_Logs_Duration_Desc" >Spécifie le nombre de jours pendant lesquels les fichiers journaux sont conservés sur le système. Si vous ne définissez pas de valeur, la valeur par défaut s'applique et les fichiers journaux ne sont conservés que 7 jours.</string>
+
+			<string id="Max_Debug_logs" >Nombre maximal de journaux de débogage</string>
+
+			<string id="Max_Debug_logs_Desc" >Spécifie le nombre maximal de fichiers journaux de débogage à conserver sur le système (10 par défaut). Lorsqu'un fichier journal atteint sa taille maximale, aucune nouvelle entrée n'est ajoutée et un nouveau fichier journal est créé. Lorsque le nombre de fichiers journaux précédents atteint cette valeur, le fichier journal le plus ancien est supprimé.</string>
+
+			<string id="Max_Debug_logs_size" >Taille maximale des journaux de débogage en mégaoctets</string>
+
+			<string id="Max_Debug_logs_size_Desc" >Spécifie la taille maximale en mégaoctets qu'un journal de débogage peut atteindre avant que le fichier journal ne soit fermé et qu'un nouveau fichier journal ne soit créé. (10 Mo par défaut)</string>
+
+			<string id="Log_Dir" >Répertoire des journaux</string>
+
+			<string id="Log_Dir_Desc" >Chemin complet vers le répertoire pour les fichiers journaux. Si cet emplacement n'est pas inscriptible, l'emplacement par défaut est utilisé. Notez que pour les fichiers journaux client, un répertoire supplémentaire avec le nom de client est créé pour les journaux.</string>
+
+			<string id="Send_logs_to_Syslog_Svr" >Envoyer des journaux à un serveur Syslog</string>
+
+			<string id="Send_logs_to_Syslog_Svr_Desc" >Activez et définissez ce paramètre pour envoyer des journaux View Server à un serveur Syslog tel que VMware LogInsight. L'utilisation de cette fonctionnalité sur un réseau non sécurisé n'est pas recommandée.
+Format : LogLevel|ServerFQDNorIP[|PortNumber (514 par défaut)], exemple Debug|192.0.2.2</string>
+
+			<string id="CPU_Mem_Sampling_Interval" >Intervalle d'échantillonnage de mémoire et de CPU en secondes</string>
+
+			<string id="CPU_Mem_Sampling_Interval_Desc" >Spécifie l'intervalle auquel le CPU et la mémoire sont interrogés. Notez qu'un intervalle d'échantillonnage faible peut entraîner un niveau très élevé de sortie écrite dans le journal.</string>
+
+			<string id="Overall_CPU_usage" >Pourcentage d'utilisation du CPU global pour émettre des informations de journalisation</string>
+
+			<string id="Overall_CPU_usage_Desc" >Seuil auquel l'utilisation du CPU global du système est journalisée. Notez que lorsque plusieurs processeurs sont disponibles, ce pourcentage représente l'utilisation combinée.</string>
+
+			<string id="Overall_memory_usage" >Pourcentage d'utilisation de mémoire globale pour émettre des informations de journalisation</string>
+
+			<string id="Overall_memory_usage_Desc" >Seuil auquel l'utilisation de mémoire système validée globale (mémoire allouée par des processus et pour laquelle le système d'exploitation a validé la mémoire physique ou un emplacement de page dans le fichier d'échange) est journalisée.</string>
+
+			<string id="Process_CPU_usage" >Pourcentage d'utilisation du CPU de processus pour émettre des informations de journalisation</string>
+
+			<string id="Process_CPU_usage_Desc" >Seuil auquel l'utilisation de CPU d'un processus individuel est journalisée.</string>
+
+			<string id="Process_memory_usage" >Pourcentage d'utilisation de mémoire de processus pour émettre des informations de journalisation</string>
+
+			<string id="Process_memory_usage_Desc" >Seuil auquel l'utilisation de mémoire d'un processus individuel est journalisée.</string>
+
+			<string id="Processes_to_check" >Processus pour vérifier une liste de noms séparés par des virgules autorisant les caractères génériques et l'exclusion</string>
+
+			<string id="Processes_to_check_Desc" >Liste séparée par des virgules de requêtes qui correspondent au nom d'un ou plusieurs processus à examiner. Pour filtrer la liste, vous pouvez utiliser les caractères génériques suivants pour chaque requête : un astérisque (*) qui correspond à zéro caractère ou plus, un point d'interrogation (?) qui correspond exactement à un caractère et un point d'exclamation (!) qui peut être utilisé comme préfixe d'une requête afin d'exclure tous les résultats produits par cette requête. Par exemple : '!*sys,ws*' - Sélectionner tous les processus commençant par « ws », mais exclure tous les processus se terminant par « sys ».</string>
+
+			<string id="Type_of_certificate_revocation" >Type de vérification de la révocation des certificats</string>
+
+			<string id="Type_of_certificate_revocation_Desc" >Sélectionnez le type de vérification de la révocation des certificats à effectuer (None, EndCertificateOnly, WholeChain ou WholeChainButRoot). La valeur par défaut est WholeChainButRoot.</string>
+
+			<string id="None" >Aucun</string>
+
+			<string id="End_Cert_Only" >EndCertificateOnly</string>
+
+			<string id="Whole_Chain" >WholeChain</string>
+
+			<string id="Whole_Chain_But_Root" >WholeChainButRoot</string>
+
+			<string id="Only_use_cached_revocation_URL" >Utiliser uniquement des URL de révocation mises en cache</string>
+
+			<string id="Only_use_cached_revocation_URL_Desc" >La vérification de la révocation des certificats n'a accès qu'aux URL mises en cache. Si ce paramètre n'est pas configuré, la valeur par défaut est faux.</string>
+
+			<string id="Revocation_URL_check_timeout" >Délai d'expiration de vérification des URL de révocation en millisecondes</string>
+
+			<string id="Revocation_URL_check_timeout_Desc" >Délai d'expiration cumulatif sur toutes les récupérations d'URL de révocation en millisecondes. Une absence de configuration ou une valeur définie sur 0 signifie que la gestion par défaut de Microsoft est utilisée.</string>
+
+			<string id="Global_Max_Dump_Count" >Configurer la création d'un vidage mémoire en cas d'erreur de programme</string>
+
+			<string id="Global_Max_Dump_Count_Desc" >Les vidages mémoire peuvent être limités à une quantité spécifique en définissant la valeur sur n'importe quelle valeur numérique. Lorsque la valeur est définie sur 0, aucun vidage mémoire n'est créé. Si aucune valeur n'est définie, aucune limite n'est établie lors de la création d'un vidage mémoire.</string>
+
+		</stringTable>
+
+		<presentationTable ><!--Storage for Presentation Definitions-->
+
+			<presentation id="Log_event_disk_threshhold" >
+				<decimalTextBox refId="Log_event_disk_threshhold_DecimalBox_1" defaultValue="200" >Seuil de disque pour les journaux et les événements en mégaoctets</decimalTextBox>
+			</presentation>
+
+			<presentation id="Override_the_default_Windows_Event_Gen" >
+				<decimalTextBox refId="Override_the_default_Windows_Event_Gen_DecimalBox" defaultValue="0" >Remplacer la génération d'événements View Windows par défaut</decimalTextBox>
+			</presentation>
+
+			<presentation id="Production_Logs_Duration" >
+				<decimalTextBox refId="Production_Logs_Duration_DecimalBox" defaultValue="7" >Nombre de jours de conservation des journaux de production</decimalTextBox>
+			</presentation>
+
+			<presentation id="Max_Debug_logs" >
+				<decimalTextBox refId="Max_Debug_logs_DecimalBox" defaultValue="10" >Nombre maximal de journaux de débogage</decimalTextBox>
+			</presentation>
+
+			<presentation id="Max_Debug_logs_size" >
+				<decimalTextBox refId="Max_Debug_logs_size_DecimalBox" defaultValue="10" >Taille maximale des journaux de débogage en mégaoctets</decimalTextBox>
+			</presentation>
+
+			<presentation id="Log_Dir" >
+				<textBox refId="Log_Dir_TextBox" >
+					<label >Répertoire des journaux</label>
+				</textBox>
+			</presentation>
+
+			<presentation id="Send_logs_to_Syslog_Svr" >
+				<textBox refId="Send_logs_to_Syslog_Svr_TextBox" >
+					<label >Envoyer des journaux à un serveur Syslog</label>
+				</textBox>
+			</presentation>
+
+			<presentation id="CPU_Mem_Sampling_Interval" >
+				<decimalTextBox refId="CPU_Mem_Sampling_Interval_DecimalBox" defaultValue="60" >Intervalle d'échantillonnage de mémoire et de CPU en secondes</decimalTextBox>
+			</presentation>
+
+			<presentation id="Overall_CPU_usage" >
+				<decimalTextBox refId="Overall_CPU_usage_DecimalBox" defaultValue="90" >Pourcentage d'utilisation du CPU global pour émettre des informations de journalisation</decimalTextBox>
+			</presentation>
+
+			<presentation id="Overall_memory_usage" >
+				<decimalTextBox refId="Overall_memory_usage_DecimalBox" defaultValue="75" >Pourcentage d'utilisation de mémoire globale pour émettre des informations de journalisation</decimalTextBox>
+			</presentation>
+
+			<presentation id="Process_CPU_usage" >
+				<decimalTextBox refId="Process_CPU_usage_DecimalBox" defaultValue="90" >Pourcentage d'utilisation du CPU de processus pour émettre des informations de journalisation</decimalTextBox>
+			</presentation>
+
+			<presentation id="Process_memory_usage" >
+				<decimalTextBox refId="Process_memory_usage_DecimalBox" defaultValue="75" >Pourcentage d'utilisation de mémoire de processus pour émettre des informations de journalisation</decimalTextBox>
+			</presentation>
+
+			<presentation id="Processes_to_check" >
+				<textBox refId="Processes_to_check_TextBox" >
+					<label >Processus pour vérifier une liste de noms séparés par des virgules autorisant les caractères génériques et l'exclusion</label>
+				</textBox>
+			</presentation>
+
+			<presentation id="Type_of_certificate_revocation" >
+				<dropdownList refId="Type_of_certificate_revocation_DropDown" defaultItem="3" >Type de vérification de la révocation des certificats</dropdownList>
+			</presentation>
+
+			<presentation id="Revocation_URL_check_timeout" >
+				<decimalTextBox refId="Revocation_URL_check_timeout_DecimalBox" defaultValue="0" >Délai d'expiration de vérification des URL de révocation en millisecondes</decimalTextBox>
+			</presentation>
+
+			<presentation id="Global_Max_Dump_Count" >
+				<decimalTextBox refId="Global_Max_Dump_Count_DecimalBox" defaultValue="" >Nombre maximal de fichiers de vidage mémoire à créer</decimalTextBox>
+			</presentation>
+
+		</presentationTable>
+
+	</resources>
+
+</policyDefinitionResources>

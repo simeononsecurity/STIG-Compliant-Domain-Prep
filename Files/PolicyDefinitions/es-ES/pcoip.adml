@@ -96,7 +96,7 @@ Si se modifica este ajuste durante una sesión PCoIP activa, se aplicará de for
 			<string id="String_Policy_Configure_the_maximum_163" >Configurar el ancho de banda máximo de una sesión PCoIP</string>
 			<string id="String_Explain_Specifies_the_maximum_164" >Especifica el ancho de banda máximo (en kilobits por segundo) de una sesión PCoIP. El ancho de banda incluye todo el tráfico PCoIP de control, imágenes, audio, canales virtuales y dispositivos USB.
 
-Establezca este valor según la capacidad total del vínculo al que el endpoint está conectado, teniendo en cuenta el número esperado de sesiones PCoIP simultáneas. Por ejemplo, con una configuración única de VDI de usuario (como una única sesión PCoIP) que se conecta mediante una conexión a Internet de 4 Mbit/s, establezca este valor en 4 Mbit (o en un 10% menos de este valor para permitir otro tráfico de red). Si espera que varias sesiones PCoIP simultáneas compartan un vínculo (por ejemplo, varios usuarios VDI o una configuración RDSH), es posible que prefiera ajustar la configuración de acuerdo con esta situación. Sin embargo, esto limitará el ancho de banda máximo para cada sesión activa.
+Establezca este valor según la capacidad total del vínculo al que el endpoint está conectado, teniendo en cuenta el número esperado de sesiones PCoIP simultáneas. Por ejemplo, con una configuración única de VDI de usuario (como una única sesión PCoIP) que se conecta mediante una conexión a Internet de 4 Mbit/s, establezca este valor en 4 Mbit (o en un 10 % menos de este valor para permitir otro tráfico de red). Si espera que varias sesiones PCoIP simultáneas compartan un vínculo (por ejemplo, varios usuarios VDI o una configuración RDSH), es posible que prefiera ajustar la configuración de acuerdo con esta situación. Sin embargo, esto limitará el ancho de banda máximo para cada sesión activa.
 
 Al configurar este valor, se evita que el agente intente realizar transmisiones a una velocidad mayor que la capacidad del vínculo, lo que provocaría una pérdida de paquetes excesiva y una experiencia de usuario deficiente. Este valor es simétrico. Obliga al cliente y al agente a utilizar el valor más bajo de los dos que están establecidos en el lado del agente y del cliente. Por ejemplo, al establecer un ancho de banda máximo de 4 Mbit/s, se obliga al agente a realizar transmisiones a una velocidad menor, incluso si el ajuste está configurado en el cliente.
 
@@ -459,7 +459,7 @@ Este ajuste se aplica únicamente al agente y no afecta a ningún cliente.</stri
 			<string id="String_Policy_DropList_Select_Use_alternate_key_2_381" >2 @</string>
 			<string id="String_Policy_DropList_Select_Use_alternate_key_3_382" >3 #</string>
 			<string id="String_Policy_DropList_Select_Use_alternate_key_4_383" >4 $</string>
-			<string id="String_Policy_DropList_Select_Use_alternate_key_5_384" >5 %</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_5_384" >5 %</string>
 			<string id="String_Policy_DropList_Select_Use_alternate_key_6_385" >6 ^</string>
 			<string id="String_Policy_DropList_Select_Use_alternate_key_7_386" >7 &amp;</string>
 			<string id="String_Policy_DropList_Select_Use_alternate_key_8_387" >8 *</string>
@@ -510,7 +510,7 @@ Si se modifica este ajuste durante una sesión PCoIP activa, se aplicará de for
 			<string id="String_Policy_Configure_the_maximum_417" >Configurar el ancho de banda máximo de una sesión PCoIP</string>
 			<string id="String_Explain_Specifies_the_maximum_418" >Especifica el ancho de banda máximo (en kilobits por segundo) de una sesión PCoIP. El ancho de banda incluye todo el tráfico PCoIP de control, imágenes, audio, canales virtuales y dispositivos USB.
 
-Establezca este valor según la capacidad total del vínculo al que el endpoint está conectado, teniendo en cuenta el número esperado de sesiones PCoIP simultáneas. Por ejemplo, con una configuración única de VDI de usuario (como una única sesión PCoIP) que se conecta mediante una conexión a Internet de 4 Mbit/s, establezca este valor en 4 Mbit (o en un 10% menos de este valor para permitir otro tráfico de red). Si espera que varias sesiones PCoIP simultáneas compartan un vínculo (por ejemplo, varios usuarios VDI o una configuración RDSH), es posible que prefiera ajustar la configuración de acuerdo con esta situación. Sin embargo, esto limitará el ancho de banda máximo para cada sesión activa.
+Establezca este valor según la capacidad total del vínculo al que el endpoint está conectado, teniendo en cuenta el número esperado de sesiones PCoIP simultáneas. Por ejemplo, con una configuración única de VDI de usuario (como una única sesión PCoIP) que se conecta mediante una conexión a Internet de 4 Mbit/s, establezca este valor en 4 Mbit (o en un 10 % menos de este valor para permitir otro tráfico de red). Si espera que varias sesiones PCoIP simultáneas compartan un vínculo (por ejemplo, varios usuarios VDI o una configuración RDSH), es posible que prefiera ajustar la configuración de acuerdo con esta situación. Sin embargo, esto limitará el ancho de banda máximo para cada sesión activa.
 
 Al configurar este valor, se evita que el agente intente realizar transmisiones a una velocidad mayor que la capacidad del vínculo, lo que provocaría una pérdida de paquetes excesiva y una experiencia de usuario deficiente. Este valor es simétrico. Obliga al cliente y al agente a utilizar el valor más bajo de los dos que están establecidos en el lado del agente y del cliente. Por ejemplo, al establecer un ancho de banda máximo de 4 Mbit/s, se obliga al agente a realizar transmisiones a una velocidad menor, incluso si el ajuste está configurado en el cliente.
 
@@ -897,7 +897,7 @@ Este ajuste se aplica únicamente al agente y no afecta a ningún cliente.</stri
 			<string id="String_Policy_DropList_Select_Use_alternate_key_2_635" >2 @</string>
 			<string id="String_Policy_DropList_Select_Use_alternate_key_3_636" >3 #</string>
 			<string id="String_Policy_DropList_Select_Use_alternate_key_4_637" >4 $</string>
-			<string id="String_Policy_DropList_Select_Use_alternate_key_5_638" >5 %</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_5_638" >5 %</string>
 			<string id="String_Policy_DropList_Select_Use_alternate_key_6_639" >6 ^</string>
 			<string id="String_Policy_DropList_Select_Use_alternate_key_7_640" >7 &amp;</string>
 			<string id="String_Policy_DropList_Select_Use_alternate_key_8_641" >8 *</string>

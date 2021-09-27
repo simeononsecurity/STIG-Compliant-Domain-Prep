@@ -57,6 +57,16 @@
         <string>0</string>
       </disabledValue>
     </policy>
+    <policy name="BLAST_CURSOR_WARPING" class="Machine" displayName="$(string.BLAST_CURSOR_WARPING_LABEL)" explainText="$(string.BLAST_CURSOR_WARPING_EXPLAIN)" presentation="$(presentation.BLAST_CURSOR_WARPING_LABEL)" key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config" valueName="CursorWarpingEnabled">
+      <parentCategory ref="BLAST_CAT_LABEL" />
+      <supportedOn ref="BLAST_SUPPORTEDON_EMPTY" />
+      <enabledValue>
+        <string>1</string>
+      </enabledValue>
+      <disabledValue>
+        <string>0</string>
+      </disabledValue>
+    </policy>
     <!-- the ACTIVATE element name is cunningly chosen to sort first among all DSCP policy items -->
     <policy name="BLAST_DSCP_ACTIVATE_LABEL" class="Machine" displayName="$(string.BLAST_DSCP_ACTIVATE_LABEL)" explainText="$(string.BLAST_DSCP_ACTIVATE_EXPLAIN)" presentation="$(presentation.BLAST_DSCP_ACTIVATE_LABEL)" key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config" valueName="NetworkVVCQoSPolicyEnabled">
       <parentCategory ref="BLAST_CAT_LABEL" />
@@ -236,6 +246,14 @@
         <decimal id="BLAST_DISPLAY_QUALITY_JPEG_QUAL_HIGH" valueName="JpegQualityHigh" minValue="10" maxValue="100" storeAsText="true" />
       </elements>
     </policy>
+    <policy name="BLAST_CODEC_QUALITY_LABEL" class="Both" displayName="$(string.BLAST_CODEC_QUALITY_LABEL)" explainText="$(string.BLAST_CODEC_QUALITY_EXPLAIN)" presentation="$(presentation.BLAST_CODEC_QUALITY_LABEL)" key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config">
+      <parentCategory ref="BLAST_CAT_LABEL" />
+      <supportedOn ref="BLAST_SUPPORTEDON_EMPTY" />
+      <elements>
+        <decimal id="BLAST_CODEC_QP_MAX" valueName="BlastCodecMaxQp" minValue="0" maxValue="8" storeAsText="true" />
+        <decimal id="BLAST_CODEC_QP_MIN" valueName="BlastCodecMinQp" minValue="0" maxValue="8" storeAsText="true" />
+      </elements>
+    </policy>
     <policy name="BLAST_H264_QUALITY_LABEL" class="Both" displayName="$(string.BLAST_H264_QUALITY_LABEL)" explainText="$(string.BLAST_H264_QUALITY_EXPLAIN)" presentation="$(presentation.BLAST_H264_QUALITY_LABEL)" key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config">
       <parentCategory ref="BLAST_CAT_LABEL" />
       <supportedOn ref="BLAST_SUPPORTEDON_EMPTY" />
@@ -281,7 +299,7 @@
         <string>0</string>
       </disabledValue>
     </policy>
-    <policy name="SERVER_CLIPBOARD_STATE" class="Machine" displayName="$(string.SERVER_CLIPBOARD_STATE)" explainText="$(string.SERVER_CLIPBOARD_STATE_EXPLAIN)" presentation="$(presentation.SERVER_CLIPBOARD_STATE)" key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config">
+    <policy name="SERVER_CLIPBOARD_STATE" class="Both" displayName="$(string.SERVER_CLIPBOARD_STATE)" explainText="$(string.SERVER_CLIPBOARD_STATE_EXPLAIN)" presentation="$(presentation.SERVER_CLIPBOARD_STATE)" key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config">
       <parentCategory ref="BLAST_CAT_LABEL" />
       <supportedOn ref="BLAST_SUPPORTEDON_EMPTY" />
       <elements>
@@ -309,7 +327,7 @@
         </enum>
       </elements>
     </policy>
-    <policy name="SERVER_CLIPBOARD_SIZE" class="Machine" displayName="$(string.SERVER_CLIPBOARD_SIZE)" explainText="$(string.SERVER_CLIPBOARD_SIZE_EXPLAIN)" presentation="$(presentation.SERVER_CLIPBOARD_SIZE)" key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config">
+    <policy name="SERVER_CLIPBOARD_SIZE" class="Both" displayName="$(string.SERVER_CLIPBOARD_SIZE)" explainText="$(string.SERVER_CLIPBOARD_SIZE_EXPLAIN)" presentation="$(presentation.SERVER_CLIPBOARD_SIZE)" key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config">
       <parentCategory ref="BLAST_CAT_LABEL" />
       <supportedOn ref="BLAST_SUPPORTEDON_EMPTY" />
       <elements>
@@ -328,7 +346,7 @@
         <decimal id="SERVER_CLIPBOARD_SIZE" valueName="ClipboardSize" minValue="1" maxValue="16384" />
       </elements>
     </policy>
-    <policy name="SERVER_CLIPBOARD_AUDIT" class="Machine" displayName="$(string.SERVER_CLIPBOARD_AUDIT)" explainText="$(string.SERVER_CLIPBOARD_AUDIT_EXPLAIN)" presentation="$(presentation.SERVER_CLIPBOARD_AUDIT)" key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config">
+    <policy name="SERVER_CLIPBOARD_AUDIT" class="Both" displayName="$(string.SERVER_CLIPBOARD_AUDIT)" explainText="$(string.SERVER_CLIPBOARD_AUDIT_EXPLAIN)" presentation="$(presentation.SERVER_CLIPBOARD_AUDIT)" key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config">
       <parentCategory ref="BLAST_CAT_LABEL" />
       <supportedOn ref="BLAST_SUPPORTEDON_EMPTY" />
       <elements>
@@ -356,7 +374,7 @@
         </enum>
       </elements>
     </policy>
-    <policy name="SERVER_CLIPBOARD_AUDIT_BLOCK_CLIPBOARD" class="Machine" displayName="$(string.SERVER_CLIPBOARD_AUDIT_BLOCK_CLIPBOARD)" explainText="$(string.SERVER_CLIPBOARD_AUDIT_BLOCK_CLIPBOARD_EXPLAIN)" presentation="$(presentation.SERVER_CLIPBOARD_AUDIT_BLOCK_CLIPBOARD)" key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config">
+    <policy name="SERVER_CLIPBOARD_AUDIT_BLOCK_CLIPBOARD" class="Both" displayName="$(string.SERVER_CLIPBOARD_AUDIT_BLOCK_CLIPBOARD)" explainText="$(string.SERVER_CLIPBOARD_AUDIT_BLOCK_CLIPBOARD_EXPLAIN)" presentation="$(presentation.SERVER_CLIPBOARD_AUDIT_BLOCK_CLIPBOARD)" key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config">
       <parentCategory ref="BLAST_CAT_LABEL" />
       <supportedOn ref="BLAST_SUPPORTEDON_EMPTY" />
       <elements>
@@ -602,7 +620,7 @@
         </enum>
       </elements>
     </policy>
-    <policy name="CLIPBOARD_FORMAT_FILTERING_TEXT_IN" class="Machine" displayName="$(string.CLIPBOARD_FORMAT_FILTERING_TEXT_IN)" explainText="$(string.CLIPBOARD_FORMAT_FILTERING_TEXT_IN_EXPLAIN)" presentation="$(presentation.CLIPBOARD_FORMAT_FILTERING_TEXT_IN)" key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config" valueName="ClipboardFilterIncomingText">
+    <policy name="CLIPBOARD_FORMAT_FILTERING_TEXT_IN" class="Both" displayName="$(string.CLIPBOARD_FORMAT_FILTERING_TEXT_IN)" explainText="$(string.CLIPBOARD_FORMAT_FILTERING_TEXT_IN_EXPLAIN)" presentation="$(presentation.CLIPBOARD_FORMAT_FILTERING_TEXT_IN)" key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config" valueName="ClipboardFilterIncomingText">
       <parentCategory ref="BLAST_CAT_LABEL" />
       <supportedOn ref="BLAST_SUPPORTEDON_EMPTY" />
       <enabledValue>
@@ -612,7 +630,7 @@
         <string>0</string>
       </disabledValue>
     </policy>
-    <policy name="CLIPBOARD_FORMAT_FILTERING_RTF_IN" class="Machine" displayName="$(string.CLIPBOARD_FORMAT_FILTERING_RTF_IN)" explainText="$(string.CLIPBOARD_FORMAT_FILTERING_RTF_IN_EXPLAIN)" presentation="$(presentation.CLIPBOARD_FORMAT_FILTERING_RTF_IN)" key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config" valueName="ClipboardFilterIncomingRTF">
+    <policy name="CLIPBOARD_FORMAT_FILTERING_RTF_IN" class="Both" displayName="$(string.CLIPBOARD_FORMAT_FILTERING_RTF_IN)" explainText="$(string.CLIPBOARD_FORMAT_FILTERING_RTF_IN_EXPLAIN)" presentation="$(presentation.CLIPBOARD_FORMAT_FILTERING_RTF_IN)" key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config" valueName="ClipboardFilterIncomingRTF">
       <parentCategory ref="BLAST_CAT_LABEL" />
       <supportedOn ref="BLAST_SUPPORTEDON_EMPTY" />
       <enabledValue>
@@ -622,7 +640,7 @@
         <string>0</string>
       </disabledValue>
     </policy>
-    <policy name="CLIPBOARD_FORMAT_FILTERING_IMAGE_IN" class="Machine" displayName="$(string.CLIPBOARD_FORMAT_FILTERING_IMAGE_IN)" explainText="$(string.CLIPBOARD_FORMAT_FILTERING_IMAGE_IN_EXPLAIN)" presentation="$(presentation.CLIPBOARD_FORMAT_FILTERING_IMAGE_IN)" key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config" valueName="ClipboardFilterIncomingImage">
+    <policy name="CLIPBOARD_FORMAT_FILTERING_IMAGE_IN" class="Both" displayName="$(string.CLIPBOARD_FORMAT_FILTERING_IMAGE_IN)" explainText="$(string.CLIPBOARD_FORMAT_FILTERING_IMAGE_IN_EXPLAIN)" presentation="$(presentation.CLIPBOARD_FORMAT_FILTERING_IMAGE_IN)" key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config" valueName="ClipboardFilterIncomingImage">
       <parentCategory ref="BLAST_CAT_LABEL" />
       <supportedOn ref="BLAST_SUPPORTEDON_EMPTY" />
       <enabledValue>
@@ -632,7 +650,7 @@
         <string>0</string>
       </disabledValue>
     </policy>
-    <policy name="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_IN" class="Machine" displayName="$(string.CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_IN)" explainText="$(string.CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_IN_EXPLAIN)" presentation="$(presentation.CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_IN)" key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config" valueName="ClipboardFilterIncomingMSOfficeText">
+    <policy name="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_IN" class="Both" displayName="$(string.CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_IN)" explainText="$(string.CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_IN_EXPLAIN)" presentation="$(presentation.CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_IN)" key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config" valueName="ClipboardFilterIncomingMSOfficeText">
       <parentCategory ref="BLAST_CAT_LABEL" />
       <supportedOn ref="BLAST_SUPPORTEDON_EMPTY" />
       <enabledValue>
@@ -642,7 +660,7 @@
         <string>0</string>
       </disabledValue>
     </policy>
-    <policy name="CLIPBOARD_FORMAT_FILTERING_MSO_CHART_IN" class="Machine" displayName="$(string.CLIPBOARD_FORMAT_FILTERING_MSO_CHART_IN)" explainText="$(string.CLIPBOARD_FORMAT_FILTERING_MSO_CHART_IN_EXPLAIN)" presentation="$(presentation.CLIPBOARD_FORMAT_FILTERING_MSO_CHART_IN)" key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config" valueName="ClipboardFilterIncomingMSOfficeChart">
+    <policy name="CLIPBOARD_FORMAT_FILTERING_MSO_CHART_IN" class="Both" displayName="$(string.CLIPBOARD_FORMAT_FILTERING_MSO_CHART_IN)" explainText="$(string.CLIPBOARD_FORMAT_FILTERING_MSO_CHART_IN_EXPLAIN)" presentation="$(presentation.CLIPBOARD_FORMAT_FILTERING_MSO_CHART_IN)" key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config" valueName="ClipboardFilterIncomingMSOfficeChart">
       <parentCategory ref="BLAST_CAT_LABEL" />
       <supportedOn ref="BLAST_SUPPORTEDON_EMPTY" />
       <enabledValue>
@@ -652,7 +670,7 @@
         <string>0</string>
       </disabledValue>
     </policy>
-    <policy name="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_IN" class="Machine" displayName="$(string.CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_IN)" explainText="$(string.CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_IN_EXPLAIN)" presentation="$(presentation.CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_IN)" key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config" valueName="ClipboardFilterIncomingMSOfficeTextEffects">
+    <policy name="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_IN" class="Both" displayName="$(string.CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_IN)" explainText="$(string.CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_IN_EXPLAIN)" presentation="$(presentation.CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_IN)" key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config" valueName="ClipboardFilterIncomingMSOfficeTextEffects">
       <parentCategory ref="BLAST_CAT_LABEL" />
       <supportedOn ref="BLAST_SUPPORTEDON_EMPTY" />
       <enabledValue>
@@ -662,7 +680,7 @@
         <string>0</string>
       </disabledValue>
     </policy>
-    <policy name="CLIPBOARD_FORMAT_FILTERING_TEXT_OUT" class="Machine" displayName="$(string.CLIPBOARD_FORMAT_FILTERING_TEXT_OUT)" explainText="$(string.CLIPBOARD_FORMAT_FILTERING_TEXT_OUT_EXPLAIN)" presentation="$(presentation.CLIPBOARD_FORMAT_FILTERING_TEXT_OUT)" key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config" valueName="ClipboardFilterOutgoingText">
+    <policy name="CLIPBOARD_FORMAT_FILTERING_TEXT_OUT" class="Both" displayName="$(string.CLIPBOARD_FORMAT_FILTERING_TEXT_OUT)" explainText="$(string.CLIPBOARD_FORMAT_FILTERING_TEXT_OUT_EXPLAIN)" presentation="$(presentation.CLIPBOARD_FORMAT_FILTERING_TEXT_OUT)" key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config" valueName="ClipboardFilterOutgoingText">
       <parentCategory ref="BLAST_CAT_LABEL" />
       <supportedOn ref="BLAST_SUPPORTEDON_EMPTY" />
       <enabledValue>
@@ -672,7 +690,7 @@
         <string>0</string>
       </disabledValue>
     </policy>
-    <policy name="CLIPBOARD_FORMAT_FILTERING_RTF_OUT" class="Machine" displayName="$(string.CLIPBOARD_FORMAT_FILTERING_RTF_OUT)" explainText="$(string.CLIPBOARD_FORMAT_FILTERING_RTF_OUT_EXPLAIN)" presentation="$(presentation.CLIPBOARD_FORMAT_FILTERING_RTF_OUT)" key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config" valueName="ClipboardFilterOutgoingRTF">
+    <policy name="CLIPBOARD_FORMAT_FILTERING_RTF_OUT" class="Both" displayName="$(string.CLIPBOARD_FORMAT_FILTERING_RTF_OUT)" explainText="$(string.CLIPBOARD_FORMAT_FILTERING_RTF_OUT_EXPLAIN)" presentation="$(presentation.CLIPBOARD_FORMAT_FILTERING_RTF_OUT)" key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config" valueName="ClipboardFilterOutgoingRTF">
       <parentCategory ref="BLAST_CAT_LABEL" />
       <supportedOn ref="BLAST_SUPPORTEDON_EMPTY" />
       <enabledValue>
@@ -682,7 +700,7 @@
         <string>0</string>
       </disabledValue>
     </policy>
-    <policy name="CLIPBOARD_FORMAT_FILTERING_IMAGE_OUT" class="Machine" displayName="$(string.CLIPBOARD_FORMAT_FILTERING_IMAGE_OUT)" explainText="$(string.CLIPBOARD_FORMAT_FILTERING_IMAGE_OUT_EXPLAIN)" presentation="$(presentation.CLIPBOARD_FORMAT_FILTERING_IMAGE_OUT)" key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config" valueName="ClipboardFilterOutgoingImage">
+    <policy name="CLIPBOARD_FORMAT_FILTERING_IMAGE_OUT" class="Both" displayName="$(string.CLIPBOARD_FORMAT_FILTERING_IMAGE_OUT)" explainText="$(string.CLIPBOARD_FORMAT_FILTERING_IMAGE_OUT_EXPLAIN)" presentation="$(presentation.CLIPBOARD_FORMAT_FILTERING_IMAGE_OUT)" key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config" valueName="ClipboardFilterOutgoingImage">
       <parentCategory ref="BLAST_CAT_LABEL" />
       <supportedOn ref="BLAST_SUPPORTEDON_EMPTY" />
       <enabledValue>
@@ -692,7 +710,7 @@
         <string>0</string>
       </disabledValue>
     </policy>
-    <policy name="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_OUT" class="Machine" displayName="$(string.CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_OUT)" explainText="$(string.CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_OUT_EXPLAIN)" presentation="$(presentation.CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_OUT)" key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config" valueName="ClipboardFilterOutgoingMSOfficeText">
+    <policy name="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_OUT" class="Both" displayName="$(string.CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_OUT)" explainText="$(string.CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_OUT_EXPLAIN)" presentation="$(presentation.CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_OUT)" key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config" valueName="ClipboardFilterOutgoingMSOfficeText">
       <parentCategory ref="BLAST_CAT_LABEL" />
       <supportedOn ref="BLAST_SUPPORTEDON_EMPTY" />
       <enabledValue>
@@ -702,7 +720,7 @@
         <string>0</string>
       </disabledValue>
     </policy>
-    <policy name="CLIPBOARD_FORMAT_FILTERING_MSO_CHART_OUT" class="Machine" displayName="$(string.CLIPBOARD_FORMAT_FILTERING_MSO_CHART_OUT)" explainText="$(string.CLIPBOARD_FORMAT_FILTERING_MSO_CHART_OUT_EXPLAIN)" presentation="$(presentation.CLIPBOARD_FORMAT_FILTERING_MSO_CHART_OUT)" key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config" valueName="ClipboardFilterOutgoingMSOfficeChart">
+    <policy name="CLIPBOARD_FORMAT_FILTERING_MSO_CHART_OUT" class="Both" displayName="$(string.CLIPBOARD_FORMAT_FILTERING_MSO_CHART_OUT)" explainText="$(string.CLIPBOARD_FORMAT_FILTERING_MSO_CHART_OUT_EXPLAIN)" presentation="$(presentation.CLIPBOARD_FORMAT_FILTERING_MSO_CHART_OUT)" key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config" valueName="ClipboardFilterOutgoingMSOfficeChart">
       <parentCategory ref="BLAST_CAT_LABEL" />
       <supportedOn ref="BLAST_SUPPORTEDON_EMPTY" />
       <enabledValue>
@@ -712,7 +730,7 @@
         <string>0</string>
       </disabledValue>
     </policy>
-    <policy name="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_OUT" class="Machine" displayName="$(string.CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_OUT)" explainText="$(string.CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_OUT_EXPLAIN)" presentation="$(presentation.CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_OUT)" key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config" valueName="ClipboardFilterOutgoingMSOfficeTextEffects">
+    <policy name="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_OUT" class="Both" displayName="$(string.CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_OUT)" explainText="$(string.CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_OUT_EXPLAIN)" presentation="$(presentation.CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_OUT)" key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config" valueName="ClipboardFilterOutgoingMSOfficeTextEffects">
       <parentCategory ref="BLAST_CAT_LABEL" />
       <supportedOn ref="BLAST_SUPPORTEDON_EMPTY" />
       <enabledValue>

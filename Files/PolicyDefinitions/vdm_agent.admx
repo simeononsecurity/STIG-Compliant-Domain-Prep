@@ -403,6 +403,46 @@
                       <decimal value="600" />
                     </value>
                   </item>
+                  <item displayName="$(string.TIME_12HR)">
+                    <value>
+                      <decimal value="720" />
+                    </value>
+                  </item>
+                  <item displayName="$(string.TIME_18HR)">
+                    <value>
+                      <decimal value="1080" />
+                    </value>
+                  </item>
+                  <item displayName="$(string.TIME_1D)">
+                    <value>
+                      <decimal value="1440" />
+                    </value>
+                  </item>
+                  <item displayName="$(string.TIME_2D)">
+                    <value>
+                      <decimal value="2880" />
+                    </value>
+                  </item>
+                  <item displayName="$(string.TIME_3D)">
+                    <value>
+                      <decimal value="4320" />
+                    </value>
+                  </item>
+                  <item displayName="$(string.TIME_4D)">
+                    <value>
+                      <decimal value="5760" />
+                    </value>
+                  </item>
+                  <item displayName="$(string.TIME_5D)">
+                    <value>
+                      <decimal value="7200" />
+                    </value>
+                  </item>
+                  <item displayName="$(string.TIME_1W)">
+                    <value>
+                      <decimal value="10080" />
+                    </value>
+                  </item>
                 </enum>
               </elements>
       </policy>
@@ -486,6 +526,46 @@
                       <decimal value="600" />
                     </value>
                   </item>
+                  <item displayName="$(string.TIME_12HR)">
+                    <value>
+                      <decimal value="720" />
+                    </value>
+                  </item>
+                  <item displayName="$(string.TIME_18HR)">
+                    <value>
+                      <decimal value="1080" />
+                    </value>
+                  </item>
+                  <item displayName="$(string.TIME_1D)">
+                    <value>
+                      <decimal value="1440" />
+                    </value>
+                  </item>
+                  <item displayName="$(string.TIME_2D)">
+                    <value>
+                      <decimal value="2880" />
+                    </value>
+                  </item>
+                  <item displayName="$(string.TIME_3D)">
+                    <value>
+                      <decimal value="4320" />
+                    </value>
+                  </item>
+                  <item displayName="$(string.TIME_4D)">
+                    <value>
+                      <decimal value="5760" />
+                    </value>
+                  </item>
+                  <item displayName="$(string.TIME_5D)">
+                    <value>
+                      <decimal value="7200" />
+                    </value>
+                  </item>
+                  <item displayName="$(string.TIME_1W)">
+                    <value>
+                      <decimal value="10080" />
+                    </value>
+                  </item>
                 </enum>
               </elements>
       </policy>
@@ -562,6 +642,46 @@
                   <item displayName="$(string.TIME_10HR)">
                     <value>
                       <decimal value="600" />
+                    </value>
+                  </item>
+                  <item displayName="$(string.TIME_12HR)">
+                    <value>
+                      <decimal value="720" />
+                    </value>
+                  </item>
+                  <item displayName="$(string.TIME_18HR)">
+                    <value>
+                      <decimal value="1080" />
+                    </value>
+                  </item>
+                  <item displayName="$(string.TIME_1D)">
+                    <value>
+                      <decimal value="1440" />
+                    </value>
+                  </item>
+                  <item displayName="$(string.TIME_2D)">
+                    <value>
+                      <decimal value="2880" />
+                    </value>
+                  </item>
+                  <item displayName="$(string.TIME_3D)">
+                    <value>
+                      <decimal value="4320" />
+                    </value>
+                  </item>
+                  <item displayName="$(string.TIME_4D)">
+                    <value>
+                      <decimal value="5760" />
+                    </value>
+                  </item>
+                  <item displayName="$(string.TIME_5D)">
+                    <value>
+                      <decimal value="7200" />
+                    </value>
+                  </item>
+                  <item displayName="$(string.TIME_1W)">
+                    <value>
+                      <decimal value="10080" />
                     </value>
                   </item>
                 </enum>
@@ -1240,6 +1360,19 @@
       </policy>
 
       <policy
+         name="HTML5MMR_Enable_Edge_Chromium" class="Machine" displayName="$(string.HTML5MMR_Enable_Edge_Chromium)" explainText="$(string.HTML5MMR_Enable_Edge_Chromium_Desc)"
+         key="Software\Policies\VMware, Inc.\VMware HTML5MMR" valueName="edge_chromium_enabled">
+         <parentCategory ref="VMware_HTML5MMR" />
+         <supportedOn ref="SupportedOn" />
+         <enabledValue>
+            <decimal value="1" />
+         </enabledValue>
+         <disabledValue>
+            <decimal value="0" />
+         </disabledValue>
+      </policy>
+
+      <policy
          name="HTML5MMRUrlList" class="Machine" displayName="$(string.HTML5MMRUrlList)" explainText="$(string.HTML5MMRUrlList_Desc)"
          key="Software\Policies\VMware, Inc.\VMware HTML5MMR\UrlWhiteList" presentation="$(presentation.HTML5MMRUrlList)">
          <parentCategory ref="VMware_HTML5MMR" />
@@ -1318,6 +1451,19 @@
          </enabledValue>
          <disabledValue>
          <decimal value="0" />
+         </disabledValue>
+      </policy>
+
+      <policy
+         name="Enable_Sharing_Client_Screen_InAppSession" class="Machine" displayName="$(string.Enable_Sharing_Client_Screen_InAppSession)" explainText="$(string.Enable_Sharing_Client_Screen_InAppSession_Desc)"
+         key="Software\Policies\VMware, Inc.\VMware WebRTCRedir" valueName="allowSharingClientScreenInAppSession">
+         <parentCategory ref="VMware_WebRTC_REDIR_FEATURES" />
+         <supportedOn ref="SupportedOn" />
+         <enabledValue>
+            <decimal value="1" />
+         </enabledValue>
+         <disabledValue>
+            <decimal value="0" />
          </disabledValue>
       </policy>
 
@@ -1598,11 +1744,15 @@
       </policy>
 
       <policy
-         name="SetForceNonOptimizedEnvVar" class="Machine" displayName="$(string.SetVMWMediaProviderProxyForceNonOptimizedEnvVar)" explainText="$(string.SetVMWMediaProviderProxyForceNonOptimizedEnvVar_Desc)"
-         key="Software\Policies\VMware, Inc.\VMware VDM\Agent\VMWMediaProviderProxy" presentation="$(presentation.SetForceNonOptimizedEnvVar)">
+         name="SetForceNonOptimizedOptions" class="Machine" displayName="$(string.SetVMWMediaProviderProxyForceNonOptimizedEnvVar)" explainText="$(string.SetVMWMediaProviderProxyForceNonOptimizedOptions_Desc)"
+         key="Software\Policies\VMware, Inc.\VMware VDM\Agent\VMWMediaProviderProxy" presentation="$(presentation.SetForceNonOptimizedOptions)">
             <parentCategory ref="VMware_MediaProviderProxy" />
             <supportedOn ref="SupportedOn" />
                <elements>
+                  <boolean id="AUTO_DETECT_EXTERNAL_CONNECTIONS_CHKBOX" valueName="AutoDetectExternalConnections">
+                     <trueValue> <decimal value="1" /> </trueValue>
+                     <falseValue> <decimal value="0" /> </falseValue>
+                  </boolean>
                   <text id="SetForceNonOptimizedEnvVar_TB" key="Software\Policies\VMware, Inc.\VMware VDM\Agent\VMWMediaProviderProxy" valueName="SetForceNonOptimizedEnvVar" />
                </elements>
       </policy>

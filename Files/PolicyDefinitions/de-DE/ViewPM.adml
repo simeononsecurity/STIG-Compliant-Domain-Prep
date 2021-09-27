@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                           revision="1.0"
+                           schemaVersion="1.0"
+                           xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" >
+
+  <!-- Copyright 2005-2016 VMware, Inc.  All rights reserved. -->
+
+  <displayName >Persona-Verwaltung</displayName>
+  <description >Persona-Verwaltungsrichtlinie</description>
+  <resources >
+    <stringTable ><!--Storage for String Definitions-->
+      <string id="String_Category_Persona_Management" >Persona-Verwaltung</string>
+      <string id="String_Category_Desktop_UI" >Desktop-Benutzeroberfläche</string>
+      <string id="String_Category_Folder_Redirection" >Ordnerumleitung</string>
+      <string id="String_Category_Logging" >Protokollierung</string>
+      <string id="String_Category_Roaming_Synchronization" >Serverspeicherung und Synchronisierung</string>
+      <string id="String_Policy_Hide_local_offline" >Lokales Offline-Dateisymbol ausblenden</string>
+      <string id="String_Explain_Hide_local_offline" >Wenn Sie diese Richtlinie aktivieren, wird das Offline-Symbol bei der lokalen Anzeige der meisten Offline-Persona-Dateien ausgeblendet. Damit wird das Offline-Symbol sowohl im Windows-Explorer als auch in den meisten allgemeinen Dialogfeldern ausgeblendet. Das Offline-Symbol ist standardmäßig ausgeblendet.</string>
+      <string id="String_Policy_Show_progress" >Beim Herunterladen von großen Dateien Fortschritt anzeigen</string>
+      <string id="String_Explain_Show_progress" >Wenn Sie diese Richtlinie aktivieren, wird beim Herunterladen großer Dateien aus dem Persona-Repository ein Fortschrittsfenster eingeblendet. Es kann auch die Dateigröße festgelegt werden, ab der das Fortschrittsfenster angezeigt wird. Das Fortschrittsfenster wird standardmäßig nicht angezeigt.</string>
+      <string id="String_Policy_Show_critical_errors" >Benutzern kritische Fehler über Leistensymbolwarnungen anzeigen</string>
+      <string id="String_Explain_Show_critical_errors" >Wenn Sie diese Richtlinie aktivieren, werden dem Benutzer mithilfe von Leistensymbolwarnungen kritische Fehler bei der Replikation oder der Netzwerkverbindung angezeigt.  Diese Warnungen sind standardmäßig ausgeblendet.</string>
+      <string id="String_Policy_Add_the_administrators" >Administratorgruppe zu umgeleiteten Ordnern hinzufügen</string>
+      <string id="String_Explain_Add_the_administrators" >Wenn Sie diese Richtlinie aktivieren, wird die Administratorgruppe jedem umgeleiteten Ordner hinzugefügt.  Standardmäßig verfügt der Benutzer über exklusive Rechte.</string>
+      <string id="String_Policy_Files_and_folders_excluded_from_redirection" >Von der Ordnerumleitung ausgeschlossene Dateien und Ordner</string>
+      <string id="String_Explain_Files_and_folders_excluded_from_redirection" >Wenn Sie diese Richtlinie aktivieren, werden die ausgewählten Datei- und Ordnerpfade nicht umgeleitet. Sie können für diese Pfade auch Ausnahmen festlegen. Dazu verwenden Sie die Richtlinie „Von der Ordnerumleitung ausgeschlossene Dateien und Ordner (Ausnahmen)“. Für einige Nutzungsszenarien müssen bestimmte Dateien und Ordner im Profil vorhanden sein. Alle Datei- und Ordnerpfade müssen relativ zum Stamm des lokalen Profils des Benutzers angegeben werden.</string>
+      <string id="String_Policy_Files_and_folders_excluded_from_redirection_exception" >Von der Ordnerumleitung ausgeschlossene Dateien und Ordner (Ausnahmen)</string>
+      <string id="String_Explain_Files_and_folders_excluded_from_redirection_exception" >Wenn Sie diese Richtlinie aktivieren, werden die ausgewählten Datei- und Ordnerpfade als Ausnahmen von den in der Richtlinie „Von der Ordnerumleitung ausgeschlossene Dateien und Ordner“ angegebenen Pfaden behandelt. Alle Datei- und Ordnerpfade müssen relativ zum Stamm des lokalen Profils des Benutzers angegeben werden und in einem mit der Richtlinie „Von der Ordnerumleitung ausgeschlossene Dateien und Ordner“ festgelegten Ordner vorhanden sein.</string>
+      <string id="String_Policy_Application_Data" >Anwendungsdaten (servergespeichert)</string>
+      <string id="String_Explain_Application_Data" >Wenn Sie diese Richtlinie aktivieren, wird der servergespeicherte Ordner „Anwendungsdaten“ des Benutzers zum konfigurierten UNC-Pfad umgeleitet.</string>
+      <string id="String_Policy_Contacts" >Kontakte</string>
+      <string id="String_Explain_Contacts" >Wenn Sie diese Richtlinie aktivieren, wird der Ordner „Kontakte“ des Benutzers zum konfigurierten UNC-Pfad umgeleitet.  Dieser Ordner ist nur in Vista und höher verfügbar.</string>
+      <string id="String_Policy_Cookies" >Cookies</string>
+      <string id="String_Explain_Cookies" >Wenn Sie diese Richtlinie aktivieren, wird der Ordner „Cookies“ des Benutzers zum konfigurierten UNC-Pfad umgeleitet.</string>
+      <string id="String_Policy_Desktop" >Desktop</string>
+      <string id="String_Explain_Desktop" >Wenn Sie diese Richtlinie aktivieren, wird der Ordner „Desktop“ des Benutzers zum konfigurierten UNC-Pfad umgeleitet.</string>
+      <string id="String_Policy_Downloads" >Downloads</string>
+      <string id="String_Explain_Downloads" >Wenn Sie diese Richtlinie aktivieren, wird der Ordner „Downloads“ des Benutzers zum konfigurierten UNC-Pfad umgeleitet.  Dieser Ordner ist nur in Vista und höher verfügbar.</string>
+      <string id="String_Policy_Favorites" >Favoriten</string>
+      <string id="String_Explain_Favorites" >Wenn Sie diese Richtlinie aktivieren, wird der Ordner „Favoriten“ des Benutzers zum konfigurierten UNC-Pfad umgeleitet.</string>
+      <string id="String_Policy_History" >Verlauf</string>
+      <string id="String_Explain_History" >Wenn Sie diese Richtlinie aktivieren, wird der Ordner „Verlauf“ des Benutzers zum konfigurierten UNC-Pfad umgeleitet.</string>
+      <string id="String_Policy_Links" >Links</string>
+      <string id="String_Explain_Links" >Wenn Sie diese Richtlinie aktivieren, wird der Ordner „Links“ des Benutzers zum konfigurierten UNC-Pfad umgeleitet.  Dieser Ordner ist nur in Vista und höher verfügbar.</string>
+      <string id="String_Policy_My_Documents" >Eigene Dokumente</string>
+      <string id="String_Explain_My_Documents" >Wenn Sie diese Richtlinie aktivieren, wird der Ordner „Eigene Dokumente“ des Benutzers zum konfigurierten UNC-Pfad umgeleitet.</string>
+      <string id="String_Policy_My_Music" >Eigene Musik</string>
+      <string id="String_Explain_My_Music" >Wenn Sie diese Richtlinie aktivieren, wird der Ordner „Eigene Musik“ des Benutzers zum konfigurierten UNC-Pfad umgeleitet.</string>
+      <string id="String_Policy_My_Pictures" >Eigene Bilder</string>
+      <string id="String_Explain_My_Pictures" >Wenn Sie diese Richtlinie aktivieren, wird der Ordner „Eigene Bilder“ des Benutzers zum konfigurierten UNC-Pfad umgeleitet.</string>
+      <string id="String_Policy_My_Videos" >Eigene Videos</string>
+      <string id="String_Explain_My_Videos" >Wenn Sie diese Richtlinie aktivieren, wird der Ordner „Eigene Videos“ des Benutzers zum konfigurierten UNC-Pfad umgeleitet.</string>
+      <string id="String_Policy_Network_Neighborhood" >Netzwerkumgebung</string>
+      <string id="String_Explain_Network_Neighborhood" >Wenn Sie diese Richtlinie aktivieren, wird der Ordner „Netzwerkumgebung“ des Benutzers zum konfigurierten UNC-Pfad umgeleitet.</string>
+      <string id="String_Policy_Printer_Neighborhood" >Druckerumgebung</string>
+      <string id="String_Explain_Printer_Neighborhood" >Wenn Sie diese Richtlinie aktivieren, wird der Ordner „Druckerumgebung“ des Benutzers zum konfigurierten UNC-Pfad umgeleitet.</string>
+      <string id="String_Policy_Recent_Items" >Zuletzt verwendet</string>
+      <string id="String_Explain_Recent_Items" >Wenn Sie diese Richtlinie aktivieren, wird der Ordner „Zuletzt verwendet“ des Benutzers zum konfigurierten UNC-Pfad umgeleitet.</string>
+      <string id="String_Policy_Saved_Games" >Gespeicherte Spiele</string>
+      <string id="String_Explain_Saved_Games" >Wenn Sie diese Richtlinie aktivieren, wird der Ordner „Gespeicherte Spiele“ des Benutzers zum konfigurierten UNC-Pfad umgeleitet.  Dieser Ordner ist nur in Vista und höher verfügbar.</string>
+      <string id="String_Policy_Searches" >Suchvorgänge</string>
+      <string id="String_Explain_Searches" >Wenn Sie diese Richtlinie aktivieren, wird der Ordner „Suchvorgänge“ des Benutzers zum konfigurierten UNC-Pfad umgeleitet.  Dieser Ordner ist nur in Vista und höher verfügbar.</string>
+      <string id="String_Policy_Send_To" >Senden an</string>
+      <string id="String_Explain_Send_To" >Wenn Sie diese Richtlinie aktivieren, wird der Ordner „Senden an“ des Benutzers zum konfigurierten UNC-Pfad umgeleitet.</string>
+      <string id="String_Policy_Start_Menu" >Startmenü</string>
+      <string id="String_Explain_Start_Menu" >Wenn Sie diese Richtlinie aktivieren, wird der Ordner „Startmenü“ des Benutzers zum konfigurierten UNC-Pfad umgeleitet.</string>
+      <string id="String_Policy_Startup_Items" >Startobjekte</string>
+      <string id="String_Explain_Startup_Items" >Wenn Sie diese Richtlinie aktivieren, wird der Ordner „Startobjekte“ des Benutzers zum konfigurierten UNC-Pfad umgeleitet.</string>
+      <string id="String_Policy_Templates" >Vorlagen</string>
+      <string id="String_Explain_Templates" >Wenn Sie diese Richtlinie aktivieren, wird der Ordner „Vorlagen“ des Benutzers zum konfigurierten UNC-Pfad umgeleitet.</string>
+      <string id="String_Policy_Temporary_Internet" >Temporäre Internetdateien</string>
+      <string id="String_Explain_Temporary_Internet" >Wenn Sie diese Richtlinie aktivieren, wird der Ordner „Temporäre Internetdateien“ des Benutzers zum konfigurierten UNC-Pfad umgeleitet.</string>
+      <string id="String_Policy_Logging_filename" >Name der Protokolldatei</string>
+      <string id="String_Explain_Logging_filename" >Der vollständige Pfadname der lokalen Protokolldatei von View Persona Management.  Dieser Pfad muss den Dateinamen enthalten und darf kein UNC-Pfad sein. Standardmäßig werden Protokollmeldungen in die Datei &lt;Allgemeine Anwendungsdaten&gt;\VMware\VDM\logs\VMWVvp.txt geschrieben.</string>
+      <string id="String_Policy_Logging_destination" >Protokollierungsziel</string>
+      <string id="String_Explain_Logging_destination" >Legt fest, wo die Protokollmeldung ausgegeben wird. Eine Protokollmeldung kann an eine lokale Protokolldatei, aber auch an den Debug-Port gesendet werden. Standardmäßig werden Protokollmeldungen in der Protokolldatei ausgegeben.</string>
+      <string id="String_Policy_Logging_flags" >Protokollierungskennzeichen</string>
+      <string id="String_Explain_Logging_flags" >Gibt den Typ der generierten Protokollmeldungen an. Wenn diese Einstellung deaktiviert oder nicht konfiguriert ist, werden Protokollmeldungen auf der Ebene „Information“ festgelegt  Standardmäßig werden Protokollmeldungen für die Ebene „Information“ ausgegeben.</string>
+      <string id="String_Policy_DropList_Select_Logging_flags" >7 – Debugging</string>
+      <string id="String_Policy_Log_History_Depth" >Protokollverlauftiefe</string>
+      <string id="String_Explain_Log_History_Depth" >Wenn Sie diese Richtlinie aktivieren, wird von Persona ein Archiv mit historischen Protokolldateien angelegt und verwendet.  Der Standardwert beträgt 1, der Mindestwert 1 und der Maximalwert 10.  Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, wird standardmäßig ein historisches Protokoll gespeichert.</string>
+      <string id="String_Policy_Log_File_Size" >Größe der Protokolldatei</string>
+      <string id="String_Explain_Log_File_Size" >Wenn Sie diese Richtlinie aktivieren, werden von Persona die Protokolldateien in der entsprechenden Größe angelegt und verwendet.  Der Standardwert beträgt 100 MB, der Mindestwert 10 MB und der Maximalwert 1024 MB.  Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, gilt standardmäßig der Wert 100 MB.</string>
+      <string id="String_Policy_Upload_log_to_network" >Protokoll auf Netzwerk hochladen</string>
+      <string id="String_Explain_Upload_log_to_network" >Lädt bei der Abmeldung die Persona-Protokolldatei an die angegebene Netzwerkfreigabe hoch.  Der Netzwerkfreigabepfad muss ein UNC-Pfad sein.  Persona erstellt keine Netzwerkfreigaben.</string>
+      <string id="String_Policy_Manage_user_persona" >Benutzer-Persona verwalten</string>
+      <string id="String_Explain_Manage_user_persona" >Wenn Sie diese Richtlinie aktivieren, wird die Persona des Benutzers dynamisch verwaltet.  Wenn Sie diese Richtlinie deaktivieren, wird die Persona des Benutzers von Windows verwaltet. Das Profiluploadintervall bestimmt, wie oft Persona-Änderungen in das Netzwerk hochgeladen werden.</string>
+      <string id="String_Policy_DSVA" >Kompatibilität mit Deep Security Virtual Appliance (DSVA)</string>
+      <string id="String_Explain_DSVA" >Wenn diese Option aktiviert ist, führt Persona die Kompatibilität mit DSVA aus. Wenn auf der Maschine DSVA ausgeführt wird, muss dies aktiviert sein. Andernfalls wird es gelegentlich Probleme bei der Anmeldung geben. Wenn dies nicht festgelegt oder deaktiviert ist, wird Persona ohne Berücksichtigung von DSVA ausgeführt.</string>
+      <string id="String_Policy_Persona_repository" >Speicherort für das Persona-Repository</string>
+      <string id="String_Explain_Persona_repository" >Der UNC-Pfad zum Repository, in der die Benutzer-Personas gespeichert werden. Wenn kein Pfad angegeben ist, wird der Benutzerprofilpfad in Active Directory verwendet.</string>
+      <string id="String_Policy_Remove_local_persona" >Lokale Persona beim Abmelden entfernen</string>
+      <string id="String_Explain_Remove_local_persona" >Wenn Sie diese Richtlinie aktivieren, wird die lokal gespeicherte Persona jedes Benutzers beim Abmelden entfernt. Sie können auch festlegen, dass die Ordner mit den lokalen Einstellungen eines Benutzers gelöscht werden, wenn die Persona entfernt wird. In Windows XP bezieht sich diese Einstellung auf den Ordner „Lokale Einstellungen“. In Windows Vista und höher bezieht sich diese Einstellung auf den Ordner „Anwendungsdaten\Lokal“. Standardmäßig wird die lokal gespeicherte Persona nicht gelöscht, wenn sich ein Benutzer abmeldet.</string>
+      <string id="String_Policy_Roam_local_settings" >Ordner mit den lokalen Einstellungen auf dem Server speichern</string>
+      <string id="String_Explain_Roam_local_settings" >Wenn Sie diese Richtlinie aktivieren, werden die Ordner mit den lokalen Einstellungen mit dem Rest der Benutzer-Persona gespeichert. In Windows XP bezieht sich diese Einstellung auf den Ordner „Lokale Einstellungen“. In Windows Vista und höher bezieht sich diese Einstellung auf den Ordner „Anwendungsdaten\Lokal“. Standardmäßig werden die Ordner mit den lokalen Einstellungen nicht auf dem Server gespeichert.</string>
+      <string id="String_Policy_Files_and_folders_preload" >Dateien und Ordner für das Vorabladen</string>
+      <string id="String_Explain_Files_and_folders_preload" >Wenn Sie diese Richtlinie aktivieren, werden die ausgewählten Datei- und Ordnerpfade bei der Anmeldung des Benutzers heruntergeladen und repliziert, wenn sich die Dateien ändern. Sie können für diese Pfade auch Ausnahmen festlegen. Dazu verwenden Sie die Richtlinie „Dateien und Ordner für das Vorabladen (Ausnahmen)“. Für einige Nutzungsszenarien müssen bestimmte Dateien und Ordner vorab in die lokal gespeicherte Persona des Benutzers geladen werden. Diese Dateien werden bei der Anmeldung des Benutzers aus dem Persona-Repository heruntergeladen. Änderungen werden sofort nach der Durchführung remote repliziert. Alle Ordnerpfade müssen relativ zum Stamm des lokalen Profils des Benutzers angegeben werden.</string>
+      <string id="String_Policy_Files_and_folders_preload_exceptions" >Dateien und Ordner für das Vorabladen (Ausnahmen)</string>
+      <string id="String_Explain_Files_and_folders_preload_exceptions" >Wenn Sie diese Richtlinie aktivieren, werden die ausgewählten Datei- und Ordnerpfade als Ausnahmen von den Pfaden behandelt, die in der Richtlinie „Dateien und Ordner für das Vorabladen“ angegeben sind. Alle Ordnerpfade müssen relativ zum Stamm des lokalen Profils des Benutzers angegeben werden und in einem mit der Richtlinie „Dateien und Ordner für das Vorabladen“ festgelegten Ordner vorhanden sein.</string>
+      <string id="String_Policy_Windows_roaming" >Synchronisierung von servergespeicherten Windows-Profilen</string>
+      <string id="String_Explain_Windows_roaming" >Wenn Sie diese Richtlinie aktivieren, werden die ausgewählten Datei- und Ordnerpfade bei der Anmeldung des Benutzers heruntergeladen und bei der Abmeldung repliziert. Mit der Richtlinie „Synchronisierung von servergespeicherten Windows-Profilen“ können Sie auch Ausnahmen für diese Pfade angeben. Für einige Nutzungsszenarien müssen bestimmte Dateien und Ordner mit der traditionellen Funktionalität servergespeicherter Windows-Profile verwaltet werden. Diese Elemente werden bei der Anmeldung des Benutzers heruntergeladen, aber bis zur Abmeldung des Benutzers nicht mit dem Repository synchronisiert. Alle Ordnerpfade müssen relativ zum Stamm des lokalen Profils des Benutzers angegeben werden.</string>
+      <string id="String_Policy_Windows_roaming_exceptions" >Synchronisierung von servergespeicherten Windows-Profilen (Ausnahmen)</string>
+      <string id="String_Explain_Windows_roaming_exceptions" >Wenn Sie diese Richtlinie aktivieren, werden die ausgewählten Datei- und Ordnerpfade als Ausnahmen von den Pfaden behandelt, die in der Richtlinie „Synchronisierung von servergespeicherten Windows-Profilen“ angegeben sind. Alle Ordnerpfade müssen relativ zum Stamm des lokalen Profils des Benutzers angegeben werden und in einem mit der Richtlinie „Synchronisierung von servergespeicherten Windows-Profilen“ festgelegten Ordner vorhanden sein.</string>
+      <string id="String_Policy_Files_and_folders_excluded_from_roaming" >Von der Serverspeicherung ausgenommene Dateien und Ordner</string>
+      <string id="String_Explain_Files_and_folders_excluded_from_roaming" >Wenn Sie diese Richtlinie aktivieren, werden die ausgewählten Datei- und Ordnerpfade nicht mit dem Rest der Benutzer-Persona repliziert. Sie können für diese Pfade auch Ausnahmen festlegen. Dazu verwenden Sie die Richtlinie „Von der Serverspeicherung ausgenommene Dateien und Ordner“. Für einige Nutzungsszenarien dürfen bestimmte Dateien und Ordner in einer Benutzer-Persona nur auf dem lokalen Computer vorhanden sein. Dies gilt für die meisten temporären und zwischengespeicherten Dateien, die nicht in das Remote-Repository repliziert werden müssen. Alle Ordnerpfade müssen relativ zum Stamm des lokalen Profils des Benutzers angegeben werden.</string>
+      <string id="String_Policy_Files_and_folders_excluded_from_roaming_exceptions" >Von der Serverspeicherung ausgenommene Dateien und Ordner (Ausnahmen)</string>
+      <string id="String_Explain_Files_and_folders_excluded_from_roaming_exceptions" >Wenn Sie diese Richtlinie aktivieren, werden die ausgewählten Datei- und Ordnerpfade als Ausnahmen von den Pfaden behandelt, die in der Richtlinie „Von der Serverspeicherung ausgenommene Dateien und Ordner“ angegeben sind. Alle Ordnerpfade müssen relativ zum Stamm des lokalen Profils des Benutzers angegeben werden und in einem mit der Richtlinie „Von der Serverspeicherung ausgenommene Dateien und Ordner“ festgelegten Ordner vorhanden sein.</string>
+      <string id="String_Policy_Enable_background_download" >Ladevorgänge im Hintergrund für Laptops aktivieren</string>
+      <string id="String_Explain_Enable_background_download" >Wenn Sie diese Richtlinie aktivieren, werden alle Dateien im lokalen Profil heruntergeladen, wenn sich ein Benutzer bei einem Laptop anmeldet.</string>
+      <string id="String_Policy_Folders_to_background" >Im Hintergrund herunterzuladende Ordner</string>
+      <string id="String_Explain_Folders_to_background" >Wenn Sie diese Richtlinie aktivieren, werden die ausgewählten Ordnerpfade im Hintergrund heruntergeladen, wenn sich ein Benutzer anmeldet. Sie können für diese Pfade auch Ausnahmen festlegen. Dazu verwenden Sie die Richtlinie „Im Hintergrund herunterzuladende Ordner (Ausnahmen)“. Einige Nutzungsszenarien lassen sich durch Herunterladen der Inhalte bestimmter Ordner im Hintergrund optimieren. Damit können Wartezeiten für Benutzer auf umfangreiche Downloads bei der Anmeldung oder beim Starten eine Anwendung vermieden werden. Beispielsweise kann durch Einbeziehen der VMware ThinApp-Sandbox-Ordner die Startzeit von Anwendungen verkürzt werden, indem sichergestellt wird, dass alle benötigten Persona-Dateien bereits vor dem Start heruntergeladen sind. Alle Ordnerpfade müssen relativ zum Stamm des lokalen Profils des Benutzers angegeben werden.</string>
+      <string id="String_Policy_Folders_to_background_exceptions" >Im Hintergrund herunterzuladende Ordner (Ausnahmen)</string>
+      <string id="String_Explain_Folders_to_background_exceptions" >Wenn Sie diese Richtlinie aktivieren, werden die ausgewählten Ordnerpfade als Ausnahmen von den Pfaden behandelt, die in der Richtlinie „Im Hintergrund herunterzuladende Ordner“ angegeben sind. Alle Ordnerpfade müssen relativ zum Stamm des lokalen Profils des Benutzers angegeben werden und in einem mit der Richtlinie „Im Hintergrund herunterzuladende Ordner“ festgelegten Ordner vorhanden sein.</string>
+      <string id="String_Policy_Excluded_Processes" >Ausgeschlossene Prozesse</string>
+      <string id="String_Explain_Excluded_processes" >Bei ausgeschlossenen Prozessen handelt es sich um jene Prozesse, deren E/A durch Persona ignoriert wird.  So können hier beispielsweise zur Vermeidung von Leistungsproblemen bestimmte Antivirus-Anwendungen hinzugefügt werden.  Wenn eine Antivirus-Anwendung nicht über eine Funktion verfügt, den Offline-Dateiabruf während der Scans nach Bedarf zu deaktivieren, hindert diese Einstellung die Anwendung daran, Dateien unnötig abzurufen.  Jedoch werden Änderungen an Dateien und/oder Einstellungen in den Benutzerprofilen, die von ausgeschlossenen Prozessen durchgeführt wurden, weiterhin repliziert.</string>
+      <string id="String_Policy_Cleanup_CLFS_Files" >CLFS-Dateien bereinigen</string>
+      <string id="String_Explain_Cleanup_CLFS_Files" >Löscht die Dateien, die vom CLFS (Gemeinsames Protokolldateisystem) für ntuser.dat und usrclass.dat aus dem servergespeicherten Profil bei der Anmeldung generiert werden.  Diese Einstellung darf nur zur Reparatur von Profilen verwendet werden, in denen ein Problem mit diesen Dateien aufgetreten ist oder die anderweitig deaktiviert wurden.</string>
+
+      <string id="Enforce_AD_Wallpaper" >Erzwingt die Wallpaper-Einstellung aus GPO</string>
+
+      <string id="Enforce_AD_Wallpaper_Desc" >Bei entsprechender Festlegung erzwingt diese Richtlinie eine Aktualisierung des Desktop-Wallpapers basierend auf der GPO-Einstellungsdefinition. Beachten Sie, dass diese Richtlinie nicht angewendet werden kann, wenn das Desktop-Wallpaper NICHT über das GPO festgelegt wird.</string>
+    </stringTable>
+    <presentationTable ><!--Storage for Presentation Definitions-->
+
+      <presentation id="Present_Hide_local_offline" >
+        <text >Blendet das Offline-Symbol für lokal gespeicherte Persona-Dateien aus.</text>
+      </presentation>
+      <presentation id="Present_Show_progress" >
+        <text >Zeigt den Fortschritt beim Herunterladen großer Dateien aus dem Persona-Repository an.</text>
+        <decimalTextBox refId="Policy_Numeric_Show_progress" defaultValue="50" >Mindestdateigröße (in MB) zur Anzeige des Fortschrittsfensters:</decimalTextBox>
+      </presentation>
+      <presentation id="Present_Show_critical_errors" >
+        <text >Benutzern kritische Fehler über Leistensymbolwarnungen anzeigen</text>
+      </presentation>
+      <presentation id="Present_Add_the_administrators" >
+        <text >Fügt die Administratorgruppe zu den umgeleiteten Ordnern hinzu.</text>
+      </presentation>
+      <presentation id="Present_Files_and_folders_excluded_from_redirection" >
+        <text >Legt die Dateien und Ordner fest, die nicht umgeleitet werden.</text>
+        <text >Alle Pfade müssen relativ zum Stamm des lokalen Profils angegeben werden.</text>
+        <listBox refId="Present_ListBox_Files_and_folders_excluded_from_redirection" >Dateien und Ordner:</listBox>
+        <text >Beispiel: Desktop\Neuer Ordner.</text>
+        <text >Eigene Dokumente\Neuer Ordner</text>
+      </presentation>
+      <presentation id="Present_Files_and_folders_excluded_from_redirection_exception" >
+        <text >Legt Dateien und Ordner fest, die von der Liste der Dateien und Ordner in der Richtlinie</text>
+        <text >„Von der Ordnerumleitung ausgeschlossene Dateien und Ordner“ ausgenommen werden sollen.</text>
+        <listBox refId="Present_ListBox_Policy_Files_and_folders_excluded_from_redirection_exception" >Ausgenommene Dateien und Ordner:</listBox>
+        <text >Beispiel: Desktop\Neuer Ordner.</text>
+        <text >Eigene Dokumente\Neuer Ordner</text>
+      </presentation>
+      <presentation id="Present_Application_Data" >
+        <textBox refId="Present_TextBox_Application_Data" >
+          <label >Zu folgendem Speicherort umleiten:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Contacts" >
+        <textBox refId="Present_TextBox_Policy_Contacts" >
+          <label >Zu folgendem Speicherort umleiten:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Cookies" >
+        <textBox refId="Present_TextBox_Cookies" >
+          <label >Zu folgendem Speicherort umleiten:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Desktop" >
+        <textBox refId="Present_TextBox_Desktop" >
+          <label >Zu folgendem Speicherort umleiten:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Downloads" >
+        <textBox refId="Present_TextBox_Downloads" >
+          <label >Zu folgendem Speicherort umleiten:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Favorites" >
+        <textBox refId="Present_TextBox_Favorites" >
+          <label >Zu folgendem Speicherort umleiten:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_History" >
+        <textBox refId="Present_TextBox_History" >
+          <label >Zu folgendem Speicherort umleiten:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Links" >
+        <textBox refId="Present_TextBox_Links" >
+          <label >Zu folgendem Speicherort umleiten:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_My_Documents" >
+        <textBox refId="Present_TextBox_My_Documents" >
+          <label >Zu folgendem Speicherort umleiten:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_My_Music" >
+        <textBox refId="Present_TextBox_My_Music" >
+          <label >Zu folgendem Speicherort umleiten:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_My_Pictures" >
+        <textBox refId="Present_TextBox_My_Pictures" >
+          <label >Zu folgendem Speicherort umleiten:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_My_Videos" >
+        <textBox refId="Present_TextBox_My_Videos" >
+          <label >Zu folgendem Speicherort umleiten:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Network_Neighborhood" >
+        <textBox refId="Present_TextBox_Network_Neighborhood" >
+          <label >Zu folgendem Speicherort umleiten:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Printer_Neighborhood" >
+        <textBox refId="Present_TextBox_Printer_Neighborhood" >
+          <label >Zu folgendem Speicherort umleiten:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Recent_Items" >
+        <textBox refId="Present_TextBox_Recent_Items" >
+          <label >Zu folgendem Speicherort umleiten:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Saved_Games" >
+        <textBox refId="Present_TextBox_Saved_Games" >
+          <label >Zu folgendem Speicherort umleiten:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Searches" >
+        <textBox refId="Present_TextBox_Searches" >
+          <label >Zu folgendem Speicherort umleiten:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Send_To" >
+        <textBox refId="Present_TextBox_Send_To" >
+          <label >Zu folgendem Speicherort umleiten:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Start_Menu" >
+        <textBox refId="Present_TextBox_Start_Menu" >
+          <label >Zu folgendem Speicherort umleiten:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Startup_Items" >
+        <textBox refId="Present_TextBox_Startup_Items" >
+          <label >Zu folgendem Speicherort umleiten:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Templates" >
+        <textBox refId="Present_TextBox_Templates" >
+          <label >Zu folgendem Speicherort umleiten:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Temporary_Internet" >
+        <textBox refId="Present_TextBox_Temporary_Internet" >
+          <label >Zu folgendem Speicherort umleiten:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Logging_filename" >
+        <textBox refId="Present_TextBox_Logging_filename" >
+          <label >Pfadname der lokalen Protokolldatei:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Logging_destination" >
+        <checkBox refId="Present_CheckBox_Logging_destination_file" defaultChecked="true" >Sendet Protokollmeldungen an die Protokolldatei.</checkBox>
+        <checkBox refId="Present_CheckBox_Logging_destination_port" >Sendet Protokollmeldungen an den Debug-Port.</checkBox>
+      </presentation>
+      <presentation id="Present_Logging_flags" >
+        <dropdownList refId="Present_DropList_Logging_flags" >Protokollebene auswählen:</dropdownList>
+      </presentation>
+      <presentation id="Present_Log_History_Depth" >
+        <decimalTextBox refId="Present_Numeric_Log_History_Depth" defaultValue="1" >Anzahl der gespeicherten Protokolle:</decimalTextBox>
+      </presentation>
+      <presentation id="Present_Log_File_Size" >
+        <decimalTextBox refId="Present_Numeric_Log_File_Size" defaultValue="100" >Größe der gespeicherten Protokolle:</decimalTextBox>
+      </presentation>
+      <presentation id="Present_Upload_log_to_network" >
+        <textBox refId="Present_TextBox_Upload_log_to_network" >
+          <label >Pfad der Netzwerkfreigabe:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Present_Manage_user_persona" >
+        <decimalTextBox refId="Present_Numeric_Manage_user_persona" defaultValue="10" >Profiluploadintervall (in Minuten):</decimalTextBox>
+      </presentation>
+      <presentation id="Present_Persona_repository" >
+        <textBox refId="Present_TextBox_Persona_repository" >
+          <label >Freigabepfad:</label>
+        </textBox>
+        <checkBox refId="Present_CheckBox_Persona_repository" >Setzt den Active Directory-Benutzerprofilpfad außer Kraft, wenn er konfiguriert ist.</checkBox>
+      </presentation>
+      <presentation id="Present_Remove_local_persona" >
+        <text >Entfernt eine lokal gespeicherte Persona bei der Benutzerabmeldung.</text>
+        <checkBox refId="Present_CheckBox_Remove_local_persona" defaultChecked="true" >Löscht „Lokale Einstellungen“ oder „Anwendungsdaten\Lokal“, wenn die Persona entfernt wird.</checkBox>
+      </presentation>
+      <presentation id="Present_Roam_local_settings" >
+        <text >Speichert „Lokale Einstellungen“ oder „Anwendungsdaten\Lokal“ mit der Benutzer-Persona.</text>
+      </presentation>
+      <presentation id="Present_Files_and_folders_preload" >
+        <text >Legt die Dateien fest, die bei der Benutzeranmeldung vom Persona-Repository</text>
+        <text >heruntergeladen werden.</text>
+        <listBox refId="Present_ListBox_Files_and_folders_preload" >Dateien und Ordner für das Vorabladen:</listBox>
+        <text >Alle Pfade müssen relativ zum Stamm des lokalen Profils angegeben werden.</text>
+        <text >Beispiel: Desktop\Neuer Ordner.</text>
+        <text >Eigene Dokumente\Neuer Ordner</text>
+      </presentation>
+      <presentation id="Present_Files_and_folders_preload_exceptions" >
+        <text >Legt Ordner fest, die von der Liste der Ordner in der Richtlinie</text>
+        <text >„Dateien und Ordner für das Vorabladen“ ausgenommen werden sollen.</text>
+        <listBox refId="Present_ListBox_Files_and_folders_preload_exceptions" >Ausgenommene Dateien und Ordner:</listBox>
+        <text >Alle Pfade müssen relativ zum Stamm des lokalen Profils angegeben werden.</text>
+        <text >Beispiel: Desktop\Neuer Ordner.</text>
+        <text >Eigene Dokumente\Neuer Ordner</text>
+      </presentation>
+      <presentation id="Present_Windows_roaming" >
+        <text >Legt Dateien fest, die mit der traditionellen Funktionalität servergespeicherter Windows-Profile</text>
+        <text >verwaltet werden.</text>
+        <listBox refId="Present_ListBox_Windows_roaming" >Dateien und Ordner:</listBox>
+        <text >Alle Pfade müssen relativ zum Stamm des lokalen Profils angegeben werden.</text>
+        <text >Beispiel: Desktop\Neuer Ordner.</text>
+        <text >Eigene Dokumente\Neuer Ordner</text>
+      </presentation>
+      <presentation id="Present_Windows_roaming_exceptions" >
+        <text >Legt Ordner fest, die von der Liste der Ordner in der Richtlinie</text>
+        <text >„Synchronisierung von servergespeicherten Windows-Profilen“ ausgenommen werden sollen.</text>
+        <listBox refId="Present_ListBox_Windows_roaming_exceptions" >Ausgenommene Dateien und Ordner:</listBox>
+        <text >Alle Pfade müssen relativ zum Stamm des lokalen Profils angegeben werden.</text>
+        <text >Beispiel: Desktop\Neuer Ordner.</text>
+        <text >Eigene Dokumente\Neuer Ordner</text>
+      </presentation>
+      <presentation id="Present_Files_and_folders_excluded_from_roaming" >
+        <text >Legt Ordner fest, die nicht mit der Benutzer-Persona gespeichert werden</text>
+        <text >(diese Ordner sind nur in der lokal gespeicherten Persona des Benutzers vorhanden).</text>
+        <listBox refId="Present_ListBox_Files_and_folders_excluded_from_roaming" >Dateien und Ordner:</listBox>
+        <text >Alle Pfade müssen relativ zum Stamm des lokalen Profils angegeben werden.</text>
+        <text >Beispiel: Desktop\Neuer Ordner.</text>
+        <text >Eigene Dokumente\Neuer Ordner</text>
+      </presentation>
+      <presentation id="Present_Files_and_folders_excluded_from_roaming_exceptions" >
+        <text >Legt Ordner fest, die von der Liste der Ordner in der Richtlinie</text>
+        <text >„Von der Serverspeicherung ausgenommene Dateien und Ordner“ ausgenommen werden sollen.</text>
+        <listBox refId="Present_ListBox_Files_and_folders_excluded_from_roaming_exceptions" >Ausgenommene Dateien und Ordner:</listBox>
+        <text >Alle Pfade müssen relativ zum Stamm des lokalen Profils angegeben werden.</text>
+        <text >Beispiel: Desktop\Neuer Ordner.</text>
+        <text >Eigene Dokumente\Neuer Ordner</text>
+      </presentation>
+      <presentation id="Present_Enable_background_download" >
+        <text >Aktiviert Ladevorgänge im Hintergrund für Laptops.</text>
+      </presentation>
+      <presentation id="Present_Folders_to_background" >
+        <text >Legt Ordner fest, die nach der Anmeldung des Benutzers im Hintergrund</text>
+        <text >heruntergeladen werden.</text>
+        <listBox refId="Present_ListBox_Folders_to_background" >Ordner zum Herunterladen:</listBox>
+        <text >Alle Pfade müssen relativ zum Stamm des lokalen Profils angegeben werden.</text>
+        <text >Beispiel: Anwendungsdaten\Thinstall</text>
+        <text >Desktop\Neuer Ordner</text>
+      </presentation>
+      <presentation id="Present_Folders_to_background_exceptions" >
+        <text >Legt Ordner fest, die von der Liste der Ordner in der Richtlinie</text>
+        <text >„Im Hintergrund herunterzuladende Ordner“ ausgenommen werden sollen.</text>
+        <listBox refId="Present_ListBox_Folders_to_background_exceptions" >Ordnerausnahmen:</listBox>
+        <text >Alle Pfade müssen relativ zum Stamm des lokalen Profils angegeben werden.</text>
+        <text >Beispiel: Anwendungsdaten\Thinstall</text>
+        <text >Desktop\Neuer Ordner</text>
+      </presentation>
+      <presentation id="Present_Excluded_Processes" >
+        <text >Legt die Namen der Prozesse fest, die von Persona ausgeschlossen werden sollen.</text>
+        <text >Beispiel: process.exe</text>
+        <listBox refId="Present_ListBox_Element_Excluded_Processes" >Ausgeschlossene Prozesse:</listBox>
+      </presentation>
+      <presentation id="Present_Cleanup_CLFS_Files" >
+        <text >Löscht CLFS-Dateien aus dem servergespeicherten Profil bei der Anmeldung.</text>
+      </presentation>
+
+      <presentation id="Enforce_AD_Wallpaper" >
+        <text >Erzwingt die Wallpaper-Einstellung aus GPO.</text>
+      </presentation>
+      <presentation id="Present_DSVA" >
+        <text >Kompatibilität mit Deep Security Virtual Appliance (DSVA)</text>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

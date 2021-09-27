@@ -1,0 +1,478 @@
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName>
+  </displayName>
+  <description>
+  </description>
+  <resources>
+    <stringTable>
+      <string id="Product_CatName">Serieller COM-Port</string>
+      <string id="LocalSettingsPriority_PolicyName">Vorrang lokaler Einstellungen</string>
+      <string id="LocalSettingsPriority_PolicyExplain">Wenn Sie diese Richtlinieneinstellung aktivieren, haben die lokalen Programmeinstellungen Vorrang vor Richtlinieneinstellungen.
+
+Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, haben die Richtlinieneinstellungen Vorrang vor lokalen Programmeinstellungen.
+
+Im Geltungsbereich jedes Einstellungstyps haben die für den Computer festgelegten Einstellungen immer Vorrang vor den für den Benutzer festgelegten Einstellungen.
+Wenn diese Richtlinieneinstellung für den Computer festgelegt ist, hat sie Vorrang vor der für den Benutzer festgelegten Einstellung.</string>
+      <string id="DisableFunctionality_PolicyName">Funktionalität deaktivieren</string>
+      <string id="DisableFunctionality_PolicyExplain">Wenn Sie diese Richtlinieneinstellung aktivieren, wird keine Verbindung mit dem Client hergestellt, die Ports werden nicht umgeleitet und das Symbol für das Taskleisten-Menü wird nicht angezeigt.
+
+Wenn Sie diese Richtlinieneinstellung deaktivieren, kann der serielle COM-Port wie gewohnt verwendet werden.
+
+Wenn Sie diese Richtlinieneinstellung nicht konfigurieren, wird die Deaktivierung über die lokalen Programmeinstellungen festgelegt.</string>
+      <string id="RedirectAll_PolicyName">Alle Ports automatisch verbinden</string>
+      <string id="RedirectAll_PolicyExplain">Wenn diese Richtlinieneinstellung aktiviert ist, werden alle COM-Clientports automatisch verbunden (selbst dann, wenn kein einzelnes GPO konfiguriert ist). Wenn für einige der Ports individuelle GPO-Einstellungen konfiguriert sind, werden die individuellen GPO-Einstellungen des Ports verwendet.
+
+Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, wird die Funktionalität für das automatische Verbinden durch individuelle GPO-Einstellungen des Ports oder durch lokale Programmeinstellungen bestimmt.</string>
+      <string id="PortIsolationMode_PolicyName">COM-Port-Isolationsmodus</string>
+      <string id="PortIsolationMode_PolicyExplain">Wenn der Modus „Vollständige Isolation“·ausgewählt wird, sind virtuelle serielle Ports nur innerhalb von Benutzersitzungen sichtbar und zugänglich. In diesem Modus können COM-Ports in unterschiedlichen Benutzersitzungen dieselben Namen haben. Wichtig: Systemdienste (z. B. spoolsrv.exe) können in einem solchen Fall nicht auf isolierte serielle Ports zugreifen.
+
+Wenn der Modus „Isolation deaktiviert“·ausgewählt wird, sind virtuelle serielle Ports global sichtbar. Von jeder beliebigen Sitzung aus kann auf jeden beliebigen Port zugegriffen werden. Einschränkung: Portnamen müssen für jeden Benutzer eindeutig sein (sodass die Ports in unterschiedlichen Benutzersitzungen nicht dieselben Namen haben können). Wichtig: Systemdienste (z. B. spoolsrv.exe) können auf alle seriellen Ports zugreifen.
+
+Wenn diese Richtlinieneinstellung nicht konfiguriert ist, arbeitet die serielle Umleitung im Modus „Vollständige Isolation“.</string>
+      <string id="PortIsolationMode_Full_Isolation_combo_txt">Vollständige Isolation</string>
+      <string id="PortIsolationMode_Isolation_Disabled_combo_txt">Isolation deaktiviert</string>
+      <string id="LockConfig_PolicyName">Konfiguration sperren</string>
+      <string id="LockConfig_PolicyExplain">Wenn Sie diese Richtlinieneinstellung aktivieren, wird die Benutzeroberfläche mit den Programmeinstellungen gesperrt. Ein Benutzer hat dann nicht mehr die Möglichkeit, die Einstellungen im Taskleisten-Menü zu ändern.
+
+Wenn Sie die Einstellung deaktivieren, ist für Benutzer die Benutzeroberfläche mit den Programmeinstellungen zugänglich.
+
+Wenn Sie diese Richtlinieneinstellung nicht konfigurieren, wird die Sperrung der Konfiguration über die lokalen Programmeinstellungen festgelegt.
+
+Wenn Sie diese Richtlinieneinstellung für den Computer konfigurieren, hat sie Vorrang vor der für den Benutzer konfigurierten Einstellung.</string>
+      <string id="BandwidthLimit_PolicyName">Bandbreitenlimit</string>
+      <string id="BandwidthLimit_PolicyExplain">Wenn Sie diese Richtlinieneinstellung aktivieren, wird die Geschwindigkeit der Datenübertragung zwischen dem Agenten und allen Clients durch die angegebenen Kilobyte pro Sekunde beschränkt. Mit dem Wert „0“ wird die Geschwindigkeit nicht beschränkt.
+
+Wenn Sie diese Richtlinieneinstellung deaktivieren, wird die Geschwindigkeitsbeschränkung deaktiviert.
+
+Wenn Sie die Einstellung nicht konfigurieren, wird die Geschwindigkeitsbeschränkung über die lokalen Programmeinstellungen festgelegt.</string>
+      <string id="BandwidthLimit_PartName">Bandbreitenlimit (in Kilobyte pro Sekunde):</string>
+      <string id="PortSettings_CatName">PortSettings</string>
+      <string id="PortSettings1_PolicyName">PortSettings1</string>
+      <string id="PortSettings2_PolicyName">PortSettings2</string>
+      <string id="PortSettings3_PolicyName">PortSettings3</string>
+      <string id="PortSettings4_PolicyName">PortSettings4</string>
+      <string id="PortSettings5_PolicyName">PortSettings5</string>
+      <string id="PortSettings_PolicyExplain">Diese Richtlinieneinstellung wird für die Konfiguration bestimmter Parameter zur Umleitung von Ports verwendet:
+
+„Quellportnummer“ – Nummer des von der Clientseite umgeleiteten COM-Ports („2“ bedeutet z. B. „COM2“).
+
+„Quellport-Gerät:“ – Name des von der Clientseite umgeleiteten Geräts des seriellen Ports (z. B. „COM5“ für Windows oder „/dev/ttySerial0“ für Linux. Dieser Parameter hat eine höhere Priorität als die Quellportnummer.).
+
+Nummer des virtuellen Zielports – Nummer des virtuellen COM-Ports, der auf dem Agenten erstellt wird und dem COM-Port auf dem Client entspricht.
+
+Automatische Verbindung – Wenn dieses Kennzeichen festgelegt ist, wird der Port automatisch zum Agenten umgeleitet, wenn er an den Client angeschlossen ist.
+
+DSR ignorieren – Wenn dieses Kennzeichen festgelegt ist, wird das DSR-Signal ignoriert.
+
+Vor dem Schließen des Ports anhalten – Einstellung zur Fehlerbehebung. Wartezeit (in Millisekunden), bis der virtuelle COM-Port durch den Benutzer geschlossen wird. Für einige USB-COM-Adapter erforderlich.
+
+„Wartezeit vor dem Senden von Daten verwenden“: Wenn dieses Kennzechen festgelegt ist, wird nach dem Öffnen des Ports eine Wartezeit vor dem Senden von Daten verwendet. Siehe Wert „Wartezeit vor dem Senden von Daten“
+
+„Wartezeit vor dem Senden von Daten“: Einstellung zur Fehlerbehebung. Wartezeit (in ms), bis der virtuelle COM-Port Daten an die physische Seite überträgt. Für einige serielle Geräte (Olivetti-Kartenlesegerät) erforderlich.
+
+Serial2USBModeChangeEnabled – Einstellung zur Fehlerbehebung. Behebt spezielle Probleme des GlobalSat BU353-GPS-Adapters (und einiger weiterer USB-COM-Adapter von Prolific).
+
+Fehler in Wartemaske deaktivieren – Einstellung zur Fehlerbehebung. Deaktiviert Fehlerwerte in einer Maske serieller COM-Ports. Siehe http://msdn.microsoft.com/en-us/library/windows/desktop/aa363479(v=vs.85).aspx. Für bestimmte Software erforderlich.
+
+HandleBtDisappear – Einstellung zur Fehlerbehebung. Unterstützt das spezifische Verhalten von Bluetooth-COM-Ports.
+
+UsbToComTroubleShooting – Einstellung zur Fehlerbehebung. Behebt bestimmte Probleme von USB-COM-Adaptern.
+
+
+„Netzwerk-Latenzkompensierung verwenden“ – Einstellung zur Fehlerbehebung. Verwenden Sie die Kompensierungsfunktion, um den Einfluss von Netzwerkverzögerungen zu vermeiden.
+
+„Kompensierungsebene“ – Einstellung zur Fehlerbehebung. Wählen Sie unter Verwendung von SpinEdit die Netzwerk-Latenzkompensierungsebene aus. Ermitteln Sie die minimale Ebene, auf der Ihre Kommunikationsanwendung mit einem seriellen Remote-Gerät stabil funktioniert.
+
+„Feste Baudrate verwenden“ – Wenn dieses Flag festgelegt ist, wird der angegebene Wert in „Bits pro Sekunde“ anstelle der festgelegten Baudrate der seriellen Kommunikationsanwendung verwendet.
+
+„Bits pro Sekunde“ – Fester Baudratenwert in Bits pro Sekunde (angewendet, wenn „Feste Baudrate verwenden“ festgelegt ist). 
+
+„Feste Zeilensteuerung verwenden“ – Wenn dieses Flag festgelegt ist, werden die angegebenen Werte in „Daten-Bits“, „Parität“ und „Stopp-Bits“ anstelle der von der seriellen Kommunikationsanwendung festgelegten Werte verwendet.
+
+„Daten-Bits“ – Fester Datenbits-Wert (angewendet, wenn „Feste Zeilensteuerung verwenden“ festgelegt ist) [Werte von 5 bis 8].
+
+„Parität“ – Fester Paritätswert (angewendet, wenn „Feste Zeilensteuerung verwenden“ festgelegt ist).
+
+„Stopp-Bits“ – Fester Stopp-Bits-Wert (angewendet, wenn „Feste Zeilensteuerung verwenden“ festgelegt ist).
+
+„Feste Flow-Steuerung verwenden“ – Wenn dieses Flag festgelegt ist, wird der angegebene Wert in „Flow-Steuerung“ anstelle des festgelegten Werts der seriellen Kommunikationsanwendung verwendet.
+
+„Flow-Steuerung“ – Fester Stopp-Bits-Wert (angewendet, wenn „Feste Flow-Steuerung verwenden“ festgelegt ist).
+
+
+Wenn Sie diese Richtlinieneinstellung aktivieren, werden ihre Parameter zur Portumleitung verwendet.
+
+Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werden für die Portumleitung die in den lokalen Programmeinstellungen angegebenen Parameter verwendet.
+
+Wenn Sie diese Richtlinieneinstellung für den Computer konfigurieren, hat sie Vorrang vor der für den Benutzer konfigurierten Einstellung.</string>
+      <string id="SrcPort_PartName">Quellportnummer:</string>
+      <string id="SrcPort_PartName2">Quellport-Gerät:</string>
+      <string id="DstVirtPort_PartName">Nummer des virtuellen Zielports:</string>
+      <string id="Autoconnect_PartName">Automatische Verbindungsherstellung</string>
+      <string id="Troubleshooting_PartName">Fehlerbehebung:</string>
+      <string id="IgnoreDsr_PartName">DSR ignorieren</string>
+      <string id="PauseBeforeClosePort_PartName">Vor dem Schließen des Ports anhalten (in Millisekunden):</string>
+      <string id="UsePauseBeforeSendData_PartName">Wartezeit vor dem Senden von Daten verwenden:</string>
+      <string id="PauseBeforeSendData_PartName">Wartezeit vor dem Senden von Daten (in Millisekunden):</string>
+      <string id="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</string>
+      <string id="DisableErrorsInWaitMask_PartName">Fehler in Wartemaske deaktivieren</string>
+      <string id="HandleBtDisappear_PartName">HandleBtDisappear</string>
+      <string id="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</string>
+      <string id="UseFixedBaudRate_PartName">Feste Baudrate verwenden</string>
+      <string id="FixedBaudRate_PartName">Fester Baudratenwert in Bits pro Sekunde (angewendet, wenn „Feste Baudrate verwenden“ festgelegt ist).</string>
+      <string id="UseFixedLineControl_PartName">Feste Zeilensteuerung verwenden</string>
+      <string id="FixedDataBits_PartName">Fester Datenbits-Wert (angewendet, wenn „Feste Zeilensteuerung verwenden“ festgelegt ist) [Werte von 5 bis 8].</string>
+      <string id="Parity_No_combo_txt">Nein</string>
+      <string id="Parity_Odd_combo_txt">Ungerade</string>
+      <string id="Parity_Even_combo_txt">Gerade</string>
+      <string id="Parity_Mark_combo_txt">Markierung</string>
+      <string id="Parity_Space_combo_txt">Leerzeichen</string>
+      <string id="StopBits_1bit_combo_txt">1 Bit</string>
+      <string id="StopBits_15bit_combo_txt">1,5 Bit</string>
+      <string id="StopBits_2bits_combo_txt">2 Bit</string>
+      <string id="UseFixedFlowControl_PartName">Feste Flow-Steuerung verwenden</string>
+      <string id="Flow_Hardware_combo_txt">Hardware</string>
+      <string id="Flow_XonXoff_combo_txt">Xon/Xoff</string>
+      <string id="Flow_None_combo_txt">Keine</string>
+      <string id="ADMXMigrator_UnresolvedString">ADMX-Migrator hat eine Zeichenfolge ermittelt, die in der Quell-ADM-Zeichenfolgentabelle nicht vorhanden ist.</string>
+      <string id="ADMXMigrator_NoSupportedOn">ADMX-Migrator hat eine Richtlinie ohne den Wert supportedOn ermittelt.</string>
+      <string id="SUPPORTED_WindowsXP">Mindestens Microsoft Windows XP Professional oder die Windows Server 2003-Produktfamilie</string>
+      <string id="UseMultiplicator_PartName">Netzwerk-Latenzkompensierung verwenden</string>
+      <string id="MultiplicatorValue_PartName">Wert der Kompensierungsebene (angewendet, wenn „Netzwerk-Latenzkompensierung verwenden“ festgelegt ist) [Werte von 1 bis 10].</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="LocalSettingsPriority_PolicyName" />
+      <presentation id="DisableFunctionality_PolicyName" />
+      <presentation id="RedirectAll_PolicyName" />
+      <presentation id="PortIsolationMode_PolicyName">
+        <dropdownList refId="PortIsolationMode_Enum" noSort="true">COM-Port-Isolationsmodus:</dropdownList>
+      </presentation>
+      <presentation id="LockConfig_PolicyName" />
+      <presentation id="BandwidthLimit_PolicyName">
+        <decimalTextBox refId="BandwidthLimit_PartName" defaultValue="0" spinStep="1024">Bandbreitenlimit (in Kilobyte pro Sekunde):</decimalTextBox>
+      </presentation>
+      <presentation id="PortSettings1_PolicyName">
+        <decimalTextBox refId="SrcPort_PartName">Quellportnummer:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>Quellport-Gerät:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">Nummer des virtuellen Zielports:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">Automatische Verbindungsherstellung</checkBox>
+        <text>
+        </text>
+        <text>Fehlerbehebung:</text>
+        <checkBox refId="IgnoreDsr_PartName">DSR ignorieren</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">Vor dem Schließen des Ports anhalten (in Millisekunden):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">Wartezeit vor dem Senden von Daten verwenden:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">Wartezeit vor dem Senden von Daten (in Millisekunden):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">Fehler in Wartemaske deaktivieren</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">Netzwerk-Latenzkompensierung verwenden</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">Kompensierungsebene:</decimalTextBox>
+        <text>
+        </text>
+        <text>Feste Einstellungen:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">Feste Baudrate verwenden</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">Bits pro Sekunde:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">Feste Zeilensteuerung verwenden</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">Daten-Bits:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">Parität:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">Stopp-Bits:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">Feste Flow-Steuerung verwenden</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">Flow-Steuerung:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings2_PolicyName">
+        <decimalTextBox refId="SrcPort_PartName">Quellportnummer:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>Quellport-Gerät:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">Nummer des virtuellen Zielports:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">Automatische Verbindungsherstellung</checkBox>
+        <text>
+        </text>
+        <text>Fehlerbehebung:</text>
+        <checkBox refId="IgnoreDsr_PartName">DSR ignorieren</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">Vor dem Schließen des Ports anhalten (in Millisekunden):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">Wartezeit vor dem Senden von Daten verwenden:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">Wartezeit vor dem Senden von Daten (in Millisekunden):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">Fehler in Wartemaske deaktivieren</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">Netzwerk-Latenzkompensierung verwenden</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">Kompensierungsebene:</decimalTextBox>
+        <text>
+        </text>
+        <text>Feste Einstellungen:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">Feste Baudrate verwenden</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">Bits pro Sekunde:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">Feste Zeilensteuerung verwenden</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">Daten-Bits:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">Parität:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">Stopp-Bits:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">Feste Flow-Steuerung verwenden</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">Flow-Steuerung:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings3_PolicyName">
+        <decimalTextBox refId="SrcPort_PartName">Quellportnummer:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>Quellport-Gerät:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">Nummer des virtuellen Zielports:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">Automatische Verbindungsherstellung</checkBox>
+        <text>
+        </text>
+        <text>Fehlerbehebung:</text>
+        <checkBox refId="IgnoreDsr_PartName">DSR ignorieren</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">Vor dem Schließen des Ports anhalten (in Millisekunden):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">Wartezeit vor dem Senden von Daten verwenden:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">Wartezeit vor dem Senden von Daten (in Millisekunden):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">Fehler in Wartemaske deaktivieren</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">Netzwerk-Latenzkompensierung verwenden</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">Kompensierungsebene:</decimalTextBox>
+        <text>
+        </text>
+        <text>Feste Einstellungen:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">Feste Baudrate verwenden</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">Bits pro Sekunde:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">Feste Zeilensteuerung verwenden</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">Daten-Bits:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">Parität:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">Stopp-Bits:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">Feste Flow-Steuerung verwenden</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">Flow-Steuerung:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings4_PolicyName">
+        <decimalTextBox refId="SrcPort_PartName">Quellportnummer:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>Quellport-Gerät:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">Nummer des virtuellen Zielports:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">Automatische Verbindungsherstellung</checkBox>
+        <text>
+        </text>
+        <text>Fehlerbehebung:</text>
+        <checkBox refId="IgnoreDsr_PartName">DSR ignorieren</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">Vor dem Schließen des Ports anhalten (in Millisekunden):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">Wartezeit vor dem Senden von Daten verwenden:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">Wartezeit vor dem Senden von Daten (in Millisekunden):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">Fehler in Wartemaske deaktivieren</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">Netzwerk-Latenzkompensierung verwenden</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">Kompensierungsebene:</decimalTextBox>
+        <text>
+        </text>
+        <text>Feste Einstellungen:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">Feste Baudrate verwenden</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">Bits pro Sekunde:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">Feste Zeilensteuerung verwenden</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">Daten-Bits:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">Parität:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">Stopp-Bits:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">Feste Flow-Steuerung verwenden</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">Flow-Steuerung:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings5_PolicyName">
+        <decimalTextBox refId="SrcPort_PartName">Quellportnummer:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>Quellport-Gerät:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">Nummer des virtuellen Zielports:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">Automatische Verbindungsherstellung</checkBox>
+        <text>
+        </text>
+        <text>Fehlerbehebung:</text>
+        <checkBox refId="IgnoreDsr_PartName">DSR ignorieren</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">Vor dem Schließen des Ports anhalten (in Millisekunden):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">Wartezeit vor dem Senden von Daten verwenden:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">Wartezeit vor dem Senden von Daten (in Millisekunden):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">Fehler in Wartemaske deaktivieren</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">Netzwerk-Latenzkompensierung verwenden</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">Kompensierungsebene:</decimalTextBox>
+        <text>
+        </text>
+        <text>Feste Einstellungen:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">Feste Baudrate verwenden</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">Bits pro Sekunde:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">Feste Zeilensteuerung verwenden</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">Daten-Bits:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">Parität:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">Stopp-Bits:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">Feste Flow-Steuerung verwenden</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">Flow-Steuerung:</dropdownList>
+      </presentation>
+      <presentation id="LocalSettingsPriority_PolicyName_1" />
+      <presentation id="LockConfig_PolicyName_1" />
+      <presentation id="PortSettings1_PolicyName_1">
+        <decimalTextBox refId="SrcPort_PartName">Quellportnummer:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>Quellport-Gerät:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">Nummer des virtuellen Zielports:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">Automatische Verbindungsherstellung</checkBox>
+        <text>
+        </text>
+        <text>Fehlerbehebung:</text>
+        <checkBox refId="IgnoreDsr_PartName">DSR ignorieren</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">Vor dem Schließen des Ports anhalten (in Millisekunden):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">Wartezeit vor dem Senden von Daten verwenden:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">Wartezeit vor dem Senden von Daten (in Millisekunden):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">Fehler in Wartemaske deaktivieren</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">Netzwerk-Latenzkompensierung verwenden</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">Kompensierungsebene:</decimalTextBox>
+        <text>
+        </text>
+        <text>Feste Einstellungen:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">Feste Baudrate verwenden</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">Bits pro Sekunde:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">Feste Zeilensteuerung verwenden</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">Daten-Bits:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">Parität:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">Stopp-Bits:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">Feste Flow-Steuerung verwenden</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">Flow-Steuerung:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings2_PolicyName_1">
+        <decimalTextBox refId="SrcPort_PartName">Quellportnummer:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>Quellport-Gerät:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">Nummer des virtuellen Zielports:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">Automatische Verbindungsherstellung</checkBox>
+        <text>
+        </text>
+        <text>Fehlerbehebung:</text>
+        <checkBox refId="IgnoreDsr_PartName">DSR ignorieren</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">Vor dem Schließen des Ports anhalten (in Millisekunden):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">Wartezeit vor dem Senden von Daten verwenden:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">Wartezeit vor dem Senden von Daten (in Millisekunden):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">Fehler in Wartemaske deaktivieren</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">Netzwerk-Latenzkompensierung verwenden</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">Kompensierungsebene:</decimalTextBox>
+        <text>
+        </text>
+        <text>Feste Einstellungen:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">Feste Baudrate verwenden</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">Bits pro Sekunde:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">Feste Zeilensteuerung verwenden</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">Daten-Bits:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">Parität:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">Stopp-Bits:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">Feste Flow-Steuerung verwenden</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">Flow-Steuerung:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings3_PolicyName_1">
+        <decimalTextBox refId="SrcPort_PartName">Quellportnummer:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>Quellport-Gerät:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">Nummer des virtuellen Zielports:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">Automatische Verbindungsherstellung</checkBox>
+        <text>
+        </text>
+        <text>Fehlerbehebung:</text>
+        <checkBox refId="IgnoreDsr_PartName">DSR ignorieren</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">Vor dem Schließen des Ports anhalten (in Millisekunden):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">Wartezeit vor dem Senden von Daten verwenden:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">Wartezeit vor dem Senden von Daten (in Millisekunden):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">Fehler in Wartemaske deaktivieren</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">Netzwerk-Latenzkompensierung verwenden</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">Kompensierungsebene:</decimalTextBox>
+        <text>
+        </text>
+        <text>Feste Einstellungen:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">Feste Baudrate verwenden</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">Bits pro Sekunde:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">Feste Zeilensteuerung verwenden</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">Daten-Bits:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">Parität:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">Stopp-Bits:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">Feste Flow-Steuerung verwenden</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">Flow-Steuerung:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings4_PolicyName_1">
+        <decimalTextBox refId="SrcPort_PartName">Quellportnummer:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>Quellport-Gerät:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">Nummer des virtuellen Zielports:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">Automatische Verbindungsherstellung</checkBox>
+        <text>
+        </text>
+        <text>Fehlerbehebung:</text>
+        <checkBox refId="IgnoreDsr_PartName">DSR ignorieren</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">Vor dem Schließen des Ports anhalten (in Millisekunden):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">Wartezeit vor dem Senden von Daten verwenden:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">Wartezeit vor dem Senden von Daten (in Millisekunden):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">Fehler in Wartemaske deaktivieren</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">Netzwerk-Latenzkompensierung verwenden</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">Kompensierungsebene:</decimalTextBox>
+        <text>
+        </text>
+        <text>Feste Einstellungen:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">Feste Baudrate verwenden</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">Bits pro Sekunde:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">Feste Zeilensteuerung verwenden</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">Daten-Bits:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">Parität:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">Stopp-Bits:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">Feste Flow-Steuerung verwenden</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">Flow-Steuerung:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings5_PolicyName_1">
+        <decimalTextBox refId="SrcPort_PartName">Quellportnummer:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>Quellport-Gerät:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">Nummer des virtuellen Zielports:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">Automatische Verbindungsherstellung</checkBox>
+        <text>
+        </text>
+        <text>Fehlerbehebung:</text>
+        <checkBox refId="IgnoreDsr_PartName">DSR ignorieren</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">Vor dem Schließen des Ports anhalten (in Millisekunden):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">Wartezeit vor dem Senden von Daten verwenden:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">Wartezeit vor dem Senden von Daten (in Millisekunden):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">Fehler in Wartemaske deaktivieren</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">Netzwerk-Latenzkompensierung verwenden</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">Kompensierungsebene:</decimalTextBox>
+        <text>
+        </text>
+        <text>Feste Einstellungen:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">Feste Baudrate verwenden</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">Bits pro Sekunde:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">Feste Zeilensteuerung verwenden</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">Daten-Bits:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">Parität:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">Stopp-Bits:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">Feste Flow-Steuerung verwenden</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">Flow-Steuerung:</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

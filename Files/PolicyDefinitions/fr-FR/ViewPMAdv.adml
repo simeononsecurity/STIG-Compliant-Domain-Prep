@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                           revision="1.0"
+                           schemaVersion="1.0"
+                           xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" >
+
+  <!-- Copyright 2005-2016 VMware, Inc.  All rights reserved. -->
+
+  <displayName >Gestion de persona</displayName>
+  <description >Stratégie avancée de gestion de persona</description>
+  <resources >
+    <stringTable ><!--Storage for String Definitions-->
+      <string id="String_Category_Troubleshooting" >Dépannage</string>
+      <string id="String_Policy_Logging_flags" >Indicateurs de journalisation</string>
+      <string id="String_Explain_Logging_flags" >Spécifie le type de messages de journalisation générés. Par défaut, les messages de journalisation sont définis au niveau des informations.</string>
+      <string id="String_Policy_Debug_flags" >Indicateurs de débogage</string>
+      <string id="String_Explain_Debug_flags" >Spécifie le type de messages de débogage générés. Les messages de débogage sont traités comme les messages de journalisation. Par défaut, les messages de débogage sont désactivés.</string>
+      <string id="String_Policy_Repository_connection" >Surveillance de la connexion au référentiel</string>
+      <string id="String_Explain_Repository_connection" >Lorsque ce paramètre est activé, View Persona Management détecte quand la connexion au référentiel de persona est perdue ou devient trop lente. Une fois une connexion rapide rétablie, toutes les modifications locales sont téléchargées et synchronisées avec le persona distant de l'utilisateur. La fréquence à laquelle la connexion réseau est testée et la latence réseau maximale peuvent être réglées pour des performances optimales. Par défaut, l'intervalle de test est de 120 secondes et la latence réseau maximale est de 40 ms.</string>
+      <string id="String_Policy_Download_Timeout" >Délai d'expiration du téléchargement du fichier référentiel</string>
+      <string id="String_Explain_Download_Timeout" >Spécifie la durée (en millisecondes) avant l'expiration du téléchargement d'un fichier du référentiel distant. Par défaut, le délai d'expiration est de 1 800 secondes.</string>
+      <string id="String_Policy_Sync_onlogon" >Synchroniser le profil à l'ouverture de session</string>
+      <string id="String_Explain_Sync_onlogon" >Lorsque ce paramètre est activé, les fichiers dans le profil local de l'utilisateur sont synchronisés avec le profil itinérant à l'ouverture de session. Par défaut, le profil de l'utilisateur est synchronisé à l'ouverture de session.</string>
+      <string id="String_Policy_File_creation_delay" >Délai de création de fichier</string>
+      <string id="String_Explain_File_creation_delay" >Indique le délai (en millisecondes) entre l'ouverture de session et la création des fichiers hors ligne dans le profil de l'utilisateur. Par défaut, le délai est de 10 000 millisecondes.</string>
+      <string id="String_Policy_Create_retry_delay" >Délai de nouvelle tentative de création</string>
+      <string id="String_Explain_Create_retry_delay" >Indique le délai (en millisecondes) entre l'échec de la création d'un fichier et la nouvelle tentative de création du fichier. Par défaut, le délai est de 500 millisecondes.</string>
+      <string id="String_Policy_Profile_reconcile_delay" >Délai de rapprochement du profil</string>
+      <string id="String_Explain_Profile_reconcile_delay" >Indique le délai (en secondes) entre l'ouverture de session et le démarrage du rapprochement du profil de l'utilisateur. Par défaut, le délai est de 10 secondes.</string>
+      <string id="String_Policy_Remove_temporary" >Supprimer les fichiers temporaires à la fermeture de session</string>
+      <string id="String_Explain_Remove_temporary" >Lorsque ce paramètre est activé, les fichiers avec l'extension .tmp sont supprimés du profil de l'utilisateur à la fermeture de session. View Persona Management utilise des fichiers .tmp pour la synchronisation de divers fichiers entre le profil local et le profil distant. Par défaut, les fichiers temporaires sont supprimés.</string>
+      <string id="String_Policy_Disable_create_retry" >Désactiver la nouvelle tentative de création de fichier</string>
+      <string id="String_Explain_Disable_create_retry" >Lorsque ce paramètre est activé, une nouvelle tentative n'est pas effectuée après l'échec de la création du fichier. Par défaut, une nouvelle tentative sera effectuée.</string>
+      <string id="String_Policy_Disable_desktop" >Désactiver l'actualisation du poste de travail</string>
+      <string id="String_Explain_Disable_desktop" >Lorsque ce paramètre est activé, les icônes de poste de travail de l'utilisateur ne sont pas actualisées après la récupération des fichiers .exe correspondants. L'activation de cet indicateur peut entraîner la non-apparition des raccourcis de Bureau si le raccourci pointe vers un fichier exécutable dans le profil, mais elle évite les actualisations de Bureau superflues. Par défaut, les icônes de poste de travail sont actualisées.</string>
+      <string id="String_Policy_Disable_user_environment" >Désactiver les erreurs d'environnement utilisateur à l'ouverture de session</string>
+      <string id="String_Explain_Disable_user_environment" >Lorsque ce paramètre est activé, les messages d'erreur d'environnement utilisateur du système sont désactivés lors de l'ouverture de session. Par défaut, les erreurs d'environnement utilisateur sont désactivées.</string>
+      <string id="String_Policy_Driver_Disable" >Indicateurs de désactivation de pilote</string>
+      <string id="String_Explain_Driver_Disable" >Les indicateurs de désactivation désactivent certaines fonctionnalités dans Persona.</string>
+    </stringTable>
+
+    <presentationTable ><!--Storage for Presentation Definitions-->
+      <presentation id="Present_Logging_flags" >
+        <checkBox refId="Present_CheckBox_Log_Error" >Journalisez les messages d'erreur.</checkBox>
+        <checkBox refId="Present_CheckBox_Log_Info" >Journalisez les messages d'information.</checkBox>
+        <checkBox refId="Present_CheckBox_Log_Debug" >Journalisez les messages de débogage.</checkBox>
+        <checkBox refId="Present_CheckBox_Log_Alt_Path" >Journalisez les messages de chemin d'accès alt.</checkBox>
+        <checkBox refId="Present_CheckBox_Log_Impersonation" >Journalisez les messages d'emprunt d'identité.</checkBox>
+        <checkBox refId="Present_CheckBox_Log_Only_Driver" >Journalisez les messages de pilote unique.</checkBox>
+        <checkBox refId="Present_CheckBox_Log_Offline" >Journalisez les messages de fichiers hors ligne.</checkBox>
+        <checkBox refId="Present_CheckBox_Log_Status_Log" >Journalisez les messages de journalisation d'état.</checkBox>
+        <checkBox refId="Present_CheckBox_Log_Fetch" >Journalisez les messages d'extraction.</checkBox>
+        <checkBox refId="Present_CheckBox_Log_Performance" >Journalisez les messages de performances.</checkBox>
+      </presentation>
+      <presentation id="Present_Debug_flags" >
+        <checkBox refId="Present_CheckBox_Debug_Error" >Déboguez les messages d'erreur.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_IRQL" >Déboguez les messages d'IRQL.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_Port" >Déboguez les messages de port.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_Process" >Déboguez les messages de processus.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_Registry" >Déboguez les messages de registre.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_Info" >Déboguez les messages d'information.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_Directory" >Déboguez les messages de répertoire.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_Stream" >Déboguez les messages de contexte de diffusion en continu.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_Create" >Déboguez les messages de création.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_Offline_File_Table" >Déboguez les messages de table de fichier hors ligne.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_User_Table" >Déboguez les messages de table d'utilisateurs.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_Alt_Path" >Déboguez les messages de chemin d'accès alt.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_Registry_Filter" >Déboguez les messages de filtre de registre.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_Oplock" >Déboguez les messages de verrou optionnel.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_Impersonation" >Déboguez les messages d'emprunt d'identité.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_Name_Provider" >Déboguez les messages de fournisseur de nom.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_Lock_Control" >Déboguez les messages de contrôle de verrouillage.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_Set_Info" >Déboguez les messages d'informations définies.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_Offline" >Déboguez les messages de fichiers hors ligne.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_Status_Log" >Déboguez les messages de journalisation d'état.</checkBox>
+      </presentation>
+      <presentation id="Present_Repository_connection" >
+        <text >Surveillez la connexion au référentiel de persona.</text>
+        <decimalTextBox refId="Present_Numeric_Repository_connection_Interval" defaultValue="120" >Intervalle de test de connexion (s) :</decimalTextBox>
+        <decimalTextBox refId="Present_Numeric_Repository_connection_Max_Latency" defaultValue="40" >Latence réseau maximale pour le téléchargement des modifications (ms) :</decimalTextBox>
+      </presentation>
+      <presentation id="Present_Download_Timeout" >
+        <decimalTextBox refId="Present_Numeric_Download_Timeout" defaultValue="1800" >Délai d'expiration du téléchargement des fichiers utilisateur distants (ms) :</decimalTextBox>
+      </presentation>
+      <presentation id="Present_Sync_onlogon" >
+        <text >Synchronisez les fichiers locaux avec le profil distant à l'ouverture de session.</text>
+      </presentation>
+      <presentation id="Present_File_creation_delay" >
+        <decimalTextBox refId="Present_Numeric_File_creation_delay" defaultValue="10000" >Délai entre l'ouverture de session et la création des fichiers utilisateur (ms) :</decimalTextBox>
+      </presentation>
+      <presentation id="Present_Create_retry_delay" >
+        <decimalTextBox refId="Present_Numeric_Create_retry_delay" defaultValue="500" >Délai avant la nouvelle tentative de création des fichiers utilisateur (ms) :</decimalTextBox>
+      </presentation>
+      <presentation id="Present_Profile_reconcile_delay" >
+        <decimalTextBox refId="Present_Numeric_Profile_reconcile_delay" defaultValue="10" >Délai entre l'ouverture de session et le démarrage du rapprochement (s) :</decimalTextBox>
+      </presentation>
+      <presentation id="Present_Remove_temporary" >
+        <text >Supprimez les fichiers .tmp du profil distant lorsque les utilisateurs ferment leur session.</text>
+      </presentation>
+      <presentation id="Present_Disable_create_retry" >
+        <text >Ne réessayez pas si la création de fichier échoue.</text>
+      </presentation>
+      <presentation id="Present_Disable_desktop" >
+        <text >N'actualisez pas les icônes de poste de travail après la récupération des fichiers EXE depuis le profil.</text>
+      </presentation>
+      <presentation id="Present_Disable_user_environment" >
+        <text >Désactivez les erreurs de profil userenv à l'ouverture de session.</text>
+      </presentation>
+      <presentation id="Present_Driver_Disable" >
+        <checkBox refId="Present_CheckBox_Driver_Disable" >Configurer indépendamment les niveaux de pilote et de journal de service</checkBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

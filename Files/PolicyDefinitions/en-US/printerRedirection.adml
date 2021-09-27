@@ -31,6 +31,14 @@ This setting is not configured by default.
 If you enable this policy setting, location-based printing is unable to use.
 
 If you disable or do not configure this policy setting, location-based printing is able to use.</string>
+	  <string id="lp_setting">Do not redirect client printer(s)</string>
+      <string id="lp_setting_detail">This policy setting allows you to manage whether redirect client printer(s) or not.
+
+If you enable this policy setting, all client printer(s) will not be redirected.
+If you disable or do not configure this policy setting, all client printer(s) will be redirected.
+
+This setting is not configured by default.
+</string>
       <string id="printer_creation_setting">Printer Driver Selection</string>
       <string id="printer_creation_setting_detail">Printer Driver Selection.
 

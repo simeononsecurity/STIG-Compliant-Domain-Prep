@@ -1,0 +1,829 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="CertCheckMode_NoSecurity">Aucune sécurité</string>
+      <string id="CertCheckMode_WarnButAllow">Avertir mais autoriser</string>
+      <string id="CertCheckMode_FullSecurity">Sécurité totale</string>
+      <string id="EnableTicketSSLAuth_Enable">Activer</string>
+      <string id="EnableTicketSSLAuth_Disable">Désactiver</string>
+      <string id="EnableTicketSSLAuth_Enforce">Appliquer</string>
+      <string id="DesktopLayout_FullScreen">Plein écran</string>
+      <string id="DesktopLayout_WindowLarge">Fenêtre - Grande</string>
+      <string id="DesktopLayout_WindowSmall">Fenêtre - Petite</string>
+      <string id="DesktopLayout_MultiMonitor">Multimoniteur</string>
+      <string id="AppSessionReconnectBehavior_Ask">Demander la reconnexion pour ouvrir des applications</string>
+      <string id="AppSessionReconnectBehavior_Always">Se reconnecter automatiquement pour ouvrir des applications</string>
+      <string id="AppSessionReconnectBehavior_Never">Ne pas demander et ne pas se reconnecter automatiquement</string>
+      <string id="ColorDepth_8bit">8 bits</string>
+      <string id="ColorDepth_15bit">15 bits</string>
+      <string id="ColorDepth_16bit">16 bits</string>
+      <string id="ColorDepth_24bit">24 bits</string>
+      <string id="ColorDepth_32bit">32 bits</string>
+      <string id="AudioRedirectionMode_PlayInVM">Lire dans la VM (nécessaire pour la prise en charge d'USB VoIP)</string>
+      <string id="AudioRedirectionMode_RedirectToClient">Rediriger vers le client</string>
+      <string id="AudioRedirectionMode_DisableAudio">Désactiver le son</string>
+      <string id="KeyboardHookMode_ApplyKeyCombinationsLocal">Appliquer des combinaisons de touches localement</string>
+      <string id="KeyboardHookMode_SendKeyCombinationsToVM">Envoyer des combinaisons de touches à la VM</string>
+      <string id="LocalModeExitBehavior_Shutdown">Arrêter</string>
+      <string id="LocalModeExitBehavior_Suspend">Interrompre</string>
+      <string id="VMwareViewClientUSB">Configuration USB de View</string>
+      <string id="VMwareViewClientOnlySetting">Paramètres non configurables par Agent</string>
+      <string id="ExcludePath">Exclure le chemin d'accès</string>
+      <string id="ExcludePathExplain">Exclure du transfert un périphérique sur un chemin de concentrateur ou de port spécifié.</string>
+      <string id="IncludePath">Inclure le chemin d'accès</string>
+      <string id="IncludePathExplain">Inclure un périphérique sur un chemin de concentrateur ou de port spécifié pouvant être transféré.</string>
+      <string id="SplitExcludeVidPid">Exclure un périphérique Vid/Pid du fractionnement</string>
+      <string id="SplitExcludeVidPidExplain">Excluez les périphériques de composant d'un périphérique composite spécifié par ses ID de fournisseur et de produit d'être traités comme des périphériques distincts pour le filtrage.
+
+Syntaxe : &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx|*&gt;&gt;[;...]
+
+Par exemple : vid-0781_pid-554c;vid-0781_pid-9999</string>
+      <string id="SplitVidPid">Fractionner un périphérique Vid/Pid</string>
+      <string id="SplitVidPidExplain">Traitez les périphériques de composant d'un périphérique composite spécifié par son ID de fournisseur et son ID de produit comme des périphériques distincts pour le filtrage.
+
+Syntaxe : &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx|*&gt;(exintf:xx[;exintf:xx])&gt;[;...]
+
+Par exemple : vid-0781_pid-554c(exintf:01;exintf:02);vid-0781_pid-9999(exintf:02)</string>
+      <string id="ExcludeVidPid">Exclure un périphérique Vid/Pid</string>
+      <string id="ExcludeVidPidExplain">Excluez un périphérique avec des ID de fournisseur et de produit spécifiés de la transmission.
+
+Syntaxe : &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx | *&gt;&gt;[;...]
+
+Par exemple : vid-0781_pid-554c;vid-0781_pid-9999</string>
+      <string id="IncludeVidPid">Inclure un périphérique Vid/Pid</string>
+      <string id="IncludeVidPidExplain">Incluez un périphérique avec des ID de fournisseur et de produit spécifiés pouvant être transmis.
+
+Syntaxe : &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx | *&gt;&gt;[;...]
+
+Par exemple : vid-0781_pid-554c;vid-0781_pid-9999</string>
+      <string id="ExcludeFamily">Exclure une famille de périphériques</string>
+      <string id="ExcludeFamilyExplain">Excluez une famille de périphériques du transfert.
+
+Syntaxe : &lt;family-name&gt;[;...]
+
+Par exemple : bluetooth;audio-in</string>
+      <string id="IncludeFamily">Inclure une famille de périphériques</string>
+      <string id="IncludeFamilyExplain">Incluez une famille de périphériques pouvant être transférés.
+
+Syntaxe : &lt;family-name&gt;[;...]
+
+Par exemple : storage;audio-out</string>
+      <string id="ExcludeAllDevices">Exclure tous les périphériques</string>
+      <string id="ExcludeAllDevicesExplain">Bloquez tous les périphériques, sauf s'ils sont inclus via la règle Inclure un filtre.
+
+Par défaut : Autoriser tous les périphériques</string>
+      <string id="VMwareViewAgentToClientUSB">Paramètres téléchargeables uniquement par le client</string>
+      <string id="AllowHID">Autoriser d'autres périphériques d'entrée</string>
+      <string id="AllowHIDExplain">Autorisez le transfert des périphériques d'entrée autres que les périphériques HID démarrables, les claviers et les souris.
+
+Par défaut : Autoriser le transfert</string>
+      <string id="AllowHIDBootable">Autoriser les périphériques HID démarrables</string>
+      <string id="AllowHIDBootableExplain">Autorisez le transfert des périphériques d'entrée démarrables (aussi appelés périphériques HID démarrables).
+
+Par défaut : Autoriser le transfert</string>
+      <string id="AllowAudioIn">Autoriser les périphériques d'entrée audio</string>
+      <string id="AllowAudioInExplain">Autorisez le transfert des périphériques d'entrée audio.
+
+Par défaut : Autoriser le transfert</string>
+      <string id="AllowAudioOut">Autoriser les périphériques de sortie audio</string>
+      <string id="AllowAudioOutExplain">Autorisez le transfert des périphériques de sortie audio.
+
+Par défaut : Bloquer le transfert</string>
+      <string id="AllowKeyboardMouse">Autoriser les périphériques clavier et souris</string>
+      <string id="AllowKeyboardMouseExplain">Autorisez le transfert des périphériques clavier et souris.
+
+Par défaut : Bloquer le transfert</string>
+      <string id="AllowVideo">Autoriser les périphériques vidéo</string>
+      <string id="AllowVideoExplain">Autorisez le transfert des périphériques vidéo.
+
+Par défaut : Autoriser le transfert</string>
+      <string id="AllowSmartcard">Autoriser les périphériques de carte à puce</string>
+      <string id="AllowSmartcardExplain">Autorisez le transfert des périphériques de carte à puce.
+
+Par défaut : Bloquer le transfert</string>
+      <string id="AllowAutoDeviceSplitting">Autoriser le fractionnement automatique de périphérique</string>
+      <string id="AllowAutoDeviceSplittingExplain">Excluez les périphériques de composant d'un périphérique composite d'être traités automatiquement comme des périphériques distincts.</string>
+      <string id="DisableRemoteConfig">Désactiver la configuration à distance</string>
+      <string id="DisableRemoteConfigExplain">Désactivez les téléchargements de la configuration à distance.</string>
+      <string id="AllowDevDescFailsafe">Autoriser le comportement du descripteur de périphérique à sécurité intégrée</string>
+      <string id="AllowDevDescFailsafeExplain">Activez le comportement du descripteur à sécurité intégrée. Les périphériques ne sont pas bloqués si l'extraction du ou des descripteurs a échoué</string>
+      <string id="VMwareViewClient">Configuration de VMware Horizon Client</string>
+      <string id="AllowDataSharing">Autoriser le partage de données</string>
+      <string id="AllowDataSharingExplain">VMware collecte des données sur les systèmes clients afin de hiérarchiser la compatibilité matérielle et logicielle. Si votre entreprise participe au programme, VMware reçoit des données anonymes concernant votre environnement.
+Cette propriété est activée par défaut.</string>
+      <string id="AllowResolutionDpiSync">Enregistrer la résolution et le paramètre DPI sur le serveur</string>
+      <string id="AllowResolutionDpiSyncExplain">Lorsque cette option est activée, Horizon Client enregistre automatiquement la résolution du poste de travail et la mise à l'échelle DPI sur le serveur. Avec cet objet de stratégie de groupe, chaque fois que l'utilisateur disposant de paramètres personnalisés, par exemple Jane, lance le poste de travail distant, le paramètre personnalisé s'applique automatiquement. Les utilisateurs qui n'ont défini aucun paramètre personnalisé continueront à afficher les paramètres par défaut, qui doivent correspondent à la résolution et au paramètre DPI du matériel local. Si l'objet de stratégie de groupe est défini sur un autre système avec une configuration de moniteur identique, Jane voit également ses paramètres personnalisés sur ce système.
+
+Cette propriété est désactivée par défaut.</string>
+      <string id="EnableShade">Activer l'ombre</string>
+      <string id="EnableShadeExplain">Détermine si l'ombre de [barre de menus] en haut de la fenêtre d'Horizon Client est activée.
+
+Cette propriété est activée par défaut.</string>
+      <string id="InitialPinState">Épingler l'ombre</string>
+      <string id="InitialPinStateExplain">Détermine si l'épinglement de l'ombre en haut de la fenêtre Horizon Client est activé, afin d'éviter le masquage automatique de la barre de menus. Remarque : cette propriété n'a aucun effet si l'ombre est désactivée.
+
+Cette propriété est activée par défaut.</string>
+      <string id="DisableSpanChecks">Ne pas vérifier l'alignement des écrans</string>
+      <string id="DisableSpanChecksExplain">Par défaut, le poste de travail client n'étend pas plusieurs moniteurs si les écrans ne forment pas un rectangle exact lorsqu'ils sont combinés (c'est-à-dire, hauteurs identiques si placés côte à côte ou largeurs identiques si placés l'un sur l'autre).
+
+Cette propriété remplace cette règle et est désactivée par défaut.</string>
+      <string id="EnableMMR">Activer l'accélération multimédia</string>
+      <string id="EnableMMRExplain">Spécifie si la redirection multimédia (MMR) est activée sur le client. MMR est un filtre Microsoft DirectShow qui transmet les données multimédia de codecs spécifiques sur le système distant directement via un socket TCP au client. Les données sont ensuite décodées directement sur le client, où elles sont lues. Les administrateurs peuvent désactiver MMR si le client dispose de ressources insuffisantes pour gérer le décodage multimédia local.
+
+Remarque : MMR ne fonctionne pas correctement si le matériel d'affichage vidéo d'Horizon Client ne prend pas en charge la superposition. La stratégie MMR ne s'applique pas aux sessions de poste de travail hors ligne.</string>
+      <string id="AlwaysOnTop">Toujours au premier plan</string>
+      <string id="AlwaysOnTopExplain">Spécifie si la fenêtre d'Horizon Client est toujours au premier plan.
+
+Ce paramètre est désactivé par défaut.</string>
+      <string id="AutomaticallyInstallShortcuts">Installer automatiquement des raccourcis s'ils sont configurés sur Horizon Server</string>
+      <string id="AutomaticallyInstallShortcutsExplain">Cette stratégie configure si des raccourcis doivent être installés automatiquement sur Horizon Client lorsqu'ils ont été configurés sur le serveur. Lorsque l'option est activée, l'utilisateur n'est pas invité et les raccourcis sont installés automatiquement. Lorsque l'option est désactivée, les raccourcis ne sont jamais installés. Lorsque les raccourcis ne sont pas configurés, l'utilisateur est invité à les installer.</string>
+      <string id="HideClientAfterLaunchSession">Valeur par défaut de la case « Masquer le sélecteur après le lancement d'un élément »</string>
+      <string id="HideClientAfterLaunchSessionExplain">Définit si la case « Masquer le sélecteur après le lancement d'un élément » est cochée par défaut.
+
+Ce paramètre est désactivé par défaut.</string>
+      <string id="VMwareViewClientScripting">Définitions de script</string>
+      <string id="ServerURL">URL du serveur</string>
+      <string id="ServerURLExplain">Détermine l'URL utilisée par Horizon Client lors de la connexion. Par exemple : https://view1.example.com</string>
+      <string id="UserName">Nom d'utilisateur d'ouverture de session</string>
+      <string id="UserNameExplain">Détermine le nom d'utilisateur utilisé par Horizon Client lors de la connexion.</string>
+      <string id="DomainName">Nom de domaine d'ouverture de session</string>
+      <string id="DomainNameExplain">Détermine le domaine NETBIOS utilisé par Horizon Client lors de la connexion. Par exemple : EXEMPLE</string>
+      <string id="Password">Mot de passe d'ouverture de session</string>
+      <string id="PasswordExplain">Détermine le mot de passe utilisé par Horizon Client lors de la connexion.
+
+Avertissement : ce mot de passe est stocké comme texte brut par Active Directory</string>
+      <string id="DesktopName">Nom de poste de travail à sélectionner</string>
+      <string id="DesktopNameExplain">Détermine le poste de travail par défaut utilisé par Horizon Client lors de la connexion.</string>
+      <string id="DesktopLayout">Disposition du poste de travail</string>
+      <string id="DesktopLayoutExplain">Détermine l'état d'affichage de la fenêtre d'Horizon Client lorsque le poste de travail est lancé.</string>
+      <string id="FullScreen">Plein écran</string>
+      <string id="Window">Fenêtre</string>
+      <string id="MultiMonitor">Multimoniteur</string>
+      <string id="LockedGuestSize">Taille d'invité verrouillée</string>
+      <string id="LockedGuestWidth">Largeur d'invité verrouillée  </string>
+      <string id="LockedGuestHeight">Hauteur d'invité verrouillée</string>
+      <string id="LockedGuestSizeExplain">Détermine la résolution d'écran du poste de travail distant. Une fois que vous avez activé le paramètre, la fonctionnalité d'ajustement automatique du poste de travail distant est désactivée. 
+
+Taille d'écran minimale : 640 x 480 
+Taille d'écran maximale : 4 096 x 4 096
+
+Remarque : ce paramètre ne s'applique pas aux connexions RDP</string>
+      <string id="NonInteractive">Supprimer les messages d'erreur (lorsque entièrement scripté uniquement)</string>
+      <string id="NonInteractiveExplain">Détermine si les messages d'erreur sont affichés lors de la connexion.
+
+Remarque : cette propriété ne s'applique que lorsque le processus de connexion est entièrement scripté, c'est-à-dire lorsque toutes les informations de connexion requises ont été préremplies à l'avance via la stratégie.
+
+Remarque : si la connexion échoue en raison d'informations de connexion entrées incorrectes, l'utilisateur n'est pas informé et le processus wswc.exe d'Horizon Client est terminé automatiquement.</string>
+      <string id="SingleAutoConnect">Se connecter automatiquement si un seul élément de lancement est autorisé</string>
+      <string id="SingleAutoConnectExplain">Se connecter automatiquement au poste de travail ou à l'application s'il s'agit du seul élément autorisé pour l'utilisateur.</string>
+      <string id="VMwareViewClientSecurity">Paramètres de sécurité</string>
+      <string id="VMwareViewClientSecurityNTLM">Paramètres NTLM</string>
+      <string id="LogInAsCurrentUser_Display">Option d'affichage pour l'option Se connecter en tant qu'utilisateur actuel</string>
+      <string id="LogInAsCurrentUser_DisplayExplain">Détermine si la case Se connecter en tant qu'utilisateur actuel est visible dans Windows Horizon Client.
+
+Ce paramètre est activé par défaut.
+
+Si cette option est définie sur « Désactivé », l'utilisateur ne pourra pas remplacer l'option « Valeur par défaut de la case à cocher Se connecter en tant qu'utilisateur actuel ».</string>
+      <string id="LogInAsCurrentUser">Valeur par défaut de la case à cocher Se connecter en tant qu'utilisateur actuel</string>
+      <string id="LogInAsCurrentUserExplain">Définit si la case « Se connecter en tant qu'utilisateur actuel » est cochée par défaut.
+
+Ce paramètre est désactivé par défaut.</string>
+      <string id="EnableRecursiveUnlock">Déverrouiller les sessions distantes lorsque la machine cliente est déverrouillée</string>
+      <string id="EnableRecursiveUnlockExplain">Cette stratégie contrôle la fonctionnalité appelée « Déverrouillage récursif », qui déverrouille toutes les sessions distantes après que la machine cliente a été déverrouillée. Cette fonctionnalité ne s'applique que si l'utilisateur s'est connecté à une instance de View Server à l'aide de la fonctionnalité « Se connecter en tant qu'utilisateur actuel ».
+
+Ce paramètre est activé par défaut.</string>
+      <string id="BrokersTrustedForDelegation">Serveurs approuvés pour la délégation</string>
+      <string id="BrokersTrustedForDelegationExplain">Définit la liste de Serveurs de connexion View pour lesquels la délégation d'informations d'identification est autorisée. Cette option est utilisée avec « Se connecter en tant qu'utilisateur actuel ».
+
+Le format d'attribution de nom pour les serveurs est le nom de principal du service (SPN).
+
+Par défaut, tous les serveurs sont approuvés.</string>
+      <string id="AllowNTLMAuthentication">Autoriser l'authentification NTLM</string>
+      <string id="AllowFallBack_YES">Oui</string>
+      <string id="AllowFallBack_NO">Non</string>
+      <string id="AllowNTLMAuthenticationExplain">Lorsque ce paramètre est activé, l'authentification NTLM est autorisée avec l'option Se connecter en tant qu'utilisateur actuel.
+
+S'il est « Non configuré », l'authentification NTLM est autorisée pour les serveurs répertoriés dans le GPO : « Toujours utiliser NTLM pour les serveurs ».
+
+S'il est « Désactivé », l'authentification NTLM n'est utilisée pour aucun serveur.
+
+Autoriser le recours de Kerberos à NTLM :
+Lorsque cette option est définie sur « Non », NTLM n'est utilisé que pour les serveurs répertoriés dans le GPO : « Toujours utiliser NTLM pour les serveurs ».
+Lorsque cette option est définie sur « Oui », vous pouvez utiliser NTLM chaque fois que le client ne parvient pas à récupérer un ticket Kerberos pour le serveur.</string>
+      <string id="ServersAlwaysUseNTLM">Toujours utiliser NTLM pour les serveurs</string>
+      <string id="ServersAlwaysUseNTLMExplain">Lorsque ce paramètre est activé, l'option Se connecter en tant qu'utilisateur actuel utilise toujours l'authentification NTLM pour les serveurs répertoriés.
+
+Le format d'attribution de nom des serveurs est le nom de domaine complet (FQDN)</string>
+      <string id="IgnoreRevocation">Ignorer les problèmes de révocation de certificat</string>
+      <string id="IgnoreRevocationExplain">Détermine si des erreurs associées à un certificat de serveur révoqué sont ignorées.
+
+Ces erreurs se produisent lorsque le certificat envoyé par le serveur a été révoqué ou le client ne peut pas vérifier l'état de révocation du certificat.
+
+Ce paramètre est désactivé par défaut.</string>
+      <string id="CertCheckMode">Mode de vérification des certificats</string>
+      <string id="CertCheckModeExplain">Configure le comportement de vérification des certificats d'Horizon Client.
+
+Lorsque cette propriété est définie sur Aucune sécurité, la vérification des certificats n'est pas effectuée.
+
+Lorsque cette propriété est définie sur Avertir mais autoriser, l'utilisateur est averti, mais autorisé à continuer si le certificat de serveur est auto-signé. Si le certificat de serveur est auto-signé, le nom du certificat est autorisé à ne pas correspondre au nom du serveur. Il s'agit de la valeur par défaut.
+
+Lorsque cette propriété est définie sur Sécurité totale, toutes les erreurs de certificat sont signalées à l'utilisateur et il n'est pas autorisé à se connecter au serveur.</string>
+      <string id="AllowConnectionViaAnSslProxy">Configure le comportement de vérification des certificats de proxy SSL d'Horizon Client</string>
+      <string id="AllowConnectionViaAnSslProxyExplain">Ce paramètre détermine si les utilisateurs peuvent se connecter à un droit virtuel via un proxy SSL. Lorsqu'il n'est pas configuré, l'utilisateur final peut modifier le paramètre manuellement. Par défaut, le client est configuré pour bloquer les connexions de proxy SSL pour les connexions Blast et de tunnel.</string>
+      <string id="EnableSmartCardSSO">Activer l'authentification unique pour l'authentification par carte à puce</string>
+      <string id="EnableSmartCardSSOExplain">Active l'authentification unique pour l'authentification par carte à puce. Cela requiert qu'Horizon Client stocke provisoirement le code PIN de carte à puce chiffré dans la mémoire avant de l'envoyer au Serveur de connexion View.</string>
+      <string id="EnableJumplist">Activer l'intégration des listes de raccourcis</string>
+      <string id="EnableJumplistExplain">Active l'ajout d'une liste de raccourcis à l'icône d'Horizon Client dans la barre des tâches sous Windows 7 et versions ultérieures, afin de permettre aux utilisateurs de se connecter facilement à des Serveurs de connexion View et des postes de travail distants récents. Cette fonctionnalité est activée par défaut.</string>
+      <string id="AllowCmdLineCredentials">Autoriser les informations d'identification de ligne de commande</string>
+      <string id="AllowCmdLineCredentialsExplain">Autorisez la fourniture d'informations d'identification, telles qu'un mot de passe ou un code PIN, via des paramètres de ligne de commande.
+
+Ce paramètre est activé par défaut.</string>
+      <string id="EnableTicketSSLAuth">Activer le canal d'infrastructure chiffré SSL</string>
+      <string id="EnableTicketSSLAuthExplain">Activer le canal d'infrastructure chiffré SSL
+
+Activer : activez SSL, autorisez le retour vers des postes de travail sans prise en charge SSL
+Désactiver : désactivez SSL
+Appliquer : activez SSL, refusez la connexion aux postes de travail sans prise en charge SSL</string>
+      <string id="SSLCipherList">Configure les protocoles et les algorithmes de chiffrement SSL</string>
+      <string id="SSLCipherListExplain">Configure la liste de chiffrements pour limiter l'utilisation de certains protocoles et algorithmes cryptographiques avant l'établissement d'une connexion SSL chiffrée. La liste de chiffrements se compose d'une ou de plusieurs chaînes de chiffrement séparées par des deux-points. Notez que toutes les chaînes de chiffrement sont sensibles à la casse.
+
+Si la fonctionnalité est activée, la valeur par défaut est :
+   'TLSv1.1:TLSv1.2:!aNULL:kECDH+AESGCM:ECDH+AESGCM:RSA+AESGCM:kECDH+AES:ECDH+AES:RSA+AES'
+
+En d'autres termes : TLS v1.1 et TLS v1.2 sont activés (SSL v2.0, SSL v3.0 et TLS v1.0 sont désactivés). Les suites de chiffrements utilisant ECDHE, ECDH et RSA avec AES 128 ou 256 bits préfèrent le mode GCM.
+
+SSL v2.0, SSL v3.0 et TLS v1.0 ne sont plus les protocoles approuvés et seront définitivement désactivés.
+
+Lien de référence pour la configuration :
+http://www.openssl.org/docs/apps/ciphers.html#</string>
+      <string id="VMwareViewRdpSettings">Paramètres RDP</string>
+      <string id="VMwareViewBrowserRedirection">Redirection de VMware Browser</string>
+      <string id="ColorDepth">Profondeur de couleurs</string>
+      <string id="ColorDepthExplain">Détermine la profondeur de couleurs du poste de travail distant.
+
+Pour les systèmes Windows XP 24 bits, vérifiez que la stratégie Limiter le nombre maximal de couleurs dans Configuration ordinateur/Modèles d'administration/Composants Windows/Services Terminal Server est définie sur Activé et 24 bits.</string>
+      <string id="AudioRedirectionMode">Redirection audio</string>
+      <string id="AudioRedirectionModeExplain">Détermine comment les informations audio sont acheminées lorsqu'elles sont lues sur le poste de travail distant. Lorsque cette propriété est activée, les paramètres disponibles sont :
+
+  * Désactiver le son : pas de son
+  * Lire dans la VM (nécessaire pour la prise en charge d'USB VoIP) : le son est lu sur le poste de travail distant (requiert un périphérique audio USB partagé pour émettre le son sur le client)
+  * Rediriger vers le client : le son est redirigé vers le client. Il s'agit du mode par défaut.
+
+Remarque : cette propriété ne s'applique qu'au son RDP ; le son redirigé via MMR est lu sur le client.</string>
+      <string id="KeyboardHookMode">Redirection de combinaisons de touches Windows</string>
+      <string id="KeyboardHookModeExplain">Détermine à quel emplacement les combinaisons de touches Windows sont appliquées.</string>
+      <string id="DisableWallpaper">Arrière-plan du poste de travail</string>
+      <string id="DisableWallpaperExplain">Détermine si l'arrière-plan du poste de travail s'affiche lorsque des clients se connectent au poste de travail distant.</string>
+      <string id="DisableFullWindowDrag">Afficher le contenu d'une fenêtre lorsque l'utilisateur le fait glisser</string>
+      <string id="DisableFullWindowDragExplain">Détermine si le contenu d'un dossier s'affiche lorsqu'un utilisateur le fait glisser vers un nouvel emplacement.</string>
+      <string id="DisableMenuAnimations">Animation du menu et fenêtre</string>
+      <string id="DisableMenuAnimationsExplain">Détermine comment les menus et les fenêtres se comportent lorsque des clients se connectent à l'ordinateur distant.</string>
+      <string id="DisableTheming">Thèmes</string>
+      <string id="DisableThemingExplain">Détermine si des thèmes s'affichent lorsque des clients se connectent au poste de travail distant.</string>
+      <string id="DisableCursorShadow">Ombre du curseur</string>
+      <string id="DisableCursorShadowExplain">Détermine si une ombre s'affiche sous le curseur sur le poste de travail distant.</string>
+      <string id="FontSmoothing">Lissage des polices</string>
+      <string id="FontSmoothingExplain">(Windows Vista ou version ultérieure) Détermine si l'anticrénelage s'applique aux polices sur le poste de travail distant.</string>
+      <string id="DesktopComposition">Composition du poste de travail</string>
+      <string id="DesktopCompositionExplain">(Windows Vista ou version ultérieure) Détermine si la composition du poste de travail est activée sur le poste de travail distant.
+
+Lorsque la composition du poste de travail est activée, les fenêtres individuelles ne se dessinent plus directement sur l'écran ou sur le périphérique d'affichage principal comme c'était le cas dans les versions précédentes de Microsoft Windows. Au lieu de cela, le dessin est redirigé vers des surfaces non affichées à l'écran, en mémoire vidéo, qui sont ensuite rendues sous la forme d'une image de poste de travail et représentées à l'écran.</string>
+      <string id="RedirectDrives">Rediriger les lecteurs</string>
+      <string id="RedirectDrivesExplain">Détermine si les lecteurs de disques locaux sont redirigés automatiquement lorsque des clients se connectent à l'ordinateur distant.</string>
+      <string id="RedirectPrinters">Rediriger les imprimantes</string>
+      <string id="RedirectPrintersExplain">Détermine si les imprimantes locales sont redirigées automatiquement lorsque des clients se connectent au poste de travail distant.</string>
+      <string id="RedirectPorts">Rediriger les ports série</string>
+      <string id="RedirectPortsExplain">Détermine si les ports COM locaux sont redirigés automatiquement lorsque des clients se connectent au poste de travail distant.</string>
+      <string id="RedirectSmartcards">Rediriger les cartes à puce</string>
+      <string id="RedirectSmartcardsExplain">Détermine si les cartes à puce locales sont redirigées automatiquement lorsque des clients se connectent au poste de travail distant.</string>
+      <string id="RedirectClipboard">Rediriger le Presse-papiers</string>
+      <string id="RedirectClipboardExplain">Ce paramètre détermine si les informations du Presse-papiers locales sont redirigées automatiquement lorsque des clients se connectent au poste de travail distant.</string>
+      <string id="RedirectPlugAndPlayDevices">Rediriger les périphériques prêts à l'emploi pris en charge</string>
+      <string id="ExplainRedirectPlugAndPlayDevices">Détermine si des périphériques prêts à l'emploi et de point de vente locaux sont redirigés automatiquement lorsque des clients se connectent au poste de travail distant. Ce paramètre est distinct de la redirection gérée par le composant Redirection USB de View Agent.</string>
+      <string id="ShadowBitmap">Ombrer les bitmaps</string>
+      <string id="ShadowBitmapExplain">Détermine si les bitmaps ombrés doivent être utilisés.
+
+Remarque : les bitmaps ombrés sont toujours désactivés en mode plein écran. Par conséquent, cette propriété n'a pas d'effet lorsque vous êtes en mode plein écran.</string>
+      <string id="CachePersistenceActive">Mise en cache des bitmaps/permanente du cache active</string>
+      <string id="CachePersistenceActiveExplain">Détermine si la mise en cache permanente des bitmaps doit être utilisée. La mise en cache permanente peut améliorer les performances, mais elle requiert plus d'espace disque.</string>
+      <string id="EnableCompression">Activer la compression</string>
+      <string id="EnableCompressionExplain">Détermine si la compression des données RDP est utilisée. Ce paramètre est activé par défaut.</string>
+      <string id="BitmapCacheSize">Taille du cache de bitmaps en mémoire en Ko pour les bitmaps de 8 bpp</string>
+      <string id="BitmapCacheSizeExplain">Spécifie la taille, en kilo-octets, du cache de bitmaps RAM à utiliser pour le paramètre de couleur de 8 bits par pixel. Si ScaleBitmapCachesByBPP est défini sur true (par défaut), cette taille de cache est multipliée par les octets par pixel afin de déterminer la taille de cache RAM réelle.
+
+Lorsque cette propriété est activée, entrez une taille en Ko.</string>
+      <string id="BitmapVirtualCacheSize">Taille du fichier de cache de bitmaps en Mo pour les bitmaps de 8 bpp</string>
+      <string id="BitmapVirtualCacheSizeExplain">Spécifie la taille, en mégaoctets, du fichier de cache de bitmaps permanent à utiliser pour le paramètre de couleurs de 8 bits par pixel.
+
+Lorsque cette propriété est activée, entrez une taille en Mo. Les valeurs valides sont comprises entre 1 et 32 inclus.</string>
+      <string id="BitmapVirtualCache16BppSize">Taille du fichier de cache de bitmaps en Mo pour les bitmaps de 16 bpp</string>
+      <string id="BitmapVirtualCache16BppSizeExplain">Spécifie la taille, en mégaoctets, du fichier de cache de bitmaps permanent à utiliser pour le paramètre de couleurs de 15/16 bits par pixel.
+
+Lorsque cette propriété est activée, entrez une taille en Mo. Les valeurs valides sont comprises entre 1 et 32 inclus.</string>
+      <string id="BitmapVirtualCache24BppSize">Taille du fichier de cache de bitmaps en Mo pour les bitmaps de 24 bpp</string>
+      <string id="BitmapVirtualCache24BppSizeExplain">Spécifie la taille, en mégaoctets, du fichier de cache de bitmaps permanent à utiliser pour le paramètre de couleurs de 24 bits par pixel.
+
+Lorsque cette propriété est activée, entrez une taille en Mo. Les valeurs valides sont comprises entre 1 et 32 inclus.</string>
+      <string id="BitmapVirtualCache32BppSize">Taille du fichier de cache de bitmaps en Mo pour les bitmaps de 32 bpp</string>
+      <string id="BitmapVirtualCache32BppSizeExplain">Spécifie la taille, en mégaoctets, du fichier de cache de bitmaps permanent à utiliser pour le paramètre de couleurs de 32 bits par pixel.
+
+Lorsque cette propriété est activée, entrez une taille en Mo. Les valeurs valides sont comprises entre 1 et 32 inclus.</string>
+      <string id="noTSCAddins">Désactiver les plug-ins Services Terminal Server tiers</string>
+      <string id="noTSCAddinsExplain">Lorsque cette propriété est définie sur true, aucune vérification n'est effectuée pour les plug-ins Services Terminal Server tiers installés comme des plug-ins RDP normaux. Ce paramètre n'affecte pas les plug-ins spécifiques de View, tels que la redirection USB. Si cette stratégie n'est pas configurée, la détection et l'utilisation de plug-ins tiers sont activées par défaut.</string>
+      <string id="DisableTimeZoneForwarding">Désactiver le transfert de fuseau horaire</string>
+      <string id="DisableTimeZoneForwardingExplain">Détermine si le fuseau horaire du poste de travail View est synchronisé avec celui du client connecté. Lorsqu'elle est activée, cette propriété ne s'applique que si la propriété Désactiver la synchronisation du fuseau horaire de la stratégie Configuration de View Agent n'est pas définie sur Désactivé.
+
+Cette propriété est désactivée par défaut.</string>
+      <string id="AutomaticInputFocus">Focus d'entrée automatique dans une fenêtre de poste de travail virtuel</string>
+      <string id="AutomaticInputFocusExplain">Lorsqu'une fenêtre de poste de travail virtuel est placée au premier plan, l'entrée sera automatiquement sur le poste de travail virtuel. En d'autres termes, le focus ne se trouve pas dans le cadre de la fenêtre et l'utilisateur n'aura pas à cliquer une fois dans la fenêtre du poste de travail pour déplacer le focus.</string>
+      <string id="EnableCredSspSupport">Activer le fournisseur de services de sécurité des informations d'identification</string>
+      <string id="EnableCredSspSupportExplain">Spécifie si la connexion du poste de travail View utilise l'authentification au niveau du réseau (NLA). Dans Windows Vista, les connexions de poste de travail distant requièrent NLA par défaut.
+
+Si le système d'exploitation invité requiert NLA pour les connexions de poste de travail distant, vous devez activer ce paramètre, sinon Horizon Client ne pourra pas se connecter au poste de travail View.
+
+En plus d'activer ce paramètre, vous devez également vérifier que les conditions suivantes sont respectées :
+   1) Le client et les systèmes d'exploitation invités prennent en charge NLA.
+   2) Les connexions clientes directes sont activées pour l'instance du Serveur de connexion View. Les connexions par tunnel ne sont pas prises en charge avec NLA.</string>
+      <string id="TunnelProxyBypass">Liste d'adresses de contournement de proxy par tunnel</string>
+      <string id="TunnelProxyBypassExplain">N'utilisez pas le serveur proxy pour les adresses de tunnel commençant par une chaîne spécifiée. Utilisez un point-virgule (;) pour séparer les entrées.</string>
+      <string id="HelpURL">URL de l'aide en ligne d'Horizon Client</string>
+      <string id="HelpURLExplain">Spécifie une autre URL depuis laquelle Horizon Client peut récupérer des pages d'aide. Cette propriété est destinée à être utilisée dans des environnements sans accès Internet et ne pouvant donc pas récupérer le système d'aide hébergé à distance.</string>
+      <string id="AutoUpdateAllowed">Activer les mises à jour en ligne d'Horizon Client</string>
+      <string id="AutoUpdateAllowedExplain">Détermine s'il est possible d'utiliser la fonctionnalité de mises à jour en ligne. Cette fonctionnalité est activée par défaut depuis Horizon Client 4.6.</string>
+      <string id="AutoUpdateURL">URL de la mise à jour en ligne d'Horizon Client</string>
+      <string id="AutoUpdateURLExplain">Spécifie une URL depuis laquelle Horizon Client peut récupérer des mises à jour. Cette propriété est conçue pour définir un serveur de mise à jour spécifique. S'il n'est pas activé, le serveur de mise à jour officiel de VMware est utilisé.</string>
+      <string id="BlockMultipleInstances">Bloquer plusieurs instances d'Horizon Client par session Windows</string>
+      <string id="BlockMultipleInstancesExplain">Cette stratégie bloque plusieurs instances d'Horizon Client par session Windows. Lorsqu'elle est définie sur « Activé », Horizon Client s'exécute en mode d'instance singleton et l'utilisateur ne peut pas lancer plusieurs instances d'Horizon Client. Lorsqu'elle est désactivée, l'utilisateur peut ouvrir plusieurs instances d'Horizon Client. Ce paramètre est désactivé par défaut.</string>
+      <string id="ListSmartCardCertsOnly">N'afficher que les certificats de carte à puce lors de la connexion</string>
+      <string id="ListSmartCardCertsOnlyExplain">Cette stratégie spécifie s'il faut répertorier tous les certificats des magasins d'utilisateur et de système ou n'afficher que les certificats de cartes à puce. Lorsqu'elle est définie sur Activé, la boîte de dialogue de sélection des certificats n'affiche que les certificats de carte à puce ; tous les autres certificats seront filtrés. Lorsqu'elle est définie sur Désactivé, tous les types de certificats sont répertoriés dans la boîte de dialogue de sélection des certificats. Ce paramètre est désactivé par défaut.</string>
+      <string id="connectUSBOnStartup">Connecter tous les périphériques USB au poste de travail ou à l'application distante au démarrage</string>
+      <string id="connectUSBOnStartupExplain">Connecte automatiquement tous les périphériques USB disponibles sur l'hôte à un poste de travail ou une application distante lorsque ce poste de travail ou cette application distante est lancé.</string>
+      <string id="EnableAutoReconnect">Activer la reconnexion automatique RDP</string>
+      <string id="EnableAutoReconnectExplain">Spécifie s'il faut autoriser le composant de client RDP à tenter de se reconnecter automatiquement à un poste de travail en cas d'échec de la connexion au protocole RDP. Ce paramètre est désactivé par défaut. Ce paramètre n'a pas d'effet lorsque l'option « Utiliser une connexion par tunnel sécurisé vers le poste de travail » est activée.</string>
+      <string id="RedirectAudioCapture">Activer la redirection de la capture audio</string>
+      <string id="RedirectAudioCaptureExplain">Détermine si le périphérique d'entrée audio par défaut est redirigé du client vers la session distante. La valeur par défaut est Désactivé.</string>
+      <string id="connectUSBOnInsert">Connecter les périphériques USB au poste de travail ou à l'application distante lors de leur branchement</string>
+      <string id="connectUSBOnInsertExplain">Connecte automatiquement les périphériques USB lors de leur branchement sur l'hôte au poste de travail ou à l'application distante que l'utilisateur est en train d'utiliser.</string>
+      <string id="RedirectSmartCardsInLocalMode">Rediriger les lecteurs de carte à puce en mode local</string>
+      <string id="RedirectSmartCardsInLocalModeExplain">Détermine si les lecteurs de carte à puce sont automatiquement redirigés vers les postes de travail en mode local. Les lecteurs seront partagés avec la machine cliente. Ce paramètre est activé par défaut.</string>
+      <string id="ReplicationStartupDelay">Retarder le démarrage de réplications lors du démarrage d'Horizon Client with Local Mode</string>
+      <string id="ReplicationStartupDelayExplain">Retardez toutes les réplications de ce nombre de secondes une fois qu'Horizon Client with Local Mode est démarré. Les réplications reprendront leur fréquence normale après ce retard. Le retard par défaut est de 900 secondes (15 minutes).</string>
+      <string id="LocalModeExitBehavior">Comportement de fermeture par défaut des postes de travail en mode local</string>
+      <string id="LocalModeExitBehaviorExplain">Détermine le comportement de fermeture par défaut de postes de travail exécutés en mode local. Le comportement de fermeture par défaut consiste à initier un arrêt de l'invité.</string>
+      <string id="DisableToastNotifications">Désactiver les notifications toast</string>
+      <string id="DisableToastNotificationsExplain">Ce paramètre désactive les notifications toast d'Horizon Client. Activez ce paramètre si vous ne voulez pas que l'utilisateur voie les notifications toast dans le coin de son écran. Notez que l'activation de ce GPO empêchera l'affichage d'un avertissement de 5 minutes lorsque la fonctionnalité Expiration de la session est active. Ce paramètre est désactivé par défaut.</string>
+      <string id="EnableRelativeMouse">Activer la souris relative</string>
+      <string id="EnableRelativeMouseExplain">Ce paramètre active la souris relative d'Horizon Client pour les postes de travail PCoIP. Activez ce paramètre si vous voulez que l'utilisateur utilise toujours le mode de souris relative avec les postes de travail PCoIP. Le mode de souris relative améliore le comportement de la souris pour certaines applications graphiques et certains jeux. Si le poste de travail distant ne prend pas en charge la souris relative, ce paramètre n'est pas utilisé. Ce paramètre est désactivé par défaut.</string>
+      <string id="DisableDisconnectMessages">Désactiver les messages de déconnexion du poste de travail</string>
+      <string id="DisableDisconnectMessagesExplain">Spécifie si des messages normalement affichés lors de la déconnexion du poste de travail doivent être désactivés. Ces messages sont affichés par défaut. Ce paramètre ne s'applique pas aux déconnexions initiées par l'utilisateur à partir de l'interface utilisateur d'Horizon Client.</string>
+      <string id="DisallowClientInformationPassthrough">Interdire le transfert d'informations client dans une session imbriquée</string>
+      <string id="DisallowClientInformationPassthroughExplain">Spécifie si Horizon Client doit être empêché de transférer des informations client dans une session imbriquée. Lorsque ce paramètre est activé, si Horizon Client est exécuté dans une session Horizon, il envoie les informations sur le client physique réelles plutôt que les informations sur le terminal VM. Ce paramètre s'applique aux informations client suivantes : nom et domaine du terminal, type de client, adresse IP et adresse MAC. Ce paramètre est désactivé par défaut, ce qui signifie que le transfert d'informations client dans une session imbriquée est autorisé par défaut.</string>
+      <string id="DisableSharing">Désactiver le partage de fichiers et de dossiers</string>
+      <string id="DisableSharingExplain">Désactivez le partage de fichiers et de dossiers entre des sessions distantes et des clients. 
+
+Lorsque le paramètre est défini sur Activer, le Client masque complètement la page de partage de fichiers et désactive également la redirection de fichiers.
+
+Lorsque le paramètre n'est pas configuré, la valeur par défaut est Désactivé.</string>
+      <string id="AppSessionReconnectBehavior">Comportement de reprise des sessions d'application déconnectées</string>
+      <string id="AppSessionReconnectBehaviorExplain">Ce paramètre vous permet de forcer un comportement spécifique en ce qui concerne la fonctionnalité de reprise automatique des sessions d'application. Les 3 options disponibles pour ce GPO reflètent les options disponibles sur la page des paramètres du client de Windows. Ce paramètre est désactivé par défaut, ce qui signifie que l'utilisateur est autorisé à choisir le comportement.</string>
+      <string id="ForceFloatingLanguageBarOff">Toujours masquer la barre de langue flottante distante (IME) pour les applications hébergées</string>
+      <string id="ForceFloatingLanguageBarOffExplain">Ce paramètre force le masquage de la barre de langue flottante pour les sessions d'application. Lorsque ce paramètre est activé, la barre de langue flottante n'est jamais affichée dans une session d'application distante, que la fonctionnalité IME locale soit activée ou non. Lorsque ce paramètre est désactivé, la barre de langue flottante n'est affichée que si la fonctionnalité IME locale est désactivée. Cette valeur est désactivée par défaut.</string>
+      <string id="DisableFileRedirection">Désactiver l'ouverture des fichiers locaux dans des applications hébergées</string>
+      <string id="DisableFileRedirectionExplain">Ce paramètre contrôle si Horizon Client enregistre des gestionnaires locaux pour l'extension de fichier qui sont pris en charge par des applications hébergées. Lorsque cette stratégie est activée, Horizon Client n'enregistre aucun gestionnaire d'extensions de fichier et n'autorise pas l'utilisateur à remplacer le paramètre. Lorsque cette stratégie est désactivée, Horizon Client enregistre toujours les gestionnaires d'extensions de fichier. Par défaut, les gestionnaires d'extensions de fichier sont enregistrés, mais l'utilisateur peut désactiver la fonctionnalité via l'interface utilisateur d'Horizon Client.</string>
+      <string id="KeyboardHotkeys">Touche de fonction de modification d'affichage</string>
+      <string id="KeyboardHotkeysExplain">Lorsque cette option est activée, ce GPO définit la combinaison de touches qui, lors de la saisie et de l'envoi de la saisie dans une session de poste de travail (PCoIP ou BLAST), permet de modifier la configuration d'affichage sur la machine cliente. Lorsque cette option est désactivée, l'utilisateur final doit annuler la saisie à l'aide de la souris ou en appuyant sur Ctrl+Alt, puis appuyer sur Windows+P pour modifier la configuration d'affichage. Ce GPO ne s'applique pas aux sessions d'application.</string>
+      <string id="DisplaySwitchModifierKey">Clé de modification du changement d'affichage :</string>
+      <string id="DisplaySwitchFunctionKey">Clé de fonction du changement d'affichage :</string>
+      <string id="KEY_NONE">&lt;Désactivé&gt;</string>
+      <string id="KEY_SHIFT">Maj</string>
+      <string id="KEY_CTRL">Ctrl</string>
+      <string id="KEY_ALT">Alt</string>
+      <string id="KEY_F1">F1</string>
+      <string id="KEY_F2">F2</string>
+      <string id="KEY_F3">F3</string>
+      <string id="KEY_F4">F4</string>
+      <string id="KEY_F5">F5</string>
+      <string id="KEY_F6">F6</string>
+      <string id="KEY_F7">F7</string>
+      <string id="KEY_F8">F8</string>
+      <string id="KEY_F9">F9</string>
+      <string id="KEY_F10">F10</string>
+      <string id="KEY_F11">F11</string>
+      <string id="KEY_F12">F12</string>
+      <string id="KEY_H">H</string>
+      <string id="KEY_I">I</string>
+      <string id="KEY_J">J</string>
+      <string id="KEY_K">K</string>
+      <string id="KEY_L">L</string>
+      <string id="KEY_M">M</string>
+      <string id="KEY_N">N</string>
+
+      <string id="HotkeyUngrabDesktop">Combinaison de raccourcis pour libérer le focus d'entrée</string>
+      <string id="HotkeyUngrabDesktopExplain">Cette stratégie définit une combinaison de touches de raccourci pour libérer le focus d'entrée d'une session de poste de travail à l'aide de PCoIP ou Blast. Une touche de raccourci se compose d'une ou de deux touches de modification et d'une touche de fonction. Si cette stratégie est désactivée ou n'est pas configurée, l'utilisateur peut annuler le focus en utilisant Ctrl+Alt ou en cliquant en dehors de la fenêtre de poste de travail.</string>
+      <string id="UngrabDesktopModifierKey">Touche de modification pour libérer le focus d'entrée :</string>
+      <string id="SecondUngrabDesktopModifierKey">Deuxième touche de modification pour libérer le focus d'entrée :</string>
+      <string id="UngrabDesktopFunctionKey">Touche de fonction pour libérer le focus d'entrée :</string>
+
+      <string id="HotkeyGrabDesktop">Combinaison de touches de raccourci pour prendre le focus d'entrée</string>
+      <string id="HotkeyGrabDesktopExplain">Cette stratégie définit une combinaison de touches de raccourci pour prendre le focus d'entrée pour la dernière session de poste de travail utilisée à l'aide de PCoIP ou Blast. Une touche de raccourci se compose d'une ou de deux touches de modification et d'une touche de lettre. Si cette stratégie est désactivée ou n'est pas configurée, l'utilisateur peut prendre le focus en cliquant à l'intérieur de la fenêtre de poste de travail</string>
+      <string id="GrabDesktopModifierKey">Touche de modification pour prendre le focus d'entrée :</string>
+      <string id="SecondGrabDesktopModifierKey">Deuxième touche de modification pour prendre le focus d'entrée :</string>
+      <string id="GrabDesktopLetterKey">Touche de lettre pour prendre le focus d'entrée :</string>
+
+      <string id="HIDE_MENU_YES">Oui</string>
+      <string id="HIDE_MENU_NO">Non</string>
+      <string id="HideToolBarMenu">Masquer des éléments dans le menu de la barre d'outils du client</string>
+      <string id="HideToolBarMenuExplain">Ces paramètres contrôlent s'il faut masquer des éléments dans la barre d'outils, la barre qui se trouve en haut de la page principale du lanceur client. La stratégie est désactivée par défaut et Horizon Client affiche tous les éléments.
+
+Ce GPO est pris en charge par Horizon Client 5.0 et versions ultérieures.</string>
+      <string id="HideDesktopContextMenu">Masquer des éléments dans le menu contextuel du poste de travail</string>
+      <string id="HideDesktopContextMenuExplain">Ces paramètres contrôlent s'il faut masquer des éléments dans le menu contextuel pour les postes de travail depuis la page du lanceur client. La stratégie est désactivée par défaut et Horizon Client affiche tous les éléments.
+
+Ce GPO est pris en charge par Horizon Client 5.0 et versions ultérieures.</string>
+      <string id="HideAppContextMenu">Masquer des éléments dans le menu contextuel de l'application</string>
+      <string id="HideAppContextMenuExplain">Ces paramètres contrôlent s'il faut masquer des éléments dans le menu contextuel pour les applications depuis la page du lanceur client. La stratégie est désactivée par défaut et Horizon Client affiche tous les éléments.
+
+Ce GPO est pris en charge par Horizon Client 5.0 et versions ultérieures.</string>
+      <string id="HideDesktopMenu">Masquer des éléments dans la barre d'outils du poste de travail</string>
+      <string id="HideDesktopMenuExplain">Ces paramètres contrôlent si vous voulez masquer des éléments dans la barre d'outils du poste de travail, la barre s'affiche en haut du poste de travail virtuel exécuté en plein écran. La stratégie est désactivée par défaut et Horizon Client affiche tous les éléments.
+
+Ce GPO est pris en charge par Horizon Client 5.0 et versions ultérieures.</string>
+      <string id="HideNotificationMenu">Masquer des éléments dans le menu de la barre d'état système</string>
+      <string id="HideNotificationMenuExplain">Ces paramètres contrôlent s'il faut masquer des éléments dans le menu de la barre d'état système en bas de l'écran Windows local. La stratégie est désactivée par défaut et Horizon Client affiche tous les éléments.
+
+Ce GPO est pris en charge par Horizon Client 5.0 et versions ultérieures.</string>
+      <string id="CustomErrorScreenFooter">Pied de page de l'écran d'erreur personnalisé</string>
+      <string id="CustomErrorScreenFooterExplain">Spécifie l'emplacement d'un fichier texte brut. Si cette option est activée, le texte dans le fichier spécifié s'affiche toujours au bas de tous les messages d'erreur.
+
+Ce GPO est pris en charge par Horizon Client 5.0 et versions ultérieures.</string>
+      <string id="UnauthenticatedAccessEnabled">Activer l'accès non authentifié au serveur</string>
+      <string id="UnauthenticatedAccessEnabledExplain">Ce paramètre contrôle si l'utilisateur doit entrer des informations d'identification pour accéder à ses applications avec Horizon Client. Lorsque le paramètre est activé, l'accès non authentifié est toujours demandé depuis le serveur. Toutefois, le client peut revenir à d'autres méthodes d'authentification si l'accès non authentifié n'est pas disponible. Lorsque le paramètre est désactivé, les utilisateurs doivent toujours entrer leurs informations d'identification pour se connecter et accéder à leurs applications. Lorsque le paramètre n'est pas configuré, l'accès non authentifié peut être activé par l'utilisateur dans l'interface utilisateur d'Horizon Client.</string>
+      <string id="ForceUserAffinity">Utiliser l'instance de client existante lors de la connexion au même serveur</string>
+      <string id="ForceUserAffinityExplain">Ce paramètre contrôle si une connexion est ajoutée à l'instance d'Horizon Client existante à laquelle l'utilisateur est déjà connecté au même serveur spécifié. Ce paramètre est désactivé par défaut lorsqu'il n'est pas configuré.</string>
+      <string id="UnauthenticatedAccessAccount">Compte à utiliser pour l'accès non authentifié</string>
+      <string id="UnauthenticatedAccessAccountExplain">Ce paramètre définit le compte qui sera utilisé par Horizon Client pour se connecter de manière anonyme au serveur. Si le paramètre n'est pas défini, le client autorise l'utilisateur à choisir un compte.</string>
+      <string id="ADMXMigrator_UnresolvedString">ADMX Migrator a rencontré une chaîne qui n'est pas présente dans le tableau de chaînes ADM source.</string>
+      <string id="VDMClient_SupportedOn_Empty"></string>
+      <string id="AllowDisplayScaling">Autoriser la mise à l'échelle de l'affichage</string>
+      <string id="AllowDisplayScalingExplain">Ce paramètre vous permet de configurer la mise à l'échelle de l'affichage pour toutes les sessions de poste de travail et d'application.</string>
+      <string id="AutoSyncToggleKeys">Synchroniser automatiquement les touches du pavé numérique, de défilement et de verrouillage des majuscules</string>
+      <string id="AutoSyncToggleKeysExplain">Lorsque ce paramètre est activé, il synchronise automatiquement les touches du pavé numérique, de défilement et de verrouillage des majuscules entre le périphérique physique et le poste de travail virtuel. Lorsqu'il n'est pas activé, le poste de travail virtuel met à jour uniquement l'état de ces touches si l'utilisateur les modifie dans le poste de travail virtuel. </string>
+      <string id="AllowHEVC">Autoriser le décodage HEVC</string>
+      <string id="AllowHEVCExplain">Ce paramètre vous permet de configurer le décodage HEVC (également appelé H.265) pour le protocole Blast. Lorsqu'il est activé, le décodage HEVC devient l'option préférée. Lorsqu'il est désactivé, le décodage HEVC n'est jamais utilisé. Lorsqu'il n'est pas configuré, l'utilisateur peut choisir d'activer ou non le décodage HEVC.</string>
+      <string id="AllowBlastThroughProxy">Autoriser les connexions Blast à utiliser les paramètres de proxy du système d'exploitation</string>
+      <string id="AllowBlastThroughProxyExplain">Ce paramètre vous permet de configurer l'utilisation du proxy pour la connexion Blast. Lorsque ce paramètre est activé, Blast peut se connecter via un proxy. Lorsque ce paramètre est désactivé, le proxy système n'est pas utilisé. Lorsque ce paramètre n'est pas configuré, l'utilisateur peut choisir d'utiliser ou non le système proxy. Cette propriété est désactivée par défaut.</string>
+      <string id="BrowserRedirUseCache">Activer le cache pour la redirection de navigateur</string>
+      <string id="BrowserRedirUseCacheExplain">Lorsque cette option est activée, l'historique de navigation, y compris les cookies, est stocké sur le client. La désactivation de ce paramètre n'efface pas le cache, qui sera réutilisé après la réactivation du paramètre suite à sa désactivation.
+
+Cette propriété est activée par défaut.</string>
+      <string id="BrowserRedirIgnoreCertErrors">Ignorer les erreurs de certificat pour la redirection de navigateur</string>
+      <string id="BrowserRedirIgnoreCertErrorsExplain">Lorsque cette option est activée, les erreurs de certificat qui se produisent sur la page redirigée seront ignorées et la navigation se poursuivra. Cette propriété est désactivée par défaut.</string>
+      <string id="BrowserRedirEnableMediaStream">Activer l'accès à la caméra WebRTC et au microphone pour la redirection de navigateur</string>
+      <string id="BrowserRedirEnableMediaStreamExplain">Lorsque cette option est activée, les pages redirigées utilisant WebRTC auront accès à la caméra et au microphone du client. Cette propriété est activée par défaut.</string>
+      <string id="MouseMoveMaxLatencyMsec">Configurer la latence maximale pour la fusion de la souris</string>
+      <string id="MouseMoveMaxLatencyMsecExplain">Ce paramètre permet de configurer la latence maximale autorisée lors de la fusion des événements de déplacement de la souris, en millisecondes. Nous acceptons les valeurs de 0 à 50 comme valides, avec 0 signifiant « désactiver la fusion des événements de déplacement de la souris ». La fusion des événements de déplacement de la souris peut réduire l'utilisation de la bande passante client à agent, mais peut potentiellement ajouter une latence mineure au déplacement de la souris. Cette propriété est désactivée par défaut.</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="ExcludePath">
+        <textBox refId="ExcludePath">
+          <label>Exclure le chemin d'accès</label>
+        </textBox>
+      </presentation>
+      <presentation id="IncludePath">
+        <textBox refId="IncludePath">
+          <label>Inclure le chemin d'accès</label>
+        </textBox>
+      </presentation>
+      <presentation id="DisableRemoteConfig" />
+      <presentation id="AllowDevDescFailsafe" />
+      <presentation id="SplitExcludeVidPid">
+        <textBox refId="SplitExcludeVidPid">
+          <label>Exclure un périphérique Vid/Pid du fractionnement</label>
+        </textBox>
+      </presentation>
+      <presentation id="SplitVidPid">
+        <textBox refId="SplitVidPid">
+          <label>Fractionner un périphérique Vid/Pid</label>
+        </textBox>
+      </presentation>
+      <presentation id="ExcludeVidPid">
+        <textBox refId="ExcludeVidPid">
+          <label>Exclure un périphérique Vid/Pid</label>
+        </textBox>
+      </presentation>
+      <presentation id="IncludeVidPid">
+        <textBox refId="IncludeVidPid">
+          <label>Inclure un périphérique Vid/Pid</label>
+        </textBox>
+      </presentation>
+      <presentation id="ExcludeFamily">
+        <textBox refId="ExcludeFamily">
+          <label>Exclure une famille de périphériques</label>
+        </textBox>
+      </presentation>
+      <presentation id="IncludeFamily">
+        <textBox refId="IncludeFamily">
+          <label>Inclure une famille de périphériques</label>
+        </textBox>
+      </presentation>
+      <presentation id="ExcludeAllDevices" />
+      <presentation id="AllowHID" />
+      <presentation id="AllowHIDBootable" />
+      <presentation id="AllowAudioIn" />
+      <presentation id="AllowAudioOut" />
+      <presentation id="AllowKeyboardMouse" />
+      <presentation id="AllowVideo" />
+      <presentation id="AllowSmartcard" />
+      <presentation id="AllowAutoDeviceSplitting" />
+      <presentation id="LogInAsCurrentUser_Display" />
+      <presentation id="LogInAsCurrentUser" />
+      <presentation id="EnableRecursiveUnlock" />
+      <presentation id="BrokersTrustedForDelegation">
+        <listBox refId="BrokersTrustedForDelegation">Serveurs approuvés pour la délégation</listBox>
+      </presentation>
+      <presentation id="AllowNTLMAuthentication">
+      <dropdownList refId="AllowNTLMAuthentication" defaultItem="1" noSort="true">Autoriser le recours de Kerberos à NTLM</dropdownList>
+      </presentation>
+      <presentation id="ServersAlwaysUseNTLM">
+        <listBox refId="ServersAlwaysUseNTLM">Toujours utiliser NTLM pour les serveurs</listBox>
+      </presentation>
+      <presentation id="IgnoreRevocation" />
+      <presentation id="CertCheckMode">
+        <dropdownList refId="CertCheckMode" defaultItem="1">Mode de vérification des certificats</dropdownList>
+      </presentation>
+      <presentation id="AllowConnectionViaAnSslProxy"/>
+      <presentation id="EnableSmartCardSSO" />
+      <presentation id="EnableJumplist" />
+      <presentation id="AllowCmdLineCredentials" />
+      <presentation id="EnableTicketSSLAuth">
+        <dropdownList refId="EnableTicketSSLAuth" defaultItem="0">Activer le canal d'infrastructure chiffré SSL</dropdownList>
+      </presentation>
+      <presentation id="SSLCipherList">
+        <textBox refId="SSLCipherList">
+          <label>Configure les protocoles et les algorithmes de chiffrement SSL</label>
+          <defaultValue>TLSv1.1:TLSv1.2:!aNULL:kECDH+AESGCM:ECDH+AESGCM:RSA+AESGCM:kECDH+AES:ECDH+AES:RSA+AES</defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="ServerURL">
+        <textBox refId="ServerURL">
+          <label>URL du serveur</label>
+        </textBox>
+      </presentation>
+      <presentation id="UserName">
+        <textBox refId="UserName">
+          <label>Nom d'utilisateur d'ouverture de session</label>
+        </textBox>
+      </presentation>
+      <presentation id="DomainName">
+        <textBox refId="DomainName">
+          <label>Nom de domaine d'ouverture de session</label>
+        </textBox>
+      </presentation>
+      <presentation id="Password">
+        <textBox refId="Password">
+          <label>Mot de passe d'ouverture de session</label>
+        </textBox>
+      </presentation>
+      <presentation id="DesktopName">
+        <textBox refId="DesktopName">
+          <label>Nom de poste de travail à sélectionner</label>
+        </textBox>
+      </presentation>
+      <presentation id="DesktopLayout">
+        <dropdownList refId="DesktopLayout" defaultItem="0">Disposition du poste de travail</dropdownList>
+      </presentation>
+      <presentation id="LockedGuestSize">
+        <decimalTextBox refId="LockedGuestWidth" defaultValue="1600">Largeur d'invité verrouillée  </decimalTextBox>
+        <decimalTextBox refId="LockedGuestHeight" defaultValue="1200">Hauteur d'invité verrouillée</decimalTextBox>
+      </presentation>
+      <presentation id="NonInteractive" />
+      <presentation id="SingleAutoConnect" />
+      <presentation id="noTSCAddins" />
+      <presentation id="connectUSBOnStartup" />
+      <presentation id="connectUSBOnInsert" />
+      <presentation id="AppSessionReconnectBehavior">
+        <dropdownList refId="AppSessionReconnectBehavior" defaultItem="0">Comportement de reprise des sessions d'application déconnectées</dropdownList>
+      </presentation>
+      <presentation id="UnauthenticatedAccessEnabled" />
+      <presentation id="ErrorFooterTextFile">
+        <textBox refId="ErrorFooterTextFile">
+          <label>Emplacement du fichier texte de pied de page d'erreur</label>
+        </textBox>
+      </presentation>
+      <presentation id="UnauthenticatedAccessAccount">
+        <textBox refId="UnauthenticatedAccessAccount">
+          <label>Compte à utiliser pour l'accès non authentifié</label>
+        </textBox>
+      </presentation>
+      <presentation id="DisableTimeZoneForwarding" />
+      <presentation id="AutomaticInputFocus" />
+      <presentation id="TunnelProxyBypass">
+        <textBox refId="TunnelProxyBypass">
+          <label>Liste d'adresses de contournement de proxy par tunnel</label>
+        </textBox>
+      </presentation>
+      <presentation id="HelpURL">
+        <textBox refId="HelpURL">
+          <label>URL de l'aide en ligne d'Horizon Client</label>
+        </textBox>
+      </presentation>
+      <presentation id="AutoUpdateAllowed" />
+      <presentation id="AutoUpdateURL">
+        <textBox refId="AutoUpdateURL">
+          <label>URL de la mise à jour en ligne d'Horizon Client</label>
+        </textBox>
+      </presentation>
+      <presentation id="BlockMultipleInstances" />
+      <presentation id="ListSmartCardCertsOnly" />
+      <presentation id="RedirectSmartCardsInLocalMode" />
+      <presentation id="ReplicationStartupDelay">
+        <decimalTextBox refId="ReplicationStartupDelay">Retarder le démarrage de réplications lors du démarrage d'Horizon Client with Local Mode</decimalTextBox>
+      </presentation>
+      <presentation id="DisableToastNotifications" />
+      <presentation id="EnableRelativeMouse" />
+      <presentation id="DisableDisconnectMessages" />
+      <presentation id="HideClientAfterLaunchSession" />
+      <presentation id="DisallowClientInformationPassthrough" />
+      <presentation id="ForceFloatingLanguageBarOff" />
+      <presentation id="DisableFileRedirection" />
+      <presentation id="KeyboardHotkeys">
+        <dropdownList refId="DisplaySwitchModifierKey" defaultItem="1">Clé de modification du changement d'affichage :</dropdownList>
+        <dropdownList refId="DisplaySwitchFunctionKey" defaultItem="1">Clé de fonction du changement d'affichage :</dropdownList>
+      </presentation>
+      <presentation id="HotkeyUngrabDesktop">
+        <dropdownList refId="UngrabDesktopModifierKey" defaultItem="0" noSort="true">Touche de modification pour libérer le focus d'entrée :</dropdownList>
+        <dropdownList refId="SecondUngrabDesktopModifierKey" defaultItem="0" noSort="true">Deuxième touche de modification pour libérer le focus d'entrée :</dropdownList>
+        <dropdownList refId="UngrabDesktopFunctionKey" defaultItem="0">Touche de fonction pour libérer le focus d'entrée :</dropdownList>
+      </presentation>
+      <presentation id="HotkeyGrabDesktop">
+        <dropdownList refId="GrabDesktopModifierKey" defaultItem="0" noSort="true">Touche de modification pour prendre le focus d'entrée :</dropdownList>
+        <dropdownList refId="SecondGrabDesktopModifierKey" defaultItem="0" noSort="true">Deuxième touche de modification pour prendre le focus d'entrée :</dropdownList>
+        <dropdownList refId="GrabDesktopFunctionKey" defaultItem="0">Touche de lettre pour prendre le focus d'entrée :</dropdownList>
+      </presentation>
+      <presentation id="HideToolBarMenu">
+        <dropdownList refId="HideFavoritesToolbar" defaultItem="0">Masquer la bascule des favoris</dropdownList>
+        <dropdownList refId="HideSettingsToolbar" defaultItem="0">Masquer l'engrenage des paramètres</dropdownList>
+      </presentation>
+      <presentation id="HideDesktopContextMenu">
+        <dropdownList refId="HideResetDesktopDesktopContext" defaultItem="0">Masquer Réinitialiser le poste de travail</dropdownList>
+        <dropdownList refId="HideRestartDesktopDesktopContext" defaultItem="0">Masquer Redémarrer le poste de travail</dropdownList>
+        <dropdownList refId="HideDisplayDesktopContext" defaultItem="0">Masquer Afficher</dropdownList>
+        <dropdownList refId="HideSettingsDesktopContext" defaultItem="0">Masquer les paramètres</dropdownList>
+        <dropdownList refId="HideCreateShortcutToDesktopDesktopContext" defaultItem="0">Masquer Créer un raccourci sur le Bureau</dropdownList>
+        <dropdownList refId="HideAddToStartMenuDesktopContext" defaultItem="0">Masquer Ajouter au menu Démarrer</dropdownList>
+        <dropdownList refId="HideMarkAsFavoriteDesktopContext" defaultItem="0">Masquer Marquer comme favori</dropdownList>
+      </presentation>
+      <presentation id="HideAppContextMenu">
+        <dropdownList refId="HideSettingsAppContext" defaultItem="0">Masquer les paramètres</dropdownList>
+        <dropdownList refId="HideCreateShortcutToDesktopAppContext" defaultItem="0">Masquer Créer un raccourci sur le Bureau</dropdownList>
+        <dropdownList refId="HideAddToStartMenuAppContext" defaultItem="0">Masquer Ajouter au menu Démarrer</dropdownList>
+        <dropdownList refId="HideMarkAsFavoriteAppContext" defaultItem="0">Masquer Marquer comme favori</dropdownList>
+      </presentation>
+      <presentation id="HideDesktopMenu">
+        <dropdownList refId="HideHelpDesktopMenu" defaultItem="0">Masquer l'aide</dropdownList>
+        <dropdownList refId="HideSupportInformationDesktopMenu" defaultItem="0">Masquer les informations de support</dropdownList>
+        <dropdownList refId="HideEnableRelativeMouseDesktopMenu" defaultItem="0">Masquer la souris relative activée</dropdownList>
+        <dropdownList refId="HideShareFoldersDesktopMenu" defaultItem="0">Masquer les dossiers de partage</dropdownList>
+        <dropdownList refId="HideAllowDisplayScalingDesktopMenu" defaultItem="0">Masquer Autoriser la mise à l'échelle de l'affichage</dropdownList>
+        <dropdownList refId="HideResetDesktopDesktopMenu" defaultItem="0">Masquer Réinitialiser le poste de travail</dropdownList>
+        <dropdownList refId="HideRestartDesktopDesktopMenu" defaultItem="0">Masquer Redémarrer le poste de travail</dropdownList>
+        <dropdownList refId="HideConnectUSBDeviceDesktopMenu" defaultItem="0">Masquer Connecter le périphérique USB</dropdownList>
+      </presentation>
+      <presentation id="HideNotificationMenu">
+        <dropdownList refId="HideSharingNotificationMenu" defaultItem="0">Masquer le partage</dropdownList>
+        <dropdownList refId="HideSettingsNotificationMenu" defaultItem="0">Masquer les paramètres</dropdownList>
+      </presentation>
+      <presentation id="ColorDepth">
+        <dropdownList refId="ColorDepth" defaultItem="0">Profondeur de couleurs</dropdownList>
+      </presentation>
+      <presentation id="DisableWallpaper" />
+      <presentation id="DisableFullWindowDrag" />
+      <presentation id="DisableMenuAnimations" />
+      <presentation id="DisableTheming" />
+      <presentation id="DisableCursorShadow" />
+      <presentation id="FontSmoothing" />
+      <presentation id="DesktopComposition" />
+      <presentation id="AudioRedirectionMode">
+        <dropdownList refId="AudioRedirectionMode" defaultItem="0">Redirection audio</dropdownList>
+      </presentation>
+      <presentation id="RedirectDrives" />
+      <presentation id="RedirectPrinters" />
+      <presentation id="RedirectPorts" />
+      <presentation id="RedirectSmartcards" />
+      <presentation id="RedirectClipboard" />
+      <presentation id="RedirectPlugAndPlayDevices" />
+      <presentation id="ShadowBitmap" />
+      <presentation id="CachePersistenceActive" />
+      <presentation id="EnableCompression" />
+      <presentation id="KeyboardHookMode">
+        <dropdownList refId="KeyboardHookMode" defaultItem="0">Redirection de combinaisons de touches Windows</dropdownList>
+      </presentation>
+      <presentation id="EnableCredSspSupport" />
+      <presentation id="BitmapCacheSize">
+        <decimalTextBox refId="BitmapCacheSize">Taille du cache de bitmaps en mémoire en Ko pour les bitmaps de 8 bpp</decimalTextBox>
+      </presentation>
+      <presentation id="BitmapVirtualCacheSize">
+        <decimalTextBox refId="BitmapVirtualCacheSize">Taille du fichier de cache de bitmaps en Mo pour les bitmaps de 8 bpp</decimalTextBox>
+      </presentation>
+      <presentation id="BitmapVirtualCache16BppSize">
+        <decimalTextBox refId="BitmapVirtualCache16BppSize">Taille du fichier de cache de bitmaps en Mo pour les bitmaps de 16 bpp</decimalTextBox>
+      </presentation>
+      <presentation id="BitmapVirtualCache24BppSize">
+        <decimalTextBox refId="BitmapVirtualCache24BppSize">Taille du fichier de cache de bitmaps en Mo pour les bitmaps de 24 bpp</decimalTextBox>
+      </presentation>
+      <presentation id="BitmapVirtualCache32BppSize">
+        <decimalTextBox refId="BitmapVirtualCache32BppSize">Taille du fichier de cache de bitmaps en Mo pour les bitmaps de 32 bpp</decimalTextBox>
+      </presentation>
+      <presentation id="EnableAutoReconnect" />
+      <presentation id="RedirectAudioCapture" />
+      <presentation id="LogInAsCurrentUser_Display_1" />
+      <presentation id="LogInAsCurrentUser_1" />
+      <presentation id="EnableRecursiveUnlock_1" />
+      <presentation id="EnableTicketSSLAuth_1">
+        <dropdownList refId="EnableTicketSSLAuth" defaultItem="0">Activer le canal d'infrastructure chiffré SSL</dropdownList>
+      </presentation>
+      <presentation id="IgnoreRevocation_1" />
+      <presentation id="SSLCipherList_1">
+        <textBox refId="SSLCipherList">
+          <label>Configure les protocoles et les algorithmes de chiffrement SSL</label>
+          <defaultValue>TLSv1.1:TLSv1.2:!aNULL:kECDH+AESGCM:ECDH+AESGCM:RSA+AESGCM:kECDH+AES:ECDH+AES:RSA+AES</defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="ServerURL_1">
+        <textBox refId="ServerURL">
+          <label>URL du serveur</label>
+        </textBox>
+      </presentation>
+      <presentation id="UserName_1">
+        <textBox refId="UserName">
+          <label>Nom d'utilisateur d'ouverture de session</label>
+        </textBox>
+      </presentation>
+      <presentation id="DomainName_1">
+        <textBox refId="DomainName">
+          <label>Nom de domaine d'ouverture de session</label>
+        </textBox>
+      </presentation>
+      <presentation id="Password_1">
+        <textBox refId="Password">
+          <label>Mot de passe d'ouverture de session</label>
+        </textBox>
+      </presentation>
+      <presentation id="DesktopName_1">
+        <textBox refId="DesktopName">
+          <label>Nom de poste de travail à sélectionner</label>
+        </textBox>
+      </presentation>
+      <presentation id="DesktopLayout_1">
+        <dropdownList refId="DesktopLayout" defaultItem="0">Disposition du poste de travail</dropdownList>
+      </presentation>
+      <presentation id="LockedGuestSize_1">
+        <decimalTextBox refId="LockedGuestWidth" defaultValue="1600">Largeur d'invité verrouillée  </decimalTextBox>
+        <decimalTextBox refId="LockedGuestHeight" defaultValue="1200">Hauteur d'invité verrouillée</decimalTextBox>
+      </presentation>
+      <presentation id="NonInteractive_1" />
+      <presentation id="SingleAutoConnect_1" />
+      <presentation id="noTSCAddins_1" />
+      <presentation id="connectUSBOnStartup_1" />
+      <presentation id="connectUSBOnInsert_1" />
+      <presentation id="AppSessionReconnectBehavior_1">
+        <dropdownList refId="AppSessionReconnectBehavior" defaultItem="0">Comportement de reprise des sessions d'application déconnectées</dropdownList>
+      </presentation>
+      <presentation id="UnauthenticatedAccessEnabled_1" />
+      <presentation id="UnauthenticatedAccessAccount_1">
+        <textBox refId="UnauthenticatedAccessAccount">
+          <label>Compte à utiliser pour l'accès non authentifié</label>
+        </textBox>
+      </presentation>
+      <presentation id="AllowDataSharing" />
+      <presentation id="AllowResolutionDpiSync" />
+      <presentation id="EnableShade" />
+      <presentation id="InitialPinState" />
+      <presentation id="DisableSpanChecks" />
+      <presentation id="EnableMMR" />
+      <presentation id="AlwaysOnTop" />
+      <presentation id="AutomaticallyInstallShortcuts" />
+      <presentation id="LocalModeExitBehavior">
+        <dropdownList refId="LocalModeExitBehavior" defaultItem="0">Comportement de fermeture par défaut des postes de travail en mode local</dropdownList>
+      </presentation>
+      <presentation id="AutomaticallyInstallShortcuts_1" />
+      <presentation id="DisableToastNotifications_1" />
+      <presentation id="EnableRelativeMouse_1" />
+      <presentation id="DisableDisconnectMessages_1" />
+      <presentation id="HideClientAfterLaunchSession_1" />
+      <presentation id="DisableSharing" />
+      <presentation id="ForceFloatingLanguageBarOff_1" />
+      <presentation id="AllowDisplayScaling" />
+      <presentation id="AutoSyncToggleKeys" />
+      <presentation id="AllowHEVC" />
+      <presentation id="AllowBlastThroughProxy" />
+      <presentation id="ForceUserAffinity" />
+      <presentation id="MouseMoveMaxLatencyMsec">
+        <decimalTextBox refId="MouseMoveMaxLatencyMsec">Latence maximale pour la fusion de la souris</decimalTextBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

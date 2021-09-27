@@ -21,40 +21,18 @@
         <decimal id="DataCollectionFrequency" valueName="DataCollectionFrequency" />
       </elements>
     </policy>
-    <policy name="perf_tracker_VDI_auto_start" class="Machine" displayName="$(string.perf_tracker_VDI_auto_start)" explainText="$(string.perf_tracker_VDI_auto_start_detail)" key="SOFTWARE\Microsoft\Windows\CurrentVersion\Run" presentation="$(presentation.perf_tracker_auto_start_mode)">
+    <policy name="perf_tracker_VDI_auto_start" class="Machine" displayName="$(string.perf_tracker_VDI_auto_start)" explainText="$(string.perf_tracker_VDI_auto_start_detail)" key="SOFTWARE\Microsoft\Windows\CurrentVersion\Run" presentation="$(presentation.perf_tracker_auto_start_command)">
       <parentCategory ref="VMwareHorizonPerfTracker" />
       <supportedOn ref="SUPPORTED_NotSpecified" />
-         <elements>
-            <enum id="HideUI" valueName="VMware perfTracker" key="SOFTWARE\Microsoft\Windows\CurrentVersion\Run" required="true">
-               <item displayName="$(string.ShowUI)">
-                  <value>
-                     <string>C:\Program Files\VMware\Horizon Performance Tracker\VMware.Horizon.PerformanceTracker.exe</string>
-                  </value>
-               </item>
-               <item displayName="$(string.HideUI)">
-                  <value>
-                     <string>C:\Program Files\VMware\Horizon Performance Tracker\VMware.Horizon.PerformanceTracker.exe -hideUI</string>
-                  </value>
-               </item>
-            </enum>
+	     <elements>
+            <text id="PerfTrackerCMD" valueName="VMware perfTracker" />
          </elements>
     </policy>
-    <policy name="perf_tracker_remote_app_auto_start" class="Machine" displayName="$(string.perf_tracker_remote_app_auto_start)" explainText="$(string.perf_tracker_remote_app_auto_start_detail)" key="SOFTWARE\VMware, Inc.\VMware VDM\UnityShell\Run" presentation="$(presentation.perf_tracker_auto_start_mode)">
+    <policy name="perf_tracker_remote_app_auto_start" class="Machine" displayName="$(string.perf_tracker_remote_app_auto_start)" explainText="$(string.perf_tracker_remote_app_auto_start_detail)" key="SOFTWARE\VMware, Inc.\VMware VDM\UnityShell\Run" presentation="$(presentation.perf_tracker_auto_start_command)">
       <parentCategory ref="VMwareHorizonPerfTracker" />
       <supportedOn ref="SUPPORTED_NotSpecified" />
-         <elements>
-            <enum id="HideUI" valueName="VMware perfTracker" key="SOFTWARE\VMware, Inc.\VMware VDM\UnityShell\Run" required="true">
-               <item displayName="$(string.ShowUI)">
-                  <value>
-                     <string>C:\Program Files\VMware\Horizon Performance Tracker\VMware.Horizon.PerformanceTracker.exe</string>
-                  </value>
-               </item>
-               <item displayName="$(string.HideUI)">
-                  <value>
-                     <string>C:\Program Files\VMware\Horizon Performance Tracker\VMware.Horizon.PerformanceTracker.exe -hideUI</string>
-                  </value>
-               </item>
-            </enum>
+	     <elements>
+            <text id="PerfTrackerCMD" valueName="VMware perfTracker" />
          </elements>
     </policy>
   </policies>

@@ -92,8 +92,8 @@ Por defecto: permitir el reenvío</string>
       <string id="AllowAudioOutExplain">Permitir que se reenvíen dispositivos de salida de audio.
 
 Por defecto: bloquear el reenvío</string>
-      <string id="AllowKeyboardMouse">Permitir dispositivos de teclado y ratón</string>
-      <string id="AllowKeyboardMouseExplain">Permitir que se reenvíen dispositivos de teclado y ratón.
+      <string id="AllowKeyboardMouse">Permitir dispositivos de teclado y mouse</string>
+      <string id="AllowKeyboardMouseExplain">Permitir que se reenvíen dispositivos de teclado y mouse.
 
 Por defecto: bloquear el reenvío</string>
       <string id="AllowVideo">Permitir dispositivos de vídeo</string>
@@ -178,6 +178,7 @@ Nota: si el inicio de sesión falla debido a que se introduce información de in
       <string id="SingleAutoConnect">Conectar automáticamente si solo hay un elemento de ejecución autorizado</string>
       <string id="SingleAutoConnectExplain">Conectar automáticamente con el escritorio o la aplicación si son los únicos autorizados para el usuario que ha iniciado sesión.</string>
       <string id="VMwareViewClientSecurity">Configuración de seguridad</string>
+      <string id="VMwareViewClientSecurityNTLM">Configuración de NTLM</string>
       <string id="LogInAsCurrentUser_Display">Mostrar opción Iniciar sesión como usuario actual</string>
       <string id="LogInAsCurrentUser_DisplayExplain">Determina si se muestra la casilla Iniciar sesión como usuario actual en Horizon Client para Windows.
 
@@ -193,14 +194,27 @@ Este ajuste está deshabilitado por defecto.</string>
 
 Este ajuste está habilitado de forma predeterminada.</string>
       <string id="BrokersTrustedForDelegation">Servidores de confianza para delegación</string>
-      <string id="BrokersTrustedForDelegationExplain">Determina la lista de servidores de conexión de View que tienen permitido que se les deleguen credenciales. Se utiliza con &quot;Iniciar sesión como usuario actual&quot;.
+      <string id="BrokersTrustedForDelegationExplain">Establece la lista de servidores de conexión de View a los que se les permite tener credenciales delegadas. Se utiliza con &quot;Iniciar sesión como usuario actual&quot;.
 
-Todos los servidores son de confianza por defecto.
+El formato del nombre de los servidores es SPN (nombre de entidad de seguridad de servicio).
 
-Puede añadir servidores utilizando 3 formatos diferentes:
-dominio\sistema$
-sistema$@dominio.dom
-SPN (Service Principal Name, nombre de entidad de seguridad de servicio).</string>
+De forma predeterminada, todos los servidores son de confianza.</string>
+      <string id="AllowNTLMAuthentication">Permitir autenticación NTLM</string>
+      <string id="AllowFallBack_YES">Sí</string>
+      <string id="AllowFallBack_NO">No</string>
+      <string id="AllowNTLMAuthenticationExplain">Cuando esta opción está habilitada, se permite la autenticación NTLM con Iniciar sesión como usuario actual.
+
+Si no está configurada, se permitirá la autenticación NTLM para los servidores que aparecen en el GPO: 'Utilizar siempre NTLM para servidores'.
+
+Si está deshabilitada, no se utilizará la autenticación NTLM para ningún servidor.
+
+Permitir reserva de Kerberos a NTLM:
+Si se establece en 'No', NTLM solo se utilizará para los servidores que aparecen en el GPO: 'Utilizar siempre NTLM para servidores'.
+Si se establece en 'Sí', NTLM se podrá utilizar cuando el cliente no pueda recuperar un ticket de Kerberos para el servidor.</string>
+      <string id="ServersAlwaysUseNTLM">Utilizar siempre NTLM para servidores</string>
+      <string id="ServersAlwaysUseNTLMExplain">Si esta opción está habilitada, la opción Iniciar de sesión como usuario actual siempre usará la autenticación NTLM para los servidores de la lista.
+
+El formato del nombre de los servidores es FQDN (nombre de dominio completo)</string>
       <string id="IgnoreRevocation">Ignorar problemas de revocación de certificados</string>
       <string id="IgnoreRevocationExplain">Determina si se ignoran los errores asociados a un certificado de servidor revocado.
 
@@ -360,7 +374,7 @@ Además de habilitar este ajuste, también debe verificar que se cumplen las sig
       <string id="DisableToastNotifications">Deshabilitar notificaciones del sistema</string>
       <string id="DisableToastNotificationsExplain">Este ajuste deshabilita las notificaciones del sistema de Horizon Client. Habilite este ajuste si no desea que el usuario vea notificaciones del sistema en la esquina de su pantalla. Tenga en cuenta que habilitar este objeto de directiva de grupo (GPO) provocará que el usuario no vea una advertencia de 5 minutos restantes cuando esté activada la función de tiempo de espera de sesión agotado.</string>
       <string id="EnableRelativeMouse">Habilitar ratón relativo</string>
-      <string id="EnableRelativeMouseExplain">Este ajuste habilita el ratón relativo de Horizon Client para escritorios PCoIP. habilite este ajuste si desea que el usuario use siempre el modo de ratón relativo con escritorios PCoIP. El modo de ratón relativo mejora el comportamiento del ratón para determinadas aplicaciones gráficas y juegos. Si el escritorio remoto no es compatible con el ratón relativo, este ajuste no se utiliza. El ajuste está deshabilitado por defecto.</string>
+      <string id="EnableRelativeMouseExplain">Este ajuste habilita el mouse relativo de Horizon Client para escritorios PCoIP. habilite este ajuste si desea que el usuario use siempre el modo de mouse relativo con escritorios PCoIP. El modo de mouse relativo mejora el comportamiento del mouse para determinadas aplicaciones gráficas y juegos. Si el escritorio remoto no es compatible con el mouse relativo, este ajuste no se utiliza. El ajuste está deshabilitado por defecto.</string>
       <string id="DisableDisconnectMessages">Deshabilitar mensajes de desconexión de escritorio</string>
       <string id="DisableDisconnectMessagesExplain">Determina si se deben deshabilitar mensajes que normalmente se muestran al desconectarse el escritorio. Estos mensajes se muestran por defecto. Este ajuste no se aplica a la desconexión iniciada por parte del usuario de la interfaz de usuario de Horizon Client.</string>
       <string id="DisallowClientInformationPassthrough">Deshabilitar la transmisión de información de cliente en una sesión anidada</string>
@@ -467,6 +481,8 @@ Esta propiedad está habilitada de forma predeterminada.</string>
       <string id="BrowserRedirIgnoreCertErrorsExplain">Si se habilita, se ignorarán todos los errores de certificado que se produzcan en la página redireccionada y la navegación continuará. Esta propiedad está deshabilitada de forma predeterminada.</string>
       <string id="BrowserRedirEnableMediaStream">Habilitar el acceso al micrófono y la cámara WebRTC para el redireccionamiento de navegador</string>
       <string id="BrowserRedirEnableMediaStreamExplain">Si se habilita, las páginas redireccionadas que usen WebRTC tendrán acceso a la cámara y al micrófono del cliente. Esta propiedad está habilitada de forma predeterminada.</string>
+      <string id="MouseMoveMaxLatencyMsec">Configurar la latencia máxima para la fusión del mouse</string>
+      <string id="MouseMoveMaxLatencyMsecExplain">Este ajuste permite configurar la latencia máxima permitida al fusionar eventos de movimiento del mouse (en milisegundos). Se aceptan como válidos los valores entre 0 y 50 (el valor 0 deshabilita la fusión de eventos de movimiento del mouse). La fusión de eventos de movimiento del mouse puede reducir el uso del ancho de banda de cliente a agente, pero puede agregar una latencia reducida al movimiento del mouse. Esta propiedad está deshabilitada de forma predeterminada.</string>
     </stringTable>
     <presentationTable>
       <presentation id="ExcludePath">
@@ -525,6 +541,12 @@ Esta propiedad está habilitada de forma predeterminada.</string>
       <presentation id="EnableRecursiveUnlock" />
       <presentation id="BrokersTrustedForDelegation">
         <listBox refId="BrokersTrustedForDelegation">Servidores de confianza para delegación</listBox>
+      </presentation>
+      <presentation id="AllowNTLMAuthentication">
+      <dropdownList refId="AllowNTLMAuthentication" defaultItem="1" noSort="true">Permitir reserva de Kerberos a NTLM</dropdownList>
+      </presentation>
+      <presentation id="ServersAlwaysUseNTLM">
+        <listBox refId="ServersAlwaysUseNTLM">Utilizar siempre NTLM para servidores</listBox>
       </presentation>
       <presentation id="IgnoreRevocation" />
       <presentation id="CertCheckMode">
@@ -661,7 +683,7 @@ Esta propiedad está habilitada de forma predeterminada.</string>
       <presentation id="HideDesktopMenu">
         <dropdownList refId="HideHelpDesktopMenu" defaultItem="0">Ocultar Ayuda</dropdownList>
         <dropdownList refId="HideSupportInformationDesktopMenu" defaultItem="0">Ocultar Información de soporte técnico</dropdownList>
-        <dropdownList refId="HideEnableRelativeMouseDesktopMenu" defaultItem="0">Ocultar Habilitar mouse relativo</dropdownList>
+        <dropdownList refId="HideEnableRelativeMouseDesktopMenu" defaultItem="0">Ocultar Habilitar ratón relativo</dropdownList>
         <dropdownList refId="HideShareFoldersDesktopMenu" defaultItem="0">Ocultar Compartir carpetas</dropdownList>
         <dropdownList refId="HideAllowDisplayScalingDesktopMenu" defaultItem="0">Ocultar Permitir ajustar escala de pantalla</dropdownList>
         <dropdownList refId="HideResetDesktopDesktopMenu" defaultItem="0">Ocultar Restablecer escritorio</dropdownList>
@@ -797,6 +819,9 @@ Esta propiedad está habilitada de forma predeterminada.</string>
       <presentation id="AllowHEVC" />
       <presentation id="AllowBlastThroughProxy" />
       <presentation id="ForceUserAffinity" />
+      <presentation id="MouseMoveMaxLatencyMsec">
+        <decimalTextBox refId="MouseMoveMaxLatencyMsec">Latencia máxima para fusión del mouse</decimalTextBox>
+      </presentation>
     </presentationTable>
   </resources>
 </policyDefinitionResources>

@@ -17,6 +17,8 @@
       <string id="BLAST_MAX_FPS_EXPLAIN">Valor máximo de fotogramas para gestionar el ancho de banda medio consumido por el usuario limitando el número de actualizaciones de pantalla por segundo.</string>
       <string id="BLAST_UDP_LABEL">Protocolo UDP</string>
       <string id="BLAST_UDP_EXPLAIN">Cuando se habilita este ajuste o no se configura, se utilizará el protocolo UDP. Si el ajustese deshabilita, se utilizará el protocolo TCP.</string>
+      <string id="BLAST_CURSOR_WARPING_LABEL">Deformación del cursor</string>
+      <string id="BLAST_CURSOR_WARPING_EXPLAIN">Cuando esta opción está habilitada, la función de deformación del cursor estará activada. Si esta función está habilitada y el mouse está en modo absoluto, el agente remoto detectará movimientos de cursor repentinos y los reflejará en el cliente moviendo el cursor local; en el resto de casos, el cliente ignorará los movimientos repentinos del cursor en el agente remoto. La función de deformación del cursor está deshabilitada de forma predeterminada.</string>
       <!--
         NOTE FOR TRANSLATORS: the collection of BLAST_DSCP_..._EXPLAIN strings that follow
 	BLAST_DSP_ACTIVATE_LABEL all cite this "DSCP Marking" string in their second paragraph.
@@ -107,6 +109,14 @@ Cuanto mayor es la calidad, más ancho de banda se utiliza y mayor es la posible
       <string id="BLAST_DISPLAY_QUALITY_JPEG_QUAL_LOW">Calidad JPEG baja</string>
       <string id="BLAST_DISPLAY_QUALITY_JPEG_QUAL_MID">Calidad JPEG media</string>
       <string id="BLAST_DISPLAY_QUALITY_JPEG_QUAL_HIGH">Calidad JPEG alta</string>
+      <string id="BLAST_CODEC_QUALITY_LABEL">Calidad del códec Blast</string>
+      <string id="BLAST_CODEC_QUALITY_EXPLAIN">Esta configuración controla la calidad de la imagen de la pantalla remota cuando se utiliza la compresión de códec Blast. El parámetro de cuantificación (QP) controla la cantidad de imágenes resultante que se cuantifican, es decir, con compresión de pérdida:
+- el valor mínimo de QP establece el límite inferior para la cuantificación, es decir, la mejor calidad.
+- el valor máximo de QP establece el límite superior para la cuantificación, es decir, la calidad más baja.
+Estos valores de cuantificación ocupan el rango [1, 8] y corresponden aproximadamente a un valor de calidad JPEG en el rango de [20, 88]. Esta cuantificación se aplica solo a las regiones que no son de texto y, por lo tanto, no tiene ningún efecto en la compresión de texto.
+El valor cero para el modo de QP máximo o mínimo hará que la configuración se reemplace por las configuraciones de calidad JPEG baja y alta, respectivamente. Este es el comportamiento predeterminado.</string>
+      <string id="BLAST_CODEC_QP_MAX">Tamaño máximo de QP del códec Blast</string>
+      <string id="BLAST_CODEC_QP_MIN">Cantidad mínima de QP del códec Blast</string>
       <string id="BLAST_H264_QUALITY_LABEL">Calidad H.264</string>
       <string id="BLAST_H264_QUALITY_EXPLAIN">Estos ajustes controlan la calidad de imagen de la pantalla remota al utilizar compresión H.264. El parámetro de cuantificación (Quantization Parameter, QZ) controla el grado de cuantificación de la imagen resultante, es decir, la compresión con pérdidas:
 - El QP mínimo establece el límite inferior de cuantificación, es decir, la mejor calidad.
@@ -180,9 +190,9 @@ Después de configurar la sesión:
 
 Este ajuste solo se aplica al agente.</string>
       <string id="KEYBOARD_LOCALE_SYNC_LABEL">Sincronización de configuración regional del teclado</string>
-      <string id="KEYBOARD_LOCALE_SYNC_EXPLAIN">Determina si la lista de configuraciones locales del teclado y la configuración local por defecto del teclado del usuario de la sesión están sincronizados con los datos del endpoint del cliente. Cuando se habilita este ajuste, se permite la sincronización. Cuando se deshabilita o no se configura, no se permite la sincronización.
+      <string id="KEYBOARD_LOCALE_SYNC_EXPLAIN">Determina si la lista de configuraciones regionales del teclado y la configuración regional del teclado predeterminada para el usuario de la sesión se sincronizan con los datos del endpoint del cliente. Cuando este ajuste está habilitado, se permite la sincronización. Si este ajuste está deshabilitado o no está configurado, no se permite la sincronización.
 
-Este ajuste solo afecta al agente.</string>
+Este ajuste solo se aplica al agente.</string>
       <string id="SERVER_FILE_TRANSFER_STATE">Configurar la transferencia de archivos</string>
       <string id="FILE_TRANSFER_STATE_DISABLE_BOTH">Carga y descarga deshabilitadas</string>
       <string id="FILE_TRANSFER_STATE_ENABLE_BOTH">Carga y descarga habilitadas</string>
@@ -283,6 +293,7 @@ Si el ajuste no está configurado o está deshabilitado, se establecerá un umbr
         <decimalTextBox refId="BLAST_MAX_FPS_LABEL" defaultValue="30">Máx. velocidad de fotogramas</decimalTextBox>
       </presentation>
       <presentation id="BLAST_UDP_LABEL" />
+      <presentation id="BLAST_CURSOR_WARPING_LABEL" />
       <presentation id="BLAST_DSCP_ACTIVATE_LABEL" />
       <presentation id="BLAST_DSCP_AGENT_OUT_TCP4_LABEL">
         <decimalTextBox refId="BLAST_DSCP_AGENT_OUT_TCP4_LABEL" defaultValue="">Valor de DSCP</decimalTextBox>
@@ -343,6 +354,10 @@ Si el ajuste no está configurado o está deshabilitado, se establecerá un umbr
         <decimalTextBox refId="BLAST_DISPLAY_QUALITY_JPEG_QUAL_LOW" defaultValue="25">Calidad JPEG baja</decimalTextBox>
         <decimalTextBox refId="BLAST_DISPLAY_QUALITY_JPEG_QUAL_MID" defaultValue="35">Calidad JPEG media</decimalTextBox>
         <decimalTextBox refId="BLAST_DISPLAY_QUALITY_JPEG_QUAL_HIGH" defaultValue="90">Calidad JPEG alta</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_CODEC_QUALITY_LABEL">
+        <decimalTextBox refId="BLAST_CODEC_QP_MAX" defaultValue="0">Tamaño máximo de QP del códec Blast</decimalTextBox>
+        <decimalTextBox refId="BLAST_CODEC_QP_MIN" defaultValue="0">Cantidad mínima de QP del códec Blast</decimalTextBox>
       </presentation>
       <presentation id="BLAST_H264_QUALITY_LABEL">
         <decimalTextBox refId="BLAST_H264_QUALITY_MAX_QP" defaultValue="36">Máximo QP de H.264</decimalTextBox>

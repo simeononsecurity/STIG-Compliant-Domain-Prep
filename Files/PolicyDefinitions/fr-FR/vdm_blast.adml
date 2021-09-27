@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                           revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="BLAST_CAT_LABEL">VMware Blast</string>
+      <string id="BLAST_CAT_EXPLAIN">Stratégies pour configurer le protocole Blast.</string>
+      <string id="BLAST_MAX_SESSION_BW_LABEL">Bande passante max. de session</string>
+      <string id="BLAST_MAX_SESSION_BW_EXPLAIN">Spécifie la bande passante maximale, en kilobits par seconde, pouvant être utilisée par le protocole Blast pour une session distante. La bande passante inclut les images, les sons, le canal virtuel, ainsi que le trafic de contrôle USB et Blast.</string>
+      <string id="BLAST_MIN_SESSION_BW_LABEL">Bande passante min. de session</string>
+      <string id="BLAST_MIN_SESSION_BW_EXPLAIN">Spécifie la bande passante minimale, en kilobits par seconde, qui est réservée au protocole Blast lors de l'accès à distance d'une session.</string>
+      <string id="BLAST_MAX_BANDWIDTH_KBPS_PER_MEGAPIXEL_SLOPE_LABEL">Pente de la bande passante max. de session en kbit/s par mégapixel</string>
+      <string id="BLAST_MAX_BANDWIDTH_KBPS_PER_MEGAPIXEL_SLOPE_EXPLAIN">Spécifie la pente des kbit/s par mégapixel de la résolution de l'écran distant pouvant être utilisée par le protocole Blast pour une session distante. kbit/s = TotalScreenMegaPixels * Pente</string>
+      <string id="BLAST_MAX_FPS_LABEL">Fréquence d'image max.</string>
+      <string id="BLAST_MAX_FPS_EXPLAIN">Valeur de fréquence d'image maximale pour gérer la bande passante moyenne consommée par utilisateur en limitant le nombre d'actualisations d'écran par seconde.</string>
+      <string id="BLAST_UDP_LABEL">Protocole UDP</string>
+      <string id="BLAST_UDP_EXPLAIN">Lorsque ce paramètre est activé ou non configuré, le protocole UDP est utilisé. Si le paramètre est désactivé, le protocole TCP est utilisé.</string>
+      <string id="BLAST_CURSOR_WARPING_LABEL">Distorsion du curseur</string>
+      <string id="BLAST_CURSOR_WARPING_EXPLAIN">Lorsque ce paramètre est activé, la fonctionnalité de distorsion du curseur est activée. Si cette fonctionnalité est activée et si la souris est en mode absolu, l'agent distant détecte les mouvements brusques du curseur et les indique au client en déplaçant le curseur local. Sinon, les mouvements brusques du curseur dans l'agent distant sont ignorés par le client. La fonctionnalité de distorsion du curseur est désactivée par défaut.</string>
+      <!--
+        NOTE FOR TRANSLATORS: the collection of BLAST_DSCP_..._EXPLAIN strings that follow
+	BLAST_DSP_ACTIVATE_LABEL all cite this "DSCP Marking" string in their second paragraph.
+	Whatever translation you apply to this string needs to be applied to those _EXPLAIN
+	strings too.
+      -->
+      <string id="BLAST_DSCP_ACTIVATE_LABEL">Marquage DSCP</string>
+      <string id="BLAST_DSCP_ACTIVATE_EXPLAIN">Lorsque ce paramètre est activé ou non configuré, permet aux valeurs DSCP (Differentiated Services Code Point) d'être spécifiées dans le trafic réseau envoyé par Blast Agent, Blast Client et Blast Secure Gateway.  Lorsque ce paramètre est désactivé, aucun marquage DSCP n'est effectué.</string>
+      <string id="BLAST_DSCP_AGENT_OUT_TCP4_LABEL">DSCP à partir de l'Agent, TCP/IPv4</string>
+      <string id="BLAST_DSCP_AGENT_OUT_TCP4_EXPLAIN">Valeur DSCP (Differentiated Services Code Point) devant être placée dans le trafic réseau envoyé par Blast Agent via TCP sur IPv4.
+
+Ce paramètre n'entre en vigueur que si le paramètre Marquage DSCP le permet.</string>
+      <string id="BLAST_DSCP_AGENT_OUT_UDP4_LABEL">DSCP à partir de l'Agent, UDP/IPv4</string>
+      <string id="BLAST_DSCP_AGENT_OUT_UDP4_EXPLAIN">Valeur DSCP (Differentiated Services Code Point) devant être placée dans le trafic réseau envoyé par Blast Agent via UDP sur IPv4.
+
+Ce paramètre n'entre en vigueur que si le paramètre Marquage DSCP le permet.</string>
+      <string id="BLAST_DSCP_AGENT_OUT_TCP6_LABEL">DSCP à partir de l'Agent, TCP/IPv6</string>
+      <string id="BLAST_DSCP_AGENT_OUT_TCP6_EXPLAIN">Valeur DSCP (Differentiated Services Code Point) devant être placée dans le trafic réseau envoyé par Blast Agent via TCP sur IPv6.
+
+Ce paramètre n'entre en vigueur que si le paramètre Marquage DSCP le permet.</string>
+      <string id="BLAST_DSCP_AGENT_OUT_UDP6_LABEL">DSCP à partir de l'Agent, UDP/IPv6</string>
+      <string id="BLAST_DSCP_AGENT_OUT_UDP6_EXPLAIN">Valeur DSCP (Differentiated Services Code Point) devant être placée dans le trafic réseau envoyé par Blast Agent via UDP sur IPv6.
+
+Ce paramètre n'entre en vigueur que si le paramètre Marquage DSCP le permet.</string>
+      <string id="BLAST_DSCP_CLIENT_OUT_TCP4_LABEL">DSCP à partir du Client, TCP/IPv4</string>
+      <string id="BLAST_DSCP_CLIENT_OUT_TCP4_EXPLAIN">Valeur DSCP (Differentiated Services Code Point) devant être placée dans le trafic réseau envoyé par Blast Client via TCP sur IPv4.
+
+Ce paramètre n'entre en vigueur que si le paramètre Marquage DSCP le permet.</string>
+      <string id="BLAST_DSCP_CLIENT_OUT_UDP4_LABEL">DSCP à partir du Client, UDP/IPv4</string>
+      <string id="BLAST_DSCP_CLIENT_OUT_UDP4_EXPLAIN">Valeur DSCP (Differentiated Services Code Point) devant être placée dans le trafic réseau envoyé par Blast Client via UDP sur IPv4.
+
+Ce paramètre n'entre en vigueur que si le paramètre Marquage DSCP le permet.</string>
+      <string id="BLAST_DSCP_CLIENT_OUT_TCP6_LABEL">DSCP à partir du Client, TCP/IPv6</string>
+      <string id="BLAST_DSCP_CLIENT_OUT_TCP6_EXPLAIN">Valeur DSCP (Differentiated Services Code Point) devant être placée dans le trafic réseau envoyé par Blast Client via TCP sur IPv6.
+
+Ce paramètre n'entre en vigueur que si le paramètre Marquage DSCP le permet.</string>
+      <string id="BLAST_DSCP_CLIENT_OUT_UDP6_LABEL">DSCP à partir du Client, UDP/IPv6</string>
+      <string id="BLAST_DSCP_CLIENT_OUT_UDP6_EXPLAIN">Valeur DSCP (Differentiated Services Code Point) devant être placée dans le trafic réseau envoyé par Blast Client via UDP sur IPv6.
+
+Ce paramètre n'entre en vigueur que si le paramètre Marquage DSCP le permet.</string>
+      <string id="BLAST_DSCP_BSG_DOWN_TCP4_LABEL">DSCP de BSG vers le client, TCP/IPv4</string>
+      <string id="BLAST_DSCP_BSG_DOWN_TCP4_EXPLAIN">Valeur DSCP (Differentiated Services Code Point) devant être placée dans le trafic réseau envoyé par Blast Secure Gateway à Blast Client via TCP sur IPv4.
+
+Ce paramètre n'entre en vigueur que si le paramètre Marquage DSCP le permet.</string>
+      <string id="BLAST_DSCP_BSG_DOWN_UDP4_LABEL">DSCP de BSG vers le client, UDP/IPv4</string>
+      <string id="BLAST_DSCP_BSG_DOWN_UDP4_EXPLAIN">Valeur DSCP (Differentiated Services Code Point) devant être placée dans le trafic réseau envoyé par Blast Secure Gateway à Blast Client via UDP sur IPv4.
+
+Ce paramètre n'entre en vigueur que si le paramètre Marquage DSCP le permet.</string>
+      <string id="BLAST_DSCP_BSG_DOWN_TCP6_LABEL">DSCP de BSG vers le client, TCP/IPv6</string>
+      <string id="BLAST_DSCP_BSG_DOWN_TCP6_EXPLAIN">Valeur DSCP (Differentiated Services Code Point) devant être placée dans le trafic réseau envoyé par Blast Secure Gateway à Blast Client via TCP sur IPv6.
+
+Ce paramètre n'entre en vigueur que si le paramètre Marquage DSCP le permet.</string>
+      <string id="BLAST_DSCP_BSG_DOWN_UDP6_LABEL">DSCP de BSG vers le client, UDP/IPv6</string>
+      <string id="BLAST_DSCP_BSG_DOWN_UDP6_EXPLAIN">Valeur DSCP (Differentiated Services Code Point) devant être placée dans le trafic réseau envoyé par Blast Secure Gateway à Blast Client via UDP sur IPv6.
+
+Ce paramètre n'entre en vigueur que si le paramètre Marquage DSCP le permet.</string>
+      <string id="BLAST_DSCP_BSG_UP_TCP4_LABEL">DSCP de BSG vers l'agent, TCP/IPv4</string>
+      <string id="BLAST_DSCP_BSG_UP_TCP4_EXPLAIN">Valeur DSCP (Differentiated Services Code Point) devant être placée dans le trafic réseau envoyé par Blast Secure Gateway à Blast Agent via TCP sur IPv4.
+
+Ce paramètre n'entre en vigueur que si le paramètre Marquage DSCP le permet.</string>
+      <string id="BLAST_DSCP_BSG_UP_UDP4_LABEL">DSCP de BSG vers l'agent, UDP/IPv4</string>
+      <string id="BLAST_DSCP_BSG_UP_UDP4_EXPLAIN">Valeur DSCP (Differentiated Services Code Point) devant être placée dans le trafic réseau envoyé par Blast Secure Gateway à Blast Agent via UDP sur IPv4.
+
+Ce paramètre n'entre en vigueur que si le paramètre Marquage DSCP le permet.</string>
+      <string id="BLAST_DSCP_BSG_UP_TCP6_LABEL">DSCP de BSG vers l'agent, TCP/IPv6</string>
+      <string id="BLAST_DSCP_BSG_UP_TCP6_EXPLAIN">Valeur DSCP (Differentiated Services Code Point) devant être placée dans le trafic réseau envoyé par Blast Secure Gateway à Blast Agent via TCP sur IPv6.
+
+Ce paramètre n'entre en vigueur que si le paramètre Marquage DSCP le permet.</string>
+      <string id="BLAST_DSCP_BSG_UP_UDP6_LABEL">DSCP de BSG vers l'agent, UDP/IPv6</string>
+      <string id="BLAST_DSCP_BSG_UP_UDP6_EXPLAIN">Valeur DSCP (Differentiated Services Code Point) devant être placée dans le trafic réseau envoyé par Blast Secure Gateway à Blast Agent via UDP sur IPv6.
+
+Ce paramètre n'entre en vigueur que si le paramètre Marquage DSCP le permet.</string>
+      <string id="BLAST_H264_ENCODE_LABEL">H.264</string>
+      <string id="BLAST_H264_ENCODE_EXPLAIN">Si vous activez ou ne configurez pas ce paramètre de stratégie, le codage H.264 est utilisé pour accéder à distance au poste de travail. Si vous désactivez ce paramètre de stratégie, JPEG/PNG est utilisé pour le codage.</string>
+      <string id="BLAST_HEVC_ENCODE_LABEL">HEVC</string>
+      <string id="BLAST_HEVC_ENCODE_EXPLAIN">Si vous activez ou ne configurez pas ce paramètre de stratégie, le codage HEVC sera autorisé pour la communication à distance avec le poste de travail. Si vous désactivez ce paramètre de stratégie, H.264 ou JPEG/PNG sera utilisé pour le codage.</string>
+      <string id="BLAST_PNG_ENCODE_LABEL">PNG</string>
+      <string id="BLAST_PNG_ENCODE_EXPLAIN">Si vous activez ou ne configurez pas ce paramètre de stratégie, le codage PNG est disponible pour les sessions distantes. Si vous désactivez ce paramètre de stratégie, seul JPEG est utilisé pour le codage en mode JPEG/PNG. Cette stratégie ne s'applique pas lorsque le codeur H.264 est actif.</string>
+      <string id="BLAST_SCREEN_BLANK_LABEL">Effacement d'écran</string>
+      <string id="BLAST_SCREEN_BLANK_EXPLAIN">Si vous activez ou ne configurez pas ce paramètre de stratégie, la console de la machine virtuelle de poste de travail affiche un écran vide lorsqu'il existe une session active sur le poste de travail. Si vous désactivez ce paramètre de stratégie, la console de la machine virtuelle affiche le poste de travail que l'utilisateur voit.</string>
+      <string id="BLAST_COOKIE_CLEANUP_LABEL">Intervalle de nettoyage des cookies</string>
+      <string id="BLAST_COOKIE_CLEANUP_EXPLAIN">L'intervalle contrôle la fréquence de nettoyage des sessions inactives. Cela est effectué en supprimant le cookie associé à la session.</string>
+      <string id="BLAST_COOKIE_CLEANUP_INTERVAL_LABEL">Intervalle (ms)</string>
+      <string id="BLAST_DISPLAY_QUALITY_LABEL">Qualité d'image</string>
+      <string id="BLAST_DISPLAY_QUALITY_EXPLAIN">Ces paramètres contrôlent la qualité d'image de l'écran distant.
+Il existe deux profils de qualité : faible et élevé. Le profil faible est utilisé lorsque des zones de l'écran changent souvent, par exemple lors du défilement. Le profil de qualité élevé est utilisé pour affiner des régions de l'écran qui changent moins, ce qui entraîne une meilleure image finale.
+Plus la qualité est élevée, plus la bande passante utilisée est importante et plus la latence est potentiellement élevée lorsque des régions de l'écran changent souvent, lors du défilement de l'écran par exemple.</string>
+      <string id="BLAST_DISPLAY_QUALITY_JPEG_QUAL_LOW">Faible qualité JPEG</string>
+      <string id="BLAST_DISPLAY_QUALITY_JPEG_QUAL_MID">Moyenne qualité JPEG</string>
+      <string id="BLAST_DISPLAY_QUALITY_JPEG_QUAL_HIGH">Haute qualité JPEG</string>
+      <string id="BLAST_CODEC_QUALITY_LABEL">Qualité du codec Blast</string>
+      <string id="BLAST_CODEC_QUALITY_EXPLAIN">Ces paramètres contrôlent la qualité d'image de l'affichage distant lors de l'utilisation de la compression du codec Blast. Le paramètre de quantification (QP) contrôle le degré de quantification de l'image obtenue, c'est-à-dire la compression avec perte :
+- la valeur minimale de QP définit la limite inférieure de la quantification, c'est-à-dire la meilleure qualité.
+- la valeur maximale de QP définit la limite supérieure de la quantification, c'est-à-dire la qualité la plus faible.
+Ces valeurs de quantification occupent la plage [1, 8] et correspondent approximativement à une valeur de qualité JPEG dans la plage [20, 88]. Cette quantification n'est appliquée qu'aux régions non textuelles et n'a donc aucune incidence sur la compression du texte.
+Une valeur de zéro pour la valeur maximale ou minimale de QP entraîne le remplacement de la configuration par les configurations de qualité JPEG Faible et Élevée, respectivement. Il s'agit du comportement par défaut.</string>
+      <string id="BLAST_CODEC_QP_MAX">Valeur maximale de QP pour le codec Blast</string>
+      <string id="BLAST_CODEC_QP_MIN">Valeur minimale de QP pour le codec Blast</string>
+      <string id="BLAST_H264_QUALITY_LABEL">Qualité H.264</string>
+      <string id="BLAST_H264_QUALITY_EXPLAIN">Ces paramètres contrôlent la qualité d'image de l'écran distant lorsque la compression H.264 est utilisée. Le paramètre de quantification (QP) contrôle la quantité d'image résultante qui est quantifiée, c'est-à-dire comprimée avec perte :
+- le QP minimal définit la limite inférieure de la quantification, c'est-à-dire la meilleure qualité.
+- le QP maximal définit la limite supérieure de la quantification, c'est-à-dire la qualité la plus faible.
+Nous vous conseillons de conserver ces valeurs à +/- 5 des valeurs par défaut, car des modifications plus importantes peuvent avoir des effets radicaux.</string>
+      <string id="BLAST_H264_QUALITY_MAX_QP">QP maximal H.264</string>
+      <string id="BLAST_H264_QUALITY_MIN_QP">QP minimal H.264</string>
+      <string id="BLAST_H264_COLOR_ACCURACY_LABEL">Haute précision couleurs H.264</string>
+      <string id="BLAST_H264_COLOR_ACCURACY_EXPLAIN">Si vous activez ce paramètre de stratégie, une précision de couleur supérieure sera demandée lorsque le codage H.264 est utilisé, en utilisant l'espace de couleurs YUV 4:4:4 au lieu de 4:2:0.
+Cela peut entraîner une dégradation des performances à des résolutions très élevées ou avec plusieurs moniteurs.</string>
+
+      <string id="BLAST_HEVC_COLOR_ACCURACY_LABEL">Haute précision des couleurs HEVC</string>
+      <string id="BLAST_HEVC_COLOR_ACCURACY_EXPLAIN">Si vous activez ce paramètre de stratégie, une meilleure précision des couleurs est demandée lorsque le codage HEVC est utilisé, grâce à l'espace colorimétrique YUV 4:4:4 au lieu de 4:2:0.
+L'accélération matérielle côté client de HEVC 4:4:4 est requise pour que cette stratégie prenne effet.</string>
+      <string id="BLAST_HTTP_LABEL">Service HTTPS</string>
+      <string id="BLAST_HTTP_EXPLAIN">Ces paramètres contrôlent le service Blast HTTP. Le numéro de port utilisé doit correspondre à la configuration du pare-feu</string>
+      <string id="BLAST_HTTP_PORTS_SECURE_LABEL">Port sécurisé (HTTPS)</string>
+      <string id="BLAST_AUDIO_LABEL">Lecture audio</string>
+      <string id="BLAST_AUDIO_EXPLAIN">Ce paramètre contrôle si la lecture audio doit être autorisée pour le poste de travail distant. La lecture audio est activée par défaut.</string>
+      <string id="SERVER_CLIPBOARD_STATE">Configurer la redirection du Presse-papiers</string>
+      <string id="SERVER_CLIPBOARD_AUDIT">Configurer l'audit du Presse-papiers</string>
+      <string id="SERVER_CLIPBOARD_AUDIT_BLOCK_CLIPBOARD">Bloquer la redirection du Presse-papiers du côté client lorsque le client ne prend pas en charge l'audit</string>
+      <string id="SERVER_CLIPBOARD_AUDIT_EXPLAIN">Détermine le sens dans lequel l'audit du Presse-papiers est autorisé. Vous pouvez sélectionner l'une de ces valeurs :
+
+-Désactivé dans les deux sens
+-Activé uniquement du client vers le serveur (en d'autres termes, les informations du Presse-papiers copiées du côté client au côté agent seront enregistrées)
+-Activé uniquement du serveur vers le client (en d'autres termes, les informations du Presse-papiers copiées du côté agent au côté client seront enregistrées)
+-Activé dans les deux sens
+
+Ce paramètre s'applique au serveur (poste de travail View) uniquement.
+
+Lorsque ce paramètre est désactivé ou qu'il n'est pas configuré, la valeur par défaut est « Désactivé dans les deux sens ».</string>
+      <string id="SERVER_CLIPBOARD_AUDIT_BLOCK_CLIPBOARD_EXPLAIN">Détermine s'il faut bloquer la redirection du Presse-papiers pour le client si le client Horizon ne prend pas en charge la fonctionnalité d'audit.
+
+Vous pouvez sélectionner le comportement de la redirection du Presse-papiers :
+
+-Laisser la redirection du Presse-papiers de l'agent vers le client traverser si l'audit est activé dans l'agent Horizon, mais pas dans le client Horizon
+-Bloquer la redirection du Presse-papiers de l'agent vers le client si l'audit est activé dans l'agent Horizon, mais pas dans le client Horizon
+
+Ce paramètre ne peut entrer en vigueur qu'après l'activation de l'audit.</string>
+      <string id="String_Policy_DropList_Select_Configure_clipboard_Audit_Pass_Through">Traverser</string>
+      <string id="String_Policy_DropList_Select_Configure_clipboard_Audit_Block">Bloquer</string>
+      <string id="CLIPBOARD_STATE_DISABLE_BOTH">Désactivé dans les deux sens</string>
+      <string id="CLIPBOARD_STATE_ENABLE_BOTH">Activé dans les deux sens</string>
+      <string id="CLIPBOARD_STATE_ENABLE_CLIENT_2_SERVER">Activé uniquement du client vers le serveur</string>
+      <string id="CLIPBOARD_STATE_ENABLE_SERVER_2_CLIENT">Activé uniquement du serveur vers le client</string>
+      <string id="String_Policy_DropList_Select_clipboard_size_unit_kilobytes" >kilo-octets</string>
+      <string id="String_Policy_DropList_Select_clipboard_size_unit_bytes" >octets</string>
+      <string id="SERVER_CLIPBOARD_STATE_EXPLAIN">Détermine le sens dans lequel la redirection du Presse-papiers est autorisée. Vous pouvez sélectionner l'une de ces valeurs :
+
+- Désactivé dans les deux sens
+- Activé dans les deux sens
+- Activé uniquement du client vers le serveur (c'est-à-dire autoriser les fonctions Copier et Coller uniquement du système client vers le poste de travail View.)
+- Activé uniquement du serveur vers le client (c'est-à-dire autoriser les fonctions Copier et Coller uniquement du poste de travail View vers le système client.)
+
+Ce paramètre s'applique uniquement au serveur (poste de travail View).
+
+Lorsque ce paramètre est désactivé ou non configuré, la valeur par défaut est « Activé uniquement du client vers le serveur ».</string>
+      <string id="SERVER_CLIPBOARD_SIZE">Taille de la mémoire du Presse-papiers sur le serveur</string>
+      <string id="SERVER_CLIPBOARD_SIZE_EXPLAIN">Ces paramètres indiquent la valeur de la taille de la mémoire du Presse-papiers du serveur.
+
+La taille de la mémoire du Presse-papiers sur le serveur est définie en octets ou en kilo-octets. La taille de la mémoire est définie en kilo-octets si elle n'est pas configurée.
+
+Le client dispose également d'une valeur pour la taille de la mémoire du Presse-papiers, mais elle est toujours en kilo-octets.
+
+Après la configuration de la session :
+- La valeur de la taille de la mémoire du Presse-papiers du serveur est envoyée au client.
+- Puis, sur le client, la valeur de la taille de la mémoire du Presse-papiers effective est déterminée en recherchant les valeurs minimales du client et du serveur.</string>
+      <string id="CLIPBOARD_FINE_GRAIN_LABEL">Configuration très fine du Presse-papiers</string>
+      <string id="CLIPBOARD_FINE_GRAIN_EXPLAIN">Détermine si le paramètre du Presse-papiers très fin est activé. Lorsque ce paramètre est activé, la taille de la mémoire du Presse-papiers sur le serveur est en octets. Lorsque ce paramètre est désactivé, la taille de la mémoire du Presse-papiers sur le serveur est en kilo-octets.
+
+Ce paramètre ne s'applique qu'à l'agent.</string>
+      <string id="KEYBOARD_LOCALE_SYNC_LABEL">Synchronisation des paramètres régionaux du clavier</string>
+      <string id="KEYBOARD_LOCALE_SYNC_EXPLAIN">Détermine si la liste des paramètres régionaux du clavier et les paramètres régionaux du clavier par défaut de l'utilisateur dans la session sont synchronisés avec les données du point de terminaison client. Lorsque ce paramètre est activé, la synchronisation est autorisée. Lorsque ce paramètre est désactivé ou qu'il n'est pas configuré, la synchronisation est interdite.
+
+Ce paramètre ne s'applique qu'à l'agent.</string>
+      <string id="SERVER_FILE_TRANSFER_STATE">Configurer le transfert de fichiers</string>
+      <string id="FILE_TRANSFER_STATE_DISABLE_BOTH">Chargement et téléchargement désactivés</string>
+      <string id="FILE_TRANSFER_STATE_ENABLE_BOTH">Chargement et téléchargement activés</string>
+      <string id="FILE_TRANSFER_STATE_ENABLE_UPLOAD">Chargement de fichiers uniquement activé</string>
+      <string id="FILE_TRANSFER_STATE_ENABLE_DOWNLOAD">Téléchargement de fichiers uniquement activé</string>
+      <string id="SERVER_FILE_TRANSFER_STATE_EXPLAIN">Détermine le transfert de fichiers entre l'agent et HTML Access. Vous pouvez sélectionner l'une de ces valeurs :
+
+- Chargement et téléchargement désactivés
+- Chargement et téléchargement activés
+- Chargement de fichiers uniquement activé (c'est-à-dire autoriser le chargement de fichiers depuis le système client vers le poste de travail View.)
+- Téléchargement de fichiers uniquement activé (c'est-à-dire autoriser le téléchargement de fichiers depuis le poste de travail View vers le système client.)
+
+Ce paramètre s'applique uniquement au serveur (poste de travail View).
+
+Lorsque ce paramètre est désactivé ou non configuré, la valeur par défaut est « Activé uniquement du client vers le serveur ».</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_TEXT_IN">Filtrer le texte des données de Presse-papiers entrantes</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_TEXT_IN_EXPLAIN">Détermine si les données textuelles sont filtrées des données de Presse-papiers allant du client vers l'agent. Lorsque cette case est cochée, les données sont filtrées, sinon elles ne le sont pas.</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_RTF_IN">Filtrer les données au format RTF des données de Presse-papiers entrantes</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_RTF_IN_EXPLAIN">Détermine si les données au format RTF sont filtrées des données de Presse-papiers allant du client vers l'agent. Lorsque cette case est cochée, les données sont filtrées, sinon elles ne le sont pas.</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_IMAGE_IN">Filtrer les images des données de Presse-papiers entrantes</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_IMAGE_IN_EXPLAIN">Détermine si les données d'image sont filtrées des données de Presse-papiers allant du client vers l'agent. Lorsque cette case est cochée, les données sont filtrées, sinon elles ne le sont pas.</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_IN">Filtrer les données texte Microsoft Office des données de Presse-papiers entrantes</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_IN_EXPLAIN">Détermine si les données au format texte Microsoft Office (format BIFF12) sont filtrées des données de Presse-papiers allant du client vers l'agent. Lorsque cette case est cochée, les données sont filtrées, sinon elles ne le sont pas.</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_MSO_CHART_IN">Filtrer les données Microsoft Chart and Smart Art des données de Presse-papiers entrantes</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_MSO_CHART_IN_EXPLAIN">Détermine si les données Microsoft Office Chart and Smart Art (Art::GVML ClipFormat) sont filtrées des données de Presse-papiers allant du client vers l'agent. Lorsque cette case est cochée, les données sont filtrées, sinon elles ne le sont pas.</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_IN">Filtrer les données Microsoft Text Effects des données de Presse-papiers entrantes</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_IN_EXPLAIN">Détermine si les données Microsoft Office Text Effects (format HTML) sont filtrées des données de Presse-papiers allant du client vers l'agent. Lorsque cette case est cochée, les données sont filtrées, sinon elles ne le sont pas.</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_TEXT_OUT">Filtrer le texte des données de Presse-papiers sortantes</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_TEXT_OUT_EXPLAIN">Détermine si les données textuelles sont filtrées des données de Presse-papiers envoyées depuis l'agent vers le client. Lorsque cette case est cochée, les données sont filtrées, sinon elles ne le sont pas.</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_RTF_OUT">Filtrer les données au format RTF des données de Presse-papiers sortantes</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_RTF_OUT_EXPLAIN">Détermine si les données au format RTF sont filtrées des données de Presse-papiers envoyées depuis l'agent vers le client. Lorsque cette case est cochée, les données sont filtrées, sinon elles ne le sont pas.</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_IMAGE_OUT">Filtrer les images des données de Presse-papiers sortantes</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_IMAGE_OUT_EXPLAIN">Détermine si les données d'image sont filtrées des données de Presse-papiers envoyées depuis l'agent vers le client. Lorsque cette case est cochée, les données sont filtrées, sinon elles ne le sont pas.</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_OUT">Filtrer les données de texte Microsoft Office des données de Presse-papiers sortantes</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_OUT_EXPLAIN">Détermine si les données au format texte Microsoft Office (format BIFF12) sont filtrées des données de Presse-papiers envoyées depuis l'agent vers le client. Lorsque cette case est cochée, les données sont filtrées, sinon elles ne le sont pas.</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_MSO_CHART_OUT">Filtrer les données Microsoft Chart and Smart Art des données de Presse-papiers sortantes</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_MSO_CHART_OUT_EXPLAIN">Détermine si les données Microsoft Office Chart and Smart Art (Art::GVML ClipFormat) sont filtrées des données de Presse-papiers envoyées depuis l'agent vers le client. Lorsque cette case est cochée, les données sont filtrées, sinon elles ne le sont pas.</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_OUT">Filtrer les données Microsoft Text Effects des données de Presse-papiers sortantes</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_OUT_EXPLAIN">Détermine si les données Microsoft Office Text Effects (format HTML) sont filtrées des données de Presse-papiers envoyées depuis l'agent vers le client. Lorsque cette case est cochée, les données sont filtrées, sinon elles ne le sont pas.</string>
+      <string id="BLAST_SUPPORTEDON_EMPTY"></string>
+      <string id="CLIPBOARD_AUDIT_DISABLE_BOTH">Désactivé dans les deux sens</string>
+      <string id="CLIPBOARD_AUDIT_ENABLE_ONLY_CLIENT_TO_SERVER">Activé uniquement du client vers le serveur</string>
+      <string id="CLIPBOARD_AUDIT_ENABLE_ONLY_SERVER_TO_CLIENT">Activé uniquement du serveur vers le client</string>
+      <string id="CLIPBOARD_AUDIT_ENABLE_BOTH">Activé dans les deux sens</string>
+      <string id="SERVER_DND_STATE">Configurer le sens du glisser-déposer</string>
+      <string id="DND_STATE_DISABLE_BOTH">Désactivé dans les deux sens</string>
+      <string id="DND_STATE_ENABLE_CLIENT_2_SERVER">Activé uniquement du client vers l'agent</string>
+      <string id="DND_STATE_ENABLE_SERVER_2_CLIENT">Activé uniquement de l'agent vers le client</string>
+      <string id="DND_STATE_ENABLE_BOTH">Activé dans les deux sens</string>
+      <string id="SERVER_DND_STATE_EXPLAIN">Détermine le sens dans lequel le glisser-déposer est autorisé. Vous pouvez sélectionner l'une de ces valeurs :
+
+- Désactivé dans les deux sens
+- Activé uniquement de l'agent vers le client (c'est-à-dire, autoriser le glisser-déposer uniquement de l'agent vers le système client.)
+- Activé uniquement du client vers l'agent (c'est-à-dire, autoriser le glisser-déposer uniquement du système client vers l'agent.)
+- Activé dans les deux sens
+
+Ce paramètre s'applique à l'agent uniquement.
+
+Lorsque ce paramètre est désactivé ou qu'il n'est pas configuré, la valeur par défaut est Activé uniquement du client vers l'agent.</string>
+      <string id="SERVER_DND_FORMAT_STATE">Configurer les formats de glisser-déposer</string>
+      <string id="SERVER_DND_FORMAT_STATE_EXPLAIN">Ce paramètre détermine quelle option de « Glisser-déposer » est autorisée pour chaque format (Fichier/Texte/Texte enrichi/Image/Format HTML/Contenu de fichier). Les valeurs des options sont les suivantes :
+
+- Désactivé dans les deux sens
+- Activé uniquement de l'agent vers le client
+- Activé uniquement du client vers l'agent
+- Activé dans les deux sens
+
+Ce paramètre s'applique à l'agent uniquement, il n'est pas configuré par défaut.
+
+Lorsque le paramètre n'est pas configuré ou est désactivé, l'option de « Glisser-déposer » est « Activé dans les deux sens » pour tous les formats.</string>
+      <string id="String_Policy_DropList_Select_DnD_size_unit_bytes" >Octets</string>
+      <string id="String_Policy_DropList_Select_DnD_size_unit_kilobytes" >Kilo-octets</string>
+      <string id="String_Policy_DropList_Select_DnD_size_unit_megabytes" >Mégaoctets</string>
+      <string id="SERVER_DND_SIZE">Configurer le seuil de taille du glisser-déposer</string>
+      <string id="SERVER_DND_SIZE_EXPLAIN">Le glisser-déposer prend en charge le glissement de différents types de données, y compris le texte brut, le texte enrichi, les images, les fichiers, les dossiers, etc. Ce paramètre détermine la limite de taille pour le glissement des types de données communs autres que des fichiers et des dossiers.
+
+L'unité de la taille des données de déplacement peut être configurée en octets, en kilo-octets et en mégaoctets.
+
+La valeur de taille souhaitée est configurée dans « Seuil de taille du glisser-déposer ». Les plages de données effectives pour l'unité de taille différente sont :
+  - Octets : 1 à 1 023
+  - Kilo-octets : 1 à 1 023
+  - Mégaoctets : 1 à 16 (La taille de données maximale pour le glisser-déplacer est de 16 mégaoctets)
+
+Ce paramètre s'applique à l'agent uniquement.
+
+Lorsque le paramètre n'est pas configuré ou est désactivé, un seuil par défaut de 1 mégaoctet est défini.</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="BLAST_MAX_SESSION_BW_LABEL">
+        <decimalTextBox refId="BLAST_MAX_SESSION_BW_LABEL" defaultValue="2147483647">Bande passante max. de session</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_MIN_SESSION_BW_LABEL">
+        <decimalTextBox refId="BLAST_MIN_SESSION_BW_LABEL" defaultValue="256">Bande passante min. de session</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_MAX_BANDWIDTH_KBPS_PER_MEGAPIXEL_SLOPE_LABEL">
+        <decimalTextBox refId="BLAST_MAX_BANDWIDTH_KBPS_PER_MEGAPIXEL_SLOPE_LABEL" defaultValue="6200">Pente de la bande passante max. de session en kbit/s par mégapixel</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_MAX_FPS_LABEL">
+        <decimalTextBox refId="BLAST_MAX_FPS_LABEL" defaultValue="30">Fréquence d'image max.</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_UDP_LABEL" />
+      <presentation id="BLAST_CURSOR_WARPING_LABEL" />
+      <presentation id="BLAST_DSCP_ACTIVATE_LABEL" />
+      <presentation id="BLAST_DSCP_AGENT_OUT_TCP4_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_AGENT_OUT_TCP4_LABEL" defaultValue="">Valeur DSCP</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_AGENT_OUT_UDP4_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_AGENT_OUT_UDP4_LABEL" defaultValue="">Valeur DSCP</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_AGENT_OUT_TCP6_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_AGENT_OUT_TCP6_LABEL" defaultValue="">Valeur DSCP</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_AGENT_OUT_UDP6_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_AGENT_OUT_UDP6_LABEL" defaultValue="">Valeur DSCP</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_CLIENT_OUT_TCP4_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_CLIENT_OUT_TCP4_LABEL" defaultValue="">Valeur DSCP</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_CLIENT_OUT_UDP4_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_CLIENT_OUT_UDP4_LABEL" defaultValue="">Valeur DSCP</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_CLIENT_OUT_TCP6_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_CLIENT_OUT_TCP6_LABEL" defaultValue="">Valeur DSCP</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_CLIENT_OUT_UDP6_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_CLIENT_OUT_UDP6_LABEL" defaultValue="">Valeur DSCP</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_BSG_DOWN_TCP4_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_BSG_DOWN_TCP4_LABEL" defaultValue="">Valeur DSCP</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_BSG_DOWN_UDP4_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_BSG_DOWN_UDP4_LABEL" defaultValue="">Valeur DSCP</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_BSG_DOWN_TCP6_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_BSG_DOWN_TCP6_LABEL" defaultValue="">Valeur DSCP</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_BSG_DOWN_UDP6_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_BSG_DOWN_UDP6_LABEL" defaultValue="">Valeur DSCP</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_BSG_UP_TCP4_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_BSG_UP_TCP4_LABEL" defaultValue="">Valeur DSCP</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_BSG_UP_UDP4_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_BSG_UP_UDP4_LABEL" defaultValue="">Valeur DSCP</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_BSG_UP_TCP6_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_BSG_UP_TCP6_LABEL" defaultValue="">Valeur DSCP</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_BSG_UP_UDP6_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_BSG_UP_UDP6_LABEL" defaultValue="">Valeur DSCP</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_H264_ENCODE_LABEL" />
+      <presentation id="BLAST_HEVC_ENCODE_LABEL" />
+      <presentation id="BLAST_PNG_ENCODE_LABEL" />
+      <presentation id="BLAST_SCREEN_BLANK_LABEL" />
+      <presentation id="BLAST_COOKIE_CLEANUP_LABEL">
+        <decimalTextBox refId="BLAST_COOKIE_CLEANUP_INTERVAL_LABEL" defaultValue="1000">Intervalle (ms)</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DISPLAY_QUALITY_LABEL">
+        <decimalTextBox refId="BLAST_DISPLAY_QUALITY_JPEG_QUAL_LOW" defaultValue="25">Faible qualité JPEG</decimalTextBox>
+        <decimalTextBox refId="BLAST_DISPLAY_QUALITY_JPEG_QUAL_MID" defaultValue="35">Moyenne qualité JPEG</decimalTextBox>
+        <decimalTextBox refId="BLAST_DISPLAY_QUALITY_JPEG_QUAL_HIGH" defaultValue="90">Haute qualité JPEG</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_CODEC_QUALITY_LABEL">
+        <decimalTextBox refId="BLAST_CODEC_QP_MAX" defaultValue="0">Valeur maximale de QP pour le codec Blast</decimalTextBox>
+        <decimalTextBox refId="BLAST_CODEC_QP_MIN" defaultValue="0">Valeur minimale de QP pour le codec Blast</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_H264_QUALITY_LABEL">
+        <decimalTextBox refId="BLAST_H264_QUALITY_MAX_QP" defaultValue="36">QP maximal H.264</decimalTextBox>
+        <decimalTextBox refId="BLAST_H264_QUALITY_MIN_QP" defaultValue="10">QP minimal H.264</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_H264_COLOR_ACCURACY_LABEL" />
+      <presentation id="BLAST_HEVC_COLOR_ACCURACY_LABEL" />
+      <presentation id="BLAST_HTTP_LABEL">
+        <decimalTextBox refId="BLAST_HTTP_PORTS_SECURE_LABEL" defaultValue="22443">Port sécurisé (HTTPS)</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_AUDIO_LABEL" />
+      <presentation id="SERVER_CLIPBOARD_STATE">
+        <dropdownList refId="SERVER_CLIPBOARD_STATE" defaultItem="2">Configurer la redirection du Presse-papiers</dropdownList>
+      </presentation>
+      <presentation id="SERVER_CLIPBOARD_SIZE">
+        <dropdownList refId="Policy_DropList_Clipboard_Fine_Grained" defaultItem="1" >Choisir l'unité de la taille de la mémoire du Presse-papiers</dropdownList>
+        <decimalTextBox refId="SERVER_CLIPBOARD_SIZE" defaultValue="1024" spinStep="100">Taille de la mémoire du Presse-papiers sur le serveur</decimalTextBox>
+      </presentation>
+      <presentation id="SERVER_CLIPBOARD_AUDIT">
+        <dropdownList refId="SERVER_CLIPBOARD_AUDIT" defaultItem="0">Configurer l'audit du Presse-papiers</dropdownList>
+      </presentation>
+      <presentation id="SERVER_CLIPBOARD_AUDIT_BLOCK_CLIPBOARD">
+        <dropdownList refId="Policy_DropList_Element_Configure_clipboard" defaultItem="0">Configurer le comportement du Presse-papiers si le client ne prend pas en charge l'audit</dropdownList>
+      </presentation>
+      <presentation id="CLIPBOARD_FINE_GRAIN_LABEL" />
+      <presentation id="KEYBOARD_LOCALE_SYNC_LABEL" />
+      <presentation id="SERVER_FILE_TRANSFER_STATE">
+        <dropdownList refId="SERVER_FILE_TRANSFER_STATE" defaultItem="1">Configurer le transfert de fichiers</dropdownList>
+      </presentation>
+      <presentation id="CLIPBOARD_FORMAT_FILTERING_TEXT_IN" />
+      <presentation id="CLIPBOARD_FORMAT_FILTERING_RTF_IN" />
+      <presentation id="CLIPBOARD_FORMAT_FILTERING_IMAGE_IN" />
+      <presentation id="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_IN" />
+      <presentation id="CLIPBOARD_FORMAT_FILTERING_MSO_CHART_IN" />
+      <presentation id="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_IN" />
+      <presentation id="CLIPBOARD_FORMAT_FILTERING_TEXT_OUT" />
+      <presentation id="CLIPBOARD_FORMAT_FILTERING_RTF_OUT" />
+      <presentation id="CLIPBOARD_FORMAT_FILTERING_IMAGE_OUT" />
+      <presentation id="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_OUT" />
+      <presentation id="CLIPBOARD_FORMAT_FILTERING_MSO_CHART_OUT" />
+      <presentation id="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_OUT" />
+      <presentation id="SERVER_DND_STATE">
+        <dropdownList refId="SERVER_DND_STATE" defaultItem="1">Configurer le glisser-déposer</dropdownList>
+      </presentation>
+      <presentation id="SERVER_DND_FORMAT_STATE">
+        <dropdownList refId="SERVER_DND_FILE_STATE" defaultItem="3">Option pour le format de fichier :</dropdownList>
+        <dropdownList refId="SERVER_DND_TEXT_STATE" defaultItem="3">Option pour le format de texte :</dropdownList>
+        <dropdownList refId="SERVER_DND_RTF_STATE" defaultItem="3">Option pour le format RTF :</dropdownList>
+        <dropdownList refId="SERVER_DND_IMAGE_STATE" defaultItem="3">Option pour le format d'image :</dropdownList>
+        <dropdownList refId="SERVER_DND_HTML_STATE" defaultItem="3">Option pour le format HTML :</dropdownList>
+        <dropdownList refId="SERVER_DND_FILE_CONTENT_STATE" defaultItem="3">Option pour le format de contenu de fichier :</dropdownList>
+      </presentation>
+      <presentation id="SERVER_DND_SIZE">
+        <dropdownList refId="Policy_DropList_DnD_Size_Unit" defaultItem="2" >Choisir l'unité de la taille du glisser-déposer</dropdownList>
+        <decimalTextBox refId="SERVER_DND_SIZE" defaultValue="1">Seuil de taille du glisser-déposer</decimalTextBox>
+      </presentation>
+      <presentation id="SERVER_HTMLACCESS_PRINT_STATE" />
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

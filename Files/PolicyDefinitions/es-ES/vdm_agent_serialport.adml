@@ -19,6 +19,10 @@ Si se establece esta configuración de directiva para el equipo, tiene prioridad
 Si se deshabilita esta configuración de directiva, el COM serie funciona de la forma habitual.
 
 Si no se configura esta configuración de directiva, la función de deshabilitación se determina a partir de las configuraciones de programa locales.</string>
+      <string id="RedirectAll_PolicyName">Conectar todos los puertos automáticamente</string>
+      <string id="RedirectAll_PolicyExplain">Si se habilita esta configuración de directiva, todos los puertos COM de cliente se conectarán automáticamente (aunque no se configure ningún GPO individual). Si hay una configuración de GPO individual configurada para algunos de los puertos, se utilizará la configuración de GPO del puerto individual.
+
+Si esta configuración de directiva está deshabilitada o no está configurada, la función de conexión automática se determinará mediante la configuración del programa local o el GPO del puerto individual.</string>
       <string id="PortIsolationMode_PolicyName">Modo de aislamiento del puerto COM</string>
       <string id="PortIsolationMode_PolicyExplain">Si se selecciona el modo &quot;Aislamiento completo&quot;, los puertos serie virtuales solo son visibles y accesibles en las sesiones de usuario. En este modo, los puertos COM pueden tener los mismos nombres en diferentes sesiones de usuario. Importante: Los servicios de sistema (como spoolsrv.exe) no pueden acceder a puertos serie aislados en ese caso.
 
@@ -138,6 +142,7 @@ Si se configura esta configuración de directiva para el equipo, tiene prioridad
     <presentationTable>
       <presentation id="LocalSettingsPriority_PolicyName" />
       <presentation id="DisableFunctionality_PolicyName" />
+      <presentation id="RedirectAll_PolicyName" />
       <presentation id="PortIsolationMode_PolicyName">
         <dropdownList refId="PortIsolationMode_Enum" noSort="true">Modo de aislamiento del puerto COM:</dropdownList>
       </presentation>

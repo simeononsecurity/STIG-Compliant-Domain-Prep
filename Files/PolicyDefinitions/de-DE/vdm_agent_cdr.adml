@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="VMwareViewCDR">VMware Horizon-Clientlaufwerkumleitung</string>
+      <string id="IsDriveLetterNeeded">Umgeleitetes Gerät mit Laufwerkbuchstaben anzeigen</string>
+      <string id="IsDriveLetterNeededExplain">Diese Einstellung legt fest, ob der Laufwerkbuchstabe für CDR (Clientlaufwerkumleitung) aktiviert ist oder nicht. Diese Funktion ist standardmäßig aktiviert.</string>
+      <string id="InitDriveLetterTimeout">Zeitüberschreitung für Laufwerkbuchstaben-Initialisierung</string>
+      <string id="InitDriveLetterTimeoutExplain">Diese Einstellung bestimmt den Zeitüberschreitungswert für das Warten darauf, dass Windows Explorer die Verarbeitung des korrekten Laufwerkbuchstabens abgeschlossen hat. Wenn diese Einstellung deaktiviert oder nicht konfiguriert ist, wird sie standardmäßig auf 5 Sek. konfiguriert.</string>
+      <string id="VMwareViewCDRDeviceFiltering">Gerätefilterung</string>
+	  <string id="ExcludeVidPid">Vid/Pid-Gerät ausschließen</string>
+      <string id="ExcludeVidPidExplain">Schließt ein Gerät mit einer bestimmten Hersteller- und Produkt-ID von der Weiterleitung aus.
+
+Syntax: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx | *&gt;&gt;[;...]
+
+Beispiel: vid-0781_pid-554c;vid-0781_pid-9999</string>
+      <string id="IncludeVidPid">Vid/Pid-Gerät einschließen</string>
+      <string id="IncludeVidPidExplain">Legt für ein Gerät mit einer bestimmten Hersteller- und Produkt-ID fest, dass es weitergeleitet werden kann.
+
+Syntax: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx | *&gt;&gt;[;...]
+
+Beispiel: vid-0781_pid-554c;vid-0781_pid-9999</string>
+      <string id="DriveLetterMapping">Laufwerkbuchstaben-Zuordnungsmodus konfigurieren</string>
+      <string id="DriveLetterMappingExplain">Dieses GPO dient der Konfiguration des Laufwerkbuchstaben-Zuordnungsmodus. Derzeit werden zwei Modi unterstützt.
+– Eins-zu-Eins-Zuordnung: Ordnen Sie dem Agent den gleichen Client-Laufwerkbuchstaben zu.
+– Definierte Zuordnung: Ordnen Sie dem Agent den Client-Laufwerkbuchstaben gemäß der definierten Zuordnungstabelle zu.
+
+
+Hinweise:
+– Dieses GPO ist gültig, wenn das GPO „Umgeleitetes Gerät mit Laufwerkbuchstaben anzeigen“ nicht deaktiviert ist.
+– Wenn es einen Konflikt beim Laufwerkbuchstaben gibt, z. B. wenn der Laufwerkbuchstabe, der zugeordnet werden soll, bereits im Agent verwendet wird, wird für beide unterstützten Modi stattdessen der erste verfügbare Buchstabe von Z bis A (rückwärts alphabetisch) verwendet. Wenn kein Laufwerkbuchstabe verfügbar ist, wird kein Laufwerkbuchstabe zugewiesen.
+      </string>
+      <string id="DriveLetterMappingTable">Zuordnungstabelle für Laufwerkbuchstaben definieren</string>
+      <string id="DriveLetterMappingTableExplain">Zuordnungstabelle für Laufwerkbuchstaben definieren
+– Client-Laufwerkbuchstabe (Wertename): beim Client verwendeter Laufwerkbuchstabe.
+– Agent-Laufwerkbuchstabe (Wert): beim Agent verwendeter Laufwerkbuchstabe.
+</string>
+      <string id="OneToOneMapping">Eins-zu-Eins-Zuordnung</string>
+      <string id="PredefinedMapping">Definierte Zuordnung</string>
+    </stringTable>
+    <presentationTable>
+       <presentation id="IsDriveLetterNeeded"/>
+       <presentation id="InitDriveLetterTimeout">
+         <decimalTextBox refId="InitDriveLetterTimeout" defaultValue="5000">Zeitüberschreitung in Millisekunden:</decimalTextBox>
+       </presentation>
+	   <presentation id="ExcludeVidPid">
+         <textBox refId="ExcludeVidPid">
+           <label>Vid/Pid-Gerät ausschließen</label>
+         </textBox>
+       </presentation>
+       <presentation id="IncludeVidPid">
+         <textBox refId="IncludeVidPid">
+           <label>Vid/Pid-Gerät einschließen</label>
+         </textBox>
+       </presentation>
+       <presentation id="DriveLetterMapping">
+         <dropdownList refId="DriveLetterMappingDropdown" defaultItem="0" noSort="true">Laufwerkbuchstaben-Zuordnungsmodus konfigurieren:</dropdownList>
+       </presentation>
+       <presentation id="DriveLetterMappingTable">
+         <listBox refId="DriveLetterMappingTable">Zuordnungstabelle für Laufwerkbuchstaben definieren:</listBox>
+       </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

@@ -5,8 +5,7 @@
   <resources>
     <stringTable>
       <string id="perf_tracker">VMware Horizon Performance Tracker</string>
-      <string id="ShowUI">Show Performance Tracker overview UI</string>
-      <string id="HideUI">Hide Performance Tracker overview UI</string>
+      <string id="perfTrackerCMD">Input Performance Tracker installation path and execute parameter</string>
       <string id="SUPPORTED_NotSpecified">Not specified</string>
       <string id="perf_tracker_basic_settings">Performance Tracker basic setting</string>
       <string id="perf_tracker_VDI_auto_start">Enable Performance Tracker auto start in remote desktop connection</string>
@@ -27,12 +26,16 @@ The amount of polls an alarm state will be held down to avoid notification flapp
 
 Data Refresh Rate:
 The frequency (in seconds) we pull performance data. </string>
-      <string id="perf_tracker_VDI_auto_start_detail">Auto start in remote desktop connection.
+      <string id="perf_tracker_VDI_auto_start_detail">Auto start in remote desktop connection with or without Performance Tracker UI.
 
-If enabled, perfTracker will automatically start when user logon to a remote desktop connection.</string>
-      <string id="perf_tracker_remote_app_auto_start_detail">Auto start in remote application connection.
+If enabled, perfTracker will automatically start when the user logs on to a remote desktop connection.
 
-If enabled, perfTracker will automatically start when user logon to a remote application connection.</string>
+If you have installed the Performace Tracker in an alternate location and would like it to auto launch, enter the new path in the text line. If you want to hide the Performace Tracker UI, add the “-hideUI” parameter, e.g. C:\installation path\VmwarePerformanceTracker.exe -hideUI</string>
+      <string id="perf_tracker_remote_app_auto_start_detail">Auto start in remote application connection with or without Performance Tracker UI.
+
+If enabled, perfTracker will automatically start when the user logs on to a remote application connection.
+
+If you have installed the Performace Tracker in an alternate location and would like it to auto launch, enter the new path in the text line. If you want to hide the Performace Tracker UI, add the “-hideUI” parameter, e.g. C:\installation path\VmwarePerformanceTracker.exe -hideUI</string>
       <string id="perf_tracker_blast_settings_detail">Blast threshold setting.
 
 Warning Blast Latency Value:
@@ -76,8 +79,11 @@ If available bandwidth is below this value (in kbps), an warning will be display
       <presentation id="perf_tracker_basic_settings">
         <decimalTextBox refId="DataCollectionFrequency" defaultValue="5">Data refresh rate</decimalTextBox>
       </presentation>
-      <presentation id="perf_tracker_auto_start_mode">
-         <dropdownList refId="HideUI" defaultItem="0">Whether hide overview UI</dropdownList>
+      <presentation id="perf_tracker_auto_start_command">
+        <textBox refId="PerfTrackerCMD">
+          <label>Input Performance Tracker installation path and execute parameter:</label>
+          <defaultValue>C:\Program Files\VMware\VMware View\Agent\Horizon Performance Tracker\VMware.Horizon.PerformanceTracker.exe</defaultValue>
+        </textBox>
       </presentation>
       <presentation id="perf_tracker_blast_settings">
         <decimalTextBox refId="WarningBlastLatencyValue" defaultValue="100">Warning Blast Latency Value</decimalTextBox>

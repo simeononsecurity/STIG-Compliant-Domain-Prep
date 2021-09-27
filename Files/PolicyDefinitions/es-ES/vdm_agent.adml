@@ -379,9 +379,9 @@ Por defecto: permitir el reenvío</string>
 
 Por defecto: bloquear el reenvío</string>
 
-         <string id="Allow_keyboard_mouse">Permitir dispositivos de teclado y ratón</string>
+         <string id="Allow_keyboard_mouse">Permitir dispositivos de teclado y mouse</string>
 
-         <string id="Allow_keyboard_mouse_Desc">Permitir que se reenvíen dispositivos de teclado y ratón.
+         <string id="Allow_keyboard_mouse_Desc">Permitir que se reenvíen dispositivos de teclado y mouse.
 
 Por defecto: bloquear el reenvío</string>
 
@@ -423,7 +423,13 @@ Por defecto: bloquear el reenvío</string>
 
          <string id="SetVMWMediaProviderProxyForceNonOptimizedEnvVar">Forzar Skype Empresarial en modo no optimizado</string>
 
-         <string id="SetVMWMediaProviderProxyForceNonOptimizedEnvVar_Desc">Puede forzar Skype Empresarial para que se ejecute en el modo no optimizado de las conexiones de Horizon Client estableciendo el nombre de variable de entorno que estará presente en el momento de la conexión en el equipo donde está instalado Horizon Agent. Si se establece el nombre de la variable, Virtualization Pack para Skype Empresarial se revertirá al modo de reserva. Por ejemplo, si la variable de entorno ViewClient_F5_APM se establece en el equipo del agente del escritorio remoto cuando la máquina de Horizon Client se conecta desde fuera de la red mediante el equilibrador de carga de F5 y desea forzar el modo no optimizado, establezca el valor ViewClient_F5_ APM. Esta directiva no está configurada de forma predeterminada.</string>
+         <string id="SetVMWMediaProviderProxyForceNonOptimizedOptions_Desc">Puede forzar Skype Empresarial para que se ejecute en el modo no optimizado para las conexiones de Horizon Client mediante la detección automática de conexiones externas. Las conexiones se determinan como externas cuando Horizon Client se conecta a través de una puerta de enlace externa. En este escenario, la variable de entorno &quot;ViewClient_Broker_GatewayType&quot; está presente y &quot;ViewClient_Broker_GatewayLocation&quot; está configurada como externa. Si se establece &quot;Detectar conexiones externas automáticamente&quot;, Virtualization Pack para Skype Empresarial revierte al modo de reserva si se determina que la conexión es externa.
+
+También puede forzar Skype Empresarial para que se ejecute en el modo no optimizado para las conexiones de Horizon Client estableciendo el nombre de variable de entorno que estará presente en el momento de la conexión en el equipo donde está instalado Horizon Agent. Si se establece el nombre de la variable, Virtualization Pack para Skype Empresarial se revertirá al modo de reserva. Por ejemplo, si la variable de entorno &quot;ViewClient_F5_APM&quot; se establece en el equipo del agente del escritorio remoto cuando la máquina de Horizon Client se conecta desde fuera de la red mediante el equilibrador de carga de F5 y desea forzar el modo no optimizado, establezca el valor ViewClient_F5_ APM.
+
+Virtualization Pack para Skype Empresarial revierte al modo de reserva si se establece uno de estos ajustes y se cumplen las condiciones.
+
+Esta directiva no está configurada de forma predeterminada. </string>
 
          <string id="EnableDetectProxySettings">EnableDetectProxySettings</string>
 
@@ -471,7 +477,7 @@ Por defecto: bloquear el reenvío</string>
 
          <string id="Enable_HTML5_FEATURES">Habilitar las funciones HTML5 de VMware</string>
 
-         <string id="Enable_HTML5_FEATURES_Desc">Habilitar las funciones HTML5 de VMware. Es necesario que la directiva se establezca como &quot;Habilitado&quot; para utilizar las funciones de redireccionamiento multimedia HTML5, redireccionamiento de geolocalización o redireccionamiento de navegador de VMware. Esta configuración surte efecto en el siguiente inicio de sesión.</string>
+         <string id="Enable_HTML5_FEATURES_Desc">Habilitar las funciones HTML5 de VMware. Es necesario que la directiva esté establecida en &quot;Habilitado&quot; o &quot;Sin configurar&quot; para usar el redireccionamiento multimedia HTML5, el redireccionamiento de geolocalización, el redireccionamiento de navegador o la optimización de medios para Microsoft Teams de VMware.  Si esta directiva se establece en &quot;Deshabilitado&quot;, no se podrá usar ninguna de las funciones HTML5 de VMware. Esta configuración surte efecto en el siguiente inicio de sesión.</string>
 
          <string id="HTML5FEATURES_Disable_AudoDetect_Intranet">Deshabilitar Detectar redes intranet automáticamente</string>
 
@@ -493,9 +499,13 @@ Nota: Es necesario que esta directiva esté habilitada cuando (1) el navegador E
 
          <string id="HTML5MMR_Enable_Chrome_Desc">Esta directiva solo se usa cuando el redireccionamiento multimedia HTML5 de VMware está habilitado. Si no se configura, el valor predeterminado será el mismo que el de &quot;Habilitar redireccionamiento multimedia HTML5 de VMware&quot;.</string>
 
-         <string id="HTML5MMR_Enable_Edge">Habilita el navegador Edge para Redireccionamiento multimedia HTML5 de VMware.</string>
+         <string id="HTML5MMR_Enable_Edge">Habilitar la versión heredada del navegador Microsoft Edge para el Redireccionamiento multimedia HTML5 de VMware</string>
 
          <string id="HTML5MMR_Enable_Edge_Desc">Esta directiva solo se usa cuando el redireccionamiento multimedia HTML5 de VMware está habilitado. Si no se configura, el valor predeterminado será el mismo que el de &quot;Habilitar redireccionamiento multimedia HTML5 de VMware&quot;. </string>
+
+         <string id="HTML5MMR_Enable_Edge_Chromium">Habilitar el navegador Microsoft Edge para el Redireccionamiento multimedia HTML5 de VMware</string>
+
+         <string id="HTML5MMR_Enable_Edge_Chromium_Desc">Esta directiva solo se usa cuando el redireccionamiento multimedia HTML5 de VMware está habilitado. Si no se configura, el valor predeterminado será el mismo que el de &quot;Habilitar redireccionamiento multimedia HTML5 de VMware&quot;. </string>
 
          <string id="VMware_GEO_REDIR">Redireccionamiento de geolocalización de VMware</string>
 
@@ -549,6 +559,10 @@ Si se deshabilita, la cancelación de eco acústico se deshabilitará en el soft
 
 Si no se configura, la cancelación de eco acústico se habilitará en el software solo si la cancelación de eco acústico no está disponible en el hardware.</string>
 
+         <string id="Enable_Sharing_Client_Screen_InAppSession">Habilite el uso compartido de la pantalla del escritorio del cliente mientras ejecuta de forma remota la aplicación Microsoft Teams en modo de uso compartido de aplicaciones.</string>
+
+         <string id="Enable_Sharing_Client_Screen_InAppSession_Desc">Mientras la aplicación Microsoft Teams se ejecuta de forma remota, la función de compartir pantalla compartirá la pantalla del escritorio del cliente en vez de la pantalla del escritorio remoto. Seleccione &quot;Deshabilitado&quot; para deshabilitar la función de compartir pantalla en el modo de uso compartido de aplicaciones. Si selecciona &quot;No configurado&quot;, se compartirá la pantalla del escritorio cliente de forma predeterminada.</string>
+
          <string id="VMware_DeviceBridge">VMware Device Bridge</string>
 
          <string id="Disable_DeviceBridge_BAS">Deshabilitar el complemento Device Bridge BAS</string>
@@ -600,6 +614,22 @@ Por ejemplo, si selecciona &quot;Nunca&quot; aquí, se evitará que las sesiones
          <string id="TIME_8HR">8 horas</string>
 
          <string id="TIME_10HR">10 horas</string>
+
+         <string id="TIME_12HR">12 horas</string>
+
+         <string id="TIME_18HR">18 horas</string>
+
+         <string id="TIME_1D">1 día</string>
+
+         <string id="TIME_2D">2 días</string>
+
+         <string id="TIME_3D">3 días</string>
+
+         <string id="TIME_4D">4 días</string>
+
+         <string id="TIME_5D">5 días</string>
+
+         <string id="TIME_1W">1 semana</string>
 
          <string id="TIME_IMMEDIATELY">Inmediatamente</string>
 
@@ -737,7 +767,7 @@ Por ejemplo, si selecciona &quot;Nunca&quot; aquí, se evitará que las sesiones
          </presentation>
 
          <presentation id="Allow_keyboard_mouse">
-            <dropdownList refId="Allow_keyboard_mouse_DDL" defaultItem="0">Permitir dispositivos de teclado y ratón</dropdownList>
+            <dropdownList refId="Allow_keyboard_mouse_DDL" defaultItem="0">Permitir dispositivos de teclado y mouse</dropdownList>
          </presentation>
 
          <presentation id="Allow_Video_Devices">
@@ -803,7 +833,8 @@ Por ejemplo, si selecciona &quot;Nunca&quot; aquí, se evitará que las sesiones
             <listBox refId="BrowserRedirNavUrlList_list">La lista de URL para habilitar la navegación para la función de redireccionamiento de navegador de VMware.</listBox>
          </presentation>
 
-         <presentation id="SetForceNonOptimizedEnvVar">
+         <presentation id="SetForceNonOptimizedOptions">
+            <checkBox refId="AUTO_DETECT_EXTERNAL_CONNECTIONS_CHKBOX">Detectar conexiones externas automáticamente</checkBox>
             <textBox refId="SetForceNonOptimizedEnvVar_TB">
                <label>El nombre de variable de entorno:</label>
             </textBox>

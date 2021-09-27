@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="VMwareViewClientRTAV">View-RTAV-Konfiguration</string>
+      <string id="DisableRTAV">RTAV deaktivieren</string>
+      <string id="DisableRTAVExplain">Echtzeit-Audio/Video deaktivieren</string>
+      <string id="VMwareViewClientRTAVWebcam">View-RTAV-Webcam-Einstellungen</string>
+      <string id="WebcamMaxResWidth">Auflösung – Maximale Bildbreite in Pixel</string>
+      <string id="WebcamMaxResWidthExplain">Maximale Breite eines Bild-Frame bei der Erfassung von einer Webcam in Pixel</string>
+      <string id="WebcamMaxResHeight">Auflösung – Maximale Bildhöhe in Pixel</string>
+      <string id="WebcamMaxResHeightExplain">Maximale Höhe eines Bild-Frame bei der Erfassung von einer Webcam in Pixel</string>
+      <string id="WebcamMaxFrameRate">Maximale Frames pro Sekunde</string>
+      <string id="WebcamMaxFrameRateExplain">Maximale Rate pro Sekunde, mit der Frames von einer Webcam erfasst werden können.
+Minimum = 1, Maximum = 25</string>
+      <string id="WebcamDefaultResWidth">Auflösung – Standardmäßige Breite der Bildauflösung in Pixel</string>
+      <string id="WebcamDefaultResWidthExplain">Legt die standardmäßige Breite der Bildauflösung fest. Standardmäßig ist hier 320 eingestellt. Diese Einstellung wird verwendet, wenn kein Auflösungswert vom Benutzer definiert wurde.</string>
+      <string id="WebcamDefaultResHeight">Auflösung – Standardmäßige Höhe der Bildauflösung in Pixel</string>
+      <string id="WebcamDefaultResHeightExplain">Legt die standardmäßige Höhe der Bildauflösung fest. Standardmäßig ist hier 240 eingestellt. Diese Einstellung wird verwendet, wenn kein Auflösungswert vom Benutzer definiert wurde.</string>
+      <string id="VMwareViewAgent">VMware View Agent-Konfiguration</string>
+      <string id="ADMXMigrator_UnresolvedString">ADMX-Migrator hat eine Zeichenfolge ermittelt, die in der Quell-ADM-Zeichenfolgentabelle nicht vorhanden ist.</string>
+      <string id="ADMXMigrator_NoSupportedOn">ADMX-Migrator hat eine Richtlinie ohne den Wert supportedOn ermittelt.</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="DisableRTAV" />
+      <presentation id="WebcamMaxFrameRate">
+        <decimalTextBox refId="WebcamMaxFrameRate" defaultValue="15">Maximale Frames pro Sekunde</decimalTextBox>
+      </presentation>
+      <presentation id="WebcamMaxResHeight">
+        <decimalTextBox refId="WebcamMaxResHeight" defaultValue="0">Auflösung – Maximale Bildhöhe in Pixel</decimalTextBox>
+      </presentation>
+      <presentation id="WebcamMaxResWidth">
+        <decimalTextBox refId="WebcamMaxResWidth" defaultValue="0">Auflösung – Maximale Bildbreite in Pixel</decimalTextBox>
+      </presentation>
+      <presentation id="WebcamDefaultResHeight">
+        <decimalTextBox refId="WebcamDefaultResHeight" defaultValue="0">Auflösung – Standardmäßige Höhe der Bildauflösung in Pixel</decimalTextBox>
+      </presentation>
+      <presentation id="WebcamDefaultResWidth">
+        <decimalTextBox refId="WebcamDefaultResWidth" defaultValue="0">Auflösung – Standardmäßige Breite der Bildauflösung in Pixel</decimalTextBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

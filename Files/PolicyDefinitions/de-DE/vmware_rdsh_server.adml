@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<policyDefinitionResources
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	revision="1.0"
+	schemaVersion="1.0"
+	xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+
+<displayName>Anzeigename hier eingeben</displayName>
+
+<description>Beschreibung hier eingeben</description>
+
+<resources>
+
+<stringTable>
+
+<string id="CASCADIA_APP_COMPATIBILITY">Anwendungskompatibilität</string>
+
+<string id="CASCADIA_APP_COMPATIBILITY_Help">Steuert die Einstellungen der Anwendungskompatibilität auf einem RD-Sitzungshostserver.</string>
+
+<string id="CASCADIA_ENABLE_IP_VIRTUALIZATION">IP-Virtualisierung des Remote-Desktops einschalten</string>
+
+<string id="CASCADIA_ENABLE_IP_VIRTUALIZATION_EXPLAIN">Diese Richtlinieneinstellung legt fest, ob die IP-Virtualisierung des Remote-Desktops eingeschaltet wird.
+Standardmäßig wird die IP-Virtualisierung des Remote-Desktops ausgeschaltet.
+
+Wenn Sie diese Richtlinieneinstellung aktivieren, wird die IP-Virtualisierung des Remote-Desktops eingeschaltet. Sie können den Modus auswählen, in dem die Einstellung angewendet wird. Wenn Sie den Modus „Pro Programm“ verwenden, müssen Sie für die Verwendung virtueller IP-Adressen eine Liste von Programmen eingeben. Listen Sie jedes Programm in einer separaten Zeile auf (geben Sie keine leeren Zeilen zwischen Programmen ein). Beispiele:
+
+explorer.exe
+mstsc.exe
+
+Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die IP-Virtualisierung des Remote-Desktops ausgeschaltet.
+</string>
+
+<string id="CASCADIA_ENABLE_SESSION_MODE_IP_VIRTUALIZATION">Pro Sitzung</string>
+
+<string id="CASCADIA_ENABLE_PRPGRAM_MODE_IP_VIRTUALIZATION">Pro Programm</string>
+
+<string id="CASCADIA_NET_ID_IP_VIRTUALIZATION">Netzwerkadapter für die IP-Virtualisierung des Remote-Desktops auswählen</string>
+
+<string id="CASCADIA_NET_ID_IP_VIRTUALIZATION_EXPLAIN">Diese Richtlinieneinstellung legt die IP-Adress- und Netzwerkmaske fest, die dem Netzwerkadapter entspricht, der für die virtuellen IP-Adressen verwendet wird. Die IP-Adress- und Netzwerkmaske muss in der Notierung „Klassenloses domänenübergreifendes Routing“ eingegeben werden (Beispiel: 192.0.2.96/24).
+
+Wenn Sie diese Richtlinieneinstellung aktivieren, wird mit der angegebenen IP-Adresse und der Netzwerkmaske der Netzwerkadapter für die virtuellen IP-Adressen ausgewählt.
+
+Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die IP-Virtualisierung des Remote-Desktops ausgeschaltet. Ein Netzwerkadapter muss konfiguriert werden, damit die IP-Virtualisierung des Remote-Desktops funktioniert.
+</string>
+
+<string id="CASCADIA_NOT_USE_SERVER_IP_WITH_IP_VIRTUALIZATION">IP-Adresse des Servers des Remotedesktop-Sitzungshosts nicht verwenden, wenn die virtuelle IP-Adresse nicht verfügbar ist</string>
+
+<string id="CASCADIA_NOT_USE_SERVER_IP_WITH_IP_VIRTUALIZATION_EXPLAIN">Diese Richtlinieneinstellung legt fest, ob eine Sitzung die IP-Adresse des Servers des Remotedesktop-Sitzungshosts verwendet, wenn eine virtuelle IP-Adresse nicht verfügbar ist.
+
+Wenn Sie die Richtlinieneinstellung aktivieren, wird die IP-Adresse des Servers des Remote-Desktop-Sitzungshosts nicht verwendet, wenn eine virtuelle IP-Adresse nicht verfügbar ist. Die Sitzung verfügt über keine Netzwerkverbindung.
+
+Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die IP-Adresse des Servers des Remote-Desktop-Sitzungshosts verwendet, wenn eine virtuelle IP-Adresse nicht verfügbar ist.
+</string>
+
+<string id="CASCADIA_ENABLE_DFSS">Gleichmäßige CPU-Planung ausschalten</string>
+
+<string id="CASCADIA_ENABLE_DFSS_EXPLAIN">Die gleichmäßige CPU-Planung verteilt die Prozessorzeit dynamisch auf alle RDS-Sitzungen auf einem RD-Sitzungshostserver, basierend auf der Anzahl der Sitzungen und ihrem jeweiligen Bedarf an Prozessorzeit.
+
+Wenn Sie diese Richtlinieneinstellung aktivieren, wird die gleichmäßige CPU-Planung deaktiviert.
+
+Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, ist die gleichmäßige CPU-Planung aktiviert.
+</string>
+
+<string id="CASCADIA_DISABLE_MSI">RDS-Kompatibilität des Windows-Installationsprogramms ausschalten</string>
+
+<string id="CASCADIA_DISABLE_MSI_EXPLAIN">Die Richtlinieneinstellung legt fest, ob die RDS-Kompatibilität des Windows-Installationsprogramms für vollständig installierte Anwendungen auf Benutzerbasis ausgeführt wird. Das Windows-Installationsprogramm lässt das Ausführen von jeweils nur einer Instanz des msiexec-Prozesses zu. Standardmäßig ist die RDS-Kompatibilität des Windows-Installationsprogramms eingeschaltet.
+
+Wenn Sie diese Richtlinieneinstellung aktivieren, ist die RDS-Kompatibilität des Windows-Installationsprogramms ausgeschaltet. Zudem kann jeweils nur eine Instanz des msiexec-Prozesses ausgeführt werden.
+
+Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die RDS-Kompatibilität des Windows-Installationsprogramms eingeschaltet, und mehrere Anforderungen zur Anwendungsinstallation pro Benutzer werden in die Warteschlange eingereiht sowie vom msiexec-Prozess in der Reihenfolge des Erhalts behandelt.
+</string>
+
+</stringTable>
+
+<presentationTable>
+	<presentation id="CASCADIA_NET_ID_IP_VIRTUALIZATION">
+		<textBox refId="CASCADIA_NET_ID_IP_VIRTUALIZATION">
+		<label>IP-Adresse und Netzwerkmaske für den Netzwerkadapter, der für die IP-Virtualisierung des Remote-Desktops verwendet werden soll, definieren:</label>
+		</textBox>
+		<text>Das Format lautet [IP-Adresse]/[Netzwerkmaske]. Beispiel: 192.0.2.96/24.</text>
+		</presentation>
+		<presentation id="CASCADIA_ENABLE_IP_VIRTUALIZATION">
+		<dropdownList refId="CASCADIA_ENABLE_IP_VIRTUALIZATION" noSort="true" defaultItem="0">Modus der IP-Virtualisierung des Remote-Desktops einschalten:</dropdownList>
+		<multiTextBox refId="CASCADIA_ENABLE_IP_VIRTUALIZATION_EDIT">Weist folgenden Programmen virtuelle IP-Adressen zu:</multiTextBox>
+		<text>Wenn mehr als ein Programm aufgeführt werden soll, muss jedes Programm in einer eigenen Zeile enthalten sein. Dabei sind keine leeren Zeilen zwischen Programmen zulässig. Beispiel:</text>
+		<text>explorer.exe
+		mstsc.exe</text>
+	</presentation>
+</presentationTable>
+</resources>
+</policyDefinitionResources>

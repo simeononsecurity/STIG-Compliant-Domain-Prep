@@ -87,6 +87,8 @@
       <string id="String_Explain_Upload_log_to_network" >Uploads the Persona log file to the specified network share on logoff.  Network share path must be a UNC path.  Persona does not create the network share.</string>
       <string id="String_Policy_Manage_user_persona" >Manage user persona</string>
       <string id="String_Explain_Manage_user_persona" >When enabled, the user's persona will be managed dynamically.  When disabled, the user's persona will be managed by Windows. The profile upload interval is used to determine how often to upload persona changes to the network.</string>
+      <string id="String_Policy_DSVA" >Deep Security Virtual Appliance (DSVA) Interoperability</string>
+      <string id="String_Explain_DSVA" >When enabled, Persona runs the interoperability with DSVA. If the machine has DSVA running then this must be enabled. Otherwise, there will be login issue sometimes. If this is not set or disabled then Persona runs without considering DSVA.</string>
       <string id="String_Policy_Persona_repository" >Persona repository location</string>
       <string id="String_Explain_Persona_repository" >The UNC path to the repository where user personas will be stored. If this path is left blank, the user profile path in Active Directory will be used.</string>
       <string id="String_Policy_Remove_local_persona" >Remove local persona at log off</string>
@@ -376,6 +378,9 @@
 
       <presentation id="Enforce_AD_Wallpaper" >
         <text >Enforces wallpaper setting from GPO.</text>
+      </presentation>
+      <presentation id="Present_DSVA" >
+        <text >Interoperability with Deep Security Virtual Appliance (DSVA)</text>
       </presentation>
     </presentationTable>
   </resources>

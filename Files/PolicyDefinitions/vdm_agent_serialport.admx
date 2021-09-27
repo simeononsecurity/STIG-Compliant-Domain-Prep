@@ -42,6 +42,16 @@
         <decimal value="0" />
       </disabledValue>
     </policy>
+    <policy name="RedirectAll_PolicyName" class="Machine" displayName="$(string.RedirectAll_PolicyName)" explainText="$(string.RedirectAll_PolicyExplain)" presentation="$(presentation.RedirectAll_PolicyName)" key="SOFTWARE\Policies\VMware, Inc.\VMware VDM\SerialCOM\Agent\Settings" valueName="ConnectAll">
+      <parentCategory ref="Product_CatName" />
+      <supportedOn ref="SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
     <policy name="PortIsolationMode_PolicyName" class="Machine" displayName="$(string.PortIsolationMode_PolicyName)" explainText="$(string.PortIsolationMode_PolicyExplain)" presentation="$(presentation.PortIsolationMode_PolicyName)" key="SOFTWARE\Policies\VMware, Inc.\VMware VDM\SerialCOM\Agent\Settings">
       <parentCategory ref="Product_CatName" />
       <supportedOn ref="SUPPORTED_WindowsXP" />

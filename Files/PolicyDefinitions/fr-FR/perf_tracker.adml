@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="perf_tracker">VMware Horizon Performance Tracker</string>
+      <string id="perfTrackerCMD">Entrez le chemin d'installation et le paramètre d'exécution de Performance Tracker</string>
+      <string id="SUPPORTED_NotSpecified">Non spécifié</string>
+      <string id="perf_tracker_basic_settings">Paramètre basique de Performance Tracker</string>
+      <string id="perf_tracker_VDI_auto_start">Activer le démarrage automatique de Performance Tracker dans une connexion de poste de travail distant</string>
+      <string id="perf_tracker_remote_app_auto_start">Activer le démarrage automatique de Performance Tracker dans une connexion d'application distante</string>
+      <string id="perf_tracker_blast_settings">Paramètre de seuil de Blast</string>
+      <string id="perf_tracker_PCoIP_settings">Paramètre de seuil de PCoIP</string>
+      <string id="perf_tracker_notification_settings_detail"> Ce paramètre de stratégie est utilisé pour ajuster les paramètres de notification.
+
+Activer les notifications :
+Lorsque ce paramètre est activé, affiche des notifications contextuelles pour avertir l'utilisateur.
+
+Heure du masquage automatique des notifications :
+Intervalle (en secondes) d'affichage d'une notification contextuelle avant le masquage automatique.
+
+Intervalle minimal entre les notifications :
+Quantité d'interrogations qu'un état d'alarme conservera pour éviter le bagottement des notifications. Cette valeur * intervalle d'interrogation = secondes.</string>
+      <string id="perf_tracker_basic_settings_detail"> Paramètre basique de Performance Tracker.
+
+Taux d'actualisation des données :
+Fréquence (en secondes) à laquelle sont extraites les données de performance. </string>
+      <string id="perf_tracker_VDI_auto_start_detail">Démarrage automatique dans une connexion de poste de travail distant avec ou sans interface utilisateur de Performance Tracker.
+
+Si ce paramètre est activé, perfTracker démarre automatiquement lorsque l'utilisateur se connecte à un poste de travail distant.
+
+Si vous avez installé Performance Tracker à un autre emplacement et que vous voulez le lancer automatiquement, entrez le nouveau chemin d'accès dans la ligne de texte. Si vous souhaitez masquer l'interface utilisateur de Performance Tracker, ajoutez le paramètre « -hideUI », par exemple C:\installation path\VMwarePerformanceTracker.exe -hideUI</string>
+      <string id="perf_tracker_remote_app_auto_start_detail">Démarrage automatique dans une connexion d'application distante avec ou sans interface utilisateur de Performance Tracker.
+
+Si ce paramètre est activé, perfTracker démarre automatiquement lorsque l'utilisateur se connecte à une application distante.
+
+Si vous avez installé Performance Tracker à un autre emplacement et que vous voulez le lancer automatiquement, entrez le nouveau chemin d'accès dans la ligne de texte. Si vous souhaitez masquer l'interface utilisateur de Performance Tracker, ajoutez le paramètre « -hideUI », par exemple C:\installation path\VMwarePerformanceTracker.exe -hideUI</string>
+      <string id="perf_tracker_blast_settings_detail">Paramètre de seuil de Blast.
+
+Avertissement Valeur de latence de Blast :
+Valeur (en ms) à laquelle un avertissement s'affichera pour la mesure de latence de Blast.
+
+Erreur Valeur de latence de Blast :
+Valeur (en ms) à laquelle une erreur s'affichera pour la mesure de latence de Blast.
+
+Avertissement Valeur de perte de Blast :
+Valeur (en %) à laquelle un avertissement s'affichera lorsque le % de perte de Blast dépasse cette valeur.
+
+Erreur Valeur de perte de Blast :
+Valeur (en %) à laquelle une erreur s'affichera lorsque le % de perte de Blast dépasse cette valeur.
+
+Erreur Valeur de bande passante de Blast :
+Si la bande passante disponible est inférieure à cette valeur (en Kbit/s), une erreur s'affichera.
+
+Avertissement Valeur de bande passante de Blast :
+Si la bande passante disponible est inférieure à cette valeur (en Kbit/s), un avertissement s'affichera.</string>
+      <string id="perf_tracker_PCoIP_settings_detail">Paramètre de seuil de PCoIP.
+
+Avertissement Valeur de latence de PCoIP :
+Valeur (en ms) à laquelle un avertissement s'affichera pour la mesure de latence de PCoIP.
+
+Erreur Valeur de latence de PCoIP :
+Valeur (en ms) à laquelle une erreur s'affichera pour la mesure de latence de PCoIP.
+
+Avertissement Valeur de perte de PCoIP :
+Valeur (en %) à laquelle un avertissement s'affichera lorsque le % de perte de PCoIP dépasse cette valeur.
+
+Erreur Valeur de perte de PCoIP :
+Valeur (en %) à laquelle une erreur s'affichera lorsque le % de perte de PCoIP dépasse cette valeur.
+
+Erreur Valeur de bande passante de PCoIP :
+Si la bande passante disponible est inférieure à cette valeur (en Kbit/s), une erreur s'affichera.
+
+Avertissement Valeur de bande passante de PCoIP :
+Si la bande passante disponible est inférieure à cette valeur (en Kbit/s), un avertissement s'affichera.</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="perf_tracker_basic_settings">
+        <decimalTextBox refId="DataCollectionFrequency" defaultValue="5">Taux d'actualisation des données</decimalTextBox>
+      </presentation>
+      <presentation id="perf_tracker_auto_start_command">
+        <textBox refId="PerfTrackerCMD">
+          <label>Entrez le chemin d'installation et le paramètre d'exécution de Performance Tracker :</label>
+          <defaultValue>C:\Program Files\VMware\VMware View\Agent\Horizon Performance Tracker\VMware.Horizon.PerformanceTracker.exe</defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="perf_tracker_blast_settings">
+        <decimalTextBox refId="WarningBlastLatencyValue" defaultValue="100">Avertissement Valeur de latence de Blast</decimalTextBox>
+        <decimalTextBox refId="ErrorBlastLatencyValue" defaultValue="300">Erreur Valeur de latence de Blast</decimalTextBox>
+        <textBox refId="WarningBlastLossValue">
+          <label>Avertissement Valeur de perte de Blast</label>
+          <defaultValue>2</defaultValue>
+        </textBox>
+        <textBox refId="ErrorBlastLossValue" defaultValue="10">
+          <label>Erreur Valeur de perte de Blast</label>
+          <defaultValue>10</defaultValue>
+        </textBox>
+        <decimalTextBox refId="ErrorBlastBandwidthKbValue" defaultValue="512">Erreur Valeur de bande passante de Blast</decimalTextBox>
+        <decimalTextBox refId="WarningBlastBandwidthKbValue" defaultValue="1500">Avertissement Valeur de bande passante de Blast</decimalTextBox>
+      </presentation>
+      <presentation id="perf_tracker_PCoIP_settings">
+        <decimalTextBox refId="WarningPCoIPLatencyValue" defaultValue="100">Avertissement Valeur de latence de PCoIP</decimalTextBox>
+        <decimalTextBox refId="ErrorPCoIPLatencyValue" defaultValue="250">Erreur Valeur de latence de PCoIP</decimalTextBox>
+        <textBox refId="WarningPCoIPLossValue">
+          <label>Avertissement Valeur de perte de PCoIP</label>
+          <defaultValue>0,5</defaultValue>
+        </textBox>
+        <textBox refId="ErrorPCoIPLossValue">
+          <label>Erreur Valeur de perte de PCoIP</label>
+          <defaultValue>2</defaultValue>
+        </textBox>
+        <decimalTextBox refId="ErrorPCoIPBandwidthKbValue" defaultValue="512">Erreur Valeur de bande passante de PCoIP</decimalTextBox>
+        <decimalTextBox refId="WarningPCoIPBandwidthKbValue" defaultValue="1500">Avertissement Valeur de bande passante de PCoIP</decimalTextBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

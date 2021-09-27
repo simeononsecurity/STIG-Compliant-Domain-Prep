@@ -1,0 +1,828 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="CertCheckMode_NoSecurity">Keine Sicherheit</string>
+      <string id="CertCheckMode_WarnButAllow">Warnen, aber zulassen</string>
+      <string id="CertCheckMode_FullSecurity">Komplette Sicherheit</string>
+      <string id="EnableTicketSSLAuth_Enable">Aktivieren</string>
+      <string id="EnableTicketSSLAuth_Disable">Deaktivieren</string>
+      <string id="EnableTicketSSLAuth_Enforce">Erzwingen</string>
+      <string id="DesktopLayout_FullScreen">Vollbild</string>
+      <string id="DesktopLayout_WindowLarge">Fenster - groß</string>
+      <string id="DesktopLayout_WindowSmall">Fenster - klein</string>
+      <string id="DesktopLayout_MultiMonitor">Mehrere Monitore</string>
+      <string id="AppSessionReconnectBehavior_Ask">Vor Neuverbindung zum Öffnen von Anwendungen fragen</string>
+      <string id="AppSessionReconnectBehavior_Always">Neuverbindung zum Öffnen von Anwendungen automatisch herstellen</string>
+      <string id="AppSessionReconnectBehavior_Never">Nicht fragen und nicht automatisch erneut verbinden</string>
+      <string id="ColorDepth_8bit">8 Bit</string>
+      <string id="ColorDepth_15bit">15 Bit</string>
+      <string id="ColorDepth_16bit">16 Bit</string>
+      <string id="ColorDepth_24bit">24 Bit</string>
+      <string id="ColorDepth_32bit">32 Bit</string>
+      <string id="AudioRedirectionMode_PlayInVM">In VM abspielen (erforderlich für VoIP-USB-Unterstützung):</string>
+      <string id="AudioRedirectionMode_RedirectToClient">Zum Client umleiten</string>
+      <string id="AudioRedirectionMode_DisableAudio">Audio deaktivieren</string>
+      <string id="KeyboardHookMode_ApplyKeyCombinationsLocal">Tastenkombinationen lokal anwenden</string>
+      <string id="KeyboardHookMode_SendKeyCombinationsToVM">Tastenkombinationen an VM senden</string>
+      <string id="LocalModeExitBehavior_Shutdown">Herunterfahren</string>
+      <string id="LocalModeExitBehavior_Suspend">Anhalten</string>
+      <string id="VMwareViewClientUSB">View USB-Konfiguration</string>
+      <string id="VMwareViewClientOnlySetting">Einstellungen können nicht vom Agenten konfiguriert werden</string>
+      <string id="ExcludePath">Pfad ausschließen</string>
+      <string id="ExcludePathExplain">Schließt ein Gerät in einem angegebenen Hub- oder Portpfad von der Weiterleitung aus.</string>
+      <string id="IncludePath">Pfad einschließen</string>
+      <string id="IncludePathExplain">Legt für ein Gerät in einem angegebenen Hub- oder Portpfad fest, dass es weitergeleitet werden kann.</string>
+      <string id="SplitExcludeVidPid">Vid/Pid-Gerät vom Splitten ausschließen</string>
+      <string id="SplitExcludeVidPidExplain">Schließt die Komponentengeräte eines mit seiner Hersteller- und Produkt-ID angegebenen Verbundgeräts von der Behandlung als separate Geräte für das Filtern aus.
+
+Syntax: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx|*&gt;&gt;[;...]
+
+Beispiel: vid-0781_pid-554c;vid-0781_pid-9999</string>
+      <string id="SplitVidPid">Vid/Pid-Gerät splitten</string>
+      <string id="SplitVidPidExplain">Behandelt die Komponentengeräte eines mit seiner Hersteller- und Produkt-ID angegebenen Verbundgeräts als separate Geräte für das Filtern.
+
+Syntax: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx|*&gt;(exintf:xx[;exintf:xx])&gt;[;...]
+
+Beispiel: vid-0781_pid-554c(exintf:01;exintf:02);vid-0781_pid-9999(exintf:02)</string>
+      <string id="ExcludeVidPid">Vid/Pid-Gerät ausschließen</string>
+      <string id="ExcludeVidPidExplain">Schließt ein Gerät mit einer bestimmten Hersteller- und Produkt-ID von der Weiterleitung aus.
+
+Syntax: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx | *&gt;&gt;[;...]
+
+Beispiel: vid-0781_pid-554c;vid-0781_pid-9999</string>
+      <string id="IncludeVidPid">Vid/Pid-Gerät einschließen</string>
+      <string id="IncludeVidPidExplain">Legt für ein Gerät mit einer bestimmten Hersteller- und Produkt-ID fest, dass es weitergeleitet werden kann.
+
+Syntax: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx | *&gt;&gt;[;...]
+
+Beispiel: vid-0781_pid-554c;vid-0781_pid-9999</string>
+      <string id="ExcludeFamily">Gerätefamilie ausschließen</string>
+      <string id="ExcludeFamilyExplain">Schließt die Geräte einer Gerätefamilie von der Weiterleitung aus.
+
+Syntax: &lt;Familienname&gt;[;...]
+
+Beispiel: bluetooth;audio-in</string>
+      <string id="IncludeFamily">Gerätefamilie einschließen</string>
+      <string id="IncludeFamilyExplain">Legt für eine Gerätefamilie fest, dass deren Geräte weitergeleitet werden können.
+
+Syntax: &lt;Familienname&gt;[;...]
+
+Beispiel: bluetooth;audio-in</string>
+      <string id="ExcludeAllDevices">Alle Geräte ausschließen</string>
+      <string id="ExcludeAllDevicesExplain">Blockiert alle Geräte, solange sie nicht über eine Filterregel eingeschlossen werden.
+
+Standard: Alle Geräte sind zulässig</string>
+      <string id="VMwareViewAgentToClientUSB">Einstellungen für nur Download zum Client</string>
+      <string id="AllowHID">Andere Eingabegeräte zulassen</string>
+      <string id="AllowHIDExplain">Erlaubt die Weiterleitung anderer Eingabegeräte neben startfähigen Geräten, Tastatur- und Mausgeräten.
+
+Standard: Weiterleitung ist zulässig</string>
+      <string id="AllowHIDBootable">Startfähige Eingabegeräte zulassen</string>
+      <string id="AllowHIDBootableExplain">Erlaubt die Weiterleitung von Eingabegeräten, die zur Startzeit verfügbar sind (auch als „Startfähige Eingabegeräte“ bezeichnet).
+
+Standard: Weiterleitung ist zulässig</string>
+      <string id="AllowAudioIn">Audioeingabegeräte zulassen</string>
+      <string id="AllowAudioInExplain">Erlaubt die Weiterleitung von Audioeingabegeräten.
+
+Standard: Weiterleitung ist zulässig</string>
+      <string id="AllowAudioOut">Audioausgabegeräte zulassen</string>
+      <string id="AllowAudioOutExplain">Erlaubt die Weiterleitung von Audioausgabegeräten.
+
+Standard: Weiterleitung ist zulässig</string>
+      <string id="AllowKeyboardMouse">Tastatur- und Mausgeräte zulassen</string>
+      <string id="AllowKeyboardMouseExplain">Erlaubt die Weiterleitung von Tastatur- und Mausgeräten.
+
+Standard: Weiterleitung ist zulässig</string>
+      <string id="AllowVideo">Videogeräte zulassen</string>
+      <string id="AllowVideoExplain">Erlaubt die Weiterleitung von Videogeräten.
+
+Standard: Weiterleitung ist zulässig</string>
+      <string id="AllowSmartcard">Smartcards zulassen</string>
+      <string id="AllowSmartcardExplain">Erlaubt die Weiterleitung von Smartcard-Geräten.
+
+Standard: Weiterleitung ist blockiert</string>
+      <string id="AllowAutoDeviceSplitting">Autom. Gerätesplitten zulassen</string>
+      <string id="AllowAutoDeviceSplittingExplain">Schließt die Komponentengeräte von Verbundgeräten von der automatischen Behandlung als separate Geräte aus.</string>
+      <string id="DisableRemoteConfig">Remotekonfiguration deaktivieren</string>
+      <string id="DisableRemoteConfigExplain">Deaktiviert Downloads für die Remotekonfiguration.</string>
+      <string id="AllowDevDescFailsafe">Ausfallsicherung für die Gerätebeschreibung zulassen</string>
+      <string id="AllowDevDescFailsafeExplain">Aktiviert die Ausfallsicherung für Beschreibungen. Geräte werden dann nicht blockiert, wenn Beschreibungen nicht abgerufen werden können.</string>
+      <string id="VMwareViewClient">VMware Horizon Client-Konfiguration</string>
+      <string id="AllowDataSharing">Datenfreigabe zulassen</string>
+      <string id="AllowDataSharingExplain">VMware sammelt die Daten auf den Clientsystemen zur Priorisierung der Hardware- und Softwarekompatibilität. Wenn Ihr Unternehmen am Programm teilnimmt, erhält VMware anonyme Daten zu Ihrer Umgebung.
+Diese Eigenschaft ist standardmäßig aktiviert.</string>
+      <string id="AllowResolutionDpiSync">Auflösung und DPI-Wert auf Server speichern</string>
+      <string id="AllowResolutionDpiSyncExplain">Wenn diese Option aktiviert ist, speichert Horizon Client die Desktop-Auflösung und die DPI-Skalierung automatisch auf dem Server. Mit diesem GPO wird die benutzerdefinierte Einstellung jedes Mal, wenn der Benutzer mit benutzerdefinierten Einstellungen, beispielsweise Benutzerin Jane, den Remote-Desktop startet, automatisch angewendet. Benutzern, die keine benutzerdefinierte Einstellung festgelegt haben, werden weiterhin die Standardeinstellungen angezeigt, die mit der Auflösung und dem DPI-Wert der lokalen Hardware übereinstimmen. Wenn das GPO auf einem anderen System mit derselben Monitorkonfiguration festgelegt ist, werden Jane ihre benutzerdefinierten Einstellungen auch auf diesem System angezeigt.
+
+Diese Eigenschaft ist standardmäßig deaktiviert.</string>
+      <string id="EnableShade">Schattierung aktivieren</string>
+      <string id="EnableShadeExplain">Legt fest, ob die schattierte [menu bar] oben im Horizon Client-Fenster aktiviert wird.
+
+Diese Eigenschaft ist standardmäßig aktiviert.</string>
+      <string id="InitialPinState">Schattierung fixieren</string>
+      <string id="InitialPinStateExplain">Legt fest, ob die Schattierung oben im Horizon Client-Fenster fixiert wird, um das automatische Ausblenden der Menüleiste zu verhindern. Hinweis: Diese Eigenschaft ist nicht wirksam, wenn die Schattierung deaktiviert ist.
+
+Diese Eigenschaft ist standardmäßig aktiviert.</string>
+      <string id="DisableSpanChecks">Monitorausrichtung für Erweiterung nicht prüfen</string>
+      <string id="DisableSpanChecksExplain">Standardmäßig wird der Client-Desktop nicht über mehrere Monitore erweitert, wenn die kombinierten Bildschirme kein exaktes Rechteck bilden (d. h., die Höhe muss identisch sein, wenn Monitore nebeneinander platziert sind, und die Breite muss identisch sein, wenn die Monitore übereinander platziert sind).
+
+Diese Eigenschaft setzt diese Regel außer Kraft. Sie ist standardmäßig deaktiviert.</string>
+      <string id="EnableMMR">Multimedia-Beschleunigung aktivieren</string>
+      <string id="EnableMMRExplain">Legt fest, ob die Multimedia-Umleitung (Multimedia Redirection, MMR) auf dem Client aktiviert wird. MMR ist ein Microsoft DirectShow-Filter, der Multimediadaten von bestimmten Codecs auf dem Remotesystem direkt über einen TCP-Socket an den Client weiterleitet. Die Daten werden direkt auf dem Client decodiert, auf dem sie wiedergegeben werden. Administratoren haben die Möglichkeit, MMR zu deaktivieren, wenn der Client nicht über ausreichend Ressourcen zur Verarbeitung der lokalen Multimedia-Decodierung verfügt.
+
+Hinweis: MMR arbeitet nicht ordnungsgemäß, wenn die Hardware zur Videoanzeige von Horizon Client über keine Overlay-Unterstützung verfügt. Die MMR-Richtlinie wird nicht für Offline-Desktop-Sitzungen angewendet.</string>
+      <string id="AlwaysOnTop">Immer im Vordergrund anzeigen</string>
+      <string id="AlwaysOnTopExplain">Legt fest, ob das Horizon Client-Fenster immer Vordergrund angezeigt wird.
+
+Diese Einstellung ist standardmäßig deaktiviert.</string>
+      <string id="AutomaticallyInstallShortcuts">Verknüpfungen automatisch installieren, wenn diese auf Horizon Server konfiguriert wurden</string>
+      <string id="AutomaticallyInstallShortcutsExplain">Diese Richtlinie legt fest, ob Verknüpfungen automatisch auf Horizon Client installiert werden, wenn sie auf Horizon Server konfiguriert wurden. Wenn diese Richtlinie aktiviert ist, erscheint keine Eingabeaufforderung für den Benutzer und die Verknüpfungen werden automatisch installiert. Ist diese deaktiviert, werden Verknüpfungen in keinem Fall installiert. Ist diese Richtlinie nicht konfiguriert, wird der Benutzer zur Installation der Verknüpfungen aufgefordert.</string>
+      <string id="HideClientAfterLaunchSession">Standardwert für das Kontrollkästchen „Selektor nach Start eines Elements ausblenden“</string>
+      <string id="HideClientAfterLaunchSessionExplain">Legt fest, ob das Kontrollkästchen „Selektor nach Start eines Elements ausblenden“ standardmäßig aktiviert wird.
+
+Diese Einstellung ist standardmäßig deaktiviert.</string>
+      <string id="VMwareViewClientScripting">Skriptdefinitionen</string>
+      <string id="ServerURL">Server-URL</string>
+      <string id="ServerURLExplain">Legt die URL fest, die von Horizon Client für die Anmeldung verwendet wird. Beispiel: https://view1.example.com.</string>
+      <string id="UserName">Benutzername für die Anmeldung</string>
+      <string id="UserNameExplain">Legt den Benutzernamen fest, der von Horizon Client für die Anmeldung verwendet wird.</string>
+      <string id="DomainName">Domänenname für die Anmeldung</string>
+      <string id="DomainNameExplain">Legt die NETBIOS-Domäne fest, die von Horizon Client für die Anmeldung verwendet wird. Beispiel: EXAMPLE.</string>
+      <string id="Password">Kennwort für die Anmeldung</string>
+      <string id="PasswordExplain">Legt das Kennwort fest, das von Horizon Client für die Anmeldung verwendet wird. 
+
+Warnung: Dieses Kennwort wird von Active Directory als Klartext gespeichert.</string>
+      <string id="DesktopName">Desktop-Name zur Auswahl</string>
+      <string id="DesktopNameExplain">Legt den Standard-Desktop fest, der von Horizon Client für die Anmeldung verwendet wird.</string>
+      <string id="DesktopLayout">Desktop-Layout</string>
+      <string id="DesktopLayoutExplain">Legt den Anzeigestatus des Horizon Client-Fensters beim Start des Desktops fest.</string>
+      <string id="FullScreen">Vollbild</string>
+      <string id="Window">Fenster</string>
+      <string id="MultiMonitor">Mehrere Monitore</string>
+      <string id="LockedGuestSize">Gesperrte Gastgröße</string>
+      <string id="LockedGuestWidth">Gesperrte Gastbreite </string>
+      <string id="LockedGuestHeight">Gesperrte Gasthöhe</string>
+      <string id="LockedGuestSizeExplain">Legt die Bildschirmauflösung des Remote-Desktops fest. Ist diese Einstellung aktiviert, wird die automatische Anpassung des Remote-Desktops deaktiviert. 
+
+Mindestbildschirmgröße: 640x480 
+Maximale Bildschirmgröße: 4096x4096
+
+Hinweis: Diese Einstellung gilt nicht für RDP-Verbindungen.</string>
+      <string id="NonInteractive">Fehlermeldungen unterdrücken (nur bei Skriptverwendung)</string>
+      <string id="NonInteractiveExplain">Legt fest, ob während der Anmeldung Fehlermeldungen angezeigt werden.
+
+Hinweis: Diese Einstellung wird nur angewendet, wenn der Anmeldevorgang vollständig per Skript ausgeführt wird, d. h., wenn alle erforderlichen Anmeldeinformationen über eine Richtlinie vorausgefüllt werden.
+
+Hinweis: Wenn die Anmeldung wegen eingegebener ungültiger Anmeldeinformationen nicht möglich ist, wird der Benutzer nicht informiert und der Horizon Client-Vorgang wswc.exe wird automatisch beendet.</string>
+      <string id="SingleAutoConnect">Automatisch verbinden, wenn nur ein Startelement über eine Berechtigung verfügt</string>
+      <string id="SingleAutoConnectExplain">Ermöglicht die automatische Herstellung einer Verbindung mit dem Desktop oder mit der Anwendung, wenn der sich anmeldende Benutzer nur für den Desktop oder die Anwendung über eine Berechtigung verfügt.</string>
+      <string id="VMwareViewClientSecurity">Sicherheitseinstellungen</string>
+      <string id="VMwareViewClientSecurityNTLM">NTLM-Einstellungen</string>
+      <string id="LogInAsCurrentUser_Display">Kontrollkästchen „Als aktueller Benutzer anmelden“ anzeigen</string>
+      <string id="LogInAsCurrentUser_DisplayExplain">Legt fest, ob das Kontrollkästchen „Als aktueller Benutzer anmelden“ im Horizon Client-Fenster angezeigt wird.
+
+Diese Einstellung ist standardmäßig aktiviert.
+
+Wenn diese Einstellung deaktiviert ist, kann der Benutzer die Option „Standardwert des Kontrollkästchens ‚Als aktueller Benutzer anmelden‘“ nicht ändern.</string>
+      <string id="LogInAsCurrentUser">Standardwert des Kontrollkästchens „Als aktueller Benutzer anmelden“</string>
+      <string id="LogInAsCurrentUserExplain">Legt fest, ob das Kontrollkästchen „Als aktueller Benutzer anmelden“ standardmäßig aktiviert wird.
+
+Diese Einstellung ist standardmäßig deaktiviert.</string>
+      <string id="EnableRecursiveUnlock">Remotesitzungen entsperren, wenn der Clientcomputer entsperrt wird</string>
+      <string id="EnableRecursiveUnlockExplain">Diese Richtlinie steuert die Funktion „Rekursive Entsperrung“, die alle Remotesitzungen entsperrt, wenn der Clientcomputer entsperrt wird. Diese Funktion kann nur angewendet werden, wenn sich der Benutzer bei einem View-Server mithilfe der Funktion „Als aktueller Benutzer anmelden“ angemeldet hat.
+
+Diese Einstellung ist standardmäßig aktiviert.</string>
+      <string id="BrokersTrustedForDelegation">Vertrauenswürdige Server für die Delegierung</string>
+      <string id="BrokersTrustedForDelegationExplain">Legt die Liste der View-Verbindungsserver fest, an die Anmeldedaten delegiert werden dürfen. Diese wird mit „Anmelden als aktueller Benutzer“ verwendet.
+
+Das Benennungsformat für Server lautet Service Principal Name (SPN).
+
+Standardmäßig werden alle Server als vertrauenswürdig eingestuft.</string>
+      <string id="AllowNTLMAuthentication">NTLM-Authentifizierung erlauben</string>
+      <string id="AllowFallBack_YES">Ja</string>
+      <string id="AllowFallBack_NO">Nein</string>
+      <string id="AllowNTLMAuthenticationExplain">Wenn diese Einstellung aktiviert ist, ist die NTLM-Authentifizierung mit „Anmelden als aktueller Benutzer“ zulässig.
+
+Wenn der Wert „Nicht konfiguriert“ lautet, wird die NTLM-Authentifizierung für Server erlaubt, die in GPO aufgelistet sind: „NTLM immer für Server verwenden“.
+
+Wenn der Wert „Deaktiviert“ lautet, wird die NTLM-Authentifizierung nicht für Server verwendet.
+
+Fallback von Kerberos zu NTLM erlauben:
+Wenn der Wert auf „Nein“ festgelegt ist, wird NTLM nur für Server verwendet, die in GPO aufgelistet sind: „NTLM immer für Server verwenden“.
+Wenn der Wert auf „Ja“ festgelegt ist, kann NTLM jederzeit verwendet werden, wenn der Client kein Kerberos-Ticket für den Server abrufen kann.</string>
+      <string id="ServersAlwaysUseNTLM">NTLM immer für Server verwenden</string>
+      <string id="ServersAlwaysUseNTLMExplain">Wenn diese Einstellung aktiviert ist, melden Sie sich als aktueller Benutzer an und verwenden Sie dabei immer die NTLM-Authentifizierung für aufgelistete Server.
+
+Das Benennungsformat für Server ist der vollqualifizierte Domänenname (FQDN)</string>
+      <string id="IgnoreRevocation">Probleme der Zertifikatsperrung ignorieren</string>
+      <string id="IgnoreRevocationExplain">Legt fest, ob Fehler, die im Zusammenhang mit einem gesperrten Serverzertifikat auftreten, ignoriert werden.
+
+Solche Fehler treten auf, wenn das vom Server gesendete Zertifikat gesperrt wurde oder wenn der Client den Sperrstatus des Zertifikats nicht prüfen kann.
+
+Diese Einstellung ist standardmäßig deaktiviert.</string>
+      <string id="CertCheckMode">Zertifikatüberprüfungsmodus</string>
+      <string id="CertCheckModeExplain">Konfiguriert das Verhalten der Zertifikatüberprüfung von Horizon Client.
+
+Wenn für diese Eigenschaft „Keine Sicherheit“ festgelegt ist, wird keine Zertifikatprüfung durchgeführt.
+
+Wenn für diese Eigenschaft „Warnen, aber zulassen“ festgelegt ist, wird der Benutzer gewarnt. Er kann aber fortfahren, wenn es sich um ein selbstsigniertes Serverzertifikat handelt. Wenn das Serverzertifikat selbstsigniert ist, muss der Zertifikatname nicht mit dem Servernamen übereinstimmen. Dies ist der Standardwert.
+
+Wenn für diese Eigenschaft „Volle Sicherheit“ festgelegt ist, werden alle Zertifikatfehler an den Benutzer gemeldet und es kann keine Verbindung mit dem Server hergestellt werden.</string>
+      <string id="AllowConnectionViaAnSslProxy">Konfiguriert das Verhalten der SSL-Proxy-Zertifikatsprüfung des Horizon Client</string>
+      <string id="AllowConnectionViaAnSslProxyExplain">Diese Einstellung legt fest, ob Benutzer über einen SSL-Proxy eine Verbindung zu einer virtuellen Berechtigung herstellen können. Wenn sie nicht konfiguriert ist, kann der Endbenutzer die Einstellung manuell ändern. Standardmäßig ist der Client so eingestellt, dass SSL-Proxy-Verbindungen für Blast- und Tunnel-Verbindungen blockiert werden.</string>
+      <string id="EnableSmartCardSSO">Single-Sign-On-Anmeldung für die Smartcard-Authentifizierung verwenden</string>
+      <string id="EnableSmartCardSSOExplain">Aktiviert die SingleSign-On-Anmeldung für die Smartcard-Authentifizierung. Dazu muss Horizon Client die verschlüsselte Smartcard-PIN vorübergehend im Arbeitsspeicher vorhalten, bevor diese an den View-Verbindungsserver weitergeleitet wird.</string>
+      <string id="EnableJumplist">Integration der Sprungliste aktivieren</string>
+      <string id="EnableJumplistExplain">Aktiviert das Hinzufügen einer Sprungliste zum Horizon Client-Symbol in der Taskleiste von Windows 7 und höher. Benutzer können dann einfacher eine Verbindung mit den aktuellen View-Verbindungsservern und Remote-Desktops herstellen. Diese Funktion ist standardmäßig aktiviert.</string>
+      <string id="AllowCmdLineCredentials">Anmeldedaten über die Befehlszeile zulassen</string>
+      <string id="AllowCmdLineCredentialsExplain">Erlaubt die Bereitstellung von Anmeldedaten wie Kennwort oder PIN über Befehlszeilenparameter.
+
+Diese Einstellung ist standardmäßig aktiviert.</string>
+      <string id="EnableTicketSSLAuth">SSL-verschlüsselten Framework-Kanal aktivieren</string>
+      <string id="EnableTicketSSLAuthExplain">Aktiviert einen SSL-verschlüsselten Framework-Kanal.
+
+Aktivieren: Aktiviert SSL und ermöglicht im Fehlerfall die Verwendung von Desktops ohne SSL-Unterstützung
+Deaktivieren: Deaktiviert SSL
+Erzwingen: Aktiviert SSL und verhindert die Verwendung von Desktops ohne SSL-Unterstützung</string>
+      <string id="SSLCipherList">SSL-Protokolle und kryptografische Algorithmen konfigurieren</string>
+      <string id="SSLCipherListExplain">Konfiguriert eine Verschlüsselungsliste zur Einschränkung der Nutzung bestimmter kryptografischer Algorithmen und Protokolle vor dem Aufbau einer verschlüsselten SSL-Verbindung. Die Verschlüsselungsliste besteht aus einer oder mehreren Verschlüsselungszeichenfolgen, die durch Doppelpunkte voneinander getrennt sind. Denken Sie daran, dass für alle Verschlüsselungszeichenfolgen die Groß-/Kleinschreibung zu beachten ist.
+
+Wenn die Funktion aktiviert ist, gilt folgender Standardwert:
+   'TLSv1.1:TLSv1.2:!aNULL:kECDH+AESGCM:ECDH+AESGCM:RSA+AESGCM:kECDH+AES:ECDH+AES:RSA+AES'
+
+Damit wird Folgendes festgelegt: TLS v1.1 und TLS v1.2 sind aktiviert (SSL v2.0, SSL v3.0 und TLS v1.0 sind deaktiviert). Verschlüsselungs-Suiten verwenden ECDHE, ECDH und RSA mit 128-Bit- oder 256-Bit-AES und bevorzugen den GCM-Modus.
+
+SSL v2.0, SSL v3.0 und TLS v1.0 sind nicht mehr die genehmigten Protokolle und werden dauerhaft deaktiviert.
+
+Referenz-Link für die Konfiguration: http://www.openssl.org/docs/apps/ciphers.html#</string>
+      <string id="VMwareViewRdpSettings">RDP-Einstellungen</string>
+      <string id="VMwareViewBrowserRedirection">VMware Browserumleitung</string>
+      <string id="ColorDepth">Farbtiefe</string>
+      <string id="ColorDepthExplain">Legt die Farbtiefe für den Remote-Desktop fest.
+
+Stellen Sie für 24-Bit-Windows XP-Systeme sicher, dass die Richtlinie „Maximale Farbtiefe einschränken“ unter „Computerkonfiguration“/„Administrative Vorlagen“/„Windows-Komponenten“/„Terminaldienste“ aktiviert und auf 24 Bit eingestellt ist.</string>
+      <string id="AudioRedirectionMode">Audioumleitung</string>
+      <string id="AudioRedirectionModeExplain">Legt fest, wie Audioinformationen geleitet werden, wenn diese auf dem Remote-Desktop wiedergegeben werden. Bei Aktivierung dieser Eigenschaft stehen folgende Einstellungen zur Verfügung:
+
+  * Audio deaktivieren – kein Audio
+  * In VM abspielen (erforderlich für VoIP-USB-Unterstützung) – Audio wird im Remote-Desktop wiedergegeben (erfordert ein gemeinsam genutztes USB-Audiogerät zur Wiedergabe von Sound auf dem Client.)
+  * An Client umleiten – Audio wird zum Client umgeleitet. Dies ist der Standardmodus.
+
+Hinweis: Diese Eigenschaft wird nur für RDP-Audio angewendet. Über MMR umgeleitete Audiodaten werden im Client wiedergegeben.</string>
+      <string id="KeyboardHookMode">Windows-Tastenkombination umleiten</string>
+      <string id="KeyboardHookModeExplain">Legt fest, wo Windows-Tastenkombinationen angewendet werden.</string>
+      <string id="DisableWallpaper">Desktop-Hintergrund</string>
+      <string id="DisableWallpaperExplain">Legt fest, ob der Desktop-Hintergrund angezeigt wird, wenn der Client eine Verbindung zum Remote-Desktop herstellt.</string>
+      <string id="DisableFullWindowDrag">Fensterinhalt beim Ziehen anzeigen</string>
+      <string id="DisableFullWindowDragExplain">Legt fest, ob der Ordnerinhalt angezeigt wird, wenn der Benutzer einen Ordner an einen neuen Speicherort zieht.</string>
+      <string id="DisableMenuAnimations">Menü- und Fensteranimation</string>
+      <string id="DisableMenuAnimationsExplain">Legt fest, wie sich Menüs und Fenster verhalten, wenn Clients eine Verbindung mit dem Remotecomputer herstellen.</string>
+      <string id="DisableTheming">Designs</string>
+      <string id="DisableThemingExplain">Legt fest, ob Designs angezeigt werden, wenn Clients eine Verbindung mit dem Remote-Desktop herstellen.</string>
+      <string id="DisableCursorShadow">Cursorschattierung</string>
+      <string id="DisableCursorShadowExplain">Legt fest, ob auf dem Remote-Desktop unter dem Cursor ein Schatten angezeigt wird.</string>
+      <string id="FontSmoothing">Schriftartglättung</string>
+      <string id="FontSmoothingExplain">(Windows Vista oder höher) Legt fest, ob Anti-Aliasing auf die Schriftarten auf dem Remote-Desktop angewendet wird.</string>
+      <string id="DesktopComposition">Desktopgestaltung</string>
+      <string id="DesktopCompositionExplain">(Windows Vista oder höher) Legt fest, ob die Desktopgestaltung auf dem Remote-Desktop aktiviert wird.
+
+Wenn die Desktopgestaltung aktiviert ist, werden einzelne Fenster nicht mehr direkt auf dem Bildschirm oder auf dem primären Anzeigegerät angezeigt, wie dies in früheren Versionen von Microsoft Windows der Fall war. Stattdessen werden die Bilddaten zunächst in den nicht sichtbaren Offscreen-Bereich des Videospeichers umgeleitet und anschließend zur Darstellung auf dem Anzeigegerät in ein Desktop-Bild gerendert.</string>
+      <string id="RedirectDrives">Laufwerke umleiten</string>
+      <string id="RedirectDrivesExplain">Legt fest, ob lokale Festplattenlaufwerke automatisch umgeleitet werden, wenn Clients eine Verbindung mit dem Remote-Desktop herstellen.</string>
+      <string id="RedirectPrinters">Drucker umleiten</string>
+      <string id="RedirectPrintersExplain">Legt fest, ob lokale Drucker automatisch umgeleitet werden, wenn Clients eine Verbindung mit dem Remote-Desktop herstellen.</string>
+      <string id="RedirectPorts">Serielle Ports umleiten</string>
+      <string id="RedirectPortsExplain">Legt fest, ob lokale COM-Ports automatisch umgeleitet werden, wenn Clients eine Verbindung mit dem Remote-Desktop herstellen.</string>
+      <string id="RedirectSmartcards">Smartcards umleiten</string>
+      <string id="RedirectSmartcardsExplain">Legt fest, ob lokale Smartcards automatisch umgeleitet werden, wenn Clients eine Verbindung mit dem Remote-Desktop herstellen.</string>
+      <string id="RedirectClipboard">Zwischenablage umleiten</string>
+      <string id="RedirectClipboardExplain">Legt fest, ob lokale Zwischenablageinformationen automatisch umgeleitet werden, wenn Clients eine Verbindung mit dem Remote-Desktop herstellen.</string>
+      <string id="RedirectPlugAndPlayDevices">Unterstützte Plug &amp; Play-Geräte umleiten</string>
+      <string id="ExplainRedirectPlugAndPlayDevices">Legt fest, ob lokale Plug &amp; Play- sowie POS-Geräte (Point of Sale) automatisch umgeleitet werden, wenn Clients eine Verbindung mit dem Remote-Desktop herstellen. Dies unterscheidet sich von der Umleitung, die von der View Agent-Komponente für die USB-Umleitung verwaltet wird.</string>
+      <string id="ShadowBitmap">Bitmaps schattieren</string>
+      <string id="ShadowBitmapExplain">Legt fest, ob schattierte Bitmaps verwendet werden.
+
+Hinweis: Schattierte Bitmaps werden im Vollbildmodus immer deaktiviert. Deshalb hat diese Einstellung auch keine Auswirkungen im Vollbildmodus.</string>
+      <string id="CachePersistenceActive">Bitmap-Cache/Dauerhafte Zwischenspeicherung aktiv</string>
+      <string id="CachePersistenceActiveExplain">Legt fest, ob Bitmaps dauerhaft zwischengespeichert werden. Eine dauerhafte Zwischenspeicherung kann die Leistung verbessern, erfordert aber zusätzlichen Festplattenspeicher.</string>
+      <string id="EnableCompression">Komprimierung aktivieren</string>
+      <string id="EnableCompressionExplain">Legt fest, ob die Komprimierung von RDP-Daten verwendet wird. Diese Einstellung ist standardmäßig aktiviert.</string>
+      <string id="BitmapCacheSize">Arbeitsspeicherinterne Größe für den Bitmap-Cache in KB für 8-bpp-Bitmaps</string>
+      <string id="BitmapCacheSizeExplain">Legt die Größe des RAM-Bitmap-Cache in Kilobyte für die Farbeinstellung 8 Bit pro Pixel (bpp) fest. Wenn für ScaleBitmapCachesByBPP „Wahr“ gilt (Standardeinstellung), wird diese Zwischenspeichergröße mit den Bits pro Pixel multipliziert, um die tatsächliche RAM-Zwischenspeichergröße zu bestimmen 
+
+Wenn diese Eigenschaft aktiviert ist, geben Sie die Größe in KB ein.</string>
+      <string id="BitmapVirtualCacheSize">Dateigröße für den Bitmap-Cache in MB für 8-bpp-Bitmaps</string>
+      <string id="BitmapVirtualCacheSizeExplain">Legt die Größe der Datei in Megabyte für den dauerhaften Bitmap-Cache fest, die für die Farbeinstellung 8 Bit pro Pixel (bpp) verwendet werden soll.
+
+Wenn diese Eigenschaft aktiviert ist, geben Sie die Dateigröße in MB ein. Die gültigen Werte reichen von 1 bis 32.</string>
+      <string id="BitmapVirtualCache16BppSize">Dateigröße für den Bitmap-Cache in MB für 16-bpp-Bitmaps</string>
+      <string id="BitmapVirtualCache16BppSizeExplain">Legt die Größe der Datei in Megabyte für den dauerhaften Bitmap-Cache fest, die für die Farbeinstellung 15/16 Bit pro Pixel (bpp) verwendet werden soll.
+
+Wenn diese Eigenschaft aktiviert ist, geben Sie die Dateigröße in MB ein. Die gültigen Werte reichen von 1 bis 32.</string>
+      <string id="BitmapVirtualCache24BppSize">Dateigröße für den Bitmap-Cache in MB für 24-bpp-Bitmaps</string>
+      <string id="BitmapVirtualCache24BppSizeExplain">Legt die Größe der Datei in Megabyte für den dauerhaften Bitmap-Cache fest, die für die Farbeinstellung 24 Bit pro Pixel (bpp) verwendet werden soll.
+
+Wenn diese Eigenschaft aktiviert ist, geben Sie die Dateigröße in MB ein. Die gültigen Werte reichen von 1 bis 32.</string>
+      <string id="BitmapVirtualCache32BppSize">Dateigröße für den Bitmap-Cache in MB für 32-bpp-Bitmaps</string>
+      <string id="BitmapVirtualCache32BppSizeExplain">Legt die Größe der Datei in Megabyte für den dauerhaften Bitmap-Cache fest, die für die Farbeinstellung 32 Bit pro Pixel (bpp) verwendet werden soll.
+
+Wenn diese Eigenschaft aktiviert ist, geben Sie die Dateigröße in MB ein. Die gültigen Werte reichen von 1 bis 32.</string>
+      <string id="noTSCAddins">Drittanbieter-Plug-Ins für Terminaldienste deaktivieren</string>
+      <string id="noTSCAddinsExplain">Wenn für diese Eigenschaft „Wahr“ festgelegt ist, werden Drittanbieter-Plug-Ins für Terminaldienste, die als herkömmliche RDP-Plug-Ins installiert wurden, nicht überprüft. Diese Einstellung hat keine Auswirkungen auf View-spezifische Plug-Ins wie z. B. die USB-Umleitung. Wenn diese Richtlinie nicht konfiguriert ist, ist die Ermittlung und Anwendung von Drittanbieter-Plug-Ins standardmäßig aktiviert.</string>
+      <string id="DisableTimeZoneForwarding">Zeitzonenweiterleitung deaktivieren</string>
+      <string id="DisableTimeZoneForwardingExplain">Legt fest, ob die Zeitzone des View-Desktops mit jener des verbundenen Clients synchronisiert wird. Ist diese Eigenschaft aktiviert, wird sie nur angewendet, wenn die Eigenschaft „Disable Time Zone Synchronization“ (Zeitzonensynchronisierung deaktivieren) der Konfigurationsrichtlinie von View Agent aktiviert ist.
+
+Diese Eigenschaft ist standardmäßig deaktiviert.</string>
+      <string id="AutomaticInputFocus">Automatischer Eingabefokus in einem virtuellen Desktop-Fenster</string>
+      <string id="AutomaticInputFocusExplain">Wenn ein virtuelles Desktop-Fenster in den Vordergrund gerückt wird, wird die Eingabe automatisch auf dem virtuellen Desktop durchgeführt. Anders ausgedrückt: Der Fokus befindet sich nicht im Fensterrahmen, und der Benutzer muss nicht einmal im Desktop-Fenster klicken, um den Fokus zu verschieben.</string>
+      <string id="EnableCredSspSupport">Dienstanbieter für Sicherheit der Anmeldedaten aktivieren</string>
+      <string id="EnableCredSspSupportExplain">Legt fest, ob die View-Desktop-Verbindung die Authentifizierung auf Netzwerkebene (Network Level Authentication, NLA) verwendet. In Windows Vista erfordern Remote-Desktop-Verbindungen standardmäßig die NLA.
+
+Wenn das Gastbetriebssystem für Remote-Desktop-Verbindungen NLA erfordert, müssen Sie diese Einstellung aktivieren. Andernfalls kann Horizon Client keine Verbindung zum View-Desktop herstellen.
+
+Zusätzlich zur Aktivierung dieser Einstellung müssen Sie sicherstellen, dass die folgenden Bedingungen erfüllt sind:
+   1) Sowohl der Client als auch die Gastbetriebssysteme unterstützen NLA.
+   2) Es sind direkte Clientverbindungen für die View-Verbindungsserver-Instanz aktiviert. Tunnelverbindungen werden mit NLA nicht unterstützt.</string>
+      <string id="TunnelProxyBypass">Adressliste zur Umgehung des Tunnel-Proxy</string>
+      <string id="TunnelProxyBypassExplain">Verwenden Sie keinen Proxy-Server für Tunneladressen, die mit einer bestimmten Zeichenfolge beginnen. Verwenden Sie das Semikolon (;) zur Trennung von Einträgen.</string>
+      <string id="HelpURL">URL für die Horizon Client-Onlinehilfe</string>
+      <string id="HelpURLExplain">Legt eine alternative URL fest, von der Horizon Client Hilfeseiten abrufen kann. Diese Eigenschaft ist für Umgebungen vorgesehen, die das remote gehostete Hilfesystem nicht abrufen können, da kein Internetzugriff verfügbar ist.</string>
+      <string id="AutoUpdateAllowed">Onlineaktualisierung von Horizon Client aktivieren</string>
+      <string id="AutoUpdateAllowedExplain">Legt fest, ob die Online-Aktualisierungsfunktion verwendet werden kann. Wird von Horizon Client 4.6 standardmäßig aktiviert.</string>
+      <string id="AutoUpdateURL">URL für die Horizon Client-Onlineaktualisierung</string>
+      <string id="AutoUpdateURLExplain">Legt eine URL fest, von der sich mit Horizon Client Aktualisierungen abrufen lassen. Diese Eigenschaft dient der Definition eines bestimmten Update-Servers. Wenn sie nicht aktiviert ist, wird der offizielle VMware-Update-Server verwendet.</string>
+      <string id="BlockMultipleInstances">Mehrere Horizon Client-Instanzen über Windows-Sitzung blockieren</string>
+      <string id="BlockMultipleInstancesExplain">Diese Richtlinie blockiert mehrere Horizon Client-Instanzen über eine Windows-Sitzung. Wenn diese Richtlinie aktiviert ist, wird Horizon Client im Singleton-Instanzmodus ausgeführt und der Benutzer kann nicht mehrere Horizon Client-Instanzen öffnen. Wenn diese Richtlinie deaktiviert ist, kann der Benutzer mehrere Horizon Client-Instanzen öffnen. Diese Einstellung ist standardmäßig deaktiviert.</string>
+      <string id="ListSmartCardCertsOnly">Nur Smartcard-Zertifikate bei Anmeldung anzeigen</string>
+      <string id="ListSmartCardCertsOnlyExplain">Diese Richtlinie gibt an, ob alle Zertifikate aus den Benutzer- und Systemspeichern oder nur Zertifikate von Smartcards angezeigt werden sollen. Wenn Sie diese Richtlinie aktivieren, enthält das Dialogfeld für die Zertifikatauswahl nur Smartcard-Zertifikate. Alle anderen Zertifikate sind herausgefiltert. Wenn Sie diese Richtlinie deaktivieren, werden alle Zertifikattypen im Dialogfeld für die Zertifikatauswahl aufgelistet. Diese Einstellung ist standardmäßig deaktiviert.</string>
+      <string id="connectUSBOnStartup">Beim Start alle USB-Geräte mit dem Desktop oder mit der Remoteanwendung verbinden</string>
+      <string id="connectUSBOnStartupExplain">Verbindet automatisch alle verfügbaren USB-Geräte auf dem Host mit einem Desktop oder mit einer Remoteanwendung, wenn dieser Desktop oder diese Remoteanwendung gestartet wird.</string>
+      <string id="EnableAutoReconnect">Automatisch erneute RDP-Verbindung aktivieren</string>
+      <string id="EnableAutoReconnectExplain">Legt fest, ob es der RDP-Client-Komponente möglich ist sein soll, automatisch eine erneute Verbindung mit einem Desktop herzustellen, wenn ein RDP-Verbindungsfehler auftritt. Diese Einstellung ist standardmäßig deaktiviert. Sie hat keine Auswirkungen, wenn die Option „Sichere Tunnelverbindung mit dem Desktop verwenden“ aktiviert ist.</string>
+      <string id="RedirectAudioCapture">Umleitung der Audioaufnahme aktivieren</string>
+      <string id="RedirectAudioCaptureExplain">Legt fest, ob das standardmäßige Audioeingabegerät vom Client an die Remote-Sitzung umgeleitet wird. Standardmäßig ist diese Einstellung deaktiviert.</string>
+      <string id="connectUSBOnInsert">Alle USB-Geräte mit dem Desktop oder mit der Remoteanwendung verbinden, wenn sie angeschlossen werden</string>
+      <string id="connectUSBOnInsertExplain">Legt fest, dass USB-Geräte automatisch verbunden werden, wenn sie am Host an den Desktop oder an die Remoteanwendung angeschlossen werden, mit dem bzw. der der Benutzer aktuell arbeitet.</string>
+      <string id="RedirectSmartCardsInLocalMode">Smartcard-Leser im lokalen Modus umleiten</string>
+      <string id="RedirectSmartCardsInLocalModeExplain">Legt fest, ob Smartcard-Leser automatisch an Desktops im lokalen Modus umgeleitet werden. Die Leser werden mit dem Clientcomputer gemeinsam genutzt. Diese Einstellung ist standardmäßig aktiviert.</string>
+      <string id="ReplicationStartupDelay">Start von Replikationen verzögern, wenn Horizon Client im lokalen Modus gestartet wird</string>
+      <string id="ReplicationStartupDelayExplain">Verzögert alle Replikationen um die angegebene Anzahl an Sekunden, wenn Horizon Client im lokalen Modus gestartet wird. Die Replikationen werden nach dieser Verzögerung gemäß dem aktuellen Zeitplan fortgesetzt. Die standardmäßige Verzögerung beträgt 900 Sekunden (15 Minuten).</string>
+      <string id="LocalModeExitBehavior">Standardverhalten beim Beenden von Desktops im lokalen Modus</string>
+      <string id="LocalModeExitBehaviorExplain">Legt das Standardverhalten beim Beenden von Desktops fest, die im lokalen Modus ausgeführt werden. Das Standardverhalten beim Beenden dient der Initiierung des Herunterfahrens eines Gastes.</string>
+      <string id="DisableToastNotifications">Toastnachrichten deaktivieren</string>
+      <string id="DisableToastNotificationsExplain">Diese Einstellung deaktiviert die Toastnachrichten von Horizon Client. Aktivieren Sie diese Einstellung, wenn Sie nicht möchten, dass dem Benutzer Toastnachrichten in der Ecke des Bildschirms angezeigt werden. Beachten Sie, dass die Aktivierung dieses GPO dazu führt, dass der Benutzer keine Fünf-Minuten-Warnung erhält, wenn die Funktionalität der Sitzungszeitüberschreitung aktiviert ist. Diese Einstellung ist standardmäßig deaktiviert.</string>
+      <string id="EnableRelativeMouse">Relative Maus aktivieren</string>
+      <string id="EnableRelativeMouseExplain">Diese Einstellung aktiviert die relative Maus von Horizon Client für PCoIP-Desktops. Aktivieren Sie diese Einstellung, wenn der Benutzer mit PCoIP-Desktops immer den Modus der relativen Maus verwenden soll. Der Modus der relativen Maus optimiert das Mausverhalten für bestimmte Grafikanwendungen und Spiele. Wenn der Remote-Desktop den Modus der relativen Maus nicht unterstützt, wird diese Einstellung nicht verwendet. Diese Einstellung ist standardmäßig deaktiviert.</string>
+      <string id="DisableDisconnectMessages">Meldungen zum Trennen von Desktops deaktivieren</string>
+      <string id="DisableDisconnectMessagesExplain">Legt fest, ob Meldungen, die normalerweise beim Trennen von Desktops angezeigt werden, deaktiviert werden. Diese Meldungen werden standardmäßig angezeigt. Diese Einstellung betrifft nicht vom Benutzer initiierte Trennungen von der Horizon Client-Benutzeroberfläche.</string>
+      <string id="DisallowClientInformationPassthrough">Weiterleitung von Clientinformatiomen in einer verschachtelten Sitzung ausschließen</string>
+      <string id="DisallowClientInformationPassthroughExplain">Legt fest, ob verhindert wird, dass Horizon Client Clientinformationen in einer verschachtelten Sitzung weiterleitet. Wenn aktiviert, werden die tatsächlichen physischen Clientinformationen anstelle der VM-Geräteinformationen gesendet, wenn Horizon Client in einer Horizon-Sitzung ausgeführt wird. Diese Einstellung gilt für die folgenden Clientinformationen: Gerätename und Domäne, Clienttyp, IP-Adresse und MAC-Adresse. Diese Einstellung ist standardmäßig deaktiviert, d. h., die Weiterleitung von Clientinformationen in einer verschachtelten Sitzung ist zulässig.</string>
+      <string id="DisableSharing">Gemeinsame Nutzung von Dateien und Ordner deaktivieren</string>
+      <string id="DisableSharingExplain">Deaktiviert die gemeinsame Nutzung von Dateien und Ordnern für Remotesitzungen und Clients. 
+
+Wenn dafür „Aktivieren“ festgelegt ist, blendet der Client die Clientseite für die gemeinsame Nutzung komplett aus und deaktiviert auch die Dateiumleitung. 
+
+Wenn diese Einstellung nicht konfiguriert ist, gilt als Standardwert „Deaktiviert“.</string>
+      <string id="AppSessionReconnectBehavior">Verhalten für die Wiederaufnahme getrennter Anwendungssitzungen</string>
+      <string id="AppSessionReconnectBehaviorExplain">Mit dieser Einstellung können Sie ein bestimmtes Verhalten in Bezug auf die automatische Wiederaufnahme einer Anwendungssitzung erzwingen. Die drei für dieses GPO verfügbaren Optionen entsprechen den Optionen auf der Seite der Windows-Clienteinstellungen. Diese Einstellung ist standardmäßig deaktiviert, d. h., der Benutzer hat die Möglichkeit, das Verhalten auszuwählen.</string>
+      <string id="ForceFloatingLanguageBarOff">Flexibel platzierbare (IME-) Remotesprachleiste für gehostete Anwendungen immer ausblenden</string>
+      <string id="ForceFloatingLanguageBarOffExplain">Mit dieser Einstellung wird die flexibel platzierbare Sprachleiste für Anwendungssitzungen ausgeschaltet. Bei Aktivierung dieser Einstellung wird die flexibel platzierbare Sprachleiste in Remoteanwendungssitzungen nicht mehr angezeigt, auch wenn die lokale IME-Funktion aktiviert ist. Ist diese Einstellung deaktiviert, wird die flexibel platzierbare Sprachleiste nur angezeigt, wenn die lokale IME-Funktion deaktiviert ist. Diese Einstellung ist standardmäßig deaktiviert.</string>
+      <string id="DisableFileRedirection">Öffnen lokaler Dateien in gehosteten Anwendungen deaktivieren</string>
+      <string id="DisableFileRedirectionExplain">Diese Einstellung legt fest, ob Horizon Client lokale Handler für Dateierweiterungen registriert, die von gehosteten Anwendungen unterstützt werden. Ist diese Richtlinie aktiviert, registriert Horizon Client keine Handler für Dateierweiterungen. Der Benutzer kann die Einstellung dann nicht ändern. Ist diese Richtlinie deaktiviert, registriert Horizon Client immer Handler für Dateierweiterungen. Standardmäßig werden Handler für Dateierweiterungen registriert, der Benutzer hat aber die Möglichkeit, die Funktion über die Benutzeroberfläche von Horizon Client zu deaktivieren.</string>
+      <string id="KeyboardHotkeys">Modifiziererfunktionstaste anzeigen</string>
+      <string id="KeyboardHotkeysExplain">Wenn dies festgelegt ist, legt dieses GPO die Kombination der Tasten fest, die beim Verwenden und dem Einfügen einer Eingabe in einer Desktop-Sitzung (PCoIP oder BLAST) die Anzeigekonfiguration auf dem Clientcomputer ändern. Wenn dies nicht festgelegt ist, muss der Endbenutzer die Freigabe mithilfe der Maus oder durch Drücken von Strg + Alt vornehmen und dann Windows + P drücken, um die Anzeigekonfiguration zu ändern. Dieses GPO gilt nicht für Anwendungssitzungen.</string>
+      <string id="DisplaySwitchModifierKey">Wechselmodifizierertaste anzeigen:</string>
+      <string id="DisplaySwitchFunctionKey">Wechselfunktionstaste anzeigen:</string>
+      <string id="KEY_NONE">&lt;Deaktiviert&gt;</string>
+      <string id="KEY_SHIFT">Shift</string>
+      <string id="KEY_CTRL">Strg</string>
+      <string id="KEY_ALT">Alt</string>
+      <string id="KEY_F1">F1</string>
+      <string id="KEY_F2">F2</string>
+      <string id="KEY_F3">F3</string>
+      <string id="KEY_F4">F4</string>
+      <string id="KEY_F5">F5</string>
+      <string id="KEY_F6">F6</string>
+      <string id="KEY_F7">F7</string>
+      <string id="KEY_F8">F8</string>
+      <string id="KEY_F9">F9</string>
+      <string id="KEY_F10">F10</string>
+      <string id="KEY_F11">F11</string>
+      <string id="KEY_F12">F12</string>
+      <string id="KEY_H">H</string>
+      <string id="KEY_I">I</string>
+      <string id="KEY_J">J</string>
+      <string id="KEY_K">K</string>
+      <string id="KEY_L">L</string>
+      <string id="KEY_M">M</string>
+      <string id="KEY_N">N</string>
+
+      <string id="HotkeyUngrabDesktop">Hotkey-Kombination zur Freigabe des Eingabefokus</string>
+      <string id="HotkeyUngrabDesktopExplain">Diese Richtlinie legt eine Hotkey-Kombination fest, mit der der Eingabefokus für eine Desktop-Sitzung mithilfe von PCoIP oder Blast freigegeben wird. Ein Hotkey besteht aus einer oder zwei Modifikatortasten und einer Funktionstaste. Wenn diese Richtlinie deaktiviert oder nicht konfiguriert ist, kann der Benutzer den Fokus mithilfe von Strg+Alt oder durch Klicken außerhalb des Desktop-Fensters deaktivieren.</string>
+      <string id="UngrabDesktopModifierKey">Modifikatortaste zum Freigeben des Eingabefokus:</string>
+      <string id="SecondUngrabDesktopModifierKey">Zweite Modifikatortaste zur Freigabe des Eingabefokus:</string>
+      <string id="UngrabDesktopFunctionKey">Funktionstaste zum Freigeben des Eingabefokus:</string>
+
+      <string id="HotkeyGrabDesktop">Hotkey-Kombination zum Erfassen des Eingabefokus</string>
+      <string id="HotkeyGrabDesktopExplain">Diese Richtlinie legt eine Hotkey-Kombination fest, um den Eingabefokus für die zuletzt verwendete Desktop-Sitzung mithilfe von PCoIP oder Blast zu erfassen. Ein Hotkey besteht aus einer oder zwei Modifikatortasten und einer Buchstabentaste. Wenn diese Richtlinie deaktiviert oder nicht konfiguriert ist, kann der Benutzer den Fokus durch Klicken in das Desktop-Fenster erfassen.</string>
+      <string id="GrabDesktopModifierKey">Modifikatortaste zum Erfassen des Eingabefokus:</string>
+      <string id="SecondGrabDesktopModifierKey">Zweite Modifikatortaste zum Erfassen des Eingabefokus:</string>
+      <string id="GrabDesktopLetterKey">Buchstabentaste zum Erfassen des Eingabefokus:</string>
+
+      <string id="HIDE_MENU_YES">Ja</string>
+      <string id="HIDE_MENU_NO">Nein</string>
+      <string id="HideToolBarMenu">Elemente im Symbolleistenmenü des Clients ausblenden</string>
+      <string id="HideToolBarMenuExplain">Diese Einstellungen steuern, ob die Elemente in der Symbolleiste (der Leiste am oberen Rand der Hauptclient-Startseite) ausgeblendet werden. Standardmäßig ist die Richtlinie deaktiviert, und Horizon Client zeigt alle Elemente an.
+
+Dieses GPO wird von Horizon Client 5.0 und höher unterstützt.</string>
+      <string id="HideDesktopContextMenu">Elemente in Desktop-Kontextmenü ausblenden</string>
+      <string id="HideDesktopContextMenuExplain">Diese Einstellungen steuern, ob Elemente im Rechtsklick-Kontextmenü für Desktops auf der Client-Startseite ausgeblendet werden. Standardmäßig ist die Richtlinie deaktiviert, und Horizon Client zeigt alle Elemente an.
+
+Dieses GPO wird von Horizon Client 5.0 und höher unterstützt.</string>
+      <string id="HideAppContextMenu">Elemente in Anwendungskontextmenü ausblenden</string>
+      <string id="HideAppContextMenuExplain">Diese Einstellungen steuern, ob Elemente im Rechtsklick-Kontextmenü für Anwendungen auf der Client-Startseite ausgeblendet werden. Standardmäßig ist die Richtlinie deaktiviert, und Horizon Client zeigt alle Elemente an.
+
+Dieses GPO wird von Horizon Client 5.0 und höher unterstützt.</string>
+      <string id="HideDesktopMenu">Elemente in Desktop-Symbolleiste ausblenden</string>
+      <string id="HideDesktopMenuExplain">Diese Einstellungen steuern, ob Elemente in der Desktop-Symbolleiste ausgeblendet werden (diese Leiste wird oben in einem virtuellen Desktop im Vollbildmodus angezeigt). Standardmäßig ist die Richtlinie deaktiviert, und Horizon Client zeigt alle Elemente an.
+
+Dieses GPO wird von Horizon Client 5.0 und höher unterstützt.</string>
+      <string id="HideNotificationMenu">Elemente im Taskleistenmenü ausblenden</string>
+      <string id="HideNotificationMenuExplain">Diese Einstellungen steuern, ob Elemente im Taskleistenmenü am unteren Rand des lokalen Windows-Bildschirms ausgeblendet werden. Standardmäßig ist die Richtlinie deaktiviert, und Horizon Client zeigt alle Elemente an.
+
+Dieses GPO wird von Horizon Client 5.0 und höher unterstützt.</string>
+      <string id="CustomErrorScreenFooter">Benutzerdefinierte Fußzeile für Fehlerbildschirm</string>
+      <string id="CustomErrorScreenFooterExplain">Gibt den Speicherort einer einfachen Textdatei an. Wenn dies aktiviert ist, wird der Text in der angegebenen Datei immer am unteren Rand aller Fehlermeldungen angezeigt.
+
+Dieses GPO wird von Horizon Client 5.0 und höher unterstützt.</string>
+      <string id="UnauthenticatedAccessEnabled">Nicht authentifizierten Zugriff auf den Server aktivieren</string>
+      <string id="UnauthenticatedAccessEnabledExplain">Diese Einstellung legt fest, ob der Benutzer Anmeldedaten eingeben muss, um sich bei seiner Anwendung mithilfe von Horizon Client anzumelden. Ist diese Einstellung aktiviert, wird vom Server immer der nicht authentifizierte Zugriff angefordert. Allerdings weicht der Client eventuell auf andere Authentifizierungsmethoden aus, wenn der nicht authentifizierte Zugriff nicht verfügbar ist. Ist diese Einstellung deaktiviert, müssen Benutzer immer ihre Anmeldedaten eingeben, um sich anzumelden und auf ihre Anwendungen zuzugreifen. Wenn der nicht authentifizierte Zugriff nicht konfiguriert ist, kann dieser vom Benutzer in der Benutzeroberfläche von Horizon Client aktiviert werden.</string>
+      <string id="ForceUserAffinity">Beim Herstellen einer Verbindung mit demselben Server die vorhandene Clientinstanz verwenden</string>
+      <string id="ForceUserAffinityExplain">Diese Einstellung legt fest, ob eine Verbindung zur vorhandenen Horizon Client-Instanz hinzugefügt wird, über die der Benutzer bereits mit dem angegebenen Server verbunden ist. Diese Einstellung ist standardmäßig deaktiviert, sofern sie nicht konfiguriert wird.</string>
+      <string id="UnauthenticatedAccessAccount">Konto für die Verwendung des nicht authentifizierten Zugriffs</string>
+      <string id="UnauthenticatedAccessAccountExplain">Diese Einstellung legt das Konto fest, das von Horizon Client für die anonyme Anmeldung beim Server verwendet wird. Ist diese Einstellung nicht festgelegt, hat der Benutzer die Möglichkeit, ein Konto auszuwählen.</string>
+      <string id="ADMXMigrator_UnresolvedString">ADMX-Migrator hat eine Zeichenfolge ermittelt, die in der Quell-ADM-Zeichenfolgentabelle nicht vorhanden ist.</string>
+      <string id="VDMClient_SupportedOn_Empty"></string>
+      <string id="AllowDisplayScaling">Anzeigeskalierung zulassen</string>
+      <string id="AllowDisplayScalingExplain">Diese Einstellung ermöglicht es Ihnen, die Anzeigeskalierung für alle Desktop- und Anwendungssitzungen zu konfigurieren.</string>
+      <string id="AutoSyncToggleKeys">Tastatur, Scroll- und Feststelltaste automatisch synchronisieren</string>
+      <string id="AutoSyncToggleKeysExplain">Wenn diese Einstellung aktiviert ist, werden die Tastatur, Scroll- und Feststelltaste vom physischen Gerät zum virtuellen Desktop automatisch synchronisiert. Wenn diese Option nicht aktiviert ist, aktualisiert der virtuelle Desktop den Status dieser Tasten nur, wenn der Benutzer sie im virtuellen Desktop ändert. </string>
+      <string id="AllowHEVC">HEVC-Decodierung zulassen</string>
+      <string id="AllowHEVCExplain">Mit dieser Einstellung können Sie die Decodierung von HEVC (auch als H.265 bezeichnet) für das Blast-Protokoll konfigurieren. Wenn diese Einstellung aktiviert ist, ist die HEVC-Decodierung die bevorzugte Option. Wenn diese Einstellung deaktiviert ist, wird die HEVC-Decodierung nie verwendet. Wenn keine Konfiguration vorgenommen wird, kann der Benutzer auswählen, ob er die HEVC-Decodierung aktivieren möchte.</string>
+      <string id="AllowBlastThroughProxy">Verwendung von Proxy-Einstellungen des Betriebssystems durch Blast-Verbindungen zulassen</string>
+      <string id="AllowBlastThroughProxyExplain">Mit dieser Einstellung können Sie die Proxy-Nutzung für die Blast-Verbindung konfigurieren. Wenn diese Option aktiviert ist, kann Blast eine Verbindung über einen Proxy herstellen. Wenn diese Option deaktiviert ist, wird der System-Proxy nicht verwendet. Wenn sie nicht konfiguriert ist, kann der Benutzer auswählen, ob der System-Proxy verwendet werden soll. Diese Eigenschaft ist standardmäßig deaktiviert.</string>
+      <string id="BrowserRedirUseCache">Cache für die Browserumleitung aktivieren</string>
+      <string id="BrowserRedirUseCacheExplain">Wenn diese Option aktiviert ist, wird der Browserverlauf, einschließlich der Cookies, auf dem Client gespeichert. Durch das Deaktivieren dieser Einstellung wird der Cache nicht gelöscht. Dieser wird wieder verwendet, nachdem die Einstellung nach der Deaktivierung erneut aktiviert wurde.
+
+Diese Eigenschaft ist standardmäßig aktiviert.</string>
+      <string id="BrowserRedirIgnoreCertErrors">Zertifikatfehler für die Browserumleitung ignorieren</string>
+      <string id="BrowserRedirIgnoreCertErrorsExplain">Wenn diese Option aktiviert ist, werden alle Zertifikatfehler, die auf der umgeleiteten Seite auftreten, ignoriert und das Browsing wird fortgesetzt. Diese Eigenschaft ist standardmäßig deaktiviert.</string>
+      <string id="BrowserRedirEnableMediaStream">WebRTC-Kamera und Mikrofonzugriff für die Browserumleitung aktivieren</string>
+      <string id="BrowserRedirEnableMediaStreamExplain">Wenn diese Option aktiviert ist, können umgeleitete Seiten mit WebRTC auf die Kamera und das Mikrofon des Clients zugreifen. Diese Eigenschaft ist standardmäßig aktiviert.</string>
+      <string id="MouseMoveMaxLatencyMsec">Konfigurieren der maximalen Latenzen für die Mauszusammenfügung</string>
+      <string id="MouseMoveMaxLatencyMsecExplain">Mit dieser Einstellung können Sie die maximale Latenz in Millisekunden konfigurieren, die bei der Zusammenfügung von Mausbewegungen zulässig ist. Wir akzeptieren Werte von 0 bis 50 als gültig, wobei 0 „Zusammenfügung von Mausbewegungen deaktivieren“ bedeutet. Die Zusammenfügung von Mausbewegungen kann zu einer Reduzierung der Client-zu-Agent-Bandbreitennutzung führen, möglicherweise jedoch eine kleine Latenz zur Mausbewegung hinzufügen. Diese Eigenschaft ist standardmäßig deaktiviert.</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="ExcludePath">
+        <textBox refId="ExcludePath">
+          <label>Pfad ausschließen</label>
+        </textBox>
+      </presentation>
+      <presentation id="IncludePath">
+        <textBox refId="IncludePath">
+          <label>Pfad einschließen</label>
+        </textBox>
+      </presentation>
+      <presentation id="DisableRemoteConfig" />
+      <presentation id="AllowDevDescFailsafe" />
+      <presentation id="SplitExcludeVidPid">
+        <textBox refId="SplitExcludeVidPid">
+          <label>Vid/Pid-Gerät vom Splitten ausschließen</label>
+        </textBox>
+      </presentation>
+      <presentation id="SplitVidPid">
+        <textBox refId="SplitVidPid">
+          <label>Vid/Pid-Gerät splitten</label>
+        </textBox>
+      </presentation>
+      <presentation id="ExcludeVidPid">
+        <textBox refId="ExcludeVidPid">
+          <label>Vid/Pid-Gerät ausschließen</label>
+        </textBox>
+      </presentation>
+      <presentation id="IncludeVidPid">
+        <textBox refId="IncludeVidPid">
+          <label>Vid/Pid-Gerät einschließen</label>
+        </textBox>
+      </presentation>
+      <presentation id="ExcludeFamily">
+        <textBox refId="ExcludeFamily">
+          <label>Gerätefamilie ausschließen</label>
+        </textBox>
+      </presentation>
+      <presentation id="IncludeFamily">
+        <textBox refId="IncludeFamily">
+          <label>Gerätefamilie einschließen</label>
+        </textBox>
+      </presentation>
+      <presentation id="ExcludeAllDevices" />
+      <presentation id="AllowHID" />
+      <presentation id="AllowHIDBootable" />
+      <presentation id="AllowAudioIn" />
+      <presentation id="AllowAudioOut" />
+      <presentation id="AllowKeyboardMouse" />
+      <presentation id="AllowVideo" />
+      <presentation id="AllowSmartcard" />
+      <presentation id="AllowAutoDeviceSplitting" />
+      <presentation id="LogInAsCurrentUser_Display" />
+      <presentation id="LogInAsCurrentUser" />
+      <presentation id="EnableRecursiveUnlock" />
+      <presentation id="BrokersTrustedForDelegation">
+        <listBox refId="BrokersTrustedForDelegation">Vertrauenswürdige Server für die Delegierung</listBox>
+      </presentation>
+      <presentation id="AllowNTLMAuthentication">
+      <dropdownList refId="AllowNTLMAuthentication" defaultItem="1" noSort="true">Fallback von Kerberos zu NTLM erlauben</dropdownList>
+      </presentation>
+      <presentation id="ServersAlwaysUseNTLM">
+        <listBox refId="ServersAlwaysUseNTLM">NTLM immer für Server verwenden</listBox>
+      </presentation>
+      <presentation id="IgnoreRevocation" />
+      <presentation id="CertCheckMode">
+        <dropdownList refId="CertCheckMode" defaultItem="1">Zertifikatüberprüfungsmodus</dropdownList>
+      </presentation>
+      <presentation id="AllowConnectionViaAnSslProxy"/>
+      <presentation id="EnableSmartCardSSO" />
+      <presentation id="EnableJumplist" />
+      <presentation id="AllowCmdLineCredentials" />
+      <presentation id="EnableTicketSSLAuth">
+        <dropdownList refId="EnableTicketSSLAuth" defaultItem="0">SSL-verschlüsselten Framework-Kanal aktivieren</dropdownList>
+      </presentation>
+      <presentation id="SSLCipherList">
+        <textBox refId="SSLCipherList">
+          <label>SSL-Protokolle und kryptografische Algorithmen konfigurieren</label>
+          <defaultValue>TLSv1.1:TLSv1.2:!aNULL:kECDH+AESGCM:ECDH+AESGCM:RSA+AESGCM:kECDH+AES:ECDH+AES:RSA+AES</defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="ServerURL">
+        <textBox refId="ServerURL">
+          <label>Server-URL</label>
+        </textBox>
+      </presentation>
+      <presentation id="UserName">
+        <textBox refId="UserName">
+          <label>Benutzername für die Anmeldung</label>
+        </textBox>
+      </presentation>
+      <presentation id="DomainName">
+        <textBox refId="DomainName">
+          <label>Domänenname für die Anmeldung</label>
+        </textBox>
+      </presentation>
+      <presentation id="Password">
+        <textBox refId="Password">
+          <label>Kennwort für die Anmeldung</label>
+        </textBox>
+      </presentation>
+      <presentation id="DesktopName">
+        <textBox refId="DesktopName">
+          <label>Desktop-Name zur Auswahl</label>
+        </textBox>
+      </presentation>
+      <presentation id="DesktopLayout">
+        <dropdownList refId="DesktopLayout" defaultItem="0">Desktop-Layout</dropdownList>
+      </presentation>
+      <presentation id="LockedGuestSize">
+        <decimalTextBox refId="LockedGuestWidth" defaultValue="1600">Gesperrte Gastbreite </decimalTextBox>
+        <decimalTextBox refId="LockedGuestHeight" defaultValue="1200">Gesperrte Gasthöhe</decimalTextBox>
+      </presentation>
+      <presentation id="NonInteractive" />
+      <presentation id="SingleAutoConnect" />
+      <presentation id="noTSCAddins" />
+      <presentation id="connectUSBOnStartup" />
+      <presentation id="connectUSBOnInsert" />
+      <presentation id="AppSessionReconnectBehavior">
+        <dropdownList refId="AppSessionReconnectBehavior" defaultItem="0">Verhalten für die Wiederaufnahme getrennter Anwendungssitzungen</dropdownList>
+      </presentation>
+      <presentation id="UnauthenticatedAccessEnabled" />
+      <presentation id="ErrorFooterTextFile">
+        <textBox refId="ErrorFooterTextFile">
+          <label>Speicherort der Textdatei für die Fehlerfußzeile</label>
+        </textBox>
+      </presentation>
+      <presentation id="UnauthenticatedAccessAccount">
+        <textBox refId="UnauthenticatedAccessAccount">
+          <label>Konto für die Verwendung des nicht authentifizierten Zugriffs</label>
+        </textBox>
+      </presentation>
+      <presentation id="DisableTimeZoneForwarding" />
+      <presentation id="AutomaticInputFocus" />
+      <presentation id="TunnelProxyBypass">
+        <textBox refId="TunnelProxyBypass">
+          <label>Adressliste zur Umgehung des Tunnel-Proxy</label>
+        </textBox>
+      </presentation>
+      <presentation id="HelpURL">
+        <textBox refId="HelpURL">
+          <label>URL für die Horizon Client-Onlinehilfe</label>
+        </textBox>
+      </presentation>
+      <presentation id="AutoUpdateAllowed" />
+      <presentation id="AutoUpdateURL">
+        <textBox refId="AutoUpdateURL">
+          <label>URL für die Horizon Client-Onlineaktualisierung</label>
+        </textBox>
+      </presentation>
+      <presentation id="BlockMultipleInstances" />
+      <presentation id="ListSmartCardCertsOnly" />
+      <presentation id="RedirectSmartCardsInLocalMode" />
+      <presentation id="ReplicationStartupDelay">
+        <decimalTextBox refId="ReplicationStartupDelay">Start von Replikationen verzögern, wenn Horizon Client im lokalen Modus gestartet wird</decimalTextBox>
+      </presentation>
+      <presentation id="DisableToastNotifications" />
+      <presentation id="EnableRelativeMouse" />
+      <presentation id="DisableDisconnectMessages" />
+      <presentation id="HideClientAfterLaunchSession" />
+      <presentation id="DisallowClientInformationPassthrough" />
+      <presentation id="ForceFloatingLanguageBarOff" />
+      <presentation id="DisableFileRedirection" />
+      <presentation id="KeyboardHotkeys">
+        <dropdownList refId="DisplaySwitchModifierKey" defaultItem="1">Wechselmodifizierertaste anzeigen:</dropdownList>
+        <dropdownList refId="DisplaySwitchFunctionKey" defaultItem="1">Wechselfunktionstaste anzeigen:</dropdownList>
+      </presentation>
+      <presentation id="HotkeyUngrabDesktop">
+        <dropdownList refId="UngrabDesktopModifierKey" defaultItem="0" noSort="true">Modifikatortaste zum Freigeben des Eingabefokus:</dropdownList>
+        <dropdownList refId="SecondUngrabDesktopModifierKey" defaultItem="0" noSort="true">Zweite Modifikatortaste zur Freigabe des Eingabefokus:</dropdownList>
+        <dropdownList refId="UngrabDesktopFunctionKey" defaultItem="0">Funktionstaste zum Freigeben des Eingabefokus:</dropdownList>
+      </presentation>
+      <presentation id="HotkeyGrabDesktop">
+        <dropdownList refId="GrabDesktopModifierKey" defaultItem="0" noSort="true">Modifikatortaste zum Erfassen des Eingabefokus:</dropdownList>
+        <dropdownList refId="SecondGrabDesktopModifierKey" defaultItem="0" noSort="true">Zweite Modifikatortaste zum Erfassen des Eingabefokus:</dropdownList>
+        <dropdownList refId="GrabDesktopFunctionKey" defaultItem="0">Buchstabentaste zum Erfassen des Eingabefokus:</dropdownList>
+      </presentation>
+      <presentation id="HideToolBarMenu">
+        <dropdownList refId="HideFavoritesToolbar" defaultItem="0">Favoritenumschalter ausblenden</dropdownList>
+        <dropdownList refId="HideSettingsToolbar" defaultItem="0">Einstellungszahnrad ausblenden</dropdownList>
+      </presentation>
+      <presentation id="HideDesktopContextMenu">
+        <dropdownList refId="HideResetDesktopDesktopContext" defaultItem="0">„Desktop zurücksetzen“ ausblenden</dropdownList>
+        <dropdownList refId="HideRestartDesktopDesktopContext" defaultItem="0">„Desktop neu starten“ ausblenden</dropdownList>
+        <dropdownList refId="HideDisplayDesktopContext" defaultItem="0">Anzeige ausblenden</dropdownList>
+        <dropdownList refId="HideSettingsDesktopContext" defaultItem="0">Einstellungen ausblenden</dropdownList>
+        <dropdownList refId="HideCreateShortcutToDesktopDesktopContext" defaultItem="0">„Verknüpfung für Desktop erstellen“ ausblenden</dropdownList>
+        <dropdownList refId="HideAddToStartMenuDesktopContext" defaultItem="0">„Zum Startmenü hinzufügen“ ausblenden</dropdownList>
+        <dropdownList refId="HideMarkAsFavoriteDesktopContext" defaultItem="0">„Als Favorit markieren“ ausblenden</dropdownList>
+      </presentation>
+      <presentation id="HideAppContextMenu">
+        <dropdownList refId="HideSettingsAppContext" defaultItem="0">Einstellungen ausblenden</dropdownList>
+        <dropdownList refId="HideCreateShortcutToDesktopAppContext" defaultItem="0">„Verknüpfung für Desktop erstellen“ ausblenden</dropdownList>
+        <dropdownList refId="HideAddToStartMenuAppContext" defaultItem="0">„Zum Startmenü hinzufügen“ ausblenden</dropdownList>
+        <dropdownList refId="HideMarkAsFavoriteAppContext" defaultItem="0">„Als Favorit markieren“ ausblenden</dropdownList>
+      </presentation>
+      <presentation id="HideDesktopMenu">
+        <dropdownList refId="HideHelpDesktopMenu" defaultItem="0">Hilfe ausblenden</dropdownList>
+        <dropdownList refId="HideSupportInformationDesktopMenu" defaultItem="0">Support-Informationen ausblenden</dropdownList>
+        <dropdownList refId="HideEnableRelativeMouseDesktopMenu" defaultItem="0">„Relative Maus aktivieren“ ausblenden</dropdownList>
+        <dropdownList refId="HideShareFoldersDesktopMenu" defaultItem="0">„Ordner freigeben“ ausblenden</dropdownList>
+        <dropdownList refId="HideAllowDisplayScalingDesktopMenu" defaultItem="0">„Anzeigeskalierung zulassen“ ausblenden</dropdownList>
+        <dropdownList refId="HideResetDesktopDesktopMenu" defaultItem="0">„Desktop zurücksetzen“ ausblenden</dropdownList>
+        <dropdownList refId="HideRestartDesktopDesktopMenu" defaultItem="0">„Desktop neu starten“ ausblenden</dropdownList>
+        <dropdownList refId="HideConnectUSBDeviceDesktopMenu" defaultItem="0">„USB-Gerät verbinden“ ausblenden</dropdownList>
+      </presentation>
+      <presentation id="HideNotificationMenu">
+        <dropdownList refId="HideSharingNotificationMenu" defaultItem="0">Freigabe ausblenden</dropdownList>
+        <dropdownList refId="HideSettingsNotificationMenu" defaultItem="0">Einstellungen ausblenden</dropdownList>
+      </presentation>
+      <presentation id="ColorDepth">
+        <dropdownList refId="ColorDepth" defaultItem="0">Farbtiefe</dropdownList>
+      </presentation>
+      <presentation id="DisableWallpaper" />
+      <presentation id="DisableFullWindowDrag" />
+      <presentation id="DisableMenuAnimations" />
+      <presentation id="DisableTheming" />
+      <presentation id="DisableCursorShadow" />
+      <presentation id="FontSmoothing" />
+      <presentation id="DesktopComposition" />
+      <presentation id="AudioRedirectionMode">
+        <dropdownList refId="AudioRedirectionMode" defaultItem="0">Audioumleitung</dropdownList>
+      </presentation>
+      <presentation id="RedirectDrives" />
+      <presentation id="RedirectPrinters" />
+      <presentation id="RedirectPorts" />
+      <presentation id="RedirectSmartcards" />
+      <presentation id="RedirectClipboard" />
+      <presentation id="RedirectPlugAndPlayDevices" />
+      <presentation id="ShadowBitmap" />
+      <presentation id="CachePersistenceActive" />
+      <presentation id="EnableCompression" />
+      <presentation id="KeyboardHookMode">
+        <dropdownList refId="KeyboardHookMode" defaultItem="0">Windows-Tastenkombination umleiten</dropdownList>
+      </presentation>
+      <presentation id="EnableCredSspSupport" />
+      <presentation id="BitmapCacheSize">
+        <decimalTextBox refId="BitmapCacheSize">Arbeitsspeicherinterne Größe für den Bitmap-Cache in KB für 8-bpp-Bitmaps</decimalTextBox>
+      </presentation>
+      <presentation id="BitmapVirtualCacheSize">
+        <decimalTextBox refId="BitmapVirtualCacheSize">Dateigröße für den Bitmap-Cache in MB für 8-bpp-Bitmaps</decimalTextBox>
+      </presentation>
+      <presentation id="BitmapVirtualCache16BppSize">
+        <decimalTextBox refId="BitmapVirtualCache16BppSize">Dateigröße für den Bitmap-Cache in MB für 16-bpp-Bitmaps</decimalTextBox>
+      </presentation>
+      <presentation id="BitmapVirtualCache24BppSize">
+        <decimalTextBox refId="BitmapVirtualCache24BppSize">Dateigröße für den Bitmap-Cache in MB für 24-bpp-Bitmaps</decimalTextBox>
+      </presentation>
+      <presentation id="BitmapVirtualCache32BppSize">
+        <decimalTextBox refId="BitmapVirtualCache32BppSize">Dateigröße für den Bitmap-Cache in MB für 32-bpp-Bitmaps</decimalTextBox>
+      </presentation>
+      <presentation id="EnableAutoReconnect" />
+      <presentation id="RedirectAudioCapture" />
+      <presentation id="LogInAsCurrentUser_Display_1" />
+      <presentation id="LogInAsCurrentUser_1" />
+      <presentation id="EnableRecursiveUnlock_1" />
+      <presentation id="EnableTicketSSLAuth_1">
+        <dropdownList refId="EnableTicketSSLAuth" defaultItem="0">SSL-verschlüsselten Framework-Kanal aktivieren</dropdownList>
+      </presentation>
+      <presentation id="IgnoreRevocation_1" />
+      <presentation id="SSLCipherList_1">
+        <textBox refId="SSLCipherList">
+          <label>SSL-Protokolle und kryptografische Algorithmen konfigurieren</label>
+          <defaultValue>TLSv1.1:TLSv1.2:!aNULL:kECDH+AESGCM:ECDH+AESGCM:RSA+AESGCM:kECDH+AES:ECDH+AES:RSA+AES</defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="ServerURL_1">
+        <textBox refId="ServerURL">
+          <label>Server-URL</label>
+        </textBox>
+      </presentation>
+      <presentation id="UserName_1">
+        <textBox refId="UserName">
+          <label>Benutzername für die Anmeldung</label>
+        </textBox>
+      </presentation>
+      <presentation id="DomainName_1">
+        <textBox refId="DomainName">
+          <label>Domänenname für die Anmeldung</label>
+        </textBox>
+      </presentation>
+      <presentation id="Password_1">
+        <textBox refId="Password">
+          <label>Kennwort für die Anmeldung</label>
+        </textBox>
+      </presentation>
+      <presentation id="DesktopName_1">
+        <textBox refId="DesktopName">
+          <label>Desktop-Name zur Auswahl</label>
+        </textBox>
+      </presentation>
+      <presentation id="DesktopLayout_1">
+        <dropdownList refId="DesktopLayout" defaultItem="0">Desktop-Layout</dropdownList>
+      </presentation>
+      <presentation id="LockedGuestSize_1">
+        <decimalTextBox refId="LockedGuestWidth" defaultValue="1600">Gesperrte Gastbreite </decimalTextBox>
+        <decimalTextBox refId="LockedGuestHeight" defaultValue="1200">Gesperrte Gasthöhe</decimalTextBox>
+      </presentation>
+      <presentation id="NonInteractive_1" />
+      <presentation id="SingleAutoConnect_1" />
+      <presentation id="noTSCAddins_1" />
+      <presentation id="connectUSBOnStartup_1" />
+      <presentation id="connectUSBOnInsert_1" />
+      <presentation id="AppSessionReconnectBehavior_1">
+        <dropdownList refId="AppSessionReconnectBehavior" defaultItem="0">Verhalten für die Wiederaufnahme getrennter Anwendungssitzungen</dropdownList>
+      </presentation>
+      <presentation id="UnauthenticatedAccessEnabled_1" />
+      <presentation id="UnauthenticatedAccessAccount_1">
+        <textBox refId="UnauthenticatedAccessAccount">
+          <label>Konto für die Verwendung des nicht authentifizierten Zugriffs</label>
+        </textBox>
+      </presentation>
+      <presentation id="AllowDataSharing" />
+      <presentation id="AllowResolutionDpiSync" />
+      <presentation id="EnableShade" />
+      <presentation id="InitialPinState" />
+      <presentation id="DisableSpanChecks" />
+      <presentation id="EnableMMR" />
+      <presentation id="AlwaysOnTop" />
+      <presentation id="AutomaticallyInstallShortcuts" />
+      <presentation id="LocalModeExitBehavior">
+        <dropdownList refId="LocalModeExitBehavior" defaultItem="0">Standardverhalten beim Beenden von Desktops im lokalen Modus</dropdownList>
+      </presentation>
+      <presentation id="AutomaticallyInstallShortcuts_1" />
+      <presentation id="DisableToastNotifications_1" />
+      <presentation id="EnableRelativeMouse_1" />
+      <presentation id="DisableDisconnectMessages_1" />
+      <presentation id="HideClientAfterLaunchSession_1" />
+      <presentation id="DisableSharing" />
+      <presentation id="ForceFloatingLanguageBarOff_1" />
+      <presentation id="AllowDisplayScaling" />
+      <presentation id="AutoSyncToggleKeys" />
+      <presentation id="AllowHEVC" />
+      <presentation id="AllowBlastThroughProxy" />
+      <presentation id="ForceUserAffinity" />
+      <presentation id="MouseMoveMaxLatencyMsec">
+        <decimalTextBox refId="MouseMoveMaxLatencyMsec">Maximale Latenz für Mauszusammenfügung</decimalTextBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

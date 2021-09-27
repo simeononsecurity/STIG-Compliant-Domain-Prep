@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                           revision="1.0"
+                           schemaVersion="1.0"
+                           xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" >
+
+  <!-- Copyright 2005-2016 VMware, Inc.  All rights reserved. -->
+
+  <displayName >Persona-Verwaltung</displayName>
+  <description >Erweiterte Persona-Verwaltungsrichtlinie</description>
+  <resources >
+    <stringTable ><!--Storage for String Definitions-->
+      <string id="String_Category_Troubleshooting" >Fehlerbehebung</string>
+      <string id="String_Policy_Logging_flags" >Protokollierungskennzeichen</string>
+      <string id="String_Explain_Logging_flags" >Gibt den Typ der generierten Protokollmeldungen an. Standardmäßig werden Protokollmeldungen für die Ebene „Information“ ausgegeben.</string>
+      <string id="String_Policy_Debug_flags" >Debug-Kennzeichen</string>
+      <string id="String_Explain_Debug_flags" >Legt den Typ der generierten Debug-Meldungen fest. Debug-Meldungen werden wie Protokollmeldungen behandelt. Standardmäßig sind Debug-Meldungen ausgeschaltet.</string>
+      <string id="String_Policy_Repository_connection" >Repository-Verbindung überwachen</string>
+      <string id="String_Explain_Repository_connection" >Wenn Sie diese Richtlinie aktivieren, ermittelt View Persona Management, ob die Verbindung zum Persona-Repository unterbrochen oder zu langsam ist. Wenn erneut eine schnelle Verbindung eingerichtet ist, werden alle lokalen Änderungen hochgeladen und mit der Remote-Persona des Benutzers synchronisiert. Die Häufigkeit des Tests der Netzwerkverbindung und die maximale Netzwerklatenz können für eine maximale Leistung optimiert werden. Standardmäßig beträgt das Testintervall 120 Sekunden und die maximale Netzwerklatenz 40 Millisekunden.</string>
+      <string id="String_Policy_Download_Timeout" >Zeitüberschreitung für Repository-Datei-Download</string>
+      <string id="String_Explain_Download_Timeout" >Legt in Millisekunden den Zeitraum fest, nach dessen Ablauf die Zeit für das Herunterladen einer Datei vom Remote-Repository überschritten ist. Standardmäßig beträgt dieser Zeitraum 1.800 Sekunden.</string>
+      <string id="String_Policy_Sync_onlogon" >Profil bei der Anmeldung synchronisieren</string>
+      <string id="String_Explain_Sync_onlogon" >Wenn Sie diese Richtlinie aktivieren, werden bei der Anmeldung die Dateien des lokalen Benutzerprofils mit dem servergespeicherten Profil synchronisiert. Standardmäßig wird das Benutzerprofil mit dem servergespeicherten Profil bei der Anmeldung synchronisiert.</string>
+      <string id="String_Policy_File_creation_delay" >Dateierstellung verzögern</string>
+      <string id="String_Explain_File_creation_delay" >Legt die Verzögerung zwischen der Anmeldung und der Erstellung der Offline-Dateien im Benutzerprofil in Millisekunden fest. Standardmäßig beträgt diese Verzögerung 10.000 Millisekunden.</string>
+      <string id="String_Policy_Create_retry_delay" >Wiederholung der Erstellung verzögern</string>
+      <string id="String_Explain_Create_retry_delay" >Legt die Verzögerung zwischen einem Fehler bei der Darteierstellung und der erneuten Erstellung der Datei in Millisekunden fest. Standardmäßig beträgt diese Verzögerung 500 Millisekunden.</string>
+      <string id="String_Policy_Profile_reconcile_delay" >Profilabstimmung verzögern</string>
+      <string id="String_Explain_Profile_reconcile_delay" >Legt die Verzögerung zwischen der Anmeldung und dem Start der Abstimmung des Benutzerprofils in Sekunden fest. Standardmäßig beträgt diese Verzögerung 10 Sekunden.</string>
+      <string id="String_Policy_Remove_temporary" >Temporäre Dateien bei der Abmeldung entfernen</string>
+      <string id="String_Explain_Remove_temporary" >Wenn Sie diese Richtlinie aktivieren, werden Dateien mit der Erweiterung .tmp bei der Abmeldung aus dem Benutzerprofil entfernt. View Persona Management verwendet .tmp-Dateien für eine Synchronisierung verschiedenster Dateien zwischen dem lokalen Profil und dem Remoteprofil. Standardmäßig werden die temporären Dateien entfernt.</string>
+      <string id="String_Policy_Disable_create_retry" >Wiederholung der Dateierstellung deaktivieren</string>
+      <string id="String_Explain_Disable_create_retry" >Wenn Sie diese Richtlinie aktivieren, wird nach einem Fehler bei der Dateierstellung kein erneuter Versuch der Erstellung gestartet. Standardmäßig wird ein erneuter Versuch unternommen.</string>
+      <string id="String_Policy_Disable_desktop" >Desktop-Aktualisierung deaktivieren</string>
+      <string id="String_Explain_Disable_desktop" >Wenn Sie diese Richtlinie aktivieren, werden die Desktop-Symbole des Benutzers nach dem Abruf der entsprechenden .exe-Dateien nicht aktualisiert. Die Aktivierung dieses Kennzeichens kann dazu führen, dass Symbole der Desktop-Verknüpfungen nicht angezeigt werden, wenn die Verknüpfung auf eine ausführbare Datei im Profil verweist. Zugleich wird aber eine unnötige Desktop-Aktualisierung unterbinden. Standardmäßig werden die Desktop-Symbole aktualisiert.</string>
+      <string id="String_Policy_Disable_user_environment" >Fehler der Benutzerumgebung bei der Anmeldung deaktivieren</string>
+      <string id="String_Explain_Disable_user_environment" >Wenn Sie diese Richtlinie aktivieren, werden Fehlermeldungen der Systembenutzerumgebung bei der Anmeldung deaktiviert. Standardmäßig werden Fehler der Benutzerumgebung deaktiviert.</string>
+      <string id="String_Policy_Driver_Disable" >Treiber für Deaktivierungskennzeichen</string>
+      <string id="String_Explain_Driver_Disable" >Deaktivierungskennzeichen deaktivieren bestimmte Funktionen in Persona.</string>
+    </stringTable>
+
+    <presentationTable ><!--Storage for Presentation Definitions-->
+      <presentation id="Present_Logging_flags" >
+        <checkBox refId="Present_CheckBox_Log_Error" >Protokolliert Fehlermeldungen.</checkBox>
+        <checkBox refId="Present_CheckBox_Log_Info" >Protokolliert Informationsmeldungen.</checkBox>
+        <checkBox refId="Present_CheckBox_Log_Debug" >Protokolliert Debug-Meldungen.</checkBox>
+        <checkBox refId="Present_CheckBox_Log_Alt_Path" >Protokolliert Meldungen zu alternativen Pfaden.</checkBox>
+        <checkBox refId="Present_CheckBox_Log_Impersonation" >Protokolliert Meldungen zu Identitätswechseln.</checkBox>
+        <checkBox refId="Present_CheckBox_Log_Only_Driver" >Protokolliert Treibermeldungen.</checkBox>
+        <checkBox refId="Present_CheckBox_Log_Offline" >Protokolliert Meldungen zu Offline-Dateien.</checkBox>
+        <checkBox refId="Present_CheckBox_Log_Status_Log" >Protokolliert Meldungen zu Statusprotokollen.</checkBox>
+        <checkBox refId="Present_CheckBox_Log_Fetch" >Protokolliert Abrufmeldungen.</checkBox>
+        <checkBox refId="Present_CheckBox_Log_Performance" >Protokolliert Leistungsmeldungen.</checkBox>
+      </presentation>
+      <presentation id="Present_Debug_flags" >
+        <checkBox refId="Present_CheckBox_Debug_Error" >Debugging für Fehlermeldungen.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_IRQL" >Debugging für IRQL-Meldungen.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_Port" >Debugging für Portmeldungen.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_Process" >Debugging für Prozessmeldungen.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_Registry" >Debugging für Registry-Meldungen.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_Info" >Debugging für Informationsmeldungen.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_Directory" >Debugging für Verzeichnismeldungen.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_Stream" >Debugging für Stream-Kontextmeldungen.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_Create" >Debugging für Erstellungsmeldungen.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_Offline_File_Table" >Debugging für Meldungen zu Offline-Dateitabellen.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_User_Table" >Debugging für Meldungen zu Benutzertabellen.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_Alt_Path" >Debugging für Meldungen zu alternativen Pfaden.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_Registry_Filter" >Debugging für Meldungen zu Registry-Filtern.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_Oplock" >Debugging für Meldungen zu opportunistischen Sperren.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_Impersonation" >Debugging für Meldungen zu Identitätswechseln.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_Name_Provider" >Debugging für Meldungen zu Namensanbietern.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_Lock_Control" >Debugging für Meldungen zu Sperrkontrollen.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_Set_Info" >Debugging für Meldungen zu Set-Infos.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_Offline" >Debugging für Meldungen zu Offline-Dateien.</checkBox>
+        <checkBox refId="Present_CheckBox_Debug_Status_Log" >Debugging für Meldungen zu Statusprotokollen.</checkBox>
+      </presentation>
+      <presentation id="Present_Repository_connection" >
+        <text >Überwacht die Verbindung zum Persona-Repository.</text>
+        <decimalTextBox refId="Present_Numeric_Repository_connection_Interval" defaultValue="120" >Intervall für Verbindungstest (in Sekunden):</decimalTextBox>
+        <decimalTextBox refId="Present_Numeric_Repository_connection_Max_Latency" defaultValue="40" >Maximale Netzwerklatenz für das Hochladen von Änderungen (in Millisekunden):</decimalTextBox>
+      </presentation>
+      <presentation id="Present_Download_Timeout" >
+        <decimalTextBox refId="Present_Numeric_Download_Timeout" defaultValue="1800" >Zeitüberschreitung für das Herunterladen von Remotebenutzerdateien (in Millisekunden):</decimalTextBox>
+      </presentation>
+      <presentation id="Present_Sync_onlogon" >
+        <text >Synchronisiert lokale Dateien mit dem Remoteprofil bei der Anmeldung.</text>
+      </presentation>
+      <presentation id="Present_File_creation_delay" >
+        <decimalTextBox refId="Present_Numeric_File_creation_delay" defaultValue="10000" >Verzögerung zwischen Anmeldung und Erstellung von Benutzerdateien (in Millisekunden):</decimalTextBox>
+      </presentation>
+      <presentation id="Present_Create_retry_delay" >
+        <decimalTextBox refId="Present_Numeric_Create_retry_delay" defaultValue="500" >Verzögerung vor der wiederholten Erstellung von Benutzerdateien (in Millisekunden):</decimalTextBox>
+      </presentation>
+      <presentation id="Present_Profile_reconcile_delay" >
+        <decimalTextBox refId="Present_Numeric_Profile_reconcile_delay" defaultValue="10" >Verzögerung zwischen Anmeldung und Abstimmungsstart (in Sekunden):</decimalTextBox>
+      </presentation>
+      <presentation id="Present_Remove_temporary" >
+        <text >Entfernt .tmp-Dateien aus dem Remoteprofil bei der Abmeldung von Benutzern.</text>
+      </presentation>
+      <presentation id="Present_Disable_create_retry" >
+        <text >Keine Wiederholung, wenn die Erstellung von Dateien fehlschlägt.</text>
+      </presentation>
+      <presentation id="Present_Disable_desktop" >
+        <text >Keine Aktualisierung von Desktop-Symbolen beim Abruf von EXE-Dateien vom Profil.</text>
+      </presentation>
+      <presentation id="Present_Disable_user_environment" >
+        <text >Deaktiviert userenv-Profilfehler bei der Anmeldung.</text>
+      </presentation>
+      <presentation id="Present_Driver_Disable" >
+        <checkBox refId="Present_CheckBox_Driver_Disable" >Treiber- und Dienstprotokollebenen gesondert konfigurieren</checkBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

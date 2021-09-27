@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="unknown_0">Redirection URL de VMware Horizon</string>
+      <string id="unknown_2">Stratégie IE : empêchez les utilisateurs de modifier le comportement de téléchargement du plug-in Redirection URL</string>
+      <string id="unknown_6">Stratégie IE : activez automatiquement le plug-in Redirection URL</string>
+      <string id="unknown_4">Règles IP de redirection URL activées</string>
+      <string id="unknown_8">Redirection URL activée</string>
+      <string id="unknown_12">Protocole de redirection URL « https »</string>
+      <string id="unknown_10">Protocole de redirection URL 'http'</string>
+      <string id="unknown_15">Protocole de redirection URL '...'</string>
+      <string id="unknown_3">Détermine si les utilisateurs peuvent désactiver la redirection de contenu URL.</string>
+      <string id="unknown_5">Ce paramètre détermine si les règles IP sont activées ou désactivées. Il n'est pas configuré par défaut. Lorsque les règles IP sont activées, le filtrage d'adresse IP/de plage IP et la résolution DNS spécifiés sont pris en charge, ce qui signifie que vous pouvez ajouter une adresse IP/plage IP dans les règles de client ou les règles d'agent et l'adresse URL entrée qui ne correspond pas aux règles d'URL sera résolue en adresse IP qui correspond à l'adresse IP/plage IP.
+Par exemple, si vous configurez les règles IP activées et réglez les règles d'agent sur « .*\.mycompany\.com;22.22.22.22;10.10.1.2-10.10.12.20 » dans HTTPS, l'adresse IP « https://22.22.22.22 », toutes les adresses IP dans la plage IP « 10.10.1.2-10.10.12.20 » et toutes les URL qui ont été résolues en plage IP « 10.10.1.2-10.10.12.20 » ou l'adresse IP « 22.22.22.22 » seront redirigées.
+
+Remarque
+
+Les règles IP s'appliquent uniquement à Internet Explorer pour l'instant.</string>
+      <string id="unknown_7">Détermine si les plug-ins Internet Explorer qui viennent d'être installés sont automatiquement activés.</string>
+      <string id="unknown_9">Détermine si cette fonctionnalité est activée. Ce paramètre n'est pas configuré par défaut. Vous pouvez utiliser ce paramètre pour désactiver la fonctionnalité même si le composant a été installé.</string>
+      <string id="HelpString">Pour toutes les URL qui utilisent ce protocole, spécifie les URL qui doivent être redirigées.
+Par exemple, si vous définissez Règles d'agent sur .*\.mycompany\.com, toutes les URL contenant « .mycompany.com » sont redirigées vers une application ou un poste de travail distant. Vous pouvez en outre spécifier quel Serveur de connexion utiliser en définissant Nom d'hôte de broker, et vous pouvez spécifier quel pool de postes de travail ou d'applications utiliser en définissant Élément distant sur le nom complet du pool, comme indiqué dans View Administrator.
+Si vous définissez Règles de client sur .*\.mycompany\.com, toutes les URL contenant « .mycompany.com » sont redirigées vers le client Windows et ouvertes dans le navigateur par défaut sur le client.
+
+Remarque
+
+Il est recommandé de définir les mêmes règles pour les protocoles HTTP et HTTPS. Ainsi, si un utilisateur saisit une URL partielle, telle que .mycompany.com dans Internet Explorer, si ce site redirige automatiquement de HTTP vers HTTPS, la redirection de contenu URL fonctionnera comme prévu. Dans ce cas, si vous définissez une règle pour HTTPS, mais pas HTTP, l'URL partielle que l'utilisateur saisit n'est pas redirigée. Lors de la définition de plusieurs règles, scindez chaque règle avec un point-virgule ; le retour à la ligne manuel n'est pas pris en charge.</string>
+      <string id="ADMXMigrator_UnresolvedString">ADMX Migrator a rencontré une chaîne qui n'est pas présente dans le tableau de chaînes ADM source.</string>
+      <string id="ADMXMigrator_NoSupportedOn">ADMX Migrator a rencontré une stratégie sans valeur supportedOn.</string>
+      <string id="ExtensionInstallForcelist">Installez l'extension Chrome qui est requise dans la fonctionnalité de redirection de contenu URL.</string>
+      <string id="ExtensionInstallForcelist_Explain">Si cette stratégie est activée, l'extension Chrome requise par la redirection de contenu URL sera installée automatiquement en mode silencieux. Cette installation inclut également l'octroi d'autorisations nécessaires. Cette installation ne peut pas être annulée sans le privilège d'administrateur.
+
+Si cette stratégie est désactivée ou non configurée, l'extension Chrome requise par la redirection de contenu URL ne sera pas installée automatiquement. Par conséquent, la redirection de contenu URL ne fonctionnera pas dans le navigateur Chrome même si les règles de redirection sont définies tant que l'extension n'est pas installée manuellement à partir du Chrome Web Store de Google. 
+
+Par défaut, cette stratégie est définie sur non configuré.</string>
+      <string id="UrlRedirectionProtocol_WhitelistSring">Configuration de la liste blanche pour la redirection d'URL</string>
+      <string id="UrlRedirectionProtocol_WhitelistExplain">Ce paramètre détermine les applications prises en charge par le protocole dans l'URL, ce qui constitue la liste blanche.
+Les applications suivantes sont prises en charge par défaut :
+- iexplore.exe : navigateur Internet Explorer
+- chrome.exe : navigateur Chrome
+- firefox.exe : navigateur Firefox
+- msedge.exe : Microsoft Edge (Chromium)
+- outlook.exe : Microsoft Outlook
+- lync.exe : Skype Entreprise
+- skype.exe : Skype
+- wmplayer.exe : lecteur Windows Media
+
+Vous pouvez modifier les applications prises en charge par défaut via la configuration de la liste blanche pour la redirection d'URL.
+
+Par exemple, lorsque la liste blanche est définie comme suit :
+chrome.exe
+outlook.exe
+skype.exe
+
+Seuls les navigateurs Chrome, Microsoft Outlook et Skype sont pris en charge dans la redirection de contenu URL.</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="IEpolicyPreventusersfromchangingURLRedirectionpluginloadingbehavior" />
+      <presentation id="IEpolicyAutomaticallyenableURLRedirectionplugin" />
+      <presentation id="UrlRedirectionEnabled" />
+      <presentation id="UrlRedirectionIPRulesEnabled" />
+      <presentation id="UrlRedirectionProtocol_http">
+        <textBox refId="brokerHostname">
+          <label>Nom d'hôte de broker</label>
+        </textBox>
+        <textBox refId="remoteItem">
+          <label>Élément distant</label>
+        </textBox>
+        <text>Règles de client</text>
+          <multiTextBox refId="clientRules" />
+        <text>Règles d'agent</text>
+          <multiTextBox refId="agentRules" />
+      </presentation>
+      <presentation id="UrlRedirectionProtocol_https">
+        <textBox refId="brokerHostname">
+          <label>Nom d'hôte de broker</label>
+        </textBox>
+        <textBox refId="remoteItem">
+          <label>Élément distant</label>
+        </textBox>
+        <text>Règles de client</text>
+          <multiTextBox refId="clientRules" />
+        <text>Règles d'agent</text>
+          <multiTextBox refId="agentRules" />
+      </presentation>
+      <presentation id="UrlRedirectionProtocol_">
+        <textBox refId="brokerHostname">
+          <label>Nom d'hôte de broker</label>
+        </textBox>
+        <textBox refId="remoteItem">
+          <label>Élément distant</label>
+        </textBox>
+        <text>Règles de client</text>
+          <multiTextBox refId="clientRules" />
+        <text>Règles d'agent</text>
+          <multiTextBox refId="agentRules" />
+      </presentation>
+      <presentation id="UrlRedirectionProtocol_Whitelist">
+        <text>Liste blanche</text>
+        <multiTextBox refId="whitelist" />
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

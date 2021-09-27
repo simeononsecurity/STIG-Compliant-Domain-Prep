@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" >
+
+	<displayName >Entrer le nom d'affichage ici</displayName>
+	<description >Paramètres de configuration de VMware Horizon View Server</description>
+	<resources >
+		<stringTable >
+
+			<string id="Undefined" >Non défini</string>
+
+			<string id="View_Server_Config" >Configuration de VMware View Server</string>
+
+			<string id="Pwd_Auth_Mode" >Mode d'authentification par mot de passe Windows</string>
+
+			<string id="Pwd_Auth_Mode_Desc" >Sélectionnez le mode d'authentification par mot de passe Windows.
+
+KerberosOnly : authentifiez-vous avec Kerberos.
+KerberosWithFallbackToNTLM : authentifiez-vous avec Kerberos, mais revenez à l'utilisation de NTLM en cas d'échec.
+Hérité : authentifiez-vous avec NTLM, mais revenez à l'utilisation de Kerberos en cas d'échec. Utilisé pour prendre en charge les contrôleurs de domaine NT hérités.
+
+La valeur par défaut est KerberosOnly.</string>
+
+			<string id="Kerberos_Only" >KerberosOnly</string>
+
+			<string id="Kerberos_With_NTLM_Fallback" >KerberosWithFallbackToNTLM</string>
+
+			<string id="Legacy" >Hérité</string>
+
+			<string id="Trusted_Domain_Enumeration" >Énumération récursive de domaines approuvés</string>
+
+			<string id="Trusted_Domain_Enumeration_Desc" >Détermine si le domaine dans lequel le serveur réside énumère chaque domaine approuvé. Pour établir une chaîne de confiance complète, les domaines approuvés par chaque domaine approuvé sont aussi énumérés et le processus continue de manière récursive jusqu'à ce que tous les domaines approuvés soient détectés. Ces informations sont transmises au Serveur de connexion View pour s'assurer que le client dispose de tous les domaines approuvés lors des ouvertures de session.
+
+Cette propriété est activée par défaut. Lorsqu'elle est désactivée, seuls les domaines approuvés directement sont énumérés et la connexion aux contrôleurs de domaine distants n'est pas assurée.
+
+Remarque : dans des environnements contenant des relations de domaine complexes (telles que celles utilisant plusieurs structures de forêt avec approbations entre domaines de leurs forêts), ce processus peut prendre plusieurs minutes.</string>
+
+			<string id="Enumerate_Forest_Trust_Child_Domains" >Énumérer des domaines enfants d'une approbation de forêt</string>
+
+			<string id="Enumerate_Forest_Trust_Child_Domains_Desc" >Détermine si des domaines enfants d'une approbation de forêt sont énumérés.
+
+Si ce paramètre n'est pas configuré, la valeur par défaut est définie sur true.</string>
+
+		</stringTable>
+
+		<presentationTable ><!--Storage for Presentation Definitions-->
+
+			<presentation id="Windows_Pwd_Auth_Mode" >
+				<dropdownList refId="Windows_Pwd_Auth_Mode_DropDown_1" defaultItem="0" >Mode d'authentification par mot de passe Windows</dropdownList>
+			</presentation>
+
+		</presentationTable>
+
+	</resources>
+
+</policyDefinitionResources>

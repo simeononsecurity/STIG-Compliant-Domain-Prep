@@ -31,6 +31,9 @@
     <category name="VMwareViewBrowserRedirection" displayName="$(string.VMwareViewBrowserRedirection)">
       <parentCategory ref="VMwareViewClient" />
     </category>
+    <category name="VMwareViewClientSecurityNTLM" displayName="$(string.VMwareViewClientSecurityNTLM)">
+      <parentCategory ref="VMwareViewClientSecurity" />
+    </category>
   </categories>
   <policies>
     <policy name="DisableTimeZoneForwarding" class="Machine" displayName="$(string.DisableTimeZoneForwarding)" explainText="$(string.DisableTimeZoneForwardingExplain)" presentation="$(presentation.DisableTimeZoneForwarding)" key="Software\Policies\VMware, Inc.\VMware VDM\Client" valueName="DisableTimeZoneForwarding">
@@ -230,6 +233,13 @@
       <disabledValue>
         <string>false</string>
       </disabledValue>
+    </policy>
+    <policy name="MouseMoveMaxLatencyMsec" class="Machine" displayName="$(string.MouseMoveMaxLatencyMsec)" explainText="$(string.MouseMoveMaxLatencyMsecExplain)" presentation="$(presentation.MouseMoveMaxLatencyMsec)" key="Software\Policies\VMware, Inc.\VMware VDM\Client" valueName="MouseMoveMaxLatencyMsec">
+      <parentCategory ref="VMwareViewClient" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <elements>
+        <decimal id="MouseMoveMaxLatencyMsec" valueName="MouseMoveMaxLatencyMsec" required="true" minValue="0" maxValue="50" />
+      </elements>
     </policy>
     <policy name="SplitExcludeVidPid" class="Machine" displayName="$(string.SplitExcludeVidPid)" explainText="$(string.SplitExcludeVidPidExplain)" presentation="$(presentation.SplitExcludeVidPid)" key="Software\Policies\VMware, Inc.\VMware VDM\Client\USB">
       <parentCategory ref="VMwareViewClientUSB" />
@@ -433,6 +443,37 @@
       <elements>
         <list id="BrokersTrustedForDelegation" valuePrefix="" />
       </elements>
+    </policy>
+    <policy name="AllowNTLMAuthentication" class="Machine" displayName="$(string.AllowNTLMAuthentication)" explainText="$(string.AllowNTLMAuthenticationExplain)" presentation="$(presentation.AllowNTLMAuthentication)" key="Software\Policies\VMware, Inc.\VMware VDM\Client\Security\NTLMAuthentication" valueName="AllowNTLMAuthentication">
+      <parentCategory ref="VMwareViewClientSecurityNTLM" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+      <elements>
+        <enum id="AllowNTLMAuthentication" valueName="AllowKerberosFallBackToNTLM">
+          <item displayName="$(string.AllowFallBack_YES)">
+            <value>
+              <string>true</string>
+            </value>
+          </item>
+          <item displayName="$(string.AllowFallBack_NO)">
+            <value>
+              <string>false</string>
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="ServersAlwaysUseNTLM" class="Machine" displayName="$(string.ServersAlwaysUseNTLM)" explainText="$(string.ServersAlwaysUseNTLMExplain)" presentation="$(presentation.ServersAlwaysUseNTLM)" key="Software\Policies\VMware, Inc.\VMware VDM\Client\Security\NTLMAuthentication\ServersAlwaysUseNTLM">
+      <parentCategory ref="VMwareViewClientSecurityNTLM" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+        <elements>
+          <list id="ServersAlwaysUseNTLM" valuePrefix="" />
+        </elements>
     </policy>
     <policy name="IgnoreRevocation" class="Machine" displayName="$(string.IgnoreRevocation)" explainText="$(string.IgnoreRevocationExplain)" presentation="$(presentation.IgnoreRevocation)" key="Software\Policies\VMware, Inc.\VMware VDM\Client\Security" valueName="IgnoreRevocation">
       <parentCategory ref="VMwareViewClientSecurity" />

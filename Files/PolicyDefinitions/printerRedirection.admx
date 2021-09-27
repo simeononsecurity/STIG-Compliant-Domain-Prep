@@ -14,19 +14,23 @@
     <category name="VMwarePrintRedirection" displayName="$(string.print_redir)" />
   </categories>
   <policies>
-    <policy name="PersistenceSetting" class="Machine" displayName="$(string.persistence_setting)" explainText="$(string.persistence_setting_detail)" key="Software\Policies\VMware, Inc.\VMware VDM\PrintRedir" valueName="DisablePersistence">
+    <policy name="PersistenceSetting" class="Both" displayName="$(string.persistence_setting)" explainText="$(string.persistence_setting_detail)" key="Software\Policies\VMware, Inc.\VMware VDM\PrintRedir" valueName="DisablePersistence">
       <parentCategory ref="VMwarePrintRedirection" />
       <supportedOn ref="SUPPORTED_NotSpecified" />
     </policy>
-    <policy name="NonDesktopClientSetting" class="Machine" displayName="$(string.nondesktopclient_setting)" explainText="$(string.nondesktopclient_setting_detail)" key="Software\Policies\VMware, Inc.\VMware VDM\PrintRedir" valueName="DisableNonDesktopClient">
+    <policy name="NonDesktopClientSetting" class="Both" displayName="$(string.nondesktopclient_setting)" explainText="$(string.nondesktopclient_setting_detail)" key="Software\Policies\VMware, Inc.\VMware VDM\PrintRedir" valueName="DisableNonDesktopClient">
       <parentCategory ref="VMwarePrintRedirection" />
       <supportedOn ref="SUPPORTED_NotSpecified" />
     </policy>
-    <policy name="LBPSetting" class="Machine" displayName="$(string.lbp_setting)" explainText="$(string.lbp_setting_detail)" key="Software\Policies\VMware, Inc.\VMware VDM\PrintRedir" valueName="DisableLBP">
+    <policy name="LBPSetting" class="Both" displayName="$(string.lbp_setting)" explainText="$(string.lbp_setting_detail)" key="Software\Policies\VMware, Inc.\VMware VDM\PrintRedir" valueName="DisableLBP">
       <parentCategory ref="VMwarePrintRedirection" />
       <supportedOn ref="SUPPORTED_NotSpecified" />
     </policy>
-    <policy name="PrinterCreationSetting" class="Machine" displayName="$(string.printer_creation_setting)" explainText="$(string.printer_creation_setting_detail)" presentation="$(presentation.PrinterCreationSetting)" key="Software\Policies\VMware, Inc.\VMware VDM\PrintRedir">
+    <policy name="LPSetting" class="Both" displayName="$(string.lp_setting)" explainText="$(string.lp_setting_detail)" key="Software\Policies\VMware, Inc.\VMware VDM\PrintRedir" valueName="DisableClientPrinterRedir">
+      <parentCategory ref="VMwarePrintRedirection" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+    </policy>
+    <policy name="PrinterCreationSetting" class="Both" displayName="$(string.printer_creation_setting)" explainText="$(string.printer_creation_setting_detail)" presentation="$(presentation.PrinterCreationSetting)" key="Software\Policies\VMware, Inc.\VMware VDM\PrintRedir">
       <parentCategory ref="VMwarePrintRedirection" />
       <supportedOn ref="SUPPORTED_NotSpecified" />
       <elements>
@@ -54,7 +58,7 @@
         </enum>
       </elements>
    </policy>
-    <policy name="printer_filter" class="Machine" displayName="$(string.printer_filter)"
+    <policy name="printer_filter" class="Both" displayName="$(string.printer_filter)"
             explainText="$(string.printer_filter_desc)"
             key="Software\Policies\VMware, Inc.\VMware VDM\PrintRedir"
             presentation="$(presentation.printer_filter)">
@@ -64,7 +68,7 @@
         <text valueName="PrinterFilterString" id="printer_filter_textbox" />
       </elements>
     </policy>
-    <policy name="PrintPreviewSetting" class="Machine" displayName="$(string.print_preview_setting)" explainText="$(string.print_preview_setting_detail)" presentation="$(presentation.PrintPreviewSetting)" key="Software\Policies\VMware, Inc.\VMware VDM\PrintRedir" >
+    <policy name="PrintPreviewSetting" class="Both" displayName="$(string.print_preview_setting)" explainText="$(string.print_preview_setting_detail)" presentation="$(presentation.PrintPreviewSetting)" key="Software\Policies\VMware, Inc.\VMware VDM\PrintRedir" >
       <parentCategory ref="VMwarePrintRedirection" />
       <supportedOn ref="SUPPORTED_NotSpecified" />
       <elements>
@@ -90,7 +94,7 @@
         </enum>
       </elements>
     </policy>
-    <policy name="PrinterNameSchema" class="Machine" displayName="$(string.printer_name_schema)"
+    <policy name="PrinterNameSchema" class="Both" displayName="$(string.printer_name_schema)"
             explainText="$(string.printer_name_schema_desc)"
             key="Software\Policies\VMware, Inc.\VMware VDM\PrintRedir"
             presentation="$(presentation.printer_name_schema)">

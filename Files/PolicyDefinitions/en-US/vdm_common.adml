@@ -96,6 +96,10 @@ Format:LogLevel|ServerFQDNorIP[|PortNumber(default is 514)], example Debug|192.0
 
 			<string id="Revocation_URL_check_timeout_Desc" >The cumulative timeout across all revocation URL wire retrievals in milliseconds. Not configured or value set to 0 means that Microsoft default handling is used.</string>
 
+			<string id="Global_Max_Dump_Count" >Configure dump creation on program error</string>
+
+			<string id="Global_Max_Dump_Count_Desc" >Dumps can be limited to a specific amount by setting the value to any numerical value. When set to 0 no dumps will be created. If unset no limit is set on dump creation.</string>
+
 		</stringTable>
 
 		<presentationTable ><!--Storage for Presentation Definitions-->
@@ -164,6 +168,10 @@ Format:LogLevel|ServerFQDNorIP[|PortNumber(default is 514)], example Debug|192.0
 
 			<presentation id="Revocation_URL_check_timeout" >
 				<decimalTextBox refId="Revocation_URL_check_timeout_DecimalBox" defaultValue="0" >Revocation URL check timeout milliseconds</decimalTextBox>
+			</presentation>
+
+			<presentation id="Global_Max_Dump_Count" >
+				<decimalTextBox refId="Global_Max_Dump_Count_DecimalBox" defaultValue="" >Maximum dump files to be created</decimalTextBox>
 			</presentation>
 
 		</presentationTable>

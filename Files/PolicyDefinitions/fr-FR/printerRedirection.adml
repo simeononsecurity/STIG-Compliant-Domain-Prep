@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="print_redir">VMware Integrated Printing</string>
+      <string id="SUPPORTED_NotSpecified">Non spécifié</string>
+      <string id="persistence_setting">Désactiver la persistance de propriété de l'imprimante</string>
+      <string id="persistence_setting_detail">Ce paramètre détermine si les paramètres de propriété de l'imprimante seront conservés ou non.
+
+Lorsqu'elle est activée, la modification de la propriété de l'imprimante côté agent n'est pas conservée après la déconnexion ou la fermeture de la session par l'utilisateur, elle n'est donc pas permanente.
+Par exemple, si un utilisateur modifie le format papier de l'imprimante de « Letter » à « A4 » pendant la session, la prochaine fois que l'utilisateur se reconnecte, le format papier est rétabli sur « Letter » et la modification « A4 » n'est pas conservée. 
+
+Lorsqu'elle n'est pas configurée ou qu'elle est désactivée, la modification de la propriété de l'imprimante côté agent est conservée après la déconnexion ou la fermeture de la session par l'utilisateur. Elle est donc permanente.
+Par exemple, si un utilisateur modifie le format papier de l'imprimante de « Letter » à « A4 » pendant la session, la prochaine fois que l'utilisateur se reconnecte, le format papier est toujours « A4 », car la modification est conservée.
+
+Ce GPO n'est pas configuré par défaut.
+</string>
+      <string id="nondesktopclient_setting">Désactiver la redirection de l'imprimante pour le client externe au bureau</string>
+      <string id="nondesktopclient_setting_detail">Ce paramètre détermine si la fonctionnalité VMware Integrated Printing est prise en charge par le point de terminaison du client externe au bureau.
+
+Lorqu'elle est activée, la fonctionnalité VMware Integrated Printing n'est pas prise en charge par le point de terminaison du client externe au bureau.
+Lorsqu'elle n'est pas configurée ou désactivée, la fonctionnalité VMware Integrated Printing est prise en charge par le point de terminaison du client externe au bureau.
+
+Ce paramètre n'est pas configuré par défaut.
+</string>
+      <string id="lbp_setting">Désactiver l'impression basée sur l'emplacement</string>
+      <string id="lbp_setting_detail">Ce paramètre de stratégie vous permet de choisir d'utiliser ou non l'impression basée sur l'emplacement.
+
+
+Si vous activez ce paramètre de stratégie, il n'est pas possible d'utiliser l'impression basée sur l'emplacement.
+
+Si vous désactivez ou ne configurez pas ce paramètre de stratégie, il est possible d'utiliser l'impression basée sur l'emplacement.</string>
+	  <string id="lp_setting">Ne pas rediriger les imprimantes clientes</string>
+      <string id="lp_setting_detail">Ce paramètre de stratégie permet de gérer la redirection éventuelle des imprimantes clientes.
+
+Si vous activez ce paramètre de stratégie, les imprimantes clientes ne sont pas toutes redirigées.
+Si vous désactivez ou ne configurez pas ce paramètre de stratégie, les imprimantes clientes sont toutes redirigées.
+
+Ce paramètre n'est pas configuré par défaut.
+</string>
+      <string id="printer_creation_setting">Sélection du pilote d'imprimante</string>
+      <string id="printer_creation_setting_detail">Sélection du pilote d'imprimante.
+
+Choix de création d'imprimante :
+Options de pilote d'imprimante utilisées, pilote d'imprimante universel (UPD) ou pilote d'imprimante natif (NPD).
+
+Si vous choisissez la première option « Toujours utiliser NPD », le pilote d'imprimante natif sera toujours utilisé pour l'imprimante redirigée.
+
+Si vous choisissez la deuxième option « Toujours utiliser UPD », le pilote d'imprimante universel sera toujours utilisé pour l'imprimante redirigée.
+
+Si vous choisissez la troisième option « Utiliser d'abord NPD, puis UPD », le pilote d'imprimante natif sera utilisé en premier et, si le pilote d'imprimante natif n'existe pas, le pilote d'imprimante universel sera utilisé.
+
+Si vous choisissez la quatrième option « Utiliser d'abord UPD, puis NPD », le pilote d'imprimante universel sera utilisé en premier et, si le pilote d'imprimante universel n'existe pas, le pilote d'imprimante natif sera utilisé.
+
+</string>
+      <string id="printer_creation_setting_npd">Toujours utiliser NPD</string>
+      <string id="printer_creation_setting_upd">Toujours utiliser UPD</string>
+      <string id="printer_creation_setting_npd_upd">Utiliser d'abord NPD, puis UPD</string>
+      <string id="printer_creation_setting_upd_npd">Utiliser d'abord UPD, puis NPD</string>
+      <string id="printer_filter">Spécifier un filtre pour rediriger des imprimantes clientes</string>
+      <string id="printer_filter_desc">Règle qui filtre les imprimantes clientes qui y correspondent dans la redirection d'imprimante. Les attributs pris en charge sont les noms d'imprimante, les noms de pilote d'imprimante et les noms de fournisseur de pilotes. Les opérateurs pris en charge sont AND, OR et NOT. Le schéma de recherche pris en charge est une expression régulière en dialecte JavaScript (ECMAScript).
+Par défaut, la règle est vide, ce qui signifie que toutes les imprimantes clientes seront redirigées.
+
+Exemple :
+(DriverName= &quot;DrName1&quot; OR VendorName=&quot;VeName1&quot;) AND NOT PrinterName= &quot;PrNa.?e&quot;</string>
+      <string id="print_preview_setting">Paramètre d'aperçu avant impression</string>
+      <string id="print_preview_setting_detail">Il existe deux paramètres pour l'aperçu avant impression.
+
+Le premier paramètre détermine si la cible d'impression est activée ou non. Il n'est pas configuré par défaut.
+
+Lorsque ce paramètre est activé, l'utilisateur final ne peut pas choisir la cible d'impression.
+
+Lorsque ce paramètre est désactivé ou non configuré, l'utilisateur final peut choisir la cible d'impression, l'aperçu avant impression ou imprimer directement.
+
+
+Le second paramètre détermine l'option de cible d'impression par défaut. Il n'est pas configuré par défaut, ce qui signifie que l'option imprime directement.
+
+Lorsque l'option « Imprimer directement » est sélectionnée, l'option d'impression par défaut à partir de l'interface utilisateur d'impression est « Imprimer directement ».
+
+Lorsque l'option « Aperçu avant impression » est sélectionnée, l'option d'impression par défaut à partir de l'interface utilisateur d'impression est « Aperçu avant impression ».
+</string>
+
+      <string id="print_directly">Imprimer directement</string>
+      <string id="print_to_preview">Aperçu avant impression</string>
+      <string id="printer_name_schema">Nom de l'imprimante pour les agents RDSH</string>
+      <string id="printer_name_schema_desc">Ce paramètre détermine la convention de dénomination des imprimantes lorsque vous utilisez VMware Integrated Printing dans RDSH.
+Lorsque cette stratégie est activée, le schéma de nom d'imprimante valide doit commencer par « %P ». En outre, seuls les suffixes suivants sont pris en charge.
+%S : ID de session
+%C : nom de la machine cliente
+
+Lorsque cette stratégie n'est pas configurée ou désactivée, les imprimantes virtuelles dans RDSH utilisent l'ID de session comme suffixe.
+Exemple : PDFCreator (v2), ici PDFCreator est le nom de l'imprimante cliente, 2 est l'ID de session.
+Lorsque cette stratégie est activée, l'utilisateur peut remplacer le schéma de nom d'imprimante dans RDSH par « %P (%C) », et le nom de la machine cliente est utilisé comme suffixe pour le nom de l'imprimante.
+Exemple : PDFCreator (client-pc). Dans cet exemple, PDFCreator est le nom de l'imprimante cliente et client-pc est le nom de la machine cliente.
+
+Ce paramètre n'est pas configuré par défaut.
+      </string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="PrinterCreationSetting">
+          <dropdownList refId="printer_creation_setting_list" defaultItem="2" noSort="true">Choix de création d'imprimante :</dropdownList>
+      </presentation>
+      <presentation id="PrintPreviewSetting">
+        <checkBox refId="disable_print_choice">Désactiver les choix d'impression</checkBox>
+        <dropdownList refId="default_choice_list" defaultItem="0" noSort="true">Choix par défaut de cible d'impression :</dropdownList>
+      </presentation>
+      <presentation id="printer_filter">
+        <textBox refId="printer_filter_textbox">
+          <label>Filtre d'imprimante</label>
+          <defaultValue></defaultValue>
+        </textBox>
+      </presentation>
+       <presentation id="printer_name_schema">
+          <textBox refId="printer_name_schema_textbox">
+             <label>Schéma de nom d'imprimante</label>
+             <defaultValue>%P (v%S)</defaultValue>
+          </textBox>
+       </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

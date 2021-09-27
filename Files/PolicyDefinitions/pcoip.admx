@@ -317,7 +317,7 @@
 				<text id="Policy_TextBox_Element_Configure_PCoIP_233" key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" valueName="pcoip.vchan_unauth_list" maxLength="255" />
 			</elements>
 		</policy>
-		<policy name="Policy_Configure_clipboard_234" class="Machine" displayName="$(string.String_Policy_Configure_clipboard_235)" explainText="$(string.String_Explain_Determines_the_236)" key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" presentation="$(presentation.Policy_Configure_clipboard_234)" >
+		<policy name="Policy_Configure_clipboard_234" class="Both" displayName="$(string.String_Policy_Configure_clipboard_235)" explainText="$(string.String_Explain_Determines_the_236)" key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" presentation="$(presentation.Policy_Configure_clipboard_234)" >
 			<parentCategory ref="Cat_Overridable_Administrator_157" />
 			<supportedOn ref="SupportedOn_29" />
 			<elements >
@@ -345,7 +345,7 @@
 				</enum>
 			</elements>
 		</policy>
-		<policy name="Policy_Configure_clipboard_242" class="Machine" displayName="$(string.String_Policy_Configure_clipboard_243)" explainText="$(string.String_Explain_This_setting_indicates_244)" key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" presentation="$(presentation.Policy_Configure_clipboard_242)" >
+		<policy name="Policy_Configure_clipboard_242" class="Both" displayName="$(string.String_Policy_Configure_clipboard_243)" explainText="$(string.String_Explain_This_setting_indicates_244)" key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" presentation="$(presentation.Policy_Configure_clipboard_242)" >
 			<parentCategory ref="Cat_Overridable_Administrator_157" />
 			<supportedOn ref="SupportedOn_31" />
 			<elements >
@@ -364,7 +364,7 @@
 				<decimal id="Policy_Numeric_ElementConfigure_clipboard_245" key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" valueName="pcoip.clipboard_size" maxValue="16384" minValue="1" />
 			</elements>
 		</policy>
-		<policy name="Policy_Filter_text_out_246" class="Machine" displayName="$(string.String_Policy_Filter_text_out_247)" explainText="$(string.String_Explain_Determines_whether_248)" key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" presentation="$(presentation.Policy_Filter_text_out_246)" >
+		<policy name="Policy_Filter_text_out_246" class="Both" displayName="$(string.String_Policy_Filter_text_out_247)" explainText="$(string.String_Explain_Determines_whether_248)" key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" presentation="$(presentation.Policy_Filter_text_out_246)" >
 			<parentCategory ref="Cat_Overridable_Administrator_157" />
 			<supportedOn ref="SupportedOn_33" />
 			<elements >
@@ -378,7 +378,7 @@
 				</boolean>
 			</elements>
 		</policy>
-		<policy name="Policy_Filter_Rich_Text_250" class="Machine" displayName="$(string.String_Policy_Filter_Rich_Text_251)" explainText="$(string.String_Explain_Determines_whether_252)" key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" presentation="$(presentation.Policy_Filter_Rich_Text_250)" >
+		<policy name="Policy_Filter_Rich_Text_250" class="Both" displayName="$(string.String_Policy_Filter_Rich_Text_251)" explainText="$(string.String_Explain_Determines_whether_252)" key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" presentation="$(presentation.Policy_Filter_Rich_Text_250)" >
 			<parentCategory ref="Cat_Overridable_Administrator_157" />
 			<supportedOn ref="SupportedOn_35" />
 			<elements >
@@ -392,7 +392,7 @@
 				</boolean>
 			</elements>
 		</policy>
-		<policy name="Policy_Filter_images_out_254" class="Machine" displayName="$(string.String_Policy_Filter_images_out_255)" explainText="$(string.String_Explain_Determines_whether_256)" key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" presentation="$(presentation.Policy_Filter_images_out_254)" >
+		<policy name="Policy_Filter_images_out_254" class="Both" displayName="$(string.String_Policy_Filter_images_out_255)" explainText="$(string.String_Explain_Determines_whether_256)" key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" presentation="$(presentation.Policy_Filter_images_out_254)" >
 			<parentCategory ref="Cat_Overridable_Administrator_157" />
 			<supportedOn ref="SupportedOn_37" />
 			<elements >
@@ -406,7 +406,7 @@
 				</boolean>
 			</elements>
 		</policy>
-		<policy name="Policy_Filter_Microsoft_258" class="Machine" displayName="$(string.String_Policy_Filter_Microsoft_259)" explainText="$(string.String_Explain_Determines_whether_260)" key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" presentation="$(presentation.Policy_Filter_Microsoft_258)" >
+		<policy name="Policy_Filter_Microsoft_258" class="Both" displayName="$(string.String_Policy_Filter_Microsoft_259)" explainText="$(string.String_Explain_Determines_whether_260)" key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" presentation="$(presentation.Policy_Filter_Microsoft_258)" >
 			<parentCategory ref="Cat_Overridable_Administrator_157" />
 			<supportedOn ref="SupportedOn_39" />
 			<elements >
@@ -420,7 +420,7 @@
 				</boolean>
 			</elements>
 		</policy>
-		<policy name="Policy_Filter_Microsoft_262" class="Machine" displayName="$(string.String_Policy_Filter_Microsoft_263)" explainText="$(string.String_Explain_Determines_whether_264)" key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" presentation="$(presentation.Policy_Filter_Microsoft_262)" >
+		<policy name="Policy_Filter_Microsoft_262" class="Both" displayName="$(string.String_Policy_Filter_Microsoft_263)" explainText="$(string.String_Explain_Determines_whether_264)" key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" presentation="$(presentation.Policy_Filter_Microsoft_262)" >
 			<parentCategory ref="Cat_Overridable_Administrator_157" />
 			<supportedOn ref="SupportedOn_41" />
 			<elements >
@@ -434,7 +434,7 @@
 				</boolean>
 			</elements>
 		</policy>
-		<policy name="Policy_Filter_Microsoft_266" class="Machine" displayName="$(string.String_Policy_Filter_Microsoft_267)" explainText="$(string.String_Explain_Determines_whether_268)" key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" presentation="$(presentation.Policy_Filter_Microsoft_266)" >
+		<policy name="Policy_Filter_Microsoft_266" class="Both" displayName="$(string.String_Policy_Filter_Microsoft_267)" explainText="$(string.String_Explain_Determines_whether_268)" key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" presentation="$(presentation.Policy_Filter_Microsoft_266)" >
 			<parentCategory ref="Cat_Overridable_Administrator_157" />
 			<supportedOn ref="SupportedOn_43" />
 			<elements >
@@ -448,7 +448,7 @@
 				</boolean>
 			</elements>
 		</policy>
-		<policy name="Policy_Filter_text_out_270" class="Machine" displayName="$(string.String_Policy_Filter_text_out_271)" explainText="$(string.String_Explain_Determines_whether_272)" key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" presentation="$(presentation.Policy_Filter_text_out_270)" >
+		<policy name="Policy_Filter_text_out_270" class="Both" displayName="$(string.String_Policy_Filter_text_out_271)" explainText="$(string.String_Explain_Determines_whether_272)" key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" presentation="$(presentation.Policy_Filter_text_out_270)" >
 			<parentCategory ref="Cat_Overridable_Administrator_157" />
 			<supportedOn ref="SupportedOn_45" />
 			<elements >
@@ -462,7 +462,7 @@
 				</boolean>
 			</elements>
 		</policy>
-		<policy name="Policy_Filter_Rich_Text_274" class="Machine" displayName="$(string.String_Policy_Filter_Rich_Text_275)" explainText="$(string.String_Explain_Determines_whether_276)" key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" presentation="$(presentation.Policy_Filter_Rich_Text_274)" >
+		<policy name="Policy_Filter_Rich_Text_274" class="Both" displayName="$(string.String_Policy_Filter_Rich_Text_275)" explainText="$(string.String_Explain_Determines_whether_276)" key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" presentation="$(presentation.Policy_Filter_Rich_Text_274)" >
 			<parentCategory ref="Cat_Overridable_Administrator_157" />
 			<supportedOn ref="SupportedOn_47" />
 			<elements >
@@ -476,7 +476,7 @@
 				</boolean>
 			</elements>
 		</policy>
-		<policy name="Policy_Filter_images_out_278" class="Machine" displayName="$(string.String_Policy_Filter_images_out_279)" explainText="$(string.String_Explain_Determines_whether_280)" key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" presentation="$(presentation.Policy_Filter_images_out_278)" >
+		<policy name="Policy_Filter_images_out_278" class="Both" displayName="$(string.String_Policy_Filter_images_out_279)" explainText="$(string.String_Explain_Determines_whether_280)" key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" presentation="$(presentation.Policy_Filter_images_out_278)" >
 			<parentCategory ref="Cat_Overridable_Administrator_157" />
 			<supportedOn ref="SupportedOn_49" />
 			<elements >
@@ -490,7 +490,7 @@
 				</boolean>
 			</elements>
 		</policy>
-		<policy name="Policy_Filter_Microsoft_282" class="Machine" displayName="$(string.String_Policy_Filter_Microsoft_283)" explainText="$(string.String_Explain_Determines_whether_284)" key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" presentation="$(presentation.Policy_Filter_Microsoft_282)" >
+		<policy name="Policy_Filter_Microsoft_282" class="Both" displayName="$(string.String_Policy_Filter_Microsoft_283)" explainText="$(string.String_Explain_Determines_whether_284)" key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" presentation="$(presentation.Policy_Filter_Microsoft_282)" >
 			<parentCategory ref="Cat_Overridable_Administrator_157" />
 			<supportedOn ref="SupportedOn_51" />
 			<elements >
@@ -504,7 +504,7 @@
 				</boolean>
 			</elements>
 		</policy>
-		<policy name="Policy_Filter_Microsoft_286" class="Machine" displayName="$(string.String_Policy_Filter_Microsoft_287)" explainText="$(string.String_Explain_Determines_whether_288)" key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" presentation="$(presentation.Policy_Filter_Microsoft_286)" >
+		<policy name="Policy_Filter_Microsoft_286" class="Both" displayName="$(string.String_Policy_Filter_Microsoft_287)" explainText="$(string.String_Explain_Determines_whether_288)" key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" presentation="$(presentation.Policy_Filter_Microsoft_286)" >
 			<parentCategory ref="Cat_Overridable_Administrator_157" />
 			<supportedOn ref="SupportedOn_53" />
 			<elements >
@@ -518,7 +518,7 @@
 				</boolean>
 			</elements>
 		</policy>
-		<policy name="Policy_Filter_Microsoft_290" class="Machine" displayName="$(string.String_Policy_Filter_Microsoft_291)" explainText="$(string.String_Explain_Determines_whether_292)" key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" presentation="$(presentation.Policy_Filter_Microsoft_290)" >
+		<policy name="Policy_Filter_Microsoft_290" class="Both" displayName="$(string.String_Policy_Filter_Microsoft_291)" explainText="$(string.String_Explain_Determines_whether_292)" key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" presentation="$(presentation.Policy_Filter_Microsoft_290)" >
 			<parentCategory ref="Cat_Overridable_Administrator_157" />
 			<supportedOn ref="SupportedOn_55" />
 			<elements >
@@ -1235,7 +1235,7 @@
 				<text id="Policy_TextBox_Element_Configure_PCoIP_487" key="Software\Policies\Teradici\PCoIP\pcoip_admin" valueName="pcoip.vchan_unauth_list" maxLength="255" />
 			</elements>
 		</policy>
-		<policy name="Policy_Configure_clipboard_488" class="Machine" displayName="$(string.String_Policy_Configure_clipboard_489)" explainText="$(string.String_Explain_Determines_the_490)" key="Software\Policies\Teradici\PCoIP\pcoip_admin" presentation="$(presentation.Policy_Configure_clipboard_488)" >
+		<policy name="Policy_Configure_clipboard_488" class="Both" displayName="$(string.String_Policy_Configure_clipboard_489)" explainText="$(string.String_Explain_Determines_the_490)" key="Software\Policies\Teradici\PCoIP\pcoip_admin" presentation="$(presentation.Policy_Configure_clipboard_488)" >
 			<parentCategory ref="Cat_Not_Overridable_155" />
 			<supportedOn ref="SupportedOn_105" />
 			<elements >
@@ -1263,7 +1263,7 @@
 				</enum>
 			</elements>
 		</policy>
-		<policy name="Policy_Configure_clipboard_496" class="Machine" displayName="$(string.String_Policy_Configure_clipboard_497)" explainText="$(string.String_Explain_This_setting_indicates_498)" key="Software\Policies\Teradici\PCoIP\pcoip_admin" presentation="$(presentation.Policy_Configure_clipboard_496)" >
+		<policy name="Policy_Configure_clipboard_496" class="Both" displayName="$(string.String_Policy_Configure_clipboard_497)" explainText="$(string.String_Explain_This_setting_indicates_498)" key="Software\Policies\Teradici\PCoIP\pcoip_admin" presentation="$(presentation.Policy_Configure_clipboard_496)" >
 			<parentCategory ref="Cat_Not_Overridable_155" />
 			<supportedOn ref="SupportedOn_107" />
 			<elements >
@@ -1282,7 +1282,7 @@
 				<decimal id="Policy_Numeric_ElementConfigure_clipboard_499" key="Software\Policies\Teradici\PCoIP\pcoip_admin" valueName="pcoip.clipboard_size" maxValue="16384" minValue="1" />
 			</elements>
 		</policy>
-		<policy name="Policy_Filter_text_out_500" class="Machine" displayName="$(string.String_Policy_Filter_text_out_501)" explainText="$(string.String_Explain_Determines_whether_502)" key="Software\Policies\Teradici\PCoIP\pcoip_admin" presentation="$(presentation.Policy_Filter_text_out_500)" >
+		<policy name="Policy_Filter_text_out_500" class="Both" displayName="$(string.String_Policy_Filter_text_out_501)" explainText="$(string.String_Explain_Determines_whether_502)" key="Software\Policies\Teradici\PCoIP\pcoip_admin" presentation="$(presentation.Policy_Filter_text_out_500)" >
 			<parentCategory ref="Cat_Not_Overridable_155" />
 			<supportedOn ref="SupportedOn_109" />
 			<elements >
@@ -1296,7 +1296,7 @@
 				</boolean>
 			</elements>
 		</policy>
-		<policy name="Policy_Filter_Rich_Text_504" class="Machine" displayName="$(string.String_Policy_Filter_Rich_Text_505)" explainText="$(string.String_Explain_Determines_whether_506)" key="Software\Policies\Teradici\PCoIP\pcoip_admin" presentation="$(presentation.Policy_Filter_Rich_Text_504)" >
+		<policy name="Policy_Filter_Rich_Text_504" class="Both" displayName="$(string.String_Policy_Filter_Rich_Text_505)" explainText="$(string.String_Explain_Determines_whether_506)" key="Software\Policies\Teradici\PCoIP\pcoip_admin" presentation="$(presentation.Policy_Filter_Rich_Text_504)" >
 			<parentCategory ref="Cat_Not_Overridable_155" />
 			<supportedOn ref="SupportedOn_111" />
 			<elements >
@@ -1310,7 +1310,7 @@
 				</boolean>
 			</elements>
 		</policy>
-		<policy name="Policy_Filter_images_out_508" class="Machine" displayName="$(string.String_Policy_Filter_images_out_509)" explainText="$(string.String_Explain_Determines_whether_510)" key="Software\Policies\Teradici\PCoIP\pcoip_admin" presentation="$(presentation.Policy_Filter_images_out_508)" >
+		<policy name="Policy_Filter_images_out_508" class="Both" displayName="$(string.String_Policy_Filter_images_out_509)" explainText="$(string.String_Explain_Determines_whether_510)" key="Software\Policies\Teradici\PCoIP\pcoip_admin" presentation="$(presentation.Policy_Filter_images_out_508)" >
 			<parentCategory ref="Cat_Not_Overridable_155" />
 			<supportedOn ref="SupportedOn_113" />
 			<elements >
@@ -1324,7 +1324,7 @@
 				</boolean>
 			</elements>
 		</policy>
-		<policy name="Policy_Filter_Microsoft_512" class="Machine" displayName="$(string.String_Policy_Filter_Microsoft_513)" explainText="$(string.String_Explain_Determines_whether_514)" key="Software\Policies\Teradici\PCoIP\pcoip_admin" presentation="$(presentation.Policy_Filter_Microsoft_512)" >
+		<policy name="Policy_Filter_Microsoft_512" class="Both" displayName="$(string.String_Policy_Filter_Microsoft_513)" explainText="$(string.String_Explain_Determines_whether_514)" key="Software\Policies\Teradici\PCoIP\pcoip_admin" presentation="$(presentation.Policy_Filter_Microsoft_512)" >
 			<parentCategory ref="Cat_Not_Overridable_155" />
 			<supportedOn ref="SupportedOn_115" />
 			<elements >
@@ -1338,7 +1338,7 @@
 				</boolean>
 			</elements>
 		</policy>
-		<policy name="Policy_Filter_Microsoft_516" class="Machine" displayName="$(string.String_Policy_Filter_Microsoft_517)" explainText="$(string.String_Explain_Determines_whether_518)" key="Software\Policies\Teradici\PCoIP\pcoip_admin" presentation="$(presentation.Policy_Filter_Microsoft_516)" >
+		<policy name="Policy_Filter_Microsoft_516" class="Both" displayName="$(string.String_Policy_Filter_Microsoft_517)" explainText="$(string.String_Explain_Determines_whether_518)" key="Software\Policies\Teradici\PCoIP\pcoip_admin" presentation="$(presentation.Policy_Filter_Microsoft_516)" >
 			<parentCategory ref="Cat_Not_Overridable_155" />
 			<supportedOn ref="SupportedOn_117" />
 			<elements >
@@ -1352,7 +1352,7 @@
 				</boolean>
 			</elements>
 		</policy>
-		<policy name="Policy_Filter_Microsoft_520" class="Machine" displayName="$(string.String_Policy_Filter_Microsoft_521)" explainText="$(string.String_Explain_Determines_whether_522)" key="Software\Policies\Teradici\PCoIP\pcoip_admin" presentation="$(presentation.Policy_Filter_Microsoft_520)" >
+		<policy name="Policy_Filter_Microsoft_520" class="Both" displayName="$(string.String_Policy_Filter_Microsoft_521)" explainText="$(string.String_Explain_Determines_whether_522)" key="Software\Policies\Teradici\PCoIP\pcoip_admin" presentation="$(presentation.Policy_Filter_Microsoft_520)" >
 			<parentCategory ref="Cat_Not_Overridable_155" />
 			<supportedOn ref="SupportedOn_119" />
 			<elements >
@@ -1366,7 +1366,7 @@
 				</boolean>
 			</elements>
 		</policy>
-		<policy name="Policy_Filter_text_out_524" class="Machine" displayName="$(string.String_Policy_Filter_text_out_525)" explainText="$(string.String_Explain_Determines_whether_526)" key="Software\Policies\Teradici\PCoIP\pcoip_admin" presentation="$(presentation.Policy_Filter_text_out_524)" >
+		<policy name="Policy_Filter_text_out_524" class="Both" displayName="$(string.String_Policy_Filter_text_out_525)" explainText="$(string.String_Explain_Determines_whether_526)" key="Software\Policies\Teradici\PCoIP\pcoip_admin" presentation="$(presentation.Policy_Filter_text_out_524)" >
 			<parentCategory ref="Cat_Not_Overridable_155" />
 			<supportedOn ref="SupportedOn_121" />
 			<elements >
@@ -1380,7 +1380,7 @@
 				</boolean>
 			</elements>
 		</policy>
-		<policy name="Policy_Filter_Rich_Text_528" class="Machine" displayName="$(string.String_Policy_Filter_Rich_Text_529)" explainText="$(string.String_Explain_Determines_whether_530)" key="Software\Policies\Teradici\PCoIP\pcoip_admin" presentation="$(presentation.Policy_Filter_Rich_Text_528)" >
+		<policy name="Policy_Filter_Rich_Text_528" class="Both" displayName="$(string.String_Policy_Filter_Rich_Text_529)" explainText="$(string.String_Explain_Determines_whether_530)" key="Software\Policies\Teradici\PCoIP\pcoip_admin" presentation="$(presentation.Policy_Filter_Rich_Text_528)" >
 			<parentCategory ref="Cat_Not_Overridable_155" />
 			<supportedOn ref="SupportedOn_123" />
 			<elements >
@@ -1394,7 +1394,7 @@
 				</boolean>
 			</elements>
 		</policy>
-		<policy name="Policy_Filter_images_out_532" class="Machine" displayName="$(string.String_Policy_Filter_images_out_533)" explainText="$(string.String_Explain_Determines_whether_534)" key="Software\Policies\Teradici\PCoIP\pcoip_admin" presentation="$(presentation.Policy_Filter_images_out_532)" >
+		<policy name="Policy_Filter_images_out_532" class="Both" displayName="$(string.String_Policy_Filter_images_out_533)" explainText="$(string.String_Explain_Determines_whether_534)" key="Software\Policies\Teradici\PCoIP\pcoip_admin" presentation="$(presentation.Policy_Filter_images_out_532)" >
 			<parentCategory ref="Cat_Not_Overridable_155" />
 			<supportedOn ref="SupportedOn_125" />
 			<elements >
@@ -1408,7 +1408,7 @@
 				</boolean>
 			</elements>
 		</policy>
-		<policy name="Policy_Filter_Microsoft_536" class="Machine" displayName="$(string.String_Policy_Filter_Microsoft_537)" explainText="$(string.String_Explain_Determines_whether_538)" key="Software\Policies\Teradici\PCoIP\pcoip_admin" presentation="$(presentation.Policy_Filter_Microsoft_536)" >
+		<policy name="Policy_Filter_Microsoft_536" class="Both" displayName="$(string.String_Policy_Filter_Microsoft_537)" explainText="$(string.String_Explain_Determines_whether_538)" key="Software\Policies\Teradici\PCoIP\pcoip_admin" presentation="$(presentation.Policy_Filter_Microsoft_536)" >
 			<parentCategory ref="Cat_Not_Overridable_155" />
 			<supportedOn ref="SupportedOn_127" />
 			<elements >
@@ -1422,7 +1422,7 @@
 				</boolean>
 			</elements>
 		</policy>
-		<policy name="Policy_Filter_Microsoft_540" class="Machine" displayName="$(string.String_Policy_Filter_Microsoft_541)" explainText="$(string.String_Explain_Determines_whether_542)" key="Software\Policies\Teradici\PCoIP\pcoip_admin" presentation="$(presentation.Policy_Filter_Microsoft_540)" >
+		<policy name="Policy_Filter_Microsoft_540" class="Both" displayName="$(string.String_Policy_Filter_Microsoft_541)" explainText="$(string.String_Explain_Determines_whether_542)" key="Software\Policies\Teradici\PCoIP\pcoip_admin" presentation="$(presentation.Policy_Filter_Microsoft_540)" >
 			<parentCategory ref="Cat_Not_Overridable_155" />
 			<supportedOn ref="SupportedOn_129" />
 			<elements >
@@ -1436,7 +1436,7 @@
 				</boolean>
 			</elements>
 		</policy>
-		<policy name="Policy_Filter_Microsoft_544" class="Machine" displayName="$(string.String_Policy_Filter_Microsoft_545)" explainText="$(string.String_Explain_Determines_whether_546)" key="Software\Policies\Teradici\PCoIP\pcoip_admin" presentation="$(presentation.Policy_Filter_Microsoft_544)" >
+		<policy name="Policy_Filter_Microsoft_544" class="Both" displayName="$(string.String_Policy_Filter_Microsoft_545)" explainText="$(string.String_Explain_Determines_whether_546)" key="Software\Policies\Teradici\PCoIP\pcoip_admin" presentation="$(presentation.Policy_Filter_Microsoft_544)" >
 			<parentCategory ref="Cat_Not_Overridable_155" />
 			<supportedOn ref="SupportedOn_131" />
 			<elements >
@@ -1936,7 +1936,7 @@
 				<decimal id="Policy_Numeric_ElementConfigure_PCoIP_666" key="Software\Policies\Teradici\PCoIP\pcoip_admin" valueName="pcoip.event_size_to_keep_log_mb" maxValue="1000" minValue="0" />
 			</elements>
 		</policy>
-		<policy name="Policy_Configure_clipboard_667" class="Machine" displayName="$(string.String_Policy_Configure_clipboard_668)" explainText="$(string.String_Explain_Determines_the_669)" presentation="$(presentation.SERVER_CLIPBOARD_AUDIT)" key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults">
+		<policy name="Policy_Configure_clipboard_667" class="Both" displayName="$(string.String_Policy_Configure_clipboard_668)" explainText="$(string.String_Explain_Determines_the_669)" presentation="$(presentation.SERVER_CLIPBOARD_AUDIT)" key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults">
 			<parentCategory ref="Cat_Overridable_Administrator_157" />
 			<supportedOn ref="SupportedOn_29" />
 			<elements>
@@ -1964,7 +1964,7 @@
 				</enum>
 			</elements>
 		</policy>
-        <policy name="Policy_Whether_block_clipboard_673" class="Machine" displayName="$(string.String_Policy_Whether_block_clipboard_674)" explainText="$(string.String_Explain_Determines_the_675)" key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults"  presentation="$(presentation.Policy_Whether_block_clipboard_676)">
+        <policy name="Policy_Whether_block_clipboard_673" class="Both" displayName="$(string.String_Policy_Whether_block_clipboard_674)" explainText="$(string.String_Explain_Determines_the_675)" key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults"  presentation="$(presentation.Policy_Whether_block_clipboard_676)">
 			<parentCategory ref="Cat_Overridable_Administrator_157" />
 			<supportedOn ref="SupportedOn_29" />
 			<elements >

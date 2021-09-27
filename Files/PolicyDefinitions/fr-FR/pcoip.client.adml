@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" >
+
+	<displayName >Entrer le nom d'affichage ici</displayName>
+	<description >Paramètres de configuration du client VMware Horizon View PCOIP</description>
+	<resources >
+		<stringTable ><!--Storage for String Definitions-->
+
+			<string id="String_SupportedOn_Undefined_2" >Non défini</string>
+			<string id="String_SupportedOn_Undefined_4" >Non défini</string>
+			<string id="String_SupportedOn_Undefined_6" >Non défini</string>
+			<string id="String_SupportedOn_Undefined_8" >Non défini</string>
+			<string id="String_SupportedOn_Undefined_10" >Non défini</string>
+			<string id="String_SupportedOn_Undefined_12" >Non défini</string>
+			<string id="String_SupportedOn_Undefined_14" >Non défini</string>
+			<string id="String_SupportedOn_Undefined_15" >Non défini</string>
+			<string id="String_SupportedOn_Undefined_16" >Non défini</string>
+			<string id="String_SupportedOn_Undefined_18" >Non défini</string>
+			<string id="String_SupportedOn_Undefined_20" >Non défini</string>
+			<string id="String_SupportedOn_Undefined_22" >Non défini</string>
+			<string id="String_SupportedOn_Undefined_24" >Non défini</string>
+			<string id="String_SupportedOn_Undefined_26" >Non défini</string>
+			<string id="String_SupportedOn_Undefined_28" >Non défini</string>
+			<string id="String_SupportedOn_Undefined_30" >Non défini</string>
+			<string id="String_SupportedOn_Undefined_32" >Non défini</string>
+			<string id="String_SupportedOn_Undefined_34" >Non défini</string>
+			<string id="String_SupportedOn_Undefined_36" >Non défini</string>
+			<string id="String_SupportedOn_Undefined_38" >Non défini</string>
+			<string id="String_SupportedOn_Undefined_40" >Non défini</string>
+			<string id="String_SupportedOn_Undefined_42" >Non défini</string>
+			<string id="String_SupportedOn_Undefined_43" >Non défini</string>
+			<string id="String_SupportedOn_Undefined_44" >Non défini</string>
+			<string id="String_SupportedOn_Undefined_46" >Non défini</string>
+			<string id="String_SupportedOn_Undefined_48" >Non défini</string>
+			<string id="String_SupportedOn_Undefined_50" >Non défini</string>
+			<string id="String_SupportedOn_Undefined_52" >Non défini</string>
+			<string id="String_SupportedOn_Undefined_54" >Non défini</string>
+			<string id="String_SupportedOn_Undefined_56" >Non défini</string>
+			<string id="String_Cat_PCoIP_Client_Session_58" >Variables de session de client PCoIP</string>
+			<string id="String_Cat_Not_Overridable_60" >Paramètres non remplaçables par l'administrateur</string>
+			<string id="String_Cat_Overridable_Administrator_62" >Valeurs par défaut remplaçables par l'administrateur</string>
+			<string id="String_Policy_Configure_the_maximum_64" >Configurer la bande passante maximale de la session PCoIP</string>
+			<string id="String_Explain_Specifies_the_maximum_65" >Spécifie la bande passante maximale, en kilobits par seconde, dans une session PCoIP. La bande passante inclut la création d'images, le son, le canal virtuel, USB et le trafic PCoIP de contrôle.
+
+Définissez cette valeur en fonction de la capacité globale du lien auquel votre point de terminaison est connecté, en tenant compte du nombre de sessions PCoIP simultanées prévues. Par exemple, avec une configuration VDI à un seul utilisateur (par exemple, une session PCoIP unique) qui se connecte au moyen d'une connexion Internet 4 Mbit/s, définissez cette valeur sur 4 Mbit (ou 10 % de moins que cette valeur pour prévoir un autre trafic réseau). Lorsque vous souhaitez que plusieurs sessions PCoIP simultanées partagent un lien (par exemple, plusieurs utilisateurs VDI ou une configuration RDSH), vous voulez peut-être ajuster le paramètre en conséquence. Toutefois, cela limite la bande passante maximale pour chaque session active.
+
+La définition de cette valeur empêche l'agent de tenter de transmettre un débit supérieur à la capacité de lien, ce qui pourrait entraîner une perte de paquets excessive et une mauvaise expérience utilisateur. Cette valeur est symétrique. Elle force le client et l'agent à utiliser la plus faible des deux valeurs qui sont définies côté client et agent. Par exemple, la définition d'une bande passante maximale de 4 Mbit/s force l'agent à transmettre à un débit plus faible, même si le paramètre est configuré sur le client.
+
+Lorsque ce paramètre est désactivé ou qu'il n'est pas configuré sur un point de terminaison, le point de terminaison n'impose aucune contrainte de bande passante. Lorsque ce paramètre est configuré, il est utilisé comme la contrainte de bande passante maximale du point de terminaison en kilobits par seconde.
+
+La valeur par défaut lorsque ce paramètre n'est pas configuré est de 900 000 kilobits par seconde.
+
+Ce paramètre s'applique à l'agent et au client. Si les deux points de terminaison ont des paramètres différents, la valeur la plus faible est utilisée.</string>
+			<string id="String_Policy_Configure_the_PCoIP_68" >Configurer la MTU de la session PCoIP</string>
+			<string id="String_Explain_Specifies_the_Maximum_69" >Spécifie la taille de l'unité de transmission maximale (MTU) pour les paquets UDP d'une session PCoIP.
+
+La taille de la MTU inclut les en-têtes de paquet IP et UDP. Le protocole TCP utilise le mécanisme de découverte MTU standard pour définir la MTU et n'est pas affecté par ce paramètre. La taille de la MTU maximale est de 1 500 octets. La taille de la MTU minimale est de 500 octets. La valeur par défaut est de 1 200 octets.
+
+En général, vous n'avez pas à modifier la taille de la MTU. Modifiez cette valeur si vous avez une configuration de réseau inhabituelle qui provoque une fragmentation de paquets PCoIP.
+
+Ce paramètre s'applique au serveur et au client. Si les deux points de terminaison ont des paramètres de taille de MTU différents, la valeur la plus faible est utilisée.
+
+Si ce paramètre est désactivé ou qu'il n'est pas configuré, le client utilise la valeur par défaut dans la négociation avec le serveur.</string>
+			<string id="String_Policy_Configure_the_PCoIP_72" >Configurer la valeur plancher de la bande passante de la session PCoIP</string>
+			<string id="String_Explain_Specifies_a_lower_73" >Spécifie une limite inférieure, en kilobits par seconde, pour la bande passante réservée par la session PCoIP.
+
+Ce paramètre configure le taux de transmission de bande passante minimal attendu pour le point de terminaison. Lorsque vous utilisez ce paramètre pour réserver de la bande passante pour un point de terminaison, la session n'a pas à attendre que la bande passante soit disponible, ce qui améliore la réactivité de la session.
+
+Assurez-vous que vous ne sursouscrivez pas la bande passante totale réservée pour tous les points de terminaison. Assurez-vous que la somme des valeurs plancher de la bande passante pour toutes les connexions dans votre configuration ne dépasse pas la capacité du réseau.
+
+La valeur par défaut est 0, ce qui signifie qu'aucune bande passante minimale n'est réservée. Lorsque ce paramètre est désactivé ou qu'il n'est pas configuré, aucune bande passante minimale n'est réservée.
+
+Ce paramètre s'applique au serveur et au client, mais le paramètre n'affecte que le point de terminaison sur lequel il est configuré.
+
+Lorsque ce paramètre est modifié lors d'une session PCoIP active, la modification prend effet immédiatement.</string>
+			<string id="String_Policy_Enable_disable_76" >Activer/désactiver le son dans la session PCoIP</string>
+			<string id="String_Explain_Determines_whether_77" >Détermine si le son est activé dans des sessions PCoIP. Le son doit être activé sur les deux points de terminaison. Lorsque ce paramètre est activé, le son PCoIP est autorisé. Lorsqu'il est désactivé, le son PCoIP est désactivé. Lorsque ce paramètre n'est pas configuré, le son est activé par défaut.
+
+</string>
+			<string id="String_Policy_Configure_SSL_connections_79" >Configurer des connexions SSL pour satisfaire les outils de sécurité</string>
+			<string id="String_Explain_Specifies_how_SSL_80" >Spécifie comment les connexions de négociation de la session SSL sont établies.
+
+Pour satisfaire les scanners de port, activez le paramètre « Configurer des connexions SSL » et procédez comme suit :
+
+1. Stockez le certificat pour l'autorité de certification qui a signé un certificat de serveur à utiliser avec PCoIP dans le magasin de certificats racines approuvés.
+2. Configurez l'agent pour charger des certificats uniquement à partir du magasin de certificats. Si le magasin personnel de la machine locale est utilisé, laissez le nom du magasin de certificats d'autorité de certification avec la valeur « ROOT » (sans les guillemets), sauf si un emplacement de magasin différent a été utilisé dans l'étape 1.
+
+Le client PCoIP Client résultant répond aux outils de sécurité, tels que les scanners de port.
+
+Si ce paramètre « Configurer des connexions SSL » est désactivé ou n'est pas configuré :
+
+1. Le point de terminaison utilise des certificats d'autorité de certification du magasin « MY » du compte de machine et des certificats d'autorité de certification du magasin « ROOT ».
+2. La suite de chiffrement AES-128 est disponible.</string>
+			<string id="String_Policy_Configure_PCoIP_85" >Configurer des algorithmes de chiffrement de la session PCoIP</string>
+			<string id="String_Explain_Controls_the_encryption_86" >Contrôle les algorithmes de chiffrement annoncés par le point de terminaison PCoIP lors de la négociation de session.
+
+Cocher l'une des cases désactive l'algorithme de chiffrement associé. Vous devez activer au moins un algorithme.
+
+Ce paramètre s'applique à la fois à l'agent et au client. Les points de terminaison négocient l'algorithme de chiffrement de session réel qui est utilisé. Si le mode approuvé FIPS140-2 est activé, la valeur Désactiver le chiffrement AES-128-GCM sera remplacée si les chiffrements AES-128-GCM et AES-256-GCM sont désactivés.
+
+Si le paramètre « Configurer des connexions SSL » global est désactivé ou n'est pas configuré, les deux algorithmes Salsa20-256round12 et AES-128-GCM sont disponibles pour la négociation par ce point de terminaison.
+
+Les algorithmes de chiffrement pris en charge, par ordre de préférence, sont SALSA20/12-256, AES-GCM-128 et AES-GCM-256. Par défaut, tous les algorithmes de chiffrement pris en charge sont disponibles à la négociation à partir de ce point de terminaison. 
+
+Si les deux points de terminaison sont configurés pour prendre en charge ces 3 algorithmes et que la connexion n'utilise pas de passerelle de sécurité, l'algorithme SALSA20 est négocié et utilisé. En revanche, si la connexion utilise une passerelle de sécurité, l'algorithme SALSA20 est désactivé automatiquement et c'est l'algorithme AES128 qui est négocié et utilisé. Si l'un des points de terminaison ou la passerelle de sécurité désactive l'algorithme SALSA20 et que l'un des points de terminaison désactive l'algorithme AES128, c'est l'algorithme AES256 qui est alors négocié et utilisé.</string>
+			<string id="String_Policy_Configure_SSL_protocols_91" >Configurer des protocoles SSL</string>
+			<string id="String_Explain_Configures_openssl_92" >Configure le protocole openssl pour limiter l'utilisation de certains protocoles avant l'établissement d'une connexion SSL chiffrée. La liste de protocoles est composée d'une ou de plusieurs chaînes de protocole openssl séparées par deux points. Notez que toutes les chaînes de chiffrement ne sont pas sensibles à la casse.
+
+ La valeur par défaut est : 
+   &quot;TLS1.0:TLS1.1:TLS1.2&quot;
+
+ Cela signifie : TLS v1.0, TLS v1.1 et TLS v1.2 sont activés (SSL v2.0 et SSL v3.0 sont désactivés). 
+
+Ce paramètre s'applique à la fois à l'agent et au client. 
+
+S'il est défini des deux côtés, la règle de négociation du protocole OpenSSL est suivie.</string>
+			<string id="String_Policy_Configure_SSL_cipher_list_93" >Configurer la liste de chiffrements SSL</string>
+			<string id="String_Explain_Configures_SSL_cipher_list_94" >Configure la liste de chiffrements pour limiter l'utilisation de la suite de chiffrements avant l'établissement d'une connexion SSL chiffrée. La liste se compose d'une ou de plusieurs chaînes de la suite de chiffrement séparées par deux points. Notez que toutes les chaînes de chiffrement ne sont pas sensibles à la casse.
+
+La valeur par défaut est la suivante :
+   &quot;ECDHE-RSA-AES256-GCM-SHA384:AES256-SHA256:AES256-SHA:ECDHE-RSA-AES128-GCM-SHA256:AES128-SHA256:AES128-SHA:@STRENGTH&quot;
+
+Si l'élément est configuré, la case à cocher « Appliquer AES-256 ou des chiffrements plus forts pour la négociation des connexions SSL » de « Configurer des connexions SSL pour satisfaire les outils de sécurité » est ignorée.
+
+Ce paramètre doit être appliqué à la fois au serveur PCoIP et au client PCoIP.</string>
+			<string id="String_Policy_Configure_the_Client_95" >Configurer le port UDP PCoIP du client</string>
+			<string id="String_Explain_Specifies_the_UDP_96" >Spécifie le port client UDP utilisé par les clients PCoIP logiciels. Ce paramètre peut être configuré manuellement ou déterminé automatiquement par le système d'exploitation client. Ce paramètre ne s'applique qu'au client.
+
+Pour le configurer manuellement, entrez un port UDP et une plage du port de nouvelle tentative. La valeur du port UDP spécifie le port UDP de base à utiliser. La valeur de plage du port UDP détermine le nombre de ports supplémentaires à essayer si le port de base n'est pas disponible. La plage s'étend du port de base à la somme du port de base et de la plage du port. Par exemple, si le port de base est 50002 et que la plage du port est 64, la plage s'étend de 50002 à 50066. Par défaut, le port de base est 50002 et la plage du port est 64.
+
+Cocher la case « Autoriser le SE à déterminer automatiquement le port UDP » ordonne au SE client d'ignorer les valeurs définies manuellement et de choisir automatiquement un port UDP non utilisé par d'autres programmes.</string>
+			<string id="String_Policy_Configure_PCoIP_101" >Configurer des canaux virtuels PCoIP</string>
+			<string id="String_Explain_Specifies_the_virtual_102" >Spécifie les canaux virtuels qui peuvent et ne peuvent pas fonctionner sur des sessions PCoIP. Ce paramètre détermine également s'il est nécessaire de désactiver le traitement du Presse-papiers sur l'hôte PCoIP.
+
+Les canaux virtuels utilisés dans des sessions PCoIP doivent apparaître dans la liste d'autorisation des canaux virtuels. Les canaux virtuels qui apparaissent dans la liste des canaux virtuels interdits ne peuvent pas être utilisés dans des sessions PCoIP.
+
+Vous pouvez spécifier un maximum de 15 canaux virtuels à utiliser dans des sessions PCoIP.
+
+Séparez les noms de canal avec le caractère de barre verticale (|). Par exemple, la chaîne d'autorisation des canaux virtuels pour autoriser les canaux virtuels mksvchan et vdp_rdpvcbridge est mksvchan|vdp_rdpvcbridge.
+
+Si un nom de canal contient le caractère de barre verticale ou de barre oblique inverse (\), insérez un caractère de barre oblique inverse avant ce caractère. Par exemple, saisissez le nom de canal awk|ward\channel comme suit : awk\|ward\\channel.
+
+Lorsque la liste des canaux virtuels autorisés est vide, tous les canaux virtuels sont interdits. Lorsque la liste des canaux virtuels interdits est vide, tous les canaux virtuels sont autorisés.
+
+Le paramètre des canaux virtuels s'applique à la fois à l'agent et au client. Les canaux virtuels doivent être activés à la fois sur l'agent et le client pour pouvoir être utilisés.
+
+Le paramètre des canaux virtuels fournit une case séparée qui vous permet de désactiver le traitement du Presse-papiers à distance sur l'hôte PCoIP. Cette valeur ne s'applique qu'à l'agent.
+
+Par défaut, tous les canaux virtuels sont activés, notamment le traitement du Presse-papiers.</string>
+			<string id="String_Policy_DropList_Select_Configure_PCoIP_0_Disable_virtual_104" >0 - Désactiver les canaux virtuels dans les sessions PCoIP</string>
+			<string id="String_Policy_DropList_Select_Configure_PCoIP_2_Disable_all_105" >2 - Désactiver tous les canaux virtuels autres que</string>
+			<string id="String_Policy_DropList_Select_Configure_PCoIP_3_Enable_all_106" >3 - Activer tous les canaux virtuels autres que</string>
+			<string id="String_Policy_Configure_PCoIP_110" >Configurer la stratégie de taille du cache d'images client PCoIP</string>
+			<string id="String_Explain_Controls_the_size_111" >Contrôle la taille du cache d'images client PCoIP. Le client utilise une mise en cache d'images pour stocker des parties de l'affichage qui ont été précédemment transmises. La mise en cache d'images réduit la quantité de données qui sont retransmises.
+
+Ce paramètre ne s'applique qu'à des clients Windows et Linux lorsque View Client, View Agent et le Serveur de connexion View sont la version View 5.0 ou ultérieure.
+
+Lorsque ce paramètre n'est pas configuré ou qu'il est désactivé, PCoIP utilise une taille de cache d'images client par défaut de 250 Mo.
+
+Lorsque vous activez ce paramètre, vous pouvez configurer une taille de cache d'images client comprise entre 50 Mo minimum et 1 024 Mo maximum. La valeur par défaut est 250 Mo.</string>
+			<string id="String_Policy_Configure_the_PCoIP_114" >Configurer l'en-tête de transport PCoIP</string>
+			<string id="String_Explain_Configures_the_115" >Configure l'en-tête de transport PCoIP. 
+
+L'en-tête de transport PCoIP est un en-tête de 32 bits ajouté à tous les paquets UDP PCoIP (uniquement si l'en-tête de transport est activé/pris en charge des deux côtés). L'en-tête de transport PCoIP permet aux périphériques réseau de prendre de meilleures décisions concernant la hiérarchisation/qualité de service lors du traitement des surcharges du réseau. L'en-tête de transport est activé par défaut. 
+
+La priorité de session de transport détermine la priorité de session PCoIP signalée dans l'en-tête de transport PCoIP. Les périphériques réseau prennent de meilleures décisions concernant la hiérarchisation/qualité de service en fonction de la priorité de session de transport spécifiée. La valeur de priorité de session de transport est négociée par l'agent et le client PCoIP. Si l'agent a spécifié une valeur de priorité de session de transport (élevée, moyenne ou faible), la session utilise la priorité de session spécifiée par l'agent. Si seul le client a spécifié une priorité de session de transport (élevée, moyenne ou faible), la session utilise la priorité de session spécifiée par le client. Si aucun agent ou client n'a spécifié de priorité de session de transport (ou spécifié « priorité non définie »), la session utilise/est définie sur la priorité de session moyenne.</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_High_Priority_117" >Priorité élevée</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_Medium_Priority_118" >Priorité moyenne (par défaut)</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_Low_Priority_119" >Priorité faible</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_Undefined_Priority_120" >Priorité non définie</string>
+			<string id="String_Policy_Configure_PCoIP_122" >Configurer le niveau de détails du journal des événements PCoIP</string>
+			<string id="String_Explain_This_policy_enables_123" >Cette stratégie active la configuration du niveau de détails du journal des événements PCoIP compris entre 0 (niveau le plus faible) et 3 (niveau le plus élevé).
+
+Lorsque cette stratégie est Désactivé ou Non configuré, la valeur par défaut du niveau de détails du journal des événements est de 2. Lorsque cette stratégie est Configuré, le paramètre contrôle le niveau de détails comme décrit ci-dessus.
+
+Lorsque ce paramètre est modifié lors d'une session PCoIP active, la modification prend effet immédiatement.</string>
+			<string id="String_Policy_Configure_PCoIP_126" >Configurer le nettoyage du journal des événements PCoIP en fonction de la durée en jours</string>
+			<string id="String_Explain_This_policy_enables_127" >Cette stratégie active la configuration du nettoyage du journal des événements PCoIP en fonction de la durée en jours.
+
+Lorsque cette stratégie est Configuré, le paramètre contrôle le nettoyage du fichier journal en fonction de la durée en jours, c'est-à-dire pour un paramètre différent de zéro de n, les fichiers journaux antérieurs à n jours sont automatiquement (et en mode silencieux) supprimés ; un paramètre de 0 indique qu'il n'y a pas de nettoyage de fichier en fonction de la durée. Lorsque cette stratégie est Désactivé ou Non configuré, la valeur par défaut du nettoyage du journal des événements en fonction de la durée en jours est de 7. 
+
+Le nettoyage du fichier journal est exécuté une fois au démarrage de la session ; toute modification du paramètre sera appliquée lors de la prochaine session.</string>
+			<string id="String_Policy_Configure_PCoIP_130" >Configurer le nettoyage du journal des événements PCoIP en fonction de la taille en Mo</string>
+			<string id="String_Explain_This_policy_enables_131" >Cette stratégie active la configuration du nettoyage du journal des événements PCoIP en fonction de la taille en Mo.
+
+Lorsque cette stratégie est Configuré, le paramètre contrôle le nettoyage du fichier journal en fonction de la taille en Mo, c'est-à-dire pour un paramètre différent de zéro de m, les fichiers journaux supérieurs à m Mo sont automatiquement (et en mode silencieux) supprimés ; un paramètre de 0 indique qu'il n'y a pas de nettoyage de fichier en fonction de la taille. Lorsque cette stratégie est Désactivé ou Non configuré, la valeur par défaut du nettoyage du journal des événements en fonction de la taille en Mo est de 100. 
+
+Le nettoyage du fichier journal est exécuté une fois au démarrage de la session ; toute modification du paramètre sera appliquée lors de la prochaine session.</string>
+			<string id="String_Policy_Configure_the_maximum_134" >Configurer la bande passante maximale de la session PCoIP</string>
+			<string id="String_Explain_Specifies_the_maximum_135" >Spécifie la bande passante maximale, en kilobits par seconde, dans une session PCoIP. La bande passante inclut la création d'images, le son, le canal virtuel, USB et le trafic PCoIP de contrôle.
+
+Définissez cette valeur en fonction de la capacité globale du lien auquel votre point de terminaison est connecté, en tenant compte du nombre de sessions PCoIP simultanées prévues. Par exemple, avec une configuration VDI à un seul utilisateur (par exemple, une session PCoIP unique) qui se connecte au moyen d'une connexion Internet 4 Mbit/s, définissez cette valeur sur 4 Mbit (ou 10 % de moins que cette valeur pour prévoir un autre trafic réseau). Lorsque vous souhaitez que plusieurs sessions PCoIP simultanées partagent un lien (par exemple, plusieurs utilisateurs VDI ou une configuration RDSH), vous voulez peut-être ajuster le paramètre en conséquence. Toutefois, cela limite la bande passante maximale pour chaque session active.
+
+La définition de cette valeur empêche l'agent de tenter de transmettre un débit supérieur à la capacité de lien, ce qui pourrait entraîner une perte de paquets excessive et une mauvaise expérience utilisateur. Cette valeur est symétrique. Elle force le client et l'agent à utiliser la plus faible des deux valeurs qui sont définies côté client et agent. Par exemple, la définition d'une bande passante maximale de 4 Mbit/s force l'agent à transmettre à un débit plus faible, même si le paramètre est configuré sur le client.
+
+Lorsque ce paramètre est désactivé ou qu'il n'est pas configuré sur un point de terminaison, le point de terminaison n'impose aucune contrainte de bande passante. Lorsque ce paramètre est configuré, il est utilisé comme la contrainte de bande passante maximale du point de terminaison en kilobits par seconde.
+
+La valeur par défaut lorsque ce paramètre n'est pas configuré est de 900 000 kilobits par seconde.
+
+Ce paramètre s'applique à l'agent et au client. Si les deux points de terminaison ont des paramètres différents, la valeur la plus faible est utilisée.</string>
+			<string id="String_Policy_Configure_the_PCoIP_138" >Configurer la MTU de la session PCoIP</string>
+			<string id="String_Explain_Specifies_the_Maximum_139" >Spécifie la taille de l'unité de transmission maximale (MTU) pour les paquets UDP d'une session PCoIP.
+
+La taille de la MTU inclut les en-têtes de paquet IP et UDP. Le protocole TCP utilise le mécanisme de découverte MTU standard pour définir la MTU et n'est pas affecté par ce paramètre. La taille de la MTU maximale est de 1 500 octets. La taille de la MTU minimale est de 500 octets. La valeur par défaut est de 1 200 octets.
+
+En général, vous n'avez pas à modifier la taille de la MTU. Modifiez cette valeur si vous avez une configuration de réseau inhabituelle qui provoque une fragmentation de paquets PCoIP.
+
+Ce paramètre s'applique au serveur et au client. Si les deux points de terminaison ont des paramètres de taille de MTU différents, la valeur la plus faible est utilisée.
+
+Si ce paramètre est désactivé ou qu'il n'est pas configuré, le client utilise la valeur par défaut dans la négociation avec le serveur.</string>
+			<string id="String_Policy_Configure_the_PCoIP_142" >Configurer la valeur plancher de la bande passante de la session PCoIP</string>
+			<string id="String_Explain_Specifies_a_lower_143" >Spécifie une limite inférieure, en kilobits par seconde, pour la bande passante réservée par la session PCoIP.
+
+Ce paramètre configure le taux de transmission de bande passante minimal attendu pour le point de terminaison. Lorsque vous utilisez ce paramètre pour réserver de la bande passante pour un point de terminaison, la session n'a pas à attendre que la bande passante soit disponible, ce qui améliore la réactivité de la session.
+
+Assurez-vous que vous ne sursouscrivez pas la bande passante totale réservée pour tous les points de terminaison. Assurez-vous que la somme des valeurs plancher de la bande passante pour toutes les connexions dans votre configuration ne dépasse pas la capacité du réseau.
+
+La valeur par défaut est 0, ce qui signifie qu'aucune bande passante minimale n'est réservée. Lorsque ce paramètre est désactivé ou qu'il n'est pas configuré, aucune bande passante minimale n'est réservée.
+
+Ce paramètre s'applique au serveur et au client, mais le paramètre n'affecte que le point de terminaison sur lequel il est configuré.
+
+Lorsque ce paramètre est modifié lors d'une session PCoIP active, la modification prend effet immédiatement.</string>
+			<string id="String_Policy_Enable_disable_146" >Activer/désactiver le son dans la session PCoIP</string>
+			<string id="String_Explain_Determines_whether_147" >Détermine si le son est activé dans des sessions PCoIP. Le son doit être activé sur les deux points de terminaison. Lorsque ce paramètre est activé, le son PCoIP est autorisé. Lorsqu'il est désactivé, le son PCoIP est désactivé. Lorsque ce paramètre n'est pas configuré, le son est activé par défaut.
+
+</string>
+			<string id="String_Policy_Configure_SSL_connections_149" >Configurer des connexions SSL pour satisfaire les outils de sécurité</string>
+			<string id="String_Explain_Specifies_how_SSL_150" >Spécifie comment les connexions de négociation de la session SSL sont établies.
+
+Pour satisfaire les scanners de port, activez le paramètre « Configurer des connexions SSL » et procédez comme suit :
+
+1. Stockez le certificat pour l'autorité de certification qui a signé un certificat de serveur à utiliser avec PCoIP dans le magasin de certificats racines approuvés.
+2. Configurez l'agent pour charger des certificats uniquement à partir du magasin de certificats. Si le magasin personnel de la machine locale est utilisé, laissez le nom du magasin de certificats d'autorité de certification avec la valeur « ROOT » (sans les guillemets), sauf si un emplacement de magasin différent a été utilisé dans l'étape 1.
+
+Le client PCoIP Client résultant répond aux outils de sécurité, tels que les scanners de port.
+
+Si ce paramètre « Configurer des connexions SSL » est désactivé ou n'est pas configuré :
+
+1. Le point de terminaison utilise des certificats d'autorité de certification du magasin « MY » du compte de machine et des certificats d'autorité de certification du magasin « ROOT ».
+2. La suite de chiffrement AES-128 est disponible.</string>
+			<string id="String_Policy_Configure_PCoIP_155" >Configurer des algorithmes de chiffrement de la session PCoIP</string>
+			<string id="String_Explain_Controls_the_encryption_156" >Contrôle les algorithmes de chiffrement annoncés par le point de terminaison PCoIP lors de la négociation de session.
+
+Cocher l'une des cases désactive l'algorithme de chiffrement associé. Vous devez activer au moins un algorithme.
+
+Ce paramètre s'applique à la fois à l'agent et au client. Les points de terminaison négocient l'algorithme de chiffrement de session réel qui est utilisé. Si le mode approuvé FIPS140-2 est activé, la valeur Désactiver le chiffrement AES-128-GCM sera remplacée si les chiffrements AES-128-GCM et AES-256-GCM sont désactivés.
+
+Si le paramètre « Configurer des connexions SSL » global est désactivé ou n'est pas configuré, les deux algorithmes Salsa20-256round12 et AES-128-GCM sont disponibles pour la négociation par ce point de terminaison.
+
+Les algorithmes de chiffrement pris en charge, par ordre de préférence, sont SALSA20/12-256, AES-GCM-128 et AES-GCM-256. Par défaut, tous les algorithmes de chiffrement pris en charge sont disponibles à la négociation à partir de ce point de terminaison. 
+
+Si les deux points de terminaison sont configurés pour prendre en charge ces 3 algorithmes et que la connexion n'utilise pas de passerelle de sécurité, l'algorithme SALSA20 est négocié et utilisé. En revanche, si la connexion utilise une passerelle de sécurité, l'algorithme SALSA20 est désactivé automatiquement et c'est l'algorithme AES128 qui est négocié et utilisé. Si l'un des points de terminaison ou la passerelle de sécurité désactive l'algorithme SALSA20 et que l'un des points de terminaison désactive l'algorithme AES128, c'est l'algorithme AES256 qui est alors négocié et utilisé.</string>
+			<string id="String_Policy_Configure_SSL_protocols_161" >Configurer des protocoles SSL</string>
+			<string id="String_Explain_Configures_openssl_162" >Configure le protocole openssl pour limiter l'utilisation de certains protocoles avant l'établissement d'une connexion SSL chiffrée. La liste de protocoles est composée d'une ou de plusieurs chaînes de protocole openssl séparées par deux points. Notez que toutes les chaînes de chiffrement ne sont pas sensibles à la casse.
+
+ La valeur par défaut est : 
+   &quot;TLS1.0:TLS1.1:TLS1.2&quot;
+
+ Cela signifie : TLS v1.0, TLS v1.1 et TLS v1.2 sont activés (SSL v2.0 et SSL v3.0 sont désactivés). 
+
+Ce paramètre s'applique à la fois à l'agent et au client. 
+
+S'il est défini des deux côtés, la règle de négociation du protocole OpenSSL est suivie.</string>
+			<string id="String_Policy_Configure_SSL_cipher_list_163" >Configurer la liste de chiffrements SSL</string>
+			<string id="String_Explain_Configures_SSL_cipher_list_164" >Configure la liste de chiffrements pour limiter l'utilisation de la suite de chiffrements avant l'établissement d'une connexion SSL chiffrée. La liste se compose d'une ou de plusieurs chaînes de la suite de chiffrement séparées par deux points. Notez que toutes les chaînes de chiffrement ne sont pas sensibles à la casse.
+
+La valeur par défaut est la suivante :
+   &quot;ECDHE-RSA-AES256-GCM-SHA384:AES256-SHA256:AES256-SHA:ECDHE-RSA-AES128-GCM-SHA256:AES128-SHA256:AES128-SHA:@STRENGTH&quot;
+
+Si l'élément est configuré, la case à cocher « Appliquer AES-256 ou des chiffrements plus forts pour la négociation des connexions SSL » de « Configurer des connexions SSL pour satisfaire les outils de sécurité » est ignorée.
+
+Ce paramètre doit être appliqué à la fois au serveur PCoIP et au client PCoIP.</string>
+			<string id="String_Policy_Configure_the_Client_165" >Configurer le port UDP PCoIP du client</string>
+			<string id="String_Explain_Specifies_the_UDP_166" >Spécifie le port client UDP utilisé par les clients PCoIP logiciels. Ce paramètre peut être configuré manuellement ou déterminé automatiquement par le système d'exploitation client. Ce paramètre ne s'applique qu'au client.
+
+Pour le configurer manuellement, entrez un port UDP et une plage du port de nouvelle tentative. La valeur du port UDP spécifie le port UDP de base à utiliser. La valeur de plage du port UDP détermine le nombre de ports supplémentaires à essayer si le port de base n'est pas disponible. La plage s'étend du port de base à la somme du port de base et de la plage du port. Par exemple, si le port de base est 50002 et que la plage du port est 64, la plage s'étend de 50002 à 50066. Par défaut, le port de base est 50002 et la plage du port est 64.
+
+Cocher la case « Autoriser le SE à déterminer automatiquement le port UDP » ordonne au SE client d'ignorer les valeurs définies manuellement et de choisir automatiquement un port UDP non utilisé par d'autres programmes.</string>
+			<string id="String_Policy_Configure_PCoIP_171" >Configurer des canaux virtuels PCoIP</string>
+			<string id="String_Explain_Specifies_the_virtual_172" >Spécifie les canaux virtuels qui peuvent et ne peuvent pas fonctionner sur des sessions PCoIP. Ce paramètre détermine également s'il est nécessaire de désactiver le traitement du Presse-papiers sur l'hôte PCoIP.
+
+Les canaux virtuels utilisés dans des sessions PCoIP doivent apparaître dans la liste d'autorisation des canaux virtuels. Les canaux virtuels qui apparaissent dans la liste des canaux virtuels interdits ne peuvent pas être utilisés dans des sessions PCoIP.
+
+Vous pouvez spécifier un maximum de 15 canaux virtuels à utiliser dans des sessions PCoIP.
+
+Séparez les noms de canal avec le caractère de barre verticale (|). Par exemple, la chaîne d'autorisation des canaux virtuels pour autoriser les canaux virtuels mksvchan et vdp_rdpvcbridge est mksvchan|vdp_rdpvcbridge.
+
+Si un nom de canal contient le caractère de barre verticale ou de barre oblique inverse (\), insérez un caractère de barre oblique inverse avant ce caractère. Par exemple, saisissez le nom de canal awk|ward\channel comme suit : awk\|ward\\channel.
+
+Lorsque la liste des canaux virtuels autorisés est vide, tous les canaux virtuels sont interdits. Lorsque la liste des canaux virtuels interdits est vide, tous les canaux virtuels sont autorisés.
+
+Le paramètre des canaux virtuels s'applique à la fois à l'agent et au client. Les canaux virtuels doivent être activés à la fois sur l'agent et le client pour pouvoir être utilisés.
+
+Le paramètre des canaux virtuels fournit une case séparée qui vous permet de désactiver le traitement du Presse-papiers à distance sur l'hôte PCoIP. Cette valeur ne s'applique qu'à l'agent.
+
+Par défaut, tous les canaux virtuels sont activés, notamment le traitement du Presse-papiers.</string>
+			<string id="String_Policy_DropList_Select_Configure_PCoIP_0_Disable_virtual_174" >0 - Désactiver les canaux virtuels dans les sessions PCoIP</string>
+			<string id="String_Policy_DropList_Select_Configure_PCoIP_2_Disable_all_175" >2 - Désactiver tous les canaux virtuels autres que</string>
+			<string id="String_Policy_DropList_Select_Configure_PCoIP_3_Enable_all_176" >3 - Activer tous les canaux virtuels autres que</string>
+			<string id="String_Policy_Configure_PCoIP_180" >Configurer la stratégie de taille du cache d'images client PCoIP</string>
+			<string id="String_Explain_Controls_the_size_181" >Contrôle la taille du cache d'images client PCoIP. Le client utilise une mise en cache d'images pour stocker des parties de l'affichage qui ont été précédemment transmises. La mise en cache d'images réduit la quantité de données qui sont retransmises.
+
+Ce paramètre ne s'applique qu'à des clients Windows et Linux lorsque View Client, View Agent et le Serveur de connexion View sont la version View 5.0 ou ultérieure.
+
+Lorsque ce paramètre n'est pas configuré ou qu'il est désactivé, PCoIP utilise une taille de cache d'images client par défaut de 250 Mo.
+
+Lorsque vous activez ce paramètre, vous pouvez configurer une taille de cache d'images client comprise entre 50 Mo minimum et 1 024 Mo maximum. La valeur par défaut est 250 Mo.</string>
+			<string id="String_Policy_Configure_the_PCoIP_184" >Configurer l'en-tête de transport PCoIP</string>
+			<string id="String_Explain_Configures_the_185" >Configure l'en-tête de transport PCoIP. 
+
+L'en-tête de transport PCoIP est un en-tête de 32 bits ajouté à tous les paquets UDP PCoIP (uniquement si l'en-tête de transport est activé/pris en charge des deux côtés). L'en-tête de transport PCoIP permet aux périphériques réseau de prendre de meilleures décisions concernant la hiérarchisation/qualité de service lors du traitement des surcharges du réseau. L'en-tête de transport est activé par défaut. 
+
+La priorité de session de transport détermine la priorité de session PCoIP signalée dans l'en-tête de transport PCoIP. Les périphériques réseau prennent de meilleures décisions concernant la hiérarchisation/qualité de service en fonction de la priorité de session de transport spécifiée. La valeur de priorité de session de transport est négociée par l'agent et le client PCoIP. Si l'agent a spécifié une valeur de priorité de session de transport (élevée, moyenne ou faible), la session utilise la priorité de session spécifiée par l'agent. Si seul le client a spécifié une priorité de session de transport (élevée, moyenne ou faible), la session utilise la priorité de session spécifiée par le client. Si aucun agent ou client n'a spécifié de priorité de session de transport (ou spécifié « priorité non définie »), la session utilise/est définie sur la priorité de session moyenne.</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_High_Priority_187" >Priorité élevée</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_Medium_Priority_188" >Priorité moyenne (par défaut)</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_Low_Priority_189" >Priorité faible</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_Undefined_Priority_190" >Priorité non définie</string>
+			<string id="String_Policy_Configure_PCoIP_192" >Configurer le niveau de détails du journal des événements PCoIP</string>
+			<string id="String_Explain_This_policy_enables_193" >Cette stratégie active la configuration du niveau de détails du journal des événements PCoIP compris entre 0 (niveau le plus faible) et 3 (niveau le plus élevé).
+
+Lorsque cette stratégie est Désactivé ou Non configuré, la valeur par défaut du niveau de détails du journal des événements est de 2. Lorsque cette stratégie est Configuré, le paramètre contrôle le niveau de détails comme décrit ci-dessus.
+
+Lorsque ce paramètre est modifié lors d'une session PCoIP active, la modification prend effet immédiatement.</string>
+			<string id="String_Policy_Configure_PCoIP_196" >Configurer le nettoyage du journal des événements PCoIP en fonction de la durée en jours</string>
+			<string id="String_Explain_This_policy_enables_197" >Cette stratégie active la configuration du nettoyage du journal des événements PCoIP en fonction de la durée en jours.
+
+Lorsque cette stratégie est Configuré, le paramètre contrôle le nettoyage du fichier journal en fonction de la durée en jours, c'est-à-dire pour un paramètre différent de zéro de n, les fichiers journaux antérieurs à n jours sont automatiquement (et en mode silencieux) supprimés ; un paramètre de 0 indique qu'il n'y a pas de nettoyage de fichier en fonction de la durée. Lorsque cette stratégie est Désactivé ou Non configuré, la valeur par défaut du nettoyage du journal des événements en fonction de la durée en jours est de 7. 
+
+Le nettoyage du fichier journal est exécuté une fois au démarrage de la session ; toute modification du paramètre sera appliquée lors de la prochaine session.</string>
+			<string id="String_Policy_Configure_PCoIP_200" >Configurer le nettoyage du journal des événements PCoIP en fonction de la taille en Mo</string>
+			<string id="String_Explain_This_policy_enables_201" >Cette stratégie active la configuration du nettoyage du journal des événements PCoIP en fonction de la taille en Mo.
+
+Lorsque cette stratégie est Configuré, le paramètre contrôle le nettoyage du fichier journal en fonction de la taille en Mo, c'est-à-dire pour un paramètre différent de zéro de m, les fichiers journaux supérieurs à m Mo sont automatiquement (et en mode silencieux) supprimés ; un paramètre de 0 indique qu'il n'y a pas de nettoyage de fichier en fonction de la taille. Lorsque cette stratégie est Désactivé ou Non configuré, la valeur par défaut du nettoyage du journal des événements en fonction de la taille en Mo est de 100. 
+
+Le nettoyage du fichier journal est exécuté une fois au démarrage de la session ; toute modification du paramètre sera appliquée lors de la prochaine session.</string>
+		</stringTable>
+		<presentationTable ><!--Storage for Presentation Definitions-->
+
+			<presentation id="Policy_Configure_the_maximum_63" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_maximum_66" spinStep="100" spin="true" defaultValue="900000" >Définissez la bande passante de la session PCoIP en kilobits par seconde sur :</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_67" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_PCoIP_70" spinStep="1" spin="true" defaultValue="1200" >Définissez la taille MTU PCoIP en octets sur :</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_71" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_PCoIP_74" spinStep="1" spin="true" defaultValue="0" >Définissez la valeur plancher de la bande passante de la session PCoIP en kilobits par seconde sur :</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_SSL_connections_78" >
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_connections_81" >
+					<label >Nom du magasin de certificats du compte de la machine pour rechercher un certificat :</label>
+					<defaultValue >MY</defaultValue>
+				</textBox>
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_connections_82" >
+					<label >Nom du magasin de certificats du compte de la machine pour rechercher un certificat de l'autorité de certification :</label>
+					<defaultValue >ROOT</defaultValue>
+				</textBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_SSL_connections_83" >Appliquer AES-256 ou des chiffrements plus forts pour la négociation des connexions SSL</checkBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_84" >
+				<text >Au moins un algorithme de chiffrement doit être activé. (Voir l'explication)</text>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_87" >Désactiver le chiffrement Salsa20-256-round12</checkBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_88" >Désactiver le chiffrement AES-128-GCM</checkBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_89" >Désactiver le chiffrement AES-256-GCM</checkBox>
+			</presentation>
+			<presentation id="Policy_Configure_SSL_protocols_90" >
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_protocols_93" >
+					<label >Configurer des protocoles SSL</label>
+					<defaultValue >TLS1.0:TLS1.1:TLS1.2</defaultValue>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Configure_SSL_cipher_list_91" >
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_cipher_list_94" >
+					<label >Configurer la liste de chiffrements SSL</label>
+					<defaultValue >ECDHE-RSA-AES256-GCM-SHA384:AES256-SHA256:AES256-SHA:ECDHE-RSA-AES128-GCM-SHA256:AES128-SHA256:AES128-SHA:@STRENGTH</defaultValue>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_Client_94" >
+				<text >Définissez un port UDP et la taille de la plage de nouvelle tentative.</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_Client_97" spinStep="1" spin="true" defaultValue="50002" >Choisir un port UDP :</decimalTextBox>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_Client_98" spinStep="1" spin="true" defaultValue="64" >Définissez la taille de la plage du port de nouvelle tentative :</decimalTextBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_the_Client_99" >Autoriser le SE à déterminer automatiquement le port UDP</checkBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_100" >
+				<dropdownList refId="Policy_DropList_Element_Configure_PCoIP_103" defaultItem="0" >Paramètre de canal virtuel :</dropdownList>
+				<text >Le paramètre suivant n'est requis et applicable que si 2 est sélectionné.</text>
+				<text >Consultez l'onglet Explication pour voir les formats des chaînes et des exemples.</text>
+				<textBox refId="Policy_TextBox_Element_Configure_PCoIP_107" >
+					<label >Entrer la liste des canaux virtuels autorisés :</label>
+				</textBox>
+				<text >Le paramètre suivant n'est requis et applicable que si 3 est sélectionné.</text>
+				<text >Consultez l'onglet Explication pour voir les formats des chaînes et des exemples.</text>
+				<textBox refId="Policy_TextBox_Element_Configure_PCoIP_108" >
+					<label >Entrer la liste des canaux virtuels interdits :</label>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_109" >
+				<text >Consultez l'onglet Explication pour voir l'explication de la mise en cache d'images et des valeurs.</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_112" spinStep="50" spin="true" defaultValue="250" >Définissez la taille du cache d'images en mégaoctets (par défaut 250 Mo) :</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_113" >
+				<dropdownList refId="Policy_DropList_Element_Configure_the_PCoIP_116" defaultItem="3" >Priorité de session de transport</dropdownList>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_121" >
+				<text >Consultez l'onglet Explication pour voir des exemples de valeur.</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_124" spinStep="1" spin="true" defaultValue="2" >Définissez la valeur du niveau de détails du journal des événements (2 par défaut) :</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_125" >
+				<text >Consultez l'onglet Explication pour voir des exemples de valeur.</text>
+				<text >Définissez la valeur du nettoyage du journal des événements en fonction de la durée en jours (7 par défaut, 0 pour aucun</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_128" spinStep="1" spin="true" defaultValue="7" >nettoyage en fonction de la durée) :</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_129" >
+				<text >Consultez l'onglet Explication pour voir des exemples de valeur.</text>
+				<text >Définissez la valeur du nettoyage du journal des événements en fonction de la taille en Mo (100 par défaut, 0 pour aucun</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_132" spinStep="1" spin="true" defaultValue="100" >nettoyage en fonction de la taille) :</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_maximum_133" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_maximum_136" spinStep="100" spin="true" defaultValue="900000" >Définissez la bande passante de la session PCoIP en kilobits par seconde sur :</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_137" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_PCoIP_140" spinStep="1" spin="true" defaultValue="1200" >Définissez la taille MTU PCoIP en octets sur :</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_141" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_PCoIP_144" spinStep="1" spin="true" defaultValue="0" >Définissez la valeur plancher de la bande passante de la session PCoIP en kilobits par seconde sur :</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_SSL_connections_148" >
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_connections_151" >
+					<label >Nom du magasin de certificats du compte de la machine pour rechercher un certificat :</label>
+					<defaultValue >MY</defaultValue>
+				</textBox>
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_connections_152" >
+					<label >Nom du magasin de certificats du compte de la machine pour rechercher un certificat de l'autorité de certification :</label>
+					<defaultValue >ROOT</defaultValue>
+				</textBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_SSL_connections_153" >Appliquer AES-256 ou des chiffrements plus forts pour la négociation des connexions SSL</checkBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_154" >
+				<text >Au moins un algorithme de chiffrement doit être activé. (Voir l'explication)</text>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_157" >Désactiver le chiffrement Salsa20-256-round12</checkBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_158" >Désactiver le chiffrement AES-128-GCM</checkBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_159" >Désactiver le chiffrement AES-256-GCM</checkBox>
+			</presentation>
+			<presentation id="Policy_Configure_SSL_protocols_160" >
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_protocols_163" >
+					<label >Configurer des protocoles SSL</label>
+					<defaultValue >TLS1.0:TLS1.1:TLS1.2</defaultValue>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Configure_SSL_cipher_list_161" >
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_cipher_list_164" >
+					<label >Configurer la liste de chiffrements SSL</label>
+					<defaultValue >ECDHE-RSA-AES256-GCM-SHA384:AES256-SHA256:AES256-SHA:ECDHE-RSA-AES128-GCM-SHA256:AES128-SHA256:AES128-SHA:@STRENGTH</defaultValue>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_Client_164" >
+				<text >Définissez un port UDP et la taille de la plage de nouvelle tentative.</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_Client_167" spinStep="1" spin="true" defaultValue="50002" >Choisir un port UDP :</decimalTextBox>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_Client_168" spinStep="1" spin="true" defaultValue="64" >Définissez la taille de la plage du port de nouvelle tentative :</decimalTextBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_the_Client_169" >Autoriser le SE à déterminer automatiquement le port UDP</checkBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_170" >
+				<dropdownList refId="Policy_DropList_Element_Configure_PCoIP_173" defaultItem="0" >Paramètre de canal virtuel :</dropdownList>
+				<text >Le paramètre suivant n'est requis et applicable que si 2 est sélectionné.</text>
+				<text >Consultez l'onglet Explication pour voir les formats des chaînes et des exemples.</text>
+				<textBox refId="Policy_TextBox_Element_Configure_PCoIP_177" >
+					<label >Entrer la liste des canaux virtuels autorisés :</label>
+				</textBox>
+				<text >Le paramètre suivant n'est requis et applicable que si 3 est sélectionné.</text>
+				<text >Consultez l'onglet Explication pour voir les formats des chaînes et des exemples.</text>
+				<textBox refId="Policy_TextBox_Element_Configure_PCoIP_178" >
+					<label >Entrer la liste des canaux virtuels interdits :</label>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_179" >
+				<text >Consultez l'onglet Explication pour voir l'explication de la mise en cache d'images et des valeurs.</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_182" spinStep="50" spin="true" defaultValue="250" >Définissez la taille du cache d'images en mégaoctets (par défaut 250 Mo) :</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_183" >
+				<dropdownList refId="Policy_DropList_Element_Configure_the_PCoIP_186" defaultItem="3" >Priorité de session de transport</dropdownList>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_191" >
+				<text >Consultez l'onglet Explication pour voir des exemples de valeur.</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_194" spinStep="1" spin="true" defaultValue="2" >Définissez la valeur du niveau de détails du journal des événements (2 par défaut) :</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_195" >
+				<text >Consultez l'onglet Explication pour voir des exemples de valeur.</text>
+				<text >Définissez la valeur du nettoyage du journal des événements en fonction de la durée en jours (7 par défaut, 0 pour aucun</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_198" spinStep="1" spin="true" defaultValue="7" >nettoyage en fonction de la durée) :</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_199" >
+				<text >Consultez l'onglet Explication pour voir des exemples de valeur.</text>
+				<text >Définissez la valeur du nettoyage du journal des événements en fonction de la taille en Mo (100 par défaut, 0 pour aucun</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_202" spinStep="1" spin="true" defaultValue="100" >nettoyage en fonction de la taille) :</decimalTextBox>
+			</presentation>
+		</presentationTable>
+	</resources>
+</policyDefinitionResources>
+

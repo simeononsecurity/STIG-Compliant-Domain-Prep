@@ -424,7 +424,7 @@ Default: Block Forwarding</string>
 
          <string id="SetVMWMediaProviderProxyForceNonOptimizedEnvVar">Force Skype for Business in non-optimized mode</string>
 
-         <string id="SetVMWMediaProviderProxyForceNonOptimizedEnvVar_Desc">You can force Skype for Business to run in the non-optimized mode for Horizon Client connections by setting the name of environment variable that will be present at connection time on the machine where Horizon Agent is installed. If the variable name is set, Virtualization Pack for Skype for Business reverts to fallback mode. For example if ViewClient_F5_APM environment variable is set on the Remote Desktop Agent machine when the Horizon Client machine connects from outside the network using F5 load balancer and you want to force non-optimized mode, set this value to be ViewClient_F5_APM. This policy is not configured by default.</string>
+         <string id="SetVMWMediaProviderProxyForceNonOptimizedOptions_Desc">You can force Skype for Business to run in the non-optimized mode for Horizon Client connections by automatically detecting external connections. Connections are determined to be external when Horizon Client connects via an external gateway. In this scenario, environment variables “ViewClient_Broker_GatewayType” is present and “ViewClient_Broker_GatewayLocation” is set to external. If "Automatically detect external connections" is set, Virtualization Pack for Skype for Business reverts to fallback mode if the connection is determined to be external.&#10;&#10;You can also force Skype for Business to run in the non-optimized mode for Horizon Client connections by setting the name of environment variable that will be present at connection time on the machine where Horizon Agent is installed. If the variable name is set, Virtualization Pack for Skype for Business reverts to fallback mode. For example, if “ViewClient_F5_APM” environment variable is set on the remote desktop agent machine when the Horizon Client machine connects from outside the network using F5 load balancer and you want to force non-optimized mode, set this value to be ViewClient_F5_APM.&#10;&#10;Virtualization Pack for Skype for Business reverts to fallback mode if either of the settings are configured and conditions satisfied.&#10;&#10;This policy is not configured by default. </string>
 
          <string id="EnableDetectProxySettings">EnableDetectProxySettings</string>
 
@@ -472,7 +472,7 @@ Default: Block Forwarding</string>
 
          <string id="Enable_HTML5_FEATURES">Enable VMware HTML5 Features</string>
 
-         <string id="Enable_HTML5_FEATURES_Desc">Enable VMware HTML5 Features. It is required that the policy is set to "Enabled" to use VMware HTML5 Multimedia Redirection, Geolocation Redirection or Browser Redirection features. The setting takes effect at next logon.</string>
+         <string id="Enable_HTML5_FEATURES_Desc">Enable VMware HTML5 Features. It is required that the policy is set to "Enabled" or "Not Configured" to use VMware HTML5 Multimedia Redirection, Geolocation Redirection, Browser Redirection, or Media Optimization for Microsoft Teams.  If this policy is set to "Disabled", none of the VMware HTML5 features can be used. The setting takes effect at next logon.</string>
 
          <string id="HTML5FEATURES_Disable_AudoDetect_Intranet">Disable Automatically Detect Intranet</string>
 
@@ -494,9 +494,13 @@ Note: It is required that this policy is "Enabled" when (1) Edge browser is enab
 
          <string id="HTML5MMR_Enable_Chrome_Desc">This policy is only used when the VMware HTML5 Multimedia Redirection is "enabled". If not configured, the default value will be the same as the "Enable VMware HTML5 Multimedia Redirection" enablement.</string>
 
-         <string id="HTML5MMR_Enable_Edge">Enable Edge Browser for VMware HTML5 Multimedia Redirection</string>
+         <string id="HTML5MMR_Enable_Edge">Enable legacy version of Microsoft Edge Browser for VMware HTML5 Multimedia Redirection</string>
 
          <string id="HTML5MMR_Enable_Edge_Desc">This policy is only used when the VMware HTML5 Multimedia Redirection is "enabled". If not configured, the default value will be the same as the "Enable VMware HTML5 Multimedia Redirection" enablement. </string>
+
+         <string id="HTML5MMR_Enable_Edge_Chromium">Enable Microsoft Edge (Chromium) Browser for VMware HTML5 Multimedia Redirection</string>
+
+         <string id="HTML5MMR_Enable_Edge_Chromium_Desc">This policy is only used when the VMware HTML5 Multimedia Redirection is "enabled". If not configured, the default value will be the same as the "Enable VMware HTML5 Multimedia Redirection" enablement. </string>
 
          <string id="VMware_GEO_REDIR">VMware Geolocation Redirection</string>
 
@@ -550,6 +554,10 @@ If "Disabled", acoustic echo cancellation is disabled in software irrespective o
 
 If "Not Configured", acoustic echo cancellation is enabled in software whenever acoustic echo cancellation is not available in hardware.</string>
 
+         <string id="Enable_Sharing_Client_Screen_InAppSession">Enable sharing the client desktop screen while remoting the Microsoft Teams application in application sharing mode.</string>
+
+         <string id="Enable_Sharing_Client_Screen_InAppSession_Desc">While remoting the Microsoft Teams application, the screen share feature will share the client desktop screen instead of the remote desktop screen. Select "Disabled" to disable the screen share feature in application sharing mode. If you select "Not Configured", the screen share will share the client desktop screen by default.</string>
+
          <string id="VMware_DeviceBridge">VMware Device Bridge</string>
 
          <string id="Disable_DeviceBridge_BAS">Disable Device Bridge BAS Plugin</string>
@@ -601,6 +609,22 @@ For example, selecting "Never" here will prevent a disconnected session (on this
          <string id="TIME_8HR">8 hours</string>
 
          <string id="TIME_10HR">10 hours</string>
+
+         <string id="TIME_12HR">12 hours</string>
+
+         <string id="TIME_18HR">18 hours</string>
+
+         <string id="TIME_1D">1 day</string>
+
+         <string id="TIME_2D">2 days</string>
+
+         <string id="TIME_3D">3 days</string>
+
+         <string id="TIME_4D">4 days</string>
+
+         <string id="TIME_5D">5 days</string>
+
+         <string id="TIME_1W">1 week</string>
 
          <string id="TIME_IMMEDIATELY">Immediately</string>
 
@@ -804,7 +828,8 @@ For example, selecting "Never" here will prevent a disconnected session (on this
             <listBox refId="BrowserRedirNavUrlList_list">The url list to enable navigation for the VMware Browser Redirection feature.</listBox>
          </presentation>
 
-         <presentation id="SetForceNonOptimizedEnvVar">
+         <presentation id="SetForceNonOptimizedOptions">
+            <checkBox refId="AUTO_DETECT_EXTERNAL_CONNECTIONS_CHKBOX">Automatically detect external connections</checkBox>
             <textBox refId="SetForceNonOptimizedEnvVar_TB">
                <label>The name of environment variable:</label>
             </textBox>

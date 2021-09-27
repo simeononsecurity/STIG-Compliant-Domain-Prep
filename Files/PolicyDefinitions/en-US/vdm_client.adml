@@ -180,6 +180,7 @@ Note: If the login fails on account of incorrect login information being entered
       <string id="SingleAutoConnect">Automatically connect if only one launch item is entitled</string>
       <string id="SingleAutoConnectExplain">Automatically connect to the desktop or app if it is the only one entitled for the login user.</string>
       <string id="VMwareViewClientSecurity">Security Settings</string>
+      <string id="VMwareViewClientSecurityNTLM">NTLM Settings</string>
       <string id="LogInAsCurrentUser_Display">Display option to Log in as current user</string>
       <string id="LogInAsCurrentUser_DisplayExplain">Determines if the Log in as current user checkbox is visible in the Windows Horizon Client.
 
@@ -197,12 +198,25 @@ This setting is enabled by default.</string>
       <string id="BrokersTrustedForDelegation">Servers Trusted For Delegation</string>
       <string id="BrokersTrustedForDelegationExplain">Sets the list of View Connection Servers that are allowed to have credentials delegated to them. This is used with 'Log in as current user'.
 
-By default all servers are trusted.
+The naming format for servers is Service Principal Name(SPN).
 
-You can add servers using any of 3 different formats:
-domain\system$
-system$@domain.dom
-SPN (Service Principal Name).</string>
+By default all servers are trusted.</string>
+      <string id="AllowNTLMAuthentication">Allow NTLM Authentication</string>
+      <string id="AllowFallBack_YES">Yes</string>
+      <string id="AllowFallBack_NO">No</string>
+      <string id="AllowNTLMAuthenticationExplain">When this setting is enabled, NTLM Authentication is allowed with Log in as current user.
+
+If 'Not Configured', NTLM Authentication will be allowed for servers listed in GPO: 'Always use NTLM for servers'.
+
+If 'Disabled', NTLM Authentication will not be used for any servers.
+
+Allow fallback from Kerberos to NTLM:
+When set to 'No', NTLM will only be used for servers listed in GPO: 'Always use NTLM for servers'.
+When set to 'Yes', NTLM may be used any time the client is unable to retrieve a Kerberos ticket for the server.</string>
+      <string id="ServersAlwaysUseNTLM">Always use NTLM for servers</string>
+      <string id="ServersAlwaysUseNTLMExplain">When this setting is enabled, Log in as current user will always use NTLM Authentication for listed servers.
+
+The naming format for servers is the fully qualified domain name (FQDN)</string>
       <string id="IgnoreRevocation">Ignore certificate revocation problems</string>
       <string id="IgnoreRevocationExplain">Determines if errors associated with a revoked server certificate are ignored.
 
@@ -469,6 +483,8 @@ This property is enabled by default.</string>
       <string id="BrowserRedirIgnoreCertErrorsExplain">When enabled, any certificate errors that occur in the redirected page will be ignored and browsing will proceed. This property is disabled by default.</string>
       <string id="BrowserRedirEnableMediaStream">Enable WebRTC camera and microphone access for browser redirection</string>
       <string id="BrowserRedirEnableMediaStreamExplain">When enabled, redirected pages using WebRTC will have access to the client's camera and microphone. This property is enabled by default.</string>
+      <string id="MouseMoveMaxLatencyMsec">Configure maximum latency for mouse coalescing</string>
+      <string id="MouseMoveMaxLatencyMsecExplain">This setting allows you to configure the maximum latency allowed when coalescing mouse move events, in milliseconds. We accept values from 0 to 50 as valid, with 0 meaning "disable mouse move events coalescing". Coalescing mouse move events can reduce client-to-agent bandwidth usage, but may potentially add minor latency to mouse movement. This property is disabled by default.</string>
     </stringTable>
     <presentationTable>
       <presentation id="ExcludePath">
@@ -527,6 +543,12 @@ This property is enabled by default.</string>
       <presentation id="EnableRecursiveUnlock" />
       <presentation id="BrokersTrustedForDelegation">
         <listBox refId="BrokersTrustedForDelegation">Servers Trusted For Delegation</listBox>
+      </presentation>
+      <presentation id="AllowNTLMAuthentication">
+      <dropdownList refId="AllowNTLMAuthentication" defaultItem="1" noSort="true">Allow fallback from Kerberos to NTLM</dropdownList>
+      </presentation>
+      <presentation id="ServersAlwaysUseNTLM">
+        <listBox refId="ServersAlwaysUseNTLM">Always use NTLM for servers</listBox>
       </presentation>
       <presentation id="IgnoreRevocation" />
       <presentation id="CertCheckMode">
@@ -799,6 +821,9 @@ This property is enabled by default.</string>
       <presentation id="AllowHEVC" />
       <presentation id="AllowBlastThroughProxy" />
       <presentation id="ForceUserAffinity" />
+      <presentation id="MouseMoveMaxLatencyMsec">
+        <decimalTextBox refId="MouseMoveMaxLatencyMsec">Maximum latency for mouse coalescing</decimalTextBox>
+      </presentation>
     </presentationTable>
   </resources>
 </policyDefinitionResources>

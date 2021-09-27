@@ -19,6 +19,10 @@ If this policy setting is set for the computer, it has priority over policy sett
 If this policy setting is disabled, the Serial COM works in usual mode.
 
 If this policy setting is not configured, the disabling functionality is determined by local program settings.</string>
+      <string id="RedirectAll_PolicyName">Connect all ports automatically</string>
+      <string id="RedirectAll_PolicyExplain">If this policy setting is enabled, all client COM ports will be automatically connected (even if no individual GPO is configured). If there are individual GPO settings configured for some of the ports, the individual port GPO settings are used.
+
+If this policy setting is disabled or not configured, the auto-connect functionality is determined by individual port GPO or local program settings.</string>
       <string id="PortIsolationMode_PolicyName">COM Port Isolation Mode</string>
       <string id="PortIsolationMode_PolicyExplain">If "Full Isolation" mode is chosen, virtual serial ports are visible and accessible within user sessions only. In this mode COM port names can have the same names in different user sessions. Important: system services (like spoolsrv.exe) are not able to access isolated serial ports in such case".
 
@@ -138,6 +142,7 @@ If this policy setting is configured for the computer, it has priority over poli
     <presentationTable>
       <presentation id="LocalSettingsPriority_PolicyName" />
       <presentation id="DisableFunctionality_PolicyName" />
+      <presentation id="RedirectAll_PolicyName" />
       <presentation id="PortIsolationMode_PolicyName">
         <dropdownList refId="PortIsolationMode_Enum" noSort="true">COM Port Isolation Mode:</dropdownList>
       </presentation>
