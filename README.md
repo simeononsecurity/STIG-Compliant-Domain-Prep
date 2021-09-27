@@ -40,6 +40,7 @@
 - [Windows Server 2016 V2R2](https://public.cyber.mil/stigs/downloads/)
 - [Windows Server 2019 V2R2](https://public.cyber.mil/stigs/downloads/)
 - [VMWare Horizon Agent V1R1](https://public.cyber.mil/stigs/downloads/)
+- [VMWare Horizon Client V1R1](https://public.cyber.mil/stigs/downloads/)
 
 ## How to run the script:
 
