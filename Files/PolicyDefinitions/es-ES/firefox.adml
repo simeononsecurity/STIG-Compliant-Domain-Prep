@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<policyDefinitionResources revision="3.3" schemaVersion="1.0" >
+<policyDefinitionResources revision="3.4" schemaVersion="1.0" >
   <displayName/>
   <description/>
   <resources >
@@ -41,6 +41,13 @@
       <string id="SUPPORTED_FF89">Firefox 89 o posterior, Firefox 78.11 ESR o posterior</string>
       <string id="SUPPORTED_FF90">Firefox 90 o posterior, Firefox 78.12 ESR o posterior</string>
       <string id="SUPPORTED_FF91">Firefox 90 o posterior</string>
+      <string id="SUPPORTED_FF95">Firefox 95 o posterior, Firefox 91.4 ESR o posterior</string>
+      <string id="SUPPORTED_FF96">Firefox 96 o posterior, Firefox 91.5 ESR o posterior</string>
+      <string id="SUPPORTED_FF96_ONLY">Firefox 96 o posterior</string>
+      <string id="SUPPORTED_FF97">Firefox 97 o posterior, Firefox 91.6 ESR o posterior</string>
+      <string id="SUPPORTED_FF98">Firefox 98 o posterior, Firefox 91.7 ESR o posterior</string>
+      <string id="SUPPORTED_FF99">Firefox 99 o posterior, Firefox 91.8 ESR o posterior</string>
+      <string id="SUPPORTED_FF100">Firefox 100 o posterior, Firefox 91.9 ESR o posterior</string>
       <string id="firefox">Firefox</string>
       <string id="Permissions_group">Permisos</string>
       <string id="Camera_group">Cámara</string>
@@ -63,7 +70,7 @@
       <string id="UserMessaging_group">Mensajería del usuario</string>
       <string id="DisabledCiphers_group">Cifrados deshabilitados</string>
       <string id="EncryptedMediaExtensions_group">Extensiones de medios cifrados</string>
-      <string id="PDFjs_group">PDFjs</string>
+      <string id="PDFjs_group">PDF.js</string>
       <string id="PictureInPicture_group">Picture-in-Picture</string>
       <string id="Allow">Sitios permitidos</string>
       <string id="AllowSession">Sitios permitidos (Session Only)</string>
@@ -316,6 +323,14 @@ Si esta política está habilitada o no está configurada, la aceleración por h
       <string id="LegacyProfiles_Explain">Si esta política está habilitada, Firefox no intentará crear diferentes perfiles para instalaciones de Firefox en diferentes directorios. Esto es el equivalente de la variable de entorno MOZ_LEGACY_PROFILES.
 
 Si esta política está deshabilitada o no está configurada, Firefox creará un perfil nuevo para cada instalación única de Firefox.</string>
+      <string id="LegacySameSiteCookieBehaviorEnabled">Revert to legacy SameSite behavior</string>
+      <string id="LegacySameSiteCookieBehaviorEnabled_Explain">If this policy is enabled, Firefox will revert to the legacy behavior of SameSite. This means that cookies that don't explicitly specify a SameSite attribute are treated as if they were SameSite=None.
+
+If this policy is disabled or not configured, Firefox will enforce SameSite=lax.</string>
+      <string id="LegacySameSiteCookieBehaviorEnabledForDomainList">Revert to legacy SameSite behavior on specific domains</string>
+      <string id="LegacySameSiteCookieBehaviorEnabledForDomainList_Explain">If this policy is enabled, Firefox will revert to the legacy behavior of SameSite for the specified domains. This means that cookies that don't explicitly specify a SameSite attribute are treated as if they were SameSite=None.
+
+If this policy is disabled or not configured, Firefox will enforce SameSite=lax for all domains.</string>
       <string id="LocalFileLinks">Enlaces a archivos locales</string>
       <string id="LocalFileLinks_Explain">Si esta política está habilitada, podrá especificar orígenes donde se permita la vinculación a archivos locales.
 
@@ -365,11 +380,11 @@ If this policy is disabled or not configured, the default cookie policy is follo
       <string id="Cookies_Block_Explain">Si esta política está habilitada, las cookies estarán bloqueadas por los orígenes indicados. Si se especifica un dominio de nivel superior (http://ejemplo.org), también se bloquearán las cookies de todos los subdominios.
 
 Si esta política está deshabilitada o no está configurada, las cookies no estarán bloqueadas de manera predeterminada.</string>
-      <string id="Cookies_Default">Aceptar cookies de sitios web</string>
+      <string id="Cookies_Default">Aceptar cookies de sitios web (obsoleto)</string>
       <string id="Cookies_Default_Explain">Si esta política está deshabilitada, las cookies no son aceptadas por los sitios web de forma predeterminada.
 
 Si esta política no está configurada o habilitada, se aceptarán cookies de los sitios web.</string>
-      <string id="Cookies_AcceptThirdParty">Aceptar cookies de terceros</string>
+      <string id="Cookies_AcceptThirdParty">Aceptar cookies de terceros (obsoleto)</string>
       <string id="Cookies_AcceptThirdParty_Explain">Si esta política está habilitada y se permiten las cookies, podrá establecer cuándo aceptar las cookies de terceros.
 
 Esta configuración se ignora si esta política está deshabilitada o no está configurada o si las cookies no están permitidas.</string>
@@ -380,7 +395,7 @@ Esta configuración se ignora si esta política está deshabilitada o no está c
       <string id="Cookies_ExpireAtSessionEnd_Explain">Si esta política está habilitada y las cookies estarán permitidas, caducarán cuando se cierre Firefox.
 
 Esta configuración se ignora si esta política está deshabilitada o no está configurada, o si las cookies no estarán permitidas.</string>
-      <string id="Cookies_RejectTracker">Bloquear rastreadores</string>
+      <string id="Cookies_RejectTracker">Bloquear rastreadores (obsoleto)</string>
       <string id="Cookies_RejectTracker_Explain">Si esta política está habilitada y las cookies estarán permitidas, Firefox bloqueará las cookies de rastreo de manera predeterminada.
 
 Esta configuración se ignora si esta política está deshabilitada o no está configurada, o si las cookies no estarán permitidas.</string>
@@ -388,6 +403,20 @@ Esta configuración se ignora si esta política está deshabilitada o no está c
       <string id="Cookies_Locked_Explain">Si esta política está habilitada, el usuario no podrá cambiar las preferencias de cookies.
 
 Si esta política está deshabilitada o no está configurada, el usuario podrá cambiar tus preferencias de cookies.</string>
+      <string id="Cookies_Behavior">Cookie Behavior</string>
+      <string id="Cookies_Behavior_Explain">If this policy is enabled, you can configure cookie behavior.
+
+If this policy is not configured or disabled, cookies are rejected for known trackers.</string>
+      <string id="Cookies_BehaviorPrivateBrowsing">Cookie Behavior in private browsing</string>
+      <string id="Cookies_BehaviorPrivateBrowsing_Explain">If this policy is enabled, you can configure cookie behavior in private browsing.
+
+If this policy is not configured or disabled, in private browsing, cookies are rejected for known trackers and third-party cookies are partitioned.</string>
+      <string id="Cookies_Behavior_Accept">Accept all cookies</string>
+      <string id="Cookies_Behavior_RejectForeign">Reject third party cookies</string>
+      <string id="Cookies_Behavior_Reject">Reject all cookies</string>
+      <string id="Cookies_Behavior_LimitForeign">Reject third party cookies for sites you haven't visited</string>
+      <string id="Cookies_Behavior_RejectTracker">Reject cookies for known trackers</string>
+      <string id="Cookies_Behavior_RejectTrackerAndPartitionForeign">Reject cookies for known trackers and partition third-party cookies (Total Cookie Protection)</string>
       <string id="Camera_Allow_Explain">Si esta política está habilitada, el acceso a la cámara siempre estará permitido para los orígenes indicados.
 
 Si esta política está deshabilitada o no está configurada, se seguirá la política de cámara predeterminada.</string>
@@ -802,7 +831,7 @@ Si esta política está habilitada o no está configurada, Firefox descargará y
       <string id="EncryptedMediaExtensions_Locked_Explain">Si esta política está habilitada y las extensiones de medios cifrados está deshabilitada, Firefox no descargará extensiones de medios cifrados (como Widevine) ni le pedirá al usuario que los instale.
 
 Si esta política no está deshabilitada o no está configurada, no tiene ningún efecto.</string>
-      <string id="PDFjs_Enabled">Habilitar PDFjs</string>
+      <string id="PDFjs_Enabled">Habilitar PDF.js</string>
       <string id="PDFjs_Enabled_Explain">Si esta política está deshabilitada, no se utilizará el visor de PDF incorporado.
 
 Si esta política está habilitada o no configurada, se utilizará el visor de PDF incorporado.</string>
@@ -838,6 +867,16 @@ If this policy is enabled, you can use JSON to configure preferences.
 If this policy is disabled or not configured, preferences are not modified.
 
 For detailed information on creating the policy, see https://github.com/mozilla/policy-templates/blob/master/README.md#preferences.</string>
+      <string id="Bookmarks">Bookmarks (JSON)</string>
+      <string id="Bookmarks_Explain">If this policy is enabled, you can use JSON to configure bookmarks, including [] to clear all bookmarks.
+
+If this policy is disabled or not configured, the individual bookmark policies are used.
+
+If this policy is enabled along with individual bookmarks, those bookmarks will not be added.
+
+This policy has no effect on Managed Bookmarks.
+
+For detailed information on the JSON, see https://github.com/mozilla/policy-templates/blob/master/README.md#bookmarks.</string>
       <string id="ManagedBookmarks">Managed Bookmarks</string>
       <string id="ManagedBookmarks_Explain">If this policy is enabled, you can use JSON to configure managed bookmarks.
 
@@ -969,6 +1008,12 @@ https://github.com/mozilla/policy-templates/blob/master/README.md#preferences</s
       <presentation id="PopupsAllow"><listBox refId="PopupsAllowDesc">Permitir ventanas emergentes para sitios web</listBox></presentation>
       <presentation id="Cookies_AcceptThirdParty">
         <dropdownList refId="Cookies_AcceptThirdParty"/>
+      </presentation>
+      <presentation id="Cookies_Behavior">
+        <dropdownList refId="Cookies_Behavior"/>
+      </presentation>
+      <presentation id="Cookies_BehaviorPrivateBrowsing">
+        <dropdownList refId="Cookies_BehaviorPrivateBrowsing"/>
       </presentation>
       <presentation id="SearchBar">
         <dropdownList refId="SearchBar"/>
@@ -1128,6 +1173,9 @@ https://github.com/mozilla/policy-templates/blob/master/README.md#preferences</s
       <presentation id="Preferences_security_default_personal_cert">
         <dropdownList refId="Preferences_security_default_personal_cert"/>
       </presentation>
+      <presentation id="LegacySameSiteCookieBehaviorEnabledForDomainList">
+        <listBox refId="LegacySameSiteCookieBehaviorEnabledForDomainList"/>
+      </presentation>
       <presentation id="LocalFileLinks">
         <listBox refId="LocalFileLinks"/>
       </presentation>
@@ -1144,8 +1192,10 @@ https://github.com/mozilla/policy-templates/blob/master/README.md#preferences</s
       <presentation id="FirefoxHome">
         <checkBox refId="FirefoxHome_Search">Búsqueda</checkBox>
         <checkBox refId="FirefoxHome_TopSites">Sitios populares</checkBox>
+        <checkBox refId="FirefoxHome_SponsoredTopSites">Sponsored Top Sites</checkBox>
         <checkBox refId="FirefoxHome_Highlights">Historial de descargas</checkBox>
         <checkBox refId="FirefoxHome_Pocket">Recomendado por Pocket</checkBox>
+        <checkBox refId="FirefoxHome_SponsoredPocket">Sponsored Pocket Stories</checkBox>
         <checkBox refId="FirefoxHome_Snippets">Fragmentos</checkBox>
         <checkBox refId="FirefoxHome_Locked">No permitir que se cambie la configuración</checkBox>
       </presentation>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<policyDefinitionResources revision="3.3" schemaVersion="1.0" >
+<policyDefinitionResources revision="3.4" schemaVersion="1.0" >
   <displayName/>
   <description/>
   <resources >
@@ -41,6 +41,13 @@
       <string id="SUPPORTED_FF89">Firefox 89 oder höher, Firefox 78.11 ESR oder höher</string>
       <string id="SUPPORTED_FF90">Firefox 90 oder höher, Firefox 78.12 ESR oder höher</string>
       <string id="SUPPORTED_FF91">Firefox 91 oder höher</string>
+      <string id="SUPPORTED_FF95">Firefox 95 oder höher, Firefox 91.4 ESR oder höher</string>
+      <string id="SUPPORTED_FF96">Firefox 96 oder höher, Firefox 91.5 ESR oder höher</string>
+      <string id="SUPPORTED_FF96_ONLY">Firefox 96 oder höher</string>
+      <string id="SUPPORTED_FF97">Firefox 97 oder höher, Firefox 91.6 ESR oder höher</string>
+      <string id="SUPPORTED_FF98">Firefox 98 oder höher, Firefox 91.7 ESR oder höher</string>
+      <string id="SUPPORTED_FF99">Firefox 99 oder höher, Firefox 91.8 ESR oder höher</string>
+      <string id="SUPPORTED_FF100">Firefox 100 oder höher, Firefox 91.9 ESR oder höher</string>
       <string id="firefox">Firefox</string>
       <string id="Permissions_group">Berechtigungen</string>
       <string id="Camera_group">Kamera</string>
@@ -59,11 +66,11 @@
       <string id="Flash_group">Flash</string>
       <string id="Homepage_group">Startseite</string>
       <string id="Search_group">Suche</string>
-      <string id="Preferences_group">Einstellungen (Veraltet)</string>
+      <string id="Preferences_group">Einstellungen (veraltet)</string>
       <string id="UserMessaging_group">Benutzer-Benachrichtigungen</string>
       <string id="DisabledCiphers_group">Disabled Ciphers</string>
       <string id="EncryptedMediaExtensions_group">DRM-Medien Erweiterungen</string>
-      <string id="PDFjs_group">PDFjs</string>
+      <string id="PDFjs_group">PDF.js</string>
       <string id="PictureInPicture_group">Bild in Bild</string>
       <string id="Allow">Erlaubte Seiten</string>
       <string id="AllowSession">Erlaubte Seiten (Session Only)</string>
@@ -144,20 +151,20 @@ Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, verwe
       <string id="Certificates_Install_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, wird Firefox die gelisteten Zertifikate installieren. Es wird in folgende Verzeichnisse geschaut %USERPROFILE%\AppData\Local\Mozilla\Certificates und %USERPROFILE%\AppData\Roaming\Mozilla\Certificates.
 
 Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird Firefox keine weiteren Zertifikate installieren.</string>
-      <string id="DefaultDownloadDirectory">Standard Download Verzeichnis</string>
-      <string id="DefaultDownloadDirectory_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, können Sie das Standard Verzeichnis für Downloads definieren. ${home} kann für den nativen Profilpfad verwendet werden.
+      <string id="DefaultDownloadDirectory">Standard-Download-Verzeichnis</string>
+      <string id="DefaultDownloadDirectory_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, können Sie das Standard-Verzeichnis für Downloads definieren. ${home} kann für den nativen Profilpfad verwendet werden.
 
-Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird das Standard Firefox Download Verzeichnis benutzt.</string>
-      <string id="DownloadDirectory">Download Verzeichnis</string>
-      <string id="DownloadDirectory_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, können Sie das Standard Verzeichnis für Downloads definieren und sperren. ${home} kann für den nativen Profilpfad verwendet werden.
+Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird das Standard-Download-Verzeichnis von Firefox benutzt.</string>
+      <string id="DownloadDirectory">Download-Verzeichnis</string>
+      <string id="DownloadDirectory_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, können Sie das Standard-Verzeichnis für Downloads definieren und sperren. ${home} kann für den nativen Profilpfad verwendet werden.
 
-Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird das Standard Firefox Download Verzeichnis benutzt und der Benutzer kann dies ändern.</string>
+Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird das Standard-Download-Verzeichnis von Firefox benutzt und der Benutzer kann dies ändern.</string>
       <string id="DNSOverHTTPS_group">DNS über HTTPS</string>
       <string id="DNSOverHTTPS_Enabled">Aktiviert</string>
       <string id="DNSOverHTTPS_Enabled_Explain">Wenn diese Richtlinieneinstellung deaktiviert ist, ist DNS über HTTPS deaktiviert.
 
 Wenn diese Richtlinieneinstellung aktiviert oder nicht konfiguriert ist, ist DNS über HTTPS aktiviert.</string>
-      <string id="DNSOverHTTPS_ProviderURL">Provider URL</string>
+      <string id="DNSOverHTTPS_ProviderURL">Provider-URL</string>
       <string id="DNSOverHTTPS_ProviderURL_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, wird die angegebene URL als Provider-URL verwendet.
 
 Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, wird der Standardanbieter verwendet.</string>
@@ -209,9 +216,9 @@ Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, stehe
 
 Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, Firefox Screenshots stehen zur Verfügung.</string>
       <string id="DisableFirefoxStudies">Firefox Studien deaktivieren</string>
-      <string id="DisableFirefoxStudies_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, führt Firefox keine SHIELD Studien durch oder fragt nach Bewertungen zu Ihren Firefox-Erfahrungen (Heartbeat).
+      <string id="DisableFirefoxStudies_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, führt Firefox keine SHIELD-Studien durch oder fragt nach Bewertungen zu Ihren Firefox-Erfahrungen (Heartbeat).
 
-Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, können SHIELD Studien oder Firefox-Erfahrungen (Heartbeat) vom Benutzer ausgewählt werden.
+Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, können SHIELD-Studien oder Firefox-Erfahrungen (Heartbeat) vom Benutzer ausgewählt werden.
 
 Für weitere Informationen, besuchen Sie https://support.mozilla.org/en-US/kb/shield und https://wiki.mozilla.org/Firefox/Shield/Heartbeat</string>
       <string id="DisableForgetButton">Vergessen Button deaktivieren</string>
@@ -230,7 +237,7 @@ Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, könn
       <string id="DisablePocket_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, steht Pocket nicht zur Verfügung.
 
 Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, steht Pocket zur Verfügung.</string>
-      <string id="DisablePrivateBrowsing">Privates surfen deaktivieren</string>
+      <string id="DisablePrivateBrowsing">Privates Surfen deaktivieren</string>
       <string id="DisablePrivateBrowsing_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, ist privates Surfen nicht erlaubt.
 
 Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, ist privates Surfen erlaubt.</string>
@@ -280,10 +287,10 @@ Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, wird 
       <string id="DisplayMenuBar_Never">Niemals</string>
       <string id="DisplayMenuBar_Default_On">Standardmäßig eingeschaltet</string>
       <string id="DisplayMenuBar_Default_Off">Standardmäßig ausgeschaltet</string>
-      <string id="DontCheckDefaultBrowser">Firefox Standardbrowser Überprüfung deaktivieren</string>
+      <string id="DontCheckDefaultBrowser">Firefox-Standardbrowser-Überprüfung deaktivieren</string>
       <string id="DontCheckDefaultBrowser_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, überprüft Firefox nicht beim Starten ob er als Standardbrowser gesetzt ist.
 
-Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, überprüft Firefox beim Starten ob er als Standardbrowser gesetzt ist.</string>
+Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, überprüft Firefox beim Starten, ob er als Standardbrowser gesetzt ist.</string>
       <string id="Extensions_Install">Erweiterungen installieren</string>
       <string id="Extensions_Install_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, können Sie eine Liste mit Erweiterungs-URLs oder -pfaden angeben, die beim Start von Firefox installiert werden.
 Jedes Mal, wenn diese Liste geändert wird, werden die Erweiterungen erneut installiert.
@@ -303,19 +310,27 @@ Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werde
 
 Wenn Sie die Richtlinieneinstellung aktivieren oder nicht konfigurieren, werden Add-ons automatisch aktualisiert.</string>
       <string id="ExtensionSettings">Erweiterungen mit JSON verwalten</string>
-      <string id="ExtensionSettings_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, werden die Einstellungen zu Erweiterungen mit einer JSON Datei verwaltet.
+      <string id="ExtensionSettings_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, werden die Einstellungen zu Erweiterungen mit einer JSON-Datei verwaltet.
 
 Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, werden Erweiterungen nicht mit einer Richtlinie verwaltet.
 
-Für detalierte Informationen bitte die Dokumentation (in Englischer Sprache) lesen: https://github.com/mozilla/policy-templates/blob/master/README.md#extensionsettings.</string>
+Für detaillierte Informationen bitte die Dokumentation (in englischer Sprache) lesen: https://github.com/mozilla/policy-templates/blob/master/README.md#extensionsettings.</string>
       <string id="HardwareAcceleration">Hardware-Beschleunigung</string>
       <string id="HardwareAcceleration_Explain">Wenn Sie die Richtlinieneinstellung deaktivieren, wird die Hardware-Beschleunigung deaktiviert.
 
 Wenn Sie die Richtlinieneinstellung aktivieren oder nicht konfigurieren, wird die Hardware-Beschleunigung aktiviert.</string>
       <string id="LegacyProfiles">Separate Profile</string>
-      <string id="LegacyProfiles_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, wird Firefox keine seperaten Profile bei mehreren parallelen Installationen anlegen. Diese Einstellung ist equivalent zu der Umgebungsvariable MOZ_LEGACY_PROFILES.
+      <string id="LegacyProfiles_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, wird Firefox keine separaten Profile bei mehreren parallelen Installationen anlegen. Diese Einstellung ist equivalent zu der Umgebungsvariable MOZ_LEGACY_PROFILES.
 
-Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, wird Firefox seperate Profile für jede Installation anlegen.</string>
+Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, wird Firefox separate Profile für jede Installation anlegen.</string>
+      <string id="LegacySameSiteCookieBehaviorEnabled">Revert to legacy SameSite behavior</string>
+      <string id="LegacySameSiteCookieBehaviorEnabled_Explain">If this policy is enabled, Firefox will revert to the legacy behavior of SameSite. This means that cookies that don't explicitly specify a SameSite attribute are treated as if they were SameSite=None.
+
+If this policy is disabled or not configured, Firefox will enforce SameSite=lax.</string>
+      <string id="LegacySameSiteCookieBehaviorEnabledForDomainList">Revert to legacy SameSite behavior on specific domains</string>
+      <string id="LegacySameSiteCookieBehaviorEnabledForDomainList_Explain">If this policy is enabled, Firefox will revert to the legacy behavior of SameSite for the specified domains. This means that cookies that don't explicitly specify a SameSite attribute are treated as if they were SameSite=None.
+
+If this policy is disabled or not configured, Firefox will enforce SameSite=lax for all domains.</string>
       <string id="LocalFileLinks">Links zu lokalen Dateien</string>
       <string id="LocalFileLinks_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, können Sie die Quellen angeben, von denen Links auf lokale Dateien erlaubt sind.
 
@@ -359,17 +374,17 @@ Wenn Sie die Richtlinieneinstellungen nicht konfigurieren oder aktivieren, könn
       <string id="Cookies_Allow_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, sind Cookies immer für die angegebenen URLs erlaubt. Wenn eine Top-Level-Domain angegeben ist (http://example.org), sind Cookies auch für alle Sub-Domains zulässig.
 
 Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die Standard Cookie Richtlinie verwendet.</string>
-      <string id="Cookies_AllowSession_Explain">If this policy is enabled, cookies are allowed for the origins indicated, but removed at the end of the session. If a top level domain is specified (http://example.org), cookies are allowed for all subdomains as well.
+      <string id="Cookies_AllowSession_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, sind Cookies immer für die angegebenen URLs erlaubt, werden aber beim Schließen von Firefox gelöscht. Wenn eine Top-Level-Domain angegeben ist (http://example.org), sind Cookies auch für alle Sub-Domains zulässig.
 
-If this policy is disabled or not configured, the default cookie policy is followed.</string>
+Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die Standard Cookie Richtlinie verwendet.</string>
       <string id="Cookies_Block_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, sind Cookies für die angegebenen URLs gesperrt. Wenn eine Top-Level-Domain angegeben ist (http://example.org), werden Cookies von allen Sub-Domains ebenfalls blockiert.
 
 Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, sind Cookies standardmäßig nicht blockiert.</string>
-      <string id="Cookies_Default">Cookies und Website-Daten annehmen</string>
+      <string id="Cookies_Default">Cookies und Website-Daten annehmen (veraltet)</string>
       <string id="Cookies_Default_Explain">Wenn Sie die Richtlinieneinstellung deaktivieren, werden Cookies standardmäßig nicht von Webseiten akzeptiert.
 
 Wenn Sie die Richtlinieneinstellung nicht konfigurieren oder aktivieren, werden Cookies von Websiten akzeptiert.</string>
-      <string id="Cookies_AcceptThirdParty">Cookies und Website-Daten von Drittanbietern akzeptieren</string>
+      <string id="Cookies_AcceptThirdParty">Cookies und Website-Daten von Drittanbietern akzeptieren (veraltet)</string>
       <string id="Cookies_AcceptThirdParty_Explain">Wenn Sie die Richtlinieneinstellung aktivieren und Cookies erlauben, können Sie einstellen wie Sie Cookies von Drittanbietern akzeptieren.
 
 Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren oder wenn Cookies nicht erlaubt sind.</string>
@@ -380,7 +395,7 @@ Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren oder w
       <string id="Cookies_ExpireAtSessionEnd_Explain">Wenn Sie die Richtlinieneinstellung aktivieren und Cookies erlaubt sind, werden diese gelöscht sobald Firefox geschlossen wird.
 
 Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren oder wenn &quot;Cookies und Website-Daten annehmen&quot; deaktiviert ist wird diese Richtlinieneinstellung ignoriert.</string>
-      <string id="Cookies_RejectTracker">Tracker ablehnen</string>
+      <string id="Cookies_RejectTracker">Tracker ablehnen (veraltet)</string>
       <string id="Cookies_RejectTracker_Explain">Wenn diese Richtlinieneinstellung aktiviert ist und Cookies aktiviert sind, werden Tracker-Cookies standardmäßig abgewiesen.
 
 Diese Einstellung wird ignoriert wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist oder Cookies durch eine andere Richtlinie oder Einstellung nicht erlaubt sind.</string>
@@ -388,6 +403,20 @@ Diese Einstellung wird ignoriert wenn diese Richtlinieneinstellung deaktiviert o
       <string id="Cookies_Locked_Explain">Wenn Sie die Richtlinieneinstellung aktivieren können Benutzer die Cookie-Einstellungen nicht ändern.
 
 Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, können Benutzer die Cookie-Einstellungen ändern.</string>
+      <string id="Cookies_Behavior">Cookie Behavior</string>
+      <string id="Cookies_Behavior_Explain">If this policy is enabled, you can configure cookie behavior.
+
+If this policy is not configured or disabled, cookies are rejected for known trackers.</string>
+      <string id="Cookies_BehaviorPrivateBrowsing">Cookie Behavior in private browsing</string>
+      <string id="Cookies_BehaviorPrivateBrowsing_Explain">If this policy is enabled, you can configure cookie behavior in private browsing.
+
+If this policy is not configured or disabled, in private browsing, cookies are rejected for known trackers and third-party cookies are partitioned.</string>
+      <string id="Cookies_Behavior_Accept">Accept all cookies</string>
+      <string id="Cookies_Behavior_RejectForeign">Reject third party cookies</string>
+      <string id="Cookies_Behavior_Reject">Reject all cookies</string>
+      <string id="Cookies_Behavior_LimitForeign">Reject third party cookies for sites you haven't visited</string>
+      <string id="Cookies_Behavior_RejectTracker">Reject cookies for known trackers</string>
+      <string id="Cookies_Behavior_RejectTrackerAndPartitionForeign">Reject cookies for known trackers and partition third-party cookies (Total Cookie Protection)</string>
       <string id="Camera_Allow_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, wird die Kamera für die genannten Quellen automatisch freigegeben.
 
 Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, wird die Standardeinstellung befolgt.</string>
@@ -463,20 +492,20 @@ Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, könn
       <string id="AllowAudioVideo">Automatische Audio- und Videowiedergabe erlauben</string>
       <string id="BlockAudio">Automatische Audiowiedergabe blockieren</string>
       <string id="BlockAudioVideo">Automatische Audio- und Videowiedergabe blockieren</string>
-      <string id="VirtualReality_Allow_Explain">If this policy is enabled, access to virtual reality devices is always allowed for the origins indicated.
+      <string id="VirtualReality_Allow_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, ist der Zugriff auf Virtual-Reality-Geräte für die angegebenen Quellen immer aktiviert.
 
-If this policy is disabled or not configured, the default virtual reality policy is followed.</string>
-      <string id="VirtualReality_Block_Explain">If this policy is enabled, access to virtual reality devices is blocked for the origins indicated.
+Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, wird die Standard-Richtlinie für Virtual Reality verwendet.</string>
+      <string id="VirtualReality_Block_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, ist der Zugriff auf Virtual-Reality-Geräte für die angegebenen Quellen immer deaktiviert.
 
-If this policy is disabled or not configured, access to virtual reality devices is not blocked by default.</string>
-      <string id="VirtualReality_BlockNewRequests">Block new requests asking to access virtual reality devices.</string>
-      <string id="VirtualReality_BlockNewRequests_Explain">If this policy is enabled, sites that are not in the Allow policy will not be allowed to ask permission to access virtual reality devices.
+Wenn diese Richtlinieneinstellung deaktiviert, wird der Zugriff auf Virtual-Reality-Geräte nicht deaktiviert.</string>
+      <string id="VirtualReality_BlockNewRequests">Neue Anfragen für den Zugriff auf Virtual-Reality-Geräte blockieren</string>
+      <string id="VirtualReality_BlockNewRequests_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, können Seiten, denen es nicht explizit erlaubt ist, nicht mehr um Erlaubnis bitten, auf Virtual-Reality-Geräte zugreifen zu dürfen.
 
-If this policy is disabled or not configured, any site that is not in the Block policy can ask permission to virtual reality devices.</string>
-      <string id="VirtualReality_Locked">Do not allow preferences to be changed</string>
-      <string id="VirtualReality_Locked_Explain">If this policy is enabled, virtual reality preferences cannot be changed by the user.
+Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, kann jede Seite, der es nicht verboten ist, nach der Erlaubnis fragen, auf Virtual-Reality-Geräte zuzugreifen.</string>
+      <string id="VirtualReality_Locked">Änderung der Einstellungen verbieten</string>
+      <string id="VirtualReality_Locked_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, können die Einstellungen zu Virtual Reality nicht vom Anwender geändert werden.
 
-If this policy is disabled or not configured, the user can change their virtual reality preferences.</string>
+Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, können Nutzer ihre Einstellungen zu Virtual Reality ändern.</string>
       <string id="FirefoxHome">Firefox Home anpassen</string>
       <string id="FirefoxHome_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, können die Sektionen festgelegt werden, die der Anwender sieht und der Anwender kann diese nicht mehr anpassen.
 
@@ -497,10 +526,10 @@ Wenn Sie die Richtlinieneinstellung nicht konfigurieren, ist Flash ausführbar.<
       <string id="FlashPlugin_Locked_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, können Benutzer die Flash-Einstellungen nicht ändern.
 
 Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, können Benutzer die Flash-Einstellungen ändern.</string>
-      <string id="OverrideFirstRunPage">Willkommen Seite ändern</string>
+      <string id="OverrideFirstRunPage">Willkommensseite ändern</string>
       <string id="OverrideFirstRunPage_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, können Sie eine URL angeben, die als Willkommensseite beim ersten Start von Firefox verwendet werden soll. Wenn Sie die URL leer lassen, wird keine Willkommensseite angezeigt.
 
-Starting with Firefox 83, Firefox ESR 78.5, you can also specify multiple URLS separated by a vertical bar (|).
+Ab Firefox 83 oder Firefox ESR 78.5 lassen sich mehrere Willkommensseiten festlegen. Diese müssen durch das Zeichen | getrennt sein.
 
 Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die Standard Willkommensseite angezeigt.</string>
       <string id="OverridePostUpdatePage">Upgrade Seite ändern</string>
@@ -521,35 +550,35 @@ Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, wird 
       <string id="SanitizeOnShutdown_Cookies_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, werden Cookies gelöscht, wenn der Browser geschlossen wird.
 
 Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, werden die Cookies nicht gelöscht wenn der Browser geschlossen wird.</string>
-      <string id="SanitizeOnShutdown_Downloads">Download Historie</string>
-      <string id="SanitizeOnShutdown_Downloads_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, wird die Download Historie gelöscht, wenn der Browser geschlossen wird.
+      <string id="SanitizeOnShutdown_Downloads">Download-Historie</string>
+      <string id="SanitizeOnShutdown_Downloads_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, wird die Download-Historie gelöscht, wenn der Browser geschlossen wird.
 
-Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, wird die Download Historie nicht gelöscht, wenn der Browser geschlossen wird.</string>
+Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, wird die Download-Historie nicht gelöscht, wenn der Browser geschlossen wird.</string>
       <string id="SanitizeOnShutdown_FormData">Eingegebene Suchbegriffe und Formulardaten</string>
       <string id="SanitizeOnShutdown_FormData_Explain">Wenn diese Gruppenrichtlinieneinstellung aktiviert ist, werden eingegebene Suchbegriffe und Formulardaten gelöscht, wenn der Browser geschlossen wird.
 
 Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, werden eingegebene Suchbegriffe und Formulardaten nicht gelöscht, wenn der Browser geschlossen wird.</string>
       <string id="SanitizeOnShutdown_History">Chronik</string>
-      <string id="SanitizeOnShutdown_History_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, wird die Chronik gelöscht wenn der Browser geschlossen wird.
+      <string id="SanitizeOnShutdown_History_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, wird die Chronik gelöscht, wenn der Browser geschlossen wird.
 
-Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, wird die Chronik nicht gelöscht wenn der Browser geschlossen wird.</string>
+Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, wird die Chronik nicht gelöscht, wenn der Browser geschlossen wird.</string>
       <string id="SanitizeOnShutdown_Sessions">Gespeicherte Logins</string>
-      <string id="SanitizeOnShutdown_Sessions_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, werden gespeicherte Logins gelöscht nachdem der Browser geschlossen wurde.
+      <string id="SanitizeOnShutdown_Sessions_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, werden gespeicherte Logins gelöscht, nachdem der Browser geschlossen wurde.
 
-Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist,  werden gespeicherte Logins nicht gelöscht nachdem der Browser geschlossen wurde.</string>
+Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist,  werden gespeicherte Logins nicht gelöscht, nachdem der Browser geschlossen wurde.</string>
       <string id="SanitizeOnShutdown_SiteSettings">Website-Einstellungen</string>
       <string id="SanitizeOnShutdown_SiteSettings_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, werden Website-Einstellungen gelöscht, wenn der Browser geschlossen wird.
 
-Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, werden Website-Einstellungen nicht gelöscht nachdem der Browser geschlossen wurde.</string>
+Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, werden Website-Einstellungen nicht gelöscht, nachdem der Browser geschlossen wurde.</string>
       <string id="SanitizeOnShutdown_OfflineApps">Offline Website Daten</string>
-      <string id="SanitizeOnShutdown_OfflineApps_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, werden Offline Website-Daten gelöscht wenn der Browser geschlossen wird.
+      <string id="SanitizeOnShutdown_OfflineApps_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, werden Offline Website-Daten gelöscht, wenn der Browser geschlossen wird.
 
-Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, werden Offline Website-Daten nicht gelöscht wenn der Browser geschlossen wird.</string>
+Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, werden Offline Website-Daten nicht gelöscht, wenn der Browser geschlossen wird.</string>
       <string id="SanitizeOnShutdown_Locked">Locked</string>
       <string id="SanitizeOnShutdown_Locked_Explain">Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert sind, können alle Einstellungen vom Nutzer geändert werden.
 
 Wenn diese Richtlinieneinstellung aktiviert ist, können Einstellungen vom Nutzer nicht geändert werden.</string>
-      <string id="WebsiteFilter_Block">Gesperrte Webseites</string>
+      <string id="WebsiteFilter_Block">Gesperrte Webseiten</string>
       <string id="WebsiteFilter_Block_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, können Sie die Übereinstimmungsmuster für zu blockierende Webseiten angeben. Die Übereinstimmungsmuster sind unter https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Match_patterns dokumentiert. Es gibt eine Beschränkung von 1000 Einträgen.
 
 Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werden keine Webseiten gesperrt.</string>
@@ -607,7 +636,7 @@ Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, gibt 
       <string id="Bookmark48">Lesezeichen 48</string>
       <string id="Bookmark49">Lesezeichen 49</string>
       <string id="Bookmark50">Lesezeichen 50</string>
-      <string id="Bookmark_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, können Sie ein Lesezeichen konfigurieren, können Sie ein Lesezeichen konfigurieren, das zu Firefox hinzugefügt wird. Aufgrund eines Fehlers müssen Sie den Speicherort auswählen. Beachten Sie, dass Sie die Lesezeichen in der Reihenfolge angeben müssen.
+      <string id="Bookmark_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, können Sie ein Lesezeichen konfigurieren, das zu Firefox hinzugefügt wird. Aufgrund eines Fehlers müssen Sie den Speicherort auswählen. Beachten Sie, dass Sie die Lesezeichen in der Reihenfolge angeben müssen.
 
 Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werden keine Lesezeichen zu Firefox hinzugefügt.</string>
       <string id="BookmarkPlacementToolbar">Werkzeugleiste</string>
@@ -634,23 +663,23 @@ Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, wird 
       <string id="Homepage">Startseite</string>
       <string id="PreviousSession">Letzte Sitzung</string>
       <string id="HomepageLocked">Homepage (Locked)</string>
-      <string id="Homepage_ShowHomeButton">Show Home button on toolbar</string>
-      <string id="Homepage_ShowHomeButton_Explain">If this policy is enabled, the home button will appear on the toolbar by default.
+      <string id="Homepage_ShowHomeButton">Home-Button zur Symbolleiste hinzufügen</string>
+      <string id="Homepage_ShowHomeButton_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, erscheint der Home-Button standardmäßig in der Symbolleiste.
 
-If this policy is disabled, the home button will not appear on the toolbar by default.
+Wenn diese Richtlinieneinstellung deaktiviert ist, erscheint der Home-Button standardmäßig nicht in der Symbolleiste.
 
-If this policy is not configured, Firefox will determine whether or not the home button appears on the toolbar by default.</string>
+Wenn diese Richtlinieneinstellung nicht konfiguriert ist, entscheidet Firefox selbst, ob der Home-Button standardmäßig in der Symbolleiste erscheint oder nicht.</string>
       <string id="PasswordManagerEnabled">Passwort-Manager</string>
       <string id="PasswordManagerEnabled_Explain">Wenn diese Richtlinieneinstellung deaktiviert ist, ist der Passwort-Manager nicht über die Einstellungen verfügbar.
 
 Wenn diese Richtlinieneinstellung aktiviert oder nicht konfiguriert ist, ist der Passwort-Manager über die Einstellungen verfügbar.</string>
-      <string id="PromptForDownloadLocation">Abfrage des Download Verzeichnisses</string>
+      <string id="PromptForDownloadLocation">Abfrage des Download-Verzeichnisses</string>
       <string id="PromptForDownloadLocation_Explain">Wenn diese Richtlinieneinstellung deaktiviert ist, wird der Nutzer nicht nach einem Verzeichnis für den Download gefragt.
 
 Wenn diese Richtlinieneinstellung aktiviert ist, wird der Nutzer immer nach einem Verzeichnis für den Download gefragt.
 
 Wenn diese Richtlinieneinstellung nicht konfiguriert ist, wird der Nutzer nach einem Verzeichnis für den Download gefragt aber kann die Einstellung ändern.</string>
-      <string id="Proxy">Proxy Einstellungen</string>
+      <string id="Proxy">Proxy-Einstellungen</string>
       <string id="Proxy_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, können Sie die Netzwerkeinstellungen ändern und sperren.
 
 Wählen Sie den Verbindungstyp und füllen Sie die entsprechenden Abschnitte aus. Aufgrund eines Fehlers müssen Sie einen Wert für die SOCKS-Proxy-Version auswählen.
@@ -740,12 +769,12 @@ Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werde
 Wenn Sie die Richtlinieneinstellung aktivieren, werden Suchvorschläge aktiviert.
 
 Wenn Sie die Richtlinieneinstellung nicht konfigurieren, werden Suchvorschläge aktiviert, aber der Benutzer kann diese abschalten.</string>
-      <string id="SSLVersionMin">Minimum SSL Version</string>
-      <string id="SSLVersionMin_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, Firefox wird keine SSL/TLS Version unter der angegebenen Version verwenden.
+      <string id="SSLVersionMin">Minimale SSL-Version</string>
+      <string id="SSLVersionMin_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, Firefox wird keine SSL/TLS-Version unter der angegebenen Version verwenden.
 
 Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, verwendet Firefox die Standardeinstellung von TLS 1.0.</string>
-      <string id="SSLVersionMax">Maximum SSL Version</string>
-      <string id="SSLVersionMax_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, Firefox wird keine höhere SSL/TLS Version als der angegebenen Version verwenden.
+      <string id="SSLVersionMax">Maximale SSL-Version</string>
+      <string id="SSLVersionMax_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, Firefox wird keine höhere SSL/TLS-Version als der angegebenen Version verwenden.
 
 Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, verwendet Firefox die Standardeinstellung von TLS 1.3.</string>
       <string id="TLS1">TLS 1.0</string>
@@ -800,10 +829,10 @@ Wenn diese Richtlinieneinstellung aktiviert oder nicht konfiguriert ist, werden 
       <string id="EncryptedMediaExtensions_Locked_Explain">Wenn diese Richtlinieneinstellung deaktiviert ist, können Nutzer Änderungen an der Einstellung zu DRM-Medien Erweiterungen vornehmen.
 
 Wenn diese Richtlinieneinstellung aktiviert oder nicht konfiguriert ist, können Nutzer die Einstellung zu DRM-Medien Erweiterungen nicht ändern.</string>
-      <string id="PDFjs_Enabled">PDFjs (integrierter PDF-Betrachter) aktivieren</string>
-      <string id="PDFjs_Enabled_Explain">Wenn diese Richtlinieneinstellung deaktiviert ist, wird der integrierte PDF Betrachter nicht verwendet.
+      <string id="PDFjs_Enabled">PDF.js (integrierter PDF-Betrachter) aktivieren</string>
+      <string id="PDFjs_Enabled_Explain">Wenn diese Richtlinieneinstellung deaktiviert ist, wird der integrierte PDF-Betrachter nicht verwendet.
 
-Wenn diese Richtlinieneinstellung aktiviert oder nicht konfiguriert ist, wird der integrierte PDF Betrachter verwendet.</string>
+Wenn diese Richtlinieneinstellung aktiviert oder nicht konfiguriert ist, wird der integrierte PDF-Betrachter verwendet.</string>
       <string id="PDFjs_EnablePermissions">PDF-Berechtigungen aktivieren</string>
       <string id="PDFjs_EnablePermissions_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, werden Berechtigungen des PDF-Dokuments (wie z.B. Markieren und Kopieren von Text verhindern) angewendet.
 
@@ -823,34 +852,46 @@ Wenn diese Richtlinieneinstellung deaktiviert ist, ist das Setzen eines Masterpa
 
 Wenn diese Richtlinieneinstellung nicht konfiguriert ist, können Nutzer ein Masterpasswort setzen, dies ist aber nicht erforderlich.</string>
       <string id="Handlers">Handlers</string>
-      <string id="Handlers_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, können Sie das Anwendungsverhalten (beim Anklicken eines Links oder beim Download) mittels JSON beschtreiben.
+      <string id="Handlers_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, können Sie das Anwendungsverhalten (beim Anklicken eines Links oder beim Download) mittels JSON beschreiben.
 
 Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, werden die Standardeinstellungen verwendet und können vom Nutzer modifiziert werden.
 
 Für eine Beschreibung der Einstellung, siehe:
 https://github.com/mozilla/policy-templates/blob/master/README.md#handlers (Englisch)</string>
       <string id="Preferences">Einstellungen</string>
-      <string id="Preferences_Explain">Note: In order to use this policy, you must clear all settings in the old Preferences (Deprecated) section.
+      <string id="Preferences_Explain">Hinweis: Um diese Richtlinieneinstellungen nutzen zu können, müssen Sie zunächst alle Einstellungen im Abschnitt Einstellungen (veraltet) löschen.
 
-If this policy is enabled, you can use JSON to configure preferences.
+Wenn diese Richtlinieneinstellung aktiviert ist, können Sie Einstellungen mit Hilfe einer JSON-Datei konfigurieren.
 
-If this policy is disabled or not configured, preferences are not modified.
+Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, werden die Einstellungen nicht verändert.
 
-For detailed information on creating the policy, see https://github.com/mozilla/policy-templates/blob/master/README.md#preferences.</string>
-      <string id="ManagedBookmarks">Managed Bookmarks</string>
-      <string id="ManagedBookmarks_Explain">If this policy is enabled, you can use JSON to configure managed bookmarks.
+Für eine Beschreibung der Einstellung, siehe:
+https://github.com/mozilla/policy-templates/blob/master/README.md#preferences (Englisch)</string>
+      <string id="Bookmarks">Bookmarks (JSON)</string>
+      <string id="Bookmarks_Explain">If this policy is enabled, you can use JSON to configure bookmarks, including [] to clear all bookmarks.
 
-If this policy is disabled or not configured, managed bookmarks are not added.
+If this policy is disabled or not configured, the individual bookmark policies are used.
 
-For detailed information on creating the policy, see https://github.com/mozilla/policy-templates/blob/master/README.md#managedbookmarks.</string>
-      <string id="AllowedDomainsForApps">Define domains allowed to access Google Workspace</string>
-      <string id="AllowedDomainsForApps_Explain">If this policy is enabled, users can only access Google Workspace for the specified domains (separated by a comma). To allow access to Gmail, you can add consumer_accounts.
+If this policy is enabled along with individual bookmarks, those bookmarks will not be added.
 
-If this policy is disabled or not configured, users can access any account on Google Workspace as well as Gmail.</string>
-      <string id="BackgroundAppUpdate">Background updater</string>
-      <string id="BackgroundAppUpdate_Explain">If this policy disabled, the application will not try to install updates when the application is not running.
+This policy has no effect on Managed Bookmarks.
 
-If this policy is enabled or not configured, application updates may be installed (without user approval) in the background, even when the application is not running. The operating system might still require approval.</string>
+For detailed information on the JSON, see https://github.com/mozilla/policy-templates/blob/master/README.md#bookmarks.</string>
+      <string id="ManagedBookmarks">Verwaltete Lesezeichen</string>
+      <string id="ManagedBookmarks_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, können Sie verwaltete Lesezeichen mit Hilfe einer JSON-Datei konfigurieren.
+
+Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, werden keine verwalteten Lesezeichen hinzugefügt.
+
+Für eine Beschreibung der Einstellung, siehe:
+https://github.com/mozilla/policy-templates/blob/master/README.md#managedbookmarks (Englisch)</string>
+      <string id="AllowedDomainsForApps">Domains, die auf Google Workspace zugreifen dürfen</string>
+      <string id="AllowedDomainsForApps_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, können Anwender nur für definierte Domains auf Google Workspace zugreifen. Domains werden durch Kommas getrennt. Um den Zugriff auf Gmail zu erlauben, fügen Sie consumer_accounts hinzu.
+
+Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, können Anwender auf jedes Konto bei Google Workspace und auch auf Gmail zugreifen.</string>
+      <string id="BackgroundAppUpdate">Hintergrund-Updates</string>
+      <string id="BackgroundAppUpdate_Explain">Wenn diese Richtlinieneinstellung deaktiviert ist, wird die Anwendung keine Updates im Hintergrund installieren, wenn sie geschlossen ist.
+
+Wenn diese Richtlinieneinstellung aktiviert oder nicht konfiguriert ist, können Updates ohne Genehmigung durch den Anwender im Hintergrund installiert werden, selbst wenn die Anwendung nicht gestartet ist. Das Betriebssystem kann jedoch den Anwender um Genehmigung fragen.</string>
       <string id="AutoLaunchProtocolsFromOrigins">Auto Launch Protocols From Origins</string>
       <string id="AutoLaunchProtocolsFromOrigins_Explain">If this policy is enabled, you can define a list of external protocols that can be used from listed origins without prompting the user.
 
@@ -858,9 +899,9 @@ If this policy is disabled or not configured, any site that invokes an external 
 
 For detailed information on creating the policy, see https://github.com/mozilla/policy-templates/blob/master/README.md#autolaunchprotocolsfromorigins.</string>
       <string id="WindowsSSO">Windows SSO</string>
-      <string id="WindowsSSO_Explain">If this policy is enabled, Firefox will use credentials stored in Windows to sign in to Microsoft, work, and school accounts.
+      <string id="WindowsSSO_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, verwendet Firefox in Windows gespeicherte Zugangsdaten, um Sie auf Webseiten von Microsoft anzumelden, einschließlich Outlook, Office 365 sowie allen anderen Geschäfts- oder Schulkonten, die Microsofts Authentifizierung verwenden.
 
-If this policy is disabled or not configured, credentials must be entered manually.</string>
+Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, müssen die Zugangsdaten manuell eingegeben werden.</string>
       <string id="Preferences_Boolean_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, ist die Einstellung auf true gesperrt. Wenn diese Richtlinieneinstellung deaktiviert ist, ist die Einstellung auf false gesperrt.
 
 Für eine Beschreibung der Einstellung, siehe:
@@ -872,7 +913,6 @@ Für eine Beschreibung der Einstellung, siehe:
 
 https://github.com/mozilla/policy-templates/blob/master/README.md#preferences (Englisch)</string>
       <string id="Preferences_Enum_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, ist sie auf den spezifizierten Wert gesperrt. Wenn diese Richtlinieneinstellung deaktiviert ist, hat sie keinen Effekt.
-
 
 Für eine Beschreibung der Einstellung, siehe:
 
@@ -969,6 +1009,12 @@ https://github.com/mozilla/policy-templates/blob/master/README.md#preferences (E
       <presentation id="PopupsAllow"><listBox refId="PopupsAllowDesc">Pop-up-Blocker deaktivieren</listBox></presentation>
       <presentation id="Cookies_AcceptThirdParty">
         <dropdownList refId="Cookies_AcceptThirdParty"/>
+      </presentation>
+      <presentation id="Cookies_Behavior">
+        <dropdownList refId="Cookies_Behavior"/>
+      </presentation>
+      <presentation id="Cookies_BehaviorPrivateBrowsing">
+        <dropdownList refId="Cookies_BehaviorPrivateBrowsing"/>
       </presentation>
       <presentation id="SearchBar">
         <dropdownList refId="SearchBar"/>
@@ -1128,6 +1174,9 @@ https://github.com/mozilla/policy-templates/blob/master/README.md#preferences (E
       <presentation id="Preferences_security_default_personal_cert">
         <dropdownList refId="Preferences_security_default_personal_cert"/>
       </presentation>
+      <presentation id="LegacySameSiteCookieBehaviorEnabledForDomainList">
+        <listBox refId="LegacySameSiteCookieBehaviorEnabledForDomainList"/>
+      </presentation>
       <presentation id="LocalFileLinks">
         <listBox refId="LocalFileLinks"/>
       </presentation>
@@ -1144,8 +1193,10 @@ https://github.com/mozilla/policy-templates/blob/master/README.md#preferences (E
       <presentation id="FirefoxHome">
         <checkBox refId="FirefoxHome_Search">Suche</checkBox>
         <checkBox refId="FirefoxHome_TopSites">Top Seiten</checkBox>
+        <checkBox refId="FirefoxHome_SponsoredTopSites">Sponsored Top Sites</checkBox>
         <checkBox refId="FirefoxHome_Highlights">Download Verlauf</checkBox>
         <checkBox refId="FirefoxHome_Pocket">Von Pocket empfohlen</checkBox>
+        <checkBox refId="FirefoxHome_SponsoredPocket">Sponsored Pocket Stories</checkBox>
         <checkBox refId="FirefoxHome_Snippets">Snippets</checkBox>
         <checkBox refId="FirefoxHome_Locked">Es ist nicht erlaubt, dass Einstellungen geändert werden.</checkBox>
       </presentation>
