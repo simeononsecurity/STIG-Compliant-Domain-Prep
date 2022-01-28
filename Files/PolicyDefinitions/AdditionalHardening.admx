@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--  
   Author: Florian Stosse <florian.stosse@safrangroup.com>
-  Version: 1.0.11
-  Date: 30/03/2021
+  Version: 1.0.17
+  Date: 09/01/2021
   -->
 <policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema"
                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -116,6 +116,73 @@
       </disabledValue>
     </policy>
     <!-- Hardening section -->
+    <!-- Disable co-installer applications-->
+    <policy name="CoInstallers"
+            class="Machine"
+            displayName="$(string.CoInstallers)"
+            explainText="$(string.CoInstallers_Help)"
+            key="SOFTWARE\Microsoft\Windows\CurrentVersion\Device Installer"
+            valueName="DisableCoInstallers">
+      <parentCategory ref="Hardening" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <!-- Configure Print Driver Restriction -->
+    <policy name="Pol_SecGuide_0721_Print_Driver"
+            class="Machine"
+            displayName="$(string.Pol_SecGuide_PrintDriver)"
+            explainText="$(string.Pol_SecGuide_PrintDriver_Help)"
+            key="Software\Policies\Microsoft\Windows NT\Printers\PointAndPrint"
+            valueName="RestrictDriverInstallationToAdministrators">
+      <parentCategory ref="Hardening" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <!-- Strict Authenticode signatures verification -->
+    <policy name="AuthenticodeCertVerification"
+            class="Machine"
+            displayName="$(string.AuthenticodeCertVerification)"
+            explainText="$(string.AuthenticodeCertVerification_Explain)"
+            key="Software\Microsoft\Cryptography\Wintrust\Config">
+      <parentCategory ref="Hardening" />
+      <supportedOn ref="windows:SUPPORTED_Windows_6_3" />
+      <enabledList defaultKey="Software\Microsoft\Cryptography\Wintrust\Config">
+        <item valueName="EnableCertPaddingCheck">
+          <value>
+            <decimal value="1" />
+          </value>
+        </item>
+        <item key="Software\Wow6432Node\Microsoft\Cryptography\Wintrust\Config"
+              valueName="EnableCertPaddingCheck">
+          <value>
+            <decimal value="1" />
+          </value>
+        </item>
+      </enabledList>
+      <disabledList defaultKey="Software\Microsoft\Cryptography\Wintrust\Config">
+        <item valueName="EnableCertPaddingCheck">
+          <value>
+            <delete />
+          </value>
+        </item>
+        <item key="Software\Wow6432Node\Microsoft\Cryptography\Wintrust\Config"
+              valueName="EnableCertPaddingCheck">
+          <value>
+            <delete />
+          </value>
+        </item>
+      </disabledList>
+    </policy>
     <policy name="LSA_RunAsPPL"
             class="Machine"
             displayName="$(string.LSA_RunAsPPL)"
@@ -172,8 +239,8 @@
       <elements>
         <decimal id="MSCHAPv2_Iteration_count"
                  valueName="NL$IterationCount"
-                 minValue="65536"
-                 maxValue="200000" />
+                 minValue="1"
+                 maxValue="200000000" />
       </elements>
     </policy>
     <policy name="Pol_MSS_DisableIPSourceRouting"
@@ -288,7 +355,7 @@
             presentation="$(presentation.MicroarchHardening_Presentation)"
             key="SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management">
       <parentCategory ref="Hardening" />
-      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
       <elements>
         <enum id="MicroarchHardening_DropdownList"
               valueName="FeatureSettingsOverride"
@@ -1563,11 +1630,6 @@
       <elements>
         <enum id="DHServer_MinLength"
               valueName="ServerMinKeyBitLength">
-          <item displayName="$(string.DH_Value1024)">
-            <value>
-              <decimal value="1024" />
-            </value>
-          </item>
           <item displayName="$(string.DH_Value2048)">
             <value>
               <decimal value="2048" />
@@ -1597,11 +1659,6 @@
       <elements>
         <enum id="DHClient_MinLength"
               valueName="ClientMinKeyBitLength">
-          <item displayName="$(string.DH_Value1024)">
-            <value>
-              <decimal value="1024" />
-            </value>
-          </item>
           <item displayName="$(string.DH_Value2048)">
             <value>
               <decimal value="2048" />
@@ -1647,11 +1704,6 @@
       <elements>
         <enum id="PKCSClient_MinLength"
               valueName="ClientMinKeyBitLength">
-          <item displayName="$(string.PKCS_Value1024)">
-            <value>
-              <decimal value="1024" />
-            </value>
-          </item>
           <item displayName="$(string.PKCS_Value2048)">
             <value>
               <decimal value="2048" />
