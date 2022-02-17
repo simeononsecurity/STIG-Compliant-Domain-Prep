@@ -56,6 +56,18 @@ Computer Configuration\Administrative Templates\Windows Components\Windows Defen
 
 If this setting is disabled or not configured, SEHOP is not enforced for 32-bit processes.
 </string>
+      <string id="Pol_SecGuide_PrintDriver">Limits print driver installation to Administrators</string>
+      <string id="Pol_SecGuide_PrintDriver_Help">
+Determines whether users that aren't Administrator can install print drivers on this computer.
+
+By default, users that aren't Administrators can't install print drivers on this computer.
+
+If you enable this setting or do not configure it, the system will limit installation of print drivers to Administrators of this computer.
+
+If you disable this setting, the system will not limit installation of print drivers to this computer.
+
+Additional Information: https://support.microsoft.com/en-us/topic/kb5005010-restricting-installation-of-new-printer-drivers-after-applying-the-july-6-2021-updates-31b91c02-05bc-4ada-a7ea-183b129578a7 for additional information.
+      </string>
       <string id="Pol_SecGuide_SMBv1Server">Configure SMB v1 server</string>
       <string id="Pol_SecGuide_SMBv1Server_Help">Disabling this setting disables server-side processing of the SMBv1 protocol. (Recommended.)
 

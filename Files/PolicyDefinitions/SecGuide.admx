@@ -25,6 +25,25 @@
 
     <policies>
 
+        <!-- Configure Print Driver Restriction-->
+        <policy name="Pol_SecGuide_0721_Print_Driver"
+                class="Machine"
+                displayName="$(string.Pol_SecGuide_PrintDriver)"
+                explainText="$(string.Pol_SecGuide_PrintDriver_Help)"
+                key="Software\Policies\Microsoft\Windows NT\Printers\PointAndPrint"
+                valueName="RestrictDriverInstallationToAdministrators"
+                >
+            <parentCategory ref="Cat_SecGuide" />
+            <supportedOn ref="windows:SUPPORTED_Windows7" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
+		
+		
         <!-- Configure SMBv1 -->
         <policy name="Pol_SecGuide_0001_SMBv1_Server"
                 class="Machine"
@@ -97,7 +116,7 @@
             presentation="$(presentation.Pol_SecGuide_NetbtNodeTypeCfg)"
                 >
             <parentCategory ref="Cat_SecGuide" />
-            <supportedOn ref="SUPPORTED_Windows_10_0_RS4" />
+            <supportedOn ref="windows:SUPPORTED_Windows7" />
             <elements>
                 <enum id="Pol_SecGuide_SecGuide_NetbtNodeTypeCfg" key="SYSTEM\CurrentControlSet\Services\NetBT\Parameters" valueName="NodeType">
                     <item displayName="$(string.NetBtNodeTypeB)">
@@ -136,7 +155,7 @@
                 presentation="$(presentation.Pol_SecGuide_LdapEnforceChannelBinding)"
                 >
             <parentCategory ref="Cat_SecGuide" />
-            <supportedOn ref="SUPPORTED_Windows_10_0_RS4" />
+            <supportedOn ref="SUPPORTED_WindowsServer2008AndNewer" />
             <elements>
                 <enum id="Pol_SecGuide_LdapEnforceChannelBinding" key="System\CurrentControlSet\Services\NTDS\Parameters" valueName="LdapEnforceChannelBinding">
                     <item displayName="$(string.LdapEnforce_Always)">
