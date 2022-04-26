@@ -8,6 +8,11 @@
 
 **This script is designed for use in Enterprise environments**
 
+## Ansible:
+We now offer a playbook collection for this script. Please see the following:
+- [Github Repo](https://github.com/simeononsecurity/Windows_STIG_Ansible)
+- [Ansible Galaxy](https://galaxy.ansible.com/simeononsecurity/windows_stigs)
+
 ## Additional configurations were considered from:
 - [CERT - IE Scripting Engine Memory Corruption](https://kb.cert.org/vuls/id/573168/)
 - [Dirteam - SSL Hardening](https://dirteam.com/sander/2019/07/30/howto-disable-weak-protocols-cipher-suites-and-hashing-algorithms-on-web-application-proxies-ad-fs-servers-and-windows-servers-running-azure-ad-connect/)
