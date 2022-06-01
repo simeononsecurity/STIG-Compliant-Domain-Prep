@@ -6,8 +6,6 @@
   <resources>
     <stringTable>
       <string id="NotificationsCategory">Notifications</string>
-      <string id="WnsEndpoint">Enables group policy for the WNS FQDN</string>
-      <string id="WnsEndpointExplain">This policy sets a special WNS FQDN for specific environments.</string>
       <string id="NoTileNotification">Turn off tile notifications</string>
       <string id="NoTileNotificationExplain">
           This policy setting turns off tile notifications.
@@ -111,11 +109,6 @@
       </presentation>
       <presentation id="QuietHoursEndTimePicker">
         <decimalTextBox refId="QuietHoursDailyEndMinuteControl" defaultValue="360">Minutes after midnight:</decimalTextBox>
-      </presentation>
-      <presentation id="WnsEndpoint">
-        <textBox refId="WnsEndpoint_FQDN">
-          <label>FQDN for WNS</label>
-        </textBox>
       </presentation>
     </presentationTable>
   </resources>

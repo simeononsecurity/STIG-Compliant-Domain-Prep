@@ -96,11 +96,11 @@ If you enable this policy setting, newly added notification icons are not tempor
 
 If you disable or do not configure this policy setting, newly added notification icons are temporarily promoted to the Taskbar.</string>
       <string id="EnableLegacyBalloonNotifications">Disable showing balloon notifications as toasts.</string>
-      <string id="EnableLegacyBalloonNotifications_Help">This policy disables the functionality that converts balloons to toast notifications.
+      <string id="EnableLegacyBalloonNotifications_Help">This policy disables the functionality that converts balloons to toast notifications. 
 
-If you enable this policy setting, system and application notifications will render as balloons instead of toast notifications.
+If you enable this policy setting, system and application notifications will render as balloons instead of toast notifications.   
 
-Enable this policy setting if a specific app or system component that uses balloon notifications has compatibility issues with toast notifications.
+Enable this policy setting if a specific app or system component that uses balloon notifications has compatibility issues with toast notifications. 
 
 If you disable or don’t configure this policy setting, all notifications will appear as toast notifications.
 
@@ -137,23 +137,23 @@ If you disable or do not configure this policy setting, users can show taskbars 
         <string id="ShowWindowsStoreAppsOnTaskbar">Show Windows Store apps on the taskbar</string>
         <string id="ShowWindowsStoreAppsOnTaskbar_Help">
 This policy setting allows users to see Windows Store apps on the taskbar.
-
+ 
 If you enable this policy setting, users will see Windows Store apps on the taskbar.
-
+ 
 If you disable this policy setting, users won’t see Windows Store apps on the taskbar.
-
+ 
 If you don’t configure this policy setting, the default setting for the user’s device will be used, and the user can choose to change it.</string>
       <string id="DisableNotificationCenter">Remove Notifications and Action Center</string>
       <string id="DisableNotificationCenter_Help">This policy setting removes Notifications and Action Center from the notification area on the taskbar.
 
-The notification area is located at the far right end of the taskbar and includes icons for current notifications and the system clock.
+The notification area is located at the far right end of the taskbar and includes icons for current notifications and the system clock.  
 
-If this setting is enabled, Notifications and Action Center is not displayed in the notification area. The user will be able to read notifications when they appear, but they won’t be able to review any notifications they miss.
+If this setting is enabled, Notifications and Action Center is not displayed in the notification area. The user will be able to read notifications when they appear, but they won’t be able to review any notifications they miss. 
 
-If you disable or do not configure this policy setting, Notification and Security and Maintenance will be displayed on the taskbar.
+If you disable or do not configure this policy setting, Notification and Security and Maintenance will be displayed on the taskbar. 
 
 A reboot is required for this policy setting to take effect.</string>
-      <string id="NoPinningStoreToTaskbar">Do not allow pinning Store app to the Taskbar</string>
+      <string id="NoPinningStoreToTaskbar">Do not allow pinning Store app to the Taskbar</string> 
       <string id="NoPinningStoreToTaskbar_Help">
 This policy setting allows you to control pinning the Store app to the Taskbar.
 
@@ -170,30 +170,10 @@ If you disable this policy setting, users cannot show an additional calendar, re
 If you do not configure this policy setting, the calendar will be set according to the default logic.</string>
       <string id="ConfigureTaskbarCalendar_SimplifiedChinese">Simplified Chinese (Lunar)</string>
       <string id="ConfigureTaskbarCalendar_TraditionalChinese">Traditional Chinese (Lunar)</string>
-      <string id="Chat">Chat</string>
-      <string id="ConfigureChatIcon">Configures the Chat icon on the taskbar</string>
-      <string id="ConfigureChatIcon_Help">This policy setting allows you to configure the Chat icon on the taskbar.
-
-If you enable this policy setting and set it to Show, the Chat icon will be displayed on the taskbar by default. Users can show or hide it in Settings.
-
-If you enable this policy setting and set it to Hide, the Chat icon will be hidden by default. Users can show or hide it in Settings.
-
-If you enable this policy setting and set it to Disabled, the Chat icon will not be displayed, and users cannot show or hide it in Settings.
-
-If you disable or do not configure this policy setting, the Chat icon will be configured according to the defaults for your Windows edition.</string>
-      <string id="ChatEnum_Show">Show</string>
-      <string id="ChatEnum_Hide">Hide</string>
-      <string id="ChatEnum_Disabled">Disabled</string>
     </stringTable>
     <presentationTable>
       <presentation id="ConfigureTaskbarCalendar">
         <dropdownList refId="ConfigureTaskbarCalendar_Dropdown" defaultItem="0">Calendar:</dropdownList>
-      </presentation>
-      <presentation id="ConfigureChatIcon">
-          <text>Configure the Chat icon setting</text>
-          <text> </text>
-          <dropdownList refId="ConfigureChatIcon_Action" noSort="true" defaultItem="1">State: </dropdownList>
-          <text> </text>
       </presentation>
     </presentationTable>
   </resources>

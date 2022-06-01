@@ -15,7 +15,7 @@ Additionally, if you check the "Include content from Enterprise spotlight" check
 
 If you disable this policy setting, Windows spotlight will be turned off and users will no longer be able to select it as their lock screen. Users will see the default lock screen image and will be able to select another image, unless you have enabled the "Prevent changing lock screen image" policy.
 
-If you do not configure this policy, Windows spotlight will be available on the lock screen and will be selected by default, unless you have configured another default lock screen image using the "Force a specific default lock screen and logon image" policy.
+If you do not configure this policy, Windows spotlight will be available on the lock screen and will be selected by default, unless you have configured another default lock screen image using the "Force a specific default lock screen image" policy.
 
 Note: This policy is only available for Enterprise SKUs</string>
       <string id="DisableWindowsSpotlightFeatures">Turn off all Windows spotlight features</string>
@@ -72,20 +72,8 @@ If you disable or do not configure this policy, the Windows Welcome Experience w
 
 If you enable this policy, Windows experiences that use the cloud optimized content client component, will instead present the default fallback content.
 
-If you disable or do not configure this policy, Windows experiences will be able to use cloud optimized content.</string>
-      <string id="DisableSpotlightCollectionOnDesktop">Turn off Spotlight collection on Desktop</string>
-      <string id="DisableSpotlightCollectionOnDesktop_Help">This policy setting removes the Spotlight collection setting in Personalization, rendering the user unable to select and subsequentyly download daily images from Microsoft to desktop.
-
-If you enable this policy, "Spotlight collection" will not be available as an option in Personalization settings.
-
-If you disable or do not configure this policy, "Spotlight collection" will appear as an option in Personalization settings, allowing the user to select "Spotlight collection" as the Desktop provider and display daily images from Microsoft on the desktop.</string>
-      <string id="DisableConsumerAccountStateContent">Turn off cloud consumer account state content</string>
-      <string id="DisableConsumerAccountStateContent_Help">This policy setting lets you turn off cloud consumer account state content in all Windows experiences.
-
-            If you enable this policy, Windows experiences that use the cloud consumer account state content client component, will instead present the default fallback content.
-
-            If you disable or do not configure this policy, Windows experiences will be able to use cloud consumer account state content.
-        </string>
+If you disable or do not configure this policy, Windows experiences will be able to use cloud optimized content.
+      </string>
     </stringTable>
     <presentationTable>
       <presentation id="ConfigureWindowsSpotlight">

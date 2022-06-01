@@ -172,12 +172,6 @@ If you disable or do not configure this policy setting, users that are not requi
 By default, users can change the background image shown when the machine is locked or displaying the logon screen.
 
 If you enable this setting, the user will not be able to change their lock screen and logon image, and they will instead see the default image.</string>
-      <string id="CPL_Personalization_AnimateLockScreenBackground">Prevent lock screen background motion</string>
-      <string id="CPL_Personalization_AnimateLockScreenBackground_Help">This policy setting controls whether the lock screen image is static or has a subtle panning effect driven by the device's accelerometer output.
-
-If you enable this setting, motion will be prevented and the user will see the traditional static lock screen background image.
-
-If you disable this setting (and the device has an accelerometer), the user will see the lock screen background pan around a still image as they physically move their device.</string>        
       <string id="CPL_Personalization_ForceDefaultLockScreen">Force a specific default lock screen and logon image</string>
       <string id="CPL_Personalization_ForceDefaultLockScreen_Help">This setting allows you to force a specific default lock screen and logon image by entering the path (location) of the image file. The same image will be used for both the lock and logon screens.
 

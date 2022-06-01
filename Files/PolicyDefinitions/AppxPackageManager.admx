@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!--  Copyright (C) Microsoft. All rights reserved.  -->
 <policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
   <policyNamespaces>
@@ -22,16 +22,6 @@
         <decimal value="0" />
       </disabledValue>
     </policy>
-    <policy name="AllowAutomaticAppArchiving" class="Machine" displayName="$(string.AllowAutomaticAppArchiving)" explainText="$(string.AllowAutomaticAppArchivingExplanation)" key="Software\Policies\Microsoft\Windows\Appx" valueName="AllowAutomaticAppArchiving">
-      <parentCategory ref="AppxDeployment" />
-      <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
-      <enabledValue>
-        <decimal value="1" />
-      </enabledValue>
-      <disabledValue>
-        <decimal value="0" />
-      </disabledValue>
-    </policy>    
     <policy name="AllowDeploymentInSpecialProfiles" class="Machine" displayName="$(string.AllowDeploymentInSpecialProfiles)" explainText="$(string.AllowDeploymentInSpecialProfilesExplanation)" key="Software\Policies\Microsoft\Windows\Appx" valueName="AllowDeploymentInSpecialProfiles">
       <parentCategory ref="AppxDeployment" />
       <supportedOn ref="windows:SUPPORTED_Windows8" />
@@ -85,26 +75,6 @@
     <policy name="BlockNonAdminUserInstall" class="Machine" displayName="$(string.BlockNonAdminUserInstall)" explainText="$(string.BlockNonAdminUserInstallExplanation)" key="Software\Policies\Microsoft\Windows\Appx" valueName="BlockNonAdminUserInstall">
       <parentCategory ref="AppxDeployment" />
       <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
-      <enabledValue>
-        <decimal value="1" />
-      </enabledValue>
-      <disabledValue>
-        <decimal value="0" />
-      </disabledValue>
-    </policy>
-    <policy name="DisableBackgroundAutoUpdates" class="Machine" displayName="$(string.DisableBackgroundAutoUpdates)" explainText="$(string.DisableBackgroundAutoUpdatesExplanation)" key="Software\Policies\Microsoft\Windows\Appx" valueName="DisableBackgroundAutoUpdates">
-      <parentCategory ref="AppxDeployment" />
-      <supportedOn ref="windows:SUPPORTED_Windows_10_0_21H2" />
-      <enabledValue>
-        <decimal value="1" />
-      </enabledValue>
-      <disabledValue>
-        <decimal value="0" />
-      </disabledValue>
-    </policy>
-    <policy name="DisableMeteredNetworkBackgroundAutoUpdates" class="Machine" displayName="$(string.DisableMeteredNetworkBackgroundAutoUpdates)" explainText="$(string.DisableMeteredNetworkBackgroundAutoUpdatesExplanation)" key="Software\Policies\Microsoft\Windows\Appx" valueName="DisableMeteredNetworkBackgroundAutoUpdates">
-      <parentCategory ref="AppxDeployment" />
-      <supportedOn ref="windows:SUPPORTED_Windows_10_0_21H2" />
       <enabledValue>
         <decimal value="1" />
       </enabledValue>

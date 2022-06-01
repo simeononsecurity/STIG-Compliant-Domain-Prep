@@ -974,5 +974,20 @@
             <decimal id="ConfigureKioskResetAfterIdleTimeout_TextBox" valueName="ConfigureKioskResetAfterIdleTimeout" minValue="0" maxValue="1440" />
         </elements>
     </policy>
+    <policy name="SuppressEdgeDeprecationNotification"
+        class="Both"
+        displayName="$(string.SuppressEdgeDeprecationNotification)"
+        explainText="$(string.SuppressEdgeDeprecationNotification_Explain)"
+        key="Software\Policies\Microsoft\MicrosoftEdge\EdgeDeprecation"
+        valueName="SuppressEdgeDeprecationNotification">
+      <parentCategory ref="MicrosoftEdge" />
+      <supportedOn ref="SUPPORTED_INTERNET_BROWSER_WIN10" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
   </policies>
 </policyDefinitions>

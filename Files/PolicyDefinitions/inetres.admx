@@ -2760,6 +2760,16 @@
         <decimal value="0" />
       </disabledValue>
     </policy>
+    <policy name="DisableFlashInIE" class="Both" displayName="$(string.DisableFlashInIE)" explainText="$(string.IE_ExplainDisableFlashInIE)" key="Software\Policies\Microsoft\Internet Explorer" valueName="DisableFlashInIE">
+      <parentCategory ref="IESF_AddOnManagement" />
+      <supportedOn ref="SUPPORTED_IE10WIN8" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
     <policy name="General_Zooming" class="Both" displayName="$(string.General_Zooming)" explainText="$(string.IE_ExplainGeneral_Zooming)" key="Software\Policies\Microsoft\Internet Explorer\ZOOM" valueName="ZoomDisabled">
       <parentCategory ref="InternetExplorer" />
       <supportedOn ref="SUPPORTED_IE7" />
@@ -35466,7 +35476,7 @@
     </policy>
     <policy name="DisableInternetExplorerApp" class="Both" displayName="$(string.DisableInternetExplorerApp)" explainText="$(string.IE_ExplainDisableInternetExplorerApp)" presentation="$(presentation.NotifyDisableIEOptions)" key="Software\Policies\Microsoft\Internet Explorer\Main">
       <parentCategory ref="InternetExplorer" />
-      <supportedOn ref="SUPPORTED_IE11WIN10" />
+      <supportedOn ref="SUPPORTED_IE11" />
       <elements>
         <enum id="NotifyDisableIEOptions" valueName="NotifyDisableIEOptions"  required="true">
           <item displayName="$(string.NotifyDisableIEOptions_Never)">
@@ -35486,16 +35496,6 @@
           </item>
         </enum>
       </elements>
-    </policy>
-    <policy name="JScriptReplacement" class="Both" displayName="$(string.JScriptReplacement)" explainText="$(string.IE_ExplainJScriptReplacement)" key="Software\Policies\Microsoft\Internet Explorer\Main" valueName="JScriptReplacement">
-      <parentCategory ref="InternetExplorer" />
-      <supportedOn ref="SUPPORTED_IE11" />
-      <enabledValue>
-        <decimal value="1" />
-      </enabledValue>
-      <disabledValue>
-        <decimal value="0" />
-      </disabledValue>
     </policy>
     <policy name="DefaultDomainCacheLimitInMB" class="Both" displayName="$(string.DefaultDomainCacheLimitInMB)" explainText="$(string.IE_ExplainDefaultDomainCacheLimitInMB)" presentation="$(presentation.DefaultDomainCacheLimitInMB)" key="Software\Policies\Microsoft\Internet Explorer\BrowserStorage">
       <parentCategory ref="CategoryBrowsingHistory" />

@@ -518,9 +518,14 @@ If you set this policy to 0, Microsoft Edge does not use an idle timer.
 If disabled or not configured, the default value is 5 minutes.
 
 If you do not configure Microsoft Edge in assigned access, then this policy does not take effect.</string>
-    </stringTable>
+      <string id="SuppressEdgeDeprecationNotification">Suppress the display of Edge Deprecation Notification</string>
+      <string id="SuppressEdgeDeprecationNotification_Explain">You can configure Microsoft Edge to suppress the display of the notification that informs users that support of this version of Microsoft Edge ended on March 9th, 2021. If enabled, the notification will not show.
 
+If disabled or not configured, the notification will show every time Edge is launched. </string>
+
+    </stringTable>
     <!-- Presentation -->
+    
     <presentationTable>
       <presentation id="ConfiguredFavorites_Presentation">
         <textBox refId="ConfiguredFavoritesPrompt">
