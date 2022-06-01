@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitions xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" revision="1.0" schemaVersion="1.0">
+  <policyNamespaces>
+    <target prefix="netbanner" namespace="Microsoft.NetBanner"/>
+    <using prefix="windows" namespace="Microsoft.Policies.Windows"/>
+  </policyNamespaces>
+  <resources minRequiredRevision="1.0"/>
+  <supportedOn>
+    <definitions>
+      <definition name="WinXP_dotNetFx4" displayName="$(string.supportedOn)" />
+    </definitions>
+  </supportedOn>
+  <categories>
+    <category name="NetBanner" displayName="$(string.ProductName)" />
+  </categories>
+  <policies>
+    <policy name="Classification" 
+            class="User" 
+            displayName="$(string.Classification)" 
+            explainText="$(string.ClassificationExplainText)" 
+            presentation="$(presentation.Classification)" 
+            key="Software\Policies\Microsoft\NetBanner" 
+            valueName="Classification">
+      <parentCategory ref="NetBanner"/>
+      <supportedOn ref="WinXP_dotNetFx4"/>
+      <elements>
+        <enum id="Classification" key="Software\Policies\Microsoft\NetBanner" valueName="Classification">
+          <item displayName="$(string.Unclassified)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.ClassificationSecret)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.ClassificationTopSecret)">
+            <value>
+              <decimal value="3" />
+            </value>
+          </item>
+          <item displayName="$(string.ClassificationSci)">
+            <value>
+              <decimal value="4" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="Caveats" class="User" displayName="$(string.Caveats)" explainText="$(string.Caveats_Help)" presentation="$(presentation.Caveats)" key="Software\Policies\Microsoft\NetBanner" valueName="CaveatsEnabled">
+      <parentCategory ref="NetBanner" />
+      <supportedOn ref="SUPPORTED_WindowsXPSP2_Or_WindowsNETSP1" />
+      <elements>
+        <text id="SizeMessage" key="Software\Policies\Microsoft\NetBanner" valueName="Caveats" maxLength="40" />
+      </elements>
+    </policy>
+  </policies>
+</policyDefinitions>

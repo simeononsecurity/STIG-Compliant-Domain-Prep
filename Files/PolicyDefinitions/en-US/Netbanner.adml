@@ -1,5 +1,5 @@
 <policyDefinitionResources revision="1.0" schemaVersion="1.0">
-  <!-- NetBanner 2.0.130 -->
+  <!-- NetBanner 2.3.181 -->
   <displayName>
   </displayName>
   <description>
@@ -9,7 +9,7 @@
       <string id="unknown_0">NetBanner</string>
       <string id="unknown_1">Classification</string>
       <string id="unknown_7">Custom Settings</string>
-      <string id="unknown_24">Information Condition</string>
+      <string id="unknown_24">Cyber Protection Condition</string>
       <string id="unknown_31">Force Protection Condition</string>
       <string id="unknown_37">Caveats</string>
       <string id="unknown_3">Unclassified</string>
@@ -44,8 +44,16 @@
       <string id="Caveats_Help">Allows administrators to enter free form text.</string>
       <string id="SUPPORTED_WindowsXPSP2_Or_WindowsNETSP1">At least Microsoft Windows XP Professional with SP2 or Windows Server 2003 family with SP1</string>
       <string id="Classification_Help">Classification level for the Organizational Unit (OU).</string>
-      <string id="InformationCondition_Help">Information condition setting.</string>
+      <string id="CyberProtectionCondition_Help">Cyber Protection Condition setting.</string>
       <string id="ForceProtectionCondition_Help">Force Protection Condition setting.</string>
+      <string id="userPolicyOverride">User Policy Override</string>
+      <string id="userPolicyOverrideDescription">Allows NetBanner to display classification and caveats from User Group Policy.
+      
+By default, classification and caveats are configured bia machine policy.
+      
+If this is setting is enabled, classifcation and caveats must be configured from User Configuration\Administrative Templates\NetBanner.</string>
+      <string id="AllowUserPolicyOverrideFalse">False</string>
+      <string id="AllowUserPolicyOverrideTrue">True</string>
     </stringTable>
     <presentationTable>
       <presentation id="Classification">
@@ -58,8 +66,8 @@
           <label>Display Text</label>
         </textBox>
       </presentation>
-      <presentation id="InformationCondition">
-        <dropdownList refId="InformationCondition" noSort="true" defaultItem="4">Information Condition</dropdownList>
+      <presentation id="CyberProtectionCondition">
+        <dropdownList refId="CyberProtectionCondition" noSort="true" defaultItem="4">Cyber Protection Condition</dropdownList>
       </presentation>
       <presentation id="ForceProtectionCondition">
         <dropdownList refId="ForceProtection" noSort="true" defaultItem="0">Force Protection</dropdownList>
@@ -68,6 +76,9 @@
         <textBox refId="SizeMessage">
           <label>40 Characters Max</label>
         </textBox>
+      </presentation>
+      <presentation id="AllowUserPolicyOverride">
+        <dropdownList refId="AllowUserPolicyOverride" noSort="true" defaultItem="0">Allow User Policy Override</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

@@ -30,6 +30,13 @@
       <parentCategory ref="VMwarePrintRedirection" />
       <supportedOn ref="SUPPORTED_NotSpecified" />
     </policy>
+    <policy name="DriverMapping" class="Both" displayName="$(string.DriverMapping)" explainText="$(string.DriverMapping_detail)" presentation="$(presentation.DriverMapping)" key="Software\Policies\VMware, Inc.\VMware VDM\PrintRedir">
+      <parentCategory ref="VMwarePrintRedirection" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+        <elements>
+        <list id="printer_driver_mapping" key="Software\Policies\VMware, Inc.\VMware VDM\PrintRedir\DriverMapping" explicitValue="true" />
+        </elements>
+    </policy>
     <policy name="PrinterCreationSetting" class="Both" displayName="$(string.printer_creation_setting)" explainText="$(string.printer_creation_setting_detail)" presentation="$(presentation.PrinterCreationSetting)" key="Software\Policies\VMware, Inc.\VMware VDM\PrintRedir">
       <parentCategory ref="VMwarePrintRedirection" />
       <supportedOn ref="SUPPORTED_NotSpecified" />
@@ -102,6 +109,96 @@
       <supportedOn ref="SUPPORTED_NotSpecified" />
       <elements>
         <text valueName="PrinterNameSchema" id="printer_name_schema_textbox" />
+      </elements>
+    </policy>
+
+    <policy name="DefaultSetting" class="Both"
+            displayName="$(string.DefaultSetting)"
+            explainText="$(string.DefaultSetting_desc)"
+            presentation="$(presentation.DefaultSetting)"
+            key="Software\Policies\VMware, Inc.\VMware VDM\PrintRedir"
+            valueName="IsDefaultSettingEnabled">
+      <parentCategory ref="VMwarePrintRedirection" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <elements>
+        <enum id="DefaultDuplex" valueName="DefaultDuplex" required="true">
+          <item displayName="$(string.none)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.duplex_vertical)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.duplex_horizontal)">
+            <value>
+              <decimal value="3" />
+            </value>
+          </item>
+        </enum>
+        <enum id="DefaultColor" valueName="DefaultColor" required="true">
+          <item displayName="$(string.bw)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.color)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+        </enum>
+        <enum id="DefaultImageCompLevel" valueName="DefaultImageCompLevel" required="true">
+          <item displayName="$(string.lossless_comp)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.high_quality_comp)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.optimized_comp)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.no_image_comp)">
+            <value>
+              <decimal value="3" />
+            </value>
+          </item>
+        </enum>
+        <boolean id="IsDuplexLocked" valueName="IsDuplexLocked">
+          <trueValue>
+            <decimal value="1" />
+          </trueValue>
+          <falseValue>
+            <decimal value="0" />
+          </falseValue>
+        </boolean>
+        <boolean id="IsColorLocked" valueName="IsColorLocked">
+          <trueValue>
+            <decimal value="1" />
+          </trueValue>
+          <falseValue>
+            <decimal value="0" />
+          </falseValue>
+        </boolean>
+        <boolean id="IsCompLevelLocked" valueName="IsCompLevelLocked">
+          <trueValue>
+            <decimal value="1" />
+          </trueValue>
+          <falseValue>
+            <decimal value="0" />
+          </falseValue>
+        </boolean>
       </elements>
     </policy>
   </policies>

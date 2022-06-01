@@ -1,5 +1,5 @@
 <policyDefinitions revision="1.0" schemaVersion="1.0">
-  <!-- NetBanner 2.0.130 -->
+  <!-- NetBanner 2.3.181 -->
   <policyNamespaces>
     <target prefix="fullarmor" namespace="FullArmor.Policies.D31FC025_CAAE_4A5F_85B1_F123FB14A8B6" />
     <using prefix="windows" namespace="Microsoft.Policies.Windows" />
@@ -115,11 +115,11 @@
         <text id="DisplayText" key="Software\Policies\Microsoft\NetBanner" valueName="CustomDisplayText" />
       </elements>
     </policy>
-    <policy name="InformationCondition" class="Machine" displayName="$(string.unknown_24)" explainText="$(string.InformationCondition_Help)" presentation="$(presentation.InformationCondition)" key="Software\Policies\Microsoft\NetBanner" valueName="InfoCon">
+    <policy name="CyberProtectionCondition" class="Machine" displayName="$(string.unknown_24)" explainText="$(string.CyberProtectionCondition_Help)" presentation="$(presentation.CyberProtectionCondition)" key="Software\Policies\Microsoft\NetBanner" valueName="CPCon">
       <parentCategory ref="NetBanner" />
       <supportedOn ref="SUPPORTED_WindowsXPSP2_Or_WindowsNETSP1" />
       <elements>
-        <enum id="InformationCondition" key="Software\Policies\Microsoft\NetBanner" valueName="InfoCon">
+        <enum id="CyberProtectionCondition" key="Software\Policies\Microsoft\NetBanner" valueName="CPCon">
           <item displayName="$(string.unknown_26)">
             <value>
               <decimal value="1" />
@@ -181,6 +181,24 @@
       <supportedOn ref="SUPPORTED_WindowsXPSP2_Or_WindowsNETSP1" />
       <elements>
         <text id="SizeMessage" key="Software\Policies\Microsoft\NetBanner" valueName="Caveats" maxLength="40" />
+      </elements>
+    </policy>
+    <policy name="AllowUserPolicyOverride" class="Machine" displayName="$(string.userPolicyOverride)" explainText="$(string.userPolicyOverrideDescription)" presentation="$(presentation.AllowUserPolicyOverride)" key="Software\Policies\Microsoft\NetBanner" valueName="AllowUserPolicyOverride">
+      <parentCategory ref="NetBanner" />
+      <supportedOn ref="SUPPORTED_WindowsXPSP2_Or_WindowsNETSP1" />
+      <elements>
+        <enum id="AllowUserPolicyOverride" key="Software\Policies\Microsoft\NetBanner" valueName="AllowUserPolicyOverride">
+          <item displayName="$(string.AllowUserPolicyOverrideFalse)">
+            <value>
+              <decimal value="0"/>
+            </value>
+          </item>
+          <item displayName="$(string.AllowUserPolicyOverrideTrue)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+        </enum>
       </elements>
     </policy>
   </policies>

@@ -186,6 +186,16 @@
       </policy>
 
       <policy
+         name="RDPVcBridgeUnsupportedClients" class="Machine" displayName="$(string.RDPVcBridgeUnsupportedClients)" explainText="$(string.RDPVcBridgeUnsupportedClients_Desc)"
+         key="Software\Policies\VMware, Inc.\VMware VDM\RdpVcBridge" presentation="$(presentation.RDPVcBridgeUnsupportedClients)">
+            <parentCategory ref="Agent_Configuration" />
+            <supportedOn ref="SupportedOn" />
+               <elements>
+                  <text id="RDPVcBridgeUnsupportedClients_TB" key="Software\Policies\VMware, Inc.\VMware VDM\RdpVcBridge" valueName="unsupported_clients" />
+               </elements>
+      </policy>
+
+      <policy
          name="Disable_Time_Zone_sync" class="Machine" displayName="$(string.Disable_Time_Zone_sync)" explainText="$(string.Disable_Time_Zone_sync_Desc)"
          key="Software\Policies\VMware, Inc.\VMware VDM\Agent\Configuration" valueName="DisableTimeZoneSynchronization">
             <parentCategory ref="Agent_Configuration" />
@@ -1443,20 +1453,68 @@
 
       <policy
          name="Enable_AEC_Teams_Redir" class="Machine" displayName="$(string.Enable_AEC_Teams_Redir)" explainText="$(string.Enable_AEC_Teams_Redir_Desc)"
-         key="Software\Policies\VMware, Inc.\VMware WebRTCRedir" valueName="enableAEC">
+         key="Software\Policies\VMware, Inc.\VMware WebRTCRedir" valueName="enableAEC" presentation="$(presentation.Webrtc_Recommended_AEC)">
          <parentCategory ref="VMware_WebRTC_REDIR_FEATURES" />
          <supportedOn ref="SupportedOn" />
          <enabledValue>
             <decimal value="1" />
          </enabledValue>
          <disabledValue>
-         <decimal value="0" />
+            <decimal value="0" />
          </disabledValue>
+         <elements>
+            <boolean id="Webrtc_Recommended_AEC_CB"
+                     key="Software\Policies\VMware, Inc.\VMware WebRTCRedir"
+                     valueName="AecOption">
+               <trueValue>
+                  <decimal value="1" />
+               </trueValue>
+               <falseValue>
+                  <decimal value="2" />
+               </falseValue>
+            </boolean>
+         </elements>
+      </policy>
+
+      <policy
+         name="Enable_Datachannel_Teams_Redir" class="Machine" displayName="$(string.Enable_Datachannel_Teams_Redir)" explainText="$(string.Enable_Datachannel_Teams_Redir_Desc)"
+         key="Software\Policies\VMware, Inc.\VMware WebRTCRedir" valueName="enableDatachannel">
+         <parentCategory ref="VMware_WebRTC_REDIR_FEATURES" />
+         <supportedOn ref="SupportedOn" />
+         <enabledValue>
+            <decimal value="1" />
+         </enabledValue>
+         <disabledValue>
+            <decimal value="0" />
+         </disabledValue>
+      </policy>
+
+      <policy
+         name="Video_Cpu_Overuse_Threshold" class="Machine" displayName="$(string.Video_Cpu_Overuse_Threshold)" explainText="$(string.Video_Cpu_Overuse_Threshold_Desc)"
+         key="Software\Policies\VMware, Inc.\VMware WebRTCRedir" valueName="videoCpuOveruseThreshold" presentation="$(presentation.Video_Cpu_Overuse_Threshold)">
+         <parentCategory ref="VMware_WebRTC_REDIR_FEATURES" />
+         <supportedOn ref="SupportedOn" />
+         <elements>
+             <decimal id="Video_Cpu_Overuse_Threshold_data" key="Software\Policies\VMware, Inc.\VMware WebRTCRedir" valueName="videoCpuOveruseThreshold" maxValue="100" minValue="0" />
+         </elements>
       </policy>
 
       <policy
          name="Enable_Sharing_Client_Screen_InAppSession" class="Machine" displayName="$(string.Enable_Sharing_Client_Screen_InAppSession)" explainText="$(string.Enable_Sharing_Client_Screen_InAppSession_Desc)"
          key="Software\Policies\VMware, Inc.\VMware WebRTCRedir" valueName="allowSharingClientScreenInAppSession">
+         <parentCategory ref="VMware_WebRTC_REDIR_FEATURES" />
+         <supportedOn ref="SupportedOn" />
+         <enabledValue>
+            <decimal value="1" />
+         </enabledValue>
+         <disabledValue>
+            <decimal value="0" />
+         </disabledValue>
+      </policy>
+
+      <policy
+         name="Enable_Sharing_Client_E911_data" class="Machine" displayName="$(string.Enable_E911)" explainText="$(string.Enable_E911_Desc)"
+         key="Software\Policies\VMware, Inc.\VMware WebRTCRedir" valueName="supportE911">
          <parentCategory ref="VMware_WebRTC_REDIR_FEATURES" />
          <supportedOn ref="SupportedOn" />
          <enabledValue>

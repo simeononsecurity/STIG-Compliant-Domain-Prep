@@ -1,45 +1,45 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<policyDefinitionResources revision="1.0" schemaVersion="1.0">
-  <displayName></displayName>
-  <description></description>
-  <resources>
-    <stringTable>
-      <string id="VMwareViewClientRTAV">Afficher la configuration RTAV</string>
-      <string id="DisableRTAV">Désactiver RTAV</string>
-      <string id="DisableRTAVExplain">Désactiver l'Audio/Vidéo en temps réel</string>
-      <string id="VMwareViewClientRTAVWebcam">Afficher les paramètres de webcam RTAV</string>
-      <string id="WebcamMaxResWidth">Résolution - Largeur d'image maximale en pixels</string>
-      <string id="WebcamMaxResWidthExplain">Largeur maximale en pixels d'une image lors de la capture par la webcam</string>
-      <string id="WebcamMaxResHeight">Résolution - Hauteur maximale d'image en pixels</string>
-      <string id="WebcamMaxResHeightExplain">Hauteur maximale en pixels d'une image lors de la capture par la webcam</string>
-      <string id="WebcamMaxFrameRate">Nombre maximal d'images par seconde</string>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="VMwareViewClientRTAV">Configuration RTAV de View</string>
+      <string id="DisableRTAV">Désactiver RTAV</string>
+      <string id="DisableRTAVExplain">Désactiver l'Audio/Vidéo en temps réel</string>
+      <string id="VMwareViewClientRTAVWebcam">Paramètres de la webcam RTAV de View</string>
+      <string id="WebcamMaxResWidth">Résolution - Largeur d'image maximale en pixels</string>
+      <string id="WebcamMaxResWidthExplain">Largeur maximale en pixels d'une image lors de la capture par la webcam</string>
+      <string id="WebcamMaxResHeight">Résolution - Hauteur maximale d'image en pixels</string>
+      <string id="WebcamMaxResHeightExplain">Hauteur maximale en pixels d'une image lors de la capture par la webcam</string>
+      <string id="WebcamMaxFrameRate">Nombre maximal d'images par seconde</string>
       <string id="WebcamMaxFrameRateExplain">Nombre maximal d'images pouvant être capturées par la webcam par seconde.
-Minimum = 1 et Maximum = 25</string>
-      <string id="WebcamDefaultResWidth">Résolution - Largeur de résolution d'image par défaut en pixels</string>
-      <string id="WebcamDefaultResWidthExplain">Définit la largeur de résolution d'image par défaut. Si elle n'est pas définie, la valeur par défaut est 320. Cette valeur est utilisée lorsqu'aucune valeur de résolution n'est définie par l'utilisateur</string>
-      <string id="WebcamDefaultResHeight">Résolution - Hauteur de la résolution d'image par défaut en pixels</string>
-      <string id="WebcamDefaultResHeightExplain">Définit la hauteur de résolution d'image par défaut. Si elle n'est pas définie, la valeur par défaut est 240. Cette valeur est utilisée lorsqu'aucune valeur de résolution n'est définie par l'utilisateur</string>
-      <string id="VMwareViewAgent">Configuration de VMware View Agent</string>
-      <string id="ADMXMigrator_UnresolvedString">ADMX Migrator a rencontré une chaîne qui n'est pas présente dans le tableau de chaînes ADM source.</string>
-      <string id="ADMXMigrator_NoSupportedOn">ADMX Migrator a rencontré une stratégie sans valeur supportedOn.</string>
-    </stringTable>
-    <presentationTable>
-      <presentation id="DisableRTAV" />
-      <presentation id="WebcamMaxFrameRate">
-        <decimalTextBox refId="WebcamMaxFrameRate" defaultValue="15">Nombre maximal d'images par seconde</decimalTextBox>
-      </presentation>
-      <presentation id="WebcamMaxResHeight">
-        <decimalTextBox refId="WebcamMaxResHeight" defaultValue="0">Résolution - Hauteur maximale d'image en pixels</decimalTextBox>
-      </presentation>
-      <presentation id="WebcamMaxResWidth">
-        <decimalTextBox refId="WebcamMaxResWidth" defaultValue="0">Résolution - Largeur d'image maximale en pixels</decimalTextBox>
-      </presentation>
-      <presentation id="WebcamDefaultResHeight">
-        <decimalTextBox refId="WebcamDefaultResHeight" defaultValue="0">Résolution - Hauteur de la résolution d'image par défaut en pixels</decimalTextBox>
-      </presentation>
-      <presentation id="WebcamDefaultResWidth">
-        <decimalTextBox refId="WebcamDefaultResWidth" defaultValue="0">Résolution - Largeur de résolution d'image par défaut en pixels</decimalTextBox>
-      </presentation>
-    </presentationTable>
-  </resources>
+Minimum = 1 et Maximum = 25</string>
+      <string id="WebcamDefaultResWidth">Résolution - Largeur de résolution d'image par défaut en pixels</string>
+      <string id="WebcamDefaultResWidthExplain">Définit la largeur de résolution d'image par défaut. Si elle n'est pas définie, la valeur par défaut est 320. Cette valeur est utilisée lorsqu'aucune valeur de résolution n'est définie par l'utilisateur</string>
+      <string id="WebcamDefaultResHeight">Résolution - Hauteur de la résolution d'image par défaut en pixels</string>
+      <string id="WebcamDefaultResHeightExplain">Définit la hauteur de résolution d'image par défaut. Si elle n'est pas définie, la valeur par défaut est 240. Cette valeur est utilisée lorsqu'aucune valeur de résolution n'est définie par l'utilisateur</string>
+      <string id="VMwareViewAgent">Configuration de VMware View Agent</string>
+      <string id="ADMXMigrator_UnresolvedString">ADMX Migrator a rencontré une chaîne qui n'est pas présente dans le tableau de chaînes ADM source.</string>
+      <string id="ADMXMigrator_NoSupportedOn">ADMX Migrator a rencontré une stratégie sans valeur supportedOn.</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="DisableRTAV" />
+      <presentation id="WebcamMaxFrameRate">
+        <decimalTextBox refId="WebcamMaxFrameRate" defaultValue="15">Nombre maximal d'images par seconde</decimalTextBox>
+      </presentation>
+      <presentation id="WebcamMaxResHeight">
+        <decimalTextBox refId="WebcamMaxResHeight" defaultValue="0">Résolution - Hauteur maximale d'image en pixels</decimalTextBox>
+      </presentation>
+      <presentation id="WebcamMaxResWidth">
+        <decimalTextBox refId="WebcamMaxResWidth" defaultValue="0">Résolution - Largeur d'image maximale en pixels</decimalTextBox>
+      </presentation>
+      <presentation id="WebcamDefaultResHeight">
+        <decimalTextBox refId="WebcamDefaultResHeight" defaultValue="0">Résolution - Hauteur de la résolution d'image par défaut en pixels</decimalTextBox>
+      </presentation>
+      <presentation id="WebcamDefaultResWidth">
+        <decimalTextBox refId="WebcamDefaultResWidth" defaultValue="0">Résolution - Largeur de résolution d'image par défaut en pixels</decimalTextBox>
+      </presentation>
+    </presentationTable>
+  </resources>
 </policyDefinitionResources>

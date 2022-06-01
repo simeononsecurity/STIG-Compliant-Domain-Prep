@@ -39,6 +39,11 @@ If you disable or do not configure this policy setting, all client printer(s) wi
 
 This setting is not configured by default.
 </string>
+      <string id="DriverMapping">Driver Mapping</string>
+      <string id="DriverMapping_detail">This setting allows user to autocreate virtual printer with a different driver.
+For example: "A" =>"a; b; c; d"
+The candidate driver list "a;b;c;d" will be tried one by one until the printer autocreation succeeded. If failed for all the candidates, it fallback to the "VMware EMF Print Driver".
+      </string>
       <string id="printer_creation_setting">Printer Driver Selection</string>
       <string id="printer_creation_setting_detail">Printer Driver Selection.
 
@@ -96,8 +101,31 @@ Example: PDFCreator (client-pc), here PDFCreator is client printer name, client-
 
 This setting is not configured by default.
       </string>
+
+      <string id="DefaultSetting">Default settings for UPD printers</string>
+      <string id="DefaultSetting_desc">This policy determines whether to enable default settings for UPD printers.
+When this policy is enabled, a group of default settings can be defined for UPD printers. They will be used as initial settings of UPD printers when applicable. For each print setting, there is a checkbox which decides whether the default setting is always used in printing.
+When this policy is not configured or disabled, default settings are not enabled for UPD printers.
+
+This policy is not configured by default.
+      </string>
+      <string id="none">None</string>
+      <string id="duplex_vertical">Flip On Long Edge</string>
+      <string id="duplex_horizontal">Flip On Short Edge</string>
+
+      <string id="bw">Black/White</string>
+      <string id="color">Color</string>
+
+      <string id="lossless_comp">Lossless Compression</string>
+      <string id="high_quality_comp">High Quality Compression</string>
+      <string id="optimized_comp">Optimized Compression</string>
+      <string id="no_image_comp">No Image</string>
+
     </stringTable>
     <presentationTable>
+      <presentation id="DriverMapping">
+         <listBox refId="printer_driver_mapping">Printer Driver Mapping:</listBox>
+      </presentation>
       <presentation id="PrinterCreationSetting">
           <dropdownList refId="printer_creation_setting_list" defaultItem="2" noSort="true">Printer Creation Choices:</dropdownList>
       </presentation>
@@ -117,6 +145,14 @@ This setting is not configured by default.
              <defaultValue>%P (v%S)</defaultValue>
           </textBox>
        </presentation>
+      <presentation id="DefaultSetting">
+        <dropdownList refId="DefaultDuplex" defaultItem="0" noSort="true">Duplex:</dropdownList>
+        <checkBox refId="IsDuplexLocked">Always use default duplex setting</checkBox>
+        <dropdownList refId="DefaultColor" defaultItem="0" noSort="true">Color:</dropdownList>
+        <checkBox refId="IsColorLocked">Always use default color setting</checkBox>
+        <dropdownList refId="DefaultImageCompLevel" defaultItem="0" noSort="true">Compression Level:</dropdownList>
+        <checkBox refId="IsCompLevelLocked">Always use default compression level setting</checkBox>
+      </presentation>       
     </presentationTable>
   </resources>
 </policyDefinitionResources>

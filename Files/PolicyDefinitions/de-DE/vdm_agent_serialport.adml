@@ -46,6 +46,39 @@ Wenn Sie diese Richtlinieneinstellung deaktivieren, wird die Geschwindigkeitsbes
 
 Wenn Sie die Einstellung nicht konfigurieren, wird die Geschwindigkeitsbeschränkung über die lokalen Programmeinstellungen festgelegt.</string>
       <string id="BandwidthLimit_PartName">Bandbreitenlimit (in Kilobyte pro Sekunde):</string>
+
+	  <string id="AllowDenyPortFiltersList_PolicyName">Portfilter zulassen/ablehnen</string>
+	  <string id="AllowDenyPortFiltersList_PolicyExplain">Bei aktivierter Richtlinie werden die Filter „Zulassen“ und „Ablehnen“ verwendet, um festzustellen, ob jeder clientseitig erkannte COM-Port umgeleitet werden kann oder nicht.
+
+Wenn ein Port nicht umgeleitet werden kann, wird er agent-seitig so behandelt, als ob er clientseitig nicht vorhanden wäre.
+
+Die Listen verwenden USB-Geräteeigenschaften des übergeordneten USB-Geräts des COM-Ports.
+
+Syntax:
+  USB:[*| VID[:*|:P ID[:*|:REV]]]
+    VID – hexadezimaler numerischer VID-Wert (Anbieter-ID) aus Gerätehardware-ID
+    PID – hexadezimaler numerischer PID-Wert (Produkt-ID) aus Gerätehardware-ID
+    REV – hexadezimaler numerischer REV-Wert (Version) aus Gerätehardware-ID
+    wenn VID, PID, REV gleich „*“ ist, bedeutet dies einen beliebigen Wert.
+  
+  WINDEVID:[HwId|*|?]
+    HwId – vollständiger oder Teilwert der Gerätehardware-ID (Platzhalterzeichen * und ? werden unterstützt). Groß-/Kleinschreibung wird nicht beachtet.
+
+Beispiele:
+  USB:067B:2303:400 – entspricht dem USB-Gerät mit der angegebenen VID, PID und Version. USB\VID_067B&amp;PID_2303&amp;REV_0400
+  USB:067B:2303:* – entspricht jedem USB-Gerät mit der angegebenen VID und PID sowie einer beliebigen Version. USB\VID_067B&amp;PID_2303
+  USB:067B:* – entspricht jedem USB-Gerät mit der angegebenen VID und einer beliebigen PID und Version. USB\VID_067B
+  USB:* – entspricht jedem USB-Gerät
+
+WINDEVID:* – entspricht jeder HardwareID-Zeichenfolge
+WINDEVID:*ACPI* – entspricht einer HardwareID-Zeichenfolge mit der Teilzeichenfolge ACPI
+
+Bemerkungen:
+  Die Positivliste hat eine höhere Priorität. Wenn das Gerät in der Negativliste enthalten ist, wird es von der Umleitung ausgeschlossen. Wenn sich das Gerät jedoch gleichzeitig in der Positivliste befindet, kann das Gerät umgeleitet werden.
+	  </string>
+	  <string id="AllowDenyPortFiltersList_PartName">Positivliste</string>
+	  <string id="DenyDenyPortFiltersList_PartName">Negativliste</string>
+		
       <string id="PortSettings_CatName">PortSettings</string>
       <string id="PortSettings1_PolicyName">PortSettings1</string>
       <string id="PortSettings2_PolicyName">PortSettings2</string>
@@ -150,6 +183,13 @@ Wenn Sie diese Richtlinieneinstellung für den Computer konfigurieren, hat sie V
       <presentation id="LockConfig_PolicyName" />
       <presentation id="BandwidthLimit_PolicyName">
         <decimalTextBox refId="BandwidthLimit_PartName" defaultValue="0" spinStep="1024">Bandbreitenlimit (in Kilobyte pro Sekunde):</decimalTextBox>
+      </presentation>
+      <presentation id="AllowDenyPortFiltersList_PolicyName">
+		  <text>Positivliste</text>
+		  <multiTextBox refId="AllowPortFiltersList_PartName" />
+		  <text></text>
+		  <text>Negativliste</text>
+		  <multiTextBox refId="DenyPortFiltersList_PartName" />
       </presentation>
       <presentation id="PortSettings1_PolicyName">
         <decimalTextBox refId="SrcPort_PartName">Quellportnummer:</decimalTextBox>

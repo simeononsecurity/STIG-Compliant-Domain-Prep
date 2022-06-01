@@ -1,181 +1,181 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" >
-
-	<displayName >Anzeigename hier eingeben</displayName>
-	<description >Einstellungen der allgemeinen VMware Horizon View-Konfiguration für Client, Server und Agent</description>
-	<resources >
-		<stringTable ><!--Storage for String Definitions-->
-
-			<string id="Undefined" >Nicht definiert</string>
-
-			<string id="View_Common_Config" >Allgemeine VMware View-Konfiguration</string>
-
-			<string id="Log_Config" >Protokollkonfiguration</string>
-
-			<string id="Perf_alarms" >Leistungsalarme</string>
-
-			<string id="Security_Config" >Sicherheitskonfiguration</string>
-
-			<string id="Enable_extended_logging" >Erweiterte Protokollierung aktivieren</string>
-
-			<string id="Enable_extended_logging_Desc" >Legt fest, ob trace- und debug-Ereignisse in die Protokolldateien geschrieben werden.</string>
-
-			<string id="Log_event_disk_threshhold" >Festplattenschwellenwert für Protokolle und Ereignisse in Megabyte</string>
-
-			<string id="Log_event_disk_threshhold_Desc" >Gibt den Speicherplatz an, der in Bezug auf die Ereignisprotokollierung mindestens auf der Festplatte verfügbar bleiben muss. Wenn kein Wert festgelegt ist, gilt standardmäßig ein Wert von 200. Wird dieser Wert erreicht, wird keine Ereignisprotokollierung mehr durchgeführt.</string>
-
-			<string id="Override_the_default_Windows_Event_Gen" >Standardmäßige View Windows-Ereignisgenerierung außer Kraft setzen</string>
-
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" >
+
+	<displayName >Anzeigename hier eingeben</displayName>
+	<description >Einstellungen der allgemeinen VMware Horizon View-Konfiguration für Client, Server und Agent</description>
+	<resources >
+		<stringTable ><!--Storage for String Definitions-->
+
+			<string id="Undefined" >Nicht definiert</string>
+
+			<string id="View_Common_Config" >Allgemeine VMware View-Konfiguration</string>
+
+			<string id="Log_Config" >Protokollkonfiguration</string>
+
+			<string id="Perf_alarms" >Leistungsalarme</string>
+
+			<string id="Security_Config" >Sicherheitskonfiguration</string>
+
+			<string id="Enable_extended_logging" >Erweiterte Protokollierung aktivieren</string>
+
+			<string id="Enable_extended_logging_Desc" >Legt fest, ob trace- und debug-Ereignisse in die Protokolldateien geschrieben werden.</string>
+
+			<string id="Log_event_disk_threshhold" >Festplattenschwellenwert für Protokolle und Ereignisse in Megabyte</string>
+
+			<string id="Log_event_disk_threshhold_Desc" >Gibt den Speicherplatz an, der in Bezug auf die Ereignisprotokollierung mindestens auf der Festplatte verfügbar bleiben muss. Wenn kein Wert festgelegt ist, gilt standardmäßig ein Wert von 200. Wird dieser Wert erreicht, wird keine Ereignisprotokollierung mehr durchgeführt.</string>
+
+			<string id="Override_the_default_Windows_Event_Gen" >Standardmäßige View Windows-Ereignisgenerierung außer Kraft setzen</string>
+
 			<string id="Override_the_default_Windows_Event_Gen_Desc" >Es werden die folgenden Werte unterstützt:
     0 = Ereignisprotokolleinträge werden nur für Standard-View-Ereignisse erstellt (es werden keine Ereignisprotokolleinträge für Protokollmeldungen generiert)
     1 = Ereignisprotokolleinträge werden im Kompatibilitätsmodus von 4.5 (und früher) erstellt Ereignisprotokolleinträge werden nicht für Standard-View-Ereignisse erstellt. Ereignisprotokolleinträge basieren ausschließlich auf dem Text von Protokolldateien.
-    2 = Ereignisprotokolleinträge werden im Kompatibilitätsmodus von 4.5 (und früher) erstellt. Es werden auch View-Ereignisse berücksichtigt.</string>
-
-			<string id="Production_Logs_Duration" >Anzahl der Tage für die Speicherung der Erstellungsprotokolle</string>
-
-			<string id="Production_Logs_Duration_Desc" >Gibt an, für wie lange (in Tagen) Protokolldateien auf dem System gespeichert werden. Wenn kein Wert festgelegt ist, gilt die Standardeinstellung, bei der Protokolldateien nur für 7 Tage beibehalten werden.</string>
-
-			<string id="Max_Debug_logs" >Maximale Anzahl an Debug-Protokollen</string>
-
-			<string id="Max_Debug_logs_Desc" >Legt fest, wie viele Debug-Protokolldateien maximal auf dem System gespeichert werden (Standard: 10). Wenn eine Protokolldatei ihre maximale Größe erreicht, werden keine weiteren Einträge hinzugefügt, und es wird eine neue Protokolldatei erstellt. Wenn die Anzahl der vorherigen Protokolldateien den hier angegebenen Wert erreicht, wird die älteste Protokolldatei gelöscht.</string>
-
-			<string id="Max_Debug_logs_size" >Maximale Größe des Debug-Protokolls in Megabyte</string>
-
-			<string id="Max_Debug_logs_size_Desc" >Legt die maximale Größe in Megabyte fest, die eine Debug-Protokolldatei erreichen darf, bevor die Protokolldatei geschlossen und eine neue Protokolldatei erstellt wird (Standard: 10 MB).</string>
-
-			<string id="Log_Dir" >Protokollverzeichnis</string>
-
-			<string id="Log_Dir_Desc" >Der vollständige Pfad zum Verzeichnis für Protokolldateien. Wenn für diesen Speicherort kein Schreibzugriff möglich ist, wird der standardmäßige Speicherort verwendet. Beachten Sie, dass für Clientprotokolldateien ein eigenes Verzeichnis für mit dem Clientnamen angelegt wird.</string>
-
-			<string id="Send_logs_to_Syslog_Svr" >Protokolle zu einem Syslog-Server senden</string>
-
+    2 = Ereignisprotokolleinträge werden im Kompatibilitätsmodus von 4.5 (und früher) erstellt. Es werden auch View-Ereignisse berücksichtigt.</string>
+
+			<string id="Production_Logs_Duration" >Anzahl der Tage für die Speicherung der Erstellungsprotokolle</string>
+
+			<string id="Production_Logs_Duration_Desc" >Gibt an, für wie lange (in Tagen) Protokolldateien auf dem System gespeichert werden. Wenn kein Wert festgelegt ist, gilt die Standardeinstellung, bei der Protokolldateien nur für 7 Tage beibehalten werden.</string>
+
+			<string id="Max_Debug_logs" >Maximale Anzahl an Debug-Protokollen</string>
+
+			<string id="Max_Debug_logs_Desc" >Legt fest, wie viele Debug-Protokolldateien maximal auf dem System gespeichert werden (Standard: 10). Wenn eine Protokolldatei ihre maximale Größe erreicht, werden keine weiteren Einträge hinzugefügt, und es wird eine neue Protokolldatei erstellt. Wenn die Anzahl der vorherigen Protokolldateien den hier angegebenen Wert erreicht, wird die älteste Protokolldatei gelöscht.</string>
+
+			<string id="Max_Debug_logs_size" >Maximale Größe des Debug-Protokolls in Megabyte</string>
+
+			<string id="Max_Debug_logs_size_Desc" >Legt die maximale Größe in Megabyte fest, die eine Debug-Protokolldatei erreichen darf, bevor die Protokolldatei geschlossen und eine neue Protokolldatei erstellt wird (Standard: 10 MB).</string>
+
+			<string id="Log_Dir" >Protokollverzeichnis</string>
+
+			<string id="Log_Dir_Desc" >Der vollständige Pfad zum Verzeichnis für Protokolldateien. Wenn für diesen Speicherort kein Schreibzugriff möglich ist, wird der standardmäßige Speicherort verwendet. Beachten Sie, dass für Clientprotokolldateien ein eigenes Verzeichnis für mit dem Clientnamen angelegt wird.</string>
+
+			<string id="Send_logs_to_Syslog_Svr" >Protokolle zu einem Syslog-Server senden</string>
+
 			<string id="Send_logs_to_Syslog_Svr_Desc" >Aktiviert das Senden von View Server-Protokollen zu einem Syslog-Server wie z. B. VMware LogInsight. Die Verwendung dieser Funktion auf einem unsicheren Netzwerk wird nicht empfohlen.
-Format: Protokollebene|Server-FQDNoderIP[|Portnummer(Standard:514)], Beispiel: Debug|192.0.2.2</string>
-
-			<string id="CPU_Mem_Sampling_Interval" >Samplingintervall für CPU und Arbeitsspeicher in Sekunden</string>
-
-			<string id="CPU_Mem_Sampling_Interval_Desc" >Legt das Intervall fest, in dem CPU und Arbeitsspeicher abgefragt werden. Beachten Sie, dass ein kurzes Samplingintervall zu sehr vielen Einträgen im Protokoll führen kann.</string>
-
-			<string id="Overall_CPU_usage" >Prozentwert für die gesamte CPU-Nutzung zur Erstellung von Protokolleinträgen</string>
-
-			<string id="Overall_CPU_usage_Desc" >Der Schwellenwert, ab dem die CPU-Gesamtnutzung des Systems protokolliert wird. Beachten Sie, dass, wenn mehrere Prozessoren verfügbar sind, dieser Prozentwert die Nutzung aller Prozessoren angibt.</string>
-
-			<string id="Overall_memory_usage" >Prozentwert für die gesamte Arbeitsspeichernutzung zur Erstellung von Protokolleinträgen</string>
-
-			<string id="Overall_memory_usage_Desc" >Der Schwellenwert, ab dem die Nutzung des gesamten zugesicherten Systemarbeitsspeichers (Arbeitsspeicher, der durch Prozesse zugeteilt wurde und dem das Betriebssystem physischen Arbeitsspeicher und/oder einen Seiten-Slot in der Auslagerungsdatei zugesichert hat) protokolliert wird.</string>
-
-			<string id="Process_CPU_usage" >Prozentwert für die CPU-Nutzung von Prozessen zur Erstellung von Protokolleinträgen</string>
-
-			<string id="Process_CPU_usage_Desc" >Der Schwellenwert, ab dem die CPU-Nutzung einzelner Prozesse protokolliert wird.</string>
-
-			<string id="Process_memory_usage" >Prozentwert für die Arbeitsspeichernutzung von Prozessen zur Erstellung von Protokolleinträgen</string>
-
-			<string id="Process_memory_usage_Desc" >Der Schwellenwert, ab dem die Arbeitsspeichernutzung einzelner Prozesse protokolliert wird.</string>
-
-			<string id="Processes_to_check" >Kommagetrennte Namensliste zu prüfender Prozesse (Platzhalter und Ausschlusszeichen sind möglich)</string>
-
-			<string id="Processes_to_check_Desc" >Eine kommagetrennte Liste mit Abfragen, die dem Namen von einem oder mehreren Prozessen entsprechen, die untersucht werden sollen. Zum Filtern der Liste stehen folgende Platzhalterzeichen für eine Abfrage zur Verfügung: das Sternchen (*), das für null oder mehr Zeichen steht, das Fragezeichen (?), das genau einem Zeichen entspricht, und das Ausrufezeichen (!), das für Abfragen als Präfix verwendet werden kann, um bestimmte Ergebnisse für die jeweilige Abfrage auszuschließen. Beispiel: „!*sys,ws*“ wählt alle Prozesse aus, die mit „ws“ beginnen und nicht mit „sys“ enden.</string>
-
-			<string id="Type_of_certificate_revocation" >Typ der Zertifikatsperrüberprüfung</string>
-
-			<string id="Type_of_certificate_revocation_Desc" >Legt den Typ der Zertifikatsperrüberprüfung fest, die durchgeführt werden soll: Keine, EndCertificateOnly, WholeChain oder WholeChainButRoot. Die Standardeinstellung ist WholeChainButRoot.</string>
-
-			<string id="None" >Keine</string>
-
-			<string id="End_Cert_Only" >EndCertificateOnly</string>
-
-			<string id="Whole_Chain" >WholeChain</string>
-
-			<string id="Whole_Chain_But_Root" >WholeChainButRoot</string>
-
-			<string id="Only_use_cached_revocation_URL" >Nur zwischengespeicherte Sperr-URLs verwenden</string>
-
-			<string id="Only_use_cached_revocation_URL_Desc" >Die Zertifikatsperrüberprüfung greift nur auf zwischengespeicherte URLs zu. Ist diese nicht konfiguriert, ist die Standardeinstellung „False“.</string>
-
-			<string id="Revocation_URL_check_timeout" >Zeitüberschreitung für die Prüfung der Sperr-URL (in Millisekunden)</string>
-
-			<string id="Revocation_URL_check_timeout_Desc" >Die kumulative Zeitüberschreitung für alle Abrufe von Sperr-URLs in Millisekunden. Bei einem nicht konfigurierten Wert oder bei einem Wert von 0 wird die Microsoft-Standardbehandlung durchgeführt.</string>
-
-			<string id="Global_Max_Dump_Count" >Konfigurieren der Speicherabbilderstellung bei Programmfehler</string>
-
-			<string id="Global_Max_Dump_Count_Desc" >Speicherabbilder können auf eine bestimmte Anzahl begrenzt werden, indem der Wert auf einen beliebigen numerischen Wert festgelegt wird. Wenn der Wert auf 0 gesetzt ist, werden keine Speicherabbilder erstellt. Wenn diese Option nicht eingestellt ist, wird kein Grenzwert für die Speicherabbilderstellung festgelegt.</string>
-
-		</stringTable>
-
-		<presentationTable ><!--Storage for Presentation Definitions-->
-
-			<presentation id="Log_event_disk_threshhold" >
-				<decimalTextBox refId="Log_event_disk_threshhold_DecimalBox_1" defaultValue="200" >Festplattenschwellenwert für Protokolle und Ereignisse in Megabyte</decimalTextBox>
-			</presentation>
-
-			<presentation id="Override_the_default_Windows_Event_Gen" >
-				<decimalTextBox refId="Override_the_default_Windows_Event_Gen_DecimalBox" defaultValue="0" >Standardmäßige View Windows-Ereignisgenerierung außer Kraft setzen</decimalTextBox>
-			</presentation>
-
-			<presentation id="Production_Logs_Duration" >
-				<decimalTextBox refId="Production_Logs_Duration_DecimalBox" defaultValue="7" >Anzahl der Tage für die Speicherung der Erstellungsprotokolle</decimalTextBox>
-			</presentation>
-
-			<presentation id="Max_Debug_logs" >
-				<decimalTextBox refId="Max_Debug_logs_DecimalBox" defaultValue="10" >Maximale Anzahl an Debug-Protokollen</decimalTextBox>
-			</presentation>
-
-			<presentation id="Max_Debug_logs_size" >
-				<decimalTextBox refId="Max_Debug_logs_size_DecimalBox" defaultValue="10" >Maximale Größe des Debug-Protokolls in Megabyte</decimalTextBox>
-			</presentation>
-
-			<presentation id="Log_Dir" >
-				<textBox refId="Log_Dir_TextBox" >
-					<label >Protokollverzeichnis</label>
-				</textBox>
-			</presentation>
-
-			<presentation id="Send_logs_to_Syslog_Svr" >
-				<textBox refId="Send_logs_to_Syslog_Svr_TextBox" >
-					<label >Protokolle zu einem Syslog-Server senden</label>
-				</textBox>
-			</presentation>
-
-			<presentation id="CPU_Mem_Sampling_Interval" >
-				<decimalTextBox refId="CPU_Mem_Sampling_Interval_DecimalBox" defaultValue="60" >Samplingintervall für CPU und Arbeitsspeicher in Sekunden</decimalTextBox>
-			</presentation>
-
-			<presentation id="Overall_CPU_usage" >
-				<decimalTextBox refId="Overall_CPU_usage_DecimalBox" defaultValue="90" >Prozentwert für die gesamte CPU-Nutzung zur Erstellung von Protokolleinträgen</decimalTextBox>
-			</presentation>
-
-			<presentation id="Overall_memory_usage" >
-				<decimalTextBox refId="Overall_memory_usage_DecimalBox" defaultValue="75" >Prozentwert für die gesamte Arbeitsspeichernutzung zur Erstellung von Protokolleinträgen</decimalTextBox>
-			</presentation>
-
-			<presentation id="Process_CPU_usage" >
-				<decimalTextBox refId="Process_CPU_usage_DecimalBox" defaultValue="90" >Prozentwert für die CPU-Nutzung von Prozessen zur Erstellung von Protokolleinträgen</decimalTextBox>
-			</presentation>
-
-			<presentation id="Process_memory_usage" >
-				<decimalTextBox refId="Process_memory_usage_DecimalBox" defaultValue="75" >Prozentwert für die Arbeitsspeichernutzung von Prozessen zur Erstellung von Protokolleinträgen</decimalTextBox>
-			</presentation>
-
-			<presentation id="Processes_to_check" >
-				<textBox refId="Processes_to_check_TextBox" >
-					<label >Kommagetrennte Namensliste zu prüfender Prozesse (Platzhalter und Ausschlusszeichen sind möglich)</label>
-				</textBox>
-			</presentation>
-
-			<presentation id="Type_of_certificate_revocation" >
-				<dropdownList refId="Type_of_certificate_revocation_DropDown" defaultItem="3" >Typ der Zertifikatsperrüberprüfung</dropdownList>
-			</presentation>
-
-			<presentation id="Revocation_URL_check_timeout" >
-				<decimalTextBox refId="Revocation_URL_check_timeout_DecimalBox" defaultValue="0" >Zeitüberschreitung für die Prüfung der Sperr-URL (in Millisekunden)</decimalTextBox>
-			</presentation>
-
-			<presentation id="Global_Max_Dump_Count" >
-				<decimalTextBox refId="Global_Max_Dump_Count_DecimalBox" defaultValue="" >Maximal zu erstellende Speicherabbilddateien</decimalTextBox>
-			</presentation>
-
-		</presentationTable>
-
-	</resources>
-
-</policyDefinitionResources>
+Format: Protokollebene|Server-FQDNoderIP[|Portnummer(Standard:514)], Beispiel: Debug|192.0.2.2</string>
+
+			<string id="CPU_Mem_Sampling_Interval" >Samplingintervall für CPU und Arbeitsspeicher in Sekunden</string>
+
+			<string id="CPU_Mem_Sampling_Interval_Desc" >Legt das Intervall fest, in dem CPU und Arbeitsspeicher abgefragt werden. Beachten Sie, dass ein kurzes Samplingintervall zu sehr vielen Einträgen im Protokoll führen kann.</string>
+
+			<string id="Overall_CPU_usage" >Prozentwert für die gesamte CPU-Nutzung zur Erstellung von Protokolleinträgen</string>
+
+			<string id="Overall_CPU_usage_Desc" >Der Schwellenwert, ab dem die CPU-Gesamtnutzung des Systems protokolliert wird. Beachten Sie, dass, wenn mehrere Prozessoren verfügbar sind, dieser Prozentwert die Nutzung aller Prozessoren angibt.</string>
+
+			<string id="Overall_memory_usage" >Prozentwert für die gesamte Arbeitsspeichernutzung zur Erstellung von Protokolleinträgen</string>
+
+			<string id="Overall_memory_usage_Desc" >Der Schwellenwert, ab dem die Nutzung des gesamten zugesicherten Systemarbeitsspeichers (Arbeitsspeicher, der durch Prozesse zugeteilt wurde und dem das Betriebssystem physischen Arbeitsspeicher und/oder einen Seiten-Slot in der Auslagerungsdatei zugesichert hat) protokolliert wird.</string>
+
+			<string id="Process_CPU_usage" >Prozentwert für die CPU-Nutzung von Prozessen zur Erstellung von Protokolleinträgen</string>
+
+			<string id="Process_CPU_usage_Desc" >Der Schwellenwert, ab dem die CPU-Nutzung einzelner Prozesse protokolliert wird.</string>
+
+			<string id="Process_memory_usage" >Prozentwert für die Arbeitsspeichernutzung von Prozessen zur Erstellung von Protokolleinträgen</string>
+
+			<string id="Process_memory_usage_Desc" >Der Schwellenwert, ab dem die Arbeitsspeichernutzung einzelner Prozesse protokolliert wird.</string>
+
+			<string id="Processes_to_check" >Kommagetrennte Namensliste zu prüfender Prozesse (Platzhalter und Ausschlusszeichen sind möglich)</string>
+
+			<string id="Processes_to_check_Desc" >Eine kommagetrennte Liste mit Abfragen, die dem Namen von einem oder mehreren Prozessen entsprechen, die untersucht werden sollen. Zum Filtern der Liste stehen folgende Platzhalterzeichen für eine Abfrage zur Verfügung: das Sternchen (*), das für null oder mehr Zeichen steht, das Fragezeichen (?), das genau einem Zeichen entspricht, und das Ausrufezeichen (!), das für Abfragen als Präfix verwendet werden kann, um bestimmte Ergebnisse für die jeweilige Abfrage auszuschließen. Beispiel: „!*sys,ws*“ wählt alle Prozesse aus, die mit „ws“ beginnen und nicht mit „sys“ enden.</string>
+
+			<string id="Type_of_certificate_revocation" >Typ der Zertifikatsperrüberprüfung</string>
+
+			<string id="Type_of_certificate_revocation_Desc" >Legt den Typ der Zertifikatsperrüberprüfung fest, die durchgeführt werden soll: Keine, EndCertificateOnly, WholeChain oder WholeChainButRoot. Die Standardeinstellung ist WholeChainButRoot.</string>
+
+			<string id="None" >Keine</string>
+
+			<string id="End_Cert_Only" >EndCertificateOnly</string>
+
+			<string id="Whole_Chain" >WholeChain</string>
+
+			<string id="Whole_Chain_But_Root" >WholeChainButRoot</string>
+
+			<string id="Only_use_cached_revocation_URL" >Nur zwischengespeicherte Sperr-URLs verwenden</string>
+
+			<string id="Only_use_cached_revocation_URL_Desc" >Die Zertifikatsperrüberprüfung greift nur auf zwischengespeicherte URLs zu. Ist diese nicht konfiguriert, ist die Standardeinstellung „False“.</string>
+
+			<string id="Revocation_URL_check_timeout" >Zeitüberschreitung für die Prüfung der Sperr-URL (in Millisekunden)</string>
+
+			<string id="Revocation_URL_check_timeout_Desc" >Die kumulative Zeitüberschreitung für alle Abrufe von Sperr-URLs in Millisekunden. Bei einem nicht konfigurierten Wert oder bei einem Wert von 0 wird die Microsoft-Standardbehandlung durchgeführt.</string>
+
+			<string id="Global_Max_Dump_Count" >Konfigurieren der Speicherabbilderstellung bei Programmfehler</string>
+
+			<string id="Global_Max_Dump_Count_Desc" >Speicherabbilder können auf eine bestimmte Anzahl begrenzt werden, indem der Wert auf einen beliebigen numerischen Wert festgelegt wird. Wenn der Wert auf 0 gesetzt ist, werden keine Speicherabbilder erstellt. Wenn diese Option nicht eingestellt ist, wird kein Grenzwert für die Speicherabbilderstellung festgelegt.</string>
+
+		</stringTable>
+
+		<presentationTable ><!--Storage for Presentation Definitions-->
+
+			<presentation id="Log_event_disk_threshhold" >
+				<decimalTextBox refId="Log_event_disk_threshhold_DecimalBox_1" defaultValue="200" >Festplattenschwellenwert für Protokolle und Ereignisse in Megabyte</decimalTextBox>
+			</presentation>
+
+			<presentation id="Override_the_default_Windows_Event_Gen" >
+				<decimalTextBox refId="Override_the_default_Windows_Event_Gen_DecimalBox" defaultValue="0" >Standardmäßige View Windows-Ereignisgenerierung außer Kraft setzen</decimalTextBox>
+			</presentation>
+
+			<presentation id="Production_Logs_Duration" >
+				<decimalTextBox refId="Production_Logs_Duration_DecimalBox" defaultValue="7" >Anzahl der Tage für die Speicherung der Erstellungsprotokolle</decimalTextBox>
+			</presentation>
+
+			<presentation id="Max_Debug_logs" >
+				<decimalTextBox refId="Max_Debug_logs_DecimalBox" defaultValue="10" >Maximale Anzahl an Debug-Protokollen</decimalTextBox>
+			</presentation>
+
+			<presentation id="Max_Debug_logs_size" >
+				<decimalTextBox refId="Max_Debug_logs_size_DecimalBox" defaultValue="10" >Maximale Größe des Debug-Protokolls in Megabyte</decimalTextBox>
+			</presentation>
+
+			<presentation id="Log_Dir" >
+				<textBox refId="Log_Dir_TextBox" >
+					<label >Protokollverzeichnis</label>
+				</textBox>
+			</presentation>
+
+			<presentation id="Send_logs_to_Syslog_Svr" >
+				<textBox refId="Send_logs_to_Syslog_Svr_TextBox" >
+					<label >Protokolle zu einem Syslog-Server senden</label>
+				</textBox>
+			</presentation>
+
+			<presentation id="CPU_Mem_Sampling_Interval" >
+				<decimalTextBox refId="CPU_Mem_Sampling_Interval_DecimalBox" defaultValue="60" >Samplingintervall für CPU und Arbeitsspeicher in Sekunden</decimalTextBox>
+			</presentation>
+
+			<presentation id="Overall_CPU_usage" >
+				<decimalTextBox refId="Overall_CPU_usage_DecimalBox" defaultValue="90" >Prozentwert für die gesamte CPU-Nutzung zur Erstellung von Protokolleinträgen</decimalTextBox>
+			</presentation>
+
+			<presentation id="Overall_memory_usage" >
+				<decimalTextBox refId="Overall_memory_usage_DecimalBox" defaultValue="75" >Prozentwert für die gesamte Arbeitsspeichernutzung zur Erstellung von Protokolleinträgen</decimalTextBox>
+			</presentation>
+
+			<presentation id="Process_CPU_usage" >
+				<decimalTextBox refId="Process_CPU_usage_DecimalBox" defaultValue="90" >Prozentwert für die CPU-Nutzung von Prozessen zur Erstellung von Protokolleinträgen</decimalTextBox>
+			</presentation>
+
+			<presentation id="Process_memory_usage" >
+				<decimalTextBox refId="Process_memory_usage_DecimalBox" defaultValue="75" >Prozentwert für die Arbeitsspeichernutzung von Prozessen zur Erstellung von Protokolleinträgen</decimalTextBox>
+			</presentation>
+
+			<presentation id="Processes_to_check" >
+				<textBox refId="Processes_to_check_TextBox" >
+					<label >Kommagetrennte Namensliste zu prüfender Prozesse (Platzhalter und Ausschlusszeichen sind möglich)</label>
+				</textBox>
+			</presentation>
+
+			<presentation id="Type_of_certificate_revocation" >
+				<dropdownList refId="Type_of_certificate_revocation_DropDown" defaultItem="3" >Typ der Zertifikatsperrüberprüfung</dropdownList>
+			</presentation>
+
+			<presentation id="Revocation_URL_check_timeout" >
+				<decimalTextBox refId="Revocation_URL_check_timeout_DecimalBox" defaultValue="0" >Zeitüberschreitung für die Prüfung der Sperr-URL (in Millisekunden)</decimalTextBox>
+			</presentation>
+
+			<presentation id="Global_Max_Dump_Count" >
+				<decimalTextBox refId="Global_Max_Dump_Count_DecimalBox" defaultValue="" >Maximal zu erstellende Speicherabbilddateien</decimalTextBox>
+			</presentation>
+
+		</presentationTable>
+
+	</resources>
+
+</policyDefinitionResources>

@@ -1,28 +1,28 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<policyDefinitionResources revision="1.0" schemaVersion="1.0">
-  <displayName></displayName>
-  <description></description>
-  <resources>
-    <stringTable>
-      <string id="VMwareViewCDR">Redirection du lecteur de VMware Horizon Client</string>
-      <string id="IsDriveLetterNeeded">Afficher le périphérique redirigé avec la lettre de lecteur</string>
-      <string id="IsDriveLetterNeededExplain">Ce paramètre détermine si la lettre de lecteur pour CDR (redirection du lecteur client) est activée ou non. Il est activé par défaut.</string>
-      <string id="InitDriveLetterTimeout">Délai d'expiration de la lettre de lecteur</string>
-      <string id="InitDriveLetterTimeoutExplain">Ce paramètre détermine la valeur du délai d'expiration pour que l'Explorateur Windows termine le traitement de la lettre de lecteur correcte. Lorsque ce paramètre est désactivé ou qu'il n'est pas configuré, il est configuré sur 5 s par défaut.</string>
-      <string id="VMwareViewCDRDeviceFiltering">Filtrage des périphériques</string>
-	  <string id="ExcludeVidPid">Exclure un périphérique Vid/Pid</string>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="VMwareViewCDR">Redirection du lecteur de VMware Horizon Client</string>
+      <string id="IsDriveLetterNeeded">Afficher le périphérique redirigé avec la lettre de lecteur</string>
+      <string id="IsDriveLetterNeededExplain">Ce paramètre détermine si la lettre de lecteur pour CDR (redirection du lecteur client) est activée ou non. Il est activé par défaut.</string>
+      <string id="InitDriveLetterTimeout">Délai d'expiration de la lettre de lecteur</string>
+      <string id="InitDriveLetterTimeoutExplain">Ce paramètre détermine la valeur du délai d'expiration pour que l'Explorateur Windows termine le traitement de la lettre de lecteur correcte. Lorsque ce paramètre est désactivé ou qu'il n'est pas configuré, il est configuré sur 5 s par défaut.</string>
+      <string id="VMwareViewCDRDeviceFiltering">Filtrage des périphériques</string>
+	  <string id="ExcludeVidPid">Exclure un périphérique Vid/Pid</string>
       <string id="ExcludeVidPidExplain">Excluez un périphérique avec des ID de fournisseur et de produit spécifiés de la transmission.
 
 Syntaxe : &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx | *&gt;&gt;[;...]
 
-Par exemple : vid-0781_pid-554c;vid-0781_pid-9999</string>
-      <string id="IncludeVidPid">Inclure un périphérique Vid/Pid</string>
+Par exemple : vid-0781_pid-554c;vid-0781_pid-9999</string>
+      <string id="IncludeVidPid">Inclure un périphérique Vid/Pid</string>
       <string id="IncludeVidPidExplain">Incluez un périphérique avec des ID de fournisseur et de produit spécifiés pouvant être transmis.
 
 Syntaxe : &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx | *&gt;&gt;[;...]
 
-Par exemple : vid-0781_pid-554c;vid-0781_pid-9999</string>
-      <string id="DriveLetterMapping">Configurer le mode de mappage de lettre de lecteur</string>
+Par exemple : vid-0781_pid-554c;vid-0781_pid-9999</string>
+      <string id="DriveLetterMapping">Configurer le mode de mappage de lettre de lecteur</string>
       <string id="DriveLetterMappingExplain">Ce GPO permet de configurer le mode de mappage de lettre de lecteur. Deux modes sont actuellement pris en charge.
 - Mappage un à un : mappez la même lettre de lecteur client vers l'agent.
 - Mappage défini : mappez la lettre de lecteur client vers l'agent en fonction de la table de mappage définie.
@@ -31,36 +31,36 @@ Par exemple : vid-0781_pid-554c;vid-0781_pid-9999</string>
 Remarques :
 - Ce GPO est valide lorsque le GPO « Afficher le périphérique redirigé avec la lettre de lecteur » n'est pas désactivé.
 - Pour les deux modes pris en charge, en cas de conflit sur la lettre de lecteur, par exemple si la lettre de lecteur mappée est déjà utilisée dans l'agent, il utilisera à la place la première lettre disponible de « Z » à « A » à rebours. Si aucune lettre de lecteur n'est disponible, aucune lettre de lecteur ne sera attribuée.
-      </string>
-      <string id="DriveLetterMappingTable">Définir la table de mappage de lettre de lecteur</string>
+      </string>
+      <string id="DriveLetterMappingTable">Définir la table de mappage de lettre de lecteur</string>
       <string id="DriveLetterMappingTableExplain">Définir la table de mappage de lettre de lecteur
 - Lettre de lecteur client (nom de valeur) : lettre de lecteur utilisée sur le client.
 - Lettre de lecteur agent (valeur) : lettre de lecteur à utiliser sur l'agent.
-</string>
-      <string id="OneToOneMapping">Mappage un à un</string>
-      <string id="PredefinedMapping">Mappage défini</string>
-    </stringTable>
-    <presentationTable>
-       <presentation id="IsDriveLetterNeeded"/>
-       <presentation id="InitDriveLetterTimeout">
-         <decimalTextBox refId="InitDriveLetterTimeout" defaultValue="5000">Délai d'expiration en millisecondes :</decimalTextBox>
-       </presentation>
-	   <presentation id="ExcludeVidPid">
-         <textBox refId="ExcludeVidPid">
-           <label>Exclure un périphérique Vid/Pid</label>
-         </textBox>
-       </presentation>
-       <presentation id="IncludeVidPid">
-         <textBox refId="IncludeVidPid">
-           <label>Inclure un périphérique Vid/Pid</label>
-         </textBox>
-       </presentation>
-       <presentation id="DriveLetterMapping">
-         <dropdownList refId="DriveLetterMappingDropdown" defaultItem="0" noSort="true">Configurer le mode de mappage de lettre de lecteur :</dropdownList>
-       </presentation>
-       <presentation id="DriveLetterMappingTable">
-         <listBox refId="DriveLetterMappingTable">Définir la table de mappage de lettre de lecteur :</listBox>
-       </presentation>
-    </presentationTable>
-  </resources>
+</string>
+      <string id="OneToOneMapping">Mappage un à un</string>
+      <string id="PredefinedMapping">Mappage défini</string>
+    </stringTable>
+    <presentationTable>
+       <presentation id="IsDriveLetterNeeded"/>
+       <presentation id="InitDriveLetterTimeout">
+         <decimalTextBox refId="InitDriveLetterTimeout" defaultValue="5000">Délai d'expiration en millisecondes :</decimalTextBox>
+       </presentation>
+	   <presentation id="ExcludeVidPid">
+         <textBox refId="ExcludeVidPid">
+           <label>Exclure un périphérique Vid/Pid</label>
+         </textBox>
+       </presentation>
+       <presentation id="IncludeVidPid">
+         <textBox refId="IncludeVidPid">
+           <label>Inclure un périphérique Vid/Pid</label>
+         </textBox>
+       </presentation>
+       <presentation id="DriveLetterMapping">
+         <dropdownList refId="DriveLetterMappingDropdown" defaultItem="0" noSort="true">Configurer le mode de mappage de lettre de lecteur :</dropdownList>
+       </presentation>
+       <presentation id="DriveLetterMappingTable">
+         <listBox refId="DriveLetterMappingTable">Définir la table de mappage de lettre de lecteur :</listBox>
+       </presentation>
+    </presentationTable>
+  </resources>
 </policyDefinitionResources>

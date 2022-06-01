@@ -46,6 +46,39 @@ Si se deshabilita esta configuración de directiva, se deshabilita el límite de
 
 Si no se configura esta configuración de directiva, el límite de velocidad se determina a partir de las configuraciones de programa locales.</string>
       <string id="BandwidthLimit_PartName">Límite de ancho de banda (en kilobytes por segundo):</string>
+
+	  <string id="AllowDenyPortFiltersList_PolicyName">Permitir/denegar filtros de puertos</string>
+	  <string id="AllowDenyPortFiltersList_PolicyExplain">Si esta política está activada, los filtros Permitir y Denegar se utilizarán para decidir si cada puerto COM específico detectado en el lado del cliente está permitido o no para el redireccionamiento.
+
+En caso de que no se permita el redireccionamiento de algún puerto, el lado del agente lo amenazará como si el puerto no exista en el lado cliente.
+
+Las listas utilizan las propiedades del dispositivo USB principal del puerto COM.
+
+Sintaxis:
+  USB:[*|VID[:*|:PID[:*|:REV]]]
+    VID: valor numérico hexadecimal de VID (ID de proveedor) del HardwareID del dispositivo
+    PID: valor numérico hexadecimal de PID (ID de producto) del HardwareID del dispositivo
+    REV: valor numérico hexadecimal de REV (Revisión) del HardwareID del dispositivo
+    Cuando VID, PID, REV es igual a &quot;*&quot;, significa cualquier valor.
+  
+  WINDEVID:[HwId|*|?]
+    HwId: valor completo o parcial del HardwareID del dispositivo (los caracteres comodín * y ? están permitidos). No se distingue entre mayúsculas y minúsculas.
+
+Ejemplos:
+  USB:067B:2303:400 - Coincide con el dispositivo USB con el valor especificado para VID, PID y REV. USB\VID_067B&amp;PID_2303&amp;REV_0400
+  USB:067B:2303:* - Coincide con cualquier dispositivo USB con los valores especificados para VID y PID, y cualquier valor de REV. USB\VID_067B&amp;PID_2303
+  USB:067B:* - Coincide con cualquier dispositivo USB con el valor especificado para VID y cualquier valor de PID y REV. USB\VID_067B
+  USB:* - Coincide con cualquier dispositivo USB
+
+ WINDEVID:* - Coincide con cualquier cadena de HardwareID
+  WINDEVID:*ACPI* - Coincide con una cadena de HardwareID que contiene la subcadena ACPI
+
+Observaciones:
+  La lista de permitidos tiene más prioridad. Por lo tanto, si el dispositivo coincide con la lista de no permitidos, el dispositivo se excluirá del redireccionamiento. Sin embargo, si al mismo tiempo el dispositivo coincide con la lista de permitidos, se permitirá el redireccionamiento del dispositivo.
+	  </string>
+	  <string id="AllowDenyPortFiltersList_PartName">Lista de permitidos</string>
+	  <string id="DenyDenyPortFiltersList_PartName">Lista de no permitidos</string>
+		
       <string id="PortSettings_CatName">PortSettings</string>
       <string id="PortSettings1_PolicyName">PortSettings1</string>
       <string id="PortSettings2_PolicyName">PortSettings2</string>
@@ -149,6 +182,13 @@ Si se configura esta configuración de directiva para el equipo, tiene prioridad
       <presentation id="LockConfig_PolicyName" />
       <presentation id="BandwidthLimit_PolicyName">
         <decimalTextBox refId="BandwidthLimit_PartName" defaultValue="0" spinStep="1024">Límite de ancho de banda (en kilobytes por segundo):</decimalTextBox>
+      </presentation>
+      <presentation id="AllowDenyPortFiltersList_PolicyName">
+		  <text>Lista de permitidos</text>
+		  <multiTextBox refId="AllowPortFiltersList_PartName" />
+		  <text></text>
+		  <text>Lista de no permitidos</text>
+		  <multiTextBox refId="DenyPortFiltersList_PartName" />
       </presentation>
       <presentation id="PortSettings1_PolicyName">
         <decimalTextBox refId="SrcPort_PartName">Número de puerto origen:</decimalTextBox>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" revision="1.0" schemaVersion="1.0">
+  <displayName>
+    NetBanner
+  </displayName>
+  <description>DESCRIPTION</description>
+  <resources>
+    <stringTable>
+      <string id="ProductName">NetBanner</string>
+      <string id="Classification">Classification</string>
+      <string id="Unclassified">Unclassified</string>
+      <string id="ClassificationExplainText">Classification</string>
+      <string id="SupportedOn_WinXP_dotNetFx4">Supported on Windows XP and .NET Framework 4.0</string>
+      <string id="ScalingFactor">Scaling Factor</string>
+      <string id="ScalingFactorExplainText">Scales the size of the banner.</string>
+      <string id="supportedOn">Supported On</string>
+      <string id="ClassificationSecret">Secret</string>
+      <string id="ClassificationTopSecret">Top Secret</string>
+      <string id="ClassificationSci">SCI</string>
+      <string id="Caveats">Caveats</string>
+      <string id="Caveats_Help">Allows administrators to enter free form text.</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="Classification">
+        <dropdownList refId="Classification" noSort="true" defaultItem="0">Classification</dropdownList>
+      </presentation>
+      <presentation id="Caveats">
+        <textBox refId="SizeMessage">
+          <label>40 Characters Max</label>
+        </textBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

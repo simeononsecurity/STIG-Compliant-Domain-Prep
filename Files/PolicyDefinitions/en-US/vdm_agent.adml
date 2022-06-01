@@ -80,27 +80,31 @@ Note: In environments with complex domain relationships — such as those that u
 
 Note: MMR will not work correctly if the View Client video display hardware does not have overlay support. MMR policy does not apply to Offline Desktop sessions.</string>
 
-         <string id="AllowDirectRDP">AllowDirectRDP</string>
+         <string id="AllowDirectRDP">Allow Direct RDP</string>
 
          <string id="AllowDirectRDP_Desc">Determines if non-View clients can connect directly to View desktops using RDP. When disabled, the agent will only permit View-managed connections via View Client or View Portal.
 
 This property is enabled by default.</string>
 
-         <string id="AllowSingleSignon">AllowSingleSignon</string>
+         <string id="AllowSingleSignon">Allow Single Signon</string>
 
          <string id="AllowSingleSignon_Desc">Determines if single sign-on (SSO) is used to connect users to View desktops. When enabled, users are only required to enter their credentials when connecting with View Client or View Portal. When disabled, users must reauthenticate when the remote connection is made.
 
 This property requires that the Secure Authentication component of View Agent is installed on the desktop, and is enabled by default.</string>
 
-         <string id="ConnectionTicketTimeout">ConnectionTicketTimeout</string>
+         <string id="ConnectionTicketTimeout">Connection Ticket Timeout</string>
 
          <string id="ConnectionTicketTimeout_Desc">Specifies the time in seconds for which the View connection ticket is valid. The connection ticket is used by View clients when connecting to View Agent and is used for verification and single sign-on purposes.
 
 For security reasons, these tickets are only valid within the specified time period. If this property is not explicitly set, a default of 900 seconds applies.</string>
 
-         <string id="CredentialFilterExceptions">CredentialFilterExceptions</string>
+         <string id="CredentialFilterExceptions">Credential Filter Exceptions</string>
 
          <string id="CredentialFilterExceptions_Desc">A semi-colon separated list of executable file names that is not allowed to load the agent CredentialFilter. The file names must be without path and suffix.</string>
+
+         <string id="RDPVcBridgeUnsupportedClients">RDPVcBridge Unsupported Clients</string>
+
+       <string id="RDPVcBridgeUnsupportedClients_Desc">A comma separated list of horizon client types which do not support RDPVcBridge.</string>
 
          <string id="Disable_Time_Zone_sync">Disable Time Zone Synchronization</string>
 
@@ -158,19 +162,19 @@ When setting the values, the first column should include the URL with an optiona
 
          <string id="UnAuthenticatedAccessEnabled_Desc">This setting enables the Unauthenticated Access feature. The system must be rebooted in order for this change to take effect. Unauthenticated Access is enabled by default.</string>
 
-         <string id="CommandsToRunOnConnect">CommandsToRunOnConnect</string>
+         <string id="CommandsToRunOnConnect">Commands To Run On Connect</string>
 
          <string id="CommandsToRunOnConnect_Desc">The list of commands to be run when a session is connected for the first time.</string>
 
-         <string id="CommandsToRunOnReconnect">CommandsToRunOnReconnect</string>
+         <string id="CommandsToRunOnReconnect">Commands To Run On Reconnect</string>
 
          <string id="CommandsToRunOnReconnect_Desc">The list of commands to be run when a session is re-connected after a disconnect.</string>
 
-         <string id="CommandsToRunOnDisconnect">CommandsToRunOnDisconnect</string>
+         <string id="CommandsToRunOnDisconnect">Commands To Run On Disconnect</string>
 
          <string id="CommandsToRunOnDisconnect_Desc">The list of commands to be run when a session is disconnected.</string>
 
-         <string id="ShowDiskActivityIcon">ShowDiskActivityIcon</string>
+         <string id="ShowDiskActivityIcon">Show Disk Activity Icon</string>
 
          <string id="ShowDiskActivityIcon_Desc">Shows a disk activity icon in the system tray. Uses the 'System Trace NT Kernel Logger' which can only be used by a single process, disable if needed for other purposes. Default is Enabled.</string>
 
@@ -426,7 +430,7 @@ Default: Block Forwarding</string>
 
          <string id="SetVMWMediaProviderProxyForceNonOptimizedOptions_Desc">You can force Skype for Business to run in the non-optimized mode for Horizon Client connections by automatically detecting external connections. Connections are determined to be external when Horizon Client connects via an external gateway. In this scenario, environment variables “ViewClient_Broker_GatewayType” is present and “ViewClient_Broker_GatewayLocation” is set to external. If "Automatically detect external connections" is set, Virtualization Pack for Skype for Business reverts to fallback mode if the connection is determined to be external.&#10;&#10;You can also force Skype for Business to run in the non-optimized mode for Horizon Client connections by setting the name of environment variable that will be present at connection time on the machine where Horizon Agent is installed. If the variable name is set, Virtualization Pack for Skype for Business reverts to fallback mode. For example, if “ViewClient_F5_APM” environment variable is set on the remote desktop agent machine when the Horizon Client machine connects from outside the network using F5 load balancer and you want to force non-optimized mode, set this value to be ViewClient_F5_APM.&#10;&#10;Virtualization Pack for Skype for Business reverts to fallback mode if either of the settings are configured and conditions satisfied.&#10;&#10;This policy is not configured by default. </string>
 
-         <string id="EnableDetectProxySettings">EnableDetectProxySettings</string>
+         <string id="EnableDetectProxySettings">Enable Detect Proxy Settings</string>
 
          <string id="EnableDetectProxySettings_Desc">When enabled, VMware Virtualization Pack for Skype for Business will detect if there are proxy settings on the Horizon Client system, and use those settings for media traffic. If proxy settings are not present on the Horizon Client system, VMware Virtualization Pack for Skype for Business will use direct connection. Enabling this policy will reduce delays when the Horizon Client system is required to use a proxy server.</string>
 
@@ -546,15 +550,28 @@ Note: It is required that this policy is "Enabled" when (1) Edge browser is enab
 
          <string id="Enable_AEC_Teams_Redir">Enable software acoustic echo cancellation for Media Optimization for Microsoft Teams</string>
 
-         <string id="Enable_AEC_Teams_Redir_Desc">This setting is used to enable or disable software acoustic echo cancellation for Media Optimization for Microsoft Teams.
+         <string id="Enable_AEC_Teams_Redir_Desc">This setting is used to configure Software Acoustic Echo Cancellation (AEC) for Media Optimization for Microsoft Teams.
 
-If "Enabled", acoustic echo cancellation is enabled in software, irrespective of whether or not acoustic echo cancellation is available in hardware.
+If "Enabled", AEC is enabled in software. Check "Use recommended AEC algorithm" for optimal audio quality and performance. Uncheck "Use recommended AEC algorithm" to use an AEC algorithm that uses less CPU but compromises audio quality. This option is useful for low end processors with low floating point power. Using the recommended AEC algorithm is strongly recommended and is ideal in most cases.
 
-If "Disabled", acoustic echo cancellation is disabled in software irrespective of whether or not acoustic echo cancellation is available in hardware.
+If "Disabled",  AEC will be disabled in software and will no longer be used.
 
-If "Not Configured", acoustic echo cancellation is enabled in software whenever acoustic echo cancellation is not available in hardware.</string>
+If "Not Configured", AEC is enabled in software, using the recommended algorithm. When using Windows client, software AEC will be used if hardware AEC is not available. If hardware AEC is available (e.g. if the headset has built-in AEC), software AEC will not be used. When using non-Windows client, software AEC will be used irrespective if hardware AEC is available.</string>
 
-         <string id="Enable_Sharing_Client_Screen_InAppSession">Enable sharing the client desktop screen while remoting the Microsoft Teams application in application sharing mode.</string>
+         <string id="Enable_Datachannel_Teams_Redir">Enable datachannel for Media Optimization for Microsoft Teams</string>
+         <string id="Enable_Datachannel_Teams_Redir_Desc">This setting is used to enable or disable the data channel for Media Optimization for Microsoft Teams.
+
+If "Enabled", the data channel can be used for Media Optimization for Microsoft Teams, and features that require the data channel are available (e.g. live captions).
+
+If "Disabled", the data channel cannot be used for Media Optimization for Microsoft Teams, and features that require the data channel will not be available.
+
+If "Not Configured", the data channel is enabled.</string>
+
+         <string id="Video_Cpu_Overuse_Threshold">Configure CPU overuse threshold</string>
+
+         <string id="Video_Cpu_Overuse_Threshold_Desc"> If CPU usage is above the threshold, sent video resolution will be reduced, which will lower client CPU usage. Default threshold is 85. To reduce client CPU during video calls, set this policy to "Enabled" with a value less than 85. Set this policy to "Disabled" or "Not Configured" to use the default threshold of 85. To not detect CPU overuse, set this policy to "Enabled" with a value of 0. This setting takes effect at next logon.</string>
+
+         <string id="Enable_Sharing_Client_Screen_InAppSession">Enable sharing the client desktop screen while remoting the Microsoft Teams application in application sharing mode</string>
 
          <string id="Enable_Sharing_Client_Screen_InAppSession_Desc">While remoting the Microsoft Teams application, the screen share feature will share the client desktop screen instead of the remote desktop screen. Select "Disabled" to disable the screen share feature in application sharing mode. If you select "Not Configured", the screen share will share the client desktop screen by default.</string>
 
@@ -563,6 +580,10 @@ If "Not Configured", acoustic echo cancellation is enabled in software whenever 
          <string id="Disable_DeviceBridge_BAS">Disable Device Bridge BAS Plugin</string>
 
          <string id="Disable_DeviceBridge_BAS_Desc">Disable finger scanners supported by BAS system. The setting takes effect at next logon.</string>
+
+         <string id="Enable_E911">Enable E911 for Microsoft Teams</string>
+
+         <string id="Enable_E911_Desc">While Microsoft Teams runs in optimized mode, the client will send E911 data to Microsoft. To disable sharing E911 data with Microsoft, select "Disabled". If "Enabled" or "Not Configured", client E911 data will be shared with Microsoft.</string>
 
          <string id="VMware_AppTap_Config">VMware AppTap Configuration</string>
 
@@ -651,12 +672,18 @@ For example, selecting "Never" here will prevent a disconnected session (on this
          </presentation>
 
          <presentation id="ConnectionTicketTimeout">
-            <decimalTextBox refId="ConnectionTicketTimeout_DB" defaultValue="120">ConnectionTicketTimeout</decimalTextBox>
+            <decimalTextBox refId="ConnectionTicketTimeout_DB" defaultValue="120">Connection Ticket Timeout</decimalTextBox>
          </presentation>
 
          <presentation id="CredentialFilterExceptions">
             <textBox refId="CredentialFilterExceptions_TB">
-               <label>CredentialFilterExceptions</label>
+               <label>Credential Filter Exceptions</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="RDPVcBridgeUnsupportedClients">
+            <textBox refId="RDPVcBridgeUnsupportedClients_TB">
+               <label>RDPVcBridge Unsupported Clients</label>
             </textBox>
          </presentation>
 
@@ -857,6 +884,13 @@ For example, selecting "Never" here will prevent a disconnected session (on this
 
          <presentation id="Prewarm_disconnect_time_till_logoff">
             <dropdownList refId="Prewarm_disconnect_time_till_logoff_minutes" noSort="true" defaultItem="5">Prewarm Timeout</dropdownList>
+         </presentation>
+
+         <presentation id="Video_Cpu_Overuse_Threshold">
+            <decimalTextBox refId="Video_Cpu_Overuse_Threshold_data" defaultValue="85">Video CPU overuse threshold</decimalTextBox>
+         </presentation>
+         <presentation id="Webrtc_Recommended_AEC">
+            <checkBox refId="Webrtc_Recommended_AEC_CB" defaultChecked="true"> Use recommended AEC algorithm </checkBox>
          </presentation>
       </presentationTable>
    </resources>

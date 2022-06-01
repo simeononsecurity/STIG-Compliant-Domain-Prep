@@ -79,27 +79,31 @@ Nota: En entornos con relaciones de dominio complejas (como las que usan varias 
 
 Nota: el MMR no funciona correctamente si el hardware de reproducción de vídeo de View Client no es compatible con la superposición. La directiva de MMR no se aplica a sesiones de escritorios sin conexión.</string>
 
-         <string id="AllowDirectRDP">AllowDirectRDP</string>
+         <string id="AllowDirectRDP">Permitir RDP directo</string>
 
          <string id="AllowDirectRDP_Desc">Determina si los clientes que no son View pueden conectarse directamente a escritorios de View mediante RDP. Cuando se deshabilita, el agente solo permite conexiones gestionadas por View mediante View Client o View Portal.
 
 Esta propiedad está habilitada de forma predeterminada.</string>
 
-         <string id="AllowSingleSignon">AllowSingleSignon</string>
+         <string id="AllowSingleSignon">Permitir inicio de sesión único</string>
 
          <string id="AllowSingleSignon_Desc">Determina si se usa Single Sign-On (SSO) para conectar usuarios a escritorios de View. Cuando se habilita, los usuarios solo deben introducir sus credenciales al conectarse con View Client o View Portal. Cuando se deshabilita, los usuarios deben volver a autenticarse cuando se realiza la conexión remota.
 
 Esta propiedad requiere la instalación en el escritorio del componente de autenticación segura de View Agent y está habilitada por defecto.</string>
 
-         <string id="ConnectionTicketTimeout">ConnectionTicketTimeout</string>
+         <string id="ConnectionTicketTimeout">Tiempo de espera del ticket de conexión</string>
 
          <string id="ConnectionTicketTimeout_Desc">Especifica durante cuánto tiempo (en segundos) es válido el ticket de conexión de View. Los clientes de View usan el ticket de conexión al conectarse a View Agent; se utiliza con fines de verificación y Single Sign-On.
 
 Por motivos de seguridad, estos tickets solo son válidos durante el período de tiempo especificado. Si no se establece esta propiedad de forma explícita, se aplica un valor por defecto de 900 segundos.</string>
 
-         <string id="CredentialFilterExceptions">CredentialFilterExceptions</string>
+         <string id="CredentialFilterExceptions">Excepciones de filtro de credenciales</string>
 
          <string id="CredentialFilterExceptions_Desc">Una lista de nombres de archivo ejecutables, separados por punto y coma, a los que no se les permite cargar el filtro de credenciales del agente. Los nombres de archivo no deben incluir la ruta ni el sufijo.</string>
+
+         <string id="RDPVcBridgeUnsupportedClients">Clientes no compatibles con RDPVcBridge</string>
+
+       <string id="RDPVcBridgeUnsupportedClients_Desc">Una lista separada por comas de tipos de Horizon Client que no admiten RDPVcBridge.</string>
 
          <string id="Disable_Time_Zone_sync">Deshabilitar sincronización de zona horaria</string>
 
@@ -157,19 +161,19 @@ Al configurar los valores, la primera columna debe incluir la URL con un puerto 
 
          <string id="UnAuthenticatedAccessEnabled_Desc">Esta opción habilita la función Acceso sin autenticar. Se debe reiniciar el sistema para que este cambio surta efecto. El acceso sin autenticar está habilitado de forma predeterminada.</string>
 
-         <string id="CommandsToRunOnConnect">CommandsToRunOnConnect</string>
+         <string id="CommandsToRunOnConnect">Comandos para ejecutar en Connect</string>
 
          <string id="CommandsToRunOnConnect_Desc">La lista de comandos que se ejecutarán al conectar una sesión por primera vez.</string>
 
-         <string id="CommandsToRunOnReconnect">CommandsToRunOnReconnect</string>
+         <string id="CommandsToRunOnReconnect">Comandos que se ejecutan al reconectar</string>
 
          <string id="CommandsToRunOnReconnect_Desc">La lista de comandos que se ejecutarán al volver a conectar una sesión después de una desconexión.</string>
 
-         <string id="CommandsToRunOnDisconnect">CommandsToRunOnDisconnect</string>
+         <string id="CommandsToRunOnDisconnect">Comandos que se ejecutan al desconectar</string>
 
          <string id="CommandsToRunOnDisconnect_Desc">Especifica una lista de comandos que se ejecutarán al desconectar una sesión.</string>
 
-         <string id="ShowDiskActivityIcon">ShowDiskActivityIcon</string>
+         <string id="ShowDiskActivityIcon">Mostrar icono de actividad de disco</string>
 
          <string id="ShowDiskActivityIcon_Desc">Muestra un icono de actividad de disco en la bandeja del sistema. Utiliza el &quot;Registrador del kernel de NT de seguimiento del sistema&quot;, que solo puede ser utilizado por un único proceso; debe desactivarse si se necesita para otros fines. Habilitado de forma predeterminada.</string>
 
@@ -431,7 +435,7 @@ Virtualization Pack para Skype Empresarial revierte al modo de reserva si se est
 
 Esta directiva no está configurada de forma predeterminada. </string>
 
-         <string id="EnableDetectProxySettings">EnableDetectProxySettings</string>
+         <string id="EnableDetectProxySettings">Habilitar la configuración de detectar proxy</string>
 
          <string id="EnableDetectProxySettings_Desc">Cuando se habilita, VMware Virtualization Pack para Skype Empresarial detecta si hay una configuración de proxy en el sistema de Horizon Client y la usa para el tráfico de medios. Si no hay una configuración de proxy en el sistema de Horizon Client, VMware Virtualization Pack para Skype Empresarial utilizará una conexión directa. Si habilita esta directiva se reducirán los retrasos cuando sea necesario que el sistema de Horizon Client utilice un servidor proxy.</string>
 
@@ -549,17 +553,30 @@ Nota: Es necesario que esta directiva esté habilitada cuando (1) el navegador E
 
          <string id="Enable_Teams_Redir_Desc">Habilitar optimización de medios para Microsoft Teams. Se requiere que la directiva se establezca como &quot;Habilitado&quot; para aplicar la optimización de medios para Microsoft Teams. Esta configuración surte efecto en el siguiente inicio de sesión.</string>
 
-         <string id="Enable_AEC_Teams_Redir">Habilitar la cancelación de eco acústico de software para la optimización de medios en Microsoft Teams</string>
+         <string id="Enable_AEC_Teams_Redir">Habilitar la cancelación de eco acústico de software para la optimización de medios para Microsoft Teams</string>
 
-         <string id="Enable_AEC_Teams_Redir_Desc">Esta opción se utiliza para habilitar o deshabilitar la cancelación de eco acústico de software para la optimización de medios en Microsoft Teams.
+         <string id="Enable_AEC_Teams_Redir_Desc">Esta opción se utiliza para configurar la cancelación de eco acústico (AEC) de software para la optimización de medios para Microsoft Teams.
 
-Si se habilita, la cancelación de eco acústico se habilitará en el software, independientemente de si la cancelación de eco acústico está disponible en el hardware.
+Si se establece el valor &quot;Habilitado&quot;, la AEC estará habilitada en el software. Seleccione &quot;Usar algoritmo de AEC recomendado&quot; para obtener un rendimiento y una calidad de audio óptimos. Desactive &quot;Usar algoritmo de AEC recomendado&quot; para utilizar un algoritmo de AEC que utilice menos CPU, pero que afectará a la calidad del audio. Esta opción es útil para procesadores de gama baja con poca potencia de punto flotante. Es aconsejable utilizar el algoritmo de AEC recomendado, ya que resultará adecuado en la mayoría de los casos.
 
-Si se deshabilita, la cancelación de eco acústico se deshabilitará en el software, independientemente de si la cancelación de eco acústico está disponible en el hardware.
+Si se establece el valor &quot;Deshabilitado&quot;, la AEC se deshabilitará en el software y dejará de utilizarse.
 
-Si no se configura, la cancelación de eco acústico se habilitará en el software solo si la cancelación de eco acústico no está disponible en el hardware.</string>
+Si se establece el valor &quot;Sin configurar&quot;, la AEC se habilitará en el software usando el algoritmo recomendado. Al utilizar un cliente Windows, se utilizará la AEC de software si la AEC de hardware no está disponible. Si la AEC de hardware está disponible (p. ej., si los auriculares tienen AEC integrada), no se utilizará la AEC de software. Al utilizar un cliente que no sea Windows, se utilizará la AEC de software independientemente de si la AEC de hardware está disponible o no.</string>
 
-         <string id="Enable_Sharing_Client_Screen_InAppSession">Habilite el uso compartido de la pantalla del escritorio del cliente mientras ejecuta de forma remota la aplicación Microsoft Teams en modo de uso compartido de aplicaciones.</string>
+         <string id="Enable_Datachannel_Teams_Redir">Habilitar canal de datos para optimización de medios para Microsoft Teams</string>
+         <string id="Enable_Datachannel_Teams_Redir_Desc">Esta opción se utiliza para habilitar o deshabilitar el canal de datos para la optimización de medios para Microsoft Teams.
+
+Si está &quot;Habilitado&quot;, el canal de datos se podrá utilizar para la optimización de medios para Microsoft Teams, y las funciones que requieren el canal de datos estarán disponibles (p. ej., subtítulos en directo).
+
+Si está &quot;Deshabilitado&quot;, el canal de datos no se podrá utilizar para la optimización de medios para Microsoft Teams, y las funciones que requieren el canal de datos no estarán disponibles.
+
+Si está establecido el valor &quot;Sin configurar&quot;, el canal de datos estará habilitado.</string>
+
+         <string id="Video_Cpu_Overuse_Threshold">Configurar umbral de uso excesivo de CPU</string>
+
+         <string id="Video_Cpu_Overuse_Threshold_Desc"> Si el uso de CPU es superior al umbral, se reducirá la resolución de vídeo enviada, lo que reducirá el uso de CPU del cliente. El umbral predeterminado es 85. Para reducir la CPU del cliente durante las videollamadas, establezca esta directiva en &quot;Habilitado&quot; con un valor inferior a 85. Establezca esta directiva en &quot;Deshabilitado&quot; o &quot;Sin configurar&quot; para utilizar el umbral predeterminado de 85. Para no detectar el uso excesivo de CPU, establezca esta directiva en &quot;Habilitado&quot; con el valor 0. Este ajuste surtirá efecto en el siguiente inicio de sesión.</string>
+
+         <string id="Enable_Sharing_Client_Screen_InAppSession">Habilite el uso compartido de la pantalla del escritorio del cliente mientras ejecuta de forma remota la aplicación Microsoft Teams en modo de uso compartido de aplicaciones</string>
 
          <string id="Enable_Sharing_Client_Screen_InAppSession_Desc">Mientras la aplicación Microsoft Teams se ejecuta de forma remota, la función de compartir pantalla compartirá la pantalla del escritorio del cliente en vez de la pantalla del escritorio remoto. Seleccione &quot;Deshabilitado&quot; para deshabilitar la función de compartir pantalla en el modo de uso compartido de aplicaciones. Si selecciona &quot;No configurado&quot;, se compartirá la pantalla del escritorio cliente de forma predeterminada.</string>
 
@@ -568,6 +585,10 @@ Si no se configura, la cancelación de eco acústico se habilitará en el softwa
          <string id="Disable_DeviceBridge_BAS">Deshabilitar el complemento Device Bridge BAS</string>
 
          <string id="Disable_DeviceBridge_BAS_Desc">Deshabilita los lectores de huellas digitales compatibles con el sistema BAS. Esta configuración surte efecto en el siguiente inicio de sesión.</string>
+
+         <string id="Enable_E911">Habilitar E911 para Microsoft Teams</string>
+
+         <string id="Enable_E911_Desc">Mientras Microsoft Teams se ejecuta en modo optimizado, el cliente enviará datos E911 a Microsoft. Para deshabilitar el uso compartido de datos E911 con Microsoft, seleccione &quot;Deshabilitado&quot;. Si está habilitado o no está configurado, los datos del cliente E911 se compartirán con Microsoft.</string>
 
          <string id="VMware_AppTap_Config">Configuración de VMware AppTap</string>
 
@@ -593,7 +614,7 @@ Por ejemplo, si selecciona &quot;Nunca&quot; aquí, se evitará que las sesiones
 
          <string id="TIME_NEVER">Nunca</string>
 
-         <string id="TIME_1MIN">1 minuto</string>
+         <string id="TIME_1MIN">1 minuto</string>
 
          <string id="TIME_5MIN">5 minutos</string>
 
@@ -656,12 +677,18 @@ Por ejemplo, si selecciona &quot;Nunca&quot; aquí, se evitará que las sesiones
          </presentation>
 
          <presentation id="ConnectionTicketTimeout">
-            <decimalTextBox refId="ConnectionTicketTimeout_DB" defaultValue="120">ConnectionTicketTimeout</decimalTextBox>
+            <decimalTextBox refId="ConnectionTicketTimeout_DB" defaultValue="120">Tiempo de espera del ticket de conexión</decimalTextBox>
          </presentation>
 
          <presentation id="CredentialFilterExceptions">
             <textBox refId="CredentialFilterExceptions_TB">
-               <label>CredentialFilterExceptions</label>
+               <label>Excepciones de filtro de credenciales</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="RDPVcBridgeUnsupportedClients">
+            <textBox refId="RDPVcBridgeUnsupportedClients_TB">
+               <label>Clientes no compatibles con RDPVcBridge</label>
             </textBox>
          </presentation>
 
@@ -862,6 +889,13 @@ Por ejemplo, si selecciona &quot;Nunca&quot; aquí, se evitará que las sesiones
 
          <presentation id="Prewarm_disconnect_time_till_logoff">
             <dropdownList refId="Prewarm_disconnect_time_till_logoff_minutes" noSort="true" defaultItem="5">Tiempo de espera de precalentamiento</dropdownList>
+         </presentation>
+
+         <presentation id="Video_Cpu_Overuse_Threshold">
+            <decimalTextBox refId="Video_Cpu_Overuse_Threshold_data" defaultValue="85">Umbral de uso excesivo de CPU de vídeo</decimalTextBox>
+         </presentation>
+         <presentation id="Webrtc_Recommended_AEC">
+            <checkBox refId="Webrtc_Recommended_AEC_CB" defaultChecked="true"> Usar algoritmo de AEC recomendado </checkBox>
          </presentation>
       </presentationTable>
    </resources>

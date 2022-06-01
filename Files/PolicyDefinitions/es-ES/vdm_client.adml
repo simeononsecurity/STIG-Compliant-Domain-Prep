@@ -12,7 +12,7 @@
       <string id="EnableTicketSSLAuth_Enforce">Forzar</string>
       <string id="DesktopLayout_FullScreen">Pantalla completa</string>
       <string id="DesktopLayout_WindowLarge">Ventana - Grande</string>
-      <string id="DesktopLayout_WindowSmall">Venta - Pequeña</string>
+      <string id="DesktopLayout_WindowSmall">Ventana - Pequeña</string>
       <string id="DesktopLayout_MultiMonitor">Varios monitores</string>
       <string id="AppSessionReconnectBehavior_Ask">Solicitar volver a conectarse a las aplicaciones abiertas</string>
       <string id="AppSessionReconnectBehavior_Always">Volver a conectarse automáticamente a las aplicaciones abiertas</string>
@@ -112,7 +112,7 @@ Por defecto: bloquear el reenvío</string>
       <string id="AllowDevDescFailsafeExplain">Habilitar el comportamiento de seguridad de descriptores. Los dispositivos no se bloquean si falla la obtención de descriptores.</string>
       <string id="VMwareViewClient">Configuración de VMware Horizon Client</string>
       <string id="AllowDataSharing">Permitir el uso compartido de datos</string>
-      <string id="AllowDataSharingExplain">VMware recopila datos de los sistemas cliente para priorizar la compatibilidad del hardware y el software. Si su empresa participa en el programa, VMware recibirá datos anónimos sobre su entorno.
+      <string id="AllowDataSharingExplain">VMware recopila datos de los sistemas de cliente para priorizar la compatibilidad entre el hardware y el software. Si su empresa participa en el programa, VMware recibirá datos anónimos sobre su entorno.
 Esta propiedad está habilitada de forma predeterminada.</string>
       <string id="AllowResolutionDpiSync">Guardar resolución y PPP en el servidor</string>
       <string id="AllowResolutionDpiSyncExplain">Si se habilita, Horizon Client guardará automáticamente el valor de la resolución y el PPP del escritorio en el servidor. Con este GPO, cada vez que un usuario con una configuración personalizada, supongamos que su nombre es Julia, inicia el escritorio remoto, la configuración personalizada se aplicará automáticamente. Los usuarios que no hayan establecido una configuración personalizada seguirán viendo la configuración predeterminada, que debe coincidir con la resolución y los PPP del hardware local. Si el GPO se estableció en otro sistema con la misma configuración de monitor, Julia también podrá ver su configuración personalizada en ese sistema.

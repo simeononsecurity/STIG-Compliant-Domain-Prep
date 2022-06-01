@@ -46,6 +46,39 @@ If this policy setting is disabled, the speed limitation is disabled.
 
 If this policy setting is not configured, the speed limitation is determined by local program settings.</string>
       <string id="BandwidthLimit_PartName">Bandwidth limit (in kilobytes per second):</string>
+
+	  <string id="AllowDenyPortFiltersList_PolicyName">Allow/Deny port filters</string>
+	  <string id="AllowDenyPortFiltersList_PolicyExplain">If this policy is enabled, the Allow and Deny filers are used in order to decide if every specific COM port detected on the Client side is allowed for redirection or not.
+
+In case if some port is not allowed for redirection, the Agent side will threat it as if the port does not even exist on the Client side.
+
+The lists use USB device properties of the COM port's parent USB device.
+
+Syntax:
+  USB:[*|VID[:*|:PID[:*|:REV]]]
+    VID - Hex numeric VID (Vendor ID) value from device HardwareID
+    PID - Hex numeric PID (Product ID) value from device HardwareID
+    REV - Hex numeric REV (Revision) value from device HardwareID
+    when VID, PID, REV equal to "*" - it means any value.
+  
+  WINDEVID:[HwId|*|?]
+    HwId - full or partial value of device HardwareID (wildcards characters * and ? are supported). Case insensitive.
+
+Examples:
+  USB:067B:2303:400 - matches the USB device with the specified VID, PID and Revision. USB\VID_067B&amp;PID_2303&amp;REV_0400
+  USB:067B:2303:* - matches any USB device with the specified VID and PID and any Revision. USB\VID_067B&amp;PID_2303
+  USB:067B:* - matches any USB device with the specified VID and any PID and any Revision. USB\VID_067B
+  USB:* - matches any USB device
+
+  WINDEVID:*  - matches any HardwareID string
+  WINDEVID:*ACPI* - matches a HardwareID string containing ACPI substring
+
+Remarks:
+  The Allow list has higher priority. So if the device is matched by the Deny list, the device is excluded from the redirection. But if at the same time the device is matched by the Allow list, the device is allowed for the redirection.
+	  </string>
+	  <string id="AllowDenyPortFiltersList_PartName">Allow List</string>
+	  <string id="DenyDenyPortFiltersList_PartName">Deny List</string>
+		
       <string id="PortSettings_CatName">PortSettings</string>
       <string id="PortSettings1_PolicyName">PortSettings1</string>
       <string id="PortSettings2_PolicyName">PortSettings2</string>
@@ -149,6 +182,13 @@ If this policy setting is configured for the computer, it has priority over poli
       <presentation id="LockConfig_PolicyName" />
       <presentation id="BandwidthLimit_PolicyName">
         <decimalTextBox refId="BandwidthLimit_PartName" defaultValue="0" spinStep="1024">Bandwidth limit (in kilobytes per second):</decimalTextBox>
+      </presentation>
+      <presentation id="AllowDenyPortFiltersList_PolicyName">
+		  <text>Allow List</text>
+		  <multiTextBox refId="AllowPortFiltersList_PartName" />
+		  <text></text>
+		  <text>Deny List</text>
+		  <multiTextBox refId="DenyPortFiltersList_PartName" />
       </presentation>
       <presentation id="PortSettings1_PolicyName">
         <decimalTextBox refId="SrcPort_PartName">Source port number:</decimalTextBox>

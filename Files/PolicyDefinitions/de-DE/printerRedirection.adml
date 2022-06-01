@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<policyDefinitionResources revision="1.0" schemaVersion="1.0">
-  <displayName></displayName>
-  <description></description>
-  <resources>
-    <stringTable>
-      <string id="print_redir">VMware Integrated Printing</string>
-      <string id="SUPPORTED_NotSpecified">Nicht angegeben</string>
-      <string id="persistence_setting">Persistenz der Druckereigenschaft deaktivieren</string>
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="print_redir">VMware Integrated Printing</string>
+      <string id="SUPPORTED_NotSpecified">Nicht angegeben</string>
+      <string id="persistence_setting">Persistenz der Druckereigenschaft deaktivieren</string>
       <string id="persistence_setting_detail">Diese Einstellung legt fest, ob die Druckereigenschaftseinstellungen beibehalten werden oder nicht.
 
 Wenn sie aktiviert ist, wird die Änderung der Druckereigenschaft auf der Agent-Seite nicht beibehalten, nachdem der Benutzer die Verbindung getrennt oder sich von der Sitzung abgemeldet hat, und ist daher nicht persistent.
@@ -16,29 +16,34 @@ Wenn sie nicht konfiguriert oder deaktiviert ist, wird die Änderung der Drucker
 Wenn z. B. ein Benutzer die Druckerpapiergröße während der Sitzung von „Brief“ in „A4“ ändert, ist die Papiergröße bei der nächsten erneuten Verbindungsherstellung weiterhin auf „A4“ festgelegt, da die Änderung beibehalten wird.
 
 Dieses GPO ist standardmäßig nicht konfiguriert.
-</string>
-      <string id="nondesktopclient_setting">Druckerumleitung für Nicht-Desktop-Client deaktivieren</string>
+</string>
+      <string id="nondesktopclient_setting">Druckerumleitung für Nicht-Desktop-Client deaktivieren</string>
       <string id="nondesktopclient_setting_detail">Diese Einstellung legt fest, ob VMware Integrated Printing für den Nicht-Desktop-Client-Endpoint unterstützt wird.
 
 Wenn diese Option aktiviert ist, wird VMware Integrated Printing für den Nicht-Desktop-Client-Endpoint nicht unterstützt.
 Wenn sie nicht konfiguriert oder deaktiviert ist, wird VMware Integrated Printing für den Nicht-Desktop-Client-Endpoint unterstützt.
 
 Diese Einstellung ist standardmäßig nicht konfiguriert.
-</string>
-      <string id="lbp_setting">Standortbasiertes Drucken deaktivieren</string>
+</string>
+      <string id="lbp_setting">Standortbasiertes Drucken deaktivieren</string>
       <string id="lbp_setting_detail">Mit dieser Richtlinieneinstellung können Sie verwalten, ob standortbasiertes Drucken verwendet werden soll oder nicht.
 
 Wenn Sie diese Richtlinieneinstellung aktivieren, kann das standortbasierte Drucken nicht verwendet werden.
-Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, kann standortbasiertes Drucken verwendet werden.</string>
-	  <string id="lp_setting">Clientdrucker nicht umleiten</string>
+Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, kann standortbasiertes Drucken verwendet werden.</string>
+	  <string id="lp_setting">Clientdrucker nicht umleiten</string>
       <string id="lp_setting_detail">Mit dieser Richtlinieneinstellung können Sie verwalten, ob (ein) Clientdrucker umgeleitet wird/werden oder nicht.
 
 Wenn Sie diese Richtlinieneinstellung aktivieren, werden keine Clientdrucker umgeleitet.
 Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werden alle Clientdrucker umgeleitet.
 
 Diese Einstellung ist standardmäßig nicht konfiguriert.
-</string>
-      <string id="printer_creation_setting">Auswahl des Druckertreibers</string>
+</string>
+      <string id="DriverMapping">Treiberzuordnung </string>
+      <string id="DriverMapping_detail">Mithilfe dieser Einstellung kann der Benutzer den virtuellen Drucker automatisch mit einem anderen Treiber erstellen.
+Beispiel: „A“ =&gt;„a; b; c; d“
+Die Druckerliste „a;b;c;d“ des Kandidaten wird bis zur erfolgreichen automatischen Erstellung des Druckers nacheinander abgearbeitet. Wenn für alle Kandidaten ein Fehler auftritt, wird als Fallback-Lösung der VMware EMF-Druckertreiber verwendet.
+      </string>
+      <string id="printer_creation_setting">Auswahl des Druckertreibers</string>
       <string id="printer_creation_setting_detail">Auswahl des Druckertreibers.
 
 Auswahlmöglichkeiten für die Druckererstellung:
@@ -52,18 +57,18 @@ Wenn Sie die dritte Option „Erst NPD, dann UPD verwenden“ auswählen, wird z
 
 Wenn Sie die vierte Option „Erst UPD, dann NPD verwenden“ auswählen, wird zunächst der Universal-Druckertreiber verwendet, und wenn der Universal-Druckertreiber nicht vorhanden ist, wird der native Druckertreiber verwendet.
 
-</string>
-      <string id="printer_creation_setting_npd">NPD immer verwenden</string>
-      <string id="printer_creation_setting_upd">UPD immer verwenden</string>
-      <string id="printer_creation_setting_npd_upd">Erst NPD, dann UPD verwenden</string>
-      <string id="printer_creation_setting_upd_npd">Erst UPD, dann NPD verwenden</string>
-      <string id="printer_filter">Geben Sie beim Umleiten von Client-Druckern einen Filter an</string>
+</string>
+      <string id="printer_creation_setting_npd">NPD immer verwenden</string>
+      <string id="printer_creation_setting_upd">UPD immer verwenden</string>
+      <string id="printer_creation_setting_npd_upd">Erst NPD, dann UPD verwenden</string>
+      <string id="printer_creation_setting_upd_npd">Erst UPD, dann NPD verwenden</string>
+      <string id="printer_filter">Geben Sie beim Umleiten von Client-Druckern einen Filter an</string>
       <string id="printer_filter_desc">Eine Regel zum Herausfiltern von Clientdruckern, die in der Druckerumleitung übereinstimmen. Unterstützte Attribute sind Druckernamen, Druckertreibernamen und Treiberanbieternamen. Unterstützte Operatoren sind AND, OR und NOT. Das unterstützte Suchmuster sind reguläre Ausdrücke in JavaScript-Dialekt (ECMAScript).
 Standardmäßig ist die Regel leer. Demnach werden alle Client-Drucker umgeleitet.
 
 Beispiel:
-(DriverName= &quot;DrName1&quot; OR VendorName=&quot;VeName1&quot;) AND NOT PrinterName= &quot;PrNa.?e&quot;</string>
-      <string id="print_preview_setting">Druckvorschau-Einstellung</string>
+(DriverName= &quot;DrName1&quot; OR VendorName=&quot;VeName1&quot;) AND NOT PrinterName= &quot;PrNa.?e&quot;</string>
+      <string id="print_preview_setting">Druckvorschau-Einstellung</string>
       <string id="print_preview_setting_detail">Es gibt zwei Einstellungen für die Druckvorschau.
 
 Die erste Einstellung bestimmt, ob das Druckziel aktiviert ist oder nicht. Sie ist standardmäßig nicht konfiguriert.
@@ -78,11 +83,11 @@ Die zweite Einstellung bestimmt die Standardoption für das Druckziel. Sie ist s
 Wenn die Option „Direkt drucken“ ausgewählt ist, lautet die Standarddruckoption in der Benutzeroberfläche zum Drucken „Direkt drucken“.
 
 Wenn die Option „Druckvorschau“ ausgewählt ist, lautet die Standarddruckoption in der Benutzeroberfläche zum Drucken „Druckvorschau“.
-</string>
-
-      <string id="print_directly">Direkt drucken</string>
-      <string id="print_to_preview">Druckvorschau</string>
-      <string id="printer_name_schema">Druckername für RDSH-Agents</string>
+</string>
+
+      <string id="print_directly">Direkt drucken</string>
+      <string id="print_to_preview">Druckvorschau</string>
+      <string id="printer_name_schema">Druckername für RDSH-Agents</string>
       <string id="printer_name_schema_desc">Diese Einstellung bestimmt die Druckerbenennungskonvention, wenn Sie VMware Integrated Printing in RDSH verwenden.
 Wenn diese Richtlinie aktiviert ist, sollte von „%P“ ein gültiges Druckernamenschema gestartet werden. Außerdem werden nur die folgenden Suffixe unterstützt.
 %S: Sitzungs-ID
@@ -94,28 +99,78 @@ Wenn diese Richtlinie aktiviert ist, kann der Benutzer das Druckernamensschema i
 Beispiel: PDFCreator (Client-PC). PDFCreator ist hier der Clientdruckername, und Client-PC ist der Name des Clientcomputers.
 
 Diese Einstellung ist standardmäßig nicht konfiguriert.
-      </string>
-    </stringTable>
-    <presentationTable>
-      <presentation id="PrinterCreationSetting">
-          <dropdownList refId="printer_creation_setting_list" defaultItem="2" noSort="true">Auswahlmöglichkeiten für die Druckererstellung:</dropdownList>
-      </presentation>
-      <presentation id="PrintPreviewSetting">
-        <checkBox refId="disable_print_choice">Druckauswahl deaktivieren</checkBox>
-        <dropdownList refId="default_choice_list" defaultItem="0" noSort="true">Standardoptionen für Druckziel:</dropdownList>
-      </presentation>
-      <presentation id="printer_filter">
-        <textBox refId="printer_filter_textbox">
-          <label>Druckerfilter</label>
-          <defaultValue></defaultValue>
-        </textBox>
-      </presentation>
-       <presentation id="printer_name_schema">
-          <textBox refId="printer_name_schema_textbox">
-             <label>Druckernamenschema</label>
-             <defaultValue>%P (v%S)</defaultValue>
-          </textBox>
-       </presentation>
-    </presentationTable>
-  </resources>
+      </string>
+
+      <string id="DefaultSetting">Standardeinstellungen für UPD-Drucker</string>
+      <string id="DefaultSetting_desc">Diese Richtlinie legt fest, ob die Standardeinstellungen für UPD-Drucker aktiviert werden sollen.
+Wenn diese Richtlinie aktiviert ist, kann eine Gruppe von Standardeinstellungen für UPD-Drucker definiert werden. Sie werden ggf. als Ersteinstellungen von UPD-Druckern verwendet. Für jede Druckeinstellung gibt es ein Kontrollkästchen, das bestimmt, ob beim Drucken immer die Standardeinstellung verwendet wird.
+Wenn diese Richtlinie nicht konfiguriert oder deaktiviert ist, werden die Standardeinstellungen für UPD-Drucker nicht aktiviert.
+
+Diese Richtlinie ist standardmäßig nicht konfiguriert.
+      </string>
+      <string id="none">Keine</string>
+      <string id="duplex_vertical">Lange Seite</string>
+      <string id="duplex_horizontal">Kurze Seite</string>
+
+      <string id="bw">Schwarz/Weiß</string>
+      <string id="color">Farbe</string>
+
+      <string id="lossless_comp">Verlustfreie Komprimierung</string>
+      <string id="high_quality_comp">Komprimierung in hoher Qualität</string>
+      <string id="optimized_comp">Optimierte Komprimierung</string>
+      <string id="no_image_comp">Kein Bild</string>
+
+       <string id="MaxDPI">Maximaler DPI-Wert für UPD-Drucker</string>
+       <string id="MaxDPI_detail">Mit dieser Richtlinie wird der maximale DPI-Wert für UPD-Drucker festgelegt. Somit können DPI-Optionen und DPI-Standardwerte der UPD-Drucker geändert werden können.
+
+Wenn diese Richtlinie aktiviert ist, wird sie zur Angabe der maximalen DPI-Stufe oder des maximalen DPI-Werts der X-Achse für UPD-Drucker verwendet. Abhängig von den Funktionen des Clientdruckers unterstützt der UPD-Drucker gegebenenfalls die DPI-Stufe oder den DPI-Wert.
+Wenn der Drucker die Angabe von DPI unterstützt, sind die DPI-Optionen und der DPI-Standardwert des UPD-Druckers nicht höher als die maximale DPI.
+Wenn der Drucker DPI-Werte unterstützt und der niedrigste DPI-Wert der X-Achse den maximalen DPI-Wert der X-Achse nicht übersteigt, sind die DPI-Optionen und der DPI-Standardwert des UPD-Druckers nicht höher als der maximale DPI-Wert der X-Achse.
+Wenn der Drucker DPI-Werte unterstützt und der niedrigste DPI-Wert der X-Achse den maximalen DPI-Wert der X-Achse übersteigt, stimmen die DPI-Optionen des UPD-Druckers mit den DPI-Optionen des Clientdruckers überein. Der DPI-Standardwert des UPD-Druckers ist der niedrigste DPI-Wert der X-Achse.
+
+Wenn diese Richtlinie weder konfiguriert noch deaktiviert ist, werden die DPI-Optionen und DPI-Standardwerte der UPD-Drucker nicht geändert.
+
+Diese Richtlinie ist standardmäßig nicht konfiguriert.       </string>
+       <string id="DPI_draft">Entwurf</string>
+       <string id="DPI_low">Niedrig</string>
+       <string id="DPI_medium">Mittel</string>
+       <string id="DPI_high">Hoch</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="DriverMapping">
+         <listBox refId="printer_driver_mapping">Zuordnung des Druckertreibers:</listBox>
+      </presentation>
+      <presentation id="PrinterCreationSetting">
+          <dropdownList refId="printer_creation_setting_list" defaultItem="2" noSort="true">Auswahlmöglichkeiten für die Druckererstellung:</dropdownList>
+      </presentation>
+      <presentation id="PrintPreviewSetting">
+        <checkBox refId="disable_print_choice">Druckauswahl deaktivieren</checkBox>
+        <dropdownList refId="default_choice_list" defaultItem="0" noSort="true">Standardoptionen für Druckziel:</dropdownList>
+      </presentation>
+      <presentation id="printer_filter">
+        <textBox refId="printer_filter_textbox">
+          <label>Druckerfilter</label>
+          <defaultValue></defaultValue>
+        </textBox>
+      </presentation>
+       <presentation id="printer_name_schema">
+          <textBox refId="printer_name_schema_textbox">
+             <label>Druckernamenschema</label>
+             <defaultValue>%P (v%S)</defaultValue>
+          </textBox>
+       </presentation>
+      <presentation id="DefaultSetting">
+        <dropdownList refId="DefaultDuplex" defaultItem="0" noSort="true">Duplex:</dropdownList>
+        <checkBox refId="IsDuplexLocked">Standard-Duplex-Einstellung immer verwenden</checkBox>
+        <dropdownList refId="DefaultColor" defaultItem="0" noSort="true">Farbe:</dropdownList>
+        <checkBox refId="IsColorLocked">Standard-Farbeinstellung immer verwenden</checkBox>
+        <dropdownList refId="DefaultImageCompLevel" defaultItem="0" noSort="true">Komprimierungsstufe:</dropdownList>
+        <checkBox refId="IsCompLevelLocked">Standardeinstellung der Komprimierungsstufe immer verwenden</checkBox>
+      </presentation>
+      <presentation id="MaxDPI">
+        <dropdownList refId="MaxDPILevel" defaultItem="2" noSort="true">Max. DPI-Stufe</dropdownList>
+        <decimalTextBox refId="MaxDPIValue" defaultValue="600">Max. DPI-Wert (X)</decimalTextBox>
+      </presentation>
+    </presentationTable>
+  </resources>
 </policyDefinitionResources>

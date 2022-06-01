@@ -1,242 +1,242 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
-
-   <displayName>VMware Horizon View Agent Direct-Connection</displayName>
-   <description>Konfigurationseinstellungen für VMware Horizon View Agent Direct-Connection</description>
-   <resources>
-
-      <stringTable>
-
-         <string id="Agent_Direct_Connect_Config">Konfiguration von View Agent Direct-Connection</string>
-
-         <string id="Agent_Direct_Connect_Authentication">Authentifizierung</string>
-
-         <string id="Agent_Direct_Connect_Authentication_lacu">Als aktueller Benutzer anmelden</string>
-
-         <string id="Agent_Direct_Connect_Protocols">Protokoll- und Netzwerkeinstellungen</string>
-
-         <string id="HTTPS_Port">HTTPS-Portnummer</string>
-
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+
+   <displayName>VMware Horizon View Agent Direct-Connection</displayName>
+   <description>Konfigurationseinstellungen für VMware Horizon View Agent Direct-Connection</description>
+   <resources>
+
+      <stringTable>
+
+         <string id="Agent_Direct_Connect_Config">Konfiguration von View Agent Direct-Connection</string>
+
+         <string id="Agent_Direct_Connect_Authentication">Authentifizierung</string>
+
+         <string id="Agent_Direct_Connect_Authentication_lacu">Als aktueller Benutzer anmelden</string>
+
+         <string id="Agent_Direct_Connect_Protocols">Protokoll- und Netzwerkeinstellungen</string>
+
+         <string id="HTTPS_Port">HTTPS-Portnummer</string>
+
          <string id="HTTPS_Port_Desc">Die TCP-Portnummer, die View Agent Connect auf eingehende View Client-HTTPS-Verbindungen überwacht. Wenn diese Einstellung nicht konfiguriert oder deaktiviert ist, wird standardmäßig die Portnummer 443 verwendet.
 
-HINWEIS: Wenn Sie die Portnummer ändern, müssen Sie eventuell die Desktop-Firewall neu konfigurieren, um eingehende Verbindungen zum Port zuzulassen.</string>
-
-         <string id="Session_Timeout">Zeitüberschreitung der Sitzung</string>
-
-         <string id="Session_Timeout_Desc">Legt fest, wie lange ein Benutzer eine Sitzung geöffnet lassen kann, nachdem er sich mit View Client angemeldet hat. Der Wert wird in Minuten festgelegt. Wenn diese Einstellung nicht konfiguriert oder deaktiviert ist, gilt als Standardwert 600 Minuten. Wenn für eine Desktop-Sitzung eine Zeitüberschreitung auftritt, wird die Sitzung beendet, und die View Client-Instanz wird vom Desktop getrennt.</string>
-
-         <string id="Disclaimer_Enabled">Haftungsausschluss aktiviert</string>
-
-         <string id="Disclaimer_Enabled_Desc">Legt fest, ob bei der Anmeldung ein Haftungsausschluss zur Annahme durch den Benutzer angezeigt wird. Wenn diese Einstellung aktiviert ist, wird dazu (wenn vorhanden) der Text des Feldes „Text des Haftungsausschlusses“ angezeigt oder der Text aus dem GPO „Interaktive Anmeldung: Nachricht für Benutzer, die sich anmelden wollen“ im Ordner „Konfiguration\Windows-Einstellungen\Sicherheitseinstellungen\Lokale Richtlinien\Sicherheitsoptionen“. Standardmäßig ist diese Richtlinie deaktiviert.</string>
-
-         <string id="Disclaimer_Text">Text des Haftungsausschlusses</string>
-
-         <string id="Disclaimer_Text_Desc">Text für den Haftungsausschluss, der für View Client-Benutzer bei ihrer Anmeldung angezeigt wird. Für dessen Anzeige muss die Richtlinie „Haftungsausschluss aktiviert“ aktiviert sein. Wenn hier kein Text festgelegt ist, wird standardmäßig der Text aus der Windows-Richtlinie „Interaktive Anmeldung: Nachricht für Benutzer, die sich anmelden wollen“ im Ordner „Konfiguration\Windows-Einstellungen\Sicherheitseinstellungen\Lokale Richtlinien\Sicherheitsoptionen“ verwendet.</string>
-
-         <string id="Applications_Enabled">Anwendungen aktiviert</string>
-
-         <string id="Applications_Enabled_Desc">Unterstützt den Start von Anwendungen auf Remotedesktop-Sitzungshosts. Standardmäßig ist diese Funktion aktiviert.</string>
-
-         <string id="Client_autoconnect_setting">Clienteinstellung: AutoConnect</string>
-
-         <string id="Client_autoconnect_setting_Desc">Legt die Einstellung für AutoConnect (Automatische Verbindungsherstellung) fest, die an View Client gesendet wird. Wenn diese Richtlinie festgelegt ist, hat diese Vorrang vor allen gespeicherten Clientvoreinstellungen. Standardmäßig ist kein Wert festgelegt. Durch Aktivierung dieser Richtlinie wird der Wert auf „True“ festgelegt, eine Deaktivierung setzt den Wert auf „False“.</string>
-
-         <string id="Client_alwaysconnect_setting">Clienteinstellung: AlwaysConnect</string>
-
-         <string id="Client_alwaysconnect_setting_Desc">Legt die Einstellung für AlwaysConnect (Immer verbinden) fest, die an View Client gesendet wird. Wenn diese Richtlinie festgelegt ist, hat diese Vorrang vor allen gespeicherten Clientvoreinstellungen. Standardmäßig ist kein Wert festgelegt. Durch Aktivierung dieser Richtlinie wird der Wert auf „True“ festgelegt, eine Deaktivierung setzt den Wert auf „False“.</string>
-
-         <string id="Client_screensize_setting">Clienteinstellung: ScreenSize</string>
-
-         <string id="Client_screensize_setting_Desc">Legt die Einstellung für ScreenSize (Bildschirmgröße) fest, die an View Client gesendet wird. Wenn Sie diese Richtlinie aktivieren, hat diese Vorrang vor allen gespeicherten Clientvoreinstellungen. Wenn diese Einstellung nicht konfiguriert oder deaktiviert ist, werden die Clienteinstellungen verwendet.</string>
-
-         <string id="External_PCoIP_port">Externer PCoIP-Port</string>
-
-         <string id="External_PCoIP_port_Desc">Die Portnummer, die an View Client für die TCP/UDP-Portnummer des Ziels gesendet wird, die für das PCoIP-Protokoll verwendet wird. Ein Pluszeichen vor der Zahl gibt eine relative Zahl aus der für HTTPS verwendeten Portnummer an. Dieser Wert muss nur festgelegt werden, wenn die extern angezeigte Portnummer nicht dem Port entspricht, den der Dienst überwacht. In der Regel ist das in einer NAT-Umgebung der Fall. Standardmäßig ist kein Wert festgelegt.</string>
-
-         <string id="External_RDP_Port">Externer RDP-Port</string>
-
-         <string id="External_RDP_Port_Desc">Die Portnummer, die an View Client für die TCP-Portnummer des Ziels gesendet wird, die für das RDP-Protokoll verwendet wird. Ein Pluszeichen vor der Zahl gibt eine relative Zahl aus der für HTTPS verwendeten Portnummer an. Dieser Wert muss nur festgelegt werden, wenn die extern angezeigte Portnummer nicht dem Port entspricht, den der Dienst überwacht. In der Regel ist das in einer NAT-Umgebung der Fall. Standardmäßig ist kein Wert festgelegt.</string>
-
-         <string id="External_Blast_port">Externer Blast-Port</string>
-
-         <string id="External_Blast_port_Desc">Die Portnummer, die an View Client für die TCP-Portnummer des Ziels gesendet wird, die für das Blast-Protokoll verwendet wird. Ein Pluszeichen vor der Zahl gibt eine relative Zahl aus der für HTTPS verwendeten Portnummer an. Dieser Wert muss nur festgelegt werden, wenn die extern angezeigte Portnummer nicht dem Port entspricht, den der Dienst überwacht. In der Regel ist das in einer NAT-Umgebung der Fall. Standardmäßig ist kein Wert festgelegt.</string>
-
-         <string id="External_IP">Externe IP-Adresse</string>
-
-         <string id="External_IP_Desc">IPv4-Adresse, die an View Client als Ziel-IP-Adresse gesendet wird, die für sekundäre Protokolle (RDP, PCoIP, Framework-Kanal, Blast, etc.) verwendet wird. Dieser Wert muss nur festgelegt werden, wenn die extern angezeigte Adresse nicht der Adresse des Desktop-Computers entspricht. In der Regel ist das in einer NAT-Umgebung der Fall. Standardmäßig ist kein Wert festgelegt.</string>
-
-         <string id="External_Framework_Channel_port">Externer Framework-Kanal-Port</string>
-
-         <string id="External_Framework_Channel_port_Desc">Die Portnummer, die an View Client für die TCP-Portnummer des Ziels gesendet wird, die für das Framework-Kanal-Protokoll verwendet wird. Ein Pluszeichen vor der Zahl gibt eine relative Zahl aus der für HTTPS verwendeten Portnummer an. Dieser Wert muss nur festgelegt werden, wenn die extern angezeigte Portnummer nicht dem Port entspricht, den der Dienst überwacht. In der Regel ist das in einer NAT-Umgebung der Fall. Standardmäßig ist kein Wert festgelegt.</string>
-
-         <string id="USB_Enabled">USB aktiviert</string>
-
-         <string id="USB_Enabled_Desc">Legt fest, ob Desktops USB-Geräte verwenden können, die mit dem Clientsystem verbunden sind. Der Standardwert ist aktiviert. Um aus Sicherheitsgründen die Verwendung externer Geräte zu unterbinden, deaktivieren Sie die Einstellung.</string>
-
-         <string id="MMR_Enabled">Multimedia-Umleitung (MMR) aktiviert</string>
-
+HINWEIS: Wenn Sie die Portnummer ändern, müssen Sie eventuell die Desktop-Firewall neu konfigurieren, um eingehende Verbindungen zum Port zuzulassen.</string>
+
+         <string id="Session_Timeout">Zeitüberschreitung der Sitzung</string>
+
+         <string id="Session_Timeout_Desc">Legt fest, wie lange ein Benutzer eine Sitzung geöffnet lassen kann, nachdem er sich mit View Client angemeldet hat. Der Wert wird in Minuten festgelegt. Wenn diese Einstellung nicht konfiguriert oder deaktiviert ist, gilt als Standardwert 600 Minuten. Wenn für eine Desktop-Sitzung eine Zeitüberschreitung auftritt, wird die Sitzung beendet, und die View Client-Instanz wird vom Desktop getrennt.</string>
+
+         <string id="Disclaimer_Enabled">Haftungsausschluss aktiviert</string>
+
+         <string id="Disclaimer_Enabled_Desc">Legt fest, ob bei der Anmeldung ein Haftungsausschluss zur Annahme durch den Benutzer angezeigt wird. Wenn diese Einstellung aktiviert ist, wird dazu (wenn vorhanden) der Text des Feldes „Text des Haftungsausschlusses“ angezeigt oder der Text aus dem GPO „Interaktive Anmeldung: Nachricht für Benutzer, die sich anmelden wollen“ im Ordner „Konfiguration\Windows-Einstellungen\Sicherheitseinstellungen\Lokale Richtlinien\Sicherheitsoptionen“. Standardmäßig ist diese Richtlinie deaktiviert.</string>
+
+         <string id="Disclaimer_Text">Text des Haftungsausschlusses</string>
+
+         <string id="Disclaimer_Text_Desc">Text für den Haftungsausschluss, der für View Client-Benutzer bei ihrer Anmeldung angezeigt wird. Für dessen Anzeige muss die Richtlinie „Haftungsausschluss aktiviert“ aktiviert sein. Wenn hier kein Text festgelegt ist, wird standardmäßig der Text aus der Windows-Richtlinie „Interaktive Anmeldung: Nachricht für Benutzer, die sich anmelden wollen“ im Ordner „Konfiguration\Windows-Einstellungen\Sicherheitseinstellungen\Lokale Richtlinien\Sicherheitsoptionen“ verwendet.</string>
+
+         <string id="Applications_Enabled">Anwendungen aktiviert</string>
+
+         <string id="Applications_Enabled_Desc">Unterstützt den Start von Anwendungen auf Remotedesktop-Sitzungshosts. Standardmäßig ist diese Funktion aktiviert.</string>
+
+         <string id="Client_autoconnect_setting">Clienteinstellung: AutoConnect</string>
+
+         <string id="Client_autoconnect_setting_Desc">Legt die Einstellung für AutoConnect (Automatische Verbindungsherstellung) fest, die an View Client gesendet wird. Wenn diese Richtlinie festgelegt ist, hat diese Vorrang vor allen gespeicherten Clientvoreinstellungen. Standardmäßig ist kein Wert festgelegt. Durch Aktivierung dieser Richtlinie wird der Wert auf „True“ festgelegt, eine Deaktivierung setzt den Wert auf „False“.</string>
+
+         <string id="Client_alwaysconnect_setting">Clienteinstellung: AlwaysConnect</string>
+
+         <string id="Client_alwaysconnect_setting_Desc">Legt die Einstellung für AlwaysConnect (Immer verbinden) fest, die an View Client gesendet wird. Wenn diese Richtlinie festgelegt ist, hat diese Vorrang vor allen gespeicherten Clientvoreinstellungen. Standardmäßig ist kein Wert festgelegt. Durch Aktivierung dieser Richtlinie wird der Wert auf „True“ festgelegt, eine Deaktivierung setzt den Wert auf „False“.</string>
+
+         <string id="Client_screensize_setting">Clienteinstellung: ScreenSize</string>
+
+         <string id="Client_screensize_setting_Desc">Legt die Einstellung für ScreenSize (Bildschirmgröße) fest, die an View Client gesendet wird. Wenn Sie diese Richtlinie aktivieren, hat diese Vorrang vor allen gespeicherten Clientvoreinstellungen. Wenn diese Einstellung nicht konfiguriert oder deaktiviert ist, werden die Clienteinstellungen verwendet.</string>
+
+         <string id="External_PCoIP_port">Externer PCoIP-Port</string>
+
+         <string id="External_PCoIP_port_Desc">Die Portnummer, die an View Client für die TCP/UDP-Portnummer des Ziels gesendet wird, die für das PCoIP-Protokoll verwendet wird. Ein Pluszeichen vor der Zahl gibt eine relative Zahl aus der für HTTPS verwendeten Portnummer an. Dieser Wert muss nur festgelegt werden, wenn die extern angezeigte Portnummer nicht dem Port entspricht, den der Dienst überwacht. In der Regel ist das in einer NAT-Umgebung der Fall. Standardmäßig ist kein Wert festgelegt.</string>
+
+         <string id="External_RDP_Port">Externer RDP-Port</string>
+
+         <string id="External_RDP_Port_Desc">Die Portnummer, die an View Client für die TCP-Portnummer des Ziels gesendet wird, die für das RDP-Protokoll verwendet wird. Ein Pluszeichen vor der Zahl gibt eine relative Zahl aus der für HTTPS verwendeten Portnummer an. Dieser Wert muss nur festgelegt werden, wenn die extern angezeigte Portnummer nicht dem Port entspricht, den der Dienst überwacht. In der Regel ist das in einer NAT-Umgebung der Fall. Standardmäßig ist kein Wert festgelegt.</string>
+
+         <string id="External_Blast_port">Externer Blast-Port</string>
+
+         <string id="External_Blast_port_Desc">Die Portnummer, die an View Client für die TCP-Portnummer des Ziels gesendet wird, die für das Blast-Protokoll verwendet wird. Ein Pluszeichen vor der Zahl gibt eine relative Zahl aus der für HTTPS verwendeten Portnummer an. Dieser Wert muss nur festgelegt werden, wenn die extern angezeigte Portnummer nicht dem Port entspricht, den der Dienst überwacht. In der Regel ist das in einer NAT-Umgebung der Fall. Standardmäßig ist kein Wert festgelegt.</string>
+
+         <string id="External_IP">Externe IP-Adresse</string>
+
+         <string id="External_IP_Desc">IPv4-Adresse, die an View Client als Ziel-IP-Adresse gesendet wird, die für sekundäre Protokolle (RDP, PCoIP, Framework-Kanal, Blast, etc.) verwendet wird. Dieser Wert muss nur festgelegt werden, wenn die extern angezeigte Adresse nicht der Adresse des Desktop-Computers entspricht. In der Regel ist das in einer NAT-Umgebung der Fall. Standardmäßig ist kein Wert festgelegt.</string>
+
+         <string id="External_Framework_Channel_port">Externer Framework-Kanal-Port</string>
+
+         <string id="External_Framework_Channel_port_Desc">Die Portnummer, die an View Client für die TCP-Portnummer des Ziels gesendet wird, die für das Framework-Kanal-Protokoll verwendet wird. Ein Pluszeichen vor der Zahl gibt eine relative Zahl aus der für HTTPS verwendeten Portnummer an. Dieser Wert muss nur festgelegt werden, wenn die extern angezeigte Portnummer nicht dem Port entspricht, den der Dienst überwacht. In der Regel ist das in einer NAT-Umgebung der Fall. Standardmäßig ist kein Wert festgelegt.</string>
+
+         <string id="USB_Enabled">USB aktiviert</string>
+
+         <string id="USB_Enabled_Desc">Legt fest, ob Desktops USB-Geräte verwenden können, die mit dem Clientsystem verbunden sind. Der Standardwert ist aktiviert. Um aus Sicherheitsgründen die Verwendung externer Geräte zu unterbinden, deaktivieren Sie die Einstellung.</string>
+
+         <string id="MMR_Enabled">Multimedia-Umleitung (MMR) aktiviert</string>
+
          <string id="MMR_Enabled_Desc">Legt fest, ob MMR für Clientsysteme aktiviert ist. MMR ist ein Microsoft DirectShow-Filter, der Multimediadaten von bestimmten Codecs auf View-Desktops direkt über einen TCP-Socket an das Clientsystem weiterleitet. Die Daten werden direkt auf dem Clientsystem decodiert, auf dem sie wiedergegeben werden. Standardmäßig ist diese Richtlinie deaktiviert.
 
-MMR arbeitet nicht ordnungsgemäß, wenn die Hardware zur Videoanzeige auf dem Clientsystem keine Overlay-Unterstützung bietet. Clientsysteme verfügen eventuell nicht über ausreichend Ressourcen zur Verarbeitung der lokalen Multimedia-Decodierung.</string>
-
-         <string id="Reset_Enabled">Zurücksetzen aktiviert</string>
-
-         <string id="Reset_Enabled_Desc">Legt fest, ob ein authentifizierter View Client einen Neustart auf Betriebssystemebene durchführen kann. Diese Einstellung ist standardmäßig deaktiviert.</string>
-
-         <string id="USB_AutoConnect">USB-AutoConnect</string>
-
-         <string id="USB_AutoConnect_Desc">Verbindet alle USB-Geräte mit dem Desktop, wenn sie angeschlossen werden Wenn diese Richtlinie festgelegt ist, hat diese Vorrang vor allen gespeicherten Clientvoreinstellungen. Standardmäßig ist kein Wert festgelegt.</string>
-
-         <string id="Client_Cred_Cache_Timeout">Zeitüberschreitung bei der Zwischenspeicherung der Clientanmeldedaten</string>
-
-         <string id="Client_Cred_Cache_Timeout_Desc">Legt in Minuten fest, wie lange ein Benutzer ein gespeichertes Kennwort für View Client verwenden darf. 0 bedeutet nie, -1 bedeutet immer. View Clients bieten Benutzern die Möglichkeit, ihre Kennwörter zu speichern, wenn dafür ein gültiger Wert festgelegt ist. Der Standardwert beträgt 0 (nie).</string>
-
-         <string id="User_Idle_Timeout">Zeitüberschreitung des Benutzerleerlaufs</string>
-
-         <string id="User_Idle_Timeout_Desc">Die maximale Zeitdauer in Sekunden, in der sich ein Benutzer im Leerlauf befinden kann, ohne dass der Dienst Maßnahmen zum Schutz der Sitzung durchführt. Der Wert -1 legt fest, dass die Sitzung nicht als im Leerlauf behandelt wird. Der Standardwert beträgt 900 Sekunden (15 Minuten).</string>
-
-         <string id="Client_Session_Timeout">Zeitüberschreitung der Clientsitzung</string>
-
-         <string id="Client_Session_Timeout_Desc">Die maximale Zeitdauer in Sekunden, in der eine Sitzung aktiv sein kann, wenn kein Client verbunden ist. Der Standardwert beträgt 36000 Sekunden (10 Stunden).</string>
-
-         <string id="X509_Cert_Auth">X509-Zertifikatauthentifizierung</string>
-
-         <string id="X509_Cert_Auth_Desc">Legt fest, ob die Authentifizierung mit Smartcard X.509 deaktiviert, zulässig oder erforderlich ist.</string>
-
-         <string id="Disabled">Deaktiviert</string>
-
-         <string id="Allowed">Zulässig</string>
-
-         <string id="Required">Erforderlich</string>
-
-         <string id="X509_SSL_Cert_Auth_Enabled">X509-SSL-Zertifikatauthentifizierung aktiviert</string>
-
-         <string id="X509_SSL_Cert_Auth_Enabled_Desc">Legt fest, ob die Zertifikatauthentifizierung mit Smartcard X.509 über eine SSL-Verbindung von einem View Client aktiviert wird. Diese Richtlinie ist nicht erforderlich, wenn die X.509-Zertifikatauthentifizierung über einen zwischenzeitlichen SSL-Beendigungspunkt durchgeführt wird. Wenn sich dieser Wert ändert, muss View Agent neu gestartet werden.</string>
-
-         <string id="Client_Config_NVP">Wertepaare für Clientkonfigurationsname</string>
-
-         <string id="Client_Config_NVP_Desc">Liste der Werte, die an den Client in der Form „Name=Wert“, z. B. „clientCredentialCacheTimeout=1440“, übergeben werden sollen.</string>
-
-         <string id="Default_Protocol">Standardprotokoll</string>
-
-         <string id="Default_Protocol_Desc">Das Standardanzeigeprotokoll, mit dem View Client eine Verbindung mit dem Desktop herstellt. Wenn kein Wert festgelegt ist, wird standardmäßig BLAST verwendet.</string>
-
-<!-- begin: log on as current user -->
-
-         <string id="gssapi_allow_legacy_clients">Vorgängermandanten erlauben</string>
+MMR arbeitet nicht ordnungsgemäß, wenn die Hardware zur Videoanzeige auf dem Clientsystem keine Overlay-Unterstützung bietet. Clientsysteme verfügen eventuell nicht über ausreichend Ressourcen zur Verarbeitung der lokalen Multimedia-Decodierung.</string>
+
+         <string id="Reset_Enabled">Zurücksetzen aktiviert</string>
+
+         <string id="Reset_Enabled_Desc">Legt fest, ob ein authentifizierter View Client einen Neustart auf Betriebssystemebene durchführen kann. Diese Einstellung ist standardmäßig deaktiviert.</string>
+
+         <string id="USB_AutoConnect">USB-AutoConnect</string>
+
+         <string id="USB_AutoConnect_Desc">Verbindet alle USB-Geräte mit dem Desktop, wenn sie angeschlossen werden Wenn diese Richtlinie festgelegt ist, hat diese Vorrang vor allen gespeicherten Clientvoreinstellungen. Standardmäßig ist kein Wert festgelegt.</string>
+
+         <string id="Client_Cred_Cache_Timeout">Zeitüberschreitung bei der Zwischenspeicherung der Clientanmeldedaten</string>
+
+         <string id="Client_Cred_Cache_Timeout_Desc">Legt in Minuten fest, wie lange ein Benutzer ein gespeichertes Kennwort für View Client verwenden darf. 0 bedeutet nie, -1 bedeutet immer. View Clients bieten Benutzern die Möglichkeit, ihre Kennwörter zu speichern, wenn dafür ein gültiger Wert festgelegt ist. Der Standardwert beträgt 0 (nie).</string>
+
+         <string id="User_Idle_Timeout">Zeitüberschreitung des Benutzerleerlaufs</string>
+
+         <string id="User_Idle_Timeout_Desc">Die maximale Zeitdauer in Sekunden, in der sich ein Benutzer im Leerlauf befinden kann, ohne dass der Dienst Maßnahmen zum Schutz der Sitzung durchführt. Der Wert -1 legt fest, dass die Sitzung nicht als im Leerlauf behandelt wird. Der Standardwert beträgt 900 Sekunden (15 Minuten).</string>
+
+         <string id="Client_Session_Timeout">Zeitüberschreitung der Clientsitzung</string>
+
+         <string id="Client_Session_Timeout_Desc">Die maximale Zeitdauer in Sekunden, in der eine Sitzung aktiv sein kann, wenn kein Client verbunden ist. Der Standardwert beträgt 36000 Sekunden (10 Stunden).</string>
+
+         <string id="X509_Cert_Auth">X509-Zertifikatauthentifizierung</string>
+
+         <string id="X509_Cert_Auth_Desc">Legt fest, ob die Authentifizierung mit Smartcard X.509 deaktiviert, zulässig oder erforderlich ist.</string>
+
+         <string id="Disabled">Deaktiviert</string>
+
+         <string id="Allowed">Zulässig</string>
+
+         <string id="Required">Erforderlich</string>
+
+         <string id="X509_SSL_Cert_Auth_Enabled">X509-SSL-Zertifikatauthentifizierung aktiviert</string>
+
+         <string id="X509_SSL_Cert_Auth_Enabled_Desc">Legt fest, ob die Zertifikatauthentifizierung mit Smartcard X.509 über eine SSL-Verbindung von einem View Client aktiviert wird. Diese Richtlinie ist nicht erforderlich, wenn die X.509-Zertifikatauthentifizierung über einen zwischenzeitlichen SSL-Beendigungspunkt durchgeführt wird. Wenn sich dieser Wert ändert, muss View Agent neu gestartet werden.</string>
+
+         <string id="Client_Config_NVP">Wertepaare für Clientkonfigurationsname</string>
+
+         <string id="Client_Config_NVP_Desc">Liste der Werte, die an den Client in der Form „Name=Wert“, z. B. „clientCredentialCacheTimeout=1440“, übergeben werden sollen.</string>
+
+         <string id="Default_Protocol">Standardprotokoll</string>
+
+         <string id="Default_Protocol_Desc">Das Standardanzeigeprotokoll, mit dem View Client eine Verbindung mit dem Desktop herstellt. Wenn kein Wert festgelegt ist, wird standardmäßig BLAST verwendet.</string>
+
+<!-- begin: log on as current user -->
+
+         <string id="gssapi_allow_legacy_clients">Vorgängermandanten erlauben</string>
          <string id="gssapi_allow_legacy_clients_Desc">Wenn diese Option deaktiviert ist, können sich Clients vor Version 5.5 nicht mithilfe der Anmeldung als aktueller Benutzer authentifizieren.
 
-Wenn dies nicht festgelegt ist, sind ältere Clients zulässig.</string>
-
-         <string id="gssapi_allow_ntlm">NTLM-Fallback erlauben</string>
+Wenn dies nicht festgelegt ist, sind ältere Clients zulässig.</string>
+
+         <string id="gssapi_allow_ntlm">NTLM-Fallback erlauben</string>
          <string id="gssapi_allow_ntlm_Desc">Wenn diese Option aktiviert ist, ist ein Fallback von Kerberos auf die NTLM-Authentifizierung zulässig, wenn der Client keinen Domänencontroller erreichen kann.
 
-Sofern nicht festgelegt, ist ein NTLM-Fallback nicht zulässig.</string>
-
-         <string id="gssapi_require_cbt">Kanalbindungen verlangen</string>
+Sofern nicht festgelegt, ist ein NTLM-Fallback nicht zulässig.</string>
+
+         <string id="gssapi_require_cbt">Kanalbindungen verlangen</string>
          <string id="gssapi_require_cbt_Desc">Wenn diese Option deaktiviert ist, sind keine Kanalbindungen erforderlich.
 
 HINWEIS: Kanalbindungen werden von älteren Clients nicht unterstützt. Wenn die Unterstützung für ältere Clients aktiviert ist, werden die Kanalbindungen nicht von den Clients vor Version 5.5 verwendet.
 
-Wenn diese Option nicht festgelegt ist, sind Kanalbindungen erforderlich.</string>
-
-<!-- end: log on as current user -->
-
-      </stringTable>
-
-      <presentationTable>
-
-         <presentation id="HTTPS_Port">
-            <textBox refId="HTTPS_Port_TB">
-               <label>HTTPS-Portnummer</label>
-               <defaultValue>443</defaultValue>
-            </textBox>
-         </presentation>
-
-         <presentation id="Session_Timeout">
-            <textBox refId="Session_Timeout_TB">
-               <label>Zeitüberschreitung der Sitzung</label>
-               <defaultValue>600</defaultValue>
-            </textBox>
-         </presentation>
-
-         <presentation id="Disclaimer_Text">
-            <textBox refId="Disclaimer_Text_TB">
-               <label>Text des Haftungsausschlusses</label>
-            </textBox>
-         </presentation>
-
-         <presentation id="Client_screensize_setting">
-            <textBox refId="Client_screensize_setting_TB">
-               <label>Clienteinstellung: ScreenSize</label>
-            </textBox>
-         </presentation>
-
-         <presentation id="External_PCoIP_port">
-            <textBox refId="External_PCoIP_port_TB">
-               <label>Externer PCoIP-Port</label>
-            </textBox>
-         </presentation>
-
-         <presentation id="External_RDP_Port">
-            <textBox refId="External_RDP_Port_TB">
-               <label>Externer RDP-Port</label>
-            </textBox>
-         </presentation>
-
-         <presentation id="External_Blast_port">
-            <textBox refId="External_Blast_port_TB">
-               <label>Externer Blast-Port</label>
-            </textBox>
-         </presentation>
-
-         <presentation id="External_IP">
-            <textBox refId="External_IP_TB">
-               <label>Externe IP-Adresse</label>
-            </textBox>
-         </presentation>
-
-         <presentation id="External_Framework_Channel_port">
-            <textBox refId="External_Framework_Channel_port_TB">
-               <label>Externer Framework-Kanal-Port</label>
-            </textBox>
-         </presentation>
-
-         <presentation id="Client_Cred_Cache_Timeout">
-            <textBox refId="Client_Cred_Cache_Timeout_TB">
-               <label>Zeitüberschreitung bei der Zwischenspeicherung der Clientanmeldedaten</label>
-               <defaultValue>0</defaultValue>
-            </textBox>
-         </presentation>
-
-         <presentation id="User_Idle_Timeout">
-            <textBox refId="User_Idle_Timeout_TB">
-               <label>Zeitüberschreitung des Benutzerleerlaufs</label>
-               <defaultValue>900</defaultValue>
-            </textBox>
-         </presentation>
-
-         <presentation id="Client_Session_Timeout">
-            <textBox refId="Client_Session_Timeout_TB">
-               <label>Zeitüberschreitung der Clientsitzung</label>
-               <defaultValue>36000</defaultValue>
-            </textBox>
-         </presentation>
-
-         <presentation id="X509_Cert_Auth">
-            <dropdownList refId="X509_Cert_Auth_DDL" defaultItem="0">X509-Zertifikatauthentifizierung</dropdownList>
-         </presentation>
-
-         <presentation id="Client_Config_NVP">
-            <listBox refId="Client_Config_NVP_list">Wertepaare für Clientkonfigurationsname</listBox>
-         </presentation>
-
-         <presentation id="Default_Protocol">
-            <textBox refId="Default_Protocol_TB">
-               <label>Standardprotokoll</label>
-               <defaultValue>BLAST</defaultValue>
-            </textBox>
-         </presentation>
-      </presentationTable>
-   </resources>
-</policyDefinitionResources>
+Wenn diese Option nicht festgelegt ist, sind Kanalbindungen erforderlich.</string>
+
+<!-- end: log on as current user -->
+
+      </stringTable>
+
+      <presentationTable>
+
+         <presentation id="HTTPS_Port">
+            <textBox refId="HTTPS_Port_TB">
+               <label>HTTPS-Portnummer</label>
+               <defaultValue>443</defaultValue>
+            </textBox>
+         </presentation>
+
+         <presentation id="Session_Timeout">
+            <textBox refId="Session_Timeout_TB">
+               <label>Zeitüberschreitung der Sitzung</label>
+               <defaultValue>600</defaultValue>
+            </textBox>
+         </presentation>
+
+         <presentation id="Disclaimer_Text">
+            <textBox refId="Disclaimer_Text_TB">
+               <label>Text des Haftungsausschlusses</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Client_screensize_setting">
+            <textBox refId="Client_screensize_setting_TB">
+               <label>Clienteinstellung: ScreenSize</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="External_PCoIP_port">
+            <textBox refId="External_PCoIP_port_TB">
+               <label>Externer PCoIP-Port</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="External_RDP_Port">
+            <textBox refId="External_RDP_Port_TB">
+               <label>Externer RDP-Port</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="External_Blast_port">
+            <textBox refId="External_Blast_port_TB">
+               <label>Externer Blast-Port</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="External_IP">
+            <textBox refId="External_IP_TB">
+               <label>Externe IP-Adresse</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="External_Framework_Channel_port">
+            <textBox refId="External_Framework_Channel_port_TB">
+               <label>Externer Framework-Kanal-Port</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Client_Cred_Cache_Timeout">
+            <textBox refId="Client_Cred_Cache_Timeout_TB">
+               <label>Zeitüberschreitung bei der Zwischenspeicherung der Clientanmeldedaten</label>
+               <defaultValue>0</defaultValue>
+            </textBox>
+         </presentation>
+
+         <presentation id="User_Idle_Timeout">
+            <textBox refId="User_Idle_Timeout_TB">
+               <label>Zeitüberschreitung des Benutzerleerlaufs</label>
+               <defaultValue>900</defaultValue>
+            </textBox>
+         </presentation>
+
+         <presentation id="Client_Session_Timeout">
+            <textBox refId="Client_Session_Timeout_TB">
+               <label>Zeitüberschreitung der Clientsitzung</label>
+               <defaultValue>36000</defaultValue>
+            </textBox>
+         </presentation>
+
+         <presentation id="X509_Cert_Auth">
+            <dropdownList refId="X509_Cert_Auth_DDL" defaultItem="0">X509-Zertifikatauthentifizierung</dropdownList>
+         </presentation>
+
+         <presentation id="Client_Config_NVP">
+            <listBox refId="Client_Config_NVP_list">Wertepaare für Clientkonfigurationsname</listBox>
+         </presentation>
+
+         <presentation id="Default_Protocol">
+            <textBox refId="Default_Protocol_TB">
+               <label>Standardprotokoll</label>
+               <defaultValue>BLAST</defaultValue>
+            </textBox>
+         </presentation>
+      </presentationTable>
+   </resources>
+</policyDefinitionResources>

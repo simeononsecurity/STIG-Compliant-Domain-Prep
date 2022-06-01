@@ -1,24 +1,24 @@
-<policyDefinitionResources revision="1.0" schemaVersion="1.0">
-  <displayName>
-  </displayName>
-  <description>
-  </description>
-  <resources>
-    <stringTable>
-      <string id="Root_CatName">Scannerumleitung</string>
-      <string id="DisableFunctionality_PolicyName">Funktionalität deaktivieren</string>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName>
+  </displayName>
+  <description>
+  </description>
+  <resources>
+    <stringTable>
+      <string id="Root_CatName">Scannerumleitung</string>
+      <string id="DisableFunctionality_PolicyName">Funktionalität deaktivieren</string>
       <string id="DisableFunctionality_PolicyExplain">Diese Richtlinieneinstellung wird für die Deaktivierung der Scannerumleitung verwendet.
 
 Wenn Sie diese Einstellung aktivieren, können Scanner nicht umgeleitet werden. Sie werden auch nicht im Scanner-Menü angezeigt.
 
-Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, funktioniert die Scannerumleitung und die Scanner werden im Scanner-Menü angezeigt.</string>
-      <string id="LockConfig_PolicyName">Konfiguration sperren</string>
+Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, funktioniert die Scannerumleitung und die Scanner werden im Scanner-Menü angezeigt.</string>
+      <string id="LockConfig_PolicyName">Konfiguration sperren</string>
       <string id="LockConfig_PolicyExplain">Diese Richtlinieneinstellung wird für die Sperrung der Benutzeroberfläche mit den Programmeinstellungen verwendet.
 
 Wenn Sie diese Richtlinieneinstellung aktivieren, wird die Benutzeroberfläche mit den Programmeinstellungen gesperrt. Ein Benutzer hat dann nicht mehr die Möglichkeit, die Einstellungen im Taskleisten-Menü zu ändern.
 
-Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, ist die Benutzeroberfläche mit den Programmeinstellungen für Benutzer zugänglich.</string>
-      <string id="HideWebcam_PolicyName">Webcam ausblenden</string>
+Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, ist die Benutzeroberfläche mit den Programmeinstellungen für Benutzer zugänglich.</string>
+      <string id="HideWebcam_PolicyName">Webcam ausblenden</string>
       <string id="HideWebcam_PolicyExplain_COMP">Aktuell können Webcams zu VMware Agent umgeleitet und als virtuelle Scanner für die Erfassung von Bildern verwendet werden.
 Mit dieser Richtlinieneinstellung wird verhindert, dass Webcams im Scannerauswahlmenü der Benutzeroberfläche angezeigt werden.
 
@@ -28,7 +28,7 @@ Wenn Sie diese Richtlinieneinstellung deaktivieren, wird der Modus für das Ausb
 
 Diese Richtlinieneinstellung hat auch Vorrang vor der gleichen Richtlinieneinstellung für die einzelnen Benutzer auf diesem Computer. Die Benutzer haben nicht die Möglichkeit, den Modus für das Ausblenden von Webcams über die Benutzeroberfläche zu ändern.
 
-Wenn Sie diese Einstellung nicht konfigurieren, wird der Modus für das Ausblenden von Webcams von der gleichen Richtlinieneinstellung für Benutzer oder über die Einstellungen in der Benutzeroberfläche festgelegt.</string>
+Wenn Sie diese Einstellung nicht konfigurieren, wird der Modus für das Ausblenden von Webcams von der gleichen Richtlinieneinstellung für Benutzer oder über die Einstellungen in der Benutzeroberfläche festgelegt.</string>
       <string id="HideWebcam_PolicyExplain_USER">Aktuell können Webcams zu VMware Agent umgeleitet und als virtuelle Scanner für die Erfassung von Bildern verwendet werden.
 Mit dieser Richtlinieneinstellung wird verhindert, dass Webcams im Scannerauswahlmenü der Benutzeroberfläche angezeigt werden.
 
@@ -38,23 +38,46 @@ Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, wird der Modus
 
 Der Benutzer kann den Modus für das Ausblenden von Webcams jederzeit über die Einstellungen in der Benutzeroberfläche ändern, auch wenn die Richtlinieneinstellung aktiviert ist.
 
-Wenn Sie diese Richtlinieneinstellung für diesen Computer verwenden, hat sie Vorrang vor der Richtlinieneinstellung für die einzelnen Benutzer dieses Computers. In diesem Fall haben Benutzer nicht die Möglichkeit, den Modus für das Ausblenden von Webcams über die Einstellungen in der Benutzeroberfläche zu ändern.</string>
-      <string id="DefaultColorMode_PolicyName">Standard-Farbmodus</string>
+Wenn Sie diese Richtlinieneinstellung für diesen Computer verwenden, hat sie Vorrang vor der Richtlinieneinstellung für die einzelnen Benutzer dieses Computers. In diesem Fall haben Benutzer nicht die Möglichkeit, den Modus für das Ausblenden von Webcams über die Einstellungen in der Benutzeroberfläche zu ändern.</string>
+      <string id="DefaultColorMode_PolicyName">Standard-Farbmodus</string>
       <string id="DefaultColorMode_PolicyExplain">Diese Richtlinie ermöglicht es, den standardmäßigen Scan-Farbmodus (z. B. Farbe oder Graustufen) zu überschreiben.
 Dies ist sehr nützlich, wenn die Scan-Anwendung ohne Anzeige des Dialogfelds „Scan-Einstellungen“ scannt und außerdem die interne Konfiguration des Farbmodus nicht zulässt.
-      </string>
-      <string id="DefaultColorMode_DropDownListName">Farbmodus:</string>
-      <string id="DefaultColorMode_BlackAndWhite">Schwarz und weiß</string>
-      <string id="DefaultColorMode_Grayscale">Graustufen</string>
-      <string id="DefaultColorMode_Color">Farbe</string>
-      <string id="DefaultDuplex_PolicyName">Standard-Duplex</string>
+      </string>
+      <string id="DefaultColorMode_DropDownListName">Farbmodus:</string>
+      <string id="DefaultColorMode_BlackAndWhite">Schwarz und weiß</string>
+      <string id="DefaultColorMode_Grayscale">Graustufen</string>
+      <string id="DefaultColorMode_Color">Farbe</string>
+	  <string id="DefaultResolution_PolicyName">Standardauflösung</string>
+      <string id="DefaultResolution_PolicyExplain">Diese Richtlinie ermöglicht das Überschreiben der standardmäßigen Scanauflösung (in DPI).</string>
+      <string id="DefaultDuplex_PolicyName">Standard-Duplex</string>
       <string id="DefaultDuplex_PolicyExplain">Diese Richtlinie ermöglicht es, den Standard-Scan-Modus (Simplex oder Duplex) zu überschreiben.
 Beim Einstellen von „Duplex“ ist Vorsicht geboten, da die Anwendung den Duplex-Scan unterstützen und beim Scanner zwei Seiten anfordern muss.
-      </string>
-      <string id="DefaultDuplex_DropDownListName">Duplex-Modus:</string>
-      <string id="DefaultDuplex_Simplex">Simplex</string>
-      <string id="DefaultDuplex_Duplex">Duplex</string>
-      <string id="DefaultScanner_PolicyName">Standardscanner</string>
+      </string>
+      <string id="DefaultDuplex_DropDownListName">Duplex-Modus:</string>
+      <string id="DefaultDuplex_Simplex">Simplex</string>
+      <string id="DefaultDuplex_Duplex">Duplex</string>
+	  <string id="DefaultAutoRotate_PolicyName">Standardmäßige automatische Drehung</string>
+      <string id="DefaultAutoRotate_PolicyExplain">NUR TWAIN. Diese Richtlinie ermöglicht es, den standardmäßigen Modus für die automatische Seitendrehung (aktiviert oder deaktiviert) außer Kraft zu setzen.
+Bei Aktivierung hängt die Logik von intelligenten Funktionen innerhalb eines Scannertreibers ab, um das Bild automatisch zu drehen und es in die richtige Position zu bringen. Das heißt, der Scannertreiber entscheidet, ob die Seite gedreht werden soll (90 oder 180 Grad, CW oder CCW).
+      </string>
+      <string id="DefaultAutoRotate_DropDownListName">Standardmäßige automatische Drehung:</string>
+      <string id="DefaultAutoRotate_Disabled">Deaktiviert</string>
+      <string id="DefaultAutoRotate_Enabled">Aktiviert</string>
+	  <string id="DefaultAutoDeskew_PolicyName">Standardmäßige automatische Ausrichtung</string>
+      <string id="DefaultAutoDeskew_PolicyExplain">NUR TWAIN. Mit dieser Richtlinie können Sie den standardmäßigen Modus für die automatische Ausrichtung außer Kraft setzen (aktiviert oder deaktiviert).
+Bei Aktivierung hängt die Logik von intelligenten Funktionen innerhalb eines Scannertreibers ab, um ein Bild automatisch auszurichten.
+      </string>
+      <string id="DefaultAutoDeskew_DropDownListName">Standardmäßige automatische Ausrichtung:</string>
+      <string id="DefaultAutoDeskew_Disabled">Deaktiviert</string>
+      <string id="DefaultAutoDeskew_Enabled">Aktiviert</string>
+	  <string id="DefaultAutoBorderDetection_PolicyName">Standardmäßige automatische Rahmenerkennung</string>
+      <string id="DefaultAutoBorderDetection_PolicyExplain">NUR TWAIN. Mit dieser Richtlinie kann der standardmäßige Modus für die automatische Erkennung von Seitenrändern außer Kraft gesetzt werden (aktiviert oder deaktiviert).
+Bei Aktivierung hängt die Logik von intelligenten Funktionen innerhalb eines Scannertreibers ab, um die gescannten Bildränder automatisch zu erkennen und das Bild entsprechend zuzuschneiden.
+      </string>
+      <string id="DefaultAutoBorderDetection_DropDownListName">Standardmäßige automatische Rahmenerkennung:</string>
+      <string id="DefaultAutoBorderDetection_Disabled">Deaktiviert</string>
+      <string id="DefaultAutoBorderDetection_Enabled">Aktiviert</string>
+      <string id="DefaultScanner_PolicyName">Standardscanner</string>
       <string id="DefaultScanners_PolicyExplain_COMP">Diese Richtlinieneinstellung wird für eine zentrale Verwaltung der automatischen Scannerauswahl verwendet.
 Die folgenden Optionen stehen für die automatische Scannerauswahl zur Verfügung:
 Keine – Scanner werden nicht automatisch ausgewählt;
@@ -65,7 +88,7 @@ Angegeben – der ausgewählte Scanner wird durch die Angabe im Feld „Angegeb
 Wenn Sie diese Richtlinieneinstellung aktivieren, hat diese Vorrang vor dem Modus für die automatische Scannerauswahl für alle Benutzer auf diesem Computer. Benutzer können dann den Modus für die automatische Auswahl nicht über die Einstellungen in der Benutzeroberfläche ändern.
 Diese Richtlinieneinstellung hat auch Vorrang vor der gleichen Richtlinieneinstellung für die einzelnen Benutzer dieses Computers.
 
-Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, wird der Modus für die automatische Auswahl über die gleiche Richtlinieneinstellung für den Benutzer oder über die Einstellungen in der Benutzeroberfläche festgelegt.</string>
+Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, wird der Modus für die automatische Auswahl über die gleiche Richtlinieneinstellung für den Benutzer oder über die Einstellungen in der Benutzeroberfläche festgelegt.</string>
       <string id="DefaultScanners_PolicyExplain_USER">Diese Richtlinieneinstellung wird für eine zentrale Verwaltung der automatischen Scannerauswahl verwendet.
 Die folgenden Optionen stehen für die automatische Scannerauswahl zur Verfügung:
 Keine – Scanner werden nicht automatisch ausgewählt;
@@ -79,126 +102,154 @@ Wenn Sie die Einstellung deaktivieren oder nicht konfigurieren, wird der Modus �
 
 Der Benutzer kann den Modus für die automatische Auswahl jederzeit über die Einstellungen in der Benutzeroberfläche ändern, auch wenn die Richtlinieneinstellung aktiviert ist.
 
-Wenn Sie diese Richtlinieneinstellung für diesen Computer verwenden, hat sie Vorrang vor der Richtlinieneinstellung für die einzelnen Benutzer dieses Computers. In diesem Fall haben Benutzer nicht die Möglichkeit, den Modus für die automatische Auswahl über die Einstellungen in der Benutzeroberfläche zu ändern.</string>
+Wenn Sie diese Richtlinieneinstellung für diesen Computer verwenden, hat sie Vorrang vor der Richtlinieneinstellung für die einzelnen Benutzer dieses Computers. In diesem Fall haben Benutzer nicht die Möglichkeit, den Modus für die automatische Auswahl über die Einstellungen in der Benutzeroberfläche zu ändern.</string>
       <string id="TWAINScanners_Caption">Für TWAIN-Scanner:
 
-</string>
+</string>
       <string id="WIAScanners_Caption">Für WIA-Scanner:
 
-</string>
-      <string id="Scanners_SelectionMode_DropDownListName">Auswahlmodus:</string>
-      <string id="Scanners_SelectionMode_None">Keine</string>
-      <string id="Scanners_SelectionMode_Auto">Automatische Auswahl</string>
-      <string id="Scanners_SelectionMode_Last">Zuletzt verwendet</string>
-      <string id="Scanners_SelectionMode_Specified">Angegeben</string>
-      <string id="Scanners_Specified_EditName">Angegebener Scanner:</string>
-      <string id="Compression_PolicyName">Komprimierung</string>
+</string>
+      <string id="Scanners_SelectionMode_DropDownListName">Auswahlmodus:</string>
+      <string id="Scanners_SelectionMode_None">Keine</string>
+      <string id="Scanners_SelectionMode_Auto">Automatische Auswahl</string>
+      <string id="Scanners_SelectionMode_Last">Zuletzt verwendet</string>
+      <string id="Scanners_SelectionMode_Specified">Angegeben</string>
+      <string id="Scanners_Specified_EditName">Angegebener Scanner:</string>
+      <string id="Compression_PolicyName">Komprimierung</string>
       <string id="Compression_PolicyExplain">Diese Richtlinieneinstellung wird für die Festlegung der Bildkomprimierungsrate bei der Übertragung zum Agenten verwendet.
 Es stehen folgende Komprimierungsmodi zur Verfügung:
 Deaktivieren – die Bildkomprimierung ist deaktiviert;
 Verlustfrei – es wird eine verlustfreie zlib-Komprimierung ohne Bildqualitätsverlust verwendet;
-JPEG – es wird eine JPEG-Komprimierung mit Einbußen bei der Bildqualität verwendet. Sie können den Grad der Bildqualität im Feld „JPEG-Kompressionsqualität“ festlegen.
+JPEG – es wird eine JPEG-Komprimierung mit Einbußen bei der Bildqualität verwendet. Sie können den Grad der Bildqualität im Feld „JPEG-Komprimierungsqualität“ festlegen.
 
 Wenn Sie diese Richtlinieneinstellung aktivieren, wird der Komprimierungsmodus für den Benutzer von dieser Richtlinieneinstellung festgelegt.
 
 Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird der Komprimierungsmodus „JPEG“ verwendet.
 
-Der Benutzer kann den Komprimierungsmodus jederzeit über die Einstellungen in der Benutzeroberfläche ändern, auch wenn die Richtlinieneinstellung aktiviert ist.</string>
-      <string id="Compression_Mode_DropDownListName">Komprimierungsmodus:</string>
-      <string id="Compression_Mode_Disable">Deaktivieren</string>
-      <string id="Compression_Mode_Lossless">Verlustfrei</string>
-      <string id="Compression_Mode_JPEG">JPEG</string>
-      <string id="Compression_JPEGQuality_NumericName">JPEG-Kompressionsqualität:</string>
-      <string id="ADMXMigrator_UnresolvedString">ADMX-Migrator hat eine Zeichenfolge ermittelt, die in der Quell-ADM-Zeichenfolgentabelle nicht vorhanden ist.</string>
-      <string id="ADMXMigrator_NoSupportedOn">ADMX-Migrator hat eine Richtlinie ohne den Wert supportedOn ermittelt.</string>
-      <string id="SUPPORTED_WindowsXP">Mindestens Microsoft Windows XP Professional oder die Windows Server 2003-Produktfamilie</string>
-	  <string id="BandwidthLimit_PolicyName">BandwidthLimit</string>
+Der Benutzer kann den Komprimierungsmodus jederzeit über die Einstellungen in der Benutzeroberfläche ändern, auch wenn die Richtlinieneinstellung aktiviert ist.</string>
+      <string id="Compression_Mode_DropDownListName">Komprimierungsmodus:</string>
+      <string id="Compression_Mode_Disable">Deaktivieren</string>
+      <string id="Compression_Mode_Lossless">Verlustfrei</string>
+      <string id="Compression_Mode_JPEG">JPEG</string>
+      <string id="Compression_JPEGQuality_NumericName">JPEG-Komprimierungsqualität:</string>
+      <string id="ADMXMigrator_UnresolvedString">ADMX-Migrator hat eine Zeichenfolge ermittelt, die in der Quell-ADM-Zeichenfolgentabelle nicht vorhanden ist.</string>
+      <string id="ADMXMigrator_NoSupportedOn">ADMX-Migrator hat eine Richtlinie ohne den Wert supportedOn ermittelt.</string>
+      <string id="SUPPORTED_WindowsXP">Mindestens Microsoft Windows XP Professional oder die Windows Server 2003-Produktfamilie</string>
+	  <string id="BandwidthLimit_PolicyName">BandwidthLimit</string>
 	  <string id="BandwidthLimit_PolicyExplain">Mit dieser Richtlinieneinstellung wird die maximal zulässige Bandbreite in Kilobyte pro Sekunde für die Übertragung von gescannten Daten in eine Benutzersitzung festgelegt. 
-Wenn Null oder nicht angegeben, keine Beschränkung.</string>
-	  <string id="BandwidthLimit_NumericName">Grenzwert KB/Sek.:</string>
-	  <string id="UseVendorUI_PolicyName">Speicherort des Dialogfelds „TWAIN-Scanner-Eigenschaften“</string>
+Wenn Null oder nicht angegeben, keine Beschränkung.</string>
+	  <string id="BandwidthLimit_NumericName">Grenzwert KB/Sek.:</string>
+	  <string id="UseVendorUI_PolicyName">Speicherort des Dialogfelds „TWAIN-Scanner-Eigenschaften“</string>
       <string id="UseVendorUI_PolicyExplain">Mit dieser Richtlinie können Sie angeben, ob das Dialogfeld „TWAIN-Scanner-Eigenschaften“ auf der Agent-Seite oder auf der Client-Seite angezeigt wird.
 Bei „Agent“ wird das Dialogfeld „VMware-Scanner-Eigenschaften“ auf der Agent-Seite angezeigt.
 Bei „Client“ wird das TWAIN-Dialogfeld „Scanner des Anbieters“ auf der Client-Seite angezeigt.
-      </string>
-      <string id="UseVendorUI_DropDownListName">Speicherort des Dialogfelds „TWAIN-Scanner-Eigenschaften“:</string>
-      <string id="UseVendorUI_Server">Agent</string>
-      <string id="UseVendorUI_Wks">Client</string>
-	  <string id="ForceTwainDialog_PolicyName">Dialogfeld „TWAIN-Scanner-Eigenschaften“ erzwingen</string>
-      <string id="ForceTwainDialog_PolicyExplain_USER">Mit dieser Richtlinie können Sie die Anzeige des Dialogfelds „TWAIN-Scanner-Eigenschaften“ erzwingen, auch wenn eine Scan-Anwendung das Scan-Dialogfeld nicht anzeigt.</string>
-    </stringTable>
-    <presentationTable>
-      <presentation id="DisableFunctionality_PolicyName" />
-      <presentation id="LockConfig_PolicyName" />
-      <presentation id="HideWebcam_PolicyName" />
-      <presentation id="DefaultColorMode_PolicyName">
-        <dropdownList refId="DefaultColorMode_DropDownListName" noSort="true" defaultItem="2">Farbmodus:</dropdownList>
-      </presentation>
-      <presentation id="DefaultDuplex_PolicyName">
-        <dropdownList refId="DefaultDuplex_DropDownListName" noSort="true" defaultItem="1">Duplex-Modus:</dropdownList>
-      </presentation>
-      <presentation id="DefaultScanner_PolicyName">
+      </string>
+      <string id="UseVendorUI_DropDownListName">Speicherort des Dialogfelds „TWAIN-Scanner-Eigenschaften“:</string>
+      <string id="UseVendorUI_Server">Agent</string>
+      <string id="UseVendorUI_Wks">Client</string>
+	  <string id="ForceTwainDialog_PolicyName">Dialogfeld „TWAIN-Scanner-Eigenschaften“ erzwingen</string>
+      <string id="ForceTwainDialog_PolicyExplain_USER">Mit dieser Richtlinie können Sie die Anzeige des Dialogfelds „TWAIN-Scanner-Eigenschaften“ erzwingen, auch wenn eine Scan-Anwendung das Scan-Dialogfeld nicht anzeigt.</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="DisableFunctionality_PolicyName" />
+      <presentation id="LockConfig_PolicyName" />
+      <presentation id="HideWebcam_PolicyName" />
+      <presentation id="DefaultColorMode_PolicyName">
+        <dropdownList refId="DefaultColorMode_DropDownListName" noSort="true" defaultItem="2">Farbmodus:</dropdownList>
+      </presentation>
+	  <presentation id="DefaultResolution_PolicyName">
+        <decimalTextBox refId="DefaultResolution_TextBoxName" noSort="true"  defaultValue="150">Auflösung:</decimalTextBox>
+      </presentation>
+      <presentation id="DefaultDuplex_PolicyName">
+        <dropdownList refId="DefaultDuplex_DropDownListName" noSort="true" defaultItem="1">Duplex-Modus:</dropdownList>
+      </presentation>
+	  <presentation id="DefaultAutoRotate_PolicyName">
+        <dropdownList refId="DefaultAutoRotate_DropDownListName" noSort="true" defaultItem="1">Standardmäßige automatische Drehung:</dropdownList>
+      </presentation>
+	  <presentation id="DefaultAutoDeskew_PolicyName">
+        <dropdownList refId="DefaultAutoDeskew_DropDownListName" noSort="true" defaultItem="1">Standardmäßige automatische Ausrichtung:</dropdownList>
+      </presentation>
+	  <presentation id="DefaultAutoBorderDetection_PolicyName">
+        <dropdownList refId="DefaultAutoBorderDetection_DropDownListName" noSort="true" defaultItem="1">Standardmäßige automatische Rahmenerkennung:</dropdownList>
+      </presentation>
+      <presentation id="DefaultScanner_PolicyName">
         <text>Für TWAIN-Scanner:
 
-</text>
-        <dropdownList refId="Scanners_SelectionMode_DropDownListName" noSort="true" defaultItem="1">Auswahlmodus:</dropdownList>
-        <textBox refId="Scanners_Specified_EditName">
-          <label>Angegebener Scanner:</label>
-          <defaultValue>
-          </defaultValue>
-        </textBox>
-        <text>
-        </text>
+</text>
+        <dropdownList refId="Scanners_SelectionMode_DropDownListName" noSort="true" defaultItem="1">Auswahlmodus:</dropdownList>
+        <textBox refId="Scanners_Specified_EditName">
+          <label>Angegebener Scanner:</label>
+          <defaultValue>
+          </defaultValue>
+        </textBox>
+        <text>
+        </text>
         <text>Für WIA-Scanner:
 
-</text>
-        <dropdownList refId="Scanners_SelectionMode_DropDownListName_1" noSort="true" defaultItem="1">Auswahlmodus:</dropdownList>
-        <textBox refId="Scanners_Specified_EditName_1">
-          <label>Angegebener Scanner:</label>
-          <defaultValue>
-          </defaultValue>
-        </textBox>
-      </presentation>
-      <presentation id="Compression_PolicyName">
-        <dropdownList refId="Compression_Mode_DropDownListName" noSort="true" defaultItem="2">Komprimierungsmodus:</dropdownList>
-        <decimalTextBox refId="Compression_JPEGQuality_NumericName" defaultValue="80">JPEG-Kompressionsqualität:</decimalTextBox>
-      </presentation>
-      <presentation id="HideWebcam_PolicyName_1" />
-      <presentation id="DefaultColorMode_PolicyName_1">
-        <dropdownList refId="DefaultColorMode_DropDownListName" noSort="true" defaultItem="2">Farbmodus:</dropdownList>
-      </presentation>
-      <presentation id="DefaultDuplex_PolicyName_1">
-        <dropdownList refId="DefaultDuplex_DropDownListName" noSort="true" defaultItem="1">Duplex-Modus:</dropdownList>
-      </presentation>
-      <presentation id="DefaultScanner_PolicyName_1">
+</text>
+        <dropdownList refId="Scanners_SelectionMode_DropDownListName_1" noSort="true" defaultItem="1">Auswahlmodus:</dropdownList>
+        <textBox refId="Scanners_Specified_EditName_1">
+          <label>Angegebener Scanner:</label>
+          <defaultValue>
+          </defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="Compression_PolicyName">
+        <dropdownList refId="Compression_Mode_DropDownListName" noSort="true" defaultItem="2">Komprimierungsmodus:</dropdownList>
+        <decimalTextBox refId="Compression_JPEGQuality_NumericName" defaultValue="80">JPEG-Komprimierungsqualität:</decimalTextBox>
+      </presentation>
+	   <presentation id="Compression_PolicyName_1">
+        <dropdownList refId="Compression_Mode_DropDownListName_1" noSort="true" defaultItem="2">Komprimierungsmodus:</dropdownList>
+        <decimalTextBox refId="Compression_JPEGQuality_NumericName_1" defaultValue="80">JPEG-Komprimierungsqualität:</decimalTextBox>
+      </presentation>
+      <presentation id="HideWebcam_PolicyName_1" />
+      <presentation id="DefaultColorMode_PolicyName_1">
+        <dropdownList refId="DefaultColorMode_DropDownListName" noSort="true" defaultItem="2">Farbmodus:</dropdownList>
+      </presentation>
+	   <presentation id="DefaultResolution_PolicyName_1">
+        <decimalTextBox refId="DefaultResolution_TextBoxName" noSort="true" defaultItem="1">Auflösung:</decimalTextBox>
+      </presentation>
+      <presentation id="DefaultDuplex_PolicyName_1">
+        <dropdownList refId="DefaultDuplex_DropDownListName" noSort="true" defaultItem="1">Duplex-Modus:</dropdownList>
+      </presentation>
+	  <presentation id="DefaultAutoRotate_PolicyName_1">
+        <dropdownList refId="DefaultAutoRotate_DropDownListName" noSort="true" defaultItem="1">Standardmäßige automatische Drehung:</dropdownList>
+      </presentation>
+	  <presentation id="DefaultAutoDeskew_PolicyName_1">
+        <dropdownList refId="DefaultAutoDeskew_DropDownListName" noSort="true" defaultItem="1">Standardmäßige automatische Ausrichtung:</dropdownList>
+      </presentation>
+	  <presentation id="DefaultAutoBorderDetection_PolicyName_1">
+        <dropdownList refId="DefaultAutoBorderDetection_DropDownListName" noSort="true" defaultItem="1">Standardmäßige automatische Rahmenerkennung:</dropdownList>
+      </presentation>
+      <presentation id="DefaultScanner_PolicyName_1">
         <text>Für TWAIN-Scanner:
 
-</text>
-        <dropdownList refId="Scanners_SelectionMode_DropDownListName" noSort="true" defaultItem="1">Auswahlmodus:</dropdownList>
-        <textBox refId="Scanners_Specified_EditName">
-          <label>Angegebener Scanner:</label>
-          <defaultValue>
-          </defaultValue>
-        </textBox>
-        <text>
-        </text>
+</text>
+        <dropdownList refId="Scanners_SelectionMode_DropDownListName" noSort="true" defaultItem="1">Auswahlmodus:</dropdownList>
+        <textBox refId="Scanners_Specified_EditName">
+          <label>Angegebener Scanner:</label>
+          <defaultValue>
+          </defaultValue>
+        </textBox>
+        <text>
+        </text>
         <text>Für WIA-Scanner:
 
-</text>
-        <dropdownList refId="Scanners_SelectionMode_DropDownListName_1" noSort="true" defaultItem="1">Auswahlmodus:</dropdownList>
-        <textBox refId="Scanners_Specified_EditName_1">
-          <label>Angegebener Scanner:</label>
-          <defaultValue>
-          </defaultValue>
-        </textBox>
-      </presentation>
-	   <presentation id="BandwidthLimit_PolicyName">
-        <decimalTextBox refId="BandwidthLimit_NumericName" defaultValue="0">Grenzwert KB/Sek.:</decimalTextBox>
-      </presentation>
-	  <presentation id="UseVendorUI_PolicyName">
-        <dropdownList refId="UseVendorUI_DropDownListName" noSort="true" defaultItem="0">Speicherort des Dialogfelds:</dropdownList>
-      </presentation>
-	  <presentation id="ForceTwainDialog_PolicyName" />
-    </presentationTable>
-  </resources>
+</text>
+        <dropdownList refId="Scanners_SelectionMode_DropDownListName_1" noSort="true" defaultItem="1">Auswahlmodus:</dropdownList>
+        <textBox refId="Scanners_Specified_EditName_1">
+          <label>Angegebener Scanner:</label>
+          <defaultValue>
+          </defaultValue>
+        </textBox>
+      </presentation>
+	   <presentation id="BandwidthLimit_PolicyName">
+        <decimalTextBox refId="BandwidthLimit_NumericName" defaultValue="0">Grenzwert KB/Sek.:</decimalTextBox>
+      </presentation>
+	  <presentation id="UseVendorUI_PolicyName">
+        <dropdownList refId="UseVendorUI_DropDownListName" noSort="true" defaultItem="0">Speicherort des Dialogfelds:</dropdownList>
+      </presentation>
+	  <presentation id="ForceTwainDialog_PolicyName" />
+    </presentationTable>
+  </resources>
 </policyDefinitionResources>

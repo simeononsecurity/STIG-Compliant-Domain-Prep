@@ -1,55 +1,55 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" >
-
-	<displayName >Anzeigename hier eingeben</displayName>
-	<description >Einstellungen für die VMware Horizon View Server-Konfiguration</description>
-	<resources >
-		<stringTable >
-
-			<string id="Undefined" >Nicht definiert</string>
-
-			<string id="View_Server_Config" >VMware View Server-Konfiguration</string>
-
-			<string id="Pwd_Auth_Mode" >Windows-Kennwortauthentifizierungsmodus</string>
-
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" >
+
+	<displayName >Anzeigename hier eingeben</displayName>
+	<description >Einstellungen für die VMware Horizon View Server-Konfiguration</description>
+	<resources >
+		<stringTable >
+
+			<string id="Undefined" >Nicht definiert</string>
+
+			<string id="View_Server_Config" >VMware View Server-Konfiguration</string>
+
+			<string id="Pwd_Auth_Mode" >Windows-Kennwortauthentifizierungsmodus</string>
+
 			<string id="Pwd_Auth_Mode_Desc" >Wählt den Windows-Kennwortauthentifizierungsmodus aus.
 
 Nur Kerberos: Authentifizierung mithilfe von Kerberos.
 Kerberos mit NTLM-Fallback: Authentifizierung mithilfe von Kerberos, aber Verwendung von NTLM im Fehlerfall.
 Vorgängerversion: Authentifizierung mithilfe von NTLM, aber Verwendung von Kerberos im Fehlerfall. Wird zur Unterstützung älterer NT-Domänencontroller verwendet.
 
-Standardmäßig wird „Nur Kerberos“ verwendet.</string>
-
-			<string id="Kerberos_Only" >Nur Kerberos</string>
-
-			<string id="Kerberos_With_NTLM_Fallback" >Kerberos mit NTLM-Fallback</string>
-
-			<string id="Legacy" >Vorgängerversion</string>
-
-			<string id="Trusted_Domain_Enumeration" >Rekursive Enumeration vertrauenswürdiger Domänen</string>
-
+Standardmäßig wird „Nur Kerberos“ verwendet.</string>
+
+			<string id="Kerberos_Only" >Nur Kerberos</string>
+
+			<string id="Kerberos_With_NTLM_Fallback" >Kerberos mit NTLM-Fallback</string>
+
+			<string id="Legacy" >Vorgängerversion</string>
+
+			<string id="Trusted_Domain_Enumeration" >Rekursive Enumeration vertrauenswürdiger Domänen</string>
+
 			<string id="Trusted_Domain_Enumeration_Desc" >Legt fest, ob alle Domänen aufgelistet werden, die von der Serverdomäne als vertrauenswürdig eingestuft werden. Um eine vollständige Vertrauenskette zu erzielen, werden rekursiv auch die vertrauten Domänen aller vertrauten Domänen aufgelistet – so lange, bis alle vertrauenswürdigen Domänen ermittelt wurden. Diese Informationen werden an den View-Verbindungsserver weitergeleitet, um sicherzustellen, dass für die Clientanmeldung alle vertrauenswürdigen Domänen verfügbar sind.
 
 Diese Eigenschaft ist standardmäßig aktiviert. Ist diese Eigenschaft deaktiviert, werden nur Domänen mit einem direkten Vertrauensverhältnis aufgelistet; eine Verbindung mit Remotedomänencontrollern findet nicht statt.
 
-Hinweis: In Umgebungen mit komplexen Domänenbeziehungen – z.B. in Umgebungen mit mehreren Gesamtstrukturen, bei denen Vertrauensstellungen zwischen den Domänen der Gesamtstrukturen eingerichtet wurden – kann dieser Vorgang mehrere Minuten in Anspruch nehmen.</string>
-
-			<string id="Enumerate_Forest_Trust_Child_Domains" >Untergeordnete Domänen von Gesamtstrukturen mit Vertrauensbeziehungen auflisten</string>
-
+Hinweis: In Umgebungen mit komplexen Domänenbeziehungen – z.B. in Umgebungen mit mehreren Gesamtstrukturen, bei denen Vertrauensstellungen zwischen den Domänen der Gesamtstrukturen eingerichtet wurden – kann dieser Vorgang mehrere Minuten in Anspruch nehmen.</string>
+
+			<string id="Enumerate_Forest_Trust_Child_Domains" >Untergeordnete Domänen von Gesamtstrukturen mit Vertrauensbeziehungen auflisten</string>
+
 			<string id="Enumerate_Forest_Trust_Child_Domains_Desc" >Legt fest, ob untergeordnete Domänen von Gesamtstrukturen mit Vertrauensbeziehungen aufgeführt werden.
 
-Ist diese Einstellung nicht konfiguriert, ist die Standardeinstellung „True“.</string>
-
-		</stringTable>
-
-		<presentationTable ><!--Storage for Presentation Definitions-->
-
-			<presentation id="Windows_Pwd_Auth_Mode" >
-				<dropdownList refId="Windows_Pwd_Auth_Mode_DropDown_1" defaultItem="0" >Windows-Kennwortauthentifizierungsmodus</dropdownList>
-			</presentation>
-
-		</presentationTable>
-
-	</resources>
-
-</policyDefinitionResources>
+Ist diese Einstellung nicht konfiguriert, ist die Standardeinstellung „True“.</string>
+
+		</stringTable>
+
+		<presentationTable ><!--Storage for Presentation Definitions-->
+
+			<presentation id="Windows_Pwd_Auth_Mode" >
+				<dropdownList refId="Windows_Pwd_Auth_Mode_DropDown_1" defaultItem="0" >Windows-Kennwortauthentifizierungsmodus</dropdownList>
+			</presentation>
+
+		</presentationTable>
+
+	</resources>
+
+</policyDefinitionResources>

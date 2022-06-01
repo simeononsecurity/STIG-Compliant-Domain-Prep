@@ -96,7 +96,7 @@ Wird diese Einstellung während einer aktiven PCoIP-Sitzung geändert, wird die 
 			<string id="String_Policy_Configure_the_maximum_163" >Maximale PCoIP-Sitzungsbandbreite konfigurieren</string>
 			<string id="String_Explain_Specifies_the_maximum_164" >Legt die maximale Bandbreite für eine PCoIP-Sitzung in Kbit/s fest. Die Bandbreite umfasst den gesamten Sitzungsdatenverkehr, Bilddarstellung, Audio, virtuelle Kanäle, USB und PCoIP-Steuerung eingeschlossen.
 
-Legen Sie diesen Wert auf der Basis der Gesamtkapazität der Verbindung fest, über die Ihr Endpunkt verbunden ist, und berücksichtigen Sie dabei die Anzahl der erwarteten gleichzeitigen PCoIP-Sitzungen. Beispiel: Legen Sie diesen Wert bei einer Einzelbenutzer-VDI-Konfiguration (z. B. eine einzelne PCoIP-Sitzung), mit der über eine Internetverbindung mit 4 Mbit/s eine Verbindung hergestellt wird, auf 4 Mbit oder auf 90 % dieses Wertes fest, um etwas Spielraum für anderen Netzwerkdatenverkehr zuzulassen. Wenn mehrere gleichzeitige PCoIP-Sitzungen einen Link teilen sollen (z. B. mehrere VDI-Benutzer oder eine RDSH-Konfiguration), müssen Sie die Einstellung eventuell entsprechend anpassen. Allerdings wird dadurch die maximale Bandbreite für jede aktive Sitzung eingeschränkt.
+Legen Sie diesen Wert auf der Basis der Gesamtkapazität der Verbindung fest, über die Ihr Endpunkt verbunden ist, und berücksichtigen Sie dabei die Anzahl der erwarteten gleichzeitigen PCoIP-Sitzungen. Beispiel: Legen Sie diesen Wert bei einer Einzelbenutzer-VDI-Konfiguration (z. B. eine einzelne PCoIP-Sitzung), mit der über eine Internetverbindung mit 4 Mbit/s eine Verbindung hergestellt wird, auf 4 Mbit oder auf 90 % dieses Wertes fest, um etwas Spielraum für anderen Netzwerkdatenverkehr zuzulassen. Wenn mehrere gleichzeitige PCoIP-Sitzungen einen Link teilen sollen (z. B. mehrere VDI-Benutzer oder eine RDSH-Konfiguration), müssen Sie die Einstellung eventuell entsprechend anpassen. Allerdings wird dadurch die maximale Bandbreite für jede aktive Sitzung eingeschränkt.
 
 Durch eine Festlegung dieses Wertes verhindern Sie, dass der Agent eine die Verbindungskapazität übersteigende Übertragungsrate wählt. Dies würde zu einem übermäßigen Paketverlust und einer schlechteren Benutzererfahrung führen. Dieser Wert ist symmetrisch. Client und Agent werden dadurch gezwungen, den niedrigeren der beiden Werte zu verwenden, die auf Client- und Agentseite festgelegt wurden. Beispielsweise wird der Agent bei Festlegung einer maximalen Bandbreite von 4 Mbit/s gezwungen, eine niedrigere Übertragungsrate zu verwenden – auch wenn die Einstellung auf dem Client konfiguriert ist.
 
@@ -462,7 +462,7 @@ Diese Einstellung gilt nur für den Agenten und hat keine Auswirkung auf einen C
 			<string id="String_Policy_DropList_Select_Use_alternate_key_2_381" >2 @</string>
 			<string id="String_Policy_DropList_Select_Use_alternate_key_3_382" >3 #</string>
 			<string id="String_Policy_DropList_Select_Use_alternate_key_4_383" >4 $</string>
-			<string id="String_Policy_DropList_Select_Use_alternate_key_5_384" >5 %</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_5_384" >5 %</string>
 			<string id="String_Policy_DropList_Select_Use_alternate_key_6_385" >6 ^</string>
 			<string id="String_Policy_DropList_Select_Use_alternate_key_7_386" >7 &amp;</string>
 			<string id="String_Policy_DropList_Select_Use_alternate_key_8_387" >8 *</string>
@@ -513,7 +513,7 @@ Wird diese Einstellung während einer aktiven PCoIP-Sitzung geändert, wird die 
 			<string id="String_Policy_Configure_the_maximum_417" >Maximale PCoIP-Sitzungsbandbreite konfigurieren</string>
 			<string id="String_Explain_Specifies_the_maximum_418" >Legt die maximale Bandbreite für eine PCoIP-Sitzung in Kbit/s fest. Die Bandbreite umfasst den gesamten Sitzungsdatenverkehr, Bilddarstellung, Audio, virtuelle Kanäle, USB und PCoIP-Steuerung eingeschlossen.
 
-Legen Sie diesen Wert auf der Basis der Gesamtkapazität der Verbindung fest, über die Ihr Endpunkt verbunden ist, und berücksichtigen Sie dabei die Anzahl der erwarteten gleichzeitigen PCoIP-Sitzungen. Beispiel: Legen Sie diesen Wert bei einer Einzelbenutzer-VDI-Konfiguration (z. B. eine einzelne PCoIP-Sitzung), mit der über eine Internetverbindung mit 4 Mbit/s eine Verbindung hergestellt wird, auf 4 Mbit oder auf 90 % dieses Wertes fest, um etwas Spielraum für anderen Netzwerkdatenverkehr zuzulassen. Wenn mehrere gleichzeitige PCoIP-Sitzungen einen Link teilen sollen (z. B. mehrere VDI-Benutzer oder eine RDSH-Konfiguration), müssen Sie die Einstellung eventuell entsprechend anpassen. Allerdings wird dadurch die maximale Bandbreite für jede aktive Sitzung eingeschränkt.
+Legen Sie diesen Wert auf der Basis der Gesamtkapazität der Verbindung fest, über die Ihr Endpunkt verbunden ist, und berücksichtigen Sie dabei die Anzahl der erwarteten gleichzeitigen PCoIP-Sitzungen. Beispiel: Legen Sie diesen Wert bei einer Einzelbenutzer-VDI-Konfiguration (z. B. eine einzelne PCoIP-Sitzung), mit der über eine Internetverbindung mit 4 Mbit/s eine Verbindung hergestellt wird, auf 4 Mbit oder auf 90 % dieses Wertes fest, um etwas Spielraum für anderen Netzwerkdatenverkehr zuzulassen. Wenn mehrere gleichzeitige PCoIP-Sitzungen einen Link teilen sollen (z. B. mehrere VDI-Benutzer oder eine RDSH-Konfiguration), müssen Sie die Einstellung eventuell entsprechend anpassen. Allerdings wird dadurch die maximale Bandbreite für jede aktive Sitzung eingeschränkt.
 
 Durch eine Festlegung dieses Wertes verhindern Sie, dass der Agent eine die Verbindungskapazität übersteigende Übertragungsrate wählt. Dies würde zu einem übermäßigen Paketverlust und einer schlechteren Benutzererfahrung führen. Dieser Wert ist symmetrisch. Client und Agent werden dadurch gezwungen, den niedrigeren der beiden Werte zu verwenden, die auf Client- und Agentseite festgelegt wurden. Beispielsweise wird der Agent bei Festlegung einer maximalen Bandbreite von 4 Mbit/s gezwungen, eine niedrigere Übertragungsrate zu verwenden – auch wenn die Einstellung auf dem Client konfiguriert ist.
 
@@ -903,7 +903,7 @@ Diese Einstellung gilt nur für den Agenten und hat keine Auswirkung auf einen C
 			<string id="String_Policy_DropList_Select_Use_alternate_key_2_635" >2 @</string>
 			<string id="String_Policy_DropList_Select_Use_alternate_key_3_636" >3 #</string>
 			<string id="String_Policy_DropList_Select_Use_alternate_key_4_637" >4 $</string>
-			<string id="String_Policy_DropList_Select_Use_alternate_key_5_638" >5 %</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_5_638" >5 %</string>
 			<string id="String_Policy_DropList_Select_Use_alternate_key_6_639" >6 ^</string>
 			<string id="String_Policy_DropList_Select_Use_alternate_key_7_640" >7 &amp;</string>
 			<string id="String_Policy_DropList_Select_Use_alternate_key_8_641" >8 *</string>

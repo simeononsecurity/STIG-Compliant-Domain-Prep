@@ -40,6 +40,11 @@ Si vous désactivez ou ne configurez pas ce paramètre de stratégie, les imprim
 
 Ce paramètre n'est pas configuré par défaut.
 </string>
+      <string id="DriverMapping">Mappage de pilote</string>
+      <string id="DriverMapping_detail">Ce paramètre permet à l'utilisateur de créer automatiquement une imprimante virtuelle avec un pilote différent.
+Par exemple : « A » =&gt;« a ; b ; c ; d »
+La liste de pilotes candidats « a ; b ; c ; d » sera tentée une par une jusqu'à ce que la création automatique de l'imprimante réussisse. En cas d'échec pour tous les candidats, la liste revient au « pilote d'impression EMF de VMware ».
+      </string>
       <string id="printer_creation_setting">Sélection du pilote d'imprimante</string>
       <string id="printer_creation_setting_detail">Sélection du pilote d'imprimante.
 
@@ -97,8 +102,47 @@ Exemple : PDFCreator (client-pc). Dans cet exemple, PDFCreator est le nom de l'
 
 Ce paramètre n'est pas configuré par défaut.
       </string>
+
+      <string id="DefaultSetting">Paramètres par défaut des imprimantes UPD</string>
+      <string id="DefaultSetting_desc">Cette stratégie détermine s'il convient d'activer les paramètres par défaut pour les imprimantes UPD.
+Lorsque cette stratégie est activée, vous pouvez définir un groupe de paramètres par défaut pour les imprimantes UPD. Ils sont utilisés comme paramètres initiaux des imprimantes UPD, le cas échéant. Pour chaque paramètre d'impression, une case à cocher détermine si le paramètre par défaut est toujours utilisé dans l'impression.
+Lorsque cette stratégie n'est pas configurée ou désactivée, les paramètres par défaut ne sont pas activés pour les imprimantes UPD.
+
+Cette stratégie n'est pas configurée par défaut.
+      </string>
+      <string id="none">Aucun</string>
+      <string id="duplex_vertical">Retourner sur les bords longs</string>
+      <string id="duplex_horizontal">Retourner sur les bords courts</string>
+
+      <string id="bw">Noir/blanc</string>
+      <string id="color">Couleur</string>
+
+      <string id="lossless_comp">Compression sans perte</string>
+      <string id="high_quality_comp">Compression de haute qualité</string>
+      <string id="optimized_comp">Compression optimisée</string>
+      <string id="no_image_comp">Aucune image</string>
+
+       <string id="MaxDPI">PPP maximal pour imprimantes UPD</string>
+       <string id="MaxDPI_detail">Cette stratégie spécifie le PPP maximal pour les imprimantes UPD. Par conséquent, les options PPP et le PPP par défaut des imprimantes UPD sont modifiables.
+
+Lorsque cette stratégie est activée, elle est utilisée pour spécifier le niveau PPP maximal ou la valeur PPP maximale de l'axe X pour les imprimantes UPD. En fonction de la capacité de l'imprimante cliente, l'imprimante UPD peut prendre en charge le niveau PPP ou la valeur PPP.
+Lorsque l'imprimante prend en charge le niveau PPP, les options PPP et le PPP par défaut de l'imprimante UPD ne sont pas supérieurs au niveau PPP maximal.
+Lorsque l'imprimante prend en charge la valeur PPP et que le PPP de l'axe X le plus bas n'est pas supérieur au PPP maximal de l'axe X, les options PPP et le PPP par défaut de l'imprimante UPD ne sont pas supérieurs au PPP maximal de l'axe X.
+Lorsque l'imprimante prend en charge la valeur PPP et que le PPP de l'axe X le plus bas est supérieur au PPP maximal de l'axe X, les options PPP de l'imprimante UPD sont identiques aux options PPP de l'imprimante cliente. Le PPP par défaut de l'imprimante UPD sera le PPP de l'axe X le plus bas.
+
+Lorsque cette stratégie n'est pas configurée ou qu'elle est désactivée, les options PPP et le PPP par défaut des imprimantes UPD ne sont pas modifiés.
+
+Cette stratégie n'est pas configurée par défaut.
+       </string>
+       <string id="DPI_draft">Brouillon</string>
+       <string id="DPI_low">Faible</string>
+       <string id="DPI_medium">Moyenne</string>
+       <string id="DPI_high">Élevée</string>
     </stringTable>
     <presentationTable>
+      <presentation id="DriverMapping">
+         <listBox refId="printer_driver_mapping">Mappage de pilote d'imprimante :</listBox>
+      </presentation>
       <presentation id="PrinterCreationSetting">
           <dropdownList refId="printer_creation_setting_list" defaultItem="2" noSort="true">Choix de création d'imprimante :</dropdownList>
       </presentation>
@@ -118,6 +162,18 @@ Ce paramètre n'est pas configuré par défaut.
              <defaultValue>%P (v%S)</defaultValue>
           </textBox>
        </presentation>
+      <presentation id="DefaultSetting">
+        <dropdownList refId="DefaultDuplex" defaultItem="0" noSort="true">Duplex :</dropdownList>
+        <checkBox refId="IsDuplexLocked">Toujours utiliser le paramètre duplex par défaut</checkBox>
+        <dropdownList refId="DefaultColor" defaultItem="0" noSort="true">Couleur :</dropdownList>
+        <checkBox refId="IsColorLocked">Toujours utiliser le paramètre de couleur par défaut</checkBox>
+        <dropdownList refId="DefaultImageCompLevel" defaultItem="0" noSort="true">Niveau de compression :</dropdownList>
+        <checkBox refId="IsCompLevelLocked">Toujours utiliser le paramètre de niveau de compression par défaut</checkBox>
+      </presentation>
+      <presentation id="MaxDPI">
+        <dropdownList refId="MaxDPILevel" defaultItem="2" noSort="true">Niveau PPP maximal</dropdownList>
+        <decimalTextBox refId="MaxDPIValue" defaultValue="600">PPP maximal (X)</decimalTextBox>
+      </presentation>
     </presentationTable>
   </resources>
 </policyDefinitionResources>

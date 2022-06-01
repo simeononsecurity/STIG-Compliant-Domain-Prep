@@ -46,6 +46,39 @@ Si ce paramètre de stratégie est désactivé, la limitation de vitesse est dé
 
 Si ce paramètre de stratégie n'est pas configuré, la limitation de vitesse est déterminée par les paramètres de programme locaux.</string>
       <string id="BandwidthLimit_PartName">Limite de bande passante (en kilo-octets par seconde) :</string>
+
+	  <string id="AllowDenyPortFiltersList_PolicyName">Autoriser/Refuser les filtres de ports</string>
+	  <string id="AllowDenyPortFiltersList_PolicyExplain">Si cette stratégie est activée, les filtres Autoriser et Refuser sont utilisés pour décider si chaque port COM spécifique détecté côté Client est autorisé ou non pour la redirection.
+
+Si un port n'est pas autorisé pour la redirection, le côté Agent le menacera comme si le port n'existait même pas côté Client.
+
+Les listes utilisent les propriétés du périphérique USB parent du port COM.
+
+Syntaxe :
+  USB : [*|VID[:*|:PID[:*|:REV]]]
+    VID - Valeur VID numérique hexadécimale (ID de fournisseur) de l'ID de matériel du périphérique
+    PID - Valeur PID numérique hexadécimale (ID de produit) de l'ID de matériel du périphérique
+    REV - Valeur REV numérique hexadécimale (Révision) de l'ID de matériel du périphérique
+    Lorsque les valeurs VID, PID, REV sont égales à « * », cela implique toutes les valeurs.
+  
+  WINDEVID : [HwId|*|?]
+    HwId - valeur complète ou partielle de l'ID de matériel du périphérique (les caractères génériques * et ? sont pris en charge). Insensible à la casse.
+
+Exemples :
+  USB:067B:2303:400 - correspond au périphérique USB avec les valeurs VID, PID et Révision spécifiées. USB\VID_067B&amp;PID_2303&amp;REV_0400
+  USB:067B:2303:* - correspond à tout périphérique USB avec les valeurs VID et PID spécifiées, et n'importe quelle valeur Révision. USB\VID_067B&amp;PID_2303
+  USB:067B:* - correspond à tout périphérique USB avec la valeur VID spécifiée, et n'importe quelles valeurs PID et Révision. USB\VID_067B
+  USB :* - correspond à tout périphérique USB
+
+  WINDEVID :*  - correspond à toute chaîne ID de matériel
+  WINDEVID :*ACPI* - correspond à une chaîne ID de matériel contenant la sous-chaîne ACPI
+
+Remarques :
+  La liste autorisée dispose d'une priorité plus élevée. Si le périphérique correspond à la liste bloquée, il est alors exclu de la redirection. Mais si en même temps, le périphérique correspond à la liste autorisée, le périphérique est autorisé pour la redirection.
+	  </string>
+	  <string id="AllowDenyPortFiltersList_PartName">Liste autorisée</string>
+	  <string id="DenyDenyPortFiltersList_PartName">Liste bloquée</string>
+		
       <string id="PortSettings_CatName">PortSettings</string>
       <string id="PortSettings1_PolicyName">PortSettings1</string>
       <string id="PortSettings2_PolicyName">PortSettings2</string>
@@ -150,6 +183,13 @@ Si ce paramètre de stratégie est configuré pour l'ordinateur, il est priorita
       <presentation id="LockConfig_PolicyName" />
       <presentation id="BandwidthLimit_PolicyName">
         <decimalTextBox refId="BandwidthLimit_PartName" defaultValue="0" spinStep="1024">Limite de bande passante (en kilo-octets par seconde) :</decimalTextBox>
+      </presentation>
+      <presentation id="AllowDenyPortFiltersList_PolicyName">
+		  <text>Liste autorisée</text>
+		  <multiTextBox refId="AllowPortFiltersList_PartName" />
+		  <text></text>
+		  <text>Liste bloquée</text>
+		  <multiTextBox refId="DenyPortFiltersList_PartName" />
       </presentation>
       <presentation id="PortSettings1_PolicyName">
         <decimalTextBox refId="SrcPort_PartName">Numéro du port source :</decimalTextBox>

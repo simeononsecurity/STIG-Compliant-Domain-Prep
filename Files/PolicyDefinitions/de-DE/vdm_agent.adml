@@ -80,27 +80,31 @@ Hinweis: In Umgebungen mit komplexen Domänenbeziehungen – z.B. in Umgebungen 
 
 Hinweis: MMR arbeitet nicht ordnungsgemäß, wenn die View Client-Hardware zur Videoanzeige über keine Overlay-Unterstützung verfügt. Die MMR-Richtlinie gilt nicht für Offline-Desktop-Sitzungen.</string>
 
-         <string id="AllowDirectRDP">AllowDirectRDP</string>
+         <string id="AllowDirectRDP">Direktes RDP zulassen</string>
 
          <string id="AllowDirectRDP_Desc">Legt fest, ob Nicht-View Clients mithilfe RDP eine direkte Verbindung mit View-Desktops herstellen können. Wenn Sie diese Eigenschaft deaktivieren, sind für den Agenten nur View-verwaltete Verbindungen über View Client oder View Portal zulässig.
 
 Diese Eigenschaft ist standardmäßig aktiviert.</string>
 
-         <string id="AllowSingleSignon">AllowSingleSignon</string>
+         <string id="AllowSingleSignon">Single Sign-On zulassen</string>
 
          <string id="AllowSingleSignon_Desc">Legt fest, ob zur Verbindungsherstellung mit View-Desktops die einmalige Anmeldung (Single Sign-On, SSO) verwendet wird. Wenn Sie diese Eigenschaft aktivieren, müssen Benutzer nur dann ihre Anmeldedaten eingeben, wenn sie eine Verbindung mit View Client oder View Portal herstellen. Wenn Sie diese Eigenschaft deaktivieren, müssen sich die Benutzer beim Herstellen einer Remoteverbindung erneut authentifizieren.
 
 Für diese Eigenschaft muss die Komponente „Secure Authentication“ von View Agent auf dem Desktop installiert sein. Sie ist standardmäßig aktiviert.</string>
 
-         <string id="ConnectionTicketTimeout">ConnectionTicketTimeout</string>
+         <string id="ConnectionTicketTimeout">Verbindungsticket, Zeitüberschreitung</string>
 
          <string id="ConnectionTicketTimeout_Desc">Legt den Zeitraum in Sekunden fest, in dem das View-Verbindungs-Ticket gültig ist. Das Verbindungs-Ticket wird von View Clients bei der Herstellung einer Verbindung mit View Agent sowie für Überprüfungen und für die Single-Sign-On-Anmeldung verwendet.
 
 Aus Sicherheitsgründen sind solche Tickets nur im angegebenen Zeitraum gültig. Wenn diese Eigenschaft nicht explizit festgelegt ist, gilt ein Standardwert von 900 Sekunden.</string>
 
-         <string id="CredentialFilterExceptions">CredentialFilterExceptions</string>
+         <string id="CredentialFilterExceptions">Ausnahmen für Anmeldedatenfilter</string>
 
          <string id="CredentialFilterExceptions_Desc">Eine Liste von durch Semikolon getrennten Namen ausführbarer Dateien, die den CredentialFilter des Agenten nicht laden sollen. Die Dateinamen müssen ohne Pfad und ohne Suffix angegeben werden.</string>
+
+         <string id="RDPVcBridgeUnsupportedClients">Nicht unterstützte RDPVcBridge-Clients</string>
+
+       <string id="RDPVcBridgeUnsupportedClients_Desc">Eine kommagetrennte Liste von Horizon Client-Typen, die RDPVcBridge nicht unterstützen.</string>
 
          <string id="Disable_Time_Zone_sync">Zeitzonensynchronisierung deaktivieren</string>
 
@@ -158,19 +162,19 @@ Wenn Sie die Werte festlegen, sollte die erste Spalte die URL mit einem optional
 
          <string id="UnAuthenticatedAccessEnabled_Desc">Diese Einstellung aktiviert die Funktion für den nicht authentifizierten Zugriff. Damit diese Änderung wirksam wird, muss das System neu gestartet werden. Der nicht authentifizierte Zugriff ist standardmäßig aktiviert.</string>
 
-         <string id="CommandsToRunOnConnect">CommandsToRunOnConnect</string>
+         <string id="CommandsToRunOnConnect">Befehle zum Ausführen bei Verbindung</string>
 
          <string id="CommandsToRunOnConnect_Desc">Liste mit Befehlen, die bei der ersten Verbindungsherstellung einer Sitzung ausgeführt werden.</string>
 
-         <string id="CommandsToRunOnReconnect">CommandsToRunOnReconnect</string>
+         <string id="CommandsToRunOnReconnect">Befehle zum Ausführen bei erneuter Verbindung</string>
 
          <string id="CommandsToRunOnReconnect_Desc">Liste mit Befehlen, die bei der erneuten Herstellung einer Verbindung mit einer Sitzung nach einer vorangegangenen Trennung ausgeführt werden.</string>
 
-         <string id="CommandsToRunOnDisconnect">CommandsToRunOnDisconnect</string>
+         <string id="CommandsToRunOnDisconnect">Befehle zum Ausführen bei Verbindungstrennung</string>
 
          <string id="CommandsToRunOnDisconnect_Desc">Liste mit Befehlen, die bei der Trennung einer Sitzung ausgeführt werden.</string>
 
-         <string id="ShowDiskActivityIcon">ShowDiskActivityIcon</string>
+         <string id="ShowDiskActivityIcon">Symbol „Festplattenaktivität anzeigen“</string>
 
          <string id="ShowDiskActivityIcon_Desc">Legt fest, ob ein Symbol für die Festplattenaktivität in der Taskleiste angezeigt wird. Verwendet den „System Trace NT Kernel Logger“ (NT-Kernelprotokollierung der Systemablaufverfolgung), der nur von einem Prozess verwendet werden kann. Deaktivieren Sie diese Eigenschaft, wenn die Protokollierung für andere Zwecke verwendet werden soll. Standardmäßig ist die Eigenschaft aktiviert.</string>
 
@@ -433,7 +437,7 @@ Das Virtualization Pack für Skype for Business wird in den Fallback-Modus zurü
 
 Diese Richtlinie ist standardmäßig nicht konfiguriert. </string>
 
-         <string id="EnableDetectProxySettings">EnableDetectProxySettings</string>
+         <string id="EnableDetectProxySettings">„Proxy-Einstellungen erkennen“ aktivieren</string>
 
          <string id="EnableDetectProxySettings_Desc">Bei Aktivierung erkennt das VMware Virtualization Pack für Skype for Business, ob Proxy-Einstellungen auf dem Horizon Client-System vorhanden sind, und diese Einstellungen werden (falls vorhanden) für Media-Datenverkehr verwendet. Sind keine Proxy-Einstellungen auf dem Horizon Client-System vorhanden, verwendet das VMware Virtualization Pack für Skype for Business eine direkte Verbindung. Durch Aktivierung dieser Richtlinie werden Verzögerungen reduziert, wenn für das Horizon Client-System die Verwendung eines Proxy-Servers erforderlich ist.</string>
 
@@ -479,7 +483,7 @@ Diese Richtlinie ist standardmäßig nicht konfiguriert. </string>
 
          <string id="Enable_HTML5_FEATURES">VMware HTML5-Funktionen aktivieren</string>
 
-         <string id="Enable_HTML5_FEATURES_Desc">Aktivieren Sie die VMware HTML5-Funktionen. Die Richtlinie muss auf „Aktiviert“ oder „Nicht konfiguriert“ festgelegt sein, damit die VMware HTML5 Multimedia-, die Geolocation- oder Browserumleitung bzw. die Medienoptimierung für Microsoft Teams verwendet werden kann.  Wenn diese Richtlinie auf „Deaktiviert“ festgelegt ist, kann keine VMware HTML5-Funktion verwendet werden. Die Einstellung wird nach der nächsten Anmeldung wirksam.</string>
+         <string id="Enable_HTML5_FEATURES_Desc">VMware HTML5-Funktionen aktivieren. Die Richtlinie muss auf „Aktiviert“ oder „Nicht konfiguriert“ festgelegt sein, damit die VMware HTML5 Multimedia-, die Geolocation- oder Browserumleitung bzw. die Medienoptimierung für Microsoft Teams verwendet werden kann.  Wenn diese Richtlinie auf „Deaktiviert“ festgelegt ist, kann keine VMware HTML5-Funktion verwendet werden. Die Einstellung wird nach der nächsten Anmeldung wirksam.</string>
 
          <string id="HTML5FEATURES_Disable_AudoDetect_Intranet">Automatische Intranet-Erkennung deaktivieren</string>
 
@@ -501,11 +505,11 @@ Hinweis: Diese Richtlinie muss auf „Aktiviert“ festgelegt sein, wenn (1) der
 
          <string id="HTML5MMR_Enable_Chrome_Desc">Diese Richtlinie wird nur verwendet, wenn die VMware HTML5 Multimedia-Umleitung aktiviert ist. Wenn sie nicht konfiguriert ist, lautet der Standardwert wie die Einstellung für „VMware HTML5 Multimedia-Umleitung aktivieren“.</string>
 
-         <string id="HTML5MMR_Enable_Edge">Vorgängerversion des Microsoft Edge-Browsers für VMware HTML5 Multimedia-Umleitung aktivieren</string>
+         <string id="HTML5MMR_Enable_Edge">Vorgängerversion des Microsoft Edge-Browsers für VMware HTML5-Multimedia-Umleitung aktivieren</string>
 
          <string id="HTML5MMR_Enable_Edge_Desc">Diese Richtlinie wird nur verwendet, wenn die VMware HTML5 Multimedia-Umleitung aktiviert ist. Wenn sie nicht konfiguriert ist, lautet der Standardwert wie die Einstellung für „VMware HTML5 Multimedia-Umleitung aktivieren“. </string>
 
-         <string id="HTML5MMR_Enable_Edge_Chromium">Microsoft Edge (Chromium)-Browser für VMware HTML5 Multimedia-Umleitung aktivieren</string>
+         <string id="HTML5MMR_Enable_Edge_Chromium">Microsoft Edge (Chromium)-Browser für VMware HTML5-Multimedia-Umleitung aktivieren</string>
 
          <string id="HTML5MMR_Enable_Edge_Chromium_Desc">Diese Richtlinie wird nur verwendet, wenn die VMware HTML5 Multimedia-Umleitung aktiviert ist. Wenn sie nicht konfiguriert ist, lautet der Standardwert wie die Einstellung für „VMware HTML5 Multimedia-Umleitung aktivieren“. </string>
 
@@ -553,14 +557,28 @@ Hinweis: Diese Richtlinie muss auf „Aktiviert“ festgelegt sein, wenn (1) der
 
          <string id="Enable_AEC_Teams_Redir">Akustische Software-Echounterdrückung zur Medienoptimierung für Microsoft Teams aktivieren</string>
 
-         <string id="Enable_AEC_Teams_Redir_Desc">Mit dieser Einstellung können Sie die akustische Software-Echounterdrückung zur Medienoptimierung für Microsoft Teams aktivieren oder deaktivieren.
-Wenn Sie „Aktiviert“ auswählen, wird die akustische Echounterdrückung in der Software aktiviert – unabhängig davon, ob eine akustische Echounterdrückung bei der Hardware verfügbar ist oder nicht.
+         <string id="Enable_AEC_Teams_Redir_Desc">Mit dieser Einstellung können Sie die akustische Software-Echounterdrückung (Software Acoustic Echo Cancellation, AEC) zur Medienoptimierung für Microsoft Teams konfigurieren.
 
-Wenn Sie „Deaktiviert“ auswählen, wird die akustische Echounterdrückung in der Software deaktiviert – unabhängig davon, ob eine akustische Echounterdrückung bei der Hardware verfügbar ist oder nicht.
+Wenn „Aktiviert“, ist AEC in der Software aktiviert. Aktivieren Sie „Empfohlenen AEC-Algorithmus verwenden“, um eine optimale Audioqualität und -leistung zu erzielen. Deaktivieren Sie „Empfohlenen AEC-Algorithmus verwenden“, um einen AEC-Algorithmus zu verwenden, der weniger CPU verwendet, aber die Audioqualität beeinträchtigt. Diese Option ist nützlich für Low-End-Prozessoren mit geringer Gleitkommaleistung. Die Verwendung des empfohlenen AEC-Algorithmus wird dringend empfohlen und ist in den meisten Fällen ideal.
 
-Wenn Sie „Nicht konfiguriert“ auswählen, wird die akustische Echounterdrückung in der Software aktiviert, falls die akustische Echounterdrückung nicht bei der Hardware verfügbar ist.</string>
+Wenn „Deaktiviert“, wird AEC in der Software deaktiviert und nicht mehr verwendet.
 
-         <string id="Enable_Sharing_Client_Screen_InAppSession">Aktivieren Sie die Freigabe des Client-Desktopbildschirms, während Sie den Fernzugriff auf die Anwendung Microsoft Teams im Anwendungsfreigabe-Modus erlauben.</string>
+Wenn „Nicht konfiguriert“, wird AEC in der Software unter Verwendung des empfohlenen Algorithmus aktiviert. Bei Verwendung eines Windows-Clients wird Software-AEC verwendet, wenn Hardware-AEC nicht verfügbar ist. Wenn Hardware-AEC verfügbar ist (z. B. wenn das Headset über integriertes AEC verfügt), wird Software-AEC nicht verwendet. Bei Verwendung eines Nicht-Windows-Clients wird Software-AEC unabhängig davon verwendet, ob Hardware-AEC verfügbar ist.</string>
+
+         <string id="Enable_Datachannel_Teams_Redir">Datenkanal für Medienoptimierung für Microsoft Teams aktivieren</string>
+         <string id="Enable_Datachannel_Teams_Redir_Desc">Diese Einstellung wird verwendet, um den Datenkanal für die Medienoptimierung für Microsoft Teams zu aktivieren oder zu deaktivieren.
+
+Wenn „Aktiviert“, kann der Datenkanal für die Medienoptimierung für Microsoft Teams verwendet werden, und Funktionen, die den Datenkanal benötigen, sind verfügbar (z. B. Live-Beschriftungen).
+
+Wenn „Deaktiviert“, kann der Datenkanal nicht für die Medienoptimierung für Microsoft Teams verwendet werden, und Funktionen, die den Datenkanal erfordern, sind nicht verfügbar.
+
+Wenn „Nicht konfiguriert“, ist der Datenkanal aktiviert.</string>
+
+         <string id="Video_Cpu_Overuse_Threshold">Schwellenwert für CPU-Überauslastung konfigurieren</string>
+
+         <string id="Video_Cpu_Overuse_Threshold_Desc"> Wenn die CPU-Auslastung über dem Schwellenwert liegt, wird die gesendete Videoauflösung reduziert, wodurch die CPU-Auslastung des Clients gesenkt wird. Der Standardschwellenwert beträgt 85. Um die Client-CPU während Videoanrufen zu reduzieren, legen Sie diese Richtlinie auf „Aktiviert“ mit einem Wert kleiner als 85 fest. Legen Sie diese Richtlinie auf „Deaktiviert“ oder „Nicht konfiguriert“ fest, um den Standardschwellenwert von 85 zu verwenden. Um keine CPU-Überauslastung zu erkennen, legen Sie diese Richtlinie auf „Aktiviert“ mit einem Wert von 0 fest. Diese Einstellung wird bei der nächsten Anmeldung wirksam.</string>
+
+         <string id="Enable_Sharing_Client_Screen_InAppSession">Aktivieren Sie die Freigabe des Client-Desktopbildschirms, während Sie den Fernzugriff auf die Anwendung Microsoft Teams im Anwendungsfreigabemodus erlauben</string>
 
          <string id="Enable_Sharing_Client_Screen_InAppSession_Desc">Während des Fernzugriffs für die Microsoft Teams-Anwendung wird die Bildschirmfreigabefunktion auf dem Bildschirm „Client-Desktop“ anstelle des Bildschirms des Remote-Desktops verwendet. Wählen Sie „deaktiviert“, um die Funktion „Bildschirmfreigabe“ im Anwendungsfreigabemodus zu deaktivieren. Wenn Sie „Nicht konfiguriert“ auswählen, wird die Bildschirmfreigabe standardmäßig den Bildschirm „Client-Desktop“ freigeben.</string>
 
@@ -569,6 +587,10 @@ Wenn Sie „Nicht konfiguriert“ auswählen, wird die akustische Echounterdrüc
          <string id="Disable_DeviceBridge_BAS">Gerätebrücken-BAS-Plug-in deaktivieren</string>
 
          <string id="Disable_DeviceBridge_BAS_Desc">Deaktiviert die vom BAS-System unterstützten Fingerscanner. Die Einstellung wird nach der nächsten Anmeldung wirksam.</string>
+
+         <string id="Enable_E911">E911 für Microsoft Teams aktivieren</string>
+
+         <string id="Enable_E911_Desc">Während Microsoft Teams im optimierten Modus ausgeführt wird, sendet der Client E911-Daten an Microsoft. Um die Freigabe von E911-Daten für Microsoft zu deaktivieren, wählen Sie „Deaktiviert“ aus. Bei Auswahl von „Aktiviert“ oder „Nicht konfiguriert“ werden die E911-Daten für Microsoft freigegeben.</string>
 
          <string id="VMware_AppTap_Config">VMware AppTap-Konfiguration</string>
 
@@ -657,12 +679,18 @@ Wenn Sie beispielsweise „Nie“ auswählen, wird verhindert, dass eine getrenn
          </presentation>
 
          <presentation id="ConnectionTicketTimeout">
-            <decimalTextBox refId="ConnectionTicketTimeout_DB" defaultValue="120">ConnectionTicketTimeout</decimalTextBox>
+            <decimalTextBox refId="ConnectionTicketTimeout_DB" defaultValue="120">Verbindungsticket, Zeitüberschreitung</decimalTextBox>
          </presentation>
 
          <presentation id="CredentialFilterExceptions">
             <textBox refId="CredentialFilterExceptions_TB">
-               <label>CredentialFilterExceptions</label>
+               <label>Ausnahmen für Anmeldedatenfilter</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="RDPVcBridgeUnsupportedClients">
+            <textBox refId="RDPVcBridgeUnsupportedClients_TB">
+               <label>Nicht unterstützte RDPVcBridge-Clients</label>
             </textBox>
          </presentation>
 
@@ -863,6 +891,13 @@ Wenn Sie beispielsweise „Nie“ auswählen, wird verhindert, dass eine getrenn
 
          <presentation id="Prewarm_disconnect_time_till_logoff">
             <dropdownList refId="Prewarm_disconnect_time_till_logoff_minutes" noSort="true" defaultItem="5">Zeitüberschreitung beim Vorwärmen</dropdownList>
+         </presentation>
+
+         <presentation id="Video_Cpu_Overuse_Threshold">
+            <decimalTextBox refId="Video_Cpu_Overuse_Threshold_data" defaultValue="85">Schwellenwert für Video-CPU-Überauslastung</decimalTextBox>
+         </presentation>
+         <presentation id="Webrtc_Recommended_AEC">
+            <checkBox refId="Webrtc_Recommended_AEC_CB" defaultChecked="true"> Empfohlenen AEC-Algorithmus verwenden </checkBox>
          </presentation>
       </presentationTable>
    </resources>

@@ -79,27 +79,31 @@ Remarque : dans des environnements contenant des relations de domaine complexes
 
 Remarque : MMR ne fonctionnera pas correctement si le matériel d'affichage vidéo de View Client ne prend pas en charge la superposition. La stratégie MMR ne s'applique pas aux sessions de poste de travail hors ligne.</string>
 
-         <string id="AllowDirectRDP">AllowDirectRDP</string>
+         <string id="AllowDirectRDP">Autoriser RDP direct</string>
 
          <string id="AllowDirectRDP_Desc">Détermine si les clients non-View peuvent se connecter directement à des postes de travail View avec RDP. Lorsque cette propriété est désactivée, l'agent n'autorisera que les connexions gérées par View via View Client ou View Portal.
 
 Cette propriété est activée par défaut.</string>
 
-         <string id="AllowSingleSignon">AllowSingleSignon</string>
+         <string id="AllowSingleSignon">Autoriser l'authentification unique</string>
 
          <string id="AllowSingleSignon_Desc">Détermine si l'authentification unique (SSO) est utilisée pour connecter des utilisateurs à des postes de travail View. Lorsque cette propriété est activée, les utilisateurs ne doivent entrer leurs informations d'identification que lors de la connexion avec View Client ou View Portal. Lorsque cette propriété est désactivée, les utilisateurs doivent s'authentifier de nouveau lorsque la connexion à distance est effectuée.
 
 Cette propriété nécessite que le composant Secure Authentication de View Agent soit installé sur le poste de travail. Elle est activée par défaut.</string>
 
-         <string id="ConnectionTicketTimeout">ConnectionTicketTimeout</string>
+         <string id="ConnectionTicketTimeout">Délai d'expiration du ticket de connexion</string>
 
          <string id="ConnectionTicketTimeout_Desc">Spécifie la durée en secondes pendant laquelle le ticket de connexion View est valide. Le ticket de connexion est utilisé par les clients View Client lors de la connexion à View Agent et est utilisé à des fins de vérification et d'authentification unique.
 
 Pour des raisons de sécurité, ces tickets ne sont valides que dans la période spécifiée. Si cette propriété n'est pas définie explicitement, une valeur par défaut de 900 secondes s'applique.</string>
 
-         <string id="CredentialFilterExceptions">CredentialFilterExceptions</string>
+         <string id="CredentialFilterExceptions">Exceptions du filtre d'informations d'identification</string>
 
          <string id="CredentialFilterExceptions_Desc">Liste de noms de fichier exécutable séparés par des points-virgules non autorisés à charger l'agent CredentialFilter. Les noms de fichier ne doivent pas comporter de chemin d'accès ou de suffixe.</string>
+
+         <string id="RDPVcBridgeUnsupportedClients">Clients RDPVcBridge non pris en charge</string>
+
+       <string id="RDPVcBridgeUnsupportedClients_Desc">Liste de types d'Horizon Client séparés par des virgules qui ne prennent pas en charge RDPVcBridge.</string>
 
          <string id="Disable_Time_Zone_sync">Désactiver la synchronisation du fuseau horaire</string>
 
@@ -157,19 +161,19 @@ Lors de la définition des valeurs, la première colonne doit comporter l'URL av
 
          <string id="UnAuthenticatedAccessEnabled_Desc">Ce paramètre active la fonctionnalité Accès non authentifié. Le système doit être redémarré pour que ce changement prenne effet. Accès non authentifié est activé par défaut.</string>
 
-         <string id="CommandsToRunOnConnect">CommandsToRunOnConnect</string>
+         <string id="CommandsToRunOnConnect">Commandes à exécuter lors de la connexion</string>
 
          <string id="CommandsToRunOnConnect_Desc">Liste de commandes à exécuter lorsqu'une session est connectée pour la première fois.</string>
 
-         <string id="CommandsToRunOnReconnect">CommandsToRunOnReconnect</string>
+         <string id="CommandsToRunOnReconnect">Commandes à exécuter lors de la reconnexion</string>
 
          <string id="CommandsToRunOnReconnect_Desc">Liste de commandes à exécuter lorsqu'une session est reconnectée après une déconnexion.</string>
 
-         <string id="CommandsToRunOnDisconnect">CommandsToRunOnDisconnect</string>
+         <string id="CommandsToRunOnDisconnect">Commandes à exécuter lors de la déconnexion</string>
 
          <string id="CommandsToRunOnDisconnect_Desc">Liste de commandes à exécuter lorsqu'une session est déconnectée.</string>
 
-         <string id="ShowDiskActivityIcon">ShowDiskActivityIcon</string>
+         <string id="ShowDiskActivityIcon">Afficher l'icône d'activité du disque</string>
 
          <string id="ShowDiskActivityIcon_Desc">Affiche une icône d'activité du disque dans la barre d'état système. Utilise « Suivi du noyau NT de trace système » qui ne peut être utilisé que par un processus unique ; désactivez-le si nécessaire pour d'autres fins. La valeur par défaut est Activé.</string>
 
@@ -430,7 +434,7 @@ Le Pack de virtualisation pour Skype Entreprise revient au mode de secours si l'
 
 Cette stratégie n'est pas configurée par défaut. </string>
 
-         <string id="EnableDetectProxySettings">EnableDetectProxySettings</string>
+         <string id="EnableDetectProxySettings">Activer la détection des paramètres de proxy</string>
 
          <string id="EnableDetectProxySettings_Desc">Lorsqu'il est activé, le pack de virtualisation VMware pour Skype Entreprise détecte les paramètres de proxy sur le système Horizon Client et les utilise pour le trafic média. Si les paramètres de proxy sont absents du système Horizon Client, le pack de virtualisation VMware pour Skype Entreprise utilise une connexion directe. L'activation de cette stratégie permet de réduire les retards lorsque le système Horizon Client doit utiliser un serveur proxy.</string>
 
@@ -476,7 +480,7 @@ Cette stratégie n'est pas configurée par défaut. </string>
 
          <string id="Enable_HTML5_FEATURES">Activer les fonctionnalités HTML5 de VMware</string>
 
-         <string id="Enable_HTML5_FEATURES_Desc">Activez les fonctionnalités HTML5 de VMware. Il est nécessaire de définir la stratégie sur «–Activée » ou « Non configurée » pour utiliser la redirection multimédia HTML5 de VMware, la redirection de géolocalisation, la redirection de navigateur ou l'optimisation des supports pour Microsoft Teams.  Si cette stratégie est définie sur « Désactivée », vous ne pouvez utiliser aucune des fonctionnalités HTML5 de VMware. Le paramètre prend effet lors de la prochaine connexion.</string>
+         <string id="Enable_HTML5_FEATURES_Desc">Activez les fonctionnalités HTML5 de VMware. Il est nécessaire de définir la stratégie sur «–Activée » ou « Non configurée » pour utiliser la redirection multimédia HTML5 de VMware, la redirection de géolocalisation, la redirection de navigateur ou l'optimisation des supports pour Microsoft Teams.  Si cette stratégie est définie sur Désactivée, vous ne pouvez utiliser aucune des fonctionnalités HTML5 de VMware. Le paramètre prend effet lors de la prochaine connexion.</string>
 
          <string id="HTML5FEATURES_Disable_AudoDetect_Intranet">Désactiver la détection automatique du réseau intranet</string>
 
@@ -550,23 +554,40 @@ Remarque : il est nécessaire que cette stratégie soit définie sur « Activ�
 
          <string id="Enable_AEC_Teams_Redir">Activer l'annulation de l'écho acoustique du logiciel pour l'optimisation des supports pour Microsoft Teams</string>
 
-         <string id="Enable_AEC_Teams_Redir_Desc">Ce paramètre est utilisé pour activer ou désactiver l'annulation de l'écho acoustique du logiciel pour l'optimisation des supports pour Microsoft Teams.
+         <string id="Enable_AEC_Teams_Redir_Desc">Ce paramètre est utilisé pour configurer l'annulation de l'écho acoustique (AEC) du logiciel pour l'optimisation des supports pour Microsoft Teams.
 
-S'il est défini sur Activé, l'annulation de l'écho acoustique est activée dans le logiciel, qu'elle soit ou non disponible dans le matériel.
+Si elle est définie sur Activé, l'AEC est activée dans le logiciel. Cochez « Utiliser l'algorithme AEC recommandé » pour optimiser la qualité audio et les performances. Décochez « Utiliser l'algorithme AEC recommandé » pour utiliser un algorithme AEC qui utilise moins le CPU, mais qui compromet la qualité audio. Cette option est utile pour les processeurs bas de gamme dotés d'une puissance de calcul faible des nombres en virgule flottante. L'utilisation de l'algorithme AEC recommandé est fortement recommandée et est idéale dans la majorité des cas.
 
-S'il est défini sur Désactivé, l'annulation de l'écho acoustique est désactivée dans le logiciel, qu'elle soit ou non disponible dans le matériel.
+Si elle est définie sur Désactivé, l'AEC est désactivée dans le logiciel et n'est plus utilisée.
 
-S'il est défini sur Non configuré, l'annulation de l'écho acoustique est activée dans le logiciel lorsqu'elle n'est pas disponible dans le matériel.</string>
+Si elle est définie sur Non configuré, l'AEC est activée dans le logiciel à l'aide de l'algorithme recommandé. Lorsque vous utilisez le client Windows, l'AEC du logiciel est utilisée si l'AEC du matériel n'est pas disponible. Si l'AEC du matériel est disponible (par exemple, si le casque dispose d'une AEC intégrée), l'AEC du logiciel n'est pas utilisée. Lors de l'utilisation d'un client autre que Windows, l'AEC du logiciel est utilisée, indépendamment de la disponibilité de l'AEC du matériel.</string>
 
-         <string id="Enable_Sharing_Client_Screen_InAppSession">Activez le partage d'écran du poste de travail client lors de l'accès à distance à l'application Microsoft Teams en mode de partage d'applications.</string>
+         <string id="Enable_Datachannel_Teams_Redir">Activer le canal de données pour l'optimisation des supports pour Microsoft Teams</string>
+         <string id="Enable_Datachannel_Teams_Redir_Desc">Ce paramètre est utilisé pour activer ou désactiver le canal de données pour l'optimisation des supports pour Microsoft Teams.
 
-         <string id="Enable_Sharing_Client_Screen_InAppSession_Desc">Lors de l'accès à distance à l'application Microsoft Teams, la fonctionnalité de partage d'écran partage l'écran du poste de travail client au lieu de l'écran du poste de travail distant. Sélectionnez « Désactivé » pour désactiver la fonctionnalité de partage d'écran dans le mode de partage d'applications. Si vous sélectionnez « Non configuré », le partage d'écran partage par défaut l'écran du poste de travail client.</string>
+Si vous sélectionnez l'option Activé, vous pouvez utiliser le canal de données pour l'optimisation des supports pour Microsoft Teams, et les fonctionnalités qui nécessitent le canal de données sont disponibles (par exemple, des légendes en direct).
+
+Si vous sélectionnez l'option Désactivé, vous ne pouvez pas utiliser le canal de données pour l'optimisation des supports pour Microsoft Teams, et les fonctionnalités qui nécessitent le canal de données ne sont pas disponibles.
+
+Si vous sélectionnez l'option Non configuré, le canal de données est activé.</string>
+
+         <string id="Video_Cpu_Overuse_Threshold">Configurer le seuil de surutilisation du CPU</string>
+
+         <string id="Video_Cpu_Overuse_Threshold_Desc"> Si l'utilisation du CPU dépasse le seuil, la résolution vidéo envoyée sera réduite, ce qui diminuera l'utilisation du CPU client. Le seuil par défaut est de 85. Pour réduire le CPU client lors des appels vidéo, définissez cette stratégie sur Activé avec une valeur inférieure à 85. Définissez cette stratégie sur Désactivé ou Non configuré pour utiliser le seuil par défaut de 85. Pour ne pas détecter de surutilisation de CPU, définissez cette stratégie sur Activé avec une valeur de 0. Ce paramètre prendra effet à la prochaine ouverture de session.</string>
+
+         <string id="Enable_Sharing_Client_Screen_InAppSession">Activez le partage d'écran du poste de travail client lors de l'accès à distance à l'application Microsoft Teams en mode de partage d'applications</string>
+
+         <string id="Enable_Sharing_Client_Screen_InAppSession_Desc">Lors de l'accès à distance à l'application Microsoft Teams, la fonctionnalité de partage d'écran partage l'écran du poste de travail client au lieu de l'écran du poste de travail distant. Sélectionnez Désactivé pour désactiver la fonctionnalité de partage d'écran dans le mode de partage d'applications. Si vous sélectionnez « Non configuré », le partage d'écran partage par défaut l'écran du poste de travail client.</string>
 
          <string id="VMware_DeviceBridge">Pont de périphérique VMware</string>
 
          <string id="Disable_DeviceBridge_BAS">Désactiver le plug-in BAS de pont de périphérique</string>
 
          <string id="Disable_DeviceBridge_BAS_Desc">Désactive les lecteurs d'empreinte digitale pris en charge par le système BAS. Le paramètre prend effet lors de la prochaine connexion.</string>
+
+         <string id="Enable_E911">Activer E911 pour Microsoft Teams</string>
+
+         <string id="Enable_E911_Desc">Lorsque Microsoft Teams s'exécute en mode optimisé, le client envoie des données E911 à Microsoft. Pour désactiver le partage de données E911 avec Microsoft, sélectionnez « Désactivé ». Si l'option « Activé » ou « Non configuré » est sélectionnée, les données E911 du client sont partagées avec Microsoft.</string>
 
          <string id="VMware_AppTap_Config">Configuration de VMware AppTap</string>
 
@@ -655,12 +676,18 @@ Par exemple, si vous sélectionnez « Jamais », une session déconnectée (su
          </presentation>
 
          <presentation id="ConnectionTicketTimeout">
-            <decimalTextBox refId="ConnectionTicketTimeout_DB" defaultValue="120">ConnectionTicketTimeout</decimalTextBox>
+            <decimalTextBox refId="ConnectionTicketTimeout_DB" defaultValue="120">Délai d'expiration du ticket de connexion</decimalTextBox>
          </presentation>
 
          <presentation id="CredentialFilterExceptions">
             <textBox refId="CredentialFilterExceptions_TB">
-               <label>CredentialFilterExceptions</label>
+               <label>Exceptions du filtre d'informations d'identification</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="RDPVcBridgeUnsupportedClients">
+            <textBox refId="RDPVcBridgeUnsupportedClients_TB">
+               <label>Clients RDPVcBridge non pris en charge</label>
             </textBox>
          </presentation>
 
@@ -861,6 +888,13 @@ Par exemple, si vous sélectionnez « Jamais », une session déconnectée (su
 
          <presentation id="Prewarm_disconnect_time_till_logoff">
             <dropdownList refId="Prewarm_disconnect_time_till_logoff_minutes" noSort="true" defaultItem="5">Délai d'expiration du préchauffage</dropdownList>
+         </presentation>
+
+         <presentation id="Video_Cpu_Overuse_Threshold">
+            <decimalTextBox refId="Video_Cpu_Overuse_Threshold_data" defaultValue="85">Seuil de surutilisation du CPU vidéo</decimalTextBox>
+         </presentation>
+         <presentation id="Webrtc_Recommended_AEC">
+            <checkBox refId="Webrtc_Recommended_AEC_CB" defaultChecked="true"> Utiliser l'algorithme AEC recommandé </checkBox>
          </presentation>
       </presentationTable>
    </resources>

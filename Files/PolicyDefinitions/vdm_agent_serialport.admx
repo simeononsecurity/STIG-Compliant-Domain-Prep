@@ -87,6 +87,14 @@
         <decimal id="BandwidthLimit_PartName" valueName="BandwidthLimit" required="true" minValue="0" maxValue="2097152" />
       </elements>
     </policy>
+	<policy name="AllowDenyPortFiltersList_PolicyName" class="Machine" displayName="$(string.AllowDenyPortFiltersList_PolicyName)" explainText="$(string.AllowDenyPortFiltersList_PolicyExplain)" presentation="$(presentation.AllowDenyPortFiltersList_PolicyName)" key="SOFTWARE\Policies\VMware, Inc.\VMware VDM\SerialCOM\Agent\Settings">
+      <parentCategory ref="Product_CatName" />
+      <supportedOn ref="SUPPORTED_WindowsXP" />
+      <elements>
+		<multiText id="AllowPortFiltersList_PartName" valueName="AllowPortFiltersList"/>
+		<multiText id="DenyPortFiltersList_PartName" valueName="DenyPortFiltersList"/>
+      </elements>
+    </policy>
     <policy name="PortSettings1_PolicyName" class="Machine" displayName="$(string.PortSettings1_PolicyName)" explainText="$(string.PortSettings_PolicyExplain)" presentation="$(presentation.PortSettings1_PolicyName)" key="SOFTWARE\Policies\VMware, Inc.\VMware VDM\SerialCOM\Agent\Settings\PortSettings\PortSettings1">
       <parentCategory ref="PortSettings_CatName" />
       <supportedOn ref="SUPPORTED_WindowsXP" />

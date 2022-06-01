@@ -47,6 +47,8 @@ This is really useful in cases if scanning application scans without displaying 
       <string id="DefaultColorMode_BlackAndWhite">Black and White</string>
       <string id="DefaultColorMode_Grayscale">Grayscale</string>
       <string id="DefaultColorMode_Color">Color</string>
+	  <string id="DefaultResolution_PolicyName">Default Resolution</string>
+      <string id="DefaultResolution_PolicyExplain">This policy allows to override default scanning resolution (in DPI).</string>
       <string id="DefaultDuplex_PolicyName">Default Duplex</string>
       <string id="DefaultDuplex_PolicyExplain">This policy allows to override default scanning mode (Simplex or Duplex).
 Pay attention when setting up "Duplex" since scanning application should support Duplex scanning and request two pages from scanner.
@@ -54,6 +56,27 @@ Pay attention when setting up "Duplex" since scanning application should support
       <string id="DefaultDuplex_DropDownListName">Duplex mode:</string>
       <string id="DefaultDuplex_Simplex">Simplex</string>
       <string id="DefaultDuplex_Duplex">Duplex</string>
+	  <string id="DefaultAutoRotate_PolicyName">Default Auto Rotate</string>
+      <string id="DefaultAutoRotate_PolicyExplain">TWAIN ONLY. This policy allows to override the default page auto-rotate mode (Enabled or Disabled).
+When Enabled, the logic depends on intelligent features within a scanner driver to automatically rotate the image in order to the correct position. i.e. the scanner driver decides if the page should be rotated (90 or 180 degrees, CW or CCW).
+      </string>
+      <string id="DefaultAutoRotate_DropDownListName">Default Auto Rotate:</string>
+      <string id="DefaultAutoRotate_Disabled">Disabled</string>
+      <string id="DefaultAutoRotate_Enabled">Enabled</string>
+	  <string id="DefaultAutoDeskew_PolicyName">Default Auto Deskew</string>
+      <string id="DefaultAutoDeskew_PolicyExplain">TWAIN ONLY. This policy allows to override the default page auto-deskew mode (Enabled or Disabled).
+When Enabled, the logic depends on intelligent features within a scanner driver to automatically straightening an image.
+      </string>
+      <string id="DefaultAutoDeskew_DropDownListName">Default Auto Deskew:</string>
+      <string id="DefaultAutoDeskew_Disabled">Disabled</string>
+      <string id="DefaultAutoDeskew_Enabled">Enabled</string>
+	  <string id="DefaultAutoBorderDetection_PolicyName">Default Auto Border Detection</string>
+      <string id="DefaultAutoBorderDetection_PolicyExplain">TWAIN ONLY. This policy allows to override the default page auto-border-detection mode (Enabled or Disabled).
+When Enabled, the logic depends on intelligent features within a scanner driver to automatically detect the scanned image borders and crop the image correspondingly.
+      </string>
+      <string id="DefaultAutoBorderDetection_DropDownListName">Default Auto Border Detection:</string>
+      <string id="DefaultAutoBorderDetection_Disabled">Disabled</string>
+      <string id="DefaultAutoBorderDetection_Enabled">Enabled</string>
       <string id="DefaultScanner_PolicyName">Default Scanner</string>
       <string id="DefaultScanners_PolicyExplain_COMP">This policy setting is used for centralized management of scanner autoselection.
 The following autoselection modes are used:
@@ -134,8 +157,20 @@ If Client, native vendor scanner TWAIN dialog appears on Client side.
       <presentation id="DefaultColorMode_PolicyName">
         <dropdownList refId="DefaultColorMode_DropDownListName" noSort="true" defaultItem="2">Color mode:</dropdownList>
       </presentation>
+	  <presentation id="DefaultResolution_PolicyName">
+        <decimalTextBox refId="DefaultResolution_TextBoxName" noSort="true"  defaultValue="150">Resolution:</decimalTextBox>
+      </presentation>
       <presentation id="DefaultDuplex_PolicyName">
         <dropdownList refId="DefaultDuplex_DropDownListName" noSort="true" defaultItem="1">Duplex mode:</dropdownList>
+      </presentation>
+	  <presentation id="DefaultAutoRotate_PolicyName">
+        <dropdownList refId="DefaultAutoRotate_DropDownListName" noSort="true" defaultItem="1">Default Auto Rotate:</dropdownList>
+      </presentation>
+	  <presentation id="DefaultAutoDeskew_PolicyName">
+        <dropdownList refId="DefaultAutoDeskew_DropDownListName" noSort="true" defaultItem="1">Default Auto Deskew:</dropdownList>
+      </presentation>
+	  <presentation id="DefaultAutoBorderDetection_PolicyName">
+        <dropdownList refId="DefaultAutoBorderDetection_DropDownListName" noSort="true" defaultItem="1">Default Auto Border Detection:</dropdownList>
       </presentation>
       <presentation id="DefaultScanner_PolicyName">
         <text>For TWAIN Scanners:
@@ -163,12 +198,28 @@ If Client, native vendor scanner TWAIN dialog appears on Client side.
         <dropdownList refId="Compression_Mode_DropDownListName" noSort="true" defaultItem="2">Compression mode:</dropdownList>
         <decimalTextBox refId="Compression_JPEGQuality_NumericName" defaultValue="80">JPEG compression quality:</decimalTextBox>
       </presentation>
+	   <presentation id="Compression_PolicyName_1">
+        <dropdownList refId="Compression_Mode_DropDownListName_1" noSort="true" defaultItem="2">Compression mode:</dropdownList>
+        <decimalTextBox refId="Compression_JPEGQuality_NumericName_1" defaultValue="80">JPEG compression quality:</decimalTextBox>
+      </presentation>
       <presentation id="HideWebcam_PolicyName_1" />
       <presentation id="DefaultColorMode_PolicyName_1">
         <dropdownList refId="DefaultColorMode_DropDownListName" noSort="true" defaultItem="2">Color mode:</dropdownList>
       </presentation>
+	   <presentation id="DefaultResolution_PolicyName_1">
+        <decimalTextBox refId="DefaultResolution_TextBoxName" noSort="true" defaultItem="1">Resolution:</decimalTextBox>
+      </presentation>
       <presentation id="DefaultDuplex_PolicyName_1">
         <dropdownList refId="DefaultDuplex_DropDownListName" noSort="true" defaultItem="1">Duplex mode:</dropdownList>
+      </presentation>
+	  <presentation id="DefaultAutoRotate_PolicyName_1">
+        <dropdownList refId="DefaultAutoRotate_DropDownListName" noSort="true" defaultItem="1">Default Auto Rotate:</dropdownList>
+      </presentation>
+	  <presentation id="DefaultAutoDeskew_PolicyName_1">
+        <dropdownList refId="DefaultAutoDeskew_DropDownListName" noSort="true" defaultItem="1">Default Auto Deskew:</dropdownList>
+      </presentation>
+	  <presentation id="DefaultAutoBorderDetection_PolicyName_1">
+        <dropdownList refId="DefaultAutoBorderDetection_DropDownListName" noSort="true" defaultItem="1">Default Auto Border Detection:</dropdownList>
       </presentation>
       <presentation id="DefaultScanner_PolicyName_1">
         <text>For TWAIN Scanners:

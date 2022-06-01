@@ -71,6 +71,13 @@
         </enum>
       </elements>
     </policy>
+    <policy name="DefaultResolution_PolicyName" class="Machine" displayName="$(string.DefaultResolution_PolicyName)" explainText="$(string.DefaultResolution_PolicyExplain)" presentation="$(presentation.DefaultResolution_PolicyName)" key="SOFTWARE\Policies\VMware, Inc.\VMware VDM\ScannerRedirection">
+      <parentCategory ref="Root_CatName" />
+      <supportedOn ref="SUPPORTED_WindowsXP" />
+      <elements>
+        <decimal id="DefaultResolution_TextBoxName" valueName="DefaultResolution" required="true" minValue="1"/>
+      </elements>
+    </policy>
     <policy name="DefaultDuplex_PolicyName" class="Machine" displayName="$(string.DefaultDuplex_PolicyName)" explainText="$(string.DefaultDuplex_PolicyExplain)" presentation="$(presentation.DefaultDuplex_PolicyName)" key="SOFTWARE\Policies\VMware, Inc.\VMware VDM\ScannerRedirection">
       <parentCategory ref="Root_CatName" />
       <supportedOn ref="SUPPORTED_WindowsXP" />
@@ -82,6 +89,60 @@
             </value>
           </item>
           <item displayName="$(string.DefaultDuplex_Duplex)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="DefaultAutoRotate_PolicyName" class="Machine" displayName="$(string.DefaultAutoRotate_PolicyName)" explainText="$(string.DefaultAutoRotate_PolicyExplain)" presentation="$(presentation.DefaultAutoRotate_PolicyName)" key="SOFTWARE\Policies\VMware, Inc.\VMware VDM\ScannerRedirection">
+      <parentCategory ref="Root_CatName" />
+      <supportedOn ref="SUPPORTED_WindowsXP" />
+      <elements>
+        <enum id="DefaultAutoRotate_DropDownListName" valueName="DefaultAutoRotate" required="true">
+          <item displayName="$(string.DefaultAutoRotate_Disabled)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.DefaultAutoRotate_Enabled)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+	<policy name="DefaultAutoDeskew_PolicyName" class="Machine" displayName="$(string.DefaultAutoDeskew_PolicyName)" explainText="$(string.DefaultAutoDeskew_PolicyExplain)" presentation="$(presentation.DefaultAutoDeskew_PolicyName)" key="SOFTWARE\Policies\VMware, Inc.\VMware VDM\ScannerRedirection">
+      <parentCategory ref="Root_CatName" />
+      <supportedOn ref="SUPPORTED_WindowsXP" />
+      <elements>
+        <enum id="DefaultAutoDeskew_DropDownListName" valueName="DefaultAutoDeskew" required="true">
+          <item displayName="$(string.DefaultAutoDeskew_Disabled)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.DefaultAutoDeskew_Enabled)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+	<policy name="DefaultAutoBorderDetection_PolicyName" class="Machine" displayName="$(string.DefaultAutoBorderDetection_PolicyName)" explainText="$(string.DefaultAutoBorderDetection_PolicyExplain)" presentation="$(presentation.DefaultAutoBorderDetection_PolicyName)" key="SOFTWARE\Policies\VMware, Inc.\VMware VDM\ScannerRedirection">
+      <parentCategory ref="Root_CatName" />
+      <supportedOn ref="SUPPORTED_WindowsXP" />
+      <elements>
+        <enum id="DefaultAutoBorderDetection_DropDownListName" valueName="DefaultAutoBorderDetection" required="true">
+          <item displayName="$(string.DefaultAutoBorderDetection_Disabled)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.DefaultAutoBorderDetection_Enabled)">
             <value>
               <decimal value="2" />
             </value>
@@ -141,7 +202,7 @@
         <text id="Scanners_Specified_EditName_1" valueName="WiaScanner" />
       </elements>
     </policy>
-    <policy name="Compression_PolicyName" class="User" displayName="$(string.Compression_PolicyName)" explainText="$(string.Compression_PolicyExplain)" presentation="$(presentation.Compression_PolicyName)" key="SOFTWARE\Policies\VMware, Inc.\VMware VDM\ScannerRedirection">
+    <policy name="Compression_PolicyName" class="Machine" displayName="$(string.Compression_PolicyName)" explainText="$(string.Compression_PolicyExplain)" presentation="$(presentation.Compression_PolicyName)" key="SOFTWARE\Policies\VMware, Inc.\VMware VDM\ScannerRedirection">
       <parentCategory ref="Root_CatName" />
       <supportedOn ref="SUPPORTED_WindowsXP" />
       <elements>
@@ -163,6 +224,30 @@
           </item>
         </enum>
         <decimal id="Compression_JPEGQuality_NumericName" valueName="CompressionQualityJpeg" required="true" maxValue="100" />
+      </elements>
+    </policy>
+    <policy name="Compression_PolicyName_1" class="User" displayName="$(string.Compression_PolicyName)" explainText="$(string.Compression_PolicyExplain)" presentation="$(presentation.Compression_PolicyName_1)" key="SOFTWARE\Policies\VMware, Inc.\VMware VDM\ScannerRedirection">
+      <parentCategory ref="Root_CatName" />
+      <supportedOn ref="SUPPORTED_WindowsXP" />
+      <elements>
+        <enum id="Compression_Mode_DropDownListName_1" valueName="Compression" required="true">
+          <item displayName="$(string.Compression_Mode_Disable)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.Compression_Mode_Lossless)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.Compression_Mode_JPEG)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+        </enum>
+        <decimal id="Compression_JPEGQuality_NumericName_1" valueName="CompressionQualityJpeg" required="true" maxValue="100" />
       </elements>
     </policy>
     <policy name="HideWebcam_PolicyName_1" class="User" displayName="$(string.HideWebcam_PolicyName)" explainText="$(string.HideWebcam_PolicyExplain_USER)" presentation="$(presentation.HideWebcam_PolicyName_1)" key="SOFTWARE\Policies\VMware, Inc.\VMware VDM\ScannerRedirection" valueName="HideWebcam">
@@ -198,6 +283,13 @@
         </enum>
       </elements>
     </policy>
+    <policy name="DefaultResolution_PolicyName_1" class="User" displayName="$(string.DefaultResolution_PolicyName)" explainText="$(string.DefaultResolution_PolicyExplain)" presentation="$(presentation.DefaultResolution_PolicyName_1)" key="SOFTWARE\Policies\VMware, Inc.\VMware VDM\ScannerRedirection">
+      <parentCategory ref="Root_CatName" />
+      <supportedOn ref="SUPPORTED_WindowsXP" />
+      <elements>
+        <decimal id="DefaultResolution_TextBoxName" valueName="DefaultResolution" required="true" minValue="1"/>
+      </elements>
+    </policy>
     <policy name="DefaultDuplex_PolicyName_1" class="User" displayName="$(string.DefaultDuplex_PolicyName)" explainText="$(string.DefaultDuplex_PolicyExplain)" presentation="$(presentation.DefaultDuplex_PolicyName_1)" key="SOFTWARE\Policies\VMware, Inc.\VMware VDM\ScannerRedirection">
       <parentCategory ref="Root_CatName" />
       <supportedOn ref="SUPPORTED_WindowsXP" />
@@ -209,6 +301,60 @@
             </value>
           </item>
           <item displayName="$(string.DefaultDuplex_Duplex)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="DefaultAutoRotate_PolicyName_1" class="User" displayName="$(string.DefaultAutoRotate_PolicyName)" explainText="$(string.DefaultAutoRotate_PolicyExplain)" presentation="$(presentation.DefaultAutoRotate_PolicyName_1)" key="SOFTWARE\Policies\VMware, Inc.\VMware VDM\ScannerRedirection">
+      <parentCategory ref="Root_CatName" />
+      <supportedOn ref="SUPPORTED_WindowsXP" />
+      <elements>
+        <enum id="DefaultAutoRotate_DropDownListName" valueName="DefaultAutoRotate" required="true">
+          <item displayName="$(string.DefaultAutoRotate_Disabled)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.DefaultAutoRotate_Enabled)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+	<policy name="DefaultAutoDeskew_PolicyName_1" class="User" displayName="$(string.DefaultAutoDeskew_PolicyName)" explainText="$(string.DefaultAutoDeskew_PolicyExplain)" presentation="$(presentation.DefaultAutoDeskew_PolicyName_1)" key="SOFTWARE\Policies\VMware, Inc.\VMware VDM\ScannerRedirection">
+      <parentCategory ref="Root_CatName" />
+      <supportedOn ref="SUPPORTED_WindowsXP" />
+      <elements>
+        <enum id="DefaultAutoDeskew_DropDownListName" valueName="DefaultAutoDeskew" required="true">
+          <item displayName="$(string.DefaultAutoDeskew_Disabled)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.DefaultAutoDeskew_Enabled)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+	<policy name="DefaultAutoBorderDetection_PolicyName_1" class="User" displayName="$(string.DefaultAutoBorderDetection_PolicyName)" explainText="$(string.DefaultAutoBorderDetection_PolicyExplain)" presentation="$(presentation.DefaultAutoBorderDetection_PolicyName_1)" key="SOFTWARE\Policies\VMware, Inc.\VMware VDM\ScannerRedirection">
+      <parentCategory ref="Root_CatName" />
+      <supportedOn ref="SUPPORTED_WindowsXP" />
+      <elements>
+        <enum id="DefaultAutoBorderDetection_DropDownListName" valueName="DefaultAutoBorderDetection" required="true">
+          <item displayName="$(string.DefaultAutoBorderDetection_Disabled)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.DefaultAutoBorderDetection_Enabled)">
             <value>
               <decimal value="2" />
             </value>
