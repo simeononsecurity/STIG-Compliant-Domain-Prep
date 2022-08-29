@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Author: Florian Stosse
+
+	Description: This template provide options to enable or disable additional protections for side-channel vulnerabilities.
+	The policies modifiy the registry values found in the Microsoft documentation available here: 
+	https://support.microsoft.com/en-us/help/4073119/protect-against-speculative-execution-side-channel-vulnerabilities-in
+
+	Date: 12/01/2020
+	Licence: GNU General Public License v3.0 (https://choosealicense.com/licenses/gpl-3.0/)
+-->
+<policyDefinitionResources 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" 
+	xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+	<displayName>Additional hardening parameters.</displayName>
+	<description>Registry modifications for additional hardening.</description>
+	<resources>
+		<stringTable>
+			<string id="SpectreMeltdown">Microarchitectural attacks additional mitigations</string>
+			<string id="MicroarchHardening">Enable Spectre and Meltdown mitigations</string>
+			<string id="MicroarchHardening_Explain">TODO</string>
+			<string id="MicroarchHardening_Option1">Intel and AMD: enable all mitigations (with Hyper-Threading)</string>
+			<string id="MicroarchHardening_Option2">Intel: enable all mitigations (without Hyper-Threading)</string>
+			<string id="MicroarchHardening_Option3">Intel: enable mitigations for Spectre v2, Meltdown and SSB</string>
+			<string id="MicroarchHardening_Option4">Intel: enable mitigations for Spectre v2 and Meltdown</string>
+			<string id="MicroarchHardening_Option5">Intel: enable mitigations for Meltdown only</string>
+			<string id="MicroarchHardening_Option6">AMD and ARM: enable mitigations for Spectre v2</string>
+			<string id="MicroarchHardening_Option7">Disable all mitigations</string>
+		</stringTable>
+		<presentationTable>
+			<presentation id="MicroarchHardening_Presentation">
+				<dropdownList refId="MicroarchHardening_DropdownList" noSort="true" defaultItem="1">Select an option:</dropdownList>
+				<checkBox refId="HyperVMitigations">Enable Hyper-V mitigations for hosts</checkBox>
+			</presentation>
+		</presentationTable>
+	</resources>
+</policyDefinitionResources>

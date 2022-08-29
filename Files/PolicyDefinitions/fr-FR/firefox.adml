@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<policyDefinitionResources revision="3.9" schemaVersion="1.0" >
+<policyDefinitionResources revision="4.1" schemaVersion="1.0" >
   <displayName/>
   <description/>
   <resources >
@@ -48,6 +48,8 @@
       <string id="SUPPORTED_FF98_ONLY">Firefox 98 ou supérieur</string>
       <string id="SUPPORTED_FF99">Firefox 99 ou supérieur, Firefox 91.8 ESR ou supérieur</string>
       <string id="SUPPORTED_FF100">Firefox 100 ou supérieur, Firefox 91.9 ESR ou supérieur</string>
+      <string id="SUPPORTED_FF101">Firefox 101 ou supérieur, Firefox 91.10 ESR ou supérieur</string>
+      <string id="SUPPORTED_FF102">Firefox 102 ou supérieur</string>
       <string id="firefox">Firefox</string>
       <string id="Permissions_group">Permissions</string>
       <string id="Camera_group">Caméra</string>
@@ -674,6 +676,10 @@ If this policy is not configured, Firefox will determine whether or not the home
       <string id="PasswordManagerEnabled_Explain">Si cette stratégie est désactivée, le gestionnaire de mots de passe n'est pas disponible via les préférences.
 
 Si cette stratégie est activée ou non configurée, le gestionnaire de mots de passe est disponible via les préférences.</string>
+      <string id="PasswordManagerExceptions">Password Manager Exceptions</string>
+      <string id="PasswordManagerExceptions_Explain">If this policy is enabled, you can specify sites where Firefox won't offer to save passwords.
+
+If this policy is disabled or not configured, Firefox will offer to save passwords on all sites.</string>
       <string id="PromptForDownloadLocation">Demander l'emplacement de téléchargement</string>
       <string id="PromptForDownloadLocation_Explain">Si cette stratégie est désactivée, l'utilisateur n'est pas invité à indiquer un emplacement de téléchargement.
 
@@ -910,6 +916,20 @@ For detailed information on creating the policy, see https://github.com/mozilla/
       <string id="WindowsSSO_Explain">If this policy is enabled, Firefox will use credentials stored in Windows to sign in to Microsoft, work, and school accounts.
 
 If this policy is disabled or not configured, credentials must be entered manually.</string>
+      <string id="UseSystemPrintDialog">Use System Print Dialog</string>
+      <string id="UseSystemPrintDialog_Explain">If this policy is enabled, Firefox will use the system print dialog instead of showing print preview before printing.
+
+If this policy is disabled or not configured, Firefox will show print preview before printing.</string>
+      <string id="ExemptDomainFileTypePairsFromFileTypeDownloadWarnings">Disable warnings based on file extension for specific file types on domains</string>
+      <string id="ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_Explain">If this policy is enabled, you can define a list of domains and file type extensions that will be exempt from executable warnings.
+
+If this policy is disabled or not configured, warnings are shown for all executable file types.
+      
+For detailed information on creating the policy, see https://github.com/mozilla/policy-templates/blob/master/README.md#exemptdomainfiletypepairsfromfiletypedownloadwarnings.</string>
+      <string id="StartDownloadsInTempDirectory">Start Downloads in Temporary Directory</string>
+      <string id="StartDownloadsInTempDirectory_Explain">If this policy is enabled, Firefox will start downloads in a temporary directory and automatically deleted when you close the browser.
+
+If this policy is disabled or not configured, Firefox will to the download folder and will not be automatically deleted when you close the browser.</string>
       <string id="Preferences_Boolean_Explain">Si cette stratégie est activée, la préférence est verrouillée sur true. Si cette stratégie est désactivée, la préférence est verrouillée sur false.
 
 Pour une description de la préférence, voir:

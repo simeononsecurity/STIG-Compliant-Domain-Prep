@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Author: Florian Stosse
+
+	Description: This template provide options to enable or disable additional protections for side-channel vulnerabilities.
+	The policies modifiy the registry values found in the Microsoft documentation available here: 
+	https://support.microsoft.com/en-us/help/4073119/protect-against-speculative-execution-side-channel-vulnerabilities-in
+
+	Date: 12/01/2020
+	Licence: GNU General Public License v3.0 (https://choosealicense.com/licenses/gpl-3.0/)
+-->
+<policyDefinitions 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" 
+	xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+	<policyNamespaces>
+		<target prefix="spectremeltdown" namespace="Microsoft.Policies.SpectreMeltdown" />
+		<using prefix="windows" namespace="Microsoft.Policies.Windows" />
+	</policyNamespaces>
+	<resources minRequiredRevision="1.0" />
+	<categories>
+		<category name="SpectreMeltdown" displayName="$(string.SpectreMeltdown)">
+			<parentCategory ref="windows:System" />
+		</category>
+	</categories>
+	<policies>
+		<policy name="MicroarchHardening" class="Machine" displayName="$(string.MicroarchHardening)" explainText="$(string.MicroarchHardening_Explain)" presentation="$(presentation.MicroarchHardening_Presentation)" key="SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management">
+			<parentCategory ref="SpectreMeltdown" />
+			<supportedOn ref="windows:SUPPORTED_WindowsVista" />
+			<elements>
+				<enum id="MicroarchHardening_DropdownList" valueName="FeatureSettingsOverride" required="true">
+					<item displayName="$(string.MicroarchHardening_Option1)">
+						<value>
+							<decimal value="72" />
+						</value>
+						<valueList defaultKey="SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management">
+							<item valueName="FeatureSettingsOverrideMask">
+								<value>
+									<decimal value="3" />
+								</value>
+							</item>
+						</valueList>
+					</item>
+					<item displayName="$(string.MicroarchHardening_Option2)">
+						<value>
+							<decimal value="8264" />
+						</value>
+						<valueList defaultKey="SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management">
+							<item valueName="FeatureSettingsOverrideMask">
+								<value>
+									<decimal value="3" />
+								</value>
+							</item>
+						</valueList>
+					</item>
+					<item displayName="$(string.MicroarchHardening_Option3)">
+						<value>
+							<decimal value="8" />
+						</value>
+						<valueList defaultKey="SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management">
+							<item valueName="FeatureSettingsOverrideMask">
+								<value>
+									<decimal value="3" />
+								</value>
+							</item>
+						</valueList>
+					</item>
+					<item displayName="$(string.MicroarchHardening_Option4)">
+						<value>
+							<decimal value="0" />
+						</value>
+						<valueList defaultKey="SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management">
+							<item valueName="FeatureSettingsOverrideMask">
+								<value>
+									<decimal value="3" />
+								</value>
+							</item>
+						</valueList>
+					</item>
+					<item displayName="$(string.MicroarchHardening_Option5)">
+						<value>
+							<decimal value="1" />
+						</value>
+						<valueList defaultKey="SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management">
+							<item valueName="FeatureSettingsOverrideMask">
+								<value>
+									<decimal value="3" />
+								</value>
+							</item>
+						</valueList>
+					</item>
+					<item displayName="$(string.MicroarchHardening_Option6)">
+						<value>
+							<decimal value="64" />
+						</value>
+						<valueList defaultKey="SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management">
+							<item valueName="FeatureSettingsOverrideMask">
+								<value>
+									<decimal value="3" />
+								</value>
+							</item>
+						</valueList>
+					</item>
+					<item displayName="$(string.MicroarchHardening_Option7)">
+						<value>
+							<decimal value="3" />
+						</value>
+						<valueList defaultKey="SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management">
+							<item valueName="FeatureSettingsOverrideMask">
+								<value>
+									<decimal value="3" />
+								</value>
+							</item>
+						</valueList>
+					</item>
+				</enum>
+				<boolean id="HyperVMitigations" key="SOFTWARE\Microsoft\Windows NT\CurrentVersion\Virtualization" valueName="MinVmVersionForCpuBasedMitigations">
+					<trueValue>
+						<string>1.0</string>
+					</trueValue>
+					<falseValue>
+						<delete />
+					</falseValue>
+				</boolean>
+			</elements>
+		</policy>
+	</policies>
+</policyDefinitions>

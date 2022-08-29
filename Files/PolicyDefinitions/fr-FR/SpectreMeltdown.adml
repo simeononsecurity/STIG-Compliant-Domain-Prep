@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Author: Florian Stosse
+
+	Description: This template provide options to enable or disable additional protections for side-channel vulnerabilities.
+	The policies modifiy the registry values found in the Microsoft documentation available here: 
+	https://support.microsoft.com/en-us/help/4073119/protect-against-speculative-execution-side-channel-vulnerabilities-in
+
+	Date: 12/01/2020
+	Licence: GNU General Public License v3.0 (https://choosealicense.com/licenses/gpl-3.0/)
+-->
+<policyDefinitionResources 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" 
+	xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+	<displayName>Additional hardening parameters.</displayName>
+	<description>Registry modifications for additional hardening.</description>
+	<resources>
+		<stringTable>
+			<string id="SpectreMeltdown">Protection contre les attaques microarchitecturales</string>
+			<string id="MicroarchHardening">Activer les durcissements contre Spectre et Meltdown</string>
+			<string id="MicroarchHardening_Explain">TODO</string>
+			<string id="MicroarchHardening_Option1">Intel et AMD : activer tous les durcissements</string>
+			<string id="MicroarchHardening_Option2">Intel : activer tous les durcissements (sans Hyper-Threading)</string>
+			<string id="MicroarchHardening_Option3">Intel : activer les durcissements contre Spectre v2, Meltdown et SSB</string>
+			<string id="MicroarchHardening_Option4">Intel : activer les durcissements contre Spectre v2 et Meltdown</string>
+			<string id="MicroarchHardening_Option5">Intel : activer les durcissements contre Meltdown seulement</string>
+			<string id="MicroarchHardening_Option6">AMD et ARM : activer les durcissements contre Spectre v2</string>
+			<string id="MicroarchHardening_Option7">Désactiver tous les durcissements</string>
+		</stringTable>
+		<presentationTable>
+			<presentation id="MicroarchHardening_Presentation">
+				<dropdownList refId="MicroarchHardening_DropdownList" noSort="true" defaultItem="1">Sélectionner une option :</dropdownList>
+				<checkBox refId="HyperVMitigations">Activer la protection supplémentaire pour les machines virtuelles Hyper-V de version inférieure à 8.0</checkBox>
+			</presentation>
+		</presentationTable>
+	</resources>
+</policyDefinitionResources>

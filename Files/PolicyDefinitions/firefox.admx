@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<policyDefinitions revision="3.7" schemaVersion="1.0">
+<policyDefinitions revision="4.1" schemaVersion="1.0">
   <policyNamespaces>
     <target prefix="firefox" namespace="Mozilla.Policies.Firefox"/>
     <using prefix="Mozilla" namespace="Mozilla.Policies"/>
   </policyNamespaces>
-  <resources minRequiredRevision="3.7"/>
+  <resources minRequiredRevision="4.1"/>
   <supportedOn>
     <definitions>
       <definition name="UNSUPPORTED" displayName="$(string.UNSUPPORTED)"/>
@@ -50,6 +50,8 @@
       <definition name="SUPPORTED_FF98_ONLY" displayName="$(string.SUPPORTED_FF98_ONLY)"/>
       <definition name="SUPPORTED_FF99" displayName="$(string.SUPPORTED_FF99)"/>
       <definition name="SUPPORTED_FF100" displayName="$(string.SUPPORTED_FF100)"/>
+      <definition name="SUPPORTED_FF101" displayName="$(string.SUPPORTED_FF101)"/>
+      <definition name="SUPPORTED_FF102" displayName="$(string.SUPPORTED_FF102)"/>
     </definitions>
   </supportedOn>
   <categories>
@@ -723,29 +725,6 @@
         <list id="List" key="Software\Policies\Mozilla\Firefox\DNSOverHTTPS\ExcludedDomains" valuePrefix=""/>
       </elements>
     </policy>
-    <policy name="DNSOverHTTPS" class="Both" displayName="$(string.DNSOverHTTPS)" explainText="$(string.DNSOverHTTPS_Explain)" key="Software\Policies\Mozilla\Firefox\DNSOverHTTPS" presentation="$(presentation.DNSOverHTTPS)" >
-      <parentCategory ref="firefox" />
-      <supportedOn ref="SUPPORTED_FF63ESR" />
-      <elements>
-        <text id="ProviderURL" valueName="ProviderURL" />
-        <boolean id="DNSOverHTTPSEnabled" key="Software\Policies\Mozilla\Firefox\DNSOverHTTPS" valueName="Enabled">
-          <trueValue>
-            <decimal value="1"/>
-          </trueValue>
-          <falseValue>
-            <decimal value="0"/>
-          </falseValue>
-        </boolean>
-        <boolean id="DNSOverHTTPSLocked" key="Software\Policies\Mozilla\Firefox\DNSOverHTTPS" valueName="Locked">
-          <trueValue>
-            <decimal value="1"/>
-          </trueValue>
-          <falseValue>
-            <decimal value="0"/>
-          </falseValue>
-        </boolean>
-      </elements>
-    </policy>
     <policy name="DisableAppUpdate" class="Both" displayName="$(string.DisableAppUpdate)" explainText="$(string.DisableAppUpdate_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="DisableAppUpdate">
       <parentCategory ref="firefox"/>
       <supportedOn ref="SUPPORTED_FF60"/>
@@ -1329,83 +1308,6 @@
       <disabledValue>
         <decimal value="0"/>
       </disabledValue>
-    </policy>
-    <!-- Alphabetization is based on name, so had to add C -->
-    <policy name="C_SanitizeOnShutdown" class="Both" displayName="$(string.SanitizeOnShutdown)" explainText="$(string.SanitizeOnShutdown_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="SanitizeOnShutdown" presentation="$(presentation.SanitizeOnShutdown)" >
-      <parentCategory ref="firefox"/>
-      <supportedOn ref="SUPPORTED_FF68"/>
-      <enabledValue>
-        <decimal value="1"/>
-      </enabledValue>
-      <disabledValue>
-        <decimal value="0"/>
-      </disabledValue>
-      <elements>
-        <boolean id="SanitizeOnShutdown_Cache" key="Software\Policies\Mozilla\Firefox\SanitizeOnShutdown" valueName="Cache">
-          <trueValue>
-            <decimal value="1"/>
-          </trueValue>
-          <falseValue>
-            <decimal value="0"/>
-          </falseValue>
-        </boolean>
-        <boolean id="SanitizeOnShutdown_Cookies" key="Software\Policies\Mozilla\Firefox\SanitizeOnShutdown" valueName="Cookies">
-          <trueValue>
-            <decimal value="1"/>
-          </trueValue>
-          <falseValue>
-            <decimal value="0"/>
-          </falseValue>
-        </boolean>
-        <boolean id="SanitizeOnShutdown_Downloads" key="Software\Policies\Mozilla\Firefox\SanitizeOnShutdown" valueName="Downloads">
-          <trueValue>
-            <decimal value="1"/>
-          </trueValue>
-          <falseValue>
-            <decimal value="0"/>
-          </falseValue>
-        </boolean>
-        <boolean id="SanitizeOnShutdown_FormData" key="Software\Policies\Mozilla\Firefox\SanitizeOnShutdown" valueName="FormData">
-          <trueValue>
-            <decimal value="1"/>
-          </trueValue>
-          <falseValue>
-            <decimal value="0"/>
-          </falseValue>
-        </boolean>
-        <boolean id="SanitizeOnShutdown_History" key="Software\Policies\Mozilla\Firefox\SanitizeOnShutdown" valueName="History">
-          <trueValue>
-            <decimal value="1"/>
-          </trueValue>
-          <falseValue>
-            <decimal value="0"/>
-          </falseValue>
-        </boolean>
-        <boolean id="SanitizeOnShutdown_Sessions" key="Software\Policies\Mozilla\Firefox\SanitizeOnShutdown" valueName="Sessions">
-          <trueValue>
-            <decimal value="1"/>
-          </trueValue>
-          <falseValue>
-            <decimal value="0"/>
-          </falseValue>
-        </boolean>
-        <boolean id="SanitizeOnShutdown_SiteSettings" key="Software\Policies\Mozilla\Firefox\SanitizeOnShutdown" valueName="SiteSettings">
-          <trueValue>
-            <decimal value="1"/>
-          </trueValue>
-          <falseValue>
-            <decimal value="0"/>
-          </falseValue>
-        </boolean>
-        <boolean id="SanitizeOnShutdown_OfflineApps" key="Software\Policies\Mozilla\Firefox\SanitizeOnShutdown" valueName="OfflineApps">
-          <trueValue>
-            <decimal value="1"/>
-          </trueValue>
-          <falseValue>
-            <decimal value="0"/>
-          </falseValue>
-        </boolean>
-      </elements>
     </policy>
     <policy name="HomepageURL" class="Both" displayName="$(string.HomepageURL)" explainText="$(string.HomepageURL_Explain)" key="Software\Policies\Mozilla\Firefox\Homepage" presentation="$(presentation.HomepageURL)" >
       <parentCategory ref="Homepage" />
@@ -2584,6 +2486,13 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
+    <policy name="PasswordManagerExceptions" class="Both" displayName="$(string.PasswordManagerExceptions)" explainText="$(string.PasswordManagerExceptions_Explain)" key="Software\Policies\Mozilla\Firefox\PasswordManagerExceptions" presentation="$(presentation.List)">
+      <parentCategory ref="firefox"/>
+      <supportedOn ref="SUPPORTED_FF101"/>
+      <elements>
+        <list id="List" key="Software\Policies\Mozilla\Firefox\PasswordManagerExceptions" valuePrefix=""/>
+      </elements>
+    </policy>
     <policy name="Proxy" class="Both" displayName="$(string.Proxy)" explainText="$(string.Proxy_Explain)" key="Software\Policies\Mozilla\Firefox\Proxy" presentation="$(presentation.Proxy)" >
       <parentCategory ref="firefox" />
       <supportedOn ref="SUPPORTED_FF60" />
@@ -2694,43 +2603,6 @@
       <disabledValue>
         <decimal value="0"/>
       </disabledValue>
-    </policy>
-    <policy name="TrackingProtection" class="Both" displayName="$(string.TrackingProtection)" explainText="$(string.TrackingProtection_Explain)" key="Software\Policies\Mozilla\Firefox\EnableTrackingProtection" valueName="Value" presentation="$(presentation.TrackingProtection)">
-      <parentCategory ref="firefox"/>
-      <supportedOn ref="SUPPORTED_FF60"/>
-      <enabledValue>
-        <decimal value="1"/>
-      </enabledValue>
-      <disabledValue>
-        <decimal value="0"/>
-      </disabledValue>
-      <elements>
-        <boolean id="TrackingProtectionLocked" key="Software\Policies\Mozilla\Firefox\EnableTrackingProtection" valueName="Locked">
-          <trueValue>
-            <decimal value="1"/>
-          </trueValue>
-          <falseValue>
-            <decimal value="0"/>
-          </falseValue>
-        </boolean>
-        <boolean id="Cryptomining" key="Software\Policies\Mozilla\Firefox\EnableTrackingProtection" valueName="Cryptomining">
-          <trueValue>
-            <decimal value="1"/>
-          </trueValue>
-          <falseValue>
-            <decimal value="0"/>
-          </falseValue>
-        </boolean>
-        <boolean id="Fingerprinting" key="Software\Policies\Mozilla\Firefox\EnableTrackingProtection" valueName="Fingerprinting">
-          <trueValue>
-            <decimal value="1"/>
-          </trueValue>
-          <falseValue>
-            <decimal value="0"/>
-          </falseValue>
-        </boolean>
-        <list id="TrackingProtection_Exceptions" key="Software\Policies\Mozilla\Firefox\EnableTrackingProtection\Exceptions" valuePrefix=""/>
-      </elements>
     </policy>
     <!-- Alphabetization is based on name, so had to add B -->
     <policy name="B_WebsiteFilter_Block" class="Both" displayName="$(string.WebsiteFilter_Block)" explainText="$(string.WebsiteFilter_Block_Explain)" key="Software\Policies\Mozilla\WebsiteFilter\Block" presentation="$(presentation.WebsiteFilter)">
@@ -3969,6 +3841,33 @@
     <policy name="WindowsSSO" class="Both" displayName="$(string.WindowsSSO)" explainText="$(string.WindowsSSO_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="WindowsSSO">
       <parentCategory ref="firefox"/>
       <supportedOn ref="SUPPORTED_FF91"/>
+      <enabledValue>
+        <decimal value="1"/>
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0"/>
+      </disabledValue>
+    </policy>
+    <policy name="UseSystemPrintDialog" class="Both" displayName="$(string.UseSystemPrintDialog)" explainText="$(string.UseSystemPrintDialog_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="UseSystemPrintDialog">
+      <parentCategory ref="firefox"/>
+      <supportedOn ref="SUPPORTED_FF102"/>
+      <enabledValue>
+        <decimal value="1"/>
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0"/>
+      </disabledValue>
+    </policy>
+    <policy name="ExemptDomainFileTypePairsFromFileTypeDownloadWarnings" class="Both" displayName="$(string.ExemptDomainFileTypePairsFromFileTypeDownloadWarnings)" key="Software\Policies\Mozilla\Firefox" explainText="$(string.ExemptDomainFileTypePairsFromFileTypeDownloadWarnings_Explain)" presentation="$(presentation.JSON)">
+      <parentCategory ref="firefox"/>
+      <supportedOn ref="SUPPORTED_FF102"/>
+      <elements>
+        <multiText id="JSON" valueName="ExemptDomainFileTypePairsFromFileTypeDownloadWarnings"  maxLength="16384"/>
+      </elements>
+    </policy>
+    <policy name="StartDownloadsInTempDirectory" class="Both" displayName="$(string.StartDownloadsInTempDirectory)" explainText="$(string.StartDownloadsInTempDirectory_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="StartDownloadsInTempDirectory">
+      <parentCategory ref="firefox"/>
+      <supportedOn ref="SUPPORTED_FF102"/>
       <enabledValue>
         <decimal value="1"/>
       </enabledValue>
