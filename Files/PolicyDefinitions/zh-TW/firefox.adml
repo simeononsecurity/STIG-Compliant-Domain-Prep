@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<policyDefinitionResources revision="4.1" schemaVersion="1.0" >
+<policyDefinitionResources revision="4.7" schemaVersion="1.0" >
   <displayName/>
   <description/>
   <resources >
@@ -50,6 +50,12 @@
       <string id="SUPPORTED_FF100">Firefox 100 或更新版本、Firefox 91.9 ESR 或更新版本</string>
       <string id="SUPPORTED_FF101">Firefox 101 或更新版本、Firefox 91.10 ESR 或更新版本</string>
       <string id="SUPPORTED_FF102">Firefox 102 或更新版本</string>
+      <string id="SUPPORTED_FF104">Firefox 104 或更新版本、Firefox 102.2 ESR 或更新版本</string>
+      <string id="SUPPORTED_FF105">Firefox 105 或更新版本、Firefox 102.3 ESR 或更新版本</string>
+      <string id="SUPPORTED_FF106">Firefox 106 或更新版本、Firefox 102.4 ESR 或更新版本</string>
+      <string id="SUPPORTED_FF107">Firefox 107 或更新版本、Firefox 102.5 ESR 或更新版本</string>
+      <string id="SUPPORTED_FF108">Firefox 108 或更新版本、Firefox 102.6 ESR 或更新版本</string>
+      <string id="SUPPORTED_FF109">Firefox 109 或更新版本、Firefox 102.7 ESR 或更新版本</string>
       <string id="firefox">Firefox</string>
       <string id="Permissions_group">權限</string>
       <string id="Camera_group">攝影機</string>
@@ -273,10 +279,17 @@
 若停用或不設定此原則，則會收集並上傳 Telemetry 資料。
 
 Mozilla 建議您不要停用 Telemetry。透過 Telemetry 收集到的資訊可幫助為企業使用者打造更好的產品。</string>
-      <string id="DisplayBookmarksToolbar">顯示書籤工具列</string>
+      <string id="DisplayBookmarksToolbar">顯示書籤工具列（已棄用）</string>
       <string id="DisplayBookmarksToolbar_Explain">若啟用此原則，預設將顯示書籤工具列。使用者還是可以將其隱藏。
 
 若停用或不設定此原則，則預設不會顯示書籤工具列。</string>
+      <string id="DisplayBookmarksToolbar_Enum">Display Bookmarks Toolbar</string>
+      <string id="DisplayBookmarksToolbar_Enum_Explain">If this policy is enabled, the default bokmarks toolbar display can be configured.
+
+If this policy is disabled or not configured, the bookmarks toolbar is displayed on the new tab page by default.</string>
+      <string id="DisplayBookmarksToolbar_Always">Always</string>
+      <string id="DisplayBookmarksToolbar_Never">Never</string>
+      <string id="DisplayBookmarksToolbar_NewTab">New Tab</string>
       <string id="DisplayMenuBar">顯示選單列（已棄用）</string>
       <string id="DisplayMenuBar_Explain">若啟用此原則，預設將顯示選單列。使用者還是可以將其隱藏。
 
@@ -929,6 +942,14 @@ For detailed information on creating the policy, see https://github.com/mozilla/
       <string id="StartDownloadsInTempDirectory_Explain">If this policy is enabled, Firefox will start downloads in a temporary directory and automatically deleted when you close the browser.
 
 If this policy is disabled or not configured, Firefox will to the download folder and will not be automatically deleted when you close the browser.</string>
+      <string id="GoToIntranetSiteForSingleWordEntryInAddressBar">Force direct intranet site navigation on single word entries in the address bar</string>
+      <string id="GoToIntranetSiteForSingleWordEntryInAddressBar_Explain">If this policy is enabled, typing single word entries in the address bar will attempt to navigate to intranet sites first, falling back to search if the DNS request fails.
+
+If this policy is disabled or not configured, typing single word entries in the address bar will search.</string>
+      <string id="AppUpdatePin">Pin updates to a specific version</string>
+      <string id="AppUpdatePin_Explain">If this policy is enabled, you can specify a Firefox version as xx. or xx.xx. and Firefox will not be updated beyond that major or minor version.
+
+If this policy is disabled or not configured, Firefox will update normally.</string>
       <string id="Preferences_Boolean_Explain">若啟用此原則，偏好設定將鎖定為 true。若停用此原則，偏好設定則鎖定為 false。
 
 若需要偏好設定的詳細說明，請參考：
@@ -1235,6 +1256,9 @@ https://github.com/mozilla/policy-templates/blob/master/README.md#preferences。
       </presentation>
       <presentation id="DisplayMenuBar">
         <dropdownList refId="DisplayMenuBar"/>
+      </presentation>
+      <presentation id="DisplayBookmarksToolbar">
+        <dropdownList refId="DisplayBookmarksToolbar"/>
       </presentation>
       <presentation id="String">
         <textBox refId="String">

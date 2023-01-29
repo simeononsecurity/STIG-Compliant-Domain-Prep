@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<policyDefinitionResources revision="4.1" schemaVersion="1.0" >
+<policyDefinitionResources revision="4.7" schemaVersion="1.0" >
   <displayName/>
   <description/>
   <resources >
@@ -50,6 +50,12 @@
       <string id="SUPPORTED_FF100">Firefox 100 ou supérieur, Firefox 91.9 ESR ou supérieur</string>
       <string id="SUPPORTED_FF101">Firefox 101 ou supérieur, Firefox 91.10 ESR ou supérieur</string>
       <string id="SUPPORTED_FF102">Firefox 102 ou supérieur</string>
+      <string id="SUPPORTED_FF104">Firefox 104 ou supérieur, Firefox 102.2 ESR ou supérieur</string>
+      <string id="SUPPORTED_FF105">Firefox 105 ou supérieur, Firefox 102.3 ESR ou supérieur</string>
+      <string id="SUPPORTED_FF106">Firefox 106 ou supérieur, Firefox 102.4 ESR ou supérieur</string>
+      <string id="SUPPORTED_FF107">Firefox 107 ou supérieur, Firefox 102.5 ESR ou supérieur</string>
+      <string id="SUPPORTED_FF108">Firefox 108 ou supérieur, Firefox 102.6 ESR ou supérieur</string>
+      <string id="SUPPORTED_FF109">Firefox 109 ou supérieur, Firefox 102.7 ESR ou supérieur</string>
       <string id="firefox">Firefox</string>
       <string id="Permissions_group">Permissions</string>
       <string id="Camera_group">Caméra</string>
@@ -273,10 +279,17 @@ Si cette stratégie est désactivée ou non configurée, les modules complément
 Si cette stratégie est désactivée ou non configurée, la télémétrie est collectée et téléchargée.
 
 Mozilla vous recommande de ne pas désactiver la télémétrie. Les informations recueillies par télémétrie nous aident à créer un meilleur produit pour des entreprises comme la vôtre.</string>
-      <string id="DisplayBookmarksToolbar">Afficher la Barre d'outils des signets</string>
+      <string id="DisplayBookmarksToolbar">Afficher la Barre d'outils des signets (Deprecated)</string>
       <string id="DisplayBookmarksToolbar_Explain">Si cette stratégie est activée, la barre d'outils des signets est affichée par défaut. L'utilisateur peut toujours le cacher.
 
 Si cette stratégie est désactivée ou non configurée, la barre d’outils des signets ne s’affiche pas par défaut. </string>
+      <string id="DisplayBookmarksToolbar_Enum">Display Bookmarks Toolbar</string>
+      <string id="DisplayBookmarksToolbar_Enum_Explain">If this policy is enabled, the default bokmarks toolbar display can be configured.
+
+If this policy is disabled or not configured, the bookmarks toolbar is displayed on the new tab page by default.</string>
+      <string id="DisplayBookmarksToolbar_Always">Always</string>
+      <string id="DisplayBookmarksToolbar_Never">Never</string>
+      <string id="DisplayBookmarksToolbar_NewTab">New Tab</string>
       <string id="DisplayMenuBar">Afficher la Barre de menus (Deprecated)</string>
       <string id="DisplayMenuBar_Explain">Si cette stratégie est activée, la barre de menus est affichée par défaut. L'utilisateur peut toujours le cacher.
 
@@ -358,10 +371,10 @@ Dans les deux cas, l'utilisateur pourra modifier la valeur (elle n'est pas verro
       <string id="PopupBlocking_Allow_Explain">Si cette stratégie est activée, les fenêtres contextuelles sont toujours autorisées pour les origines indiquées. Si un domaine de premier niveau est spécifié (http://example.org), les fenêtres contextuelles sont également autorisées pour tous les sous-domaines.
 
 Si cette stratégie est désactivée ou non configurée, la stratégie par défaut des fenêtres contextuelles est suivie.</string>
-      <string id="PopupBlocking_Default">Autoriser les fenêtres publicitaires intempestives à partir de sites Web</string>
-      <string id="PopupBlocking_Default_Explain">Si cette stratégie est désactivée, les fenêtres contextuelles sont autorisées à partir des sites Web par défaut.
+      <string id="PopupBlocking_Default">Bloquer les pop-ups des sites Web</string>
+      <string id="PopupBlocking_Default_Explain">Si cette stratégie est désactivée, les pop-ups sont autorisées à partir des sites Web.
 
-Si cette stratégie n'est ni configurée ni activée, les fenêtres contextuelles ne sont pas autorisées à partir de sites Web.</string>
+Si cette stratégie est non configurée ou activée, les pop-ups ne sont pas autorisées à partir de sites Web.</string>
       <string id="PopupBlocking_Locked">Ne pas autoriser la modification des préférences</string>
       <string id="PopupBlocking_Locked_Explain">Si cette stratégie est activée, les préférences en incrustation ne peuvent pas être modifiées par l'utilisateur.
 
@@ -930,6 +943,14 @@ For detailed information on creating the policy, see https://github.com/mozilla/
       <string id="StartDownloadsInTempDirectory_Explain">If this policy is enabled, Firefox will start downloads in a temporary directory and automatically deleted when you close the browser.
 
 If this policy is disabled or not configured, Firefox will to the download folder and will not be automatically deleted when you close the browser.</string>
+      <string id="GoToIntranetSiteForSingleWordEntryInAddressBar">Force direct intranet site navigation on single word entries in the address bar</string>
+      <string id="GoToIntranetSiteForSingleWordEntryInAddressBar_Explain">If this policy is enabled, typing single word entries in the address bar will attempt to navigate to intranet sites first, falling back to search if the DNS request fails.
+
+If this policy is disabled or not configured, typing single word entries in the address bar will search.</string>
+      <string id="AppUpdatePin">Pin updates to a specific version</string>
+      <string id="AppUpdatePin_Explain">If this policy is enabled, you can specify a Firefox version as xx. or xx.xx. and Firefox will not be updated beyond that major or minor version.
+
+If this policy is disabled or not configured, Firefox will update normally.</string>
       <string id="Preferences_Boolean_Explain">Si cette stratégie est activée, la préférence est verrouillée sur true. Si cette stratégie est désactivée, la préférence est verrouillée sur false.
 
 Pour une description de la préférence, voir:
@@ -1236,6 +1257,9 @@ https://github.com/mozilla/policy-templates/blob/master/README.md#preferences</s
       </presentation>
       <presentation id="DisplayMenuBar">
         <dropdownList refId="DisplayMenuBar"/>
+      </presentation>
+      <presentation id="DisplayBookmarksToolbar">
+        <dropdownList refId="DisplayBookmarksToolbar"/>
       </presentation>
       <presentation id="String">
         <textBox refId="String">

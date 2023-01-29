@@ -8,11 +8,14 @@
   <description>Additional hardening parameters</description>
   <resources>
     <stringTable>
+      <string id="SUPPORTED_3174644">At least Windows 10; 
+At least Windows Server 2008 SP2 or Windows Vista SP2 with KB3174644</string>
       <!-- CATEGORIES -->
-      <string id="Cat_AddHard">Additional hardening parameters</string>
-      <string id="System">Additional system hardening parameters</string>
-      <string id="Network">Additional network hardening parameters</string>
-      <string id="Net">.NET Framework configuration hardening</string>
+      <string id="Cat_AddHard">Additional hardening settings</string>
+      <string id="System">Additional system hardening settings</string>
+      <string id="Network">Additional network hardening settings</string>
+      <string id="DomainControllers">Additional Domain Controllers hardening settings</string>
+      <string id="Net">.NET Framework configuration</string>
       <string id="Schannel">Schannel configuration</string>
       <string id="Protocols">Protocols</string>
       <string id="WeakProtocols">Weak Protocols</string>
@@ -22,12 +25,56 @@
       <string id="WeakHashes">Weak Hashes</string>
       <string id="KeyEx">Key Exchanges</string>
       <string id="WeakKeyEx">Weak Key Exchanges</string>
-      <string id="SMB">SMB hardening configuration</string>
+      <string id="SMB">SMB configuration</string>
       <!-- PARAMETERS -->
+      <!-- SMB -->
       <string id="DisableSMB1">Disable SMB 1.0 support (client and server)</string>
       <string id="DisableSMB1_Explain">Disable SMB 1.0 support (client and server)</string>
+      <string id="MinSMB2Dialect">Configure the minimum SMB2 client dialect supported</string>
+      <string id="MinSMB2Dialect_Explain">This policy allows you to configure the minimum SMB2 version supported when acting as a client.
+
+It is recommended to select the minimal version supported by your environment.
+      
+NOTE: if you select a version above what the remote server can, handle, you will not be able to connect to the remote file share.
+
+Supported versions:
+- SMB 2.0.2
+- SMB 2.1.0 (Windows 7)
+- SMB 3.0.0 (Windows 8)
+- SMB 3.0.2 (windows 8.1)
+- SMB 3.1.1 (Windows 10, Windows Server 2016)</string>
+      <string id="MaxSMB2Dialect">Configure the maximum SMB2 client dialect supported</string>
+      <string id="MaxSMB2Dialect_Explain">This policy allows you to configure the maximum SMB2 version supported when acting as a client.
+      
+It is recommended to not configure this policy and to let the system negociate the most suitable version.
+
+NOTE: do not configure this policy with a value below the one selected in the "Configure minimum SMB2 client dialect supported" policy, otherwise you could break SMB support on your system.
+
+Supported versions:
+- SMB 2.0.2
+- SMB 2.1.0 (Windows 7)
+- SMB 3.0.0 (Windows 8)
+- SMB 3.0.2 (windows 8.1)
+- SMB 3.1.1 (Windows 10, Windows Server 2016)</string>
+      <string id="MaxSMB2Dialect_202">v2.0.2</string>
+      <string id="MaxSMB2Dialect_210">v2.1.0 (Windows 7)</string>
+      <string id="MaxSMB2Dialect_300">v3.0.0 (Windows 8)</string>
+      <string id="MaxSMB2Dialect_302">v3.0.2 (Windows 8.1)</string>
+      <string id="MaxSMB2Dialect_311">v3.1.1 (Windows 10, Windows Server 2016)</string>
+      <string id="MaxSMB2Dialect_Remove">Remove the registry key</string>
+      <string id="MinSMB2Dialect_202">v2.0.2</string>
+      <string id="MinSMB2Dialect_210">v2.1.0 (Windows 7)</string>
+      <string id="MinSMB2Dialect_300">v3.0.0 (Windows 8)</string>
+      <string id="MinSMB2Dialect_302">v3.0.2 (Windows 8.1)</string>
+      <string id="MinSMB2Dialect_311">v3.1.1 (Windows 10, Windows Server 2016)</string>
+      <string id="MinSMB2Dialect_Remove">Remove the registry key</string>
+      <!-- System policies -->
       <string id="LSA_RunAsPPL">Enable additional LSA process hardening</string>
       <string id="LSA_RunAsPPL_Explain">Enable this option to allow the LSA process to run as a PPL (Protected Process Light), in order to disallow its debugging.</string>
+      <string id="LSA_SamDisableListenOnTCP">Disable the SAM server TCP listener</string>
+      <string id="LSA_SamDisableListenOnTCP_Explain">By default, the SAM server (lsass.exe) is constantly listening on a random TCP port, bound to all network interfaces.
+
+Enabling this policy will disable the TCP listener.</string>
       <string id="SafeBootUserAccess">Disable standard users in Safe-Boot mode</string>
       <string id="SafeBootUserAccess_Explain">An adversary with standard user credentials that can boot into Microsoft Windows using Safe Mode, Safe Mode with Networking or Safe Mode with Command Prompt options may be able to bypass system protections and security functionalities. To reduce this risk, users with standard credentials should be prevented from using Safe Mode options to log in.
 
@@ -104,10 +151,18 @@ This modification is necessary to fully fix an information disclosure vulnerabil
 - For a value inferior or equal to 10240, the setting acts as a 1024-mutiplier (for example, setting it to 20 will result in 20480 iterations).
 - For a value superior to 10240, the setting acts as a raw value (modulo 1024).
       
-The recommended value depends on the target environment, the CPU power available and the performance hit you are willing to tolerate (a high value can incur a net performance penalty for the logon process).</string>
+The recommended value depends on the target environment, the CPU power available and the performance hit you are willing to tolerate (a high value can incur a net performance penalty for the logon process).
+
+When the policy is enabled, the default value configured is 1954 (2 000 896 rounds). This is the recommended value (at the time of December 2022) for the PBKDF2-HMAC-SHA1 algorithm, considering the compute power of a RTX 4090 GPU.
+
+More informations:
+- https://tobtu.com/minimum-password-settings/
+- https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html#pbkdf2</string>
       <string id="PSLockDownPolicy">Enable PowerShell Constrained Language Mode</string>
-      <string id="PSLockDownPolicy_Explain">Enable the Constrained Language Mode for Powershell. This mode disallow several language elements that can be leveraged by attackers to perform sensitive APIs calls.</string>
-      <string id="Schannel_Category">Schannel</string>
+      <string id="PSLockDownPolicy_Explain">Enable the Constrained Language Mode for Powershell. This mode disallow several language elements that can be leveraged by attackers to perform sensitive APIs calls.
+      
+NOTE: since this policy is only rewritting the __PSLockdownPolicy environment variable, this is not a secure way to enable CLM, and this is intended for defense-in-depth only. CLM can only be securely enforced by AppLocker and/or WDAC.</string>
+      <!-- Network policies -->
       <string id="SchannelLogging">Enable advanced logging for Schannel</string>
       <string id="SchannelLogging_Explain">Increase Schannel verbosity level in Event Logs.</string>
       <string id="KerberosLogging">Enable Kerberos events logging</string>
@@ -121,6 +176,89 @@ If disabled, this policy disable Kerberos-related events logging (this is the de
       <string id="DisableIPSourceRouting2">Highest protection, source routing is completely disabled</string>
       <string id="DisableIPSourceRoutingIPv6">Configure the IP source routing protection level for IPv6</string>
       <string id="DisableIPSourceRoutingIPv6_Help">Allows to choose a protection for source-routed packets.</string>
+      <string id="TLS_Ciphersuites">TLS cipher suites configuration</string>
+      <string id="TLS_Ciphersuites_Help">This policy allows you to select between several TLS cipher suites configuration profiles.
+
+NOTE: for profiles listed with TLS 1.3, please verify that your OS version support TLS 1.3 (Windows 10 v1903 and up) and that TLS 1.3 support is enabled in the Schannel "Protocols" section, otherwise you could break TLS support on your system.
+
+Changing this setting will require a restart of the computer before the setting will take effect. You can check the applied configuration with the Get-TlsCiphersuite cmdlet in a PowerShell session.
+
+Ciphers enabled for each profile, in order of preference:
+
+Modern (TLS 1.3 only)
+TLS_AES_256_GCM_SHA384
+TLS_AES_128_GCM_SHA256
+TLS_CHACHA20_POLY1305_SHA256
+TLS_AES_128_CCM_SHA256
+
+Modern (TLS 1.3 and 1.2)
+TLS_AES_256_GCM_SHA384
+TLS_AES_128_GCM_SHA256
+TLS_CHACHA20_POLY1305_SHA256
+TLS_AES_128_CCM_SHA256
+TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256
+TLS_ECDHE_ECDSA_WITH_AES_128_CCM
+TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+
+Standard (TLS 1.2 only)
+TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256
+TLS_ECDHE_ECDSA_WITH_AES_128_CCM
+TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+
+Backward compatible (TLS 1.3, 1.2, 1.1 and 1.0)
+TLS_AES_256_GCM_SHA384
+TLS_AES_128_GCM_SHA256
+TLS_CHACHA20_POLY1305_SHA256
+TLS_AES_128_CCM_SHA256
+TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256
+TLS_ECDHE_ECDSA_WITH_AES_128_CCM
+TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384
+TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256
+TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+
+Backward compatible (TLS 1.2, 1.1 and 1.0)
+TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256
+TLS_ECDHE_ECDSA_WITH_AES_128_CCM
+TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384
+TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256
+TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</string>
+      <string id="TLS_Ciphersuites0">Modern (TLS 1.3 only)</string>
+      <string id="TLS_Ciphersuites1">Modern (TLS 1.3 and 1.2)</string>
+      <string id="TLS_Ciphersuites2">Standard (TLS 1.2 only)</string>
+      <string id="TLS_Ciphersuites3">Backward compatible (TLS 1.3, 1.2, 1.1 and 1.0)</string>
+      <string id="TLS_Ciphersuites4">Backward compatible (TLS 1.2, 1.1 and 1.0)</string>
       <string id="AdminShare_Wks">Disable administrative shares for workstations</string>
       <string id="AdminShare_Wks_Explain">Not recommended, except for highly secure environments.</string>
       <string id="AdminShare_Srv">Disable administrative shares for servers</string>
@@ -134,88 +272,91 @@ If you enable this setting or do not configure it, the system will limit install
 
 If you disable this setting, the system will not limit installation of print drivers to this computer.
 
-Additional Information: https://support.microsoft.com/en-us/topic/kb5005010-restricting-installation-of-new-printer-drivers-after-applying-the-july-6-2021-updates-31b91c02-05bc-4ada-a7ea-183b129578a7 for additional information.
-      </string>
+Additional Information: https://support.microsoft.com/en-us/topic/kb5005010-restricting-installation-of-new-printer-drivers-after-applying-the-july-6-2021-updates-31b91c02-05bc-4ada-a7ea-183b129578a7 for additional information.</string>
+      <string id="ProtectedRoots">Prevent standard users to install root certificates</string>
+      <string id="ProtectedRoots_Help">This policy prevent standard (non-administrators) users to install root certificate authorities to their user-specific trust store.
+
+Enabling this policy can help prevent code signing certificate cloning attacks. It is recommended to enable this policy.</string>
       <string id="CoInstallers">Block drivers co-installers applications</string>
       <string id="CoInstallers_Help">A co-installer is a user-mode Win32 DLL that typically writes additional configuration information to the registry, or performs other installation tasks that require information that is not available when an INF is written.
 
 If you enable this setting, co-installers execution will be prevented, and additional configuration software for specific devices (mouses, gaming keyboards, etc) must be downloaded and manually installed from the manufacturer website.
 
-If you disable this setting, co-installers execution will be permitted, which is a significant security risk (potentially dangerous code execution).
-      </string>
+If you disable this setting, co-installers execution will be permitted, which is a significant security risk (potentially dangerous code execution).</string>
       <!-- PROTOCOLS -->
       <!-- Multi-Protocol Unified Hello -->
       <string id="MPUH">Multi-Protocol Unified Hello</string>
-      <string id="MPUH_Help">Enables or disables the use of Multi-Protocol Unified Hello.  This protocol will never be used by Schannel SSP.
+      <string id="MPUH_Help">Enabling or disabling this policy will respectively enable or disable support for Multi-Protocol Unified Hello. This protocol will never be used by Schannel SSP.
 
-Changing this setting will require a restart of the computer before the setting will take effect.
-      </string>
+Changing this setting will require a restart of the computer before the setting will take effect.</string>
       <!-- PCT 1.0 -->
       <string id="PCTv1">PCT 1.0</string>
-      <string id="PCTv1_Help">Enables or disables the use of PCT 1.0.  This protocol will never be used by Schannel SSP.
+      <string id="PCTv1_Help">Enabling or disabling this policy will respectively enable or disable support for PCT 1.0. This protocol will never be used by Schannel SSP.
 
 Changing this setting will require a restart of the computer before the setting will take effect.
       </string>
       <!-- SSLv2 -->
       <string id="SSLv2">SSL 2.0</string>
-      <string id="SSLv2_Help">Enables or disables the use of SSL 2.0.  By default for Windows clients, SSL 2.0 is disabled.
+      <string id="SSLv2_Help">Enabling or disabling this policy will respectively enable or disable support for SSL 2.0. By default for Windows clients, SSL 2.0 is disabled.
 
-Note that SSL 2.0 is insecure and must not be used.
+Note that SSL 2.0 is insecure and should not be enabled.
 
 Changing this setting will require a restart of the computer before the setting will take effect.
       </string>
       <!-- SSLv3 -->
       <string id="SSLv3">SSL 3.0</string>
-      <string id="SSLv3_Help">Enables or disables the use of SSL 3.0.
+      <string id="SSLv3_Help">Enabling or disabling this policy will respectively enable or disable support for SSL 3.0.
 
-SSL 3.0 is insecure when used with HTTP and weak when used with other protocols.  It is also obsolete.  TLS 1.2 or better should be used instead, if possible.
+SSL 3.0 is insecure and considered obsolete, and therefore should not be used. TLS 1.2 or better should be used instead, if possible.
 
 Changing this setting will require a restart of the computer before the setting will take effect.
       </string>
       <!-- TLSv1.0 -->
       <string id="TLSv10">TLS 1.0</string>
-      <string id="TLSv10_Help">Enables or disables the use of TLS 1.0.
+      <string id="TLSv10_Help">Enabling or disabling this policy will respectively enable or disable support for TLS 1.0.
 
-TLS 1.0 is largely still secure.  When used with HTTP, it can almost be made secure with careful configuration.  However, it may be required for backwards compatibility reasons.
+TLS 1.0 is still considered secure, but is in process of deprecation from Microsoft, and should be disabled. However, it may be required for backwards compatibility reasons.
 
 Changing this setting will require a restart of the computer before the setting will take effect.
       </string>
       <!-- TLSv1.1 -->
       <string id="TLSv11">TLS 1.1</string>
-      <string id="TLSv11_Help">Enables or disables the use of TLS 1.1.
+      <string id="TLSv11_Help">Enabling or disabling this policy will respectively enable or disable support for TLS 1.1.
+
+TLS 1.1 is still considered secure, but is in process of deprecation from Microsoft, and should be disabled. However, it may be required for backwards compatibility reasons.
 
 Changing this setting will require a restart of the computer before the setting will take effect.
       </string>
       <!-- TLSv1.2 -->
       <string id="TLSv12">TLS 1.2</string>
-      <string id="TLSv12_Help">Enables or disables the use of TLS 1.2.  TLS 1.2 is without known security issues.
+      <string id="TLSv12_Help">Enabling or disabling this policy will respectively enable or disable support for TLS 1.2. TLS 1.2 is without known security issues, and it is recommended to enable it.
 
 Changing this setting will require a restart of the computer before the setting will take effect.
       </string>
       <!-- TLSv1.3 -->
-      <string id="TLSv13">TLS 1.3 - [WARNING: READ DESCRIPTION]</string>
-      <string id="TLSv13_Help">Enables or disables the use of TLS 1.3.  TLS 1.3 is without known security issues.
+      <string id="TLSv13">TLS 1.3 [WARNING: READ DESCRIPTION]</string>
+      <string id="TLSv13_Help">Enabling or disabling this policy will respectively enable or disable support for TLS 1.3. TLS 1.3 is without known security issues, and it is recommended to enable it.
 
-!! WARNING: This setting is only compatible with Windows 10 1903 and above. Enabling this setting on older OS versions will break SChannel, and you will need to manually remove the SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.3 key in the Registry to fix it.
+!! WARNING: This setting is only compatible with Windows 10 v1903 and above. Enabling this setting on older OS versions will break SChannel, and you will need to manually remove the SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.3 key in the Registry to fix it.
 
-This setting does not require a reboot to take effect.
+Changing this setting will require a restart of the computer before the setting will take effect.
       </string>
       <!-- DTLSv1.0 -->
       <string id="DTLSv10">DTLS 1.0</string>
-      <string id="DTLSv10_Help">Enables or disables the use of DTLS 1.0.  Windows 7 and Windows Server 2008 R2 and above.
+      <string id="DTLSv10_Help">Enabling or disabling this policy will respectively enable or disable support for DTLS 1.0. Supported by Windows 7, Windows Server 2008 R2 and above.
 
 Changing this setting will require a restart of the computer before the setting will take effect.
       </string>
       <!-- DTLSv1.2 -->
       <string id="DTLSv12">DTLS 1.2</string>
-      <string id="DTLSv12_Help">Enables or disables the use of DTLS 1.2.  Windows 10 v1607 and above.
+      <string id="DTLSv12_Help">Enabling or disabling this policy will respectively enable or disable support for DTLS 1.2. Supported by Windows 10 v1607 and above.
 
 Changing this setting will require a restart of the computer before the setting will take effect.
       </string>
       <!-- WEAK CIPHERS -->
       <!-- NULL -->
       <string id="NULL">NULL</string>
-      <string id="NULL_Help">Enables or disables the use of NULL encryption ciphers.  This is a weak cipher and should not be used.
+      <string id="NULL_Help">Enabling or disabling this policy will respectively enable or disable support for NULL encryption ciphers. This is a weak cipher and shoud not be enabled.
 
 Changing this setting will have an effect on whether the following ciphers can be selected for use:
 
@@ -224,7 +365,7 @@ TLS_RSA_WITH_NULL_SHA256
       </string>
       <!-- DES 56/56 -->
       <string id="DES_56">DES 56/56</string>
-      <string id="DES_56_Help">Enables or disables the use of the DES 56/56.  This is a weak cipher and should not be used.
+      <string id="DES_56_Help">Enabling or disabling this policy will respectively enable or disable support for DES 56/56. This is a weak cipher and shoud not be enabled.
 
 Changing this setting will have an effect on whether the following ciphers can be selected for use:
 
@@ -233,7 +374,7 @@ TLS_RSA_WITH_DES_CBC_SHA
       </string>
       <!-- RC2 40/128 -->
       <string id="RC2_40">RC2 40/128</string>
-      <string id="RC2_40_Help">Enables or disables the use of RC2 40/128.  This is a weak cipher and shoud not be used.
+      <string id="RC2_40_Help">Enabling or disabling this policy will respectively enable or disable support for RC2 40/128. This is a weak cipher and shoud not be enabled.
 
 Changing this setting will have an effect on whether the following ciphers can be selected for use:
 
@@ -242,7 +383,7 @@ TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5
       </string>
       <!-- RC2 56/128 -->
       <string id="RC2_56">RC2 56/128</string>
-      <string id="RC2_56_Help">Enables or disables the use of RC2 56/128.  This is a weak cipher and shoud not be used.
+      <string id="RC2_56_Help">Enabling or disabling this policy will respectively enable or disable support for RC2 56/128. This is a weak cipher and shoud not be enabled.
 
 Changing this setting will have an effect on whether the following ciphers can be selected for use:
 
@@ -251,10 +392,10 @@ TLS_RSA_WITH_DES_CBC_SHA
       </string>
       <!-- RC2 128/128 -->
       <string id="RC2_128">RC2 128/128</string>
-      <string id="RC2_128_Help">Enables or disables the use of RC2 128/128.  This is a weak cipher and shoud not be used.</string>
+      <string id="RC2_128_Help">Enabling or disabling this policy will respectively enable or disable support for RC2 128/128. This is a weak cipher and shoud not be enabled.</string>
       <!-- RC4 40/128 -->
       <string id="RC4_40">RC4 40/128</string>
-      <string id="RC4_40_Help">Enables or disables the use of RC4 40/128.  This is a weak cipher and shoud not be used.
+      <string id="RC4_40_Help">Enabling or disabling this policy will respectively enable or disable support for RC4 40/128. This is a weak cipher and shoud not be enabled.
 
 Changing this setting will have an effect on whether the following ciphers can be selected for use:
 
@@ -263,7 +404,7 @@ TLS_RSA_EXPORT_WITH_RC4_40_MD5
       </string>
       <!-- RC4 56/128 -->
       <string id="RC4_56">RC4 56/128</string>
-      <string id="RC4_56_Help">Enables or disables the use of RC4 56/128.  This is a weak cipher and shoud not be used.
+      <string id="RC4_56_Help">Enabling or disabling this policy will respectively enable or disable support for RC4 56/128. This is a weak cipher and shoud not be enabled.
 
 Changing this setting will have an effect on whether the following ciphers can be selected for use:
 
@@ -271,10 +412,10 @@ TLS_RSA_EXPORT1024_WITH_RC4_56_SHA
       </string>
       <!-- RC4 64/128 -->
       <string id="RC4_64">RC4 64/128</string>
-      <string id="RC4_64_Help">Enables or disables the use of RC4 64/128.  This is a weak cipher and shoud not be used.</string>
+      <string id="RC4_64_Help">Enabling or disabling this policy will respectively enable or disable support for RC4 64/128. This is a weak cipher and shoud not be enabled.</string>
       <!-- RC4 128/128 -->
       <string id="RC4_128">RC4 128/128</string>
-      <string id="RC4_128_Help">Enables or disables the use of RC4 128/128.  This is a weak cipher and shoud not be used.
+      <string id="RC4_128_Help">Enabling or disabling this policy will respectively enable or disable support for RC4 128/128. This is a weak cipher and shoud not be enabled.
 
 Changing this setting will have an effect on whether the following ciphers can be selected for use:
 
@@ -286,7 +427,7 @@ TLS_RSA_WITH_RC4_128_SHA
       <!-- STRONG CIPHERS -->
       <!-- Triple DES 168 -->
       <string id="3DES">Triple DES 168</string>
-      <string id="3DES_Help">Enables or disables the use of Triple-DES 128.
+      <string id="3DES_Help">Enabling or disabling this policy will respectively enable or disable support for Triple-DES 168. This is a weak cipher and shoud not be enabled.
 
 Changing this setting will have an effect on whether the following ciphers can be selected for use:
 
@@ -296,7 +437,9 @@ TLS_RSA_WITH_3DES_EDE_CBC_SHA
       </string>
       <!-- AES 128/128 -->
       <string id="AES128">AES 128/128</string>
-      <string id="AES128_Help">Enables or disables the use of AES 128/128.  Note that in order for Windows 2003 to support AES-128, hotfix KB948963 must be installed.
+      <string id="AES128_Help">Enabling or disabling this policy will respectively enable or disable support for AES 128/128. Note that in order for Windows 2003 to support AES-128, hotfix KB948963 must be installed.
+
+It is recommended to enable it.
 
 Changing this setting will have an effect on whether the following ciphers can be selected for use:
 
@@ -322,7 +465,9 @@ TLS_RSA_WITH_AES_128_CBC_SHA256
       </string>
       <!-- AES 256/256 -->
       <string id="AES256">AES 256/256</string>
-      <string id="AES256_Help">Enables or disables the use of AES 256/256.  Note that in order for Windows 2003 to support AES-256, hotfix KB948963 must be installed.
+      <string id="AES256_Help">Enabling or disabling this policy will respectively enable or disable support for AES 256/256.  Note that in order for Windows 2003 to support AES-256, hotfix KB948963 must be installed.
+
+It is recommended to enable it.
 
 Changing this setting will have an effect on whether the following ciphers can be selected for use:
 
@@ -347,7 +492,7 @@ TLS_RSA_WITH_AES_256_CBC_SHA256
       <!-- HASHING ALGORITHMS -->
       <!-- MD5 -->
       <string id="MD5">MD5</string>
-      <string id="MD5_Help">Enables or disables the use of the MD5 hashing algorithm.
+      <string id="MD5_Help">Enabling or disabling this policy will respectively enable or disable support for the MD5 hashing algorithm. This is a weak hash algorithm, and it shoud not be enabled.
 
 Changing this setting will have an effect on whether the following ciphers can be selected for use:
 
@@ -361,7 +506,7 @@ TLS_RSA_WITH_RC4_128_MD5
       </string>
       <!-- SHA -->
       <string id="SHA">SHA</string>
-      <string id="SHA_Help">Enables or disables the use of the SHA hashing algorithm.
+      <string id="SHA_Help">Enabling or disabling this policy will respectively enable or disable support for the SHA hashing algorithm. This is a weak hash algorithm, and it shoud not be enabled.
 
 Changing this setting will have an effect on whether the following ciphers can be selected for use:
 
@@ -393,7 +538,9 @@ TLS_RSA_WITH_RC4_128_SHA
       </string>
       <!-- SHA-256 -->
       <string id="SHA256">SHA-256</string>
-      <string id="SHA256_Help">Enables or disables the use of the SHA-256 hashing algorithm.
+      <string id="SHA256_Help">Enabling or disabling this policy will respectively enable or disable support for the SHA-256 hashing algorithm.
+
+It is recommended to enable it.
 
 Changing this setting will have an effect on whether the following ciphers can be selected for use:
 
@@ -414,7 +561,9 @@ TLS_RSA_WITH_NULL_SHA256
       </string>
       <!-- SHA-384 -->
       <string id="SHA384">SHA-384</string>
-      <string id="SHA384_Help">Enables or disables the use of the SHA-384 hashing algorithm.
+      <string id="SHA384_Help">Enabling or disabling this policy will respectively enable or disable support for the SHA-384 hashing algorithm.
+
+It is recommended to enable it.
 
 Changing this setting will have an effect on whether the following ciphers can be selected for use:
 
@@ -428,11 +577,15 @@ TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521
       </string>
       <!-- SHA-512 -->
       <string id="SHA512">SHA-512</string>
-      <string id="SHA512_Help">Enables or disables the use of the SHA-512 hashing algorithm.</string>
+      <string id="SHA512_Help">Enabling or disabling this policy will respectively enable or disable support for the SHA-512 hashing algorithm.
+      
+It is recommended to enable it.</string>
       <!-- KEY EXCHANGE ALGORITHMS -->
       <!-- Diffie-Hellman -->
       <string id="DH">Diffie-Hellman</string>
-      <string id="DH_Help">Enables or disables the use of the Diffie-Hellman key exchange algorithm.
+      <string id="DH_Help">Enabling or disabling this policy will respectively enable or disable support for the Diffie-Hellman key exchange algorithm.
+
+It is recommended to enable it.
 
 Changing this setting will have an effect on whether the following ciphers can be selected for use:
 
@@ -445,12 +598,12 @@ TLS_DHE_DSS_WITH_AES_256_CBC_SHA256
 TLS_DHE_DSS_WITH_DES_CBC_SHA
       </string>
       <string id="DHServer">Diffie-Hellman Server-side Key Size</string>
-      <string id="DHServer_Help">Sets the minimum Diffie-Hellman ephemeral key size for TLS servers.
+      <string id="DHServer_Help">Sets the minimum Diffie-Hellman ephemeral key size for TLS server.
 
 Please see Microsoft Security Advisory 3174644 for more information on DH modulus length. 2048 is the currently recommended minimum value.
       </string>
       <string id="DHClient">Diffie-Hellman Client-side Key Size</string>
-      <string id="DHClient_Help">Sets the minimum Diffie-Hellman ephemeral key size for TLS Client.
+      <string id="DHClient_Help">Sets the minimum Diffie-Hellman ephemeral key size for TLS client.
 
 Please see Microsoft Security Advisory 3174644 for more information on DH modulus length. 2048 is the currently recommended minimum value.
       </string>
@@ -459,9 +612,11 @@ Please see Microsoft Security Advisory 3174644 for more information on DH modulu
       <string id="DH_Value4096">4096</string>
       <!-- PKCS -->
       <string id="PKCS">PKCS</string>
-      <string id="PKCS_Help">Enables or disables the use of the PKCS key exchange algorithm.</string>
+      <string id="PKCS_Help">Enabling or disabling this policy will respectively enable or disable support for the PKCS key exchange algorithm.
+
+It is recommended to enable it.</string>
       <string id="PKCSClient">PKCS Client-side Key Size</string>
-      <string id="PKCSClient_Help">Sets the minimum PKCS ephemeral key size for TLS Client.
+      <string id="PKCSClient_Help">Sets the minimum PKCS ephemeral key size for TLS client.
 
 Please see Microsoft Security Advisory 3174644 or https://support.microsoft.com/en-us/help/3174644/microsoft-security-advisory-updated-support-for-diffie-hellman-key-exc for more information on PKCS modulus length. 2048 is the currently recommended minimum value.
       </string>
@@ -470,7 +625,9 @@ Please see Microsoft Security Advisory 3174644 or https://support.microsoft.com/
       <string id="PKCS_Value4096">4096</string>
       <!-- ECDH -->
       <string id="ECDH">ECDH</string>
-      <string id="ECDH_Help">Enables or disables the use of the Elliptic-Curve Diffie-Hellman key exchange algorithm.
+      <string id="ECDH_Help">Enabling or disabling this policy will respectively enable or disable support for the Elliptic-Curve Diffie-Hellman key exchange algorithm.
+
+It is recommended to enable it.
 
 Changing this setting will have an effect on whether the following ciphers can be selected for use:
 
@@ -504,37 +661,37 @@ TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384
 TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521
       </string>
       <!-- .NET Framework 4 -->
-      <string id="dotnet4">.NET Framework 4 Strong Crypto</string>
-      <string id="dotnet4_Help">Enables or disables the use of TLS 1.1 and TLS 1.2 in .NET Framework 4.
+      <string id="dotnet4">.NET Framework 4: enable strong cryptographic support</string>
+      <string id="dotnet4_Help">Enabling or disabling this policy will respectively enable or disable support for TLS 1.1 and TLS 1.2 in .NET Framework 4.
 
 If this setting is left unconfigured, TLS 1.1 and TLS 1.2 will be enabled by default for applications targeting .NET Framework 4.6 or higher and disabled otherwise.
       </string>
       <!-- .NET Framework 2 -->
-      <string id="dotnet2">.NET Framework 2 Strong Crypto</string>
-      <string id="dotnet2_Help">Enables or disables the use of TLS 1.1 and TLS 1.2 in .NET Framework 2.
+      <string id="dotnet2">.NET Framework 2: enable strong cryptographic support</string>
+      <string id="dotnet2_Help">Enabling or disabling this policy will respectively enable or disable support for TLS 1.1 and TLS 1.2 in .NET Framework 2.
 
 If this setting is left unconfigured, TLS 1.1 and TLS 1.2 will be disabled by default.
       </string>
+      <string id="dotnet_strongname">Disable the strong-name bypass feature</string>
+      <string id="dotnet_strongname_Help">Starting with the .NET Framework version 3.5 Service Pack 1 (SP1), strong-name signatures are not validated when an assembly is loaded into a full-trust xref:System.AppDomain object, such as the default xref:System.AppDomain for the MyComputer zone. This is referred to as the strong-name bypass feature. In a full-trust environment, demands for xref:System.Security.Permissions.StrongNameIdentityPermission always succeed for signed, full-trust assemblies regardless of their signature. 
+      
+The only restriction is that the assembly must be fully trusted because its zone is fully trusted. Because the strong name is not a determining factor under these conditions, there is no reason for it to be validated. Bypassing the validation of strong-name signatures provides significant performance improvements.
+      </string>
     </stringTable>
     <presentationTable>
-      <presentation id="DiffieHelmannClientMinKeyBitLength_Presentation">
-        <dropdownList refId="DiffieHelmannClientMinKeyBitLength_DropdownList"
+      <presentation id="MaxSMB2Dialect">
+        <dropdownList refId="MaxSMB2Dialect_Enum"
                       noSort="true"
-                      defaultItem="2">Select an option:</dropdownList>
+                      defaultItem="2">Select a version:</dropdownList>
       </presentation>
-      <presentation id="DiffieHelmannServerMinKeyBitLength_Presentation">
-        <dropdownList refId="DiffieHelmannServerMinKeyBitLength_DropdownList"
+      <presentation id="MinSMB2Dialect">
+        <dropdownList refId="MinSMB2Dialect_Enum"
                       noSort="true"
-                      defaultItem="2">Select an option:</dropdownList>
-      </presentation>
-      <presentation id="RSAClientMinKeyBitLength_Presentation">
-        <dropdownList refId="RSAClientMinKeyBitLength_DropdownList"
-                      noSort="true"
-                      defaultItem="2">Select an option:</dropdownList>
+                      defaultItem="2">Select a version:</dropdownList>
       </presentation>
       <presentation id="MSCHAPv2_Iteration">
         <decimalTextBox refId="MSCHAPv2_Iteration_count"
-                        defaultValue="1024">Number of PBKDF2 rounds:</decimalTextBox>
+                        defaultValue="1954">Number of PBKDF2 rounds:</decimalTextBox>
       </presentation>
       <presentation id="DisableIPSourceRouting">
         <dropdownList refId="DisableIPSourceRouting"
@@ -555,17 +712,22 @@ If this setting is left unconfigured, TLS 1.1 and TLS 1.2 will be disabled by de
       <presentation id="DHServer">
         <dropdownList refId="DHServer_MinLength"
                       noSort="true"
-                      defaultItem="2">Server side DH modulus minimum length</dropdownList>
+                      defaultItem="2">Server side DH modulus minimum length:</dropdownList>
       </presentation>
       <presentation id="DHClient">
         <dropdownList refId="DHClient_MinLength"
                       noSort="true"
-                      defaultItem="2">Client side DH modulus minimum length</dropdownList>
+                      defaultItem="2">Client side DH modulus minimum length:</dropdownList>
       </presentation>
       <presentation id="PKCSClient">
         <dropdownList refId="PKCSClient_MinLength"
                       noSort="true"
-                      defaultItem="2">Client side PKCS modulus minimum length</dropdownList>
+                      defaultItem="2">Client side PKCS modulus minimum length:</dropdownList>
+      </presentation>
+      <presentation id="TLS_Ciphersuites">
+        <dropdownList refId="TLS_Ciphersuites_Selection"
+                      noSort="true"
+                      defaultItem="1">Select a profile:</dropdownList>
       </presentation>
       <!-- PROTOCOLS -->
       <presentation id="MPUH">

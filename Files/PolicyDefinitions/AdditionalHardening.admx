@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--  
   Author: Florian Stosse <florian.stosse@safrangroup.com>
-  Version: 1.0.21
-  Date: 2022-08-12
-  -->
+  Version: 1.0.28
+  Date: 2023-01-28
+-->
 <policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0"
   xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
@@ -20,6 +20,9 @@
       <parentCategory ref="Cat_AddHard" />
     </category>
     <category name="System" displayName="$(string.System)">
+      <parentCategory ref="Cat_AddHard" />
+    </category>
+    <category name="DomainController" displayName="$(string.DomainControllers)">
       <parentCategory ref="Cat_AddHard" />
     </category>
     <!-- Subsubcategories -->
@@ -60,12 +63,23 @@
   <policies>
     <!-- Hardening section -->
     <!-- 
-███████ ██    ██ ███████ ████████ ███████ ███    ███         ███████ ███████  ██████ ████████ ██  ██████  ███    ██ 
-██       ██  ██  ██         ██    ██      ████  ████         ██      ██      ██         ██    ██ ██    ██ ████   ██ 
-███████   ████   ███████    ██    █████   ██ ████ ██         ███████ █████   ██         ██    ██ ██    ██ ██ ██  ██ 
-     ██    ██         ██    ██    ██      ██  ██  ██              ██ ██      ██         ██    ██ ██    ██ ██  ██ ██ 
-███████    ██    ███████    ██    ███████ ██      ██         ███████ ███████  ██████    ██    ██  ██████  ██   ████ 
-     -->
+
+
+      SYSTEM SETTINGS
+
+
+    -->
+    <!-- Prevent root CAs tampering from standard users-->
+    <policy name="ProtectedRoots" class="Machine" displayName="$(string.ProtectedRoots)" explainText="$(string.ProtectedRoots_Help)" key="SOFTWARE\Policies\Microsoft\SystemCertificates\Root\ProtectedRoots" valueName="Flags">
+      <parentCategory ref="System" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
     <!-- Disable co-installer applications-->
     <policy name="CoInstallers" class="Machine" displayName="$(string.CoInstallers)" explainText="$(string.CoInstallers_Help)" key="SOFTWARE\Microsoft\Windows\CurrentVersion\Device Installer" valueName="DisableCoInstallers">
       <parentCategory ref="System" />
@@ -95,12 +109,12 @@
       <enabledList defaultKey="Software\Microsoft\Cryptography\Wintrust\Config">
         <item valueName="EnableCertPaddingCheck">
           <value>
-            <decimal value="1" />
+            <string>1</string>
           </value>
         </item>
         <item key="Software\Wow6432Node\Microsoft\Cryptography\Wintrust\Config" valueName="EnableCertPaddingCheck">
           <value>
-            <decimal value="1" />
+            <string>1</string>
           </value>
         </item>
       </enabledList>
@@ -130,6 +144,16 @@
     </policy>
     <!-- Run LSA process as a PPL -->
     <policy name="LSA_RunAsPPL" class="Machine" displayName="$(string.LSA_RunAsPPL)" explainText="$(string.LSA_RunAsPPL_Explain)" key="SYSTEM\CurrentControlSet\Control\Lsa" valueName="RunAsPPL">
+      <parentCategory ref="System" />
+      <supportedOn ref="windows:SUPPORTED_Windows_6_3" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="LSA_SamDisableListenOnTCP" class="Machine" displayName="$(string.LSA_SamDisableListenOnTCP)" explainText="$(string.LSA_SamDisableListenOnTCP_Explain)" key="SYSTEM\CurrentControlSet\Control\Lsa" valueName="SamDisableListenOnTCP">
       <parentCategory ref="System" />
       <supportedOn ref="windows:SUPPORTED_Windows_6_3" />
       <enabledValue>
@@ -468,12 +492,45 @@
       </disabledValue>
     </policy>
     <!-- 
-███    ██ ███████ ████████ ██     ██  ██████  ██████  ██   ██         ███████ ███████  ██████ ████████ ██  ██████  ███    ██ 
-████   ██ ██         ██    ██     ██ ██    ██ ██   ██ ██  ██          ██      ██      ██         ██    ██ ██    ██ ████   ██ 
-██ ██  ██ █████      ██    ██  █  ██ ██    ██ ██████  █████           ███████ █████   ██         ██    ██ ██    ██ ██ ██  ██ 
-██  ██ ██ ██         ██    ██ ███ ██ ██    ██ ██   ██ ██  ██               ██ ██      ██         ██    ██ ██    ██ ██  ██ ██ 
-██   ████ ███████    ██     ███ ███   ██████  ██   ██ ██   ██         ███████ ███████  ██████    ██    ██  ██████  ██   ████ 
+
+
+      NETWORK SETTINGS
+
+
     -->
+    <policy name="TLS_Ciphersuites" class="Machine" displayName="$(string.TLS_Ciphersuites)" explainText="$(string.TLS_Ciphersuites_Help)" presentation="$(presentation.TLS_Ciphersuites)" key="SOFTWARE\Policies\Microsoft\Cryptography\Configuration\SSL\00010002">
+      <parentCategory ref="Schannel" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS6" />
+      <elements>
+        <enum id="TLS_Ciphersuites_Selection" valueName="Functions" required="true">
+          <item displayName="$(string.TLS_Ciphersuites0)">
+            <value>
+              <string>TLS_AES_256_GCM_SHA384,TLS_AES_128_GCM_SHA256,TLS_CHACHA20_POLY1305_SHA256,TLS_AES_128_CCM_SHA256</string>
+            </value>
+          </item>
+          <item displayName="$(string.TLS_Ciphersuites1)">
+            <value>
+              <string>TLS_AES_256_GCM_SHA384,TLS_AES_128_GCM_SHA256,TLS_CHACHA20_POLY1305_SHA256,TLS_AES_128_CCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_CCM,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256,TLS_DHE_RSA_WITH_AES_256_GCM_SHA384,TLS_DHE_RSA_WITH_AES_128_GCM_SHA256,TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256</string>
+            </value>
+          </item>
+          <item displayName="$(string.TLS_Ciphersuites2)">
+            <value>
+              <string>TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_CCM,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256,TLS_DHE_RSA_WITH_AES_256_GCM_SHA384,TLS_DHE_RSA_WITH_AES_128_GCM_SHA256,TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256</string>
+            </value>
+          </item>
+          <item displayName="$(string.TLS_Ciphersuites3)">
+            <value>
+              <string>TLS_AES_256_GCM_SHA384,TLS_AES_128_GCM_SHA256,TLS_CHACHA20_POLY1305_SHA256,TLS_AES_128_CCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_CCM,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256,TLS_DHE_RSA_WITH_AES_256_GCM_SHA384,TLS_DHE_RSA_WITH_AES_128_GCM_SHA256,TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</string>
+            </value>
+          </item>
+          <item displayName="$(string.TLS_Ciphersuites4)">
+            <value>
+              <string>TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_CCM,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256,TLS_DHE_RSA_WITH_AES_256_GCM_SHA384,TLS_DHE_RSA_WITH_AES_128_GCM_SHA256,TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</string>
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
     <policy name="Pol_MSS_DisableIPSourceRouting" class="Machine" displayName="$(string.DisableIPSourceRouting)" explainText="$(string.DisableIPSourceRouting_Help)" presentation="$(presentation.DisableIPSourceRouting)" key="System\CurrentControlSet\Services\Tcpip\Parameters">
       <parentCategory ref="Network" />
       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
@@ -546,6 +603,82 @@
           </value>
         </item>
       </enabledList>
+    </policy>
+    <policy name="MinSMB2Dialect" class="Machine" displayName="$(string.MinSMB2Dialect)" explainText="$(string.MinSMB2Dialect_Explain)" presentation="$(presentation.MinSMB2Dialect)" key="SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters">
+      <parentCategory ref="SMB" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS3" />
+      <elements>
+        <enum id="MinSMB2Dialect_Enum" valueName="MinSMB2Dialect">
+          <item displayName="$(string.MinSMB2Dialect_202)">
+            <value>
+              <decimal value="514" />
+            </value>
+          </item>
+          <item displayName="$(string.MinSMB2Dialect_210)">
+            <value>
+              <decimal value="528" />
+            </value>
+          </item>
+          <item displayName="$(string.MinSMB2Dialect_300)">
+            <value>
+              <decimal value="768" />
+            </value>
+          </item>
+          <item displayName="$(string.MinSMB2Dialect_302)">
+            <value>
+              <decimal value="770" />
+            </value>
+          </item>
+          <item displayName="$(string.MinSMB2Dialect_311)">
+            <value>
+              <decimal value="785" />
+            </value>
+          </item>
+          <item displayName="$(string.MinSMB2Dialect_Remove)">
+            <value>
+              <delete />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="MaxSMB2Dialect" class="Machine" displayName="$(string.MaxSMB2Dialect)" explainText="$(string.MaxSMB2Dialect_Explain)" presentation="$(presentation.MaxSMB2Dialect)" key="SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters">
+      <parentCategory ref="SMB" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS3" />
+      <elements>
+        <enum id="MaxSMB2Dialect_Enum" valueName="MaxSMB2Dialect">
+          <item displayName="$(string.MaxSMB2Dialect_202)">
+            <value>
+              <decimal value="514" />
+            </value>
+          </item>
+          <item displayName="$(string.MaxSMB2Dialect_210)">
+            <value>
+              <decimal value="528" />
+            </value>
+          </item>
+          <item displayName="$(string.MaxSMB2Dialect_300)">
+            <value>
+              <decimal value="768" />
+            </value>
+          </item>
+          <item displayName="$(string.MaxSMB2Dialect_302)">
+            <value>
+              <decimal value="770" />
+            </value>
+          </item>
+          <item displayName="$(string.MaxSMB2Dialect_311)">
+            <value>
+              <decimal value="785" />
+            </value>
+          </item>
+          <item displayName="$(string.MaxSMB2Dialect_Remove)">
+            <value>
+              <delete />
+            </value>
+          </item>
+        </enum>
+      </elements>
     </policy>
     <!-- Schannel subsection -->
     <policy name="Schannel_Logging" class="Machine" displayName="$(string.SchannelLogging)" explainText="$(string.SchannelLogging_Explain)" key="SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL" valueName="EventLogging">
@@ -1447,6 +1580,34 @@
       </disabledValue>
     </policy>
     <!-- .NET Framework subsection -->
+    <policy name="dotnet_strongname" class="Machine" displayName="$(string.dotnet_strongname)" explainText="$(string.dotnet_strongname_Help)" key="SOFTWARE\Microsoft\.NETFramework">
+      <parentCategory ref="NETFrame" />
+      <supportedOn ref="windows:SUPPORTED_Windows7" />
+      <enabledList>
+        <item key="SOFTWARE\Microsoft\.NETFramework" valueName="AllowStrongNameBypass">
+          <value>
+            <decimal value="0" />
+          </value>
+        </item>
+        <item key="SOFTWARE\Wow6432Node\Microsoft\.NETFramework" valueName="AllowStrongNameBypass">
+          <value>
+            <decimal value="0" />
+          </value>
+        </item>
+      </enabledList>
+      <disabledList>
+        <item key="SOFTWARE\Microsoft\.NETFramework" valueName="AllowStrongNameBypass">
+          <value>
+            <decimal value="1" />
+          </value>
+        </item>
+        <item key="SOFTWARE\Wow6432Node\Microsoft\.NETFramework" valueName="AllowStrongNameBypass">
+          <value>
+            <decimal value="1" />
+          </value>
+        </item>
+      </disabledList>
+    </policy>
     <!-- .NET Framework 4 -->
     <policy name="dotnet4" class="Machine" displayName="$(string.dotnet4)" explainText="$(string.dotnet4_Help)" key="SOFTWARE\Microsoft\.NETFramework\v4.0.30319">
       <parentCategory ref="NETFrame" />
@@ -1545,5 +1706,12 @@
         </item>
       </disabledList>
     </policy>
+    <!-- 
+
+
+      DOMAIN CONTROLLERS SETTINGS
+
+
+    -->
   </policies>
 </policyDefinitions>
