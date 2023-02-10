@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>indtast det viste navn her</displayName>
+  <description>indtast beskrivelsen her</description>
+  <resources>
+    <stringTable>
+      <string id="DisableSensors">Slå sensorer fra</string>
+      <string id="DisableSensors_Explain">
+        
+        Denne politikindstilling slår sensorfunktionen fra for denne computer.
+
+        Hvis du aktiverer denne politikindstilling, er sensorfunktionen slået fra, og alle programmer på computeren forhindres i at bruge sensorfunktionen.
+
+        Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, kan alle programmer på denne computer bruge sensorfunktionen.
+      
+      </string>
+      <string id="DisableLocation">Slå placering fra</string>
+      <string id="DisableLocation_Explain">
+        
+        Denne politikindstilling slår placeringsfunktionen fra for denne computer.
+
+        Hvis du aktiverer denne politikindstilling, er placeringsfunktionen slået fra, og alle programmer på computeren forhindres i at bruge placeringsoplysningerne fra placeringsfunktionen.
+
+        Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, kan alle programmer på computeren bruge placeringsoplysningerne fra placeringsfunktionen.
+      
+      </string>
+      <string id="DisableLocationScripting">Slå placeringsscripting fra</string>
+      <string id="DisableLocationScripting_Explain">
+        
+        Denne politikindstilling slår scripting for placeringsfunktionen fra.
+
+        Hvis du aktiverer denne politikindstilling, kan scripts til placeringsfunktionen ikke køres.
+
+        Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, kan alle placeringsscripts køres.
+      
+      </string>
+      <string id="LocationAndSensors">Placering og sensorer</string>
+      <string id="HumanPresence">Menneskelig tilstedeværelse</string>
+      <string id="ForceInstantWake_DisplayName">Gennemtving hurtigsøgning</string>
+      <string id="ForceInstantWake_ExplainText">Afgør, om Wake On Arrival tvinges til/fra af MDM-politikken. Brugeren kan ikke ændre denne indstilling, og indstillingen i brugergrænsefladen bliver nedtonet.</string>
+      <string id="ForceInstantWake_0">Brugervalg sættes som standard</string>
+      <string id="ForceInstantWake_1">Tvunget til</string>
+      <string id="ForceInstantWake_2">Nødt til at gå af</string>
+      <string id="ForceInstantLock_DisplayName">Gennemtving Hurtiglås</string>
+      <string id="ForceInstantLock_ExplainText">Afgør, om Lock on Leave tvinges til/fra af MDM-politikken. Brugeren kan ikke ændre denne indstilling, og indstillingen i brugergrænsefladen bliver nedtonet.</string>
+      <string id="ForceInstantLock_0">Brugervalg sættes som standard</string>
+      <string id="ForceInstantLock_1">Tvunget til</string>
+      <string id="ForceInstantLock_2">Nødt til at gå af</string>
+      <string id="ForceLockTimeout_DisplayName">Timeout for lås</string>
+      <string id="ForceLockTimeout_ExplainText">Bestemmer timeouten for Lock on Leave tvunget af MDM-politikken. Brugeren kan ikke ændre denne indstilling, og indstillingen i brugergrænsefladen bliver nedtonet.</string>
+      <string id="ForceLockTimeout_0">Brugervalg sættes som standard</string>
+      <string id="ForceLockTimeout_1">10 sekunder</string>
+      <string id="ForceLockTimeout_2">30 sekunder</string>
+      <string id="ForceLockTimeout_3">2 minutter</string>
+      <string id="ForceInstantDim_DisplayName">Gennemtving øjeblikkelig nedtoning</string>
+      <string id="ForceInstantDim_ExplainText">Afgør, om Opmærksomhedsbaseret nedtoning af visning tvinges til/fra af MDM-politikken. Brugeren kan ikke ændre denne indstilling, og indstillingen i brugergrænsefladen bliver nedtonet.</string>
+      <string id="ForceInstantDim_0">Brugervalg sættes som standard</string>
+      <string id="ForceInstantDim_1">Tvunget til</string>
+      <string id="ForceInstantDim_2">Nødt til at gå af</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="ForceInstantWake">
+        <dropdownList refId="ForceInstantWakeDropdown" noSort="true" defaultItem="0">Vælg en af følgende handlinger</dropdownList>
+      </presentation>
+      <presentation id="ForceInstantLock">
+        <dropdownList refId="ForceInstantLockDropdown" noSort="true" defaultItem="0">Vælg en af følgende handlinger</dropdownList>
+      </presentation>
+      <presentation id="ForceLockTimeout">
+        <dropdownList refId="ForceLockTimeoutDropdown" noSort="true" defaultItem="1">Vælg en af følgende timeouts</dropdownList>
+      </presentation>
+      <presentation id="ForceInstantDim">
+        <dropdownList refId="ForceInstantDimDropDown" noSort="true" defaultItem="0">Vælg en af følgende handlinger</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

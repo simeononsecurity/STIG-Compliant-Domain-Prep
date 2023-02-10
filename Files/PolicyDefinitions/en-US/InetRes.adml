@@ -3903,7 +3903,7 @@ If you disable or do not configure this policy setting, users can pin sites.</st
 If you turn this setting on, users can see and use the Enterprise Mode option from the Tools menu. If you turn this setting on, but don't specify a report location, Enterprise Mode will still be available to your users, but you won't get any reports.
 
 If you disable or don't configure this policy setting, the menu option won't appear and users won't be able to run websites in Enterprise Mode.</string>
-      <string id="RestrictInternetExplorer">Send all sites not included in the Enterprise Mode Site List to Microsoft Edge.</string>
+      <string id="RestrictInternetExplorer">Send all sites not included in the Enterprise Mode Site List to Microsoft Edge</string>
       <string id="IE_ExplainRestrictInternetExplorer">This setting lets you decide whether to open all sites not included in the Enterprise Mode Site List in Microsoft Edge. If you use this setting, you must also turn on the Administrative Templates\Windows Components\Internet Explorer\Use the Enterprise Mode IE website list policy setting and you must include at least one site in the Enterprise Mode Site List.
 
 Enabling this setting automatically opens all sites not included in the Enterprise Mode Site List in Microsoft Edge.
@@ -3966,12 +3966,30 @@ If you enable this policy, "Save Target As" will show up in the Internet Explore
 If you disable or do not configure this policy setting, "Save Target As" will not show up in the Internet Explorer mode context menu.
 
 For more information, see https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="EnableGlobalWindowListInIEMode">Enable global window list in Internet Explorer mode</string>
+      <string id="IE_ExplainEnableGlobalWindowListInIEMode">This setting allows Internet Explorer mode to use the global window list that enables sharing state with other applications.
+The setting will take effect only when Internet Explorer 11 is disabled as a standalone browser.
+
+If you enable this policy, Internet Explorer mode will use the global window list.
+
+If you disable or don’t configure this policy, Internet Explorer mode will continue to maintain a separate window list.
+
+To learn more about Internet Explorer mode, see https://go.microsoft.com/fwlink/?linkid=2102921
+To learn more about disabling Internet Explorer 11 as a standalone browser, see https://go.microsoft.com/fwlink/?linkid=2168340</string>
       <string id="EnableExtendedIEModeHotkeys">Enable extended hot keys in Internet Explorer mode</string>
       <string id="IE_ExplainEnableExtendedIEModeHotkeys">This policy setting lets admins enable extended Microsoft Edge Internet Explorer mode hotkeys, such as "Ctrl+S" to have "Save as" functionality.
 
 If you enable this policy, extended hotkey functionality is enabled in Internet Explorer mode and work the same as Internet Explorer.
 
 If you disable, or don't configure this policy, extended hotkeys will not work in Internet Explorer mode.
+
+For more information, see https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="ResetZoomForDialogInIEMode">Reset zoom to default for HTML dialogs in Internet Explorer mode</string>
+      <string id="IE_ExplainResetZoomForDialogInIEMode">This policy setting lets admins reset zoom to default for HTML dialogs in Internet Explorer mode.
+
+If you enable this policy, the zoom of an HTML dialog in Internet Explorer mode will not get propagated from its parent page.
+
+If you disable, or don't configure this policy, the zoom of an HTML dialog in Internet Explorer mode will be set based on the zoom of it's parent page.
 
 For more information, see https://go.microsoft.com/fwlink/?linkid=2102115</string>
       <string id="DisableInternetExplorerApp">Disable Internet Explorer 11 as a standalone browser</string>
@@ -3987,6 +4005,14 @@ If you disable, or don’t configure this policy, all sites are opened using the
       <string id="NotifyDisableIEOptions_Never">Never</string>
       <string id="NotifyDisableIEOptions_Always">Always</string>
       <string id="NotifyDisableIEOptions_OncePerUser">Once per user</string>
+      <string id="JScriptReplacement">Replace JScript by loading JScript9Legacy in place of JScript via MSHTML/WebOC.</string>
+      <string id="IE_ExplainJScriptReplacement">This policy setting specifies whether JScript or JScript9Legacy is loaded for MSHTML/WebOC/MSXML/Cscript based invocations.
+      
+If you enable this policy setting, JScript9Legacy will be loaded in situations where JScript is instantiated.
+
+If you disable this policy, then JScript will be utilized.
+
+If this policy is left unconfigured, then MSHTML will use JScript9Legacy and MSXML/Cscript will use JScript.</string>
       <string id="VerMgmtDisable">Turn off blocking of outdated ActiveX controls for Internet Explorer</string>
       <string id="IE_ExplainVerMgmtDisable">This policy setting determines whether Internet Explorer blocks specific outdated ActiveX controls. Outdated ActiveX controls are never blocked in the Intranet Zone.
 
@@ -4188,6 +4214,12 @@ If you enable this setting, IE stops downloading updated versions of VersionList
 If you disable or don't configure this setting, IE continues to download updated versions of VersionList.XML.
 
 For more information, see "Out-of-date ActiveX control blocking" in the Internet Explorer TechNet library.</string>
+      <string id="DisableHTMLApplication">Disable HTML Application</string>
+      <string id="DisableHTMLApplication_Explain">This policy setting specifies if running the HTML Application (HTA file) is blocked or allowed.
+
+If you enable this policy setting, running the HTML Application (HTA file) will be blocked.
+
+If you disable or do not configure this policy setting, running the HTML Application (HTA file) is allowed.</string>
     </stringTable>
     <presentationTable>
       <presentation id="VerMgmtDomainAllowlist_1">

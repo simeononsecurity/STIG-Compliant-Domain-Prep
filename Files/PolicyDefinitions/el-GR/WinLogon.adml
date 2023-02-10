@@ -101,6 +101,13 @@
       <string id="ConfigAutomaticRestartSignOn_EnableIfSecure">Ενεργοποίηση αν το BitLocker είναι ενεργοποιημένο και δεν έχει ανασταλεί</string>
       <string id="ConfigAutomaticRestartSignOn_EnableAlways">Πάντα ενεργοποίηση</string>
 
+      <string id="EnableMPRNotifications">Ενεργοποίηση ειδοποιήσεων MPR για το σύστημα</string>
+      <string id="EnableMPRNotifications_Help">Αυτή η πολιτική ελέγχει τη ρύθμιση παραμέτρων με την οποία το winlogon στέλνει ειδοποιήσεις MPR στο σύστημα.
+
+Εάν ενεργοποιήσετε αυτήν τη ρύθμιση ή δεν ρυθμίσετε τις παραμέτρους της, το winlogon στέλνει ειδοποιήσεις MPR εάν έχει ρυθμιστεί μια διαχείριση διαπιστευτηρίων.
+
+Εάν απενεργοποιήσετε αυτήν τη ρύθμιση, το winlogon δεν στέλνει ειδοποιήσεις MPR.</string>
+
     </stringTable>
     <presentationTable>
       <presentation id="LogonHoursPolicyDescription">

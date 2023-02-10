@@ -12,7 +12,7 @@ If you enable this setting, you can select specific items not to display on the 
 
 To hide a Control Panel item, enable this policy setting and click Show to access the list of disallowed Control Panel items. In the Show Contents dialog box in the Value column, enter the Control Panel item's canonical name. For example, enter Microsoft.Mouse, Microsoft.System, or Microsoft.Personalization.
 
-Note: For Windows Vista, Windows Server 2008, and earlier versions of Windows, the module name should be entered, for example timedate.cpl or inetcpl.cpl. If a Control Panel item does not have a CPL file, or the CPL file contains multiple applets, then its module name and string resource identification number should be entered, for example @systemcpl.dll,-1 for System, or @themecpl.dll,-1 for Personalization. A complete list of canonical and module names can be found in MSDN by searching "Control Panel items". 
+Note: For Windows Vista, Windows Server 2008, and earlier versions of Windows, the module name should be entered, for example timedate.cpl or inetcpl.cpl. If a Control Panel item does not have a CPL file, or the CPL file contains multiple applets, then its module name and string resource identification number should be entered, for example @systemcpl.dll,-1 for System, or @themecpl.dll,-1 for Personalization. A complete list of canonical and module names can be found in MSDN by searching "Control Panel items".
 
 If both the "Hide specified Control Panel items" setting and the "Show only specified Control Panel items" setting are enabled, the "Show only specified Control Panel items" setting is ignored.
 
@@ -20,7 +20,7 @@ Note: The Display Control Panel item cannot be hidden in the Desktop context men
 
 Note: To hide pages in the System Settings app, use the "Settings Page Visibility" setting under Computer Configuration.</string>
       <string id="ForceClassicControlPanel">Always open All Control Panel Items when opening Control Panel</string>
-      <string id="ForceClassicControlPanel_Help">This policy setting controls the default Control Panel view, whether by category or icons. 
+      <string id="ForceClassicControlPanel_Help">This policy setting controls the default Control Panel view, whether by category or icons.
 
 If this policy setting is enabled, the Control Panel opens to the icon view.
 
@@ -76,6 +76,12 @@ The availability of per-user support is documented here: https://go.microsoft.co
       <string id="AllowOnlineTips_Help">Enables or disables the retrieval of online tips and help for the Settings app.
 
 If disabled, Settings will not contact Microsoft content services to retrieve tips and help content.</string>
+      <string id="HideUnsupportedHardwareNotifications">Hide messages when Windows system requirements are not met</string>
+      <string id="HideUnsupportedHardwareNotificationsExplain">This policy controls messages which are shown when Windows is running on a device that does not meet the minimum system requirements for this OS version.
+
+If you enable this policy setting, these messages will never appear on desktop or in the Settings app.
+
+If you disable or do not configure this policy setting, these messages will appear on desktop and in the Settings app when Windows is running on a device that does not meet the minimum system requirements for this OS version.</string>
     </stringTable>
     <presentationTable>
       <presentation id="DisallowCpls">

@@ -6,6 +6,8 @@
   <resources>
     <stringTable>
       <string id="NotificationsCategory">Notificaciones</string>
+      <string id="WnsEndpoint">Habilita la directiva de grupo para el FQDN de WNS</string>
+      <string id="WnsEndpointExplain">Esta directiva establece un FQDN de WNS especial para entornos específicos.</string>
       <string id="NoTileNotification">Desactivar las notificaciones de mosaico</string>
       <string id="NoTileNotificationExplain">
           
@@ -124,6 +126,11 @@
       </presentation>
       <presentation id="QuietHoursEndTimePicker">
         <decimalTextBox refId="QuietHoursDailyEndMinuteControl" defaultValue="360">Minutos tras la medianoche:</decimalTextBox>
+      </presentation>
+      <presentation id="WnsEndpoint">
+        <textBox refId="WnsEndpoint_FQDN">
+          <label>FQDN de WNS</label>
+        </textBox>
       </presentation>
     </presentationTable>
   </resources>

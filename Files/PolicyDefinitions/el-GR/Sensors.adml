@@ -36,6 +36,42 @@
       
       </string>
       <string id="LocationAndSensors">Θέση και αισθητήρες</string>
+      <string id="HumanPresence">Ανθρώπινη παρουσία</string>
+      <string id="ForceInstantWake_DisplayName">Επιβολή Στιγμιαίας αφύπνισης</string>
+      <string id="ForceInstantWake_ExplainText">Καθορίζει εάν η Αφύπνιση κατά την Άφιξη έχει ενεργοποιηθεί/απενεργοποιηθεί από την πολιτική MDM. Ο χρήστης δεν θα μπορεί να αλλάξει αυτήν τη ρύθμιση και η εναλλαγή στο περιβάλλον εργασίας θα απενεργοποιηθεί.</string>
+      <string id="ForceInstantWake_0">Προεπιλογές για την επιλογή χρήστη</string>
+      <string id="ForceInstantWake_1">Επιβολή ενεργοποίησης</string>
+      <string id="ForceInstantWake_2">Επιβολή απενεργοποίησης</string>
+      <string id="ForceInstantLock_DisplayName">Επιβολή Άμεσου κλειδώματος</string>
+      <string id="ForceInstantLock_ExplainText">Καθορίζει εάν το Κλείδωμα κατά την αποχώρηση έχει ενεργοποιηθεί/απενεργοποιηθεί υποχρεωτικά από την πολιτική MDM. Ο χρήστης δεν θα μπορεί να αλλάξει αυτήν τη ρύθμιση και η δυνατότητα εναλλαγής στο περιβάλλον εργασίας θα απενεργοποιηθεί.</string>
+      <string id="ForceInstantLock_0">Προεπιλογές για την επιλογή χρήστη</string>
+      <string id="ForceInstantLock_1">Επιβολή ενεργοποίησης</string>
+      <string id="ForceInstantLock_2">Επιβολή απενεργοποίησης</string>
+      <string id="ForceLockTimeout_DisplayName">Χρονικό όριο κλειδώματος</string>
+      <string id="ForceLockTimeout_ExplainText">Καθορίζει το χρονικό όριο για το Κλείδωμα κατά την αποχώρηση που επιβάλλεται από την πολιτική MDM. Ο χρήστης δεν θα μπορεί να αλλάξει αυτήν τη ρύθμιση και η δυνατότητα εναλλαγής στο περιβάλλον εργασίας θα απενεργοποιηθεί.</string>
+      <string id="ForceLockTimeout_0">Προεπιλογές για την επιλογή χρήστη</string>
+      <string id="ForceLockTimeout_1">10 δευτερόλεπτα</string>
+      <string id="ForceLockTimeout_2">30 δευτερόλεπτα</string>
+      <string id="ForceLockTimeout_3">2 λεπτά</string>
+      <string id="ForceInstantDim_DisplayName">Επιβολή άμεσης μείωσης</string>
+      <string id="ForceInstantDim_ExplainText">Καθορίζει εάν η εξαναγκασμένη ενεργοποίηση/απενεργοποίηση της μείωσης της φωτεινότητας οθόνης βάσει προσοχής από την πολιτική MDM. Ο χρήστης δεν θα μπορεί να αλλάξει αυτήν τη ρύθμιση και ο διακόπτης στο περιβάλλον εργασίας χρήστη θα απενεργοποιηθεί.</string>
+      <string id="ForceInstantDim_0">Προεπιλογές για την επιλογή χρήστη</string>
+      <string id="ForceInstantDim_1">Επιβολή ενεργοποίησης</string>
+      <string id="ForceInstantDim_2">Επιβολή απενεργοποίησης</string>
     </stringTable>
+    <presentationTable>
+      <presentation id="ForceInstantWake">
+        <dropdownList refId="ForceInstantWakeDropdown" noSort="true" defaultItem="0">Επιλέξτε μια από τις παρακάτω ενέργειες</dropdownList>
+      </presentation>
+      <presentation id="ForceInstantLock">
+        <dropdownList refId="ForceInstantLockDropdown" noSort="true" defaultItem="0">Επιλέξτε μια από τις παρακάτω ενέργειες</dropdownList>
+      </presentation>
+      <presentation id="ForceLockTimeout">
+        <dropdownList refId="ForceLockTimeoutDropdown" noSort="true" defaultItem="1">Επιλέξτε ένα από τα παρακάτω χρονικά όρια</dropdownList>
+      </presentation>
+      <presentation id="ForceInstantDim">
+        <dropdownList refId="ForceInstantDimDropDown" noSort="true" defaultItem="0">Επιλέξτε μια από τις παρακάτω ενέργειες</dropdownList>
+      </presentation>
+    </presentationTable>
   </resources>
 </policyDefinitionResources>

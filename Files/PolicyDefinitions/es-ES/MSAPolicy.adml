@@ -12,6 +12,8 @@ Esto se aplica tanto a los usuarios existentes de un dispositivo como a los nuev
 Se recomienda habilitar esta configuración antes de que un usuario inicie sesión en un dispositivo para impedir que los tokens almacenados en caché estén presentes. Si esta opción está deshabilitada o no está configurada, las aplicaciones y los servicios pueden usar cuentas de Microsoft para la autenticación.  
 Esta opción está deshabilitada de forma predeterminada. Esta configuración no afecta a la capacidad de los usuarios para iniciar sesión en los dispositivos mediante cuentas de Microsoft ni si los usuarios para proporcionar cuentas de Microsoft a través del explorador para la autenticación con aplicaciones basadas en Web. 
         </string>
+        <string id="MicrosoftAccount_RestrictToEnterpriseDeviceAuthenticationOnly">Permitir solo la autenticación de dispositivos para el Asistente para el inicio de sesión de cuentas Microsoft</string>
+        <string id="MicrosoftAccount_RestrictToEnterpriseDeviceAuthenticationOnlyExplain">Esta configuración determina si solo se permite la autenticación de dispositivos empresariales para el servicio Asistente para el inicio de sesión de cuentas Microsoft (wlidsvc). De forma predeterminada, esta configuración está deshabilitada y permite la autenticación de usuarios y dispositivos. Cuando el valor se establece en 1, solo se permite la autenticación de dispositivos y se bloquea la autenticación del usuario.</string>
     </stringTable>
   </resources>
 </policyDefinitionResources>

@@ -29,24 +29,24 @@ Nota: solo se proporcionará información acerca de los inicios de sesión anter
       <string id="CbacAndArmor">KDC admite notificaciones, autenticación compuesta y protección de Kerberos</string>
       <string id="CbacAndArmor_explain">Esta configuración de directiva le permite establecer un controlador de dominio que admita notificaciones y autenticación compuesta para el control de acceso dinámico y la protección de Kerberos mediante la autenticación Kerberos.
 
-Si habilita esta configuración de directiva, los equipos cliente que admiten notificaciones y autenticación compuesta para el control de acceso dinámico y que reconocen la protección de Kerberos usarán esta característica para los mensajes de autenticación Kerberos. Esta directiva debe aplicarse a todos los controladores de dominio para garantizar una aplicación coherente en el dominio. 
+Si habilita esta configuración de directiva, los equipos de los clientes que admiten notificaciones y autenticación compuesta para el control de acceso dinámico y que reconocen la protección de Kerberos usarán esta característica para los mensajes de autenticación Kerberos. Esta directiva debe aplicarse a todos los controladores de dominio para garantizar una aplicación coherente en el dominio. 
 
-Si deshabilita o no establece esta configuración de directiva, el controlador de dominio no admitirá notificaciones, autenticación compuesta ni protección.
+Si deshabilita o no establece esta configuración de directiva, el controlador de dominio no admite notificaciones, autenticación compuesta ni protección.
 
 Si configura la opción "No compatible", el controlador de dominio no admitirá notificaciones, autenticación compuesta ni protección, que es el comportamiento predeterminado de los controladores de dominio que ejecutan Server 2008 R2 o sistemas operativos anteriores.
 
-Nota: para que las siguientes opciones de esta directiva KDC sean efectivas, la directiva de grupo Kerberos "El cliente Kerberos admite notificaciones, autenticación compuesta y protección de Kerberos" debe estar habilitada en los sistemas compatibles. Si la configuración de directiva Kerberos no está habilitada, los mensajes de autenticación Kerberos no usarán estas funciones.  
+Nota: para que las siguientes opciones de esta directiva KDC sean efectivas, la directiva de grupo Kerberos "El cliente Kerberos admite notificaciones, autenticación compuesta y protección de Kerberos" debe estar habilitada en los sistemas compatibles. Si la configuración de directiva Kerberos no está habilitada, los mensajes de autenticación Kerberos no usarán estas funciones. 
 
-Si establece la opción "Compatible", el controlador de dominio admitirá notificaciones, autenticación compuesta y protección de Kerberos. El controlador de dominio anunciará a los equipos cliente Kerberos que el dominio admite notificaciones y autenticación compuesta para el control de acceso dinámico y protección de Kerberos. 
+Si establece la opción "Compatible", el controlador de dominio admitirá notificaciones, autenticación compuesta y protección de Kerberos. El controlador de dominio anunciará a los equipos de los clientes Kerberos que el dominio admite notificaciones y autenticación compuesta para el control de acceso dinámico y protección de Kerberos. 
 
 Requisitos del nivel funcional del dominio
-Para las opciones "Siempre proporcionar notificaciones" y "Generar error en solicitudes de autenticación sin blindar", cuando el nivel funcional del dominio se establece en Windows Server 2008 R2 o versiones anteriores, los controladores de dominio se comportarán como si se hubiera seleccionado la opción "Compatible". 
+Para las opciones "Siempre proporcionar notificaciones" y "Generar error en solicitudes de autenticación sin blindar", cuando el nivel funcional del dominio se establece en Windows Server 2008 R2 o versiones anteriores, los controladores de dominio se comportarán como si se hubiera seleccionado la opción "Compatible".
 
-Cuando el nivel funcional del dominio se establece en Windows Server 2012, el controlador de dominio anunciará a los equipos cliente Kerberos que el dominio admite notificaciones y autenticación compuesta para el control de acceso dinámico y protección de Kerberos, y:
+Cuando el nivel funcional del dominio se establece en Windows Server 2012, el controlador de dominio anunciará a los equipos de los clientes Kerberos que el dominio admite notificaciones y autenticación compuesta para el control de acceso dinámico y protección de Kerberos, y:
    - Si establece la opción "Siempre proporcionar notificaciones", siempre devolverá notificaciones para las cuentas y admitirá el comportamiento RFC para anunciar el túnel seguro de autenticación flexible (FAST).
    - Si establece la opción "Generar error en solicitudes de autenticación sin blindar", rechazará los mensajes Kerberos sin blindar.
 
-Advertencia: cuando se establece "Generar error en solicitudes de autenticación sin blindar", los equipos cliente que no admiten la protección de Kerberos no se podrán autenticar con el controlador de dominio.
+Advertencia: cuando se establece "Generar error en solicitudes de autenticación sin blindar", los equipos de los clientes que no admiten la protección de Kerberos no se podrán autenticar con el controlador de dominio.
 
 Para garantizar la eficacia de esta característica, implemente suficientes controladores de dominio que admitan notificaciones y autenticación compuesta para el control de acceso dinámico y que reconozcan la protección de Kerberos para que atiendan las solicitudes de autenticación. Si no hay suficientes controladores de dominio para admitir esta directiva, se producirán errores de autenticación siempre que se requiera el control de acceso dinámico o la protección de Kerberos (es decir, que la opción "Compatible" esté habilitada).
 
@@ -54,7 +54,6 @@ Impacto en el rendimiento del controlador de dominio cuando esta configuración 
    - Es necesaria la detección de la funcionalidad de dominio Kerberos seguro, lo que provoca intercambios de mensajes adicionales.
    - Las notificaciones y la autenticación compuesta para el control de acceso dinámico aumentan el tamaño y la complejidad de los datos del mensaje, lo que provoca un tiempo de procesamiento más prolongado y un mayor tamaño de los vales de servicio Kerberos.
    - La protección de Kerberos cifra completamente los mensajes Kerberos y firma los errores de Kerberos, lo que provoca un tiempo de procesamiento más prolongado, pero no cambia el tamaño de los valores de servicio.
-
 </string>
       <string id="NoCbacAndArmor">No compatible</string>
       <string id="MixModeCbacAndArmor">Compatible</string>
@@ -94,6 +93,28 @@ Si deshabilitas o no estableces esta configuración de directiva, el controlador
       <string id="NoPKINITFreshness">Deshabilitado</string>
       <string id="SupportPKINITFreshness">Compatible</string>
       <string id="RequirePKINITFreshness">Requerido</string>
+      <string id="PKINITHashAlgorithmConfiguration">Configurar algoritmos hash para inicio de sesión de certificado</string>
+      <string id="PKINITHashAlgorithmConfiguration_explain">Esta configuración de directiva controla los algoritmos hash o de suma de comprobación usados por el cliente Kerberos al realizar la autenticación de certificados.
+
+Si habilita esta directiva, podrá configurar uno de los cuatro estados para cada algoritmo:
+
+- "Predeterminado" establece el algoritmo en el estado recomendado.
+
+- "Compatible" habilita el uso del algoritmo. La habilitación de algoritmos que se han deshabilitado de forma predeterminada puede reducir la seguridad.
+
+- "Auditado" habilita el uso del algoritmo e informa de un evento (id. 309) cada vez que se usa. Este estado está pensado para comprobar que el algoritmo no se está usando y que se puede deshabilitar de forma segura.
+
+- "No compatible" deshabilita el uso del algoritmo. Este estado está pensado para algoritmos que se consideran no seguros.
+
+Si deshabilita o no configura esta directiva, cada algoritmo asumirá el estado "Predeterminado".
+Encontrará más información sobre los algoritmos hash y suma de comprobación compatibles con el cliente Kerberos de Windows y sus estados predeterminados en https://go.microsoft.com/fwlink/?linkid=2169037.
+
+Eventos generados por esta configuración: 309, 310.
+</string>
+      <string id="PKINITHashAlgorithm_Default">Predeterminado</string>
+      <string id="PKINITHashAlgorithm_Supported">Compatible</string>
+      <string id="PKINITHashAlgorithm_Audited">Auditado</string>
+      <string id="PKINITHashAlgorithm_NotSupported">No compatible</string>
     </stringTable>
     <presentationTable>
       <presentation id="emitlili">
@@ -121,6 +142,12 @@ Si deshabilitas o no estableces esta configuración de directiva, el controlador
       </presentation>
       <presentation id="PKINITFreshness">
         <dropdownList refId="PKINITFreshness_Levels" noSort="true" defaultItem="1">Opciones de extensión de actualización PKInit:</dropdownList>
+      </presentation>
+      <presentation id="PKINITHashAlgorithmConfiguration">
+        <dropdownList refId="PKINITHashAlgorithmSHA1" noSort="true" defaultItem="0">SHA-1    </dropdownList>
+        <dropdownList refId="PKINITHashAlgorithmSHA256" noSort="true" defaultItem="0">SHA-256</dropdownList>
+        <dropdownList refId="PKINITHashAlgorithmSHA384" noSort="true" defaultItem="0">SHA-384</dropdownList>
+        <dropdownList refId="PKINITHashAlgorithmSHA512" noSort="true" defaultItem="0">SHA-512</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

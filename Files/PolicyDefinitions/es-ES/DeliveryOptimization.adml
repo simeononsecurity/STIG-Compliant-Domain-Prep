@@ -4,23 +4,23 @@
   <description>Este archivo describe la configuración de directiva de grupo de Optimización de distribución</description>
   <resources>
     <stringTable>
-      <string id="DeliveryOptimizationCat">Optimización de distribución</string>
+      <string id="DeliveryOptimizationCat">Optimización de entrega</string>
       <string id="DownloadMode">Modo de descarga</string>
       <string id="DownloadMode_Help">Especifica el método de descarga que el servicio Optimización de distribución puede usar al descargar actualizaciones de Windows, aplicaciones y actualizaciones de aplicaciones.
 
 En la siguiente lista encontrarás los valores admitidos:
 
-0 = Solo HTTP, sin emparejamiento.
+0 = solo HTTP, sin emparejamientos.
 
-1 = HTTP combinado con emparejamiento en la misma NAT.
+1 = HTTP combinado con el emparejamiento que se encuentra en la misma NAT.
 
-2 = HTTP combinado con emparejamiento en un grupo privado. El emparejamiento se lleva a cabo de manera predeterminada en los dispositivos del mismo sitio de Active Directory (si existiera) o del mismo dominio. Cuando selecciones esta opción, el emparejamiento cruzará las NAT. Si quieres crear un grupo personalizado, usa el id. de grupo junto con el modo 2.
+2 = HTTP combinado con el emparejamiento de un grupo privado. El emparejamiento se lleva a cabo de forma predeterminada en los dispositivos del mismo sitio de Active Directory (si existe) o del mismo dominio. Cuando se selecciona esta opción, el emparejamiento cruzará las NAT. Si quieres crear un grupo personalizado, usa el id. de grupo junto con el modo 2.
 
-3 = HTTP combinado con el emparejamiento de Internet. 
+3 = HTTP combinado con el emparejamiento de Internet.
 
-99 = Modo de descarga simple sin emparejamiento. El servicio Optimización de distribución realiza las descargas mediante Solo HTTP y no intenta ponerse en contacto con los servicios en la nube de Optimización de distribución.
+99 = modo de descarga simple sin emparejamientos. El servicio Optimización de distribución realiza las descargas solo mediante HTTP y no intenta ponerse en contacto con los servicios en la nube de Optimización de distribución.
 
-100 = Modo omisión. No uses el servicio Optimización de distribución; en su lugar, usa BITS.</string>
+100 = Modo Bypass. Windows 10: no usa Optimización de distribución y usa BITS en su lugar. Windows 11: en desuso, usa el modo simple en su lugar.</string>
       <string id="DownloadMode_CdnOnly">Solo HTTP (0)</string>
       <string id="DownloadMode_Lan">LAN (1)</string>
       <string id="DownloadMode_Group">Grupo (2)</string>
@@ -102,20 +102,22 @@ El valor recomendado que debes establecer si permites las cargas mientras se usa
 
 El valor 0 significa "sin límites". Se usará el valor predeterminado establecido del servicio en la nube.</string>
       <string id="CacheHost">Nombre de host del servidor de caché</string>
-      <string id="CacheHost_Help">Esta directiva te permite establecer uno o más servidores de caché en la red de Optimización de distribución que usarán los clientes.
+      <string id="CacheHost_Help">Esta directiva le permite establecer uno o varios servidores de Microsoft Caché conectada que usarán sus clientes.
 
-Se pueden agregar uno o más valores como nombres de dominio completos (FQDN) direcciones IP. Para agregar varios valores, separa los FQDN o las direcciones IP con comas.
+Se pueden agregar uno o varios valores como nombres de dominio completos (FQDN) o direcciones IP. Para agregar varios valores, separe cada FQDN o dirección IP con comas.
       </string>
       <string id="CacheHostSource">Origen del nombre de host del servidor de caché</string>
-      <string id="CacheHostSource_Help">Esta directiva te permite especificar de qué manera tus clientes pueden descubrir la Optimización de distribución en servidores de caché de red dinámicamente.
+      <string id="CacheHostSource_Help">Esta directiva le permite especificar cómo los clientes pueden detectar servidores de Caché conectada de Microsoft dinámicamente.
 
 Las opciones disponibles son:
 
+0 = Deshabilitar DNS-SD.
+
 1 = Opción DHCP 235.
 
-2 = Opción DHCP 235 forzar.
+2 = Opción DHCP 235 Force.
 
-Para ambas opciones, el cliente consultará el id. de opción de DHCP 235 y usará el valor devuelto como nombre de host del servidor de caché. La opción 2 invalida la directiva de nombre de host del servidor de caché, si está configurada.</string>
+Si esta directiva no está configurada, el cliente intentará buscar automáticamente un servidor de caché mediante DNS-SD. Si se establece en 0, el cliente no usará DNS-SD para buscar automáticamente un servidor de caché. Si se establece en 1 o 2, el cliente consultará el id. de opción 235 de DHCP y usará el valor devuelto como nombre de host del servidor de caché. La opción 2 invalida la directiva nombre de host del servidor de caché, si está configurada.</string>
       <string id="CacheHostSource_DHCP">Opción de DHCP 235</string>
       <string id="CacheHostSource_DHCP_Force">Opción de DHCP 235 forzar</string>
       <string id="GroupIdSource">Seleccionar el origen de los id. de grupo</string>
@@ -133,7 +135,7 @@ Las opciones disponibles son:
 
 5 = Id. de inquilino de AAD.
 
-Cuando se establece, el id. de grupo se asigna automáticamente desde el origen seleccionado. Si estableces esta directiva, se ignora la directiva GroupID.
+Cuando se establece, el id. de grupo se asigna automáticamente desde el origen seleccionado. Esta directiva se omite si también se establece la directiva GroupID.
 
 Las opciones establecidas en esta directiva solo se aplican al modo de descarga Grupo (2). Si Grupo (2) no está definido como el modo de descarga, se ignorará esta directiva.
 
@@ -169,14 +171,19 @@ Nota: Si estableces la directiva para retrasar la descarga en segundo plano en H
 
 Nota: Si estableces la directiva para retrasar la descarga en primer plano en HTTP, esta se aplicará primero para permitir descargas desde los equipos del mismo nivel.</string>
       <string id="RestrictPeerSelectionBy">Seleccionar un método para restringir la selección de pares</string>
-      <string id="RestrictPeerSelectionBy_Help">Establece esta directiva para limitar la selección de nodos del mismo nivel a través de la opción seleccionada.
+      <string id="RestrictPeerSelectionBy_Help">Establece esta directiva para restringir la selección del mismo nivel a través de la opción seleccionada.
 
 Las opciones disponibles son:
-1 = Máscara de subred (se agregarán más opciones en una versión futura).
+0 = NAT.
+1 = máscara de subred.
+2 = detección local (DNS-SD).
 
-La opción 1 (Máscara de subred) se aplica a ambos modos de descarga: LAN (1) y grupo (2).</string>
-      <string id="RestrictPeerSelectionBy_None">Ninguno</string>
+El valor predeterminado ha cambiado de 0 (sin restricción) a 1 (restringir a la subred).
+
+Estas opciones se aplican tanto a la LAN (1) como al grupo (2) del modo de descarga.</string>
+      <string id="RestrictPeerSelectionBy_None">NAT</string>
       <string id="RestrictPeerSelectionBy_Subnet">Subred</string>
+      <string id="RestrictPeerSelectionBy_LinkLocal">Detección local</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth">Establecer el horario comercial para limitar el ancho de banda de descarga en segundo plano</string>
       <string id="SetHoursToLimitBackgroundDownloadBandwidth_Help">Especifica el ancho de banda de descarga en segundo plano máximo que usa Optimización de distribución durante el horario comercial y fuera de este en todas las actividades de descarga simultáneas como un porcentaje de ancho de banda de descarga disponible.</string>
       <string id="SetHoursToLimitForegroundDownloadBandwidth">Establecer el horario comercial para limitar el ancho de banda de descarga en primer plano</string>
@@ -224,16 +231,16 @@ La opción 1 (Máscara de subred) se aplica a ambos modos de descarga: LAN (1) y
         <text>El valor predeterminado es 10 GB.</text>
       </presentation>
       <presentation id="MaxCacheAge">
-        <decimalTextBox defaultValue="259200" refId="MaxCacheAge">Antigüedad máxima de la memoria caché (en segundos):</decimalTextBox>
-        <text>El valor predeterminado es 3 días.</text>
+        <decimalTextBox defaultValue="604800" refId="MaxCacheAge">Antigüedad máxima de la memoria caché (en segundos):</decimalTextBox>
+        <text>El valor predeterminado es 7 días.</text>
       </presentation>
       <presentation id="MonthlyUploadDataCap">
-        <decimalTextBox defaultValue="20" refId="MonthlyUploadDataCap">Capacidad de carga de datos mensual (en GB):</decimalTextBox>
-        <text>El valor predeterminado es 20 GB.</text>
+        <decimalTextBox defaultValue="5120" refId="MonthlyUploadDataCap">Capacidad de carga de datos mensual (en GB):</decimalTextBox>
+        <text>El valor predeterminado es 5 TB.</text>
       </presentation>
       <presentation id="MinBackgroundQos">
-        <decimalTextBox defaultValue="500" refId="MinBackgroundQos">QoS mínima en segundo plano (en KB/s):</decimalTextBox>
-        <text>El valor predeterminado es 500 KB/s.</text>
+        <decimalTextBox defaultValue="20480" refId="MinBackgroundQos">QoS mínima en segundo plano (en KB/s):</decimalTextBox>
+        <text>El valor predeterminado es 20 MB/s.</text>
       </presentation>
       <presentation id="ModifyCacheDrive">
         <textBox refId="ModifyCacheDrive">
@@ -303,7 +310,7 @@ La opción 1 (Máscara de subred) se aplica a ambos modos de descarga: LAN (1) y
         <text>El valor predeterminado es 0 (sin retraso)</text>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">
-        <dropdownList defaultItem="0" noSort="true" refId="RestrictPeerSelectionBy">Limitar la selección de pares a:</dropdownList>
+        <dropdownList defaultItem="1" noSort="true" refId="RestrictPeerSelectionBy">Limitar la selección de pares a:</dropdownList>
       </presentation>
       <presentation id="SetHoursToLimitBackgroundDownloadBandwidth">
         <text/>

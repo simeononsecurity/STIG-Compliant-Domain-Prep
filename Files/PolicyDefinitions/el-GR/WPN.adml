@@ -6,6 +6,8 @@
   <resources>
     <stringTable>
       <string id="NotificationsCategory">Ειδοποιήσεις</string>
+      <string id="WnsEndpoint">Ενεργοποιεί την πολιτική ομάδας για το FQDN WNS</string>
+      <string id="WnsEndpointExplain">Αυτή η πολιτική ορίζει μια ειδική WNS FQDN για συγκεκριμένα περιβάλλοντα.</string>
       <string id="NoTileNotification">Απενεργοποίηση των ειδοποιήσεων πλακιδίων</string>
       <string id="NoTileNotificationExplain">
           
@@ -125,6 +127,11 @@
       </presentation>
       <presentation id="QuietHoursEndTimePicker">
         <decimalTextBox refId="QuietHoursDailyEndMinuteControl" defaultValue="360">Λεπτά μετά από τα μεσάνυχτα:</decimalTextBox>
+      </presentation>
+      <presentation id="WnsEndpoint">
+        <textBox refId="WnsEndpoint_FQDN">
+          <label>Πλήρως προσδιορισμένο όνομα τομέα (FQDN) για την υπηρεσία ειδοποιήσεων push των Windows (WNS)</label>
+        </textBox>
       </presentation>
     </presentationTable>
   </resources>

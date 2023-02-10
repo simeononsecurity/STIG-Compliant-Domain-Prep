@@ -221,7 +221,7 @@ Si deshabilita o no establece esta configuración de directiva, la resolución d
 
 Si habilita esta configuración de directiva, el cliente DNS preferirá las respuestas DNS, seguidas de LLMNR, seguidas de NetBT para todas las redes.  
 
-Si deshabilita o no establece esta configuración de política, el cliente DNS preferirá las respuestas locales de vínculos para las consultas de nombres planos en las redes fuera del dominio. 
+Si deshabilita o no establece esta configuración de política, el cliente DNS preferirá las respuestas locales de vínculos para las consultas de nombres planos en las redes fuera del dominio.
 
 Nota: esta configuración de directiva solo puede aplicarse si la configuración de directiva Desactivar resolución inteligente de nombres de hosts múltiples está deshabilitada o no está establecida.</string>
       <string id="DNS_AllowFQDNNetBiosQueries">Permitir consultas NetBT para nombres de dominio completos</string>
@@ -250,6 +250,51 @@ Si se deshabilita o no se establece esta configuración de directiva, los IDN se
 Si esta configuración de directiva está habilitada, los IDN se convierten a la forma Nameprep.
 
 Si esta configuración de directiva está deshabilitada o no se establece, los IDN no se convierten a la forma Nameprep.</string>
+      <string id="DNS_Doh">Configurar resolución de nombres DNS por HTTPS (DoH)</string>
+      <string id="DNS_Doh_Disabled">Prohibir DoH</string>
+      <string id="DNS_Doh_Auto">Permitir DoH</string>
+      <string id="DNS_Doh_Force">Requerir DoH</string>
+      <string id="DNS_Doh_Help">Especifica si el cliente DNS realizará la resolución de nombres con DNS por HTTPS (DoH).
+
+De forma predeterminada, el cliente DNS hará la resolución clásica de nombres DNS (a través de UDP o TCP). Esta configuración puede mejorar el cliente DNS para usar el protocolo DoH para resolver nombres de dominio.
+
+Para usar esta configuración de directiva, haz clic en Habilitado y luego selecciona una de las siguientes opciones de la lista desplegable:
+
+Prohibir DoH: no se realizará ninguna resolución de nombres de DoH.
+
+Permitir DoH: realizar consultas de DoH si los servidores DNS configurados lo admiten. Si no lo admiten, se intenta la resolución de nombre clásica.
+
+Requerir DoH: permitir solo la resolución de nombre DoH. Si no hay servidores DNS con capacidad para DoH configurados, la resolución de nombre fallará.
+
+Si deshabilitas esta configuración de directiva o si no la configuras, los equipos usarán configuraciones establecidas localmente. Se permite el tráfico de texto no cifrado de DDR (detección de solucionadores designados), ya que es necesario para detectar automáticamente la configuración de DoH.</string>
+      <string id="DNS_Netbios">Configurar las opciones de NetBIOS</string>
+      <string id="DNS_Netbios_Disable">Deshabilitar la resolución de nombres NetBIOS</string>
+      <string id="DNS_Netbios_Allow">Permitir resolución de nombres NetBIOS</string>
+      <string id="DNS_Netbios_Disable_Public_Networks">Deshabilitar la resolución de nombres NetBIOS en redes públicas</string>
+      <string id="DNS_Netbios_Learning_Mode">Modo de aprendizaje NetBIOS</string>
+      <string id="DNS_Netbios_Help">Especifica si el cliente DNS realizará la resolución de nombres a través de NetBIOS.
+
+De forma predeterminada, el cliente DNS deshabilitará la resolución de nombres NetBIOS en redes públicas por razones de seguridad..
+
+Para usar esta configuración de directiva, haga clic en Habilitada y luego seleccione una de las siguientes opciones de la lista desplegable:
+
+Disable NetBIOS name resolution : no permitir nunca la resolución de nombres NetBIOS.
+
+Allow NetBIOS name resolution: permitir siempre la resolución de nombres NetBIOS.
+
+Disable NetBIOS name resolution on public networks: permitir solo la resolución de nombres NetBIOS en adaptadores de red que no estén conectados a redes públicas.
+
+Modo de aprendizaje NetBIOS : permita siempre la resolución de nombres NetBIOS y úsela como reserva después de que se produzca un error en las consultas mDNS/LLMNR.
+
+Si deshabilita esta configuración de directiva o no la configura, los equipos usarán las opciones configuradas localmente.</string>
+      <string id="DNS_Ddr">Configurar la detección del protocolo de solucionadores designados (DDR)</string>
+      <string id="DNS_Ddr_Help">Especifica si el cliente DNS utilizaría el protocolo DDR.
+
+El protocolo Discovery of Designated Resolvers (DDR) permite a Windows pasar de DNS sin cifrar a DNS cifrado cuando solo se conoce la dirección IP de una resolución.
+
+Si habilita esta directiva, el cliente DNS usará el protocolo DDR.
+
+Si deshabilita o no establece esta configuración de directiva, los equipos usarán las opciones configuradas localmente.</string>
     </stringTable>
     <presentationTable>
       <presentation id="DNS_Domain">
@@ -286,6 +331,12 @@ Si esta configuración de directiva está deshabilitada o no se establece, los I
       </presentation>
       <presentation id="DNS_UpdateSecurityLevel">
         <dropdownList refId="DNS_UpdateSecurityLevel_Box" defaultItem="2">Nivel de seguridad de la actualización:</dropdownList>
+      </presentation>
+      <presentation id="DNS_Doh">
+        <dropdownList refId="DNS_Doh_Box" defaultItem="1">Configurar opciones de DoH:</dropdownList>
+      </presentation>
+      <presentation id="DNS_Netbios">
+        <dropdownList refId="DNS_Netbios_Box" defaultItem="1">Configure las opciones de NetBIOS:</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

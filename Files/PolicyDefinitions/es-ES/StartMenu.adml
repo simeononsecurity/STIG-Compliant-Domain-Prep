@@ -27,12 +27,11 @@ Si deshabilita o no configura esta directiva, el vínculo "Ver todos los resulta
 Si deshabilita o no configura esta directiva, aparecerá un vínculo "Ver más resultados" cuando el usuario realice una búsqueda en el cuadro de búsqueda del menú Inicio.  Si se instala un controlador de protocolos de terceros, aparecerá un vínculo "Buscar en todas partes" en vez del vínculo "Ver más resultados".</string>
       <string id="AddSearchInternetLinkInStartMenu">Agregar vínculo Buscar en Internet al menú Inicio</string>
       <string id="AddSearchInternetLinkInStartMenu_Help">
+Si habilita esta directiva, se mostrará un vínculo "Buscar en Internet" cuando el usuario realice una búsqueda en el cuadro de búsqueda del menú Inicio.  Este botón inicia el explorador predeterminado con los términos de búsqueda.
 
-Si habilita esta directiva, no aparecerá un vínculo "Buscar en Internet" cuando el usuario realice una búsqueda en el cuadro de búsqueda del menú Inicio.  Este botón inicia el explorador predeterminado con los términos de búsqueda.
+Si deshabilita esta directiva, no habrá un vínculo "Buscar en Internet" cuando el usuario realice una búsqueda en el cuadro de búsqueda del menú Inicio.
 
-Si deshabilita esta directiva, no aparecerá un vínculo "Buscar en Internet" cuando el usuario realice una búsqueda en el cuadro de búsqueda del menú Inicio.
-          
-Si no configura esta directiva (configuración predeterminada), no aparecerá un vínculo "Buscar en Internet" en el menú Inicio.</string>
+Si no configura esta directiva (predeterminada), no habrá un vínculo "Buscar en Internet" en el menú Inicio.</string>
       <string id="NoSearchFilesInStartMenu">No buscar archivos</string>
       <string id="NoSearchFilesInStartMenu_Help">Si se habilita esta configuración de directiva, el cuadro de búsqueda del menú Inicio no buscará archivos.
 
@@ -207,6 +206,19 @@ En el Explorador de archivos, el elemento Buscar sigue apareciendo en la barra d
 Esta configuración de directiva afecta solo a los elementos de la interfaz de usuario especificados. No afecta a Internet Explorer y no impide que el usuario utilice otros métodos para buscar.
 
 Si deshabilita o no establece esta configuración de directiva, el vínculo Buscar está disponible en el menú Inicio.</string>
+      <string id="ShowOrHideMostUsedApps">Mostrar u ocultar la lista de "Más usados" del menú Inicio</string>
+      <string id="ShowOrHideMostUsedApps_Help">Si se habilita esta configuración de directiva, se puede configurar el menú Inicio para mostrar u ocultar la lista de las aplicaciones más usadas del usuario, independientemente de la configuración del usuario.
+
+Al seleccionar "Mostrar", se forzará que se muestre la lista "Más usados" y el usuario no podrá cambiar para ocultarla mediante la aplicación Configuración.
+
+Si se selecciona "Ocultar", se forzará que la lista "Más usados" quede oculta y el usuario no podrá cambiar para mostrarla mediante la aplicación Configuración.
+
+Al seleccionar "No configurado" o deshabilitar o no establecer esta configuración de directiva, todos los usuarios podrán activar o desactivar la visualización de la lista "Más usados" mediante la aplicación Configuración. Este es el comportamiento predeterminado.
+
+Nota: si se configura esta directiva como "Mostrar" u "Ocultar" en versiones compatibles de Windows 10, se reemplazará cualquier configuración de directiva de "Quitar la lista de programas usados frecuentemente del menú Inicio" (que administra la misma parte del menú Inicio pero con menos opciones).</string>
+      <string id="MFU_NotConfigured">Sin configurar</string>
+      <string id="MFU_Show">Mostrar</string>
+      <string id="MFU_Hide">Ocultar</string>
       <string id="NoFrequentUsedPrograms">Quitar del menú Inicio la lista de programas de uso frecuente</string>
       <string id="NoFrequentUsedPrograms_Help">Si habilita esta opción, la lista de programas usados con frecuencia se quitará del menú Inicio.
 
@@ -243,7 +255,7 @@ Si deshabilitas o no configuras esto, la lista de todas las aplicaciones será v
       <string id="APPLIST_NONE">Ninguno</string>
       <string id="APPLIST_COLLAPSE">Contraer</string>
       <string id="APPLIST_COLLAPSESETTING">Contraer y deshabilitar configuración</string>
-      <string id="APPLIST_REMOVESETTING">Eliminar y deshabilitar configuración</string>    
+      <string id="APPLIST_REMOVESETTING">Eliminar y deshabilitar configuración</string>
 
       <string id="NoNetAndDialupConnect">Quitar Conexiones de red del menú Inicio</string>
       <string id="NoNetAndDialupConnect_Help">Esta configuración de directiva le permite quitar Conexiones de red del menú Inicio.
@@ -258,11 +270,11 @@ Si deshabilita o no establece esta configuración de directiva, el elemento Cone
 
 Consulte también las configuraciones de directiva "Deshabilitar programas en el menú Configuración" y "Deshabilitar el Panel de control" y las configuraciones de directiva para la carpeta Conexiones de red (Configuración del equipo y Configuración del usuario\Plantillas administrativas\Red\Conexiones de red).</string>
       <string id="NoPinnedPrograms">Quitar del menú Inicio la lista de programas anclados</string>
-      <string id="NoPinnedPrograms_Help">Si habilita esta opción, la lista de programas anclados se quitará del menú Inicio. Los usuarios no podrán anclar programas al menú Inicio. 
+      <string id="NoPinnedPrograms_Help">Si habilita esta configuración, la lista "Programas anclados" se quitará de la menú Inicio. Los usuarios no pueden anclar programas al menú Inicio.
 
-En Windows XP y Windows Vista, las casillas de Internet y Correo electrónico se quitarán del cuadro de diálogo 'Personalizar el menú Inicio'. 
+En Windows XP y Windows Vista, las casillas de Internet y correo electrónico se quitan del cuadro de diálogo "Personalizar menú Inicio".
 
-Si deshabilita esta opción o no la configura, la lista "Programas anclados" permanecerá en el menú Inicio. Los usuarios podrán anclar y desanclar programas en el menú Inicio.</string>
+Si deshabilita esta opción o no la configura, la lista "Programas anclados" permanece en el menú Inicio. Los usuarios pueden anclar y desanclar programas en el menú Inicio.</string>
       <string id="NoRecentDocsHistory">No guardar historial de documentos abiertos recientemente</string>
       <string id="NoRecentDocsHistory_Help">Impide que el sistema operativo y los programas instalados creen y muestren accesos directos a los documentos que el usuario ha abierto recientemente.
 
@@ -324,11 +336,11 @@ Si habilita esta opción, se producirán los siguientes cambios:
 
 (1) Se quita el comando Ejecutar del menú Inicio.
 
-(2) El comando Nueva tarea (ejecutar) se quita del Administrador de tareas.
+(2) El comando Nueva tarea (Ejecutar) se quita del Administrador de tareas.
 
 (3) Se impedirá al usuario lo siguiente en la barra de direcciones de Internet Explorer:
 
---- Escribir una ruta de acceso UNC: \\&lt;servidor&gt;\&lt;recursoCompartido&gt; 
+--- Escribir una ruta de acceso UNC: \\&lt;server&gt;\&lt;share&gt;
 
 --- Tener acceso a unidades locales: por ejemplo, C:
 
@@ -599,9 +611,9 @@ Si deshabilita o no establece esta configuración de directiva, la pantalla Inic
 
 Si deshabilita o no establece esta configuración de directiva, la pantalla Inicio siempre aparecerá en la pantalla principal cuando el usuario presione la tecla de logotipo de Windows. Los usuarios podrán seguir abriendo Inicio en otras pantallas presionando el botón Inicio de esa pantalla. Además, el usuario podrá establecer esta configuración.</string>
       <string id="ForceStartSize_DisplayName">Forzar el inicio para que sea el tamaño de pantalla completa o el tamaño de menú</string>
-      <string id="ForceStartSize_ExplainText">Si habilitas esta directiva y la estableces en el menú Inicio o pantalla de Inicio completa, Inicio será de ese tamaño y los usuarios no podrán cambiar el tamaño de Inicio en la Configuración. 
+      <string id="ForceStartSize_ExplainText">Si habilita esta directiva y la establece en menú Inicio o Inicio a pantalla completa, Inicio será ese tamaño y los usuarios no podrán cambiar el tamaño de Inicio en Configuración.
 
-Si deshabilitas o no estableces esta configuración de directiva, Windows seleccionará automáticamente el tamaño en función del factor de forma de hardware y los usuarios podrán cambiar el tamaño de Inicio en la Configuración.</string>
+Si deshabilita o no establece esta configuración de directiva, Windows seleccionará automáticamente el tamaño en función del factor de forma de hardware y los usuarios podrán cambiar el tamaño de Inicio en Configuración.</string>
       <string id="ForceLauncherSize_Collapsed">Menú Inicio</string>
       <string id="ForceLauncherSize_Expanded">Pantalla de Inicio completa</string>
       <string id="HidePeopleBar_DisplayName">Quitar la barra de personas de la barra de tareas</string>
@@ -612,10 +624,30 @@ Si habilitas esta directiva se quitará el icono de contactos de la barra de tar
       <string id="HideRecentlyAddedApps_Help">Esta directiva le permite impedir que el menú Inicio muestre una lista de aplicaciones instaladas recientemente.
 
 Si habilita esta directiva, el menú Inicio no mostrará la lista "Agregadas recientemente".  También se deshabilitará la opción de configuración correspondiente en Configuración.</string>
+      <string id="HideRecommendedSection">Quitar sección recomendada del menú Inicio</string>
+      <string id="HideRecommendedSection_Help">Esta directiva le permite impedir que el menú Inicio muestre una lista de aplicaciones y archivos recomendados.
+
+Si habilita esta configuración de directiva, el menú Inicio dejará de mostrar la sección que contiene una lista de archivos y aplicaciones recomendados.</string>
       <string id="DisableContextMenusInStart">Deshabilitar los menús contextuales en el menú Inicio</string>
       <string id="DisableContextMenusInStart_Help">Esta directiva le permite impedir que los usuarios puedan abrir menús contextuales en el menú Inicio.
 
 Si habilita esta directiva, se omitirán invocaciones de menús contextuales en el menú Inicio.</string>
+      <string id="SimplifyQuickSettings_DisplayName">Simplificar diseño de configuración rápida</string>
+      <string id="SimplifyQuickSettings_ExplainText">Si habilita esta directiva, la configuración rápida solo tendrá los botones WiFi, Bluetooth, Accesibilidad y VPN; los controles deslizantes de brillo y volumen; indicador de batería y vínculo a la aplicación Configuración.
+
+Si deshabilita o no establece esta configuración de directiva, el diseño normal de configuración rápida aparecerá cada vez que se use la configuración rápida.</string>
+      <string id="DisableEditingQuickSettings_DisplayName">Deshabilitar la edición de la configuración rápida</string>
+      <string id="DisableEditingQuickSettings_ExplainText">Si habilita esta directiva, el usuario no podrá modificar la configuración rápida.
+
+Si deshabilita o no establece esta configuración de directiva, el usuario podrá editar la configuración rápida, como anclar o desanclar botones.</string>
+      <string id="DisableControlCenter">Quitar configuración rápida</string>
+      <string id="DisableControlCenter_Help">Esta configuración de directiva quita la configuración rápida del área inferior derecha de la barra de tareas.
+
+El área de configuración rápida se encuentra a la izquierda del reloj en la barra de tareas e incluye iconos para la red y el volumen actuales.
+
+Si esta opción está habilitada, la configuración rápida no se muestra en el área de configuración rápida. 
+
+Es necesario reiniciar para que esta configuración de directiva surta efecto.</string>
     </stringTable>
     <presentationTable>
       <presentation id="NoMoreProgramsList">
@@ -632,9 +664,13 @@ Si habilita esta directiva, se omitirán invocaciones de menús contextuales en 
           <label>Iniciar el archivo de diseño</label>
           <defaultValue></defaultValue>
         </textBox>
+        <checkBox refId="LockedStartLayout_ReapplyEveryLogon" defaultChecked="false">Volver a aplicar el diseño en cada inicio de sesión</checkBox>
       </presentation>
       <presentation id="ForceStartSize">
         <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">Elija uno de los siguientes tamaños</dropdownList>
+      </presentation>
+      <presentation id="ShowOrHideMostUsedApps">
+        <dropdownList refId="ShowOrHideMostUsedAppsDropdown" noSort="true" defaultItem="1">Elige una de las siguientes acciones</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

@@ -73,7 +73,7 @@
       </presentation>
       <presentation id="NCSI_PassivePolling">
         <text>Το παρακάτω πλαίσιο ελέγχου απενεργοποιεί τον μηχανισμό παθητικής ανίχνευσης στο NCSI.   Αυτό μπορεί να ελαφρύνει το φόρτο εργασίας της κεντρικής μονάδας επεξεργασίας (CPU) σε διακομιστές και άλλους υπολογιστές με στατική συνδεσιμότητα δικτύου.</text>
-        <checkBox refId="NCSI_DisablePassivePolling_Checkbox">Απενεργοποίηση παθητικής ανίχνευσης</checkBox>  
+        <checkBox refId="NCSI_DisablePassivePolling_Checkbox">Απενεργοποίηση παθητικής ανίχνευσης</checkBox>
       </presentation>
       <presentation id="NCSI_GlobalDns">
         <text>Το παρακάτω πλαίσιο ελέγχου απενεργοποιεί την ενοποίηση διασύνδεσης κατά τη διερεύνηση DNS στο NCSI. Αυτό μπορεί να επιτρέψει στο NCSI να λειτουργεί καλύτερα με ειδικές ρυθμίσεις παραμέτρων δικτύου, όπως είναι η εκτέλεση ενός διακομιστή DNS σε localhost.</text>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+  <displayName>Moniajo</displayName>
+  <description>Hallitsee Windowsin moniajoasetuksia</description>
+  <resources>
+    <stringTable>
+      <string id="MULTITASKING">Moniajo</string>
+      <string id="MULTITASKINGHELP">Hallitsee Windowsin moniajoasetuksia</string>
+      <string id="BrowserAltTabBlowout">Määritä Microsoft Edgen välilehtien näyttäminen Alt-Sarkaimella</string>
+      <string id="BrowserAltTabBlowout_Help">Tämä asetus määrittää, näytetäänkö Microsoft Edgen välilehdet näppäinyhdistelmällä Alt+Sarkain.
+
+Tämä voidaan määrittää näyttämään Microsoft Edgestä kaikki välilehdet, viimeisimmät 3 tai 5 välilehteä tai ei ollenkaan välilehtiä.
+
+Jos tämä on määritetty näyttämään Vain avoimet ikkunat, koko ominaisuus poistetaan käytöstä.
+</string>
+      <string id="AltTabFilter_All">Avoimet ikkunat ja kaikki välilehdet Microsoft Edgessä</string>
+      <string id="AltTabFilter_Five">Avoimet ikkunat ja viisi viimeisintä välilehteä Microsoft Edgessä</string>
+      <string id="AltTabFilter_Three">Avoimet ikkunat ja kolme viimeisintä välilehteä Microsoft Edgessä</string>
+      <string id="AltTabFilter_None">Vain avoimet ikkunat</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="AltTabFilter">
+        <dropdownList refId="AltTabFilterDropdown" noSort="true" defaultItem="0">Näppäinyhdistelmän Alt + sarkain painaminen näyttää</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

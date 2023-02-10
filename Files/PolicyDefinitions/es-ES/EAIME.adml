@@ -55,17 +55,19 @@ Esta configuración de directiva se aplica a Microsoft IME en japonés.
 
 Nota: Los cambios en esta configuración no tendrán efecto hasta que el usuario cierre la sesión.</string>
       <string id="L_TurnOffCustomDictionary">Desactivar el diccionario personalizado</string>
-      <string id="L_TurnOffCustomDictionaryExplain">Esta configuración de directiva te permite desactivar la posibilidad de usar un diccionario personalizado.
+      <string id="L_TurnOffCustomDictionaryExplain">Esta configuración de directiva le permite desactivar la capacidad de usar un diccionario personalizado.
 
-Si habilitas esta configuración de directiva, no podrás agregar, editar ni eliminar palabras en el diccionario personalizado con las herramientas de la interfaz gráfica de usuario o las API. Si se registra una palabra en el diccionario personalizado antes de habilitar esta configuración de directiva, se podrá seguir usando para la conversión.
+Si habilita esta configuración de directiva, no podrá agregar, editar ni eliminar palabras en el diccionario personalizado ni con las herramientas GUI ni con las API. Una palabra registrada en el diccionario personalizado antes de habilitar esta configuración de directiva puede seguir usándose para la conversión.
 
-Si deshabilitas o no estableces esta configuración de directiva, el diccionario personalizado puede usarse de manera predeterminada.
+Si deshabilita o no configura esta configuración de directiva, puede usarse el diccionario personalizado de forma predeterminada.
 
-En el caso de Microsoft IME en japonés, la opción [Borrar información de ajuste automático] funciona, aunque esta configuración de directiva esté habilitada, y borra palabras de ajuste automático del diccionario personalizado.
+[Borrar información de ajuste automático] quita las palabras ajustadas automáticamente del diccionario personalizado, incluso si la configuración de directiva de grupo está activada. Para ello, seleccione Configuración &gt; Fecha e idioma &gt; Opciones de japonés &gt; Opciones del editor de métodos de entrada de Microsoft. Si está activado el modo de compatibilidad, seleccione Opciones avanzadas &gt; Diccionario/ajuste automático &gt; [Borrar información de ajuste automático].
 
-Esta configuración de directiva se aplica a Microsoft IME en japonés.
+[Borrar historial de entrada] quita las palabras ajustadas automáticamente del diccionario personalizado, incluso si una configuración de directiva de grupo está activada. Para ello, seleccione Configuración &gt; Fecha e idioma &gt; Opciones de japonés &gt; Opciones del editor de métodos de entrada de Microsoft &gt; Aprendizaje y diccionario &gt; [Borrar historial de entrada].
 
-Nota: Los cambios en esta configuración no tendrán efecto hasta que el usuario cierre la sesión.</string>
+Esta configuración de directiva se aplica al editor de métodos de entrada de Microsoft para japonés.
+
+Nota: Los cambios realizados en esta configuración no tendrán efecto hasta que el usuario cierre la sesión.</string>
       <string id="L_RestrictCharacterCodeRangeOfConversion">Restringir el intervalo de códigos de carácter de conversión</string>
       <string id="L_RestrictCharacterCodeRangeOfConversionExplain">Esta configuración de directiva permite restringir el intervalo de códigos de carácter de conversión al establecer un filtro de caracteres.
 
@@ -118,26 +120,6 @@ Si deshabilitas esta configuración de directiva, la funcionalidad asociada con 
 Si no configuras esta configuración de directiva, estará desactivada de forma predeterminada y el usuario podrá activar y desactivar la característica de candidatos a la nube.
 
 Esta configuración de directiva solo se aplica a Microsoft CHS pinyin IME.</string>
-      <string id="L_TurnOnLiveSticker">Activar la característica de adhesivos dinámicos</string>
-      <string id="L_TurnOnLiveStickerExplain">Esta configuración de directiva controla la característica de adhesivos dinámicos, que usa un servicio en línea para proporcionar adhesivos en línea.
-
-Si habilitas esta configuración de directiva, ten en cuenta que la funcionalidad asociada con ella también se activa para enviar las entradas de teclado del usuario a Microsoft y así poder crear los adhesivos dinámicos. El usuario no podrá desactivar esta funcionalidad. 
-
-Si deshabilitas esta configuración de directiva, la funcionalidad asociada con ella también se deshabilita y el usuario no podrá activarla. 
-
-Si no configuras esta configuración de directiva, se desactivará de forma predeterminada y el usuario podrá activar y desactivar la característica de adhesivos dinámicos.
-
-Esta configuración de directiva solo se aplica a Microsoft CHS Pinyin IME.</string>
-      <string id="L_TurnOnLexiconUpdate">Activar la actualización del lexicón</string>
-      <string id="L_TurnOnLexiconUpdateExplain">Esta configuración de directiva controla la característica de actualización del lexicón, que descarga un diccionario de palabras más usadas en el equipo local.
-
-Si habilitas esta configuración de directiva, se activará la funcionalidad asociada con esta característica, se podrá descargar el diccionario de palabras más usadas en el equipo local y el usuario podrá activar o desactivar esta configuración.
-
-Si deshabilitas esta configuración de directiva, se desactivará la funcionalidad asociada con esta característica y el usuario no podrá activarla.
-
-Si no estableces esta configuración de directiva, estará desactivada de forma predeterminada y el usuario podrá activar y desactivar la característica de actualización del lexicón.
-
-Esta configuración de directiva se aplica solo a Microsoft CHS Pinyin IME.</string>
       <string id="L_ConfigureSimplifiedChineseImeVersion">Configurar la versión de IME en chino simplificado</string>
       <string id="L_ConfigureSimplifiedChineseImeVersionExplain">Esta configuración de directiva controla la versión de Microsoft IME.
 
@@ -172,6 +154,18 @@ Si habilitas esta opción, el usuario no podrá controlar qué versión de IME u
 Si deshabilitas esta opción, el usuario no podrá controlar qué versión de IME usar. Siempre se selecciona la nueva versión de Microsoft IME.
 
 Esta configuración de política solo se aplica a Microsoft Japanese IME.
+
+Nota: Los cambios en esta configuración no entrarán en vigor hasta que el usuario cierre sesión.</string>
+      <string id="L_ConfigureKoreanImeVersion">Configurar la versión de IME coreano</string>
+      <string id="L_ConfigureKoreanImeVersionExplain">Esta configuración de directiva controla la versión de Microsoft IME.
+
+Si no estableces esta configuración de directiva, el usuario puede controlar qué versión de IME usar. La nueva versión de Microsoft IME está activada de manera predeterminada.
+
+Si habilitas esta opción, el usuario no podrá controlar qué versión de IME usar. Siempre se selecciona la versión anterior de Microsoft IME.
+
+Si deshabilitas esta opción, el usuario no podrá controlar qué versión de IME usar. Siempre se selecciona la nueva versión de Microsoft IME.
+
+Esta configuración de política solo se aplica a Microsoft Korean IME.
 
 Nota: Los cambios en esta configuración no entrarán en vigor hasta que el usuario cierre sesión.</string>
     </stringTable>

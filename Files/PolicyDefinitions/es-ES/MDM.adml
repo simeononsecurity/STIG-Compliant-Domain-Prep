@@ -33,6 +33,11 @@ Si deshabilitas esta configuración de directiva, se habilitará la inscripción
     <presentationTable>
       <presentation id="AutoEnrollMDM">
         <dropdownList refId="UseAADCredentialTypeDrop" defaultItem="1">Selecciona el tipo de credencial que quieres usar:</dropdownList>
+        <textBox refId="MDMApplicationId">
+          <label>Id. de aplicación MDM:</label>
+        </textBox>
+        <text>El Id. de aplicación MDM representa el Id. de aplicación MDM que está configurada en Azure AD. Esto es opcional y solo se requiere para la inscripción automática de MDM con credenciales de dispositivo cuando se configuran varias aplicaciones MDM en Azure AD.</text>
+        <text/>
       </presentation>
     </presentationTable>	
   </resources>

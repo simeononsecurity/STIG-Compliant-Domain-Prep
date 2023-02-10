@@ -10,6 +10,8 @@
         <string id="MSPassport_UsePassportForWork">Usa Windows Hello para empresas</string>
         <!-- Add support for certificate trust deployments -->
         <string id="WHFB_UseCertificateForOnPremAuth">Uso de un certificado para la autenticación local</string>
+        <!-- Add support for cloud trust deployments -->
+        <string id="WHFB_UseCloudTrustForOnPremAuth">Use la confianza de nube para la autenticación local</string>
         <!-- DropdownList Button strings -->
         <string id="MSPassport_UsePassportForWorkExplain">Windows Hello para empresas es un método alternativo para iniciar sesión en Windows con la cuenta de Active Directory o Azure Active Directory que puede reemplazar las contraseñas, las tarjetas inteligentes y las tarjetas inteligentes virtuales.
 
@@ -34,13 +36,13 @@ Si habilitas esta configuración de directiva, el aprovisionamiento de Windows H
 Si deshabilitas o no defines esta configuración de directiva, el TPM seguirá siendo la opción preferente, pero todos los dispositivos podrán aprovisionar Windows Hello para empresas mediante software si el TPM no funciona o no está disponible.
         </string>
         <string id="MSPassport_MinimumPINLength">Longitud mínima del PIN</string>
-        <string id="MSPassport_MinimumPINLengthExplain">La longitud mínima del PIN permite configurar el número mínimo de caracteres que se necesitan para el PIN. El número más bajo que se puede establecer para esta configuración de directiva es 4. El número más alto que se puede establecer debe ser menor que el número configurado en la configuración de directiva Longitud máxima del PIN o 127, el que sea más bajo.
+        <string id="MSPassport_MinimumPINLengthExplain">La longitud mínima del PIN configura el número mínimo de caracteres necesarios para el PIN.  El número más bajo que puede establecer para esta configuración de directiva es 4.  El número más grande que puede configurar debe ser menor que el número configurado en la configuración de directiva Longitud máxima del PIN o el número 127, el que sea más bajo.
 
-Si estableces esta configuración de directiva, la longitud del PIN debe ser mayor o igual que este número.
+Si establece esta configuración de directiva, la longitud del PIN debe ser mayor o igual que este número.
 
-Si deshabilitas esta configuración de directiva, la longitud del PIN debe ser mayor o igual que 4.
+Si deshabilita o no establece esta configuración de directiva, la longitud del PIN debe ser mayor o igual que 6.
 
-NOTA: si no se satisfacen las condiciones especificadas arriba en relación con la longitud mínima del PIN, se usarán los valores predeterminados tanto para la longitud máxima como la longitud mínimo del PIN.
+NOTA: si no se cumplen las condiciones especificadas anteriormente para la longitud mínima del PIN, se usarán los valores predeterminados para las longitudes máxima y mínima del PIN.
         </string>
         <string id="MSPassport_MaximumPINLength">Longitud máxima del PIN</string>
         <string id="MSPassport_MaximumPINLengthExplain">La longitud máxima del PIN permite configurar el número máximo de caracteres que se permiten para el PIN. El número más alto que se puede establecer para esta configuración de directiva es 127. El número más bajo que se puede establecer debe ser mayor que el número configurado en la configuración de directiva Longitud mínima del PIN o 4, el que sea más alto.
@@ -108,6 +110,18 @@ Si deshabilitas esta configuración de directiva, Windows Hello para empresas im
 
 NOTA: si deshabilitas esta directiva, el usuario no podrá usar gestos de biometría en el dispositivo para todos los tipos de cuenta.
         </string>
+        <string id="MSPassport_EnableEnhancedSignInSecurity">Habilitar ESS con periféricos admitidos</string>
+        <string id="MSPassport_EnableEnhancedSignInSecurityExplain">La seguridad de inicio de sesión mejorada aísla operaciones coincidentes y plantillas de datos de biometría de Windows Hello (facial y huella digital) con el hardware de confianza o las regiones de memoria especificadas, lo que significa que el resto del sistema operativo no podrá acceder a ellos ni alterarlos. Dado que el canal de comunicación entre los sensores y el algoritmo también está protegido, es imposible que el malware inyecte o reproduzca datos para simular que un usuario inicia sesión o para bloquearlo fuera de su equipo. Mientras esta directiva esté habilitada en dispositivos Windows 11, se bloqueará la autenticación biométrica externa con Windows Hello. Las funcionalidades operativas que no sean de autenticación, como el uso de la cámara, no se verán afectadas. 
+Si habilita esta directiva, podrá tener los siguientes valores posibles:
+
+0 - Seguridad de inicio de sesión mejorada deshabilitada (no recomendado)
+La seguridad de inicio de sesión mejorada se deshabilitará en todos los sistemas, lo que permitirá el uso de la autenticación biométrica externa. Si un usuario se inscribió en Windows Hello con la seguridad de inicio de sesión mejorada habilitada, cuando se deshabilite la característica, perderá su inscripción y deberá restablecer el PIN. En ese momento, tendrá la opción de volver a iniciar con biometría. El sistema operativo no intentará iniciar componentes seguros, incluso si los componentes de hardware y software seguros están presentes.
+
+1 - Seguridad de inicio de sesión mejorada habilitada (predeterminada y recomendada para mayor seguridad)
+La seguridad de inicio de sesión mejorada se habilitará en sistemas con software y hardware compatibles, siguiendo el comportamiento predeterminado existente en Windows. Las operaciones de autenticación de cualquier dispositivo biométrico que la seguridad de inicio de sesión mejorada no admita, incluida la de dispositivos periféricos, se bloquearán y no estarán disponibles para Windows Hello.
+
+Si deshabilita o no configura esta directiva, se preferirá la seguridad de inicio de sesión mejorada en el dispositivo. El comportamiento será el mismo que habilitar la directiva y establecer el valor en 1.
+        </string>
         <string id="MSPassport_EnablePinRecovery">Recuperación PIN de uso</string>
         <string id="MSPassport_EnablePinRecoveryExplain">La recuperación de PIN permite que el usuario cambie un PIN que olvidó con el servicio de recuperación de PIN de Windows Hello para empresas, sin perder las credenciales ni los certificados asociados, incluidas las claves asociadas a las cuentas personales del usuario en el dispositivo. Para conseguir esto, el servicio de recuperación de PIN basado en Azure cifra un secreto de recuperación, que se almacena en el dispositivo. La recuperación de PIN requiere que el usuario realice una autenticación multifactor en Azure Active Directory.
 
@@ -118,13 +132,22 @@ Si deshabilitas o no configuras esta directiva, Windows no creará ni almacenar�
 NOTA: Esta directiva solo es aplicable a dispositivos que están registrados con Azure Active Directory.
         </string>
         <!-- Explain Text for UseCertificateForOnPremAuth -->
-        <string id="WHFB_UseCertificateForOnPremAuthExplain">Usa esta configuración de directiva para configurar Windows Hello para empresas con el fin de inscribir un certificado de inicio de sesión empleado para la autenticación local.
+        <string id="WHFB_UseCertificateForOnPremAuthExplain">Usa esta configuración de directiva para configurar Windows Hello para empresas con el fin de inscribir un certificado de inicio de sesión usado para la autenticación local.
 
-Si habilitas esta configuración de directiva, Windows Hello para empresas inscribe un certificado de inicio de sesión que se usa para la autenticación local.
+Si habilitas esta configuración de Directiva, Windows Hello para empresas inscribe un certificado de inicio de sesión que se usa para la autenticación local.
 
-Si deshabilitas o no estableces esta configuración de directiva, Windows Hello para empresas inscribe una clave que se usa para la autenticación local.
+Si deshabilitas o no estableces esta configuración de Directiva, Windows Hello para empresas usará una clave o un vale Kerberos (en función de otras configuraciones de directiva) para la autenticación local.
 
-NOTA: Si se deshabilita o no se establece esta configuración de directiva y se habilita "Usa Windows Hello para empresas", el entorno debe tener uno o más controladores de dominio de Windows Server 2016 para evitar que se produzca un error en la autenticación de Windows Hello para empresas.
+Nota: Si deshabilitas o no estableces esta configuración de directiva y habilitas la configuración de directiva "usar Windows Hello para empresas", el entorno debe tener uno o más controladores de dominio de Windows Server 2016 para evitar que se produzca un error en la autenticación de Windows Hello para empresas.
+        </string>
+        <!-- Explain Text for UseCloudTrustForOnPremAuth -->
+        <string id="WHFB_UseCloudTrustForOnPremAuthExplain">Usa esta configuración de directiva para configurar Windows Hello para empresas para que use Azure AD Kerberos para la autenticación local.
+
+Si habilitas esta configuración de Directiva, Windows Hello para empresas usará un vale Kerberos recuperado de autenticarse en Azure para la autenticación local.
+
+Si deshabilitas o no estableces esta configuración de Directiva, Windows Hello para empresas usará una clave o un certificado (en función de otras configuraciones de directiva) para la autenticación local. 
+ 
+Nota: los entornos que habilitan esta configuración de directiva y la configuración de directiva "usar Windows Hello para empresas" requieren uno o más controladores de dominio de Windows Server 2016. De lo contrario, se producirá un error en la autenticación de Windows Hello para empresas.
         </string>
         <!-- Explain text for device unlock policy -->
         <string id="MSPassport_UseDeviceUnlock">Configurar factores de desbloqueo de dispositivo</string>
@@ -181,6 +204,9 @@ Windows requiere que un usuario bloquee y desbloquee su sesión después de camb
         </string>
     </stringTable>
     <presentationTable>
+        <presentation id="MSPassport_EnableEnhancedSignInSecurityControl">
+            <decimalTextBox refId="MSPassport_EnableEnhancedSignInSecurityDataType" spin="true" spinStep="1" defaultvalue="1">Habilitar ESS con periféricos admitidos</decimalTextBox>
+        </presentation>
         <presentation id="MSPassport_MinimumPINLengthControl">
             <decimalTextBox refId="MSPassport_MinimumPINLengthDataType" spin="true" spinStep="1" defaultvalue="6">Longitud mínima del PIN</decimalTextBox>
         </presentation>

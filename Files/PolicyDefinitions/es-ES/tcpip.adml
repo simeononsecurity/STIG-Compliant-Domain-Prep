@@ -27,19 +27,17 @@
       <string id="IPHTTPS_ClientState">Establecer estado de IP-HTTPS</string>
       <string id="IPHTTPS_ClientUrl">Dirección URL de IP-HTTPS</string>
 
-      <string id="ISATAP_State_Help">Esta configuración de directiva le permite configurar ISATAP (Intra-Site Automatic Tunnel Addressing Protocol), una tecnología de túnel automático dirección a enrutador y host a host, host a enrutador y enrutador a host que se usa para proporcionar conectividad IPv6 de unidifusión entre hosts IPv6 en una intranet IPv4.
+      <string id="ISATAP_State_Help">Esta configuración de directiva le permite configurar ISATAP (Intra-Site Automatic Tunnel Addressing Protocol), una tecnología de tunelización automática de dirección a enrutador y host a host, host a enrutador y enrutador a host que se usa para proporcionar conectividad IPv6 de unidifusión entre hosts IPv6 en una intranet IPv4.
 
 Si deshabilita o no establece esta configuración de directiva, se usa la configuración del host local.
 
 Si habilita esta configuración de directiva, puede configurar ISATAP con una de las siguientes opciones:
 
-Estado de directiva predeterminado: si el nombre del enrutador ISATAP se resuelve correctamente, se configurará ISATAP para el host con una dirección local de vínculo y una dirección para cada prefijo recibido del enrutador ISATAP mediante configuración automática de dirección sin estado. Si el nombre del enrutador ISATAP no se resuelve correctamente, la conectividad de ISATAP no estará disponible en el host que use la dirección IPv4 correspondiente.
+Estado de directiva predeterminado: No hay interfaces ISATAP presentes en el host.
 
 Estado de directiva habilitada: si el nombre de ISATAP se resuelve correctamente, se configurará ISATAP para el host con una dirección local de vínculo y una dirección para cada prefijo recibido del enrutador ISATAP mediante configuración automática de dirección sin estado. Si el nombre del enrutador ISATAP no se resuelve correctamente, se configurará una interfaz de ISATAP para el host con una dirección local de vínculo.
 
 Estado de directiva deshabilitada: no habrá interfaces de ISATAP en el host.
-
-
 
 </string>
 
@@ -54,19 +52,17 @@ Si deshabilita o no configura esta directiva, se usará la configuración del ho
 </string>
 
 
-      <string id="6to4_State_Help">Esta configuración de directiva le permite configurar 6to4, una tecnología de asignación de dirección y de túnel automático enrutador a enrutador que se usa para proporcionar conectividad IPv6 de unidifusión entre sitios y hosts IPv6 en Internet IPv4. 6to4 usa el prefijo global de dirección: 2002:WWXX:YYZZ::/48 en el que las letras son representaciones hexadecimales de la dirección IPv4 global (w.x.y.z) asignada al sitio.
+      <string id="6to4_State_Help">Esta configuración de directiva le permite configurar 6to4, una tecnología de asignación de dirección y de tunelización automática de enrutador a enrutador que se usa para proporcionar conectividad IPv6 de unidifusión entre sitios y hosts IPv6 en Internet IPv4. 6to4 usa el prefijo global de dirección: 2002:WWXX:YYZZ::/48 en el que las letras son representaciones hexadecimales de la dirección IPv4 global (w.x.y.z) asignada al sitio.
 
 Si deshabilita o no establece esta configuración de directiva, se usa la configuración del host local.
 
 Si habilita esta configuración de directiva, puede configurar 6to4 con una de las siguientes opciones:
 
-Estado de directiva predeterminado: se habilita 6to4 si el host tiene solo conectividad IPv6 local de vínculo y una dirección IPv4 pública. Si no hay una dirección IPv6 global ni una dirección IPv4 global, el host no tendrá una interfaz 6to4. Si no hay una dirección IPv6 global y sí hay una dirección IPv4 global, el host tendrá una interfaz 6to4.
+Estado de directiva predeterminado: se deshabilita 6to4 y la conectividad con 6to4 no estará disponible.
 
 Estado de directiva habilitada: si hay una dirección IPv4 global, el host tendrá una interfaz 6to4. Si no hay una dirección IPv4 global, el host no tendrá una interfaz 6to4.
 
 Estado de directiva deshabilitada: 6to4 se desactiva y la conectividad con 6to4 no estará disponible.
-
-
 
 </string>
 

@@ -37,14 +37,16 @@
       <string id="DisableRoamedProfileInit_Help">Αυτή η ρύθμιση πολιτικής επιτρέπει στους διαχειριστές που έχουν ρυθμίσει το προφίλ περιαγωγής σε συνδυασμό με τη ρύθμιση της πολιτικής ομάδας "Διαγραφή προσωρινής αποθήκευσης προφίλ περιαγωγής" να διασφαλίσουν ότι η Εξερεύνηση δεν θα προετοιμάσει ξανά τις προεπιλεγμένες συσχετίσεις προγραμμάτων και άλλες ρυθμίσεις στις προεπιλεγμένες τιμές τους. 
 
 Αν ενεργοποιήσετε αυτήν τη ρύθμιση πολιτικής σε έναν υπολογιστή στον οποίο δεν είναι εγκατεστημένα όλα τα προγράμματα με τον ίδιο τρόπο όπως είναι στον υπολογιστή στον οποίο ο χρήστης συνδέθηκε τελευταία φορά, ενδέχεται να παρουσιαστεί απροσδόκητη συμπεριφορά. </string>
+      <string id="DisableGraphRecentItems">Απενεργοποίηση αρχείων από Office.com στην προβολή Γρήγορη πρόσβαση</string>
+      <string id="DisableGraphRecentItems_Help">Η απενεργοποίηση αρχείων από Office.com δεν θα επιτρέψει στους Εξερεύνηση αρχείων να ζητήσουν πρόσφατα μετα-δεδομένα αρχείου cloud και να τα εμφανίσουν στην προβολή Γρήγορη πρόσβαση.</string>
     </stringTable>
     <presentationTable>
-	<presentation id="AdminInfoUrl">
-            <textBox refId="AdminInfoUrl_TextBox">
-              <label>Διεύθυνση URL της σελίδας Web τεχνικής υποστήριξης</label>
-	      <defaultValue>http://msdn.microsoft.com</defaultValue>
-            </textBox>	    
-	</presentation>
+      <presentation id="AdminInfoUrl">
+        <textBox refId="AdminInfoUrl_TextBox">
+          <label>Διεύθυνση URL της σελίδας Web τεχνικής υποστήριξης</label>
+          <defaultValue>http://msdn.microsoft.com</defaultValue>
+        </textBox>
+      </presentation>
     </presentationTable>
   </resources>
 </policyDefinitionResources>

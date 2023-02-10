@@ -17,6 +17,8 @@ Conjuntos de cifrado de SMB 3.11:
 
 AES_128_GCM
 AES_128_CCM
+AES_256_GCM
+AES_256_CCM
 
 Conjuntos de cifrado de SMB 3.0 y 3.02:
 
@@ -57,6 +59,23 @@ Los servidores de archivos usan los inicios de sesión de invitado no seguros pa
         Si deshabilitas o no estableces esta configuración de directiva, Windows impedirá el uso de controladores en caché para archivos abiertos a través de recursos compartidos de CA.
 
         Nota: Esta directiva no tiene efecto al conectarse a recursos compartidos de servidor de archivos de escalabilidad horizontal proporcionados por un servidor de Windows Server. Microsoft no recomienda habilitar esta directiva para los clientes que suelen conectarse a archivos hospedados en un clúster de conmutación por error de Windows con el servidor de archivos para el rol de uso general, ya que puede dar lugar periodos de conmutación por error negativa y un mayor uso de la memoria y la CPU.
+      </string>
+      <string id="SUPPORTED_Windows_Server_2022_Windows_11_0">Se requiere al menos Windows Server 2022, Windows 11</string>
+      <string id="Pol_EnableCompressedTraffic_Name">Usar compresión SMB de forma predeterminada</string>
+      <string id="Pol_EnableCompressedTraffic_Help">Esta directiva controla si el cliente SMB usa la compresión de tráfico de forma predeterminada.
+
+Si habilita esta configuración de directiva, el cliente SMB intentará comprimir el tráfico de forma predeterminada cuando esté habilitada la compresión SMB.
+
+Si deshabilita o no establece esta configuración de directiva, el cliente SMB no intentará comprimir el tráfico de forma predeterminada. Sin embargo, la compresión de tráfico puede solicitarse por otros medios. Consulte las notas a continuación.
+
+Nota: Esta directiva se combina con propiedades de identificador por recurso compartido y por archivo, a través de las cuales se puede solicitar compresión de tráfico. Además, el servidor SMB debe admitir y habilitar la compresión. Por ejemplo, si esta directiva se deshabilita (o no se configura), el cliente SMB puede seguir realizando compresión si un recurso compartido de servidor SMB ha solicitado compresión. Si esto no quiere hacerse y se quiere deshabilitar completamente la compresión, configure en su lugar la directiva "Deshabilitar compresión SMB".
+      </string>
+      <string id="Pol_DisableCompression_Name">Deshabilitar compresión SMB</string>
+      <string id="Pol_DisableCompression_Help">Esta directiva controla si el cliente SMB deshabilitará (impedirá completamente) la compresión de tráfico.
+
+Si habilita esta configuración de directiva, el cliente SMB nunca comprimirá los datos, independientemente de otras directivas (como la directiva "Usar compresión SMB de forma predeterminada" o la propiedad por recurso compartido).
+
+Si deshabilitas o no estableces esta configuración de directiva, el cliente SMB puede comprimir el tráfico (en función de una combinación de otras directivas y condiciones).
       </string>
     </stringTable>
     <presentationTable>

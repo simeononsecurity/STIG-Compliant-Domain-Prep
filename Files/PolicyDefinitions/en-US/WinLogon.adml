@@ -101,6 +101,13 @@ If you disable or don’t configure this setting, automatic sign on will default
       <string id="ConfigAutomaticRestartSignOn_EnableIfSecure">Enabled if BitLocker is on and not suspended</string>
       <string id="ConfigAutomaticRestartSignOn_EnableAlways">Always Enabled</string>
 
+      <string id="EnableMPRNotifications">Enable MPR notifications for the system</string>
+      <string id="EnableMPRNotifications_Help">This policy controls the configuration under which winlogon sends MPR notifications in the system.
+
+If you enable this setting or do not configure it, winlogon sends MPR notifications if a credential manager is configured.
+
+If you disable this setting, winlogon does not send MPR notifications.</string>
+
     </stringTable>
     <presentationTable>
       <presentation id="LogonHoursPolicyDescription">

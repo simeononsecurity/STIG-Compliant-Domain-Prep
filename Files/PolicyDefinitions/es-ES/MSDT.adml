@@ -60,33 +60,34 @@ Para que esta configuración de directiva surta efecto, no es necesario reinicia
 
 </string>
 <string id="TroubleshootingAllowRecommendations">Solución de problemas: permitir a los usuarios obtener acceso a la solución recomendada para problemas conocidos</string>
-<string id="TroubleshootingAllowRecommendationsExplain">La configuración de esta directiva aplica la solución recomendada para problemas conocidos en el dispositivo y permite a los administradores configurar cómo se aplica a sus dominios y entornos de TI.
-Si no se establece esta configuración de directiva, se permitirá al usuario configurarla y cómo aplicar la solución de problemas recomendada.
+<string id="TroubleshootingAllowRecommendationsExplain">Esta configuración de directiva establece cómo se puede aplicar la solución de problemas conocidos en el dispositivo y permite a los administradores configurar cómo se aplica a sus dominios o entornos de TI.
 
-Habilitar esta directiva te permite configurar cómo se aplica la solución de problemas recomendada en el dispositivo del usuario. Puedes seleccionar uno de los siguientes valores:
-0 = desactiva esta característica.
-1 = desactiva esta característica, pero aplica una solución a los problemas críticos.
-2 = notifica a los usuarios cuando esté disponible la solución de problemas recomendada y permite que el usuario la ejecute o la omita.
-3 = ejecuta de forma automática la solución de problemas recomendada y notifica al usuario después de que se ha ejecutado correctamente.
-4 = ejecuta de forma automática la solución de problemas recomendada sin notificar al usuario.
-5 = permite que el usuario elija su propia configuración de solución de problemas recomendada.
+Si no establece esta configuración de directiva, el usuario podrá configurar cómo se aplica la solución de problemas.
 
-Después de establecer esta configuración nueva, para activar la solución de problemas recomendada para los dispositivos del dominio, sigue estas instrucciones:
-1. Crea un script bat con el siguiente contenido:
-rem El siguiente script por lotes activa Resolución de problemas recomendada
-schtasks /run /TN "\Microsoft\Windows\Diagnosis\RecommendedTroubleshootingScanner"
+La habilitación de esta directiva le permite configurar cómo se aplica la solución de problemas en el dispositivo del usuario. Puede seleccionar uno de los siguientes valores:
+0 = no permitir que los usuarios, las características del sistema o Microsoft apliquen la solución de problemas
+1 = aplicar automáticamente la solución de problemas para problemas críticos por parte del sistema y por Microsoft
+2 = aplicar automáticamente la solución de problemas para problemas críticos de las características del sistema y Microsoft. Notificar a los usuarios que hay disponible una solución de problemas para otros problemas y permitir que los usuarios elijan si desean aplicarlos o ignorarlos.
+3 = aplicar automáticamente la solución de problemas de importancia crítica y otros problemas según las características del sistema y Microsoft. Notificar a los usuarios cuando la solución de problemas resuelva un problema.
+4 = aplicar automáticamente la solución de problemas de problemas críticos y otros problemas según las características del sistema y Microsoft. No notificar a los usuarios cuando la solución de problemas resuelva un problema.
+5 = permitir que el usuario elija su propia configuración de solución de problemas.
 
-2. Para crear una nueva tarea inmediata, navega hasta Editor de administración de directivas de grupo &gt; Configuración del equipo &gt; Preferencias y selecciona Configuración del Panel de control. 
-3. En Configuración del Panel de control, haz clic con el botón derecho en Tareas programadas y selecciona Nuevo. Selecciona Tarea inmediata (como mínimo, Windows 7).
-4. Proporciona un nombre y una descripción, según corresponda, luego, en Opciones de seguridad, establece la cuenta de usuario en Sistema y selecciona la casilla ejecutar con los privilegios más altos.
-5. En la pestaña Acciones, crea una nueva acción, selecciona Iniciar un programa como tipo y, luego, escribe el archivo creado en el paso 1.
-6. Configura la tarea que quieres implementar en el dominio.</string>
-<string id="RecommendationsDropDown_DoNothing">Desactivar esta característica</string>
-<string id="RecommendationsDropDown_ApplyCoreSystemMitigationsOnly">Desactiva esta característica, pero aplica una solución a los problemas críticos.</string>
-<string id="RecommendationsDropDown_AskFirst">Notifica a los usuarios cuando esté disponible la solución de problemas recomendada y permite que el usuario la ejecute o la omita.</string>
-<string id="RecommendationsDropDown_ApplyThenNotify">Ejecuta de forma automática la solución de problemas recomendada y notifica al usuario después de que se ha ejecutado correctamente.</string>
-<string id="RecommendationsDropDown_ApplySilently">Ejecuta de forma automática la solución de problemas recomendada sin notificar al usuario.</string>
-<string id="RecommendationsDropDown_DeferToUser">Permite que el usuario elija su propia configuración de solución de problemas recomendada.</string>
+Después de establecer esta directiva, puede usar las siguientes instrucciones para comprobar si en los dispositivos de su dominio hay disponible la solución de problemas de Microsoft:
+1. cree un script bat con el siguiente contenido:
+rem Los siguientes desencadenadores de script por lotes recomendados para la solución de problemas
+Schtasks/Run/TN "\Microsoft\Windows\Diagnosis\RecommendedTroubleshootingScanner"
+
+2. para crear una nueva tarea inmediata, vaya al editor de administración de directivas de grupo &gt; configuración del equipo &gt; Preferencias y seleccione Configuración del panel de control. 
+3. en Configuración del panel de control, haga clic con el botón secundario en Tareas programadas y seleccione Nuevo. Seleccione Tarea Inmediata (como mínimo, Windows 7).
+4. proporcione el nombre y la descripción según corresponda, en opciones de seguridad establezca la cuenta de usuario en Sistema y seleccione la casilla Ejecutar con los privilegios más elevados.
+5. En la pestaña Acciones, cree una nueva acción, seleccione como tipo Iniciar un programa e introduzca el archivo creado en el paso 1.
+6. Configure la tarea que desea implementar en su dominio.</string>
+<string id="RecommendationsDropDown_DoNothing">No permitir que los usuarios, las características del sistema ni Microsoft puedan aplicar la solución de problemas.</string>
+<string id="RecommendationsDropDown_ApplyCoreSystemMitigationsOnly">Solo las características del sistema y Microsoft se aplican automáticamente para solucionar problemas críticos.</string>
+<string id="RecommendationsDropDown_AskFirst">Aplicar automáticamente la solución de problemas para problemas críticos del sistema y de Microsoft. Notificar a los usuarios que hay disponible una solución de problemas para otros problemas y permitir que los usuarios elijan si desean aplicarla o ignorarla.</string>
+<string id="RecommendationsDropDown_ApplyThenNotify">Aplicar automáticamente la solución de problemas de importancia crítica y otros problemas según las características del sistema y Microsoft. Notificar a los usuarios cuando la solución de problemas resuelva un problema.</string>
+<string id="RecommendationsDropDown_ApplySilently">Aplicar automáticamente la solución de problemas de importancia crítica y otros problemas según las características del sistema y Microsoft. No notificar a los usuarios cuando la solución de problemas resuelve un problema.</string>
+<string id="RecommendationsDropDown_DeferToUser">Permitir que el usuario elija su propia configuración de solución de problemas.</string>
     </stringTable>
     <presentationTable>
       <presentation id="MsdtToolDownloadPolicy">

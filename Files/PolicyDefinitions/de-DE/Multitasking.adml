@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+  <displayName>Multitasking</displayName>
+  <description>Verwaltet die Windows-Multitasking-Optionen</description>
+  <resources>
+    <stringTable>
+      <string id="MULTITASKING">Multitasking</string>
+      <string id="MULTITASKINGHELP">Verwaltet die Windows-Multitasking-Optionen</string>
+      <string id="BrowserAltTabBlowout">Die Einbeziehung von Microsoft Edge-Registerkarten in ALT-TAB konfigurieren</string>
+      <string id="BrowserAltTabBlowout_Help">Mit dieser Einstellung wird die Einbeziehung von Microsoft Edge-Registerkarten in Alt+Tab gesteuert.
+
+Dies kann so festgelegt werden, dass alle Registerkarten, die neuesten 3 oder 5 Registerkarten oder keine Registerkarten von Microsoft Edge angezeigt werden. 
+
+Wenn diese Option auf "Nur Fenster öffnen" eingestellt ist, wird das gesamte Feature deaktiviert.
+</string>
+      <string id="AltTabFilter_All">Geöffnete Fenster und alle Tabs in Microsoft Edge</string>
+      <string id="AltTabFilter_Five">Geöffnete Fenster und die 5 letzten Tabs in Microsoft Edge</string>
+      <string id="AltTabFilter_Three">Geöffnete Fenster und die 3 letzten Tabs in Microsoft Edge</string>
+      <string id="AltTabFilter_None">Nur geöffnete Fenster</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="AltTabFilter">
+        <dropdownList refId="AltTabFilterDropdown" noSort="true" defaultItem="0">Durch Drücken von Alt + TAB wird Folgendes angezeigt:</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

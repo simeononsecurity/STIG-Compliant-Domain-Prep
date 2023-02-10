@@ -61,14 +61,16 @@ Versión de hash admitida:
       <string id="Pol_CipherSuiteOrder_Name">Orden de conjuntos de cifrado</string>
       <string id="Pol_CipherSuiteOrder_Help">Esta configuración de directiva determina los conjuntos de cifrado usados por el servidor SMB.
 
-Si habilitas esta configuración de directiva, los conjuntos de cifrado se ordenarán por prioridad de la forma especificada.
+Si habilita esta configuración de directiva, los conjuntos de cifrado se ordenarán por prioridad de la forma especificada.
 
-Si habilitas esta configuración de directiva y no especificas como mínimo un conjunto de cifrado compatible o si deshabilitas o no estableces esta configuración de directiva, se usará el orden de conjuntos de cifrado predeterminado.
+Si habilita esta configuración de directiva y no especifica como mínimo un conjunto de cifrado compatible, o si deshabilita o no establece esta configuración de directiva, se usará el orden de conjuntos de cifrado predeterminado.
 
 Conjuntos de cifrado de SMB 3.11:
 
 AES_128_GCM
 AES_128_CCM
+AES_256_GCM
+AES_256_CCM
 
 Conjuntos de cifrado de SMB 3.0 y 3.02:
 
@@ -76,9 +78,9 @@ AES_128_CCM
 
 Cómo modificar esta configuración:
 
-Organiza los conjuntos de cifrado deseados en el cuadro de edición: un conjunto de cifrado por línea, en orden de preferencia, con el conjunto de cifrado de mayor preferencia en la parte superior. Elimina los conjuntos de cifrado que no quieras usar.
+Organice los conjuntos de cifrado deseados en el cuadro de edición: un conjunto de cifrado por línea, en orden de preferencia, con el conjunto de cifrado de mayor preferencia en la parte superior. Elimine los conjuntos de cifrado que no quiera usar.
 
-Nota: Al establecer esta configuración de seguridad, no se aplicarán los cambios hasta que reinicies Windows.</string>
+Nota: Al establecer esta configuración de seguridad, no se aplicarán los cambios hasta que reinicie Windows.</string>
       <string id="HonorCipherSuiteOrder_Name">Respetar el orden de conjuntos de cifrado</string>
       <string id="HonorCipherSuiteOrder_Help">Esta configuración de directiva determina cómo el servidor SMB selecciona un conjunto de cifrado al negociar una nueva conexión con un cliente SMB.
 
@@ -95,6 +97,25 @@ Si habilitas esta configuración de directiva, el servidor SMB seleccionará el 
 Si deshabilitas o no estableces esta configuración de directiva, el servidor SMB seleccionará el conjunto de cifrado que prefiera el cliente SMB de la lista de conjuntos de cifrado compatibles con el servidor.
 
 Nota: Al establecer esta configuración de seguridad, no se aplicarán los cambios hasta que reinicies Windows.</string>
+      <string id="SUPPORTED_Windows_Server_2022_Windows_11_0">Se requiere al menos Windows Server 2022, Windows 11</string>
+      <string id="Pol_EnableCompressedTraffic_Name">Solicitar compresión de tráfico para todos los recursos compartidos</string>
+      <string id="Pol_EnableCompressedTraffic_Help">Esta directiva controla si el servidor SMB solicita al cliente SMB que use la compresión de tráfico para todos los recursos compartidos SMB.
+
+Si habilita esta configuración de directiva, el servidor SMB solicitará de forma predeterminada al cliente SMB que comprima el tráfico cuando esté habilitada la compresión SMB. Consulte las notas a continuación.
+
+Si deshabilita o no establece esta configuración de directiva, el servidor SMB no solicitará de forma predeterminada al cliente SMB que comprima el tráfico. Sin embargo, la compresión de tráfico puede solicitarse por otros medios. Consulte las notas a continuación.
+
+Nota: Si esta directiva está deshabilitada, las propiedades por recurso compartido del servidor o el cliente SMB pueden solicitar la compresión de tráfico. Si esto no quiere hacerse y se quiere deshabilitar completamente la compresión, configure en su lugar la directiva "Deshabilitar compresión SMB".
+
+Nota: la compresión de tráfico solo se puede usar cuando el cliente SMB y el servidor SMB admiten y habilitan la compresión de tráfico.
+      </string>
+      <string id="Pol_DisableCompression_Name">Deshabilitar compresión SMB</string>
+      <string id="Pol_DisableCompression_Help">Esta directiva controla si el servidor SMB deshabilitará (impedirá completamente) la compresión del tráfico.
+
+Si habilita esta configuración de directiva, el servidor SMB nunca comprimirá los datos, independientemente de otras directivas (como la directiva "Usar compresión SMB de forma predeterminada" o la propiedad por recurso compartido).
+
+Si deshabilita o no establece esta configuración de directiva, el servidor SMB puede comprimir el tráfico (en función de una combinación de otras directivas y condiciones).
+      </string>
       </stringTable>
     <presentationTable>
       <presentation id="Pol_HashPublication">

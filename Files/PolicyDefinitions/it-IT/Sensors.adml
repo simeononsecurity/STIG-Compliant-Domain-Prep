@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>immettere qui il nome visualizzato</displayName>
+  <description>immettere qui la descrizione</description>
+  <resources>
+    <stringTable>
+      <string id="DisableSensors">Disattiva sensori</string>
+      <string id="DisableSensors_Explain">
+        
+        Questa impostazione dei criteri disattiva la funzionalità dei sensori per il computer in uso.
+
+        Se si abilita questa impostazione dei criteri, la funzionalità dei sensori verrà disattivata e tutti i programmi nel computer in uso non saranno in grado di utilizzarla.
+
+        Se si disabilita o non si configura questa impostazione dei criteri, tutti i programmi nel computer in uso saranno in grado di utilizzare la funzionalità dei sensori.
+      
+      </string>
+      <string id="DisableLocation">Disattiva percorso</string>
+      <string id="DisableLocation_Explain">
+        
+        Questa impostazione dei criteri disattiva la funzionalità del percorso per il computer in uso.
+
+        Se si abilita questa impostazione dei criteri, la funzionalità del percorso verrà disattivata e tutti i programmi nel computer in uso non saranno in grado di utilizzare le informazioni sul percorso rese disponibili da tale funzionalità.
+
+        Se si disabilita o non si configura questa impostazione dei criteri, tutti i programmi nel computer in uso saranno in grado di utilizzare le informazioni sul percorso rese disponibili dalla funzionalità del percorso.
+      
+      </string>
+      <string id="DisableLocationScripting">Disattiva script percorso</string>
+      <string id="DisableLocationScripting_Explain">
+        
+        Questa impostazione disabilita gli script per la funzionalità del percorso.
+
+        Se si abilita questa impostazione, gli script per la funzionalità del percorso non verranno eseguiti.
+
+        Se si disabilita o non si configura questa impostazione, verranno eseguiti tutti gli script per la funzionalità del percorso.
+      
+      </string>
+      <string id="LocationAndSensors">Posizione e sensori</string>
+      <string id="HumanPresence">Presenza umana</string>
+      <string id="ForceInstantWake_DisplayName">Imponi riattivazione istantanea</string>
+      <string id="ForceInstantWake_ExplainText">Stabilisce se la riattivazione all'arrivo sia imposta o no dal criterio MDM. L'impostazione non può essere modificata dall'utente, e l'interruttore nell'interfaccia sarà disattivato.</string>
+      <string id="ForceInstantWake_0">Applica la selezione predefinita dell'utente</string>
+      <string id="ForceInstantWake_1">Abilita imposizione</string>
+      <string id="ForceInstantWake_2">Disabilita imposizione</string>
+      <string id="ForceInstantLock_DisplayName">Imponi blocco istantaneo</string>
+      <string id="ForceInstantLock_ExplainText">Stabilisce se il blocco all'uscita sia imposto o no dal criterio MDM. L'impostazione non può essere modificata dall'utente e l'interruttore nell'interfaccia sarà disattivato.</string>
+      <string id="ForceInstantLock_0">Applica la selezione predefinita dell'utente</string>
+      <string id="ForceInstantLock_1">Abilita imposizione</string>
+      <string id="ForceInstantLock_2">Disabilita imposizione</string>
+      <string id="ForceLockTimeout_DisplayName">Blocca Timeout</string>
+      <string id="ForceLockTimeout_ExplainText">Stabilisce il timeout per il blocco all'uscita imposto dal criterio MDM. L'impostazione non può essere modificata dall'utente e l'interruttore nell'interfaccia sarà disattivato.</string>
+      <string id="ForceLockTimeout_0">Applica la selezione predefinita dell'utente</string>
+      <string id="ForceLockTimeout_1">10 secondi</string>
+      <string id="ForceLockTimeout_2">30 secondi</string>
+      <string id="ForceLockTimeout_3">2 minuti</string>
+      <string id="ForceInstantDim_DisplayName">Imponi attenuazione immediata</string>
+      <string id="ForceInstantDim_ExplainText">Stabiliscese l'attenuazione dello schermo basata sull'attenzione sia imposta o meno dal criterio MDM. L'impostazione non può essere modificata dall'utente, e l'interruttore nell'interfaccia sarà disattivato.</string>
+      <string id="ForceInstantDim_0">Applica la selezione predefinita dell'utente</string>
+      <string id="ForceInstantDim_1">Abilita imposizione</string>
+      <string id="ForceInstantDim_2">Disabilita imposizione</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="ForceInstantWake">
+        <dropdownList refId="ForceInstantWakeDropdown" noSort="true" defaultItem="0">Scegli una delle azioni seguenti</dropdownList>
+      </presentation>
+      <presentation id="ForceInstantLock">
+        <dropdownList refId="ForceInstantLockDropdown" noSort="true" defaultItem="0">Scegli una delle azioni seguenti</dropdownList>
+      </presentation>
+      <presentation id="ForceLockTimeout">
+        <dropdownList refId="ForceLockTimeoutDropdown" noSort="true" defaultItem="1">Scegli uno dei seguenti timeout</dropdownList>
+      </presentation>
+      <presentation id="ForceInstantDim">
+        <dropdownList refId="ForceInstantDimDropDown" noSort="true" defaultItem="0">Scegli una delle azioni seguenti</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

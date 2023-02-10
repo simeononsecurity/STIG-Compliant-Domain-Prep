@@ -135,11 +135,11 @@ Para especificar el período de vida para los registros DNS del servicio de ubic
 
 Si no establece esta configuración de directiva, no se aplicará a ningún DC y los DC usarán su configuración local.</string>
       <string id="Netlogon_ExpectedDialupDelay">Especificar el retraso de marcado esperado en el inicio de sesión</string>
-      <string id="Netlogon_ExpectedDialupDelay_Help">Esta configuración de directiva especifica el tiempo adicional que el equipo esperará la respuesta del controlador de dominio (DC) al iniciar sesión en la red.
+      <string id="Netlogon_ExpectedDialupDelay_Help">Esta configuración de directiva especifica el tiempo adicional que el equipo esperará la respuesta del controlador de dominio al iniciar sesión en la red.
 
-Para especificar el retraso de marcado esperado en el inicio de sesión, haga clic en Habilitado y escriba el valor deseado en segundos (por ejemplo, el valor "60" es equivalente a 1 minuto).
+Para especificar el retraso de marcado esperado en el inicio de sesión, haz clic en Habilitado y luego escribe el valor deseado en segundos (por ejemplo, el valor "60" es 1 minuto).
 
-Si no establece esta configuración de directiva, no se aplicará a ningún equipo y los equipos usarán su configuración local.</string>
+Si no estableces esta configuración de directiva, no se aplicará a ningún equipo y los equipos usarán su configuración local.</string>
       <string id="Netlogon_GcSiteCoverage">Especificar los sitios cubiertos por los registros SRV de DNS del servicio de ubicación de catálogos globales</string>
       <string id="Netlogon_GcSiteCoverage_Help">Esta configuración de directiva especifica los sitios para los que los catálogos globales (GC) deben registrar los registros de recurso SRV de DNS del servicio de ubicación de GC específicos del sitio. Estos registros se crean además de los registros SRV específicos del sitio registrados para el sitio en el que reside el GC y los registros creados por un GC configurado para crear registros SRV de DNS del servicio de ubicación de GC para esos sitios sin un GC que están cerca de él. 
 
@@ -337,6 +337,22 @@ Los valores permitidos para esta configuración provocan los comportamientos sig
 Para especificar este comportamiento, haga clic en Habilitado y, entonces, introduzca un valor. El intervalo de valores oscila entre 1 y 2.
 
 Si no establece esta configuración de directiva, no se aplicará a ningún equipo y los equipos usarán su configuración local.</string>
+
+      <string id="Netlogon_DnsSrvRecordUseLowerCaseHostNames">Usar nombres de host DNS en minúsculas al realizar registros SRV de controlador de dominio</string>
+      <string id="Netlogon_DnsSrvRecordUseLowerCaseHostNames_Help">Esta configuración de directiva define si los controladores de dominio a los que se aplica usarán el nombre de host DNS en minúsculas al registrar registros SRV.
+
+Si se habilita, los controladores de dominio usarán el nombre de host DNS en minúsculas al registrar los registros SRV del controlador de dominio. Se intentará de nuevo eliminar todos los registros SRV registrados anteriormente que contengan nombres de host DNS con mayúsculas y minúsculas. Para obtener más información y posibles procedimientos de limpieza manuales, consulta el vínculo siguiente.
+
+Si se deshabilita, los controladores de dominio usarán el nombre de host DNS configurado como está al registrar los registros SRV del controlador de dominio.
+
+Si no se configura, los controladores de dominio utilizarán de forma predeterminada su configuración local.
+
+La configuración local predeterminada está habilitada.
+
+No es necesario reiniciar para que los cambios de esta configuración se apliquen.
+
+Hay más información disponible en https://aka.ms/lowercasehostnamesrvrecord
+      </string>
 
     </stringTable>
     <presentationTable>

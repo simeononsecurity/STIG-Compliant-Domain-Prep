@@ -246,13 +246,13 @@ Cuando esta directiva no está habilitada o configurada, Windows Search controla
 
 Cuando esta directiva no está habilitada o configurada, la configuración predeterminada se establecerá a .bmp;.emf;.gif;.jpg;.jpeg;.png;.wmf;.wrn;.txt;.err;.xml;.cpp;.c;.h;.cxx;.hxx;.idl;.cs;.vb;.idl;.xsd;.doc;.docx;.xls;.xlsx;.ppt;.pptx;.vsd;.xlsb;.xltx;.dot;.rtf</string>
       <string id="PreventUnwantedAddins">Impedir iFilters no deseados y controladores de protocolo</string>
-      <string id="PreventUnwantedAddins_Explain">La habilitación de esta directiva previene a Windows Search del uso de iFilters y controladores de protocolo a menos que estén especificados en la lista de admitidos. Sin embargo, esta directiva no impide que estos iFilters o controladores de protocolo se instalen ni que sean usados por otras aplicaciones o servicios. 
-Además, puede especificar una lista de complementos admitidos si proporciona la cadena classID o ProgId. Por ejemplo, si piensa implementar iFilter, asegúrese de que este iFilter se encuentra en la lista de admitidos, ya sea un GUID como {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx} (incluya las llaves) o un ProgID como VisFilter.CFilter.1.
+      <string id="PreventUnwantedAddins_Explain">La habilitación de esta directiva previene a Windows Search del uso de iFilters y controladores de protocolo a menos que estén especificados en la lista de permitidos. Sin embargo, esta directiva no impide que estos iFilters o controladores de protocolo se instalen ni que sean usados por otras aplicaciones o servicios. 
+Además, puede especificar una lista de complementos permitidos si proporciona la cadena classID o ProgId. Por ejemplo, si piensa implementar iFilter, asegúrese de que este iFilter se encuentra en la lista de permitidos, ya sea un GUID como {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx} (incluya las llaves) o un ProgID como VisFilter.CFilter.1.
 
 Si mantiene el entorno de escritorio bloqueado, esta configuración será redundante, ya que los usuarios que no son administradores no tienen permiso para instalar componentes nuevos. Si los usuarios tienen los permisos del administrador o pueden instalar software, esta directiva les impide usar específicamente componentes de búsqueda relacionados con Windows Search.
 
-Nota: Debido a la limitación en el editor de la directiva de grupo, debe agregar al menos una entrada en la lista de admitidos, incluso si desea habilitar esta directiva sin una lista de admitidos. Cree una entrada en la lista colocando un espacio en el campo valor y, a continuación, guárdela. Esto creará una entrada de marcador de posición que el programa ignorará.</string>
-      <string id="PreventUnwantedAddins_AllowList">Lista de admitidos</string>
+Nota: Debido a la limitación en el editor de la directiva de grupo, debe agregar al menos una entrada en la lista de permitidos, incluso si desea habilitar esta directiva sin una lista de permitidos. Cree una entrada en la lista colocando un espacio en el campo valor y, a continuación, guárdela. Esto creará una entrada de marcador de posición que el programa ignorará.</string>
+      <string id="PreventUnwantedAddins_AllowList">Lista de permitidos</string>
       <string id="ExcludedExtensionsMultiline">Impedir la indización de algunos tipos de archivo</string>
       <string id="ExcludedExtensionsMultiline_Explain">La habilitación de esta directiva permite editar la lista de tipos de archivos para excluir de la indización. El usuario final no puede modificar esta lista. Debe separar cada tipo de extensión con un punto y coma.
 
@@ -275,6 +275,8 @@ Si deshabilita o no establece la configuración de directiva, los usuarios obten
 Si habilitas o no estableces esta configuración, se permitirá el uso de Cortana en el dispositivo. Si deshabilitas esta opción, se desactivará Cortana. 
  
 Aunque Cortana esté desactivada, los usuarios podrán realizar búsquedas en el dispositivo.</string>
+      <string id="EnableDynamicContentInWSB">Permitir elementos destacados de búsqueda</string>
+      <string id="ExplainEnableDynamicContentInWSB">Al deshabilitar esta configuración, se desactivan los elementos destacados de búsqueda en el cuadro de búsqueda del menú Inicio y en la página principal de búsqueda. Al habilitar o no configurar esta opción, se activan los elementos destacados de búsqueda en el cuadro de búsqueda del menú Inicio y en la página principal de búsqueda.</string>
       <string id="AllowCortanaAboveLock">Permitir usar Cortana sobre la pantalla de bloqueo</string>
       <string id="ExplainAllowCortanaAboveLock">Esta configuración de directiva determina si el usuario puede o no puede interactuar con Cortana mediante la voz mientras el sistema está bloqueado.
 
@@ -294,6 +296,10 @@ Si habilitas esta opción, las búsquedas y Cortana podrán acceder a la informa
       <string id="AllowCortanainAADEnabled">Habilitar la página de Cortana en AAD</string>
       <string id="AllowCloudSearchEnabled">Habilitar la búsqueda en la nube</string>
       <string id="AllowCloudSearchControlledByUser">Seleccionado por el usuario</string>
+      <string id="DisableSearch_DisplayName">Deshabilitar completamente la interfaz de usuario de búsqueda</string>
+      <string id="DisableSearch_ExplainText">Si habilita esta directiva, la interfaz de usuario de búsqueda se deshabilitará junto con todos sus puntos de entrada, como los métodos abreviados de teclado, los gestos del panel táctil y el tipo de búsqueda en el menú Inicio. El cuadro de búsqueda del menú Inicio y el botón De la barra de tareas de búsqueda también se ocultarán.
+
+Si deshabilita o no establece esta configuración de directiva, el usuario podrá abrir la interfaz de usuario de búsqueda y se mostrarán sus diferentes puntos de entrada.</string>
     </stringTable>
     <presentationTable>
       <presentation id="RichAttachmentPreviews">
@@ -333,7 +339,7 @@ Si habilitas esta opción, las búsquedas y Cortana podrán acceder a la informa
         <decimalTextBox refId="LimitEnableThrottlingOnlineMailboxes" defaultValue="120">Número de artículos por minuto</decimalTextBox>
       </presentation>
       <presentation id="PreventUnwantedAddins">
-        <listBox refId="PreventUnwantedAddins_AllowList">Lista de admitidos</listBox>
+        <listBox refId="PreventUnwantedAddins_AllowList">Lista de permitidos</listBox>
       </presentation>
       <presentation id="PreventIndexingCertainPaths_1">
         <listBox refId="PreventIndexingCertainPaths">Impedir indización de algunas rutas</listBox>

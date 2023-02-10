@@ -99,6 +99,36 @@ Si deshabilitas o no estableces esta configuración de directiva, los empleados 
 
 Si una aplicación está abierta cuando este objeto de directiva de grupo se aplica en un dispositivo, los empleados deberán reiniciar la aplicación o el dispositivo para que los cambios de directiva se apliquen a la aplicación.
       </string>
+      <string id="LetAppsAccessGraphicsCaptureProgrammatic_Name">Permitir que las aplicaciones de Windows tomen capturas de pantalla de varias ventanas o pantallas</string>
+      <string id="LetAppsAccessGraphicsCaptureProgrammatic_Explain">Esta configuración de directiva especifica si las aplicaciones de Windows pueden hacer capturas de varias pantallas o ventanas.
+
+Puede establecer una configuración predeterminada para todas las aplicaciones o configurar una por aplicación especificando el Nombre de familia de paquete. Puede obtener el Nombre de familia de paquete de una aplicación mediante el cmdlet Get-AppPackage de Windows PowerShell. La configuración por aplicación reemplazará la configuración predeterminada.
+
+Si elige la opción "El usuario tiene el control", los empleados de su organización podrán decidir si las aplicaciones de Windows pueden hacer capturas de varias pantallas o ventanas mediante la Configuración y Privacidad en el dispositivo.
+
+Si elige la opción "Forzar permiso", las aplicaciones de Windows podrán realizar capturas de varias pantallas o ventanas y los empleados de su organización no podrán cambiar este ajuste.
+
+Si elige la opción "Forzar denegación", las aplicaciones de Windows no podrán realizar capturas de varias pantallas o ventanas y los empleados de su organización tampoco podrán cambiarlo.
+
+Si deshabilita o no define la configuración de esta directiva, los empleados de su organización podrán decidir si las aplicaciones de Windows pueden realizar capturas de varias pantallas o ventanas mediante la Configuración y Privacidad en el dispositivo.
+
+Si una aplicación está abierta cuando este objeto de Directiva de grupo sea aplicado en un dispositivo, los empleados deberán reiniciar la aplicación o el dispositivo para que se apliquen los cambios de la directiva en la aplicación.
+      </string>
+      <string id="LetAppsAccessGraphicsCaptureWithoutBorder_Name">Permitir que las aplicaciones de Windows desactiven el borde de captura de pantalla</string>
+      <string id="LetAppsAccessGraphicsCaptureWithoutBorder_Explain">Esta configuración de esta directiva especifica si las aplicaciones de Windows pueden desactivar el borde de captura de pantalla.
+
+Puede establecer una configuración predeterminada para todas las aplicaciones o configurar una por aplicación especificando el Nombre de familia de paquete. Puede obtener el nombre de familia de paquete de una aplicación mediante el cmdlet Get-AppPackage de Windows PowerShell. La configuración por aplicación reemplazará la configuración predeterminada.
+
+Si elige la opción "El usuario tiene el control", los empleados de su organización podrán decidir si las aplicaciones de Windows pueden desactivar el borde de captura de pantalla mediante la Configuración y Privacidad en el dispositivo.
+
+Si elige la opción "Forzar permiso", las aplicaciones de Windows podrán desactivar el borde de captura de pantalla y los empleados de su organización no podrán cambiar este ajuste.
+
+Si elige la opción "Forzar denegación", las aplicaciones de Windows no podrán desactivar el borde de captura de pantalla y los empleados de su organización tampoco podrán cambiarlo.
+
+Si deshabilita o no define la configuración de esta directiva, los empleados de su organización podrán decidir si las aplicaciones de Windows pueden desactivar el borde de captura de pantalla mediante la Configuración y Privacidad en el dispositivo.
+
+Si una aplicación está abierta cuando este objeto de Directiva de grupo sea aplicado en un dispositivo, los empleados deberán reiniciar la aplicación o el dispositivo para que se apliquen los cambios de la directiva en la aplicación.
+      </string>
       <string id="LetAppsAccessLocation_Name">Permitir que las aplicaciones de Windows accedan a la ubicación</string>
       <string id="LetAppsAccessLocation_Explain">Esta configuración de directiva especifica si las aplicaciones de Windows pueden acceder a la ubicación.
 
@@ -392,6 +422,24 @@ Si una aplicación está abierta cuando se aplica este objeto de directiva de gr
         <text>Forzar denegación de estas aplicaciones específicas (usar nombres de familia de paquete):</text>
         <multiTextBox refId="LetAppsAccessEmail_ForceDenyTheseApps_List"/>
       </presentation>
+      <presentation id="LetAppsAccessGraphicsCaptureProgrammatic">
+        <dropdownList refId="LetAppsAccessGraphicsCaptureProgrammatic_Enum" noSort="true" defaultItem="0">Valor predeterminado para todas las aplicaciones:</dropdownList>
+        <text>Hacer que el usuario controle estas aplicaciones específicas (usar nombres de familia de paquete):</text>
+        <multiTextBox refId="LetAppsAccessGraphicsCaptureProgrammatic_UserInControlOfTheseApps_List"/>
+        <text>Forzar permiso de estas aplicaciones específicas (usar nombres de familia de paquete):</text>
+        <multiTextBox refId="LetAppsAccessGraphicsCaptureProgrammatic_ForceAllowTheseApps_List"/>
+        <text>Forzar denegación de estas aplicaciones específicas (usar nombres de familia de paquete):</text>
+        <multiTextBox refId="LetAppsAccessGraphicsCaptureProgrammatic_ForceDenyTheseApps_List"/>
+      </presentation>
+      <presentation id="LetAppsAccessGraphicsCaptureWithoutBorder">
+        <dropdownList refId="LetAppsAccessGraphicsCaptureWithoutBorder_Enum" noSort="true" defaultItem="0">Valor predeterminado para todas las aplicaciones:</dropdownList>
+        <text>Hacer que el usuario controle estas aplicaciones específicas (usar nombres de familia de paquete):</text>
+        <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_UserInControlOfTheseApps_List"/>
+        <text>Forzar permiso de estas aplicaciones específicas (usar nombres de familia de paquete):</text>
+        <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_ForceAllowTheseApps_List"/>
+        <text>Forzar denegación de estas aplicaciones específicas (usar nombres de familia de paquete):</text>
+        <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_ForceDenyTheseApps_List"/>
+      </presentation>
       <presentation id="LetAppsAccessLocation">
         <dropdownList refId="LetAppsAccessLocation_Enum" noSort="true" defaultItem="0">Valor predeterminado para todas las aplicaciones:</dropdownList>
         <text>Hacer que el usuario controle estas aplicaciones específicas (usar nombres de familia de paquete):</text>
@@ -504,9 +552,9 @@ Si una aplicación está abierta cuando se aplica este objeto de directiva de gr
         <dropdownList refId="LetAppsAccessGazeInput_Enum" noSort="true" defaultItem="0">Valor predeterminado para todas las aplicaciones:</dropdownList>
         <text>Hacer que el usuario controle estas aplicaciones específicas (usar nombres de familia de paquete):</text>
         <multiTextBox refId="LetAppsAccessGazeInput_UserInControlOfTheseApps_List"/>
-        <text>Forzar permiso de estas aplicaciones específicas (usar nombres de familia de paquete):</text>
+        <text>Forzar permiso de estas aplicaciones específicas (usar los nombres de familia del paquete):</text>
         <multiTextBox refId="LetAppsAccessGazeInput_ForceAllowTheseApps_List"/>
-        <text>Forzar denegación de estas aplicaciones específicas (usar nombres de familia de paquete):</text>
+        <text>Forzar denegación de estas aplicaciones específicas (usar los nombres de familia del paquete):</text>
         <multiTextBox refId="LetAppsAccessGazeInput_ForceDenyTheseApps_List"/>
       </presentation>
       <presentation id="LetAppsActivateWithVoice">
@@ -519,9 +567,9 @@ Si una aplicación está abierta cuando se aplica este objeto de directiva de gr
         <dropdownList refId="LetAppsAccessBackgroundSpatialPerception_Enum" noSort="true" defaultItem="0">Valor predeterminado para todas las aplicaciones:</dropdownList>
         <text>Hacer que el usuario controle estas aplicaciones específicas (usar nombres de familia de paquete):</text>
         <multiTextBox refId="LetAppsAccessBackgroundSpatialPerception_UserInControlOfTheseApps_List"/>
-        <text>Forzar permiso de estas aplicaciones específicas (usar nombres de familia de paquete):</text>
+        <text>Forzar permiso de estas aplicaciones específicas (usar los nombres de familia del paquete):</text>
         <multiTextBox refId="LetAppsAccessBackgroundSpatialPerception_ForceAllowTheseApps_List"/>
-        <text>Forzar denegación de estas aplicaciones específicas (usar nombres de familia de paquete):</text>
+        <text>Forzar denegación de estas aplicaciones específicas (usar los nombres de familia del paquete):</text>
         <multiTextBox refId="LetAppsAccessBackgroundSpatialPerception_ForceDenyTheseApps_List"/>
       </presentation>
     </presentationTable>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+  <displayName>Multitasking</displayName>
+  <description>Administrerer indstillingerne for multitasking i Windows</description>
+  <resources>
+    <stringTable>
+      <string id="MULTITASKING">Multitasking</string>
+      <string id="MULTITASKINGHELP">Administrerer indstillingerne for multitasking i Windows</string>
+      <string id="BrowserAltTabBlowout">Konfigurer inkluderingen af Microsoft Edge-faner i Alt-tabulator</string>
+      <string id="BrowserAltTabBlowout_Help">Denne indstilling styrer inkluderingen af Microsoft Edge-faner i Alt+tabulator.
+
+Dette kan indstilles til at vise alle faner, de seneste tre eller fem faner eller ingen faner fra Microsoft Edge.
+
+Hvis dette er indstillet til at vise "Åbn kun vinduer", deaktiveres hele funktionen.
+</string>
+      <string id="AltTabFilter_All">Åbn vinduer og alle faner i Microsoft Edge</string>
+      <string id="AltTabFilter_Five">Åbn vinduer og de fem seneste faner i Microsoft Edge</string>
+      <string id="AltTabFilter_Three">Åbn vinduer og de tre seneste faner i Microsoft Edge</string>
+      <string id="AltTabFilter_None">Åbn kun vinduer</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="AltTabFilter">
+        <dropdownList refId="AltTabFilterDropdown" noSort="true" defaultItem="0">Tryk på Alt+tabulator viser</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

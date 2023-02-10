@@ -36,6 +36,42 @@
       
       </string>
       <string id="LocationAndSensors">Ubicación y sensores</string>
+      <string id="HumanPresence">Presencia humana</string>
+      <string id="ForceInstantWake_DisplayName">Forzar el activado instantáneo</string>
+      <string id="ForceInstantWake_ExplainText">Determina si la directiva de MDM fuerza el activado o desactivado de la opción Activar al llegar. El usuario no podrá cambiar esta configuración y el botón de alternancia de la interfaz de usuario estará atenuado.</string>
+      <string id="ForceInstantWake_0">El valor predeterminado es la elección del usuario</string>
+      <string id="ForceInstantWake_1">Forzado activado</string>
+      <string id="ForceInstantWake_2">Forzado desactivado</string>
+      <string id="ForceInstantLock_DisplayName">Forzar el bloqueo instantáneo</string>
+      <string id="ForceInstantLock_ExplainText">Determina si la directiva de MDM fuerza el activado o desactivado de la opción Bloqueo al abandonar. El usuario no podrá cambiar esta configuración y el botón de alternancia de la interfaz de usuario estará atenuado.</string>
+      <string id="ForceInstantLock_0">El valor predeterminado es la elección del usuario</string>
+      <string id="ForceInstantLock_1">Forzado activado</string>
+      <string id="ForceInstantLock_2">Forzado desactivado</string>
+      <string id="ForceLockTimeout_DisplayName">Tiempo de espera de bloqueo</string>
+      <string id="ForceLockTimeout_ExplainText">Determina el tiempo de espera para el Bloqueo al abandonar forzado por la directiva de MDM. El usuario no podrá cambiar esta configuración y el botón de alternancia de la interfaz de usuario estará atenuado.</string>
+      <string id="ForceLockTimeout_0">El valor predeterminado es la elección del usuario</string>
+      <string id="ForceLockTimeout_1">10 segundos</string>
+      <string id="ForceLockTimeout_2">30 segundos</string>
+      <string id="ForceLockTimeout_3">2 minutos</string>
+      <string id="ForceInstantDim_DisplayName">Forzar atenuación instantánea</string>
+      <string id="ForceInstantDim_ExplainText">Determina si la directiva MDM fuerza la activación o desactivación de la atenuación de pantalla basada en la atención. El usuario no podrá cambiar esta configuración y el botón de alternancia de la interfaz de usuario estará atenuado.</string>
+      <string id="ForceInstantDim_0">El valor predeterminado es la elección del usuario</string>
+      <string id="ForceInstantDim_1">Forzado activado</string>
+      <string id="ForceInstantDim_2">Forzado desactivado</string>
     </stringTable>
+    <presentationTable>
+      <presentation id="ForceInstantWake">
+        <dropdownList refId="ForceInstantWakeDropdown" noSort="true" defaultItem="0">Elige una de las siguientes acciones</dropdownList>
+      </presentation>
+      <presentation id="ForceInstantLock">
+        <dropdownList refId="ForceInstantLockDropdown" noSort="true" defaultItem="0">Elige una de las siguientes acciones</dropdownList>
+      </presentation>
+      <presentation id="ForceLockTimeout">
+        <dropdownList refId="ForceLockTimeoutDropdown" noSort="true" defaultItem="1">Elija uno de los siguientes tiempos de espera</dropdownList>
+      </presentation>
+      <presentation id="ForceInstantDim">
+        <dropdownList refId="ForceInstantDimDropDown" noSort="true" defaultItem="0">Elige una de las siguientes acciones</dropdownList>
+      </presentation>
+    </presentationTable>
   </resources>
 </policyDefinitionResources>

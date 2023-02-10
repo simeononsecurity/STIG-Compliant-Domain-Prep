@@ -5,6 +5,8 @@
   <description>escriba aquí la descripción</description>
   <resources>
     <stringTable>
+      <string id="TS_AUTOSUBSCRIPTION_NAME">Habilitar suscripción automática</string>
+      <string id="TS_AUTOSUBSCRIPTION_EXPLAIN">Controla la lista de direcciones URL a las que se debería suscribir automáticamente el usuario</string>
       <string id="TS_SUPPORTED_Windows10">Al menos Windows 10 o Windows Server 2016</string>
       <string id="TS_SUPPORTED_Windows8_or_ARM">Al menos Windows 8 o Windows RT</string>
       <string id="TS_SUPPORTED_Windows8_Server">Se requiere al menos Windows Server 2012</string>
@@ -26,6 +28,7 @@
       <string id="TS_SUPPORTED_WindowsXP_Win2K3_only">Al menos Windows XP y solo Windows Server 2003</string>
       <string id="TS_SUPPORTED_WindowsServer2008OrWin7">Al menos Windows Server 2008 o Windows 7</string>
       <string id="TS_SUPPORTED_WindowsServer2008R2_Only">  Solo Windows Server 2008 R2</string>
+      <string id="TS_SUPPORTED_1903_TO_2004">Windows 10 versión 1903, Windows 10 versión 1909 y Windows 10 versión 2004</string>
       <string id="TS_TERMINAL_SERVER">Host de sesión de Escritorio remoto</string>
       <string id="TS_TERMINAL_SERVER_Help">Controla la configuración de un servidor host de sesión de Escritorio remoto</string>
       <string id="TS_LICENSE_SERVER">Licencia de Escritorio remoto</string>
@@ -130,20 +133,20 @@ Si habilita esta opción, se deshabilitará la casilla para guardar credenciales
 Si deshabilita esta opción o no la configura, el usuario podrá guardar contraseñas por medio de Conexión a Escritorio remoto.</string>
       <string id="TS_CLIENT_DRIVE_EXPLAIN_M">Esta configuración de directiva especifica si impedir la asignación de unidades cliente en una sesión de Servicios de Escritorio remoto (redirección de unidad).
 
-De forma predeterminada, el servidor host de sesión de Escritorio remoto asigna unidades cliente automáticamente al conectarse. Las unidades asignadas aparecen en el árbol de carpetas de sesión en el Explorador de archivos o en Equipo con el formato &lt;letraDeUnidad&gt; en &lt;nombreDeEquipo&gt;. Puede usar esta directiva para invalidar este comportamiento.
+De forma predeterminada, el servidor host de sesión de Escritorio remoto asigna unidades cliente automáticamente al conectarse. Las unidades asignadas aparecen en el árbol de carpetas de sesión en el Explorador de archivos o en Equipo con el formato &lt;driveletter&gt; en &lt;computername&gt;. Puede usar esta directiva para invalidar este comportamiento.
 
-Si habilita esta configuración de directiva, no se permitirá la redirección de unidades cliente en sesiones de Servicios de Escritorio remoto ni se permitirá la redirección de copias de archivos del Portapapeles en equipos que ejecuten Windows Server 2003, Windows 8 y Windows XP.
+Si habilita esta configuración de directiva, no se permitirá la redirección de unidades cliente en sesiones de Servicios de Escritorio remoto ni se permitirá la redirección de copias de archivos del Portapapeles en equipos que ejecuten Windows XP, Windows Server 2003, Windows Server 2012 (y posteriores) o Windows 8 (y posteriores).
 
 Si deshabilita esta configuración de directiva, se permitirá siempre la redirección de unidades cliente. Además, la redirección de copias de archivo del Portapapeles siempre se permite si se permite la redirección del Portapapeles.
 
 Si no establece esta configuración de directiva, la redirección de unidades cliente y la redirección de copias de archivo del Portapapeles no se especificarán en el nivel de directiva de grupo.
-
 </string>
       <string id="TS_CLIENT_DRIVE_M">No permitir redirección de unidad</string>
       <string id="TS_CLIENT_HELP">Controla la configuración del cliente de conexión a Escritorio remoto</string>
       <string id="TS_CLIENT_LPT">No permitir redirección de puertos LPT</string>
       <string id="TS_CLIENT_PNP">No permitir redirección de dispositivo Plug and Play compatible</string>
       <string id="TS_CAMERA_REDIRECTION">No permitir el redireccionamiento de la captura de vídeo</string>
+      <string id="TS_LOCATION_REDIRECTION">No permitir redirección de ubicación</string>
       <string id="TS_CLIENT_PRINTER">No permitir la redirección de impresoras de cliente</string>
       <string id="TS_CLIPBOARDMAP_EXPLAIN">Esta configuración de directiva especifica si impedir el uso compartido del contenido del Portapapeles (redirección del Portapapeles) entre un equipo remoto y un equipo cliente durante una sesión de Servicios de Escritorio remoto.
 
@@ -208,6 +211,15 @@ Si habilitas esta configuración de directiva, los usuarios no podrán redirigir
 
 Si deshabilitas esta configuración de directiva o no la configuras, los usuarios podrán redirigir sus dispositivos de captura de vídeo al equipo remoto. Los usuarios pueden usar la opción Más de la pestaña Recursos locales de Conexión a Escritorio remoto para elegir los dispositivos de captura de vídeo que se redirigirán al equipo remoto.
 
+</string>
+      <string id="TS_LOCATION_REDIRECTION_EXPLAIN">Esta configuración de directiva permite controlar la redirección de los datos de ubicación al equipo remoto en una sesión de servicios de escritorio remoto.
+
+De forma predeterminada, servicios de escritorio remoto permite la redirección de los datos de ubicación.
+
+Si habilita esta configuración de Directiva, los usuarios no podrán redirigir sus datos de ubicación al equipo remoto.
+
+Si deshabilita o no establece esta configuración de Directiva, los usuarios podrán redirigir sus datos de ubicación al equipo remoto.
+          
 </string>
       <string id="TS_MAXMONITOR_EXPLAIN">Esta configuración de directiva le permite limitar el número máximo de monitores que un usuario puede usar para mostrar una sesión de Servicios de Escritorio remoto. La limitación del número de monitores para mostrar una sesión de Servicios de Escritorio remoto puede mejorar el rendimiento de la conexión, en particular con vínculos lentos, y reducir la carga del servidor.
 
@@ -419,23 +431,20 @@ Si habilita esta configuración de directiva, estas notificaciones no se mostrar
 Si deshabilita o no define esta configuración de directiva, estas notificaciones se mostrarán en el servidor host de sesión de Escritorio remoto después de que inicie sesión como administrador local.</string>
       <string id="TS_LICENSING_MODE">Establecer el modo de licencia de Escritorio remoto</string>
       <string id="TS_LICENSING_MODE_EXPLAIN">
-        Esta configuración de directiva te permite especificar el tipo de licencia de acceso de cliente de los Servicios de Escritorio remoto (CAL de RDS) que necesitas para conectarte a este servidor host de sesión de Escritorio remoto.
+        Esta configuración de la directiva le permite especificar el tipo de licencia de acceso al cliente de Servicios de escritorio remoto (RDS CAL) que se requiere para conectarse a este servidor de sesión RD.
 
-        Puedes usar esta configuración de directiva para seleccionar uno de los tres modos de licencia: por usuario, por dispositivo y AAD por usuario.
+        Puede utilizar esta configuración de la directiva para seleccionar uno de los dos modos de licencia: Por usuario o por dispositivo.
 
-        El modo de licencia por usuario requiere que cada cuenta de usuario que se conecte a este servidor host de sesión de Escritorio remoto tenga una CAL por usuario de RDS emitida desde un servidor de licencias de escritorio remoto.
+        El modo de licencia por usuario requiere que cada cuenta de usuario que se conecte a este servidor de sesión RD tenga un CAL RDS por usuario emitido desde un servidor de licencias RD.
 
-        El modo de licencia por dispositivo requiere que cada dispositivo que se conecte a este servidor host de sesión de Escritorio remoto tenga una CAL por dispositivo de RDS emitida desde un servidor de licencias de escritorio remoto.
+        El modo de licencia por dispositivo requiere que cada dispositivo que se conecte a este servidor de sesión RD tenga un CAL RDS por dispositivo emitido por un servidor de licenciamiento RD. 
 
-        El modo de licencia de AAD por usuario requiere que cada cuenta de usuario que se conecte a este servidor host de sesión de Escritorio remoto tenga un plan de servicio que admita licencias de RDS asignadas en AAD.
-        
-        Si habilitas esta configuración de Directiva, el servidor de licencias de Escritorio remoto podrá admitir el modo de licencia de Escritorio remoto que especifiques.
+        Si habilita esta configuración de política, el modo de licencia de Escritorio remoto que especifique será respetado por el servidor de licencias de Escritorio remoto y el host de sesión RD..
 
-        Si deshabilitas o no estableces esta configuración de directiva, el modo de licencia no se especificará en el nivel de directiva de grupo.
+        Si desactiva o no configura este ajuste de directiva, el modo de licencia no se especifica en el nivel de directiva de grupo.
       </string>
       <string id="TS_LICENSING_MODE_PER_DEVICE">Por dispositivo</string>
       <string id="TS_LICENSING_MODE_PER_USER">Por usuario</string>
-      <string id="TS_LICENSING_MODE_AAD_PER_USER">AAD por usuario</string>
       <string id="TS_LPTPORTMAP_EXPLAIN">Esta configuración de directiva especifica si se impide la redirección de datos a puertos LPT de cliente durante una sesión de Servicios de Escritorio remoto.
 
 Puede usar esta opción para impedir a los usuarios asignar puertos LPT locales y redirigir datos desde el equipo remoto a periféricos de puertos locales LPT. De forma predeterminada, Servicios de Escritorio remoto permite la redirección de puertos LPT.
@@ -786,6 +795,35 @@ Si habilita esta configuración de directiva, el escritorio se mostrará siempre
 Si deshabilita esta configuración de directiva o no la establece, se podrá especificar un programa inicial para ejecutarse en el equipo remoto después de que el cliente se conecte al equipo remoto. Si no se especifica ningún programa inicial, el escritorio se mostrará siempre en el equipo remoto después de que el cliente se conecte al mismo.
 
 Nota: si esta configuración de directiva se habilita, la configuración de directiva "Iniciar un programa al conectarse" se omitirá.</string>
+      <string id="TS_UIA">Permitir redirección de automatización de la interfaz de usuario</string>
+      <string id="TS_UIA_EXPLAIN">Esta configuración de directiva determina si las aplicaciones cliente de automatización de la interfaz de usuario (UI) que se ejecutan en el equipo local pueden tener acceso a los elementos de la UI del servidor.
+
+La automatización de la UI da a los programas acceso a la mayoría de los elementos de la UI, lo que permite usar productos con tecnología de asistencia, como la Lupa y el Narrador, que deben interactuar con la UI para funcionar correctamente. La información de la UI también permite que los scripts de prueba automatizados interactúen con la UI.
+
+Las sesiones de escritorio remoto no admiten actualmente la redirección de automatización de la UI.
+
+Si habilita o no configura esta configuración de directiva, los clientes de automatización de la UI del equipo local pueden interactuar con aplicaciones remotas. Por ejemplo, puede usar los clientes de la Lupa y el Narrador del equipo local para interactuar con la UI en una página web que abrió en una sesión remota.
+
+Si deshabilita esta configuración de directiva, los clientes de automatización de la UI que se ejecutan en el equipo local no pueden interactuar con aplicaciones remotas.
+</string>
+      <string id="TS_WEBAUTHN">No permitir el redireccionamiento de WebAuthn</string>
+      <string id="TS_WEBAUTHN_EXPLAIN">Esta configuración de directiva permite controlar el redireccionamiento de solicitudes de autenticación web (WebAuthn) de una sesión de Escritorio remoto al dispositivo local. Este redireccionamiento permite a los usuarios autenticarse en los recursos en la sesión de Escritorio remoto mediante su autenticador local (por ejemplo, Windows Hello para empresas, clave de seguridad u otro).
+
+De forma predeterminada, Escritorio remoto permite el redireccionamiento de las solicitudes WebAuthn.
+
+Si habilita esta configuración de directiva, los usuarios no podrán usar su autenticador local en la sesión de Escritorio remoto.
+
+Si deshabilita o no establece esta configuración de directiva, los usuarios pueden usar autenticadores locales en la sesión de Escritorio remoto.
+</string>
+      <string id="TS_CLIPRDR_CLOUD_CLIP_INTEGRATION">Deshabilitar la integración del Portapapeles en la nube para la transferencia de datos de servidor a cliente</string>
+      <string id="TS_CLIPRDR_CLOUD_CLIP_INTEGRATION_EXPLAIN">Esta configuración de directiva permite controlar si los datos transferidos desde la sesión remota al cliente mediante el redireccionamiento del Portapapeles se agregan al Portapapeles de nube del lado cliente.
+
+De forma predeterminada, Escritorio remoto deshabilita la integración con el Portapapeles de nube del lado cliente para los datos transferidos desde la sesión remota mediante la redirección del Portapapeles.
+
+Si habilita o no establece esta configuración de directiva, los datos copiados en la sesión remota y pegados en el cliente no se agregarán al Portapapeles de nube del lado cliente.
+
+Si deshabilita esta configuración de directiva, los datos copiados en la sesión remota y pegados en el cliente se agregarán al Portapapeles de nube del lado cliente (si está habilitado).
+</string>
       <string id="TS_USER_AUTHENTICATION_EXPLAIN">Esta configuración de directiva le permite especificar si es necesaria la autenticación del usuario para conexiones remotas al servidor host de sesión de Escritorio remoto mediante Autenticación a nivel de red. Esta configuración de directiva mejora la seguridad al requerir que la autenticación del usuario tenga lugar en un momento más temprano del proceso de conexión remota.
 
 Si habilita esta configuración de directiva, solo podrán conectarse al servidor host de sesión de Escritorio remoto los equipos cliente que sean compatibles con Autenticación a nivel de red.

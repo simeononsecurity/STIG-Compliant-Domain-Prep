@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+  <displayName>Πολυδιεργασία</displayName>
+  <description>Διαχειρίζεται τις επιλογές πολυδιεργασίας των Windows</description>
+  <resources>
+    <stringTable>
+      <string id="MULTITASKING">Πολυδιεργασία</string>
+      <string id="MULTITASKINGHELP">Διαχειρίζεται τις επιλογές πολυδιεργασίας των Windows</string>
+      <string id="BrowserAltTabBlowout">Ρύθμιση παραμέτρων της συμπερίληψης των καρτελών Microsoft Edge στον συνδυασμό πλήκτρων ALT-TAB</string>
+      <string id="BrowserAltTabBlowout_Help">Αυτή η ρύθμιση ελέγχει τη συμπερίληψη των καρτελών του Microsoft Edge στον συνδυασμό πλήκτρων ALT+TAB.
+
+Αυτή η ενέργεια μπορεί να ρυθμιστεί ώστε να εμφανίζει όλες τις καρτέλες, τις πιο πρόσφατες 3 ή 5 καρτέλες ή καμία καρτέλα από το Microsoft Edge.
+
+Εάν έχει ρυθμιστεί ώστε να εμφανίζει "Μόνο ανοιχτά παράθυρα", η δυνατότητα θα απενεργοποιηθεί εξ ολοκλήρου.
+</string>
+      <string id="AltTabFilter_All">Άνοιγμα παραθύρων και όλων των καρτελών στο Microsoft Edge</string>
+      <string id="AltTabFilter_Five">Άνοιγμα παραθύρων και των 5 πιο πρόσφατων καρτελών στο Microsoft Edge</string>
+      <string id="AltTabFilter_Three">Άνοιγμα των παραθύρων και των 3 πιο πρόσφατων καρτελών στο Microsoft Edge</string>
+      <string id="AltTabFilter_None">Άνοιγμα μόνο των παραθύρων</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="AltTabFilter">
+        <dropdownList refId="AltTabFilterDropdown" noSort="true" defaultItem="0">Πατώντας τον συνδυασμό πλήκτρων Alt + Tab εμφανίζεται</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

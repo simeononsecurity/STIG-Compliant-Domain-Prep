@@ -17,6 +17,8 @@ SMB 3.11 cipher suites:
 
 AES_128_GCM
 AES_128_CCM
+AES_256_GCM
+AES_256_CCM
 
 SMB 3.0 and 3.02 cipher suites:
 
@@ -57,6 +59,23 @@ Insecure guest logons are used by file servers to allow unauthenticated access t
         If you disable or do not configure this policy setting, Windows will prevent use of cached handles to files opened through CA shares.
 
         Note: This policy has no effect when connecting Scale-out File Server shares provided by a Windows Server. Microsoft does not recommend enabling this policy for clients that routinely connect to files hosted on a Windows Failover Cluster with the File Server for General Use role, as it can lead to adverse failover times and increased memory and CPU usage.
+      </string>
+      <string id="SUPPORTED_Windows_Server_2022_Windows_11_0">At least Windows Server 2022, Windows 11</string>
+      <string id="Pol_EnableCompressedTraffic_Name">Use SMB compression by default</string>
+      <string id="Pol_EnableCompressedTraffic_Help">This policy controls whether the SMB client uses traffic compression by default.
+
+If you enable this policy setting, the SMB client will attempt to compress traffic by default when SMB compression is enabled.
+
+If you disable or do not configure this policy setting, the SMB client will not by default attempt to compress traffic. However traffic compression may be requested by other means. See notes below.
+
+Note: This policy is combined with per-share and per-file handle properties, through which traffic compression may be requested. As well, the SMB server must support and enable compression. For example, should this policy be disabled (or not configured), the SMB client may still perform compression if an SMB server share has compression requested. If this is undesired, and one wishes to completely disable compression, configure the accompanying 'Disable SMB compression' policy instead.
+      </string>
+      <string id="Pol_DisableCompression_Name">Disable SMB compression</string>
+      <string id="Pol_DisableCompression_Help">This policy controls whether the SMB client will disable (completely prevent) traffic compression.
+
+If you enable this policy setting, the SMB client will never compress data, irrespective of other policies (such as the 'Use SMB compression by default' policy or per-share property).
+
+If you disable or do not configure this policy setting, the SMB client may compress traffic (depending on a combination of other policies and conditions).
       </string>
     </stringTable>
     <presentationTable>

@@ -518,9 +518,14 @@
 Εάν απενεργοποιηθεί ή δεν ρυθμιστεί, η προεπιλεγμένη τιμή είναι 5 λεπτά.
 
 Εάν δεν ρυθμίσετε το Microsoft Edge σε προσαρμοσμένη πρόσβαση, αυτή η πολιτική δεν θα εφαρμοστεί.</string>
-    </stringTable>
+      <string id="SuppressEdgeDeprecationNotification">Καταστολή της εμφάνισης της ειδοποίησης απόσυρσης του Microsoft Edge</string>
+      <string id="SuppressEdgeDeprecationNotification_Explain">Μπορείτε να ρυθμίσετε τις παραμέτρους του Microsoft Edge για να απενεργοποιείτε την εμφάνιση της ειδοποίησης που πληροφορεί τους χρήστες ότι η υποστήριξη αυτής της έκδοσης του Microsoft Edge έληξε στις 9 Μαρτίου 2021. Εάν ενεργοποιηθεί, η ειδοποίηση δεν θα εμφανίζεται.
 
+Εάν απενεργοποιηθεί ή δεν ρυθμιστεί, η ειδοποίηση θα εμφανίζεται κάθε φορά που γίνεται εκκίνηση του Edge. </string>
+
+    </stringTable>
     <!-- Presentation -->
+    
     <presentationTable>
       <presentation id="ConfiguredFavorites_Presentation">
         <textBox refId="ConfiguredFavoritesPrompt">

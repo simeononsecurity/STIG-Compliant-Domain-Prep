@@ -13,6 +13,14 @@
 Si habilitas esta configuración de directiva, podrás instalar cualquier aplicación de LOB o desarrolladores de la Tienda Windows (debe estar firmada con una cadena de certificados que el equipo local pueda validar correctamente).
 
 Si deshabilitas o no estableces esta configuración de directiva, no podrás instalar aplicaciones de LOB o desarrolladores de la Tienda Windows.</string>
+      <string id="AllowAutomaticAppArchiving">Archivar aplicaciones poco usadas</string>
+      <string id="AllowAutomaticAppArchivingExplanation">Esta configuración de directiva controla si el sistema puede archivar aplicaciones de uso poco frecuente.
+
+Si habilita esta configuración de Directiva, el sistema comprobará y archivará periódicamente las aplicaciones usadas con poca frecuencia.
+
+Si deshabilitas esta configuración de Directiva, el sistema no archivará ninguna aplicación.
+
+Si no establece esta configuración de directiva (valor predeterminado), el sistema seguirá el comportamiento predeterminado, que es comprobar periódicamente si hay aplicaciones que se usan con poca frecuencia y archivarlas, y el usuario podrá configurar esta configuración.</string>
       <string id="AllowDeploymentInSpecialProfiles">Permitir operaciones de implementación en perfiles especiales</string>
       <string id="AllowDeploymentInSpecialProfilesExplanation">Esta configuración de directiva permite administrar la implementación de aplicaciones de la Tienda Windows cuando el usuario inicia sesión con un perfil especial. Los perfiles especiales son los siguientes perfiles de usuario, donde los cambios se descartan cuando el usuario cierre sesión:
 
@@ -32,7 +40,7 @@ Si deshabilita o no establece esta configuración de directiva, la directiva de 
       <string id="AllowDevelopmentWithoutDevLicenseExplanation">
         Permite o impide desarrollar aplicaciones de Microsoft Store e instalarlas directamente desde un IDE.
 
-        Si habilitas esta configuración y habilitas la directiva de grupo "Permitir la instalación de todas las aplicaciones de confianza", podrás desarrollar aplicaciones de Microsoft Store e instalarlas directamente desde un IDE.
+        Si habilitas esta configuración de directiva junto con la directiva de grupo "Permitir la instalación de todas las aplicaciones de confianza", podrás desarrollar aplicaciones de Microsoft Store e instalarlas directamente desde un IDE.
 
         Si deshabilitas o no estableces esta configuración, no podrás desarrollar aplicaciones de Microsoft Store ni instalarlas directamente desde un IDE.
       </string>
@@ -65,6 +73,24 @@ Si deshabilita o no establece esta configuración de directiva, la directiva de 
         Si habilitas esta directiva, los usuarios que no sean administradores no podrán iniciar la instalación de paquetes de aplicaciones de Windows. Los administradores que quieran instalar una aplicación deberán hacerlo desde un contexto de administrador (por ejemplo, una ventana de administrador de PowerShell). Todos los usuarios seguirán pudiendo instalar paquetes de aplicaciones de Windows a través de Microsoft Store, si así lo permiten otras directivas.
 
         Si deshabilitas o no configuras esta directiva, todos los usuarios podrán iniciar la instalación de paquetes de aplicaciones de Windows.
+      </string>
+      <string id="DisableBackgroundAutoUpdates">No se permite que las aplicaciones transferidas localmente se actualicen automáticamente en segundo plano</string>
+      <string id="DisableBackgroundAutoUpdatesExplanation">Administra la capacidad de una aplicación transferida localmente para actualizarse automáticamente en segundo plano. 
+
+Si habilitas esta Directiva, las aplicaciones transferidas localmente no se actualizarán automáticamente en segundo plano.
+
+Si deshabilitas esta Directiva, las aplicaciones transferidas localmente se actualizarán automáticamente en segundo plano.
+
+El valor predeterminado es "Disabled" (Key not present).
+      </string>
+      <string id="DisableMeteredNetworkBackgroundAutoUpdates">No se permite que las aplicaciones transferidas localmente se actualicen automáticamente en segundo plano en una red de uso medido</string>
+      <string id="DisableMeteredNetworkBackgroundAutoUpdatesExplanation">Administra la capacidad de las aplicaciones transferidas localmente para actualizarse automáticamente en segundo plano en una red de uso medido. 
+
+Si habilitas esta Directiva, las aplicaciones transferidas localmente no se actualizarán automáticamente en segundo plano en una red de uso medido.
+
+Si deshabilitas esta Directiva, las aplicaciones transferidas localmente se actualizarán automáticamente en segundo plano en una red de uso medido.
+
+El valor predeterminado es "Disabled" (Key not present).
       </string>
     </stringTable>
   </resources>

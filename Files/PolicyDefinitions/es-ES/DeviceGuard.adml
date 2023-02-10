@@ -7,47 +7,69 @@
     <stringTable>
       <string id="DeviceGuard">Device Guard</string>
       <string id="VirtualizationBasedSecurity">Activar la seguridad basada en la virtualización</string>
-      <string id="VirtualizationBasedSecurityHelp">Especifica si la seguridad basada en la virtualización está activada.
+      <string id="VirtualizationBasedSecurityHelp">Especifica si está habilitada la seguridad basada en virtualización.
 
-La seguridad basada en la virtualización utiliza el hipervisor de Windows para proporcionar compatibilidad con los servicios de seguridad. La seguridad basada en la virtualización requiere un arranque seguro y, opcionalmente, puede habilitarse con el uso de protecciones DMA. Las protecciones DMA requieren compatibilidad con el hardware y solo se habilitarán en dispositivos que estén configurados correctamente.
+La seguridad basada en virtualización usa el hipervisor de Windows para proporcionar compatibilidad con los servicios de seguridad. La seguridad basada en virtualización requiere arranque seguro y, opcionalmente, se puede habilitar con el uso de protecciones de DMA. Las protecciones de DMA requieren compatibilidad con hardware y solo se habilitarán en dispositivos configurados correctamente.
 
-Protección basada en la virtualización de la integridad del código
+Protección basada en virtualización de integridad de código
 
-Esta configuración habilita la protección basada en la virtualización de la integridad del código del modo kernel. Cuando está habilitada, se aplican las protecciones de memoria de modo kernel y la ruta de validación de integridad del código se protege con la característica de seguridad basada en la virtualización.
+Esta configuración habilita la protección basada en la virtualización de integridad de código del modo kernel. Cuando esta opción está habilitada, se aplican las protecciones de memoria en modo kernel y la ruta de validación de integridad de código estará protegida por la característica de seguridad basada en virtualización.
 
-La opción "Deshabilitada" desactiva la protección basada en la virtualización de la integridad del código de forma remota si se ha activó previamente con la opción "Habilitar sin bloqueo".
- 
-La opción "Habilitar con el bloqueo UEFI" garantiza que la protección basada en la virtualización de la integridad del código no se pueda deshabilitar de forma remota. Para deshabilitar la característica, debes establecer la directiva de grupo en "Deshabilitada", así como quitar la funcionalidad de seguridad de cada equipo, con un usuario físicamente presente, con el fin de borrar la configuración que persiste en UEFI.
- 
-La opción "Habilitar sin bloqueo" permite que la protección basada en la virtualización de la integridad del código se deshabilite de forma remota mediante la directiva de grupo. 
+La opción "Deshabilitado" desactiva la protección basada en la virtualización de la integridad de código de forma remota si se activó previamente con la opción "Habilitado sin bloqueo".
 
-La opción "No configurada" deja la configuración de directiva sin definir. La directiva de grupo no escribe la configuración de directiva en el registro y, por lo tanto, no tiene ningún impacto en los equipos ni en los usuarios. Si hay una configuración actual en el registro, esta no se modificará.
+La opción "Habilitado con bloqueo UEFI" garantiza que la protección basada en virtualización de la integridad de código no se pueda deshabilitar de forma remota. Para deshabilitar la característica, debe establecer la directiva de grupo en "Deshabilitado", así como quitar la funcionalidad de seguridad de cada equipo con un usuario presente físicamente para borrar la configuración persistente en UEFI.
 
-La opción "Necesita la tabla de los atributos de memoria UEFI" solo habilitará la protección basada en la virtualización de la integridad del código en dispositivos compatibles con el firmware UEFI para la tabla de los atributos de memoria. Los dispositivos sin la tabla de los atributos de memoria UEFI pueden tener firmware incompatible con la protección basada en la virtualización de la integridad del código, que en algunos casos puede provocar bloqueos, pérdida de datos o incompatibilidad con ciertas tarjetas de complemento. Si no se configura esta opción, los dispositivos de destino deben probarse para garantizar la compatibilidad.
+La opción "Habilitado sin bloqueo" permite deshabilitar de forma remota la protección basada en la virtualización de la integridad de código mediante la directiva de grupo.
 
-Advertencia: Todos los controladores del sistema deben ser compatibles con esta característica. De lo contrario, el sistema podría bloquearse. Asegúrate de que esta configuración de directiva solo se implemente en equipos que se sepa que son compatibles. 
+La opción "Sin configurar" deja la configuración de directiva sin definir. La directiva de grupo no escribe la configuración de directiva en el registro, por lo que no afecta a los equipos ni a los usuarios. Si hay una configuración actual en el registro, no se modificará.
+
+La opción "Requerir tabla de atributos de memoria UEFI" solo habilitará la protección basada en virtualización de la integridad de código en dispositivos con compatibilidad con firmware UEFI para la tabla de atributos de memoria. Los dispositivos sin la tabla atributos de memoria UEFI podrían tener firmware incompatible con la protección basada en la virtualización de la integridad de código, lo que en algunos casos podría provocar bloqueos, pérdida de datos o incompatibilidad con determinadas tarjetas insertables. Si no se establece esta opción, se deberán probar los dispositivos de destino para garantizar la compatibilidad.
+
+Advertencia: todos los controladores del sistema deberán ser compatibles con esta característica o el sistema podría bloquearse. Asegúrese de que esta configuración de directiva solo se implemente en equipos donde se sepa que son compatibles.
 
 Credential Guard
 
-Esta opción permite a los usuarios activar Credential Guard con seguridad basada en la virtualización para ayudar a proteger las credenciales.
+Esta configuración permite a los usuarios activar Credential Guard con seguridad basada en virtualización para ayudar a proteger las credenciales.
 
-La opción "Deshabilitada" desactiva Credential Guard de forma remota si se activó previamente con la opción "Habilitar sin bloqueo".
+Para Windows 11 21H2 y versiones anteriores, la opción "Deshabilitado" desactivará Credential Guard de forma remota si se activó anteriormente con la opción "Habilitado sin bloqueo". Para versiones posteriores, la opción "Deshabilitado" desactivará Credential Guard de forma remota si se activó previamente con la opción "Habilitado sin bloqueo" o si estaba "Sin configurar".
 
-La opción "Habilitar con el bloqueo UEFI" garantiza que Credential Guard no pueda deshabilitarse de forma remota. Para deshabilitar la característica, debes establecer la directiva de grupo en "Deshabilitada", así como quitar la funcionalidad de seguridad de cada equipo, con un usuario físicamente presente, con el fin de borrar la configuración que persiste en UEFI.
+La opción "Habilitado con bloqueo UEFI" garantiza que Credential Guard no se pueda deshabilitar de forma remota. Para deshabilitar la característica, debe establecer la directiva de grupo en "Deshabilitado", así como quitar la funcionalidad de seguridad de cada equipo con un usuario presente físicamente para borrar la configuración persistente en UEFI.
 
-La opción "Habilitar sin bloqueo" permite que Credential Guard se deshabilite de forma remota mediante la directiva de grupo. Los dispositivos que utilicen esta configuración deben ejecutar como mínimo Windows 10 (versión 1511).
+La opción "Habilitado sin bloqueo" permite deshabilitar Credential Guard de forma remota mediante la directiva de grupo. Los dispositivos que usen esta configuración deberán ejecutar al menos Windows 10 (versión 1511).
 
-La opción "No configurada" deja la configuración de directiva sin definir. La directiva de grupo no escribe la configuración de directiva en el registro y, por lo tanto, no tiene ningún impacto en los equipos ni en los usuarios. Si hay una configuración actual en el registro, esta no se modificará.
-      
+Para Windows 11 21H2 y versiones anteriores, la opción "Sin configurar" deja la configuración de directiva sin definir. La directiva de grupo no escribe la configuración de directiva en el registro, por lo que no afectará a los equipos ni a los usuarios. Si hay una configuración actual en el registro, no se modificará. Para versiones posteriores, si no hay ninguna configuración actual en el registro, la opción "Sin configurar" habilitará Credential Guard sin bloqueo UEFI.
+
 Inicio seguro
 
-Esta configuración establece la configuración del inicio seguro para proteger la cadena de arranque.
+Esta opción establece la configuración de inicio seguro para proteger la cadena de arranque.
 
-La opción "No configurada" es la predeterminada, y permite que los usuarios administrativos configuren la característica.
+El valor "Sin configurar" es el valor predeterminado y permitirá la configuración de la característica por parte de los usuarios administrativos.
 
-La opción "Habilitada" activa el inicio seguro en el hardware compatible.
+La opción "Habilitado" activará el inicio seguro en el hardware compatible.
 
-La opción "Deshabilitada" desactiva el inicio seguro, independientemente de la compatibilidad del hardware.
+La opción "Deshabilitado" desactivará el inicio seguro, independientemente de la compatibilidad con el hardware.
+
+Protección de pila aplicada por hardware en modo kernel
+
+Esta configuración habilita la protección de pila aplicada por hardware para el código de modo kernel. Cuando se habilita esta característica de seguridad, las pilas de datos en modo kernel se reforzarán con pilas paralelas basadas en hardware, que almacenarán los destinos de dirección de retorno previstos para garantizar que el flujo de control de programas no se altere.
+
+Esta característica de seguridad tiene los siguientes requisitos previos:
+1) El hardware de CPU deberá admitir pilas paralelas basadas en hardware.
+2) La protección basada en virtualización de la integridad de código estará habilitada.
+
+Si no se cumplen los requisitos previos, esta característica no se habilitará, aunque se seleccione la opción "Habilitada" para esta característica. Tenga en cuenta que seleccionar la opción "Habilitada" para esta característica no habilitará automáticamente la protección basada en la virtualización de la integridad de código, que deberá realizarse por separado.
+
+Los dispositivos que habiliten esta característica de seguridad deberán ejecutar al menos Windows 11 (versión 22H2).
+
+La opción "Deshabilitado" desactivará la protección de pila aplicada por hardware en modo kernel.
+
+La opción "Habilitado en modo auditoría" habilita la protección de pila aplicada por hardware en modo kernel en modo auditoría donde las infracciones de la pila paralela no sean irrecuperables y se registrarán en el registro de eventos del sistema.
+
+La opción "Habilitado en modo de cumplimiento" habilitará la protección de pila aplicada por hardware en modo kernel en el modo de cumplimiento, donde las infracciones de la pila paralela sean irrecuperables.
+
+La opción "Sin configurar" dejará la configuración de directiva sin definir. La directiva de grupo no escribirá la configuración de directiva en el registro, por lo que no afectará a los equipos ni a los usuarios. Si hay una configuración actual en el registro, no se modificará.
+
+Advertencia: todos los controladores del sistema deberán ser compatibles con esta característica de seguridad o el sistema podría bloquearse en modo de cumplimiento. El modo auditoría se podrá usar para detectar controladores incompatibles. Para obtener más información, consulte https://go.microsoft.com/fwlink/?LinkId=2162953.
       </string>
       <string id="SecureBoot">Arranque seguro</string>
       <string id="SecureBootAndDmaProtection">Arranque seguro y protección de DMA</string>
@@ -55,29 +77,32 @@ La opción "Deshabilitada" desactiva el inicio seguro, independientemente de la 
       <string id="Enabled">Habilitado</string>
       <string id="EnabledWithoutLock">Habilitar sin bloqueo</string>
       <string id="EnabledWithUefiLock">Habilitado con el bloqueo UEFI</string>
+      <string id="EnabledAudit">Habilitado en modo auditoría</string>
+      <string id="EnabledEnforcement">Habilitado en modo de cumplimiento</string>
       <string id="NotConfigured">No configurado</string>
       <string id="ConfigCIPolicy">Implementar Control de aplicaciones de Windows Defender</string>
-      <string id="ConfigCIPolicyHelp">Implementar Control de aplicaciones de Windows Defender
+      <string id="ConfigCIPolicyHelp">Implementar control de aplicaciones de Windows Defender
 
-Esta configuración de directiva permite implementar una directiva de integridad de código en una máquina para controlar lo que tiene permiso para ejecutarse en esa máquina.
+Esta configuración de directiva permite implementar una directiva de integridad de código en un equipo para controlar lo que se permite ejecutar en ese equipo.
 
-Si implementas una directiva de integridad de código, Windows restringirá lo que se puede ejecutar tanto en modo kernel como en el escritorio de Windows según la directiva. Para habilitar esta directiva, se debe reiniciar la máquina. 
+Si implementa una directiva de integridad de código, Windows restringirá lo que se puede ejecutar tanto en modo kernel como en el escritorio de Windows en función de la directiva. Para habilitar esta directiva, se debe reiniciar el equipo.
 
-La ruta del archivo debe ser una ruta UNC (por ejemplo, \\ServerName\ShareName\SIPolicy.p7b), o una ruta local válida (por ejemplo, C:\FolderName\SIPolicy.p7b). La cuenta de la máquina local (SISTEMA LOCAL) debe tener el permiso de acceso al archivo de la directiva.
- 
-Si usas una directiva firmada y protegida, no se eliminará la característica del equipo al deshabilitar esta configuración de directiva. Deberás llevar a cabo una de las siguientes opciones:
+La ruta de acceso del archivo debe ser una ruta de acceso UNC (por ejemplo, \\NombreServidor\NombreDeRe share\SIPolicy.p7b) o una ruta de acceso válida localmente (por ejemplo, C:\FolderName\SIPolicy.p7b).  La cuenta de equipo local (SISTEMA LOCAL) debe tener permiso de acceso al archivo de directiva.
 
-   1) actualizar la directiva a una directiva no protegida y, a continuación, deshabilitar la configuración, o
-   2) deshabilitar la configuración y, a continuación, eliminar la directiva de cada equipo, con un usuario presente de forma física.
+Si usa una directiva firmada y protegida, deshabilitar esta configuración de directiva no quita la característica del equipo. En su lugar, debe:
+
+   1) actualizar primero la directiva a una directiva no protegida y, a continuación, deshabilitar la configuración o
+   2) deshabilitar la configuración y, a continuación, quitar la directiva de cada equipo, con un usuario físicamente presente.
       </string>
     </stringTable>
     <presentationTable>
       <presentation id="VirtualizationBasedSecurity">
         <dropdownList refId="RequirePlatformSecurityFeaturesDrop" defaultItem="1">Selecciona el nivel de seguridad de la plataforma:</dropdownList>
-        <dropdownList refId="HypervisorEnforcedCodeIntegrityDrop" defaultItem="3">Protección basada en la virtualización de la integridad de código:</dropdownList>        
-        <checkBox refId="CheckboxMAT">Necesita la tabla de los atributos de memoria UEFI</checkBox>        
+        <dropdownList refId="HypervisorEnforcedCodeIntegrityDrop" defaultItem="3">Protección basada en la virtualización de la integridad de código:</dropdownList>
+        <checkBox refId="CheckboxMAT">Necesita la tabla de los atributos de memoria UEFI</checkBox>
         <dropdownList refId="CredentialIsolationDrop" defaultItem="3">Configuración de Credential Guard:</dropdownList>
-        <dropdownList refId="SystemGuardDrop" defaultItem="2">Configuración de inicio seguro:</dropdownList>                
+        <dropdownList refId="SystemGuardDrop" defaultItem="2">Configuración de inicio seguro:</dropdownList>
+        <dropdownList refId="KernelShadowStacksDrop" defaultItem="3">Protección de pila aplicada por hardware en modo kernel:</dropdownList>
       </presentation>
       <presentation id="ConfigCIPolicy">
         <textBox refId="ConfigCIPolicyFilePathText">

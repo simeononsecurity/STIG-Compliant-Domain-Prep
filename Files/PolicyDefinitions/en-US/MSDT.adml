@@ -58,18 +58,19 @@ No reboots or service restarts are required for this policy setting to take effe
 
 </string>
 <string id="TroubleshootingAllowRecommendations">Troubleshooting: Allow users to access recommended troubleshooting for known problems</string>
-<string id="TroubleshootingAllowRecommendationsExplain">This policy setting applies recommended troubleshooting for known problems on the device and lets administrators configure how it's applied to their domains/IT environments.
-Not configuring this policy setting will allow the user to configure if and how recommended troubleshooting is applied.
+<string id="TroubleshootingAllowRecommendationsExplain">This policy setting configures how troubleshooting for known problems can be applied on the device and lets administrators configure how it's applied to their domains/IT environments.
 
-Enabling this policy allows you to configure how recommended troubleshooting is applied on the user's device. You can select from one of the following values:
-0 = Turn this feature off.
-1 = Turn this feature off but still apply critical troubleshooting.
-2 = Notify users when recommended troubleshooting is available, then allow the user to run or ignore it.
-3 = Run recommended troubleshooting automatically and notify the user after it's been successfully run.
-4 = Run recommended troubleshooting automatically without notifying the user.
-5 = Allow the user to choose their own recommended troubleshooting settings.
+Not configuring this policy setting will allow the user to configure how troubleshooting is applied.
 
-After setting this new setting, to trigger recommended troubleshooting for devices in your domain, follow these instructions:
+Enabling this policy allows you to configure how troubleshooting is applied on the user's device. You can select from one of the following values:
+0 = Do not allow users, system features, or Microsoft to apply troubleshooting.
+1 = Only automatically apply troubleshooting for critical problems by system features and Microsoft.
+2 = Automatically apply troubleshooting for critical problems by system features and Microsoft. Notify users when troubleshooting for other problems is available and allow users to choose to apply or ignore.
+3 = Automatically apply troubleshooting for critical and other problems by system features and Microsoft. Notify users when troubleshooting has solved a problem.
+4 = Automatically apply troubleshooting for critical and other problems by system features and Microsoft. Do not notify users when troubleshooting has solved a problem.
+5 = Allow the user to choose their own troubleshooting settings.
+
+After setting this policy, you can use the following instructions to check devices in your domain for available troubleshooting from Microsoft:
 1. Create a bat script with the following contents:
 rem The following batch script triggers Recommended Troubleshooting
 schtasks /run /TN "\Microsoft\Windows\Diagnosis\RecommendedTroubleshootingScanner"
@@ -79,12 +80,12 @@ schtasks /run /TN "\Microsoft\Windows\Diagnosis\RecommendedTroubleshootingScanne
 4. Provide name and description as appropriate, then under Security Options set the user account to System and select the Run with highest privileges checkbox.
 5. In the Actions tab, create a new action, select Start a Program as its type, then enter the file created in step 1.
 6. Configure the task to deploy to your domain.</string>
-<string id="RecommendationsDropDown_DoNothing">Turn this feature off</string>
-<string id="RecommendationsDropDown_ApplyCoreSystemMitigationsOnly">Turn this feature off but still apply critical troubleshooting.</string>
-<string id="RecommendationsDropDown_AskFirst">Notify users when recommended troubleshooting is available, then allow the user to run or ignore it.</string>
-<string id="RecommendationsDropDown_ApplyThenNotify">Run recommended troubleshooting automatically and notify the user after it's been successfully run.</string>
-<string id="RecommendationsDropDown_ApplySilently">Run recommended troubleshooting automatically without notifying the user.</string>
-<string id="RecommendationsDropDown_DeferToUser">Allow the user to choose their own recommended troubleshooting settings.</string>
+<string id="RecommendationsDropDown_DoNothing">Do not allow users, system features, or Microsoft to apply troubleshooting.</string>
+<string id="RecommendationsDropDown_ApplyCoreSystemMitigationsOnly">Only automatically apply troubleshooting for critical problems by system features and Microsoft.</string>
+<string id="RecommendationsDropDown_AskFirst">Automatically apply troubleshooting for critical problems by system features and Microsoft. Notify users when troubleshooting for other problems is available and allow users to choose to apply or ignore.</string>
+<string id="RecommendationsDropDown_ApplyThenNotify">Automatically apply troubleshooting for critical and other problems by system features and Microsoft. Notify users when troubleshooting has solved a problem.</string>
+<string id="RecommendationsDropDown_ApplySilently">Automatically apply troubleshooting for critical and other problems by system features and Microsoft. Do not notify users when troubleshooting has solved a problem.</string>
+<string id="RecommendationsDropDown_DeferToUser">Allow the user to choose their own troubleshooting settings.</string>
     </stringTable>
     <presentationTable>
       <presentation id="MsdtToolDownloadPolicy">

@@ -15,11 +15,11 @@ If you enable this policy setting, the DNS suffix that you enter will be applied
 
 If you disable this policy setting, or if you do not configure this policy setting, computers will use the local or DHCP supplied connection specific DNS suffix, if configured.</string>
       <string id="DNS_NameServer">DNS servers</string>
-      <string id="DNS_NameServer_Help">Defines the DNS servers to which a computer sends queries when it attempts to resolve names. This policy setting supersedes the list of DNS servers configured locally and those configured using DHCP. 
+      <string id="DNS_NameServer_Help">Defines the DNS servers to which a computer sends queries when it attempts to resolve names. This policy setting supersedes the list of DNS servers configured locally and those configured using DHCP.
 
 To use this policy setting, click Enabled, and then enter a space-delimited list of IP addresses in the available field. To use this policy setting, you must enter at least one IP address.
 
-If you enable this policy setting, the list of DNS servers is applied to all network connections used by computers that receive this policy setting. 
+If you enable this policy setting, the list of DNS servers is applied to all network connections used by computers that receive this policy setting.
 
 If you disable this policy setting, or if you do not configure this policy setting, computers will use the local or DHCP supplied list of DNS servers, if configured.</string>
       <string id="DNS_PrimaryDnsSuffix">Primary DNS suffix</string>
@@ -218,15 +218,15 @@ If you disable this policy setting, or if you do not configure this policy setti
       <string id="DNS_SmartProtocolReorder">Turn off smart protocol reordering</string>
       <string id="DNS_SmartProtocolReorder_Help">Specifies that the DNS client should prefer responses from link local name resolution protocols on non-domain networks over DNS responses when issuing queries for flat names. Examples of link local name resolution protocols include link local multicast name resolution (LLMNR) and NetBIOS over TCP/IP (NetBT).
 
-If you enable this policy setting, the DNS client will prefer DNS responses, followed by LLMNR, followed by NetBT for all networks.  
+If you enable this policy setting, the DNS client will prefer DNS responses, followed by LLMNR, followed by NetBT for all networks.
 
-If you disable this policy setting, or if you do not configure this policy setting, the DNS client will prefer link local responses for flat name queries on non-domain networks. 
+If you disable this policy setting, or if you do not configure this policy setting, the DNS client will prefer link local responses for flat name queries on non-domain networks.
 
 Note:  This policy setting is applicable only if the turn off smart multi-homed name resolution policy setting is disabled or not configured.</string>
       <string id="DNS_AllowFQDNNetBiosQueries">Allow NetBT queries for fully qualified domain names</string>
-      <string id="DNS_AllowFQDNNetBiosQueries_Help">Specifies that NetBIOS over TCP/IP (NetBT) queries are issued for fully qualified domain names. 
+      <string id="DNS_AllowFQDNNetBiosQueries_Help">Specifies that NetBIOS over TCP/IP (NetBT) queries are issued for fully qualified domain names.
 
-If you enable this policy setting, NetBT queries will be issued for multi-label and fully qualified domain names such as "www.example.com" in addition to single-label names.  
+If you enable this policy setting, NetBT queries will be issued for multi-label and fully qualified domain names such as "www.example.com" in addition to single-label names.
 
 If you disable this policy setting, or if you do not configure this policy setting, NetBT queries will only be issued for single-label names such as "example" and not for multi-label and fully qualified domain names.</string>
       <string id="DNS_PreferLocalResponsesOverLowerOrderDns">Prefer link local responses over DNS when received over a network with higher precedence</string>
@@ -249,6 +249,51 @@ If this policy setting is disabled, or if this policy setting is not configured,
 If this policy setting is enabled, IDNs are converted to the Nameprep form.
 
 If this policy setting is disabled, or if this policy setting is not configured, IDNs are not converted to the Nameprep form.</string>
+      <string id="DNS_Doh">Configure DNS over HTTPS (DoH) name resolution</string>
+      <string id="DNS_Doh_Disabled">Prohibit DoH</string>
+      <string id="DNS_Doh_Auto">Allow DoH</string>
+      <string id="DNS_Doh_Force">Require DoH</string>
+      <string id="DNS_Doh_Help">Specifies if the DNS client will perform name resolution over DNS over HTTPS (DoH).
+
+By default, the DNS client will do classic DNS name resolution (over UDP or TCP). This setting can enhance the DNS client to use DoH protocol to resolve domain names.
+
+To use this policy setting, click Enabled, and then select one of the following options from the drop-down list:
+
+Prohibit DoH: No DoH name resolution will be performed.
+
+Allow DoH: Perform DoH queries if the configured DNS servers support it. If they don't support it, try classic name resolution.
+
+Require DoH: Allow only DoH name resolution. If there are no DoH capable DNS servers configured, name resolution will fail.
+
+If you disable this policy setting, or if you do not configure this policy setting, computers will use locally configured settings. DDR (Discovery of Designated Resolvers) plaintext traffic is allowed as it is necessary for auto-discovering DoH settings.</string>
+      <string id="DNS_Netbios">Configure NetBIOS settings</string>
+      <string id="DNS_Netbios_Disable">Disable NetBIOS name resolution</string>
+      <string id="DNS_Netbios_Allow">Allow NetBIOS name resolution</string>
+      <string id="DNS_Netbios_Disable_Public_Networks">Disable NetBIOS name resolution on public networks</string>
+      <string id="DNS_Netbios_Learning_Mode">NetBIOS learning mode</string>
+      <string id="DNS_Netbios_Help">Specifies if the DNS client will perform name resolution over NetBIOS.
+
+By default, the DNS client will disable NetBIOS name resolution on public networks for security reasons.
+
+To use this policy setting, click Enabled, and then select one of the following options from the drop-down list:
+
+Disable NetBIOS name resolution: Never allow NetBIOS name resolution.
+
+Allow NetBIOS name resolution: Always allow NetBIOS name resolution.
+
+Disable NetBIOS name resolution on public networks: Only allow NetBIOS name resolution on network adapters which are not connected to public networks.
+
+NetBIOS learning mode: Always allow NetBIOS name resolution and use it as a fallback after mDNS/LLMNR queries fail.
+
+If you disable this policy setting, or if you do not configure this policy setting, computers will use locally configured settings.</string>
+      <string id="DNS_Ddr">Configure Discovery of Designated Resolvers (DDR) protocol</string>
+      <string id="DNS_Ddr_Help">Specifies if the DNS client would use the DDR protocol.
+
+The Discovery of Designated Resolvers (DDR) protocol allows Windows to move from unencrypted DNS to encrypted DNS when only the IP address of a resolver is known.
+
+If you enable this policy, the DNS client will use the DDR protocol.
+
+If you disable this policy setting, or if you do not configure this policy setting, computers will use locally configured settings.</string>
     </stringTable>
     <presentationTable>
       <presentation id="DNS_Domain">
@@ -285,6 +330,12 @@ If this policy setting is disabled, or if this policy setting is not configured,
       </presentation>
       <presentation id="DNS_UpdateSecurityLevel">
         <dropdownList refId="DNS_UpdateSecurityLevel_Box" defaultItem="2">Update security level:</dropdownList>
+      </presentation>
+      <presentation id="DNS_Doh">
+        <dropdownList refId="DNS_Doh_Box" defaultItem="1">Configure DoH options:</dropdownList>
+      </presentation>
+      <presentation id="DNS_Netbios">
+        <dropdownList refId="DNS_Netbios_Box" defaultItem="1">Configure NetBIOS options:</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+  <displayName>Multitasking</displayName>
+  <description>Gestisce le opzioni multitasking di Windows</description>
+  <resources>
+    <stringTable>
+      <string id="MULTITASKING">Multitasking</string>
+      <string id="MULTITASKINGHELP">Gestisce le opzioni multitasking di Windows</string>
+      <string id="BrowserAltTabBlowout">Configura l'inclusione delle schede Microsoft Edge in ALT-TAB</string>
+      <string id="BrowserAltTabBlowout_Help">Questa impostazione controlla l'inclusione delle schede Microsoft Edge in ALT+TAB.
+
+Può essere impostata per mostrare tutte le schede, le 3 o 5 schede più recenti o nessuna scheda da Microsoft Edge.
+
+Se è impostata per mostrare "Solo finestre aperte", l'intera funzionalità sarà disabilitata.
+</string>
+      <string id="AltTabFilter_All">Le finestre aperte e tutte le schede in Microsoft Edge</string>
+      <string id="AltTabFilter_Five">Le finestre aperte e le 5 schede più recenti in Microsoft Edge</string>
+      <string id="AltTabFilter_Three">Le finestre aperte e le 3 schede più recenti in Microsoft Edge</string>
+      <string id="AltTabFilter_None">Solo le finestre aperte</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="AltTabFilter">
+        <dropdownList refId="AltTabFilterDropdown" noSort="true" defaultItem="0">Premendo ALT + TAB vengono mostrate</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

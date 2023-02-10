@@ -33,6 +33,11 @@
     <presentationTable>
       <presentation id="AutoEnrollMDM">
         <dropdownList refId="UseAADCredentialTypeDrop" defaultItem="1">Επιλέξτε τον τύπο διαπιστευτηρίων που θα χρησιμοποιήσετε:</dropdownList>
+        <textBox refId="MDMApplicationId">
+          <label>Αναγνωριστικό εφαρμογής MDM:</label>
+        </textBox>
+        <text>Το αναγνωριστικό εφαρμογής MDM αντιπροσωπεύει το αναγνωριστικό της δικής σας εφαρμογής MDM που διαμορφώθηκε στο Azure AD. Αυτό είναι προαιρετικό και απαιτείται μόνο για την αυτόματη εγγραφή MDM με χρήση των διαπιστευτηρίων συσκευής, όταν οι παράμετροι πολλών εφαρμογών MDM έχουν ρυθμιστεί στο Azure AD.</text>
+        <text/>
       </presentation>
     </presentationTable>	
   </resources>

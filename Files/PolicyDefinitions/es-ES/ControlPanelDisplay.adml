@@ -173,6 +173,12 @@ Si deshabilitas o no estableces esta configuración de directiva, los usuarios q
 De manera predeterminada, los usuarios pueden cambiar la imagen de fondo cuando la máquina está bloqueada o cuando se muestra la pantalla de inicio de sesión.
 
 Si habilitas esta configuración, el usuario no podrá cambiar la imagen de la pantalla de bloqueo y, en su lugar, verá la imagen predeterminada.</string>
+      <string id="CPL_Personalization_AnimateLockScreenBackground">Impedir movimiento de fondo de la pantalla de bloqueo</string>
+      <string id="CPL_Personalization_AnimateLockScreenBackground_Help">Esta configuración de directiva controla si la imagen de la pantalla de bloqueo es estática o tiene un efecto de movimiento sutil controlado por la salida del acelerómetro del dispositivo.
+
+Si habilita esta configuración, se impedirá el movimiento y el usuario verá la imagen de fondo tradicional de la pantalla de bloqueo estático.
+
+Si deshabilitas esta configuración (y el dispositivo tiene un acelerómetro), el usuario verá la panorámica del fondo de la pantalla de bloqueo sobre una imagen fija, ya que mueven físicamente su dispositivo.</string>        
       <string id="CPL_Personalization_ForceDefaultLockScreen">Aplicar una imagen predeterminada específica en las pantallas de bloqueo e inicio de sesión</string>
       <string id="CPL_Personalization_ForceDefaultLockScreen_Help">Esta configuración permite forzar el uso de una imagen predeterminada en las pantallas de bloqueo e inicio de sesión escribiendo la ruta de acceso (ubicación) del archivo de imagen. Se usará la misma imagen tanto para la pantalla de bloqueo como para la de inicio de sesión.
 

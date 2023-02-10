@@ -8,19 +8,19 @@
     <stringTable>
       <string id="AppInstaller">Asztali Alkalmazástelepítő</string>
       <string id="EnableAppInstaller">Az Alkalmazástelepítő engedélyezése</string>
-      <string id="EnableAppInstallerExplanation">Ez a házirend szabályozza, hogy a Windows csomagkezelője használható-e a felhasználók számára.
+      <string id="EnableAppInstallerExplanation">Ez a szabályzat határozza meg, hogy a Windows csomagkezelője használható-e a felhasználók számára.
 
 Ha engedélyezi vagy nem konfigurálja ezt a beállítást, akkor a felhasználók használhatják a Windows csomagkezelőt.
 
 Ha letiltja ezt a beállítást, a felhasználók nem tudják használni a Windows csomagkezelőt.</string>
       <string id="EnableSettings">Az Alkalmazástelepítő beállításainak engedélyezése</string>
-      <string id="EnableSettingsExplanation">Ez a házirend szabályozza, hogy a felhasználók módosíthatják-e a beállításaikat.
+      <string id="EnableSettingsExplanation">Ez a szabályzat határozza meg, hogy a felhasználók módosíthatják-e a beállításaikat.
 
 Ha engedélyezi vagy nem konfigurálja ezt a beállítást, akkor a felhasználók módosíthatják a Windows csomagkezelővel kapcsolatos beállításokat.
 
 Ha letiltja ezt a beállítást, a felhasználók nem tudják módosítani a Windows csomagkezelő beállításait.</string>
       <string id="EnableExperimentalFeatures">Az Alkalmazástelepítő kísérleti funkcióinak engedélyezése</string>
-      <string id="EnableExperimentalFeaturesExplanation">Ez a házirend szabályozza, hogy a felhasználók engedélyezhetik-e a kísérleti szolgáltatásokat a Windows csomagkezelőben.
+      <string id="EnableExperimentalFeaturesExplanation">Ez a szabályzat határozza meg, hogy a felhasználók engedélyezhetik-e a kísérleti szolgáltatásokat a Windows csomagkezelőben.
 
 Ha engedélyezi vagy nem konfigurálja ezt a beállítást, a felhasználók engedélyezhetik a kísérleti funkciókat a Windows csomagkezelővel.
 
@@ -53,8 +53,8 @@ Ha nem konfigurálja a beállítást, a Windows-csomagkezelőhöz tartozó Micro
 Ha engedélyezi ezt a beállítást, a Windows-csomagkezelő Microsoft Store-forrása elérhető lesz, és nem lehet eltávolítani.
 
 Ha letiltja ezt a beállítást, a Windows-csomagkezelőhöz tartozó Microsoft Store-forrás nem lesz elérhető.</string>
-      <string id="SourceAutoUpdateIntervalInMinutes">Az Alkalmazástelepítő-forrás automatikus frissítési időköze percben</string>
-      <string id="SourceAutoUpdateIntervalInMinutesExplanation">Ez a házirend vezérli a csomagalapú források automatikus frissítési időközét.
+      <string id="SourceAutoUpdateInterval">Az Alkalmazástelepítő-forrás automatikus frissítési időköze percben</string>
+      <string id="SourceAutoUpdateIntervalExplanation">Ez a szabályzat határozza meg a csomagalapú források automatikus frissítési időközét.
 
 Ha letiltja vagy nem konfigurálja ezt a beállítást, a rendszer az alapértelmezett időközt vagy a beállításokban megadott értéket fogja használni a Windows csomagkezelővel.
 
@@ -75,10 +75,16 @@ Ha nem konfigurálja ezt a házirendet, a felhasználók hozzáadhatnak vagy elt
 Ha engedélyezi ezt a házirendet, csak a megadott forrásokat lehet hozzáadni vagy eltávolítani a Windows-csomagkezelőből. Az egyes engedélyezett források reprezentációit a telepített forrásokból lehet előhívni a „winget-forrás exportálás“ segítségével.
 
 Ha letiltja ezt a házirendet, nem lehet további forrásokat konfigurálni a Windows-csomagkezelőhöz.</string>
+      <string id="EnableMSAppInstallerProtocol">Alkalmazástelepítő ms-appinstaller protokoll engedélyezése</string>
+      <string id="EnableMSAppInstallerProtocolExplanation">Ez a szabályzat határozza meg, hogy a felhasználók telepíthetnek-e csomagokat ms-appinstaller protokollt használó webhelyekről.
+      
+Ha engedélyezi vagy nem konfigurálja ezt a beállítást, a felhasználók telepíthetnek csomagokat az ilyen protokollt használó webhelyekről. 
+
+Ha letiltja ezt a beállítást, a felhasználók nem telepíthetnek csomagokat az ilyen protokollt használó webhelyekről.</string>
     </stringTable>
     <presentationTable>
-      <presentation id="SourceAutoUpdateIntervalInMinutes">
-        <decimalTextBox refId="SourceAutoUpdateIntervalInMinutes" defaultValue="5">Forrás automatikus frissítési időköze percben</decimalTextBox>
+      <presentation id="SourceAutoUpdateInterval">
+        <decimalTextBox refId="SourceAutoUpdateInterval" defaultValue="5">Forrás automatikus frissítési időköze percben</decimalTextBox>
       </presentation>
       <presentation id="AdditionalSources">
         <listBox refId="AdditionalSources" required="false">További források: </listBox>
