@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<policyDefinitionResources revision="4.7" schemaVersion="1.0" >
+<policyDefinitionResources revision="4.1" schemaVersion="1.0" >
   <displayName/>
   <description/>
   <resources >
@@ -50,12 +50,6 @@
       <string id="SUPPORTED_FF100">Firefox 100 or later, Firefox 91.9 ESR or later</string>
       <string id="SUPPORTED_FF101">Firefox 101 or later, Firefox 91.10 ESR or later</string>
       <string id="SUPPORTED_FF102">Firefox 102 or later</string>
-      <string id="SUPPORTED_FF104">Firefox 104 or later, Firefox 102.2 ESR or later</string>
-      <string id="SUPPORTED_FF105">Firefox 105 or later, Firefox 102.3 ESR or later</string>
-      <string id="SUPPORTED_FF106">Firefox 106 or later, Firefox 102.4 ESR or later</string>
-      <string id="SUPPORTED_FF107">Firefox 107 or later, Firefox 102.5 ESR or later</string>
-      <string id="SUPPORTED_FF108">Firefox 108 or later, Firefox 102.6 ESR or later</string>
-      <string id="SUPPORTED_FF109">Firefox 109 or later, Firefox 102.7 ESR or later</string>
       <string id="firefox">Firefox</string>
       <string id="Permissions_group">Permissions</string>
       <string id="Camera_group">Camera</string>
@@ -279,17 +273,10 @@ If this policy is disabled or not configured, system add-ons are installed and u
 If this policy is disabled or not configured, telemetry is collected and uploaded.
 
 Mozilla recommends that you do not disable telemetry. Information collected through telemetry helps us build a better product for businesses like yours.</string>
-      <string id="DisplayBookmarksToolbar">Display Bookmarks Toolbar (Deprecated)</string>
+      <string id="DisplayBookmarksToolbar">Display Bookmarks Toolbar</string>
       <string id="DisplayBookmarksToolbar_Explain">If this policy is enabled, the bookmarks toolbar is displayed by default. The user can still hide it.
 
 If this policy is disabled or not configured, the bookmarks toolbar is not displayed by default.</string>
-      <string id="DisplayBookmarksToolbar_Enum">Display Bookmarks Toolbar</string>
-      <string id="DisplayBookmarksToolbar_Enum_Explain">If this policy is enabled, the default bokmarks toolbar display can be configured.
-
-If this policy is disabled or not configured, the bookmarks toolbar is displayed on the new tab page by default.</string>
-      <string id="DisplayBookmarksToolbar_Always">Always</string>
-      <string id="DisplayBookmarksToolbar_Never">Never</string>
-      <string id="DisplayBookmarksToolbar_NewTab">New Tab</string>
       <string id="DisplayMenuBar">Display Menu Bar (Deprecated)</string>
       <string id="DisplayMenuBar_Explain">If this policy is enabled, the menu bar is displayed by default. The user can still hide it.
 
@@ -942,14 +929,6 @@ For detailed information on creating the policy, see https://github.com/mozilla/
       <string id="StartDownloadsInTempDirectory_Explain">If this policy is enabled, Firefox will start downloads in a temporary directory and automatically deleted when you close the browser.
 
 If this policy is disabled or not configured, Firefox will to the download folder and will not be automatically deleted when you close the browser.</string>
-      <string id="GoToIntranetSiteForSingleWordEntryInAddressBar">Force direct intranet site navigation on single word entries in the address bar</string>
-      <string id="GoToIntranetSiteForSingleWordEntryInAddressBar_Explain">If this policy is enabled, typing single word entries in the address bar will attempt to navigate to intranet sites first, falling back to search if the DNS request fails.
-
-If this policy is disabled or not configured, typing single word entries in the address bar will search.</string>
-      <string id="AppUpdatePin">Pin updates to a specific version</string>
-      <string id="AppUpdatePin_Explain">If this policy is enabled, you can specify a Firefox version as xx. or xx.xx. and Firefox will not be updated beyond that major or minor version.
-
-If this policy is disabled or not configured, Firefox will update normally.</string>
       <string id="Preferences_Boolean_Explain">If this policy is enabled, the preference is locked to true. If this policy is disabled, the preference is locked to false.
 
 For a description of the preference, see:
@@ -1256,9 +1235,6 @@ https://github.com/mozilla/policy-templates/blob/master/README.md#preferences.</
       </presentation>
       <presentation id="DisplayMenuBar">
         <dropdownList refId="DisplayMenuBar"/>
-      </presentation>
-      <presentation id="DisplayBookmarksToolbar">
-        <dropdownList refId="DisplayBookmarksToolbar"/>
       </presentation>
       <presentation id="String">
         <textBox refId="String">
