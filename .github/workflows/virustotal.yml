@@ -12,9 +12,6 @@ jobs:
         name: Checkout
         uses: actions/checkout@v3
       -
-        name: Set up Go
-        uses: actions/setup-go@v3
-      -
         name: VirusTotal Scan
         uses: crazy-max/ghaction-virustotal@v3
         with:
