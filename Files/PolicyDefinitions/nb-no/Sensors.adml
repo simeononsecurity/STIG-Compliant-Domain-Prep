@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2006 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>skriv inn visningsnavn her</displayName>
+  <description>skriv inn beskrivelse her</description>
+  <resources>
+    <stringTable>
+      <string id="DisableSensors">Slå av sensorer</string>
+      <string id="DisableSensors_Explain">
+        
+        Denne policyinnstillingen slår av sensorfunksjonen for datamaskinen.
+
+        Hvis du aktiverer denne policyinnstillingen, blir sensorfunksjonen slått av, og ingen programmer på datamaskinen kan bruke sensorfunksjonen.
+
+        Hvis du deaktiverer eller lar være å konfigurere denne policyinnstillingen, kan alle programmer på datamaskinen bruke sensorfunksjonen.
+      
+      </string>
+      <string id="DisableLocation">Slå av plassering</string>
+      <string id="DisableLocation_Explain">
+        
+        Denne policyinnstillingen slår av plasseringsfunksjonen for datamaskinen.
+
+        Hvis du aktiverer denne policyinnstillingen, slås plasseringsfunksjonen av, og alle programmer på denne datamaskinen hindres fra å bruke plasseringsinformasjon fra plasseringsfunksjonen.
+
+        Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, blir ingen programmer hindret fra å bruke plasseringsinformasjon fra plasseringsfunksjonen.
+      
+      </string>
+      <string id="DisableLocationScripting">Slå av skript for plassering</string>
+      <string id="DisableLocationScripting_Explain">
+        
+        Denne policyinnstillingen slår av skript for plasseringsfunksjonen.
+
+        Hvis du aktiverer denne policyinnstillingen, vil ikke skript for plasseringsfunksjonen kjøre.
+
+        Hvis du deaktiverer eller lar være å konfigurere denne policyinnstillingen, vil alle plasseringsskript kjøre.
+      
+      </string>
+      <string id="LocationAndSensors">Plassering og sensorer</string>
+      <string id="HumanPresence">Menneskelig tilstedeværelse</string>
+      <string id="ForceInstantWake_DisplayName">Tving umiddelbar vekking</string>
+      <string id="ForceInstantWake_ExplainText">Bestemmer om våkning ved ankomst skal bli tvunget av/på av MDM-policyen. Brukeren vil ikke kunne endre denne innstillingen, og veksleknappen i brukergrensesnittet blir nedtonet.</string>
+      <string id="ForceInstantWake_0">Standarder for brukervalg</string>
+      <string id="ForceInstantWake_1">Tvunget på</string>
+      <string id="ForceInstantWake_2">Tvunget av</string>
+      <string id="ForceInstantLock_DisplayName">Tving umiddelbar låsing</string>
+      <string id="ForceInstantLock_ExplainText">Bestemmer om låsing ved fravær skal bli tvunget av/på av MDM-policyen. Brukeren vil ikke kunne endre denne innstillingen, og veksleknappen i brukergrensesnittet blir nedtonet.</string>
+      <string id="ForceInstantLock_0">Standarder for brukervalg</string>
+      <string id="ForceInstantLock_1">Tvunget på</string>
+      <string id="ForceInstantLock_2">Tvunget av</string>
+      <string id="ForceLockTimeout_DisplayName">Tidsavbrudd for lås</string>
+      <string id="ForceLockTimeout_ExplainText">Bestemmer tidsavbruddet tvunget av MDM-policyen for låsing ved fravær. Brukeren vil ikke kunne endre denne innstillingen, og veksleknappen i brukergrensesnittet blir nedtonet.</string>
+      <string id="ForceLockTimeout_0">Standarder for brukervalg</string>
+      <string id="ForceLockTimeout_1">10 sekunder</string>
+      <string id="ForceLockTimeout_2">30 sekunder</string>
+      <string id="ForceLockTimeout_3">2 minutter</string>
+      <string id="ForceInstantDim_DisplayName">Fremtving øyeblikkelig nedtoning</string>
+      <string id="ForceInstantDim_ExplainText">Bestemmer om oppmerksomhetsbasert skjermnedtoning skal bli tvunget av/på av MDM-policyen. Brukeren vil ikke kunne endre denne innstillingen, og veksleknappen i brukergrensesnittet blir visket ut.</string>
+      <string id="ForceInstantDim_0">Standarder for brukervalg</string>
+      <string id="ForceInstantDim_1">Tvunget på</string>
+      <string id="ForceInstantDim_2">Tvunget av</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="ForceInstantWake">
+        <dropdownList refId="ForceInstantWakeDropdown" noSort="true" defaultItem="0">Velg en av følgende handlinger</dropdownList>
+      </presentation>
+      <presentation id="ForceInstantLock">
+        <dropdownList refId="ForceInstantLockDropdown" noSort="true" defaultItem="0">Velg en av følgende handlinger</dropdownList>
+      </presentation>
+      <presentation id="ForceLockTimeout">
+        <dropdownList refId="ForceLockTimeoutDropdown" noSort="true" defaultItem="1">Velg en av følgende tidsavbrudd</dropdownList>
+      </presentation>
+      <presentation id="ForceInstantDim">
+        <dropdownList refId="ForceInstantDimDropDown" noSort="true" defaultItem="0">Velg en av følgende handlinger</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

@@ -66,6 +66,67 @@
         </enum>
       </elements>
     </policy>
+    <policy name="DNS_Doh" class="Machine" displayName="$(string.DNS_Doh)" explainText="$(string.DNS_Doh_Help)" presentation="$(presentation.DNS_Doh)" key="Software\Policies\Microsoft\Windows NT\DNSClient">
+      <parentCategory ref="DNS_Client" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <enum id="DNS_Doh_Box" valueName="DoHPolicy" required="true">
+          <item displayName="$(string.DNS_Doh_Force)">
+            <value>
+              <decimal value="3" />
+            </value>
+          </item>
+          <item displayName="$(string.DNS_Doh_Auto)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.DNS_Doh_Disabled)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="DNS_Ddr" class="Machine" displayName="$(string.DNS_Ddr)" explainText="$(string.DNS_Ddr_Help)" key="Software\Policies\Microsoft\Windows NT\DNSClient" valueName="EnableDdr">
+      <parentCategory ref="DNS_Client" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="DNS_Netbios" class="Machine" displayName="$(string.DNS_Netbios)" explainText="$(string.DNS_Netbios_Help)" presentation="$(presentation.DNS_Netbios)" key="Software\Policies\Microsoft\Windows NT\DNSClient">
+      <parentCategory ref="DNS_Client" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <enum id="DNS_Netbios_Box" valueName="EnableNetbios" required="true">
+          <item displayName="$(string.DNS_Netbios_Disable)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.DNS_Netbios_Allow)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.DNS_Netbios_Disable_Public_Networks)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.DNS_Netbios_Learning_Mode)">
+            <value>
+              <decimal value="3" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
     <policy name="DNS_RegistrationEnabled" class="Machine" displayName="$(string.DNS_RegistrationEnabled)" explainText="$(string.DNS_RegistrationEnabled_Help)" key="Software\Policies\Microsoft\Windows NT\DNSClient" valueName="RegistrationEnabled">
       <parentCategory ref="DNS_Client" />
       <supportedOn ref="windows:SUPPORTED_WindowsXP" />

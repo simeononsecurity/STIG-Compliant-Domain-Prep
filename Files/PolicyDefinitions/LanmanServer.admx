@@ -6,6 +6,13 @@
     <using prefix="windows" namespace="Microsoft.Policies.Windows" />
   </policyNamespaces>
   <resources minRequiredRevision="1.0" />
+  <supportedOn>
+    <definitions>
+      <!--At least Windows Server 2022 or Windows 11-->
+      <definition name="SUPPORTED_Windows_Server_2022_Windows_11_0" displayName="$(string.SUPPORTED_Windows_Server_2022_Windows_11_0)">
+      </definition>
+    </definitions>
+  </supportedOn>
   <categories>
     <category name="Cat_LanmanServer" displayName="$(string.Cat_LanmanServer)">
       <parentCategory ref="windows:Network" />
@@ -99,6 +106,40 @@
         >
       <parentCategory ref="Cat_LanmanServer" />
       <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy 
+        class="Machine"
+        displayName="$(string.Pol_EnableCompressedTraffic_Name)"
+        explainText="$(string.Pol_EnableCompressedTraffic_Help)"
+        key="Software\Policies\Microsoft\Windows\LanmanServer"
+        name="Pol_EnableCompressedTraffic"
+        valueName="EnableCompressedTraffic"
+        >
+      <parentCategory ref="Cat_LanmanServer" />
+      <supportedOn ref="SUPPORTED_Windows_Server_2022_Windows_11_0" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy 
+        class="Machine"
+        displayName="$(string.Pol_DisableCompression_Name)"
+        explainText="$(string.Pol_DisableCompression_Help)"
+        key="Software\Policies\Microsoft\Windows\LanmanServer"
+        name="Pol_DisableCompression"
+        valueName="DisableCompression"
+        >
+      <parentCategory ref="Cat_LanmanServer" />
+      <supportedOn ref="SUPPORTED_Windows_Server_2022_Windows_11_0" />
       <enabledValue>
         <decimal value="1" />
       </enabledValue>

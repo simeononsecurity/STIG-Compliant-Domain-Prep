@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--  (c) 2015 Microsoft Corporation  -->
-<policyDefinitions 
-  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" 
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0"
   xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
   <policyNamespaces>
     <target prefix="DataCollection" namespace="Microsoft.Policies.DataCollection" />
@@ -23,11 +22,6 @@
           <item displayName="$(string.AllowTelemetry_1)">
             <value>
               <decimal value="1" />
-            </value>
-          </item>
-          <item displayName="$(string.AllowTelemetry_2)">
-            <value>
-              <decimal value="2" />
             </value>
           </item>
           <item displayName="$(string.AllowTelemetry_3)">
@@ -216,6 +210,48 @@
     <policy name="AllowCommercialDataPipeline" class="Machine" displayName="$(string.AllowCommercialDataPipeline)" explainText="$(string.AllowCommercialDataPipeline_Explain)" key="Software\Policies\Microsoft\Windows\DataCollection" valueName="AllowCommercialDataPipeline">
       <parentCategory ref="windows:DataCollectionAndPreviewBuilds" />
       <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS6" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="LimitDiagnosticLogCollection" class="Machine" displayName="$(string.LimitDiagnosticLogCollection)" explainText="$(string.LimitDiagnosticLogCollection_Explain)" key="Software\Policies\Microsoft\Windows\DataCollection" valueName="LimitDiagnosticLogCollection">
+      <parentCategory ref="windows:DataCollectionAndPreviewBuilds" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS7" />
+      <!-- "Enabled" here means we are limiting advanced diagnostics. -->
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="LimitDumpCollection" class="Machine" displayName="$(string.LimitDumpCollection)" explainText="$(string.LimitDumpCollection_Explain)" key="Software\Policies\Microsoft\Windows\DataCollection" valueName="LimitDumpCollection">
+      <parentCategory ref="windows:DataCollectionAndPreviewBuilds" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS7" />
+      <!-- "Enabled" here means we are limiting dump collection. -->
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="EnableOneSettingsAuditing" class="Machine" displayName="$(string.EnableOneSettingsAuditing)" explainText="$(string.EnableOneSettingsAuditing_Explain)" key="Software\Policies\Microsoft\Windows\DataCollection" valueName="EnableOneSettingsAuditing">
+      <parentCategory ref="windows:DataCollectionAndPreviewBuilds" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS7" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="DisableOneSettingsDownloads" class="Machine" displayName="$(string.DisableOneSettingsDownloads)" explainText="$(string.DisableOneSettingsDownloads_Explain)" key="Software\Policies\Microsoft\Windows\DataCollection" valueName="DisableOneSettingsDownloads">
+      <parentCategory ref="windows:DataCollectionAndPreviewBuilds" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS7" />
       <enabledValue>
         <decimal value="1" />
       </enabledValue>

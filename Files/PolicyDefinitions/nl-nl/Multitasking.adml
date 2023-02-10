@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+  <displayName>Multitasking</displayName>
+  <description>Hiermee worden de opties voor Windows-multitasking beheerd</description>
+  <resources>
+    <stringTable>
+      <string id="MULTITASKING">Multitasking</string>
+      <string id="MULTITASKINGHELP">Hiermee worden de opties voor Windows-multitasking beheerd</string>
+      <string id="BrowserAltTabBlowout">De weergave van Microsoft Edge-tabbladen met Alt-Tab configureren</string>
+      <string id="BrowserAltTabBlowout_Help">Met deze instelling bepaalt u hoeveel tabbladen in Microsoft Edge worden weergegeven met Alt+Tab.
+
+Mogelijke instellingen zijn bijvoorbeeld: alle tabbladen, de meest recente 3 of 5 tabbladen of geen tabbladen van Microsoft Edge.
+
+Als dit is ingesteld op 'Alleen open vensters', wordt de hele functie uitgeschakeld.
+</string>
+      <string id="AltTabFilter_All">Open vensters en alle tabbladen in Microsoft Edge</string>
+      <string id="AltTabFilter_Five">Open vensters en vijf meest recente tabbladen in Microsoft Edge</string>
+      <string id="AltTabFilter_Three">Open vensters en drie meest recente tabbladen in Microsoft Edge</string>
+      <string id="AltTabFilter_None">Alleen open vensters</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="AltTabFilter">
+        <dropdownList refId="AltTabFilterDropdown" noSort="true" defaultItem="0">Als u op Alt+Tab drukt, wordt het volgende weergegeven</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

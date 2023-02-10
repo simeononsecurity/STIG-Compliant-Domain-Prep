@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!--  (c) 2006 Microsoft Corporation  -->
 <policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                    revision="1.1" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
@@ -224,6 +224,34 @@
           </or>
       </definition>
 
+      <!--At least Windows 10 RS7 no SERVER-->
+      <definition name="SUPPORTED_Windows_10_0_RS7_NOSERVER" displayName="$(string.SUPPORTED_Windows_10_0_RS7_NOSERVER)">
+        <or>
+          <range ref="products:MicrosoftWindows" minVersionIndex="14" maxVersionIndex="15"/>
+        </or>
+      </definition>
+
+      <!--At least Windows 10 20H1-->
+      <definition name="SUPPORTED_Windows_10_0_20H1" displayName="$(string.SUPPORTED_Windows_10_0_20H1)">
+          <or>
+              <range ref="products:MicrosoftWindows" minVersionIndex="13"/>
+          </or>
+      </definition>
+
+      <!--At least Windows 10 21H2-->
+      <definition name="SUPPORTED_Windows_10_0_21H2" displayName="$(string.SUPPORTED_Windows_10_0_21H2)">
+          <or>
+              <range ref="products:MicrosoftWindows" minVersionIndex="13"/>
+          </or>
+      </definition>
+
+      <!--At least Windows 10 21H2 no SERVER-->
+      <definition name="SUPPORTED_Windows_10_0_21H2_NOSERVER" displayName="$(string.SUPPORTED_Windows_10_0_21H2_NOSERVER)">
+          <or>
+              <range ref="products:MicrosoftWindows" minVersionIndex="13"/>
+          </or>
+      </definition>
+
       <!--At least Windows Threshold no ARM-->
       <definition name="SUPPORTED_Windows_10_0_NOARM" displayName="$(string.SUPPORTED_Windows_10_0_NOARM)">
           <or>
@@ -245,10 +273,52 @@
         </or>
       </definition>
 
+      <!--At least Windows Threshold no SERVER Enterprise with Microsoft Defender Application Guard in Enterprise mode-->
+      <definition name="SUPPORTED_Windows_10_0_NOSERVER_ENTERPRISE_EDUCATION_MDAG" displayName="$(string.SUPPORTED_Windows_10_0_NOSERVER_ENTERPRISE_EDUCATION_MDAG)">
+        <or>
+          <range ref="products:MicrosoftWindows" minVersionIndex="14" maxVersionIndex="14"/>
+        </or>
+      </definition>
+
+      <!--At least Windows Threshold no SERVER Enterprise with Microsoft Defender Application Guard in Enterprise mode for Microsoft Edge-->
+      <definition name="SUPPORTED_Windows_10_0_NOSERVER_ENTERPRISE_EDUCATION_MDAG_EDGE" displayName="$(string.SUPPORTED_Windows_10_0_NOSERVER_ENTERPRISE_EDUCATION_MDAG_EDGE)">
+        <or>
+          <range ref="products:MicrosoftWindows" minVersionIndex="14" maxVersionIndex="14"/>
+        </or>
+      </definition>
+
       <!--At least Windows Threshold SERVER -->
       <definition name="SUPPORTED_Windows_10_0_SERVER" displayName="$(string.SUPPORTED_Windows_10_0_SERVER)">
           <or>
               <range ref="products:MicrosoftWindows" minVersionIndex="13" maxVersionIndex="13"/>
+          </or>
+      </definition>
+
+      <!--At least Windows 11 SE -->
+      <definition name="SUPPORTED_Windows_11_0_SE" displayName="$(string.SUPPORTED_Windows_11_0_SE)">
+          <or>
+              <range ref="products:MicrosoftWindows" minVersionIndex="16" maxVersionIndex="16"/>
+          </or>
+      </definition>
+
+      <!--At least Windows 11 22H2 no SERVER -->
+      <definition name="SUPPORTED_Windows_11_0_22H2_NOSERVER" displayName="$(string.SUPPORTED_Windows_11_0_22H2_NOSERVER)">
+          <or>
+              <range ref="products:MicrosoftWindows" minVersionIndex="16" maxVersionIndex="16"/>
+          </or>
+      </definition>
+
+      <!--At least Windows 11 22H2 -->
+      <definition name="SUPPORTED_Windows_11_0_22H2" displayName="$(string.SUPPORTED_Windows_11_0_22H2)">
+          <or>
+              <range ref="products:MicrosoftWindows" minVersionIndex="16"/>
+          </or>
+      </definition>
+
+      <!--At least Windows 11 no SERVER -->
+      <definition name="SUPPORTED_Windows_11_0_NOSERVER" displayName="$(string.SUPPORTED_Windows_11_0_NOSERVER)">
+          <or>
+              <range ref="products:MicrosoftWindows" minVersionIndex="16"/>
           </or>
       </definition>
 

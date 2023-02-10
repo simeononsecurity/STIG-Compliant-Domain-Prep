@@ -13,6 +13,12 @@
         <category name="Exclusions" displayName="$(string.Exclusions)">
             <parentCategory ref="AntiSpywareDefender" />
         </category>
+        <category name="Features" displayName="$(string.Features)">
+            <parentCategory ref="AntiSpywareDefender" />
+        </category>
+        <category name="DeviceControl" displayName="$(string.DeviceControl)">
+            <parentCategory ref="AntiSpywareDefender" />
+        </category>
         <category name="ExploitGuard" displayName="$(string.ExploitGuard)">
             <parentCategory ref="AntiSpywareDefender" />
         </category>
@@ -63,6 +69,56 @@
       </category>
     </categories>
     <policies>
+        <policy name="DeviceControlEnabled" class="Machine" displayName="$(string.Features_DeviceControlEnabled)" explainText="$(string.DeviceControl_DeviceControlEnabled_Explain)" key="Software\Policies\Microsoft\Windows Defender\Features" valueName="DeviceControlEnabled">
+            <parentCategory ref="Features" />
+            <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS1" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
+        <policy name="DeviceControl_PolicyGroups" class="Machine" displayName="$(string.DeviceControl_PolicyGroups)" explainText="$(string.DeviceControl_PolicyGroups_Explain)" key="Software\Policies\Microsoft\Windows Defender\Device Control\Policy Groups" presentation="$(presentation.DeviceControl_PolicyGroups)">
+            <parentCategory ref="DeviceControl" />
+            <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS1" />
+            <elements>
+                <text id="DeviceControl_PolicyGroups" valueName="PolicyGroups" required="true" />
+            </elements>
+        </policy>
+        <policy name="DeviceControl_PolicyRules" class="Machine" displayName="$(string.DeviceControl_PolicyRules)" explainText="$(string.DeviceControl_PolicyRules_Explain)" key="Software\Policies\Microsoft\Windows Defender\Device Control\Policy Rules" presentation="$(presentation.DeviceControl_PolicyRules)">
+            <parentCategory ref="DeviceControl" />
+            <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS1" />
+            <elements>
+                <text id="DeviceControl_PolicyRules" valueName="PolicyRules" required="true" />
+            </elements>
+        </policy>
+        <policy name="DeviceControl_DefaultEnforcement" class="Machine" displayName="$(string.DeviceControl_DefaultEnforcement)" explainText="$(string.DeviceControl_DefaultEnforcement_Explain)" key="Software\Policies\Microsoft\Windows Defender\Device Control" presentation="$(presentation.DeviceControlDefaultEnforcementDropDown)">
+            <parentCategory ref="DeviceControl" />
+            <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS1" />
+            <elements>
+                <enum id="DeviceControlDefaultEnforcementDropDown" valueName="DefaultEnforcement" required="true">
+                    <item displayName="$(string.DeviceControl_DefaultEnforcement_DefaultAllow)">
+                        <value>
+                            <decimal value="1" />
+                        </value>
+                    </item>
+                    <item displayName="$(string.DeviceControl_DefaultEnforcement_DefaultDeny)">
+                        <value>
+                            <decimal value="2" />
+                        </value>
+                    </item>
+                </enum>
+            </elements>
+        </policy>
+        <policy name="DeviceControl_DataDuplicationRemoteLocation" class="Machine" displayName="$(string.DeviceControl_DataDuplicationRemoteLocation)" explainText="$(string.DeviceControl_DataDuplicationRemoteLocation_Explain)" key="Software\Policies\Microsoft\Windows Defender\Device Control" presentation="$(presentation.DeviceControl_DataDuplicationRemoteLocation)">
+            <parentCategory ref="DeviceControl" />
+            <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS1" />
+            <elements>
+                <text id="DeviceControl_DataDuplicationRemoteLocation" valueName="DataDuplicationRemoteLocation" required="true" />
+            </elements>
+        </policy>
+
         <policy name="DisableAutoExclusions" class="Machine" displayName="$(string.DisableAutoExclusions)" explainText="$(string.DisableAutoExclusions_Explain)" key="Software\Policies\Microsoft\Windows Defender\Exclusions" valueName="DisableAutoExclusions">
             <parentCategory ref="Exclusions" />
             <supportedOn ref="windows:SUPPORTED_Windows_10_0_SERVER" />
@@ -97,10 +153,10 @@
             <parentCategory ref="AntiSpywareDefender" />
             <supportedOn ref="windows:SUPPORTED_Windows8" />
             <enabledValue>
-                <decimal value="0" />
+                <decimal value="1" />
             </enabledValue>
             <disabledValue>
-                <decimal value="1" />
+                <decimal value="0" />
             </disabledValue>
         </policy>
         <policy name="DisableRoutinelyTakingAction" class="Machine" displayName="$(string.DisableRoutinelyTakingAction)" explainText="$(string.DisableRoutinelyTakingActionDefender_Explain)" key="Software\Policies\Microsoft\Windows Defender" valueName="DisableRoutinelyTakingAction">
@@ -144,10 +200,34 @@
                 <decimal value="0" />
             </disabledValue>
         </policy>
+        <policy name="SchedulerRandomizationTime" class="Machine" displayName="$(string.SchedulerRandomizationTime)" explainText="$(string.SchedulerRandomizationTime_Explain)" key="Software\Policies\Microsoft\Windows Defender" valueName="SchedulerRandomizationTime" presentation="$(presentation.SchedulerRandomizationTime)">
+            <parentCategory ref="AntiSpywareDefender" />
+            <supportedOn ref="windows:SUPPORTED_Windows8" />
+            <elements>
+                <decimal id="SchedulerRandomizationTime" valueName="SchedulerRandomizationTime" minValue="1" maxValue="23" />
+            </elements>
+        </policy>
         <policy name="ServiceKeepAlive" class="Machine" displayName="$(string.ServiceKeepAlive)" explainText="$(string.ServiceKeepAlive_Explain)" key="Software\Policies\Microsoft\Windows Defender" valueName="ServiceKeepAlive">
             <parentCategory ref="AntiSpywareDefender" />
             <supportedOn ref="windows:SUPPORTED_Windows8" />
             <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
+        <policy name="SupportLogLocation" class="Machine" displayName="$(string.SupportLogLocation)" explainText="$(string.SupportLogLocation_Explain)" key="Software\Policies\Microsoft\Windows Defender" presentation="$(presentation.SupportLogLocation)">
+            <parentCategory ref="AntiSpywareDefender" />
+            <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS1" />
+            <elements>
+                <text id="SupportLogLocation" valueName="SupportLogLocation" required="true" />
+            </elements>
+        </policy>
+        <policy name="HideExclusionsFromLocalAdmins" class="Machine" displayName="$(string.HideExclusionsFromLocalAdmins)" explainText="$(string.HideExclusionsFromLocalAdmins_Explain)" key="Software\Policies\Microsoft\Windows Defender" valueName="HideExclusionsFromLocalAdmins">
+            <parentCategory ref="AntiSpywareDefender" />
+            <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS1" />
+             <enabledValue>
                 <decimal value="1" />
             </enabledValue>
             <disabledValue>
@@ -177,6 +257,95 @@
                 </enum>
             </elements>
         </policy>
+        <policy name="Root_PlatformUpdateChannel" class="Machine" displayName="$(string.Root_PlatformUpdateChannel)" explainText="$(string.Root_PlatformUpdateChannel_Explain)" key="Software\Policies\Microsoft\Windows Defender" presentation="$(presentation.PlatformUpdateChannelsDropDown)">
+            <parentCategory ref="AntiSpywareDefender" />
+            <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS1" />
+            <elements>
+                <enum id="UpdateChannelsDropDown" valueName="PlatformRing" required="true">
+                    <item displayName="$(string.Root_UpdateChannel_Dropdown_Beta)">
+                        <value>
+                            <decimal value="2" />
+                        </value>
+                    </item>
+                    <item displayName="$(string.Root_UpdateChannel_Dropdown_Preview)">
+                        <value>
+                            <decimal value="3" />
+                        </value>
+                    </item>
+                    <item displayName="$(string.Root_UpdateChannel_Dropdown_Staged)">
+                        <value>
+                            <decimal value="4" />
+                        </value>
+                    </item>
+                    <item displayName="$(string.Root_UpdateChannel_Dropdown_Broad)">
+                        <value>
+                            <decimal value="5" />
+                        </value>
+                    </item>
+                    <item displayName="$(string.Root_UpdateChannel_Dropdown_Delayed)">
+                        <value>
+                            <decimal value="6" />
+                        </value>
+                    </item>
+                </enum>
+            </elements>
+        </policy>
+        <policy name="Root_EngineUpdateChannel" class="Machine" displayName="$(string.Root_EngineUpdateChannel)" explainText="$(string.Root_EngineUpdateChannel_Explain)" key="Software\Policies\Microsoft\Windows Defender" presentation="$(presentation.EngineUpdateChannelsDropDown)">
+            <parentCategory ref="AntiSpywareDefender" />
+            <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS1" />
+            <elements>
+                <enum id="UpdateChannelsDropDown" valueName="EngineRing" required="true">
+                    <item displayName="$(string.Root_UpdateChannel_Dropdown_Beta)">
+                        <value>
+                            <decimal value="2" />
+                        </value>
+                    </item>
+                    <item displayName="$(string.Root_UpdateChannel_Dropdown_Preview)">
+                        <value>
+                            <decimal value="3" />
+                        </value>
+                    </item>
+                    <item displayName="$(string.Root_UpdateChannel_Dropdown_Staged)">
+                        <value>
+                            <decimal value="4" />
+                        </value>
+                    </item>
+                    <item displayName="$(string.Root_UpdateChannel_Dropdown_Broad)">
+                        <value>
+                            <decimal value="5" />
+                        </value>
+                    </item>
+                    <item displayName="$(string.Root_UpdateChannel_Dropdown_Delayed)">
+                        <value>
+                            <decimal value="6" />
+                        </value>
+                    </item>
+                </enum>
+            </elements>
+        </policy>
+        <policy name="Root_SecurityIntelligenceUpdateChannel" class="Machine" displayName="$(string.Root_SecurityIntelligenceUpdateChannel)" explainText="$(string.Root_SecurityIntelligenceUpdateChannel_Explain)" key="Software\Policies\Microsoft\Windows Defender" presentation="$(presentation.SecurityIntelligenceUpdateChannelsDropDown)">
+            <parentCategory ref="AntiSpywareDefender" />
+            <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS1" />
+            <elements>
+                <enum id="UpdateChannelsDropDown" valueName="SignaturesRing" required="true">
+                    <item displayName="$(string.Root_UpdateChannel_Dropdown_Staged)">
+                        <value>
+                            <decimal value="4" />
+                        </value>
+                    </item>
+                    <item displayName="$(string.Root_UpdateChannel_Dropdown_Broad)">
+                        <value>
+                            <decimal value="5" />
+                        </value>
+                    </item>
+                    <item displayName="$(string.Root_UpdateChannel_Dropdown_Delayed)">
+                        <value>
+                            <decimal value="6" />
+                        </value>
+                    </item>
+                </enum>
+            </elements>
+        </policy>
         <policy name="Exclusions_Extensions" class="Machine" displayName="$(string.Exclusions_Extensions)" explainText="$(string.Exclusions_Extensions_Explain)" key="Software\Policies\Microsoft\Windows Defender\Exclusions" valueName="Exclusions_Extensions" presentation="$(presentation.Exclusions_Extensions)">
             <parentCategory ref="Exclusions" />
             <supportedOn ref="windows:SUPPORTED_Windows8" />
@@ -196,6 +365,13 @@
             <supportedOn ref="windows:SUPPORTED_Windows8" />
             <elements>
                 <list id="Exclusions_ProcessesList" additive="true" explicitValue="true" key="Software\Policies\Microsoft\Windows Defender\Exclusions\Processes" />
+            </elements>
+        </policy>
+        <policy name="Exclusions_IpAddresses" class="Machine" displayName="$(string.Exclusions_IpAddresses)" explainText="$(string.Exclusions_IpAddresses_Explain)" key="Software\Policies\Microsoft\Windows Defender\Exclusions" valueName="Exclusions_IpAddresses" presentation="$(presentation.Exclusions_IpAddresses)">
+            <parentCategory ref="Exclusions" />
+            <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS3" />
+            <elements>
+                <list id="Exclusions_IpAddressesList" additive="true" explicitValue="true" key="Software\Policies\Microsoft\Windows Defender\Exclusions\IpAddresses" />
             </elements>
         </policy>
         <policy name="Nis_DisableProtocolRecognition" class="Machine" displayName="$(string.Nis_DisableProtocolRecognition)" explainText="$(string.Nis_DisableProtocolRecognition_Explain)" key="Software\Policies\Microsoft\Windows Defender\NIS" valueName="DisableProtocolRecognition">
@@ -241,6 +417,16 @@
             <elements>
                 <decimal id="Quarantine_PurgeItemsAfterDelay" valueName="PurgeItemsAfterDelay" minValue="0" maxValue="10000000" />
             </elements>
+        </policy>
+        <policy name="RealtimeProtection_DisableSriptScanning" class="Machine" displayName="$(string.RealtimeProtection_DisableSriptScanning)" explainText="$(string.RealtimeProtection_DisableSriptScanning_Explain)" key="Software\Policies\Microsoft\Windows Defender\Real-Time Protection" valueName="DisableScriptScanning">
+          <parentCategory ref="RealtimeProtection" />
+          <supportedOn ref="windows:SUPPORTED_Windows8" />
+          <enabledValue>
+            <decimal value="0" />
+          </enabledValue>
+          <disabledValue>
+            <decimal value="1" />
+          </disabledValue>
         </policy>
         <policy name="RealtimeProtection_DisableBehaviorMonitoring" class="Machine" displayName="$(string.RealtimeProtection_DisableBehaviorMonitoring)" explainText="$(string.RealtimeProtection_DisableBehaviorMonitoring_Explain)" key="Software\Policies\Microsoft\Windows Defender\Real-Time Protection" valueName="DisableBehaviorMonitoring">
             <parentCategory ref="RealtimeProtection" />
@@ -514,6 +700,13 @@
             <decimal value="0" />
             </disabledValue>
         </policy>
+        <policy name="Reporting_ServiceHealthReportInterval" class="Machine" displayName="$(string.Reporting_ServiceHealthReportInterval)" explainText="$(string.Reporting_ServiceHealthReportInterval_Explain)" key="Software\Policies\Microsoft\Windows Defender\Reporting" valueName="ServiceHealthReportInterval" presentation="$(presentation.Reporting_ServiceHealthReportInterval)">
+            <parentCategory ref="Reporting" />
+            <supportedOn ref="windows:SUPPORTED_Windows8" />
+            <elements>
+                <decimal id="Reporting_ServiceHealthReportInterval" valueName="ServiceHealthReportInterval" minValue="0" maxValue="14400" />
+            </elements>
+        </policy>
         <policy name="Scan_AllowPause" class="Machine" displayName="$(string.Scan_AllowPause)" explainText="$(string.Scan_AllowPause_Explain)" key="Software\Policies\Microsoft\Windows Defender\Scan" valueName="AllowPause">
             <parentCategory ref="Scan" />
             <supportedOn ref="windows:SUPPORTED_Windows8" />
@@ -575,6 +768,16 @@
                 <decimal value="1" />
             </disabledValue>
         </policy>
+        <policy name="Scan_ThrottleForScheduledScanOnly" class="Machine" displayName="$(string.Scan_ThrottleForScheduledScanOnly)" explainText="$(string.Scan_ThrottleForScheduledScanOnly_Explain)" key="Software\Policies\Microsoft\Windows Defender\Scan" valueName="ThrottleForScheduledScanOnly">
+            <parentCategory ref="Scan" />
+            <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS1" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
         <policy name="Scan_DisableCatchupQuickScan" class="Machine" displayName="$(string.Scan_DisableCatchupQuickScan)" explainText="$(string.Scan_DisableCatchupQuickScan_Explain)" key="Software\Policies\Microsoft\Windows Defender\Scan" valueName="DisableCatchupQuickScan">
             <parentCategory ref="Scan" />
             <supportedOn ref="windows:SUPPORTED_Windows8" />
@@ -596,16 +799,6 @@
             </disabledValue>
         </policy>
         <policy name="Scan_DisableHeuristics" class="Machine" displayName="$(string.Scan_DisableHeuristics)" explainText="$(string.Scan_DisableHeuristics_Explain)" key="Software\Policies\Microsoft\Windows Defender\Scan" valueName="DisableHeuristics">
-            <parentCategory ref="Scan" />
-            <supportedOn ref="windows:SUPPORTED_Windows8" />
-            <enabledValue>
-                <decimal value="0" />
-            </enabledValue>
-            <disabledValue>
-                <decimal value="1" />
-            </disabledValue>
-        </policy>
-        <policy name="Scan_DisablePackedExeScanning" class="Machine" displayName="$(string.Scan_DisablePackedExeScanning)" explainText="$(string.Scan_DisablePackedExeScanning_Explain)" key="Software\Policies\Microsoft\Windows Defender\Scan" valueName="DisablePackedExeScanning">
             <parentCategory ref="Scan" />
             <supportedOn ref="windows:SUPPORTED_Windows8" />
             <enabledValue>
@@ -835,6 +1028,36 @@
             <parentCategory ref="Scan" />
             <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS5" />
             <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
+        <policy name="MeteredConnectionUpdates" class="Machine" displayName="$(string.MeteredConnectionUpdates)" explainText="$(string.MeteredConnectionUpdates_Explain)" key="Software\Policies\Microsoft\Windows Defender\Signature Updates" valueName="MeteredConnectionUpdates">
+            <parentCategory ref="SignatureUpdate" />
+            <supportedOn ref="windows:SUPPORTED_Windows8" />
+             <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
+        <policy name="AllowNetworkProtectionOnWinServer" class="Machine" displayName="$(string.AllowNetworkProtectionOnWinServer)" explainText="$(string.AllowNetworkProtectionOnWinServer_Explain)" key="Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\Network Protection" valueName="AllowNetworkProtectionOnWinServer">
+            <parentCategory ref="ExploitGuard_NetworkProtection" />
+            <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS3" />
+             <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
+        <policy name="DisableDatagramProcessing" class="Machine" displayName="$(string.DisableDatagramProcessing)" explainText="$(string.AllowNetworkProtectionOnWinServer_Explain)" key="Software\Policies\Microsoft\Windows Defender\NIS" valueName="DisableDatagramProcessing">
+            <parentCategory ref="NetworkRealtimeInspection" />
+            <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS3" />
+             <enabledValue>
                 <decimal value="1" />
             </enabledValue>
             <disabledValue>
@@ -1184,7 +1407,17 @@
         </policy>
         <policy name="MpEngine_EnableFileHashComputation" class="Machine" displayName="$(string.MpEngine_EnableFileHashComputation)" explainText="$(string.MpEngine_EnableFileHashComputation_Explain)" key="Software\Policies\Microsoft\Windows Defender\MpEngine" valueName="EnableFileHashComputation">
             <parentCategory ref="MpEngine" />
-            <supportedOn ref="windows:supported_windows_10_0_rs7" />
+            <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS7" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
+        </policy>
+        <policy name="DisableGradualRelease" class="Machine" displayName="$(string.MpEngine_DisableGradualRelease)" explainText="$(string.MpEngine_DisableGradualRelease_Explain)" key="Software\Policies\Microsoft\Windows Defender\MpEngine" valueName="DisableGradualRelease">
+            <parentCategory ref="MpEngine" />
+            <supportedOn ref="windows:SUPPORTED_Windows_10_RS1" />
             <enabledValue>
                 <decimal value="1" />
             </enabledValue>

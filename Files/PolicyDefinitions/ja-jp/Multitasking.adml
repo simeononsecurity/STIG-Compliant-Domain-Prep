@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+  <displayName>マルチタスキング</displayName>
+  <description>Windows のマルチタスキング オプションを管理します</description>
+  <resources>
+    <stringTable>
+      <string id="MULTITASKING">マルチタスキング</string>
+      <string id="MULTITASKINGHELP">Windows のマルチタスキング オプションを管理します</string>
+      <string id="BrowserAltTabBlowout">Alt + Tab キーへの Microsoft Edge タブの追加を構成</string>
+      <string id="BrowserAltTabBlowout_Help">この設定により、Alt + Tab キーへの Microsoft Edge タブの追加が制御されます。
+
+すべてのタブ、最新の 3 つまたは 5 つのタブを表示するように設定するか、Microsoft Edge のタブを表示しないように設定することもできます。
+
+「開いているウィンドウのみ」を表示するように設定されている場合、機能全体が無効になります。
+</string>
+      <string id="AltTabFilter_All">開いているウィンドウと Microsoft Edge のすべてのタブ</string>
+      <string id="AltTabFilter_Five">開いているウィンドウと Microsoft Edge で最近開いた 5 つのタブ</string>
+      <string id="AltTabFilter_Three">開いているウィンドウと Microsoft Edge で最近開いた 3 つのタブ</string>
+      <string id="AltTabFilter_None">開いているウィンドウのみ</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="AltTabFilter">
+        <dropdownList refId="AltTabFilterDropdown" noSort="true" defaultItem="0">Alt キーと Tab キーを押すと表示されます</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

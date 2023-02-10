@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+  <displayName>Wielozadaniowość</displayName>
+  <description>Umożliwia zarządzanie opcjami funkcji Wielozadaniowość systemu Windows</description>
+  <resources>
+    <stringTable>
+      <string id="MULTITASKING">Wielozadaniowość</string>
+      <string id="MULTITASKINGHELP">Umożliwia zarządzanie opcjami funkcji Wielozadaniowość systemu Windows</string>
+      <string id="BrowserAltTabBlowout">Konfigurowanie integracji kart przeglądarki Microsoft Edge z kombinacją klawiszy Alt-Tab</string>
+      <string id="BrowserAltTabBlowout_Help">To ustawienie kontroluje integrację kart przeglądarki Microsoft Edge z kombinacją klawiszy Alt+Tab.
+
+Można to tak ustawić, aby były wyświetlane wszystkie karty, ostatnio otwierane 3 lub 5 kart lub żadne karty przeglądarki Microsoft Edge.
+
+Jeśli jest to ustawione w sposób powodujący wyświetlanie opcji „Otwórz tylko okna”, funkcja ta zostanie wyłączona całkowicie.
+</string>
+      <string id="AltTabFilter_All">Otwartych okien i wszystkich kart w przeglądarce Microsoft Edge</string>
+      <string id="AltTabFilter_Five">Otwartych okien i 5 ostatnich kart w przeglądarce Microsoft Edge</string>
+      <string id="AltTabFilter_Three">Otwartych okien i 3 ostatnich kart w przeglądarce Microsoft Edge</string>
+      <string id="AltTabFilter_None">Tylko otwartych okien</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="AltTabFilter">
+        <dropdownList refId="AltTabFilterDropdown" noSort="true" defaultItem="0">Naciśnięcie klawiszy Alt + Tab powoduje wyświetlenie</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

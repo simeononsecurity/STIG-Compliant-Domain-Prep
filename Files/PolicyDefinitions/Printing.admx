@@ -1,4 +1,4 @@
-﻿<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
 
 <!--  (c) 2006 Microsoft Corporation  --><policyDefinitions
     xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions"
@@ -705,7 +705,7 @@
       <disabledValue>
         <decimal value="0"/>
       </disabledValue>
-    </policy>    
+    </policy>
     <policy
         class="Machine"
         displayName="$(string.ShowJobTitleInEventLogs)"
@@ -740,5 +740,346 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
+    <policy
+        class="Machine"
+        displayName="$(string.EnableDeviceControl)"
+        explainText="$(string.EnableDeviceControl_Help)"
+        key="Software\Policies\Microsoft\Windows NT\Printers"
+        name="EnableDeviceControl"
+        valueName="EnableDeviceControl"
+      >
+      <parentCategory ref="windows:Printers"/>
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0"/>
+      <enabledValue>
+        <decimal value="1"/>
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0"/>
+      </disabledValue>
+    </policy>
+    <policy
+        class="Machine"
+        displayName="$(string.ApprovedUsbPrintDevices)"
+        explainText="$(string.ApprovedUsbPrintDevices_Help)"
+        key="Software\Policies\Microsoft\Windows NT\Printers"
+        name="ApprovedUsbPrintDevices"
+        presentation="$(presentation.ApprovedUsbPrintDevices)"
+      >
+      <parentCategory ref="windows:Printers"/>
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0"/>
+      <elements>
+        <text
+            id="ApprovedUsbPrintDevices_List"
+            maxLength="1024"
+            valueName="ApprovedUsbPrintDevices"
+            />
+      </elements>
+    </policy>
+    <policy
+        class="User"
+        displayName="$(string.EnableDeviceControl)"
+        explainText="$(string.EnableDeviceControl_Help)"
+        key="Software\Policies\Microsoft\Windows NT\Printers"
+        name="EnableDeviceControlUser"
+        valueName="EnableDeviceControl"
+      >
+      <parentCategory ref="CplPrinters"/>
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0"/>
+      <enabledValue>
+        <decimal value="1"/>
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0"/>
+      </disabledValue>
+    </policy>
+    <policy
+        class="User"
+        displayName="$(string.ApprovedUsbPrintDevices)"
+        explainText="$(string.ApprovedUsbPrintDevices_Help)"
+        key="Software\Policies\Microsoft\Windows NT\Printers"
+        name="ApprovedUsbPrintDevicesUser"
+        presentation="$(presentation.ApprovedUsbPrintDevices)"
+      >
+      <parentCategory ref="CplPrinters"/>
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0"/>
+      <elements>
+        <text
+            id="ApprovedUsbPrintDevices_List"
+            maxLength="1024"
+            valueName="ApprovedUsbPrintDevices"
+            />
+      </elements>
+    </policy>
+    <policy
+        class="Machine"
+        displayName="$(string.RestrictDriverInstallationToAdministrators)"
+        explainText="$(string.RestrictDriverInstallationToAdministrators_Help)"
+        key="Software\Policies\Microsoft\Windows NT\Printers\PointAndPrint"
+        name="RestrictDriverInstallationToAdministrators"
+        valueName="RestrictDriverInstallationToAdministrators"
+      >
+      <parentCategory ref="windows:Printers"/>
+      <supportedOn ref="windows:SUPPORTED_Windows7"/>
+      <enabledValue>
+        <decimal value="1"/>
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0"/>
+      </disabledValue>
+    </policy>
+    <policy
+        class="Machine"
+        displayName="$(string.CopyFilesPolicy)"
+        explainText="$(string.CopyFilesPolicy_Help)"
+        key="Software\Policies\Microsoft\Windows NT\Printers"
+        name="ConfigureCopyFilesPolicy"
+        presentation="$(presentation.CopyFilesPolicy)"
+        >
+      <parentCategory ref="windows:Printers"/>
+      <supportedOn ref="windows:SUPPORTED_WindowsVista"/>
+      <elements>
+        <enum
+            id="CopyFilesPolicy_Enum"
+            valueName="CopyFilesPolicy"
+            >
+          <item displayName="$(string.CopyFilesPolicy_Disabled)">
+            <value>
+              <decimal value="0"/>
+            </value>
+          </item>
+          <item displayName="$(string.CopyFilesPolicy_ICMOnly)">
+            <value>
+              <decimal value="1"/>
+            </value>
+          </item>
+          <item displayName="$(string.CopyFilesPolicy_AllowAll)">
+            <value>
+              <decimal value="2"/>
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy
+        class="Machine"
+        displayName="$(string.DriverValidationLevel)"
+        explainText="$(string.DriverValidationLevel_Help)"
+        key="Software\Policies\Microsoft\Windows NT\Printers\Driver"
+        name="ConfigureDriverValidationLevel"
+        presentation="$(presentation.DriverValidationLevel)"
+        >
+      <parentCategory ref="windows:Printers" />
+      <supportedOn ref="windows:SUPPORTED_Windows8" />
+      <elements>
+        <enum
+            id="DriverValidationLevel_Enum"
+            valueName="ValidationLevel"
+            >
+          <item displayName="$(string.DriverValidationLevel_Inbox)">
+            <value>
+              <decimal value="0"/>
+            </value>
+          </item>
+          <item displayName="$(string.DriverValidationLevel_Trusted)">
+            <value>
+              <decimal value="1"/>
+            </value>
+          </item>
+          <item displayName="$(string.DriverValidationLevel_WHQL)">
+            <value>
+              <decimal value="2"/>
+            </value>
+          </item>
+          <item displayName="$(string.DriverValidationLevel_TrustedShared)">
+            <value>
+              <decimal value="3"/>
+            </value>
+          </item>
+          <item displayName="$(string.DriverValidationLevel_Legacy)">
+            <value>
+              <decimal value="4"/>
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy
+        class="Machine"
+        displayName="$(string.DriverExclusionList)"
+        explainText="$(string.DriverExclusionList_Help)"
+        key="Software\Policies\Microsoft\Windows NT\Printers\Driver"
+        name="ManageDriverExclusionList"
+        presentation="$(presentation.DriverExclusionList)"
+        >
+      <parentCategory ref="windows:Printers" />
+      <supportedOn ref="windows:SUPPORTED_Windows8" />
+      <elements>
+        <list id="Driver_ExclusionListEntry" key="Software\Policies\Microsoft\Windows NT\Printers\Driver\ExclusionList" explicitValue="true" />
+      </elements>
+    </policy>
+    <policy
+        class="Machine"
+        displayName="$(string.RpcListenerPolicy)"
+        explainText="$(string.RpcListenerPolicy_Help)"
+        key="Software\Policies\Microsoft\Windows NT\Printers\RPC"
+        name="ConfigureRpcListenerPolicy"
+        presentation="$(presentation.RpcListenerPolicy)"
+      >
+      <parentCategory ref="windows:Printers"/>
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0"/>
+      <elements>
+        <enum
+            id="RpcListenerProtocols_Enum"
+            valueName="RpcProtocols"
+            >
+          <item displayName="$(string.RpcOverNamedPipes)">
+            <value>
+              <decimal value="3"/>
+            </value>
+          </item>
+          <item displayName="$(string.RpcOverTcp)">
+            <value>
+              <decimal value="5"/>
+            </value>
+          </item>
+          <item displayName="$(string.RpcOverNamedPipesAndTcp)">
+            <value>
+              <decimal value="7"/>
+            </value>
+          </item>
+        </enum>
+        <enum
+            id="RpcAuthenticationProtocol_Enum"
+            valueName="ForceKerberosForRpc"
+            >
+          <item displayName="$(string.RpcAuthenticationProtocol_Negotiate)">
+            <value>
+              <decimal value="0"/>
+            </value>
+          </item>
+          <item displayName="$(string.RpcAuthenticationProtocol_Kerberos)">
+            <value>
+              <decimal value="1"/>
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy
+        class="Machine"
+        displayName="$(string.RpcConnectionPolicy)"
+        explainText="$(string.RpcConnectionPolicy_Help)"
+        key="Software\Policies\Microsoft\Windows NT\Printers\RPC"
+        name="ConfigureRpcConnectionPolicy"
+        presentation="$(presentation.RpcConnectionPolicy)"
+      >
+      <parentCategory ref="windows:Printers"/>
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0"/>
+      <elements>
+        <enum
+            id="RpcConnectionProtocol_Enum"
+            valueName="RpcUseNamedPipeProtocol"
+            >
+          <item displayName="$(string.RpcOverTcp)">
+            <value>
+              <decimal value="0"/>
+            </value>
+          </item>
+          <item displayName="$(string.RpcOverNamedPipes)">
+            <value>
+              <decimal value="1"/>
+            </value>
+          </item>
+        </enum>
+        <enum
+            id="RpcConnectionAuthentication_Enum"
+            valueName="RpcAuthentication"
+            >
+          <item displayName="$(string.RpcConnectionAuthenticationDefault)">
+            <value>
+              <decimal value="0"/>
+            </value>
+          </item>
+          <item displayName="$(string.RpcConnectionAuthenticationEnabled)">
+            <value>
+              <decimal value="1"/>
+            </value>
+          </item>
+          <item displayName="$(string.RpcConnectionAuthenticationDisabled)">
+            <value>
+              <decimal value="2"/>
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy
+        class="Machine"
+        displayName="$(string.RpcTcpPortPolicy)"
+        explainText="$(string.RpcTcpPortPolicy_Help)"
+        key="Software\Policies\Microsoft\Windows NT\Printers\RPC"
+        name="ConfigureRpcTcpPort"
+        presentation="$(presentation.RpcTcpPortPolicy)"
+      >
+      <parentCategory ref="windows:Printers"/>
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0"/>
+      <elements>
+        <decimal
+            id="RpcTcpPort"
+            maxValue="65535"
+            valueName="RpcTcpPort"
+            />
+      </elements>
+    </policy>
+    <policy
+        class="Machine"
+        displayName="$(string.AlwaysSendIppPageCounts)"
+        explainText="$(string.AlwaysSendIppPageCounts_Help)"
+        key="Software\Policies\Microsoft\Windows NT\Printers\IPP"
+        name="ConfigureIppPageCountsPolicy"
+        valueName="AlwaysSendIppPageCounts"
+      >
+      <parentCategory ref="windows:Printers"/>
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0"/>
+      <enabledValue>
+        <decimal value="1"/>
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0"/>
+      </disabledValue>
+    </policy>
+    <policy
+        class="Machine"
+        displayName="$(string.RedirectionGuardPolicy)"
+        explainText="$(string.RedirectionGuardPolicy_Help)"
+        key="Software\Policies\Microsoft\Windows NT\Printers"
+        name="ConfigureRedirectionGuardPolicy"
+        presentation="$(presentation.RedirectionGuardPolicy)"
+      >
+      <parentCategory ref="windows:Printers"/>
+      <supportedOn ref="windows:SUPPORTED_Windows7"/>
+      <elements>
+        <enum
+            id="RedirectionGuardPolicy_Enum"
+            valueName="RedirectionGuardPolicy"
+            >
+          <item displayName="$(string.RedirectionGuardPolicy_Disabled)">
+            <value>
+              <decimal value="0"/>
+            </value>
+          </item>
+          <item displayName="$(string.RedirectionGuardPolicy_Enabled)">
+            <value>
+              <decimal value="1"/>
+            </value>
+          </item>
+          <item displayName="$(string.RedirectionGuardPolicy_AuditOnly)">
+            <value>
+              <decimal value="2"/>
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>    
   </policies>
 </policyDefinitions>

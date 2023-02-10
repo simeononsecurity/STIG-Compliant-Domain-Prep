@@ -117,7 +117,7 @@
       <parentCategory ref="windows:Desktop" />
       <supportedOn ref="windows:SUPPORTED_Win2k" />
     </policy>
-    <policy name="NoDesktop" class="User" displayName="$(string.NoDesktop)" explainText="$(string.NoDesktop_Help)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoDesktop">
+    <policy name="NoDesktop" class="Both" displayName="$(string.NoDesktop)" explainText="$(string.NoDesktop_Help)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoDesktop">
       <parentCategory ref="windows:Desktop" />
       <supportedOn ref="windows:SUPPORTED_Win2k" />
     </policy>

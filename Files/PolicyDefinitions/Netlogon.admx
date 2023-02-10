@@ -289,5 +289,15 @@
         <decimal id="Netlogon_PingUrgencyModeLabel" valueName="PingUrgencyMode" maxValue="2" />
       </elements>
     </policy>
+    <policy name="Netlogon_DnsSrvRecordUseLowerCaseHostNames" class="Machine" displayName="$(string.Netlogon_DnsSrvRecordUseLowerCaseHostNames)" explainText="$(string.Netlogon_DnsSrvRecordUseLowerCaseHostNames_Help)" key="Software\Policies\Microsoft\Netlogon\Parameters" valueName="DnsSrvRecordUseLowerCaseHostNames">
+      <parentCategory ref="Netlogon_DC_Locator_DNS_Records" />
+      <supportedOn ref="windows:SUPPORTED_WindowsServer2008" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
   </policies>
 </policyDefinitions>

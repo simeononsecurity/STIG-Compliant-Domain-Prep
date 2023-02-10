@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+  <displayName>Flerprogramskörning</displayName>
+  <description>Hanterar Windows alternativ för flerprogramskörning</description>
+  <resources>
+    <stringTable>
+      <string id="MULTITASKING">Flerprogramskörning</string>
+      <string id="MULTITASKINGHELP">Hanterar Windows alternativ för flerprogramskörning</string>
+      <string id="BrowserAltTabBlowout">Konfigurera hur Microsoft Edge-flikar inkluderas i Alt-Tabb</string>
+      <string id="BrowserAltTabBlowout_Help">Den här inställningen styr inkluderingen av Microsoft Edge-flikar till Alt+Tabb.
+
+Det här kan ställas in så att alla flikar, de senaste 3 eller 5 flikarna och inga flikar från Microsoft Edge visas.
+
+Om det här är inställt på att visa “Endast öppna fönster” kommer hela funktionen att inaktiveras.
+</string>
+      <string id="AltTabFilter_All">Öppna fönster och alla flikar i Microsoft Edge</string>
+      <string id="AltTabFilter_Five">Öppna fönster och de fem senaste flikarna i Microsoft Edge</string>
+      <string id="AltTabFilter_Three">Öppna fönster och de tre senaste flikarna i Microsoft Edge</string>
+      <string id="AltTabFilter_None">Endast öppna fönster</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="AltTabFilter">
+        <dropdownList refId="AltTabFilterDropdown" noSort="true" defaultItem="0">Tryck på ALT + TABB visas</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

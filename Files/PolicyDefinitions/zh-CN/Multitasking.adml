@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+  <displayName>多任务处理</displayName>
+  <description>管理 "Windows 多任务" 选项</description>
+  <resources>
+    <stringTable>
+      <string id="MULTITASKING">多任务处理</string>
+      <string id="MULTITASKINGHELP">管理 "Windows 多任务" 选项</string>
+      <string id="BrowserAltTabBlowout">配置以将 Microsoft Edge 选项卡纳入 Alt-Tab</string>
+      <string id="BrowserAltTabBlowout_Help">此设置可控制是否将 Microsoft Edge 选项卡包含到 Alt+Tab 中。
+
+可将其设置为显示所有选项卡、最新的 3 个或 5 个选项卡，或者没有来自 Microsoft Edge 的选项卡。
+
+如果设置为显示“仅打开的窗口”，则将禁用整个功能。
+</string>
+      <string id="AltTabFilter_All">打开的窗口和 Microsoft Edge 中的所有选项卡</string>
+      <string id="AltTabFilter_Five">打开的窗口和 Microsoft Edge 中最近打开的 5 个标签页</string>
+      <string id="AltTabFilter_Three">打开的窗口和 Microsoft Edge 中最近打开的 3 个标签页</string>
+      <string id="AltTabFilter_None">仅打开的窗口</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="AltTabFilter">
+        <dropdownList refId="AltTabFilterDropdown" noSort="true" defaultItem="0">按 Alt + Tab 将显示</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

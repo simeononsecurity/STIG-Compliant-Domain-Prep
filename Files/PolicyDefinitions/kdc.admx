@@ -12,7 +12,7 @@
     </category>
   </categories>
   <policies>
-    <policy name="emitlili" class="Machine" displayName="$(string.emitlili)" explainText="$(string.emitlili_explain)" 
+    <policy name="emitlili" class="Machine" displayName="$(string.emitlili)" explainText="$(string.emitlili_explain)"
     key="Software\Microsoft\Windows\CurrentVersion\Policies\System\KDC\Parameters" valueName="EmitLILI">
       <parentCategory ref="KDC" />
       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
@@ -111,6 +111,106 @@
           <item displayName="$(string.RequirePKINITFreshness)">
             <value>
               <decimal value="2" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="PKINITHashAlgorithmConfiguration" class="Machine" displayName="$(string.PKINITHashAlgorithmConfiguration)" explainText="$(string.PKINITHashAlgorithmConfiguration_explain)" key="Software\Microsoft\Windows\CurrentVersion\Policies\System\KDC\Parameters" presentation="$(presentation.PKINITHashAlgorithmConfiguration)" valueName="PKINITHashAlgorithmConfigurationEnabled">
+      <parentCategory ref="KDC" />
+      <supportedOn ref="windows:SUPPORTED_Windows_11_0_22H2_NOSERVER" /> <!--  Update this after Server release  -->
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+      <elements>
+        <enum id="PKINITHashAlgorithmSHA1" valueName="PKINITSHA1">
+          <item displayName="$(string.PKINITHashAlgorithm_Default)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.PKINITHashAlgorithm_Supported)">
+            <value>
+              <decimal value="3" />
+            </value>
+          </item>
+          <item displayName="$(string.PKINITHashAlgorithm_Audited)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.PKINITHashAlgorithm_NotSupported)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+        </enum>
+        <enum id="PKINITHashAlgorithmSHA256" valueName="PKINITSHA256">
+          <item displayName="$(string.PKINITHashAlgorithm_Default)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.PKINITHashAlgorithm_Supported)">
+            <value>
+              <decimal value="3" />
+            </value>
+          </item>
+          <item displayName="$(string.PKINITHashAlgorithm_Audited)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.PKINITHashAlgorithm_NotSupported)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+        </enum>
+        <enum id="PKINITHashAlgorithmSHA384" valueName="PKINITSHA384">
+          <item displayName="$(string.PKINITHashAlgorithm_Default)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.PKINITHashAlgorithm_Supported)">
+            <value>
+              <decimal value="3" />
+            </value>
+          </item>
+          <item displayName="$(string.PKINITHashAlgorithm_Audited)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.PKINITHashAlgorithm_NotSupported)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+        </enum>
+        <enum id="PKINITHashAlgorithmSHA512" valueName="PKINITSHA512">
+          <item displayName="$(string.PKINITHashAlgorithm_Default)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.PKINITHashAlgorithm_Supported)">
+            <value>
+              <decimal value="3" />
+            </value>
+          </item>
+          <item displayName="$(string.PKINITHashAlgorithm_Audited)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.PKINITHashAlgorithm_NotSupported)">
+            <value>
+              <decimal value="0" />
             </value>
           </item>
         </enum>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!--  (c) 2006 Microsoft Corporation  -->
 <policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
     <policyNamespaces>
@@ -6,6 +6,11 @@
         <using prefix="windows" namespace="Microsoft.Policies.Windows" />
     </policyNamespaces>
     <resources minRequiredRevision="1.0" />
+    <categories>
+        <category name="Chat" displayName="$(string.Chat)">
+            <parentCategory ref="windows:WindowsComponents" />
+        </category>
+    </categories>
     <policies>
         <policy name="HideSCAPower" class="User" displayName="$(string.HideSCABattery)" explainText="$(string.HideSCABattery_Help)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="HideSCAPower">
             <parentCategory ref="windows:StartMenu" />
@@ -49,7 +54,7 @@
         </policy>
         <policy name="HideSCAMeetNow" class="User" displayName="$(string.HideSCAMeetNow)" explainText="$(string.HideSCAMeetNow_Help)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="HideSCAMeetNow">
             <parentCategory ref="windows:StartMenu" />
-            <supportedOn ref="windows:SUPPORTED_Windows_10_0_19H1" />
+            <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
             <enabledValue>
                 <decimal value="1" />
             </enabledValue>
@@ -127,7 +132,7 @@
                 <decimal value="0" />
             </disabledValue>
         </policy>
-        <policy name="TaskbarNoPinnedList" class="User" displayName="$(string.TaskbarNoPinnedList)" explainText="$(string.TaskbarNoPinnedList_Help)" key="Software\Policies\Microsoft\Windows\Explorer" valueName="TaskbarNoPinnedList">
+        <policy name="TaskbarNoPinnedList" class="Both" displayName="$(string.TaskbarNoPinnedList)" explainText="$(string.TaskbarNoPinnedList_Help)" key="Software\Policies\Microsoft\Windows\Explorer" valueName="TaskbarNoPinnedList">
             <parentCategory ref="windows:StartMenu" />
             <supportedOn ref="windows:SUPPORTED_Windows7" />
             <enabledValue>
@@ -260,6 +265,39 @@
                     </item>
                 </enum>
             </elements>
+        </policy>
+        <policy name="ConfigureChatIcon" class="Machine" displayName="$(string.ConfigureChatIcon)" explainText="$(string.ConfigureChatIcon_Help)" presentation="$(presentation.ConfigureChatIcon)" key="Software\Policies\Microsoft\Windows\Windows Chat">
+            <parentCategory ref="Chat" />
+            <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+            <elements>
+                <enum id="ConfigureChatIcon_Action" valueName="ChatIcon" required="true">
+                    <item displayName="$(string.ChatEnum_Show)">
+                        <value>
+                            <decimal value="1" />
+                        </value>
+                    </item>
+                    <item displayName="$(string.ChatEnum_Hide)">
+                        <value>
+                            <decimal value="2" />
+                        </value>
+                    </item>
+                    <item displayName="$(string.ChatEnum_Disabled)">
+                        <value>
+                            <decimal value="3" />
+                        </value>
+                    </item>
+                </enum>
+            </elements>
+        </policy>
+        <policy name="HideTaskViewButton" class="Both" displayName="$(string.HideTaskViewButton)" explainText="$(string.HideTaskViewButton_Help)" key="Software\Policies\Microsoft\Windows\Explorer" valueName="HideTaskViewButton">
+            <parentCategory ref="windows:StartMenu" />
+            <supportedOn ref="windows:SUPPORTED_Windows_11_0_NOSERVER_ENTERPRISE_EDUCATION_PRO_SANDBOX" />
+            <enabledValue>
+                <decimal value="1" />
+            </enabledValue>
+            <disabledValue>
+                <decimal value="0" />
+            </disabledValue>
         </policy>
     </policies>
 </policyDefinitions>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+  <displayName>Multitarefas</displayName>
+  <description>Gere as opções de Multitasking do Windows</description>
+  <resources>
+    <stringTable>
+      <string id="MULTITASKING">Multitarefas</string>
+      <string id="MULTITASKINGHELP">Gere as opções de Multitasking do Windows</string>
+      <string id="BrowserAltTabBlowout">Configura a inclusão de separadores do Microsoft Edge no Alt+Tecla de tabulação</string>
+      <string id="BrowserAltTabBlowout_Help">Esta definição controla a inclusão dos separadores do Microsoft Edge no Alt+Tecla de tabulação.
+
+Esta opção pode ser definida para mostrar todos os separadores, os 3 ou 5 separadores mais recentes ou nenhum separador do Microsoft Edge.
+
+Se estiver definido para mostrar "Abrir apenas janelas", toda a funcionalidade será desativada.
+</string>
+      <string id="AltTabFilter_All">Janelas abertas e todos os separadores no Microsoft Edge</string>
+      <string id="AltTabFilter_Five">Janelas abertas e os cinco separadores mais recentes no Microsoft Edge</string>
+      <string id="AltTabFilter_Three">As janelas abertas e os três separadores mais recentes no Microsoft Edge</string>
+      <string id="AltTabFilter_None">Apenas as janelas abertas</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="AltTabFilter">
+        <dropdownList refId="AltTabFilterDropdown" noSort="true" defaultItem="0">Premir Alt+Tecla de tabulação mostra</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>
