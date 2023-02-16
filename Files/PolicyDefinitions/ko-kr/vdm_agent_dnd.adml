@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="VMwareViewDnD">끌어서 놓기</string>
+      <string id="SUPPORTED_VERSION"></string>
+      <string id="SERVER_DND_STATE">끌어서 놓기 방향 구성</string>
+      <string id="DND_STATE_DISABLE_BOTH">양방향으로 사용 안 함</string>
+      <string id="DND_STATE_ENABLE_CLIENT_2_SERVER">클라이언트에서 에이전트로만 사용</string>
+      <string id="DND_STATE_ENABLE_SERVER_2_CLIENT">에이전트에서 클라이언트로만 사용</string>
+      <string id="DND_STATE_ENABLE_BOTH">양방향으로 사용</string>
+      <string id="SERVER_DND_STATE_EXPLAIN">끌어서 놓기를 허용할 방향을 결정합니다. 다음 값 중 하나를 선택할 수 있습니다.
+
+-양방향으로 사용 안 함
+-에이전트에서 클라이언트로만 사용(즉, 에이전트에서 클라이언트 시스템으로 끌어서 놓기만 허용)
+-클라이언트에서 에이전트로만 사용(즉, 클라이언트 시스템에서 에이전트로 끌어서 놓기만 허용)
+-양방향으로 사용
+
+이 설정은 에이전트에만 적용됩니다.
+
+이 설정이 사용되지 않도록 설정되거나 구성되지 않은 경우 기본값은 '클라이언트에서 에이전트로만 사용 설정'입니다.</string>
+      <string id="SERVER_DND_FORMAT_STATE">끌어서 놓기 형식 구성</string>
+      <string id="SERVER_DND_FORMAT_STATE_EXPLAIN">이 설정은 각 형식(파일/텍스트/서식 있는 텍스트/이미지/HTML 형식/파일 컨텐츠)에 대해 허용되는 &quot;끌어서 놓기&quot; 옵션을 결정합니다. 옵션 값은 다음과 같습니다.
+
+-양방향으로 사용 안 함
+-에이전트에서 클라이언트로만 사용
+-클라이언트에서 에이전트로만 사용
+-양방향으로 사용
+
+이 설정은 에이전트에만 적용되고 기본적으로 구성되지 않습니다.
+
+설정을 구성하지 않거나 사용하지 않도록 설정하면 &quot;끌어서 놓기&quot; 옵션은 모든 형식에 대해 '양방향으로 사용'입니다.</string>
+      <string id="String_Policy_DropList_Select_DnD_size_unit_bytes" >바이트</string>
+      <string id="String_Policy_DropList_Select_DnD_size_unit_kilobytes" >킬로바이트</string>
+      <string id="String_Policy_DropList_Select_DnD_size_unit_megabytes" >메가바이트</string>
+      <string id="SERVER_DND_SIZE">끌어서 놓기 크기 임계값 구성</string>
+      <string id="SERVER_DND_SIZE_EXPLAIN">끌어서 놓기는 일반 텍스트, 서식 있는 텍스트, 이미지, 파일, 폴더 등 다양한 형식의 데이터를 끌어오도록 지원합니다. 이 설정은 파일 및 폴더 이외의 일반 데이터 형식을 끌어올 때의 크기 제한을 결정합니다.
+
+끌기 데이터 크기의 단위는 바이트, 킬로바이트 및 메가바이트로 구성할 수 있습니다.
+원하는 크기 값은 &quot;끌어서 놓기 크기 임계값&quot;에서 구성합니다. 다양한 크기 단위에 대해 유효한 데이터 범위는 다음과 같습니다.
+- 바이트: 1 ~ 1023
+- 킬로바이트: 1 ~ 1023
+- 메가바이트: 1 ~ 16(끌어서 놓을 수 있는 최대 데이터 크기는 16MB임)
+
+이 설정은 에이전트에만 적용됩니다.
+
+설정을 구성하지 않거나 사용하지 않도록 설정하면 기본 임계값 1MB가 설정됩니다.</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="SERVER_DND_STATE">
+        <dropdownList refId="SERVER_DND_STATE" defaultItem="2">끌어서 놓기 구성</dropdownList>
+      </presentation>
+      <presentation id="SERVER_DND_FORMAT_STATE">
+        <dropdownList refId="SERVER_DND_FILE_STATE" defaultItem="3">파일 형식 옵션:</dropdownList>
+        <dropdownList refId="SERVER_DND_TEXT_STATE" defaultItem="3">텍스트 형식 옵션:</dropdownList>
+        <dropdownList refId="SERVER_DND_RTF_STATE" defaultItem="3">서식 있는 텍스트 형식 옵션:</dropdownList>
+        <dropdownList refId="SERVER_DND_IMAGE_STATE" defaultItem="3">이미지 형식 옵션:</dropdownList>
+        <dropdownList refId="SERVER_DND_HTML_STATE" defaultItem="3">HTML 형식 옵션:</dropdownList>
+        <dropdownList refId="SERVER_DND_FILE_CONTENT_STATE" defaultItem="3">파일 컨텐츠 형식 옵션:</dropdownList>
+      </presentation>
+      <presentation id="SERVER_DND_SIZE">
+        <dropdownList refId="Policy_DropList_DnD_Size_Unit" defaultItem="2" >끌어서 놓기 크기의 단위 선택</dropdownList>
+        <decimalTextBox refId="SERVER_DND_SIZE" defaultValue="1">끌어서 놓기 크기 임계값</decimalTextBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="VMwareViewDnD">Drag &amp; Drop</string>
+      <string id="SUPPORTED_VERSION"></string>
+      <string id="SERVER_DND_STATE">„Drag &amp; Drop“-Richtung konfigurieren</string>
+      <string id="DND_STATE_DISABLE_BOTH">In beiden Richtungen deaktiviert</string>
+      <string id="DND_STATE_ENABLE_CLIENT_2_SERVER">Nur Client zu Agent aktiviert</string>
+      <string id="DND_STATE_ENABLE_SERVER_2_CLIENT">Nur Agent zu Client aktiviert</string>
+      <string id="DND_STATE_ENABLE_BOTH">In beiden Richtungen aktiviert</string>
+      <string id="SERVER_DND_STATE_EXPLAIN">Bestimmt die Richtung, in der „Drag &amp; Drop“ zulässig ist. Sie können einen der folgenden Werte auswählen:
+
+– In beiden Richtungen deaktiviert
+– Nur Agent zu Client aktiviert (dadurch ist der „Drag &amp; Drop“-Vorgang nur vom Agent zum Clientsystem zulässig)
+– Nur Client zu Agent aktiviert (dadurch ist der „Drag &amp; Drop“-Vorgang nur vom Clientsystem zum Agent zulässig)
+– In beiden Richtungen aktiviert
+
+Diese Einstellung bezieht sich nur auf den Agent.
+
+Wenn diese Einstellung deaktiviert oder nicht konfiguriert ist, lautet der Standardwert „Nur Client zu Agent aktiviert“.</string>
+      <string id="SERVER_DND_FORMAT_STATE">„Drag &amp; Drop“-Formate konfigurieren</string>
+      <string id="SERVER_DND_FORMAT_STATE_EXPLAIN">Durch diese Einstellung wird festgelegt, welche „Drag &amp; Drop“-Option für das jeweilige Format (Datei/Text/Rich Text/Image/HTML/Dateiinhalt) zulässig ist. Die Werte für die Optionen sind:
+
+– In beiden Richtungen deaktiviert
+– Nur Agent zu Client aktiviert
+– Nur Client zu Agent aktiviert
+– In beiden Richtungen aktiviert
+
+Diese Einstellung gilt nur für den Agent, sie ist nicht standardmäßig konfiguriert.
+
+Wenn die Einstellung nicht konfiguriert oder deaktiviert ist, wird für alle Formate die „Drag &amp; Drop“-Option in beide Richtungen aktiviert.</string>
+      <string id="String_Policy_DropList_Select_DnD_size_unit_bytes" >Byte</string>
+      <string id="String_Policy_DropList_Select_DnD_size_unit_kilobytes" >Kilobyte</string>
+      <string id="String_Policy_DropList_Select_DnD_size_unit_megabytes" >Megabyte</string>
+      <string id="SERVER_DND_SIZE">Schwellenwert für „Drag &amp; Drop“-Größe konfigurieren</string>
+      <string id="SERVER_DND_SIZE_EXPLAIN">„Drag &amp; Drop“ unterstützt das Ziehen verschiedener Datentypen, einschließlich Klartext, Rich Text, Image, Dateien, Ordner. Durch diese Einstellung wird die Größenbeschränkung für das Ziehen allgemeiner Datentypen bestimmt, die nicht Dateien oder Ordner sind.
+
+Die Einheit der Datengröße zum Ziehen kann in Byte, Kilobyte und Megabyte konfiguriert werden.
+
+Der Wert für die gewünschte Größe wird unter „Schwellenwert für ‚Drag &amp; Drop‘-Größe“ konfiguriert. Die effektiven Datenbereiche für unterschiedliche Größeneinheiten sind:
+– Byte: 1–1023
+– Kilobyte: 1–1023
+– Megabyte: 1–16 (maximale „Drag &amp; Drop“-Datengröße beträgt 16 MB)
+
+Diese Einstellung gilt nur für den Agenten.
+
+Wenn die Einstellung nicht konfiguriert oder deaktiviert ist, wird ein standardmäßiger Schwellenwert von 1 MB festgelegt.</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="SERVER_DND_STATE">
+        <dropdownList refId="SERVER_DND_STATE" defaultItem="2">Drag &amp; Drop konfigurieren</dropdownList>
+      </presentation>
+      <presentation id="SERVER_DND_FORMAT_STATE">
+        <dropdownList refId="SERVER_DND_FILE_STATE" defaultItem="3">Option für Dateiformat:</dropdownList>
+        <dropdownList refId="SERVER_DND_TEXT_STATE" defaultItem="3">Option für Textformat:</dropdownList>
+        <dropdownList refId="SERVER_DND_RTF_STATE" defaultItem="3">Option für Rich-Text-Format:</dropdownList>
+        <dropdownList refId="SERVER_DND_IMAGE_STATE" defaultItem="3">Option für Image-Format:</dropdownList>
+        <dropdownList refId="SERVER_DND_HTML_STATE" defaultItem="3">Option für HTML-Format:</dropdownList>
+        <dropdownList refId="SERVER_DND_FILE_CONTENT_STATE" defaultItem="3">Option für Dateiinhaltsformat:</dropdownList>
+      </presentation>
+      <presentation id="SERVER_DND_SIZE">
+        <dropdownList refId="Policy_DropList_DnD_Size_Unit" defaultItem="2" >Einheit für „Drag &amp; Drop“-Größe auswählen</dropdownList>
+        <decimalTextBox refId="SERVER_DND_SIZE" defaultValue="1">Schwellenwert für „Drag &amp; Drop“-Größe</decimalTextBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

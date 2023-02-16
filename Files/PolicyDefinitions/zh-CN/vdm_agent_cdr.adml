@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="VMwareViewCDR">VMware Horizon Client 驱动器重定向</string>
+      <string id="IsDriveLetterNeeded">显示带驱动器盘符的已重定向设备</string>
+      <string id="IsDriveLetterNeededExplain">此设置确定是否已为 CDR (客户端驱动器重定向) 启用驱动器盘符。默认情况下，启用此设置。</string>
+      <string id="InitDriveLetterTimeout">驱动器盘符初始化超时</string>
+      <string id="InitDriveLetterTimeoutExplain">此设置确定等待 Windows 资源管理器完成正确驱动器盘符处理的超时值。如果禁用或不配置此设置，默认情况下系统会将其配置为 5 秒。</string>
+      <string id="VMwareViewCDRDeviceFiltering">设备筛选</string>
+	  <string id="ExcludeVidPid">排除 Vid/Pid 设备</string>
+      <string id="ExcludeVidPidExplain">将具有指定供应商 ID 和产品 ID 的设备从转发中排除。
+
+语法: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx | *&gt;&gt;[;...]
+
+例如: vid-0781_pid-554c;vid-0781_pid-9999</string>
+      <string id="IncludeVidPid">包含 Vid/Pid 设备</string>
+      <string id="IncludeVidPidExplain">包含具有指定供应商 ID 和产品 ID 的可以转发的设备。
+
+语法: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx | *&gt;&gt;[;...]
+
+例如: vid-0781_pid-554c;vid-0781_pid-9999</string>
+      <string id="DriveLetterMapping">配置驱动器盘符映射模式</string>
+      <string id="DriveLetterMappingExplain">此 GPO 用于配置驱动器盘符映射模式，当前有两种受支持的模式。
+- 一对一映射: 将同一个客户端驱动器盘符映射到代理。
+- 定义的映射: 根据定义的映射表，将客户端驱动器盘符映射到代理。
+
+
+注意:
+- 当 GPO“显示带驱动器盘符的已重定向设备”未禁用时，此 GPO 才有效。
+- 对于上述两种受支持的模式，当驱动器盘符发生冲突 (例如，要映射的驱动器盘符已在代理中使用) 时，将改为使用从“Z”到“A”逆向排序的第一个可用字母。如果没有可用的驱动器盘符，将不会分配驱动器盘符。
+      </string>
+      <string id="DriveLetterMappingTable">定义驱动器盘符映射表</string>
+      <string id="DriveLetterMappingTableExplain">定义驱动器盘符映射表
+- 客户端驱动器盘符 (值名称): 在客户端使用的驱动器盘符。
+- 代理驱动器盘符 (值): 要在代理中使用的驱动器盘符。
+</string>
+      <string id="OneToOneMapping">一对一映射</string>
+      <string id="PredefinedMapping">定义的映射</string>
+      <string id="EnableHighPerformanceCDR">启用性能优化</string>
+      <string id="EnableHighPerformanceCDRExplain">此设置确定是否对客户端驱动程序重定向启用性能优化。如果启用此设置，则在从共享驱动器复制文件/文件夹等场景中，可享有更高的性能。
+
+默认情况下，将禁用此设置。
+      </string>
+    </stringTable>
+    <presentationTable>
+       <presentation id="IsDriveLetterNeeded"/>
+       <presentation id="InitDriveLetterTimeout">
+         <decimalTextBox refId="InitDriveLetterTimeout" defaultValue="5000">超时 (以毫秒为单位):</decimalTextBox>
+       </presentation>
+	   <presentation id="ExcludeVidPid">
+         <textBox refId="ExcludeVidPid">
+           <label>排除 Vid/Pid 设备</label>
+         </textBox>
+       </presentation>
+       <presentation id="IncludeVidPid">
+         <textBox refId="IncludeVidPid">
+           <label>包含 Vid/Pid 设备</label>
+         </textBox>
+       </presentation>
+       <presentation id="DriveLetterMapping">
+         <dropdownList refId="DriveLetterMappingDropdown" defaultItem="0" noSort="true">配置驱动器盘符映射模式:</dropdownList>
+       </presentation>
+       <presentation id="DriveLetterMappingTable">
+         <listBox refId="DriveLetterMappingTable">定义驱动器盘符映射表:</listBox>
+       </presentation>
+       <presentation id="EnableHighPerformanceCDR"/>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

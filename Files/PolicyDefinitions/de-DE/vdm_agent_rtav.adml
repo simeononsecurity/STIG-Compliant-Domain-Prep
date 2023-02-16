@@ -5,16 +5,15 @@
   <resources>
     <stringTable>
       <string id="VMwareViewClientRTAV">View-RTAV-Konfiguration</string>
-      <string id="DisableRTAV">RTAV deaktivieren</string>
-      <string id="DisableRTAVExplain">Echtzeit-Audio/Video deaktivieren</string>
       <string id="VMwareViewClientRTAVWebcam">View-RTAV-Webcam-Einstellungen</string>
+      <string id="VMwareViewRTAVMicrophone">View-RTAV-Mikrofoneinstellungen</string>
       <string id="WebcamMaxResWidth">Auflösung – Maximale Bildbreite in Pixel</string>
       <string id="WebcamMaxResWidthExplain">Maximale Breite eines Bild-Frame bei der Erfassung von einer Webcam in Pixel</string>
       <string id="WebcamMaxResHeight">Auflösung – Maximale Bildhöhe in Pixel</string>
       <string id="WebcamMaxResHeightExplain">Maximale Höhe eines Bild-Frame bei der Erfassung von einer Webcam in Pixel</string>
       <string id="WebcamMaxFrameRate">Maximale Frames pro Sekunde</string>
       <string id="WebcamMaxFrameRateExplain">Maximale Rate pro Sekunde, mit der Frames von einer Webcam erfasst werden können.
-Minimum = 1, Maximum = 25</string>
+Minimum = 1, Maximum = 30</string>
       <string id="WebcamDefaultResWidth">Auflösung – Standardmäßige Breite der Bildauflösung in Pixel</string>
       <string id="WebcamDefaultResWidthExplain">Legt die standardmäßige Breite der Bildauflösung fest. Standardmäßig ist hier 320 eingestellt. Diese Einstellung wird verwendet, wenn kein Auflösungswert vom Benutzer definiert wurde.</string>
       <string id="WebcamDefaultResHeight">Auflösung – Standardmäßige Höhe der Bildauflösung in Pixel</string>
@@ -22,9 +21,25 @@ Minimum = 1, Maximum = 25</string>
       <string id="VMwareViewAgent">VMware View Agent-Konfiguration</string>
       <string id="ADMXMigrator_UnresolvedString">ADMX-Migrator hat eine Zeichenfolge ermittelt, die in der Quell-ADM-Zeichenfolgentabelle nicht vorhanden ist.</string>
       <string id="ADMXMigrator_NoSupportedOn">ADMX-Migrator hat eine Richtlinie ohne den Wert supportedOn ermittelt.</string>
+      <string id="MicrophoneSampleRate">Samplerate – Samplerate des aufnehmenden Audiogeräts</string>
+      <string id="MicrophoneSampleRateExplain">Legt die Abtastrate des Audiogeräts vom Endpoint auf RDSH-Desktop- und RDSH-Remoteanwendungen fest.
+Wichtig: Diese GPO-Einstellung sollte nicht geändert werden, wenn eine Sitzung verbunden ist. Damit diese Einstellung wirksam wird, ist ein Neustart erforderlich.</string>
+      <string id="SampleRate8K">8.000</string>
+      <string id="SampleRate16K">16.000</string>
+      <string id="SampleRate48K">48.000</string>
+      <string id="DisableRTAV">Mikrofon oder Webcam deaktivieren</string>
+      <string id="DisableRTAVExplain">Mikrofon oder Webcam deaktivieren
+
+Hinweis: „Mikrofon deaktivieren“ und „Webcam deaktivieren“ sind nur bei Verwendung des Windows-Clients wirksam. Darüber hinaus müssen sowohl Client als auch Agent Version 2209 und höher aufweisen.</string>
+      <string id="DisableMicAndWebcam">Mikrofon und Webcam deaktivieren</string>
+      <string id="DisableWebcam">Webcam deaktivieren</string>
+      <string id="DisableMic">Mikrofon deaktivieren</string>
+      <string id="ForceNV">Hardwarebeschleunigung: Aktivieren Sie diese Option zum Verwenden der Nvidia-Hardwarebeschleunigung für den Webcam-Video-Codec</string>
+      <string id="ForceNVExplain">Aktivieren Sie diese Option, um die Nvidia-Hardwarebeschleunigung für den Webcam-Video-Codec zu verwenden, wenn die angegebene GPU erkannt und mit FFmpeg kompatibel ist</string>
+      <string id="ForceQSV">Hardwarebeschleunigung: Aktivieren Sie diese Option für die Verwendung von Intel QSV als Webcam-Video-Codec</string>
+      <string id="ForceQSVExplain">Aktivieren Sie diese Option, um Intel QSV als Webcam-Video-Codec zu verwenden, wenn die angegebene GPU erkannt und mit FFmpeg kompatibel ist</string>
     </stringTable>
     <presentationTable>
-      <presentation id="DisableRTAV" />
       <presentation id="WebcamMaxFrameRate">
         <decimalTextBox refId="WebcamMaxFrameRate" defaultValue="15">Maximale Frames pro Sekunde</decimalTextBox>
       </presentation>
@@ -40,6 +55,14 @@ Minimum = 1, Maximum = 25</string>
       <presentation id="WebcamDefaultResWidth">
         <decimalTextBox refId="WebcamDefaultResWidth" defaultValue="0">Auflösung – Standardmäßige Breite der Bildauflösung in Pixel</decimalTextBox>
       </presentation>
+      <presentation id="MicrophoneSampleRate">
+        <dropdownList refId="MicrophoneSampleRateList" defaultItem="0" noSort="true">Samplerate – Samplerate des aufnehmenden Audiogeräts</dropdownList>
+      </presentation>
+      <presentation id="DisableRTAV">
+        <dropdownList refId="RTAVDisableComponentList" defaultItem="0" noSort="true">Mikrofon oder Webcam deaktivieren</dropdownList>
+      </presentation>
+      <presentation id="ForceNV" />
+      <presentation id="ForceQSV" />
     </presentationTable>
   </resources>
 </policyDefinitionResources>

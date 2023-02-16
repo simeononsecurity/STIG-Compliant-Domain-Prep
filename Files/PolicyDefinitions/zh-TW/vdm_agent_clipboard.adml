@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="VMwareViewClipboard">剪貼簿重新導向</string>
+      <string id="SUPPORTED_VERSION"></string>
+      <string id="SERVER_CLIPBOARD_STATE">設定剪貼簿重新導向</string>
+      <string id="CLIPBOARD_STATE_DISABLE_BOTH">雙向停用</string>
+      <string id="CLIPBOARD_STATE_ENABLE_BOTH">雙向啟用</string>
+      <string id="CLIPBOARD_STATE_ENABLE_CLIENT_2_SERVER">僅啟用用戶端至伺服器</string>
+      <string id="CLIPBOARD_STATE_ENABLE_SERVER_2_CLIENT">僅啟用伺服器至用戶端</string>
+      <string id="SERVER_CLIPBOARD_STATE_EXPLAIN">決定允許的剪貼簿重新導向方向。您可以選取下列其中一個值:
+
+- 雙向停用
+- 雙向啟用
+- 僅啟用用戶端至伺服器 (也就是說，僅允許從用戶端系統複製並貼至 View 桌面平台。)
+-僅啟用伺服器至用戶端 (也就是說，僅允許從 View 桌面平台複製並貼至用戶端系統。)
+
+此設定僅適用於伺服器 (View 桌面平台)。
+
+當此設定為 [已停用] 或 [未設定] 時，預設值為 [僅啟用用戶端至伺服器]。</string>
+      <string id="SERVER_CLIPBOARD_SIZE">伺服器上的剪貼簿記憶體大小</string>
+      <string id="SERVER_CLIPBOARD_SIZE_EXPLAIN">這些設定表示伺服器的剪貼簿記憶體大小值。
+
+伺服器上的剪貼簿記憶體大小以位元組或 KB 為單位，視選取狀況而定。若未設定，則記憶體大小將以 KB 為單位。
+
+用戶端也具有剪貼簿記憶體大小值，但該值一律以 KB 為單位。
+
+設定工作階段之後:
+- 來自伺服器的剪貼簿記憶體大小值會傳送到用戶端。
+- 然後，在用戶端尋找用戶端和伺服器值的最小值來決定有效的剪貼簿記憶體大小值。</string>
+      <string id="CLIPBOARD_FINE_GRAIN_LABEL">剪貼簿精密組態</string>
+      <string id="CLIPBOARD_FINE_GRAIN_EXPLAIN">決定是否啟用精密剪貼簿設定。此設定啟用時，伺服器上的剪貼簿記憶體大小會以位元組為單位。此設定停用時，伺服器上的剪貼簿記憶體大小會以 KB 為單位。
+
+此設定僅會套用至代理程式。</string>
+      <string id="String_Policy_DropList_Select_clipboard_size_unit_kilobytes" >KB</string>
+      <string id="String_Policy_DropList_Select_clipboard_size_unit_bytes" >位元組</string>
+      <string id="SERVER_CLIPBOARD_AUDIT">設定剪貼簿稽核</string>
+      <string id="CLIPBOARD_AUDIT_DISABLE_BOTH">雙向停用</string>
+      <string id="CLIPBOARD_AUDIT_ENABLE_ONLY_CLIENT_TO_SERVER">僅啟用用戶端至伺服器</string>
+      <string id="CLIPBOARD_AUDIT_ENABLE_ONLY_SERVER_TO_CLIENT">僅啟用伺服器至用戶端</string>
+      <string id="CLIPBOARD_AUDIT_ENABLE_BOTH">雙向啟用</string>
+      <string id="SERVER_CLIPBOARD_AUDIT_BLOCK_CLIPBOARD">當用戶端不支援稽核時，是否封鎖對用戶端的剪貼簿重新導向</string>
+      <string id="SERVER_CLIPBOARD_AUDIT_EXPLAIN">決定允許剪貼簿稽核的方向。您可以選取下列其中一個值:
+
+- 雙向停用
+- 僅啟用用戶端至伺服器 (也就是說，將會記錄從用戶端複製到代理程式端之剪貼簿資料的資訊。)
+- 僅啟用伺服器至用戶端 (也就是說，將會記錄從代理程式端複製到用戶端之剪貼簿資料的資訊。)
+- 雙向啟用
+
+此設定只會套用至伺服器 (View 桌面平台)。
+當此設定為 [已停用] 或 [未設定] 時，預設值將是 [雙向停用]。</string>
+      <string id="SERVER_CLIPBOARD_AUDIT_BLOCK_CLIPBOARD_EXPLAIN">決定若 Horizon Client 不支援稽核功能，是否封鎖對用戶端的剪貼簿重新導向。
+
+您可以選取剪貼簿重新導向的行為:
+
+- 如果稽核是在 Horizon Agent 中而非在 Horizon Client 中啟用，則讓代理程式至用戶端的剪貼簿重新導向通過
+- 如果稽核是在 Horizon Agent 中而非在 Horizon Client 中啟用，則封鎖代理程式至用戶端的剪貼簿重新導向
+
+此設定僅在啟用稽核之後生效。</string>
+      <string id="String_Policy_DropList_Select_Configure_clipboard_Audit_Pass_Through">通過</string>
+      <string id="String_Policy_DropList_Select_Configure_clipboard_Audit_Block">封鎖</string>
+      <string id="SERVER_FILE_TRANSFER_STATE">設定檔案傳輸</string>
+      <string id="FILE_TRANSFER_STATE_DISABLE_BOTH">同時停用上傳和下載</string>
+      <string id="FILE_TRANSFER_STATE_ENABLE_BOTH">同時啟用上傳和下載</string>
+      <string id="FILE_TRANSFER_STATE_ENABLE_UPLOAD">僅啟用檔案上傳</string>
+      <string id="FILE_TRANSFER_STATE_ENABLE_DOWNLOAD">僅啟用檔案下載</string>
+      <string id="SERVER_FILE_TRANSFER_STATE_EXPLAIN">決定代理程式與 HTML Access 之間的檔案傳輸。您可以選取下列其中一個值:
+
+- 同時停用上傳和下載
+- 同時啟用上傳和下載
+- 僅啟用檔案上傳 (也就是說，允許從用戶端系統到 View 桌面平台的檔案上傳。)
+- 僅啟用檔案下載 (也就是說，允許從 View 桌面平台到用戶端系統的檔案下載。)
+
+此設定僅適用於伺服器 (View 桌面平台)。
+
+當此設定為 [已停用] 或 [未設定] 時，預設值為「僅啟用檔案上傳」。</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING">設定剪貼簿重新導向格式</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_EXPLAIN">此設定會決定是否為每種資料格式 (檔案/文字/RTF 文字/影像/Microsoft Office 文字/Microsoft Office 文字效果/Microsoft Office 圖表和 SmartArt) 啟用篩選器。每個篩選器的狀態為:
+
+- 已停用
+- 已啟用
+
+此設定僅會套用至代理程式，依預設為未設定狀態。
+
+未設定或停用此設定時，所有格式的「剪貼簿重新導向」篩選器皆為「已停用」。</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_ENABLED">已啟用</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_DISABLED">已停用</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="SERVER_CLIPBOARD_STATE">
+        <dropdownList refId="SERVER_CLIPBOARD_STATE" defaultItem="1">設定剪貼簿重新導向</dropdownList>
+      </presentation>
+      <presentation id="SERVER_CLIPBOARD_SIZE">
+        <dropdownList refId="Policy_DropList_Clipboard_Fine_Grained" defaultItem="1" >選擇剪貼簿記憶體大小的單位</dropdownList>
+        <decimalTextBox refId="SERVER_CLIPBOARD_SIZE" defaultValue="1024" spinStep="100">伺服器上的剪貼簿記憶體大小</decimalTextBox>
+      </presentation>
+      <presentation id="SERVER_CLIPBOARD_AUDIT">
+        <dropdownList refId="SERVER_CLIPBOARD_AUDIT" defaultItem="0">設定剪貼簿稽核</dropdownList>
+      </presentation>
+      <presentation id="SERVER_CLIPBOARD_AUDIT_BLOCK_CLIPBOARD">
+        <dropdownList refId="Policy_DropList_Element_Configure_clipboard" defaultItem="0">設定若用戶端不支援稽核時的剪貼簿行為</dropdownList>
+      </presentation>
+      <presentation id="CLIPBOARD_FINE_GRAIN_LABEL" />
+      <presentation id="SERVER_FILE_TRANSFER_STATE">
+        <dropdownList refId="SERVER_FILE_TRANSFER_STATE" defaultItem="3">設定檔案傳輸</dropdownList>
+      </presentation>
+      <presentation id="CLIPBOARD_FORMAT_FILTERING">
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_FILE_IN" defaultItem="0">從傳入的剪貼簿資料中篩選檔案和資料夾:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_FILE_OUT" defaultItem="0">從傳出的剪貼簿資料中篩選檔案和資料夾:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_TEXT_IN" defaultItem="0">從傳入的剪貼簿資料中篩除文字:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_TEXT_OUT" defaultItem="0">從傳出的剪貼簿資料中篩除文字:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_RTF_IN" defaultItem="0">從傳入的剪貼簿資料中篩除 RTF 格式資料:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_RTF_OUT" defaultItem="0">從傳出的剪貼簿資料中篩除 RTF 格式資料:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_IMAGE_IN" defaultItem="0">從傳入的剪貼簿資料中篩除影像:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_IMAGE_OUT" defaultItem="0">從傳出的剪貼簿資料中篩除影像:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_IN" defaultItem="0">從傳入的剪貼簿資料中篩除 Microsoft Office 文字資料:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_OUT" defaultItem="0">從傳出的剪貼簿資料中篩除 Microsoft Office 文字資料:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_CHART_IN" defaultItem="0">從傳入的剪貼簿資料中篩除 Microsoft 圖表和 SmartArt 資料:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_CHART_OUT" defaultItem="0">從傳出的剪貼簿資料中篩除 Microsoft 圖表和 SmartArt 資料:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_IN" defaultItem="0">從傳入的剪貼簿資料中篩除 Microsoft 文字效果資料:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_OUT" defaultItem="0">從傳出的剪貼簿資料中篩除 Microsoft 文字效果資料:</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

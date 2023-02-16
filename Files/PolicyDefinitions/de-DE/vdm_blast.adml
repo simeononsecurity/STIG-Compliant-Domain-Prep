@@ -7,6 +7,11 @@
     <stringTable>
       <string id="BLAST_CAT_LABEL">VMware Blast</string>
       <string id="BLAST_CAT_EXPLAIN">Richtlinien zur Konfiguration des Blast-Protokolls.</string>
+      <string id="BLAST_OPTIMIZER_LABEL">Blast Optimizer</string>
+      <string id="BLAST_OPTIMIZER_EXPLAIN">Eine einzelne Konfiguration, mit der Blast-Benutzer zwischen Standardeinstellungen wählen können, die eine bessere Benutzererfahrung oder Ressourceneffizienz bieten.
+Wert 5: (Standard) Standardeinstellungen von Blast verwenden.
+Wert größer als 5: Benutzererfahrung verbessern, indem die Blast-Standardwerte für encoderGlobalQualityLevel, Bandbreitenbelastung und Encoder-maxFPS erhöht werden.
+Wert kleiner als 5: Ressourceneffizienz verbessern, indem die Blast-Standardwerte für encoderGlobalQualityLevel, Bandbreitenbelastung und Encoder-maxFPS verringert werden.</string>
       <string id="BLAST_MAX_SESSION_BW_LABEL">Maximale Sitzungsbandbreite</string>
       <string id="BLAST_MAX_SESSION_BW_EXPLAIN">Legt die maximale Bandbreite in Kilobit pro Sekunde fest, die vom Blast-Protokoll für eine Remotesitzung verwendet werden kann. Die Bandbreite umfasst den gesamten Datenverkehr, Bilddarstellung, Audio, virtuelle Kanäle, USB und Blast-Steuerung eingeschlossen.</string>
       <string id="BLAST_MIN_SESSION_BW_LABEL">Mindestsitzungsbandbreite</string>
@@ -16,7 +21,7 @@
       <string id="BLAST_MAX_FPS_LABEL">Maximale Frame-Rate</string>
       <string id="BLAST_MAX_FPS_EXPLAIN">Wert zur Verwaltung der pro Benutzer durchschnittlich genutzten Bandbreite. Dazu wird die Anzahl der Bildschirmaktualisierungen pro Sekunde begrenzt.</string>
       <string id="BLAST_UDP_LABEL">UDP-Protokoll</string>
-      <string id="BLAST_UDP_EXPLAIN">Wenn diese Einstellung aktiviert oder nicht konfiguriert ist, wird das UDP-Protokoll verwendet. Ist diese Einstellung deaktiviert, wird das TCP-Protokoll verwendet.</string>
+      <string id="BLAST_UDP_EXPLAIN">Wenn diese Einstellung aktiviert oder nicht konfiguriert ist, kann der Blast-Sitzungsdatenverkehr über UDP erfolgen, wenn Blast feststellt, dass die Verwendung von UDP die Benutzerfreundlichkeit verbessert. Wenn die Einstellung deaktiviert ist, wird der Blast-Sitzungsdatenverkehr über TCP übertragen.</string>
       <string id="BLAST_CURSOR_WARPING_LABEL">Cursor-Verzerrung</string>
       <string id="BLAST_CURSOR_WARPING_EXPLAIN">Wenn diese Einstellung aktiviert ist, ist die Funktion „Cursor-Verzerrung“ aktiviert. Wenn diese Funktion aktiviert ist und sich die Maus im absoluten Modus befindet, erkennt der Remoteagent plötzliche Cursor-Bewegungen und reflektiert sie dem Client, indem er den lokalen Cursor bewegt. Andernfalls werden die plötzlichen Cursor-Bewegungen im Remoteagent vom Client ignoriert. Die Funktion „Cursor-Verzerrung“ ist standardmäßig deaktiviert.</string>
       <!--
@@ -90,6 +95,16 @@ Diese Einstellung ist nur wirksam, wenn die DSCP-Markierungseinstellung dies zul
       <string id="BLAST_DSCP_BSG_UP_UDP6_EXPLAIN">Der Differentiated Services Code Point-Wert, der bei vom Blast-Secure Gateway über UDP per IPv6 an den Blast-Agent gesendetem Netzwerkverkehr platziert werden soll.
 
 Diese Einstellung ist nur wirksam, wenn die DSCP-Markierungseinstellung dies zulässt.</string>
+      <string id="BLAST_ENCODER_IMAGE_CACHE_SIZE_LABEL">Größe des Encoder-Image-Caches (KB)</string>
+      <string id="BLAST_ENCODER_IMAGE_CACHE_SIZE_EXPLAIN">Die maximale Größe des Encoder-Image-Cache in Kilobyte.
+
+Die endgültige Größe des Cache wird basierend auf dem Minimum dieser Konfiguration und der zugehörigen Konfiguration des Clients ausgewählt und darf die Hälfte des verfügbaren Arbeitsspeichers auf dem Horizon Agent nicht überschreiten.</string>
+      <string id="BLAST_ENCODER_CPU_CONTROLLER_LABEL">Encoder-CPU-Controller</string>
+      <string id="BLAST_ENCODER_CPU_CONTROLLER_EXPLAIN">Wenn Sie diese Richtlinieneinstellung aktivieren oder nicht konfigurieren, wird der maximale Grenzwert für Encoder-Frames pro Sekunde basierend auf der aktuellen durchschnittlichen CPU-Auslastung des Systems dynamisch herunterskaliert oder erhöht. Wie weit dieser Grenzwert zur Reduzierung der Encoder-CPU-Auslastung gesenkt werden könnte, wird durch die Einstellung „Minimale Frame-Rate des Encoder-CPU-Controllers“ gesteuert.
+
+Wenn Sie diese Richtlinieneinstellung deaktivieren, wird der maximale Grenzwert für Encoder-Frames pro Sekunde aufgrund der hohen CPU-Auslastung des Systems nicht von der Einstellung „Maximale Frame-Rate“ herunterskaliert.</string>
+      <string id="BLAST_ENCODER_CPU_CONTROLLER_MIN_FPS_LABEL">Minimale Frame-Rate des Encoder-CPU-Controllers</string>
+      <string id="BLAST_ENCODER_CPU_CONTROLLER_MIN_FPS_EXPLAIN">Die minimale Frame-Rate, mit der der Encoder-CPU-Controller den maximalen Grenzwert für Encoder-Frames pro Sekunde herabsetzen darf, um die Encoder-CPU-Auslastung bei hoher CPU-Auslastung des Systems zu reduzieren. Dieser Wert darf die Einstellung „Maximale Frame-Rate“ nicht überschreiten.</string>
       <string id="BLAST_H264_ENCODE_LABEL">H.264</string>
       <string id="BLAST_H264_ENCODE_EXPLAIN">Wenn diese Einstellung aktiviert oder nicht konfiguriert ist, wird die H.264-Decodierung für die Remoteausführung des Desktops verwendet. Ist diese Richtlinieneinstellung deaktiviert, wird JPEG/PNG für die Codierung verwendet.</string>
       <string id="BLAST_HEVC_ENCODE_LABEL">HEVC</string>
@@ -101,10 +116,19 @@ Diese Einstellung ist nur wirksam, wenn die DSCP-Markierungseinstellung dies zul
       <string id="BLAST_COOKIE_CLEANUP_LABEL">Intervall der Cookie-Bereinigung</string>
       <string id="BLAST_COOKIE_CLEANUP_EXPLAIN">Dieses Intervall steuert die Häufigkeit, mit der inaktive Sitzungen bereinigt werden. Bei einer Bereinigung werden die Cookies gelöscht, die dieser Sitzung zugeordnet sind.</string>
       <string id="BLAST_COOKIE_CLEANUP_INTERVAL_LABEL">Intervall (ms)</string>
-      <string id="BLAST_DISPLAY_QUALITY_LABEL">Bildqualität</string>
-      <string id="BLAST_DISPLAY_QUALITY_EXPLAIN">Diese Einstellungen steuern die Bildqualität der Remoteanzeige.
-Es sind zwei Qualitätsprofile verfügbar, niedrig und hoch. Das niedrige Profil wird verwendet, wenn sich Bildschirmbereiche häufig ändern, z. B. beim Bildlauf. Das hohe Profil wird für die optimale Darstellung von Bildschirmbereichen verwendet, die sich seltener ändern. Dies ergibt dann ein verbessertes endgültiges Bild.
-Je höher die Qualität ist, desto mehr Bandbreite und eine höhere Latenz werden benötigt, wenn sich Bildschirmbereiche häufig ändern, beispielsweise beim Bildlauf.</string>
+      <string id="BLAST_ENCODER_GLOBAL_QUALITY_LABEL">Globale Qualität von Blast-Encodern</string>
+      <string id="BLAST_ENCODER_GLOBAL_QUALITY_EXPLAIN">Diese Einstellung steuert die Bildqualitätsebene der Remote-Anzeige für alle Blast-Encoder. Die ausgewählte Ebene wird allen Codecs zugeordnet, d. h., mit dieser Einstellung werden der maximale QP-Wert für H.264, der maximale QP-Wert für den Blast-Codec und die niedrige JPEG-Qualität im adaptiven Encoder entsprechend dem ausgewählten Wert aktualisiert.
+Für die globale Qualitätsstufe des Encoders sind Werte im Bereich [1-5] zulässig. Ein niedrigerer Wert bedeutet eine niedrigere Qualität und ein höherer Wert bedeutet eine höhere Qualität. Je höher die Qualitätsstufe, desto mehr Bandbreite wird verbraucht und desto höher kann die Latenz sein, wenn sich die Bildschirmbereiche häufig ändern, z. B. beim Scrollen auf dem Bildschirm.
+Der Standardwert lautet 1 (ausgewogen). Die Qualitätszuordnung kann durch entsprechende QP-Werte des Encoders außer Kraft gesetzt werden.</string>
+      <string id="BLAST_ENCODER_GLOBAL_QUALITY_LEVEL">Globale Blast-Encoder-Qualitätsstufe</string>
+      <string id="BLAST_ENCODER_INTEL_H264_LABEL">Intel HW-Encoder H264</string>
+      <string id="BLAST_ENCODER_INTEL_H264_EXPLAIN">Wenn Sie diese Richtlinieneinstellung aktivieren oder nicht konfigurieren, steht die Intel HW-Codierung mithilfe der H.264-Komprimierung für Remotesitzungen zur Verfügung. Wenn Sie diese Richtlinieneinstellung deaktivieren, ist der Intel HW-Encoder für H.264 nicht verfügbar und verwendet standardmäßig den nächsten möglichen Codec</string>
+      <string id="BLAST_ENCODER_INTEL_HEVC_LABEL">Intel HW-Encoder HEVC</string>
+      <string id="BLAST_ENCODER_INTEL_HEVC_EXPLAIN">Wenn Sie diese Richtlinieneinstellung aktivieren oder nicht konfigurieren, ist die Intel HW-Codierung mit HEVC-Komprimierung für Remotesitzungen verfügbar. Wenn Sie diese Richtlinieneinstellung deaktivieren, ist der Intel HW-Encoder für HEVC nicht verfügbar und verwendet standardmäßig den nächsten möglichen Codec</string>
+      <string id="BLAST_DISPLAY_QUALITY_LABEL">Adaptive Encoder-Bildqualität</string>
+      <string id="BLAST_DISPLAY_QUALITY_EXPLAIN">Diese Einstellungen steuern die Bildqualität der Remoteanzeige bei Verwendung des adaptiven Encoders (JPEG/PNG).
+Es gibt zwei Qualitätsprofile, nämlich niedrig und hoch.  Das niedrige Profil wird verwendet, wenn sich Bereiche des Bildschirms häufig ändern, z. B. beim Scrollen. Das Profil mit hoher Qualität wird verwendet, um Bereiche des Bildschirms zu verfeinern, die sich weniger ändern, was zu einem besseren Ergebnis führt.
+Je höher die Qualität, desto mehr Bandbreite wird genutzt und die Latenz ist potenziell höher, wenn sich Bereiche des Bildschirms häufig ändern, z. B. beim Scrollen auf dem Bildschirm.</string>
       <string id="BLAST_DISPLAY_QUALITY_JPEG_QUAL_LOW">Niedrige JPEG-Qualität</string>
       <string id="BLAST_DISPLAY_QUALITY_JPEG_QUAL_MID">Mittlere JPEG-Qualität</string>
       <string id="BLAST_DISPLAY_QUALITY_JPEG_QUAL_HIGH">Hohe JPEG-Qualität</string>
@@ -125,161 +149,36 @@ Wir empfehlen, diese Werte im Bereich zwischen +/- 5 der Standardwerte einzustel
       <string id="BLAST_H264_QUALITY_MIN_QP">Mindest-QP-Wert für H.264</string>
       <string id="BLAST_H264_COLOR_ACCURACY_LABEL">Hohe H.264-Farbgenauigkeit</string>
       <string id="BLAST_H264_COLOR_ACCURACY_EXPLAIN">Wenn Sie diese Richtlinieneinstellung aktivieren, wird eine erhöhte Farbgenauigkeit bei der Verwendung der H.264-Decodierung angefordert, indem der Farbraum „YUV 4:4:4“ anstelle von „4:2:0“ verwendet wird.
+Hohe Farbgenauigkeit bezieht sich auf die Tatsache, dass die Farbkennzeichnung bei der Konvertierung von RGB in YUV nicht unterabgetastet wird.
 Dadurch kann die Leistung bei sehr hohen Auflösungen oder der Verwendung mehrerer Bildschirme absinken.</string>
 
       <string id="BLAST_HEVC_COLOR_ACCURACY_LABEL">Hohe Farbgenauigkeit (HEVC)</string>
       <string id="BLAST_HEVC_COLOR_ACCURACY_EXPLAIN">Wenn Sie diese Richtlinieneinstellung aktivieren, wird bei Verwendung der HEVC-Decodierung eine erhöhte Farbgenauigkeit angefordert, indem der Farbraum „YUV 4:4:4“ anstelle von „4:2:0“ verwendet wird.
+Hohe Farbgenauigkeit bezieht sich auf die Tatsache, dass die Farbkennzeichnung bei der Konvertierung von RGB in YUV nicht unterabgetastet wird.
 Die clientseitige Hardwarebeschleunigung von HEVC 4:4:4 ist erforderlich, damit diese Richtlinie wirksam wird.</string>
+
+      <string id="BLAST_HIGHER_FIDELITY_COLOR_LABEL">H.264, Farbe für höhere HEVC-Originaltreue</string>
+      <string id="BLAST_HIGHER_FIDELITY_COLOR_EXPLAIN">Wenn Sie diese Richtlinieneinstellung aktivieren, werden bei Verwendung des YUV 4:4:4-Farbraums mit HEVC oder H.264 der volle Luma-/Chroma-Bereich und optimierte Konvertierungsmatrizen angefordert.
+Voller Bereich bedeutet, dass der RGB-Eingabebereich vor der Konvertierung nicht reduziert wird.
+Für SDR-Inhalte wird eine HDTV-Matrix und für HDR-Inhalte eine UHDTV-Matrix verwendet.
+Wenn diese Richtlinie nicht konfiguriert ist, wird sie standardmäßig aktiviert.
+Die Client-Unterstützung für diese Funktion ist erforderlich, damit diese Richtlinie wirksam wird.</string>
+
       <string id="BLAST_HTTP_LABEL">HTTP-Dienst</string>
       <string id="BLAST_HTTP_EXPLAIN">Diese Einstellungen steuern den Blast-HTTP-Dienst. Die verwendete Portnummer muss mit dem Firewall-Setup übereinstimmen.</string>
       <string id="BLAST_HTTP_PORTS_SECURE_LABEL">Sicherer Port (HTTPS)</string>
       <string id="BLAST_AUDIO_LABEL">Audiowiedergabe</string>
       <string id="BLAST_AUDIO_EXPLAIN">Diese Einstellung legt fest, ob für den Remote-Desktop eine Audiowiedergabe zulässig ist. Die Audiowiedergabe ist standardmäßig aktiviert.</string>
-      <string id="SERVER_CLIPBOARD_STATE">Zwischenablagenumleitung konfigurieren</string>
-      <string id="SERVER_CLIPBOARD_AUDIT">Zwischenablagenüberwachung konfigurieren</string>
-      <string id="SERVER_CLIPBOARD_AUDIT_BLOCK_CLIPBOARD">Gibt an, ob die Zwischenablagenumleitung zur Clientseite blockiert wird, wenn der Client die Überwachung nicht unterstützt.</string>
-      <string id="SERVER_CLIPBOARD_AUDIT_EXPLAIN">Bestimmt die Richtung, in der die Zwischenablagenüberwachung zulässig ist. Sie können einen der folgenden Werte auswählen:
-
-– In beiden Richtungen deaktiviert
-– Nur von Client zu Server aktiviert (Bei dieser Option werden Informationen von Zwischenablagedaten, die von der Client- zur Agent-Seite kopiert werden, aufgezeichnet.)
-– Nur von Server zu Client aktiviert (Bei dieser Option werden Informationen von Zwischenablagedaten, die von der Agent- zur Client-Seite kopiert werden, aufgezeichnet.)
-- In beiden Richtungen aktiviert
-
-Diese Einstellung bezieht sich nur auf den Server (View-Desktop).
-
-Wenn diese Einstellung deaktiviert oder nicht konfiguriert ist, ist standardmäßig der Wert „In beiden Richtungen deaktiviert“ festgelegt.</string>
-      <string id="SERVER_CLIPBOARD_AUDIT_BLOCK_CLIPBOARD_EXPLAIN">Legt fest, ob die Zwischenablagenumleitung zum Client blockiert wird, wenn Horizon Client die Überwachungsfunktion nicht unterstützt.
-
-Sie können das Verhalten der Zwischenablagenumleitung auswählen:
-
-– Lassen Sie die Zwischenablagenumleitung vom Agenten zum Client passieren, wenn die Überwachung in Horizon Agent aktiviert ist, jedoch nicht in Horizon Client.
-– Blockieren Sie die Zwischenablagenumleitung vom Agenten zum Client, wenn die Überwachung in Horizon Agent aktiviert ist, jedoch nicht in Horizon Client.
-
-Diese Einstellung wird erst nach dem Aktivieren der Überwachung wirksam.</string>
-      <string id="String_Policy_DropList_Select_Configure_clipboard_Audit_Pass_Through">Passthrough</string>
-      <string id="String_Policy_DropList_Select_Configure_clipboard_Audit_Block">Blockieren</string>
-      <string id="CLIPBOARD_STATE_DISABLE_BOTH">In beiden Richtungen deaktiviert</string>
-      <string id="CLIPBOARD_STATE_ENABLE_BOTH">In beiden Richtungen aktiviert</string>
-      <string id="CLIPBOARD_STATE_ENABLE_CLIENT_2_SERVER">Aktiviert, nur Client zu Server</string>
-      <string id="CLIPBOARD_STATE_ENABLE_SERVER_2_CLIENT">Aktiviert, nur Server zu Client</string>
-      <string id="String_Policy_DropList_Select_clipboard_size_unit_kilobytes" >Kilobyte</string>
-      <string id="String_Policy_DropList_Select_clipboard_size_unit_bytes" >Byte</string>
-      <string id="SERVER_CLIPBOARD_STATE_EXPLAIN">Legt die Richtung fest, in der die Zwischenablagenumleitung zulässig ist. Sie können zwischen folgenden Werten wählen:
-
-– In beiden Richtungen deaktiviert
-– In beiden Richtungen aktiviert
-– Nur von Client zu Server aktiviert (d. h., es sind nur Kopier- und Einfügevorgänge vom Clientsystem zum View-Desktop möglich)
-– Nur von Server zu Client aktiviert (d. h., es sind nur Kopier- und Einfügevorgänge vom View-Desktop zum Clientsystem möglich)
-
-Diese Einstellung gilt nur für den Server (View-Desktop).
-
-Wenn diese Einstellung deaktiviert oder nicht konfiguriert ist, gilt die Standardeinstellung „Nur von Client zu Server aktiviert“.</string>
-      <string id="SERVER_CLIPBOARD_SIZE">Zwischenspeichergröße auf dem Server</string>
-      <string id="SERVER_CLIPBOARD_SIZE_EXPLAIN">Diese Einstellungen geben den Wert der Zwischenspeichergröße des Servers an.
-
-Die Zwischenspeichergröße auf dem Server wird – je nach Auswahl – in Kilobyte oder Byte angegeben. Die Speichergröße wird in Kilobyte angegeben, wenn sie nicht konfiguriert ist.
-
-Der Client verfügt ebenfalls über einen Wert für die Zwischenspeichergröße. Dieser wird immer in Kilobyte angezeigt.
-
-Nach der Einrichtung der Sitzung gilt Folgendes:
-– Der Zwischenspeichergrößenwert des Servers wird an den Client gesendet.
-– Beim Client wird dann der effektive Wert der Zwischenspeichergröße aus den Mindestwerten für Client und Server bestimmt.</string>
-      <string id="CLIPBOARD_FINE_GRAIN_LABEL">Zwischenspeichergröße in Byte</string>
-      <string id="CLIPBOARD_FINE_GRAIN_EXPLAIN">Legt fest, ob die Zwischenspeichergröße in Byte oder Kilobyte angegeben wird. Wenn diese Einstellung aktiviert ist, wird die Zwischenspeichergröße auf dem Server in Byte angezeigt. Wenn diese Einstellung deaktiviert ist, wird die Zwischenspeichergröße auf dem Server in Kilobyte angezeigt.
-
-Diese Einstellung gilt nur für den Agenten.</string>
       <string id="KEYBOARD_LOCALE_SYNC_LABEL">Synchronisierung des Tastaturgebietsschemas</string>
       <string id="KEYBOARD_LOCALE_SYNC_EXPLAIN">Legt fest, ob die Tastaturgebietsschemaliste und das Standardtastaturgebietsschema für den Benutzer in der Sitzung mit den Daten des Clientendpunkts synchronisiert werden. Wenn diese Einstellung aktiviert ist, ist eine Synchronisierung zugelassen. Wenn diese Einstellung deaktiviert oder nicht konfiguriert ist, ist eine Synchronisierung nicht zulässig.
 
 Diese Einstellung gilt nur für den Agenten.</string>
-      <string id="SERVER_FILE_TRANSFER_STATE">Dateiübertragung konfigurieren</string>
-      <string id="FILE_TRANSFER_STATE_DISABLE_BOTH">Upload und Download deaktiviert</string>
-      <string id="FILE_TRANSFER_STATE_ENABLE_BOTH">Upload und Download aktiviert</string>
-      <string id="FILE_TRANSFER_STATE_ENABLE_UPLOAD">Nur Dateiupload aktiviert</string>
-      <string id="FILE_TRANSFER_STATE_ENABLE_DOWNLOAD">Nur Dateidownload aktiviert</string>
-      <string id="SERVER_FILE_TRANSFER_STATE_EXPLAIN">Legt die Dateiübertragung zwischen Agent und HTML Access fest. Sie können zwischen folgenden Werten wählen:
-
-– Upload und Download deaktiviert
-– Upload und Download aktiviert
-– Nur Dateiupload aktiviert (d. h., es ist nur das Hochladen von Dateien vom Clientsystem zum View-Desktop möglich)
-– Nur Dateidownload aktiviert (d. h., es ist nur das Herunterladen von Dateien vom View-Desktop zum Clientsystem möglich)
-
-Diese Einstellung gilt nur für den Server (View-Desktop).
-
-Wenn diese Einstellung deaktiviert oder nicht konfiguriert ist, gilt die Standardeinstellung „Nur Dateiupload aktiviert“.</string>
-      <string id="CLIPBOARD_FORMAT_FILTERING_TEXT_IN">Text aus eingehenden Zwischenablagedaten herausfiltern</string>
-      <string id="CLIPBOARD_FORMAT_FILTERING_TEXT_IN_EXPLAIN">Legt fest, ob die Textdaten aus den vom Client an den Agent übergebenen Zwischenablagedaten herausgefiltert werden. Ist dieses Kontrollkästchen aktiviert, werden die Daten herausgefiltert, andernfalls werden sie beibehalten.</string>
-      <string id="CLIPBOARD_FORMAT_FILTERING_RTF_IN">RTF-Daten aus eingehenden Zwischenablagedaten herausfiltern</string>
-      <string id="CLIPBOARD_FORMAT_FILTERING_RTF_IN_EXPLAIN">Legt fest, ob die RTF-Daten aus den vom Client an den Agent übergebenen Zwischenablagedaten herausgefiltert werden. Ist dieses Kontrollkästchen aktiviert, werden die Daten herausgefiltert, andernfalls werden sie beibehalten.</string>
-      <string id="CLIPBOARD_FORMAT_FILTERING_IMAGE_IN">Bilder aus eingehenden Zwischenablagedaten herausfiltern</string>
-      <string id="CLIPBOARD_FORMAT_FILTERING_IMAGE_IN_EXPLAIN">Legt fest, ob die Bilddaten aus den vom Client an den Agent übergebenen Zwischenablagedaten herausgefiltert werden. Ist dieses Kontrollkästchen aktiviert, werden die Daten herausgefiltert, andernfalls werden sie beibehalten.</string>
-      <string id="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_IN">Microsoft Office-Textdaten aus eingehenden Zwischenablagedaten herausfiltern</string>
-      <string id="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_IN_EXPLAIN">Legt fest, ob die Daten im Microsoft Office-Textformat (BIFF12-Format) aus den vom Client an den Agent übergebenen Zwischenablagedaten herausgefiltert werden. Ist dieses Kontrollkästchen aktiviert, werden die Daten herausgefiltert, andernfalls werden sie beibehalten.</string>
-      <string id="CLIPBOARD_FORMAT_FILTERING_MSO_CHART_IN">Microsoft Chart- und SmartArt-Daten aus eingehenden Zwischenablagedaten herausfiltern</string>
-      <string id="CLIPBOARD_FORMAT_FILTERING_MSO_CHART_IN_EXPLAIN">Legt fest, ob die Microsoft Office-Diagrammdaten und Smart Art-Daten (Art::GVML ClipFormat) aus den vom Client an den Agent übergebenen Zwischenablagedaten herausgefiltert werden. Ist dieses Kontrollkästchen aktiviert, werden die Daten herausgefiltert, andernfalls werden sie beibehalten.</string>
-      <string id="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_IN">Microsoft-Texteffektdaten aus eingehenden Zwischenablagedaten herausfiltern</string>
-      <string id="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_IN_EXPLAIN">Legt fest, ob die Daten mit Microsoft Office-Texteffekten (HTML-Format) aus den vom Client an den Agent übergebenen Zwischenablagedaten herausgefiltert werden. Ist dieses Kontrollkästchen aktiviert, werden die Daten herausgefiltert, andernfalls werden sie beibehalten.</string>
-      <string id="CLIPBOARD_FORMAT_FILTERING_TEXT_OUT">Text aus ausgehenden Zwischenablagedaten herausfiltern</string>
-      <string id="CLIPBOARD_FORMAT_FILTERING_TEXT_OUT_EXPLAIN">Legt fest, ob die Textdaten aus den vom Agent an den Client gesendeten Zwischenablagedaten herausgefiltert werden. Ist dieses Kontrollkästchen aktiviert, werden die Daten herausgefiltert, andernfalls werden sie beibehalten.</string>
-      <string id="CLIPBOARD_FORMAT_FILTERING_RTF_OUT">RTF-Daten aus ausgehenden Zwischenablagedaten herausfiltern</string>
-      <string id="CLIPBOARD_FORMAT_FILTERING_RTF_OUT_EXPLAIN">Legt fest, ob die RTF-Daten aus den vom Agent an den Client gesendeten Zwischenablagedaten herausgefiltert werden. Ist dieses Kontrollkästchen aktiviert, werden die Daten herausgefiltert, andernfalls werden sie beibehalten.</string>
-      <string id="CLIPBOARD_FORMAT_FILTERING_IMAGE_OUT">Bilder aus ausgehenden Zwischenablagedaten herausfiltern</string>
-      <string id="CLIPBOARD_FORMAT_FILTERING_IMAGE_OUT_EXPLAIN">Legt fest, ob die Bilddaten aus den vom Agent an den Client gesendeten Zwischenablagedaten herausgefiltert werden. Ist dieses Kontrollkästchen aktiviert, werden die Daten herausgefiltert, andernfalls werden sie beibehalten.</string>
-      <string id="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_OUT">Microsoft Office-Textdaten aus ausgehenden Zwischenablagedaten herausfiltern</string>
-      <string id="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_OUT_EXPLAIN">Legt fest, ob die Daten im Microsoft Office-Textformat (BIFF12-Format) aus den vom Agent an den Client gesendeten Zwischenablagedaten herausgefiltert werden. Ist dieses Kontrollkästchen aktiviert, werden die Daten herausgefiltert, andernfalls werden sie beibehalten.</string>
-      <string id="CLIPBOARD_FORMAT_FILTERING_MSO_CHART_OUT">Microsoft Chart- und SmartArt-Daten aus ausgehenden Zwischenablagedaten herausfiltern</string>
-      <string id="CLIPBOARD_FORMAT_FILTERING_MSO_CHART_OUT_EXPLAIN">Legt fest, ob die Microsoft Office-Diagrammdaten und Smart Art-Daten (Art::GVML ClipFormat) aus den vom Agent an den Client gesendeten Zwischenablagedaten herausgefiltert werden. Ist dieses Kontrollkästchen aktiviert, werden die Daten herausgefiltert, andernfalls werden sie beibehalten.</string>
-      <string id="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_OUT">Microsoft-Texteffektdaten aus ausgehenden Zwischenablagedaten herausfiltern</string>
-      <string id="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_OUT_EXPLAIN">Legt fest, ob die Daten mit Microsoft Office-Texteffekten (HTML-Format) aus den vom Agenten an den Client gesendeten Zwischenablagedaten herausgefiltert werden. Ist dieses Kontrollkästchen aktiviert, werden die Daten herausgefiltert, andernfalls werden sie beibehalten.</string>
       <string id="BLAST_SUPPORTEDON_EMPTY"></string>
-      <string id="CLIPBOARD_AUDIT_DISABLE_BOTH">In beiden Richtungen deaktiviert</string>
-      <string id="CLIPBOARD_AUDIT_ENABLE_ONLY_CLIENT_TO_SERVER">Aktiviert, nur Client zu Server</string>
-      <string id="CLIPBOARD_AUDIT_ENABLE_ONLY_SERVER_TO_CLIENT">Aktiviert, nur Server zu Client</string>
-      <string id="CLIPBOARD_AUDIT_ENABLE_BOTH">In beiden Richtungen aktiviert</string>
-      <string id="SERVER_DND_STATE">„Drag &amp; Drop“-Richtung konfigurieren</string>
-      <string id="DND_STATE_DISABLE_BOTH">In beiden Richtungen deaktiviert</string>
-      <string id="DND_STATE_ENABLE_CLIENT_2_SERVER">Nur Client zu Agent aktiviert</string>
-      <string id="DND_STATE_ENABLE_SERVER_2_CLIENT">Nur Agent zu Client aktiviert</string>
-      <string id="DND_STATE_ENABLE_BOTH">In beiden Richtungen aktiviert</string>
-      <string id="SERVER_DND_STATE_EXPLAIN">Bestimmt die Richtung, in der „Drag &amp; Drop“ zulässig ist. Sie können einen der folgenden Werte auswählen:
-
-– In beiden Richtungen deaktiviert
-– Nur Agent zu Client aktiviert (dadurch ist der „Drag &amp; Drop“-Vorgang nur vom Agent zum Clientsystem zulässig)
-– Nur Client zu Agent aktiviert (dadurch ist der „Drag &amp; Drop“-Vorgang nur vom Clientsystem zum Agent zulässig)
-– In beiden Richtungen aktiviert
-
-Diese Einstellung bezieht sich nur auf den Agent.
-
-Wenn diese Einstellung deaktiviert oder nicht konfiguriert ist, lautet der Standardwert „Nur Client zu Agent aktiviert“.</string>
-      <string id="SERVER_DND_FORMAT_STATE">„Drag &amp; Drop“-Formate konfigurieren</string>
-      <string id="SERVER_DND_FORMAT_STATE_EXPLAIN">Durch diese Einstellung wird festgelegt, welche „Drag &amp; Drop“-Option für das jeweilige Format (Datei/Text/Rich Text/Image/HTML/Dateiinhalt) zulässig ist. Die Werte für die Optionen sind:
-
-– In beiden Richtungen deaktiviert
-– Nur Agent zu Client aktiviert
-– Nur Client zu Agent aktiviert
-– In beiden Richtungen aktiviert
-
-Diese Einstellung gilt nur für den Agent, sie ist nicht standardmäßig konfiguriert.
-
-Wenn die Einstellung nicht konfiguriert oder deaktiviert ist, wird für alle Formate die „Drag &amp; Drop“-Option in beide Richtungen aktiviert.</string>
-      <string id="String_Policy_DropList_Select_DnD_size_unit_bytes" >Byte</string>
-      <string id="String_Policy_DropList_Select_DnD_size_unit_kilobytes" >Kilobyte</string>
-      <string id="String_Policy_DropList_Select_DnD_size_unit_megabytes" >Megabyte</string>
-      <string id="SERVER_DND_SIZE">Schwellenwert für „Drag &amp; Drop“-Größe konfigurieren</string>
-      <string id="SERVER_DND_SIZE_EXPLAIN">„Drag &amp; Drop“ unterstützt das Ziehen verschiedener Datentypen, einschließlich Klartext, Rich Text, Image, Dateien, Ordner. Durch diese Einstellung wird die Größenbeschränkung für das Ziehen allgemeiner Datentypen bestimmt, die nicht Dateien oder Ordner sind.
-
-Die Einheit der Datengröße zum Ziehen kann in Byte, Kilobyte und Megabyte konfiguriert werden.
-
-Der Wert für die gewünschte Größe wird unter „Schwellenwert für ‚Drag &amp; Drop‘-Größe“ konfiguriert. Die effektiven Datenbereiche für unterschiedliche Größeneinheiten sind:
-  – Byte: 1–1023
-  – Kilobyte: 1–1023
-  – Megabyte: 1–16 (maximale „Drag &amp; Drop“-Datengröße beträgt 16 MB)
-
-Diese Einstellung gilt nur für den Agent.
-
-Wenn die Einstellung nicht konfiguriert oder deaktiviert ist, wird ein standardmäßiger Schwellenwert von 1 MB festgelegt.</string>
     </stringTable>
     <presentationTable>
+      <presentation id="BLAST_OPTIMIZER_LABEL">
+        <decimalTextBox refId="BLAST_OPTIMIZER_LABEL" defaultValue="5">Blast Optimizer</decimalTextBox>
+      </presentation>
       <presentation id="BLAST_MAX_SESSION_BW_LABEL">
         <decimalTextBox refId="BLAST_MAX_SESSION_BW_LABEL" defaultValue="2147483647">Maximale Sitzungsbandbreite</decimalTextBox>
       </presentation>
@@ -343,6 +242,13 @@ Wenn die Einstellung nicht konfiguriert oder deaktiviert ist, wird ein standardm
       <presentation id="BLAST_DSCP_BSG_UP_UDP6_LABEL">
         <decimalTextBox refId="BLAST_DSCP_BSG_UP_UDP6_LABEL" defaultValue="">DSCP-Wert</decimalTextBox>
       </presentation>
+      <presentation id="BLAST_ENCODER_IMAGE_CACHE_SIZE_LABEL">
+        <decimalTextBox refId="BLAST_ENCODER_IMAGE_CACHE_SIZE_LABEL" defaultValue="256000">Größe des Encoder-Image-Caches (KB)</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_ENCODER_CPU_CONTROLLER_LABEL" />
+      <presentation id="BLAST_ENCODER_CPU_CONTROLLER_MIN_FPS_LABEL">
+        <decimalTextBox refId="BLAST_ENCODER_CPU_CONTROLLER_MIN_FPS_LABEL" defaultValue="5">Minimale Frame-Rate des Encoder-CPU-Controllers</decimalTextBox>
+      </presentation>
       <presentation id="BLAST_H264_ENCODE_LABEL" />
       <presentation id="BLAST_HEVC_ENCODE_LABEL" />
       <presentation id="BLAST_PNG_ENCODE_LABEL" />
@@ -350,11 +256,16 @@ Wenn die Einstellung nicht konfiguriert oder deaktiviert ist, wird ein standardm
       <presentation id="BLAST_COOKIE_CLEANUP_LABEL">
         <decimalTextBox refId="BLAST_COOKIE_CLEANUP_INTERVAL_LABEL" defaultValue="1000">Intervall (ms)</decimalTextBox>
       </presentation>
+      <presentation id="BLAST_ENCODER_GLOBAL_QUALITY_LABEL">
+        <decimalTextBox refId="BLAST_ENCODER_GLOBAL_QUALITY_LEVEL" defaultValue="1">Globale Qualitätsstufe des Encoders</decimalTextBox>
+      </presentation>
       <presentation id="BLAST_DISPLAY_QUALITY_LABEL">
         <decimalTextBox refId="BLAST_DISPLAY_QUALITY_JPEG_QUAL_LOW" defaultValue="25">Niedrige JPEG-Qualität</decimalTextBox>
         <decimalTextBox refId="BLAST_DISPLAY_QUALITY_JPEG_QUAL_MID" defaultValue="35">Mittlere JPEG-Qualität</decimalTextBox>
         <decimalTextBox refId="BLAST_DISPLAY_QUALITY_JPEG_QUAL_HIGH" defaultValue="90">Hohe JPEG-Qualität</decimalTextBox>
       </presentation>
+      <presentation id="BLAST_ENCODER_INTEL_H264_LABEL" />
+      <presentation id="BLAST_ENCODER_INTEL_HEVC_LABEL" />
       <presentation id="BLAST_CODEC_QUALITY_LABEL">
         <decimalTextBox refId="BLAST_CODEC_QP_MAX" defaultValue="0">Maximaler QP für Blast Codec</decimalTextBox>
         <decimalTextBox refId="BLAST_CODEC_QP_MIN" defaultValue="0">Minimaler QP für Blast Codec</decimalTextBox>
@@ -365,55 +276,12 @@ Wenn die Einstellung nicht konfiguriert oder deaktiviert ist, wird ein standardm
       </presentation>
       <presentation id="BLAST_H264_COLOR_ACCURACY_LABEL" />
       <presentation id="BLAST_HEVC_COLOR_ACCURACY_LABEL" />
+      <presentation id="BLAST_HIGHER_FIDELITY_COLOR_LABEL" />
       <presentation id="BLAST_HTTP_LABEL">
         <decimalTextBox refId="BLAST_HTTP_PORTS_SECURE_LABEL" defaultValue="22443">Sicherer Port (HTTPS)</decimalTextBox>
       </presentation>
       <presentation id="BLAST_AUDIO_LABEL" />
-      <presentation id="SERVER_CLIPBOARD_STATE">
-        <dropdownList refId="SERVER_CLIPBOARD_STATE" defaultItem="2">Zwischenablagenumleitung konfigurieren</dropdownList>
-      </presentation>
-      <presentation id="SERVER_CLIPBOARD_SIZE">
-        <dropdownList refId="Policy_DropList_Clipboard_Fine_Grained" defaultItem="1" >Maßeinheit für die Zwischenspeichergröße auswählen</dropdownList>
-        <decimalTextBox refId="SERVER_CLIPBOARD_SIZE" defaultValue="1024" spinStep="100">Zwischenspeichergröße auf dem Server</decimalTextBox>
-      </presentation>
-      <presentation id="SERVER_CLIPBOARD_AUDIT">
-        <dropdownList refId="SERVER_CLIPBOARD_AUDIT" defaultItem="0">Zwischenablagenüberwachung konfigurieren</dropdownList>
-      </presentation>
-      <presentation id="SERVER_CLIPBOARD_AUDIT_BLOCK_CLIPBOARD">
-        <dropdownList refId="Policy_DropList_Element_Configure_clipboard" defaultItem="0">Zwischenablagenverhalten konfigurieren, wenn Client die Überwachung nicht unterstützt</dropdownList>
-      </presentation>
-      <presentation id="CLIPBOARD_FINE_GRAIN_LABEL" />
       <presentation id="KEYBOARD_LOCALE_SYNC_LABEL" />
-      <presentation id="SERVER_FILE_TRANSFER_STATE">
-        <dropdownList refId="SERVER_FILE_TRANSFER_STATE" defaultItem="1">Dateiübertragung konfigurieren</dropdownList>
-      </presentation>
-      <presentation id="CLIPBOARD_FORMAT_FILTERING_TEXT_IN" />
-      <presentation id="CLIPBOARD_FORMAT_FILTERING_RTF_IN" />
-      <presentation id="CLIPBOARD_FORMAT_FILTERING_IMAGE_IN" />
-      <presentation id="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_IN" />
-      <presentation id="CLIPBOARD_FORMAT_FILTERING_MSO_CHART_IN" />
-      <presentation id="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_IN" />
-      <presentation id="CLIPBOARD_FORMAT_FILTERING_TEXT_OUT" />
-      <presentation id="CLIPBOARD_FORMAT_FILTERING_RTF_OUT" />
-      <presentation id="CLIPBOARD_FORMAT_FILTERING_IMAGE_OUT" />
-      <presentation id="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_OUT" />
-      <presentation id="CLIPBOARD_FORMAT_FILTERING_MSO_CHART_OUT" />
-      <presentation id="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_OUT" />
-      <presentation id="SERVER_DND_STATE">
-        <dropdownList refId="SERVER_DND_STATE" defaultItem="1">Drag &amp; Drop konfigurieren</dropdownList>
-      </presentation>
-      <presentation id="SERVER_DND_FORMAT_STATE">
-        <dropdownList refId="SERVER_DND_FILE_STATE" defaultItem="3">Option für Dateiformat:</dropdownList>
-        <dropdownList refId="SERVER_DND_TEXT_STATE" defaultItem="3">Option für Textformat:</dropdownList>
-        <dropdownList refId="SERVER_DND_RTF_STATE" defaultItem="3">Option für Rich-Text-Format:</dropdownList>
-        <dropdownList refId="SERVER_DND_IMAGE_STATE" defaultItem="3">Option für Image-Format:</dropdownList>
-        <dropdownList refId="SERVER_DND_HTML_STATE" defaultItem="3">Option für HTML-Format:</dropdownList>
-        <dropdownList refId="SERVER_DND_FILE_CONTENT_STATE" defaultItem="3">Option für Dateiinhaltsformat:</dropdownList>
-      </presentation>
-      <presentation id="SERVER_DND_SIZE">
-        <dropdownList refId="Policy_DropList_DnD_Size_Unit" defaultItem="2" >Einheit für „Drag &amp; Drop“-Größe auswählen</dropdownList>
-        <decimalTextBox refId="SERVER_DND_SIZE" defaultValue="1">Schwellenwert für „Drag &amp; Drop“-Größe</decimalTextBox>
-      </presentation>
       <presentation id="SERVER_HTMLACCESS_PRINT_STATE" />
     </presentationTable>
   </resources>

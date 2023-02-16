@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="VMwareViewClipboard">Redirection du Presse-papiers</string>
+      <string id="SUPPORTED_VERSION"></string>
+      <string id="SERVER_CLIPBOARD_STATE">Configurer la redirection du Presse-papiers</string>
+      <string id="CLIPBOARD_STATE_DISABLE_BOTH">Désactivé dans les deux sens</string>
+      <string id="CLIPBOARD_STATE_ENABLE_BOTH">Activé dans les deux sens</string>
+      <string id="CLIPBOARD_STATE_ENABLE_CLIENT_2_SERVER">Activé uniquement du client vers le serveur</string>
+      <string id="CLIPBOARD_STATE_ENABLE_SERVER_2_CLIENT">Activé uniquement du serveur vers le client</string>
+      <string id="SERVER_CLIPBOARD_STATE_EXPLAIN">Détermine le sens dans lequel la redirection du Presse-papiers est autorisée. Vous pouvez sélectionner l'une de ces valeurs :
+
+- Désactivé dans les deux sens
+- Activé dans les deux sens
+- Activé uniquement du client vers le serveur (c'est-à-dire autoriser les fonctions Copier et Coller uniquement du système client vers le poste de travail View.)
+- Activé uniquement du serveur vers le client (c'est-à-dire autoriser les fonctions Copier et Coller uniquement du poste de travail View vers le système client.)
+
+Ce paramètre s'applique uniquement au serveur (poste de travail View).
+
+Lorsque ce paramètre est désactivé ou non configuré, la valeur par défaut est « Activé uniquement du client vers le serveur ».</string>
+      <string id="SERVER_CLIPBOARD_SIZE">Taille de la mémoire du Presse-papiers sur le serveur</string>
+      <string id="SERVER_CLIPBOARD_SIZE_EXPLAIN">Ces paramètres indiquent la valeur de la taille de la mémoire du Presse-papiers du serveur.
+
+La taille de la mémoire du Presse-papiers sur le serveur est définie en octets ou en kilo-octets. La taille de la mémoire est définie en kilo-octets si elle n'est pas configurée.
+
+Le client dispose également d'une valeur pour la taille de la mémoire du Presse-papiers, mais elle est toujours en kilo-octets.
+
+Après la configuration de la session :
+- La valeur de la taille de la mémoire du Presse-papiers du serveur est envoyée au client.
+- Puis, sur le client, la valeur de la taille de la mémoire du Presse-papiers effective est déterminée en recherchant les valeurs minimales du client et du serveur.</string>
+      <string id="CLIPBOARD_FINE_GRAIN_LABEL">Configuration très fine du Presse-papiers</string>
+      <string id="CLIPBOARD_FINE_GRAIN_EXPLAIN">Détermine si le paramètre du Presse-papiers très fin est activé. Lorsque ce paramètre est activé, la taille de la mémoire du Presse-papiers sur le serveur est en octets. Lorsque ce paramètre est désactivé, la taille de la mémoire du Presse-papiers sur le serveur est en kilo-octets.
+
+Ce paramètre ne s'applique qu'à l'agent.</string>
+      <string id="String_Policy_DropList_Select_clipboard_size_unit_kilobytes" >kilo-octets</string>
+      <string id="String_Policy_DropList_Select_clipboard_size_unit_bytes" >octets</string>
+      <string id="SERVER_CLIPBOARD_AUDIT">Configurer l'audit du Presse-papiers</string>
+      <string id="CLIPBOARD_AUDIT_DISABLE_BOTH">Désactivé dans les deux sens</string>
+      <string id="CLIPBOARD_AUDIT_ENABLE_ONLY_CLIENT_TO_SERVER">Activé uniquement du client vers le serveur</string>
+      <string id="CLIPBOARD_AUDIT_ENABLE_ONLY_SERVER_TO_CLIENT">Activé uniquement du serveur vers le client</string>
+      <string id="CLIPBOARD_AUDIT_ENABLE_BOTH">Activé dans les deux sens</string>
+      <string id="SERVER_CLIPBOARD_AUDIT_BLOCK_CLIPBOARD">Bloquer la redirection du Presse-papiers du côté client lorsque le client ne prend pas en charge l'audit</string>
+      <string id="SERVER_CLIPBOARD_AUDIT_EXPLAIN">Détermine le sens dans lequel l'audit du Presse-papiers est autorisé. Vous pouvez sélectionner l'une de ces valeurs :
+
+-Désactivé dans les deux sens
+-Activé uniquement du client vers le serveur (en d'autres termes, les informations du Presse-papiers copiées du côté client au côté agent seront enregistrées)
+-Activé uniquement du serveur vers le client (en d'autres termes, les informations du Presse-papiers copiées du côté agent au côté client seront enregistrées)
+-Activé dans les deux sens
+
+Ce paramètre s'applique au serveur (poste de travail View) uniquement.
+
+Lorsque ce paramètre est désactivé ou qu'il n'est pas configuré, la valeur par défaut est « Désactivé dans les deux sens ».</string>
+      <string id="SERVER_CLIPBOARD_AUDIT_BLOCK_CLIPBOARD_EXPLAIN">Détermine s'il faut bloquer la redirection du Presse-papiers pour le client si le client Horizon ne prend pas en charge la fonctionnalité d'audit.
+
+Vous pouvez sélectionner le comportement de la redirection du Presse-papiers :
+
+-Laisser la redirection du Presse-papiers de l'agent vers le client traverser si l'audit est activé dans l'agent Horizon, mais pas dans le client Horizon
+-Bloquer la redirection du Presse-papiers de l'agent vers le client si l'audit est activé dans l'agent Horizon, mais pas dans le client Horizon
+
+Ce paramètre ne peut entrer en vigueur qu'après l'activation de l'audit.</string>
+      <string id="String_Policy_DropList_Select_Configure_clipboard_Audit_Pass_Through">Traverser</string>
+      <string id="String_Policy_DropList_Select_Configure_clipboard_Audit_Block">Bloquer</string>
+      <string id="SERVER_FILE_TRANSFER_STATE">Configurer le transfert de fichiers</string>
+      <string id="FILE_TRANSFER_STATE_DISABLE_BOTH">Chargement et téléchargement désactivés</string>
+      <string id="FILE_TRANSFER_STATE_ENABLE_BOTH">Chargement et téléchargement activés</string>
+      <string id="FILE_TRANSFER_STATE_ENABLE_UPLOAD">Chargement de fichiers uniquement activé</string>
+      <string id="FILE_TRANSFER_STATE_ENABLE_DOWNLOAD">Téléchargement de fichiers uniquement activé</string>
+      <string id="SERVER_FILE_TRANSFER_STATE_EXPLAIN">Détermine le transfert de fichiers entre l'agent et HTML Access. Vous pouvez sélectionner l'une des valeurs suivantes :
+
+- Chargement et téléchargement désactivés
+- Chargement et téléchargement activés
+- Chargement de fichiers uniquement activé (c'est-à-dire, autoriser le chargement de fichiers du système client vers le poste de travail View.)
+- Téléchargement de fichiers uniquement activé (c'est-à-dire, autoriser le téléchargement de fichiers du poste de travail View vers le système client.)
+
+Ce paramètre ne s'applique qu'au serveur (poste de travail View).
+
+Lorsque ce paramètre est désactivé ou qu'il n'est pas configuré, la valeur par défaut est « Chargement de fichiers uniquement activé ».</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING">Configurer les formats de redirection du Presse-papiers</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_EXPLAIN">Ce paramètre détermine si un filtre est activé pour chaque format de données (Fichier/Texte/RTF/Image/Texte Microsoft Office//Effets de texte Microsoft Office/Graphique Microsoft Office et SmartArt). L'état de chaque filtre est le suivant :
+
+- Désactivé
+- Activé
+
+Ce paramètre ne s'applique qu'à l'agent, il n'est pas configuré par défaut.
+
+Lorsque le paramètre n'est pas configuré ou qu'est désactivé, les filtres pour « Redirection du Presse-papiers » sont désactivés pour tous les formats.</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_ENABLED">Activé</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_DISABLED">Désactivé</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="SERVER_CLIPBOARD_STATE">
+        <dropdownList refId="SERVER_CLIPBOARD_STATE" defaultItem="1">Configurer la redirection du Presse-papiers</dropdownList>
+      </presentation>
+      <presentation id="SERVER_CLIPBOARD_SIZE">
+        <dropdownList refId="Policy_DropList_Clipboard_Fine_Grained" defaultItem="1" >Choisir l'unité de la taille de la mémoire du Presse-papiers</dropdownList>
+        <decimalTextBox refId="SERVER_CLIPBOARD_SIZE" defaultValue="1024" spinStep="100">Taille de la mémoire du Presse-papiers sur le serveur</decimalTextBox>
+      </presentation>
+      <presentation id="SERVER_CLIPBOARD_AUDIT">
+        <dropdownList refId="SERVER_CLIPBOARD_AUDIT" defaultItem="0">Configurer l'audit du Presse-papiers</dropdownList>
+      </presentation>
+      <presentation id="SERVER_CLIPBOARD_AUDIT_BLOCK_CLIPBOARD">
+        <dropdownList refId="Policy_DropList_Element_Configure_clipboard" defaultItem="0">Configurer le comportement du Presse-papiers si le client ne prend pas en charge l'audit</dropdownList>
+      </presentation>
+      <presentation id="CLIPBOARD_FINE_GRAIN_LABEL" />
+      <presentation id="SERVER_FILE_TRANSFER_STATE">
+        <dropdownList refId="SERVER_FILE_TRANSFER_STATE" defaultItem="3">Configurer le transfert de fichiers</dropdownList>
+      </presentation>
+      <presentation id="CLIPBOARD_FORMAT_FILTERING">
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_FILE_IN" defaultItem="0">Filtrer les fichiers et les dossiers des données de Presse-papiers entrantes :</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_FILE_OUT" defaultItem="0">Filtrer les fichiers et les dossiers des données de Presse-papiers sortantes :</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_TEXT_IN" defaultItem="0">Filtrer le texte des données de Presse-papiers entrantes :</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_TEXT_OUT" defaultItem="0">Filtrer le texte des données de Presse-papiers sortantes :</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_RTF_IN" defaultItem="0">Filtrer les données au format RTF des données de Presse-papiers entrantes :</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_RTF_OUT" defaultItem="0">Filtrer les données au format RTF des données de Presse-papiers sortantes :</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_IMAGE_IN" defaultItem="0">Filtrer les images des données de Presse-papiers entrantes :</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_IMAGE_OUT" defaultItem="0">Filtrer les images des données de Presse-papiers sortantes :</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_IN" defaultItem="0">Filtrer les données de texte Microsoft Office des données de Presse-papiers entrantes :</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_OUT" defaultItem="0">Filtrer les données de texte Microsoft Office des données de Presse-papiers sortantes :</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_CHART_IN" defaultItem="0">Filtrer les données Microsoft Chart and SmartArt des données de Presse-papiers entrantes :</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_CHART_OUT" defaultItem="0">Filtrer les données Microsoft Chart and SmartArt des données de Presse-papiers sortantes :</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_IN" defaultItem="0">Filtrer les données d'effets de texte Microsoft des données de Presse-papiers entrantes :</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_OUT" defaultItem="0">Filtrer les données d'effets de texte Microsoft des données de Presse-papiers sortantes :</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

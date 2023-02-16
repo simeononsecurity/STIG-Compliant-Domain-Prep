@@ -10,7 +10,7 @@
       <string id="persistence_setting_detail">Diese Einstellung legt fest, ob die Druckereigenschaftseinstellungen beibehalten werden oder nicht.
 
 Wenn sie aktiviert ist, wird die Änderung der Druckereigenschaft auf der Agent-Seite nicht beibehalten, nachdem der Benutzer die Verbindung getrennt oder sich von der Sitzung abgemeldet hat, und ist daher nicht persistent.
-Wenn z. B. ein Benutzer die Druckerpapiergröße während der Sitzung von „Brief“ in „A4“ ändert, wird die Papiergröße bei der nächsten erneuten Verbindungsherstellung auf „Brief“ zurückgesetzt und die Änderung „A4“ ist nicht persistent. 
+Wenn z. B. ein Benutzer die Druckerpapiergröße während der Sitzung von „Brief“ in „A4“ ändert, wird die Papiergröße bei der nächsten erneuten Verbindungsherstellung auf „Brief“ zurückgesetzt, und die Änderung „A4“ ist nicht persistent.
 
 Wenn sie nicht konfiguriert oder deaktiviert ist, wird die Änderung der Druckereigenschaft auf der Agent-Seite beibehalten, nachdem der Benutzer die Verbindung getrennt oder sich von der Sitzung abgemeldet hat, und ist daher persistent.
 Wenn z. B. ein Benutzer die Druckerpapiergröße während der Sitzung von „Brief“ in „A4“ ändert, ist die Papiergröße bei der nächsten erneuten Verbindungsherstellung weiterhin auf „A4“ festgelegt, da die Änderung beibehalten wird.
@@ -29,8 +29,11 @@ Diese Einstellung ist standardmäßig nicht konfiguriert.
       <string id="lbp_setting_detail">Mit dieser Richtlinieneinstellung können Sie verwalten, ob standortbasiertes Drucken verwendet werden soll oder nicht.
 
 Wenn Sie diese Richtlinieneinstellung aktivieren, kann das standortbasierte Drucken nicht verwendet werden.
-Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, kann standortbasiertes Drucken verwendet werden.</string>
-	  <string id="lp_setting">Clientdrucker nicht umleiten</string>
+Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, kann standortbasiertes Drucken verwendet werden.
+
+Diese Einstellung ist standardmäßig nicht konfiguriert.
+</string>
+      <string id="lp_setting">Clientdrucker nicht umleiten</string>
       <string id="lp_setting_detail">Mit dieser Richtlinieneinstellung können Sie verwalten, ob (ein) Clientdrucker umgeleitet wird/werden oder nicht.
 
 Wenn Sie diese Richtlinieneinstellung aktivieren, werden keine Clientdrucker umgeleitet.
@@ -38,11 +41,32 @@ Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wer
 
 Diese Einstellung ist standardmäßig nicht konfiguriert.
 </string>
+      <string id="DefaultPrinter">Standarddrucker nicht ändern</string>
+      <string id="DefaultPrinter_detail">Diese Einstellung legt fest, ob VMware Integrated Printing den Standarddrucker in den Remote-Sitzungen ändert.
+
+Wenn ein standortbasierter Drucker als Standarddrucker konfiguriert ist, wird dieser Drucker standardmäßig in den Remote-Sitzungen als Standarddrucker festgelegt. Wenn kein standortbasierter Drucker als Standarddrucker konfiguriert ist, wird der Standard-Clientdrucker in Remote-Sitzungen als Standarddrucker festgelegt und setzt alle im VM-Image ausgewählten Drucker außer Kraft. Sie können diese Einstellung verwerden, um dieses Verhalten außer Kraft zu setzen.
+
+Wenn Sie diese Einstellung aktivieren, ändert VMware Integrated Printing den Standarddrucker in Remote-Sitzungen nicht.
+Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, ändert VMware Integrated Printing den Standarddrucker in Remote-Sitzungen. Dies ist das Standardverhalten.
+
+Diese Einstellung ist standardmäßig nicht konfiguriert.
+
+</string>
       <string id="DriverMapping">Treiberzuordnung </string>
-      <string id="DriverMapping_detail">Mithilfe dieser Einstellung kann der Benutzer den virtuellen Drucker automatisch mit einem anderen Treiber erstellen.
-Beispiel: „A“ =&gt;„a; b; c; d“
-Die Druckerliste „a;b;c;d“ des Kandidaten wird bis zur erfolgreichen automatischen Erstellung des Druckers nacheinander abgearbeitet. Wenn für alle Kandidaten ein Fehler auftritt, wird als Fallback-Lösung der VMware EMF-Druckertreiber verwendet.
+      <string id="DriverMapping_detail">Diese Einstellung gilt für Windows-/Linux-/Mac-Clients. Der Benutzer kann automatisch einen virtuellen Drucker mit einem anderen Treiber als dem des Clients erstellen.
+
+Sie können eine Treiberzuordnung hinzufügen, eine vorhandene Zuordnung bearbeiten oder entfernen. Wenn Sie eine Zuordnung hinzufügen, geben Sie den Namen des Clientdruckertreibers in der Spalte „Wertname“ und dann die Namen der zuzuordnenden Servertreiber in der Spalte „Wert“ ein.
+
+Sie können einen oder mehrere Servertreibernamen in der Spalte „Wert“ angeben. Wenn Sie mehrere Servertreibernamen angeben, trennen Sie jeden Treibernamen durch ein Semikolon wie „TreiberA; TreiberB; TreiberC; TreiberD“.
+
+Alle angegebenen Servertreiber werden nacheinander getestet, bis der umgeleitete Drucker erfolgreich erstellt wurde. Wenn Horizon keinen umgeleiteten Drucker unter Verwendung eines angegebenen Servertreibers erstellen kann, wird „VMware EMF-Druckertreiber“ zum Erstellen eines umgeleiteten Druckers für den Windows-Client und „VMware PostScript-Druckertreiber“ zum Erstellen eines umgeleiteten Druckers für einen Linux-/Mac-Client verwendet.
       </string>
+      <string id="MaxTxRate">Tx-Rate begrenzen (Kbit/s)</string>
+      <string id="MaxTxRate_detail">Mit dieser Einstellung wird die Tx-Rate aller Druckaufträge auf die angegebene Anzahl in Kbit/s begrenzt.
+Die minimal zulässige Tx-Rate beträgt 1.600 KBit/s. Wenn die Tx-Rate nicht konfiguriert oder deaktiviert ist, ist sie nicht beschränkt.
+Die maximal zulässige Tx-Rate beträgt 32.000 KBit/s. Wenn der Wert größer ist, ist die Tx-Rate nicht begrenzt.
+
+</string>
       <string id="printer_creation_setting">Auswahl des Druckertreibers</string>
       <string id="printer_creation_setting_detail">Auswahl des Druckertreibers.
 
@@ -57,11 +81,19 @@ Wenn Sie die dritte Option „Erst NPD, dann UPD verwenden“ auswählen, wird z
 
 Wenn Sie die vierte Option „Erst UPD, dann NPD verwenden“ auswählen, wird zunächst der Universal-Druckertreiber verwendet, und wenn der Universal-Druckertreiber nicht vorhanden ist, wird der native Druckertreiber verwendet.
 
+Bevorzugter universeller Druckertreiber:
+Optionen für den bevorzugten universellen Druckertreiber.
+
+Wenn Sie die erste Option „VMware Universal EMF-Treiber“ auswählen, wird der EMF-Treiber verwendet.
+
+Wenn Sie die zweite Option „VMware Universal XPS-Treiber“ auswählen, wird der XPS-Treiber verwendet.
 </string>
       <string id="printer_creation_setting_npd">NPD immer verwenden</string>
       <string id="printer_creation_setting_upd">UPD immer verwenden</string>
       <string id="printer_creation_setting_npd_upd">Erst NPD, dann UPD verwenden</string>
       <string id="printer_creation_setting_upd_npd">Erst UPD, dann NPD verwenden</string>
+      <string id="preferredEMF">VMware Universal EMF-Treiber</string>
+      <string id="preferredXPS">VMware Universal XPS-Treiber</string>
       <string id="printer_filter">Geben Sie beim Umleiten von Client-Druckern einen Filter an</string>
       <string id="printer_filter_desc">Eine Regel zum Herausfiltern von Clientdruckern, die in der Druckerumleitung übereinstimmen. Unterstützte Attribute sind Druckernamen, Druckertreibernamen und Treiberanbieternamen. Unterstützte Operatoren sind AND, OR und NOT. Das unterstützte Suchmuster sind reguläre Ausdrücke in JavaScript-Dialekt (ECMAScript).
 Standardmäßig ist die Regel leer. Demnach werden alle Client-Drucker umgeleitet.
@@ -84,22 +116,23 @@ Wenn die Option „Direkt drucken“ ausgewählt ist, lautet die Standarddruckop
 
 Wenn die Option „Druckvorschau“ ausgewählt ist, lautet die Standarddruckoption in der Benutzeroberfläche zum Drucken „Druckvorschau“.
 </string>
-
       <string id="print_directly">Direkt drucken</string>
       <string id="print_to_preview">Druckvorschau</string>
-      <string id="printer_name_schema">Druckername für RDSH-Agents</string>
-      <string id="printer_name_schema_desc">Diese Einstellung bestimmt die Druckerbenennungskonvention, wenn Sie VMware Integrated Printing in RDSH verwenden.
-Wenn diese Richtlinie aktiviert ist, sollte von „%P“ ein gültiges Druckernamenschema gestartet werden. Außerdem werden nur die folgenden Suffixe unterstützt.
+      <string id="printer_name_schema">Druckernamenschema</string>
+      <string id="printer_name_schema_desc">Durch diese Einstellung wird die Druckerbenennungskonvention bestimmt, wenn Sie VMware Integrated Printing verwenden.
+Wenn diese Einstellung aktiviert ist, können Sie das Druckernamenschema für VDI und RDSH Agents ändern.
+Das gültige Druckernamenschema muss das Format „%P“ aufweisen. Das Sternchen steht für den konfigurierbaren Teil. Folgende Variablen können im konfigurierbaren Teil verwendet werden.
 %S: Sitzungs-ID
-%C: Name des Clientcomputers
+%C: Name der Clientmaschine
 
-Wenn diese Richtlinie nicht konfiguriert oder deaktiviert ist, verwenden die virtuellen Drucker in RDSH die Sitzungs-ID als Suffix.
-Beispiel: PDFCreator (v2). Hier ist PDFCreator der Clientdruckername, 2 ist die Sitzungs-ID.
-Wenn diese Richtlinie aktiviert ist, kann der Benutzer das Druckernamensschema in RDSH in „%P (%C)“ ändern. Dann wird der Name des Clientcomputers als Suffix des Druckernamens verwendet.
-Beispiel: PDFCreator (Client-PC). PDFCreator ist hier der Clientdruckername, und Client-PC ist der Name des Clientcomputers.
+Wenn diese Einstellung zwar aktiviert, das Druckernamenschema aber leer oder ungültig ist, wird das standardmäßige Druckernamenschema verwendet.
+
+Beispiel: %P%S, %P2%S(nur Zahlen zwischen %P und %S) oder „/“ im Schema enthalten, sind alle ungültig
+
+Wenn diese Einstellung weder konfiguriert noch deaktiviert ist, verwenden VDI-Agents „%P (vdi)“ als Druckernamenschema und RDSH-Agents „%P (v%S)“ als Druckernamenschema.
 
 Diese Einstellung ist standardmäßig nicht konfiguriert.
-      </string>
+</string>
 
       <string id="DefaultSetting">Standardeinstellungen für UPD-Drucker</string>
       <string id="DefaultSetting_desc">Diese Richtlinie legt fest, ob die Standardeinstellungen für UPD-Drucker aktiviert werden sollen.
@@ -108,6 +141,7 @@ Wenn diese Richtlinie nicht konfiguriert oder deaktiviert ist, werden die Standa
 
 Diese Richtlinie ist standardmäßig nicht konfiguriert.
       </string>
+
       <string id="none">Keine</string>
       <string id="duplex_vertical">Lange Seite</string>
       <string id="duplex_horizontal">Kurze Seite</string>
@@ -142,6 +176,7 @@ Diese Richtlinie ist standardmäßig nicht konfiguriert.       </string>
       </presentation>
       <presentation id="PrinterCreationSetting">
           <dropdownList refId="printer_creation_setting_list" defaultItem="2" noSort="true">Auswahlmöglichkeiten für die Druckererstellung:</dropdownList>
+          <dropdownList refId="preferred_upd" defaultItem="0" noSort="true">Bevorzugter UPD:</dropdownList>
       </presentation>
       <presentation id="PrintPreviewSetting">
         <checkBox refId="disable_print_choice">Druckauswahl deaktivieren</checkBox>
@@ -153,12 +188,15 @@ Diese Richtlinie ist standardmäßig nicht konfiguriert.       </string>
           <defaultValue></defaultValue>
         </textBox>
       </presentation>
-       <presentation id="printer_name_schema">
-          <textBox refId="printer_name_schema_textbox">
-             <label>Druckernamenschema</label>
-             <defaultValue>%P (v%S)</defaultValue>
-          </textBox>
-       </presentation>
+      <presentation id="printer_name_schema">
+        <textBox refId="printer_name_schema_textbox">
+          <label>Druckernamenschema</label>
+          <defaultValue></defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="MaxTxRate">
+        <decimalTextBox refId="MaxTxRate" defaultValue="32000">Max. Tx-Rate (Kbit/s)</decimalTextBox>
+      </presentation>
       <presentation id="DefaultSetting">
         <dropdownList refId="DefaultDuplex" defaultItem="0" noSort="true">Duplex:</dropdownList>
         <checkBox refId="IsDuplexLocked">Standard-Duplex-Einstellung immer verwenden</checkBox>

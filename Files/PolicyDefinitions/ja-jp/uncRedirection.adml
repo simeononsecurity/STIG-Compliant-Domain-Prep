@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="UNCPath_GPO_Define">VMware Horizon UNC パス リダイレクト</string>
+      <string id="UNCPathRedirection_Enabled">UNC パス リダイレクトを有効にする</string>
+      <string id="UNCPathRedirection_FilterRule">UNC パス リダイレクト フィルタ ルール</string>
+      <string id="UNCPathRedirection_Enabled_Description">この設定は、UNC パスをリダイレクトできるかどうかを決定します。設定が「未構成」または「無効」の場合、機能が有効になっていないことを意味します。デフォルトは「未構成」です。</string>
+      <string id="UNCPathRedirection_FilterRule_Description">ルールに一致するすべての UNC パスについて、リダイレクトが必要な UNC パスを指定します。
+たとえば、エージェント ルール を .*\.mycompany\.com に設定すると、「.mycompany.com」が含まれるすべての UNC パスがリモート デスクトップまたはアプリケーション セッションにリダイレクトされます。ブローカー ホスト名を設定すると、使用する Horizon Connection Server をさらに指定できます。また、リモート項目を Horizon Administrator コンソールに表示されるプールの表示名に設定すると、使用するデスクトップまたはアプリケーションを指定できます。
+クライアント ルールを .*\.mycompany\.com に設定すると、「.mycompany.com」が含まれるすべての UNC パスがリモート デスクトップまたはアプリケーション セッションから Windows ベースのクライアントにリダイレクトされ、クライアントのデフォルト アプリケーションで開きます。
+
+注
+
+複数のルールを設定する場合は、各ルールをセミコロンで区切ってください。手動ラップはサポートされていません。</string>
+      <string id="ADMXMigrator_NoSupportedOn">ADMX Migrator が、supportedOn 値が設定されていないポリシーを検出しました。</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="UNCPathRedirectionEnabled" />
+      <presentation id="UNCPathRedirectionFilterRule">
+        <textBox refId="brokerHostname">
+          <label>ブローカー ホスト名</label>
+        </textBox>
+        <textBox refId="remoteItem">
+          <label>リモート項目</label>
+        </textBox>
+        <text>クライアント ルール</text>
+          <multiTextBox refId="clientRules" />
+        <text>エージェント ルール</text>
+          <multiTextBox refId="agentRules" />
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

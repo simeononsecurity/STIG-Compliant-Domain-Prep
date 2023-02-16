@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<policyDefinitionResources
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	revision="1.0"
+	schemaVersion="1.0"
+	xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+
+<displayName>ここに表示名を入力</displayName>
+
+<description>ここに説明を入力</description>
+
+<resources>
+
+<stringTable>
+
+<string id="CASCADIA_APP_COMPATIBILITY">アプリケーションの互換性</string>
+
+<string id="CASCADIA_APP_COMPATIBILITY_Help">RD セッション ホスト サーバのアプリケーションの互換性の設定を制御します。</string>
+
+<string id="CASCADIA_ENABLE_IP_VIRTUALIZATION">リモート デスクトップの IP アドレスの仮想化を有効にする</string>
+
+<string id="CASCADIA_ENABLE_IP_VIRTUALIZATION_EXPLAIN">このポリシー設定は、リモート デスクトップの IP アドレスの仮想化を有効にするかどうかを指定します。デフォルトでは、リモート デスクトップの IP アドレスの仮想化は無効です。このポリシー設定を有効にすると、リモート デスクトップの IP アドレスの仮想化が有効になります。この設定が適用されるモードを選択できます。プログラム単位モードを使用する場合は、仮想 IP アドレスを使用するプログラムのリストを入力する必要があります。各プログラムを個別の行に入力してください (プログラム間に空の行を入れないでください)。例:
+
+explorer.exe
+mstsc.exe
+
+このポリシー設定を無効にした場合、または構成しない場合は、リモート デスクトップの IP アドレスの仮想化は無効になります。</string>
+
+<string id="CASCADIA_ENABLE_SESSION_MODE_IP_VIRTUALIZATION">セッション単位</string>
+
+<string id="CASCADIA_ENABLE_PRPGRAM_MODE_IP_VIRTUALIZATION">プログラム単位</string>
+
+<string id="CASCADIA_NET_ID_IP_VIRTUALIZATION">リモート デスクトップの IP アドレスの仮想化に使用するネットワーク アダプタを選択する</string>
+
+<string id="CASCADIA_NET_ID_IP_VIRTUALIZATION_EXPLAIN">このポリシー設定は、仮想 IP アドレスに使用されるネットワーク アダプタに対応する IP アドレスとネットワーク マスクを指定します。IP アドレスとネットワーク マスクは、Classless Inter-Domain Routing の表記で入力する必要があります (例: 192.0.2.96/24)。
+
+このポリシー設定を有効にすると、指定した IP アドレスとネットワーク マスクが使用されて、仮想 IP アドレスに使用されるネットワーク アダプタが選択されます。このポリシー設定を無効にした場合、または構成しない場合は、リモート デスクトップの IP アドレスの仮想化は無効になります。リモート デスクトップの IP アドレスの仮想化を機能させるには、ネットワーク アダプタを構成する必要があります。</string>
+
+<string id="CASCADIA_NOT_USE_SERVER_IP_WITH_IP_VIRTUALIZATION">仮想 IP アドレスを利用できない場合にリモート デスクトップ セッション ホスト サーバの IP アドレスを使用しない</string>
+
+<string id="CASCADIA_NOT_USE_SERVER_IP_WITH_IP_VIRTUALIZATION_EXPLAIN">このポリシー設定は、仮想 IP アドレスが使用できない場合にリモート デスクトップ セッション ホスト サーバの IP アドレスをセッションが使用するかどうかを指定します。このポリシー設定を有効にすると、仮想 IP アドレスが使用できない場合に RD セッション ホスト サーバの IP アドレスが使用されません。このセッションではネットワーク接続が確立されていません。このポリシー設定を無効にした場合、または構成しない場合、仮想 IP アドレスが使用できないときに、RD セッション ホスト サーバの IP アドレスが使用されます。</string>
+
+<string id="CASCADIA_ENABLE_DFSS">CPU スケジュール設定の公平なシェアを有効にする</string>
+
+<string id="CASCADIA_ENABLE_DFSS_EXPLAIN">CPU スケジュール設定の公平なシェアは、同じ RD セッション ホスト サーバ上のすべてのリモート デスクトップ サービス セッション間で、セッションの数と、各セッション内でのプロセッサ時間の要求に基づき、プロセッサ時間を動的に分散します。このポリシー設定を有効にすると、CPU スケジュール設定の公平なシェアはオフになります。このポリシー設定を無効にした場合、または構成しない場合、CPU スケジュール設定の公平なシェアはオンになります。</string>
+
+<string id="CASCADIA_DISABLE_MSI">Windows Installer RDS Compatibility をオフにする</string>
+
+<string id="CASCADIA_DISABLE_MSI_EXPLAIN">このポリシー設定は、Windows Installer RDS Compatibility が、フルインストールされたアプリケーションのユーザーごとに実行されるかどうかを指定します。Windows インストーラで一度に実行できる msiexec プロセス インスタンスは 1 つです。デフォルトでは、Windows Installer RDS Compatibility が有効になります。このポリシー設定を有効にすると、Windows Installer RDS Compatibility が無効になり、一度に実行できる msiexec プロセス インスタンスは 1 つになります。このポリシーが無効な場合、または構成されていない場合、Windows Installer RDS Compatibility が有効になり、複数のユーザーごとのアプリケーションのインストール要求が待機中になり、それらが受け取られた順に msiexec プロセスによって処理されます。</string>
+
+</stringTable>
+
+<presentationTable>
+	<presentation id="CASCADIA_NET_ID_IP_VIRTUALIZATION">
+		<textBox refId="CASCADIA_NET_ID_IP_VIRTUALIZATION">
+		<label>リモート デスクトップの IP アドレスの仮想化に使用するネットワーク アダプタの IP アドレスとネットワーク マスクを定義する:</label>
+		</textBox>
+		<text>形式は [IP アドレス]/[ネットワーク マスク] です。例:192.0.2.96/24</text>
+		</presentation>
+		<presentation id="CASCADIA_ENABLE_IP_VIRTUALIZATION">
+		<dropdownList refId="CASCADIA_ENABLE_IP_VIRTUALIZATION" noSort="true" defaultItem="0">リモート デスクトップの IP アドレスの仮想化モードを有効にする:</dropdownList>
+		<multiTextBox refId="CASCADIA_ENABLE_IP_VIRTUALIZATION_EDIT">次のプログラムに仮想 IP アドレスを割り当てる:</multiTextBox>
+		<text>複数のプログラムをリストにする場合、1 行に 1 つずつ指定します (各プログラムの間に空白行を入れないでください)。例:</text>
+		<text>explorer.exe
+		mstsc.exe</text>
+	</presentation>
+</presentationTable>
+</resources>
+</policyDefinitionResources>

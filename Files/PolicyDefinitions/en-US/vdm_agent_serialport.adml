@@ -1,4 +1,4 @@
-<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+﻿<policyDefinitionResources revision="1.0" schemaVersion="1.0">
   <displayName>
   </displayName>
   <description>
@@ -23,6 +23,39 @@ If this policy setting is not configured, the disabling functionality is determi
       <string id="RedirectAll_PolicyExplain">If this policy setting is enabled, all client COM ports will be automatically connected (even if no individual GPO is configured). If there are individual GPO settings configured for some of the ports, the individual port GPO settings are used.
 
 If this policy setting is disabled or not configured, the auto-connect functionality is determined by individual port GPO or local program settings.</string>
+      <string id="EnableEventLog_PolicyName">Enable Windows Event Log functionality</string>
+      <string id="EnableEventLog_PolicyExplain">If this policy setting is enabled, different serial port related events will be written to the Application Log category of the Windows Event Log.
+
+If this policy setting is disabled or not configured, no any log records will write to Application part of Windows EventViewer.
+
+The following events are supported:
+5 - Trying to establish a connection to the Client PC.
+10 - Connection between agent and client sides is established.
+20 - Connection is closed between agent and client sides.
+30 - The initial port enumeration (the list of serial ports available on the Client PC and available for the connection).
+40 - Connected. The port has been connected.
+41 - Connected. The port is occupied (while session reconnected). The port becomes readable/writable again.
+50 - Disconnected. The port has disconnected.
+51 - Disconnected. The port is occupied (while session disconnect detected). The port remains active but not readable/writable.
+60 - Error
+
+The format of the port item entry:
+&lt;Source port name&gt; DELIMETER &lt;Destination port name&gt; DELIMETER &lt;Hardware ID&gt; DELIMITER &lt;Device Description&gt;
+
+&lt;Source port name&gt; – the name of the COM port, as it appears on the Client PC, e.g. COM2
+&lt;Destination port name&gt; – the name of virtual COM port, as it appears in remote desktop session, e.g. COM15
+&lt;Hardware ID&gt; and &lt;Description&gt; - The parent device properties (in case of the serial port on the Client PC is actually a USB or some other device)
+DELIMETER - Event data format separator string
+
+Example (comma-character is used as a DELIMITER):
+COM20,COM28,USB\VID_067B&amp;PID_2303&amp;REV_0400,Prolific USB-to-Serial Comm Port</string>
+      <string id="EventLogTableSeparator_PolicyName">Enable Event data format separator</string>
+      <string id="EventLogTableSeparator_PolicyExplain">When enabled, this policy defines the string that is used row separator for data fields.
+	  
+The default separator is Tab-character. But it’s possible to change it to any other character, like a comma, a semicolon, a space, or any other custom character or even a string.</string>
+	  <string id="EventLogTableSeparatorType_TAB_combo_txt">Tab</string>
+	  <string id="EventLogTableSeparatorType_SPACE_combo_txt">Space</string>
+	  <string id="EventLogTableSeparatorType_custom_combo_txt">Custom string</string>
       <string id="PortIsolationMode_PolicyName">COM Port Isolation Mode</string>
       <string id="PortIsolationMode_PolicyExplain">If "Full Isolation" mode is chosen, virtual serial ports are visible and accessible within user sessions only. In this mode COM port names can have the same names in different user sessions. Important: system services (like spoolsrv.exe) are not able to access isolated serial ports in such case".
 
@@ -52,7 +85,14 @@ If this policy setting is not configured, the speed limitation is determined by 
 
 In case if some port is not allowed for redirection, the Agent side will threat it as if the port does not even exist on the Client side.
 
-The lists use USB device properties of the COM port's parent USB device.
+The policy is multi-line string that contains a list of rules.
+
+Example:
+  USB:067B:2303:*
+  USBPATH:1-4
+  WINDEVID:*ACPI*
+  PORTNAME:COM3
+  PORTNAME:COM5
 
 Syntax:
   USB:[*|VID[:*|:PID[:*|:REV]]]
@@ -60,18 +100,31 @@ Syntax:
     PID - Hex numeric PID (Product ID) value from device HardwareID
     REV - Hex numeric REV (Revision) value from device HardwareID
     when VID, PID, REV equal to "*" - it means any value.
+	
+  USBPATH:[N1[-N2[...[-N8]]]]
+    Nx - Numeric value (1-127 range) that identifies the USB port.	
   
   WINDEVID:[HwId|*|?]
     HwId - full or partial value of device HardwareID (wildcards characters * and ? are supported). Case insensitive.
+
+  PORTNAME:[PortName|*|?]
+    PortName - full or partial value of serial port name (wildcards characters * and ? are supported). Case insensitive.
 
 Examples:
   USB:067B:2303:400 - matches the USB device with the specified VID, PID and Revision. USB\VID_067B&amp;PID_2303&amp;REV_0400
   USB:067B:2303:* - matches any USB device with the specified VID and PID and any Revision. USB\VID_067B&amp;PID_2303
   USB:067B:* - matches any USB device with the specified VID and any PID and any Revision. USB\VID_067B
   USB:* - matches any USB device
+  
+  USBPATH:1-2-1 - matches the identificator of the USB port where the device is plugged physically  
 
   WINDEVID:*  - matches any HardwareID string
   WINDEVID:*ACPI* - matches a HardwareID string containing ACPI substring
+  
+  PORTNAME:COM3 - matches only "COM3" serial port
+  PORTNAME:*M3 - matches serial ports with the names ending with "M3". E.g. COM3, VCOM3.
+  PORTNAME:*M3* - matches serial ports with names containing "M3" substring. E.g. COM3, COM33, VCOM333.
+  PORTNAME:/dev/ttys* - matches all "/dev/ttys" devices. E.g. /dev/ttyS0, /dev/ttyS5.
 
 Remarks:
   The Allow list has higher priority. So if the device is matched by the Deny list, the device is excluded from the redirection. But if at the same time the device is matched by the Allow list, the device is allowed for the redirection.
@@ -89,7 +142,11 @@ Remarks:
 
 "Source port number" - Number of the COM port redirected from the client side (e.g. 2 means COM2).
 
-"Source port device" - Name of Serial port device redirected from the client side (e.g. "COM5" for Windows, or "/dev/ttySerial0" for Linux. This paramerter has higer priority than Source port number.).
+"Source port device" - By default, the name of Serial port device redirected from the client side. Also, special syntax is supported for complex serial device matching.
+
+Note: This parameter has higher priority than Source port number.
+
+Source port is usually identified by the device name (e.g., "COM5" for Windows, or "/dev/ttySerial0" for Linux). Anyway, special matching syntax is supported in order to identify the source serial device by USB device properties, USB Port identifier and so on. Refer to Allow/deny filters section for more details.
 
 "Destination virtual port number" - virtual COM port number, created on the agent side and corresponding to the COM port on the client side.
 
@@ -175,6 +232,13 @@ If this policy setting is configured for the computer, it has priority over poli
     <presentationTable>
       <presentation id="LocalSettingsPriority_PolicyName" />
       <presentation id="DisableFunctionality_PolicyName" />
+      <presentation id="EnableEventLog_PolicyName" />
+	  <presentation id="EventLogTableSeparator_PolicyName">
+		<dropdownList refId="EventLogTableSeparatorType_Enum" noSort="true">Event data format separator:</dropdownList>
+        <textBox refId="EventLogTableSeparatorType_custom_Text">
+            <label>Custom string:</label>
+        </textBox>
+	  </presentation>
       <presentation id="RedirectAll_PolicyName" />
       <presentation id="PortIsolationMode_PolicyName">
         <dropdownList refId="PortIsolationMode_Enum" noSort="true">COM Port Isolation Mode:</dropdownList>

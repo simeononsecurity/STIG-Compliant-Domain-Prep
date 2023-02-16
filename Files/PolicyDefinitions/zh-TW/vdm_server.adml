@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" >
+
+	<displayName >在這裡輸入顯示名稱</displayName>
+	<description >VMware Horizon View Server 組態設定</description>
+	<resources >
+		<stringTable >
+
+			<string id="Undefined" >未定義</string>
+
+			<string id="View_Server_Config" >VMware View Server 組態</string>
+
+			<string id="Pwd_Auth_Mode" >Windows 密碼驗證模式</string>
+
+			<string id="Pwd_Auth_Mode_Desc" >選取 Windows 密碼驗證模式。
+
+KerberosOnly: 使用 Kerberos 進行驗證。
+KerberosWithFallbackToNTLM: 使用 Kerberos 進行驗證，但失敗時則退回使用 NTLM。
+舊版: 使用 NTLM 進行驗證，但失敗時則退回使用 Kerberos。用於支援舊版 NT 網域控制站。
+
+預設為 KerberosOnly。</string>
+
+			<string id="Kerberos_Only" >KerberosOnly</string>
+
+			<string id="Kerberos_With_NTLM_Fallback" >KerberosWithFallbackToNTLM</string>
+
+			<string id="Legacy" >舊版</string>
+
+			<string id="Trusted_Domain_Enumeration" >信任的網域的遞迴列舉</string>
+
+			<string id="Trusted_Domain_Enumeration_Desc" >決定是否列舉伺服器所在網域所信任的每個網域。為了建立完整的信任鏈結，也要列舉每個信任的網域所信任的網域，在搜尋到所有信任的網域之前，程序才會以遞迴的方式繼續。此資訊會傳遞到 View 連線伺服器，以確保用戶端在登入時可以使用所有信任的網域。
+
+此內容依預設為啟用。停用時，只會列舉直接信任的網域，因此不會與遠端網域控制站建立連線。
+
+注意: 在網域關係複雜的環境 (例如，在其樹系中使用網域間受信任的多個樹系結構的環境) 中，此程序可能需要幾分鐘才能完成。</string>
+
+			<string id="Enumerate_Forest_Trust_Child_Domains" >列舉樹系信任子網域</string>
+
+			<string id="Enumerate_Forest_Trust_Child_Domains_Desc" >決定是否列舉樹系信任的子網域。
+
+如果未設定，則預設為 true。</string>
+
+		</stringTable>
+
+		<presentationTable ><!--Storage for Presentation Definitions-->
+
+			<presentation id="Windows_Pwd_Auth_Mode" >
+				<dropdownList refId="Windows_Pwd_Auth_Mode_DropDown_1" defaultItem="0" >Windows 密碼驗證模式</dropdownList>
+			</presentation>
+
+		</presentationTable>
+
+	</resources>
+
+</policyDefinitionResources>

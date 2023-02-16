@@ -1,0 +1,995 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="CertCheckMode_NoSecurity">보안 없음</string>
+      <string id="CertCheckMode_WarnButAllow">주의를 표시하되 허용</string>
+      <string id="CertCheckMode_FullSecurity">전체 보안</string>
+      <string id="ProtocolConnectionCertCheckMode_TP">지문 확인</string>
+      <string id="ProtocolConnectionCertCheckMode_TPORPKI">지문 또는 PKI 확인</string>
+      <string id="ProtocolConnectionCertCheckMode_PKIANDTP">PKI 및 지문 확인</string>
+      <string id="ProtocolConnectionCertCheckMode_PKI">PKI 확인</string>
+      <string id="EnableTicketSSLAuth_Enable">사용</string>
+      <string id="EnableTicketSSLAuth_Disable">사용 안 함</string>
+      <string id="EnableTicketSSLAuth_Enforce">강제 적용</string>
+      <string id="DesktopLayout_FullScreen">전체 화면</string>
+      <string id="DesktopLayout_WindowLarge">창 - 크게</string>
+      <string id="DesktopLayout_WindowSmall">창 - 작게</string>
+      <string id="DesktopLayout_MultiMonitor">다중 모니터</string>
+      <string id="AppSessionReconnectBehavior_Ask">열려 있는 애플리케이션에 다시 연결할지 묻기</string>
+      <string id="AppSessionReconnectBehavior_Always">열려 있는 애플리케이션에 자동으로 다시 연결</string>
+      <string id="AppSessionReconnectBehavior_Never">묻지 않고 자동으로 다시 연결하지 않음</string>
+      <string id="AllSessionsDisconnectedBehavior_Quit">종료</string>
+      <string id="AllSessionsDisconnectedBehavior_Logoff">로그오프</string>
+      <string id="AllSessionsDisconnectedBehavior_Keep">클라이언트를 현재 상태로 유지</string>
+      <string id="ColorDepth_8bit">8비트</string>
+      <string id="ColorDepth_15bit">15비트</string>
+      <string id="ColorDepth_16bit">16비트</string>
+      <string id="ColorDepth_24bit">24비트</string>
+      <string id="ColorDepth_32bit">32비트</string>
+      <string id="AudioRedirectionMode_PlayInVM">VM에서 재생(VoIP USB 지원에 필요)</string>
+      <string id="AudioRedirectionMode_RedirectToClient">클라이언트로 리디렉션</string>
+      <string id="AudioRedirectionMode_DisableAudio">오디오 사용 안 함</string>
+      <string id="KeyboardHookMode_ApplyKeyCombinationsLocal">로컬에서 키 조합 적용</string>
+      <string id="KeyboardHookMode_SendKeyCombinationsToVM">VM에 키 조합 전송</string>
+      <string id="LocalModeExitBehavior_Shutdown">종료</string>
+      <string id="LocalModeExitBehavior_Suspend">일시 중단</string>
+      <string id="VMwareViewClientUSB">View USB 구성</string>
+      <string id="VMwareViewClientOnlySetting">Agent에서 구성할 수 없는 설정</string>
+      <string id="ExcludePath">경로 제외</string>
+      <string id="ExcludePathExplain">전달되지 않도록 지정된 허브 또는 포트 경로에서 디바이스를 제외합니다.</string>
+      <string id="IncludePath">경로 포함</string>
+      <string id="IncludePathExplain">전달할 수 있는 지정된 허브 또는 포트 경로에서 디바이스를 포함합니다.</string>
+      <string id="SplitExcludeVidPid">분할에서 Vid/Pid 디바이스 제외</string>
+      <string id="SplitExcludeVidPidExplain">해당 벤더 ID 및 제품 ID로 지정된 복합 디바이스의 구성 요소 디바이스가 필터링을 위해 별도 디바이스로 처리되지 않도록 제외합니다.
+
+구문: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx|*&gt;&gt;[;...]
+
+예: vid-0781_pid-554c;vid-0781_pid-9999</string>
+      <string id="SplitVidPid">Vid/Pid 디바이스 분할</string>
+      <string id="SplitVidPidExplain">필터링의 별도 디바이스로 벤더 및 제품 ID로 지정된 복합 디바이스의 구성 요소 디바이스를 처리합니다.
+
+구문: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx|*&gt;(exintf:xx[;exintf:xx])&gt;[;...]
+
+예: vid-0781_pid-554c(exintf:01;exintf:02);vid-0781_pid-9999(exintf:02)</string>
+      <string id="ExcludeVidPid">Vid/Pid 디바이스 제외</string>
+      <string id="ExcludeVidPidExplain">지정된 벤더 ID 및 제품 ID를 갖는 디바이스를 전달하지 않도록 제외합니다.
+
+구문: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx | *&gt;&gt;[;...]
+
+예: vid-0781_pid-554c;vid-0781_pid-9999</string>
+      <string id="ExcludeVidPidRel">Vid/Pid/Rel 디바이스 제외</string>
+      <string id="ExcludeVidPidRelExplain">지정된 벤더 ID, 제품 ID 및 릴리스 번호를 갖는 디바이스를 전달하지 않도록 제외합니다.
+
+구문: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx&gt;_rel-&lt;xxxx | *&gt;&gt;[;...]
+
+예: vid-0781_pid-554c_rel-0100;vid-0781_pid-9999_rel-0010</string>
+      <string id="IncludeVidPid">Vid/Pid 디바이스 포함</string>
+      <string id="IncludeVidPidExplain">지정된 벤더 ID 및 제품 ID를 갖는 디바이스를 전달할 수 있도록 포함합니다.
+
+구문: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx | *&gt;&gt;[;...]
+
+예: vid-0781_pid-554c;vid-0781_pid-9999</string>
+      <string id="IncludeVidPidRel">Vid/Pid/Rel 디바이스 포함</string>
+      <string id="IncludeVidPidRelExplain">지정된 벤더 ID, 제품 ID 및 릴리스 번호를 갖는 디바이스를 전달할 수 있도록 포함합니다.
+
+구문: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx&gt;_rel-&lt;xxxx | *&gt;&gt;[;...]
+
+예: vid-0781_pid-554c_rel-0100;vid-0781_pid-9999_rel-0010</string>
+      <string id="ExcludeFamily">디바이스 제품군 제외</string>
+      <string id="ExcludeFamilyExplain">전달되지 않도록 디바이스 제품군을 제외합니다.
+
+구문: &lt;family-name&gt;[;...]
+
+예: bluetooth;audio-in</string>
+      <string id="IncludeFamily">디바이스 제품군 포함</string>
+      <string id="IncludeFamilyExplain">전달할 수 있는 디바이스 제품군을 포함합니다.
+
+구문: &lt;family-name&gt;[;...]
+
+예: storage;audio-out</string>
+      <string id="ExAutoRedirectVidPid">자동 연결 Vid/Pid 디바이스 제외</string>
+      <string id="ExAutoRedirectVidPidExplain">지정된 벤더 ID 및 제품 ID를 갖는 디바이스를 자동으로 전달하지 않도록 제외합니다.
+
+구문: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx | *&gt;&gt;[;...]
+
+예: vid-0781_pid-554c;vid-0781_pid-9999</string>
+      <string id="ExAutoRedirectFamily">자동 연결 디바이스 제품군 제외</string>
+      <string id="ExAutoRedirectFamilyExplain">디바이스 제품군을 자동으로 전달하지 않도록 제외합니다.
+
+구문: &lt;family-name&gt;[;...]
+
+예: storage; hid</string>
+      <string id="ExcludeAllDevices">모든 디바이스 제외</string>
+      <string id="ExcludeAllDevicesExplain">포함 필터 규칙을 통해 포함되지 않는 한 모든 디바이스를 차단합니다.
+
+기본값: 모든 디바이스 허용</string>
+      <string id="VMwareViewAgentToClientUSB">클라이언트 다운로드 가능한 설정만</string>
+      <string id="AllowHID">기타 입력 디바이스 허용</string>
+      <string id="AllowHIDExplain">HID 부팅 가능 디바이스, 키보드 및 마우스 디바이스가 아닌 입력 디바이스를 전달하도록 허용합니다.
+
+기본값: 전달 허용</string>
+      <string id="AllowHIDBootable">HID 부팅 가능 허용</string>
+      <string id="AllowHIDBootableExplain">부팅 가능 입력 디바이스(HID 부팅 가능 디바이스라고도 함)를 전달하도록 허용합니다.
+
+기본값: 전달 허용</string>
+      <string id="AllowAudioIn">오디오 입력 디바이스 허용</string>
+      <string id="AllowAudioInExplain">오디오 입력 디바이스를 전달하도록 허용합니다.
+
+기본값: 전달 허용</string>
+      <string id="AllowAudioOut">오디오 출력 디바이스 허용</string>
+      <string id="AllowAudioOutExplain">오디오 출력 디바이스를 전달하도록 허용합니다.
+
+기본값: 전달 차단</string>
+      <string id="AllowKeyboardMouse">키보드 및 마우스 디바이스 허용</string>
+      <string id="AllowKeyboardMouseExplain">키보드 및 마우스 디바이스를 전달하도록 허용합니다.
+
+기본값: 전달 차단</string>
+      <string id="AllowVideo">비디오 디바이스 허용</string>
+      <string id="AllowVideoExplain">비디오 디바이스를 전달하도록 허용합니다.
+
+기본값: 전달 허용</string>
+      <string id="AllowSmartcard">스마트 카드 허용</string>
+      <string id="AllowSmartcardExplain">스마트 카드 디바이스를 전달하도록 허용합니다.
+
+기본값: 전달 차단</string>
+      <string id="AllowAutoDeviceSplitting">자동 디바이스 분할 허용</string>
+      <string id="AllowAutoDeviceSplittingExplain">별도의 디바이스로 자동 처리되지 않도록 모든 복합 디바이스의 구성 요소 디바이스를 제외합니다.</string>
+      <string id="DisableRemoteConfig">원격 구성 사용 안 함</string>
+      <string id="DisableRemoteConfigExplain">원격 구성에 대해 다운로드를 사용하지 않도록 설정합니다.</string>
+      <string id="AllowDevDescFailsafe">디바이스 설명자 페일세이프 동작 허용</string>
+      <string id="AllowDevDescFailsafeExplain">설명자 페일세이프 동작을 사용하도록 설정합니다. 설명자 가져오기가 실패하는 경우 디바이스가 차단되지 않습니다.</string>
+      <string id="VMwareViewClient">VMware Horizon Client 구성</string>
+      <string id="AllowDataSharing">데이터 공유 허용</string>
+      <string id="AllowDataSharingExplain">VMware는 하드웨어 및 소프트웨어 호환성에 대한 우선 순위를 지정하기 위해 클라이언트 시스템의 데이터를 수집합니다. 귀사가 이 프로그램에 참여하는 경우 VMware에 귀하의 환경에 관한 익명 데이터가 전송됩니다.
+이 속성은 기본적으로 사용하도록 설정됩니다.</string>
+      <string id="AllowPluginUpdate">최종 사용자가 플러그인을 설치하거나 업그레이드할 수 있도록 허용</string>
+      <string id="AllowPluginUpdateExplain">이 GPO를 사용하도록 설정하면 플러그인을 설치하거나 업그레이드해야 할 때마다 Horizon Client UI에 항상 플러그인 설치 대화상자가 표시됩니다. 이 GPO를 사용하지 않도록 설정하면 Horizon Client에 플러그인 설치 대화상자가 표시되지 않습니다. GPO를 [구성되지 않음]으로 설정하면 사용자는 클라이언트 UI에서 이 설정을 제어할 수 있습니다.</string>
+      <string id="AllowResolutionDpiSync">서버에 해상도 및 DPI 저장</string>
+      <string id="AllowResolutionDpiSyncExplain">사용하도록 설정되면 Horizon Client는 데스크톱 해상도 및 DPI 크기 조정을 서버에 자동으로 저장합니다. 이 GPO를 사용하면, 사용자가 나중에 사용자 지정 설정을 사용하고 이름이 Jane인 경우 원격 데스크톱을 실행할 때마다 사용자 지정 설정이 자동으로 적용됩니다. 사용자 지정 설정을 설정하지 않은 사용자는 로컬 하드웨어의 해상도 및 DPI와 일치시킬 기본 설정을 계속해서 볼 수 있습니다. GPO가 동일한 모니터 구성을 사용하는 다른 시스템에 설정된 경우 Jane은 해당 시스템에서도 자신의 사용자 지정 설정을 볼 수 있습니다.
+
+이 속성은 기본적으로 사용하지 않도록 설정됩니다.</string>
+      <string id="EnableShade">음영 사용</string>
+      <string id="EnableShadeExplain">Horizon Client 창의 상단에 있는 음영 [메뉴 모음]을 사용하도록 설정할지 여부를 결정합니다.
+
+이 속성은 기본적으로 사용하도록 설정됩니다.</string>
+      <string id="InitialPinState">음영 핀</string>
+      <string id="InitialPinStateExplain">메뉴 모음의 자동 숨김을 방지하기 위해 Horizon Client 창 상단의 음영에서 핀을 사용하도록 설정할지 여부를 결정합니다. 참고: 이 속성은 음영을 사용하지 않도록 설정하는 경우 영향을 주지 않습니다.
+
+이 속성은 기본적으로 사용하도록 설정됩니다.</string>
+      <string id="DisableSpanChecks">스패닝 시 모니터 정렬을 확인하지 않음</string>
+      <string id="DisableSpanChecksExplain">조합 시 화면에서 정확한 사각형을 형성(즉, 왼쪽 및 오른쪽 모니터 배치 시 동일한 높이, 상단 및 하단 배치 시 동일한 너비)하지 않는 경우 기본적으로 클라이언트 데스크톱은 다중 모니터를 스패닝하지 않습니다.
+
+이 속성은 이 규칙을 무시하며 기본적으로 사용하지 않도록 설정됩니다.</string>
+      <string id="EnableMMR">멀티미디어 가속화 사용</string>
+      <string id="EnableMMRExplain">멀티미디어 리디렉션(MMR)을 클라이언트에서 사용하도록 설정할지 여부를 지정합니다. MMR은 TCP 소켓을 통해 직접 원격 시스템의 특정 코덱에서 클라이언트로 멀티미디어 데이터를 전달하는 Microsoft DirectShow 필터입니다. 그러면 데이터가 직접 클라이언트에서 디코딩되며 여기에서 재생됩니다. 관리자는 클라이언트에 로컬 멀티미디어 디코딩을 처리할 충분한 리소스가 없는 경우 MMR을 사용하지 않도록 설정할 수 있습니다.
+
+참고: MMR은 Horizon Client 비디오 디스플레이 하드웨어에 오버레이 지원이 되지 않는 경우 올바르게 작동하지 않습니다. MMR 정책은 오프라인 데스크톱 세션에 적용되지 않습니다.</string>
+      <string id="AlwaysOnTop">항상 위</string>
+      <string id="AlwaysOnTopExplain">Horizon Client 창을 항상 위에 배치할지 여부를 지정합니다.
+
+이 설정은 기본적으로 사용하지 않도록 설정됩니다.</string>
+      <string id="AutomaticallyInstallShortcuts">Horizon Server에 구성된 경우 자동으로 바로 가기 설치</string>
+      <string id="AutomaticallyInstallShortcutsExplain">이 정책은 바로 가기가 서버에 구성된 경우 이를 자동으로 Horizon Client에 설치할지 여부를 구성합니다. 사용하도록 설정되면 사용자에게 메시지가 표시되지 않고 대신에 바로 가기가 자동으로 설치됩니다. 사용하지 않도록 설정되면 바로 가기가 설치되지 않습니다. 구성되지 않은 경우 사용자에게 바로 가기를 설치하라는 메시지가 표시됩니다.</string>
+      <string id="HideClientAfterLaunchSession">'항목을 시작하면 선택기 숨기기' 확인란의 기본값</string>
+      <string id="HideClientAfterLaunchSessionExplain">'항목을 시작하면 선택기 숨기기' 확인란을 기본적으로 선택할지 설정합니다.
+
+이 설정은 기본적으로 사용하지 않도록 설정됩니다.</string>
+      <string id="VMwareViewClientScripting">스크립팅 정의</string>
+      <string id="ServerURL">서버 URL</string>
+      <string id="ServerURLExplain">로그인하는 동안 Horizon Client에서 사용하는 URL을 결정합니다(예: https://view1.example.com).</string>
+      <string id="UserName">로그온 사용자 이름</string>
+      <string id="UserNameExplain">로그인하는 동안 Horizon Client에서 사용하는 사용자 이름을 결정합니다.</string>
+      <string id="DomainName">로그온 도메인 이름</string>
+      <string id="DomainNameExplain">로그인하는 동안 Horizon Client에서 사용하는 NETBIOS 도메인을 결정합니다(예: EXAMPLE).</string>
+      <string id="Password">로그온 암호</string>
+      <string id="PasswordExplain">로그인하는 동안 Horizon Client에서 사용하는 암호를 결정합니다.
+
+주의: 이 암호는 Active Directory에서 일반 텍스트로 저장됩니다.</string>
+      <string id="DesktopName">선택할 데스크톱 이름</string>
+      <string id="DesktopNameExplain">로그인하는 동안 Horizon Client에서 사용하는 기본 데스크톱을 결정합니다.</string>
+      <string id="DesktopLayout">데스크톱 레이아웃</string>
+      <string id="DesktopLayoutExplain">데스크톱을 실행할 때 Horizon Client 창의 디스플레이 상태를 결정합니다.</string>
+      <string id="FullScreen">전체 화면</string>
+      <string id="Window">창</string>
+      <string id="MultiMonitor">다중 모니터</string>
+      <string id="LockedGuestSize">잠긴 게스트 크기</string>
+      <string id="LockedGuestWidth">잠긴 게스트 너비  </string>
+      <string id="LockedGuestHeight">잠긴 게스트 높이</string>
+      <string id="LockedGuestSizeExplain">원격 데스크톱의 화면 해상도를 결정합니다. 설정을 사용하도록 지정하면 원격 데스크톱 자동 맞춤 기능이 사용하지 않도록 설정됩니다.
+
+최소 화면 크기: 640x480
+최대 화면 크기: 4096x4096
+
+참고: 이 설정은 RDP 연결에 적용되지 않음</string>
+      <string id="NonInteractive">오류 메시지 생략(완전히 스크립트로 작성된 경우에만)</string>
+      <string id="NonInteractiveExplain">로그인하는 동안 오류 메시지를 표시할지 여부를 결정합니다.
+
+참고: 이 속성은 로그인 프로세스가 완전히 스크립트로 작성된 경우, 즉 모든 필수 로그인 정보가 정책을 통해 미리 채워진 경우에만 적용됩니다.
+
+참고: 잘못된 로그인 정보가 입력된 계정에서 로그인이 실패하는 경우 사용자는 알림을 받지 않으며 Horizon Client wswc.exe 프로세스가 자동으로 종료됩니다.</string>
+      <string id="SingleAutoConnect">하나의 실행 항목에만 권한이 부여된 경우 자동으로 연결</string>
+      <string id="SingleAutoConnectExplain">데스크톱 또는 애플리케이션이 로그인 사용자에 대해 권한이 부여된 유일한 항목인 경우 해당 데스크톱 또는 애플리케이션에 자동으로 연결합니다.</string>
+      <string id="VMwareViewClientSecurity">보안 설정</string>
+      <string id="VMwareViewClientSecurityNTLM">NTLM 설정</string>
+      <string id="LogInAsCurrentUser_Display">현재 사용자로 로그인할 옵션 표시</string>
+      <string id="LogInAsCurrentUser_DisplayExplain">Windows Horizon Client에서 [현재 사용자로 로그인] 확인란을 표시할지 여부를 결정합니다.
+
+이 설정은 기본적으로 사용하도록 설정됩니다.
+
+이 옵션이 '해제'로 설정되어 있으면 사용자는 '현재 사용자로 로그인 확인란의 기본값' 옵션을 재정의할 수 없습니다.</string>
+      <string id="LogInAsCurrentUser">'현재 사용자로 로그인' 확인란의 기본값</string>
+      <string id="LogInAsCurrentUserExplain">'현재 사용자로 로그인' 확인란을 기본적으로 선택할지 설정합니다.
+
+이 설정은 기본적으로 사용하지 않도록 설정됩니다.</string>
+      <string id="EnableRecursiveUnlock">클라이언트 시스템의 잠금이 해제되면 원격 세션의 잠금 해제</string>
+      <string id="EnableRecursiveUnlockExplain">이 정책은 클라이언트 시스템의 잠금이 해제된 후 모든 원격 세션의 잠금을 해제하는 &quot;재귀 잠금 해제&quot; 기능을 제어합니다. 이 기능은 사용자가 &quot;현재 사용자로 로그인&quot; 기능을 사용하여 View Server에 로그인했을 때만 적용됩니다.
+
+이 설정은 기본적으로 사용하도록 설정됩니다.</string>
+      <string id="BrokersTrustedForDelegation">위임을 위해 신뢰된 서버</string>
+      <string id="BrokersTrustedForDelegationExplain">자격 증명을 위임할 수 있는 View 연결 서버 목록을 설정합니다. '현재 사용자로 로그인'과 함께 사용됩니다.
+
+서버에 대한 이름 지정 형식은 SPN(서비스 사용자 이름)입니다.
+
+기본적으로 모든 서버를 신뢰할 수 있습니다.</string>
+      <string id="AllowNTLMAuthentication">NTLM 인증 허용</string>
+      <string id="AllowFallBack_YES">예</string>
+      <string id="AllowFallBack_NO">아니요</string>
+      <string id="AllowNTLMAuthenticationExplain">이 설정을 사용하도록 지정하면 [현재 사용자로 로그인]을 사용하는 NTLM 인증이 허용됩니다.
+
+'구성되지 않음'인 경우 GPO: '서버에 대해 항상 NTLM 사용'에 나열된 서버에 대해 NTLM 인증이 허용됩니다.
+
+'사용 안 함'인 경우 NTLM 인증이 어떤 서버에도 사용되지 않습니다.
+
+Kerberos에서 NTLM으로 폴백 허용:
+'아니요'로 설정하면 GPO: '서버에 대해 항상 NTLM 사용'에 나열된 서버에만 NTLM이 사용됩니다.
+'예'로 설정하면 클라이언트가 서버에 대한 Kerberos 티켓을 검색할 수 없을 때마다 NTLM을 사용할 수 있습니다.</string>
+      <string id="ServersAlwaysUseNTLM">서버에 대해 항상 NTLM 사용</string>
+      <string id="ServersAlwaysUseNTLMExplain">이 설정을 사용하도록 설정하고 [현재 사용자로 로그인]을 지정하면 항상 나열된 서버에 대해 NTLM 인증이 사용됩니다.
+
+서버에 대한 이름 지정 형식은 FQDN(정규화된 도메인 이름)입니다</string>
+      <string id="DoNotCheckCertRevocationStatus">인증서 해지 상태 확인 안 함</string>
+      <string id="DoNotCheckCertRevocationStatusExplain">인증서 해지 상태를 확인할지 여부를 결정합니다. 이 GPO를 사용하도록 설정하면 Horizon Client는 서버에서 보낸 인증서가 해지되었거나 인증서 해지 검사가 불가능한 것으로 알려진 경우(예: 인터넷 연결이 제한된 경우)에도 서버의 인증서를 유효한 것으로 취급합니다.
+
+이 설정은 기본적으로 사용하지 않도록 설정됩니다.</string>
+      <string id="StrictCertRevocationCheck">엄격한 인증서 해지 확인</string>
+      <string id="StrictCertRevocationCheckExplain">이 GPO를 사용하도록 설정하면 Horizon Client는 인증서 해지 상태를 확인할 수 없는 경우 서버에 대한 연결을 거부합니다.  이 설정을 사용하지 않도록 설정하면 클라이언트는 해지를 확인하지만 해지 상태에 따라 연결을 차단하지 않습니다. “DoNotCheckCertRevocationStatus” GPO는 이 GPO보다 우선하므로 함께 사용하지 마십시오.
+
+이 설정은 기본적으로 사용하지 않도록 설정됩니다.</string>
+      <string id="CertCheckMode">인증서 검사 모드</string>
+      <string id="CertCheckModeExplain">Horizon Client의 인증서 확인 동작을 구성합니다.
+
+이 속성을 '보안 없음'으로 설정하면 인증서 확인이 수행되지 않습니다.
+
+이 속성을 '주의를 표시하되 허용'으로 설정하면 서버 인증서가 자체 서명된 경우 사용자에게 주의가 표시되지만 작업이 계속 진행됩니다. 서버 인증서가 자체 서명된 경우 인증서 이름이 서버 이름과 일치하지 않아도 됩니다. 이는 기본값입니다.
+
+이 속성을 '전체 보안'으로 설정하면 모든 인증서 오류가 사용자에게 보고되며 서버 연결이 허용되지 않습니다.</string>
+      <string id="ProtocolConnectionCertCheckMode">프로토콜 연결 인증서 확인 모드</string>
+      <string id="ProtocolConnectionCertCheckModeExplain">이 설정은 Blast 및 터널 연결에 대한 인증서 검사 모드를 결정합니다.
+기본적으로 지문 확인이 수행됩니다.
+
+이 속성을 '지문 확인'으로 설정하면 인증서 지문 확인이 실패할 경우 가상 권한에 대한 연결이 차단됩니다.
+
+이 속성을 '지문 또는 PKI 확인'으로 설정하면 인증서 지문 오류가 PKI 인증서 확인으로 폴백됩니다. PKI 인증서 확인이 실패하면 가상 권한에 대한 연결이 차단됩니다.
+
+이 속성이 'PKI 및 지문 확인'으로 설정되면 클라이언트는 PKI 및 지문 확인을 모두 사용합니다. 인증서 지문 또는 PKI 인증서 인증이 실패하면 가상 권한에 대한 연결이 차단됩니다.
+
+이 속성을 'PKI 확인'으로 설정하면 PKI 인증서 인증이 실패할 경우 가상 권한에 대한 연결이 차단됩니다.
+
+</string>
+      <string id="EnableSmartCardSSO">스마트 카드 인증을 위해 단일 로그온 사용</string>
+      <string id="EnableSmartCardSSOExplain">스마트 카드 인증에 SSO(Single Sign-On)를 사용합니다. 이 경우 Horizon Client에서 암호화된 스마트 카드 PIN을 View 연결 서버에 제출하기 전에 잠시 메모리에 저장해야 합니다.</string>
+      <string id="EnableJumplist">점프 목록 통합 사용</string>
+      <string id="EnableJumplistExplain">사용자가 쉽게 최신 View 연결 서버 및 원격 데스크톱에 연결할 수 있도록 Windows 7 이상의 작업 목록에 있는 Horizon Client 아이콘에 점프 목록 추가를 사용합니다. 이 기능은 기본적으로 사용하도록 설정됩니다.</string>
+      <string id="AllowCmdLineCredentials">명령줄 자격 증명 허용</string>
+      <string id="AllowCmdLineCredentialsExplain">암호 또는 PIN 등의 자격 증명을 명령줄 매개 변수를 통해 제공하도록 허용합니다.
+
+이 설정은 기본적으로 사용하도록 설정됩니다.</string>
+      <string id="EnableTicketSSLAuth">SSL 암호화된 프레임워크 채널 사용</string>
+      <string id="EnableTicketSSLAuthExplain">SSL 암호화된 프레임워크 채널 사용
+
+사용: SSL 사용, SSL 지원 없이 데스크톱으로 폴백 허용
+사용 안 함: SSL 사용 안 함
+강제 적용: SSL 사용, SSL 지원 없이 데스크톱 연결 거절</string>
+      <string id="SSLCipherList">SSL 프로토콜 및 암호화 알고리즘 구성</string>
+      <string id="SSLCipherListExplain">SSL 프로토콜 및 암호 그룹 구성을 사용하면 암호화된 SSL 연결을 설정하기 전에 암호화 알고리즘 및 프로토콜을 지정할 수 있습니다. 암호 목록은 콜론으로 구분된 하나 이상의 암호 문자열로 구성됩니다. 모든 암호 문자열은 대소문자를 구분합니다.
+이 기능을 사용하도록 설정한 경우 기본값은 다음과 같습니다.
+  'TLSv1.1:TLSv1.2:!aNULL:kECDH+AESGCM:ECDH+AESGCM:RSA+AESGCM:kECDH+AES:ECDH+AES:RSA+AES'
+해당 의미: TLS v1.1 및 TLS v1.2를 사용하도록 설정합니다. 
+ 암호 그룹은 GCM 모드에 대한 기본 설정을 사용하여 128비트 또는 256비트 AES에서 ECDHE, ECDH 및 RSA를 사용합니다. SSL v2.0, SSL v3.0 및 TLS v1.0은 지원되지 않습니다.
+
+TLS v1.2에 대한 서명 알고리즘의 서명 알고리즘 규격을 구성합니다. 콜론으로 구분되고 알고리즘+해시 형식을 갖는 서명 알고리즘 목록을 기본 내림차순으로 입력합니다.
+알고리즘 및 해시 이름은 대/소문자를 구분합니다. 예: RSA+SHA256:ECDSA+SHA256
+이 옵션을 설정하지 않으면 기본값은 OpenSSL 라이브러리에서 지원하는 모든 서명 알고리즘입니다.
+
+지원되는 그룹 구성은 지원되는 타원 곡선 그룹을 설정합니다. 콜론으로 구분된 곡선 목록을 입력합니다. 곡선 이름은 대/소문자를 구분합니다. 예: P-256:P-384
+이 옵션이 설정되지 않고 ECDHE 암호 그룹이 제공되면 기본값은 OpenSSL 라이브러리에서 지원하는 모든 서명 알고리즘입니다.
+
+구성에 대한 참조 링크:
+https://kb.vmware.com/s/article/85640</string>
+      <string id="VMwareViewRdpSettings">RDP 설정</string>
+      <string id="VMwareViewBrowserRedirection">VMware Browser 리디렉션</string>
+      <string id="ColorDepth">색 농도</string>
+      <string id="ColorDepthExplain">원격 데스크톱의 색 농도를 결정합니다.
+
+24비트 Windows XP 시스템의 경우 컴퓨터 구성/관리 템플릿/Windows 구성 요소/터미널 서비스의 최대 색 농도 제한 정책이 사용하도록 설정되며 색 농도는 24비트입니다.</string>
+      <string id="AudioRedirectionMode">오디오 리디렉션</string>
+      <string id="AudioRedirectionModeExplain">원격 데스크톱에서 재생 시 오디오 정보가 채널링되는 방법을 결정합니다. 이 속성을 사용하도록 설정하면 사용 가능한 설정은 다음과 같습니다.
+
+  * 오디오 사용 안 함 - 오디오 없음
+  * VM에서 재생(VoIP USB 지원에 필요) - 오디오가 원격 데스크톱 내에서 재생(클라이언트에서 사운드를 제공할 공유 USB 오디오 디바이스 필요)
+  * 클라이언트로 리디렉션 - 오디오가 클라이언트로 리디렉션됩니다. 이는 기본 모드입니다.
+
+참고: 이 속성은 RDP 오디오에만 적용됩니다. MMR을 통해 리디렉션되는 오디오는 클라이언트에서 재생됩니다.</string>
+      <string id="KeyboardHookMode">Windows 키 조합 리디렉션</string>
+      <string id="KeyboardHookModeExplain">Windows 키 조합이 적용되는 위치를 결정합니다.</string>
+      <string id="DisableWallpaper">데스크톱 배경</string>
+      <string id="DisableWallpaperExplain">클라이언트가 원격 데스크톱에 연결할 때 데스크톱 배경을 표시할지 여부를 결정합니다.</string>
+      <string id="DisableFullWindowDrag">드래그 중 창의 내용 표시</string>
+      <string id="DisableFullWindowDragExplain">사용자가 폴더를 새 위치로 끌어 놓을 때 폴더 내용을 표시할지 여부를 결정합니다.</string>
+      <string id="DisableMenuAnimations">메뉴 및 창 애니메이션</string>
+      <string id="DisableMenuAnimationsExplain">클라이언트가 원격 컴퓨터에 연결할 때 메뉴 및 창 동작 방법을 결정합니다.</string>
+      <string id="DisableTheming">테마</string>
+      <string id="DisableThemingExplain">클라이언트가 원격 데스크톱에 연결할 때 테마를 표시할지 여부를 결정합니다.</string>
+      <string id="DisableCursorShadow">커서 섀도</string>
+      <string id="DisableCursorShadowExplain">원격 데스크톱의 커서 아래에 섀도를 표시할지 여부를 결정합니다.</string>
+      <string id="FontSmoothing">글꼴 다듬기</string>
+      <string id="FontSmoothingExplain">(Windows Vista 이상) 원격 데스크톱에서 앤티앨리어싱을 글꼴에 적용할지 여부를 결정합니다.</string>
+      <string id="DesktopComposition">데스크톱 구성</string>
+      <string id="DesktopCompositionExplain">(Windows Vista 이상) 원격 데스크톱에서 데스크톱 구성을 사용하도록 설정할지 여부를 결정합니다.
+
+데스크톱 구성을 사용하도록 설정하면 개별 창은 더 이상 이전 Microsoft Windows 버전에서처럼 화면 또는 기본 디스플레이 디바이스에 직접 드로잉하지 않습니다. 대신, 드로잉은 비디오 메모리의 오프스크린 표면으로 리디렉션되어 데스크톱 이미지로 렌더링되고 디스플레이에 표시됩니다.</string>
+      <string id="RedirectDrives">드라이브 리디렉션</string>
+      <string id="RedirectDrivesExplain">클라이언트가 원격 데스크톱에 연결할 때 로컬 디스크 드라이브를 자동으로 리디렉션할지 여부를 결정합니다.</string>
+      <string id="RedirectPrinters">프린터 리디렉션</string>
+      <string id="RedirectPrintersExplain">클라이언트가 원격 데스크톱에 연결할 때 로컬 프린터를 자동으로 리디렉션할지 여부를 결정합니다.</string>
+      <string id="RedirectPorts">직렬 포트 리디렉션</string>
+      <string id="RedirectPortsExplain">클라이언트가 원격 데스크톱에 연결할 때 로컬 COM 포트를 자동으로 리디렉션할지 여부를 결정합니다.</string>
+      <string id="RedirectSmartcards">스마트 카드 리디렉션</string>
+      <string id="RedirectSmartcardsExplain">클라이언트가 원격 데스크톱에 연결할 때 로컬 스마트 카드를 자동으로 리디렉션할지 여부를 결정합니다.</string>
+      <string id="RedirectClipboard">클립보드 리디렉션</string>
+      <string id="RedirectClipboardExplain">이 설정은 클라이언트가 원격 데스크톱에 연결할 때 로컬 클립보드 정보를 자동으로 리디렉션할지 여부를 결정합니다.</string>
+      <string id="RedirectPlugAndPlayDevices">지원되는 플러그 앤 플레이 디바이스 리디렉션</string>
+      <string id="ExplainRedirectPlugAndPlayDevices">클라이언트가 원격 데스크톱에 연결할 때 로컬 플러그 앤 플레이 및 POS(Point of Sale) 디바이스를 자동으로 리디렉션할지 여부를 결정합니다. 이는 View Agent의 USB 리디렉션 구성 요소에서 관리하는 리디렉션과는 다릅니다.</string>
+      <string id="ShadowBitmap">섀도 비트맵</string>
+      <string id="ShadowBitmapExplain">섀도 비트맵을 사용해야 하는지 여부를 결정합니다.
+
+참고: 섀도 비트맵은 전체 화면 모드에서는 항상 사용하지 않도록 설정되므로 이 속성은 전체 화면 모드일 경우에는 영향을 주지 않습니다.</string>
+      <string id="CachePersistenceActive">비트맵 캐싱/캐시 지속성 활성</string>
+      <string id="CachePersistenceActiveExplain">영구 비트맵 캐싱을 사용해야 하는지 여부를 결정합니다. 영구 캐싱을 사용하면 성능이 개선되지만 추가 디스크 공간이 필요합니다.</string>
+      <string id="EnableCompression">압축 사용</string>
+      <string id="EnableCompressionExplain">RDP 데이터 압축을 사용할지 여부를 결정합니다. 이 설정은 기본적으로 사용하도록 설정됩니다.</string>
+      <string id="BitmapCacheSize">8bpp 비트맵의 메모리 내 비트맵 캐시 크기(KB)</string>
+      <string id="BitmapCacheSizeExplain">픽셀당 8비트 색 설정에 사용할 RAM 비트맵 캐시의 크기를 킬로바이트 단위로 지정합니다. ScaleBitmapCachesByBPP가 true(기본값)인 경우 이 캐시 크기에 픽셀당 바이트 수를 곱해 실제 RAM 캐시 크기를 결정합니다.
+
+이 속성을 사용하도록 설정하는 경우 크기(KB)를 입력하십시오.</string>
+      <string id="BitmapVirtualCacheSize">8bpp 비트맵의 비트맵 캐시 파일 크기(MB)</string>
+      <string id="BitmapVirtualCacheSizeExplain">픽셀당 8비트 색 설정에 사용할 영구 비트맵 캐시 파일의 크기를 메가바이트 단위로 지정합니다.
+
+이 속성을 사용하도록 설정하는 경우 파일 크기(MB)를 입력하십시오. 유효한 값은 1에서 32까지입니다.</string>
+      <string id="BitmapVirtualCache16BppSize">16bbp 비트맵의 비트맵 캐시 파일 크기(MB)</string>
+      <string id="BitmapVirtualCache16BppSizeExplain">픽셀당 15/16비트 색 설정에 사용할 영구 비트맵 캐시 파일의 크기를 메가바이트 단위로 지정합니다.
+
+이 속성을 사용하도록 설정하는 경우 파일 크기(MB)를 입력하십시오. 유효한 값은 1에서 32까지입니다.</string>
+      <string id="BitmapVirtualCache24BppSize">24bpp 비트맵의 비트맵 캐시 파일 크기(MB)</string>
+      <string id="BitmapVirtualCache24BppSizeExplain">픽셀당 24비트 색 설정에 사용할 영구 비트맵 캐시 파일의 크기를 메가바이트 단위로 지정합니다.
+
+이 속성을 사용하도록 설정하는 경우 파일 크기(MB)를 입력하십시오. 유효한 값은 1에서 32까지입니다.</string>
+      <string id="BitmapVirtualCache32BppSize">32bpp 비트맵의 비트맵 캐시 파일 크기(MB)</string>
+      <string id="BitmapVirtualCache32BppSizeExplain">픽셀당 32비트 색 설정에 사용할 영구 비트맵 캐시 파일의 크기를 메가바이트 단위로 지정합니다.
+
+이 속성을 사용하도록 설정하는 경우 파일 크기(MB)를 입력하십시오. 유효한 값은 1에서 32까지입니다.</string>
+      <string id="noTSCAddins">타사 터미널 서비스 플러그인 사용 안 함</string>
+      <string id="noTSCAddinsExplain">이 속성을 true로 설정하면 일반 RDP 플러그인으로 설치한 타사 터미널 서비스 플러그인에 대한 확인이 수행되지 않습니다. 이 설정은 USB 리디렉션 등과 같은 View 특정 플러그인에는 영향을 주지 않습니다. 이 정책을 구성하지 않는 경우 타사 플러그인 감지 및 사용이 기본적으로 사용되도록 설정됩니다.</string>
+      <string id="DisableTimeZoneForwarding">표준 시간대 전달 사용 안 함</string>
+      <string id="DisableTimeZoneForwardingExplain">View 데스크톱의 표준 시간대가 연결된 클라이언트의 표준 시간대와 동기화되는지 여부를 결정합니다. 사용하도록 설정하는 경우 이 속성은 View Agent 구성 정책의 [표준 시간대 동기화 사용 안 함] 속성이 [사용 안 함]으로 설정되지 않은 경우에만 적용됩니다.
+
+이 속성은 기본적으로 사용하지 않도록 설정됩니다.</string>
+      <string id="AutomaticInputFocus">가상 데스크톱 창의 자동 입력 포커스</string>
+      <string id="AutomaticInputFocusExplain">가상 데스크톱 창이 전경으로 나오면 입력 포커스가 자동으로 가상 데스크톱에 지정됩니다. 즉, 포커스가 창의 프레임에 있지 않으며, 사용자는 데스크톱 창 내부를 한 번 클릭하여 포커스를 이동할 필요가 없습니다.</string>
+      <string id="EnableCredSspSupport">자격 증명 보안 서비스 공급자 사용</string>
+      <string id="EnableCredSspSupportExplain">View 데스크톱 연결이 NLA(Network Level Authentication)를 사용하는지 여부를 지정합니다. Windows Vista에서는 원격 데스크톱 연결에 기본적으로 NLA가 필요합니다.
+
+게스트 운영 체제에서 원격 데스크톱 연결에 NLA가 필요한 경우 이 설정을 사용하지 않도록 설정하면 Horizon Client를 View 데스크톱에 연결할 수 없습니다.
+
+이 설정을 사용하도록 설정하는 것 외에도 다음 조건을 충족하는지 확인해야 합니다.
+   1) 클라이언트와 게스트 운영 체제가 모두 NLA를 지원합니다.
+   2) 직접 클라이언트 연결이 View 연결 서버 인스턴스에 사용됩니다. 터널링된 연결이 NLA에 지원되지 않습니다.</string>
+      <string id="TunnelProxyBypass">터널 프록시 바이패스 주소 목록</string>
+      <string id="TunnelProxyBypassExplain">지정된 문자열로 시작되는 터널 주소에 프록시 서버를 사용하지 마십시오. 항목을 구분하려면 세미콜론을 사용합니다.</string>
+      <string id="HelpURL">Horizon Client 온라인 도움말의 URL</string>
+      <string id="HelpURLExplain">Horizon Client에서 도움말 페이지를 검색할 수 있는 대체 URL을 지정합니다. 이 속성은 인터넷 액세스를 제공하지 않으므로 원격 호스팅된 도움말 시스템을 검색할 수 없는 환경에서 사용하기 위한 것입니다.</string>
+      <string id="AutoUpdateAllowed">Horizon Client 온라인 업데이트 사용</string>
+      <string id="AutoUpdateAllowedExplain">온라인 업데이트 기능을 사용할 수 있는지 여부를 결정합니다. 기본적으로 Horizon Client 4.6에서 사용하도록 설정됩니다.</string>
+      <string id="AutoUpdateMessagePopUp">메시지 팝업 업데이트</string>
+      <string id="AutoUpdateMessagePopUpExplain">최신 버전의 Horizon Client가 있을 때 최종 사용자에게 팝업 메시지를 자동으로 표시할지 여부를 지정합니다. 이 설정은 기본적으로 사용하지 않도록 설정됩니다.
+
+이 GPO는 Horizon Client 8.1 이상에서 지원됩니다.</string>
+      <string id="AutoCheckForUpdate">자동으로 업데이트 확인</string>
+      <string id="AutoCheckForUpdateExplain">Horizon Client 소프트웨어 업데이트가 있는지 자동으로 확인하도록 설정할지 여부를 지정합니다. 이 설정은 기본적으로 사용하도록 설정됩니다.
+
+이 GPO는 Horizon Client 8.1 이상에서 지원됩니다.</string>
+      <string id="AutoUpdateAllowSkip">사용자가 Horizon Client 업데이트를 건너뛸 수 있도록 허용</string>
+      <string id="AutoUpdateAllowSkipExplain">최종 사용자가 Horizon Client 업데이트 창에서 &quot;건너뛰기&quot; 옵션을 선택할 수 있는지 여부를 지정합니다. 사용자가 &quot;건너뛰기&quot;를 선택하면 다음 Horizon Client 업데이트 전까지 사용자에게 업데이트 통신이 표시되지 않습니다.
+
+이 GPO는 Horizon Client 8.1 이상에서 지원됩니다.</string>
+      <string id="AutoUpdateURL">Horizon Client 온라인 업데이트의 URL</string>
+      <string id="AutoUpdateURLExplain">업데이트를 검색할 수 있는 Horizon Client에서 URL을 지정합니다. 이 속성은 특정 업데이트 서버를 지정하도록 설계되었습니다. 이 속성을 사용하지 않는 경우 VMware 공식 업데이트 서버가 사용됩니다.</string>
+      <string id="BlockMultipleInstances">Windows 세션당 여러 Horizon Client 인스턴스 차단</string>
+      <string id="BlockMultipleInstancesExplain">이 정책은 Windows 세션당 여러 Horizon Client 인스턴스를 차단합니다. &quot;사용&quot;으로 설정하면 Horizon Client가 단일 인스턴스 모드로 실행되며 사용자는 여러 Horizon Client 인스턴스를 시작할 수 없습니다. 이 설정을 사용하지 않도록 설정하면 사용자는 여러 Horizon Client 인스턴스를 열 수 있습니다. 이 설정은 기본적으로 사용하지 않도록 설정됩니다.</string>
+      <string id="ListSmartCardCertsOnly">로그인 동안 스마트 카드 인증서만 표시</string>
+      <string id="ListSmartCardCertsOnlyExplain">이 정책은 사용자 및 시스템 저장소의 모든 인증서를 나열할지 또는 스마트 카드 인증서만 표시할지를 지정합니다. [사용]으로 설정되면 [인증서 선택] 대화상자에 스마트 카드 인증서만 표시되고 다른 모든 인증서는 필터링되어 표시되지 않습니다. [사용 안 함]으로 설정되면 모든 유형의 인증서가 [인증서 선택] 대화상자에 표시됩니다. 이 설정은 기본적으로 사용하지 않도록 설정됩니다.</string>
+      <string id="connectUSBOnStartup">시작할 때 모든 USB 디바이스를 데스크톱 또는 원격 애플리케이션에 연결</string>
+      <string id="connectUSBOnStartupExplain">데스크톱 또는 원격 애플리케이션이 시작될 때 호스트의 사용 가능한 모든 USB 디바이스를 해당 데스크톱 또는 원격 애플리케이션에 자동으로 연결합니다.</string>
+      <string id="EnableAutoReconnect">RDP 자동 재연결 사용</string>
+      <string id="EnableAutoReconnectExplain">RDP 프로토콜 연결 실패 시 RDP 클라이언트 구성 요소가 데스크톱에 자동으로 다시 연결을 시도하도록 허용할지 여부를 지정합니다. 이 설정은 기본적으로 사용하지 않도록 설정됩니다. 이 설정은 &quot;데스크톱에 보안 터널 연결 사용&quot; 옵션이 사용하도록 설정되어 있는 경우에는 영향을 주지 않습니다.</string>
+      <string id="RedirectAudioCapture">오디오 캡처 리디렉션 사용</string>
+      <string id="RedirectAudioCaptureExplain">기본 오디오 입력 디바이스를 클라이언트에서 원격 세션으로 리디렉션할지 여부를 지정합니다. 기본값은 해제입니다.</string>
+      <string id="connectUSBOnInsert">연결 시 USB 디바이스를 데스크톱 또는 원격 애플리케이션에 연결</string>
+      <string id="connectUSBOnInsertExplain">USB 디바이스를 호스트에 연결 시 사용자가 현재 작업 중인 데스크톱 또는 원격 애플리케이션에 자동으로 연결합니다.</string>
+      <string id="DisableToastNotifications">알림 사용 안 함</string>
+      <string id="DisableToastNotificationsExplain">이 설정은 Horizon Client에서 알림을 사용하지 않도록 설정합니다. 사용자가 화면의 모서리에서 알림을 볼 수 없도록 하려면 이 설정을 사용합니다. 이 GPO를 사용하도록 설정하면 Horizon Client가 숨겨져 있는 경우 사용자가 알림을 볼 수 없게 됩니다. 이 설정은 기본적으로 사용하지 않도록 설정됩니다.</string>
+      <string id="EnableRelativeMouse">상대 마우스 사용</string>
+      <string id="EnableRelativeMouseExplain">이 설정을 사용하면 PCoIP 또는 Blast 데스크톱의 Horizon Client에서 상대 마우스를 사용할 수 있습니다. 사용자가 항상 PCoIP 또는 Blast 데스크톱에서 상대 마우스 모드를 사용하도록 설정하려면 이 설정을 사용하도록 설정하십시오. 상대 마우스 모드를 사용하면 특정 그래픽 애플리케이션 및 게임의 마우스 동작이 향상됩니다. 원격 데스크톱에서 상대 마우스가 지원되지 않으면 이 설정이 사용되지 않습니다. 이 설정은 기본적으로 사용하지 않도록 설정됩니다.</string>
+      <string id="DisableDisconnectMessages">데스크톱 연결 해제 메시지 사용 안 함</string>
+      <string id="DisableDisconnectMessagesExplain">데스크톱 연결 해제 시 일반적으로 표시되는 메시지를 사용하지 않도록 설정할지 여부를 지정합니다. 이러한 메시지는 기본적으로 표시됩니다. 이 설정은 Horizon Client UI에서 사용자가 시작한 연결 해제에 적용되지 않습니다.</string>
+      <string id="DisallowClientInformationPassthrough">중첩 세션에서 클라이언트 정보 전달을 허용하지 않음</string>
+      <string id="DisallowClientInformationPassthroughExplain">중첩 세션에서 클라이언트 정보를 전달하지 못하도록 Horizon Client를 방지해야 하는지 여부를 지정합니다. 이를 사용하도록 설정하는 경우 Horizon Client가 Horizon 세션 내부에서 실행되면 VM 디바이스 정보 대신 실제 물리적 클라이언트 정보를 전송합니다. 이 설정은 클라이언트 정보의 일부 즉, 디바이스 이름 및 도메인, 클라이언트 유형, IP 주소 및 MAC 주소에 적용됩니다. 이 설정은 기본적으로 사용되지 않도록 설정되며 이는 중첩 세션에서 클라이언트 정보 전달이 기본적으로 허용됨을 의미합니다.</string>
+      <string id="DisableSharing">파일 및 폴더 공유 사용 안 함</string>
+      <string id="DisableSharingExplain">원격 세션과 클라이언트 간 파일 및 폴더 공유를 사용하지 않도록 설정합니다.
+
+&quot;사용&quot;으로 설정하면 클라이언트가 클라이언트 공유 페이지를 전부 숨기며 파일 리디렉션도 사용하지 않도록 설정합니다.
+
+이 설정이 구성되지 않으면 기본값은 &quot;사용 안 함&quot;입니다.</string>
+      <string id="AppSessionReconnectBehavior">연결 해제된 애플리케이션 세션 재개 동작</string>
+      <string id="AppSessionReconnectBehaviorExplain">이 설정을 통해 자동 애플리케이션 세션 재개 기능과 관련한 특정 동작을 강제 적용할 수 있습니다. 이 GPO에 사용할 수 있는 3개의 옵션은 Windows 클라이언트 설정 페이지에서 사용할 수 있는 옵션을 미러링합니다. 이 설정은 기본적으로 사용하지 않도록 설정되어 있으며 사용자가 동작을 선택할 수 있습니다.</string>
+      <string id="AllSessionsDisconnectedBehavior">모든 세션의 연결이 해제되었을 때 클라이언트 동작</string>
+      <string id="AllSessionsDisconnectedBehaviorExplain">이 설정을 사용하면 모든 세션의 연결이 해제되었을 때 클라이언트 동작을 사용자 지정할 수 있습니다. 모든 세션의 연결이 해제되었을 때 클라이언트를 종료하거나 연결 서버에서 로그오프하거나 클라이언트를 현재 상태로 유지하도록 구성할 수 있습니다. 이 설정이 구성되지 않은 경우 클라이언트는 기본 방식으로 동작합니다. </string>
+      <string id="ForceFloatingLanguageBarOff">호스팅된 앱에 대해 원격 플로팅 언어(IME) 모음을 항상 숨기기</string>
+      <string id="ForceFloatingLanguageBarOffExplain">이 설정은 애플리케이션 세션에 대해 플로팅 언어 모음 해제를 강제 적용합니다. 이 설정을 사용하도록 설정하면 로컬 IME 기능을 사용하도록 설정했는지 여부와 관계없이 플로팅 언어 모음이 원격 애플리케이션 세션에 절대 표시되지 않습니다. 이 설정을 사용하지 않도록 설정하면 플로팅 언어 모음은 로컬 IME 기능을 사용하지 않도록 설정한 경우에만 표시됩니다. 이 값은 기본적으로 사용하지 않도록 설정됩니다.</string>
+      <string id="DisableFileRedirection">호스팅된 애플리케이션에서 로컬 파일 열기 사용 안 함</string>
+      <string id="DisableFileRedirectionExplain">이 설정은 Horizon Client가 호스팅된 애플리케이션에서 지원되는 파일 확장명에 로컬 처리기를 등록할지 여부를 제어합니다. 이 정책을 사용하도록 설정하면 Horizon Client가 파일 확장명 처리기를 등록하지 않으며 사용자가 설정을 재정의할 수 없습니다. 이 정책을 사용하지 않도록 설정하면 Horizon Client가 항상 파일 확장명 처리기를 등록합니다. 기본적으로 파일 확장명 처리기가 등록되지만 사용자는 Horizon Client UI를 통해 기능을 사용하지 않도록 설정할 수 있습니다.</string>
+      <string id="KeyboardHotkeys">디스플레이 조합 기능 키</string>
+      <string id="KeyboardHotkeysExplain">설정되면, 이 GPO는 키 조합을 설정하는데 이를 사용하여 데스크톱 세션(PCoIP 또는 BLAST)에 입력이 되면 클라이언트 시스템에서 디스플레이 구성이 변경됩니다. 설정되지 않으면, 최종 사용자가 마우스를 사용하거나 Ctrl+Alt를 눌러 사용을 해제한 후 Windows+P를 눌러야 디스플레이 구성이 변경됩니다. 이 GPO는 애플리케이션 세션에 적용되지 않습니다.</string>
+      <string id="DisplaySwitchModifierKey">디스플레이 전환 조합 키:</string>
+      <string id="DisplaySwitchFunctionKey">디스플레이 전환 기능 키:</string>
+      <string id="KEY_NONE">&lt;사용 안 함&gt;</string>
+      <string id="KEY_SHIFT">Shift</string>
+      <string id="KEY_CTRL">Ctrl</string>
+      <string id="KEY_ALT">Alt</string>
+      <string id="KEY_F1">F1</string>
+      <string id="KEY_F2">F2</string>
+      <string id="KEY_F3">F3</string>
+      <string id="KEY_F4">F4</string>
+      <string id="KEY_F5">F5</string>
+      <string id="KEY_F6">F6</string>
+      <string id="KEY_F7">F7</string>
+      <string id="KEY_F8">F8</string>
+      <string id="KEY_F9">F9</string>
+      <string id="KEY_F10">F10</string>
+      <string id="KEY_F11">F11</string>
+      <string id="KEY_F12">F12</string>
+      <string id="KEY_H">H</string>
+      <string id="KEY_I">I</string>
+      <string id="KEY_J">J</string>
+      <string id="KEY_K">K</string>
+      <string id="KEY_L">L</string>
+      <string id="KEY_M">M</string>
+      <string id="KEY_N">N</string>
+
+      <string id="HotkeyUngrabDesktop">입력 포커스를 해제하기 위한 바로 가기 키 조합</string>
+      <string id="HotkeyUngrabDesktopExplain">이 정책은 PCoIP 또는 Blast를 사용하여 데스크톱 세션의 입력 포커스를 해제하기 위한 바로 가기 키 조합을 설정합니다. 바로 가기 키는 하나 또는 두 개의 조합 키와 하나의 기능 키로 구성됩니다. 이 정책을 사용하지 않도록 설정하거나 구성하지 않으면 사용자는 Ctrl + Alt를 사용하거나 데스크톱 창 외부를 클릭하여 포커스를 해제할 수 있습니다.</string>
+      <string id="UngrabDesktopModifierKey">입력 포커스를 해제하기 위한 조합 키:</string>
+      <string id="SecondUngrabDesktopModifierKey">입력 포커스를 해제하기 위한 두 번째 조합 키:</string>
+      <string id="UngrabDesktopFunctionKey">입력 포커스를 해제하기 위한 기능 키:</string>
+
+      <string id="HotkeyGrabDesktop">입력 포커스를 가져오기 위한 바로 가기 키 조합</string>
+      <string id="HotkeyGrabDesktopExplain">이 정책은 PCoIP 또는 Blast를 사용하여 마지막으로 사용된 데스크톱 세션의 입력 포커스를 가져오기 위한 바로 가기 키 조합을 설정합니다. 바로 가기 키는 하나 또는 두 개의 조합 키와 하나의 문자 키로 구성됩니다. 이 정책을 사용하지 않도록 설정하거나 구성하지 않으면 사용자는 데스크톱 창 내부를 클릭하여 포커스를 가져올 수 있습니다.</string>
+      <string id="GrabDesktopModifierKey">입력 포커스를 가져오기 위한 조합 키:</string>
+      <string id="SecondGrabDesktopModifierKey">입력 포커스를 가져오기 위한 두 번째 조합 키:</string>
+      <string id="GrabDesktopLetterKey">입력 포커스를 가져오기 위한 문자 키:</string>
+
+      <string id="HIDE_MENU_YES">예</string>
+      <string id="HIDE_MENU_NO">아니요</string>
+      <string id="HideToolBarMenu">클라이언트 도구 모음 메뉴에서 항목 숨기기</string>
+      <string id="HideToolBarMenuExplain">이러한 설정은 기본 클라이언트 시작 관리자 페이지의 상단에 있는 도구 모음에서 항목을 숨길지 여부를 제어합니다. 기본적으로 이 정책은 사용되지 않도록 설정되고 Horizon Client는 모든 항목을 표시합니다.
+
+이 GPO는 Horizon Client 5.0 이상에서 지원됩니다.</string>
+      <string id="HideDesktopContextMenu">데스크톱 컨텍스트 메뉴에서 항목 숨기기</string>
+      <string id="HideDesktopContextMenuExplain">이러한 설정은 클라이언트 시작 관리자 페이지에서 데스크톱에 대한 오른쪽 클릭 상황에 맞는 메뉴에서 항목을 숨길지 여부를 제어합니다. 기본적으로 이 정책은 사용되지 않도록 설정되고 Horizon Client는 모든 항목을 표시합니다.
+
+이 GPO는 Horizon Client 5.0 이상에서 지원됩니다.</string>
+      <string id="HideAppContextMenu">애플리케이션 컨텍스트 메뉴에서 항목 숨기기</string>
+      <string id="HideAppContextMenuExplain">이러한 설정은 클라이언트 시작 관리자 페이지에서 애플리케이션에 대한 오른쪽 클릭 상황에 맞는 메뉴에서 항목을 숨길지 여부를 제어합니다. 기본적으로 이 정책은 사용되지 않도록 설정되고 Horizon Client는 모든 항목을 표시합니다.
+
+이 GPO는 Horizon Client 5.0 이상에서 지원됩니다.</string>
+      <string id="HideDesktopMenu">데스크톱 도구 모음에서 항목 숨기기</string>
+      <string id="HideDesktopMenuExplain">이러한 설정은 전체 화면을 실행하는 가상 데스크톱의 상단에 있는 데스크톱 도구 모음에서 항목을 숨길지 여부를 제어합니다. 기본적으로 이 정책은 사용되지 않도록 설정되고 Horizon Client는 모든 항목을 표시합니다.
+
+이 GPO는 Horizon Client 5.0 이상에서 지원됩니다.</string>
+      <string id="HideNotificationMenu">시스템 트레이 메뉴에서 항목 숨기기</string>
+      <string id="HideNotificationMenuExplain">이러한 설정은 로컬 Windows 화면의 하단에 있는 시스템 트레이 메뉴에서 항목을 숨길지 여부를 제어합니다. 기본적으로 이 정책은 사용되지 않도록 설정되고 Horizon Client는 모든 항목을 표시합니다.
+
+이 GPO는 Horizon Client 5.0 이상에서 지원됩니다.</string>
+      <string id="CustomErrorScreenFooter">사용자 지정 오류 화면 바닥글</string>
+      <string id="CustomErrorScreenFooterExplain">일반 텍스트 파일의 위치를 지정합니다. 사용하도록 설정하는 경우 지정한 파일의 텍스트가 모든 오류 메시지의 하단에 항상 표시됩니다.
+
+이 GPO는 Horizon Client 5.0 이상에서 지원됩니다.</string>
+      <string id="UnauthenticatedAccessEnabled">서버에 대한 인증되지 않은 액세스 사용</string>
+      <string id="UnauthenticatedAccessEnabledExplain">이 설정은 Horizon Client를 사용하여 애플리케이션에 액세스하도록 사용자가 자격 증명을 입력해야 하는지 여부를 제어합니다. 이 설정을 사용하도록 설정하면 인증되지 않은 액세스가 항상 서버에서 요청되지만 인증되지 않은 액세스를 사용할 수 없는 경우 클라이언트는 다른 인증 방법으로 변경할 수 있습니다. 이 설정을 사용하지 않도록 설정하면 사용자는 항상 애플리케이션 로그인 및 액세스 시 자격 증명을 입력해야 합니다. 구성되지 않은 경우 사용자는 Horizon Client UI에서 인증되지 않은 액세스를 사용하도록 설정할 수 있습니다.</string>
+      <string id="ForceUserAffinity">동일한 서버에 연결할 때 기존 클라이언트 인스턴스 사용</string>
+      <string id="ForceUserAffinityExplain">이 설정은 사용자가 지정된 동일한 서버에 이미 연결되어 있는 기존 Horizon Client 인스턴스에 연결을 추가할지 여부를 제어합니다. 이 설정은 구성되지 않은 경우 기본적으로 사용하지 않도록 설정됩니다.</string>
+      <string id="UnauthenticatedAccessAccount">인증되지 않은 액세스 사용 계정</string>
+      <string id="UnauthenticatedAccessAccountExplain">이 설정은 Horizon Client에서 익명으로 서버에 로그인하는 데 사용할 계정을 설정합니다. 설정하지 않는 경우 클라이언트는 사용자가 계정을 선택하도록 허용합니다.</string>
+      <string id="ADMXMigrator_UnresolvedString">ADMX 마이그레이터에서 소스 ADM 문자열 표에 없는 문자열이 발생했습니다.</string>
+      <string id="VDMClient_SupportedOn_Empty"></string>
+      <string id="AllowDisplayScaling">디스플레이 크기 조정 허용</string>
+      <string id="AllowDisplayScalingExplain">이 설정을 사용하면 모든 데스크톱 및 애플리케이션 세션에 대한 디스플레이 크기 조정을 구성할 수 있습니다.</string>
+      <string id="AutoSyncToggleKeys">키패드, Scroll Lock 및 Caps Lock 키를 자동으로 동기화</string>
+      <string id="AutoSyncToggleKeysExplain">사용하도록 설정하면 이 설정은 물리적 디바이스의 키패드, Scroll Lock 및 Caps Lock 키를 가상 데스크톱과 자동으로 동기화합니다. 사용하지 않도록 설정하면 사용자가 가상 데스크톱에 있는 동안 해당 키의 상태를 변경하는 경우에만 가상 데스크톱에서 이를 업데이트합니다. </string>
+      <string id="AllowBlastCodec">BlastCodec 디코딩 허용</string>
+      <string id="AllowBlastCodecExplain">이 설정을 사용하여 Blast 프로토콜에 대해 BlastCodec 디코딩을 구성할 수 있습니다. 사용하도록 설정되면 BlastCodec 디코딩을 사용할 수 있습니다. 사용하지 않도록 설정하면 BlastCodec 디코딩을 사용할 수 없습니다. 구성되지 않은 경우 사용자가 BlastCodec 디코딩을 사용할지 여부를 선택할 수 있습니다.</string>
+      <string id="AllowH264">H.264 디코딩 허용</string>
+      <string id="AllowH264Explain">이 설정을 사용하여 Blast 프로토콜에 대해 H.264 디코딩을 구성할 수 있습니다. 사용하도록 설정되면 H.264 디코딩을 사용할 수 있습니다. 사용하지 않도록 설정하면 H.264 디코딩이 사용되지 않습니다. 구성되지 않은 경우 사용자가 H.264 디코딩을 사용할지 여부를 선택할 수 있습니다.</string>
+      <string id="AllowH264YUV444">H.264 높은 색상 정확도 허용</string>
+      <string id="AllowH264YUV444Explain">이 설정을 사용하면 H.264에 대해 높은 색상 정확도 모드를 구성할 수 있습니다. 이 구성은 H.264를 사용하도록 설정한 경우에만 적용됩니다.</string>
+      <string id="AllowHEVC">HEVC 디코딩 허용</string>
+      <string id="AllowHEVCExplain">이 설정을 사용하면 Blast 프로토콜에 대한 HEVC(H.265라고도 함) 디코딩을 구성할 수 있습니다. 사용하도록 설정하면 HEVC 디코딩이 기본 옵션이 됩니다. 사용하지 않도록 설정하면 HEVC 디코딩이 사용되지 않습니다. 구성되지 않은 경우 사용자가 HEVC 디코딩을 사용할지 여부를 선택할 수 있습니다.</string>
+      <string id="AllowHDR">HDR 디코딩 허용</string>
+      <string id="AllowHDRExplain">이 설정을 사용하여 Blast 프로토콜을 통해 HDR(High Dynamic Range) 인코딩을 구성할 수 있습니다. 사용하도록 설정하면 HDR이 사용 가능하고 클라이언트 시스템에서 표시할 수 있는 경우 에이전트 시스템에서는 데스크톱에서 HDR을 켭니다.</string>
+      <string id="EnableWindowOptimizations">Horizon Client 창 최적화 사용</string>
+      <string id="EnableWindowOptimizationsExplain">이 설정은 Horizon Client 창이 완전히 표시되지 않을 때 CPU 사용량을 줄이는 최적화를 사용하도록 설정합니다.  이 설정이 구성되지 않으면 기본적으로 사용됩니다.</string>
+      <string id="DecodeCapsProbingMode">하드웨어 디코더 프로브 모드 구성</string>
+      <string id="ProbingMode_NORMAL">Horizon Client를 시작할 때 프로브</string>
+      <string id="ProbingMode_LEGACY">Horizon 데스크톱/애플리케이션이 시작된 경우 프로브</string>
+      <string id="ProbingMode_OFF">하드웨어 디코딩을 프로브하지 않음</string>
+      <string id="DecodeCapsProbingModeExplain">이 정책을 사용하도록 설정하면 관리자가 Horizon Client 하드웨어 디코딩 기능을 프로브할 때 구성할 수 있습니다.
+
+이 정책을 사용하도록 설정하지 않으면 Horizon Client는 기본적으로 &quot;Horizon Client를 시작할 때 프로브&quot;로 설정됩니다.</string>
+      <string id="DecoderImageCacheSize">디코더 이미지 캐시 크기(KB)</string>
+      <string id="DecoderImageCacheSizeExplain">디코더 이미지 캐시의 최대 크기(단위: 킬로바이트)입니다.
+
+캐시의 최종 크기는 해당 구성의 최소값 또는 에이전트의 연결된 구성에 따라 선택되며 Horizon Agent에서 사용할 수 있는 RAM의 절반을 초과할 수 없습니다.</string>
+      <string id="AllowBlastThroughProxy">Blast 연결에서 운영 체제 프록시 설정을 사용하도록 허용</string>
+      <string id="AllowBlastThroughProxyExplain">이 설정은 Blast 연결의 프록시 사용량을 구성하도록 허용합니다. 사용하도록 설정하면 Blast에서 프록시를 통해 연결할 수 있습니다. 사용하지 않도록 설정하면 시스템 프록시가 사용되지 않습니다. 구성되지 않은 경우 사용자가 시스템 프록시 사용 여부를 선택할 수 있습니다. 이 속성은 기본적으로 사용하지 않도록 설정됩니다.</string>
+      <string id="AllowSplitMksWindowExplain">이 설정을 사용하면 분할 mks 창을 사용하도록 설정할 수 있습니다. 사용하도록 설정되면 mks 창이 모니터별로 분할됩니다. 사용하지 않도록 설정하면 mks 창이 모든 모니터의 경계선 상자가 됩니다. 구성되지 않은 경우 분할 mks 창이 사용되도록 설정됩니다.</string>
+      <string id="AllowSplitMksWindow">분할 mks 창 사용</string>
+      <string id="BrowserRedirUseCache">브라우저 리디렉션에 캐시 사용</string>
+      <string id="BrowserRedirUseCacheExplain">사용으로 설정 시 쿠키를 포함한 검색 기록이 클라이언트에 저장됩니다. 이 설정을 사용하지 않음으로 지정해도 캐시는 지워지지 않기 때문에 설정을 다시 사용함으로 지정하면 캐시를 재사용할 수 있습니다.
+
+이 속성은 기본적으로 사용하도록 설정됩니다.</string>
+      <string id="BrowserRedirIgnoreCertErrors">브라우저 리디렉션에 대한 인증서 오류 무시</string>
+      <string id="BrowserRedirIgnoreCertErrorsExplain">사용함으로 설정 시 리디렉션된 페이지에서 발생한 인증서 오류가 무시되고 검색이 계속 진행됩니다. 이 속성은 기본적으로 사용하지 않도록 설정됩니다.</string>
+      <string id="BrowserRedirEnableMediaStream">브라우저 리디렉션에 대한 WebRTC 카메라 및 마이크 액세스 사용</string>
+      <string id="BrowserRedirEnableMediaStreamExplain">사용함으로 설정 시 WebRTC를 사용하는 리디렉션된 페이지에서 클라이언트의 카메라 및 마이크에 액세스할 수 있습니다. 이 속성은 기본적으로 사용하도록 설정됩니다.</string>
+      <string id="MouseMoveMaxLatencyMsec">마우스 병합에 대한 최대 지연 시간 구성</string>
+      <string id="MouseMoveMaxLatencyMsecExplain">이 설정을 사용하면 마우스 이동 이벤트를 결합할 때 허용되는 최대 지연 시간을 밀리초 단위로 구성할 수 있습니다. 0에서 50 사이의 값은 유효합니다. 0은 &quot;마우스 이동 이벤트 병합 사용 안 함&quot;을 의미합니다. 마우스 이동 이벤트 병합은 클라이언트-에이전트 간 대역폭 사용량을 줄일 수 있지만 마우스 이동 시 시간이 약간 지연될 수 있습니다. 이 속성은 기본적으로 사용하지 않도록 설정됩니다.</string>
+      <string id="VMwareViewPrintRedirection">VMware Integrated Printing</string>
+      <string id="PrintRedir_SISActive">L1 로컬 프린터를 내부 세션으로 리디렉션하도록 허용</string>
+      <string id="PrintRedir_SISActive_detail">이 설정은 L1 로컬 프린터를 내부 세션으로 리디렉션할지 여부를 결정합니다.
+
+VMware는 Horizon 원격 데스크톱 내에서 Horizon Client 실행을 지원합니다. 일반적으로 &quot;중첩 모드&quot;라고 불리는 이 구성에는 3개의 계층과 2개의 홉이 포함됩니다.
+
+L0(끝점): Horizon Client가 설치되는 물리적 시스템
+L1(첫 번째 홉 원격 데스크톱): Horizon Client 및 Horizon Agent 둘 다 설치된 원격 데스크톱
+L2(두 번째 홉 원격 데스크톱/애플리케이션): 두 번째 홉 클라이언트가 연결하는 게시된 데스크톱/게시된 애플리케이션
+
+사용하도록 설정되면 L1 로컬 프린터가 내부 세션으로 리디렉션됩니다.
+구성되지 않거나 사용하지 않도록 설정된 경우 L1 로컬 프린터가 내부 세션으로 리디렉션되지 않습니다.
+
+이 설정은 기본적으로 구성되어 있지 않습니다.
+</string>
+      <string id="PrintRedir_MaxTxRate">전송률 제한(KBps)</string>
+      <string id="PrintRedir_MaxTxRate_detail">이 설정은 모든 인쇄 작업의 전송률을 지정된 KBps로 제한합니다.
+허용되는 최소 전송률은 200KBps입니다. 구성되지 않거나 사용하지 않도록 설정된 경우 전송률이 제한되지 않습니다.
+허용되는 최대 전송률은 4000KBps입니다. 이 속도보다 큰 경우에는 전송률이 제한되지 않습니다.
+
+
+</string>
+      <string id="PrintRedir_lp_setting">클라이언트 프린터를 리디렉션하지 않음</string>
+      <string id="PrintRedir_lp_setting_detail">이 정책 설정으로 클라이언트 프린터를 리디렉션할지 여부를 관리할 수 있습니다.
+
+이 정책 설정을 사용하도록 설정하면 모든 클라이언트 프린터가 리디렉션되지 않습니다.
+이 정책 설정을 사용하지 않도록 설정하거나 구성하지 않으면 모든 클라이언트 프린터가 리디렉션됩니다.
+
+이 설정은 기본적으로 구성되어 있지 않습니다.
+</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="ExcludePath">
+        <textBox refId="ExcludePath">
+          <label>경로 제외</label>
+        </textBox>
+      </presentation>
+      <presentation id="IncludePath">
+        <textBox refId="IncludePath">
+          <label>경로 포함</label>
+        </textBox>
+      </presentation>
+      <presentation id="DisableRemoteConfig" />
+      <presentation id="AllowDevDescFailsafe" />
+      <presentation id="SplitExcludeVidPid">
+        <textBox refId="SplitExcludeVidPid">
+          <label>분할에서 Vid/Pid 디바이스 제외</label>
+        </textBox>
+      </presentation>
+      <presentation id="SplitVidPid">
+        <textBox refId="SplitVidPid">
+          <label>Vid/Pid 디바이스 분할</label>
+        </textBox>
+      </presentation>
+      <presentation id="ExcludeVidPid">
+        <textBox refId="ExcludeVidPid">
+          <label>Vid/Pid 디바이스 제외</label>
+        </textBox>
+      </presentation>
+      <presentation id="ExcludeVidPidRel">
+        <textBox refId="ExcludeVidPidRel">
+          <label>Vid/Pid/Rel 디바이스 제외</label>
+        </textBox>
+      </presentation>
+      <presentation id="IncludeVidPid">
+        <textBox refId="IncludeVidPid">
+          <label>Vid/Pid 디바이스 포함</label>
+        </textBox>
+      </presentation>
+      <presentation id="IncludeVidPidRel">
+        <textBox refId="IncludeVidPidRel">
+          <label>Vid/Pid/Rel 디바이스 포함</label>
+        </textBox>
+      </presentation>
+      <presentation id="ExcludeFamily">
+        <textBox refId="ExcludeFamily">
+          <label>디바이스 제품군 제외</label>
+        </textBox>
+      </presentation>
+      <presentation id="IncludeFamily">
+        <textBox refId="IncludeFamily">
+          <label>디바이스 제품군 포함</label>
+        </textBox>
+      </presentation>
+      <presentation id="ExAutoRedirectVidPid">
+        <textBox refId="ExAutoRedirectVidPid">
+          <label>자동 연결 Vid/Pid 디바이스 제외</label>
+        </textBox>
+      </presentation>
+      <presentation id="ExAutoRedirectFamily">
+        <textBox refId="ExAutoRedirectFamily">
+          <label>자동 연결 디바이스 제품군 제외</label>
+        </textBox>
+      </presentation>
+      <presentation id="ExcludeAllDevices" />
+      <presentation id="AllowHID" />
+      <presentation id="AllowHIDBootable" />
+      <presentation id="AllowAudioIn" />
+      <presentation id="AllowAudioOut" />
+      <presentation id="AllowKeyboardMouse" />
+      <presentation id="AllowVideo" />
+      <presentation id="AllowSmartcard" />
+      <presentation id="AllowAutoDeviceSplitting" />
+      <presentation id="LogInAsCurrentUser_Display" />
+      <presentation id="LogInAsCurrentUser" />
+      <presentation id="EnableRecursiveUnlock" />
+      <presentation id="BrokersTrustedForDelegation">
+        <listBox refId="BrokersTrustedForDelegation">위임을 위해 신뢰된 서버</listBox>
+      </presentation>
+      <presentation id="AllowNTLMAuthentication">
+      <dropdownList refId="AllowNTLMAuthentication" defaultItem="1" noSort="true">Kerberos에서 NTLM으로 폴백 허용</dropdownList>
+      </presentation>
+      <presentation id="ServersAlwaysUseNTLM">
+        <listBox refId="ServersAlwaysUseNTLM">서버에 대해 항상 NTLM 사용</listBox>
+      </presentation>
+      <presentation id="DoNotCheckCertRevocationStatus" />
+      <presentation id="StrictCertRevocationCheck" />
+      <presentation id="CertCheckMode">
+       <dropdownList refId="CertCheckMode" defaultItem="1">인증서 검사 모드</dropdownList>
+      </presentation>
+      <presentation id="ProtocolConnectionCertCheckMode">
+       <dropdownList refId="ProtocolConnectionCertCheckMode" defaultItem="3">프로토콜 연결 인증서 확인 모드</dropdownList>
+      </presentation>
+      <presentation id="EnableSmartCardSSO" />
+      <presentation id="EnableJumplist" />
+      <presentation id="AllowCmdLineCredentials" />
+      <presentation id="EnableTicketSSLAuth">
+        <dropdownList refId="EnableTicketSSLAuth" defaultItem="0">SSL 암호화된 프레임워크 채널 사용</dropdownList>
+      </presentation>
+      <presentation id="SSLCipherList">
+        <textBox refId="SSLCipherList">
+          <label>SSL 프로토콜 및 암호 그룹 구성</label>
+          <defaultValue>TLSv1.1:TLSv1.2:!aNULL:kECDH+AESGCM:ECDH+AESGCM:RSA+AESGCM:kECDH+AES:ECDH+AES:RSA+AES</defaultValue>
+        </textBox>
+        <textBox refId="SSLSignatureAlgorithms">
+          <label>서명 알고리즘 확장 구성</label>
+          <defaultValue></defaultValue>
+        </textBox>
+        <textBox refId="SSLSupportedGroups">
+          <label>지원되는 그룹 확장 구성</label>
+          <defaultValue></defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="ServerURL">
+        <textBox refId="ServerURL">
+          <label>서버 URL</label>
+        </textBox>
+      </presentation>
+      <presentation id="UserName">
+        <textBox refId="UserName">
+          <label>로그온 사용자 이름</label>
+        </textBox>
+      </presentation>
+      <presentation id="DomainName">
+        <textBox refId="DomainName">
+          <label>로그온 도메인 이름</label>
+        </textBox>
+      </presentation>
+      <presentation id="Password">
+        <textBox refId="Password">
+          <label>로그온 암호</label>
+        </textBox>
+      </presentation>
+      <presentation id="DesktopName">
+        <textBox refId="DesktopName">
+          <label>선택할 데스크톱 이름</label>
+        </textBox>
+      </presentation>
+      <presentation id="DesktopLayout">
+        <dropdownList refId="DesktopLayout" defaultItem="0">데스크톱 레이아웃</dropdownList>
+      </presentation>
+      <presentation id="LockedGuestSize">
+        <decimalTextBox refId="LockedGuestWidth" defaultValue="1600">잠긴 게스트 너비  </decimalTextBox>
+        <decimalTextBox refId="LockedGuestHeight" defaultValue="1200">잠긴 게스트 높이</decimalTextBox>
+      </presentation>
+      <presentation id="NonInteractive" />
+      <presentation id="SingleAutoConnect" />
+      <presentation id="noTSCAddins" />
+      <presentation id="connectUSBOnStartup" />
+      <presentation id="connectUSBOnInsert" />
+      <presentation id="AppSessionReconnectBehavior">
+        <dropdownList refId="AppSessionReconnectBehavior" defaultItem="0">연결 해제된 애플리케이션 세션 재개 동작</dropdownList>
+      </presentation>
+      <presentation id="AllSessionsDisconnectedBehavior">
+        <dropdownList refId="AllSessionsDisconnectedBehavior" defaultItem="0">모든 세션의 연결이 해제되었을 때 클라이언트 동작</dropdownList>
+      </presentation>
+      <presentation id="UnauthenticatedAccessEnabled" />
+      <presentation id="ErrorFooterTextFile">
+        <textBox refId="ErrorFooterTextFile">
+          <label>오류 바닥글 텍스트 파일 위치</label>
+        </textBox>
+      </presentation>
+      <presentation id="UnauthenticatedAccessAccount">
+        <textBox refId="UnauthenticatedAccessAccount">
+          <label>인증되지 않은 액세스 사용 계정</label>
+        </textBox>
+      </presentation>
+      <presentation id="DisableTimeZoneForwarding" />
+      <presentation id="AutomaticInputFocus" />
+      <presentation id="TunnelProxyBypass">
+        <textBox refId="TunnelProxyBypass">
+          <label>터널 프록시 바이패스 주소 목록</label>
+        </textBox>
+      </presentation>
+      <presentation id="HelpURL">
+        <textBox refId="HelpURL">
+          <label>Horizon Client 온라인 도움말의 URL</label>
+        </textBox>
+      </presentation>
+      <presentation id="AutoUpdateAllowed" />
+      <presentation id="AutoUpdateMessagePopUp" />
+      <presentation id="AutoCheckForUpdate" />
+      <presentation id="AutoUpdateAllowSkip" />
+      <presentation id="AutoUpdateURL">
+        <textBox refId="AutoUpdateURL">
+          <label>Horizon Client 온라인 업데이트의 URL</label>
+        </textBox>
+      </presentation>
+      <presentation id="BlockMultipleInstances" />
+      <presentation id="ListSmartCardCertsOnly" />
+      <presentation id="DisableToastNotifications" />
+      <presentation id="EnableRelativeMouse" />
+      <presentation id="DisableDisconnectMessages" />
+      <presentation id="HideClientAfterLaunchSession" />
+      <presentation id="DisallowClientInformationPassthrough" />
+      <presentation id="ForceFloatingLanguageBarOff" />
+      <presentation id="DisableFileRedirection" />
+      <presentation id="KeyboardHotkeys">
+        <dropdownList refId="DisplaySwitchModifierKey" defaultItem="1">디스플레이 전환 조합 키:</dropdownList>
+        <dropdownList refId="DisplaySwitchFunctionKey" defaultItem="1">디스플레이 전환 기능 키:</dropdownList>
+      </presentation>
+      <presentation id="HotkeyUngrabDesktop">
+        <dropdownList refId="UngrabDesktopModifierKey" defaultItem="0" noSort="true">입력 포커스를 해제하기 위한 조합 키:</dropdownList>
+        <dropdownList refId="SecondUngrabDesktopModifierKey" defaultItem="0" noSort="true">입력 포커스를 해제하기 위한 두 번째 조합 키:</dropdownList>
+        <dropdownList refId="UngrabDesktopFunctionKey" defaultItem="0">입력 포커스를 해제하기 위한 기능 키:</dropdownList>
+        <checkBox refId="MinimizeToTaskbar">릴리스 입력 포커스 후 전체 화면 가상 데스크톱 최소화</checkBox>
+      </presentation>
+      <presentation id="HotkeyGrabDesktop">
+        <dropdownList refId="GrabDesktopModifierKey" defaultItem="0" noSort="true">입력 포커스를 가져오기 위한 조합 키:</dropdownList>
+        <dropdownList refId="SecondGrabDesktopModifierKey" defaultItem="0" noSort="true">입력 포커스를 가져오기 위한 두 번째 조합 키:</dropdownList>
+        <dropdownList refId="GrabDesktopFunctionKey" defaultItem="0">입력 포커스를 가져오기 위한 문자 키:</dropdownList>
+      </presentation>
+      <presentation id="HideToolBarMenu">
+        <dropdownList refId="HideFavoritesToolbar" defaultItem="0">즐겨찾기 토글 숨기기</dropdownList>
+        <dropdownList refId="HideSettingsToolbar" defaultItem="0">설정 톱니 숨기기</dropdownList>
+      </presentation>
+      <presentation id="HideDesktopContextMenu">
+        <dropdownList refId="HideResetDesktopDesktopContext" defaultItem="0">데스크톱 리셋 숨기기</dropdownList>
+        <dropdownList refId="HideRestartDesktopDesktopContext" defaultItem="0">데스크톱 다시 시작 숨기기</dropdownList>
+        <dropdownList refId="HideDisplayDesktopContext" defaultItem="0">디스플레이 숨기기</dropdownList>
+        <dropdownList refId="HideSettingsDesktopContext" defaultItem="0">설정 숨기기</dropdownList>
+        <dropdownList refId="HideCreateShortcutToDesktopDesktopContext" defaultItem="0">데스크톱 바로 가기 생성 숨기기</dropdownList>
+        <dropdownList refId="HideAddToStartMenuDesktopContext" defaultItem="0">시작 메뉴에 추가 숨기기</dropdownList>
+        <dropdownList refId="HideMarkAsFavoriteDesktopContext" defaultItem="0">즐겨찾기로 표시 숨기기</dropdownList>
+      </presentation>
+      <presentation id="HideAppContextMenu">
+        <dropdownList refId="HideSettingsAppContext" defaultItem="0">설정 숨기기</dropdownList>
+        <dropdownList refId="HideCreateShortcutToDesktopAppContext" defaultItem="0">데스크톱 바로 가기 생성 숨기기</dropdownList>
+        <dropdownList refId="HideAddToStartMenuAppContext" defaultItem="0">시작 메뉴에 추가 숨기기</dropdownList>
+        <dropdownList refId="HideMarkAsFavoriteAppContext" defaultItem="0">즐겨찾기로 표시 숨기기</dropdownList>
+      </presentation>
+      <presentation id="HideDesktopMenu">
+        <dropdownList refId="HideHelpDesktopMenu" defaultItem="0">도움말 숨기기</dropdownList>
+        <dropdownList refId="HideSettingsDesktopMenu" defaultItem="0">설정 숨기기</dropdownList>
+        <dropdownList refId="HideResetDesktopDesktopMenu" defaultItem="0">데스크톱 리셋 숨기기</dropdownList>
+        <dropdownList refId="HideRestartDesktopDesktopMenu" defaultItem="0">데스크톱 다시 시작 숨기기</dropdownList>
+        <dropdownList refId="HideConnectUSBDeviceDesktopMenu" defaultItem="0">USB 디바이스 연결 숨기기</dropdownList>
+      </presentation>
+      <presentation id="HideNotificationMenu">
+        <dropdownList refId="HideSettingsNotificationMenu" defaultItem="0">설정 숨기기</dropdownList>
+      </presentation>
+      <presentation id="ColorDepth">
+        <dropdownList refId="ColorDepth" defaultItem="0">색 농도</dropdownList>
+      </presentation>
+      <presentation id="DisableWallpaper" />
+      <presentation id="DisableFullWindowDrag" />
+      <presentation id="DisableMenuAnimations" />
+      <presentation id="DisableTheming" />
+      <presentation id="DisableCursorShadow" />
+      <presentation id="FontSmoothing" />
+      <presentation id="DesktopComposition" />
+      <presentation id="AudioRedirectionMode">
+        <dropdownList refId="AudioRedirectionMode" defaultItem="0">오디오 리디렉션</dropdownList>
+      </presentation>
+      <presentation id="RedirectDrives" />
+      <presentation id="RedirectPrinters" />
+      <presentation id="RedirectPorts" />
+      <presentation id="RedirectSmartcards" />
+      <presentation id="RedirectClipboard" />
+      <presentation id="RedirectPlugAndPlayDevices" />
+      <presentation id="ShadowBitmap" />
+      <presentation id="CachePersistenceActive" />
+      <presentation id="EnableCompression" />
+      <presentation id="KeyboardHookMode">
+        <dropdownList refId="KeyboardHookMode" defaultItem="0">Windows 키 조합 리디렉션</dropdownList>
+      </presentation>
+      <presentation id="EnableCredSspSupport" />
+      <presentation id="BitmapCacheSize">
+        <decimalTextBox refId="BitmapCacheSize">8bpp 비트맵의 메모리 내 비트맵 캐시 크기(KB)</decimalTextBox>
+      </presentation>
+      <presentation id="BitmapVirtualCacheSize">
+        <decimalTextBox refId="BitmapVirtualCacheSize">8bpp 비트맵의 비트맵 캐시 파일 크기(MB)</decimalTextBox>
+      </presentation>
+      <presentation id="BitmapVirtualCache16BppSize">
+        <decimalTextBox refId="BitmapVirtualCache16BppSize">16bbp 비트맵의 비트맵 캐시 파일 크기(MB)</decimalTextBox>
+      </presentation>
+      <presentation id="BitmapVirtualCache24BppSize">
+        <decimalTextBox refId="BitmapVirtualCache24BppSize">24bpp 비트맵의 비트맵 캐시 파일 크기(MB)</decimalTextBox>
+      </presentation>
+      <presentation id="BitmapVirtualCache32BppSize">
+        <decimalTextBox refId="BitmapVirtualCache32BppSize">32bpp 비트맵의 비트맵 캐시 파일 크기(MB)</decimalTextBox>
+      </presentation>
+      <presentation id="EnableAutoReconnect" />
+      <presentation id="RedirectAudioCapture" />
+      <presentation id="LogInAsCurrentUser_Display_1" />
+      <presentation id="LogInAsCurrentUser_1" />
+      <presentation id="EnableRecursiveUnlock_1" />
+      <presentation id="EnableTicketSSLAuth_1">
+        <dropdownList refId="EnableTicketSSLAuth" defaultItem="0">SSL 암호화된 프레임워크 채널 사용</dropdownList>
+      </presentation>
+      <presentation id="DoNotCheckCertRevocationStatus_1" />
+      <presentation id="StrictCertRevocationCheck_1" />
+      <presentation id="SSLCipherList_1">
+        <textBox refId="SSLCipherList">
+          <label>SSL 프로토콜 및 암호화 알고리즘 구성</label>
+          <defaultValue>TLSv1.1:TLSv1.2:!aNULL:kECDH+AESGCM:ECDH+AESGCM:RSA+AESGCM:kECDH+AES:ECDH+AES:RSA+AES</defaultValue>
+        </textBox>
+        <textBox refId="SSLSignatureAlgorithms">
+          <label>서명 알고리즘 확장 구성</label>
+          <defaultValue></defaultValue>
+        </textBox>
+        <textBox refId="SSLSupportedGroups">
+          <label>지원되는 그룹 확장 구성</label>
+          <defaultValue></defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="ServerURL_1">
+        <textBox refId="ServerURL">
+          <label>서버 URL</label>
+        </textBox>
+      </presentation>
+      <presentation id="UserName_1">
+        <textBox refId="UserName">
+          <label>로그온 사용자 이름</label>
+        </textBox>
+      </presentation>
+      <presentation id="DomainName_1">
+        <textBox refId="DomainName">
+          <label>로그온 도메인 이름</label>
+        </textBox>
+      </presentation>
+      <presentation id="Password_1">
+        <textBox refId="Password">
+          <label>로그온 암호</label>
+        </textBox>
+      </presentation>
+      <presentation id="DesktopName_1">
+        <textBox refId="DesktopName">
+          <label>선택할 데스크톱 이름</label>
+        </textBox>
+      </presentation>
+      <presentation id="DesktopLayout_1">
+        <dropdownList refId="DesktopLayout" defaultItem="0">데스크톱 레이아웃</dropdownList>
+      </presentation>
+      <presentation id="LockedGuestSize_1">
+        <decimalTextBox refId="LockedGuestWidth" defaultValue="1600">잠긴 게스트 너비  </decimalTextBox>
+        <decimalTextBox refId="LockedGuestHeight" defaultValue="1200">잠긴 게스트 높이</decimalTextBox>
+      </presentation>
+      <presentation id="NonInteractive_1" />
+      <presentation id="SingleAutoConnect_1" />
+      <presentation id="noTSCAddins_1" />
+      <presentation id="connectUSBOnStartup_1" />
+      <presentation id="connectUSBOnInsert_1" />
+      <presentation id="AppSessionReconnectBehavior_1">
+        <dropdownList refId="AppSessionReconnectBehavior" defaultItem="0">연결 해제된 애플리케이션 세션 재개 동작</dropdownList>
+      </presentation>
+      <presentation id="AllSessionsDisconnectedBehavior_1">
+        <dropdownList refId="AllSessionsDisconnectedBehavior" defaultItem="0">모든 세션의 연결이 해제되었을 때 클라이언트 동작</dropdownList>
+      </presentation>
+      <presentation id="UnauthenticatedAccessEnabled_1" />
+      <presentation id="UnauthenticatedAccessAccount_1">
+        <textBox refId="UnauthenticatedAccessAccount">
+          <label>인증되지 않은 액세스 사용 계정</label>
+        </textBox>
+      </presentation>
+      <presentation id="AllowDataSharing" />
+      <presentation id="AllowPluginUpdate" />
+      <presentation id="AllowResolutionDpiSync" />
+      <presentation id="EnableShade" />
+      <presentation id="InitialPinState" />
+      <presentation id="DisableSpanChecks" />
+      <presentation id="EnableMMR" />
+      <presentation id="AlwaysOnTop" />
+      <presentation id="AutomaticallyInstallShortcuts" />
+      <presentation id="AutomaticallyInstallShortcuts_1" />
+      <presentation id="DisableToastNotifications_1" />
+      <presentation id="EnableRelativeMouse_1" />
+      <presentation id="DisableDisconnectMessages_1" />
+      <presentation id="HideClientAfterLaunchSession_1" />
+      <presentation id="DisableSharing" />
+      <presentation id="ForceFloatingLanguageBarOff_1" />
+      <presentation id="AllowDisplayScaling" />
+      <presentation id="AutoSyncToggleKeys" />
+      <presentation id="AllowBlastCodec" />
+      <presentation id="AllowH264" />
+      <presentation id="AllowH264YUV444" />
+      <presentation id="AllowHEVC" />
+      <presentation id="AllowHDR" />
+      <presentation id="EnableWindowOptimizations" />
+      <presentation id="DecodeCapsProbingMode">
+        <dropdownList refId="DecodeCapsProbingMode" defaultItem="0" noSort="true">하드웨어 디코딩 기능을 프로브하는 경우:</dropdownList>
+      </presentation>
+      <presentation id="DecoderImageCacheSize">
+        <decimalTextBox refId="DecoderImageCacheSize" defaultValue="256000">디코더 이미지 캐시 크기(KB)</decimalTextBox>
+      </presentation>
+      <presentation id="AllowBlastThroughProxy" />
+      <presentation id="AllowSplitMksWindow" />
+      <presentation id="ForceUserAffinity" />
+      <presentation id="MouseMoveMaxLatencyMsec">
+        <decimalTextBox refId="MouseMoveMaxLatencyMsec">마우스 병합에 대한 최대 지연 시간</decimalTextBox>
+      </presentation>
+      <presentation id="MaxTxRate">
+        <decimalTextBox refId="MaxTxRate" defaultValue="500">최대 전송률</decimalTextBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

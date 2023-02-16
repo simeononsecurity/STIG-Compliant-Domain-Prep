@@ -1,0 +1,994 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="CertCheckMode_NoSecurity">无安全性</string>
+      <string id="CertCheckMode_WarnButAllow">警告但允许</string>
+      <string id="CertCheckMode_FullSecurity">完整安全性</string>
+      <string id="ProtocolConnectionCertCheckMode_TP">指纹验证</string>
+      <string id="ProtocolConnectionCertCheckMode_TPORPKI">指纹或 PKI 验证</string>
+      <string id="ProtocolConnectionCertCheckMode_PKIANDTP">PKI 和指纹验证</string>
+      <string id="ProtocolConnectionCertCheckMode_PKI">PKI 验证</string>
+      <string id="EnableTicketSSLAuth_Enable">启用</string>
+      <string id="EnableTicketSSLAuth_Disable">禁用</string>
+      <string id="EnableTicketSSLAuth_Enforce">强制</string>
+      <string id="DesktopLayout_FullScreen">全屏</string>
+      <string id="DesktopLayout_WindowLarge">窗口 - 大尺寸</string>
+      <string id="DesktopLayout_WindowSmall">窗口 - 小尺寸</string>
+      <string id="DesktopLayout_MultiMonitor">多显示器</string>
+      <string id="AppSessionReconnectBehavior_Ask">请求重新连接以打开应用程序</string>
+      <string id="AppSessionReconnectBehavior_Always">自动重新连接以打开应用程序</string>
+      <string id="AppSessionReconnectBehavior_Never">不请求重新连接且不自动重新连接</string>
+      <string id="AllSessionsDisconnectedBehavior_Quit">退出</string>
+      <string id="AllSessionsDisconnectedBehavior_Logoff">注销</string>
+      <string id="AllSessionsDisconnectedBehavior_Keep">让客户端保持当前状态</string>
+      <string id="ColorDepth_8bit">8 位</string>
+      <string id="ColorDepth_15bit">15 位</string>
+      <string id="ColorDepth_16bit">16 位</string>
+      <string id="ColorDepth_24bit">24 位</string>
+      <string id="ColorDepth_32bit">32 位</string>
+      <string id="AudioRedirectionMode_PlayInVM">在虚拟机中播放 (VoIP USB 支持所需)</string>
+      <string id="AudioRedirectionMode_RedirectToClient">重定向到客户端</string>
+      <string id="AudioRedirectionMode_DisableAudio">禁用音频</string>
+      <string id="KeyboardHookMode_ApplyKeyCombinationsLocal">在本地应用组合键</string>
+      <string id="KeyboardHookMode_SendKeyCombinationsToVM">将组合键发送到虚拟机</string>
+      <string id="LocalModeExitBehavior_Shutdown">关闭</string>
+      <string id="LocalModeExitBehavior_Suspend">挂起</string>
+      <string id="VMwareViewClientUSB">View USB 配置</string>
+      <string id="VMwareViewClientOnlySetting">代理无法配置设置</string>
+      <string id="ExcludePath">排除路径</string>
+      <string id="ExcludePathExplain">从转发中排除指定的集线器或端口路径中的设备。</string>
+      <string id="IncludePath">包含路径</string>
+      <string id="IncludePathExplain">在转发中包含指定的集线器或端口路径中的设备。</string>
+      <string id="SplitExcludeVidPid">从拆分中排除 Vid/Pid 设备</string>
+      <string id="SplitExcludeVidPidExplain">排除通过其供应商 ID 和产品 ID 指定的复合设备的组件设备，不将它们视为单独设备进行筛选。
+
+语法: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx|*&gt;&gt;[;...]
+
+例如: vid-0781_pid-554c;vid-0781_pid-9999</string>
+      <string id="SplitVidPid">拆分 Vid/Pid 设备</string>
+      <string id="SplitVidPidExplain">将按供应商和产品 ID 指定的复合设备的组件设备视为单独的设备以进行筛选。
+
+语法: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx|*&gt;(exintf:xx[;exintf:xx])&gt;[;...]
+
+例如: vid-0781_pid-554c(exintf:01;exintf:02);vid-0781_pid-9999(exintf:02)</string>
+      <string id="ExcludeVidPid">排除 Vid/Pid 设备</string>
+      <string id="ExcludeVidPidExplain">将具有指定供应商 ID 和产品 ID 的设备从转发中排除。
+
+语法: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx | *&gt;&gt;[;...]
+
+例如: vid-0781_pid-554c;vid-0781_pid-9999</string>
+      <string id="ExcludeVidPidRel">排除 Vid/Pid/Rel 设备</string>
+      <string id="ExcludeVidPidRelExplain">排除转发具有指定供应商 ID、产品 ID 和版本号的设备。
+
+语法: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx&gt;_rel-&lt;xxxx | *&gt;&gt;[;...]
+
+例如: vid-0781_pid-554c_rel-0100;vid-0781_pid-9999_rel-0010</string>
+      <string id="IncludeVidPid">包含 Vid/Pid 设备</string>
+      <string id="IncludeVidPidExplain">包含具有指定供应商 ID 和产品 ID 的可以转发的设备。
+
+语法: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx | *&gt;&gt;[;...]
+
+例如: vid-0781_pid-554c;vid-0781_pid-9999</string>
+      <string id="IncludeVidPidRel">包含 Vid/Pid/Rel 设备</string>
+      <string id="IncludeVidPidRelExplain">包含具有指定供应商 ID、产品 ID 和版本号、可以转发的设备。
+
+语法: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx&gt;_rel-&lt;xxxx | *&gt;&gt;[;...]
+
+例如: vid-0781_pid-554c_rel-0100;vid-0781_pid-9999_rel-0010</string>
+      <string id="ExcludeFamily">排除设备系列</string>
+      <string id="ExcludeFamilyExplain">从转发中排除一系列设备。
+
+语法: &lt;family-name&gt;[;...]
+
+例如: bluetooth;audio-in</string>
+      <string id="IncludeFamily">包含设备系列</string>
+      <string id="IncludeFamilyExplain">包含一系列可转发的设备。
+
+语法: &lt;family-name&gt;[;...]
+
+例如: storage;audio-out</string>
+      <string id="ExAutoRedirectVidPid">排除自动连接 Vid/Pid 设备</string>
+      <string id="ExAutoRedirectVidPidExplain">将具有指定供应商 ID 和产品 ID 的设备从自动转发中排除。
+
+语法: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx | *&gt;&gt;[;...]
+
+例如: vid-0781_pid-554c;vid-0781_pid-9999</string>
+      <string id="ExAutoRedirectFamily">排除自动连接设备系列</string>
+      <string id="ExAutoRedirectFamilyExplain">将一系列设备从自动转发中排除。
+
+语法: &lt;family-name&gt;[;...]
+
+例如: storage;hid</string>
+      <string id="ExcludeAllDevices">排除所有设备</string>
+      <string id="ExcludeAllDevicesExplain">阻止所有设备，除非通过包含筛选器规则包含这些设备。
+
+默认: 允许所有设备</string>
+      <string id="VMwareViewAgentToClientUSB">仅客户端可下载设置</string>
+      <string id="AllowHID">允许其他输入设备</string>
+      <string id="AllowHIDExplain">允许转发可引导的 HID 设备、键盘和鼠标设备之外的输入设备。
+
+默认: 允许转发</string>
+      <string id="AllowHIDBootable">允许可引导的 HID</string>
+      <string id="AllowHIDBootableExplain">允许转发可引导的输入设备 (也称为可引导的 HID 设备)。
+
+默认: 允许转发</string>
+      <string id="AllowAudioIn">允许音频输入设备</string>
+      <string id="AllowAudioInExplain">允许转发音频输入设备。
+
+默认: 允许转发</string>
+      <string id="AllowAudioOut">允许音频输出设备</string>
+      <string id="AllowAudioOutExplain">允许转发音频输出设备。
+
+默认: 阻止转发</string>
+      <string id="AllowKeyboardMouse">允许键盘和鼠标设备</string>
+      <string id="AllowKeyboardMouseExplain">允许转发键盘和鼠标设备。
+
+默认: 阻止转发</string>
+      <string id="AllowVideo">允许视频设备</string>
+      <string id="AllowVideoExplain">允许转发视频设备
+
+默认: 允许转发</string>
+      <string id="AllowSmartcard">允许智能卡</string>
+      <string id="AllowSmartcardExplain">允许转发智能卡设备。
+
+默认: 阻止转发</string>
+      <string id="AllowAutoDeviceSplitting">允许自动设备拆分</string>
+      <string id="AllowAutoDeviceSplittingExplain">不要将任何复合设备的组件设备自动视为单独的设备。</string>
+      <string id="DisableRemoteConfig">禁用远程配置</string>
+      <string id="DisableRemoteConfigExplain">禁止下载远程配置。</string>
+      <string id="AllowDevDescFailsafe">允许设备描述符防故障行为</string>
+      <string id="AllowDevDescFailsafeExplain">启用描述符防故障行为。如果描述符提取失败，则不会阻止设备</string>
+      <string id="VMwareViewClient">VMware Horizon Client 配置</string>
+      <string id="AllowDataSharing">允许数据共享</string>
+      <string id="AllowDataSharingExplain">VMware 收集客户端系统上的数据以确定硬件和软件兼容性优先次序。如果您的公司参与该计划，VMware 将收到有关您环境的匿名数据。
+默认情况下启用此属性。</string>
+      <string id="AllowPluginUpdate">允许最终用户安装或升级插件</string>
+      <string id="AllowPluginUpdateExplain">如果启用此 GPO，每当需要安装或升级插件时，Horizon Client UI 将始终显示插件安装对话框。如果禁用此 GPO，Horizon Client 将不会显示插件安装对话框。如果 GPO 设置为“未配置”，则用户可以选择在客户端 UI 中控制此设置。</string>
+      <string id="AllowResolutionDpiSync">将分辨率和 DPI 保存到服务器</string>
+      <string id="AllowResolutionDpiSyncExplain">如果启用，Horizon Client 会自动将桌面分辨率和 DPI 缩放比例保存到服务器。通过该 GPO，每当设定了自定义设置的用户 (假定其名字为 Jane) 随后启动远程桌面时，都会自动应用该自定义设置。未设定自定义设置的用户将继续看到默认设置，这些设置与本地硬件的分辨率和 DPI 相匹配。如果在具有相同显示器配置的其他系统上设置了该 GPO，则 Jane 也将在该系统上看到其自定义设置。
+
+默认情况下将禁用此属性。</string>
+      <string id="EnableShade">启用幕帘</string>
+      <string id="EnableShadeExplain">确定是否启用 Horizon Client 窗口顶部的幕帘 [菜单栏]。
+
+默认情况下，将启用该属性。</string>
+      <string id="InitialPinState">固定幕帘</string>
+      <string id="InitialPinStateExplain">确定是否允许在 Horizon Client 窗口顶部固定幕帘，以防止自动隐藏菜单栏。注意: 如果禁用了幕帘，则该属性无效。
+
+默认情况下，将启用该属性。</string>
+      <string id="DisableSpanChecks">跨越时不检查显示器是否对齐</string>
+      <string id="DisableSpanChecksExplain">默认情况下，如果组合屏幕时没有形成精确的矩形 (即，左右放置的显示器具有相同的高度，上下放置的显示器具有相同的宽度)，则客户端桌面不会跨越多个显示器。
+
+该属性覆盖此规则，默认情况下，将禁用该属性。</string>
+      <string id="EnableMMR">启用多媒体加速</string>
+      <string id="EnableMMRExplain">指定是否在客户端上启用多媒体重定向 (MMR)。MMR 是一个 Microsoft DirectShow 筛选器，用于将远程系统上的特定编解码器中的多媒体数据通过 TCP 套接字直接转发到客户端。然后，直接在客户端上解码该数据，将在其中进行播放。如果客户端没有足够的资源以处理本地多媒体解码，管理员可以禁用 MMR。
+
+注意: 如果 Horizon Client 视频显示硬件没有覆盖支持，MMR 将无法正常工作。MMR 策略不适用于脱机桌面会话。</string>
+      <string id="AlwaysOnTop">总在最前面</string>
+      <string id="AlwaysOnTopExplain">指定 Horizon Client 窗口是否始终在最前面。
+
+默认情况下，将禁用该设置。</string>
+      <string id="AutomaticallyInstallShortcuts">在 Horizon Server 上配置快捷方式后自动安装快捷方式</string>
+      <string id="AutomaticallyInstallShortcutsExplain">该策略配置在服务器上配置了快捷方式后，是否应在 Horizon Client 上自动安装这些快捷方式。如果启用，将不提示用户而自动安装快捷方式。如果禁用，将不安装快捷方式。如果未配置，将提示用户安装快捷方式。</string>
+      <string id="HideClientAfterLaunchSession">“在启动项目后隐藏选择器”复选框的默认值</string>
+      <string id="HideClientAfterLaunchSessionExplain">设置是否默认选中“在启动项目后隐藏选择器”复选框。
+
+默认情况下，将禁用该设置。</string>
+      <string id="VMwareViewClientScripting">脚本定义</string>
+      <string id="ServerURL">服务器 URL</string>
+      <string id="ServerURLExplain">确定 Horizon Client 在登录期间使用的 URL。例如: https://view1.example.com</string>
+      <string id="UserName">登录用户名</string>
+      <string id="UserNameExplain">确定 Horizon Client 在登录期间使用的用户名。</string>
+      <string id="DomainName">登录域名</string>
+      <string id="DomainNameExplain">确定 Horizon Client 在登录期间使用的 NETBIOS 域。例如: EXAMPLE</string>
+      <string id="Password">登录密码</string>
+      <string id="PasswordExplain">确定 Horizon Client 在登录期间使用的密码。
+
+警告: 该密码是 Active Directory 以纯文本形式存储的</string>
+      <string id="DesktopName">要选择的桌面名称</string>
+      <string id="DesktopNameExplain">确定 Horizon Client 在登录期间使用的默认桌面。</string>
+      <string id="DesktopLayout">桌面布局</string>
+      <string id="DesktopLayoutExplain">确定启动桌面时的 Horizon Client 窗口显示状态。</string>
+      <string id="FullScreen">全屏</string>
+      <string id="Window">窗口</string>
+      <string id="MultiMonitor">多显示器</string>
+      <string id="LockedGuestSize">锁定的客户机大小</string>
+      <string id="LockedGuestWidth">锁定的客户机宽度 </string>
+      <string id="LockedGuestHeight">锁定的客户机高度</string>
+      <string id="LockedGuestSizeExplain">确定远程桌面的屏幕分辨率。启用此设置后，将禁用远程桌面自动调整功能。
+
+最小屏幕大小: 640x480
+最大屏幕大小: 4096x4096
+
+注意: 此设置不适用于 RDP 连接</string>
+      <string id="NonInteractive">禁止显示错误消息 (仅在完全脚本化时)</string>
+      <string id="NonInteractiveExplain">确定在登录期间是否显示错误消息。
+
+注意: 只有在登录过程完全脚本化时 (即，事先通过策略预填充所有必需的登录信息)，才会应用该属性。
+
+注意: 如果由于输入的登录信息不正确而导致登录失败，则不会通知用户并自动终止 Horizon Client wswc.exe 进程。</string>
+      <string id="SingleAutoConnect">如果仅授权一个启动项目，则自动连接</string>
+      <string id="SingleAutoConnectExplain">如果桌面或应用程序是为登录用户授权的唯一项目，则自动连接到该桌面或应用程序。</string>
+      <string id="VMwareViewClientSecurity">安全性设置</string>
+      <string id="VMwareViewClientSecurityNTLM">NTLM 设置</string>
+      <string id="LogInAsCurrentUser_Display">显示“以当前用户身份登录”选项</string>
+      <string id="LogInAsCurrentUser_DisplayExplain">确定是否在 Windows Horizon Client 中显示“以当前用户身份登录”复选框。
+
+默认情况下，将启用该设置。
+
+如果该选项设置为“关闭”，则用户无法覆盖“‘以当前用户身份登录’复选框的默认值”选项。</string>
+      <string id="LogInAsCurrentUser">“以当前用户身份登录”复选框的默认值</string>
+      <string id="LogInAsCurrentUserExplain">设置是否默认选中“以当前用户登录”复选框。
+
+默认情况下，将禁用该设置。</string>
+      <string id="EnableRecursiveUnlock">解锁客户端计算机后解锁远程会话</string>
+      <string id="EnableRecursiveUnlockExplain">该策略控制名为“递归解锁”的功能，此功能可在解锁客户端计算机后解锁所有远程会话。仅当用户已使用“以当前用户身份登录”功能登录到 View Server 时，此功能才适用。
+
+默认情况下，将启用该设置。</string>
+      <string id="BrokersTrustedForDelegation">获得委派信任的服务器</string>
+      <string id="BrokersTrustedForDelegationExplain">设置允许为其委派凭据的 View 连接服务器的列表。它与“以当前用户登录”一起使用。
+
+服务器的命名格式为服务主体名称 (SPN)。
+
+默认情况下，将信任所有服务器。</string>
+      <string id="AllowNTLMAuthentication">允许 NTLM 身份验证</string>
+      <string id="AllowFallBack_YES">是</string>
+      <string id="AllowFallBack_NO">否</string>
+      <string id="AllowNTLMAuthenticationExplain">如果启用此设置，则将允许在以当前用户身份登录时使用 NTLM 身份验证。
+
+如果为“未配置”，则将允许对 GPO“始终对服务器使用 NTLM”中列出的服务器使用 NTLM 身份验证。
+
+如果为“已禁用”，则不会对任何服务器使用 NTLM 身份验证。
+
+允许从 Kerberos 回退到 NTLM:
+如果设置为“否”，则将仅对 GPO“始终对服务器使用 NTLM”中列出的服务器使用 NTLM。
+如果设置为“是”，则当客户端无法检索服务器的 Kerberos 票证时，可以使用 NTLM。</string>
+      <string id="ServersAlwaysUseNTLM">始终对服务器使用 NTLM</string>
+      <string id="ServersAlwaysUseNTLMExplain">如果启用此设置，则以当前用户身份登录时将始终对列出的服务器使用 NTLM 身份验证。
+
+服务器的命名格式为完全限定域名 (FQDN)</string>
+      <string id="DoNotCheckCertRevocationStatus">不检查证书吊销状态</string>
+      <string id="DoNotCheckCertRevocationStatusExplain">确定是否检查证书吊销状态。如果启用此 GPO，则即使服务器发送的证书已被吊销，或者已知无法进行证书吊销检查 (例如，在 Internet 连接受限时)，Horizon Client 仍会将服务器的证书视为有效。
+
+默认情况下，将禁用此设置。</string>
+      <string id="StrictCertRevocationCheck">严格的证书吊销检查</string>
+      <string id="StrictCertRevocationCheckExplain">如果启用此 GPO，Horizon Client 将在无法验证证书吊销状态时拒绝连接到服务器。如果禁用此设置，客户端将检查吊销状态，但不会根据吊销状态阻止连接。“DoNotCheckCertRevocationStatus”GPO 优先于此 GPO，请不要将这两个 GPO 一起使用。
+
+默认情况下，将禁用此设置。</string>
+      <string id="CertCheckMode">证书验证模式</string>
+      <string id="CertCheckModeExplain">配置 Horizon Client 的证书检查行为。
+
+如果该属性设置为“无安全性”，则不执行证书检查。
+
+如果该属性设置为“警告但允许”，并且服务器证书是自签名证书，则警告用户但允许继续操作。如果服务器证书是自签名证书，则允许证书名称与服务器名称不匹配。这是默认值。
+
+如果该属性设置为“完整安全性”，则向用户报告所有证书错误，并且不允许用户连接到服务器。</string>
+      <string id="ProtocolConnectionCertCheckMode">协议连接证书验证模式</string>
+      <string id="ProtocolConnectionCertCheckModeExplain">此设置确定 Blast 连接和安全加密链路连接的证书检查模式。
+默认情况下，将执行指纹验证。
+
+如果该属性设置为“指纹验证”，则当证书指纹验证失败时，将阻止与虚拟授权的连接。 
+
+如果该属性设置为“指纹或 PKI 验证”，则证书指纹错误将回退至 PKI 证书验证。如果 PKI 证书检查失败，则将阻止与虚拟授权的连接。
+
+如果该属性设置为“PKI 和指纹验证”，则客户端将同时使用 PKI 和指纹验证。如果证书指纹或 PKI 证书身份验证失败，则将阻止与虚拟授权的连接。
+
+如果该属性设置为“PKI 验证”，则当 PKI 证书身份验证失败时，将阻止与虚拟授权的连接。
+
+</string>
+      <string id="EnableSmartCardSSO">为智能卡身份验证启用单点登录</string>
+      <string id="EnableSmartCardSSOExplain">为智能卡身份验证启用单点登录。这要求 Horizon Client 先在内存中暂时存储加密的智能卡 PIN，然后再将其提交到 View 连接服务器。</string>
+      <string id="EnableJumplist">启用跳转列表集成</string>
+      <string id="EnableJumplistExplain">允许将跳转列表添加到 Windows 7 和更高版本的任务栏中的 Horizon Client 图标，以使用户轻松连接到最近使用的 View 连接服务器和远程桌面。默认情况下，将启用该功能。</string>
+      <string id="AllowCmdLineCredentials">允许命令行凭据</string>
+      <string id="AllowCmdLineCredentialsExplain">允许通过命令行参数提供凭据，例如，密码或 PIN。
+
+默认情况下，将启用该设置。</string>
+      <string id="EnableTicketSSLAuth">启用 SSL 加密框架通道</string>
+      <string id="EnableTicketSSLAuthExplain">启用 SSL 加密框架通道
+
+启用: 启用 SSL，允许回退到没有 SSL 支持的桌面
+禁用: 禁用 SSL
+强制: 启用 SSL，拒绝连接到没有 SSL 支持的桌面</string>
+      <string id="SSLCipherList">配置 SSL 协议和加密算法</string>
+      <string id="SSLCipherListExplain">通过配置 SSL 协议和密码套件，您可以在建立加密 SSL 连接之前指定加密算法和协议。密码列表包含一个密码字符串或者多个以冒号分隔的密码字符串。请注意，所有密码字符串均区分大小写。
+
+如果启用该功能，则默认值为:
+   “TLSv1.1:TLSv1.2:!aNULL:kECDH+AESGCM:ECDH+AESGCM:RSA+AESGCM:kECDH+AES:ECDH+AES:RSA+AES”
+这意味着: 将启用 TLS v1.1 和 TLS v1.2。密码套件将使用 ECDHE、ECDH 和 RSA 以及 128 或 256 位 AES，并首选使用 GCM 模式。不支持 SSL v2.0、SSL v3.0 和 TLS v1.0。
+
+通过配置签名算法，可指定 TLS v1.2 的签名算法。输入以冒号分隔的一系列签名算法，各个签名算法按优先级从高到低的顺序排列，且采用“算法+哈希”格式。
+请注意，算法和哈希名称区分大小写。例如: RSA+SHA256:ECDSA+SHA256
+如果未设置此选项，则默认值为 OpenSSL 库支持的所有签名算法。
+
+通过配置支持的组，可设置支持的椭圆曲线组。输入以冒号分隔的一系列曲线。请注意，曲线名称区分大小写。例如: P-256:P-384
+如果未设置此选项且提供的是 ECDHE 密码套件，则默认值为 OpenSSL 库支持的所有签名算法。
+
+相关配置的参考链接:
+https://kb.vmware.com/s/article/85640</string>
+      <string id="VMwareViewRdpSettings">RDP 设置</string>
+      <string id="VMwareViewBrowserRedirection">VMware Browser 重定向</string>
+      <string id="ColorDepth">颜色深度</string>
+      <string id="ColorDepthExplain">确定远程桌面的颜色深度。
+
+对于 24 位 Windows XP 系统，请确保已启用“计算机配置”/“管理模板”/“Windows 组件”/“终端服务”中的“限制最大颜色深度”策略并且为 24 位。</string>
+      <string id="AudioRedirectionMode">音频重定向</string>
+      <string id="AudioRedirectionModeExplain">确定在远程桌面上播放时如何通过通道传送音频信息。如果启用该属性，则可用的设置为:
+
+  * 禁用音频 - 无音频
+  * 在虚拟机中播放 (VoIP USB 支持所需) - 在远程桌面中播放音频 (需要使用共享 USB 音频设备在客户端上提供声音)
+  * 重定向到客户端 - 将音频重定向到客户端。这是默认模式。
+
+注意: 该属性仅适用于 RDP 音频 ï¿½ 通过 MMR 重定向的音频将在客户端中播放。</string>
+      <string id="KeyboardHookMode">Windows 组合键重定向</string>
+      <string id="KeyboardHookModeExplain">确定在何处应用 Windows 组合键。</string>
+      <string id="DisableWallpaper">桌面背景</string>
+      <string id="DisableWallpaperExplain">确定在客户端连接到远程桌面时是否显示桌面背景。</string>
+      <string id="DisableFullWindowDrag">拖动时显示窗口内容</string>
+      <string id="DisableFullWindowDragExplain">确定在用户将文件夹拖到新位置时是否显示文件夹内容。</string>
+      <string id="DisableMenuAnimations">菜单和窗口动画</string>
+      <string id="DisableMenuAnimationsExplain">确定在客户端连接到远程计算机时的菜单和窗口行为。</string>
+      <string id="DisableTheming">主题</string>
+      <string id="DisableThemingExplain">确定在客户端连接到远程桌面时是否显示主题。</string>
+      <string id="DisableCursorShadow">光标阴影</string>
+      <string id="DisableCursorShadowExplain">确定在远程桌面上的光标下方是否显示阴影。</string>
+      <string id="FontSmoothing">字体平滑</string>
+      <string id="FontSmoothingExplain">(Windows Vista 或更高版本) 确定是否为远程桌面上的字体应用消除锯齿效果。</string>
+      <string id="DesktopComposition">桌面拼合</string>
+      <string id="DesktopCompositionExplain">(Windows Vista 或更高版本) 确定是否在远程桌面上启用桌面拼合。
+
+如果启用桌面拼合，则各个窗口不再像以前的 Microsoft Windows 版本那样直接绘制到屏幕或主要显示设备上。相反，其图形重定向到显存中的屏幕外部表面，然后呈现为桌面图像并在显示器上显示。</string>
+      <string id="RedirectDrives">重定向驱动器</string>
+      <string id="RedirectDrivesExplain">确定在客户端连接到远程计算机时是否自动重定向本地磁盘驱动器。</string>
+      <string id="RedirectPrinters">重定向打印机</string>
+      <string id="RedirectPrintersExplain">确定在客户端连接到远程桌面时是否自动重定向本地打印机。</string>
+      <string id="RedirectPorts">重定向串行端口</string>
+      <string id="RedirectPortsExplain">确定在客户端连接到远程桌面时是否自动重定向本地 COM 端口。</string>
+      <string id="RedirectSmartcards">重定向智能卡</string>
+      <string id="RedirectSmartcardsExplain">确定在客户端连接到远程桌面时是否自动重定向本地智能卡。</string>
+      <string id="RedirectClipboard">重定向剪贴板</string>
+      <string id="RedirectClipboardExplain">该设置确定在客户端连接到远程桌面时是否自动重定向本地剪贴板信息。</string>
+      <string id="RedirectPlugAndPlayDevices">重定向支持的即插即用设备</string>
+      <string id="ExplainRedirectPlugAndPlayDevices">确定在客户端连接到远程桌面时是否自动重定向本地即插即用设备和 POS 设备。这与 View Agent 的 USB 重定向组件管理的重定向不同。</string>
+      <string id="ShadowBitmap">阴影位图</string>
+      <string id="ShadowBitmapExplain">确定是否应使用阴影位图。
+
+注意: 在全屏模式下，将始终禁用阴影位图，因此，该属性在全屏模式下无效。</string>
+      <string id="CachePersistenceActive">位图缓存/缓存永久活动</string>
+      <string id="CachePersistenceActiveExplain">确定是否应使用永久位图缓存。永久缓存可以提高性能，但需要额外的磁盘空间。</string>
+      <string id="EnableCompression">启用压缩</string>
+      <string id="EnableCompressionExplain">确定是否使用 RDP 数据压缩，默认情况下，将启用压缩。</string>
+      <string id="BitmapCacheSize">8bpp 位图的内存位图缓存大小 (KB)</string>
+      <string id="BitmapCacheSizeExplain">指定用于 8 位/像素颜色设置的 RAM 位图缓存大小 (KB)。如果 ScaleBitmapCachesByBPP 为 true (默认)，则将该缓存大小乘以字节数/像素以确定实际的 RAM 缓存大小。
+
+如果启用该属性，请输入大小 (KB)。</string>
+      <string id="BitmapVirtualCacheSize">8bpp 位图的位图缓存文件大小 (MB)</string>
+      <string id="BitmapVirtualCacheSizeExplain">指定用于 8 位/像素颜色设置的永久位图缓存文件大小 (MB)。
+
+如果启用该属性，请输入文件大小 (MB)。有效的值为 1 到 32 (含这两个数字)。</string>
+      <string id="BitmapVirtualCache16BppSize">16bpp 位图的位图缓存文件大小 (MB)</string>
+      <string id="BitmapVirtualCache16BppSizeExplain">指定用于 15/16 位/像素颜色设置的永久位图缓存文件大小 (MB)。
+
+如果启用该属性，请输入文件大小 (MB)。有效的值为 1 到 32 (含这两个数字)。</string>
+      <string id="BitmapVirtualCache24BppSize">24bpp 位图的位图缓存文件大小 (MB)</string>
+      <string id="BitmapVirtualCache24BppSizeExplain">指定用于 24 位/像素颜色设置的永久位图缓存文件大小 (MB)。
+
+如果启用该属性，请输入文件大小 (MB)。有效的值为 1 到 32 (含这两个数字)。</string>
+      <string id="BitmapVirtualCache32BppSize">32bpp 位图的位图缓存文件大小 (MB)</string>
+      <string id="BitmapVirtualCache32BppSizeExplain">指定用于 32 位/像素颜色设置的永久位图缓存文件大小 (MB)。
+
+如果启用该属性，请输入文件大小 (MB)。有效的值为 1 到 32 (含这两个数字)。</string>
+      <string id="noTSCAddins">禁用第三方终端服务插件</string>
+      <string id="noTSCAddinsExplain">如果该属性设置为 true，则不检查作为正常 RDP 插件安装的第三方终端服务插件。该设置不影响 View 特定的插件，例如，USB 重定向。如果未配置该策略，则默认允许检测和使用第三方插件。</string>
+      <string id="DisableTimeZoneForwarding">禁用时区转发</string>
+      <string id="DisableTimeZoneForwardingExplain">确定是否将 View 桌面的时区与连接的客户端的时区同步。如果启用，只有在 View Agent 配置策略的“禁用时区同步”属性未设置为已禁用时，才会应用该属性。
+
+默认情况下，将禁用该属性。</string>
+      <string id="AutomaticInputFocus">输入焦点自动位于虚拟桌面窗口中</string>
+      <string id="AutomaticInputFocusExplain">在将某个虚拟桌面窗口置于最前端后，输入内容将自动位于该虚拟桌面中。换言之，焦点不会位于窗口边框中，因此用户无需单击一次桌面窗口内部来移动焦点。</string>
+      <string id="EnableCredSspSupport">启用凭据安全服务提供程序</string>
+      <string id="EnableCredSspSupportExplain">指定 View 桌面连接是否使用网络级别身份验证 (NLA)。在 Windows Vista 中，远程桌面连接默认需要使用 NLA。
+
+如果客户机操作系统需要在远程桌面连接中使用 NLA，您必须启用该设置，否则，Horizon Client 无法连接到 View 桌面。
+
+除了启用该设置以外，您还必须确认满足以下条件:
+   1) 客户端和客户机操作系统均支持 NLA。
+   2) 为 View 连接服务器实例启用了直接客户端连接。NLA 不支持安全加密链路连接。</string>
+      <string id="TunnelProxyBypass">不使用安全加密链路代理的地址列表</string>
+      <string id="TunnelProxyBypassExplain">对于以指定的字符串开头的安全加密链路地址，不要使用代理服务器，请使用分号 (;) 分隔条目。</string>
+      <string id="HelpURL">Horizon Client 联机帮助的 URL</string>
+      <string id="HelpURLExplain">指定 Horizon Client 可以从中检索帮助页面的备用 URL。该属性适用于没有 Internet 访问权限的环境，因此无法检索远程托管的帮助系统。</string>
+      <string id="AutoUpdateAllowed">启用 Horizon Client 联机更新</string>
+      <string id="AutoUpdateAllowedExplain">确定是否可以使用联机更新功能。从 Horizon Client 4.6 开始，将默认启用该功能。</string>
+      <string id="AutoUpdateMessagePopUp">更新消息弹出窗口</string>
+      <string id="AutoUpdateMessagePopUpExplain">指定当有较新版本的 Horizon Client 时，是否自动向最终用户显示弹出消息。默认情况下，将禁用此设置。
+
+Horizon Client 8.1 及更高版本支持此 GPO。</string>
+      <string id="AutoCheckForUpdate">自动检查更新</string>
+      <string id="AutoCheckForUpdateExplain">指定是否允许自动检查 Horizon Client 软件更新。默认情况下，将启用此设置。
+
+Horizon Client 8.1 及更高版本支持此 GPO。</string>
+      <string id="AutoUpdateAllowSkip">允许用户跳过 Horizon Client 更新</string>
+      <string id="AutoUpdateAllowSkipExplain">指定最终用户是否可以在 Horizon Client 更新窗口中选择“跳过”选项。如果用户选择“跳过”，则在下次 Horizon Client 更新之前，用户将看不到更新通信。
+
+Horizon Client 8.1 及更高版本支持此 GPO。</string>
+      <string id="AutoUpdateURL">Horizon Client 联机更新的 URL</string>
+      <string id="AutoUpdateURLExplain">指定 Horizon Client 可以从中检索更新的 URL。该属性旨在定义特定的更新服务器。如果未启用该属性，将使用 VMware 官方更新服务器。</string>
+      <string id="BlockMultipleInstances">阻止每个 Windows 会话使用多个 Horizon Client 实例</string>
+      <string id="BlockMultipleInstancesExplain">此策略阻止每个 Windows 会话使用多个 Horizon Client 实例。如果设置为“已启用”，则 Horizon Client 以单例实例模式运行，并且用户无法启动多个 Horizon Client 实例。如果禁用，则用户可以打开多个 Horizon Client 实例。默认情况下，将禁用此设置。</string>
+      <string id="ListSmartCardCertsOnly">在登录期间仅显示智能卡证书</string>
+      <string id="ListSmartCardCertsOnlyExplain">该策略指定是列出用户和系统存储中的所有证书，还是仅显示智能卡的证书。如果设置为“已启用”，则证书选择对话框仅显示智能卡证书，并筛选掉所有其他证书。如果设置为“已禁用”，则证书选择对话框中将列出所有类型的证书。默认情况下，将禁用此设置。</string>
+      <string id="connectUSBOnStartup">启动时将所有 USB 设备连接到桌面或远程应用程序</string>
+      <string id="connectUSBOnStartupExplain">在启动桌面或远程应用程序时，自动将主机上的所有可用 USB 设备连接到该桌面或远程应用程序。</string>
+      <string id="EnableAutoReconnect">启用 RDP 自动重新连接</string>
+      <string id="EnableAutoReconnectExplain">指定在 RDP 协议连接失败时是否允许 RDP 客户端组件自动尝试重新连接到桌面。默认情况下，将禁用该设置。如果启用“使用安全加密链路连接到桌面”选项，则该设置无效。</string>
+      <string id="RedirectAudioCapture">启用音频捕获重定向</string>
+      <string id="RedirectAudioCaptureExplain">指定是否将默认音频输入设备从客户端重定向到远程会话。默认设置为关闭。</string>
+      <string id="connectUSBOnInsert">插入 USB 设备时将其连接到桌面或远程应用程序</string>
+      <string id="connectUSBOnInsertExplain">在将 USB 设备插入到主机时，自动将这些设备连接到用户当前使用的桌面或远程应用程序。</string>
+      <string id="DisableToastNotifications">禁用 Toast 通知</string>
+      <string id="DisableToastNotificationsExplain">此设置禁用 Horizon Client 的 Toast 通知。如果不希望用户在屏幕边角看到 Toast 通知，请启用此设置。请注意，在 Horizon Client 处于隐藏状态时，启用该 GPO 将导致用户看不到通知。默认情况下，将禁用此设置。</string>
+      <string id="EnableRelativeMouse">启用相对鼠标</string>
+      <string id="EnableRelativeMouseExplain">此设置为 PCoIP 或 Blast 桌面启用 Horizon Client 中的相对鼠标。如果您希望用户在 PCoIP 或 Blast 桌面中始终使用相对鼠标模式，请启用此设置。相对鼠标模式可改善某些图形应用程序和游戏的鼠标行为。如果远程桌面不支持相对鼠标，则不使用此设置。默认情况下，将禁用此设置。</string>
+      <string id="DisableDisconnectMessages">禁用桌面断开连接消息</string>
+      <string id="DisableDisconnectMessagesExplain">指定是否应禁用通常在桌面断开连接后显示的消息。默认情况下，将显示这些消息。该设置不适用于用户从 Horizon Client UI 中启动的断开连接。</string>
+      <string id="DisallowClientInformationPassthrough">禁止在嵌套会话中传送客户端信息</string>
+      <string id="DisallowClientInformationPassthroughExplain">指定是否应禁止 Horizon Client 在嵌套会话中传送客户端信息。如果启用，并且 Horizon Client 在 Horizon 会话中运行，它将发送实际物理客户端信息而不是虚拟机设备信息。该设置适用于以下类型的客户端信息: 设备名称和域、客户端类型、IP 地址和 MAC 地址。默认情况下，将禁用该设置，这意味着，默认允许在嵌套会话中传送客户端信息。</string>
+      <string id="DisableSharing">禁止共享文件和文件夹</string>
+      <string id="DisableSharingExplain">禁止在远程会话和客户端之间共享文件和文件夹。
+
+如果设置为“启用”，客户端将完全隐藏客户端共享页面，并且还会禁用文件重定向。
+
+如果未配置该设置，则默认值为“已禁用”。</string>
+      <string id="AppSessionReconnectBehavior">断开连接的应用程序会话恢复行为</string>
+      <string id="AppSessionReconnectBehaviorExplain">该设置允许您强制实施有关自动应用程序会话恢复功能的特定行为。适用于该 GPO 的三个选项与 Windows 客户端设置页面中提供的选项完全相同。默认情况下，将禁用该设置，这意味着允许用户选择该行为。</string>
+      <string id="AllSessionsDisconnectedBehavior">所有会话断开连接时的客户端行为</string>
+      <string id="AllSessionsDisconnectedBehaviorExplain">此设置允许您自定义在所有会话断开连接时的客户端行为。您可以将客户端配置为在所有会话断开连接时退出、从连接服务器注销，或者让客户端保持当前状态即可。未配置此设置时，客户端将以默认方式运行。</string>
+      <string id="ForceFloatingLanguageBarOff">始终隐藏托管应用程序的远程浮动语言 (IME) 栏</string>
+      <string id="ForceFloatingLanguageBarOffExplain">该设置强制关闭应用程序会话的浮动语言栏。如果启用，则在远程应用程序会话中从不显示浮动语言栏，而无论是否启用了本地 IME 功能。如果禁用，只有在禁用本地 IME 功能时，才会显示浮动语言栏。默认情况下，将禁用该值。</string>
+      <string id="DisableFileRedirection">禁止在托管应用程序中打开本地文件</string>
+      <string id="DisableFileRedirectionExplain">该设置控制 Horizon Client 是否为托管应用程序支持的文件扩展名注册本地处理程序。如果启用该策略，Horizon Client 不会注册任何文件扩展名处理程序，并且不允许用户覆盖该设置。如果禁用该策略，Horizon Client 将始终注册文件扩展名处理程序。默认情况下，将注册文件扩展名处理程序，但用户可以通过 Horizon Client UI 禁用该功能。</string>
+      <string id="KeyboardHotkeys">显示修改符功能键</string>
+      <string id="KeyboardHotkeysExplain">如果设置，此 GPO 会设置组合键，在桌面会话 (PCoIP 或 BLAST) 中获取输入内容后注入该内容时，按此组合键将更改客户端计算机上的显示配置。如果未设置，最终用户必须使用鼠标或通过按 Ctrl+Alt 来取消获取，然后再按 Windows+P 以更改显示配置。此 GPO 不适用于应用程序会话。</string>
+      <string id="DisplaySwitchModifierKey">显示切换修改符键:</string>
+      <string id="DisplaySwitchFunctionKey">显示切换功能键:</string>
+      <string id="KEY_NONE">&lt;已禁用&gt;</string>
+      <string id="KEY_SHIFT">Shift</string>
+      <string id="KEY_CTRL">Ctrl</string>
+      <string id="KEY_ALT">Alt</string>
+      <string id="KEY_F1">F1</string>
+      <string id="KEY_F2">F2</string>
+      <string id="KEY_F3">F3</string>
+      <string id="KEY_F4">F4</string>
+      <string id="KEY_F5">F5</string>
+      <string id="KEY_F6">F6</string>
+      <string id="KEY_F7">F7</string>
+      <string id="KEY_F8">F8</string>
+      <string id="KEY_F9">F9</string>
+      <string id="KEY_F10">F10</string>
+      <string id="KEY_F11">F11</string>
+      <string id="KEY_F12">F12</string>
+      <string id="KEY_H">H</string>
+      <string id="KEY_I">I</string>
+      <string id="KEY_J">J</string>
+      <string id="KEY_K">K</string>
+      <string id="KEY_L">L</string>
+      <string id="KEY_M">M</string>
+      <string id="KEY_N">N</string>
+
+      <string id="HotkeyUngrabDesktop">用于释放输入焦点的热键组合</string>
+      <string id="HotkeyUngrabDesktopExplain">此策略将设置一个热键组合，以用于释放使用 PCoIP 或 Blast 的桌面会话的输入焦点。热键由一个或两个修改符键与一个功能键组成。如果禁用或未配置此策略，则用户可以通过使用 Ctrl+Alt 或单击桌面窗口外部来取消获取焦点。</string>
+      <string id="UngrabDesktopModifierKey">用于释放输入焦点的修改符键:</string>
+      <string id="SecondUngrabDesktopModifierKey">用于释放输入焦点的第二个修改符键:</string>
+      <string id="UngrabDesktopFunctionKey">用于释放输入焦点的功能键:</string>
+
+      <string id="HotkeyGrabDesktop">用于获取输入焦点的热键组合</string>
+      <string id="HotkeyGrabDesktopExplain">此策略将设置一个热键组合，以用于获取上一个使用的桌面会话 (使用 PCoIP 或 Blast) 的输入焦点。热键由一个或两个修改符键与一个字母键组成。如果禁用或未配置此策略，则用户可以通过单击桌面窗口内部来获取焦点</string>
+      <string id="GrabDesktopModifierKey">用于获取输入焦点的修改符键:</string>
+      <string id="SecondGrabDesktopModifierKey">用于获取输入焦点的第二个修改符键:</string>
+      <string id="GrabDesktopLetterKey">用于获取输入焦点的字母键:</string>
+
+      <string id="HIDE_MENU_YES">是</string>
+      <string id="HIDE_MENU_NO">否</string>
+      <string id="HideToolBarMenu">隐藏客户端工具栏菜单中的项目</string>
+      <string id="HideToolBarMenuExplain">这些设置控制是否隐藏主客户端启动程序页面顶部工具栏中的项目。默认情况下，将禁用该策略，Horizon Client 会显示所有项目。
+
+Horizon Client 5.0 及更高版本支持此 GPO。</string>
+      <string id="HideDesktopContextMenu">隐藏桌面上下文菜单中的项目</string>
+      <string id="HideDesktopContextMenuExplain">这些设置控制是否在客户端启动程序页面中隐藏桌面右键单击上下文菜单中的项目。默认情况下，将禁用该策略，Horizon Client 会显示所有项目。
+
+Horizon Client 5.0 及更高版本支持此 GPO。</string>
+      <string id="HideAppContextMenu">隐藏应用程序上下文菜单中的项目</string>
+      <string id="HideAppContextMenuExplain">这些设置控制是否在客户端启动程序页面中隐藏应用程序右键单击上下文菜单中的项目。默认情况下，将禁用该策略，Horizon Client 会显示所有项目。
+
+Horizon Client 5.0 及更高版本支持此 GPO。</string>
+      <string id="HideDesktopMenu">隐藏桌面工具栏中的项目</string>
+      <string id="HideDesktopMenuExplain">这些设置控制是否隐藏桌面工具栏 (位于全屏模式运行的虚拟桌面的顶部) 中的项目。默认情况下，将禁用该策略，Horizon Client 会显示所有项目。
+
+Horizon Client 5.0 及更高版本支持此 GPO。</string>
+      <string id="HideNotificationMenu">隐藏系统托盘菜单中的项目</string>
+      <string id="HideNotificationMenuExplain">这些设置控制是否隐藏本地 Windows 屏幕底部系统托盘菜单中的项目。默认情况下，将禁用该策略，Horizon Client 会显示所有项目。
+
+Horizon Client 5.0 及更高版本支持此 GPO。</string>
+      <string id="CustomErrorScreenFooter">自定义错误屏幕页脚</string>
+      <string id="CustomErrorScreenFooterExplain">指定纯文本文件的位置。如果启用，指定文件中的文本将始终显示在所有错误消息的底部。
+
+Horizon Client 5.0 及更高版本支持此 GPO。</string>
+      <string id="UnauthenticatedAccessEnabled">启用对服务器的未验证访问</string>
+      <string id="UnauthenticatedAccessEnabledExplain">该设置控制用户是否需要输入凭据以使用 Horizon Client 访问其应用程序。如果启用，将始终从服务器中请求未验证访问，但如果未验证访问不可用，客户端可以改用其他身份验证方法。如果禁用，用户将始终需要输入凭据才能登录和访问其应用程序。如果未配置，用户可以在 Horizon Client UI 中启用未验证访问。</string>
+      <string id="ForceUserAffinity">连接到同一服务器时使用现有客户端实例</string>
+      <string id="ForceUserAffinityExplain">此设置控制是否将连接添加到现有的 Horizon Client 实例，用户已通过该实例连接到指定的同一服务器。默认情况下，此设置在未配置时处于禁用状态。</string>
+      <string id="UnauthenticatedAccessAccount">用于未验证访问的帐户</string>
+      <string id="UnauthenticatedAccessAccountExplain">该设置设定 Horizon Client 匿名登录到服务器时将使用的帐户。如果未设置，客户端将允许用户选择一个帐户。</string>
+      <string id="ADMXMigrator_UnresolvedString">ADMX Migrator 遇到源 ADM 字符串表中不存在的字符串。</string>
+      <string id="VDMClient_SupportedOn_Empty"></string>
+      <string id="AllowDisplayScaling">允许缩放显示</string>
+      <string id="AllowDisplayScalingExplain">此设置允许您配置所有桌面和应用程序会话的显示缩放。</string>
+      <string id="AutoSyncToggleKeys">自动同步小键盘、Scroll Lock 和 Caps Lock 键</string>
+      <string id="AutoSyncToggleKeysExplain">如果启用，此设置会自动将物理设备中的小键盘、Scroll Lock 和 Caps Lock 键同步到虚拟桌面。如果未启用，则仅当用户在虚拟桌面中更改这些键时，虚拟桌面才会更新这些键的状态。</string>
+      <string id="AllowBlastCodec">允许 BlastCodec 解码</string>
+      <string id="AllowBlastCodecExplain">此设置允许您为 Blast 协议配置 BlastCodec 解码。如果启用，将允许使用 BlastCodec 解码。如果禁用，将从不使用 BlastCodec 解码。如果未配置，将允许用户选择是否启用 BlastCodec 解码。</string>
+      <string id="AllowH264">允许 H.264 解码</string>
+      <string id="AllowH264Explain">此设置允许您为 Blast 协议配置 H.264 解码。如果启用，将允许使用 H.264 解码。如果禁用，将从不使用 H.264 解码。如果未配置，将允许用户选择是否启用 H.264 解码。</string>
+      <string id="AllowH264YUV444">允许 H.264 高色彩精度</string>
+      <string id="AllowH264YUV444Explain">此设置允许您为 H.264 配置高色彩精度模式。此设置仅在还同时启用了 H.264 时才会生效。</string>
+      <string id="AllowHEVC">允许 HEVC 解码</string>
+      <string id="AllowHEVCExplain">此设置允许您为 Blast 协议配置 HEVC (也称为 H.265) 解码。如果启用，HEVC 解码将成为首选项。如果禁用，将不会再使用 HEVC 解码。如果未配置，将允许用户选择是否启用 HEVC 解码。</string>
+      <string id="AllowHDR">允许 HDR 解码</string>
+      <string id="AllowHDRExplain">此设置允许您通过 Blast 协议配置 HDR (高动态范围) 解码。如果启用，代理计算机将在桌面上启用 HDR，前提是其可用且可由客户机显示。</string>
+      <string id="EnableWindowOptimizations">启用 Horizon Client 窗口优化</string>
+      <string id="EnableWindowOptimizationsExplain">此设置会启用优化，以在 Horizon Client 窗口不完全可见时降低 CPU 使用率。默认情况下，此设置在未配置时处于启用状态。</string>
+      <string id="DecodeCapsProbingMode">配置硬件解码器探测模式</string>
+      <string id="ProbingMode_NORMAL">启动 Horizon Client 时探测</string>
+      <string id="ProbingMode_LEGACY">启动 Horizon 桌面/应用程序时探测</string>
+      <string id="ProbingMode_OFF">不探测解码硬件</string>
+      <string id="DecodeCapsProbingModeExplain">启用此策略后，管理员可以配置 Horizon Client 何时探测硬件解码功能。
+
+如果未启用此策略，Horizon Client 将默认为“启动 Horizon Client 时探测”。</string>
+      <string id="DecoderImageCacheSize">解码器映像缓存大小 (KB)</string>
+      <string id="DecoderImageCacheSizeExplain">解码器映像缓存的最大大小 (以千字节为单位)。
+
+缓存的最终大小将根据此配置或代理的关联配置的最小值进行选择，并且不能超过 Horizon Agent 上可用 RAM 的一半。</string>
+      <string id="AllowBlastThroughProxy">允许 Blast 连接使用操作系统代理设置</string>
+      <string id="AllowBlastThroughProxyExplain">此设置允许您配置 Blast 连接的代理使用情况。如果启用，Blast 可以通过代理进行连接。如果禁用，将不会使用系统代理。如果未配置，将允许用户选择是否使用系统代理。默认情况下将禁用此属性。</string>
+      <string id="AllowSplitMksWindowExplain">此设置允许您启用 MKS 分屏窗口。如果启用，MKS 窗口将按显示器分屏。如果禁用，MKS 窗口是所有显示器的边界框。如果未配置，将启用 MKS 分屏窗口。</string>
+      <string id="AllowSplitMksWindow">启用 MKS 分屏窗口</string>
+      <string id="BrowserRedirUseCache">为浏览器重定向启用缓存</string>
+      <string id="BrowserRedirUseCacheExplain">如果启用，浏览历史记录 (包括 Cookie) 将存储在客户端上。禁用此设置不会清除缓存，在禁用此设置后再次启用它时，将重用该缓存。
+
+默认情况下启用此属性。</string>
+      <string id="BrowserRedirIgnoreCertErrors">忽略浏览器重定向的证书错误</string>
+      <string id="BrowserRedirIgnoreCertErrorsExplain">如果启用，将忽略重定向页面中出现的任何证书错误，并将继续浏览。默认情况下将禁用此属性。</string>
+      <string id="BrowserRedirEnableMediaStream">为浏览器重定向启用 WebRTC 相机和麦克风访问权限</string>
+      <string id="BrowserRedirEnableMediaStreamExplain">如果启用，使用 WebRTC 的重定向页面将有权访问客户端的相机和麦克风。默认情况下启用此属性。</string>
+      <string id="MouseMoveMaxLatencyMsec">配置鼠标合并的最大延迟</string>
+      <string id="MouseMoveMaxLatencyMsecExplain">此设置允许您配置在合并鼠标移动事件时所允许的最大延迟 (以毫秒为单位)。0 到 50 之间的值均视为有效，其中 0 表示“禁用鼠标移动事件合并”。合并鼠标移动事件可以减少客户端到代理的带宽使用量，但可能会稍微增加鼠标移动的延迟。默认情况下将禁用此属性。</string>
+      <string id="VMwareViewPrintRedirection">VMware Integrated Printing</string>
+      <string id="PrintRedir_SISActive">允许将 L1 本地打印机重定向到内部会话</string>
+      <string id="PrintRedir_SISActive_detail">此设置确定是否将 L1 本地打印机重定向到内部会话。
+
+VMware 支持在 Horizon 远程桌面中运行 Horizon Client。此配置通常称为“嵌套模式”，涉及三个分层和两个跃点。
+
+L0 (端点): 安装了 Horizon Client 的物理机
+L1 (第一个跃点远程桌面): 同时安装了 Horizon Client 和 Horizon Agent 的远程桌面
+L2 (第二个跃点远程桌面/应用程序): 第二个跃点客户端连接到的已发布桌面/已发布应用程序
+
+如果启用此设置，则会将 L1 本地打印机重定向到内部会话。
+如果未配置或禁用此设置，则不会将 L1 本地打印机重定向到内部会话。
+
+默认情况下不配置此设置。
+</string>
+      <string id="PrintRedir_MaxTxRate">限制 Tx 率 (KBps)</string>
+      <string id="PrintRedir_MaxTxRate_detail">此设置会将所有打印作业的 Tx 率限制为指定的数值 (以 KBps 为单位)。
+允许的最小 Tx 率为 200 KBps。如果未配置或已禁用，Tx 率将不受限制。
+允许的最大 Tx 率为 4000 KBps。如果大于该值，则 Tx 率将不受限制。
+
+</string>
+      <string id="PrintRedir_lp_setting">不重定向客户端打印机</string>
+      <string id="PrintRedir_lp_setting_detail">此策略设置允许您管理是否重定向客户端打印机。
+
+如果启用该策略设置，则不会重定向所有客户端打印机。
+如果禁用或未配置此策略设置，则会重定向所有客户端打印机。
+
+默认情况下不配置此设置。
+</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="ExcludePath">
+        <textBox refId="ExcludePath">
+          <label>排除路径</label>
+        </textBox>
+      </presentation>
+      <presentation id="IncludePath">
+        <textBox refId="IncludePath">
+          <label>包含路径</label>
+        </textBox>
+      </presentation>
+      <presentation id="DisableRemoteConfig" />
+      <presentation id="AllowDevDescFailsafe" />
+      <presentation id="SplitExcludeVidPid">
+        <textBox refId="SplitExcludeVidPid">
+          <label>从拆分中排除 Vid/Pid 设备</label>
+        </textBox>
+      </presentation>
+      <presentation id="SplitVidPid">
+        <textBox refId="SplitVidPid">
+          <label>拆分 Vid/Pid 设备</label>
+        </textBox>
+      </presentation>
+      <presentation id="ExcludeVidPid">
+        <textBox refId="ExcludeVidPid">
+          <label>排除 Vid/Pid 设备</label>
+        </textBox>
+      </presentation>
+      <presentation id="ExcludeVidPidRel">
+        <textBox refId="ExcludeVidPidRel">
+          <label>排除 Vid/Pid/Rel 设备</label>
+        </textBox>
+      </presentation>
+      <presentation id="IncludeVidPid">
+        <textBox refId="IncludeVidPid">
+          <label>包含 Vid/Pid 设备</label>
+        </textBox>
+      </presentation>
+      <presentation id="IncludeVidPidRel">
+        <textBox refId="IncludeVidPidRel">
+          <label>包含 Vid/Pid/Rel 设备</label>
+        </textBox>
+      </presentation>
+      <presentation id="ExcludeFamily">
+        <textBox refId="ExcludeFamily">
+          <label>排除设备系列</label>
+        </textBox>
+      </presentation>
+      <presentation id="IncludeFamily">
+        <textBox refId="IncludeFamily">
+          <label>包含设备系列</label>
+        </textBox>
+      </presentation>
+      <presentation id="ExAutoRedirectVidPid">
+        <textBox refId="ExAutoRedirectVidPid">
+          <label>排除自动连接 Vid/Pid 设备</label>
+        </textBox>
+      </presentation>
+      <presentation id="ExAutoRedirectFamily">
+        <textBox refId="ExAutoRedirectFamily">
+          <label>排除自动连接设备系列</label>
+        </textBox>
+      </presentation>
+      <presentation id="ExcludeAllDevices" />
+      <presentation id="AllowHID" />
+      <presentation id="AllowHIDBootable" />
+      <presentation id="AllowAudioIn" />
+      <presentation id="AllowAudioOut" />
+      <presentation id="AllowKeyboardMouse" />
+      <presentation id="AllowVideo" />
+      <presentation id="AllowSmartcard" />
+      <presentation id="AllowAutoDeviceSplitting" />
+      <presentation id="LogInAsCurrentUser_Display" />
+      <presentation id="LogInAsCurrentUser" />
+      <presentation id="EnableRecursiveUnlock" />
+      <presentation id="BrokersTrustedForDelegation">
+        <listBox refId="BrokersTrustedForDelegation">获得委派信任的服务器</listBox>
+      </presentation>
+      <presentation id="AllowNTLMAuthentication">
+      <dropdownList refId="AllowNTLMAuthentication" defaultItem="1" noSort="true">允许从 Kerberos 回退到 NTLM</dropdownList>
+      </presentation>
+      <presentation id="ServersAlwaysUseNTLM">
+        <listBox refId="ServersAlwaysUseNTLM">始终对服务器使用 NTLM</listBox>
+      </presentation>
+      <presentation id="DoNotCheckCertRevocationStatus" />
+      <presentation id="StrictCertRevocationCheck" />
+      <presentation id="CertCheckMode">
+       <dropdownList refId="CertCheckMode" defaultItem="1">证书验证模式</dropdownList>
+      </presentation>
+      <presentation id="ProtocolConnectionCertCheckMode">
+       <dropdownList refId="ProtocolConnectionCertCheckMode" defaultItem="3">协议连接证书验证模式</dropdownList>
+      </presentation>
+      <presentation id="EnableSmartCardSSO" />
+      <presentation id="EnableJumplist" />
+      <presentation id="AllowCmdLineCredentials" />
+      <presentation id="EnableTicketSSLAuth">
+        <dropdownList refId="EnableTicketSSLAuth" defaultItem="0">启用 SSL 加密框架通道</dropdownList>
+      </presentation>
+      <presentation id="SSLCipherList">
+        <textBox refId="SSLCipherList">
+          <label>配置 SSL 协议和密码套件</label>
+          <defaultValue>TLSv1.1:TLSv1.2:!aNULL:kECDH+AESGCM:ECDH+AESGCM:RSA+AESGCM:kECDH+AES:ECDH+AES:RSA+AES</defaultValue>
+        </textBox>
+        <textBox refId="SSLSignatureAlgorithms">
+          <label>配置签名算法扩展</label>
+          <defaultValue></defaultValue>
+        </textBox>
+        <textBox refId="SSLSupportedGroups">
+          <label>配置支持的组扩展</label>
+          <defaultValue></defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="ServerURL">
+        <textBox refId="ServerURL">
+          <label>服务器 URL</label>
+        </textBox>
+      </presentation>
+      <presentation id="UserName">
+        <textBox refId="UserName">
+          <label>登录用户名</label>
+        </textBox>
+      </presentation>
+      <presentation id="DomainName">
+        <textBox refId="DomainName">
+          <label>登录域名</label>
+        </textBox>
+      </presentation>
+      <presentation id="Password">
+        <textBox refId="Password">
+          <label>登录密码</label>
+        </textBox>
+      </presentation>
+      <presentation id="DesktopName">
+        <textBox refId="DesktopName">
+          <label>要选择的桌面名称</label>
+        </textBox>
+      </presentation>
+      <presentation id="DesktopLayout">
+        <dropdownList refId="DesktopLayout" defaultItem="0">桌面布局</dropdownList>
+      </presentation>
+      <presentation id="LockedGuestSize">
+        <decimalTextBox refId="LockedGuestWidth" defaultValue="1600">锁定的客户机宽度 </decimalTextBox>
+        <decimalTextBox refId="LockedGuestHeight" defaultValue="1200">锁定的客户机高度</decimalTextBox>
+      </presentation>
+      <presentation id="NonInteractive" />
+      <presentation id="SingleAutoConnect" />
+      <presentation id="noTSCAddins" />
+      <presentation id="connectUSBOnStartup" />
+      <presentation id="connectUSBOnInsert" />
+      <presentation id="AppSessionReconnectBehavior">
+        <dropdownList refId="AppSessionReconnectBehavior" defaultItem="0">断开连接的应用程序会话恢复行为</dropdownList>
+      </presentation>
+      <presentation id="AllSessionsDisconnectedBehavior">
+        <dropdownList refId="AllSessionsDisconnectedBehavior" defaultItem="0">所有会话断开连接时的客户端行为</dropdownList>
+      </presentation>
+      <presentation id="UnauthenticatedAccessEnabled" />
+      <presentation id="ErrorFooterTextFile">
+        <textBox refId="ErrorFooterTextFile">
+          <label>错误页脚文本文件位置</label>
+        </textBox>
+      </presentation>
+      <presentation id="UnauthenticatedAccessAccount">
+        <textBox refId="UnauthenticatedAccessAccount">
+          <label>用于未验证访问的帐户</label>
+        </textBox>
+      </presentation>
+      <presentation id="DisableTimeZoneForwarding" />
+      <presentation id="AutomaticInputFocus" />
+      <presentation id="TunnelProxyBypass">
+        <textBox refId="TunnelProxyBypass">
+          <label>不使用安全加密链路代理的地址列表</label>
+        </textBox>
+      </presentation>
+      <presentation id="HelpURL">
+        <textBox refId="HelpURL">
+          <label>Horizon Client 联机帮助的 URL</label>
+        </textBox>
+      </presentation>
+      <presentation id="AutoUpdateAllowed" />
+      <presentation id="AutoUpdateMessagePopUp" />
+      <presentation id="AutoCheckForUpdate" />
+      <presentation id="AutoUpdateAllowSkip" />
+      <presentation id="AutoUpdateURL">
+        <textBox refId="AutoUpdateURL">
+          <label>Horizon Client 联机更新的 URL</label>
+        </textBox>
+      </presentation>
+      <presentation id="BlockMultipleInstances" />
+      <presentation id="ListSmartCardCertsOnly" />
+      <presentation id="DisableToastNotifications" />
+      <presentation id="EnableRelativeMouse" />
+      <presentation id="DisableDisconnectMessages" />
+      <presentation id="HideClientAfterLaunchSession" />
+      <presentation id="DisallowClientInformationPassthrough" />
+      <presentation id="ForceFloatingLanguageBarOff" />
+      <presentation id="DisableFileRedirection" />
+      <presentation id="KeyboardHotkeys">
+        <dropdownList refId="DisplaySwitchModifierKey" defaultItem="1">显示切换修改符键:</dropdownList>
+        <dropdownList refId="DisplaySwitchFunctionKey" defaultItem="1">显示切换功能键:</dropdownList>
+      </presentation>
+      <presentation id="HotkeyUngrabDesktop">
+        <dropdownList refId="UngrabDesktopModifierKey" defaultItem="0" noSort="true">用于释放输入焦点的修改符键:</dropdownList>
+        <dropdownList refId="SecondUngrabDesktopModifierKey" defaultItem="0" noSort="true">用于释放输入焦点的第二个修改符键:</dropdownList>
+        <dropdownList refId="UngrabDesktopFunctionKey" defaultItem="0">用于释放输入焦点的功能键:</dropdownList>
+        <checkBox refId="MinimizeToTaskbar">释放输入焦点后最小化全屏虚拟桌面</checkBox>
+      </presentation>
+      <presentation id="HotkeyGrabDesktop">
+        <dropdownList refId="GrabDesktopModifierKey" defaultItem="0" noSort="true">用于获取输入焦点的修改符键:</dropdownList>
+        <dropdownList refId="SecondGrabDesktopModifierKey" defaultItem="0" noSort="true">用于获取输入焦点的第二个修改符键:</dropdownList>
+        <dropdownList refId="GrabDesktopFunctionKey" defaultItem="0">用于获取输入焦点的字母键:</dropdownList>
+      </presentation>
+      <presentation id="HideToolBarMenu">
+        <dropdownList refId="HideFavoritesToolbar" defaultItem="0">隐藏“收藏夹”切换开关</dropdownList>
+        <dropdownList refId="HideSettingsToolbar" defaultItem="0">隐藏“设置”齿轮</dropdownList>
+      </presentation>
+      <presentation id="HideDesktopContextMenu">
+        <dropdownList refId="HideResetDesktopDesktopContext" defaultItem="0">隐藏“重置桌面”</dropdownList>
+        <dropdownList refId="HideRestartDesktopDesktopContext" defaultItem="0">隐藏“重新启动桌面”</dropdownList>
+        <dropdownList refId="HideDisplayDesktopContext" defaultItem="0">隐藏“显示”</dropdownList>
+        <dropdownList refId="HideSettingsDesktopContext" defaultItem="0">隐藏“设置”</dropdownList>
+        <dropdownList refId="HideCreateShortcutToDesktopDesktopContext" defaultItem="0">隐藏“创建桌面快捷方式”</dropdownList>
+        <dropdownList refId="HideAddToStartMenuDesktopContext" defaultItem="0">隐藏“添加到‘开始’菜单”</dropdownList>
+        <dropdownList refId="HideMarkAsFavoriteDesktopContext" defaultItem="0">隐藏“标记为收藏项”</dropdownList>
+      </presentation>
+      <presentation id="HideAppContextMenu">
+        <dropdownList refId="HideSettingsAppContext" defaultItem="0">隐藏“设置”</dropdownList>
+        <dropdownList refId="HideCreateShortcutToDesktopAppContext" defaultItem="0">隐藏“创建桌面快捷方式”</dropdownList>
+        <dropdownList refId="HideAddToStartMenuAppContext" defaultItem="0">隐藏“添加到‘开始’菜单”</dropdownList>
+        <dropdownList refId="HideMarkAsFavoriteAppContext" defaultItem="0">隐藏“标记为收藏项”</dropdownList>
+      </presentation>
+      <presentation id="HideDesktopMenu">
+        <dropdownList refId="HideHelpDesktopMenu" defaultItem="0">隐藏“帮助”</dropdownList>
+        <dropdownList refId="HideSettingsDesktopMenu" defaultItem="0">隐藏“设置”</dropdownList>
+        <dropdownList refId="HideResetDesktopDesktopMenu" defaultItem="0">隐藏“重置桌面”</dropdownList>
+        <dropdownList refId="HideRestartDesktopDesktopMenu" defaultItem="0">隐藏“重新启动桌面”</dropdownList>
+        <dropdownList refId="HideConnectUSBDeviceDesktopMenu" defaultItem="0">隐藏“连接 USB 设备”</dropdownList>
+      </presentation>
+      <presentation id="HideNotificationMenu">
+        <dropdownList refId="HideSettingsNotificationMenu" defaultItem="0">隐藏“设置”</dropdownList>
+      </presentation>
+      <presentation id="ColorDepth">
+        <dropdownList refId="ColorDepth" defaultItem="0">颜色深度</dropdownList>
+      </presentation>
+      <presentation id="DisableWallpaper" />
+      <presentation id="DisableFullWindowDrag" />
+      <presentation id="DisableMenuAnimations" />
+      <presentation id="DisableTheming" />
+      <presentation id="DisableCursorShadow" />
+      <presentation id="FontSmoothing" />
+      <presentation id="DesktopComposition" />
+      <presentation id="AudioRedirectionMode">
+        <dropdownList refId="AudioRedirectionMode" defaultItem="0">音频重定向</dropdownList>
+      </presentation>
+      <presentation id="RedirectDrives" />
+      <presentation id="RedirectPrinters" />
+      <presentation id="RedirectPorts" />
+      <presentation id="RedirectSmartcards" />
+      <presentation id="RedirectClipboard" />
+      <presentation id="RedirectPlugAndPlayDevices" />
+      <presentation id="ShadowBitmap" />
+      <presentation id="CachePersistenceActive" />
+      <presentation id="EnableCompression" />
+      <presentation id="KeyboardHookMode">
+        <dropdownList refId="KeyboardHookMode" defaultItem="0">Windows 组合键重定向</dropdownList>
+      </presentation>
+      <presentation id="EnableCredSspSupport" />
+      <presentation id="BitmapCacheSize">
+        <decimalTextBox refId="BitmapCacheSize">8bpp 位图的内存位图缓存大小 (KB)</decimalTextBox>
+      </presentation>
+      <presentation id="BitmapVirtualCacheSize">
+        <decimalTextBox refId="BitmapVirtualCacheSize">8bpp 位图的位图缓存文件大小 (MB)</decimalTextBox>
+      </presentation>
+      <presentation id="BitmapVirtualCache16BppSize">
+        <decimalTextBox refId="BitmapVirtualCache16BppSize">16bpp 位图的位图缓存文件大小 (MB)</decimalTextBox>
+      </presentation>
+      <presentation id="BitmapVirtualCache24BppSize">
+        <decimalTextBox refId="BitmapVirtualCache24BppSize">24bpp 位图的位图缓存文件大小 (MB)</decimalTextBox>
+      </presentation>
+      <presentation id="BitmapVirtualCache32BppSize">
+        <decimalTextBox refId="BitmapVirtualCache32BppSize">32bpp 位图的位图缓存文件大小 (MB)</decimalTextBox>
+      </presentation>
+      <presentation id="EnableAutoReconnect" />
+      <presentation id="RedirectAudioCapture" />
+      <presentation id="LogInAsCurrentUser_Display_1" />
+      <presentation id="LogInAsCurrentUser_1" />
+      <presentation id="EnableRecursiveUnlock_1" />
+      <presentation id="EnableTicketSSLAuth_1">
+        <dropdownList refId="EnableTicketSSLAuth" defaultItem="0">启用 SSL 加密框架通道</dropdownList>
+      </presentation>
+      <presentation id="DoNotCheckCertRevocationStatus_1" />
+      <presentation id="StrictCertRevocationCheck_1" />
+      <presentation id="SSLCipherList_1">
+        <textBox refId="SSLCipherList">
+          <label>配置 SSL 协议和加密算法</label>
+          <defaultValue>TLSv1.1:TLSv1.2:!aNULL:kECDH+AESGCM:ECDH+AESGCM:RSA+AESGCM:kECDH+AES:ECDH+AES:RSA+AES</defaultValue>
+        </textBox>
+        <textBox refId="SSLSignatureAlgorithms">
+          <label>配置签名算法扩展</label>
+          <defaultValue></defaultValue>
+        </textBox>
+        <textBox refId="SSLSupportedGroups">
+          <label>配置支持的组扩展</label>
+          <defaultValue></defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="ServerURL_1">
+        <textBox refId="ServerURL">
+          <label>服务器 URL</label>
+        </textBox>
+      </presentation>
+      <presentation id="UserName_1">
+        <textBox refId="UserName">
+          <label>登录用户名</label>
+        </textBox>
+      </presentation>
+      <presentation id="DomainName_1">
+        <textBox refId="DomainName">
+          <label>登录域名</label>
+        </textBox>
+      </presentation>
+      <presentation id="Password_1">
+        <textBox refId="Password">
+          <label>登录密码</label>
+        </textBox>
+      </presentation>
+      <presentation id="DesktopName_1">
+        <textBox refId="DesktopName">
+          <label>要选择的桌面名称</label>
+        </textBox>
+      </presentation>
+      <presentation id="DesktopLayout_1">
+        <dropdownList refId="DesktopLayout" defaultItem="0">桌面布局</dropdownList>
+      </presentation>
+      <presentation id="LockedGuestSize_1">
+        <decimalTextBox refId="LockedGuestWidth" defaultValue="1600">锁定的客户机宽度 </decimalTextBox>
+        <decimalTextBox refId="LockedGuestHeight" defaultValue="1200">锁定的客户机高度</decimalTextBox>
+      </presentation>
+      <presentation id="NonInteractive_1" />
+      <presentation id="SingleAutoConnect_1" />
+      <presentation id="noTSCAddins_1" />
+      <presentation id="connectUSBOnStartup_1" />
+      <presentation id="connectUSBOnInsert_1" />
+      <presentation id="AppSessionReconnectBehavior_1">
+        <dropdownList refId="AppSessionReconnectBehavior" defaultItem="0">断开连接的应用程序会话恢复行为</dropdownList>
+      </presentation>
+      <presentation id="AllSessionsDisconnectedBehavior_1">
+        <dropdownList refId="AllSessionsDisconnectedBehavior" defaultItem="0">所有会话断开连接时的客户端行为</dropdownList>
+      </presentation>
+      <presentation id="UnauthenticatedAccessEnabled_1" />
+      <presentation id="UnauthenticatedAccessAccount_1">
+        <textBox refId="UnauthenticatedAccessAccount">
+          <label>用于未验证访问的帐户</label>
+        </textBox>
+      </presentation>
+      <presentation id="AllowDataSharing" />
+      <presentation id="AllowPluginUpdate" />
+      <presentation id="AllowResolutionDpiSync" />
+      <presentation id="EnableShade" />
+      <presentation id="InitialPinState" />
+      <presentation id="DisableSpanChecks" />
+      <presentation id="EnableMMR" />
+      <presentation id="AlwaysOnTop" />
+      <presentation id="AutomaticallyInstallShortcuts" />
+      <presentation id="AutomaticallyInstallShortcuts_1" />
+      <presentation id="DisableToastNotifications_1" />
+      <presentation id="EnableRelativeMouse_1" />
+      <presentation id="DisableDisconnectMessages_1" />
+      <presentation id="HideClientAfterLaunchSession_1" />
+      <presentation id="DisableSharing" />
+      <presentation id="ForceFloatingLanguageBarOff_1" />
+      <presentation id="AllowDisplayScaling" />
+      <presentation id="AutoSyncToggleKeys" />
+      <presentation id="AllowBlastCodec" />
+      <presentation id="AllowH264" />
+      <presentation id="AllowH264YUV444" />
+      <presentation id="AllowHEVC" />
+      <presentation id="AllowHDR" />
+      <presentation id="EnableWindowOptimizations" />
+      <presentation id="DecodeCapsProbingMode">
+        <dropdownList refId="DecodeCapsProbingMode" defaultItem="0" noSort="true">何时探测硬件解码功能:</dropdownList>
+      </presentation>
+      <presentation id="DecoderImageCacheSize">
+        <decimalTextBox refId="DecoderImageCacheSize" defaultValue="256000">解码器映像缓存大小 (KB)</decimalTextBox>
+      </presentation>
+      <presentation id="AllowBlastThroughProxy" />
+      <presentation id="AllowSplitMksWindow" />
+      <presentation id="ForceUserAffinity" />
+      <presentation id="MouseMoveMaxLatencyMsec">
+        <decimalTextBox refId="MouseMoveMaxLatencyMsec">鼠标合并的最大延迟</decimalTextBox>
+      </presentation>
+      <presentation id="MaxTxRate">
+        <decimalTextBox refId="MaxTxRate" defaultValue="500">最大 Tx 率</decimalTextBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="print_redir">VMware Integrated Printing</string>
+      <string id="SUPPORTED_NotSpecified">未指定</string>
+      <string id="persistence_setting">禁用打印机属性持久性</string>
+      <string id="persistence_setting_detail">此设置确定是否将保留打印机属性设置。
+
+如果启用此设置，则在用户断开连接或注销会话后，代理端的打印机属性更改将不会保留，因此不具有持久性。
+例如，如果用户在会话期间将打印机纸张大小从“Letter”更改为“A4”，则用户下次重新连接时，纸张大小将恢复为“Letter”，而所做的“A4”更改将不会保留。
+
+如果未配置或禁用此设置，则在用户断开连接或注销会话后，代理端的打印机属性更改将会保留，因此具有持久性。
+例如，如果用户在会话期间将打印机纸张大小从“Letter”更改为“A4”，则用户下次重新连接时，纸张大小将仍然为“A4”，因为所做的更改会被保留。
+
+默认情况下，不配置此 GPO。
+</string>
+      <string id="nondesktopclient_setting">为非桌面客户端禁用打印机重定向</string>
+      <string id="nondesktopclient_setting_detail">此设置用于确定非桌面客户端端点是否支持 VMware Integrated Printing。
+
+如果启用此设置，则非桌面客户端端点不支持 VMware Integrated Printing。
+如果未配置或已禁用此设置，则非桌面客户端端点支持 VMware Integrated Printing。
+
+默认情况下不配置此设置。
+</string>
+      <string id="lbp_setting">禁用 LBP</string>
+      <string id="lbp_setting_detail">此策略设置允许您管理是否使用基于位置的打印 (LBP)。
+
+如果启用该策略设置，则无法使用基于位置的打印。
+
+如果禁用或未配置此策略设置，则可以使用基于位置的打印。
+
+默认情况下不配置此设置。
+</string>
+      <string id="lp_setting">不重定向客户端打印机</string>
+      <string id="lp_setting_detail">此策略设置允许您管理是否重定向客户端打印机。
+
+如果启用该策略设置，则不会重定向所有客户端打印机。
+如果禁用或未配置此策略设置，则会重定向所有客户端打印机。
+
+默认情况下不配置此设置。
+</string>
+      <string id="DefaultPrinter">不更改默认打印机</string>
+      <string id="DefaultPrinter_detail">此设置用于确定 VMware Integrated Printing 是否更改远程会话中的默认打印机。
+
+默认情况下，如果将任何基于位置的打印机配置为默认打印机，则会将该打印机设置为远程会话中的默认打印机。如果未将任何基于位置的打印机配置为默认打印机，则会将默认客户端打印机设置为远程会话中的默认打印机，且该打印机将覆盖在虚拟机映像中选择的任何打印机。您可以使用此设置覆盖该行为。
+
+如果启用此设置，VMware Integrated Printing 将不会更改远程会话中的默认打印机。
+如果禁用或未配置此设置，则 VMware Integrated Printing 将更改远程会话中的默认打印机。这是默认行为。
+
+默认情况下不配置此设置。
+
+</string>
+      <string id="DriverMapping">驱动程序映射</string>
+      <string id="DriverMapping_detail">此设置适用于 Windows/Linux/Mac 客户端。它允许用户自动从客户端使用不同的驱动程序创建虚拟打印机。
+
+您可以添加驱动程序映射，也可以编辑或移除现有映射。添加映射时，在“值名称”列中输入客户端打印机驱动程序名称，然后在“值”列中输入要映射的服务器驱动程序名称。
+
+您可以在“值”列中指定一个或多个服务器驱动程序名称。指定多个服务器驱动程序名称时，请使用分号分隔每个驱动程序名称，如“DriverA; DriverB; DriverC; DriverD”。
+
+将逐一尝试使用所有指定的服务器驱动程序，直到成功创建重定向的打印机为止。如果 Horizon 无法使用任何指定的服务器驱动程序创建重定向的打印机，则将使用“VMware EMF 打印驱动程序”创建适用于 Windows 客户端的重定向打印机，并使用“VMware PostScript 打印机驱动程序”创建适用于 Linux/Mac 客户端的重定向打印机。
+      </string>
+      <string id="MaxTxRate">限制 Tx 率 (KBps)</string>
+      <string id="MaxTxRate_detail">此设置会将所有打印作业的 Tx 率限制为指定的数值 (以 KBps 为单位)。
+允许的最小 Tx 率为 1600 KBps。如果未配置或已禁用，Tx 率将不受限制。
+允许的最大 Tx 率为 32000 KBps。如果大于该值，则 Tx 率将不受限制。
+
+</string>
+      <string id="printer_creation_setting">打印机驱动程序选项</string>
+      <string id="printer_creation_setting_detail">打印机驱动程序选项。
+
+打印机创建选项:
+关于使用的打印机驱动程序 (通用打印机驱动程序 (UPD) 或本机打印机驱动程序 (NPD)) 的选项。
+
+如果选择第一个选项“始终使用 NPD”，则将对重定向的打印机始终使用本机打印机驱动程序。
+
+如果选择第二个选项“始终使用 UPD”，则将对重定向的打印机始终使用通用打印机驱动程序。
+
+如果选择第三个选项“先使用 NPD，再使用 UPD”，则将首先使用本机打印机驱动程序；如果本机打印机驱动程序不存在，则将使用通用打印机驱动程序。
+
+如果选择第四个选项“先使用 UPD，再使用 NPD”，则将首先使用通用打印机驱动程序；如果通用打印机驱动程序不存在，则将使用本机打印机驱动程序。
+
+首选通用打印驱动程序:
+关于首选通用打印驱动程序的选项。
+
+如果选择第一个选项“VMware 通用 EMF 驱动程序”，则将使用 EMF 驱动程序。
+
+如果选择第二个选项“VMware 通用 XPS 驱动程序”，则将使用 XPS 驱动程序。
+</string>
+      <string id="printer_creation_setting_npd">始终使用 NPD</string>
+      <string id="printer_creation_setting_upd">始终使用 UPD</string>
+      <string id="printer_creation_setting_npd_upd">先使用 NPD，再使用 UPD</string>
+      <string id="printer_creation_setting_upd_npd">先使用 UPD，再使用 NPD</string>
+      <string id="preferredEMF">VMware 通用 EMF 驱动程序</string>
+      <string id="preferredXPS">VMware 通用 XPS 驱动程序</string>
+      <string id="printer_filter">指定在重定向客户端打印机时使用的筛选器</string>
+      <string id="printer_filter_desc">一个可在重定向打印机时筛选掉与其匹配的任何客户端打印机的规则。支持的属性包括打印机名称、打印机驱动程序名称和驱动程序供应商名称。支持的运算符包括 AND、OR 和 NOT。支持的搜索模式为采用 JavaScript 方言 (ECMAScript) 的正则表达式。
+默认情况下，此规则为空，表示将重定向所有客户端打印机。
+
+示例:
+(DriverName= &quot;DrName1&quot; OR VendorName=&quot;VeName1&quot;) AND NOT PrinterName= &quot;PrNa.?e&quot;</string>
+      <string id="print_preview_setting">打印预览设置</string>
+      <string id="print_preview_setting_detail">有两个打印预览设置。
+
+第一个设置确定是否启用打印目标。默认情况下，不配置该设置。
+
+如果选中该设置，最终用户将无法选择打印目标。
+
+如果取消选中或未配置该设置，最终用户将可以选择打印目标，即“打印预览”或“直接打印”。
+
+
+第二个设置确定默认打印目标选项。默认情况下，不配置该设置，这意味着选项将为“直接打印”。
+
+如果选中“直接打印”选项，打印 UI 中的默认打印选项将为“直接打印”。
+
+如果选中“打印预览”选项，打印 UI 中的默认打印选项将为“打印预览”。
+</string>
+      <string id="print_directly">直接打印</string>
+      <string id="print_to_preview">打印预览</string>
+      <string id="printer_name_schema">打印机名称模式</string>
+      <string id="printer_name_schema_desc">此设置确定在使用 VMware Integrated Printing 时的打印机命名约定。
+如果启用此设置，您可以更改 VDI 和 RDSH 代理的打印机名称模式。
+有效的打印机名称模式应为“%P*”格式。星号标记表示可配置的部分。可以在可配置的部分中使用以下变量。
+%S: 会话 ID
+%C: 客户机名称
+
+如果启用此设置，但打印机名称模式为空或无效，则将使用默认打印机名称模式。
+
+例如，%P%S、%P2%S (%P 和 %S 之间仅存在数字) 或“/”包含在模式中，它们都无效
+
+如果未配置或禁用此设置，则 VDI 代理将使用“%P (vdi)”作为打印机名称模式，RDSH 代理将使用“%P (v%S)”作为打印机名称模式。
+
+默认情况下不配置此设置。
+</string>
+
+      <string id="DefaultSetting">UPD 打印机的默认设置</string>
+      <string id="DefaultSetting_desc">此策略可确定是否为 UPD 打印机启用默认设置。
+启用此策略后，可以为 UPD 打印机定义一组默认设置。如果适用，这些设置将用作 UPD 打印机的初始设置。对于每个打印设置，都有一个复选框，用于确定打印时是否始终使用默认设置。
+如果未配置或已禁用此策略，则不会为 UPD 打印机启用默认设置。
+
+默认情况下不配置此策略。
+      </string>
+
+      <string id="none">无</string>
+      <string id="duplex_vertical">长边翻转</string>
+      <string id="duplex_horizontal">短边翻转</string>
+
+      <string id="bw">黑/白</string>
+      <string id="color">彩色</string>
+
+      <string id="lossless_comp">无损压缩</string>
+      <string id="high_quality_comp">高质量压缩</string>
+      <string id="optimized_comp">优化压缩</string>
+      <string id="no_image_comp">无图像</string>
+
+       <string id="MaxDPI">UPD 打印机的最大 DPI</string>
+       <string id="MaxDPI_detail">此策略指定 UPD 打印机的最大 DPI，因此 UPD 打印机的 DPI 选项和默认 DPI 可能会更改。
+
+启用此策略后，此策略用于指定 UPD 打印机的最大 DPI 级别或最大 X 轴 DPI 值。根据客户端打印机的功能，UPD 打印机可能支持 DPI 级别或 DPI 值。
+当打印机支持 DPI 级别时，UPD 打印机的 DPI 选项和默认 DPI 不会高于最大 DPI 级别。
+当打印机支持 DPI 值，并且最低 X 轴 DPI 不高于最大 X 轴 DPI 时，UPD 打印机的 DPI 选项和默认 DPI 不会高于最大 X 轴 DPI。
+当打印机支持 DPI 值，并且最低 X 轴 DPI 高于最大 X 轴 DPI 时，UPD 打印机的 DPI 选项将与客户端打印机的 DPI 选项相同。UPD 打印机的默认 DPI 将是最低 X 轴 DPI。
+
+如果未配置或禁用此策略，UPD 打印机的 DPI 选项和默认 DPI 将不会更改。
+
+默认情况下不配置此策略。
+       </string>
+       <string id="DPI_draft">草稿</string>
+       <string id="DPI_low">低</string>
+       <string id="DPI_medium">中</string>
+       <string id="DPI_high">高</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="DriverMapping">
+         <listBox refId="printer_driver_mapping">打印机驱动程序映射:</listBox>
+      </presentation>
+      <presentation id="PrinterCreationSetting">
+          <dropdownList refId="printer_creation_setting_list" defaultItem="2" noSort="true">打印机创建选项:</dropdownList>
+          <dropdownList refId="preferred_upd" defaultItem="0" noSort="true">首选 UPD:</dropdownList>
+      </presentation>
+      <presentation id="PrintPreviewSetting">
+        <checkBox refId="disable_print_choice">禁用打印选项</checkBox>
+        <dropdownList refId="default_choice_list" defaultItem="0" noSort="true">打印目标默认选项:</dropdownList>
+      </presentation>
+      <presentation id="printer_filter">
+        <textBox refId="printer_filter_textbox">
+          <label>打印机筛选器</label>
+          <defaultValue></defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="printer_name_schema">
+        <textBox refId="printer_name_schema_textbox">
+          <label>打印机名称模式</label>
+          <defaultValue></defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="MaxTxRate">
+        <decimalTextBox refId="MaxTxRate" defaultValue="32000">最大 Tx 率 (kbps)</decimalTextBox>
+      </presentation>
+      <presentation id="DefaultSetting">
+        <dropdownList refId="DefaultDuplex" defaultItem="0" noSort="true">双面:</dropdownList>
+        <checkBox refId="IsDuplexLocked">始终使用默认双面设置</checkBox>
+        <dropdownList refId="DefaultColor" defaultItem="0" noSort="true">颜色:</dropdownList>
+        <checkBox refId="IsColorLocked">始终使用默认颜色设置</checkBox>
+        <dropdownList refId="DefaultImageCompLevel" defaultItem="0" noSort="true">压缩级别:</dropdownList>
+        <checkBox refId="IsCompLevelLocked">始终使用默认压缩级别设置</checkBox>
+      </presentation>
+      <presentation id="MaxDPI">
+        <dropdownList refId="MaxDPILevel" defaultItem="2" noSort="true">最大 DPI 级别</dropdownList>
+        <decimalTextBox refId="MaxDPIValue" defaultValue="600">最大 DPI (X)</decimalTextBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

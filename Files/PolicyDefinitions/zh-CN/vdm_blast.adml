@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                           revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="BLAST_CAT_LABEL">VMware Blast</string>
+      <string id="BLAST_CAT_EXPLAIN">用于配置 Blast 协议的策略。</string>
+      <string id="BLAST_OPTIMIZER_LABEL">Blast 优化器</string>
+      <string id="BLAST_OPTIMIZER_EXPLAIN">一种配置，允许 Blast 用户在改进用户体验或提高资源效率的默认值之间进行选择。
+值 5: (默认值) 使用 Blast 的默认设置。
+值大于 5: 通过增加 Blast 的 encoderGlobalQualityLevel、带宽斜率和编码器 maxFPS 默认值来改善用户体验。
+值小于 5: 通过减少 Blast 的 encoderGlobalQualityLevel、带宽斜率和编码器 maxFPS 默认值来提高资源效率。</string>
+      <string id="BLAST_MAX_SESSION_BW_LABEL">最大会话带宽</string>
+      <string id="BLAST_MAX_SESSION_BW_EXPLAIN">指定 Blast 协议可以在远程会话中使用的最大带宽 (kbps)。带宽包括所有图像处理、音频、虚拟通道、USB 和 Blast 控制流量。</string>
+      <string id="BLAST_MIN_SESSION_BW_LABEL">最小会话带宽</string>
+      <string id="BLAST_MIN_SESSION_BW_EXPLAIN">指定在远程处理会话时为 Blast 协议保留的最小带宽 (kbps)。</string>
+      <string id="BLAST_MAX_BANDWIDTH_KBPS_PER_MEGAPIXEL_SLOPE_LABEL">最大会话带宽 kbps 百万像素斜率</string>
+      <string id="BLAST_MAX_BANDWIDTH_KBPS_PER_MEGAPIXEL_SLOPE_EXPLAIN">指定 Blast 协议可以在远程会话中使用的远程屏幕分辨率每百万像素的 kbps 斜率。kbps = 总屏幕百万像素 * 斜率</string>
+      <string id="BLAST_MAX_FPS_LABEL">最大帧速率</string>
+      <string id="BLAST_MAX_FPS_EXPLAIN">可以使用最大帧速率值限制每秒更新屏幕的次数，从而管理每个用户使用的平均带宽。</string>
+      <string id="BLAST_UDP_LABEL">UDP 协议</string>
+      <string id="BLAST_UDP_EXPLAIN">如果启用或未配置此设置，则当 Blast 确定使用 UDP 将提升用户体验时，Blast 会话流量可通过 UDP 传输。如果禁用此设置，则 Blast 会话流量将通过 TCP 传输。</string>
+      <string id="BLAST_CURSOR_WARPING_LABEL">光标变形</string>
+      <string id="BLAST_CURSOR_WARPING_EXPLAIN">如果启用此设置，则会启用光标变形功能。如果启用此功能，并且鼠标处于绝对模式，则远程代理将检测到突然的光标移动，并通过移动本地光标将其反映到客户端，否则，客户端将忽略远程代理中的突然光标移动。默认情况下，将禁用光标变形功能。</string>
+      <!--
+        NOTE FOR TRANSLATORS: the collection of BLAST_DSCP_..._EXPLAIN strings that follow
+	BLAST_DSP_ACTIVATE_LABEL all cite this "DSCP Marking" string in their second paragraph.
+	Whatever translation you apply to this string needs to be applied to those _EXPLAIN
+	strings too.
+      -->
+      <string id="BLAST_DSCP_ACTIVATE_LABEL">DSCP 标记</string>
+      <string id="BLAST_DSCP_ACTIVATE_EXPLAIN">如果已启用或未配置该设置，则允许在由 Blast Agent、Blast Client 和 Blast 安全网关发送的网络流量中指定差分服务代码点值。如果已禁用该设置，则不会进行 DSCP 标记。</string>
+      <string id="BLAST_DSCP_AGENT_OUT_TCP4_LABEL">Agent 通过 TCP/IPv4 发送流量的 DSCP</string>
+      <string id="BLAST_DSCP_AGENT_OUT_TCP4_EXPLAIN">要在由 Blast Agent 通过 TCP over IPv4 发送的网络流量中放入的差分服务代码点值。
+
+仅当“DSCP 标记”设置允许时，此设置才有效。</string>
+      <string id="BLAST_DSCP_AGENT_OUT_UDP4_LABEL">Agent 通过 UDP/IPv4 发送流量的 DSCP</string>
+      <string id="BLAST_DSCP_AGENT_OUT_UDP4_EXPLAIN">要在由 Blast Agent 通过 UDP over IPv4 发送的网络流量中放入的差分服务代码点值。
+
+仅当“DSCP 标记”设置允许时，此设置才有效。</string>
+      <string id="BLAST_DSCP_AGENT_OUT_TCP6_LABEL">Agent 通过 TCP/IPv6 发送流量的 DSCP</string>
+      <string id="BLAST_DSCP_AGENT_OUT_TCP6_EXPLAIN">要在由 Blast Agent 通过 TCP over IPv6 发送的网络流量中放入的差分服务代码点值。
+
+仅当“DSCP 标记”设置允许时，此设置才有效。</string>
+      <string id="BLAST_DSCP_AGENT_OUT_UDP6_LABEL">Agent 通过 UDP/IPv6 发送流量的 DSCP</string>
+      <string id="BLAST_DSCP_AGENT_OUT_UDP6_EXPLAIN">要在由 Blast Agent 通过 UDP over IPv6 发送的网络流量中放入的差分服务代码点值。
+
+仅当“DSCP 标记”设置允许时，此设置才有效。</string>
+      <string id="BLAST_DSCP_CLIENT_OUT_TCP4_LABEL">Client 通过 TCP/IPv4 发送流量的 DSCP</string>
+      <string id="BLAST_DSCP_CLIENT_OUT_TCP4_EXPLAIN">要在由 Blast Client 通过 TCP over IPv4 发送的网络流量中放入的差分服务代码点值。
+
+仅当“DSCP 标记”设置允许时，此设置才有效。</string>
+      <string id="BLAST_DSCP_CLIENT_OUT_UDP4_LABEL">Client 通过 UDP/IPv4 发送流量的 DSCP</string>
+      <string id="BLAST_DSCP_CLIENT_OUT_UDP4_EXPLAIN">要在由 Blast Client 通过 UDP over IPv4 发送的网络流量中放入的差分服务代码点值。
+
+仅当“DSCP 标记”设置允许时，此设置才有效。</string>
+      <string id="BLAST_DSCP_CLIENT_OUT_TCP6_LABEL">Client 通过 TCP/IPv6 发送流量的 DSCP</string>
+      <string id="BLAST_DSCP_CLIENT_OUT_TCP6_EXPLAIN">要在由 Blast Client 通过 TCP over IPv6 发送的网络流量中放入的差分服务代码点值。
+
+仅当“DSCP 标记”设置允许时，此设置才有效。</string>
+      <string id="BLAST_DSCP_CLIENT_OUT_UDP6_LABEL">Client 通过 UDP/IPv6 发送流量的 DSCP</string>
+      <string id="BLAST_DSCP_CLIENT_OUT_UDP6_EXPLAIN">要在由 Blast Client 通过 UDP over IPv6 发送的网络流量中放入的差分服务代码点值。
+
+仅当“DSCP 标记”设置允许时，此设置才有效。</string>
+      <string id="BLAST_DSCP_BSG_DOWN_TCP4_LABEL">BSG 通过 TCP/IPv4 发送到 Client 的流量的 DSCP</string>
+      <string id="BLAST_DSCP_BSG_DOWN_TCP4_EXPLAIN">要在由 Blast 安全网关通过 TCP over IPv4 发送到 Blast Client 的网络流量中放入的差分服务代码点值。
+
+仅当“DSCP 标记”设置允许时，此设置才有效。</string>
+      <string id="BLAST_DSCP_BSG_DOWN_UDP4_LABEL">BSG 通过 UDP/IPv4 发送到 Client 的流量的 DSCP</string>
+      <string id="BLAST_DSCP_BSG_DOWN_UDP4_EXPLAIN">要在由 Blast 安全网关通过 UDP over IPv4 发送到 Blast Client 的网络流量中放入的差分服务代码点值。
+
+仅当“DSCP 标记”设置允许时，此设置才有效。</string>
+      <string id="BLAST_DSCP_BSG_DOWN_TCP6_LABEL">BSG 通过 TCP/IPv6 发送到 Client 的流量的 DSCP</string>
+      <string id="BLAST_DSCP_BSG_DOWN_TCP6_EXPLAIN">要在由 Blast 安全网关通过 TCP over IPv6 发送到 Blast Client 的网络流量中放入的差分服务代码点值。
+
+仅当“DSCP 标记”设置允许时，此设置才有效。</string>
+      <string id="BLAST_DSCP_BSG_DOWN_UDP6_LABEL">BSG 通过 UDP/IPv6 发送到 Client 的流量的 DSCP</string>
+      <string id="BLAST_DSCP_BSG_DOWN_UDP6_EXPLAIN">要在由 Blast 安全网关通过 UDP over IPv6 发送到 Blast Client 的网络流量中放入的差分服务代码点值。
+
+仅当“DSCP 标记”设置允许时，此设置才有效。</string>
+      <string id="BLAST_DSCP_BSG_UP_TCP4_LABEL">BSG 通过 TCP/IPv4 发送到 Agent 的流量的 DSCP</string>
+      <string id="BLAST_DSCP_BSG_UP_TCP4_EXPLAIN">要在由 Blast 安全网关通过 TCP over IPv4 发送到 Blast Agent 的网络流量中放入的差分服务代码点值。
+
+仅当“DSCP 标记”设置允许时，此设置才有效。</string>
+      <string id="BLAST_DSCP_BSG_UP_UDP4_LABEL">BSG 通过 UDP/IPv4 发送到 Agent 的流量的 DSCP</string>
+      <string id="BLAST_DSCP_BSG_UP_UDP4_EXPLAIN">要在由 Blast 安全网关通过 UDP over IPv4 发送到 Blast Agent 的网络流量中放入的差分服务代码点值。
+
+仅当“DSCP 标记”设置允许时，此设置才有效。</string>
+      <string id="BLAST_DSCP_BSG_UP_TCP6_LABEL">BSG 通过 TCP/IPv6 发送到 Agent 的流量的 DSCP</string>
+      <string id="BLAST_DSCP_BSG_UP_TCP6_EXPLAIN">要在由 Blast 安全网关通过 TCP over IPv6 发送到 Blast Agent 的网络流量中放入的差分服务代码点值。
+
+仅当“DSCP 标记”设置允许时，此设置才有效。</string>
+      <string id="BLAST_DSCP_BSG_UP_UDP6_LABEL">BSG 通过 UDP/IPv6 发送到 Agent 的流量的 DSCP</string>
+      <string id="BLAST_DSCP_BSG_UP_UDP6_EXPLAIN">要在由 Blast 安全网关通过 UDP over IPv6 发送到 Blast Agent 的网络流量中放入的差分服务代码点值。
+
+仅当“DSCP 标记”设置允许时，此设置才有效。</string>
+      <string id="BLAST_ENCODER_IMAGE_CACHE_SIZE_LABEL">编码器映像缓存大小 (KB)</string>
+      <string id="BLAST_ENCODER_IMAGE_CACHE_SIZE_EXPLAIN">编码器映像缓存的最大大小 (以千字节为单位)。
+
+缓存的最终大小将根据此配置和客户端的关联配置的最小值进行选择，并且不能超过 Horizon Agent 上可用 RAM 的一半。</string>
+      <string id="BLAST_ENCODER_CPU_CONTROLLER_LABEL">编码器 CPU 控制器</string>
+      <string id="BLAST_ENCODER_CPU_CONTROLLER_EXPLAIN">如果启用或未配置该策略设置，则将根据最近的平均系统 CPU 使用率动态缩小或放大每秒编码器帧数的最大限制。为减小编码器 CPU 使用率而可将此限制降低的程度由“编码器 CPU 控制器最小帧速率”设置控制。
+
+如果禁用该策略设置，则由于系统 CPU 使用率高，“最大帧速率”设置中每秒编码器帧数的最大限制不会降低。</string>
+      <string id="BLAST_ENCODER_CPU_CONTROLLER_MIN_FPS_LABEL">编码器 CPU 控制器最小帧速率</string>
+      <string id="BLAST_ENCODER_CPU_CONTROLLER_MIN_FPS_EXPLAIN">为在系统 CPU 使用率高时降低编码器 CPU 使用率，编码器 CPU 控制器可以将每秒编码器帧数最大限制降低到的最小帧速率。该值不能超过“最大帧速率”设置。</string>
+      <string id="BLAST_H264_ENCODE_LABEL">H.264</string>
+      <string id="BLAST_H264_ENCODE_EXPLAIN">如果启用或未配置该策略设置，则使用 H.264 编码远程处理桌面。如果禁用该策略设置，则使用 JPEG/PNG 进行编码。</string>
+      <string id="BLAST_HEVC_ENCODE_LABEL">HEVC</string>
+      <string id="BLAST_HEVC_ENCODE_EXPLAIN">如果启用或未配置该策略设置，则将允许使用 HEVC 编码远程访问桌面。如果禁用该策略设置，则将使用 H.264 或 JPEG/PNG 进行编码。</string>
+      <string id="BLAST_PNG_ENCODE_LABEL">PNG</string>
+      <string id="BLAST_PNG_ENCODE_EXPLAIN">如果启用或未配置该策略设置，则可以在远程会话中使用 PNG 编码。如果禁用该策略设置，则在 JPEG/PNG 模式下仅使用 JPEG 进行编码。在 H.264 编码器处于活动状态时，该策略不适用。</string>
+      <string id="BLAST_SCREEN_BLANK_LABEL">显示空白屏幕</string>
+      <string id="BLAST_SCREEN_BLANK_EXPLAIN">如果启用或未配置该策略设置，在具有到桌面的活动会话时，桌面虚拟机的控制台将显示空白屏幕。如果禁用该策略设置，虚拟机的控制台将显示用户看到的桌面。</string>
+      <string id="BLAST_COOKIE_CLEANUP_LABEL">Cookie 清理间隔</string>
+      <string id="BLAST_COOKIE_CLEANUP_EXPLAIN">该间隔控制每隔多长时间清理一次非活动会话。这是通过删除与会话关联的 Cookie 完成的。</string>
+      <string id="BLAST_COOKIE_CLEANUP_INTERVAL_LABEL">间隔 (毫秒)</string>
+      <string id="BLAST_ENCODER_GLOBAL_QUALITY_LABEL">Blast 编码器全局质量</string>
+      <string id="BLAST_ENCODER_GLOBAL_QUALITY_EXPLAIN">该设置控制所有 Blast 编码器中远程处理的显示器图像质量级别。所选级别将映射到所有编解码器，即，该设置将根据所选值更新 H.264 的最大 QP 值、Blast 编解码器的最大 QP 值以及自适应编码器中的低 JPEG 质量。
+编码器全局质量级别采用范围为 [1-5] 的值。值较低意味着质量较低，值较高意味着质量较高。当屏幕区域经常发生变化时 (例如，滚动屏幕时)，质量级别越高，使用的带宽越多，可能产生的延迟也越大。
+默认值为 1 (均衡)。可以使用相应的编码器 QP 值覆盖质量映射。</string>
+      <string id="BLAST_ENCODER_GLOBAL_QUALITY_LEVEL">Blast 编码器全局质量级别</string>
+      <string id="BLAST_ENCODER_INTEL_H264_LABEL">Intel 硬件编码器 H264</string>
+      <string id="BLAST_ENCODER_INTEL_H264_EXPLAIN">如果启用或未配置该策略设置，则使用 H.264 压缩的 Intel 硬件编码将可用于远程会话。如果禁用该策略设置，则适用于 H.264 的 Intel 硬件编码器将不可用，并默认使用下一个可能的编解码器</string>
+      <string id="BLAST_ENCODER_INTEL_HEVC_LABEL">Intel 硬件编码器 HEVC</string>
+      <string id="BLAST_ENCODER_INTEL_HEVC_EXPLAIN">如果启用或未配置该策略设置，则使用 HEVC 压缩的 Intel 硬件编码将可用于远程会话。如果禁用该策略设置，则适用于 HEVC 的 Intel 硬件编码器将不可用，并默认使用下一个可能的编解码器</string>
+      <string id="BLAST_DISPLAY_QUALITY_LABEL">自适应编码器图像质量</string>
+      <string id="BLAST_DISPLAY_QUALITY_EXPLAIN">这些设置控制在使用自适应编码器 (JPEG/PNG) 时远程处理的显示器的图像质量。
+有两个质量配置文件:“低”和“高”。当屏幕区域经常发生变化时 (例如，滚动屏幕时)，将使用低质量配置文件。高质量配置文件用于优化很少发生变化的屏幕区域，从而获得更佳的最终图像。
+当屏幕区域经常发生变化时 (例如，滚动屏幕时)，质量越高，使用的带宽越多，可能产生的延迟也越大。</string>
+      <string id="BLAST_DISPLAY_QUALITY_JPEG_QUAL_LOW">低 JPEG 质量</string>
+      <string id="BLAST_DISPLAY_QUALITY_JPEG_QUAL_MID">中 JPEG 质量</string>
+      <string id="BLAST_DISPLAY_QUALITY_JPEG_QUAL_HIGH">高 JPEG 质量</string>
+      <string id="BLAST_CODEC_QUALITY_LABEL">Blast 编解码器质量</string>
+      <string id="BLAST_CODEC_QUALITY_EXPLAIN">这些设置控制在使用 Blast 编解码器压缩时远程处理的显示器的图像质量。量化参数 (QP) 控制生成的图像的量化幅度，即有损压缩:
+- 最小 QP 设置量化下限，即最佳质量。
+- 最大 QP 设置量化上限，即最低质量。
+这些量化值将占用范围 [1, 8]，并大致映射到范围为 [20, 88] 的 JPEG 质量值。此量化只应用于非文本区域，因此对文本压缩没有影响。
+最大 QP 或最小 QP 值为零将导致该配置分别被“低 JPEG 质量”和“高 JPEG 质量”配置所覆盖。这是默认行为。</string>
+      <string id="BLAST_CODEC_QP_MAX">Blast 编解码器最大 QP</string>
+      <string id="BLAST_CODEC_QP_MIN">Blast 编解码器最小 QP</string>
+      <string id="BLAST_H264_QUALITY_LABEL">H.264 质量</string>
+      <string id="BLAST_H264_QUALITY_EXPLAIN">在使用 H.264 压缩时，这些设置控制远程处理的显示器的图像质量。量化参数 (QP) 控制生成的图像的量化幅度，即有损压缩:
+- 最小 QP 设置量化下限，即最佳质量。
+- 最大 QP 设置量化上限，即最低质量。
+我们建议将这些值保持在默认值的 +/-5 以内，因为较大的更改可能会产生显著的影响。</string>
+      <string id="BLAST_H264_QUALITY_MAX_QP">H.264 最大 QP</string>
+      <string id="BLAST_H264_QUALITY_MIN_QP">H.264 最小 QP</string>
+      <string id="BLAST_H264_COLOR_ACCURACY_LABEL">H.264 高色彩精度</string>
+      <string id="BLAST_H264_COLOR_ACCURACY_EXPLAIN">如果启用该策略设置，在使用 H.264 编码时，将要求使用 YUV 4:4:4 颜色空间而不是 4:2:0 以提高色彩精度。
+高色彩精度是指从 RGB 转换为 YUV 时，不会对色度进行子采样。
+在使用非常高的分辨率或多个显示器时，这可能会导致性能下降。</string>
+
+      <string id="BLAST_HEVC_COLOR_ACCURACY_LABEL">HEVC 高色彩精度</string>
+      <string id="BLAST_HEVC_COLOR_ACCURACY_EXPLAIN">如果启用该策略设置，在使用 HEVC 编码时，将要求使用 YUV 4:4:4 颜色空间而不是 4:2:0 以提高色彩精度。
+高色彩精度是指从 RGB 转换为 YUV 时，不会对色度进行子采样。
+要使此策略生效，需要使用 HEVC 4:4:4 的客户端硬件加速。</string>
+
+      <string id="BLAST_HIGHER_FIDELITY_COLOR_LABEL">H.264，HEVC 较高保真度色彩</string>
+      <string id="BLAST_HIGHER_FIDELITY_COLOR_EXPLAIN">如果启用该策略设置，在将 YUV 4:4:4 颜色空间与 HEVC 或 H.264 结合使用时，将请求完整的亮度/色度范围和优化的转换矩阵。
+完整范围表示输入 RGB 范围在转换前不进行缩减。
+HDTV 矩阵将用于 SDR 内容，UHDTV 矩阵将用于 HDR 内容。
+如果未配置此策略，则默认为启用此策略。
+要使此策略生效，需要客户端支持此功能。</string>
+
+      <string id="BLAST_HTTP_LABEL">HTTP 服务</string>
+      <string id="BLAST_HTTP_EXPLAIN">这些设置控制 Blast HTTP 服务。使用的端口号应与防火墙设置匹配</string>
+      <string id="BLAST_HTTP_PORTS_SECURE_LABEL">安全 (HTTPS) 端口</string>
+      <string id="BLAST_AUDIO_LABEL">音频播放</string>
+      <string id="BLAST_AUDIO_EXPLAIN">该设置控制是否应允许远程桌面播放音频。默认情况下，将启用音频播放。</string>
+      <string id="KEYBOARD_LOCALE_SYNC_LABEL">键盘区域设置同步</string>
+      <string id="KEYBOARD_LOCALE_SYNC_EXPLAIN">确定是否将键盘区域设置列表和用户在会话中使用的默认键盘区域设置与客户端端点的数据同步。启用此设置时，允许同步。禁用或未配置此设置时，禁止同步。
+
+该设置仅适用于代理。</string>
+      <string id="BLAST_SUPPORTEDON_EMPTY"></string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="BLAST_OPTIMIZER_LABEL">
+        <decimalTextBox refId="BLAST_OPTIMIZER_LABEL" defaultValue="5">Blast 优化器</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_MAX_SESSION_BW_LABEL">
+        <decimalTextBox refId="BLAST_MAX_SESSION_BW_LABEL" defaultValue="2147483647">最大会话带宽</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_MIN_SESSION_BW_LABEL">
+        <decimalTextBox refId="BLAST_MIN_SESSION_BW_LABEL" defaultValue="256">最小会话带宽</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_MAX_BANDWIDTH_KBPS_PER_MEGAPIXEL_SLOPE_LABEL">
+        <decimalTextBox refId="BLAST_MAX_BANDWIDTH_KBPS_PER_MEGAPIXEL_SLOPE_LABEL" defaultValue="6200">最大会话带宽 kbps 百万像素斜率</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_MAX_FPS_LABEL">
+        <decimalTextBox refId="BLAST_MAX_FPS_LABEL" defaultValue="30">最大帧速率</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_UDP_LABEL" />
+      <presentation id="BLAST_CURSOR_WARPING_LABEL" />
+      <presentation id="BLAST_DSCP_ACTIVATE_LABEL" />
+      <presentation id="BLAST_DSCP_AGENT_OUT_TCP4_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_AGENT_OUT_TCP4_LABEL" defaultValue="">DSCP 值</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_AGENT_OUT_UDP4_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_AGENT_OUT_UDP4_LABEL" defaultValue="">DSCP 值</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_AGENT_OUT_TCP6_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_AGENT_OUT_TCP6_LABEL" defaultValue="">DSCP 值</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_AGENT_OUT_UDP6_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_AGENT_OUT_UDP6_LABEL" defaultValue="">DSCP 值</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_CLIENT_OUT_TCP4_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_CLIENT_OUT_TCP4_LABEL" defaultValue="">DSCP 值</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_CLIENT_OUT_UDP4_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_CLIENT_OUT_UDP4_LABEL" defaultValue="">DSCP 值</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_CLIENT_OUT_TCP6_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_CLIENT_OUT_TCP6_LABEL" defaultValue="">DSCP 值</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_CLIENT_OUT_UDP6_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_CLIENT_OUT_UDP6_LABEL" defaultValue="">DSCP 值</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_BSG_DOWN_TCP4_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_BSG_DOWN_TCP4_LABEL" defaultValue="">DSCP 值</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_BSG_DOWN_UDP4_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_BSG_DOWN_UDP4_LABEL" defaultValue="">DSCP 值</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_BSG_DOWN_TCP6_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_BSG_DOWN_TCP6_LABEL" defaultValue="">DSCP 值</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_BSG_DOWN_UDP6_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_BSG_DOWN_UDP6_LABEL" defaultValue="">DSCP 值</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_BSG_UP_TCP4_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_BSG_UP_TCP4_LABEL" defaultValue="">DSCP 值</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_BSG_UP_UDP4_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_BSG_UP_UDP4_LABEL" defaultValue="">DSCP 值</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_BSG_UP_TCP6_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_BSG_UP_TCP6_LABEL" defaultValue="">DSCP 值</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_BSG_UP_UDP6_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_BSG_UP_UDP6_LABEL" defaultValue="">DSCP 值</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_ENCODER_IMAGE_CACHE_SIZE_LABEL">
+        <decimalTextBox refId="BLAST_ENCODER_IMAGE_CACHE_SIZE_LABEL" defaultValue="256000">编码器映像缓存大小 (KB)</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_ENCODER_CPU_CONTROLLER_LABEL" />
+      <presentation id="BLAST_ENCODER_CPU_CONTROLLER_MIN_FPS_LABEL">
+        <decimalTextBox refId="BLAST_ENCODER_CPU_CONTROLLER_MIN_FPS_LABEL" defaultValue="5">编码器 CPU 控制器最小帧速率</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_H264_ENCODE_LABEL" />
+      <presentation id="BLAST_HEVC_ENCODE_LABEL" />
+      <presentation id="BLAST_PNG_ENCODE_LABEL" />
+      <presentation id="BLAST_SCREEN_BLANK_LABEL" />
+      <presentation id="BLAST_COOKIE_CLEANUP_LABEL">
+        <decimalTextBox refId="BLAST_COOKIE_CLEANUP_INTERVAL_LABEL" defaultValue="1000">间隔 (毫秒)</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_ENCODER_GLOBAL_QUALITY_LABEL">
+        <decimalTextBox refId="BLAST_ENCODER_GLOBAL_QUALITY_LEVEL" defaultValue="1">编码器全局质量级别</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DISPLAY_QUALITY_LABEL">
+        <decimalTextBox refId="BLAST_DISPLAY_QUALITY_JPEG_QUAL_LOW" defaultValue="25">低 JPEG 质量</decimalTextBox>
+        <decimalTextBox refId="BLAST_DISPLAY_QUALITY_JPEG_QUAL_MID" defaultValue="35">中 JPEG 质量</decimalTextBox>
+        <decimalTextBox refId="BLAST_DISPLAY_QUALITY_JPEG_QUAL_HIGH" defaultValue="90">高 JPEG 质量</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_ENCODER_INTEL_H264_LABEL" />
+      <presentation id="BLAST_ENCODER_INTEL_HEVC_LABEL" />
+      <presentation id="BLAST_CODEC_QUALITY_LABEL">
+        <decimalTextBox refId="BLAST_CODEC_QP_MAX" defaultValue="0">Blast 编解码器最大 QP</decimalTextBox>
+        <decimalTextBox refId="BLAST_CODEC_QP_MIN" defaultValue="0">Blast 编解码器最小 QP</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_H264_QUALITY_LABEL">
+        <decimalTextBox refId="BLAST_H264_QUALITY_MAX_QP" defaultValue="36">H.264 最大 QP</decimalTextBox>
+        <decimalTextBox refId="BLAST_H264_QUALITY_MIN_QP" defaultValue="10">H.264 最小 QP</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_H264_COLOR_ACCURACY_LABEL" />
+      <presentation id="BLAST_HEVC_COLOR_ACCURACY_LABEL" />
+      <presentation id="BLAST_HIGHER_FIDELITY_COLOR_LABEL" />
+      <presentation id="BLAST_HTTP_LABEL">
+        <decimalTextBox refId="BLAST_HTTP_PORTS_SECURE_LABEL" defaultValue="22443">安全 (HTTPS) 端口</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_AUDIO_LABEL" />
+      <presentation id="KEYBOARD_LOCALE_SYNC_LABEL" />
+      <presentation id="SERVER_HTMLACCESS_PRINT_STATE" />
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="UNCPath_GPO_Define">VMware Horizon UNC 路径重定向</string>
+      <string id="UNCPathRedirection_Enabled">启用 UNC 路径重定向</string>
+      <string id="UNCPathRedirection_FilterRule">UNC 路径重定向筛选规则</string>
+      <string id="UNCPathRedirection_Enabled_Description">此设置确定是否可以重定向 UNC 路径。“未配置”或“已禁用”设置表示未启用该功能。默认为“未配置”。</string>
+      <string id="UNCPathRedirection_FilterRule_Description">对于所有与规则匹配的 UNC 路径，指定应重定向的 UNC 路径。
+例如，如果您将代理规则设置为 .*\.mycompany\.com，则包含“.mycompany.com”的所有 UNC 路径都将重定向到远程桌面或应用程序会话。您可以设置“代理主机名”以进一步指定要使用的 Horizon Connection Server，以及将“远程项目”设置为池显示名称以指定要使用的桌面或应用程序，如 Horizon Administrator 控制台中所示。
+如果您将客户端规则设置为 .*\.mycompany\.com，则包含“.mycompany.com”的所有 UNC 路径都将从远程桌面或应用程序会话重定向到基于 Windows 的客户端，并在客户端上的默认应用程序中打开。
+
+注意
+
+设置多个规则时，请使用分号分隔每个规则，因为不支持手动换行。</string>
+      <string id="ADMXMigrator_NoSupportedOn">ADMX Migrator 遇到没有 supportedOn 值的策略。</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="UNCPathRedirectionEnabled" />
+      <presentation id="UNCPathRedirectionFilterRule">
+        <textBox refId="brokerHostname">
+          <label>代理主机名</label>
+        </textBox>
+        <textBox refId="remoteItem">
+          <label>远程项目</label>
+        </textBox>
+        <text>客户端规则</text>
+          <multiTextBox refId="clientRules" />
+        <text>代理规则</text>
+          <multiTextBox refId="agentRules" />
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="UNCPath_GPO_Define">VMware Horizon UNC 路徑重新導向</string>
+      <string id="UNCPathRedirection_Enabled">啟用 UNC 路徑重新導向</string>
+      <string id="UNCPathRedirection_FilterRule">UNC 路徑重新導向篩選器規則</string>
+      <string id="UNCPathRedirection_Enabled_Description">此設定決定是否可以重新導向 UNC 路徑。[未設定] 或 [已停用] 設定表示未啟用功能。預設值是 [未設定]。</string>
+      <string id="UNCPathRedirection_FilterRule_Description">對於符合規則的所有 UNC 路徑，指定應重新導向的 UNC 路徑。
+例如，若您將代理程式規則設定為 .*\.mycompany\.com，其中包含「.mycompany.com」的所有 UNC 路徑會重新導向至遠端桌面平台或應用程式工作階段。您可以透過設定 [代理主機名稱] 來進一步指定要使用的 Horizon Connection Server，並且可以透過將 [遠端項目] 設定為集區的顯示名稱，來指定要使用的桌面平台或應用程式，如 Horizon Administrator 主控台中所示。
+如果您將用戶端規則設定為 .*\.mycompany\.com，其中包含「.mycompany.com」的所有 UNC 路徑會從遠端桌面平台或應用程式工作階段重新導向至 Windows 用戶端，並在用戶端上的預設應用程式中開啟。
+
+注意
+
+設定多個規則時，請使用分號分隔每個規則，並且不支援手動換行。</string>
+      <string id="ADMXMigrator_NoSupportedOn">ADMX Migrator 遇到沒有 supportedOn 值的原則。</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="UNCPathRedirectionEnabled" />
+      <presentation id="UNCPathRedirectionFilterRule">
+        <textBox refId="brokerHostname">
+          <label>代理主機名稱</label>
+        </textBox>
+        <textBox refId="remoteItem">
+          <label>遠端項目</label>
+        </textBox>
+        <text>用戶端規則</text>
+          <multiTextBox refId="clientRules" />
+        <text>代理程式規則</text>
+          <multiTextBox refId="agentRules" />
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

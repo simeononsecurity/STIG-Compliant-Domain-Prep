@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" >
+
+	<displayName >在這裡輸入顯示名稱</displayName>
+	<description >VMware Horizon View PCOIP 用戶端組態設定</description>
+	<resources >
+		<stringTable ><!--Storage for String Definitions-->
+
+			<string id="String_SupportedOn_Undefined_2" >未定義</string>
+			<string id="String_SupportedOn_Undefined_4" >未定義</string>
+			<string id="String_SupportedOn_Undefined_6" >未定義</string>
+			<string id="String_SupportedOn_Undefined_8" >未定義</string>
+			<string id="String_SupportedOn_Undefined_10" >未定義</string>
+			<string id="String_SupportedOn_Undefined_12" >未定義</string>
+			<string id="String_SupportedOn_Undefined_14" >未定義</string>
+			<string id="String_SupportedOn_Undefined_15" >未定義</string>
+			<string id="String_SupportedOn_Undefined_16" >未定義</string>
+			<string id="String_SupportedOn_Undefined_18" >未定義</string>
+			<string id="String_SupportedOn_Undefined_20" >未定義</string>
+			<string id="String_SupportedOn_Undefined_22" >未定義</string>
+			<string id="String_SupportedOn_Undefined_24" >未定義</string>
+			<string id="String_SupportedOn_Undefined_26" >未定義</string>
+			<string id="String_SupportedOn_Undefined_28" >未定義</string>
+			<string id="String_SupportedOn_Undefined_30" >未定義</string>
+			<string id="String_SupportedOn_Undefined_32" >未定義</string>
+			<string id="String_SupportedOn_Undefined_34" >未定義</string>
+			<string id="String_SupportedOn_Undefined_36" >未定義</string>
+			<string id="String_SupportedOn_Undefined_38" >未定義</string>
+			<string id="String_SupportedOn_Undefined_40" >未定義</string>
+			<string id="String_SupportedOn_Undefined_42" >未定義</string>
+			<string id="String_SupportedOn_Undefined_43" >未定義</string>
+			<string id="String_SupportedOn_Undefined_44" >未定義</string>
+			<string id="String_SupportedOn_Undefined_46" >未定義</string>
+			<string id="String_SupportedOn_Undefined_48" >未定義</string>
+			<string id="String_SupportedOn_Undefined_50" >未定義</string>
+			<string id="String_SupportedOn_Undefined_52" >未定義</string>
+			<string id="String_SupportedOn_Undefined_54" >未定義</string>
+			<string id="String_SupportedOn_Undefined_56" >未定義</string>
+			<string id="String_Cat_PCoIP_Client_Session_58" >PCoIP 用戶端工作階段變數</string>
+			<string id="String_Cat_Not_Overridable_60" >非可覆寫的管理員設定</string>
+			<string id="String_Cat_Overridable_Administrator_62" >可覆寫的管理員預設值</string>
+			<string id="String_Policy_Configure_the_maximum_64" >設定最大 PCoIP 工作階段頻寬</string>
+			<string id="String_Explain_Specifies_the_maximum_65" >指定 PCoIP 工作階段中的最大頻寬 (單位為每秒 kb)。頻寬包括所有影像處理、音訊、虛擬通道、USB 和控制 PCoIP 流量。
+
+根據端點所連線之連結的總容量設定此值，並考量預期的並行 PCoIP 工作階段數目。例如，單一使用者的 VDI 組態 (例如單一 PCoIP 工作階段) 是透過 4 Mbit/s 網際網路連線來連線時，請將此值設為 4 Mbit，或設定一個比此值低 10% 的值，留一些空間供其他網路流量使用。當您預期多個並行 PCoIP 工作階段會共用連結 (例如多個 VDI 使用者或一個 RDSH 組態)，您可能想要據以調整設定，不過這將限制每個作用中工作階段的最大頻寬。
+
+設定此值可防止代理程式嘗試以高於連結容量的速率傳輸，以避免造成大量封包遺失並產生較差的使用者體驗。此值為對稱的。它會強制用戶端和代理程式使用用戶端和代理程式端上所設定的兩個值中的較低者。例如，將最大頻寬設定為 4 Mbit/s 會強制代理程式以較低速率傳輸，即使該設定是在用戶端上設定的也一樣。
+
+在端點上，當此設定為 [已停用] 或 [未設定] 時，端點就不會實施任何頻寬限制。當此設定為 [已設定] 時，設定會用作端點的最大頻寬限制 (單位為每秒 kb)。
+
+當此設定未設定時，預設值為每秒 900000 kb。
+
+此設定會套用至代理程式和用戶端。如果兩個端點擁有不同的設定，則會使用較小的值。</string>
+			<string id="String_Policy_Configure_the_PCoIP_68" >設定 PCoIP 工作階段 MTU</string>
+			<string id="String_Explain_Specifies_the_Maximum_69" >針對 PCoIP 工作階段的 UDP 封包，指定傳輸單元最大值 (MTU) 大小。
+
+MTU 大小包括 IP 和 UDP 封包標頭。TCP 會使用標準 MTU 探索機制設定 MTU，因此不會受此設定影響。MTU 大小的最大值為 1500 個位元組。MTU 大小的最小值為 500 個位元組。預設值為 1200 個位元組。
+
+通常您不需要變更 MTU 大小。如果您使用非一般的網路設定而造成 PCoIP 封包分段，請變更此值。
+
+此設定會套用至伺服器和用戶端。如果兩個端點擁有不同的 MTU 大小設定，則會使用最小的值。
+
+如果停用或未設定此設定，用戶端會使用預設值與伺服器交涉。</string>
+			<string id="String_Policy_Configure_the_PCoIP_72" >設定 PCoIP 工作階段頻寬下限</string>
+			<string id="String_Explain_Specifies_a_lower_73" >指定 PCoIP 工作階段所保留頻寬的下限值 (單位為每秒 kb)。
+
+此設定會設定端點的預期最小頻寬傳輸速率。當您使用此設定保留端點的頻寬時，工作階段就不必等待可用的頻寬，如此就能改善工作階段的回應能力。
+
+請確認不要過度訂閱所有端點的總保留頻寬。確定組態中所有連線的頻寬下限總和未超過網路能力。
+
+預設值為 0，表示未保留最小頻寬。當此設定為 [已停用] 或 [未設定] 時，系統不會保留最小頻寬。
+
+此設定會套用至伺服器和用戶端，但是僅會影響進行此設定的端點。
+
+在作用中的 PCoIP 工作階段期間修改此設定時，變更會立即生效。</string>
+			<string id="String_Policy_Enable_disable_76" >在 PCoIP 工作階段中啟用/停用音訊</string>
+			<string id="String_Explain_Determines_whether_77" >決定是否在 PCoIP 工作階段中啟用音訊。兩個端點都必須啟用音訊。當此設定為 [已啟用] 時，系統會允許 PCoIP 音訊。停用此設定時，會停用 PCoIP 音訊。當此設定為 [未設定] 時，依預設會啟用音訊。
+
+</string>
+			<string id="String_Policy_Configure_SSL_connections_79" >設定 SSL 連線以滿足安全工具</string>
+			<string id="String_Explain_Specifies_how_SSL_80" >指定建立 SSL 工作階段交涉連線的方式。
+
+為了滿足連接埠掃描器，請啟用此 [設定 SSL 連線] 設定，並執行下列動作:
+
+1. 儲存已簽署任何伺服器之憑證授權機構的憑證，以便在受信任的根憑證存放區中與 PCoIP 搭配使用。
+2. 設定代理程式，以僅從憑證存放區載入憑證。如果使用的是本機電腦的個人存放區，請將 CA 憑證存放區名稱保持不變為值「ROOT」(不帶引號)，除非在步驟 1 中使用不同的存放區位置。
+
+產生的 PCoIP 用戶端將滿足連接埠掃描器等安全工具的要求。
+
+如果此 [設定 SSL 連線] 設定已停用或未設定:
+
+1. 端點將使用來自機器帳戶的「MY」存放區的憑證授權機構憑證，以及來自「ROOT」存放區的憑證授權機構憑證。
+2. AES-128 加密套件將可供使用。</string>
+			<string id="String_Policy_Configure_PCoIP_85" >設定 PCoIP 工作階段加密演算法</string>
+			<string id="String_Explain_Controls_the_encryption_86" >控制 PCoIP 端點在工作階段交涉期間公告的加密演算法。
+
+勾選其中一個核取方塊就會停用相關的加密演算法。您必須至少啟用一種演算法。
+
+此設定會同時套用至代理程式和用戶端。端點會交涉所使用的實際工作階段加密演算法。如果啟用了 FIPS140-2 核准模式，則在 AES-128-GCM 加密和 AES-256-GCM 加密皆停用時，系統會覆寫 [停用 AES-128-GCM 加密] 值。
+
+如果停用或未設定整體 [設定 SSL 連線]，則 Salsa20-256round12 和 AES-128-GCM 演算法都可用於此端點的交涉。
+
+依優先順序，支援的加密演算法為 SALSA20/12-256、AES-GCM-128 和 AES-GCM-256。依預設，所有支援的加密演算法均可供此端點用於交涉。
+
+如果兩個端點均設定為支援全部三種演算法，但連線並未使用安全閘道 (SG)，則會使用 SALSA20 演算法進行交涉。但是，如果連線使用 SG，則會自動停用 SALSA20，並使用 AES128 進行交涉。如果任一端點或 SG 停用了 SALSA20，且任一端點停用了 AES128，則會使用 AES256 進行交涉。</string>
+			<string id="String_Policy_Configure_SSL_protocols_91" >設定 SSL 通訊協定</string>
+			<string id="String_Explain_Configures_openssl_92" >設定 openssl 通訊協定，以限制在建立加密 SSL 連線之前某些通訊協定的使用。通訊協定清單由一個或多個以冒號分隔的 openssl 通訊協定字串組成。請注意，所有加密字串皆不區分大小寫。
+
+ 預設值為: 
+   &quot;TLS1.0:TLS1.1:TLS1.2&quot;
+
+ 這表示: 已啟用 TLS v1.0、TLS v1.1 和 TLS v1.2 (已停用 SSL v2.0 和 SSLv3.0)。
+
+此設定會同時套用至代理程式和用戶端。
+
+如果已在兩端設定，系統將遵循 OpenSSL 通訊協定交涉規則。</string>
+			<string id="String_Policy_Configure_SSL_cipher_list_93" >設定 SSL 加密清單</string>
+			<string id="String_Explain_Configures_SSL_cipher_list_94" >設定 SSL 加密清單，以限制在建立加密 SSL 連線之前對於加密套件的使用。清單由一或多個以冒號分隔的加密套件字串組成。請注意，所有加密字串皆不區分大小寫。
+
+預設值為:
+   「ECDHE-RSA-AES256-GCM-SHA384:AES256-SHA256:AES256-SHA:ECDHE-RSA-AES128-GCM-SHA256:AES128-SHA256:AES128-SHA:@STRENGTH」
+
+如果已設定此項目，則系統會忽略「設定 SSL 連線以滿足安全工具」中的「強制執行用於 SSL 連線交涉的 AES-256 或更強的加密」核取方塊。
+
+此設定需要同時套用至 PCoIP 伺服器和 PCoIP 用戶端。</string>
+			<string id="String_Policy_Configure_the_Client_95" >設定用戶端 PCoIP UDP 連接埠</string>
+			<string id="String_Explain_Specifies_the_UDP_96" >指定軟體 PCoIP 用戶端所使用的 UDP 用戶端連接埠，這可以手動設定或由用戶端作業系統 (OS) 自動決定。此設定僅適用於用戶端。
+
+若要手動設定，請輸入 UDP 連接埠和重試連接埠範圍。UDP 連接埠值會指定要使用的基礎 UDP 連接埠。UDP 連接埠範圍值會決定基礎連接埠無法使用時，要嘗試的其他連接埠數目。此範圍從基礎連接埠跨越至基礎連接埠和連接埠範圍的總和。例如，如果基礎連接埠為 50002 且連接埠範圍為 64，則範圍會從 50002 跨越至 50066。依預設，基礎連接埠為 50002 且連接埠範圍為 64。
+
+勾選「允許作業系統自動決定 UDP 連接埠」會指示用戶端作業系統忽略手動設定的值，並自動選擇未由其他程式使用的 UDP 連接埠。</string>
+			<string id="String_Policy_Configure_PCoIP_101" >設定 PCoIP 虛擬通道</string>
+			<string id="String_Explain_Specifies_the_virtual_102" >指定可以及無法透過 PCoIP 工作階段操作的虛擬通道。此設定也會決定是否停用 PCoIP 主機上的剪貼簿處理。
+
+PCoIP 工作階段中使用的虛擬通道必須出現在虛擬通道授權清單中。出現在未授權虛擬通道清單中的虛擬通道無法在 PCoIP 工作階段中使用。
+
+您最多可以指定 15 個在 PCoIP 工作階段中使用的虛擬通道。
+
+請使用分隔號 (|) 字元分隔多個通道名稱。例如，允許 mksvchan 和 vdp_rdpvcbridge 虛擬通道的虛擬通道授權字串為 mksvchan|vdp_rdpvcbridge。
+
+如果通道名稱包含分隔號或反斜線 (\) 字元，請在前面插入反斜線字元。例如，將通道名稱 awk|ward\channel 輸入為 awk\|ward\\channel。
+
+授權的虛擬通道清單為空白時，表示不允許所有虛擬通道。未授權的虛擬通道清單為空白時，表示允許所有虛擬通道。
+
+虛擬通道設定會同時套用至代理程式和用戶端。代理程式和用戶端上的虛擬通道都必須啟用，才能使用虛擬通道。
+
+虛擬通道設定會另外提供一個核取方塊，讓您停用 PCoIP 主機上的遠端剪貼簿處理。此值僅適用於代理程式。
+
+依預設，會啟用所有虛擬通道，包括剪貼簿處理。</string>
+			<string id="String_Policy_DropList_Select_Configure_PCoIP_0_Disable_virtual_104" >0 - 在 PCoIP 工作階段中停用虛擬通道</string>
+			<string id="String_Policy_DropList_Select_Configure_PCoIP_2_Disable_all_105" >2 - 停用除了以下之外的所有虛擬通道</string>
+			<string id="String_Policy_DropList_Select_Configure_PCoIP_3_Enable_all_106" >3 - 啟用除了以下之外的所有虛擬通道</string>
+			<string id="String_Policy_Configure_PCoIP_110" >設定 PCoIP 用戶端映像快取大小原則</string>
+			<string id="String_Explain_Controls_the_size_111" >控制 PCoIP 用戶端映像快取的大小。用戶端會使用映像快取，儲存之前傳輸的顯示部分。映像快取可減少重複傳輸的資料量。
+
+當 View Client、View Agent 和 View 連線伺服器為 View 5.0 或較新版本時，此設定僅會套用至 Windows 和 Linux 用戶端。
+
+當此設定為 [未設定] 或 [已停用] 時，PCoIP 會使用預設用戶端映像快取大小 (250 MB)。
+
+當您啟用此設定時，可以在最小 50 MB 到最大 1024 MB 之間設定用戶端映像快取大小。預設值為 250 MB。</string>
+			<string id="String_Policy_Configure_the_PCoIP_114" >設定 PCoIP 傳輸標頭</string>
+			<string id="String_Explain_Configures_the_115" >設定 PCoIP 傳輸標頭。
+
+PCoIP 傳輸標頭為 32 位元長度標頭，會新增至所有 PCoIP UDP 封包 (但只有在雙方均啟用且支援傳輸標頭時)。PCoIP 傳輸標頭會允許網路裝置在處理網路壅塞時決定較佳的優先順序/Qos。傳輸標頭依預設為啟用。
+
+傳輸工作階段優先順序會決定 PCoIP 傳輸標頭中報告的 PCoIP 工作階段優先順序。網路裝置會根據指定的傳輸工作階段優先順序來決定較佳的優先順序/Qos。傳輸工作階段優先順序值會由 PCoIP 代理程式和用戶端進行交涉。如果代理程式具有指定的傳輸工作階段優先順序值 (高、中或低)，則工作階段會使用代理程式指定的工作階段優先順序。如果只有用戶端具有指定的傳輸工作階段優先順序 (高、中或低)，則工作階段會使用用戶端指定的工作階段優先順序。如果代理程式或用戶端均未指定傳輸工作階段優先順序 (或指定了「未定義的優先順序」)，則工作階段會使用/預設為中工作階段優先順序。</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_High_Priority_117" >高優先順序</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_Medium_Priority_118" >中優先順序 (預設值)</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_Low_Priority_119" >低優先順序</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_Undefined_Priority_120" >未定義的優先順序</string>
+			<string id="String_Policy_Configure_PCoIP_122" >設定 PCoIP 事件記錄詳細資訊</string>
+			<string id="String_Explain_This_policy_enables_123" >此原則會啟用 PCoIP 事件記錄詳細資訊的組態，範圍自 0 (最不詳細) 到 3 (最詳細)。
+
+當此原則為 [已停用] 或 [未設定] 時，預設的事件記錄詳細資訊設定為 2。當此原則為 [已設定] 時，此設定會控制上述的詳細資訊等級。
+
+在作用中的 PCoIP 工作階段期間修改此設定時，變更會立即生效。</string>
+			<string id="String_Policy_Configure_PCoIP_126" >設定依時間 (天數) 的 PCoIP 事件記錄清理</string>
+			<string id="String_Explain_This_policy_enables_127" >此原則會啟用依時間 (天數) 之 PCoIP 事件記錄清理的組態。
+
+當此原則為 [已設定] 時，此設定會控制依時間 (天數) 的記錄檔清理，亦即，若是非零設定 n，則大於 n 天的記錄檔會自動 (且無訊息) 刪除；設定 0 則表示不會依時間清理檔案。當此原則為 [已停用] 或 [未設定] 時，預設的依時間 (天數) 事件記錄清理設定為 7。
+
+一旦工作階段啟動，即會執行記錄檔清理；在下一個工作階段之前，將不會套用對此設定的任何變更。</string>
+			<string id="String_Policy_Configure_PCoIP_130" >設定依大小 (MB) 的 PCoIP 事件記錄清理</string>
+			<string id="String_Explain_This_policy_enables_131" >此原則會啟用依大小 (MB) 之 PCoIP 事件記錄清理的組態。
+
+當此原則為 [已設定] 時，此設定會控制依大小 (MB) 的記錄檔清理，亦即，若是非零設定 m，則大於 m MB 的記錄檔會自動 (且無訊息) 刪除；設定 0 則指出不會依大小清理檔案。當此原則為 [已停用] 或 [未設定] 時，預設的依大小 (MB) 事件記錄清理設定為 100。
+
+一旦工作階段啟動，即會執行記錄檔清理；在下一個工作階段之前，將不會套用對此設定的任何變更。</string>
+			<string id="String_Policy_Configure_the_maximum_134" >設定最大 PCoIP 工作階段頻寬</string>
+			<string id="String_Explain_Specifies_the_maximum_135" >指定 PCoIP 工作階段中的最大頻寬 (單位為每秒 kb)。頻寬包括所有影像處理、音訊、虛擬通道、USB 和控制 PCoIP 流量。
+
+根據端點所連線之連結的總容量設定此值，並考量預期的並行 PCoIP 工作階段數目。例如，單一使用者的 VDI 組態 (例如單一 PCoIP 工作階段) 是透過 4 Mbit/s 網際網路連線來連線時，請將此值設為 4 Mbit，或設定一個比此值低 10% 的值，留一些空間供其他網路流量使用。當您預期多個並行 PCoIP 工作階段會共用連結 (例如多個 VDI 使用者或一個 RDSH 組態)，您可能想要據以調整設定，不過這將限制每個作用中工作階段的最大頻寬。
+
+設定此值可防止代理程式嘗試以高於連結容量的速率傳輸，以避免造成大量封包遺失並產生較差的使用者體驗。此值為對稱的。它會強制用戶端和代理程式使用用戶端和代理程式端上所設定的兩個值中的較低者。例如，將最大頻寬設定為 4 Mbit/s 會強制代理程式以較低速率傳輸，即使該設定是在用戶端上設定的也一樣。
+
+在端點上，當此設定為 [已停用] 或 [未設定] 時，端點就不會實施任何頻寬限制。當此設定為 [已設定] 時，設定會用作端點的最大頻寬限制 (單位為每秒 kb)。
+
+當此設定未設定時，預設值為每秒 900000 kb。
+
+此設定會套用至代理程式和用戶端。如果兩個端點擁有不同的設定，則會使用較小的值。</string>
+			<string id="String_Policy_Configure_the_PCoIP_138" >設定 PCoIP 工作階段 MTU</string>
+			<string id="String_Explain_Specifies_the_Maximum_139" >針對 PCoIP 工作階段的 UDP 封包，指定傳輸單元最大值 (MTU) 大小。
+
+MTU 大小包括 IP 和 UDP 封包標頭。TCP 會使用標準 MTU 探索機制設定 MTU，因此不會受此設定影響。MTU 大小的最大值為 1500 個位元組。MTU 大小的最小值為 500 個位元組。預設值為 1200 個位元組。
+
+通常您不需要變更 MTU 大小。如果您使用非一般的網路設定而造成 PCoIP 封包分段，請變更此值。
+
+此設定會套用至伺服器和用戶端。如果兩個端點擁有不同的 MTU 大小設定，則會使用最小的值。
+
+如果停用或未設定此設定，用戶端會使用預設值與伺服器交涉。</string>
+			<string id="String_Policy_Configure_the_PCoIP_142" >設定 PCoIP 工作階段頻寬下限</string>
+			<string id="String_Explain_Specifies_a_lower_143" >指定 PCoIP 工作階段所保留頻寬的下限值 (單位為每秒 kb)。
+
+此設定會設定端點的預期最小頻寬傳輸速率。當您使用此設定保留端點的頻寬時，工作階段就不必等待可用的頻寬，如此就能改善工作階段的回應能力。
+
+請確認不要過度訂閱所有端點的總保留頻寬。確定組態中所有連線的頻寬下限總和未超過網路能力。
+
+預設值為 0，表示未保留最小頻寬。當此設定為 [已停用] 或 [未設定] 時，系統不會保留最小頻寬。
+
+此設定會套用至伺服器和用戶端，但是僅會影響進行此設定的端點。
+
+在作用中的 PCoIP 工作階段期間修改此設定時，變更會立即生效。</string>
+			<string id="String_Policy_Enable_disable_146" >在 PCoIP 工作階段中啟用/停用音訊</string>
+			<string id="String_Explain_Determines_whether_147" >決定是否在 PCoIP 工作階段中啟用音訊。兩個端點都必須啟用音訊。當此設定為 [已啟用] 時，系統會允許 PCoIP 音訊。停用此設定時，會停用 PCoIP 音訊。當此設定為 [未設定] 時，依預設會啟用音訊。
+
+</string>
+			<string id="String_Policy_Configure_SSL_connections_149" >設定 SSL 連線以滿足安全工具</string>
+			<string id="String_Explain_Specifies_how_SSL_150" >指定建立 SSL 工作階段交涉連線的方式。
+
+為了滿足連接埠掃描器，請啟用此 [設定 SSL 連線] 設定，並執行下列動作:
+
+1. 儲存已簽署任何伺服器之憑證授權機構的憑證，以便在受信任的根憑證存放區中與 PCoIP 搭配使用。
+2. 設定代理程式，以僅從憑證存放區載入憑證。如果使用的是本機電腦的個人存放區，請將 CA 憑證存放區名稱保持不變為值「ROOT」(不帶引號)，除非在步驟 1 中使用不同的存放區位置。
+
+產生的 PCoIP 用戶端將滿足連接埠掃描器等安全工具的要求。
+
+如果此 [設定 SSL 連線] 設定已停用或未設定:
+
+1. 端點將使用來自機器帳戶的「MY」存放區的憑證授權機構憑證，以及來自「ROOT」存放區的憑證授權機構憑證。
+2. AES-128 加密套件將可供使用。</string>
+			<string id="String_Policy_Configure_PCoIP_155" >設定 PCoIP 工作階段加密演算法</string>
+			<string id="String_Explain_Controls_the_encryption_156" >控制 PCoIP 端點在工作階段交涉期間公告的加密演算法。
+
+勾選其中一個核取方塊就會停用相關的加密演算法。您必須至少啟用一種演算法。
+
+此設定會同時套用至代理程式和用戶端。端點會交涉所使用的實際工作階段加密演算法。如果啟用了 FIPS140-2 核准模式，則在 AES-128-GCM 加密和 AES-256-GCM 加密皆停用時，系統會覆寫 [停用 AES-128-GCM 加密] 值。
+
+如果停用或未設定整體 [設定 SSL 連線]，則 Salsa20-256round12 和 AES-128-GCM 演算法都可用於此端點的交涉。
+
+依優先順序，支援的加密演算法為 SALSA20/12-256、AES-GCM-128 和 AES-GCM-256。依預設，所有支援的加密演算法均可供此端點用於交涉。
+
+如果兩個端點均設定為支援全部三種演算法，但連線並未使用安全閘道 (SG)，則會使用 SALSA20 演算法進行交涉。但是，如果連線使用 SG，則會自動停用 SALSA20，並使用 AES128 進行交涉。如果任一端點或 SG 停用了 SALSA20，且任一端點停用了 AES128，則會使用 AES256 進行交涉。</string>
+			<string id="String_Policy_Configure_SSL_protocols_161" >設定 SSL 通訊協定</string>
+			<string id="String_Explain_Configures_openssl_162" >設定 openssl 通訊協定，以限制在建立加密 SSL 連線之前某些通訊協定的使用。通訊協定清單由一個或多個以冒號分隔的 openssl 通訊協定字串組成。請注意，所有加密字串皆不區分大小寫。
+
+ 預設值為: 
+   &quot;TLS1.0:TLS1.1:TLS1.2&quot;
+
+ 這表示: 已啟用 TLS v1.0、TLS v1.1 和 TLS v1.2 (已停用 SSL v2.0 和 SSLv3.0)。
+
+此設定會同時套用至代理程式和用戶端。
+
+如果已在兩端設定，系統將遵循 OpenSSL 通訊協定交涉規則。</string>
+			<string id="String_Policy_Configure_SSL_cipher_list_163" >設定 SSL 加密清單</string>
+			<string id="String_Explain_Configures_SSL_cipher_list_164" >設定 SSL 加密清單，以限制在建立加密 SSL 連線之前對於加密套件的使用。清單由一或多個以冒號分隔的加密套件字串組成。請注意，所有加密字串皆不區分大小寫。
+
+預設值為:
+   「ECDHE-RSA-AES256-GCM-SHA384:AES256-SHA256:AES256-SHA:ECDHE-RSA-AES128-GCM-SHA256:AES128-SHA256:AES128-SHA:@STRENGTH」
+
+如果已設定此項目，則系統會忽略「設定 SSL 連線以滿足安全工具」中的「強制執行用於 SSL 連線交涉的 AES-256 或更強的加密」核取方塊。
+
+此設定需要同時套用至 PCoIP 伺服器和 PCoIP 用戶端。</string>
+			<string id="String_Policy_Configure_the_Client_165" >設定用戶端 PCoIP UDP 連接埠</string>
+			<string id="String_Explain_Specifies_the_UDP_166" >指定軟體 PCoIP 用戶端所使用的 UDP 用戶端連接埠，這可以手動設定或由用戶端作業系統 (OS) 自動決定。此設定僅適用於用戶端。
+
+若要手動設定，請輸入 UDP 連接埠和重試連接埠範圍。UDP 連接埠值會指定要使用的基礎 UDP 連接埠。UDP 連接埠範圍值會決定基礎連接埠無法使用時，要嘗試的其他連接埠數目。此範圍從基礎連接埠跨越至基礎連接埠和連接埠範圍的總和。例如，如果基礎連接埠為 50002 且連接埠範圍為 64，則範圍會從 50002 跨越至 50066。依預設，基礎連接埠為 50002 且連接埠範圍為 64。
+
+勾選「允許作業系統自動決定 UDP 連接埠」會指示用戶端作業系統忽略手動設定的值，並自動選擇未由其他程式使用的 UDP 連接埠。</string>
+			<string id="String_Policy_Configure_PCoIP_171" >設定 PCoIP 虛擬通道</string>
+			<string id="String_Explain_Specifies_the_virtual_172" >指定可以及無法透過 PCoIP 工作階段操作的虛擬通道。此設定也會決定是否停用 PCoIP 主機上的剪貼簿處理。
+
+PCoIP 工作階段中使用的虛擬通道必須出現在虛擬通道授權清單中。出現在未授權虛擬通道清單中的虛擬通道無法在 PCoIP 工作階段中使用。
+
+您最多可以指定 15 個在 PCoIP 工作階段中使用的虛擬通道。
+
+請使用分隔號 (|) 字元分隔多個通道名稱。例如，允許 mksvchan 和 vdp_rdpvcbridge 虛擬通道的虛擬通道授權字串為 mksvchan|vdp_rdpvcbridge。
+
+如果通道名稱包含分隔號或反斜線 (\) 字元，請在前面插入反斜線字元。例如，將通道名稱 awk|ward\channel 輸入為 awk\|ward\\channel。
+
+授權的虛擬通道清單為空白時，表示不允許所有虛擬通道。未授權的虛擬通道清單為空白時，表示允許所有虛擬通道。
+
+虛擬通道設定會同時套用至代理程式和用戶端。代理程式和用戶端上的虛擬通道都必須啟用，才能使用虛擬通道。
+
+虛擬通道設定會另外提供一個核取方塊，讓您停用 PCoIP 主機上的遠端剪貼簿處理。此值僅適用於代理程式。
+
+依預設，會啟用所有虛擬通道，包括剪貼簿處理。</string>
+			<string id="String_Policy_DropList_Select_Configure_PCoIP_0_Disable_virtual_174" >0 - 在 PCoIP 工作階段中停用虛擬通道</string>
+			<string id="String_Policy_DropList_Select_Configure_PCoIP_2_Disable_all_175" >2 - 停用除了以下之外的所有虛擬通道</string>
+			<string id="String_Policy_DropList_Select_Configure_PCoIP_3_Enable_all_176" >3 - 啟用除了以下之外的所有虛擬通道</string>
+			<string id="String_Policy_Configure_PCoIP_180" >設定 PCoIP 用戶端映像快取大小原則</string>
+			<string id="String_Explain_Controls_the_size_181" >控制 PCoIP 用戶端映像快取的大小。用戶端會使用映像快取，儲存之前傳輸的顯示部分。映像快取可減少重複傳輸的資料量。
+
+當 View Client、View Agent 和 View 連線伺服器為 View 5.0 或較新版本時，此設定僅會套用至 Windows 和 Linux 用戶端。
+
+當此設定為 [未設定] 或 [已停用] 時，PCoIP 會使用預設用戶端映像快取大小 (250 MB)。
+
+當您啟用此設定時，可以在最小 50 MB 到最大 1024 MB 之間設定用戶端映像快取大小。預設值為 250 MB。</string>
+			<string id="String_Policy_Configure_the_PCoIP_184" >設定 PCoIP 傳輸標頭</string>
+			<string id="String_Explain_Configures_the_185" >設定 PCoIP 傳輸標頭。
+
+PCoIP 傳輸標頭為 32 位元長度標頭，會新增至所有 PCoIP UDP 封包 (但只有在雙方均啟用且支援傳輸標頭時)。PCoIP 傳輸標頭會允許網路裝置在處理網路壅塞時決定較佳的優先順序/Qos。傳輸標頭依預設為啟用。
+
+傳輸工作階段優先順序會決定 PCoIP 傳輸標頭中報告的 PCoIP 工作階段優先順序。網路裝置會根據指定的傳輸工作階段優先順序來決定較佳的優先順序/Qos。傳輸工作階段優先順序值會由 PCoIP 代理程式和用戶端進行交涉。如果代理程式具有指定的傳輸工作階段優先順序值 (高、中或低)，則工作階段會使用代理程式指定的工作階段優先順序。如果只有用戶端具有指定的傳輸工作階段優先順序 (高、中或低)，則工作階段會使用用戶端指定的工作階段優先順序。如果代理程式或用戶端均未指定傳輸工作階段優先順序 (或指定了「未定義的優先順序」)，則工作階段會使用/預設為中工作階段優先順序。</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_High_Priority_187" >高優先順序</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_Medium_Priority_188" >中優先順序 (預設值)</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_Low_Priority_189" >低優先順序</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_Undefined_Priority_190" >未定義的優先順序</string>
+			<string id="String_Policy_Configure_PCoIP_192" >設定 PCoIP 事件記錄詳細資訊</string>
+			<string id="String_Explain_This_policy_enables_193" >此原則會啟用 PCoIP 事件記錄詳細資訊的組態，範圍自 0 (最不詳細) 到 3 (最詳細)。
+
+當此原則為 [已停用] 或 [未設定] 時，預設的事件記錄詳細資訊設定為 2。當此原則為 [已設定] 時，此設定會控制上述的詳細資訊等級。
+
+在作用中的 PCoIP 工作階段期間修改此設定時，變更會立即生效。</string>
+			<string id="String_Policy_Configure_PCoIP_196" >設定依時間 (天數) 的 PCoIP 事件記錄清理</string>
+			<string id="String_Explain_This_policy_enables_197" >此原則會啟用依時間 (天數) 之 PCoIP 事件記錄清理的組態。
+
+當此原則為 [已設定] 時，此設定會控制依時間 (天數) 的記錄檔清理，亦即，若是非零設定 n，則大於 n 天的記錄檔會自動 (且無訊息) 刪除；設定 0 則表示不會依時間清理檔案。當此原則為 [已停用] 或 [未設定] 時，預設的依時間 (天數) 事件記錄清理設定為 7。
+
+一旦工作階段啟動，即會執行記錄檔清理；在下一個工作階段之前，將不會套用對此設定的任何變更。</string>
+			<string id="String_Policy_Configure_PCoIP_200" >設定依大小 (MB) 的 PCoIP 事件記錄清理</string>
+			<string id="String_Explain_This_policy_enables_201" >此原則會啟用依大小 (MB) 之 PCoIP 事件記錄清理的組態。
+
+當此原則為 [已設定] 時，此設定會控制依大小 (MB) 的記錄檔清理，亦即，若是非零設定 m，則大於 m MB 的記錄檔會自動 (且無訊息) 刪除；設定 0 則指出不會依大小清理檔案。當此原則為 [已停用] 或 [未設定] 時，預設的依大小 (MB) 事件記錄清理設定為 100。
+
+一旦工作階段啟動，即會執行記錄檔清理；在下一個工作階段之前，將不會套用對此設定的任何變更。</string>
+		</stringTable>
+		<presentationTable ><!--Storage for Presentation Definitions-->
+
+			<presentation id="Policy_Configure_the_maximum_63" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_maximum_66" spinStep="100" spin="true" defaultValue="900000" >將 PCoIP 工作階段頻寬 (單位為每秒 kb) 設定為:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_67" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_PCoIP_70" spinStep="1" spin="true" defaultValue="1200" >將 PCoIP MTU 大小 (位元組) 設定為:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_71" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_PCoIP_74" spinStep="1" spin="true" defaultValue="0" >將 PCoIP 工作階段頻寬下限 (單位為每秒 kb) 設定為:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_SSL_connections_78" >
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_connections_81" >
+					<label >機器帳戶之憑證存放區的名稱，用於搜尋憑證:</label>
+					<defaultValue >MY</defaultValue>
+				</textBox>
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_connections_82" >
+					<label >機器帳戶之憑證存放區的名稱，用於搜尋憑證授權機構的憑證:</label>
+					<defaultValue >ROOT</defaultValue>
+				</textBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_SSL_connections_83" >強制執行用於 SSL 連線交涉的 AES-256 或更強的加密</checkBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_84" >
+				<text >至少必須啟用一種加密演算法。(請參閱說明)</text>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_87" >停用 Salsa20-256-round12 加密</checkBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_88" >停用 AES-128-GCM 加密</checkBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_89" >停用 AES-256-GCM 加密</checkBox>
+			</presentation>
+			<presentation id="Policy_Configure_SSL_protocols_90" >
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_protocols_93" >
+					<label >設定 SSL 通訊協定</label>
+					<defaultValue >TLS1.0:TLS1.1:TLS1.2</defaultValue>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Configure_SSL_cipher_list_91" >
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_cipher_list_94" >
+					<label >設定 SSL 加密清單</label>
+					<defaultValue >ECDHE-RSA-AES256-GCM-SHA384:AES256-SHA256:AES256-SHA:ECDHE-RSA-AES128-GCM-SHA256:AES128-SHA256:AES128-SHA:@STRENGTH</defaultValue>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_Client_94" >
+				<text >設定 UDP 連接埠和重試範圍的大小。</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_Client_97" spinStep="1" spin="true" defaultValue="50002" >選擇 UDP 連接埠:</decimalTextBox>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_Client_98" spinStep="1" spin="true" defaultValue="64" >設定重試連接埠範圍的大小:</decimalTextBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_the_Client_99" >允許作業系統自動決定 UDP 連接埠</checkBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_100" >
+				<dropdownList refId="Policy_DropList_Element_Configure_PCoIP_103" defaultItem="0" >虛擬通道設定:</dropdownList>
+				<text >下列設定僅在選取 2 的情況下才需要且適用。</text>
+				<text >請參閱 [說明] 索引標籤，以取得字串格式和範例。</text>
+				<textBox refId="Policy_TextBox_Element_Configure_PCoIP_107" >
+					<label >輸入授權的虛擬通道清單:</label>
+				</textBox>
+				<text >下列設定僅在選取 3 的情況下才需要且適用。</text>
+				<text >請參閱 [說明] 索引標籤，以取得字串格式和範例。</text>
+				<textBox refId="Policy_TextBox_Element_Configure_PCoIP_108" >
+					<label >輸入未授權的虛擬通道清單:</label>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_109" >
+				<text >請參閱 [說明] 索引標籤，以取得映像快取與值的說明。</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_112" spinStep="50" spin="true" defaultValue="250" >設定映像快取大小 (MB) (預設值 250 MB):</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_113" >
+				<dropdownList refId="Policy_DropList_Element_Configure_the_PCoIP_116" defaultItem="3" >傳輸工作階段優先順序</dropdownList>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_121" >
+				<text >請參閱 [說明] 索引標籤，以取得範例值。</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_124" spinStep="1" spin="true" defaultValue="2" >設定事件記錄詳細資訊值 (預設值 2):</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_125" >
+				<text >請參閱 [說明] 索引標籤，以取得範例值。</text>
+				<text >設定依時間 (天數) 的事件記錄清理值 (預設值 7，0 代表不</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_128" spinStep="1" spin="true" defaultValue="7" >依時間清理):</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_129" >
+				<text >請參閱 [說明] 索引標籤，以取得範例值。</text>
+				<text >設定依大小 (MB) 的事件記錄清理值 (預設值 100，0 代表不</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_132" spinStep="1" spin="true" defaultValue="100" >依大小清理):</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_maximum_133" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_maximum_136" spinStep="100" spin="true" defaultValue="900000" >將 PCoIP 工作階段頻寬 (單位為每秒 kb) 設定為:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_137" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_PCoIP_140" spinStep="1" spin="true" defaultValue="1200" >將 PCoIP MTU 大小 (位元組) 設定為:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_141" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_PCoIP_144" spinStep="1" spin="true" defaultValue="0" >將 PCoIP 工作階段頻寬下限 (單位為每秒 kb) 設定為:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_SSL_connections_148" >
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_connections_151" >
+					<label >機器帳戶之憑證存放區的名稱，用於搜尋憑證:</label>
+					<defaultValue >MY</defaultValue>
+				</textBox>
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_connections_152" >
+					<label >機器帳戶之憑證存放區的名稱，用於搜尋憑證授權機構的憑證:</label>
+					<defaultValue >ROOT</defaultValue>
+				</textBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_SSL_connections_153" >強制執行用於 SSL 連線交涉的 AES-256 或更強的加密</checkBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_154" >
+				<text >至少必須啟用一種加密演算法。(請參閱說明)</text>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_157" >停用 Salsa20-256-round12 加密</checkBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_158" >停用 AES-128-GCM 加密</checkBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_159" >停用 AES-256-GCM 加密</checkBox>
+			</presentation>
+			<presentation id="Policy_Configure_SSL_protocols_160" >
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_protocols_163" >
+					<label >設定 SSL 通訊協定</label>
+					<defaultValue >TLS1.0:TLS1.1:TLS1.2</defaultValue>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Configure_SSL_cipher_list_161" >
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_cipher_list_164" >
+					<label >設定 SSL 加密清單</label>
+					<defaultValue >ECDHE-RSA-AES256-GCM-SHA384:AES256-SHA256:AES256-SHA:ECDHE-RSA-AES128-GCM-SHA256:AES128-SHA256:AES128-SHA:@STRENGTH</defaultValue>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_Client_164" >
+				<text >設定 UDP 連接埠和重試範圍的大小。</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_Client_167" spinStep="1" spin="true" defaultValue="50002" >選擇 UDP 連接埠:</decimalTextBox>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_Client_168" spinStep="1" spin="true" defaultValue="64" >設定重試連接埠範圍的大小:</decimalTextBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_the_Client_169" >允許作業系統自動決定 UDP 連接埠</checkBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_170" >
+				<dropdownList refId="Policy_DropList_Element_Configure_PCoIP_173" defaultItem="0" >虛擬通道設定:</dropdownList>
+				<text >下列設定僅在選取 2 的情況下才需要且適用。</text>
+				<text >請參閱 [說明] 索引標籤，以取得字串格式和範例。</text>
+				<textBox refId="Policy_TextBox_Element_Configure_PCoIP_177" >
+					<label >輸入授權的虛擬通道清單:</label>
+				</textBox>
+				<text >下列設定僅在選取 3 的情況下才需要且適用。</text>
+				<text >請參閱 [說明] 索引標籤，以取得字串格式和範例。</text>
+				<textBox refId="Policy_TextBox_Element_Configure_PCoIP_178" >
+					<label >輸入未授權的虛擬通道清單:</label>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_179" >
+				<text >請參閱 [說明] 索引標籤，以取得映像快取與值的說明。</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_182" spinStep="50" spin="true" defaultValue="250" >設定映像快取大小 (MB) (預設值 250 MB):</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_183" >
+				<dropdownList refId="Policy_DropList_Element_Configure_the_PCoIP_186" defaultItem="3" >傳輸工作階段優先順序</dropdownList>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_191" >
+				<text >請參閱 [說明] 索引標籤，以取得範例值。</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_194" spinStep="1" spin="true" defaultValue="2" >設定事件記錄詳細資訊值 (預設值 2):</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_195" >
+				<text >請參閱 [說明] 索引標籤，以取得範例值。</text>
+				<text >設定依時間 (天數) 的事件記錄清理值 (預設值 7，0 代表不</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_198" spinStep="1" spin="true" defaultValue="7" >依時間清理):</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_199" >
+				<text >請參閱 [說明] 索引標籤，以取得範例值。</text>
+				<text >設定依大小 (MB) 的事件記錄清理值 (預設值 100，0 代表不</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_202" spinStep="1" spin="true" defaultValue="100" >依大小清理):</decimalTextBox>
+			</presentation>
+		</presentationTable>
+	</resources>
+</policyDefinitionResources>
+

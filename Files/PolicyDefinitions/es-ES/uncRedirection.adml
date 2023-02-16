@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="UNCPath_GPO_Define">Redireccionamiento de ruta UNC de VMware Horizon</string>
+      <string id="UNCPathRedirection_Enabled">Habilitar redireccionamiento de ruta UNC</string>
+      <string id="UNCPathRedirection_FilterRule">Regla de filtro de redireccionamiento de ruta de UNC</string>
+      <string id="UNCPathRedirection_Enabled_Description">Esta opción determina si se puede redireccionar una ruta de UNC. Los ajustes &quot;Sin configurar&quot; o &quot;Deshabilitado&quot; significan que la función no está habilitada. La opción predeterminada es &quot;Sin configurar&quot;.</string>
+      <string id="UNCPathRedirection_FilterRule_Description">Para todas las rutas UNC que coincidan con las reglas, especifica la ruta UNC que se debe redireccionar.
+Por ejemplo, si establece las reglas del agente como .*\miempresa\.com, todas las rutas UNC que incluyan &quot;.miempresa.com&quot; se redireccionarán a una sesión de aplicación o escritorio remoto. También puede especificar la instancia de Horizon Connection Server que se usará al configurar Nombre de host del agente, y puede especificar qué escritorio o aplicación desea usar si configura Elemento remoto con el nombre para mostrar del grupo, como aparece en Horizon Administrator Console.
+Si establece Reglas del cliente como .*\.miempresa\.com, todas las rutas UNC que incluyan &quot;.miempresa.com&quot; se redireccionarán desde una sesión de aplicación o escritorio remoto al cliente basado en Windows, y se abrirán en la aplicación predeterminada del cliente.
+
+Nota
+
+Si establece varias reglas, sepárelas con punto y coma. No se admite el ajuste de texto manual.</string>
+      <string id="ADMXMigrator_NoSupportedOn">ADMX Migrator encontró una directiva que no contiene un valor On compatible.</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="UNCPathRedirectionEnabled" />
+      <presentation id="UNCPathRedirectionFilterRule">
+        <textBox refId="brokerHostname">
+          <label>Nombre de host del agente</label>
+        </textBox>
+        <textBox refId="remoteItem">
+          <label>Elemento remoto</label>
+        </textBox>
+        <text>Reglas del cliente</text>
+          <multiTextBox refId="clientRules" />
+        <text>Reglas del agente</text>
+          <multiTextBox refId="agentRules" />
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

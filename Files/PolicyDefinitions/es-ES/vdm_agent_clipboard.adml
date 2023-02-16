@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="VMwareViewClipboard">Redireccionamiento del portapapeles</string>
+      <string id="SUPPORTED_VERSION"></string>
+      <string id="SERVER_CLIPBOARD_STATE">Configurar el redireccionamiento del portapapeles</string>
+      <string id="CLIPBOARD_STATE_DISABLE_BOTH">Deshabilitado en ambas direcciones</string>
+      <string id="CLIPBOARD_STATE_ENABLE_BOTH">Habilitado en ambas direcciones</string>
+      <string id="CLIPBOARD_STATE_ENABLE_CLIENT_2_SERVER">Habilitado solo de cliente a servidor</string>
+      <string id="CLIPBOARD_STATE_ENABLE_SERVER_2_CLIENT">Habilitado solo de servidor a cliente</string>
+      <string id="SERVER_CLIPBOARD_STATE_EXPLAIN">Determina en qué dirección se permite el redireccionamiento del portapapeles. Puede seleccionar uno de estos valores:
+
+- Deshabilitado en ambas direcciones
+- Habilitado en ambas direcciones
+- Habilitado solo de cliente a servidor (solo se permite copiar y pegar desde el sistema cliente al escritorio de View.)
+-Habilitado solo de servidor a cliente (solo se permite copiar y pegar desde el escritorio de View al sistema cliente.)
+
+Estos ajustes se aplican al servidor (escritorio de View).
+
+Cuando se deshabilita este ajuste o no se configura, el valor por defecto es &quot;Solo carga de archivos habilitada&quot;.</string>
+      <string id="SERVER_CLIPBOARD_SIZE">Tamaño de la memoria del portapapeles del servidor</string>
+      <string id="SERVER_CLIPBOARD_SIZE_EXPLAIN">Estos ajustes indican el tamaño de la memoria del portapapeles del servidor.
+
+El tamaño de la memoria del portapapeles del servidor se muestra en bytes o kilobytes, según se seleccione. Si no se configura esta opción, el tamaño de la memoria se mostrará en kilobytes.
+
+El cliente también tiene un valor para el tamaño de la memoria del portapapeles, pero siempre se indica en kilobytes.
+
+Después de configurar la sesión:
+-El valor del tamaño de la memoria del portapapeles del servidor se envía al cliente.
+-En el cliente, se determina el valor efectivo del tamaño de la memoria del portapapeles buscando los valores mínimos del servidor y del cliente.</string>
+      <string id="CLIPBOARD_FINE_GRAIN_LABEL">Configuración detallada del portapapeles</string>
+      <string id="CLIPBOARD_FINE_GRAIN_EXPLAIN">Determina si el ajuste detallado del portapapeles está habilitado. Si está habilitada, el tamaño de la memoria del portapapeles se muestra en bytes. Si está deshabilitada, se muestra en kilobytes.
+
+Este ajuste solo se aplica al agente.</string>
+      <string id="String_Policy_DropList_Select_clipboard_size_unit_kilobytes" >kilobytes</string>
+      <string id="String_Policy_DropList_Select_clipboard_size_unit_bytes" >bytes</string>
+      <string id="SERVER_CLIPBOARD_AUDIT">Configurar auditoría del portapapeles</string>
+      <string id="CLIPBOARD_AUDIT_DISABLE_BOTH">Deshabilitado en ambas direcciones</string>
+      <string id="CLIPBOARD_AUDIT_ENABLE_ONLY_CLIENT_TO_SERVER">Habilitado solo de cliente a servidor</string>
+      <string id="CLIPBOARD_AUDIT_ENABLE_ONLY_SERVER_TO_CLIENT">Habilitado solo de servidor a cliente</string>
+      <string id="CLIPBOARD_AUDIT_ENABLE_BOTH">Habilitado en ambas direcciones</string>
+      <string id="SERVER_CLIPBOARD_AUDIT_BLOCK_CLIPBOARD">Si se bloquea el redireccionamiento del portapapeles al cliente cuando el cliente no admite auditoría</string>
+      <string id="SERVER_CLIPBOARD_AUDIT_EXPLAIN">Determina la dirección en la que se permite la auditoría del portapapeles. Puede seleccionar uno de los siguientes valores:
+
+- Deshabilitado en ambas direcciones
+- Habilitado solo de cliente a servidor, es decir, que se registrará la información de los datos del portapapeles copiados de cliente a agente
+- Habilitado solo de servidor a cliente, es decir, que se registrará la información de los datos del portapapeles copiados de agente a cliente
+- Habilitado en ambas direcciones
+
+Este ajuste se aplica únicamente al servidor (escritorio de View).
+
+Cuando este ajuste está deshabilitado o no está configurado, el valor predeterminado es 'Deshabilitado en ambas direcciones'.</string>
+      <string id="SERVER_CLIPBOARD_AUDIT_BLOCK_CLIPBOARD_EXPLAIN">Determina si se bloquea el redireccionamiento del portapapeles al cliente si Horizon Client no admite la función de auditoría.
+
+Puede seleccionar el comportamiento del redireccionamiento del portapapeles:
+
+-Permitir el redireccionamiento del portapapeles del agente al cliente si la auditoría está habilitada en Horizon Agent, pero no en Horizon Client
+-Bloquear el redireccionamiento del portapapeles del agente al cliente si la auditoría está habilitada en Horizon Agent, pero no en Horizon Client
+
+Este ajuste solo puede surtir efecto después de habilitar auditoría.</string>
+      <string id="String_Policy_DropList_Select_Configure_clipboard_Audit_Pass_Through">Pasar</string>
+      <string id="String_Policy_DropList_Select_Configure_clipboard_Audit_Block">Bloquear</string>
+      <string id="SERVER_FILE_TRANSFER_STATE">Configurar la transferencia de archivos</string>
+      <string id="FILE_TRANSFER_STATE_DISABLE_BOTH">Carga y descarga deshabilitadas</string>
+      <string id="FILE_TRANSFER_STATE_ENABLE_BOTH">Carga y descarga habilitadas</string>
+      <string id="FILE_TRANSFER_STATE_ENABLE_UPLOAD">Solo carga de archivos habilitada</string>
+      <string id="FILE_TRANSFER_STATE_ENABLE_DOWNLOAD">Solo descarga de archivos habilitada</string>
+      <string id="SERVER_FILE_TRANSFER_STATE_EXPLAIN">Determina la transferencia de archivos entre el agente y HTML Access. Puede seleccionar uno de estos valores:
+
+- Carga y descarga deshabilitadas
+- Carga y descarga habilitadas
+- Solo carga de archivos habilitada (se permite la carga de archivos al escritorio de View desde el sistema cliente).
+- Solo descarga de archivos habilitada (se permite la descarga de archivos desde el escritorio de View al sistema cliente).
+
+Estos ajustes solo se aplican al servidor (escritorio de View).
+
+Cuando se deshabilita este ajuste o no se configura, el valor por defecto es &quot;Solo carga de archivos habilitada&quot;.</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING">Configurar los formatos de redireccionamiento del portapapeles</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_EXPLAIN">Este ajuste determina si un filtro está habilitado para cada formato de datos (archivo/texto/texto enriquecido/imagen/texto de Microsoft Office/efectos de texto de Microsoft Office/gráfico de Microsoft Office o SmartArt). El estado de cada filtro es:
+
+-Deshabilitado
+-Habilitado
+
+Este ajuste solo se aplica al agente, pero no está configurado de forma predeterminada.
+
+Cuando este ajuste no está configurado o está deshabilitada, los filtros para el redireccionamiento del portapapeles estarán deshabilitados para todos los formatos.</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_ENABLED">Habilitado</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_DISABLED">Deshabilitado</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="SERVER_CLIPBOARD_STATE">
+        <dropdownList refId="SERVER_CLIPBOARD_STATE" defaultItem="1">Configurar el redireccionamiento del portapapeles</dropdownList>
+      </presentation>
+      <presentation id="SERVER_CLIPBOARD_SIZE">
+        <dropdownList refId="Policy_DropList_Clipboard_Fine_Grained" defaultItem="1" >Elegir la unidad para indicar el tamaño de la memoria del portapapeles</dropdownList>
+        <decimalTextBox refId="SERVER_CLIPBOARD_SIZE" defaultValue="1024" spinStep="100">Tamaño de la memoria del portapapeles del servidor</decimalTextBox>
+      </presentation>
+      <presentation id="SERVER_CLIPBOARD_AUDIT">
+        <dropdownList refId="SERVER_CLIPBOARD_AUDIT" defaultItem="0">Configurar auditoría del portapapeles</dropdownList>
+      </presentation>
+      <presentation id="SERVER_CLIPBOARD_AUDIT_BLOCK_CLIPBOARD">
+        <dropdownList refId="Policy_DropList_Element_Configure_clipboard" defaultItem="0">Configurar el comportamiento del portapapeles si el cliente no admite auditorías</dropdownList>
+      </presentation>
+      <presentation id="CLIPBOARD_FINE_GRAIN_LABEL" />
+      <presentation id="SERVER_FILE_TRANSFER_STATE">
+        <dropdownList refId="SERVER_FILE_TRANSFER_STATE" defaultItem="3">Configurar la transferencia de archivos</dropdownList>
+      </presentation>
+      <presentation id="CLIPBOARD_FORMAT_FILTERING">
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_FILE_IN" defaultItem="0">Filtrar archivos y carpetas de los datos de portapapeles entrantes:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_FILE_OUT" defaultItem="0">Filtrar archivos y carpetas de los datos de portapapeles salientes:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_TEXT_IN" defaultItem="0">Filtrar texto de los datos de portapapeles entrantes:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_TEXT_OUT" defaultItem="0">Filtrar texto de los datos de portapapeles salientes:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_RTF_IN" defaultItem="0">Filtrar datos con formato de texto enriquecido de los datos de portapapeles entrantes:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_RTF_OUT" defaultItem="0">Filtrar datos con formato de texto enriquecido de los datos de portapapeles salientes:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_IMAGE_IN" defaultItem="0">Filtrar imágenes de los datos de portapapeles entrantes:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_IMAGE_OUT" defaultItem="0">Filtrar datos de imágenes de los datos de portapapeles salientes:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_IN" defaultItem="0">Filtrar datos de texto de Microsoft Office de los datos de portapapeles entrantes:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_OUT" defaultItem="0">Filtrar datos de texto de Microsoft Office de los datos de portapapeles salientes:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_CHART_IN" defaultItem="0">Filtrar datos de gráficos y SmartArt de Microsoft de los datos de portapapeles entrantes:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_CHART_OUT" defaultItem="0">Filtrar datos de gráficos y SmartArt de Microsoft de los datos de portapapeles salientes:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_IN" defaultItem="0">Filtrar datos de efectos de texto de Microsoft de los datos de portapapeles entrantes:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_OUT" defaultItem="0">Filtrar datos de efectos de texto de Microsoft de los datos de portapapeles salientes:</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

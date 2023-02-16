@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="unknown_0">VMware Horizon URL 리디렉션</string>
+      <string id="unknown_2">IE 정책: 사용자가 URL 리디렉션 플러그인 로드 동작을 변경할 수 없도록 함</string>
+      <string id="unknown_6">IE 정책: URL 리디렉션 플러그인을 자동으로 사용하도록 설정</string>
+      <string id="unknown_4">URL 리디렉션 IP 규칙 사용</string>
+      <string id="unknown_8">Url 리디렉션 사용</string>
+      <string id="unknown_12">Url 리디렉션 프로토콜 'https'</string>
+      <string id="unknown_10">Url 리디렉션 프로토콜 'http'</string>
+      <string id="unknown_15">Url 리디렉션 프로토콜 '...'</string>
+      <string id="unknown_3">사용자의 URL 컨텐츠 리디렉션 사용 안 함을 허용할지 결정합니다.</string>
+      <string id="unknown_5">이 설정은 IP 규칙을 사용하도록 설정할지 여부를 결정합니다. 이 옵션은 기본적으로 구성되어 있지 않습니다. IP 규칙을 사용하도록 설정하면 지정된 IP/IP 범위 필터링 및 DNS 확인이 지원됩니다. 즉, 클라이언트 규칙 또는 에이전트 규칙에서 IP/IP 범위를 추가할 수 있으며 URL 규칙과 일치하지 않는 입력된 URL 주소가 IP/IP 범위와 일치하는 IP 주소로 확인됨을 의미합니다.
+예를 들어, IP 규칙을 사용하도록 구성하고 HTTPS에서 에이전트 규칙을 &quot;.*\.mycompany\.com;22.22.22.22;10.10.1.2-10.10.12.20&quot;으로 설정하면 IP 주소 &quot;https://22.22.22.22&quot;, IP 범위 &quot;10.10.1.2-10.10.12.20&quot;의 모든 IP와 IP 범위 &quot;10.10.1.2-10.10.12.20&quot; 또는 IP &quot;22.22.22.22&quot;로 확인된 모든 URL이 리디렉션됩니다.
+
+참고
+
+IP 규칙은 현재 Internet Explorer에만 적용됩니다.</string>
+      <string id="unknown_7">새로 설치된 Internet Explorer 플러그인의 자동 활성화 여부를 결정합니다.</string>
+      <string id="unknown_9">이 기능을 사용하도록 설정할지 결정합니다. 이 설정은 기본적으로 구성되어 있지 않습니다. 이 설정을 사용하여 구성 요소가 설치된 경우에도 기능을 사용 안 함으로 설정할 수 있습니다.</string>
+      <string id="HelpString">이 프로토콜을 사용하는 모든 URL에 대해 리디렉션해야 할 URL을 지정합니다.
+예를 들어 에이전트 규칙을 .*\.mycompany\.com으로 설정하면 &quot;.mycompany.com&quot;이 있는 모든 URL이 원격 데스크톱이나 원격 애플리케이션으로 리디렉션됩니다. View Administrator에 나타난 것처럼 브로커 호스트 이름을 설정하여 사용할 연결 서버를 더 구체적으로 지정할 수 있고, 원격 항목을 풀의 표시 이름으로 설정하여 사용할 데스크톱이나 애플리케이션 풀을 지정할 수 있습니다.
+클라이언트 규칙을 .*\.mycompany\.com으로 설정하면 &quot;.mycompany.com&quot;이 있는 모든 URL이 Windows 기반 클라이언트로 리디렉션되고 클라이언트의 기본 브라우저에서 열립니다.
+
+참고
+
+모범 사례는 HTTP 프로토콜 및 HTTPS 프로토콜에 같은 규칙을 설정하는 것입니다. 이렇게 해야 사용자가 .mycompany.com과 같이 부분적인 URL을 Internet Explorer에 입력할 때 해당 사이트가 HTTP에서 HTTPS로 자동 리디렉션되면 URL 컨텐츠 리디렉션 기능이 원하는 대로 작동합니다. 이 경우 규칙을 HTTPS에 대해서만 설정하고 HTTP에 대해 설정하지 않으면 사용자가 부분적인 URL을 입력했을 때 리디렉션되지 않습니다. 여러 규칙을 설정할 때 각 규칙을 세미콜론으로 구분하십시오. 수동 줄 바꿈은 지원되지 않습니다.</string>
+      <string id="ADMXMigrator_UnresolvedString">ADMX 마이그레이터에서 소스 ADM 문자열 표에 없는 문자열이 발생했습니다.</string>
+      <string id="ADMXMigrator_NoSupportedOn">ADMX 마이그레이터에서 supportedOn 값이 없는 정책이 발견되었습니다.</string>
+      <string id="ExtensionInstallForcelist">URL 컨텐츠 리디렉션 기능에 필요한 Chrome 확장 기능을 설치합니다.</string>
+      <string id="ExtensionInstallForcelist_Explain">이 정책을 사용하도록 설정하면 URL 컨텐츠 리디렉션에 필요한 Chrome 확장 기능이 자동으로 설치됩니다. 이 설치에는 필요한 사용 권한 부여도 포함됩니다. 이 설치는 관리자 권한 없이는 되돌릴 수 없습니다.
+
+이 정책을 사용하지 않도록 설정하거나 이를 구성하지 않은 경우 URL 컨텐츠 리디렉션에 필요한 Chrome 확장 기능이 자동으로 설치되지 않습니다. 따라서 리디렉션 규칙을 설정해도 Google Chrome 웹 스토어에서 확장 기능을 수동으로 설치할 때까지 URL 컨텐츠 리디렉션이 Chrome 브라우저에서 작동하지 않습니다.
+
+기본적으로 이 정책은 구성되지 않도록 설정됩니다.</string>
+      <string id="UrlRedirectionProtocol_WhitelistSring">URL 리디렉션 화이트리스트 구성</string>
+      <string id="UrlRedirectionProtocol_WhitelistExplain">이 설정은 URL의 프로토콜에 대해 지원되는 애플리케이션을 결정하며 화이트리스트라고 합니다.
+기본적으로 지원되는 애플리케이션은 다음과 같습니다.
+- iexplore.exe: Internet Explorer 브라우저
+- chrome.exe: Chrome 브라우저
+- firefox.exe: Firefox 브라우저
+- msedge.exe: Microsoft Edge(Chromium)
+- outlook.exe: Microsoft Outlook
+- lync.exe: 비즈니스용 Skype
+- skype.exe: Skype
+- wmplayer.exe: Windows Media Player
+
+URL 리디렉션 화이트리스트 구성을 통해 지원되는 기본 애플리케이션은 수정할 수 있습니다.
+
+예를 들어 화이트리스트가 다음과 같이 설정된 경우
+chrome.exe
+outlook.exe
+skype.exe
+
+Chrome 브라우저, Microsoft Outlook 및 Skype만 URL 컨텐츠 리디렉션에서 지원됩니다.</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="IEpolicyPreventusersfromchangingURLRedirectionpluginloadingbehavior" />
+      <presentation id="IEpolicyAutomaticallyenableURLRedirectionplugin" />
+      <presentation id="UrlRedirectionEnabled" />
+      <presentation id="UrlRedirectionIPRulesEnabled" />
+      <presentation id="UrlRedirectionProtocol_http">
+        <textBox refId="brokerHostname">
+          <label>브로커 호스트 이름</label>
+        </textBox>
+        <textBox refId="remoteItem">
+          <label>원격 항목</label>
+        </textBox>
+        <text>클라이언트 규칙</text>
+          <multiTextBox refId="clientRules" />
+        <text>에이전트 규칙</text>
+          <multiTextBox refId="agentRules" />
+      </presentation>
+      <presentation id="UrlRedirectionProtocol_https">
+        <textBox refId="brokerHostname">
+          <label>브로커 호스트 이름</label>
+        </textBox>
+        <textBox refId="remoteItem">
+          <label>원격 항목</label>
+        </textBox>
+        <text>클라이언트 규칙</text>
+          <multiTextBox refId="clientRules" />
+        <text>에이전트 규칙</text>
+          <multiTextBox refId="agentRules" />
+      </presentation>
+      <presentation id="UrlRedirectionProtocol_">
+        <textBox refId="brokerHostname">
+          <label>브로커 호스트 이름</label>
+        </textBox>
+        <textBox refId="remoteItem">
+          <label>원격 항목</label>
+        </textBox>
+        <text>클라이언트 규칙</text>
+          <multiTextBox refId="clientRules" />
+        <text>에이전트 규칙</text>
+          <multiTextBox refId="agentRules" />
+      </presentation>
+      <presentation id="UrlRedirectionProtocol_Whitelist">
+        <text>화이트리스트</text>
+        <multiTextBox refId="whitelist" />
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

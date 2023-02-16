@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" >
+
+	<displayName >在此处输入显示名称</displayName>
+	<description >VMware Horizon View 客户端、服务器和代理公共配置设置</description>
+	<resources >
+		<stringTable ><!--Storage for String Definitions-->
+
+			<string id="Undefined" >未定义</string>
+
+			<string id="View_Common_Config" >VMware View 公共配置</string>
+
+			<string id="Log_Config" >日志配置</string>
+
+			<string id="Perf_alarms" >性能警报</string>
+
+			<string id="Security_Config" >安全配置</string>
+
+			<string id="Enable_extended_logging" >启用扩展日志记录</string>
+
+			<string id="Enable_extended_logging_Desc" >确定是否将跟踪和调试事件包含在日志文件中</string>
+
+			<string id="Log_event_disk_threshhold" >日志和事件的磁盘阈值 (以 MB 为单位)</string>
+
+			<string id="Log_event_disk_threshhold_Desc" >指定日志和事件的最小剩余磁盘空间阈值。如果未指定值，将采用 200 的默认值。当达到此值时，将停止事件日志记录。</string>
+
+			<string id="Override_the_default_Windows_Event_Gen" >覆盖默认的 View Windows 事件生成</string>
+
+			<string id="Override_the_default_Windows_Event_Gen_Desc" >支持以下值:
+    0 = 仅为视图事件生成事件日志条目 (不为日志消息生成事件日志条目)
+    1 = 在 4.5 (以及较低版本) 兼容模式下生成事件日志条目。不会生成标准视图事件的事件日志条目。事件日志条目仅基于日志文件文本。2 = 在 4.5 (及更低版本) 兼容模式下生成事件日志条目，同时包含视图事件。</string>
+
+			<string id="Production_Logs_Duration" >保留生产日志的天数</string>
+
+			<string id="Production_Logs_Duration_Desc" >指定日志文件在系统中保留的天数。如果未设置任何值，将应用默认值，日志文件将仅保留 7 天。</string>
+
+			<string id="Max_Debug_logs" >最大调试日志数</string>
+
+			<string id="Max_Debug_logs_Desc" >指定系统中可保留的最大调试日志文件数目 (默认值为 10)。当日志文件达到最大大小时，系统将不再添加更多条目，而是创建一个新的日志文件。当先前的日志文件数量达到此值时，最早的日志文件将被删除。</string>
+
+			<string id="Max_Debug_logs_size" >最大调试日志大小 (以 MB 为单位)</string>
+
+			<string id="Max_Debug_logs_size_Desc" >指定调试日志可以达到的最大大小 (以 MB 为单位)，达到此大小后系统将关闭该日志文件，并创建一个新的日志文件。(默认值为 10MB)</string>
+
+			<string id="Log_Dir" >日志目录</string>
+
+			<string id="Log_Dir_Desc" >日志文件目录的完整路径。如果该位置不可写，将使用默认位置。注意，对于客户端日志文件，为日志创建包含客户端名称的附加目录。</string>
+
+			<string id="Send_logs_to_Syslog_Svr" >将日志发送至 Syslog 服务器</string>
+
+			<string id="Send_logs_to_Syslog_Svr_Desc" >启用并设置为将 View Server 日志发送至 Syslog 服务器，例如 VMware LogInsight。不建议在不安全的网络上使用此功能。
+格式: LogLevel|ServerFQDNorIP[|PortNumber(默认值为 514)]，示例: Debug|192.0.2.2</string>
+
+			<string id="CPU_Mem_Sampling_Interval" >CPU 和内存采样间隔 (以秒为单位)</string>
+
+			<string id="CPU_Mem_Sampling_Interval_Desc" >指定轮询 CPU 和内存的时间间隔。请注意，较短的采样间隔可能导致大量输出数据量写入日志。</string>
+
+			<string id="Overall_CPU_usage" >用于发布日志信息的总体 CPU 使用率</string>
+
+			<string id="Overall_CPU_usage_Desc" >记录系统总体 CPU 使用率的阈值。注意，如果有多个处理器可用，此百分比即表示综合使用率。</string>
+
+			<string id="Overall_memory_usage" >用于发布日志信息的总体内存使用率</string>
+
+			<string id="Overall_memory_usage_Desc" >记录提交的总体系统内存使用率的阈值 (已通过进程分配以及操作系统已在页面文件中向其提交物理内存和/或页线的内存)。</string>
+
+			<string id="Process_CPU_usage" >用于发布日志信息的进程 CPU 使用率</string>
+
+			<string id="Process_CPU_usage_Desc" >记录任意单个进程 CPU 使用率的阈值。</string>
+
+			<string id="Process_memory_usage" >用于发布日志信息的进程内存使用率</string>
+
+			<string id="Process_memory_usage_Desc" >记录任意单个进程的内存使用率的阈值。</string>
+
+			<string id="Processes_to_check" >要检查进程的逗号分隔名称列表，允许使用通配符和排除</string>
+
+			<string id="Processes_to_check_Desc" >一个用逗号分隔的查询列表，这些查询对应于要检查的一个或多个进程的名称。要筛选列表，您可以在每个查询中使用以下通配符: 星号 (*)、问号 (?) 和感叹号 (!)。星号匹配零个或多个字符，问号精确匹配一个字符，而感叹号可以用作查询的前缀，以排除此查询产生的任何结果。例如: ‘! *sys,ws*’- 选择以‘ws’开头的所有进程，并排除以‘sys’结尾的所有进程。</string>
+
+			<string id="Type_of_certificate_revocation" >证书吊销检查类型</string>
+
+			<string id="Type_of_certificate_revocation_Desc" >选择进行的证书吊销检查类型: None (无)、EndCertificateOnly、WholeChain 或 WholeChainButRoot。默认为 WholeChainButRoot。</string>
+
+			<string id="None" >无</string>
+
+			<string id="End_Cert_Only" >EndCertificateOnly</string>
+
+			<string id="Whole_Chain" >WholeChain</string>
+
+			<string id="Whole_Chain_But_Root" >WholeChainButRoot</string>
+
+			<string id="Only_use_cached_revocation_URL" >仅使用缓存吊销 URL</string>
+
+			<string id="Only_use_cached_revocation_URL_Desc" >证书吊销检查将仅访问缓存 URL。如果未配置，默认为 False。</string>
+
+			<string id="Revocation_URL_check_timeout" >吊销 URL 检查超时 (以毫秒为单位)</string>
+
+			<string id="Revocation_URL_check_timeout_Desc" >所有吊销 URL Wire 检索之间的累积超时 (单位: 毫秒)。未配置或值设置为 0，意味着使用 Microsoft 默认处理方式。</string>
+
+			<string id="Global_Max_Dump_Count" >配置程序出错时的转储计数</string>
+
+			<string id="Global_Max_Dump_Count_Desc" >通过将此值设置为任何数值，可以将转储限制为特定数量。此受限数量将对每个用户的每个进程生效。如果设置为 0，则不会创建任何转储。如果未设置，则在创建转储时将应用默认限制。(根据不同的进程，默认值为 128 或无限制)</string>
+			<string id="Global_Dump_Type" >配置程序出错时的转储类型</string>
+
+			<string id="DumpType_Full" >完整</string>
+
+			<string id="DumpType_Mini" >小型</string>
+
+			<string id="Global_Dump_Type_Desc" >用户可以将此值设置为“完整转储”或“小型转储”。“完整转储”和“小型转储”之间的差异在于转储中包含的内存。这一差异归因于完整转储的大小。小型转储中包含的信息仍足够生成堆栈跟踪和执行基本的故障排除步骤。由于小型转储中未包含完整内存，因此无法提取有关某些对象或对象名称的信息。如果将此值设置为“小型转储”，则将创建小型转储。如果未设置此值，则默认情况下将创建完整转储。</string>
+		</stringTable>
+
+		<presentationTable ><!--Storage for Presentation Definitions-->
+
+			<presentation id="Log_event_disk_threshhold" >
+				<decimalTextBox refId="Log_event_disk_threshhold_DecimalBox_1" defaultValue="200" >日志和事件的磁盘阈值 (以 MB 为单位)</decimalTextBox>
+			</presentation>
+
+			<presentation id="Override_the_default_Windows_Event_Gen" >
+				<decimalTextBox refId="Override_the_default_Windows_Event_Gen_DecimalBox" defaultValue="0" >覆盖默认的 View Windows 事件生成</decimalTextBox>
+			</presentation>
+
+			<presentation id="Production_Logs_Duration" >
+				<decimalTextBox refId="Production_Logs_Duration_DecimalBox" defaultValue="7" >保留生产日志的天数</decimalTextBox>
+			</presentation>
+
+			<presentation id="Max_Debug_logs" >
+				<decimalTextBox refId="Max_Debug_logs_DecimalBox" defaultValue="10" >最大调试日志数</decimalTextBox>
+			</presentation>
+
+			<presentation id="Max_Debug_logs_size" >
+				<decimalTextBox refId="Max_Debug_logs_size_DecimalBox" defaultValue="10" >最大调试日志大小 (以 MB 为单位)</decimalTextBox>
+			</presentation>
+
+			<presentation id="Log_Dir" >
+				<textBox refId="Log_Dir_TextBox" >
+					<label >日志目录</label>
+				</textBox>
+			</presentation>
+
+			<presentation id="Send_logs_to_Syslog_Svr" >
+				<textBox refId="Send_logs_to_Syslog_Svr_TextBox" >
+					<label >将日志发送至 Syslog 服务器</label>
+				</textBox>
+			</presentation>
+
+			<presentation id="CPU_Mem_Sampling_Interval" >
+				<decimalTextBox refId="CPU_Mem_Sampling_Interval_DecimalBox" defaultValue="60" >CPU 和内存采样间隔 (以秒为单位)</decimalTextBox>
+			</presentation>
+
+			<presentation id="Overall_CPU_usage" >
+				<decimalTextBox refId="Overall_CPU_usage_DecimalBox" defaultValue="90" >用于发布日志信息的总体 CPU 使用率</decimalTextBox>
+			</presentation>
+
+			<presentation id="Overall_memory_usage" >
+				<decimalTextBox refId="Overall_memory_usage_DecimalBox" defaultValue="75" >用于发布日志信息的总体内存使用率</decimalTextBox>
+			</presentation>
+
+			<presentation id="Process_CPU_usage" >
+				<decimalTextBox refId="Process_CPU_usage_DecimalBox" defaultValue="90" >用于发布日志信息的进程 CPU 使用率</decimalTextBox>
+			</presentation>
+
+			<presentation id="Process_memory_usage" >
+				<decimalTextBox refId="Process_memory_usage_DecimalBox" defaultValue="75" >用于发布日志信息的进程内存使用率</decimalTextBox>
+			</presentation>
+
+			<presentation id="Processes_to_check" >
+				<textBox refId="Processes_to_check_TextBox" >
+					<label >要检查进程的逗号分隔名称列表，允许使用通配符和排除</label>
+				</textBox>
+			</presentation>
+
+			<presentation id="Type_of_certificate_revocation" >
+				<dropdownList refId="Type_of_certificate_revocation_DropDown" defaultItem="3" >证书吊销检查类型</dropdownList>
+			</presentation>
+
+			<presentation id="Revocation_URL_check_timeout" >
+				<decimalTextBox refId="Revocation_URL_check_timeout_DecimalBox" defaultValue="0" >吊销 URL 检查超时 (以毫秒为单位)</decimalTextBox>
+			</presentation>
+
+			<presentation id="Global_Max_Dump_Count" >
+				<decimalTextBox refId="Global_Max_Dump_Count_DecimalBox" defaultValue="" >要创建的最大转储文件数</decimalTextBox>
+			</presentation>
+
+			<presentation id="Global_Dump_Type" >
+				<dropdownList refId="Global_Dump_Type_DropDown" defaultItem="" >要创建的转储文件类型</dropdownList>
+			</presentation>
+
+		</presentationTable>
+
+	</resources>
+
+</policyDefinitionResources>

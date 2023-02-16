@@ -29,7 +29,7 @@ Nota:
 
 La práctica recomendada es establecer las mismas reglas para los protocolos HTTP y HTTPS. De esta forma, si un usuario escribe en Internet Explorer una URL parcial, como .miempresa.com, y esa página redirecciona automáticamente de HTTP a HTTPS, la función de redireccionamiento de contenido URL funcionará de la manera deseada. En este caso, si establece una regla para HTTPS pero no para HTTP, no se redirecciona la URL parcial que el usuario escribe. Si establece varias reglas, sepárelas con punto y coma. No se admite el ajuste de texto manual.</string>
       <string id="ADMXMigrator_UnresolvedString">ADMX Migrator encontró una cadena no presente en la tabla de cadenas ADM de origen.</string>
-      <string id="ADMXMigrator_NoSupportedOn">ADMX Migrator encontró una cadena que no contiene un valor On compatible.</string>
+      <string id="ADMXMigrator_NoSupportedOn">ADMX Migrator encontró una directiva que no contiene un valor On compatible.</string>
       <string id="ExtensionInstallForcelist">Instale la extensión de Chrome necesaria para la función Redireccionamiento de contenido URL.</string>
       <string id="ExtensionInstallForcelist_Explain">Si esta directiva está habilitada, la extensión de Chrome que requiere el Redireccionamiento de contenido URL se instalará de forma silenciosa y automática. Esta instalación también concede los permisos necesarios. Esta instalación no se puede revertir sin privilegio de administrador.
 

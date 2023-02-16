@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="VMwareViewClientRTAV">View の RTAV 構成</string>
+      <string id="VMwareViewClientRTAVWebcam">View の RTAV Web カメラ設定</string>
+      <string id="VMwareViewRTAVMicrophone">View の RTAV マイク設定</string>
+      <string id="WebcamMaxResWidth">解像度 - ピクセル単位での画像の最大幅</string>
+      <string id="WebcamMaxResWidthExplain">Web カメラからキャプチャするときの画像フレームの最大幅 (ピクセル単位)</string>
+      <string id="WebcamMaxResHeight">解像度 - ピクセル単位での画像の最大の高さ</string>
+      <string id="WebcamMaxResHeightExplain">Web カメラからキャプチャするときの画像フレームの最大の高さ (ピクセル単位)</string>
+      <string id="WebcamMaxFrameRate">1 秒あたりの最大フレーム</string>
+      <string id="WebcamMaxFrameRateExplain">Web カメラからキャプチャするときの 1 秒あたりの最大フレーム レート。
+最小 = 1、最大 = 30</string>
+      <string id="WebcamDefaultResWidth">解像度 - ピクセル単位でのデフォルト イメージ解像度の幅</string>
+      <string id="WebcamDefaultResWidthExplain">デフォルト イメージ解像度の幅を設定します。設定しない場合、デフォルトは 320 になります。これは、解像度の値がユーザーによって定義されていない場合に使用されます。</string>
+      <string id="WebcamDefaultResHeight">解像度 - ピクセル単位でのデフォルト イメージ解像度の高さ</string>
+      <string id="WebcamDefaultResHeightExplain">デフォルト イメージ解像度の高さを設定します。設定しない場合、デフォルトは 240 になります。これは、解像度の値がユーザーによって定義されていない場合に使用されます。</string>
+      <string id="VMwareViewAgent">VMware View Agent の構成</string>
+      <string id="ADMXMigrator_UnresolvedString">ADMX Migrator が、元の ADM 文字列テーブルにない文字列を検出しました。</string>
+      <string id="ADMXMigrator_NoSupportedOn">ADMX Migrator が、supportedOn 値が設定されていないポリシーを検出しました。</string>
+      <string id="MicrophoneSampleRate">サンプリング レート - 録音デバイスのサンプリング レート</string>
+      <string id="MicrophoneSampleRateExplain">エンドポイントから RDSH デスクトップおよび RDSH リモート アプリケーションへの録音デバイスのサンプリング レートを設定します。
+重要: 接続中のセッションがある場合は、この GPO 設定を変更しないでください。この設定を有効にするには、再起動が必要です。</string>
+      <string id="SampleRate8K">8000</string>
+      <string id="SampleRate16K">16000</string>
+      <string id="SampleRate48K">48000</string>
+      <string id="DisableRTAV">マイクまたは Web カメラの無効化</string>
+      <string id="DisableRTAVExplain">マイクまたは Web カメラの無効化
+
+注: [マイクの無効化] と [Web カメラの無効化] は、Windows クライアントを使用している場合にのみ有効です。また、クライアントとエージェントの両方がバージョン 2209 以降である必要があります。</string>
+      <string id="DisableMicAndWebcam">マイクと Web カメラの無効化</string>
+      <string id="DisableWebcam">Web カメラの無効化</string>
+      <string id="DisableMic">マイクの無効化</string>
+      <string id="ForceNV">ハードウェア アクセラレーション - Web カメラ ビデオ コーデックに NVIDIA ハードウェア アクセラレーションを使用できるようにします</string>
+      <string id="ForceNVExplain">指定した GPU が検出され、FFmpeg と互換性がある場合に、Web カメラ ビデオ コーデックに NVIDIA ハードウェア アクセラレーションを使用できるようにします</string>
+      <string id="ForceQSV">ハードウェア アクセラレーション - Web カメラ ビデオ コーデックに Intel QSV を使用できるようにします</string>
+      <string id="ForceQSVExplain">指定した GPU が検出され、FFmpeg と互換性がある場合に、Web カメラ ビデオ コーデックに Intel QSV を使用できるようにします</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="WebcamMaxFrameRate">
+        <decimalTextBox refId="WebcamMaxFrameRate" defaultValue="15">1 秒あたりの最大フレーム</decimalTextBox>
+      </presentation>
+      <presentation id="WebcamMaxResHeight">
+        <decimalTextBox refId="WebcamMaxResHeight" defaultValue="0">解像度 - ピクセル単位での画像の最大の高さ</decimalTextBox>
+      </presentation>
+      <presentation id="WebcamMaxResWidth">
+        <decimalTextBox refId="WebcamMaxResWidth" defaultValue="0">解像度 - ピクセル単位での画像の最大幅</decimalTextBox>
+      </presentation>
+      <presentation id="WebcamDefaultResHeight">
+        <decimalTextBox refId="WebcamDefaultResHeight" defaultValue="0">解像度 - ピクセル単位でのデフォルト イメージ解像度の高さ</decimalTextBox>
+      </presentation>
+      <presentation id="WebcamDefaultResWidth">
+        <decimalTextBox refId="WebcamDefaultResWidth" defaultValue="0">解像度 - ピクセル単位でのデフォルト イメージ解像度の幅</decimalTextBox>
+      </presentation>
+      <presentation id="MicrophoneSampleRate">
+        <dropdownList refId="MicrophoneSampleRateList" defaultItem="0" noSort="true">サンプリング レート - 録音デバイスのサンプリング レート</dropdownList>
+      </presentation>
+      <presentation id="DisableRTAV">
+        <dropdownList refId="RTAVDisableComponentList" defaultItem="0" noSort="true">マイクまたは Web カメラの無効化</dropdownList>
+      </presentation>
+      <presentation id="ForceNV" />
+      <presentation id="ForceQSV" />
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

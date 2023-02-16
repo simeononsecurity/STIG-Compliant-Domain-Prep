@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="VMwareViewDnD">Glisser-déposer</string>
+      <string id="SUPPORTED_VERSION"></string>
+      <string id="SERVER_DND_STATE">Configurer le sens du glisser-déposer</string>
+      <string id="DND_STATE_DISABLE_BOTH">Désactivé dans les deux sens</string>
+      <string id="DND_STATE_ENABLE_CLIENT_2_SERVER">Activé uniquement du client vers l'agent</string>
+      <string id="DND_STATE_ENABLE_SERVER_2_CLIENT">Activé uniquement de l'agent vers le client</string>
+      <string id="DND_STATE_ENABLE_BOTH">Activé dans les deux sens</string>
+      <string id="SERVER_DND_STATE_EXPLAIN">Détermine le sens dans lequel le glisser-déposer est autorisé. Vous pouvez sélectionner l'une de ces valeurs :
+
+- Désactivé dans les deux sens
+- Activé uniquement de l'agent vers le client (c'est-à-dire, autoriser le glisser-déposer uniquement de l'agent vers le système client.)
+- Activé uniquement du client vers l'agent (c'est-à-dire, autoriser le glisser-déposer uniquement du système client vers l'agent.)
+- Activé dans les deux sens
+
+Ce paramètre s'applique à l'agent uniquement.
+
+Lorsque ce paramètre est désactivé ou qu'il n'est pas configuré, la valeur par défaut est Activé uniquement du client vers l'agent.</string>
+      <string id="SERVER_DND_FORMAT_STATE">Configurer les formats de glisser-déposer</string>
+      <string id="SERVER_DND_FORMAT_STATE_EXPLAIN">Ce paramètre détermine quelle option de « Glisser-déposer » est autorisée pour chaque format (Fichier/Texte/Texte enrichi/Image/Format HTML/Contenu de fichier). Les valeurs des options sont les suivantes :
+
+- Désactivé dans les deux sens
+- Activé uniquement de l'agent vers le client
+- Activé uniquement du client vers l'agent
+- Activé dans les deux sens
+
+Ce paramètre s'applique à l'agent uniquement, il n'est pas configuré par défaut.
+
+Lorsque le paramètre n'est pas configuré ou est désactivé, l'option de « Glisser-déposer » est « Activé dans les deux sens » pour tous les formats.</string>
+      <string id="String_Policy_DropList_Select_DnD_size_unit_bytes" >Octets</string>
+      <string id="String_Policy_DropList_Select_DnD_size_unit_kilobytes" >Kilo-octets</string>
+      <string id="String_Policy_DropList_Select_DnD_size_unit_megabytes" >Mégaoctets</string>
+      <string id="SERVER_DND_SIZE">Configurer le seuil de taille du glisser-déposer</string>
+      <string id="SERVER_DND_SIZE_EXPLAIN">Le glisser-déposer prend en charge le glissement de différents types de données, y compris le texte brut, le texte enrichi, les images, les fichiers, les dossiers, etc. Ce paramètre détermine la limite de taille pour le glissement des types de données communs autres que des fichiers et des dossiers.
+
+L'unité de la taille des données de déplacement peut être configurée en octets, en kilo-octets et en mégaoctets.
+
+La valeur de taille souhaitée est configurée dans « Seuil de taille du glisser-déposer ». Les plages de données effectives pour l'unité de taille différente sont les suivantes :
+- Octets : 1 à 1 023
+- Kilo-octets : 1 à 1 023
+- Mégaoctets : 1 à 16 (la taille de données maximale pour le glisser-déposer est de 16 mégaoctets)
+
+Ce paramètre ne s'applique qu'à l'agent.
+
+Lorsque le paramètre n'est pas configuré ou qu'il est désactivé, un seuil par défaut de 1 mégaoctet est défini.</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="SERVER_DND_STATE">
+        <dropdownList refId="SERVER_DND_STATE" defaultItem="2">Configurer le glisser-déposer</dropdownList>
+      </presentation>
+      <presentation id="SERVER_DND_FORMAT_STATE">
+        <dropdownList refId="SERVER_DND_FILE_STATE" defaultItem="3">Option pour le format de fichier :</dropdownList>
+        <dropdownList refId="SERVER_DND_TEXT_STATE" defaultItem="3">Option pour le format de texte :</dropdownList>
+        <dropdownList refId="SERVER_DND_RTF_STATE" defaultItem="3">Option pour le format RTF :</dropdownList>
+        <dropdownList refId="SERVER_DND_IMAGE_STATE" defaultItem="3">Option pour le format d'image :</dropdownList>
+        <dropdownList refId="SERVER_DND_HTML_STATE" defaultItem="3">Option pour le format HTML :</dropdownList>
+        <dropdownList refId="SERVER_DND_FILE_CONTENT_STATE" defaultItem="3">Option pour le format de contenu de fichier :</dropdownList>
+      </presentation>
+      <presentation id="SERVER_DND_SIZE">
+        <dropdownList refId="Policy_DropList_DnD_Size_Unit" defaultItem="2" >Choisir l'unité de la taille du glisser-déposer</dropdownList>
+        <decimalTextBox refId="SERVER_DND_SIZE" defaultValue="1">Seuil de taille du glisser-déposer</decimalTextBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="perf_tracker">Performance Tracker</string>
+      <string id="perfTrackerCMD">Performance Tracker のインストール パスと実行パラメータを入力</string>
+      <string id="SUPPORTED_NotSpecified">指定されていません</string>
+      <string id="perf_tracker_basic_settings">Performance Tracker の基本設定</string>
+      <string id="perf_tracker_VDI_auto_start">リモート デスクトップ接続で Performance Tracker の自動開始を有効にする</string>
+      <string id="perf_tracker_remote_app_auto_start">リモート アプリケーション接続で Performance Tracker の自動開始を有効にする</string>
+      <string id="perf_tracker_blast_settings">Blast しきい値の設定</string>
+      <string id="perf_tracker_PCoIP_settings">PCoIP しきい値の設定</string>
+      <string id="perf_tracker_notification_settings_detail">このポリシー設定は、通知設定の調整に使用します。
+
+通知を有効にする:
+有効な場合、ポップアップ通知でユーザーに警告が表示されます。
+
+通知の自動非表示を行うまでの時間:
+ポップアップ通知を自動的に非表示するまでの時間 (秒)。
+
+通知の最小間隔:
+通知フラッピングを回避するため、アラーム状態を維持するポーリング量。この値 * のポーリング間隔 = 秒。</string>
+      <string id="perf_tracker_basic_settings_detail">Performance Tracker の基本設定。
+
+データ更新率:
+パフォーマンス データを引き出す頻度 (秒)。</string>
+      <string id="perf_tracker_VDI_auto_start_detail">Performance Tracker UI の有無にかかわらず、リモート デスクトップ接続で自動的に開始します。
+
+有効にすると、ユーザーがリモート デスクトップ接続にログインしたときに Performance Tracker が自動的に開始します。
+
+Performace Tracker を別の場所にインストールして自動起動を設定する場合は、テキスト行に新しいパスを入力します。Performace Tracker UI を非表示にするには、-hideUI パラメータを追加します。例: C:\installation path\VMwarePerformanceTracker.exe -hideUI</string>
+      <string id="perf_tracker_remote_app_auto_start_detail">Performance Tracker UI の有無にかかわらず、リモート アプリケーション接続で自動的に開始します。
+
+有効にすると、ユーザーがリモート アプリケーション接続にログインしたときに Performance Tracker が自動的に開始します。
+
+Performace Tracker を別の場所にインストールして自動起動を設定する場合は、テキスト行に新しいパスを入力します。Performace Tracker UI を非表示にするには、-hideUI パラメータを追加します。例: C:\installation path\VMwarePerformanceTracker.exe -hideUI</string>
+      <string id="perf_tracker_blast_settings_detail">Blast しきい値の設定。
+
+Blast 遅延の警告しきい値:
+Blast 遅延メトリックの警告を表示するしきい値 (ミリ秒)。
+
+Blast 遅延のエラーしきい値:
+Blast 遅延メトリックのエラーを表示するしきい値 (ミリ秒)。
+
+Blast 損失の警告しきい値:
+Blast 損失の警告を表示するしきい値 (%)。損失がこの値を超えると、警告が表示されます。
+
+Blast 損失のエラーしきい値:
+Blast 損失のエラーを表示するしきい値 (%)。損失がこの値を超えると、エラーが表示されます。
+
+Blast バンド幅のエラーしきい値:
+使用可能なバンド幅がこの値 (kbps) を下回ると、エラーが表示されます。
+
+Blast バンド幅の警告しきい値:
+使用可能なバンド幅がこの値 (kbps) を下回ると、警告が表示されます。</string>
+      <string id="perf_tracker_PCoIP_settings_detail">PCoIP しきい値の設定。
+
+PCoIP 遅延の警告しきい値:
+PCoIP 遅延メトリックの警告を表示するしきい値 (ミリ秒)。
+
+PCoIP 遅延のエラーしきい値:
+PCoIP 遅延メトリックのエラーを表示するしきい値 (ミリ秒)。
+
+PCoIP 損失の警告しきい値:
+PCoIP 損失の警告を表示するしきい値 (%)。損失がこの値を超えると、警告が表示されます。
+
+PCoIP 損失のエラーしきい値:
+PCoIP 損失のエラーを表示するしきい値 (%)。損失がこの値を超えると、エラーが表示されます。
+
+PCoIP バンド幅のエラーしきい値:
+使用可能なバンド幅がこの値 (kbps) を下回ると、エラーが表示されます。
+
+PCoIP バンド幅の警告しきい値:
+使用可能なバンド幅がこの値 (kbps) を下回ると、警告が表示されます。</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="perf_tracker_basic_settings">
+        <decimalTextBox refId="DataCollectionFrequency" defaultValue="5">データ更新率</decimalTextBox>
+      </presentation>
+      <presentation id="perf_tracker_auto_start_command">
+        <textBox refId="PerfTrackerCMD">
+          <label>Performance Tracker のインストール パスと実行パラメータを入力:</label>
+          <defaultValue>C:\Program Files\VMware\VMware View\Agent\Horizon Performance Tracker\VMware.Horizon.PerformanceTracker.exe</defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="perf_tracker_blast_settings">
+        <decimalTextBox refId="WarningBlastLatencyValue" defaultValue="100">Blast 遅延の警告しきい値</decimalTextBox>
+        <decimalTextBox refId="ErrorBlastLatencyValue" defaultValue="300">Blast 遅延のエラーしきい値</decimalTextBox>
+        <textBox refId="WarningBlastLossValue">
+          <label>Blast 損失の警告しきい値</label>
+          <defaultValue>2</defaultValue>
+        </textBox>
+        <textBox refId="ErrorBlastLossValue" defaultValue="10">
+          <label>Blast 損失のエラーしきい値</label>
+          <defaultValue>10</defaultValue>
+        </textBox>
+        <decimalTextBox refId="ErrorBlastBandwidthKbValue" defaultValue="512">Blast バンド幅のエラーしきい値</decimalTextBox>
+        <decimalTextBox refId="WarningBlastBandwidthKbValue" defaultValue="1500">Blast バンド幅の警告しきい値</decimalTextBox>
+      </presentation>
+      <presentation id="perf_tracker_PCoIP_settings">
+        <decimalTextBox refId="WarningPCoIPLatencyValue" defaultValue="100">PCoIP 遅延の警告しきい値</decimalTextBox>
+        <decimalTextBox refId="ErrorPCoIPLatencyValue" defaultValue="250">PCoIP 遅延のエラーしきい値</decimalTextBox>
+        <textBox refId="WarningPCoIPLossValue">
+          <label>PCoIP 損失の警告しきい値</label>
+          <defaultValue>0.5</defaultValue>
+        </textBox>
+        <textBox refId="ErrorPCoIPLossValue">
+          <label>PCoIP 損失のエラーしきい値</label>
+          <defaultValue>2</defaultValue>
+        </textBox>
+        <decimalTextBox refId="ErrorPCoIPBandwidthKbValue" defaultValue="512">PCoIP バンド幅のエラーしきい値</decimalTextBox>
+        <decimalTextBox refId="WarningPCoIPBandwidthKbValue" defaultValue="1500">PCoIP バンド幅の警告しきい値</decimalTextBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

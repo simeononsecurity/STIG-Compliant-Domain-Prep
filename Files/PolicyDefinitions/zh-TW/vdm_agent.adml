@@ -1,0 +1,1146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+
+   <displayName>VMware Horizon View Agent</displayName>
+   <description>VMware Horizon View Agent 組態設定</description>
+   <resources>
+      <stringTable>
+
+         <string id="SUPPORTED_Windows10_1607_VM">最低系統需求為 Windows 10 / Windows Server 2016 VDI 1607 版虛擬機器</string>
+
+         <string id="Agent_Configuration">Agent 組態</string>
+
+         <string id="Collaboration">協作</string>
+
+         <string id="Agent_Security">Agent 安全性</string>
+
+         <string id="Unity_Touch_Hosted_Apps">Unity Touch 和主控應用程式</string>
+
+         <string id="Unity_Filter">Unity 篩選規則清單</string>
+
+         <string id="Unity_Filter_Rules_Desc">此原則指定遠端處理主控應用程式時視窗所適用的篩選規則。Horizon Agent 會使用篩選規則來支援自訂應用程式。如果您有視窗顯示問題，例如視窗有黑色背景或下拉式清單視窗的大小不正確等等，即應使用此 GPO。
+
+設定規則的第一個步驟是針對您想要套用規則的視窗判斷其特性。許多可能的特性可供識別:
+
+1. 視窗類別名稱，在自訂規則中會識別為 classname=XYZ
+2. 產品公司，識別為 company=XYZ
+3. 產品名稱，識別為 product=XYZ
+4. 產品主要版本，識別為 major=XYZ
+5. 產品次要版本，識別為 minor=XYZ
+6. 產品組建編號，識別為 build=XYZ
+7. 產品修訂編號，識別為 revision=XYZ
+
+最常見的是僅使用「視窗類別名稱」作為偏好的特性 (例如 classname=CustomClassName)。不過，如果您需要將規則限制在一個特定產品，會提供其他的特性；您可以在可執行檔的 [檔案屬性] 視窗中找到這些特性，而它們必須是大小寫完全相符，包括任何特殊字元。當提供多個特性時，所有特性必須符合，如此規則才能套用至視窗。
+
+一旦您已識別特性之後，下一步是選擇一個動作。動作必須是 action=block 或 action=map 中的其中一個。action=block 會告訴 Horizon Agent 不要將視窗遠端連線至用戶端。在用戶端上顯示的視窗太大或影響正常的視窗焦點行為時使用此操作。action=map 會告訴 Horizon Agent 將視窗視為特定硬式編碼類型。
+
+如果您設定 action=map，也必須指定類型才能將視窗對應至類型。此操作透過包含 type=XYZ 來完成。以下是所有可用類型值的清單: normal、panel、dialog、tooltip、splash、toolbar、dock、desktop、widget、combobox、startscreen、sidepanel、taskbar、metrofullscreen、metrodocked。
+
+以下是兩個您可以設定為修正行為異常應用程式的規則範例: 
+
+1. 您可以篩選出不應進行遠端連線的視窗。
+   - 若要使用類別名稱 MyClassName 封鎖所有視窗，請使用規則「classname=MyClassName;action=block」
+   - 若要從產品 MyProduct 封鎖所有視窗，請使用規則「product=MyProduct;action=block」。
+2. 您可以將視窗對應至正確的類型。因為難以判斷視窗是否對應至錯誤的類型，所以通常僅在 VMware 支援指示您執行此操作時才需要。
+   - 若要將自訂類別對應至類型下拉式方塊，請使用規則「classname=MyClassName;action=map;type=combobox」
+
+注意: 此 GPO 的優先順序低於 %ProgramData%\VMware\RdeServer\Unity Filters 中安裝的篩選規則</string>
+
+         <string id="Smartcard_Redirection">智慧卡重新導向</string>
+
+         <string id="Local_Reader_Access">本機讀卡機存取</string>
+
+         <string id="True_SSO_Configuration">True SSO 組態</string>
+
+         <string id="Whfb_Certificate_Redirection">Whfb 憑證重新導向</string>
+
+         <string id="Whfb_Certificate_Allowed_Applications">允許的可執行檔清單</string>
+
+         <string id="Whfb_Certificate_Allowed_Applications_Desc">允許使用重新導向的 Whfb 憑證的可執行檔清單</string>
+
+         <string id="View_USB_Configuration">View USB 組態</string>
+
+         <string id="Client_Downloadable_only_settings">僅供用戶端下載的設定</string>
+
+         <string id="VMware_MediaProviderProxy">適用於商務用 Skype 的 VMware 虛擬化套件</string>
+
+         <string id="Recursive_Domain_Enumeration">信任的網域的遞迴列舉</string>
+
+         <string id="Recursive_Domain_Enumeration_Desc">決定是否列舉伺服器所在網域所信任的每個網域。為了建立完整的信任鏈結，也要列舉每個信任的網域所信任的網域，在搜尋到所有信任的網域之前，程序才會以遞迴的方式繼續。此資訊會傳遞到 View 連線伺服器，以確保用戶端在登入時可以使用所有信任的網域。
+
+此內容依預設為啟用。停用時，只會列舉直接信任的網域，因此不會與遠端網域控制站建立連線。
+
+注意: 在網域關係複雜的環境 (例如，在其樹系中使用網域間受信任的多個樹系結構的環境) 中，此程序可能需要幾分鐘才能完成。</string>
+
+         <string id="Force_MMR_to_use_overlay">強制 MMR 使用軟體重疊</string>
+
+         <string id="Force_MMR_to_use_overlay_Desc">MMR 會嘗試使用硬體重疊來播放視訊以獲得較佳的效能。不過，使用多部顯示器時，硬體重疊僅能存在於其中一部顯示器上: 即主要顯示器或用來啟動 WMP 的顯示器。如果將 WMP 拖曳到另一部顯示器，視訊會顯示為黑色矩形。使用此選項可強制 MMR 使用軟體重疊，如此即可在所有顯示器上運作。</string>
+
+         <string id="Enable_multi_media_acceleration">啟用多媒體加速</string>
+
+         <string id="Enable_multi_media_acceleration_Desc">指定是否在代理程式上啟用多媒體重新導向 (MMR)。MMR 是一種 Microsoft DirectShow 篩選器，會將遠端系統上特定轉碼器中的多媒體資料直接透過 TCP 通訊端轉送給用戶端。當播放時，該資料會在用戶端上直接解碼。如果用戶端沒有足夠資源可處理本機多媒體解碼，管理員可以停用 MMR。
+
+注意: 如果 View Client 視訊顯示硬體不支援重疊，則 MMR 無法正確運作。MMR 原則不適用於離線桌面平台工作階段。</string>
+
+         <string id="AllowDirectRDP">允許直接 RDP</string>
+
+         <string id="AllowDirectRDP_Desc">決定非 View Client 是否可以使用 RDP 直接連線至 View 桌面平台。停用時，代理程式僅允許透過 View Client 或 View Portal 進行 View 管理的連線。
+
+此內容依預設為啟用。</string>
+
+         <string id="AllowSingleSignon">允許單一登入</string>
+
+         <string id="AllowSingleSignon_Desc">決定是否使用 Single Sign-On (SSO) 將使用者連線至 View 桌面平台。啟用時，使用者僅在透過 View Client 或 View Portal 連線時才需要輸入其認證。停用時，如果使用者進行遠端連線，則必須重新驗證。
+
+此內容需要在桌面平台上安裝 View Agent 的安全驗證元件，且依預設為啟用。</string>
+
+         <string id="ConnectionTicketTimeout">連線票證逾時</string>
+
+         <string id="ConnectionTicketTimeout_Desc">指定 View 連線票證的有效時間 (以秒為單位)。View Client 連線至 View Agent 時會使用連線票證，用於驗證和 Single Sign-On。
+
+基於安全理由，這些票證只在指定的期間內有效。如果未明確設定此內容，則系統會套用預設值 900 秒。</string>
+
+         <string id="CredentialFilterExceptions">認證篩選器例外狀況</string>
+
+         <string id="CredentialFilterExceptions_Desc">不允許載入代理程式 CredentialFilter 的可執行檔名稱清單 (以分號分隔)。檔案名稱不能包含路徑和尾碼。</string>
+
+         <string id="RDPVcBridgeUnsupportedClients">RDPVcBridge 不支援的用戶端</string>
+
+         <string id="RDPVcBridgeUnsupportedClients_Desc">不支援 RDPVcBridge 的 Horizon Client 類型清單 (以逗號分隔)。</string>
+
+         <string id="Disable_Time_Zone_sync">停用時區同步化</string>
+
+         <string id="Disable_Time_Zone_sync_Desc">決定 View 桌面平台的時區是否與已連線用戶端的時區同步。啟用時，僅在 [View Client 組態] 原則的 [停用時區轉送] 內容未設為停用時才會套用此內容。
+
+此內容依預設為停用。</string>
+
+         <string id="Toggle_Display_Settings_Control">切換顯示設定控制</string>
+
+         <string id="Toggle_Display_Settings_Control_Desc">決定當 View Client 連線時，是否停用 [顯示控制台] 小程式的 [設定] 頁面。
+
+此內容僅適用於使用 PCoIP 通訊協定的工作階段。此內容依預設為啟用。</string>
+
+         <string id="DpiSync">DPI 同步</string>
+
+         <string id="DpiSync_Desc">調整遠端工作階段的全系統 DPI 設定。此設定啟用或未設定時，系統會設定遠端工作階段的全系統 DPI 設定，以符合用戶端作業系統上對應的 DPI 設定。停用此設定時，則不會變更遠端工作階段的全系統 DPI 設定。</string>
+
+         <string id="DpiSyncPerMonitor">每個監視器的 DPI 同步</string>
+
+         <string id="DpiSyncPerMonitor_Desc">在遠端工作階段期間，調整多個監視器中的 DPI 設定。啟用或未設定時，所有監視器中的 DPI 設定會變更，以符合遠端工作階段期間用戶端作業系統的 DPI 設定。如果已自訂 DPI 設定，則會與自訂 DPI 設定相符。停用時，使用者必須中斷連線，並連線至新的遠端工作階段，才能使 DPI 變更在所有監視器中生效。</string>
+
+         <string id="DisallowCollaboration">關閉協作</string>
+
+         <string id="DisallowCollaboration_Desc">此設定會設定 View Agent 虛擬機器上是否允許協作。如果啟用，則會完全關閉協作功能。如果停用或未設定，則此功能會在集區層級上受到控制。必須將 View Agent 機器重新開機，此設定才會生效。</string>
+
+         <string id="AllowCollaborationInviteByIM">允許透過 IM 邀請協作者</string>
+
+         <string id="AllowCollaborationInviteByIM_Desc">此設定會設定是否允許使用者透過已安裝的即時訊息 (IM) 應用程式傳送協作邀請。如果停用，則不允許使用者透過 IM 發出邀請，即使已安裝 IM 應用程式亦然。此設定依預設為啟用。</string>
+
+         <string id="AllowCollaborationInviteByEmail">允許透過電子郵件邀請協作者</string>
+
+         <string id="AllowCollaborationInviteByEmail_Desc">此設定會設定是否允許使用者透過已安裝的電子郵件應用程式傳送協作邀請。如果停用，則不允許使用者透過電子郵件發出邀請，即使已安裝電子郵件應用程式亦然。此設定依預設為啟用。</string>
+
+         <string id="AllowCollaborationControlPassing">允許將控制傳送至協作者</string>
+
+         <string id="AllowCollaborationControlPassing_Desc">此設定可設定是否允許使用者在協作期間，將輸入控制傳送至其他協作者。此設定依預設為啟用。</string>
+
+         <string id="MaxCollaboratorCount">受邀協作者數目上限</string>
+
+         <string id="MaxCollaboratorCount_Desc">此設定會設定一個使用者可邀請加入其工作階段的協作者數目上限。預設最大值為 5。</string>
+
+         <string id="CollaborationEmailInviteDelimiter">mailto: 連結中用於多個電子郵件地址的分隔符號</string>
+
+         <string id="CollaborationEmailInviteDelimiter_Desc">此設定會設定 mailto: 連結中用於多個電子郵件地址的分隔符號。未設定此原則時，該值會預設為「;」(不含空格的分號) 用來分隔電子郵件地址，以確保與主流電子郵件用戶端之間的相容性。
+
+如果您的預設電子郵件用戶端無法使用此分隔符號，則可以嘗試其他組合，例如「, 」(逗號加空格) 或「; 」(分號加空格)。此值在放入 mailto: 連結之前會進行 URI 編碼，因此請勿將此項目設為 URI 編碼的值。</string>
+
+         <string id="CollaborationClipboardIncludeOutlookURL">在剪貼簿文字中包括 Outlook 格式的 URL</string>
+
+         <string id="CollaborationClipboardIncludeOutlookURL_Desc">啟用此設定時，系統會在剪貼簿邀請文字中包括 Outlook 格式的邀請 URL。如果您希望使用者將剪貼簿邀請文字貼到電子郵件中，請啟用此設定。此設定依預設為停用。</string>
+
+         <string id="CollaborationServerURLs">要包含在邀請訊息中的伺服器 URL</string>
+
+         <string id="CollaborationServerURLs_Desc">此設定可讓您覆寫協作邀請中包含的預設 URL。如果您的部署使用多個伺服器 URL (例如，不同的內部和外部 URL，或個別網繭的 URL)，建議您設定此值。
+
+設定這些值時，第一欄應包含 URL 和選用的連接埠 (例如「horizon-ca.corp.int」或「horizon-ca.corp.int:2323」)，而第二欄應包含 URL 的簡短說明 (例如「加州網繭」或「公司網路」)。僅在清單中有多個伺服器的情況下才需要使用此說明。</string>
+
+         <string id="UnAuthenticatedAccessEnabled">啟用未驗證存取</string>
+
+         <string id="UnAuthenticatedAccessEnabled_Desc">此設定會啟用「未驗證存取」功能。系統必須重新開機，此變更才會生效。「未驗證存取」依預設為啟用。</string>
+
+         <string id="CommandsToRunOnConnect">連線時要執行的命令</string>
+
+         <string id="CommandsToRunOnConnect_Desc">首次連線某個工作階段時，要執行的命令清單。</string>
+
+         <string id="CommandsToRunOnReconnect">重新連線時要執行的命令</string>
+
+         <string id="CommandsToRunOnReconnect_Desc">某個工作階段中斷連線後重新連線時，要執行的命令清單。</string>
+
+         <string id="CommandsToRunOnDisconnect">中斷連線時要執行的命令</string>
+
+         <string id="CommandsToRunOnDisconnect_Desc">某個工作階段中斷連線後，要執行的命令清單。</string>
+
+         <string id="ShowDiskActivityIcon">顯示磁碟活動圖示</string>
+
+         <string id="ShowDiskActivityIcon_Desc">在系統匣中顯示磁碟活動圖示。使用僅供單一處理序使用的「System Trace NT Kernel Logger」；如需用於其他目的請將其停用。預設為啟用。</string>
+
+         <string id="SSO_retry_timeout">Single Sign-On 重試逾時</string>
+
+         <string id="SSO_retry_timeout_Desc">指定重試 Single Sign-On 之前的等待時間 (以毫秒為單位)。設定為 0 將停用 Single Sign-On 重試。預設值為 5000 毫秒。</string>
+
+         <string id="Win10PhysicalAgentAudioOption">單一工作階段 Windows 10 實體遠端桌面平台機器的音訊選項</string>
+
+         <string id="Win10PhysicalAgentAudioOption_Desc">指定要在 Horizon Windows 10 實體遠端桌面平台機器工作階段中使用的音訊裝置。預設值是使用連結到 Horizon Client 端點的音訊裝置。</string>
+
+         <string id="UseClientAudioDevice">使用連結到 Horizon Client 端點的音訊裝置</string>
+
+         <string id="UsePhysicalMachineAudioDevice">使用連結到 Horizon Windows 10 實體遠端桌面平台端點的音訊裝置</string>
+
+         <string id="VDI_idle_time_till_disconnect">中斷連線前的閒置時間 (VDI)</string>
+
+         <string id="VDI_idle_time_till_disconnect_Desc">指定 VDI 桌面平台工作階段將由於使用者閒置而中斷連線的時間量。
+如果此設定已停用或未設定，則 VDI 桌面平台工作階段將永遠不會中斷連線。選取「永不」將具有相同的效果。
+注意: 如果桌面平台集區或機器設定為中斷連線後自動登出，則會採用這些設定。</string>
+
+         <string id="Accept_SSL_encr_framework_channel">接受採用 SSL 加密的架構通道</string>
+
+         <string id="Accept_SSL_encr_framework_channel_Desc">接受採用 SSL 加密的架構通道
+
+啟用: 啟用 SSL，允許舊版用戶端不使用 SSL 連線
+停用: 停用 SSL
+強制執行: 啟用 SSL，拒絕舊版用戶端連線</string>
+
+         <string id="Enable">啟用</string>
+
+         <string id="Disable">停用</string>
+
+         <string id="Enforce">強制執行</string>
+
+         <string id="Allow_smartcard_local_access">允許應用程式存取本機智慧卡讀卡機</string>
+
+         <string id="Allow_smartcard_local_access_Desc">若啟用，應用程式將能夠存取所有「本機」智慧卡讀卡機 (即使已安裝智慧卡重新導向功能)。
+
+啟用遠端桌面服務角色時，此設定不適用於 RDP 或 RDSH 主機。
+
+啟用時，系統會監控桌面平台是否有本機讀卡機，若偵測到，則會關閉智慧卡重新導向以允許存取本機讀卡機。重新導向會維持關閉，直到使用者下次連線至工作階段。
+
+注意: 啟用本機存取時，應用程式將再也無法存取用戶端上的遠端讀卡機。
+
+此設定依預設為停用。</string>
+
+         <string id="Local_Reader_Name">本機讀卡機名稱</string>
+
+         <string id="Local_Reader_Name_Desc">指定要監控之本機讀卡機的名稱，以便啟用本機存取。依預設，讀卡機必須已插入卡片才能啟用本機存取。您可以使用「需要已插入智慧卡」設定來停用該要求。
+
+
+預設值是對所有讀卡機啟用此功能</string>
+
+         <string id="Require_an_inserted_smart_card">需要已插入智慧卡</string>
+
+         <string id="Require_an_inserted_smart_card_Desc">若啟用，則僅在本機讀卡機已插入卡片時才會啟用本機讀卡機存取權。若停用，則只要偵測到本機讀卡機便會啟用本機存取。
+
+此設定依預設為啟用。</string>
+
+         <string id="Disable_true_SSO">停用 True SSO</string>
+
+         <string id="Disable_true_SSO_Desc">若啟用此選項，則會停用代理程式上的功能</string>
+
+         <string id="Cert_wait_timeout">憑證等候逾時</string>
+
+         <string id="Cert_wait_timeout_Desc">指定憑證到達代理程式的逾時期間，以秒為單位</string>
+
+         <string id="Min_key_size">最小金鑰大小</string>
+
+         <string id="Min_key_size_Desc">使用的最小大小金鑰</string>
+
+         <string id="All_key_sizes">所有金鑰大小</string>
+
+         <string id="All_key_sizes_Desc">可以使用所有大小的金鑰。可以指定最多 5 個大小。範例: 1024,2048,3072,4096</string>
+
+         <string id="Keys_to_precreate">要預先建立的金鑰數目</string>
+
+         <string id="Keys_to_precreate_Desc">在 RDSH 環境上預先建立的金鑰數目</string>
+
+         <string id="Cert_min_validity">憑證所需的最短有效期間</string>
+
+         <string id="Cert_min_validity_Desc">重複使用某個憑證來重新連線使用者時所需的最短有效期間 (以分鐘為單位)</string>
+
+         <string id="Enable_Unity_Touch">啟用 Unity Touch</string>
+
+         <string id="Enable_Unity_Touch_Desc">此原則會指定是否在 View Agent 上啟用 Unity Touch 功能。此設定的預設值是啟用 Unity Touch。
+
+在 Windows 10 上，如果已啟用 Unity Touch，則子原則會指定是否已在 View Agent 上啟用針對 Unity Touch 的通用 Windows 平台 (UWP) 應用程式支援。Unity Touch 上 UWP 支援的預設值為針對 Unity Touch 啟用 UWP 支援。如果未設定 Unity Touch 原則，則會在 Windows 10 上針對 Unity Touch 啟用 UWP 支援。</string>
+
+         <string id="Enable_system_tray_redir">啟用主控應用程式系統匣重新導向</string>
+
+         <string id="Enable_system_tray_redir_Desc">此原則會指定遠端處理主控應用程式時，是否應啟用系統匣重新導向。此設定的預設值是啟用系統匣重新導向。</string>
+
+         <string id="Enable_user_prof_customization">啟用主控應用程式的使用者設定檔自訂</string>
+
+         <string id="Enable_user_prof_customization_Desc">此原則會指定遠端處理主控應用程式時，是否執行使用者設定檔自訂。這將產生使用者設定檔、自訂 Windows 佈景主題，並執行登錄的啟動應用程式。預設值為停用。</string>
+
+         <string id="AllowTinyOrOffscreenWindows">為空白或螢幕上不可見的視窗傳送更新</string>
+
+         <string id="AllowTinyOrOffscreenWindows_Desc">此原則會指定 Horizon Client 是否應接收空白或螢幕上不可見的視窗之相關更新。停用此值時，小於 2x2 像素或螢幕上完全不可見的視窗之相關資訊不會傳送給 Horizon Client。此設定依預設為停用。</string>
+
+         <string id="MinimalHookingModeEnabled">限制 Windows 勾點的使用</string>
+
+         <string id="MinimalHookingModeEnabled_Desc">此原則在遠端處理主控應用程式或使用 Unity Touch 時會關閉多數勾點。此設定適用於在設定作業系統層級勾點時有相容性或效能問題的應用程式。例如，此設定會停用多數 Windows Active Accessibility 與內含式勾點的使用。此原則依預設為停用，表示我們依預設會使用所有慣用的勾點。</string>
+
+         <string id="LaunchAppWhenArgsAreDifferent">僅在引數不同時才啟動新的主控應用程式執行個體</string>
+
+         <string id="LaunchAppWhenArgsAreDifferent_Desc">此原則會控制主控應用程式已啟動，但現有應用程式執行個體在已中斷連線的通訊協定工作階段內執行時的行為。停用時，現有的應用程式執行個體將會啟動。啟用時，僅在命令列參數相符的情況下，現有的應用程式執行個體才會啟動。此原則的預設值為停用。</string>
+
+         <string id="Exclude_Vid_Pid">排除 Vid/Pid 裝置</string>
+
+         <string id="Exclude_Vid_Pid_Desc">將具有指定廠商識別碼和產品識別碼的裝置排除在轉送之外。
+
+語法: {m|o}:&lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx|*&gt;&gt;[;...]
+merge-flag:
+m=用戶端設定將與代理程式設定合併
+o=代理程式設定將覆寫用戶端設定
+
+例如: m:vid-0781_pid-554c;vid-0781_pid-9999</string>
+
+         <string id="Exclude_Vid_Pid_Rel">排除 Vid/Pid/Rel 裝置</string>
+
+         <string id="Exclude_Vid_Pid_Rel_Desc">將具有指定廠商識別碼、產品識別碼和版本號碼的裝置排除在轉送之外。
+
+語法: {m|o}:&lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx&gt;_rel-&lt;xxxx|*&gt;&gt;[;...]
+merge-flag:
+m=用戶端設定將與代理程式設定合併
+o=代理程式設定將覆寫用戶端設定
+
+例如: m:vid-0781_pid-554c_rel-0100;vid-0781_pid-9999_rel-0010</string>
+
+         <string id="Include_Vid_Pid">納入 Vid/Pid 裝置</string>
+
+         <string id="Include_Vid_Pid_Desc">納入具有指定廠商識別碼和產品識別碼且可以轉送的裝置。
+
+語法: {m|o}:&lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx|*&gt;&gt;[;...]
+
+merge-flag:
+m=用戶端設定將與代理程式設定合併
+o=代理程式設定將覆寫用戶端設定
+
+例如: o:vid-0781_pid-554c;vid-0781_pid-9999</string>
+
+         <string id="Include_Vid_Pid_Rel">納入 Vid/Pid/Rel 裝置</string>
+
+         <string id="Include_Vid_Pid_Rel_Desc">納入具有指定廠商識別碼、產品識別碼和版本號碼且可以轉送的裝置。
+
+語法: {m|o}:&lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx&gt;_rel-&lt;xxxx|*&gt;&gt;[;...]
+
+merge-flag:
+m=用戶端設定將與代理程式設定合併
+o=代理程式設定將覆寫用戶端設定
+
+例如: o:vid-0781_pid-554c_rel-0100;vid-0781_pid-9999_rel-0010</string>
+
+         <string id="Exclude_device_family">排除裝置系列</string>
+
+         <string id="Exclude_device_family_Desc">將裝置系列排除在轉送之外。
+
+語法: {m|o}:&lt;family-name&gt;[;...]
+
+merge-flag:
+m=用戶端設定將與代理程式設定合併
+o=代理程式設定將覆寫用戶端設定
+
+例如: o:bluetooth;audio-in</string>
+
+         <string id="Include_device_family">納入裝置系列</string>
+
+         <string id="Include_device_family_Desc">納入可以轉送的裝置系列。
+
+語法: {m|o}:&lt;family-name&gt;[;...]
+
+merge-flag:
+m=用戶端設定將與代理程式設定合併
+o=代理程式設定將覆寫用戶端設定
+
+例如: m:storage;audio-out</string>
+
+         <string id="Exclude_all">排除所有裝置</string>
+
+         <string id="Exclude_all_Desc">封鎖所有裝置，除非裝置已透過「包含」篩選規則納入。
+
+預設值: 允許所有裝置</string>
+
+         <string id="HidOpt_Include_Vid_Pid">包含 HID 最佳化 Vid/Pid 裝置</string>
+
+         <string id="HidOpt_Include_Vid_Pid_Desc">包含具有指定廠商識別碼和產品識別碼且可以最佳化的 HID 裝置。
+
+語法: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx|*&gt;&gt;[;...]
+
+例如: vid-056a_pid-0302;vid-046d_pid-c628</string>
+
+         <string id="Exclude_Auto_Vid_Pid">排除自動連線 Vid/Pid 裝置</string>
+
+         <string id="Exclude_Auto_Vid_Pid_Desc">將具有指定廠商識別碼和產品識別碼的裝置排除在自動轉送之外。
+
+語法: {m|o}:&lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx|*&gt;&gt;[;...]
+merge-flag:
+m=用戶端設定將與代理程式設定合併
+o=代理程式設定將覆寫用戶端設定
+
+例如: m:vid-0781_pid-554c;vid-0781_pid-9999</string>
+
+         <string id="Exclude_auto_device_family">排除自動連線裝置系列</string>
+
+         <string id="Exclude_auto_device_family_Desc">將裝置系列排除在自動轉送之外。
+
+語法: {m|o}:&lt;family-name&gt;[;...]
+
+merge-flag:
+m=用戶端設定將與代理程式設定合併
+o=代理程式設定將覆寫用戶端設定
+
+例如: o:storage;hid</string>
+
+         <string id="Exclude_Vid_Pid_from_Split">排除 Vid/Pid 裝置以避免分割</string>
+
+         <string id="Exclude_Vid_Pid_from_Split_Desc">排除以廠商識別碼和產品識別碼指定之複合裝置的元件裝置，使其不會被視為可篩選的不同裝置。
+
+語法: {m|o}:&lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx|*&gt;&gt;[;...]
+merge-flag:
+m=用戶端設定將與代理程式設定合併
+o=代理程式設定將覆寫用戶端設定
+
+例如: o:vid-0781_pid-554c;vid-0781_pid-9999</string>
+
+         <string id="Split_Vid_Pid_Device">分割 Vid/Pid 裝置</string>
+
+         <string id="Split_Vid_Pid_Device_Desc">將以廠商識別碼和產品識別碼指定之複合裝置的元件裝置視為可篩選的不同裝置。
+
+語法: {m|o}:&lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx|*&gt;(exintf:xx[;exintf:xx])&gt;[;...]
+merge-flag:
+m=用戶端設定將與代理程式設定合併
+o=代理程式設定將覆寫用戶端設定
+
+例如: o:vid-0781_pid-554c(exintf:01;exintf:02);vid-0781_pid-9999(exintf:02)</string>
+
+         <string id="Allow_other_input_devices">允許其他輸入裝置</string>
+
+         <string id="Allow_other_input_devices_Desc">允許轉送 HID 可開機裝置、鍵盤和滑鼠裝置以外的輸入裝置。
+
+預設值: 允許轉送</string>
+
+         <string id="Allow_Default">允許 - 預設用戶端設定</string>
+
+         <string id="Allow_Override">允許 - 覆寫用戶端設定</string>
+
+         <string id="Disable_Default">停用 - 預設用戶端設定</string>
+
+         <string id="Disable_Override">停用 - 覆寫用戶端設定</string>
+
+         <string id="Allow_HID_Bootable">允許 HID 可開機</string>
+
+         <string id="Allow_HID_Bootable_Desc">允許轉送可開機輸入裝置 (也稱為 HID 可開機裝置)。
+
+預設值: 允許轉送</string>
+
+         <string id="Allow_Audio_Input_devices">允許音訊輸入裝置</string>
+
+         <string id="Allow_Audio_Input_devices_Desc">允許轉送音訊輸入裝置。
+
+預設值: 允許轉送</string>
+
+         <string id="Allow_Audio_Output_devices">允許音訊輸出裝置</string>
+
+         <string id="Allow_Audio_Output_devices_Desc">允許轉送音訊輸出裝置。
+
+預設值: 封鎖轉送</string>
+
+         <string id="Allow_keyboard_mouse">允許鍵盤和滑鼠裝置</string>
+
+         <string id="Allow_keyboard_mouse_Desc">允許轉送鍵盤和滑鼠裝置。
+
+預設值: 封鎖轉送</string>
+
+         <string id="Allow_Video_Devices">允許視訊裝置</string>
+
+         <string id="Allow_Video_Devices_Desc">允許轉送視訊裝置。
+
+預設值: 允許轉送</string>
+
+         <string id="Allow_Smart_Cards">允許智慧卡</string>
+
+         <string id="Allow_Smart_Cards_Desc">允許轉送智慧卡裝置。
+
+預設值: 封鎖轉送</string>
+
+         <string id="Allow_Auto_Device_Splitting">允許音訊裝置分割</string>
+
+         <string id="Allow_Auto_Device_Splitting_Desc">排除任何複合裝置的元件裝置，使其不會自動被視為不同的裝置。</string>
+
+         <string id="ShowVMWMediaProviderProxyIcon">顯示圖示</string>
+
+         <string id="ShowVMWMediaProviderProxyIcon_Desc">顯示適用於商務用 Skype 之虛擬化套件的圖示。此原則依預設為啟用。如果停用適用於商務用 Skype 之虛擬化套件的「顯示圖示」原則，則系統不會顯示此圖示，且您將無法檢視呼叫統計資料或訊息。</string>
+
+         <string id="ShowVMWMediaProviderProxyMessages">顯示訊息</string>
+
+         <string id="ShowVMWMediaProviderProxyMessages_Desc">顯示適用於商務用 Skype 之虛擬化套件的訊息。此原則依預設為啟用。如果停用適用於商務用 Skype 之虛擬化套件的「顯示圖示」或「顯示訊息」原則，則系統不會顯示訊息。</string>
+
+         <string id="SetVMWMediaProviderProxyForceNonOptimizedEnvVar">強制商務用 Skype 在非最佳化模式中執行</string>
+
+         <string id="SetVMWMediaProviderProxyForceNonOptimizedOptions_Desc">您可以透過自動偵測外部連線，強制商務用 Skype 在 Horizon Client 連線的非最佳化模式中執行。當 Horizon Client 透過外部閘道連線時，系統會將連線判定為外部。在此案例中，環境變數「ViewClient_Broker_GatewayType」已存在，且「ViewClient_Broker_GatewayLocation」設為外部。如果已設定「自動偵測外部連線」，則商務用 Skype 的虛擬化套件會在連線被判定為外部時還原為後援模式。
+您也可以強制商務用 Skype 針對 Horizon Client 連線在非最佳化模式中執行，方法是設定環境變數的名稱，而名稱會在連線時顯示於安裝 Horizon Agent 所在的機器上。如果已設定變數名稱，則商務用 Skype 的虛擬化套件會還原為後援模式。例如，如果已在遠端桌面平台代理程式機器上設定「ViewClient_F5_APM」環境變數，則當 Horizon Client 機器使用 F5 負載平衡器從網路外部連線，且您想要強制使用非最佳化模式時，請將此值設為 ViewClient_F5_APM。
+
+如果已設定任一設定並滿足條件，則商務用 Skype 的虛擬化套件會還原為後援模式。
+依預設不會設定此原則。</string>
+
+         <string id="EnableDetectProxySettings">啟用偵測 Proxy 設定</string>
+
+         <string id="EnableDetectProxySettings_Desc">啟用時，適用於商務用 Skype 的 VMware 虛擬化套件將偵測 Horizon Client 系統上是否有 Proxy 的設定，並對媒體流量使用那些設定。如果 Horizon Client 系統上沒有 Proxy 的設定，適用於商務用 Skype 的 VMware 虛擬化套件將會使用直接連線。當 Horizon Client 系統必須使用 Proxy 伺服器時，啟用此原則將會降低延遲。</string>
+
+         <string id="SuppressMinorVersionMismatchWarning">隱藏次要版本不符警告</string>
+
+         <string id="SuppressMinorVersionMismatchWarning_Desc">如果適用於商務用 Skype 的 VMware 虛擬化套件不具有與 Horizon Client 系統和 Horizon 桌面平台上相同的次要 API 版本，即會在通知區域顯示警告。啟用此 GPO 後，此警告即會隱藏。請注意，當次要 API 版本不相符時，商務用 Skype 呼叫將會最佳化，但是虛擬化套件可能不具有最新功能。</string>
+
+         <string id="DisableAECExtendedFilter">在適用於商務用 Skype 的 VMware 虛擬化套件中停用用於消除聲學回音的延伸篩選器</string>
+
+         <string id="DisableAECExtendedFilter_Desc">啟用時，適用於商務用 Skype 的 VMware 虛擬化套件將不會使用延伸篩選器來消除聲學回音。依預設，適用於商務用 Skype 的 VMware 虛擬化套件將使用延伸篩選器來消除聲學回音。此篩選器提供更佳的回音和回饋音消除。在案例中當 Horizon Client 系統的麥克風和喇叭彼此接近時特別有效。</string>
+
+         <string id="Proxy_default_ie_autodetect">預設自動偵測 Proxy</string>
+
+         <string id="Proxy_default_ie_autodetect_Desc">預設 IE 連線設定。此設定會開啟 [網際網路內容] 的 [區域網路設定] 中的自動偵測設定</string>
+
+         <string id="Default_proxy_server">預設 Proxy 伺服器</string>
+
+         <string id="Default_proxy_server_Desc">Proxy 伺服器的預設 IE 連線設定。此設定會指定應在 [網際網路內容] 的 [區域網路設定] 中使用的 Proxy 伺服器</string>
+
+         <string id="Update_Java_Proxy">設定 Java Applet 的 Proxy</string>
+
+         <string id="Update_Java_Proxy_Desc">設定 Java Proxy 為直接連線並略過瀏覽器的設定。設定 Java Proxy 使用用戶端 IP 通透性以重新導向 Java Applet 的網路。設為預設值會將 Java Proxy 設定還原為原始設定。</string>
+
+         <string id="Use_Client_IP">針對 Java Proxy 使用用戶端 IP 通透性</string>
+
+         <string id="Use_Direct_Connect">針對 Java Proxy 使用直接連線</string>
+
+         <string id="Use_Default">針對 Java Proxy 使用預設值</string>
+
+         <string id="Enable_white_list">啟用白名單</string>
+
+         <string id="Enable_black_list">啟用黑名單</string>
+
+         <string id="VMware_HTML5_FEATURES">VMware HTML5 功能</string>
+
+         <string id="Enable_HTML5_FEATURES">啟用 VMware HTML5 功能</string>
+
+         <string id="Enable_HTML5_FEATURES_Desc">啟用 VMware HTML5 功能。如果此原則設為「已啟用」，則可使用 VMware HTML5 多媒體重新導向、地理位置重新導向、瀏覽器重新導向或 Microsoft Teams 的媒體最佳化。如果此原則設定為「已停用」，則所有 VMware HTML5 功能均無法使用。此設定會在下次登入時生效。</string>
+
+         <string id="HTML5FEATURES_Disable_AudoDetect_Intranet">停用自動偵測內部網路</string>
+
+         <string id="HTML5FEATURES_Disable_AudoDetect_Intranet_Desc">當此原則為「已啟用」時，將會在下次登入期間停用 [包括所有未列在其他區域的近端內部網路網站] 和 [包含所有略過 Proxy 伺服器的網站] 內部網路設定。當此原則為「已停用」時，系統不會對 IE 近端內部網路區域進行任何變更。
+
+附註: 在以下情況下，必須將此原則設為 [已啟用]: (1) 已為 VMware HTML5 多媒體重新導向啟用 Edge 瀏覽器，或 (2) 已啟用地理位置重新導向。</string>
+
+         <string id="VMware_HTML5MMR">VMware HTML5 多媒體重新導向</string>
+
+         <string id="Enable_HTML5_MMR">啟用 VMware HTML5 多媒體重新導向</string>
+
+         <string id="Enable_HTML5_MMR_Desc">啟用 VMware HTML5 多媒體重新導向。此設定會在下次登入時生效。</string>
+
+         <string id="HTML5MMRUrlList">啟用 VMware HTML5 多媒體重新導向的 URL 清單。</string>
+
+         <string id="HTML5MMRUrlList_Desc">指定要啟用 VMware HTML5 多媒體重新導向的 URL 清單。在 [值名稱] 欄中指定 URL 模式，例如「https://www.youtube.com/*」。[值] 欄應為空白，並保留供日後使用。</string>
+
+         <string id="HTML5MMR_Enable_Chrome">針對 VMware HTML5 多媒體重新導向啟用 Chrome 瀏覽器</string>
+
+         <string id="HTML5MMR_Enable_Chrome_Desc">僅在 VMware HTML5 多媒體重新導向為「已啟用」時，才會使用此原則。若未設定，則預設值將會與「啟用 VMware HTML5 多媒體重新導向」啟用時相同。</string>
+
+         <string id="HTML5MMR_Enable_Edge">針對 VMware HTML5 多媒體重新導向啟用舊版 Microsoft Edge 瀏覽器</string>
+
+         <string id="HTML5MMR_Enable_Edge_Desc">僅在 VMware HTML5 多媒體重新導向為「已啟用」時，才會使用此原則。若未設定，則預設值將會與「啟用 VMware HTML5 多媒體重新導向」啟用時相同。</string>
+
+         <string id="HTML5MMR_Enable_Edge_Chromium">針對 VMware HTML5 多媒體重新導向啟用 Microsoft Edge (Chromium) 瀏覽器</string>
+
+         <string id="HTML5MMR_Enable_Edge_Chromium_Desc">僅在 VMware HTML5 多媒體重新導向為「已啟用」時，才會使用此原則。若未設定，則預設值將會與「啟用 VMware HTML5 多媒體重新導向」啟用時相同。</string>
+
+         <string id="HTML5MMR_Auto_Adjust_Visual_Effect">自動調整視窗視覺效果</string>
+
+         <string id="HTML5MMR_Auto_Adjust_Visual_Effect_Desc">此原則用於自動調整視窗對 VMware HTML5 多媒體重新導向的視覺效果。如果未設定或停用，則不會自動調整視窗視覺效果。</string>
+
+         <string id="VMware_GEO_REDIR">VMware 地理位置重新導向</string>
+
+         <string id="Enable_GEO_REDIR">啟用 VMware 地理位置重新導向</string>
+
+         <string id="Enable_GEO_REDIR_Desc">啟用 VMware 地理位置重新導向功能。此設定會在下次登入時生效。</string>
+
+         <string id="Enable_GEO_REDIR_For_Chrome">啟用 Chrome 瀏覽器的 VMware 地理位置重新導向</string>
+
+         <string id="Enable_GEO_REDIR_For_Chrome_Desc">啟用 Chrome 瀏覽器的 VMware 地理位置重新導向功能。此設定會在下次登入時生效。</string>
+
+         <string id="Enable_GEO_REDIR_For_Edge_Chromium">啟用 Microsoft Edge (Chromium) 瀏覽器的 VMware 地理位置重新導向</string>
+
+         <string id="Enable_GEO_REDIR_For_Edge_Chromium_Desc">啟用 Microsoft Edge (Chromium) 瀏覽器的 VMware 地理位置重新導向功能。此設定會在下次登入時生效。</string>
+
+         <string id="GeoRedirUrlList">啟用 VMware 地理位置重新導向的 URL 清單。</string>
+
+         <string id="GeoRedirUrlList_Desc">指定要啟用地理位置重新導向功能的 URL 清單。在 [值名稱] 欄中指定 URL 模式，例如「https://www.youtube.com/*」。[值] 欄應為空白，並保留供日後使用。此 URL 清單將會由 (1) VMware Horizon 地理位置重新導向擴充功能用於所有 RDSH 和 VDI 環境中的 Google Chrome 和 Microsoft Edge (Chromium) 瀏覽器，以及由 (2) VMware Horizon 地理位置重新導向外掛程式用於 RDSH 和 Windows 7 VDI 環境中的 Internet Explorer。</string>
+
+         <string id="GeoRedirDistanceDelta">設定要報告位置更新的最小距離</string>
+
+         <string id="GeoRedirDistanceDelta_Desc">指定用戶端中的位置更新與上次向代理程式報告的更新 (必須向代理程式報告新位置) 之間的最小距離。依預設，使用的最小距離為 75 公尺。</string>
+
+         <string id="VMware_BROWSER_REDIR">VMware Browser 重新導向</string>
+
+         <string id="Enable_BROWSER_REDIR">啟用 VMware Browser 重新導向</string>
+
+         <string id="Enable_BROWSER_REDIR_Desc">啟用 VMware Browser 重新導向功能。此設定會在下次登入時生效。</string>
+
+         <string id="Enable_BROWSER_REDIR_For_Chrome">啟用 Chrome 瀏覽器的 VMware Browser 重新導向</string>
+
+         <string id="Enable_BROWSER_REDIR_For_Chrome_Desc">啟用 Chrome 瀏覽器的 VMware Browser 重新導向功能。此設定會在下次登入時生效。</string>
+
+         <string id="Enable_BROWSER_REDIR_For_Edge_Chromium">啟用 Microsoft Edge (Chromium) 瀏覽器的 VMware Browser 重新導向功能</string>
+
+         <string id="Enable_BROWSER_REDIR_For_Edge_Chromium_Desc">啟用 Microsoft Edge (Chromium) 瀏覽器的 VMware Browser 重新導向功能。此設定會在下次登入時生效。</string>
+
+         <string id="BrowserRedirFallbackWhitelistErr">啟用白名單違規後的自動後援</string>
+
+         <string id="BrowserRedirFallbackWhitelistErr_Desc">啟用時，如果在索引標籤中導覽至某個 URL (藉由在自訂網址列中輸入該 URL，或從任一白名單中的 URL 導覽至該 URL)，只要該 URL 不在任一清單中，即會停止該索引標籤的重新導向，而改為在代理程式上擷取並顯示該 URL。請注意，若嘗試導覽至未在「啟用 VMware Browser 重新導向的 URL 清單」下方設定的 URL，將會立即回復至代理程式上的擷取並轉譯，而不考量此設定。</string>
+
+         <string id="BrowserRedirShowErrPage">在自動後援前顯示含有錯誤資訊的頁面</string>
+
+         <string id="BrowserRedirShowErrPage_Desc">只有在啟用了「啟用白名單違規後的自動後援」，且有白名單違規存在時，才會使用此設定。在此情況下，如果啟用此設定，則會顯示一個頁面，且在倒數 5 秒後，索引標籤將會自動回復至擷取並轉譯導致代理程式出現違規的 URL。如果停用此設定，則索引標籤會直接回復至代理程式端的轉譯，而不會為使用者提供 5 秒的警告。</string>
+
+         <string id="BrowserRedirUrlList">啟用 VMware Browser 重新導向的 URL 清單</string>
+
+         <string id="BrowserRedirUrlList_Desc">指定瀏覽器重新導向功能的所有 URL。您可以在 Chrome 的網址列或自訂網址列中輸入這些 URL 來進行造訪。您也可以從清單中的其他 URL 或任何代理程式端轉譯的頁面開始導覽至這些 URL 來進行造訪。在 [值名稱] 欄中指定 URL 模式，例如「https://www.youtube.com/*」。[值] 欄應為空白，並保留供日後使用。</string>
+
+         <string id="BrowserRedirNavUrlList">啟用 VMware Browser 重新導向的導覽 URL 清單</string>
+
+         <string id="BrowserRedirNavUrlList_Desc">指定允許使用者導覽的 URL，可直接在自訂網址列中輸入，或是從其他清單中的 URL 開始導覽至這些 URL。您無法藉由在 Chrome 的網址列中輸入這些 URL 來進行造訪，也無法從任何代理程式端轉譯的頁面開始導覽至這些 URL。在 [值名稱] 欄中指定 URL 模式，例如「https://www.youtube.com/*」。[值] 欄應為空白，並保留供日後使用。</string>
+
+         <string id="VMware_WebRTC_REDIR_FEATURES">VMware WebRTC 重新導向功能</string>
+
+         <string id="Enable_Teams_Redir">為 Microsoft Teams 啟用媒體最佳化</string>
+
+         <string id="Enable_Teams_Redir_Desc">此設定用於啟用或停用 Microsoft Teams 最佳化。
+
+安裝 Horizon Agent 後，系統會在啟用了 Microsoft Teams 最佳化的代理程式上建立 teamsEnabled 登錄機碼。依預設，使用者可以在 Horizon Client 中設定 [WebRTC 型應用程式的媒體最佳化] 設定，選擇使用或不使用 Microsoft Teams 最佳化。
+
+如果此原則為 [已啟用]，則會啟用 Microsoft Teams 最佳化。如果啟用，且勾選 [強制用戶端 WebRTC 最佳化]，則會在端點強制執行 Teams 媒體最佳化，並忽略任何用戶端設定或其他任何管理原則 (例如，Chrome 用戶端的 Chrome 層級使用者原則)。如果啟用，且未勾選 [強制用戶端 WebRTC 最佳化]，則使用者可以透過 Horizon Client 的 [WebRTC 型應用程式的媒體最佳化] 設定，選擇使用或不使用 Microsoft Teams 最佳化。
+
+如果此原則為 [已停用]，Microsoft Teams 最佳化會停用且無法使用。Horizon Client 的 [WebRTC 型應用程式的媒體最佳化] 設定不會有任何影響。
+
+依預設，此原則為 [未設定]，但如果對原則進行變更然後再改回 [未設定]，則會移除 teamsEnabled 登錄機碼，而且不會使用 Microsoft Teams 最佳化。
+
+此設定會在下次登入時生效。</string>
+
+         <string id="Enable_Electron_App_Redir">為一般 Electron 應用程式啟用媒體最佳化</string>
+
+         <string id="Enable_Electron_App_Redir_Desc">此設定用於啟用或停用 Electron 應用程式最佳化。
+
+如果為 [已啟用] 或 [未設定]，則會啟用 Electron 應用程式最佳化。此外，如果您要強制使用者使用最佳化 (如果端點支援)，請選擇 [已啟用]，然後選取 [強制用戶端 WebRTC 最佳化]。[未設定] 會採取用戶端設定 (如果可用)。
+詳細資料:
+如果啟用，且未勾選 [強制用戶端 WebRTC 最佳化]，則使用者可以透過 Horizon Client 的 [WebRTC 型應用程式的媒體最佳化] 設定，選擇使用或不使用 Electron 應用程式最佳化。如果勾選，則會在端點強制執行 Electron 應用程式媒體最佳化，並忽略用戶端設定或任何其他管理原則 (例如，Chrome 用戶端的 Chrome 層級使用者原則)。
+依預設，Electron 應用程式最佳化設定為 [未設定]，表示啟用 Electron 應用程式最佳化，並允許使用者進行 [WebRTC 型應用程式的媒體最佳化] 設定。
+如果為 [已停用]，則 Electron 應用程式最佳化會停用且無法使用。Horizon Client 的 [WebRTC 型應用程式的媒體最佳化] 設定不會有任何影響。
+
+此設定會在下次登入時生效。</string>
+
+         <string id="Enable_AEC_Teams_Redir">啟用軟體聲學回音消除以針對 Microsoft Teams 進行媒體最佳化</string>
+
+         <string id="Enable_AEC_Teams_Redir_Desc">此設定可用於設定軟體聲學回音消除 (AEC) 以針對 Microsoft Teams 進行媒體最佳化。
+
+如果是 [已啟用]，則會在軟體中啟用 AEC。勾選 [使用建議的 AEC 演算法] 以取得最佳音訊品質和效能。取消勾選 [使用建議的 AEC 演算法]，即可使用 AEC 演算法，其使用較少的 CPU 但會降低音訊品質。此選項對於具有低浮點功耗的低階處理器很有用。強烈建議使用建議的 AEC 演算法，其在大多數情況下是理想的選擇。
+
+如果是 [已停用]，則 AEC 將在軟體中停用，且將不再使用。
+
+如果是 [未設定]，則會使用建議的演算法，在軟體中啟用 AEC。使用 Windows 用戶端時，如果硬體 AEC 無法使用，將會使用軟體 AEC。如果硬體 AEC 可用 (例如，如果耳機具有內建 AEC)，則不會使用軟體 AEC。使用非 Windows 用戶端時，無論硬體 AEC 是否可用，都將使用軟體 AEC。</string>
+
+         <string id="Enable_Datachannel_Teams_Redir">為 Microsoft Teams 的媒體最佳化啟用資料通道</string>
+         <string id="Enable_Datachannel_Teams_Redir_Desc">此設定可用於為 Microsoft Teams 的媒體最佳化啟用或停用資料通道。
+
+如果為 [已啟用]，則可以將資料通道用於 Microsoft Teams 的媒體最佳化，並且需要資料通道的功能 (例如即時字幕) 可供使用。
+
+如果為 [已停用]，則無法將資料通道用於 Microsoft Teams 的媒體最佳化，而且需要資料通道的功能將無法使用。
+
+如果是 [未設定]，則會啟用資料通道。</string>
+
+         <string id="Video_Cpu_Overuse_Threshold">設定 CPU 超用臨界值</string>
+
+         <string id="Video_Cpu_Overuse_Threshold_Desc"> 如果 CPU 使用率高於臨界值，則傳送的視訊解析度將會降低，而這會降低用戶端 CPU 使用率。預設臨界值為 85。若要在視訊通話期間降低用戶端 CPU 使用率，請以小於 85 的值將此原則設為 [已啟用]。將此原則設為 [已停用] 或 [未設定]，以使用預設臨界值 85。如果不要偵測 CPU 超用，請以 0 值將此原則設為 [已啟用]。此設定會在您下次登入時生效。</string>
+
+         <string id="Enable_Sharing_Client_Screen_InAppSession">在應用程式分享模式中於遠端處理 Microsoft Teams 應用程式時啟用用戶端桌面平台畫面的分享</string>
+
+         <string id="Enable_Sharing_Client_Screen_InAppSession_Desc">在遠端處理 Microsoft Teams 應用程式時，螢幕畫面分享功能將會分享用戶端桌面平台螢幕畫面，而非遠端桌面平台螢幕畫面。選取 [已停用] 可停用應用程式分享模式中的螢幕畫面分享功能。如果「已啟用」或「未設定」，則螢幕畫面分享功能可以分享用戶端桌面平台畫面。</string>
+
+         <string id="Enable_E911">為 Microsoft Teams 啟用 E911</string>
+
+         <string id="Enable_E911_Desc">當 Microsoft Teams 以最佳化模式執行時，用戶端會將 E911 資料傳送給 Microsoft。若要停用與 Microsoft 的 E911 資料共用，請選取 [已停用]。如果是 [已啟用] 或 [未設定]，則會與 Microsoft 共用用戶端 E911 資料。</string>
+
+         <string id="Enable_HID">針對 Microsoft Teams 啟用用戶端 HID 裝置按鈕</string>
+
+         <string id="Enable_HID_Desc">當 Microsoft Teams 以最佳化模式執行時，使用者可以使用用戶端 HID 裝置按鈕來與 Microsoft Teams 互動。若要停用用戶端 HID 裝置支援，請選取 [已停用]。若為 [已啟用] 或 [未設定]，則允許使用用戶端 HID 裝置支援。</string>
+
+         <string id="Enable_Background_Effects">啟用 Microsoft Teams 的背景效果</string>
+
+         <string id="Enable_Background_Effects_Desc">當 Microsoft Teams 以最佳化模式執行時，使用者可以選取虛擬背景進行通話和會議。若要停用背景效果支援，請選取 [已停用]。若為 [已啟用] 或 [未設定]，則允許使用背景效果支援。</string>
+
+         <string id="VMware_AppTap_Config">VMware AppTap 組態</string>
+
+         <string id="ProcessIgnoreList">偵測空白應用程式工作階段時要略過的程序</string>
+
+         <string id="ProcessIgnoreList_Desc">指定偵測空白應用程式工作階段時要略過的程序清單。您可以指定程序檔案名稱或完整路徑。將以不區分大小寫的方式評估這些值。路徑中不允許環境變數。允許的 UNC 網路路徑 (例如 \\vmware\temp\app.exe)。</string>
+
+         <string id="VDI_disconnect_time_till_logoff">中斷連線的工作階段時間限制 (VDI)</string>
+
+         <string id="VDI_disconnect_time_till_logoff_Desc">指定中斷連線的 VDI 桌面平台工作階段將自動登出的時間量。
+如果選取「永不」，則此機器上已中斷連線的 VDI 桌面平台工作階段將永遠不會登出。如果選取「立即」，已中斷連線的工作階段將立即登出。
+
+View 連線伺服器管理員中存在類似的設定，您可以在桌面平台集區設定中找到它，名為「中斷連線後自動登出」。如果同時設定了此設定和 View 連線伺服器管理員設定，則此處選取的值會優先獲得採用。
+例如，無論在 View 連線伺服器管理員上的設定為何，在此處選取「永不」皆會防止將中斷連線的工作階段 (此機器上) 登出。</string>
+
+         <string id="RDS_idle_time_till_disconnect">中斷連線前的 RDS 閒置時間</string>
+
+         <string id="RDS_idle_time_till_disconnect_Desc">指定閒置遠端桌面服務工作階段將自動中斷連線的時間量。
+如果選取「永不」，則此機器上的遠端桌面服務工作階段將永遠不會中斷連線。</string>
+
+         <string id="RDS_disconnect_time_till_logoff">登出前的 RDS 中斷連線時間</string>
+
+         <string id="RDS_disconnect_time_till_logoff_Desc">指定已中斷連線遠端桌面服務工作階段將自動登出的時間長度。
+如果選取「永不」，則此機器上已中斷連線的遠端桌面服務工作階段將永遠不會登出。</string>
+
+         <string id="RDS_active_time_till_disconnect">中斷連線前的 RDS 連線時間</string>
+
+         <string id="RDS_active_time_till_disconnect_Desc">指定「遠端桌面服務」工作階段在自動中斷連線之前可處於作用中狀態的時間長度上限。
+如果選取「永不」，則此機器上的遠端桌面服務工作階段將永遠不會中斷連線。</string>
+
+         <string id="RDS_end_session_time_limit">RDS 會在達到時間限制時結束工作階段</string>
+
+         <string id="RDS_end_session_time_limit_Desc">指定是否要結束已逾時的遠端桌面服務工作階段，而將其中斷連線。
+如果已設定，在達到作用中或閒置工作階段的時間限制後，工作階段將會結束 (使用者會登出且工作階段會從伺服器中刪除)。依預設，遠端桌面服務工作階段在達到其時間限制後會中斷連線。</string>
+
+         <string id="RDS_threshold_connecting_session">正在連線工作階段臨界值</string>
+
+         <string id="RDS_threshold_connecting_session_Desc">指定可同時登入 RDSH 機器的工作階段數目上限，免除重新連線工作階段。
+
+如果啟用，工作階段臨界值最初設定為 20，但應根據使用案例進行變更。如果選取 0，則會停用連線工作階段臨界值。
+
+此原則依預設為停用，因此如果未設定原則，則會停用連線工作階段臨界值。</string>
+
+         <string id="RDS_threshold_load_index">負載指數臨界值</string>
+
+         <string id="RDS_threshold_load_index_Desc">指定 RDSH 機器開始拒絕工作階段登入的負載指數下限，免除重新連線工作階段。
+
+如果啟用，則載入臨界值最初設定為 0，但應根據使用案例來變更。如果選取 0，則會停用負載指數臨界值。
+
+此原則依預設為停用，因此如果未設定原則，則會停用負載指數臨界值。</string>
+
+         <string id="Prewarm_disconnect_time_till_logoff">預熱工作階段時間限制</string>
+
+         <string id="Prewarm_disconnect_time_till_logoff_Desc">指定預熱工作階段將自動登出的時間量。</string>
+
+         <string id="EnableUWPOnRDSH">在 RDSH 平台上啟用 UWP 支援</string>
+
+         <string id="EnableUWPOnRDSH_Desc">此原則可控制是否可使用支援 UWP 應用程式的作業系統版本，在 RDSH 伺服器陣列上掃描和啟動 UWP 應用程式。此原則不適用於桌面平台作業系統平台，例如 VDI 應用程式遠端處理。啟用時，UWP 應用程式可作為 RDSH 伺服器陣列中的主控應用程式。必須重新啟動 wsnm 服務或重新啟動 RDSH 伺服器，GPO 才會生效。請參閱 VMware 說明文件以瞭解有哪些支援的平台，以及此設定依預設為啟用還是停用。</string>
+
+        <string id="HandleLegalNoticeInWindow">重新導向以視窗開啟的法律聲明訊息</string>
+
+        <string id="HandleLegalNoticeInWindow_Desc">啟用時，此原則會將法律聲明重新導向至指定大小的 Horizon Client 視窗。系統會以像素為單位指定此原則中的寬度和高度。對於高 DPI 監視器，將會根據 DPI 將大小相乘。僅 RDSH 主控應用程式支援此功能。
+此原則依預設為停用。需要重新啟動 RDSH 伺服器和 View Client，GPO 才會生效。</string>
+
+        <string id="TIME_NEVER">永不</string>
+
+         <string id="TIME_1MIN">1 分鐘</string>
+
+         <string id="TIME_5MIN">5 分鐘</string>
+
+         <string id="TIME_10MIN">10 分鐘</string>
+
+         <string id="TIME_15MIN">15 分鐘</string>
+
+         <string id="TIME_30MIN">30 分鐘</string>
+
+         <string id="TIME_1HR">1 小時</string>
+
+         <string id="TIME_2HR">2 小時</string>
+
+         <string id="TIME_3HR">3 小時</string>
+
+         <string id="TIME_6HR">6 小時</string>
+
+         <string id="TIME_8HR">8 小時</string>
+
+         <string id="TIME_10HR">10 小時</string>
+
+         <string id="TIME_12HR">12 小時</string>
+
+         <string id="TIME_18HR">18 小時</string>
+
+         <string id="TIME_1D">1 天</string>
+
+         <string id="TIME_2D">2 天</string>
+
+         <string id="TIME_3D">3 天</string>
+
+         <string id="TIME_4D">4 天</string>
+
+         <string id="TIME_5D">5 天</string>
+
+         <string id="TIME_1W">1 週</string>
+
+         <string id="TIME_IMMEDIATELY">立即</string>
+
+         <string id="EnableBatStatRedir">啟用電池狀態重新導向</string>
+
+         <string id="EnableBatStatRedir_Desc">此原則可控制是否啟用電池狀態重新導向。未設定此原則時，會啟用電池狀態重新導向。</string>
+         <string id="VMware_Watermark">浮水印</string>
+         <string id="VMware_Watermark_Config">浮水印組態</string>
+         <string id="Desktop_Watermark_Configuration_Desc">此設定可讓您將浮水印設定為在虛擬桌面平台上顯示。在「文字」區域中，您可以設定將顯示在浮水印中的內容。選項包括:
+
+%ViewClient_IP_Address%
+%ViewClient_Broker_UserName%
+%ViewClient_Broker_DomainName%
+%COMPUTERNAME%
+%USERDOMAIN%
+%USERNAME%
+%ViewClient_ConnectTime%   - 日期格式為月/日/年
+%ViewClient_ConnectTicks%  - 時間格式為時:分:秒
+
+以下是「文字」的範例:
+%USERDOMAIN%\%USERNAME%
+%COMPUTERNAME% 連接時間 %ViewClient_ConnectTime%
+%ViewClient_IP_Address%
+
+「文字」的字元限制為 256 個字元，且在擴充後限制為 1024 個字元。
+
+「映像配置」會指定浮水印的配置。我們支援「並排」、「多重」和「置中」。「多重」會將浮水印放置在中心和每個角落。針對應用程式工作階段，系統會忽略此設定，且配置將一律為「並排」。
+「文字旋轉」可讓您選取浮水印文字的旋轉角度。
+「不透明度」可讓您選擇文字的透明度。
+「邊界」可指定浮水印與虛擬桌面平台畫面邊緣之間的距離，僅適用於「並排」配置。
+「文字色彩」使用以空格分隔的十進位格式 RGB 色彩值，來指定浮水印文字的色彩，而文字外框以對比色彩呈現。依預設，文字會以白色呈現，而外框以黑色呈現。
+「字型大小」指定浮水印文字的大小。此值為 0 時，將會套用預設字型大小。
+[重新整理時間間隔] 指定浮水印重新整理的時間間隔 (以秒為單位)。指定 0 時，系統會停用浮水印更新。最大值為 86400 秒 (24 小時)。
+</string>
+         <string id="Tile">並排</string>
+         <string id="Multiple">多重</string>
+         <string id="Center">置中</string>
+         <string id="TextColor">文字色彩</string>
+         <string id="FontSize">字型大小</string>
+         <string id="RefreshInterval">重新整理時間間隔</string>
+         <string id="BlockScreenCapture">螢幕擷取封鎖</string>
+         <string id="BlockScreenCapture_Desc">決定使用者是否可以從其端點擷取其虛擬桌面平台或遠端應用程式的螢幕擷取畫面。此設定只能在 2106 及更新版本的 Windows 版 Horizon Client 及 Mac 版 Horizon Client 上強制執行。預設值為停用，允許使用者從其裝置上擷取螢幕擷取畫面。
+
+啟用: 封鎖使用者從 Windows 或 macOS 裝置中擷取虛擬桌面平台或虛擬應用程式的螢幕擷取畫面。
+
+停用: 允許使用者從其端點擷取螢幕擷取畫面。</string>
+         <string id="AntiKeyLogger">鍵盤記錄木馬程式封鎖</string>
+         <string id="AntiKeyLogger_Desc">決定端點是否加密鍵盤與 Horizon Client 之間的通訊，以避免在端點上記錄金鑰惡意程式碼。 無論虛擬機器中的 GPO 設定為何，Horizon Server 的初始連線始終受到保護。 初始驗證之後，此設定會決定端點上的所有輸入是否均已加密。 此設定只能在 Mac 版 Horizon Client 2111 和 Windows 版 Horizon Client 2203 或更新版本上強制執行。預設為停用。
+
+啟用: 加密鍵盤與 Horizon Client 之間的所有按鍵輸入。
+
+停用: 按鍵輸入會在端點上正常通訊。</string>
+      </stringTable>
+
+      <presentationTable>
+
+         <presentation id="MaxCollaboratorCount">
+            <decimalTextBox refId="MaxCollaboratorCount_DB" defaultValue="5">最大值</decimalTextBox>
+         </presentation>
+
+         <presentation id="CollaborationEmailInviteDelimiter">
+            <textBox refId="CollaborationEmailInviteDelimiter_TB">
+               <label>電子郵件地址之間的分隔符號</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="CollaborationServerURLs">
+            <listBox refId="CollaborationServerURLs_list">外部伺服器 URL 和名稱的清單</listBox>
+         </presentation>
+
+         <presentation id="ConnectionTicketTimeout">
+            <decimalTextBox refId="ConnectionTicketTimeout_DB" defaultValue="120">連線票證逾時</decimalTextBox>
+         </presentation>
+
+         <presentation id="CredentialFilterExceptions">
+            <textBox refId="CredentialFilterExceptions_TB">
+               <label>認證篩選器例外狀況</label>
+            </textBox>
+         </presentation>
+         <presentation id="RDPVcBridgeUnsupportedClients">
+            <textBox refId="RDPVcBridgeUnsupportedClients_TB">
+               <label>RDPVcBridge 不支援的用戶端</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="CommandsToRunOnConnect">
+            <listBox refId="CommandsToRunOnConnect_list">命令</listBox>
+         </presentation>
+
+         <presentation id="CommandsToRunOnReconnect">
+            <listBox refId="CommandsToRunOnReconnect_list">命令</listBox>
+         </presentation>
+
+         <presentation id="CommandsToRunOnDisconnect">
+            <listBox refId="CommandsToRunOnDisconnect_list">命令</listBox>
+         </presentation>
+
+         <presentation id="SSO_retry_timeout">
+            <decimalTextBox refId="SSO_retry_timeout_DB" defaultValue="5000">Single Sign-On 重試逾時</decimalTextBox>
+         </presentation>
+
+         <presentation id="RDS_threshold_connecting_session">
+            <decimalTextBox refId="RDS_threshold_connecting_session_DB" defaultValue="20">正在連線工作階段臨界值</decimalTextBox>
+         </presentation>
+
+         <presentation id="RDS_threshold_load_index">
+            <decimalTextBox refId="RDS_threshold_load_index_DB" defaultValue="0">負載指數臨界值</decimalTextBox>
+         </presentation>
+
+         <presentation id="Win10PhysicalAgentAudioOption">
+            <dropdownList refId="Win10PhysicalAgentAudioOption_DDL" defaultItem="0">單一工作階段 Windows 10 實體遠端桌面平台機器的音訊選項</dropdownList>
+         </presentation>
+
+         <presentation id="Accept_SSL_encr_framework_channel">
+            <dropdownList refId="Accept_SSL_encr_framework_channel_DDL" defaultItem="0">接受採用 SSL 加密的架構通道</dropdownList>
+         </presentation>
+
+         <presentation id="Local_Reader_Name">
+            <textBox refId="Local_Reader_Name_TB">
+               <label>本機讀卡機名稱</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Cert_wait_timeout">
+            <decimalTextBox refId="Cert_wait_timeout_DB" defaultValue="40">憑證等候逾時</decimalTextBox>
+         </presentation>
+
+         <presentation id="Min_key_size">
+            <decimalTextBox refId="Min_key_size_DB" defaultValue="1024">最小金鑰大小</decimalTextBox>
+         </presentation>
+
+         <presentation id="All_key_sizes">
+            <textBox refId="All_key_sizes_TB">
+               <label>所有金鑰大小</label>
+                  <defaultValue>2048</defaultValue>
+            </textBox>
+         </presentation>
+
+         <presentation id="Keys_to_precreate">
+            <decimalTextBox refId="Keys_to_precreate_DB" defaultValue="5">要預先建立的金鑰數目</decimalTextBox>
+         </presentation>
+
+         <presentation id="Cert_min_validity">
+            <decimalTextBox refId="Cert_min_validity_DB" defaultValue="10">憑證所需的最短有效期間</decimalTextBox>
+         </presentation>
+
+         <presentation id="WhfbCertificateAllowedApplicationsList">
+            <multiTextBox refId="Whfb_Certificate_Allowed_Applications_list_TB">允許的可執行檔清單</multiTextBox>
+         </presentation>
+
+         <presentation id="Exclude_Vid_Pid">
+            <textBox refId="Exclude_Vid_Pid_TB">
+               <label>排除 Vid/Pid 裝置</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Exclude_Vid_Pid_Rel">
+            <textBox refId="Exclude_Vid_Pid_Rel_TB">
+               <label>排除 Vid/Pid/Rel 裝置</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Include_Vid_Pid">
+            <textBox refId="Include_Vid_Pid_TB">
+               <label>納入 Vid/Pid 裝置</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Include_Vid_Pid_Rel">
+            <textBox refId="Include_Vid_Pid_Rel_TB">
+               <label>納入 Vid/Pid/Rel 裝置</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Exclude_device_family">
+            <textBox refId="Exclude_device_family_TB">
+               <label>排除裝置系列</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Include_device_family">
+            <textBox refId="Include_device_family_TB">
+               <label>納入裝置系列</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="HidOpt_Include_Vid_Pid">
+            <textBox refId="HidOpt_Include_Vid_Pid_TB">
+               <label>包含 HID 最佳化 Vid/Pid 裝置</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Exclude_Auto_Vid_Pid">
+            <textBox refId="Exclude_Auto_Vid_Pid_TB">
+               <label>排除自動連線 Vid/Pid 裝置</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Exclude_auto_device_family">
+            <textBox refId="Exclude_auto_device_family_TB">
+               <label>排除自動連線裝置系列</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Exclude_Vid_Pid_from_Split">
+            <textBox refId="Exclude_Vid_Pid_from_Split_TB">
+               <label>排除 Vid/Pid 裝置以避免分割</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Split_Vid_Pid_Device">
+            <textBox refId="Split_Vid_Pid_Device_TB">
+               <label>分割 Vid/Pid 裝置</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Allow_other_input_devices">
+            <dropdownList refId="Allow_other_input_devices_DDL" defaultItem="0">允許其他輸入裝置</dropdownList>
+         </presentation>
+
+         <presentation id="Allow_HID_Bootable">
+            <dropdownList refId="Allow_HID_Bootable_DDL" defaultItem="0">允許 HID 可開機</dropdownList>
+         </presentation>
+
+         <presentation id="Allow_Audio_Input_devices">
+            <dropdownList refId="Allow_Audio_Input_devices_DDL" defaultItem="0">允許音訊輸入裝置</dropdownList>
+         </presentation>
+
+         <presentation id="Allow_Audio_Output_devices">
+            <dropdownList refId="Allow_Audio_Output_devices_DDL" defaultItem="0">允許音訊輸出裝置</dropdownList>
+         </presentation>
+
+         <presentation id="Allow_keyboard_mouse">
+            <dropdownList refId="Allow_keyboard_mouse_DDL" defaultItem="0">允許鍵盤和滑鼠裝置</dropdownList>
+         </presentation>
+
+         <presentation id="Allow_Video_Devices">
+            <dropdownList refId="Allow_Video_Devices_DDL" defaultItem="0">允許視訊裝置</dropdownList>
+         </presentation>
+
+         <presentation id="Allow_Smart_Cards">
+            <dropdownList refId="Allow_Smart_Cards_DDL" defaultItem="0">允許智慧卡</dropdownList>
+         </presentation>
+
+         <presentation id="Allow_Auto_Device_Splitting">
+            <dropdownList refId="Allow_Auto_Device_Splitting_DDL" defaultItem="0">允許音訊裝置分割</dropdownList>
+         </presentation>
+
+         <presentation id="Accept_SSL_encr_framework_channel_2">
+            <dropdownList refId="Accept_SSL_encr_framework_channel_2_DDL" defaultItem="0">接受採用 SSL 加密的架構通道</dropdownList>
+         </presentation>
+
+         <presentation id="Default_proxy_server">
+            <textBox refId="Default_proxy_server_TB">
+               <label>預設 Proxy 伺服器</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Update_Java_Proxy">
+            <dropdownList refId="Update_Java_Proxy_DDL" defaultItem="2">設定 Java Applet 的 Proxy</dropdownList>
+         </presentation>
+
+         <presentation id="HTML5MMRUrlList">
+            <listBox refId="HTML5MMRUrlList_list">要啟用 VMware HTML5 多媒體重新導向的 URL 清單。</listBox>
+         </presentation>
+
+         <presentation id="GeoRedirUrlList">
+            <listBox refId="GeoRedirUrlList_list">要啟用 VMware 地理位置重新導向功能的 URL 清單。</listBox>
+         </presentation>
+
+         <presentation id="GeoRedirDistanceDelta">
+            <textBox refId="GeoRedirDistanceDelta_value">
+               <label>最小距離 (以公尺為單位)</label>
+               <defaultValue>75</defaultValue>
+            </textBox>
+         </presentation>
+
+         <presentation id="BrowserRedirUrlList">
+            <listBox refId="BrowserRedirUrlList_list">要啟用 VMware Browser 重新導向功能的 URL 清單。</listBox>
+         </presentation>
+
+         <presentation id="BrowserRedirNavUrlList">
+            <listBox refId="BrowserRedirNavUrlList_list">要啟用 VMware Browser 重新導向功能進行導覽的 URL 清單。</listBox>
+         </presentation>
+
+         <presentation id="SetForceNonOptimizedOptions">
+            <checkBox refId="AUTO_DETECT_EXTERNAL_CONNECTIONS_CHKBOX">自動偵測外部連線</checkBox>
+            <textBox refId="SetForceNonOptimizedEnvVar_TB">
+               <label>環境變數的名稱:</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="UnityFilterRules_Filter">
+            <listBox refId="UnityFilterRules_FilterList">Unity 篩選規則</listBox>
+         </presentation>
+
+         <presentation id="Enable_Unity_Touch">
+            <checkBox refId="Enabled_UWP_For_UnityTouch_CB" defaultChecked="true">在 Windows 10 上為 Unity Touch 啟用通用 Windows 平台 (UWP) 應用程式支援。</checkBox>
+         </presentation>
+
+         <presentation id="ProcessIgnoreList">
+            <multiTextBox refId="ProcessIgnoreList_TB">偵測空白應用程式工作階段時要略過的程序</multiTextBox>
+         </presentation>
+
+         <presentation id="VDI_idle_time_till_disconnect">
+            <dropdownList refId="VDI_idle_time_till_disconnect_minutes" noSort="true" defaultItem="0">閒置逾時</dropdownList>
+         </presentation>
+
+         <presentation id="VDI_disconnect_time_till_logoff">
+            <dropdownList refId="VDI_disconnect_time_till_logoff_minutes" noSort="true" defaultItem="0">中斷連線逾時</dropdownList>
+         </presentation>
+
+         <presentation id="RDS_idle_time_till_disconnect">
+            <dropdownList refId="RDS_idle_time_till_disconnect_milliseconds" noSort="true" defaultItem="0">RDS 閒置逾時</dropdownList>
+         </presentation>
+
+         <presentation id="RDS_disconnect_time_till_logoff">
+            <dropdownList refId="RDS_disconnect_time_till_logoff_milliseconds" noSort="true" defaultItem="0">RDS 中斷連線逾時</dropdownList>
+         </presentation>
+
+         <presentation id="RDS_active_time_till_disconnect">
+            <dropdownList refId="RDS_active_time_till_disconnect_milliseconds" noSort="true" defaultItem="0">RDS 連線逾時</dropdownList>
+         </presentation>
+
+         <presentation id="Prewarm_disconnect_time_till_logoff">
+            <dropdownList refId="Prewarm_disconnect_time_till_logoff_minutes" noSort="true" defaultItem="5">預熱逾時</dropdownList>
+         </presentation>
+
+         <presentation id ="watermark_configuration">
+            <multiTextBox refId="Text">文字</multiTextBox>
+            <dropdownList refId="ImageFit" noSort="true" defaultItem="0">映像配置</dropdownList>
+            <decimalTextBox refId="Rotation" defaultValue="45">文字旋轉</decimalTextBox>
+            <decimalTextBox refId="Opacity" defaultValue="50">不透明度</decimalTextBox>
+            <decimalTextBox refId="Margin" defaultValue="50">邊界</decimalTextBox>
+            <textBox refId="TextColor">
+               <label>文字色彩</label>
+               <defaultValue>255 255 255</defaultValue>
+            </textBox>
+            <decimalTextBox refId="FontSize" defaultValue="0">字型大小</decimalTextBox>
+            <decimalTextBox refId="RefreshInterval" defaultValue="0">重新整理時間間隔</decimalTextBox>
+         </presentation>
+
+        <presentation id="AppSignInWindow">
+            <decimalTextBox refId="app_sign_in_window_width" defaultValue="800" spinStep="2">法律聲明視窗寬度: </decimalTextBox>
+            <decimalTextBox refId="app_sign_in_window_height" defaultValue="600" spinStep="2">法律聲明視窗高度: </decimalTextBox>
+        </presentation>
+        <presentation id="Video_Cpu_Overuse_Threshold">
+            <decimalTextBox refId="Video_Cpu_Overuse_Threshold_data" defaultValue="85">視訊 CPU 超用臨界值</decimalTextBox>
+         </presentation>
+         <presentation id="Webrtc_Recommended_AEC">
+            <checkBox refId="Webrtc_Recommended_AEC_CB" defaultChecked="true"> 使用建議的 AEC 演算法</checkBox>
+         </presentation>
+         <presentation id="Force_Enable_Teams_Redir">
+            <checkBox refId="Force_Enable_Teams_Redir_Value" defaultChecked="false"> 強制用戶端 WebRTC 最佳化</checkBox>
+         </presentation>
+         <presentation id="Force_Enable_Electron_App_Redir">
+            <checkBox refId="Force_Enable_Electron_App_Redir_Value" defaultChecked="false"> 強制用戶端 WebRTC 最佳化</checkBox>
+         </presentation>
+      </presentationTable>
+   </resources>
+</policyDefinitionResources>

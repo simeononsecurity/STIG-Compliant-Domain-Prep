@@ -1,4 +1,4 @@
-<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+﻿<policyDefinitionResources revision="1.0" schemaVersion="1.0">
   <displayName>
   </displayName>
   <description>
@@ -23,6 +23,40 @@ Wenn Sie diese Richtlinieneinstellung nicht konfigurieren, wird die Deaktivierun
       <string id="RedirectAll_PolicyExplain">Wenn diese Richtlinieneinstellung aktiviert ist, werden alle COM-Clientports automatisch verbunden (selbst dann, wenn kein einzelnes GPO konfiguriert ist). Wenn für einige der Ports individuelle GPO-Einstellungen konfiguriert sind, werden die individuellen GPO-Einstellungen des Ports verwendet.
 
 Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, wird die Funktionalität für das automatische Verbinden durch individuelle GPO-Einstellungen des Ports oder durch lokale Programmeinstellungen bestimmt.</string>
+      <string id="EnableEventLog_PolicyName">Funktion „Windows-Ereignisprotokoll aktivieren“</string>
+      <string id="EnableEventLog_PolicyExplain">Wenn diese Richtlinieneinstellung aktiviert ist, werden verschiedene Ereignisse im Zusammenhang mit seriellen Ports in die Kategorie „Anwendungsprotokoll“ des Windows-Ereignisprotokolls geschrieben.
+
+Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, werden keine Protokolldatensätze in den Anwendungsteil von Windows EventViewer geschrieben.
+
+Die folgenden Ereignisse werden unterstützt:
+5 – Versuch einer Verbindungsherstellung mit dem Client-PC.
+10 – Verbindung zwischen Agent und Client wird hergestellt.
+20 – Verbindung zwischen Agent und Client wird geschlossen.
+30 – Die anfängliche Port-Enumeration (die Liste der seriellen Ports, die auf dem Client-PC und für die Verbindung verfügbar sind).
+40 – Verbunden. Der Port wurde verbunden.
+41 – Verbunden. Der Port ist belegt (während die Sitzung erneut verbunden wird). Der Port ist wieder lesbar/beschreibbar.
+50 – Getrennt. Der Port wurde getrennt.
+51 – Getrennt. Der Port ist belegt (während die Trennung der Sitzung erkannt wird). Der Port bleibt aktiv, ist aber weder lesbar noch beschreibbar.
+60 – Fehler
+
+Das Format des Eintrags für das Portelement:
+&lt;Name des Quellports&gt; DELIMETER &lt;Name des Zielports&gt; DELIMETER &lt;Hardware-ID&gt; DELIMITER &lt;Gerätebeschreibung&gt;
+
+&lt; Name des Quellports &gt; – Name des COM-Anschlusses, der auf dem Client-PC angezeigt wird, z. B. COM2
+&lt; Name des Zielports &gt; – Name des virtuellen COM-Ports, der in der Remote-Desktop-Sitzung angezeigt wird, z. B. COM15
+&lt;Hardware-ID&gt; und &lt;Beschreibung&gt; – Eigenschaften des übergeordneten Geräts (falls der serielle Port des Client-PCs tatsächlich ein USB- oder ein anderes Gerät ist)
+DELIMETER – Trennzeichenfolge für das Ereignisdatenformat
+
+Beispiel (Komma wird als DELIMITER verwendet):
+COM20,COM28,USB\VID_067B&amp;PID_2303&amp;REV_0400,Prolific USB-to-Serial Comm Port</string>
+      <string id="EventLogTableSeparator_PolicyName">Trennzeichen für das Ereignisdatenformat aktivieren</string>
+      <string id="EventLogTableSeparator_PolicyExplain">Wenn diese Richtlinie aktiviert ist, definiert sie die Zeichenfolge, die für Datenfelder als Zeilentrennzeichen verwendet wird.
+	  
+
+Das Standardtrennzeichen ist das Tabulatorzeichen. Es kann jedoch in ein beliebiges anderes Zeichen geändert werden, z. B. ein Komma, ein Semikolon, ein Leerzeichen oder ein anderes benutzerdefiniertes Zeichen oder sogar eine Zeichenfolge.</string>
+	  <string id="EventLogTableSeparatorType_TAB_combo_txt">Tabulatortaste</string>
+	  <string id="EventLogTableSeparatorType_SPACE_combo_txt">Leerzeichen</string>
+	  <string id="EventLogTableSeparatorType_custom_combo_txt">Benutzerdefinierte Zeichenfolge</string>
       <string id="PortIsolationMode_PolicyName">COM-Port-Isolationsmodus</string>
       <string id="PortIsolationMode_PolicyExplain">Wenn der Modus „Vollständige Isolation“·ausgewählt wird, sind virtuelle serielle Ports nur innerhalb von Benutzersitzungen sichtbar und zugänglich. In diesem Modus können COM-Ports in unterschiedlichen Benutzersitzungen dieselben Namen haben. Wichtig: Systemdienste (z. B. spoolsrv.exe) können in einem solchen Fall nicht auf isolierte serielle Ports zugreifen.
 
@@ -52,28 +86,48 @@ Wenn Sie die Einstellung nicht konfigurieren, wird die Geschwindigkeitsbeschrän
 
 Wenn ein Port nicht umgeleitet werden kann, wird er agent-seitig so behandelt, als ob er clientseitig nicht vorhanden wäre.
 
-Die Listen verwenden USB-Geräteeigenschaften des übergeordneten USB-Geräts des COM-Ports.
+Die Richtlinie ist eine mehrzeilige Zeichenfolge, die eine Liste von Regeln enthält.
+
+Beispiel:
+  USB:067B:2303:*
+  USBPATH:1-4
+  WINDEVID:*ACPI*
+  PORTNAME:COM3
+  PORTNAME:COM5
 
 Syntax:
   USB:[*| VID[:*|:P ID[:*|:REV]]]
-    VID – hexadezimaler numerischer VID-Wert (Anbieter-ID) aus Gerätehardware-ID
+    VID – hexadezimaler numerischer VID-Wert (Hersteller-ID) aus Gerätehardware-ID
     PID – hexadezimaler numerischer PID-Wert (Produkt-ID) aus Gerätehardware-ID
     REV – hexadezimaler numerischer REV-Wert (Version) aus Gerätehardware-ID
     wenn VID, PID, REV gleich „*“ ist, bedeutet dies einen beliebigen Wert.
+	
+  USBPATH:[N1[-N2[...[-N8]]]]
+    Nx – numerischer Wert (Bereich 1-127), der den USB-Port identifiziert.	
   
   WINDEVID:[HwId|*|?]
     HwId – vollständiger oder Teilwert der Gerätehardware-ID (Platzhalterzeichen * und ? werden unterstützt). Groß-/Kleinschreibung wird nicht beachtet.
+
+  PORTNAME:[PortName|*|?]
+    PortName – vollständiger oder teilweiser Wert des Namens der seriellen Schnittstelle (Platzhalterzeichen * und ? werden unterstützt). Groß-/Kleinschreibung wird nicht beachtet.
 
 Beispiele:
   USB:067B:2303:400 – entspricht dem USB-Gerät mit der angegebenen VID, PID und Version. USB\VID_067B&amp;PID_2303&amp;REV_0400
   USB:067B:2303:* – entspricht jedem USB-Gerät mit der angegebenen VID und PID sowie einer beliebigen Version. USB\VID_067B&amp;PID_2303
   USB:067B:* – entspricht jedem USB-Gerät mit der angegebenen VID und einer beliebigen PID und Version. USB\VID_067B
-  USB:* – entspricht jedem USB-Gerät
+  USB:* – entspricht einem USB-Gerät
+  
+  USBPATH:1-2-1 – entspricht der Kennung des USB-Ports, in den das Gerät physisch eingesteckt ist  
 
-WINDEVID:* – entspricht jeder HardwareID-Zeichenfolge
-WINDEVID:*ACPI* – entspricht einer HardwareID-Zeichenfolge mit der Teilzeichenfolge ACPI
+  WINDEVID:*  – entspricht einer Hardware-ID-Zeichenfolge
+  WINDEVID:*ACPI* – entspricht einer Hardware-ID-Zeichenfolge, die eine ACPI-Teilzeichenfolge enthält
+  
+  PORTNAME:COM3 – entspricht nur dem seriellen Port „COM3“
+  PORTNAME:*M3 – entspricht den seriellen Ports mit den Namen, die auf „M3“ enden. Beispiel: COM3, VCOM3.
+  PORTNAME: * M3 * – entspricht seriellen Ports mit Namen, die die Teilzeichenfolge „M3“ enthalten. Beispiel: COM3, COM33, VCOM333.
+  PORTNAME:/dev/ttys* – entspricht allen „/dev/ttys“-Geräten. Beispiel: /dev/ttyS0, /dev/ttyS5.
 
-Bemerkungen:
+Hinweise:
   Die Positivliste hat eine höhere Priorität. Wenn das Gerät in der Negativliste enthalten ist, wird es von der Umleitung ausgeschlossen. Wenn sich das Gerät jedoch gleichzeitig in der Positivliste befindet, kann das Gerät umgeleitet werden.
 	  </string>
 	  <string id="AllowDenyPortFiltersList_PartName">Positivliste</string>
@@ -89,7 +143,11 @@ Bemerkungen:
 
 „Quellportnummer“ – Nummer des von der Clientseite umgeleiteten COM-Ports („2“ bedeutet z. B. „COM2“).
 
-„Quellport-Gerät:“ – Name des von der Clientseite umgeleiteten Geräts des seriellen Ports (z. B. „COM5“ für Windows oder „/dev/ttySerial0“ für Linux. Dieser Parameter hat eine höhere Priorität als die Quellportnummer.).
+„Quellportgerät“ – Standardmäßig der Name des seriellen Portgeräts, das von der Clientseite umgeleitet wird. Darüber hinaus wird eine spezielle Syntax für den komplexen Abgleich serieller Geräte unterstützt.
+
+Hinweis: Dieser Parameter besitzt eine höhere Priorität als die Quellportnummer.
+
+Der Quellport wird in der Regel durch den Gerätenamen identifiziert (z. B. „COM5“ für Windows oder „/dev/ttySerial0“ für Linux). Trotzdem wird eine spezielle Syntax für den Abgleich unterstützt, um das serielle Quellgerät anhand von USB-Geräteeigenschaften, USB-Port-Bezeichner usw. zu identifizieren. Weitere Informationen finden Sie im Abschnitt „Filter zulassen/verweigern“.
 
 Nummer des virtuellen Zielports – Nummer des virtuellen COM-Ports, der auf dem Agenten erstellt wird und dem COM-Port auf dem Client entspricht.
 
@@ -176,6 +234,13 @@ Wenn Sie diese Richtlinieneinstellung für den Computer konfigurieren, hat sie V
     <presentationTable>
       <presentation id="LocalSettingsPriority_PolicyName" />
       <presentation id="DisableFunctionality_PolicyName" />
+      <presentation id="EnableEventLog_PolicyName" />
+	  <presentation id="EventLogTableSeparator_PolicyName">
+		<dropdownList refId="EventLogTableSeparatorType_Enum" noSort="true">Trennzeichen für Ereignisdatenformat:</dropdownList>
+        <textBox refId="EventLogTableSeparatorType_custom_Text">
+            <label>Benutzerdefinierte Zeichenfolge:</label>
+        </textBox>
+	  </presentation>
       <presentation id="RedirectAll_PolicyName" />
       <presentation id="PortIsolationMode_PolicyName">
         <dropdownList refId="PortIsolationMode_Enum" noSort="true">COM-Port-Isolationsmodus:</dropdownList>

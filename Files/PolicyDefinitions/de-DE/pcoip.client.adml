@@ -104,7 +104,7 @@ Unterstützte Verschlüsselungsalgorithmen sind in der bevorzugten Reihenfolge S
 
 Wenn beide Endpunkte für die Unterstützung aller drei Algorithmen konfiguriert sind und die Verbindung kein Sicherheitsgateway (SG) verwendet, wird der Algorithmus SALSA20 ausgehandelt und verwendet.  Wenn die Verbindung dennoch ein SG verwendet, wird SALSA20 automatisch deaktiviert und AES128 wird ausgehandelt und verwendet. Wenn der Endpunkt oder das SG entweder SALSA20 deaktiviert oder der Endpunkt AES128 deaktiviert, wird AES256 ausgehandelt und verwendet.</string>
 			<string id="String_Policy_Configure_SSL_protocols_91" >SSL-Protokolle konfigurieren</string>
-			<string id="String_Explain_Configures_openssl_92" >Konfiguriert die OpenSSL-Protokolle, um die Verwendung bestimmter Protokolle zu unterbinden, bevor eine verschlüsselte SSL-Verbindung hergestellt wird. Die Protokollliste besteht aus einer oder mehreren OpenSSL-Zeichenfolgen, die durch Doppelpunkte voneinander getrennt werden. Beachten Sie, dass für alle Verschlüsselungszeichenfolgen die Groß-/Kleinschreibung zu beachten ist.
+			<string id="String_Explain_Configures_openssl_92" >Konfiguriert die OpenSSL-Protokolle, um die Verwendung bestimmter Protokolle zu unterbinden, bevor eine verschlüsselte SSL-Verbindung hergestellt wird. Die Protokollliste besteht aus einer oder mehreren OpenSSL-Zeichenfolgen, die durch Doppelpunkte voneinander getrennt werden. Beachten Sie, dass für alle Verschlüsselungszeichenfolgen die Groß-/Kleinschreibung nicht zu beachten ist.
 
  Der Standardwert lautet: 
    &quot;TLS1.0:TLS1.1:TLS1.2&quot;
@@ -115,7 +115,7 @@ Diese Einstellung gilt sowohl für den Agenten als auch für den Client.
 
 Wenn dies auf beiden Seiten so festgelegt ist, wird die Regel für die OpenSSL-Protokollaushandlung angewendet.</string>
 			<string id="String_Policy_Configure_SSL_cipher_list_93" >SSL-Verschlüsselungsliste konfigurieren</string>
-			<string id="String_Explain_Configures_SSL_cipher_list_94" >Konfiguriert die SSL-Verschlüsselungsliste, um die Verwendung der Verschlüsselungs-Suite zu beschränken, bevor eine verschlüsselte SSL-Verbindung hergestellt wird. Die Verschlüsselungsliste besteht aus einer oder mehreren Zeichenfolgen der Verschlüsselungs-Suite, die durch Doppelpunkte voneinander getrennt werden. Beachten Sie, dass für alle Verschlüsselungszeichenfolgen die Groß-/Kleinschreibung zu beachten ist.
+			<string id="String_Explain_Configures_SSL_cipher_list_94" >Konfiguriert die SSL-Verschlüsselungsliste, um die Verwendung der Verschlüsselungs-Suite zu beschränken, bevor eine verschlüsselte SSL-Verbindung hergestellt wird. Die Verschlüsselungsliste besteht aus einer oder mehreren Zeichenfolgen der Verschlüsselungs-Suite, die durch Doppelpunkte voneinander getrennt werden. Beachten Sie, dass für alle Verschlüsselungszeichenfolgen die Groß-/Kleinschreibung nicht zu beachten ist.
 
 Der Standardwert lautet:
    „ECDHE-RSA-AES256-GCM-SHA384:AES256-SHA256:AES256-SHA:ECDHE-RSA-AES128-GCM-SHA256:AES128-SHA256:AES128-SHA:@STRENGTH“
@@ -251,7 +251,7 @@ Unterstützte Verschlüsselungsalgorithmen sind in der bevorzugten Reihenfolge S
 
 Wenn beide Endpunkte für die Unterstützung aller drei Algorithmen konfiguriert sind und die Verbindung kein Sicherheitsgateway (SG) verwendet, wird der Algorithmus SALSA20 ausgehandelt und verwendet.  Wenn die Verbindung dennoch ein SG verwendet, wird SALSA20 automatisch deaktiviert und AES128 wird ausgehandelt und verwendet. Wenn der Endpunkt oder das SG entweder SALSA20 deaktiviert oder der Endpunkt AES128 deaktiviert, wird AES256 ausgehandelt und verwendet.</string>
 			<string id="String_Policy_Configure_SSL_protocols_161" >SSL-Protokolle konfigurieren</string>
-			<string id="String_Explain_Configures_openssl_162" >Konfiguriert die OpenSSL-Protokolle, um die Verwendung bestimmter Protokolle zu unterbinden, bevor eine verschlüsselte SSL-Verbindung hergestellt wird. Die Protokollliste besteht aus einer oder mehreren OpenSSL-Zeichenfolgen, die durch Doppelpunkte voneinander getrennt werden. Beachten Sie, dass für alle Verschlüsselungszeichenfolgen die Groß-/Kleinschreibung zu beachten ist.
+			<string id="String_Explain_Configures_openssl_162" >Konfiguriert die OpenSSL-Protokolle, um die Verwendung bestimmter Protokolle zu unterbinden, bevor eine verschlüsselte SSL-Verbindung hergestellt wird. Die Protokollliste besteht aus einer oder mehreren OpenSSL-Zeichenfolgen, die durch Doppelpunkte voneinander getrennt werden. Beachten Sie, dass für alle Verschlüsselungszeichenfolgen die Groß-/Kleinschreibung nicht zu beachten ist.
 
  Der Standardwert lautet: 
    &quot;TLS1.0:TLS1.1:TLS1.2&quot;
@@ -262,7 +262,7 @@ Diese Einstellung gilt sowohl für den Agenten als auch für den Client.
 
 Wenn dies auf beiden Seiten so festgelegt ist, wird die Regel für die OpenSSL-Protokollaushandlung angewendet.</string>
 			<string id="String_Policy_Configure_SSL_cipher_list_163" >SSL-Verschlüsselungsliste konfigurieren</string>
-			<string id="String_Explain_Configures_SSL_cipher_list_164" >Konfiguriert die SSL-Verschlüsselungsliste, um die Verwendung der Verschlüsselungs-Suite zu beschränken, bevor eine verschlüsselte SSL-Verbindung hergestellt wird. Die Verschlüsselungsliste besteht aus einer oder mehreren Zeichenfolgen der Verschlüsselungs-Suite, die durch Doppelpunkte voneinander getrennt werden. Beachten Sie, dass für alle Verschlüsselungszeichenfolgen die Groß-/Kleinschreibung zu beachten ist.
+			<string id="String_Explain_Configures_SSL_cipher_list_164" >Konfiguriert die SSL-Verschlüsselungsliste, um die Verwendung der Verschlüsselungs-Suite zu beschränken, bevor eine verschlüsselte SSL-Verbindung hergestellt wird. Die Verschlüsselungsliste besteht aus einer oder mehreren Zeichenfolgen der Verschlüsselungs-Suite, die durch Doppelpunkte voneinander getrennt werden. Beachten Sie, dass für alle Verschlüsselungszeichenfolgen die Groß-/Kleinschreibung nicht zu beachten ist.
 
 Der Standardwert lautet:
    „ECDHE-RSA-AES256-GCM-SHA384:AES256-SHA256:AES256-SHA:ECDHE-RSA-AES128-GCM-SHA256:AES128-SHA256:AES128-SHA:@STRENGTH“

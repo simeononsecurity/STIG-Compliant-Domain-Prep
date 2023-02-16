@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="unknown_0">VMware Horizon URL リダイレクト</string>
+      <string id="unknown_2">IE ポリシー: URL リダイレクト プラグインの読み込み動作をユーザーが変更できないようにする</string>
+      <string id="unknown_6">IE ポリシー: URL リダイレクト プラグインを自動的に有効にする</string>
+      <string id="unknown_4">URL リダイレクトの IP アドレス ルールが有効かどうか</string>
+      <string id="unknown_8">URL リダイレクト有効</string>
+      <string id="unknown_12">URL リダイレクト プロトコル「https」</string>
+      <string id="unknown_10">URL リダイレクト プロトコル「http」</string>
+      <string id="unknown_15">URL リダイレクト プロトコル「...」</string>
+      <string id="unknown_3">ユーザーが URL コンテンツ リダイレクトを無効にできるかどうかを決定します。</string>
+      <string id="unknown_5">IP アドレス ルールを有効にするか、無効にするかを設定します。デフォルトでは構成されていません。IP アドレス ルールを有効にすると、指定された IP アドレス/IP アドレス範囲のフィルタリングと DNS 解決がサポートされます。クライアント ルールまたはエージェント ルールに IP アドレス/IP アドレス範囲を追加できます。入力した URL アドレスが URL ルールと一致しない場合、IP アドレス/IP アドレス範囲に一致する IP アドレスに解決されます。
+たとえば、IP アドレス ルールを有効にし、エージェント ルールの HTTPS に &quot;.*\.mycompany\.com;22.22.22.22;10.10.1.2-10.10.12.20&quot; を設定したとします。この場合、IP アドレス「https://22.22.22.22」、IP アドレス範囲「10.10.1.2-10.10.12.20」のすべての IP アドレス、IP アドレス範囲「10.10.1.2-10.10.12.20」または IP アドレス「22.22.22.22」に解決されるすべての URL がリダイレクトされます。
+
+注:
+
+IP アドレス ルールは現在、Internet Explorer にのみ適用されます。</string>
+      <string id="unknown_7">新しくインストールされた Internet Explorer プラグインを自動的に有効にするかどうかを決定します。</string>
+      <string id="unknown_9">この機能をオンにするかどうかを決定します。デフォルトでは、この設定は構成されていません。この設定を使用すると、コンポーネントがインストールされている場合であっても、機能を無効にできます。</string>
+      <string id="HelpString">このプロトコルを使用するすべての URL について、リダイレクトする URL を指定します。
+たとえば、エージェント ルール を .*\.mycompany\.com に設定すると、「.mycompany.com」が含まれるすべての URL がリモート デスクトップまたはリモート アプリケーションにリダイレクトされます。ブローカー ホスト名を設定すると、使用する Connection Server をさらに指定できます。リモート項目を設定すると、使用するデスクトップまたはアプリケーション プールの View Administrator に表示される名前を指定できます。
+クライアント ルールを .*\.mycompany\.com に設定すると、「.mycompany.com」が含まれるすべての URL が Windows ベースのクライアントにリダイレクトされ、クライアントのデフォルト ブラウザで開きます。
+
+注:
+
+ベスト プラクティスとして、HTTP プロトコルと HTTPS プロトコルに同じルールを設定します。この方法では、ユーザーが mycompany.com などの部分的な URL を Internet Explorer に入力し、そのサイトが自動的に HTTP から HTTPS にリダイレクトされると、URL コンテンツ リダイレクト機能が想定通りに動作します。この場合、HTTP ではなく HTTPS のルールを設定すると、ユーザー入力による部分的な URL ではリダイレクトされません。複数のルールを設定する場合は、各ルールをセミコロンで区切ってください。手動ラップはサポートされていません。</string>
+      <string id="ADMXMigrator_UnresolvedString">ADMX Migrator が、元の ADM 文字列テーブルにない文字列を検出しました。</string>
+      <string id="ADMXMigrator_NoSupportedOn">ADMX Migrator が、supportedOn 値が設定されていないポリシーを検出しました。</string>
+      <string id="ExtensionInstallForcelist">URL コンテンツ リダイレクト機能で必要な Chrome 拡張機能をインストールします。</string>
+      <string id="ExtensionInstallForcelist_Explain">このポリシーを有効にした場合、URL コンテンツ リダイレクト機能で必要な Chrome 拡張機能がサイレントで自動的にインストールされます。このインストールでは、必要な権限も付与されます。このインストールを元に戻すには、管理者権限が必要です。
+
+このポリシーを無効にするか、設定しない場合、URL コンテンツ リダイレクトで必要な Chrome 拡張機能は自動的にインストールされません。この場合、リダイレクト ルールを設定しても Chrome ブラウザで URL コンテンツ リダイレクトが機能しません。この機能を使用するには、必要な拡張機能を Google Chrome ウェブストアから手動でインストールする必要があります。
+
+デフォルトでは、このポリシーは使用しないように構成されています。</string>
+      <string id="UrlRedirectionProtocol_WhitelistSring">URL リダイレクトのホワイトリストの設定</string>
+      <string id="UrlRedirectionProtocol_WhitelistExplain">この設定により、URL のプロトコルでサポートされるアプリケーションが決まります。これをホワイトリストといいます。
+デフォルトでは、次のアプリケーションがサポートされています。
+- iexplore.exe: Internet Explorer ブラウザ
+- chrome.exe: Chrome ブラウザ
+- firefox.exe: Firefox ブラウザ
+- msedge.exe: Microsoft Edge (Chromium)
+- outlook.exe: Microsoft Outlook
+- lync.exe: Skype for business
+- skype.exe: Skype
+- wmplayer.exe: Windows Media Player
+
+URL リダイレクトのホワイトリストの設定を使用して、デフォルトでサポートされるアプリケーションを変更できます。
+
+たとえば、ホワイトリストが次のように設定されているとします。
+chrome.exe
+outlook.exe
+skype.exe
+
+URL コンテンツ リダイレクトでは、Chrome ブラウザ、Microsoft Outlook、Skype のみがサポートされます。</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="IEpolicyPreventusersfromchangingURLRedirectionpluginloadingbehavior" />
+      <presentation id="IEpolicyAutomaticallyenableURLRedirectionplugin" />
+      <presentation id="UrlRedirectionEnabled" />
+      <presentation id="UrlRedirectionIPRulesEnabled" />
+      <presentation id="UrlRedirectionProtocol_http">
+        <textBox refId="brokerHostname">
+          <label>ブローカー ホスト名</label>
+        </textBox>
+        <textBox refId="remoteItem">
+          <label>リモート項目</label>
+        </textBox>
+        <text>クライアント ルール</text>
+          <multiTextBox refId="clientRules" />
+        <text>エージェント ルール</text>
+          <multiTextBox refId="agentRules" />
+      </presentation>
+      <presentation id="UrlRedirectionProtocol_https">
+        <textBox refId="brokerHostname">
+          <label>ブローカー ホスト名</label>
+        </textBox>
+        <textBox refId="remoteItem">
+          <label>リモート項目</label>
+        </textBox>
+        <text>クライアント ルール</text>
+          <multiTextBox refId="clientRules" />
+        <text>エージェント ルール</text>
+          <multiTextBox refId="agentRules" />
+      </presentation>
+      <presentation id="UrlRedirectionProtocol_">
+        <textBox refId="brokerHostname">
+          <label>ブローカー ホスト名</label>
+        </textBox>
+        <textBox refId="remoteItem">
+          <label>リモート項目</label>
+        </textBox>
+        <text>クライアント ルール</text>
+          <multiTextBox refId="clientRules" />
+        <text>エージェント ルール</text>
+          <multiTextBox refId="agentRules" />
+      </presentation>
+      <presentation id="UrlRedirectionProtocol_Whitelist">
+        <text>ホワイトリスト</text>
+        <multiTextBox refId="whitelist" />
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

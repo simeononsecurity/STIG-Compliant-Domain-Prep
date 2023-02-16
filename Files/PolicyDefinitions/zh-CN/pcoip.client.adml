@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" >
+
+	<displayName >在此处输入显示名称</displayName>
+	<description >VMware Horizon View PCOIP 客户端配置设置</description>
+	<resources >
+		<stringTable ><!--Storage for String Definitions-->
+
+			<string id="String_SupportedOn_Undefined_2" >未定义</string>
+			<string id="String_SupportedOn_Undefined_4" >未定义</string>
+			<string id="String_SupportedOn_Undefined_6" >未定义</string>
+			<string id="String_SupportedOn_Undefined_8" >未定义</string>
+			<string id="String_SupportedOn_Undefined_10" >未定义</string>
+			<string id="String_SupportedOn_Undefined_12" >未定义</string>
+			<string id="String_SupportedOn_Undefined_14" >未定义</string>
+			<string id="String_SupportedOn_Undefined_15" >未定义</string>
+			<string id="String_SupportedOn_Undefined_16" >未定义</string>
+			<string id="String_SupportedOn_Undefined_18" >未定义</string>
+			<string id="String_SupportedOn_Undefined_20" >未定义</string>
+			<string id="String_SupportedOn_Undefined_22" >未定义</string>
+			<string id="String_SupportedOn_Undefined_24" >未定义</string>
+			<string id="String_SupportedOn_Undefined_26" >未定义</string>
+			<string id="String_SupportedOn_Undefined_28" >未定义</string>
+			<string id="String_SupportedOn_Undefined_30" >未定义</string>
+			<string id="String_SupportedOn_Undefined_32" >未定义</string>
+			<string id="String_SupportedOn_Undefined_34" >未定义</string>
+			<string id="String_SupportedOn_Undefined_36" >未定义</string>
+			<string id="String_SupportedOn_Undefined_38" >未定义</string>
+			<string id="String_SupportedOn_Undefined_40" >未定义</string>
+			<string id="String_SupportedOn_Undefined_42" >未定义</string>
+			<string id="String_SupportedOn_Undefined_43" >未定义</string>
+			<string id="String_SupportedOn_Undefined_44" >未定义</string>
+			<string id="String_SupportedOn_Undefined_46" >未定义</string>
+			<string id="String_SupportedOn_Undefined_48" >未定义</string>
+			<string id="String_SupportedOn_Undefined_50" >未定义</string>
+			<string id="String_SupportedOn_Undefined_52" >未定义</string>
+			<string id="String_SupportedOn_Undefined_54" >未定义</string>
+			<string id="String_SupportedOn_Undefined_56" >未定义</string>
+			<string id="String_Cat_PCoIP_Client_Session_58" >PCoIP 客户端会话变量</string>
+			<string id="String_Cat_Not_Overridable_60" >管理员不可覆盖的设置</string>
+			<string id="String_Cat_Overridable_Administrator_62" >管理员可覆盖的默认值</string>
+			<string id="String_Policy_Configure_the_maximum_64" >配置最大 PCoIP 会话带宽</string>
+			<string id="String_Explain_Specifies_the_maximum_65" >指定 PCoIP 会话中的最大带宽 (kbps)。此带宽包括所有图像处理、音频、虚拟通道、USB 以及控制 PCoIP 流量。
+
+根据端点连接到的链路的总容量设置该值，并考虑所需的并发 PCoIP 会话数。例如，对于通过 4 Mbps Internet 连接进行连接的单用户 VDI 配置 (例如，单个 PCoIP 会话)，应将该值设置为 4 Mbps (或其 90%，以便为其他网络流量留出一些容限)。如果希望多个并发 PCoIP 会话共享某个链路 (例如，多个 VDI 用户或 RDSH 配置)，您可能需要相应地调整该设置，但这会限制每个活动会话的最大带宽。
+
+设置此值可防止代理尝试以超过链路容量的速率进行传输，从而避免出现过多的数据包丢失或用户体验下降现象。此值是对称的。该设置强制客户端和代理使用两者上所设置的两个值中较小的一个。例如，设置 4 Mbps 的最大带宽将强制代理以低于此值的速率传输数据，即便在客户端上配置了此设置也是如此。
+
+在端点上禁用或未配置此设置时，端点不实施带宽限制。配置此设置后，该设置会被用作端点的最大带宽限制 (kbps)。
+
+未配置此设置时的默认值为 900000 kbps。
+
+该设置适用于代理和客户端。如果两个端点的设置不同，将使用较低的值。</string>
+			<string id="String_Policy_Configure_the_PCoIP_68" >配置 PCoIP 会话 MTU</string>
+			<string id="String_Explain_Specifies_the_Maximum_69" >指定 PCoIP 会话的 UDP 数据包的最大传输单元 (MTU) 大小。
+
+此 MTU 大小包括 IP 和 UDP 数据包标头。TCP 使用标准 MTU 发现机制来设置 MTU，且不受此设置影响。最大 MTU 大小为 1500 字节。最小 MTU 大小为 500 字节。默认值为 1200 字节。
+
+通常情况下，无需更改 MTU 大小。如果存在会造成 PCoIP 数据包出现碎片的异常网络设置，请更改此值。
+
+该设置适用于服务器和客户端。如果两个端点的 MTU 大小设置不同，将使用最低的值。
+
+如果禁用或未配置该设置，则客户端在与服务器协商时使用默认值。</string>
+			<string id="String_Policy_Configure_the_PCoIP_72" >配置 PCoIP 会话带宽下限</string>
+			<string id="String_Explain_Specifies_a_lower_73" >指定 PCoIP 会话预留的带宽下限 (Kbps)。
+
+此设置配置端点的最低预期带宽传输速率。在使用该设置为某个端点预留带宽时，会话无需等待带宽变得可用，从而提高了会话的响应速度。
+
+确保不要为所有端点过度预定总体预留带宽。确保配置的所有连接带宽下限之和不超过网络流量。
+
+默认值为 0，表示不预留最小带宽。禁用或未配置此设置时，不预留最小带宽。
+
+该设置适用于服务器和客户端，但仅影响配置了该设置的端点。
+
+如果在活动 PCoIP 会话期间修改该设置，将会立即生效。</string>
+			<string id="String_Policy_Enable_disable_76" >在 PCoIP 会话中启用/禁用音频</string>
+			<string id="String_Explain_Determines_whether_77" >确定是否在 PCoIP 会话中启用音频。两个端点必须都启用音频。启用此设置时，允许使用 PCoIP 音频。禁用此设置时，禁用 PCoIP 音频。未配置此设置时，默认启用音频。
+
+</string>
+			<string id="String_Policy_Configure_SSL_connections_79" >配置 SSL 连接以满足安全工具要求</string>
+			<string id="String_Explain_Specifies_how_SSL_80" >指定如何建立 SSL 会话协商连接。
+
+要满足端口扫描程序要求，请启用“配置 SSL 连接”设置并执行以下操作:
+
+1. 存储对任何服务器证书进行签名的证书颁发机构证书，以便与受信任的根证书存储中的 PCoIP 一起使用。
+2. 将代理配置为仅从证书存储中加载证书。如果使用本地计算机的个人存储，请将 CA 证书存储名称保留为“ROOT”值 (不带引号)，除非在步骤 1 中使用不同的存储位置。
+
+生成的 PCoIP 客户端将满足端口扫描程序等安全工具的要求。
+
+如果禁用或未配置“配置 SSL 连接”设置:
+
+1. 端点将使用计算机帐户的“MY”存储中的证书颁发机构证书以及“ROOT”存储中的证书颁发机构证书。
+2. AES-128 密码套件将可用。</string>
+			<string id="String_Policy_Configure_PCoIP_85" >配置 PCoIP 会话加密算法</string>
+			<string id="String_Explain_Controls_the_encryption_86" >控制会话协商期间 PCoIP 端点播发的加密算法。
+
+勾选其中一个复选框将禁用相关加密算法。必须启用至少一个算法。
+
+该设置适用于代理和客户端。各端点协商实际所用的会话加密算法。如果启用了 FIPS140-2 批准的模式，并且禁用了 AES-128-GCM 加密和 AES-256-GCM 加密，则会覆盖“禁用 AES-128-GCM 加密”值。
+
+如果禁用或未配置总体“配置 SSL 连接”，该端点可以协商使用 Salsa20-256round12 和 AES-128-GCM 算法。
+
+支持的加密算法按优先顺序排列为: SALSA20/12-256、AES-GCM-128 和 AES-GCM-256。默认情况下，所有支持的加密算法均可供此端点协商使用。
+
+如果将两个端点都配置为支持所有三个算法，并且连接不使用安全网关 (SG)，则会协商使用 SALSA20 算法。不过，如果连接使用 SG，则会自动禁用 SALSA20 并协商使用 AES128。如果一个端点或 SG 禁用 SALSA20，且一个端点禁用 AES128，则将协商使用 AES256。</string>
+			<string id="String_Policy_Configure_SSL_protocols_91" >配置 SSL 协议</string>
+			<string id="String_Explain_Configures_openssl_92" >在建立加密的 SSL 连接之前，配置 openssl 协议以限制使用某些协议。协议列表包含一个或多个以冒号分隔的 openssl 协议字符串。请注意，所有密码字符串不区分大小写。
+
+ 默认值为: 
+   &quot;TLS1.0:TLS1.1:TLS1.2&quot;
+
+ 这意味着: 将启用 TLS v1.0、TLS v1.1 和 TLS v1.2 (禁用 SSL v2.0 和 SSLv3.0)。
+
+该设置适用于代理和客户端。
+
+如果在两端设置了该设置，将遵循 OpenSSL 协议协商规则。</string>
+			<string id="String_Policy_Configure_SSL_cipher_list_93" >配置 SSL 密码列表</string>
+			<string id="String_Explain_Configures_SSL_cipher_list_94" >在建立加密的 SSL 连接之前，配置 SSL 密码列表以限制使用密码套件。该列表由一个或多个以冒号分隔的密码套件字符串组成。请注意，所有密码字符串不区分大小写。
+
+默认值为:
+   &quot;ECDHE-RSA-AES256-GCM-SHA384:AES256-SHA256:AES256-SHA:ECDHE-RSA-AES128-GCM-SHA256:AES128-SHA256:AES128-SHA:@STRENGTH&quot;
+
+如果配置了该项目，将忽略“配置 SSL 连接以满足安全工具要求”中的“强制实施 AES-256 或更强的密码进行 SSL 连接协商”复选框。
+
+需要将该设置同时应用于 PCoIP 服务器和 PCoIP 客户端。</string>
+			<string id="String_Policy_Configure_the_Client_95" >配置客户端 PCoIP UDP 端口</string>
+			<string id="String_Explain_Specifies_the_UDP_96" >指定软件 PCoIP 客户端使用的 UDP 客户端端口，可以手动配置该端口，也可以由客户端操作系统 (OS) 自动确定该端口。该设置仅适用于客户端。
+
+要手动进行配置，请输入 UDP 端口和重试端口范围。UDP 端口值指定要使用的基本 UDP 端口。UDP 端口范围值确定当基本端口不可用时尝试其他端口的个数。此范围从基本端口跨越至基本端口与端口范围之和。例如，如果基本端口为 50002，端口范围为 64，则其范围为 50002 至 50066。默认情况下，基本端口为 50002，端口范围为 64。
+
+如果选中“允许操作系统自动确定 UDP 端口”，则指示客户端操作系统忽略手动设置的值，并自动选择其他程序未在使用的 UDP 端口。</string>
+			<string id="String_Policy_Configure_PCoIP_101" >配置 PCoIP 虚拟通道</string>
+			<string id="String_Explain_Specifies_the_virtual_102" >指定能够以及不能通过 PCoIP 会话操作的虚拟通道。此设置还决定是否禁用 PCoIP 主机上的剪贴板处理功能。
+
+PCoIP 会话中使用的虚拟通道必须显示在虚拟通道授权列表中。未授权虚拟通道列表中显示的虚拟通道不能在 PCoIP 会话中使用。
+
+最多可指定 15 个虚拟通道，以在 PCoIP 会话中使用。
+
+使用竖线 (|) 字符来分隔不同的通道名称。例如，允许 mksvchan 和 vdp_rdpvcbridge 虚拟通道的虚拟通道授权字符串为 mksvchan|vdp_rdpvcbridge。
+
+如果通道名称包含竖线或反斜线 (\) 字符，请在这两个字符的前面插入一个反斜线字符。例如，将通道名称 awk|ward\channel 键入为 awk\|ward\\channel。
+
+授权虚拟通道列表为空时表示禁用所有虚拟通道。未授权虚拟通道列表为空时表示允许使用所有虚拟通道。
+
+此虚拟通道设置适用于代理和客户端。必须在代理和客户端上均启用虚拟通道才能使用虚拟通道。
+
+虚拟通道设置中有一个单独的复选框，可供您禁用 PCoIP 主机上的远程剪贴板处理功能。此值仅适用于代理。
+
+默认情况下，启用所有虚拟通道，包括剪贴板处理功能。</string>
+			<string id="String_Policy_DropList_Select_Configure_PCoIP_0_Disable_virtual_104" >0 - 在 PCoIP 会话中禁用虚拟通道</string>
+			<string id="String_Policy_DropList_Select_Configure_PCoIP_2_Disable_all_105" >2 - 禁用所有其他的虚拟通道</string>
+			<string id="String_Policy_DropList_Select_Configure_PCoIP_3_Enable_all_106" >3 - 启用所有其他的虚拟通道</string>
+			<string id="String_Policy_Configure_PCoIP_110" >配置 PCoIP 客户端图像缓存大小策略</string>
+			<string id="String_Explain_Controls_the_size_111" >控制 PCoIP 客户端图像缓存的大小。客户端使用图像缓存来存储之前传送的显示部分。图像缓存减少了重传的数据量。
+
+在 View Client、View Agent 和 View 连接服务器为 View 5.0 或更高版本时，该设置仅适用于 Windows 和 Linux 客户端。
+
+未配置或禁用此设置时，PCoIP 使用 250 MB 的默认客户端图像缓存大小。
+
+如果启用该设置，您可以配置最小为 50 MB 且最大为 1024 MB 的客户端图像缓存大小。默认值为 250 MB。</string>
+			<string id="String_Policy_Configure_the_PCoIP_114" >配置 PCoIP 传输标头</string>
+			<string id="String_Explain_Configures_the_115" >配置 PCoIP 传输标头。
+
+PCoIP 传输标头是添加到所有 PCoIP UDP 数据包的 32 位标头 (只有在两端均启用/支持传输标头时)。在处理网络拥塞问题时，网络设备可以通过 PCoIP 传输标头做出更好的优先级/Qos 决策。默认情况下传输标头处于启用状态。
+
+传输会话的优先级决定了在 PCoIP 传输标头中报告的 PCoIP 会话优先级。网络设备可以根据指定的传输会话优先级做出更好的优先级/Qos 决策。PCoIP 代理和客户端进行协商来确定传输会话的优先级值。如果代理指定了传输会话优先级值 (高、中或低)，则会话使用代理指定的会话优先级。如果仅客户端指定了传输会话优先级 (高、中或低)，则会话使用客户端指定的会话优先级。如果代理和客户端均未指定传输会话优先级 (或指定了“未定义的优先级”)，则会话使用中优先级 (默认值)。</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_High_Priority_117" >高优先级</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_Medium_Priority_118" >中优先级 (默认)</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_Low_Priority_119" >低优先级</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_Undefined_Priority_120" >未定义的优先级</string>
+			<string id="String_Policy_Configure_PCoIP_122" >配置 PCoIP 事件日志详细级别</string>
+			<string id="String_Explain_This_policy_enables_123" >该策略允许配置从 0 (最不详细) 到 3 (最详细) 的 PCoIP 事件日志详细级别。
+
+如果该策略为“已禁用”或“未配置”，则默认事件日志详细级别设置为 2。如果该策略为“已配置”，则该设置控制上述详细级别。
+
+如果在活动 PCoIP 会话期间修改该设置，将会立即生效。</string>
+			<string id="String_Policy_Configure_PCoIP_126" >配置 PCoIP 事件日志清理时间 (天)</string>
+			<string id="String_Explain_This_policy_enables_127" >该策略允许配置 PCoIP 事件日志清理时间 (天)。
+
+如果该策略为“已配置”，则该设置控制日志文件清理时间 (天)，即，如果设置为非零值 n，则自动 (并无提示) 删除早于 n 天的日志文件；如果设置为 0，则表示不按时间清理文件。如果该策略为“已禁用”或“未配置”，则默认事件日志清理时间 (天) 设置为 7。
+
+在会话启动时，将执行一次日志文件清理；在运行下一个会话时，才会应用对该设置进行的任何更改。</string>
+			<string id="String_Policy_Configure_PCoIP_130" >配置 PCoIP 事件日志清理大小 (MB)</string>
+			<string id="String_Explain_This_policy_enables_131" >该策略允许配置 PCoIP 事件日志清理大小 (MB)。
+
+如果该策略为“已配置”，则该设置控制日志文件清理大小 (MB)，即，如果设置为非零值 m，则自动 (并无提示) 删除超过 m MB 的日志文件；如果设置为 0，则表示不按大小清理文件。如果该策略为“已禁用”或“未配置”，则默认事件日志清理大小 (MB) 设置为 100。
+
+在会话启动时，将执行一次日志文件清理；在运行下一个会话时，才会应用对该设置进行的任何更改。</string>
+			<string id="String_Policy_Configure_the_maximum_134" >配置最大 PCoIP 会话带宽</string>
+			<string id="String_Explain_Specifies_the_maximum_135" >指定 PCoIP 会话中的最大带宽 (kbps)。此带宽包括所有图像处理、音频、虚拟通道、USB 以及控制 PCoIP 流量。
+
+根据端点连接到的链路的总容量设置该值，并考虑所需的并发 PCoIP 会话数。例如，对于通过 4 Mbps Internet 连接进行连接的单用户 VDI 配置 (例如，单个 PCoIP 会话)，应将该值设置为 4 Mbps (或其 90%，以便为其他网络流量留出一些容限)。如果希望多个并发 PCoIP 会话共享某个链路 (例如，多个 VDI 用户或 RDSH 配置)，您可能需要相应地调整该设置，但这会限制每个活动会话的最大带宽。
+
+设置此值可防止代理尝试以超过链路容量的速率进行传输，从而避免出现过多的数据包丢失或用户体验下降现象。此值是对称的。该设置强制客户端和代理使用两者上所设置的两个值中较小的一个。例如，设置 4 Mbps 的最大带宽将强制代理以低于此值的速率传输数据，即便在客户端上配置了此设置也是如此。
+
+在端点上禁用或未配置此设置时，端点不实施带宽限制。配置此设置后，该设置会被用作端点的最大带宽限制 (kbps)。
+
+未配置此设置时的默认值为 900000 kbps。
+
+该设置适用于代理和客户端。如果两个端点的设置不同，将使用较低的值。</string>
+			<string id="String_Policy_Configure_the_PCoIP_138" >配置 PCoIP 会话 MTU</string>
+			<string id="String_Explain_Specifies_the_Maximum_139" >指定 PCoIP 会话的 UDP 数据包的最大传输单元 (MTU) 大小。
+
+此 MTU 大小包括 IP 和 UDP 数据包标头。TCP 使用标准 MTU 发现机制来设置 MTU，且不受此设置影响。最大 MTU 大小为 1500 字节。最小 MTU 大小为 500 字节。默认值为 1200 字节。
+
+通常情况下，无需更改 MTU 大小。如果存在会造成 PCoIP 数据包出现碎片的异常网络设置，请更改此值。
+
+该设置适用于服务器和客户端。如果两个端点的 MTU 大小设置不同，将使用最低的值。
+
+如果禁用或未配置该设置，则客户端在与服务器协商时使用默认值。</string>
+			<string id="String_Policy_Configure_the_PCoIP_142" >配置 PCoIP 会话带宽下限</string>
+			<string id="String_Explain_Specifies_a_lower_143" >指定 PCoIP 会话预留的带宽下限 (Kbps)。
+
+此设置配置端点的最低预期带宽传输速率。在使用该设置为某个端点预留带宽时，会话无需等待带宽变得可用，从而提高了会话的响应速度。
+
+确保不要为所有端点过度预定总体预留带宽。确保配置的所有连接带宽下限之和不超过网络流量。
+
+默认值为 0，表示不预留最小带宽。禁用或未配置此设置时，不预留最小带宽。
+
+该设置适用于服务器和客户端，但仅影响配置了该设置的端点。
+
+如果在活动 PCoIP 会话期间修改该设置，将会立即生效。</string>
+			<string id="String_Policy_Enable_disable_146" >在 PCoIP 会话中启用/禁用音频</string>
+			<string id="String_Explain_Determines_whether_147" >确定是否在 PCoIP 会话中启用音频。两个端点必须都启用音频。启用此设置时，允许使用 PCoIP 音频。禁用此设置时，禁用 PCoIP 音频。未配置此设置时，默认启用音频。
+
+</string>
+			<string id="String_Policy_Configure_SSL_connections_149" >配置 SSL 连接以满足安全工具要求</string>
+			<string id="String_Explain_Specifies_how_SSL_150" >指定如何建立 SSL 会话协商连接。
+
+要满足端口扫描程序要求，请启用“配置 SSL 连接”设置并执行以下操作:
+
+1. 存储对任何服务器证书进行签名的证书颁发机构证书，以便与受信任的根证书存储中的 PCoIP 一起使用。
+2. 将代理配置为仅从证书存储中加载证书。如果使用本地计算机的个人存储，请将 CA 证书存储名称保留为“ROOT”值 (不带引号)，除非在步骤 1 中使用不同的存储位置。
+
+生成的 PCoIP 客户端将满足端口扫描程序等安全工具的要求。
+
+如果禁用或未配置“配置 SSL 连接”设置:
+
+1. 端点将使用计算机帐户的“MY”存储中的证书颁发机构证书以及“ROOT”存储中的证书颁发机构证书。
+2. AES-128 密码套件将可用。</string>
+			<string id="String_Policy_Configure_PCoIP_155" >配置 PCoIP 会话加密算法</string>
+			<string id="String_Explain_Controls_the_encryption_156" >控制会话协商期间 PCoIP 端点播发的加密算法。
+
+勾选其中一个复选框将禁用相关加密算法。必须启用至少一个算法。
+
+该设置适用于代理和客户端。各端点协商实际所用的会话加密算法。如果启用了 FIPS140-2 批准的模式，并且禁用了 AES-128-GCM 加密和 AES-256-GCM 加密，则会覆盖“禁用 AES-128-GCM 加密”值。
+
+如果禁用或未配置总体“配置 SSL 连接”，该端点可以协商使用 Salsa20-256round12 和 AES-128-GCM 算法。
+
+支持的加密算法按优先顺序排列为: SALSA20/12-256、AES-GCM-128 和 AES-GCM-256。默认情况下，所有支持的加密算法均可供此端点协商使用。
+
+如果将两个端点都配置为支持所有三个算法，并且连接不使用安全网关 (SG)，则会协商使用 SALSA20 算法。不过，如果连接使用 SG，则会自动禁用 SALSA20 并协商使用 AES128。如果一个端点或 SG 禁用 SALSA20，且一个端点禁用 AES128，则将协商使用 AES256。</string>
+			<string id="String_Policy_Configure_SSL_protocols_161" >配置 SSL 协议</string>
+			<string id="String_Explain_Configures_openssl_162" >在建立加密的 SSL 连接之前，配置 openssl 协议以限制使用某些协议。协议列表包含一个或多个以冒号分隔的 openssl 协议字符串。请注意，所有密码字符串不区分大小写。
+
+ 默认值为: 
+   &quot;TLS1.0:TLS1.1:TLS1.2&quot;
+
+ 这意味着: 将启用 TLS v1.0、TLS v1.1 和 TLS v1.2 (禁用 SSL v2.0 和 SSLv3.0)。
+
+该设置适用于代理和客户端。
+
+如果在两端设置了该设置，将遵循 OpenSSL 协议协商规则。</string>
+			<string id="String_Policy_Configure_SSL_cipher_list_163" >配置 SSL 密码列表</string>
+			<string id="String_Explain_Configures_SSL_cipher_list_164" >在建立加密的 SSL 连接之前，配置 SSL 密码列表以限制使用密码套件。该列表由一个或多个以冒号分隔的密码套件字符串组成。请注意，所有密码字符串不区分大小写。
+
+默认值为:
+   &quot;ECDHE-RSA-AES256-GCM-SHA384:AES256-SHA256:AES256-SHA:ECDHE-RSA-AES128-GCM-SHA256:AES128-SHA256:AES128-SHA:@STRENGTH&quot;
+
+如果配置了该项目，将忽略“配置 SSL 连接以满足安全工具要求”中的“强制实施 AES-256 或更强的密码进行 SSL 连接协商”复选框。
+
+需要将该设置同时应用于 PCoIP 服务器和 PCoIP 客户端。</string>
+			<string id="String_Policy_Configure_the_Client_165" >配置客户端 PCoIP UDP 端口</string>
+			<string id="String_Explain_Specifies_the_UDP_166" >指定软件 PCoIP 客户端使用的 UDP 客户端端口，可以手动配置该端口，也可以由客户端操作系统 (OS) 自动确定该端口。该设置仅适用于客户端。
+
+要手动进行配置，请输入 UDP 端口和重试端口范围。UDP 端口值指定要使用的基本 UDP 端口。UDP 端口范围值确定当基本端口不可用时尝试其他端口的个数。此范围从基本端口跨越至基本端口与端口范围之和。例如，如果基本端口为 50002，端口范围为 64，则其范围为 50002 至 50066。默认情况下，基本端口为 50002，端口范围为 64。
+
+如果选中“允许操作系统自动确定 UDP 端口”，则指示客户端操作系统忽略手动设置的值，并自动选择其他程序未在使用的 UDP 端口。</string>
+			<string id="String_Policy_Configure_PCoIP_171" >配置 PCoIP 虚拟通道</string>
+			<string id="String_Explain_Specifies_the_virtual_172" >指定能够以及不能通过 PCoIP 会话操作的虚拟通道。此设置还决定是否禁用 PCoIP 主机上的剪贴板处理功能。
+
+PCoIP 会话中使用的虚拟通道必须显示在虚拟通道授权列表中。未授权虚拟通道列表中显示的虚拟通道不能在 PCoIP 会话中使用。
+
+最多可指定 15 个虚拟通道，以在 PCoIP 会话中使用。
+
+使用竖线 (|) 字符来分隔不同的通道名称。例如，允许 mksvchan 和 vdp_rdpvcbridge 虚拟通道的虚拟通道授权字符串为 mksvchan|vdp_rdpvcbridge。
+
+如果通道名称包含竖线或反斜线 (\) 字符，请在这两个字符的前面插入一个反斜线字符。例如，将通道名称 awk|ward\channel 键入为 awk\|ward\\channel。
+
+授权虚拟通道列表为空时表示禁用所有虚拟通道。未授权虚拟通道列表为空时表示允许使用所有虚拟通道。
+
+此虚拟通道设置适用于代理和客户端。必须在代理和客户端上均启用虚拟通道才能使用虚拟通道。
+
+虚拟通道设置中有一个单独的复选框，可供您禁用 PCoIP 主机上的远程剪贴板处理功能。此值仅适用于代理。
+
+默认情况下，启用所有虚拟通道，包括剪贴板处理功能。</string>
+			<string id="String_Policy_DropList_Select_Configure_PCoIP_0_Disable_virtual_174" >0 - 在 PCoIP 会话中禁用虚拟通道</string>
+			<string id="String_Policy_DropList_Select_Configure_PCoIP_2_Disable_all_175" >2 - 禁用所有其他的虚拟通道</string>
+			<string id="String_Policy_DropList_Select_Configure_PCoIP_3_Enable_all_176" >3 - 启用所有其他的虚拟通道</string>
+			<string id="String_Policy_Configure_PCoIP_180" >配置 PCoIP 客户端图像缓存大小策略</string>
+			<string id="String_Explain_Controls_the_size_181" >控制 PCoIP 客户端图像缓存的大小。客户端使用图像缓存来存储之前传送的显示部分。图像缓存减少了重传的数据量。
+
+在 View Client、View Agent 和 View 连接服务器为 View 5.0 或更高版本时，该设置仅适用于 Windows 和 Linux 客户端。
+
+未配置或禁用此设置时，PCoIP 使用 250 MB 的默认客户端图像缓存大小。
+
+如果启用该设置，您可以配置最小为 50 MB 且最大为 1024 MB 的客户端图像缓存大小。默认值为 250 MB。</string>
+			<string id="String_Policy_Configure_the_PCoIP_184" >配置 PCoIP 传输标头</string>
+			<string id="String_Explain_Configures_the_185" >配置 PCoIP 传输标头。
+
+PCoIP 传输标头是添加到所有 PCoIP UDP 数据包的 32 位标头 (只有在两端均启用/支持传输标头时)。在处理网络拥塞问题时，网络设备可以通过 PCoIP 传输标头做出更好的优先级/Qos 决策。默认情况下传输标头处于启用状态。
+
+传输会话的优先级决定了在 PCoIP 传输标头中报告的 PCoIP 会话优先级。网络设备可以根据指定的传输会话优先级做出更好的优先级/Qos 决策。PCoIP 代理和客户端进行协商来确定传输会话的优先级值。如果代理指定了传输会话优先级值 (高、中或低)，则会话使用代理指定的会话优先级。如果仅客户端指定了传输会话优先级 (高、中或低)，则会话使用客户端指定的会话优先级。如果代理和客户端均未指定传输会话优先级 (或指定了“未定义的优先级”)，则会话使用中优先级 (默认值)。</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_High_Priority_187" >高优先级</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_Medium_Priority_188" >中优先级 (默认)</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_Low_Priority_189" >低优先级</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_Undefined_Priority_190" >未定义的优先级</string>
+			<string id="String_Policy_Configure_PCoIP_192" >配置 PCoIP 事件日志详细级别</string>
+			<string id="String_Explain_This_policy_enables_193" >该策略允许配置从 0 (最不详细) 到 3 (最详细) 的 PCoIP 事件日志详细级别。
+
+如果该策略为“已禁用”或“未配置”，则默认事件日志详细级别设置为 2。如果该策略为“已配置”，则该设置控制上述详细级别。
+
+如果在活动 PCoIP 会话期间修改该设置，将会立即生效。</string>
+			<string id="String_Policy_Configure_PCoIP_196" >配置 PCoIP 事件日志清理时间 (天)</string>
+			<string id="String_Explain_This_policy_enables_197" >该策略允许配置 PCoIP 事件日志清理时间 (天)。
+
+如果该策略为“已配置”，则该设置控制日志文件清理时间 (天)，即，如果设置为非零值 n，则自动 (并无提示) 删除早于 n 天的日志文件；如果设置为 0，则表示不按时间清理文件。如果该策略为“已禁用”或“未配置”，则默认事件日志清理时间 (天) 设置为 7。
+
+在会话启动时，将执行一次日志文件清理；在运行下一个会话时，才会应用对该设置进行的任何更改。</string>
+			<string id="String_Policy_Configure_PCoIP_200" >配置 PCoIP 事件日志清理大小 (MB)</string>
+			<string id="String_Explain_This_policy_enables_201" >该策略允许配置 PCoIP 事件日志清理大小 (MB)。
+
+如果该策略为“已配置”，则该设置控制日志文件清理大小 (MB)，即，如果设置为非零值 m，则自动 (并无提示) 删除超过 m MB 的日志文件；如果设置为 0，则表示不按大小清理文件。如果该策略为“已禁用”或“未配置”，则默认事件日志清理大小 (MB) 设置为 100。
+
+在会话启动时，将执行一次日志文件清理；在运行下一个会话时，才会应用对该设置进行的任何更改。</string>
+		</stringTable>
+		<presentationTable ><!--Storage for Presentation Definitions-->
+
+			<presentation id="Policy_Configure_the_maximum_63" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_maximum_66" spinStep="100" spin="true" defaultValue="900000" >将 PCoIP 会话带宽 (kbps) 设置为:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_67" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_PCoIP_70" spinStep="1" spin="true" defaultValue="1200" >将 PCoIP MTU 大小 (字节) 设置为:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_71" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_PCoIP_74" spinStep="1" spin="true" defaultValue="0" >将 PCoIP 会话带宽下限 (kbps) 设置为:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_SSL_connections_78" >
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_connections_81" >
+					<label >从中搜索证书的计算机帐户证书存储的名称:</label>
+					<defaultValue >MY</defaultValue>
+				</textBox>
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_connections_82" >
+					<label >从中搜索证书颁发机构证书的计算机帐户证书存储的名称:</label>
+					<defaultValue >ROOT</defaultValue>
+				</textBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_SSL_connections_83" >强制实施 AES-256 或更强的密码进行 SSL 连接协商</checkBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_84" >
+				<text >必须启用至少一个加密算法。(请参见“解释”)</text>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_87" >禁用 Salsa20-256-round12 加密</checkBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_88" >禁用 AES-128-GCM 加密</checkBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_89" >禁用 AES-256-GCM 加密</checkBox>
+			</presentation>
+			<presentation id="Policy_Configure_SSL_protocols_90" >
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_protocols_93" >
+					<label >配置 SSL 协议</label>
+					<defaultValue >TLS1.0:TLS1.1:TLS1.2</defaultValue>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Configure_SSL_cipher_list_91" >
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_cipher_list_94" >
+					<label >配置 SSL 密码列表</label>
+					<defaultValue >ECDHE-RSA-AES256-GCM-SHA384:AES256-SHA256:AES256-SHA:ECDHE-RSA-AES128-GCM-SHA256:AES128-SHA256:AES128-SHA:@STRENGTH</defaultValue>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_Client_94" >
+				<text >设置 UDP 端口和重试范围大小。</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_Client_97" spinStep="1" spin="true" defaultValue="50002" >选择一个 UDP 端口:</decimalTextBox>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_Client_98" spinStep="1" spin="true" defaultValue="64" >设置重试端口范围大小:</decimalTextBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_the_Client_99" >允许操作系统自动确定 UDP 端口</checkBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_100" >
+				<dropdownList refId="Policy_DropList_Element_Configure_PCoIP_103" defaultItem="0" >虚拟通道设置:</dropdownList>
+				<text >只有在选择 2 时，以下设置才是必需和适用的。</text>
+				<text >有关字符串格式和示例，请参阅“解释”选项卡。</text>
+				<textBox refId="Policy_TextBox_Element_Configure_PCoIP_107" >
+					<label >输入授权的虚拟通道列表:</label>
+				</textBox>
+				<text >只有在选择 3 时，以下设置才是必需和适用的。</text>
+				<text >有关字符串格式和示例，请参阅“解释”选项卡。</text>
+				<textBox refId="Policy_TextBox_Element_Configure_PCoIP_108" >
+					<label >输入取消授权的虚拟通道列表:</label>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_109" >
+				<text >有关图像缓存和值的说明，请参阅“解释”选项卡。</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_112" spinStep="50" spin="true" defaultValue="250" >设置图像缓存大小 (MB) (默认为 250 MB):</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_113" >
+				<dropdownList refId="Policy_DropList_Element_Configure_the_PCoIP_116" defaultItem="3" >传输会话优先级</dropdownList>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_121" >
+				<text >有关示例值，请参阅“解释”选项卡。</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_124" spinStep="1" spin="true" defaultValue="2" >设置事件日志详细级别值 (默认为 2):</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_125" >
+				<text >有关示例值，请参阅“解释”选项卡。</text>
+				<text >设置事件日志清理时间值 (天) (默认为 7，0 表示不</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_128" spinStep="1" spin="true" defaultValue="7" >按时间清理):</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_129" >
+				<text >有关示例值，请参阅“解释”选项卡。</text>
+				<text >设置事件日志清理大小值 (MB) (默认为 100，0 表示不</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_132" spinStep="1" spin="true" defaultValue="100" >按大小清理):</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_maximum_133" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_maximum_136" spinStep="100" spin="true" defaultValue="900000" >将 PCoIP 会话带宽 (kbps) 设置为:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_137" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_PCoIP_140" spinStep="1" spin="true" defaultValue="1200" >将 PCoIP MTU 大小 (字节) 设置为:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_141" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_PCoIP_144" spinStep="1" spin="true" defaultValue="0" >将 PCoIP 会话带宽下限 (kbps) 设置为:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_SSL_connections_148" >
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_connections_151" >
+					<label >从中搜索证书的计算机帐户证书存储的名称:</label>
+					<defaultValue >MY</defaultValue>
+				</textBox>
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_connections_152" >
+					<label >从中搜索证书颁发机构证书的计算机帐户证书存储的名称:</label>
+					<defaultValue >ROOT</defaultValue>
+				</textBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_SSL_connections_153" >强制实施 AES-256 或更强的密码进行 SSL 连接协商</checkBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_154" >
+				<text >必须启用至少一个加密算法。(请参见“解释”)</text>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_157" >禁用 Salsa20-256-round12 加密</checkBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_158" >禁用 AES-128-GCM 加密</checkBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_159" >禁用 AES-256-GCM 加密</checkBox>
+			</presentation>
+			<presentation id="Policy_Configure_SSL_protocols_160" >
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_protocols_163" >
+					<label >配置 SSL 协议</label>
+					<defaultValue >TLS1.0:TLS1.1:TLS1.2</defaultValue>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Configure_SSL_cipher_list_161" >
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_cipher_list_164" >
+					<label >配置 SSL 密码列表</label>
+					<defaultValue >ECDHE-RSA-AES256-GCM-SHA384:AES256-SHA256:AES256-SHA:ECDHE-RSA-AES128-GCM-SHA256:AES128-SHA256:AES128-SHA:@STRENGTH</defaultValue>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_Client_164" >
+				<text >设置 UDP 端口和重试范围大小。</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_Client_167" spinStep="1" spin="true" defaultValue="50002" >选择一个 UDP 端口:</decimalTextBox>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_Client_168" spinStep="1" spin="true" defaultValue="64" >设置重试端口范围大小:</decimalTextBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_the_Client_169" >允许操作系统自动确定 UDP 端口</checkBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_170" >
+				<dropdownList refId="Policy_DropList_Element_Configure_PCoIP_173" defaultItem="0" >虚拟通道设置:</dropdownList>
+				<text >只有在选择 2 时，以下设置才是必需和适用的。</text>
+				<text >有关字符串格式和示例，请参阅“解释”选项卡。</text>
+				<textBox refId="Policy_TextBox_Element_Configure_PCoIP_177" >
+					<label >输入授权的虚拟通道列表:</label>
+				</textBox>
+				<text >只有在选择 3 时，以下设置才是必需和适用的。</text>
+				<text >有关字符串格式和示例，请参阅“解释”选项卡。</text>
+				<textBox refId="Policy_TextBox_Element_Configure_PCoIP_178" >
+					<label >输入取消授权的虚拟通道列表:</label>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_179" >
+				<text >有关图像缓存和值的说明，请参阅“解释”选项卡。</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_182" spinStep="50" spin="true" defaultValue="250" >设置图像缓存大小 (MB) (默认为 250 MB):</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_183" >
+				<dropdownList refId="Policy_DropList_Element_Configure_the_PCoIP_186" defaultItem="3" >传输会话优先级</dropdownList>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_191" >
+				<text >有关示例值，请参阅“解释”选项卡。</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_194" spinStep="1" spin="true" defaultValue="2" >设置事件日志详细级别值 (默认为 2):</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_195" >
+				<text >有关示例值，请参阅“解释”选项卡。</text>
+				<text >设置事件日志清理时间值 (天) (默认为 7，0 表示不</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_198" spinStep="1" spin="true" defaultValue="7" >按时间清理):</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_199" >
+				<text >有关示例值，请参阅“解释”选项卡。</text>
+				<text >设置事件日志清理大小值 (MB) (默认为 100，0 表示不</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_202" spinStep="1" spin="true" defaultValue="100" >按大小清理):</decimalTextBox>
+			</presentation>
+		</presentationTable>
+	</resources>
+</policyDefinitionResources>
+

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="VMwareViewDnD">拖放</string>
+      <string id="SUPPORTED_VERSION"></string>
+      <string id="SERVER_DND_STATE">配置拖放方向</string>
+      <string id="DND_STATE_DISABLE_BOTH">双向禁用</string>
+      <string id="DND_STATE_ENABLE_CLIENT_2_SERVER">仅启用客户端到代理</string>
+      <string id="DND_STATE_ENABLE_SERVER_2_CLIENT">仅启用代理到客户端</string>
+      <string id="DND_STATE_ENABLE_BOTH">双向启用</string>
+      <string id="SERVER_DND_STATE_EXPLAIN">确定允许拖放的方向。您可以选择以下值之一:
+
+-双向禁用
+-仅启用代理到客户端 (即，仅允许从代理到客户端系统的拖放操作。)
+-仅启用从客户端到代理 (即仅允许从客户端系统到代理的拖放操作。)
+-双向启用
+
+此设置仅适用于代理。
+
+如果禁用或未配置此设置，则默认值为“仅启用客户端到代理”。</string>
+      <string id="SERVER_DND_FORMAT_STATE">配置拖放格式</string>
+      <string id="SERVER_DND_FORMAT_STATE_EXPLAIN">此设置可确定允许对每种格式 (文件/文本/富文本/图像/HTML 格式/文件内容) 使用哪个“拖放”选项。这些选项的值包括:
+
+-双向禁用
+-仅启用代理到客户端
+-仅启用客户端到代理
+-双向启用
+
+此设置仅适用于代理，默认情况下未配置此设置。
+
+如果未配置或禁用该设置，则用于所有格式的“拖放”选项均为“双向启用”。</string>
+      <string id="String_Policy_DropList_Select_DnD_size_unit_bytes" >字节</string>
+      <string id="String_Policy_DropList_Select_DnD_size_unit_kilobytes" >千字节</string>
+      <string id="String_Policy_DropList_Select_DnD_size_unit_megabytes" >兆字节</string>
+      <string id="SERVER_DND_SIZE">配置拖放大小阈值</string>
+      <string id="SERVER_DND_SIZE_EXPLAIN">拖放支持拖动各种类型的数据，包括纯文本、富文本、图像、文件、文件夹等。此设置为拖动除文件和文件夹以外的常用数据类型确定了大小限制。
+
+拖动数据大小的单位可配置为字节、千字节和兆字节。
+
+所需大小值在“拖放大小阈值”中配置。不同大小单位的有效数据范围为:
+- 字节: 1 到 1023
+- 千字节: 1 到 1023
+- 兆字节: 1 到 16 (可拖放的最大数据大小为 16 兆字节)
+
+此设置仅适用于代理。
+
+如果未配置或禁用此设置，则会设置默认阈值 1 兆字节。</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="SERVER_DND_STATE">
+        <dropdownList refId="SERVER_DND_STATE" defaultItem="2">配置拖放</dropdownList>
+      </presentation>
+      <presentation id="SERVER_DND_FORMAT_STATE">
+        <dropdownList refId="SERVER_DND_FILE_STATE" defaultItem="3">用于文件格式的选项:</dropdownList>
+        <dropdownList refId="SERVER_DND_TEXT_STATE" defaultItem="3">用于文本格式的选项:</dropdownList>
+        <dropdownList refId="SERVER_DND_RTF_STATE" defaultItem="3">用于富文本格式的选项:</dropdownList>
+        <dropdownList refId="SERVER_DND_IMAGE_STATE" defaultItem="3">用于图像格式的选项:</dropdownList>
+        <dropdownList refId="SERVER_DND_HTML_STATE" defaultItem="3">用于 HTML 格式的选项:</dropdownList>
+        <dropdownList refId="SERVER_DND_FILE_CONTENT_STATE" defaultItem="3">用于文件内容格式的选项:</dropdownList>
+      </presentation>
+      <presentation id="SERVER_DND_SIZE">
+        <dropdownList refId="Policy_DropList_DnD_Size_Unit" defaultItem="2" >选择拖放大小的单位</dropdownList>
+        <decimalTextBox refId="SERVER_DND_SIZE" defaultValue="1">拖放大小阈值</decimalTextBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

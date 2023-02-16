@@ -42,6 +42,40 @@
         <decimal value="0" />
       </disabledValue>
     </policy>
+    <policy name="EnableEventLog_PolicyName" class="Machine" displayName="$(string.EnableEventLog_PolicyName)" explainText="$(string.EnableEventLog_PolicyExplain)" presentation="$(presentation.EnableEventLog_PolicyName)" key="SOFTWARE\Policies\VMware, Inc.\VMware VDM\SerialCOM\Agent\Settings" valueName="EnableEventLog">
+      <parentCategory ref="Product_CatName" />
+      <supportedOn ref="SUPPORTED_WindowsXP" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="EventLogTableSeparator_PolicyName" class="Machine" displayName="$(string.EventLogTableSeparator_PolicyName)" explainText="$(string.EventLogTableSeparator_PolicyExplain)" presentation="$(presentation.EventLogTableSeparator_PolicyName)" key="SOFTWARE\Policies\VMware, Inc.\VMware VDM\SerialCOM\Agent\Settings">
+      <parentCategory ref="Product_CatName" />
+      <supportedOn ref="SUPPORTED_WindowsXP" />
+      <elements>
+        <enum id="EventLogTableSeparatorType_Enum" valueName="EventLogTableSeparatorType">
+          <item displayName="$(string.EventLogTableSeparatorType_TAB_combo_txt)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.EventLogTableSeparatorType_SPACE_combo_txt)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.EventLogTableSeparatorType_custom_combo_txt)">
+            <value>
+              <decimal value="3" />
+            </value>
+          </item>
+        </enum>
+		<text id="EventLogTableSeparatorType_custom_Text" valueName="EventLogTableSeparatorText" />
+      </elements>
+    </policy>
     <policy name="RedirectAll_PolicyName" class="Machine" displayName="$(string.RedirectAll_PolicyName)" explainText="$(string.RedirectAll_PolicyExplain)" presentation="$(presentation.RedirectAll_PolicyName)" key="SOFTWARE\Policies\VMware, Inc.\VMware VDM\SerialCOM\Agent\Settings" valueName="ConnectAll">
       <parentCategory ref="Product_CatName" />
       <supportedOn ref="SUPPORTED_WindowsXP" />

@@ -5,26 +5,41 @@
   <resources>
     <stringTable>
       <string id="VMwareViewClientRTAV">Configuración de audio/vídeo en tiempo real de View</string>
-      <string id="DisableRTAV">Deshabilitar audio/vídeo en tiempo real</string>
-      <string id="DisableRTAVExplain">Deshabilitar audio/vídeo en tiempo real</string>
       <string id="VMwareViewClientRTAVWebcam">Configuración de audio/vídeo en tiempo real de cámara web de View</string>
+      <string id="VMwareViewRTAVMicrophone">Configuración de audio/vídeo en tiempo real de micrófono de View</string>
       <string id="WebcamMaxResWidth">Resolución - Máx. ancho de imagen en píxeles</string>
       <string id="WebcamMaxResWidthExplain">Máximo ancho en píxeles de un fotograma al capturar con la cámara web</string>
       <string id="WebcamMaxResHeight">Resolución - Máx. altura de imagen en píxeles</string>
       <string id="WebcamMaxResHeightExplain">Máxima altura en píxeles de un fotograma al capturar con la cámara web</string>
       <string id="WebcamMaxFrameRate">Fotogramas máximos por segundo</string>
       <string id="WebcamMaxFrameRateExplain">Velocidad máxima con la que se capturan fotogramas con la cámara web por segundo.
-Mínimo = 1 y máximo = 25</string>
+Mínimo = 1 y máximo = 30</string>
       <string id="WebcamDefaultResWidth">Resolución - Ancho predeterminado de resolución de imagen en píxeles</string>
       <string id="WebcamDefaultResWidthExplain">Establece el ancho predeterminado de resolución de imagen. Si no se establece, el valor por defecto es 320. Se utiliza si el usuario no define un valor</string>
       <string id="WebcamDefaultResHeight">Resolución - Altura predeterminada de resolución de imagen en píxeles</string>
       <string id="WebcamDefaultResHeightExplain">Establece la altura predeterminada de resolución de imagen. Si no se establece, el valor por defecto es 240. Se utiliza si el usuario no define un valor</string>
       <string id="VMwareViewAgent">Configuración de VMware View Agent</string>
       <string id="ADMXMigrator_UnresolvedString">ADMX Migrator encontró una cadena no presente en la tabla de cadenas ADM de origen.</string>
-      <string id="ADMXMigrator_NoSupportedOn">ADMX Migrator encontró una cadena que no contiene un valor On compatible.</string>
+      <string id="ADMXMigrator_NoSupportedOn">ADMX Migrator encontró una directiva que no contiene un valor On compatible.</string>
+      <string id="MicrophoneSampleRate">Tasa de muestra: tasa de muestra del dispositivo de audio de grabación</string>
+      <string id="MicrophoneSampleRateExplain">Establece la frecuencia de muestreo del dispositivo de audio de grabación desde el terminal hasta las aplicaciones remotas RDSH y los escritorios RDSH.
+Importante: no cambie esta configuración de GPO cuando hay una sesión conectada. Es necesario reiniciar para que esta opción surta efecto.</string>
+      <string id="SampleRate8K">8000</string>
+      <string id="SampleRate16K">16 000</string>
+      <string id="SampleRate48K">48 000</string>
+      <string id="DisableRTAV">Deshabilitar micrófono o cámara web</string>
+      <string id="DisableRTAVExplain">Deshabilitar micrófono o cámara web
+
+Nota: &quot;Deshabilitar micrófono&quot; y &quot;Deshabilitar cámara web&quot; solo tienen efecto cuando se utiliza un cliente Windows. Además, tanto el cliente como el agente deben tener la versión 2209 o una posterior.</string>
+      <string id="DisableMicAndWebcam">Deshabilitar micrófono y cámara web</string>
+      <string id="DisableWebcam">Deshabilitar cámara web</string>
+      <string id="DisableMic">Deshabilitar micrófono</string>
+      <string id="ForceNV">Aceleración de hardware: habilite esta opción para utilizar la aceleración de hardware de Nvidia para el códec de vídeo de la cámara web</string>
+      <string id="ForceNVExplain">Habilite esta opción para utilizar la aceleración de hardware de Nvidia para el códec de vídeo de la cámara web si se detectó la GPU especificada y funciona de forma compatible con FFmpeg</string>
+      <string id="ForceQSV">Aceleración de hardware: habilite esta opción para usar Intel QSV para el códec de vídeo de la cámara web</string>
+      <string id="ForceQSVExplain">Habilite el uso de Intel QSV para el códec de vídeo de la cámara web si se detectó la GPU especificada y funciona de forma compatible con FFmpeg</string>
     </stringTable>
     <presentationTable>
-      <presentation id="DisableRTAV" />
       <presentation id="WebcamMaxFrameRate">
         <decimalTextBox refId="WebcamMaxFrameRate" defaultValue="15">Fotogramas máximos por segundo</decimalTextBox>
       </presentation>
@@ -40,6 +55,14 @@ Mínimo = 1 y máximo = 25</string>
       <presentation id="WebcamDefaultResWidth">
         <decimalTextBox refId="WebcamDefaultResWidth" defaultValue="0">Resolución - Ancho predeterminado de resolución de imagen en píxeles</decimalTextBox>
       </presentation>
+      <presentation id="MicrophoneSampleRate">
+        <dropdownList refId="MicrophoneSampleRateList" defaultItem="0" noSort="true">Tasa de muestra: tasa de muestra del dispositivo de audio de grabación</dropdownList>
+      </presentation>
+      <presentation id="DisableRTAV">
+        <dropdownList refId="RTAVDisableComponentList" defaultItem="0" noSort="true">Deshabilitar micrófono o cámara web</dropdownList>
+      </presentation>
+      <presentation id="ForceNV" />
+      <presentation id="ForceQSV" />
     </presentationTable>
   </resources>
 </policyDefinitionResources>

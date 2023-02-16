@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<policyDefinitionResources
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	revision="1.0"
+	schemaVersion="1.0"
+	xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+
+<displayName>在這裡輸入顯示名稱</displayName>
+
+<description>在這裡輸入說明</description>
+
+<resources>
+
+<stringTable>
+
+<string id="CASCADIA_APP_COMPATIBILITY">應用程式相容性</string>
+
+<string id="CASCADIA_APP_COMPATIBILITY_Help">控制 RD 工作階段主機伺服器上的應用程式相容性設定</string>
+
+<string id="CASCADIA_ENABLE_IP_VIRTUALIZATION">開啟遠端桌面平台 IP 虛擬化</string>
+
+<string id="CASCADIA_ENABLE_IP_VIRTUALIZATION_EXPLAIN">此原則設定指定遠端桌面平台 IP 虛擬化是否已開啟。依預設，遠端桌面平台 IP 虛擬化會關閉。如果啟用此原則設定，則會開啟遠端桌面平台 IP 虛擬化。您可以選取套用此設定的模式。如果使用「每個程式」模式，您必須輸入程式清單以使用虛擬 IP 位址。則一行列出一個程式 (請勿在程式之間輸入任何空白行)。例如:
+
+explorer.exe
+mstsc.exe
+
+如果停用或不設定此原則設定，則會關閉遠端桌面平台 IP 虛擬化。</string>
+
+<string id="CASCADIA_ENABLE_SESSION_MODE_IP_VIRTUALIZATION">每個工作階段</string>
+
+<string id="CASCADIA_ENABLE_PRPGRAM_MODE_IP_VIRTUALIZATION">每個程式</string>
+
+<string id="CASCADIA_NET_ID_IP_VIRTUALIZATION">選取用於遠端桌面平台 IP 虛擬化的網路介面卡</string>
+
+<string id="CASCADIA_NET_ID_IP_VIRTUALIZATION_EXPLAIN">此原則設定指定與用於虛擬 IP 位址的網路介面卡對應的 IP 位址和網路遮罩。應該在無類別網域間路由選擇標記法中輸入 IP 位址和網路遮罩，例如 192.0.2.96/24。
+
+若啟用此原則設定，指定的 IP 位址和網路遮罩會用於選取虛擬 IP 位址所用的網路介面卡。如果停用或不設定此原則設定，則會關閉遠端桌面平台 IP 虛擬化。必須設定網路介面卡，遠端桌面平台 IP 虛擬化才能正常運作。</string>
+
+<string id="CASCADIA_NOT_USE_SERVER_IP_WITH_IP_VIRTUALIZATION">虛擬 IP 位址無法使用時，不使用遠端桌面工作階段主機伺服器 IP 位址</string>
+
+<string id="CASCADIA_NOT_USE_SERVER_IP_WITH_IP_VIRTUALIZATION_EXPLAIN">如果虛擬 IP 位址無法使用，此原則設定會指定工作階段是否使用遠端桌面工作階段主機伺服器的 IP 位址。如果啟用此原則設定，則虛擬 IP 無法使用時，將不會使用 RD 工作階段主機伺服器的 IP 位址。工作階段將不具備網路連線能力。如果停用或不設定此原則設定，則虛擬 IP 無法使用時，將會使用 RD 工作階段主機伺服器的 IP 位址。</string>
+
+<string id="CASCADIA_ENABLE_DFSS">關閉公平共用 CPU 排程</string>
+
+<string id="CASCADIA_ENABLE_DFSS_EXPLAIN">公平共用 CPU 排程會根據每個工作階段中處理器時間的工作階段數量與需求，在同一 RD 工作階段主機伺服器上的所有遠端桌面服務工作階段之間動態分配處理器時間。如果啟用此原則設定，則會關閉公平共用 CPU 排程。如果停用或不設定此原則設定，則會開啟公平共用 CPU 排程。</string>
+
+<string id="CASCADIA_DISABLE_MSI">關閉 Windows Installer RDS 相容性</string>
+
+<string id="CASCADIA_DISABLE_MSI_EXPLAIN">此原則設定指定，對於完整安裝的應用程式是否以每個使用者為基礎執行 Windows Installer RDS 相容性。Windows Installer 允許一次執行 msiexec 程序的一個執行個體。依預設，Windows Installer RDS 相容性會開啟。如果啟用此原則設定，則 Windows Installer RDS 相容性會關閉，並且一次僅能執行 msiexec 程序的一個執行個體。
+
+如果停用或不設定此原則設定，則 Windows Installer RDS 相容性會開啟，且多個使用者應用程式安裝要求會排入佇列，並以收到的順序由 msiexec 程序進行處理。</string>
+
+</stringTable>
+
+<presentationTable>
+	<presentation id="CASCADIA_NET_ID_IP_VIRTUALIZATION">
+		<textBox refId="CASCADIA_NET_ID_IP_VIRTUALIZATION">
+		<label>定義對應至用於遠端桌面平台 IP 虛擬化之網路介面卡的 IP 位址和網路遮罩:</label>
+		</textBox>
+		<text>格式為 [IP 位址]/[網路遮罩]。例如: 192.0.2.96/24</text>
+		</presentation>
+		<presentation id="CASCADIA_ENABLE_IP_VIRTUALIZATION">
+		<dropdownList refId="CASCADIA_ENABLE_IP_VIRTUALIZATION" noSort="true" defaultItem="0">關閉遠端桌面平台 IP 虛擬化模式:</dropdownList>
+		<multiTextBox refId="CASCADIA_ENABLE_IP_VIRTUALIZATION_EDIT">指派虛擬 IP 位址給這些程式:</multiTextBox>
+		<text>如果要列出多個程式，則一行列出一個程式 (請勿在程式之間輸入任何空白行)。例如:</text>
+		<text>explorer.exe
+		mstsc.exe</text>
+	</presentation>
+</presentationTable>
+</resources>
+</policyDefinitionResources>

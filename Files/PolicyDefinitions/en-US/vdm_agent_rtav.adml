@@ -5,16 +5,15 @@
   <resources>
     <stringTable>
       <string id="VMwareViewClientRTAV">View RTAV Configuration</string>
-      <string id="DisableRTAV">Disable RTAV</string>
-      <string id="DisableRTAVExplain">Disable Real Time Audio-Video</string>
       <string id="VMwareViewClientRTAVWebcam">View RTAV Webcam Settings</string>
+      <string id="VMwareViewRTAVMicrophone">View RTAV Microphone Settings</string>
       <string id="WebcamMaxResWidth">Resolution - Max image width in pixels</string>
       <string id="WebcamMaxResWidthExplain">Maximum width in pixels of an image frame when capturing from Webcam</string>
       <string id="WebcamMaxResHeight">Resolution - Max image height in pixels</string>
       <string id="WebcamMaxResHeightExplain">Maximum height in pixels of an image frame when capturing from Webcam</string>
       <string id="WebcamMaxFrameRate">Max frames per second</string>
       <string id="WebcamMaxFrameRateExplain">Maximum rate at which frames can be captured from Webcam per second.
-Minimum = 1 &amp; Maximum = 25</string>
+Minimum = 1 &amp; Maximum = 30</string>
       <string id="WebcamDefaultResWidth">Resolution - Default image resolution width in pixels</string>
       <string id="WebcamDefaultResWidthExplain">Sets the default image resolution width. If unset, default is 320. This is used if no resolution value is defined by the user</string>
       <string id="WebcamDefaultResHeight">Resolution - Default image resolution height in pixels</string>
@@ -22,9 +21,25 @@ Minimum = 1 &amp; Maximum = 25</string>
       <string id="VMwareViewAgent">VMware View Agent Configuration</string>
       <string id="ADMXMigrator_UnresolvedString">ADMX Migrator encountered a string that is not present in the source ADM string table.</string>
       <string id="ADMXMigrator_NoSupportedOn">ADMX Migrator encountered a policy that does not have a supportedOn value.</string>
+      <string id="MicrophoneSampleRate">Sample Rate - Recording Audio Device sample rate</string>
+      <string id="MicrophoneSampleRateExplain">Sets the recording audio device sample rate from the end point to RDSH desktop and RDSH remote apps.
+Important: Do not change this GPO setting when there is session connected. A reboot is required for this setting take effect.</string>
+      <string id="SampleRate8K">8000</string>
+      <string id="SampleRate16K">16000</string>
+      <string id="SampleRate48K">48000</string>
+      <string id="DisableRTAV">Disable Microphone or Webcam</string>
+      <string id="DisableRTAVExplain">Disable Microphone or Webcam
+
+Note: "Disable Microphone" and "Disable Webcam" only take effect when using Windows client. Furthermore, Both client and agent need to be in version 2209 and above.</string>
+      <string id="DisableMicAndWebcam">Disable Microphone and Webcam</string>
+      <string id="DisableWebcam">Disable Webcam</string>
+      <string id="DisableMic">Disable Microphone</string>
+      <string id="ForceNV">Hardware Acceleration - Enable to use Nvidia hardware acceleration for webcam video codec</string>
+      <string id="ForceNVExplain">Enable to use Nvidia hardware acceleration for webcam video codec if the specified GPU detected and work compatible with FFmpeg</string>
+      <string id="ForceQSV">Hardware Acceleration - Enable to use Intel QSV for webcam video codec</string>
+      <string id="ForceQSVExplain">Enable to use Intel QSV for webcam video codec if the specified GPU detected and work compatible with FFmpeg</string>
     </stringTable>
     <presentationTable>
-      <presentation id="DisableRTAV" />
       <presentation id="WebcamMaxFrameRate">
         <decimalTextBox refId="WebcamMaxFrameRate" defaultValue="15">Max frames per second</decimalTextBox>
       </presentation>
@@ -40,6 +55,14 @@ Minimum = 1 &amp; Maximum = 25</string>
       <presentation id="WebcamDefaultResWidth">
         <decimalTextBox refId="WebcamDefaultResWidth" defaultValue="0">Resolution - Default image resolution width in pixels</decimalTextBox>
       </presentation>
+      <presentation id="MicrophoneSampleRate">
+        <dropdownList refId="MicrophoneSampleRateList" defaultItem="0" noSort="true">Sample Rate - Recording Audio Device sample rate</dropdownList>
+      </presentation>
+      <presentation id="DisableRTAV">
+        <dropdownList refId="RTAVDisableComponentList" defaultItem="0" noSort="true">Disable Microphone or Webcam</dropdownList>
+      </presentation>
+      <presentation id="ForceNV" />
+      <presentation id="ForceQSV" />
     </presentationTable>
   </resources>
 </policyDefinitionResources>

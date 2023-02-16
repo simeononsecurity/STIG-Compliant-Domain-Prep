@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+
+   <displayName>VMware Horizon View Agent Direct Connection</displayName>
+   <description>VMware Horizon View Agent Direct Connection の構成</description>
+   <resources>
+
+      <stringTable>
+
+         <string id="Agent_Direct_Connect_Config">View Agent Direct-Connection の構成</string>
+
+         <string id="Agent_Direct_Connect_Authentication">認証</string>
+
+         <string id="Agent_Direct_Connect_Authentication_lacu">現在のユーザーとしてログイン</string>
+
+         <string id="Agent_Direct_Connect_Protocols">プロトコルとネットワークの設定</string>
+
+         <string id="HTTPS_Port">HTTPS ポート番号</string>
+
+         <string id="HTTPS_Port_Desc">View Agent Connect が View Client の HTTPS 受信接続をリッスンする TCP ポート番号。このポリシーが無効な場合、または構成されていない場合、デフォルトの 443 が使用されます。
+
+注: ポート番号を変更すると、ポートに対する受信接続を許可するため、デスクトップ ファイアウォールの再構成が必要になる場合があります。</string>
+
+         <string id="Session_Timeout">セッション タイムアウト</string>
+
+         <string id="Session_Timeout_Desc">ユーザーが View Client にログインした後にセッションを開いておくことができる時間を指定します。値を分単位で設定します。このポリシーが構成されていない場合、または無効な場合、デフォルトの 600 分が使用されます。デスクトップ セッションがタイムアウトになると、そのセッションは終了し、View Client がデスクトップから切断されます。</string>
+
+         <string id="Disclaimer_Enabled">免責条項が有効</string>
+
+         <string id="Disclaimer_Enabled_Desc">ログイン時にユーザーが承諾する必要がある免責条項を表示します。[免責条項テキスト] (指定されている場合) または GPO「Configuration\Windows Settings\Security Settings\Local Policies\Security Options」の「対話型ログイン: ログイン時にユーザーに表示するメッセージのテキスト」のテキストが表示されます。デフォルトの設定では、無効です。</string>
+
+         <string id="Disclaimer_Text">免責条項テキスト</string>
+
+         <string id="Disclaimer_Text_Desc">View Client ユーザーのログイン時に表示される免責条項テキスト。「免責条項が有効」ポリシーを設定する必要があります。テキストを指定しないと、デフォルトの値が Windows ポリシー「Configuration\Windows Settings\Security Settings\Local Policies\Security Options」の「対話型ログイン: ログイン時にユーザーに表示するメッセージのテキスト」から値が取得されます。</string>
+
+         <string id="Applications_Enabled">アプリケーションが有効</string>
+
+         <string id="Applications_Enabled_Desc">リモート デスクトップ セッション ホストでのアプリケーションの起動をサポートします。デフォルトの設定では、この機能は有効です。</string>
+
+         <string id="Client_autoconnect_setting">クライアント設定: AutoConnect</string>
+
+         <string id="Client_autoconnect_setting_Desc">View Client に送信された AutoConnect 設定。このポリシーを構成すると、保存されているすべてのクライアント設定が上書きされます。デフォルトでは値は設定されていません。このポリシーを有効にすると、値が true に設定されます。無効にすると、値が false に設定されます。</string>
+
+         <string id="Client_alwaysconnect_setting">クライアント設定: AlwaysConnect</string>
+
+         <string id="Client_alwaysconnect_setting_Desc">View Client に送信された AlwaysConnect 設定。このポリシーを構成すると、保存されているすべてのクライアント設定が上書きされます。デフォルトでは値は設定されていません。このポリシーを有効にすると、値が true に設定されます。無効にすると、値が false に設定されます。</string>
+
+         <string id="Client_screensize_setting">クライアント設定: ScreenSize</string>
+
+         <string id="Client_screensize_setting_Desc">View Client に送信された ScreenSize 設定。このポリシーを有効にすると、保存されているすべてのクライアント設定が上書きされます。このポリシーが無効な場合、または構成されていない場合、クライアント設定が使用されます。</string>
+
+         <string id="External_PCoIP_port">外部 PCoIP ポート</string>
+
+         <string id="External_PCoIP_port_Desc">PCoIP プロトコルに使用される宛先 TCP/UDP のポート番号で、View Client に送信されるポート番号です。番号の前の + 文字は、HTTPS で使用されたポート番号からの関連番号を示します。外部に公開されているポート番号が、リッスンしているサービスのポートと一致しない場合にのみ、この値を設定します。通常、この状況は NAT 環境で発生します。デフォルトでは値は設定されていません。</string>
+
+         <string id="External_RDP_Port">外部 RDP ポート</string>
+
+         <string id="External_RDP_Port_Desc">RDP プロトコルに使用される宛先 TCP のポート番号で、View Client に送信されるポート番号です。番号の前の + 文字は、HTTPS で使用されたポート番号からの関連番号を示します。外部に公開されているポート番号が、リッスンしているサービスのポートと一致しない場合にのみ、この値を設定します。通常、この状況は NAT 環境で発生します。デフォルトでは値は設定されていません。</string>
+
+         <string id="External_Blast_port">外部 Blast ポート</string>
+
+         <string id="External_Blast_port_Desc">Blast プロトコルに使用される宛先 TCP のポート番号で、View Client に送信されるポート番号です。番号の前の + 文字は、HTTPS で使用されたポート番号からの関連番号を示します。外部に公開されているポート番号が、リッスンしているサービスのポートと一致しない場合にのみ、この値を設定します。通常、この状況は NAT 環境で発生します。デフォルトでは値は設定されていません。</string>
+
+         <string id="External_IP">外部 IP アドレス</string>
+
+         <string id="External_IP_Desc">View Client に送信された IP v4 アドレス。セカンダリ プロトコル (RDP、PCoIP、フレームワーク チャネル、Blast など) に使用される宛先の IP アドレスです。外部に公開されているアドレスがデスクトップ マシンのアドレスに一致しない場合にのみ、この値を設定します。通常、この状況は NAT 環境で発生します。デフォルトでは値は設定されていません。</string>
+
+         <string id="External_Framework_Channel_port">外部フレームワーク チャネル ポート</string>
+
+         <string id="External_Framework_Channel_port_Desc">フレームワーク チャネル プロトコルに使用される宛先 TCP のポート番号で、View Client に送信されるポート番号です。番号の前の + 文字は、HTTPS で使用されたポート番号からの関連番号を示します。外部に公開されているポート番号が、リッスンしているサービスのポートと一致しない場合にのみ、この値を設定します。通常、この状況は NAT 環境で発生します。デフォルトでは値は設定されていません。</string>
+
+         <string id="USB_Enabled">USB が有効</string>
+
+         <string id="USB_Enabled_Desc">デスクトップがクライアント システムに接続されている USB デバイスを使用できるかどうかを指定します。デフォルト値は有効です。セキュリティ上の理由のため、外部デバイスを使用できないようにするには、設定を無効に変更します。</string>
+
+         <string id="MMR_Enabled">マルチメディア リダイレクト (MMR) が有効</string>
+
+         <string id="MMR_Enabled_Desc">クライアント システムで MMR を有効にするかどうかを指定します。MMR は Microsoft DirectShow のフィルタであり、マルチメディア データを View デスクトップ上の特定のコーデックから TCP ソケット経由で直接クライアント システムに転送します。その後、データはクライアント システム上で直接デコードされ、そこで再生されます。デフォルト値は無効です。
+
+クライアント システムのビデオ再生ハードウェアでオーバーレイがサポートされていない場合は、MMR が正しく機能しません。クライアント システムに十分なリソースがなく、ローカル マルチメディア デコーディングが処理できない場合があります。</string>
+
+         <string id="Reset_Enabled">リセットが有効</string>
+
+         <string id="Reset_Enabled_Desc">認証された View Client がオペレーティング システム レベルで再起動できます。デフォルトでは、この設定は無効です。</string>
+
+         <string id="USB_AutoConnect">USB 自動接続</string>
+
+         <string id="USB_AutoConnect_Desc">USB デバイスがプラグインされたときにデスクトップに接続します。このポリシーを構成すると、保存されているすべてのクライアント設定が上書きされます。デフォルトでは値は設定されていません。</string>
+
+         <string id="Client_Cred_Cache_Timeout">クライアント認証情報のキャッシュ タイムアウト</string>
+
+         <string id="Client_Cred_Cache_Timeout_Desc">View Client がユーザーに保存済みパスワードの使用を許可する時間 (分)。0 は使用できない、-1 は永久に使用できることを意味します。この設定に有効な値が設定されている場合、View Client はパスワードの保存オプションをユーザーに表示します。デフォルトは 0 分です。</string>
+
+         <string id="User_Idle_Timeout">ユーザー アイドル タイムアウト</string>
+
+         <string id="User_Idle_Timeout_Desc">ユーザーがアイドル状態を維持できる最長時間 (秒)。この時間が経過すると、サービスがセッションを保護するための処理を実行します。-1 は、セッションがアイドル状態とみなされないことを意味します。デフォルトは 900 秒 (15 分) です。</string>
+
+         <string id="Client_Session_Timeout">クライアント セッション タイムアウト</string>
+
+         <string id="Client_Session_Timeout_Desc">クライアントが接続していない場合にセッションがアクティブ状態を維持する最長時間 (秒)。デフォルトは 36,000 秒 (10 時間) です。</string>
+
+         <string id="X509_Cert_Auth">X509 証明書認証</string>
+
+         <string id="X509_Cert_Auth_Desc">スマート カード X.509 証明書認証を無効、許可または必須に指定します。</string>
+
+         <string id="Disabled">無効</string>
+
+         <string id="Allowed">許可</string>
+
+         <string id="Required">必須</string>
+
+         <string id="X509_SSL_Cert_Auth_Enabled">X509 SSL 証明書認証が有効</string>
+
+         <string id="X509_SSL_Cert_Auth_Enabled_Desc">View Client からの SSL 直接接続でスマート カード X.509 証明書認証を有効にするかどうかを指定します。X.509 証明書認証が中間の SSL 終了ポイント経由で処理される場合、設定を行う必要はありません。この値を変更すると、View Agent を再起動する必要があります。</string>
+
+         <string id="Client_Config_NVP">クライアント構成の名前/値のペア</string>
+
+         <string id="Client_Config_NVP_Desc">name=value の形式でクライアントに渡される値のリスト。例: clientCredentialCacheTimeout=1440。</string>
+
+         <string id="Default_Protocol">デフォルトのプロトコル</string>
+
+         <string id="Default_Protocol_Desc">View Client がデスクトップとの接続に使用するデフォルトの表示プロトコル。値が設定されてない場合、デフォルトは BLAST になります。</string>
+
+<!-- begin: log on as current user -->
+
+         <string id="gssapi_allow_legacy_clients">レガシー クライアントを許可</string>
+         <string id="gssapi_allow_legacy_clients_Desc">無効にすると、バージョン 5.5 より前のクライアントは、「現在のユーザーとしてログイン」を使用して認証を行うことができなくなります。
+
+設定しない場合、古いクライアントが許可されます。</string>
+
+         <string id="gssapi_allow_ntlm">NTLM フォールバックを許可</string>
+         <string id="gssapi_allow_ntlm_Desc">有効にすると、クライアントがドメイン コントローラに到達できない場合に、Kerberos から NTLM 認証へのフォールバックが許可されます。
+
+設定しない場合、NTLM フォールバックは許可されません。</string>
+
+         <string id="gssapi_require_cbt">チャネル バインディングを必須にする</string>
+         <string id="gssapi_require_cbt_Desc">無効にすると、チャネル バインディングが不要になります。
+
+注: レガシー クライアントはチャネル バインディングをサポートしていません。レガシー クライアントのサポートが有効になっている場合、バージョン 5.5 より前のクライアントでチャネル バインディングが使用されることはありません。
+
+設定しない場合、チャネル バインディングが必須になります。</string>
+
+<!-- end: log on as current user -->
+
+      </stringTable>
+
+      <presentationTable>
+
+         <presentation id="HTTPS_Port">
+            <textBox refId="HTTPS_Port_TB">
+               <label>HTTPS ポート番号</label>
+               <defaultValue>443</defaultValue>
+            </textBox>
+         </presentation>
+
+         <presentation id="Session_Timeout">
+            <textBox refId="Session_Timeout_TB">
+               <label>セッション タイムアウト</label>
+               <defaultValue>600</defaultValue>
+            </textBox>
+         </presentation>
+
+         <presentation id="Disclaimer_Text">
+            <textBox refId="Disclaimer_Text_TB">
+               <label>免責条項テキスト</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Client_screensize_setting">
+            <textBox refId="Client_screensize_setting_TB">
+               <label>クライアント設定: ScreenSize</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="External_PCoIP_port">
+            <textBox refId="External_PCoIP_port_TB">
+               <label>外部 PCoIP ポート</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="External_RDP_Port">
+            <textBox refId="External_RDP_Port_TB">
+               <label>外部 RDP ポート</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="External_Blast_port">
+            <textBox refId="External_Blast_port_TB">
+               <label>外部 Blast ポート</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="External_IP">
+            <textBox refId="External_IP_TB">
+               <label>外部 IP アドレス</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="External_Framework_Channel_port">
+            <textBox refId="External_Framework_Channel_port_TB">
+               <label>外部フレームワーク チャネル ポート</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Client_Cred_Cache_Timeout">
+            <textBox refId="Client_Cred_Cache_Timeout_TB">
+               <label>クライアント認証情報のキャッシュ タイムアウト</label>
+               <defaultValue>0</defaultValue>
+            </textBox>
+         </presentation>
+
+         <presentation id="User_Idle_Timeout">
+            <textBox refId="User_Idle_Timeout_TB">
+               <label>ユーザー アイドル タイムアウト</label>
+               <defaultValue>900</defaultValue>
+            </textBox>
+         </presentation>
+
+         <presentation id="Client_Session_Timeout">
+            <textBox refId="Client_Session_Timeout_TB">
+               <label>クライアント セッション タイムアウト</label>
+               <defaultValue>36000</defaultValue>
+            </textBox>
+         </presentation>
+
+         <presentation id="X509_Cert_Auth">
+            <dropdownList refId="X509_Cert_Auth_DDL" defaultItem="0">X509 証明書認証</dropdownList>
+         </presentation>
+
+         <presentation id="Client_Config_NVP">
+            <listBox refId="Client_Config_NVP_list">クライアント構成の名前/値のペア</listBox>
+         </presentation>
+
+         <presentation id="Default_Protocol">
+            <textBox refId="Default_Protocol_TB">
+               <label>デフォルトのプロトコル</label>
+               <defaultValue>BLAST</defaultValue>
+            </textBox>
+         </presentation>
+      </presentationTable>
+   </resources>
+</policyDefinitionResources>

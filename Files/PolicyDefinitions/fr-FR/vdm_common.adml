@@ -96,10 +96,16 @@ Format : LogLevel|ServerFQDNorIP[|PortNumber (514 par défaut)], exemple Debug
 
 			<string id="Revocation_URL_check_timeout_Desc" >Délai d'expiration cumulatif sur toutes les récupérations d'URL de révocation en millisecondes. Une absence de configuration ou une valeur définie sur 0 signifie que la gestion par défaut de Microsoft est utilisée.</string>
 
-			<string id="Global_Max_Dump_Count" >Configurer la création d'un vidage mémoire en cas d'erreur de programme</string>
+			<string id="Global_Max_Dump_Count" >Configurer le nombre de vidages mémoire sur erreur de programme</string>
 
-			<string id="Global_Max_Dump_Count_Desc" >Les vidages mémoire peuvent être limités à une quantité spécifique en définissant la valeur sur une valeur numérique quelconque. Lorsque la valeur est définie sur 0, aucun vidage mémoire n'est créé. Si aucune valeur n'est définie, aucune limite n'est établie lors de la création d'un vidage mémoire.</string>
+			<string id="Global_Max_Dump_Count_Desc" >Les vidages mémoire peuvent être limités à une quantité spécifique en définissant la valeur sur une valeur numérique quelconque. Cette quantité limitée prend effet par processus/utilisateur. Lorsque la valeur est définie sur 0, aucun vidage mémoire n'est créé. Si aucune valeur n'est définie, la limite par défaut est appliquée lors de la création d'un vidage mémoire. (la valeur par défaut est de 128 ou aucune limite, selon différents processus)</string>
+			<string id="Global_Dump_Type" >Configurer le type de vidage mémoire sur erreur de programme</string>
 
+			<string id="DumpType_Full" >Maximal</string>
+
+			<string id="DumpType_Mini" >Minimal</string>
+
+			<string id="Global_Dump_Type_Desc" >L'utilisateur peut définir la valeur sur Vidage mémoire maximal ou sur Vidage mémoire minimal. La différence entre un vidage mémoire maximal et un vidage mémoire minimal se situe au niveau de la mémoire incluse dans le vidage mémoire. Cet attribut s'applique à la taille du vidage mémoire maximal. Le vidage mémoire minimal contient toujours suffisamment d'informations pour produire une trace de la pile et effectuer les étapes de dépannage de base. Le vidage mémoire minimal ne contient aucune mémoire maximale. Nous ne pouvons donc pas extraire des informations sur certains objets ou noms d'objets sans le vidage mémoire maximal. Lorsque cette valeur est définie sur Vidage mémoire minimal, ce type de vidage est créé. Si la valeur n'est pas définie, le vidage mémoire maximal est créé par défaut.</string>
 		</stringTable>
 
 		<presentationTable ><!--Storage for Presentation Definitions-->
@@ -172,6 +178,10 @@ Format : LogLevel|ServerFQDNorIP[|PortNumber (514 par défaut)], exemple Debug
 
 			<presentation id="Global_Max_Dump_Count" >
 				<decimalTextBox refId="Global_Max_Dump_Count_DecimalBox" defaultValue="" >Nombre maximal de fichiers de vidage mémoire à créer</decimalTextBox>
+			</presentation>
+
+			<presentation id="Global_Dump_Type" >
+				<dropdownList refId="Global_Dump_Type_DropDown" defaultItem="" >Type de fichiers de vidage mémoire à créer</dropdownList>
 			</presentation>
 
 		</presentationTable>

@@ -63,6 +63,26 @@
             <string>vmware-view-url-launch:*</string>
           </value>
         </item>
+        <item key="Software\Policies\Google\Chrome\URLAllowlist" valueName="1">
+          <value>
+            <string>vmware-view:*</string>
+          </value>
+        </item>
+        <item key="Software\Policies\Google\Chrome\URLAllowlist" valueName="2">
+          <value>
+            <string>vmware-view-url-launch:*</string>
+          </value>
+        </item>
+        <item key="Software\Policies\Microsoft\Edge\URLAllowlist" valueName="1">
+          <value>
+            <string>vmware-view:*</string>
+          </value>
+        </item>
+        <item key="Software\Policies\Microsoft\Edge\URLAllowlist" valueName="2">
+          <value>
+            <string>vmware-view-url-launch:*</string>
+          </value>
+        </item>
       </enabledList>
       <disabledList>
         <item key="Software\VMware, Inc.\VMware VDM\URLRedirection" valueName="Enabled">
@@ -76,6 +96,26 @@
           </value>
         </item>
         <item key="Software\Policies\Google\Chrome\URLWhitelist" valueName="2">
+          <value>
+            <delete />
+          </value>
+        </item>
+        <item key="Software\Policies\Google\Chrome\URLAllowlist" valueName="1">
+          <value>
+            <delete />
+          </value>
+        </item>
+        <item key="Software\Policies\Google\Chrome\URLAllowlist" valueName="2">
+          <value>
+            <delete />
+          </value>
+        </item>
+        <item key="Software\Policies\Microsoft\Edge\URLAllowlist" valueName="1">
+          <value>
+            <delete />
+          </value>
+        </item>
+        <item key="Software\Policies\Microsoft\Edge\URLAllowlist" valueName="2">
           <value>
             <delete />
           </value>

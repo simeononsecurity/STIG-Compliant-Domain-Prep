@@ -96,10 +96,16 @@ Formato: Nivel de registro|FQDN o IP del servidor [|Número de puerto (514 prede
 
 			<string id="Revocation_URL_check_timeout_Desc" >El tiempo de espera acumulado en todas las recuperaciones de filtrado de URL de revocación en milisegundos. Si el valor no está configurado o está establecido en 0, esto significa que se utiliza la manipulación predeterminada de Microsoft.</string>
 
-			<string id="Global_Max_Dump_Count" >Error de configuración de creación de volcado en el programa</string>
+			<string id="Global_Max_Dump_Count" >Error de configuración de recuento de volcado en el programa</string>
 
-			<string id="Global_Max_Dump_Count_Desc" >Los volcados de memoria se pueden limitar a una cantidad específica estableciendo un valor numérico. Cuando se establece en 0, no se creará ningún volcado. Si no se establece ningún valor, no habrá límite para la creación de volcados.</string>
+			<string id="Global_Max_Dump_Count_Desc" >Los volcados de memoria se pueden limitar a una cantidad específica estableciendo un valor numérico. Esta cantidad limitada se aplica por proceso/usuario. Cuando se establece en 0, no se creará ningún volcado. Si no se establece ningún valor, se aplicará el límite predeterminado para la creación de volcados. (el valor predeterminado es 128 o ningún límite, según el proceso)</string>
+			<string id="Global_Dump_Type" >Error de configuración de tipo de volcado en el programa</string>
 
+			<string id="DumpType_Full" >Completa</string>
+
+			<string id="DumpType_Mini" >Mini</string>
+
+			<string id="Global_Dump_Type_Desc" >El usuario puede establecer el valor como volcado completo o volcado parcial. La diferencia entre un volcado completo y un volcado parcial es la memoria que se incluye en el volcado. Este atributo se ajusta al tamaño total del volcado. El volcado parcial contiene suficiente información para generar un seguimiento de la pila y realizar pasos básicos de solución de problemas. El volcado parcial no contiene una memoria completa, por lo que no es posible extraer información sobre algunos objetos o nombres de objetos sin el volcado completo. Cuando se establece en Volcado parcial, se creará un volcado parcial. Si no se configura, se creará el volcado completo de forma predeterminada.</string>
 		</stringTable>
 
 		<presentationTable ><!--Storage for Presentation Definitions-->
@@ -172,6 +178,10 @@ Formato: Nivel de registro|FQDN o IP del servidor [|Número de puerto (514 prede
 
 			<presentation id="Global_Max_Dump_Count" >
 				<decimalTextBox refId="Global_Max_Dump_Count_DecimalBox" defaultValue="" >Número máxima de archivos de volcado que se pueden crear</decimalTextBox>
+			</presentation>
+
+			<presentation id="Global_Dump_Type" >
+				<dropdownList refId="Global_Dump_Type_DropDown" defaultItem="" >Tipo de archivos de volcado que se crearán</dropdownList>
 			</presentation>
 
 		</presentationTable>

@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="unknown_0">VMware Horizon URL 重定向</string>
+      <string id="unknown_2">IE 策略: 阻止用户更改 URL 重定向插件加载行为</string>
+      <string id="unknown_6">IE 策略: 自动启用 URL 重定向插件</string>
+      <string id="unknown_4">URL 重定向 IP 规则已启用</string>
+      <string id="unknown_8">URL 重定向已启用</string>
+      <string id="unknown_12">URL 重定向协议“https”</string>
+      <string id="unknown_10">URL 重定向协议“http”</string>
+      <string id="unknown_15">URL 重定向协议“...”</string>
+      <string id="unknown_3">确定用户是否可以禁用 URL 内容重定向。</string>
+      <string id="unknown_5">此设置确定是启用还是禁用了 IP 规则。默认情况下，不配置该设置。如果启用 IP 规则，指定的 IP/IP 范围筛选和 DNS 解析将受支持，这意味着您可以在客户端规则或代理规则中添加 IP/IP 范围，并且输入的与 URL 规则不匹配的 URL 地址将解析为与 IP/IP 范围相匹配的 IP 地址。
+例如，如果您将 IP 规则配置为已启用，并且在 HTTPS 中将代理规则设置为“.*\.mycompany\.com;22.22.22.22;10.10.1.2-10.10.12.20”，则 IP 地址“https://22.22.22.22”、IP 范围“10.10.1.2-10.10.12.20”中的所有 IP 以及解析为 IP 范围“10.10.1.2-10.10.12.20”或 IP“22.22.22.22”的所有 URL 都将被重定向。
+
+注意
+
+IP 规则目前仅适用于 Internet Explorer。</string>
+      <string id="unknown_7">确定是否自动激活新安装的 Internet Explorer 插件。</string>
+      <string id="unknown_9">确定是否启用该功能。默认情况下不配置此设置。即使已安装该组件，也可以使用该设置禁用该功能。</string>
+      <string id="HelpString">对于使用此协议的所有 URL，请指定应重定向的 URL。
+例如，如果您将代理规则设置为 .*\.mycompany\.com，则包含“.mycompany.com”的所有 URL 将重定向到远程桌面或远程应用程序。您可以设置“代理主机名”以进一步指定要使用的连接服务器，以及将“远程项目”设置为池显示名称以指定要使用的桌面或应用程序池，如 View Administrator 中所示。
+如果您将客户端规则设置为 .*\.mycompany\.com，则包含“.mycompany.com”的所有 URL 将重定向到基于 Windows 的客户端，并在客户端上的默认浏览器中打开。
+
+注意
+
+最佳做法是，为 HTTP 协议和 HTTPS 协议设置相同的规则。这样，如果用户在 Internet Explorer 中键入部分 URL (如 .mycompany.com)，并且该站点自动从 HTTP 重定向到 HTTPS，则 URL 内容重定向功能将正常工作。在这种情况下，如果为 HTTPS 设置一个规则，但没有为 HTTP 设置规则，则不会重定向用户键入的部分 URL。设置多个规则时，请使用分号分隔每个规则，因为不支持手动换行。</string>
+      <string id="ADMXMigrator_UnresolvedString">ADMX Migrator 遇到源 ADM 字符串表中不存在的字符串。</string>
+      <string id="ADMXMigrator_NoSupportedOn">ADMX Migrator 遇到没有 supportedOn 值的策略。</string>
+      <string id="ExtensionInstallForcelist">安装在 URL 内容重定向功能中所需的 Chrome 扩展。</string>
+      <string id="ExtensionInstallForcelist_Explain">如果启用此策略，则以无提示方式自动安装 URL 内容重定向所需的 Chrome 扩展。此安装还包括授予所需的权限。如果没有管理员特权，则无法撤消此安装。
+
+如果禁用或不配置此策略，则不会自动安装 URL 内容重定向所需的 Chrome 扩展。因此，即使设置了重定向规则，URL 内容重定向也无法在 Chrome 浏览器中正常工作，直到从 Google Chrome 网上应用商店中手动安装了该扩展。
+
+默认情况下，此策略设置为“未配置”。</string>
+      <string id="UrlRedirectionProtocol_WhitelistSring">URL 重定向白名单配置</string>
+      <string id="UrlRedirectionProtocol_WhitelistExplain">此设置用于确定 URL 中的协议支持的应用程序，即白名单。
+默认情况下支持以下应用程序:
+- iexplore.exe: Internet Explorer 浏览器
+- chrome.exe: Chrome 浏览器
+- firefox.exe: Firefox 浏览器
+- msedge.exe: Microsoft Edge (Chromium)
+- outlook.exe: Microsoft Outlook
+- lync.exe: Skype for Business
+- skype.exe: Skype
+- wmplayer.exe: Windows Media Player
+
+您可以通过 URL 重定向白名单配置修改默认支持的应用程序。
+
+例如，如果将白名单设为:
+chrome.exe
+outlook.exe
+skype.exe
+
+则 URL 内容重定向仅支持 Chrome 浏览器、Microsoft Outlook 和 Skype。</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="IEpolicyPreventusersfromchangingURLRedirectionpluginloadingbehavior" />
+      <presentation id="IEpolicyAutomaticallyenableURLRedirectionplugin" />
+      <presentation id="UrlRedirectionEnabled" />
+      <presentation id="UrlRedirectionIPRulesEnabled" />
+      <presentation id="UrlRedirectionProtocol_http">
+        <textBox refId="brokerHostname">
+          <label>代理主机名</label>
+        </textBox>
+        <textBox refId="remoteItem">
+          <label>远程项目</label>
+        </textBox>
+        <text>客户端规则</text>
+          <multiTextBox refId="clientRules" />
+        <text>代理规则</text>
+          <multiTextBox refId="agentRules" />
+      </presentation>
+      <presentation id="UrlRedirectionProtocol_https">
+        <textBox refId="brokerHostname">
+          <label>代理主机名</label>
+        </textBox>
+        <textBox refId="remoteItem">
+          <label>远程项目</label>
+        </textBox>
+        <text>客户端规则</text>
+          <multiTextBox refId="clientRules" />
+        <text>代理规则</text>
+          <multiTextBox refId="agentRules" />
+      </presentation>
+      <presentation id="UrlRedirectionProtocol_">
+        <textBox refId="brokerHostname">
+          <label>代理主机名</label>
+        </textBox>
+        <textBox refId="remoteItem">
+          <label>远程项目</label>
+        </textBox>
+        <text>客户端规则</text>
+          <multiTextBox refId="clientRules" />
+        <text>代理规则</text>
+          <multiTextBox refId="agentRules" />
+      </presentation>
+      <presentation id="UrlRedirectionProtocol_Whitelist">
+        <text>白名单</text>
+        <multiTextBox refId="whitelist" />
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

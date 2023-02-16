@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+
+   <displayName>VMware Horizon View Agent 직접 연결</displayName>
+   <description>VMware Horizon View Agent 직접 연결 구성 설정</description>
+   <resources>
+
+      <stringTable>
+
+         <string id="Agent_Direct_Connect_Config">View Agent Direct-Connection 구성</string>
+
+         <string id="Agent_Direct_Connect_Authentication">인증</string>
+
+         <string id="Agent_Direct_Connect_Authentication_lacu">현재 사용자로 로그인</string>
+
+         <string id="Agent_Direct_Connect_Protocols">프로토콜 및 네트워크 설정</string>
+
+         <string id="HTTPS_Port">HTTPS 포트 번호</string>
+
+         <string id="HTTPS_Port_Desc">View Agent Connect가 수신 View Client HTTPS 연결을 수신하는 TCP 포트 번호입니다. 이 정책이 구성되지 않거나 사용되지 않도록 설정되면 기본값인 443이 사용됩니다.
+
+참고: 포트 번호를 변경하는 경우 포트에 대한 수신 연결을 허용하도록 데스크톱 방화벽을 다시 구성해야 할 수 있습니다.</string>
+
+         <string id="Session_Timeout">세션 시간 초과</string>
+
+         <string id="Session_Timeout_Desc">View Client에 로그인한 후에 사용자가 세션을 열어 놓을 수 있는 시간을 지정합니다. 이 값은 분 단위로 설정되며, 이 정책이 구성되지 않거나 사용되지 않도록 설정되면 기본값은 600분입니다. 데스크톱 세션 시간을 초과하면 세션이 종료되고 View Client와 데스크톱의 연결이 끊깁니다.</string>
+
+         <string id="Disclaimer_Enabled">고지 사항 사용</string>
+
+         <string id="Disclaimer_Enabled_Desc">로그인 시 사용자 동의를 위한 고지 사항 텍스트를 표시합니다. 이 텍스트는 존재하는 경우 '고지 사항 텍스트'에서 또는 GPO '구성\Windows 설정\보안 설정\로컬 정책\보안 옵션' '대화식 로그온: 로그온을 시도하는 사용자에 대한 메시지 텍스트'에서 표시됩니다. 기본 설정은 사용하지 않도록 설정하는 것입니다.</string>
+
+         <string id="Disclaimer_Text">고지 사항 텍스트</string>
+
+         <string id="Disclaimer_Text_Desc">로그인 시 View Client 사용자에게 고지 사항 텍스트가 표시되려면 고지 사항 사용 정책을 설정해야 합니다. 텍스트를 지정하지 않으면 기본값은 Windows 정책 '구성\Windows 설정\보안 설정\로컬 정책\보안 옵션' '대화식 로그온: 로그온을 시도하는 사용자에 대한 메시지 텍스트'에서 값을 가져오는 것입니다.</string>
+
+         <string id="Applications_Enabled">애플리케이션 사용</string>
+
+         <string id="Applications_Enabled_Desc">원격 데스크톱 세션 호스트의 애플리케이션 시작을 지원합니다. 기본 설정은 이 기능을 사용하도록 설정하는 것입니다.</string>
+
+         <string id="Client_autoconnect_setting">클라이언트 설정: AutoConnect</string>
+
+         <string id="Client_autoconnect_setting_Desc">AutoConnect 설정이 View Client로 전송됩니다. 이 정책을 설정할 경우 저장된 모든 클라이언트 기본 설정을 재정의합니다. 기본적으로 값이 설정되지 않습니다. 이 정책을 사용하도록 설정하면 값이 true로 설정되고 이 정책을 사용하지 않도록 설정하면 값이 false로 설정됩니다.</string>
+
+         <string id="Client_alwaysconnect_setting">클라이언트 설정: AlwaysConnect</string>
+
+         <string id="Client_alwaysconnect_setting_Desc">AlwaysConnect 설정이 View Client로 전송됩니다. 이 정책을 설정할 경우 저장된 모든 클라이언트 기본 설정을 재정의합니다. 기본적으로 값이 설정되지 않습니다. 이 정책을 사용하도록 설정하면 값이 true로 설정되고 이 정책을 사용하지 않도록 설정하면 값이 false로 설정됩니다.</string>
+
+         <string id="Client_screensize_setting">클라이언트 설정: ScreenSize</string>
+
+         <string id="Client_screensize_setting_Desc">ScreenSize 설정이 View Client로 전송됩니다. 이 정책을 사용하도록 설정할 경우 저장된 모든 클라이언트 기본 설정을 재정의합니다. 이 정책이 구성되지 않거나 사용되지 않도록 설정되면 클라이언트 기본 설정이 사용됩니다.</string>
+
+         <string id="External_PCoIP_port">외부 PCoIP 포트</string>
+
+         <string id="External_PCoIP_port_Desc">PCoIP 프로토콜에 사용되는 대상 TCP/UDP 포트 번호로 View Client에 전송되는 포트 번호입니다. 숫자 앞에 표시되는 '+' 문자는 HTTPS에 사용되는 포트 번호에 상대적인 번호를 나타냅니다. 외부에 노출된 포트 번호가 서비스가 수신하는 포트와 일치하지 않는 경우에만 이 값을 설정합니다. 일반적으로 NAT 환경에서 이러한 상황이 발생합니다. 기본적으로 값이 설정되지 않습니다.</string>
+
+         <string id="External_RDP_Port">외부 RDP 포트</string>
+
+         <string id="External_RDP_Port_Desc">RDP 프로토콜에 사용되는 대상 TCP 포트 번호로 View Client에 전송되는 포트 번호입니다. 숫자 앞에 표시되는 '+' 문자는 HTTPS에 사용되는 포트 번호에 상대적인 번호를 나타냅니다. 외부에 노출된 포트 번호가 서비스가 수신하는 포트와 일치하지 않는 경우에만 이 값을 설정합니다. 일반적으로 NAT 환경에서 이러한 상황이 발생합니다. 기본적으로 값이 설정되지 않습니다.</string>
+
+         <string id="External_Blast_port">외부 Blast 포트</string>
+
+         <string id="External_Blast_port_Desc">Blast 프로토콜에 사용되는 대상 TCP 포트 번호로 View Client에 전송되는 포트 번호입니다. 숫자 앞에 표시되는 '+' 문자는 HTTPS에 사용되는 포트 번호에 상대적인 번호를 나타냅니다. 외부에 노출된 포트 번호가 서비스가 수신하는 포트와 일치하지 않는 경우에만 이 값을 설정합니다. 일반적으로 NAT 환경에서 이러한 상황이 발생합니다. 기본적으로 값이 설정되지 않습니다.</string>
+
+         <string id="External_IP">외부 IP 주소</string>
+
+         <string id="External_IP_Desc">보조 프로토콜(RDP, PCoIP, Framework 채널, Blast ...)에 사용되는 대상 IP 주소로 View Client에 전송되는 IP v4 주소입니다. 외부에 노출된 주소가 데스크톱 시스템의 주소와 일치하지 않는 경우에만 이 값을 설정합니다. 일반적으로 NAT 환경에서 이러한 상황이 발생합니다. 기본적으로 값이 설정되지 않습니다.</string>
+
+         <string id="External_Framework_Channel_port">외부 프레임워크 채널 포트</string>
+
+         <string id="External_Framework_Channel_port_Desc">프레임워크 채널 프로토콜에 사용되는 대상 TCP 포트 번호로 View Client에 전송되는 포트 번호입니다. 숫자 앞에 표시되는 '+' 문자는 HTTPS에 사용되는 포트 번호에 상대적인 번호를 나타냅니다. 외부에 노출된 포트 번호가 서비스가 수신하는 포트와 일치하지 않는 경우에만 이 값을 설정합니다. 일반적으로 NAT 환경에서 이러한 상황이 발생합니다. 기본적으로 값이 설정되지 않습니다.</string>
+
+         <string id="USB_Enabled">USB 사용</string>
+
+         <string id="USB_Enabled_Desc">데스크톱에서 클라이언트에 연결된 USB 디바이스를 사용할 수 있는지 여부를 결정합니다. 기본값은 사용입니다. 보안상의 이유로 외부 디바이스의 사용을 방지하려면 이 설정을 사용하지 않도록 변경하십시오.</string>
+
+         <string id="MMR_Enabled">MMR(멀티미디어 리디렉션) 사용</string>
+
+         <string id="MMR_Enabled_Desc">클라이언트 시스템을 위해 MMR이 사용되도록 설정되어 있는지 여부를 결정합니다. MMR은 멀티미디어 데이터를 TCP 소켓을 통해 직접 View 데스크톱의 특정 코덱에서 클라이언트 시스템에 전달하는 Microsoft DirectShow 필터입니다. 그런 다음 데이터는 재생되는 클라이언트 시스템에서 바로 디코딩됩니다. 기본값은 사용 안 함입니다.
+
+클라이언트 시스템의 비디오 디스플레이 하드웨어에 오버레이 지원이 없는 경우 MMR은 올바르게 작동하지 않습니다. 클라이언트 시스템에 로컬 멀티미디어 디코딩을 처리할 만큼 충분한 리소스가 없을 수 있습니다.</string>
+
+         <string id="Reset_Enabled">재설정 사용</string>
+
+         <string id="Reset_Enabled_Desc">인증된 View Client 가 운영 체제 수준 재부팅을 수행할 수 있도록 하는 기능입니다. 기본 설정이 사용되지 않도록 설정됩니다.</string>
+
+         <string id="USB_AutoConnect">USB 자동 연결</string>
+
+         <string id="USB_AutoConnect_Desc">전원 연결 시 USB 디바이스를 데스크톱에 연결합니다. 이 정책을 설정할 경우 저장된 모든 클라이언트 기본 설정을 재정의합니다. 기본적으로 값이 설정되지 않습니다.</string>
+
+         <string id="Client_Cred_Cache_Timeout">클라이언트 자격 증명 캐시 시간 초과</string>
+
+         <string id="Client_Cred_Cache_Timeout_Desc">View Client에서 사용자가 저장된 암호를 사용하도록 허용할 시간(분)입니다. 0은 허용되지 않음을 의미하고 -1은 시간 제한이 없음을 의미합니다. 이것이 유효한 값으로 설정된 경우 View Client에서는 사용자가 암호를 저장할 수 있는 옵션을 제공합니다. 기본값은 0(허용 안 함)입니다.</string>
+
+         <string id="User_Idle_Timeout">사용자 유휴 시간 초과</string>
+
+         <string id="User_Idle_Timeout_Desc">서비스가 세션 보호를 위해 조치를 취하기 전까지 사용자가 유휴 상태를 유지할 수 있는 최대 시간(초)입니다. -1 값은 세션이 유휴 상태로 간주되지 않음을 나타냅니다. 기본값은 900초(15분)입니다.</string>
+
+         <string id="Client_Session_Timeout">클라이언트 세션 시간 초과</string>
+
+         <string id="Client_Session_Timeout_Desc">클라이언트가 연결되지 않을 경우 세션이 활성 상태로 유지되는 최대 시간(초)입니다. 기본값은 36000초(10시간)입니다.</string>
+
+         <string id="X509_Cert_Auth">X509 인증서 인증</string>
+
+         <string id="X509_Cert_Auth_Desc">스마트 카드 X.509 인증서 인증이 사용되지 않도록 설정되는지, 허용되는지 또는 필수인지를 결정합니다.</string>
+
+         <string id="Disabled">비활성화됨</string>
+
+         <string id="Allowed">허용됨</string>
+
+         <string id="Required">필수</string>
+
+         <string id="X509_SSL_Cert_Auth_Enabled">X509 SSL 인증서 인증 사용</string>
+
+         <string id="X509_SSL_Cert_Auth_Enabled_Desc">스마트 카드 X.509 인증서 인증이 View Client에서의 직접 SSL 연결을 통해 사용되도록 설정되는지 여부를 결정합니다. X.509 인증서 인증이 중간 SSL 종료 지점을 통해 처리되는 경우에는 필요하지 않습니다. 이 값이 변경되는 경우 View Agent를 다시 시작해야 합니다.</string>
+
+         <string id="Client_Config_NVP">클라이언트 구성 이름 값 쌍</string>
+
+         <string id="Client_Config_NVP_Desc">name=value(예: clientCredentialCacheTimeout=1440) 형식으로 클라이언트에 전달될 값 목록입니다.</string>
+
+         <string id="Default_Protocol">기본 프로토콜</string>
+
+         <string id="Default_Protocol_Desc">View Client가 데스크톱에 연결하는 데 사용하는 기본 디스플레이 프로토콜입니다. 이 값을 설정하지 않으면 기본값은 BLAST입니다.</string>
+
+<!-- begin: log on as current user -->
+
+         <string id="gssapi_allow_legacy_clients">레거시 클라이언트 허용</string>
+         <string id="gssapi_allow_legacy_clients_Desc">사용하지 않도록 설정되면 버전 5.5 이전의 클라이언트는 [현재 사용자로 로그온]을 사용하여 인증할 수 없습니다.
+
+설정하지 않으면 이전 클라이언트가 허용됩니다.</string>
+
+         <string id="gssapi_allow_ntlm">NTLM 폴백 허용</string>
+         <string id="gssapi_allow_ntlm_Desc">사용하도록 설정되면 클라이언트가 도메인 컨트롤러에 연결할 수 없는 경우 Kerberos에서 NTLM 인증으로의 폴백이 허용됩니다.
+
+설정하지 않으면 NTLM 폴백이 허용되지 않습니다.</string>
+
+         <string id="gssapi_require_cbt">채널 바인딩 필요</string>
+         <string id="gssapi_require_cbt_Desc">사용하지 않도록 설정되면 채널 바인딩이 필요하지 않습니다.
+
+참고: 기존 클라이언트에서는 채널 바인딩이 지원되지 않습니다. 레거시 클라이언트에 대한 지원이 사용하도록 설정된 경우에는 클라이언트에서 버전 5.5 이전의 채널 바인딩을 사용하지 않습니다.
+
+설정하지 않으면 채널 바인딩이 필요합니다.</string>
+
+<!-- end: log on as current user -->
+
+      </stringTable>
+
+      <presentationTable>
+
+         <presentation id="HTTPS_Port">
+            <textBox refId="HTTPS_Port_TB">
+               <label>HTTPS 포트 번호</label>
+               <defaultValue>443</defaultValue>
+            </textBox>
+         </presentation>
+
+         <presentation id="Session_Timeout">
+            <textBox refId="Session_Timeout_TB">
+               <label>세션 시간 초과</label>
+               <defaultValue>600</defaultValue>
+            </textBox>
+         </presentation>
+
+         <presentation id="Disclaimer_Text">
+            <textBox refId="Disclaimer_Text_TB">
+               <label>고지 사항 텍스트</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Client_screensize_setting">
+            <textBox refId="Client_screensize_setting_TB">
+               <label>클라이언트 설정: ScreenSize</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="External_PCoIP_port">
+            <textBox refId="External_PCoIP_port_TB">
+               <label>외부 PCoIP 포트</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="External_RDP_Port">
+            <textBox refId="External_RDP_Port_TB">
+               <label>외부 RDP 포트</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="External_Blast_port">
+            <textBox refId="External_Blast_port_TB">
+               <label>외부 Blast 포트</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="External_IP">
+            <textBox refId="External_IP_TB">
+               <label>외부 IP 주소</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="External_Framework_Channel_port">
+            <textBox refId="External_Framework_Channel_port_TB">
+               <label>외부 프레임워크 채널 포트</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Client_Cred_Cache_Timeout">
+            <textBox refId="Client_Cred_Cache_Timeout_TB">
+               <label>클라이언트 자격 증명 캐시 시간 초과</label>
+               <defaultValue>0</defaultValue>
+            </textBox>
+         </presentation>
+
+         <presentation id="User_Idle_Timeout">
+            <textBox refId="User_Idle_Timeout_TB">
+               <label>사용자 유휴 시간 초과</label>
+               <defaultValue>900</defaultValue>
+            </textBox>
+         </presentation>
+
+         <presentation id="Client_Session_Timeout">
+            <textBox refId="Client_Session_Timeout_TB">
+               <label>클라이언트 세션 시간 초과</label>
+               <defaultValue>36000</defaultValue>
+            </textBox>
+         </presentation>
+
+         <presentation id="X509_Cert_Auth">
+            <dropdownList refId="X509_Cert_Auth_DDL" defaultItem="0">X509 인증서 인증</dropdownList>
+         </presentation>
+
+         <presentation id="Client_Config_NVP">
+            <listBox refId="Client_Config_NVP_list">클라이언트 구성 이름 값 쌍</listBox>
+         </presentation>
+
+         <presentation id="Default_Protocol">
+            <textBox refId="Default_Protocol_TB">
+               <label>기본 프로토콜</label>
+               <defaultValue>BLAST</defaultValue>
+            </textBox>
+         </presentation>
+      </presentationTable>
+   </resources>
+</policyDefinitionResources>

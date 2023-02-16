@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="VMwareViewDnD">Drag and Drop</string>
+      <string id="SUPPORTED_VERSION"></string>
+      <string id="SERVER_DND_STATE">Configure drag and drop direction</string>
+      <string id="DND_STATE_DISABLE_BOTH">Disabled in both directions</string>
+      <string id="DND_STATE_ENABLE_CLIENT_2_SERVER">Enabled client to agent only</string>
+      <string id="DND_STATE_ENABLE_SERVER_2_CLIENT">Enabled agent to client only</string>
+      <string id="DND_STATE_ENABLE_BOTH">Enabled in both directions</string>
+      <string id="SERVER_DND_STATE_EXPLAIN">Determines the direction in which drag and drop is allowed. You can select one of these values:
+
+-Disabled in both directions
+-Enabled agent to client only (That is, allow drag and drop only from the agent to the client system.)
+-Enabled client to agent only (That is, allow drag and drop only from the client system to the agent.)
+-Enabled in both directions
+
+This setting applies to the agent only.
+
+When this setting is disabled or not configured, the default value is 'Enabled client to agent only'.</string>
+      <string id="SERVER_DND_FORMAT_STATE">Configure drag and drop formats</string>
+      <string id="SERVER_DND_FORMAT_STATE_EXPLAIN">This setting determines what option of "Drag and Drop" is allowed for each format(File/Text/Rich Text/Image/HTML format/File Content). The values for the options are:
+
+-Disabled in both directions
+-Enabled agent to client only
+-Enabled client to agent only
+-Enabled in both directions
+
+This setting applies to the agent only, it is not configured by default.
+
+When the setting is not configured or disabled, the option for "drag and drop" is 'Enabled in both directions' for all formats.</string>
+      <string id="String_Policy_DropList_Select_DnD_size_unit_bytes" >Bytes</string>
+      <string id="String_Policy_DropList_Select_DnD_size_unit_kilobytes" >Kilobytes</string>
+      <string id="String_Policy_DropList_Select_DnD_size_unit_megabytes" >Megabytes</string>
+      <string id="SERVER_DND_SIZE">Configure drag and drop size threshold</string>
+      <string id="SERVER_DND_SIZE_EXPLAIN">Drag and drop supports dragging various types of data including plain text, rich text, image, files, folders etc. This setting determines the size limit for dragging common data types other than files and folders.
+
+The unit of the drag data size can be configured in Bytes, Kilobytes and Megabytes.
+
+The desired size value is configured in "Drag and drop size threshold". The effective data ranges for different size unit are:
+- Bytes: 1 ~ 1023
+- Kilobytes: 1 ~ 1023
+- Megabytes: 1 ~ 16 (The maximum data size to drag and drop is 16 Megabytes)
+
+This setting applies to the agent only.
+
+When the setting is not configured or disabled, a default threshold 1 megabytes is set.</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="SERVER_DND_STATE">
+        <dropdownList refId="SERVER_DND_STATE" defaultItem="2">Configure drag and drop</dropdownList>
+      </presentation>
+      <presentation id="SERVER_DND_FORMAT_STATE">
+        <dropdownList refId="SERVER_DND_FILE_STATE" defaultItem="3">Option for File format:</dropdownList>
+        <dropdownList refId="SERVER_DND_TEXT_STATE" defaultItem="3">Option for Text format:</dropdownList>
+        <dropdownList refId="SERVER_DND_RTF_STATE" defaultItem="3">Option for Rich Text format:</dropdownList>
+        <dropdownList refId="SERVER_DND_IMAGE_STATE" defaultItem="3">Option for Image format:</dropdownList>
+        <dropdownList refId="SERVER_DND_HTML_STATE" defaultItem="3">Option for HTML format:</dropdownList>
+        <dropdownList refId="SERVER_DND_FILE_CONTENT_STATE" defaultItem="3">Option for File Content format:</dropdownList>
+      </presentation>
+      <presentation id="SERVER_DND_SIZE">
+        <dropdownList refId="Policy_DropList_DnD_Size_Unit" defaultItem="2" >Choose the unit of the drag and drop size</dropdownList>
+        <decimalTextBox refId="SERVER_DND_SIZE" defaultValue="1">Drag and drop size threshold</decimalTextBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="UNCPath_GPO_Define">VMware Horizon-UNC-Pfadumleitung</string>
+      <string id="UNCPathRedirection_Enabled">UNC-Pfadumleitung aktivieren</string>
+      <string id="UNCPathRedirection_FilterRule">Filterregel für UNC-Pfadumleitung</string>
+      <string id="UNCPathRedirection_Enabled_Description">Diese Einstellung legt fest, ob ein UNC-Pfad umgeleitet werden kann. Die Einstellung „Nicht konfiguriert“ oder „Deaktiviert“ bedeutet, dass die Funktion nicht aktiviert ist. Die Standardeinstellung lautet „Nicht konfiguriert“.</string>
+      <string id="UNCPathRedirection_FilterRule_Description">Geben Sie für alle UNC-Pfade, die den Regeln entsprechen, den UNC-Pfad an, der umgeleitet werden soll.
+Beispiel: Wenn Sie Agent-Regeln auf„*\.mycompany\.com“ festlegen, werden alle UNC-Pfade mit der Zeichenfolge „.mycompany.com“ auf einen Remote-Desktop oder eine App-Sitzung umgeleitet. Sie können außerdem mit der Einstellung „Broker-Hostname“ den verwendeten Horizon Connection Server bestimmen und festlegen, welcher Desktop oder welche App benutzt wird. Dazu geben Sie für Remote-Element den Anzeigenamen des Pools an, der in Horizon Administrator-Konsole dargestellt wird.
+Beispiel: Wenn Sie Clientregeln auf„*\.mycompany\.com“ festlegen, werden alle UNC-Pfade mit der Zeichenfolge „mycompany.com“, die vom Remote-Desktop oder von der App-Sitzung zum Windows-basierten Client umgeleitet und in der Standard-App auf dem Client geöffnet.
+
+Hinweis
+
+Wenn Sie mehrere Regeln festlegen, trennen Sie die einzelnen Regeln mit einem Semikolon voneinander. Der manuelle Umbruch wird nicht unterstützt.</string>
+      <string id="ADMXMigrator_NoSupportedOn">ADMX-Migrator hat eine Richtlinie ohne den Wert supportedOn ermittelt.</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="UNCPathRedirectionEnabled" />
+      <presentation id="UNCPathRedirectionFilterRule">
+        <textBox refId="brokerHostname">
+          <label>Broker-Hostname</label>
+        </textBox>
+        <textBox refId="remoteItem">
+          <label>Remote-Element</label>
+        </textBox>
+        <text>Clientregeln</text>
+          <multiTextBox refId="clientRules" />
+        <text>Agent-Regeln</text>
+          <multiTextBox refId="agentRules" />
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

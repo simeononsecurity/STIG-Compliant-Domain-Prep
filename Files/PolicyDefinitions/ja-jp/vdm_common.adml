@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" >
+
+	<displayName >ここに表示名を入力</displayName>
+	<description >クライアント、サーバ、エージェント用の VMware Horizon View の一般的な設定</description>
+	<resources >
+		<stringTable ><!--Storage for String Definitions-->
+
+			<string id="Undefined" >未定義</string>
+
+			<string id="View_Common_Config" >VMware View の一般的な設定</string>
+
+			<string id="Log_Config" >ログ構成</string>
+
+			<string id="Perf_alarms" >パフォーマンス アラーム</string>
+
+			<string id="Security_Config" >セキュリティ設定</string>
+
+			<string id="Enable_extended_logging" >拡張ログを有効にする</string>
+
+			<string id="Enable_extended_logging_Desc" >トレースとデバッグのイベントをログ ファイルに記録するかどうかを指定します。</string>
+
+			<string id="Log_event_disk_threshhold" >ログおよびイベントに対するディスクのしきい値 (MB)</string>
+
+			<string id="Log_event_disk_threshhold_Desc" >ログおよびイベント用の残りのディスク容量の最小しきい値を指定します。値が指定されてない場合は、デフォルトの 200 が適用されます。この値に達すると、イベントの記録が停止します。</string>
+
+			<string id="Override_the_default_Windows_Event_Gen" >デフォルトの View Windows イベント生成を上書きする</string>
+
+			<string id="Override_the_default_Windows_Event_Gen_Desc" >次の値がサポートされています。
+    0 = View イベントに対してのみイベント ログ エントリが生成されます (ログ メッセージにイベント ログ エントリは生成されません)。
+    1 = View 4.5 およびそれ以前の互換性モードでイベント ログ エントリが生成されます。標準の View イベントにイベント ログ エントリは生成されません。イベント ログ エントリは、ログ ファイルのテキストにのみ基づいて生成されます。2 = イベント ログ エントリが 4.5 以前の互換性モードで生成されますが、View イベントも追加されます。</string>
+
+			<string id="Production_Logs_Duration" >本番環境ログを保持する日数</string>
+
+			<string id="Production_Logs_Duration_Desc" >ログ ファイルをシステムに保持する日数を指定します。値が設定されてない場合、デフォルト値が適用されます。ログ ファイルは 7 日間保持されます。</string>
+
+			<string id="Max_Debug_logs" >デバッグ ログの最大数</string>
+
+			<string id="Max_Debug_logs_Desc" >システムで保持するデバッグ ログ ファイルの最大数を指定します (デフォルトは 10 です)。ログ ファイルが最大サイズに達すると、新しいエントリは追加されず、新しいログ ファイルが作成されます。以前のログ ファイル数がこの値に達すると、最も古いログ ファイルが削除されます。</string>
+
+			<string id="Max_Debug_logs_size" >最大デバッグ ログ サイズ (MB)</string>
+
+			<string id="Max_Debug_logs_size_Desc" >デバッグ ログの最大サイズを MB 単位で指定します。このサイズに達すると、デバッグ ログ ファイルが閉じられ、新しいログ ファイルが作成されます。(デフォルトは 10MB)</string>
+
+			<string id="Log_Dir" >ログ ディレクトリ</string>
+
+			<string id="Log_Dir_Desc" >ログ ファイルのディレクトリの完全パス。この場所が書き込み可能でない場合、デフォルトの場所が使用されます。クライアント ログ ファイルの場合は、クライアント名で追加のディレクトリが作成されます。</string>
+
+			<string id="Send_logs_to_Syslog_Svr" >Syslog サーバにログを送信する</string>
+
+			<string id="Send_logs_to_Syslog_Svr_Desc" >有効にすると、VMware LogInsight などの Syslog サーバに View Server ログを送信するように設定されます。この機能は、セキュアでないネットワークで使用しないでください。
+形式: LogLevel|ServerFQDNorIP[|PortNumber(デフォルトは 514)] 例: Debug|192.0.2.2</string>
+
+			<string id="CPU_Mem_Sampling_Interval" >CPU とメモリのサンプリング間隔 (秒)</string>
+
+			<string id="CPU_Mem_Sampling_Interval_Desc" >CPU とメモリのポーリング間隔を指定します。サンプリング間隔を低くすると、詳細な出力がログに書き込まれる場合があります。</string>
+
+			<string id="Overall_CPU_usage" >ログ情報を発行する CPU 合計使用率</string>
+
+			<string id="Overall_CPU_usage_Desc" >システムの CPU 合計使用率をログに記録するしきい値。複数のプロセッサを使用できる場合、このパーセンテージは組み合わされた使用率を表します。</string>
+
+			<string id="Overall_memory_usage" >ログ情報を発行するメモリ合計使用率</string>
+
+			<string id="Overall_memory_usage_Desc" >コミットされたシステム メモリの合計使用率をログに記録するしきい値。プロセッサによって割り振られ、オペレーティング システムが物理メモリまたはページファイルのページ スロットをコミットしたメモリの使用量が記録されます。</string>
+
+			<string id="Process_CPU_usage" >ログ情報を発行するプロセス CPU 使用率</string>
+
+			<string id="Process_CPU_usage_Desc" >各プロセスの CPU 使用率がログに記録されるしきい値。</string>
+
+			<string id="Process_memory_usage" >ログ情報を発行するプロセス メモリ使用率</string>
+
+			<string id="Process_memory_usage_Desc" >各プロセスのメモリ使用率がログに記録されるしきい値。</string>
+
+			<string id="Processes_to_check" >確認するプロセス、ワイルド カードと除外を使用できるカンマ区切りの名前リスト</string>
+
+			<string id="Processes_to_check_Desc" >調査する 1 つ以上のプロセス名に対応する、クエリのカンマ区切りのリスト。リストをフィルタリングするために、クエリ内で次のワイルドカードを使用できます。アスタリスク (*) は 0 個以上の文字に一致します。疑問符 (?) は1 文字に一致します。感嘆符 (!) をクエリのプリフィックスとして使用すると、このクエリで生成された結果を除外できます。例:「! *sys,ws*」- ws で始まるプロセスをすべて選択し、sys で終わるプロセスをすべて除外します。</string>
+
+			<string id="Type_of_certificate_revocation" >証明書失効確認のタイプ</string>
+
+			<string id="Type_of_certificate_revocation_Desc" >実行する証明書失効確認のタイプを選択します。なし、EndCertificateOnly、WholeChain、WholeChainButRoot のいずれかを選択します。デフォルトは WholeChainButRoot です。</string>
+
+			<string id="None" >なし</string>
+
+			<string id="End_Cert_Only" >EndCertificateOnly</string>
+
+			<string id="Whole_Chain" >WholeChain</string>
+
+			<string id="Whole_Chain_But_Root" >WholeChainButRoot</string>
+
+			<string id="Only_use_cached_revocation_URL" >キャッシュ内の失効 URL のみを使用する</string>
+
+			<string id="Only_use_cached_revocation_URL_Desc" >証明書失効確認は、キャッシュ内の URL にのみアクセスします。未構成の場合、デフォルトは false です。</string>
+
+			<string id="Revocation_URL_check_timeout" >失効 URL 確認のタイムアウト (ミリ秒)</string>
+
+			<string id="Revocation_URL_check_timeout_Desc" >すべての失効 URL ワイヤ取得の累積的なタイムアウト (ミリ秒)。未設定または値が 0 に構成されている場合、Microsoft のデフォルト処理が使用されます。</string>
+
+			<string id="Global_Max_Dump_Count" >プログラム エラー発生時のダンプ数を設定</string>
+
+			<string id="Global_Max_Dump_Count_Desc" >任意の数値を設定して、ダンプの量を限定できます。この制限は、ユーザー/プロセスごとに適用されます。0 に設定すると、ダンプは作成されません。設定を解除すると、ダンプの作成にデフォルトの制限が適用されます。(デフォルトは 128 または制限なしです。どちらの値になるかは、プロセスによって異なります)</string>
+			<string id="Global_Dump_Type" >プログラム エラー発生時のダンプ タイプを設定</string>
+
+			<string id="DumpType_Full" >フル</string>
+
+			<string id="DumpType_Mini" >ミニ</string>
+
+			<string id="Global_Dump_Type_Desc" >この値はフル ダンプまたはミニ ダンプに設定できます。フル ダンプとミニ ダンプの違いは、ダンプに含まれるメモリです。この値は、フル ダンプのサイズに適用されます。ミニ ダンプには、スタック トレースを生成して基本的なトラブルシューティングを行う上で十分な情報が含まれています。ミニ ダンプには完全なメモリが含まれていません。このため、オブジェクトまたはオブジェクト名に関する情報を抽出する際にフル ダンプが必要になることがあります。ミニ ダンプに設定すると、ミニ ダンプが作成されます。未設定の場合、デフォルトでフル ダンプが作成されます。</string>
+		</stringTable>
+
+		<presentationTable ><!--Storage for Presentation Definitions-->
+
+			<presentation id="Log_event_disk_threshhold" >
+				<decimalTextBox refId="Log_event_disk_threshhold_DecimalBox_1" defaultValue="200" >ログおよびイベントに対するディスクのしきい値 (MB)</decimalTextBox>
+			</presentation>
+
+			<presentation id="Override_the_default_Windows_Event_Gen" >
+				<decimalTextBox refId="Override_the_default_Windows_Event_Gen_DecimalBox" defaultValue="0" >デフォルトの View Windows イベント生成を上書きする</decimalTextBox>
+			</presentation>
+
+			<presentation id="Production_Logs_Duration" >
+				<decimalTextBox refId="Production_Logs_Duration_DecimalBox" defaultValue="7" >本番環境ログを保持する日数</decimalTextBox>
+			</presentation>
+
+			<presentation id="Max_Debug_logs" >
+				<decimalTextBox refId="Max_Debug_logs_DecimalBox" defaultValue="10" >デバッグ ログの最大数</decimalTextBox>
+			</presentation>
+
+			<presentation id="Max_Debug_logs_size" >
+				<decimalTextBox refId="Max_Debug_logs_size_DecimalBox" defaultValue="10" >最大デバッグ ログ サイズ (MB)</decimalTextBox>
+			</presentation>
+
+			<presentation id="Log_Dir" >
+				<textBox refId="Log_Dir_TextBox" >
+					<label >ログ ディレクトリ</label>
+				</textBox>
+			</presentation>
+
+			<presentation id="Send_logs_to_Syslog_Svr" >
+				<textBox refId="Send_logs_to_Syslog_Svr_TextBox" >
+					<label >Syslog サーバにログを送信する</label>
+				</textBox>
+			</presentation>
+
+			<presentation id="CPU_Mem_Sampling_Interval" >
+				<decimalTextBox refId="CPU_Mem_Sampling_Interval_DecimalBox" defaultValue="60" >CPU とメモリのサンプリング間隔 (秒)</decimalTextBox>
+			</presentation>
+
+			<presentation id="Overall_CPU_usage" >
+				<decimalTextBox refId="Overall_CPU_usage_DecimalBox" defaultValue="90" >ログ情報を発行する CPU 合計使用率</decimalTextBox>
+			</presentation>
+
+			<presentation id="Overall_memory_usage" >
+				<decimalTextBox refId="Overall_memory_usage_DecimalBox" defaultValue="75" >ログ情報を発行するメモリ合計使用率</decimalTextBox>
+			</presentation>
+
+			<presentation id="Process_CPU_usage" >
+				<decimalTextBox refId="Process_CPU_usage_DecimalBox" defaultValue="90" >ログ情報を発行するプロセス CPU 使用率</decimalTextBox>
+			</presentation>
+
+			<presentation id="Process_memory_usage" >
+				<decimalTextBox refId="Process_memory_usage_DecimalBox" defaultValue="75" >ログ情報を発行するプロセス メモリ使用率</decimalTextBox>
+			</presentation>
+
+			<presentation id="Processes_to_check" >
+				<textBox refId="Processes_to_check_TextBox" >
+					<label >確認するプロセス、ワイルド カードと除外を使用できるカンマ区切りの名前リスト</label>
+				</textBox>
+			</presentation>
+
+			<presentation id="Type_of_certificate_revocation" >
+				<dropdownList refId="Type_of_certificate_revocation_DropDown" defaultItem="3" >証明書失効確認のタイプ</dropdownList>
+			</presentation>
+
+			<presentation id="Revocation_URL_check_timeout" >
+				<decimalTextBox refId="Revocation_URL_check_timeout_DecimalBox" defaultValue="0" >失効 URL 確認のタイムアウト (ミリ秒)</decimalTextBox>
+			</presentation>
+
+			<presentation id="Global_Max_Dump_Count" >
+				<decimalTextBox refId="Global_Max_Dump_Count_DecimalBox" defaultValue="" >作成されるダンプ ファイルの最大数</decimalTextBox>
+			</presentation>
+
+			<presentation id="Global_Dump_Type" >
+				<dropdownList refId="Global_Dump_Type_DropDown" defaultItem="" >作成されるダンプ ファイルのタイプ</dropdownList>
+			</presentation>
+
+		</presentationTable>
+
+	</resources>
+
+</policyDefinitionResources>

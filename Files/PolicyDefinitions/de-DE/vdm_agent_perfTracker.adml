@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="perf_tracker">Performance Tracker</string>
+      <string id="perfTrackerCMD">Installationspfad und Ausführungsparameter für den Performance Tracker eingeben</string>
+      <string id="SUPPORTED_NotSpecified">Nicht angegeben</string>
+      <string id="perf_tracker_basic_settings">Grundeinstellung für Performance Tracker</string>
+      <string id="perf_tracker_VDI_auto_start">Automatischen Start von Performance Tracker in Remotedesktopverbindung aktivieren</string>
+      <string id="perf_tracker_remote_app_auto_start">Automatischen Start von Performance Tracker in Remoteanwendungsverbindung aktivieren</string>
+      <string id="perf_tracker_blast_settings">Einstellung für Blast-Schwellenwert</string>
+      <string id="perf_tracker_PCoIP_settings">Einstellung für PCoIP-Schwellenwert</string>
+      <string id="perf_tracker_notification_settings_detail"> Diese Richtlinieneinstellung wird verwendet, um Benachrichtigungseinstellungen anzupassen.
+
+Benachrichtigung aktivieren:
+Wenn diese Einstellung aktiviert ist, werden Popup-Benachrichtigungen angezeigt, um den Benutzer zu warnen.
+
+Zeit für automatisches Ausblenden von Benachrichtigungen:
+Zeitintervall (in Sekunden), in dem eine Popup-Benachrichtigung vor dem automatischen Ausblenden angezeigt wird.
+
+Mindestintervall zwischen Benachrichtigungen:
+Abrufanzahl, bei der ein Alarmstatus unterdrückt wird, um Benachrichtigungsfluktuation zu vermeiden. Dieser Wert * Abrufintervall = Sekunden.</string>
+      <string id="perf_tracker_basic_settings_detail"> Grundeinstellung für Performance Tracker.
+
+Datenaktualisierungsrate:
+Die Häufigkeit (in Sekunden), mit der wir Leistungsdaten abrufen. </string>
+      <string id="perf_tracker_VDI_auto_start_detail">Remotedesktopverbindung mit oder ohne automatischem Start der Performance Tracker-UI.
+
+Wenn diese Einstellung aktiviert ist, startet der perfTracker automatisch, sobald sich der Benutzer bei einer Remotedesktopverbindung anmeldet.
+
+Wenn Sie den Performance Tracker an einem alternativen Speicherort installiert haben und ihn automatisch starten möchten, geben Sie den neuen Pfad in der Textzeile ein. Wenn Sie die Performance Tracker-UI ausblenden möchten, fügen Sie den Parameter „-hideUI“ hinzu, beispielsweise C:\Installationspfad\VMwarePerformanceTracker.exe -hideUI</string>
+      <string id="perf_tracker_remote_app_auto_start_detail">Remoteanwendungsverbindung mit oder ohne automatischem Start der Performance Tracker-UI.
+
+Wenn diese Einstellung aktiviert ist, startet der perfTracker automatisch, sobald sich der Benutzer bei einer Remoteanwendungsverbindung anmeldet.
+
+Wenn Sie den Performance Tracker an einem alternativen Speicherort installiert haben und ihn automatisch starten möchten, geben Sie den neuen Pfad in der Textzeile ein. Wenn Sie die Performance Tracker-UI ausblenden möchten, fügen Sie den Parameter „-hideUI“ hinzu, beispielsweise C:\Installationspfad\VMwarePerformanceTracker.exe -hideUI</string>
+      <string id="perf_tracker_blast_settings_detail">Einstellung für Blast-Schwellenwert.
+
+Wert für Blast-Latenzwarnung:
+Wert (in ms), bei dem eine Warnung für die Blast-Latenzmetrik angezeigt wird.
+
+Wert für Blast-Latenzfehler:
+Wert (in ms), bei dem ein Fehler für die Blast-Latenzmetrik angezeigt wird.
+
+Wert für Warnung bei Blast-Verlust:
+Wert (in %), bei dem eine Warnung angezeigt wird, wenn der Verlustprozentsatz für Blast diesen Wert übersteigt.
+
+Wert für Fehler bei Blast-Verlust:
+Wert (in %), bei dem ein Fehler angezeigt wird, wenn der Verlustprozentsatz für Blast diesen Wert übersteigt.
+
+Wert für Fehler bei Blast-Bandbreite:
+Wenn die verfügbare Bandbreite unter diesem Wert liegt (in Kbit/s), wird ein Fehler angezeigt.
+
+Wert für Warnung bei Blast-Bandbreite:
+Wenn die verfügbare Bandbreite unter diesem Wert liegt (in Kbit/s), wird eine Warnung angezeigt.</string>
+      <string id="perf_tracker_PCoIP_settings_detail">Einstellung für PCoIP-Schwellenwert.
+
+Wert für PCoIP-Latenzwarnung:
+Wert (in ms), bei dem eine Warnung für die PCoIP-Latenzmetrik angezeigt wird.
+
+Wert für PCoIP-Latenzfehler:
+Wert (in ms), bei dem ein Fehler für die PCoIP-Latenzmetrik angezeigt wird.
+
+Wert für Warnung bei PCoIP-Verlust:
+Wert (in %), bei dem eine Warnung angezeigt wird, wenn der Verlustprozentsatz für PCoIP diesen Wert übersteigt.
+
+Wert für Fehler bei PCoIP-Verlust:
+Wert (in %), bei dem ein Fehler angezeigt wird, wenn der Verlustprozentsatz für PCoIP diesen Wert übersteigt.
+
+Wert für Fehler bei PCoIP-Bandbreite:
+Wenn die verfügbare Bandbreite unter diesem Wert liegt (in Kbit/s), wird ein Fehler angezeigt.
+
+
+Wert für Warnung bei PCoIP-Bandbreite:
+Wenn die verfügbare Bandbreite unter diesem Wert liegt (in Kbit/s), wird eine Warnung angezeigt.</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="perf_tracker_basic_settings">
+        <decimalTextBox refId="DataCollectionFrequency" defaultValue="5">Datenaktualisierungsrate</decimalTextBox>
+      </presentation>
+      <presentation id="perf_tracker_auto_start_command">
+        <textBox refId="PerfTrackerCMD">
+          <label>Installationspfad und Ausführungsparameter für den Performance Tracker eingeben:</label>
+          <defaultValue>C:\Program Files\VMware\VMware View\Agent\Horizon Performance Tracker\VMware.Horizon.PerformanceTracker.exe</defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="perf_tracker_blast_settings">
+        <decimalTextBox refId="WarningBlastLatencyValue" defaultValue="100">Wert für Blast-Latenzwarnung</decimalTextBox>
+        <decimalTextBox refId="ErrorBlastLatencyValue" defaultValue="300">Wert für Blast-Latenzfehler</decimalTextBox>
+        <textBox refId="WarningBlastLossValue">
+          <label>Wert für Warnung bei Blast-Verlust</label>
+          <defaultValue>2</defaultValue>
+        </textBox>
+        <textBox refId="ErrorBlastLossValue" defaultValue="10">
+          <label>Wert für Fehler bei Blast-Verlust</label>
+          <defaultValue>10</defaultValue>
+        </textBox>
+        <decimalTextBox refId="ErrorBlastBandwidthKbValue" defaultValue="512">Wert für Fehler bei Blast-Bandbreite</decimalTextBox>
+        <decimalTextBox refId="WarningBlastBandwidthKbValue" defaultValue="1500">Wert für Warnung bei Blast-Bandbreite</decimalTextBox>
+      </presentation>
+      <presentation id="perf_tracker_PCoIP_settings">
+        <decimalTextBox refId="WarningPCoIPLatencyValue" defaultValue="100">Wert für PCoIP-Latenzwarnung</decimalTextBox>
+        <decimalTextBox refId="ErrorPCoIPLatencyValue" defaultValue="250">Wert für PCoIP-Latenzfehler</decimalTextBox>
+        <textBox refId="WarningPCoIPLossValue">
+          <label>Wert für Warnung bei PCoIP-Verlust</label>
+          <defaultValue>0,5</defaultValue>
+        </textBox>
+        <textBox refId="ErrorPCoIPLossValue">
+          <label>Wert für Fehler bei PCoIP-Verlust</label>
+          <defaultValue>2</defaultValue>
+        </textBox>
+        <decimalTextBox refId="ErrorPCoIPBandwidthKbValue" defaultValue="512">Wert für Fehler bei PCoIP-Bandbreite</decimalTextBox>
+        <decimalTextBox refId="WarningPCoIPBandwidthKbValue" defaultValue="1500">Wert für Warnung bei PCoIP-Bandbreite</decimalTextBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

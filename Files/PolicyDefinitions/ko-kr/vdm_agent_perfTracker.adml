@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="perf_tracker">Performance Tracker</string>
+      <string id="perfTrackerCMD">Performance Tracker 설치 경로 입력 및 매개 변수 실행</string>
+      <string id="SUPPORTED_NotSpecified">지정되지 않음</string>
+      <string id="perf_tracker_basic_settings">Performance Tracker 기본 설정</string>
+      <string id="perf_tracker_VDI_auto_start">원격 데스크톱 연결에서 Performance Tracker 자동 시작 사용</string>
+      <string id="perf_tracker_remote_app_auto_start">원격 애플리케이션 연결에서 Performance Tracker 자동 시작 사용</string>
+      <string id="perf_tracker_blast_settings">Blast 임계값 설정</string>
+      <string id="perf_tracker_PCoIP_settings">PCoIP 임계값 설정</string>
+      <string id="perf_tracker_notification_settings_detail"> 이 정책 설정은 알림 설정을 조정하는 데 사용됩니다.
+
+알림 사용:
+사용하도록 설정되면 사용자에게 경고하기 위한 팝업 알림이 표시됩니다.
+
+알림 자동 숨김 시간:
+자동 숨김 전에 팝업 알림이 표시되는 간격(초)입니다.
+
+알림 간 최소 간격:
+알림이 변동되지 않도록 알람 상태가 보류되는 폴링의 양입니다. 이 값 * 폴링 간격 = 초.</string>
+      <string id="perf_tracker_basic_settings_detail"> Performance Tracker 기본 설정입니다.
+
+데이터 새로 고침 빈도:
+성능 데이터를 가져오는 빈도(초)입니다. </string>
+      <string id="perf_tracker_VDI_auto_start_detail">Performance Tracker UI를 사용하거나 사용하지 않고 원격 데스크톱 연결에서 자동으로 시작합니다.
+
+사용하도록 설정되면 perfTracker는 사용자가 원격 데스크톱 연결로 로그온할 때 자동으로 시작됩니다.
+
+대체 위치에 Performance Tracker를 설치했으며 자동 시작을 원하는 경우 텍스트 줄에 새 경로를 입력합니다. Performance Tracker UI를 숨기려면 &quot;-hideUI&quot; 매개 변수를 추가합니다(예: C:\installation path\VMwarePerformanceTracker.exe -hideUI)</string>
+      <string id="perf_tracker_remote_app_auto_start_detail">Performance Tracker UI를 사용하거나 사용하지 않고 원격 애플리케이션 연결에서 자동으로 시작합니다.
+
+사용하도록 설정되면 perfTracker는 사용자가 원격 애플리케이션 연결로 로그온할 때 자동으로 시작됩니다.
+
+대체 위치에 Performance Tracker를 설치했으며 자동 시작을 원하는 경우 텍스트 줄에 새 경로를 입력합니다. Performance Tracker UI를 숨기려면 &quot;-hideUI&quot; 매개 변수를 추가합니다(예: C:\installation path\VMwarePerformanceTracker.exe -hideUI)</string>
+      <string id="perf_tracker_blast_settings_detail">Blast 임계값 설정입니다.
+
+경고 Blast 지연 시간 값:
+Blast 지연 시간 메트릭에 대해 경고가 표시되는 값(ms)입니다.
+
+오류 Blast 지연 시간 값:
+Blast 지연 시간 메트릭에 대해 오류가 표시되는 값(ms)입니다.
+
+경고 Blast 손실 값:
+Blast 손실율(%)이 이 값(%)을 초과하면 경고가 표시됩니다.
+
+오류 Blast 손실 값:
+Blast 손실율(%)이 이 값(%)을 초과하면 오류가 표시됩니다.
+
+오류 Blast 대역폭 값:
+사용 가능한 대역폭이 이 값(kbps)보다 낮으면 오류가 표시됩니다.
+
+경고 Blast 대역폭 값:
+사용 가능한 대역폭이 이 값(kbps)보다 낮으면 경고가 표시됩니다.</string>
+      <string id="perf_tracker_PCoIP_settings_detail">PCoIP 임계값 설정입니다.
+
+경고 PCoIP 지연 시간 값:
+PCoIP 지연 시간 메트릭에 대해 경고가 표시되는 값(ms)입니다.
+
+오류 PCoIP 지연 시간 값:
+PCoIP 지연 시간 메트릭에 대해 오류가 표시되는 값(ms)입니다.
+
+경고 PCoIP 손실 값:
+PCoIP 손실율(%)이 이 값(%)을 초과하면 경고가 표시됩니다.
+
+오류 PCoIP 손실 값:
+PCoIP 손실율(%)이 이 값(%)을 초과하면 오류가 표시됩니다.
+
+오류 PCoIP 대역폭 값:
+사용 가능한 대역폭이 이 값(kbps)보다 낮으면 오류가 표시됩니다.
+
+경고 PCoIP 대역폭 값:
+사용 가능한 대역폭이 이 값(kbps)보다 낮으면 경고가 표시됩니다.</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="perf_tracker_basic_settings">
+        <decimalTextBox refId="DataCollectionFrequency" defaultValue="5">데이터 새로 고침 빈도</decimalTextBox>
+      </presentation>
+      <presentation id="perf_tracker_auto_start_command">
+        <textBox refId="PerfTrackerCMD">
+          <label>Performance Tracker 설치 경로 입력 및 매개 변수 실행:</label>
+          <defaultValue>C:\Program Files\VMware\VMware View\Agent\Horizon Performance Tracker\VMware.Horizon.PerformanceTracker.exe</defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="perf_tracker_blast_settings">
+        <decimalTextBox refId="WarningBlastLatencyValue" defaultValue="100">경고 Blast 지연 시간 값</decimalTextBox>
+        <decimalTextBox refId="ErrorBlastLatencyValue" defaultValue="300">오류 Blast 지연 시간 값</decimalTextBox>
+        <textBox refId="WarningBlastLossValue">
+          <label>경고 Blast 손실 값</label>
+          <defaultValue>2</defaultValue>
+        </textBox>
+        <textBox refId="ErrorBlastLossValue" defaultValue="10">
+          <label>오류 Blast 손실 값</label>
+          <defaultValue>10</defaultValue>
+        </textBox>
+        <decimalTextBox refId="ErrorBlastBandwidthKbValue" defaultValue="512">오류 Blast 대역폭 값</decimalTextBox>
+        <decimalTextBox refId="WarningBlastBandwidthKbValue" defaultValue="1500">경고 Blast 대역폭 값</decimalTextBox>
+      </presentation>
+      <presentation id="perf_tracker_PCoIP_settings">
+        <decimalTextBox refId="WarningPCoIPLatencyValue" defaultValue="100">경고 PCoIP 지연 시간 값</decimalTextBox>
+        <decimalTextBox refId="ErrorPCoIPLatencyValue" defaultValue="250">오류 PCoIP 지연 시간 값</decimalTextBox>
+        <textBox refId="WarningPCoIPLossValue">
+          <label>경고 PCoIP 손실 값</label>
+          <defaultValue>0.5</defaultValue>
+        </textBox>
+        <textBox refId="ErrorPCoIPLossValue">
+          <label>오류 PCoIP 손실 값</label>
+          <defaultValue>2</defaultValue>
+        </textBox>
+        <decimalTextBox refId="ErrorPCoIPBandwidthKbValue" defaultValue="512">오류 PCoIP 대역폭 값</decimalTextBox>
+        <decimalTextBox refId="WarningPCoIPBandwidthKbValue" defaultValue="1500">경고 PCoIP 대역폭 값</decimalTextBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

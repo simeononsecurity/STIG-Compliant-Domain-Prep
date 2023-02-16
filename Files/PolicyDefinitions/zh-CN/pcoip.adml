@@ -1,0 +1,1047 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" >
+
+	<displayName >在此处输入显示名称</displayName>
+	<description >输入 ADMX 文件描述</description>
+	<resources >
+		<stringTable ><!--Storage for String Definitions-->
+
+			<string id="String_SupportedOn_Undefined_2" >未定义</string>
+			<string id="String_SupportedOn_Undefined_4" >未定义</string>
+			<string id="String_SupportedOn_Undefined_6" >未定义</string>
+			<string id="String_SupportedOn_Undefined_8" >未定义</string>
+			<string id="String_SupportedOn_Undefined_10" >未定义</string>
+			<string id="String_SupportedOn_Undefined_12" >未定义</string>
+			<string id="String_SupportedOn_Undefined_14" >未定义</string>
+			<string id="String_SupportedOn_Undefined_16" >未定义</string>
+			<string id="String_SupportedOn_Undefined_18" >未定义</string>
+			<string id="String_SupportedOn_Undefined_20" >未定义</string>
+			<string id="String_SupportedOn_Undefined_21" >未定义</string>
+			<string id="String_SupportedOn_Undefined_22" >未定义</string>
+			<string id="String_SupportedOn_Undefined_24" >未定义</string>
+			<string id="String_SupportedOn_Undefined_26" >未定义</string>
+			<string id="String_SupportedOn_Undefined_28" >未定义</string>
+			<string id="String_SupportedOn_Undefined_30" >未定义</string>
+			<string id="String_SupportedOn_Undefined_32" >未定义</string>
+			<string id="String_SupportedOn_Undefined_34" >未定义</string>
+			<string id="String_SupportedOn_Undefined_36" >未定义</string>
+			<string id="String_SupportedOn_Undefined_38" >未定义</string>
+			<string id="String_SupportedOn_Undefined_40" >未定义</string>
+			<string id="String_SupportedOn_Undefined_42" >未定义</string>
+			<string id="String_SupportedOn_Undefined_44" >未定义</string>
+			<string id="String_SupportedOn_Undefined_46" >未定义</string>
+			<string id="String_SupportedOn_Undefined_48" >未定义</string>
+			<string id="String_SupportedOn_Undefined_50" >未定义</string>
+			<string id="String_SupportedOn_Undefined_52" >未定义</string>
+			<string id="String_SupportedOn_Undefined_54" >未定义</string>
+			<string id="String_SupportedOn_Undefined_56" >未定义</string>
+			<string id="String_SupportedOn_Undefined_58" >未定义</string>
+			<string id="String_SupportedOn_Undefined_60" >未定义</string>
+			<string id="String_SupportedOn_Undefined_62" >未定义</string>
+			<string id="String_SupportedOn_Undefined_64" >未定义</string>
+			<string id="String_SupportedOn_Undefined_66" >未定义</string>
+			<string id="String_SupportedOn_Undefined_68" >未定义</string>
+			<string id="String_SupportedOn_Undefined_70" >未定义</string>
+			<string id="String_SupportedOn_Undefined_72" >未定义</string>
+			<string id="String_SupportedOn_Undefined_74" >未定义</string>
+			<string id="String_SupportedOn_Undefined_76" >未定义</string>
+			<string id="String_SupportedOn_Undefined_78" >未定义</string>
+			<string id="String_SupportedOn_Undefined_80" >未定义</string>
+			<string id="String_SupportedOn_Undefined_82" >未定义</string>
+			<string id="String_SupportedOn_Undefined_84" >未定义</string>
+			<string id="String_SupportedOn_Undefined_86" >未定义</string>
+			<string id="String_SupportedOn_Undefined_88" >未定义</string>
+			<string id="String_SupportedOn_Undefined_90" >未定义</string>
+			<string id="String_SupportedOn_Undefined_92" >未定义</string>
+			<string id="String_SupportedOn_Undefined_94" >未定义</string>
+			<string id="String_SupportedOn_Undefined_96" >未定义</string>
+			<string id="String_SupportedOn_Undefined_97" >未定义</string>
+			<string id="String_SupportedOn_Undefined_98" >未定义</string>
+			<string id="String_SupportedOn_Undefined_100" >未定义</string>
+			<string id="String_SupportedOn_Undefined_102" >未定义</string>
+			<string id="String_SupportedOn_Undefined_104" >未定义</string>
+			<string id="String_SupportedOn_Undefined_106" >未定义</string>
+			<string id="String_SupportedOn_Undefined_108" >未定义</string>
+			<string id="String_SupportedOn_Undefined_110" >未定义</string>
+			<string id="String_SupportedOn_Undefined_112" >未定义</string>
+			<string id="String_SupportedOn_Undefined_114" >未定义</string>
+			<string id="String_SupportedOn_Undefined_116" >未定义</string>
+			<string id="String_SupportedOn_Undefined_118" >未定义</string>
+			<string id="String_SupportedOn_Undefined_120" >未定义</string>
+			<string id="String_SupportedOn_Undefined_122" >未定义</string>
+			<string id="String_SupportedOn_Undefined_124" >未定义</string>
+			<string id="String_SupportedOn_Undefined_126" >未定义</string>
+			<string id="String_SupportedOn_Undefined_128" >未定义</string>
+			<string id="String_SupportedOn_Undefined_130" >未定义</string>
+			<string id="String_SupportedOn_Undefined_132" >未定义</string>
+			<string id="String_SupportedOn_Undefined_134" >未定义</string>
+			<string id="String_SupportedOn_Undefined_136" >未定义</string>
+			<string id="String_SupportedOn_Undefined_138" >未定义</string>
+			<string id="String_SupportedOn_Undefined_140" >未定义</string>
+			<string id="String_SupportedOn_Undefined_142" >未定义</string>
+			<string id="String_SupportedOn_Undefined_144" >未定义</string>
+			<string id="String_SupportedOn_Undefined_146" >未定义</string>
+			<string id="String_SupportedOn_Undefined_148" >未定义</string>
+			<string id="String_SupportedOn_Undefined_150" >未定义</string>
+			<string id="String_SupportedOn_Undefined_152" >未定义</string>
+			<string id="String_Cat_PCoIP_Session_Variables_154" >PCoIP 会话变量</string>
+			<string id="String_Cat_Not_Overridable_156" >管理员不可覆盖的设置</string>
+			<string id="String_Cat_Overridable_Administrator_158" >管理员可覆盖的默认值</string>
+			<string id="String_Policy_Turn_off_Build_to_Lossles_160" >关闭无损构建功能</string>
+			<string id="String_Explain_Specifies_whether_161" >指定是关闭还是开启 PCoIP 协议的无损构建功能；默认情况下，将关闭该功能。
+
+如果该设置为“已启用”或“未配置”，则会关闭无损构建功能，并且可能永远无法将图像和其他桌面内容构建为无损状态。在带宽受限的网络环境中，关闭无损构建功能可以节省带宽。如果该设置为“已禁用”，则会开启无损构建功能；对于需要将图像和桌面内容构建为无损状态的环境，建议使用该功能。
+
+如果在活动 PCoIP 会话期间修改该设置，将会立即生效。</string>
+			<string id="String_Policy_Configure_the_maximum_163" >配置最大 PCoIP 会话带宽</string>
+			<string id="String_Explain_Specifies_the_maximum_164" >指定 PCoIP 会话中的最大带宽 (kbps)。此带宽包括所有图像处理、音频、虚拟通道、USB 以及控制 PCoIP 流量。
+
+根据端点连接到的链路的总容量设置该值，并考虑所需的并发 PCoIP 会话数。例如，对于通过 4 Mbps Internet 连接进行连接的单用户 VDI 配置 (例如，单个 PCoIP 会话)，应将该值设置为 4 Mbps (或其 90%，以便为其他网络流量留出一些容限)。如果希望多个并发 PCoIP 会话共享某个链路 (例如，多个 VDI 用户或 RDSH 配置)，您可能需要相应地调整该设置，但这会限制每个活动会话的最大带宽。
+
+设置此值可防止代理尝试以超过链路容量的速率进行传输，从而避免出现过多的数据包丢失或用户体验下降现象。此值是对称的。该设置强制客户端和代理使用两者上所设置的两个值中较小的一个。例如，设置 4 Mbps 的最大带宽将强制代理以低于此值的速率传输数据，即便在客户端上配置了此设置也是如此。
+
+在端点上禁用或未配置此设置时，端点不实施带宽限制。配置此设置后，该设置会被用作端点的最大带宽限制 (kbps)。
+
+未配置此设置时的默认值为 900000 kbps。
+
+该设置适用于代理和客户端。如果两个端点的设置不同，将使用较低的值。</string>
+			<string id="String_Policy_Configure_the_PCoIP_167" >配置 PCoIP 会话 MTU</string>
+			<string id="String_Explain_Specifies_the_Maximum_168" >指定 PCoIP 会话的 UDP 数据包的最大传输单元 (MTU) 大小。
+
+此 MTU 大小包括 IP 和 UDP 数据包标头。TCP 使用标准 MTU 发现机制来设置 MTU，且不受此设置影响。最大 MTU 大小为 1500 字节。最小 MTU 大小为 500 字节。默认值为 1200 字节。
+
+通常情况下，无需更改 MTU 大小。如果存在会造成 PCoIP 数据包出现碎片的异常网络设置，请更改此值。
+
+该设置适用于代理和客户端。如果两个端点的 MTU 大小设置不同，将使用最低的值。
+
+如果禁用或未配置该设置，则客户端在与代理进行协商时使用默认值。</string>
+			<string id="String_Policy_Configure_the_PCoIP_171" >配置 PCoIP 会话带宽下限</string>
+			<string id="String_Explain_Specifies_a_lower_172" >指定 PCoIP 会话预留的带宽下限 (Kbps)。
+
+此设置配置端点的最低预期带宽传输速率。在使用该设置为某个端点预留带宽时，会话无需等待带宽变得可用，从而提高了会话的响应速度。
+
+确保不要为所有端点过度预定总体预留带宽。确保配置的所有连接带宽下限之和不超过网络流量。
+
+默认值为 0，表示不预留最小带宽。禁用或未配置此设置时，不预留最小带宽。
+
+该设置适用于代理和客户端，但仅影响配置了该设置的端点。
+
+如果在活动 PCoIP 会话期间修改该设置，将会立即生效。</string>
+			<string id="String_Policy_Enable_disable_175" >在 PCoIP 会话中启用/禁用音频</string>
+			<string id="String_Explain_Determines_whether_176" >确定是否在 PCoIP 会话中启用音频。两个端点必须都启用音频。启用此设置时，允许使用 PCoIP 音频。禁用此设置时，禁用 PCoIP 音频。未配置此设置时，默认启用音频。
+
+</string>
+			<string id="String_Policy_Enable_disable_178" >在 PCoIP 会话中启用/禁用麦克风噪声和直流偏移滤波器</string>
+			<string id="String_Explain_Determines_whether_179" >确定是否在 PCoIP 会话期间启用麦克风输入的麦克风噪声和直流偏移滤波器。
+
+该设置仅适用于代理和 Teradici 音频驱动程序。
+
+未配置此设置时，Teradici 音频驱动程序默认使用麦克风噪声和直流偏移滤波器。</string>
+			<string id="String_Policy_Configure_the_PCoIP_181" >配置 PCoIP 会话音频带宽限制</string>
+			<string id="String_Explain_Specifies_the_maximum_182" >指定 PCoIP 会话中音频 (声音播放) 可用的最大带宽。
+
+音频处理进程监视音频使用的带宽。此处理进程根据当前带宽利用率来选择可提供最佳音频的音频压缩算法。如果设置了带宽限制，处理进程会通过更改所选的压缩算法来降低音质，直到达到带宽限制为止。如果在指定的带宽限制下无法提供最低音质，音频将被禁用。
+
+要允许传输未压缩的高品质立体声音频，请将此设置设为大于 1600 kbps 的值。设为 450 kbps 及更高值可支持压缩的高品质立体声音频。设为 50 kbps 至 450 kbps 之间的值可支持 FM 广播与电话品质之间的音频。设为低于 50 kbps 的值将无法播放音频。
+
+该设置仅适用于代理。必须在两个端点上启用音频，此设置方可生效。
+
+此外，此设置对 USB 音频不起作用。
+
+如果禁用或未配置此设置，将采用 500 kbps 的默认音频带宽限制配置，以限制所选音频压缩算法。如果配置了此设置，则值的单位为 kbps，且默认音频带宽限制为 500 kbps。
+
+此设置适用于 View 4.6 及更高版本。它对较早版本的 View 不起作用。
+
+如果在活动 PCoIP 会话期间修改该设置，将会立即生效。</string>
+			<string id="String_Policy_Configure_SSL_connections_185" >配置 SSL 连接以满足安全工具要求</string>
+			<string id="String_Explain_Specifies_how_SSL_186" >指定如何建立 SSL 会话协商连接。
+
+为了满足端口扫描程序要求，请启用“配置 SSL 连接”设置，并在 View Agent 上执行以下操作:
+
+1. 在 Microsoft 管理控制台中，将正确命名和签名的证书存储到本地计算机的计算机帐户的个人存储中。确保将其标记为可导出。
+2. 将对证书进行签名的证书颁发机构的证书存储在受信任的根证书存储中。
+3. 禁用到 VMware View 5.1 和更低版本的连接。
+4. 将代理配置为仅从证书存储中加载证书。如果使用本地计算机的个人存储，请将证书存储名称保留为“MY”和“ROOT”(不带引号)，除非在步骤 1 和 2 中使用不同的存储位置。
+
+生成的 PCoIP Server 将满足端口扫描程序等安全工具的要求。
+
+如果选中相应的框以强制实施 AES-256 或更强的密码，将禁止在 SSL 协商期间使用 AES-128 密码套件。
+
+如果禁用或未配置“配置 SSL 连接”设置:
+
+1. 该端点将连接到 VMware View 5.1 和更低版本的端点以及较新的端点。
+2. 该端点将使用计算机帐户的“MY”存储中的证书以及“ROOT”存储中的证书颁发机构证书。
+3. 代理将尝试加载一个证书，但如果找不到证书，则会生成唯一的自签名证书。
+4. 最小密钥大小为 1024
+5. 服务器的证书是其自己的证书，而不是 View 连接服务器的证书。
+6. AES-128 密码套件将可用。</string>
+			<string id="String_Policy_DropList_Select_Configure_SSL_connections_From_the_Certificate_189" >从证书存储中</string>
+			<string id="String_Policy_DropList_Select_Configure_SSL_connections_Generate_a_unique_190" >生成唯一的自签名证书</string>
+			<string id="String_Policy_DropList_Select_Configure_SSL_connections_From_the_Certificate_191" >如果可能，从证书存储中，否则生成</string>
+			<string id="String_Policy_DropList_Select_Configure_SSL_connections_1024_194" >1024</string>
+			<string id="String_Policy_DropList_Select_Configure_SSL_connections_2048_195" >2048</string>
+			<string id="String_Policy_DropList_Select_Configure_SSL_connections_4096_196" >4096</string>
+			<string id="String_Policy_Configure_PCoIP_201" >配置 PCoIP 会话加密算法</string>
+			<string id="String_Explain_Controls_the_encryption_202" >控制会话协商期间 PCoIP 端点播发的加密算法。
+
+勾选其中一个复选框将禁用相关加密算法。必须启用至少一个算法。
+
+该设置适用于代理和客户端。各端点协商实际所用的会话加密算法。如果启用了 FIPS140-2 批准的模式，则始终覆盖“禁用 AES-128-GCM 加密”值，从而启用 AES-128-GCM 加密。
+
+如果禁用或未配置总体“配置 SSL 连接”，该端点可以协商使用 Salsa20-256round12 和 AES-128-GCM 算法。
+
+支持的加密算法按优先顺序排列为: SALSA20/12-256、AES-GCM-128 和 AES-GCM-256。默认情况下，所有支持的加密算法均可供此端点协商使用。
+
+如果将两个端点都配置为支持所有三个算法，并且连接不使用安全网关 (SG)，则会协商使用 SALSA20 算法。不过，如果连接使用 SG，则会自动禁用 SALSA20 并协商使用 AES128。如果一个端点或 SG 禁用 SALSA20，且一个端点禁用 AES128，则将协商使用 AES256。</string>
+			<string id="String_Policy_Configure_SSL_protocols_207" >配置 SSL 协议</string>
+			<string id="String_Explain_Configures_openssl_208" >在建立加密的 SSL 连接之前，配置 openssl 协议以限制使用某些协议。协议列表包含一个或多个以冒号分隔的 openssl 协议字符串。请注意，所有密码字符串不区分大小写。
+
+ 默认值为: 
+   &quot;TLS1.1:TLS1.2&quot;
+
+ 这意味着: 将启用 TLS v1.1 和 TLS v1.2 (禁用 SSL v2.0、SSLv3.0 和 TLS v1.0)。
+
+该设置适用于代理和客户端。
+
+如果在两端设置了该设置，将遵循 OpenSSL 协议协商规则。</string>
+			<string id="String_Policy_Configure_SSL_cipher_list_209" >配置 SSL 密码列表</string>
+			<string id="String_Explain_Configures_SSL_cipher_list_210" >在建立加密的 SSL 连接之前，配置 SSL 密码列表以限制使用密码套件。该列表由一个或多个以冒号分隔的密码套件字符串组成。请注意，所有密码字符串不区分大小写。
+
+默认值为:
+   &quot;ECDHE-RSA-AES256-GCM-SHA384:AES256-SHA256:AES256-SHA:ECDHE-RSA-AES128-GCM-SHA256:AES128-SHA256:AES128-SHA:@STRENGTH&quot;
+
+如果配置了该项目，将忽略“配置 SSL 连接以满足安全工具要求”中的“强制实施 AES-256 或更强的密码进行 SSL 连接协商”复选框。
+
+需要将该设置同时应用于 PCoIP 服务器和 PCoIP 客户端。</string>
+			<string id="String_Policy_Configure_PCoIP_211" >配置 PCoIP USB 允许和禁止的设备规则</string>
+			<string id="String_Explain_Specifies_the_USB_212" >对于使用运行 Teradici 固件的零客户端的 PCoIP 会话，指定有权进行和无权进行此种会话的 USB 设备。PCoIP 会话中使用的 USB 设备必须显示在 USB 授权表中。USB 取消授权表中显示的 USB 设备不能在 PCoIP 会话中使用。
+
+最多可定义 10 条 USB 授权规则和 10 条 USB 取消授权规则。使用竖线 (|) 字符来分隔不同的规则。
+
+每条规则可以包含供应商 ID (VID) 和产品 ID (PID)，或者也可以描述一个 USB 设备类。类规则可允许或禁用整个设备类、单个子类或子类中的协议。
+
+VID/PID 组合规则的格式为 1xxxxyyyy，其中 xxxx 是十六进制格式的 VID，yyyy 是十六进制格式的 PID。例如，授权或阻止具有 VID 0x1a2b 和 PID 0x3c4d 的设备的规则为 11a2b3c4d。
+
+对于类规则，请使用以下格式之一:
+
+允许所有 USB             格式: 23XXXXXX
+设备                       示例: 23XXXXXX
+
+允许具有                  格式: 22classXXXX
+ 特定类 ID            示例: 22aaXXXX
+的 USB 设备
+
+允许特定的        格式: 21class-subclassXX
+子类                     示例: 21aabbXX
+
+允许特定的        格式: 20class-subclass-protocol
+协议                    示例: 20aabbcc
+
+例如，允许 USB HID (鼠标和键盘) 设备 (类 ID 0x03) 和网络摄像头 (类 ID 0x0e) 的 USB 授权字符串为 2203XXXX|220eXXXX。禁止 USB 大容量存储设备 (类 ID 0x08) 的 USB 取消授权字符串为 2208XXXX。
+
+空的 USB 授权字符串表示不授权任何 USB 设备。空的 USB 取消授权字符串表示不禁用任何 USB 设备。
+
+该设置仅适用于服务器，并且仅在服务器与运行 Teradici 固件的零客户端建立会话时适用。各个端点会相互协商来确定使用哪些设备。
+
+默认情况下，允许使用所有设备，不禁用任何设备。</string>
+			<string id="String_Policy_Configure_the_TCP_216" >配置 PCoIP Server 绑定到和侦听的 TCP 端口</string>
+			<string id="String_Explain_Specifies_the_TCP_217" >指定软件 PCoIP 主机绑定的 TCP 代理端口。
+
+TCP 端口值指定代理尝试绑定的基本 TCP 端口。TCP 端口范围值确定当基本端口不可用时尝试其他端口的个数。端口范围必须在 0 到 10 之间。
+
+此范围从基本端口跨越至基本端口与端口范围之和。例如，如果基本端口为 4172，端口范围为 10，则其范围为 4172 至 4182。
+
+该设置仅适用于代理。
+
+默认情况下，对于 View 4.5 和更高版本，基本 TCP 端口为 4172；对于 View 4.0.x 和更低版本，基本 TCP 端口为 50002。默认情况下，端口范围为 1。</string>
+			<string id="String_Policy_Configure_the_UDP_221" >配置 PCoIP Server 绑定到和侦听的 UDP 端口</string>
+			<string id="String_Explain_Specifies_the_UDP_222" >指定软件 PCoIP 主机绑定的 UDP 代理端口。
+
+UDP 端口值指定代理尝试绑定的基本 UDP 端口。UDP 端口范围值确定当基本端口不可用时尝试其他端口的个数。端口范围必须在 0 到 10 之间。
+
+此范围从基本端口跨越至基本端口与端口范围之和。例如，如果基本端口为 4172，端口范围为 10，则其范围为 4172 至 4182。
+
+该设置仅适用于代理。
+
+默认情况下，对于 View 4.5 和更高版本，基本 TCP 端口为 4172；对于 View 4.0.x 和更低版本，基本 TCP 端口为 50002。默认情况下，端口范围为 10。</string>
+			<string id="String_Policy_Configure_PCoIP_226" >配置 PCoIP 虚拟通道</string>
+			<string id="String_Explain_Specifies_the_virtual_227" >指定能够以及不能通过 PCoIP 会话操作的虚拟通道。此设置还决定是否禁用 PCoIP 主机上的剪贴板处理功能。
+
+PCoIP 会话中使用的虚拟通道必须显示在虚拟通道授权列表中。未授权虚拟通道列表中显示的虚拟通道不能在 PCoIP 会话中使用。
+
+最多可指定 15 个虚拟通道，以在 PCoIP 会话中使用。
+
+使用竖线 (|) 字符来分隔不同的通道名称。例如，允许 mksvchan 和 vdp_rdpvcbridge 虚拟通道的虚拟通道授权字符串为 mksvchan|vdp_rdpvcbridge。
+
+如果通道名称包含竖线或反斜线 (\) 字符，请在这两个字符的前面插入一个反斜线字符。例如，将通道名称 awk|ward\channel 键入为 awk\|ward\\channel。
+
+授权虚拟通道列表为空时表示禁用所有虚拟通道。未授权虚拟通道列表为空时表示允许使用所有虚拟通道。
+
+此虚拟通道设置适用于代理和客户端。必须在代理和客户端上均启用虚拟通道才能使用虚拟通道。
+
+虚拟通道设置中有一个单独的复选框，可供您禁用 PCoIP 主机上的远程剪贴板处理功能。此值仅适用于代理。
+
+默认情况下，启用所有虚拟通道，包括剪贴板处理功能。</string>
+			<string id="String_Policy_DropList_Select_Configure_PCoIP_0_Disable_virtual_229" >0 - 在 PCoIP 会话中禁用虚拟通道</string>
+			<string id="String_Policy_DropList_Select_Configure_PCoIP_2_Disable_all_230" >2 - 禁用所有其他的虚拟通道</string>
+			<string id="String_Policy_DropList_Select_Configure_PCoIP_3_Enable_all_231" >3 - 启用所有其他的虚拟通道</string>
+			<string id="String_Policy_Configure_PCoIP_295" >配置 PCoIP 图像质量级别</string>
+			<string id="String_Explain_Controls_how_PCoIP_296" >控制在网络拥塞期间 PCoIP 如何呈现图像。“最小图像质量”、“最大初始图像质量”和“最大帧速率”值交互作用，从而精确控制网络带宽受限的环境。
+
+可以使用“最小图像质量”值均衡带宽受限情况下的图像质量和帧速率。可指定 30 至 100 之间的值。默认值为 40。较低的值支持较高帧速率，但是可能会导致显示质量降低。较高的值支持较高的图像质量，但在网络带宽受限时可能会导致帧速率降低。当网络带宽不受限时，无论值设置如何，PCoIP 均保持最高质量。
+
+可以使用“最大初始图像质量”值限制更改的显示图像区域的初始质量，从而降低 PCoIP 所需的网络带宽峰值。可指定 30 至 100 之间的值。默认值为 80。较低的值会降低变化内容的图像质量和峰值带宽要求。较高的值会提高变化内容的图像质量和峰值带宽要求。无论值设置如何，无变化的图像区域会逐渐以无损 (完美) 质量呈现。设置为 80 或更低的值可最充分地利用可用带宽。
+
+“最小图像质量”值不能超过“最大初始图像质量”值。
+
+可以使用“最大帧速率”值限制每秒更新屏幕的次数，从而管理每个用户使用的平均带宽。可指定每秒 1 帧至每秒 120 帧之间的值。默认值为 30。较高的值会占用更多的带宽，但更稳定，支持更顺畅地传输变化图像，例如视频。较低的值占用的带宽较低，但稳定性较差。
+
+如果要使用客户端而不是主机中的“最小图像质量”、“最大初始图像质量”、“最大帧速率”和“禁用无损构建”值，请设置“使用客户端中的图像设置”。目前，仅零客户端固件 3.5 和更高版本在客户端支持这些设置。
+
+这些图像质量值仅适用于软主机，对软客户端不起作用。
+
+禁用或未配置此设置时，使用默认值。如果在运行时更改这些设置，它们将立即生效。</string>
+			<string id="String_Policy_Configure_frame_302" >配置帧速率与图像质量首选项</string>
+			<string id="String_Explain_Configure_the_frame_303" >将帧速率和图像质量首选项配置为从 0 (最高帧速率) 到 100 (最高图像质量) 之间的值。如果禁用或未配置此策略，则默认设置为 50。
+
+较高的值 (最大: 100) 意味着您希望获得较高的图像质量，而可以容忍不连续的帧速率；较低的值 (最小: 0) 意味着您希望获得流畅的体验，而可以容忍较低的图像质量。
+
+该设置可以与“配置 PCoIP 图像质量级别”GPO 一起使用，以便确定最大初始图像质量级别和最小图像质量级别。虽然“帧速率和图像质量首选项”可以调整每个帧的图像质量级别，但不能超出“配置 PCoIP 图像质量级别”GPO 配置的最大/最小质量级别阈值。
+
+在运行时更改此策略后，所做的更改可以立即生效。</string>
+			<string id="String_Policy_Enable_access_to_306" >允许从 vSphere 控制台中访问 PCoIP 会话</string>
+			<string id="String_Explain_Determines_whether_307" >确定是否允许 vSphere Client 控制台显示活动 PCoIP 会话以及将输入发送到桌面。
+
+默认情况下，如果客户端通过 PCoIP 连接，vSphere Client 控制台屏幕为空白且控制台无法发送输入。此默认设置可确保当 PCoIP 远程会话处于活动状态时，恶意用户无法查看用户桌面或从本地向主机进行输入。
+
+该设置仅适用于代理。
+
+禁用或未配置此设置时，不允许进行控制台访问。启用此设置后，控制台将显示 PCoIP 会话并允许控制台输入。
+
+如果启用该设置，只有在 Windows 7 虚拟机硬件为 v8 或更高版本时，控制台才会显示在 Windows 7 系统上运行的 PCoIP 会话。硬件 v8 仅在 ESX 5.0 和更高版本上可用。与此相反，无论虚拟机硬件版本为何，都允许从控制台向 Windows 7 系统进行输入。
+
+在 Windows XP 或 Windows Vista 系统中，无论虚拟机硬件版本为何，控制台都会显示 PCoIP 会话。</string>
+			<string id="String_Policy_Turn_on_PCoIP_user_309" >开启 PCoIP 用户默认输入语言同步</string>
+			<string id="String_Explain_Determines_whether_310" >确定 PCoIP 会话中用户的默认输入语言是否与 PCoIP 客户端端点的默认输入语言同步。启用此设置时，允许同步。禁用或未配置此设置时，禁止同步。
+
+该设置仅适用于代理。</string>
+			<string id="String_Policy_Use_alternate_key_312" >使用备用键发送安全注意序列</string>
+			<string id="String_Explain_Specifies_an_alternate_313" >指定一个用于发送安全注意序列 (SAS) 的备用键，而不是指定 Insert 键。
+
+您可以使用该设置在 PCoIP 会话期间从 View 桌面启动的虚拟机中保留 Ctrl+Alt+Ins 按键序列。
+
+例如，用户可从 PCoIP 桌面启动 vSphere Client，并打开 vCenter Server 中虚拟机的控制台。如果在 vCenter Server 虚拟机的客户机操作系统中使用了 Ctrl+Alt+Ins 序列，则会将 Ctrl+Alt+Del SAS 发送至虚拟机。该设置允许通过 Ctrl+Alt+备用键序列将 Ctrl+Alt+Del SAS 发送到 PCoIP 桌面。
+
+如果启用该设置，您必须从下拉菜单中选择一个备用键。不能启用此设置但不指定任何值。
+
+禁用或未配置此设置时，Ctrl+Alt+Ins 按键序列用作 SAS。
+
+该设置仅适用于代理，对客户端无效。</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Home_315" >Home</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_End_316" >End</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Page_Up_317" >Page Up</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Page_Down_318" >Page Down</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Backspace_319" >Backspace</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Tab_320" >Tab</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Print_Screen_321" >Print Screen</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Scroll_Lock_322" >Scroll Lock</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Right_Arrow_323" >右箭头</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Left_Arrow_324" >左箭头</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Down_Arrow_325" >下箭头</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Up_Arrow_326" >上箭头</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Keypad_327" >小键盘 /</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Keypad_328" >小键盘 *</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Keypad_329" >小键盘 -</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Keypad_330" >小键盘 +</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Keypad_Enter_331" >小键盘 Enter</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Keypad_1_End_332" >小键盘 1 End</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Keypad_2_Down_333" >小键盘 2 下箭头</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Keypad_3_PageDn_334" >小键盘 3 PageDn</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Keypad_4_Left_335" >小键盘 4 左箭头</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Keypad_5_336" >小键盘 5</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Keypad_6_Right_337" >小键盘 6 右箭头</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Keypad_7_Home_338" >小键盘 7 Home</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Keypad_8_Up_339" >小键盘 8 上箭头</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Keypad_9_PageUp_340" >小键盘 9 PageUp</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Keypad_0_Insert_341" >小键盘 0 Insert</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Keypad_Delete_342" >小键盘 . 删除</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_343" >- _</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_344" >= +</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_345" >[ {</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_346" >] }</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_347" >\ |</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_348" >; :</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_349" >' &quot;</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_350" >` ~</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_351" >, &lt;</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_352" >. &gt;</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_353" >/ ?</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_a_A_354" >a A</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_b_B_355" >b B</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_c_C_356" >c C</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_d_D_357" >d D</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_e_E_358" >e E</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_f_F_359" >f F</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_g_G_360" >g G</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_h_H_361" >h H</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_i_I_362" >i I</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_j_J_363" >j J</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_k_K_364" >k K</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_l_L_365" >l L</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_m_M_366" >m M</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_n_N_367" >n N</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_o_O_368" >o O</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_p_P_369" >p P</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_q_Q_370" >q Q</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_r_R_371" >r R</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_s_S_372" >s S</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_t_T_373" >t T</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_u_U_374" >u U</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_v_V_375" >v V</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_w_W_376" >w W</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_x_X_377" >x X</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_y_Y_378" >y Y</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_z_Z_379" >z Z</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_1_380" >1 !</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_2_381" >2 @</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_3_382" >3 #</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_4_383" >4 $</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_5_384" >5 %</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_6_385" >6 ^</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_7_386" >7 &amp;</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_8_387" >8 *</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_9_388" >9 (</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_0_389" >0 )</string>
+			<string id="String_Policy_Disable_sending_391" >禁止在用户按 Ctrl+Alt+Del 时发送 CAD</string>
+			<string id="String_Explain_When_this_policy_392" >如果启用该策略，用户必须按 Ctrl+Alt+Insert 而不是 Ctrl+Alt+Del 以在 PCoIP 会话期间将安全注意序列 (SAS) 发送到桌面。
+
+当用户按 Ctrl+Alt+Del 锁定客户端端点时，如果一个 SAS 被发送到主机和客户机，他们一定会感到困惑。这种情况下，您可能希望启用此设置。
+
+该设置仅适用于代理，对客户端无效。
+
+如果未配置或禁用该策略，用户可以按 Ctrl+Alt+Del 或 Ctrl+Alt+Insert 以将 SAS 发送到桌面。</string>
+			<string id="String_Policy_Configure_the_PCoIP_394" >配置 PCoIP 传输标头</string>
+			<string id="String_Explain_Configures_the_395" >配置 PCoIP 传输标头。
+
+PCoIP 传输标头是添加到所有 PCoIP UDP 数据包的 32 位标头 (只有在两端均启用/支持传输标头时)。在处理网络拥塞问题时，网络设备可以通过 PCoIP 传输标头做出更好的优先级/Qos 决策。默认情况下传输标头处于启用状态。
+
+传输会话的优先级决定了在 PCoIP 传输标头中报告的 PCoIP 会话优先级。网络设备可以根据指定的传输会话优先级做出更好的优先级/Qos 决策。PCoIP 代理和客户端进行协商来确定传输会话的优先级值。如果代理指定了传输会话优先级值 (高、中或低)，则会话使用代理指定的会话优先级。如果仅客户端指定了传输会话优先级 (高、中或低)，则会话使用客户端指定的会话优先级。如果代理和客户端均未指定传输会话优先级 (或指定了“未定义的优先级”)，则会话使用中优先级 (默认值)。</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_High_Priority_397" >高优先级</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_Medium_Priority_398" >中优先级 (默认)</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_Low_Priority_399" >低优先级</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_Undefined_Priority_400" >未定义的优先级</string>
+			<string id="String_Policy_Configure_PCoIP_402" >配置 PCoIP 事件日志详细级别</string>
+			<string id="String_Explain_This_policy_enables_403" >该策略允许配置从 0 (最不详细) 到 3 (最详细) 的 PCoIP 事件日志详细级别。
+
+如果该策略为“已禁用”或“未配置”，则默认事件日志详细级别设置为 2。如果该策略为“已配置”，则该设置控制上述详细级别。
+
+如果在活动 PCoIP 会话期间修改该设置，将会立即生效。</string>
+			<string id="String_Policy_Configure_PCoIP_406" >配置 PCoIP 事件日志清理时间 (天)</string>
+			<string id="String_Explain_This_policy_enables_407" >该策略允许配置 PCoIP 事件日志清理时间 (天)。
+
+如果该策略为“已配置”，则该设置控制日志文件清理时间 (天)，即，如果设置为非零值 n，则自动 (并无提示) 删除早于 n 天的日志文件；如果设置为 0，则表示不按时间清理文件。如果该策略为“已禁用”或“未配置”，则默认事件日志清理时间 (天) 设置为 7。
+
+在会话启动时，将执行一次日志文件清理；在运行下一个会话时，才会应用对该设置进行的任何更改。</string>
+			<string id="String_Policy_Configure_PCoIP_410" >配置 PCoIP 事件日志清理大小 (MB)</string>
+			<string id="String_Explain_This_policy_enables_411" >该策略允许配置 PCoIP 事件日志清理大小 (MB)。
+
+如果该策略为“已配置”，则该设置控制日志文件清理大小 (MB)，即，如果设置为非零值 m，则自动 (并无提示) 删除超过 m MB 的日志文件；如果设置为 0，则表示不按大小清理文件。如果该策略为“已禁用”或“未配置”，则默认事件日志清理大小 (MB) 设置为 100。
+
+在会话启动时，将执行一次日志文件清理；在运行下一个会话时，才会应用对该设置进行的任何更改。</string>
+			<string id="String_Policy_Turn_off_Build_to_Lossles_414" >关闭无损构建功能</string>
+			<string id="String_Explain_Specifies_whether_415" >指定是关闭还是开启 PCoIP 协议的无损构建功能；默认情况下，将关闭该功能。
+
+如果该设置为“已启用”或“未配置”，则会关闭无损构建功能，并且可能永远无法将图像和其他桌面内容构建为无损状态。在带宽受限的网络环境中，关闭无损构建功能可以节省带宽。如果该设置为“已禁用”，则会开启无损构建功能；对于需要将图像和桌面内容构建为无损状态的环境，建议使用该功能。
+
+如果在活动 PCoIP 会话期间修改该设置，将会立即生效。</string>
+			<string id="String_Policy_Configure_the_maximum_417" >配置最大 PCoIP 会话带宽</string>
+			<string id="String_Explain_Specifies_the_maximum_418" >指定 PCoIP 会话中的最大带宽 (kbps)。此带宽包括所有图像处理、音频、虚拟通道、USB 以及控制 PCoIP 流量。
+
+根据端点连接到的链路的总容量设置该值，并考虑所需的并发 PCoIP 会话数。例如，对于通过 4 Mbps Internet 连接进行连接的单用户 VDI 配置 (例如，单个 PCoIP 会话)，应将该值设置为 4 Mbps (或其 90%，以便为其他网络流量留出一些容限)。如果希望多个并发 PCoIP 会话共享某个链路 (例如，多个 VDI 用户或 RDSH 配置)，您可能需要相应地调整该设置，但这会限制每个活动会话的最大带宽。
+
+设置此值可防止代理尝试以超过链路容量的速率进行传输，从而避免出现过多的数据包丢失或用户体验下降现象。此值是对称的。该设置强制客户端和代理使用两者上所设置的两个值中较小的一个。例如，设置 4 Mbps 的最大带宽将强制代理以低于此值的速率传输数据，即便在客户端上配置了此设置也是如此。
+
+在端点上禁用或未配置此设置时，端点不实施带宽限制。配置此设置后，该设置会被用作端点的最大带宽限制 (kbps)。
+
+未配置此设置时的默认值为 900000 kbps。
+
+该设置适用于代理和客户端。如果两个端点的设置不同，将使用较低的值。</string>
+			<string id="String_Policy_Configure_the_PCoIP_421" >配置 PCoIP 会话 MTU</string>
+			<string id="String_Explain_Specifies_the_Maximum_422" >指定 PCoIP 会话的 UDP 数据包的最大传输单元 (MTU) 大小。
+
+此 MTU 大小包括 IP 和 UDP 数据包标头。TCP 使用标准 MTU 发现机制来设置 MTU，且不受此设置影响。最大 MTU 大小为 1500 字节。最小 MTU 大小为 500 字节。默认值为 1200 字节。
+
+通常情况下，无需更改 MTU 大小。如果存在会造成 PCoIP 数据包出现碎片的异常网络设置，请更改此值。
+
+该设置适用于代理和客户端。如果两个端点的 MTU 大小设置不同，将使用最低的值。
+
+如果禁用或未配置该设置，则客户端在与代理进行协商时使用默认值。</string>
+			<string id="String_Policy_Configure_the_PCoIP_425" >配置 PCoIP 会话带宽下限</string>
+			<string id="String_Explain_Specifies_a_lower_426" >指定 PCoIP 会话预留的带宽下限 (Kbps)。
+
+此设置配置端点的最低预期带宽传输速率。在使用该设置为某个端点预留带宽时，会话无需等待带宽变得可用，从而提高了会话的响应速度。
+
+确保不要为所有端点过度预定总体预留带宽。确保配置的所有连接带宽下限之和不超过网络流量。
+
+默认值为 0，表示不预留最小带宽。禁用或未配置此设置时，不预留最小带宽。
+
+该设置适用于代理和客户端，但仅影响配置了该设置的端点。
+
+如果在活动 PCoIP 会话期间修改该设置，将会立即生效。</string>
+			<string id="String_Policy_Enable_disable_429" >在 PCoIP 会话中启用/禁用音频</string>
+			<string id="String_Explain_Determines_whether_430" >确定是否在 PCoIP 会话中启用音频。两个端点必须都启用音频。启用此设置时，允许使用 PCoIP 音频。禁用此设置时，禁用 PCoIP 音频。未配置此设置时，默认启用音频。
+
+</string>
+			<string id="String_Policy_Enable_disable_432" >在 PCoIP 会话中启用/禁用麦克风噪声和直流偏移滤波器</string>
+			<string id="String_Explain_Determines_whether_433" >确定是否在 PCoIP 会话期间启用麦克风输入的麦克风噪声和直流偏移滤波器。
+
+该设置仅适用于代理和 Teradici 音频驱动程序。
+
+未配置此设置时，Teradici 音频驱动程序默认使用麦克风噪声和直流偏移滤波器。</string>
+			<string id="String_Policy_Configure_the_PCoIP_435" >配置 PCoIP 会话音频带宽限制</string>
+			<string id="String_Explain_Specifies_the_maximum_436" >指定 PCoIP 会话中音频 (声音播放) 可用的最大带宽。
+
+音频处理进程监视音频使用的带宽。此处理进程根据当前带宽利用率来选择可提供最佳音频的音频压缩算法。如果设置了带宽限制，处理进程会通过更改所选的压缩算法来降低音质，直到达到带宽限制为止。如果在指定的带宽限制下无法提供最低音质，音频将被禁用。
+
+要允许传输未压缩的高品质立体声音频，请将此设置设为大于 1600 kbps 的值。设为 450 kbps 及更高值可支持压缩的高品质立体声音频。设为 50 kbps 至 450 kbps 之间的值可支持 FM 广播与电话品质之间的音频。设为低于 50 kbps 的值将无法播放音频。
+
+该设置仅适用于代理。必须在两个端点上启用音频，此设置方可生效。
+
+此外，此设置对 USB 音频不起作用。
+
+如果禁用或未配置此设置，将采用 500 kbps 的默认音频带宽限制配置，以限制所选音频压缩算法。如果配置了此设置，则值的单位为 kbps，且默认音频带宽限制为 500 kbps。
+
+此设置适用于 View 4.6 及更高版本。它对较早版本的 View 不起作用。
+
+如果在活动 PCoIP 会话期间修改该设置，将会立即生效。</string>
+			<string id="String_Policy_Configure_SSL_connections_439" >配置 SSL 连接以满足安全工具要求</string>
+			<string id="String_Explain_Specifies_how_SSL_440" >指定如何建立 SSL 会话协商连接。
+
+为了满足端口扫描程序要求，请启用“配置 SSL 连接”设置，并在 View Agent 上执行以下操作:
+
+1. 在 Microsoft 管理控制台中，将正确命名和签名的证书存储到本地计算机的计算机帐户的个人存储中。确保将其标记为可导出。
+2. 将对证书进行签名的证书颁发机构的证书存储在受信任的根证书存储中。
+3. 禁用到 VMware View 5.1 和更低版本的连接。
+4. 将代理配置为仅从证书存储中加载证书。如果使用本地计算机的个人存储，请将证书存储名称保留为“MY”和“ROOT”(不带引号)，除非在步骤 1 和 2 中使用不同的存储位置。
+
+生成的 PCoIP Server 将满足端口扫描程序等安全工具的要求。
+
+如果选中相应的框以强制实施 AES-256 或更强的密码，将禁止在 SSL 协商期间使用 AES-128 密码套件。
+
+如果禁用或未配置“配置 SSL 连接”设置:
+
+1. 该端点将连接到 VMware View 5.1 和更低版本的端点以及较新的端点。
+2. 该端点将使用计算机帐户的“MY”存储中的证书以及“ROOT”存储中的证书颁发机构证书。
+3. 代理将尝试加载一个证书，但如果找不到证书，则会生成唯一的自签名证书。
+4. 最小密钥大小为 1024
+5. 服务器的证书是其自己的证书，而不是 View 连接服务器的证书。
+6. AES-128 密码套件将可用。</string>
+			<string id="String_Policy_DropList_Select_Configure_SSL_connections_a_From_the_Certificate_443" >(a) 从证书存储中</string>
+			<string id="String_Policy_DropList_Select_Configure_SSL_connections_b_Generate_a_444" >(b) 生成唯一的自签名证书</string>
+			<string id="String_Policy_DropList_Select_Configure_SSL_connections_c_From_the_Certificate_445" >(c) 如果可能，从证书存储中，否则生成</string>
+			<string id="String_Policy_DropList_Select_Configure_SSL_connections_1024_448" >1024</string>
+			<string id="String_Policy_DropList_Select_Configure_SSL_connections_2048_449" >2048</string>
+			<string id="String_Policy_DropList_Select_Configure_SSL_connections_4096_450" >4096</string>
+			<string id="String_Policy_Configure_PCoIP_455" >配置 PCoIP 会话加密算法</string>
+			<string id="String_Explain_Controls_the_encryption_456" >控制会话协商期间 PCoIP 端点播发的加密算法。
+
+勾选其中一个复选框将禁用相关加密算法。必须启用至少一个算法。
+
+该设置适用于代理和客户端。各端点协商实际所用的会话加密算法。如果启用了 FIPS140-2 批准的模式，则始终覆盖“禁用 AES-128-GCM 加密”值，从而启用 AES-128-GCM 加密。
+
+如果禁用或未配置总体“配置 SSL 连接”，该端点可以协商使用 Salsa20-256round12 和 AES-128-GCM 算法。
+
+支持的加密算法按优先顺序排列为: SALSA20/12-256、AES-GCM-128 和 AES-GCM-256。默认情况下，所有支持的加密算法均可供此端点协商使用。
+
+如果将两个端点都配置为支持所有三个算法，并且连接不使用安全网关 (SG)，则会协商使用 SALSA20 算法。不过，如果连接使用 SG，则会自动禁用 SALSA20 并协商使用 AES128。如果一个端点或 SG 禁用 SALSA20，且一个端点禁用 AES128，则将协商使用 AES256。</string>
+			<string id="String_Policy_Configure_SSL_protocols_461" >配置 SSL 协议</string>
+			<string id="String_Explain_Configures_openssl_462" >在建立加密的 SSL 连接之前，配置 openssl 协议以限制使用某些协议。协议列表包含一个或多个以冒号分隔的 openssl 协议字符串。请注意，所有密码字符串不区分大小写。
+
+ 默认值为: 
+   &quot;TLS1.1:TLS1.2&quot;
+
+ 这意味着: 将启用 TLS v1.1 和 TLS v1.2 (禁用 SSL v2.0、SSLv3.0 和 TLS v1.0)。
+
+该设置适用于代理和客户端。
+
+如果在两端设置了该设置，将遵循 OpenSSL 协议协商规则。</string>
+			<string id="String_Policy_Configure_SSL_cipher_list_463" >配置 SSL 密码列表</string>
+			<string id="String_Explain_Configures_SSL_cipher_list_464" >在建立加密的 SSL 连接之前，配置 SSL 密码列表以限制使用密码套件。该列表由一个或多个以冒号分隔的密码套件字符串组成。请注意，所有密码字符串不区分大小写。
+
+默认值为:
+   &quot;ECDHE-RSA-AES256-GCM-SHA384:AES256-SHA256:AES256-SHA:ECDHE-RSA-AES128-GCM-SHA256:AES128-SHA256:AES128-SHA:@STRENGTH&quot;
+
+如果配置了该项目，将忽略“配置 SSL 连接以满足安全工具要求”中的“强制实施 AES-256 或更强的密码进行 SSL 连接协商”复选框。
+
+需要将该设置同时应用于 PCoIP 服务器和 PCoIP 客户端。</string>
+			<string id="String_Policy_Configure_PCoIP_465" >配置 PCoIP USB 允许和禁止的设备规则</string>
+			<string id="String_Explain_Specifies_the_USB_466" >对于使用运行 Teradici 固件的零客户端的 PCoIP 会话，指定有权进行和无权进行此种会话的 USB 设备。PCoIP 会话中使用的 USB 设备必须显示在 USB 授权表中。USB 取消授权表中显示的 USB 设备不能在 PCoIP 会话中使用。
+
+最多可定义 10 条 USB 授权规则和 10 条 USB 取消授权规则。使用竖线 (|) 字符来分隔不同的规则。
+
+每条规则可以包含供应商 ID (VID) 和产品 ID (PID)，或者也可以描述一个 USB 设备类。类规则可允许或禁用整个设备类、单个子类或子类中的协议。
+
+VID/PID 组合规则的格式为 1xxxxyyyy，其中 xxxx 是十六进制格式的 VID，yyyy 是十六进制格式的 PID。例如，授权或阻止具有 VID 0x1a2b 和 PID 0x3c4d 的设备的规则为 11a2b3c4d。
+
+对于类规则，请使用以下格式之一:
+
+允许所有 USB             格式: 23XXXXXX
+设备                       示例: 23XXXXXX
+
+允许具有                  格式: 22classXXXX
+ 特定类 ID            示例: 22aaXXXX
+的 USB 设备
+
+允许特定的        格式: 21class-subclassXX
+子类                     示例: 21aabbXX
+
+允许特定的        格式: 20class-subclass-protocol
+协议                    示例: 20aabbcc
+
+例如，允许 USB HID (鼠标和键盘) 设备 (类 ID 0x03) 和网络摄像头 (类 ID 0x0e) 的 USB 授权字符串为 2203XXXX|220eXXXX。禁止 USB 大容量存储设备 (类 ID 0x08) 的 USB 取消授权字符串为 2208XXXX。
+
+空的 USB 授权字符串表示不授权任何 USB 设备。空的 USB 取消授权字符串表示不禁用任何 USB 设备。
+
+该设置仅适用于服务器，并且仅在服务器与运行 Teradici 固件的零客户端建立会话时适用。各个端点会相互协商来确定使用哪些设备。
+
+默认情况下，允许使用所有设备，不禁用任何设备。</string>
+			<string id="String_Policy_Configure_the_TCP_470" >配置 PCoIP Server 绑定到和侦听的 TCP 端口</string>
+			<string id="String_Explain_Specifies_the_TCP_471" >指定软件 PCoIP 主机绑定的 TCP 代理端口。
+
+TCP 端口值指定代理尝试绑定的基本 TCP 端口。TCP 端口范围值确定当基本端口不可用时尝试其他端口的个数。端口范围必须在 0 到 10 之间。
+
+此范围从基本端口跨越至基本端口与端口范围之和。例如，如果基本端口为 4172，端口范围为 10，则其范围为 4172 至 4182。
+
+该设置仅适用于代理。
+
+默认情况下，对于 View 4.5 和更高版本，基本 TCP 端口为 4172；对于 View 4.0.x 和更低版本，基本 TCP 端口为 50002。默认情况下，端口范围为 1。</string>
+			<string id="String_Policy_Configure_the_UDP_475" >配置 PCoIP Server 绑定到和侦听的 UDP 端口</string>
+			<string id="String_Explain_Specifies_the_UDP_476" >指定软件 PCoIP 主机绑定的 UDP 代理端口。
+
+UDP 端口值指定代理尝试绑定的基本 UDP 端口。UDP 端口范围值确定当基本端口不可用时尝试其他端口的个数。端口范围必须在 0 到 10 之间。
+
+此范围从基本端口跨越至基本端口与端口范围之和。例如，如果基本端口为 4172，端口范围为 10，则其范围为 4172 至 4182。
+
+该设置仅适用于代理。
+
+默认情况下，对于 View 4.5 和更高版本，基本 TCP 端口为 4172；对于 View 4.0.x 和更低版本，基本 TCP 端口为 50002。默认情况下，端口范围为 10。</string>
+			<string id="String_Policy_Configure_PCoIP_480" >配置 PCoIP 虚拟通道</string>
+			<string id="String_Explain_Specifies_the_virtual_481" >指定能够以及不能通过 PCoIP 会话操作的虚拟通道。此设置还决定是否禁用 PCoIP 主机上的剪贴板处理功能。
+
+PCoIP 会话中使用的虚拟通道必须显示在虚拟通道授权列表中。未授权虚拟通道列表中显示的虚拟通道不能在 PCoIP 会话中使用。
+
+最多可指定 15 个虚拟通道，以在 PCoIP 会话中使用。
+
+使用竖线 (|) 字符来分隔不同的通道名称。例如，允许 mksvchan 和 vdp_rdpvcbridge 虚拟通道的虚拟通道授权字符串为 mksvchan|vdp_rdpvcbridge。
+
+如果通道名称包含竖线或反斜线 (\) 字符，请在这两个字符的前面插入一个反斜线字符。例如，将通道名称 awk|ward\channel 键入为 awk\|ward\\channel。
+
+授权虚拟通道列表为空时表示禁用所有虚拟通道。未授权虚拟通道列表为空时表示允许使用所有虚拟通道。
+
+此虚拟通道设置适用于代理和客户端。必须在代理和客户端上均启用虚拟通道才能使用虚拟通道。
+
+虚拟通道设置中有一个单独的复选框，可供您禁用 PCoIP 主机上的远程剪贴板处理功能。此值仅适用于代理。
+
+默认情况下，启用所有虚拟通道，包括剪贴板处理功能。</string>
+			<string id="String_Policy_DropList_Select_Configure_PCoIP_0_Disable_virtual_483" >0 - 在 PCoIP 会话中禁用虚拟通道</string>
+			<string id="String_Policy_DropList_Select_Configure_PCoIP_2_Disable_all_484" >2 - 禁用所有其他的虚拟通道</string>
+			<string id="String_Policy_DropList_Select_Configure_PCoIP_3_Enable_all_485" >3 - 启用所有其他的虚拟通道</string>
+			<string id="String_Policy_Configure_PCoIP_549" >配置 PCoIP 图像质量级别</string>
+			<string id="String_Explain_Controls_how_PCoIP_550" >控制在网络拥塞期间 PCoIP 如何呈现图像。“最小图像质量”、“最大初始图像质量”和“最大帧速率”值交互作用，从而精确控制网络带宽受限的环境。
+
+可以使用“最小图像质量”值均衡带宽受限情况下的图像质量和帧速率。可指定 30 至 100 之间的值。默认值为 40。较低的值支持较高帧速率，但是可能会导致显示质量降低。较高的值支持较高的图像质量，但在网络带宽受限时可能会导致帧速率降低。当网络带宽不受限时，无论值设置如何，PCoIP 均保持最高质量。
+
+可以使用“最大初始图像质量”值限制更改的显示图像区域的初始质量，从而降低 PCoIP 所需的网络带宽峰值。可指定 30 至 100 之间的值。默认值为 80。较低的值会降低变化内容的图像质量和峰值带宽要求。较高的值会提高变化内容的图像质量和峰值带宽要求。无论值设置如何，无变化的图像区域会逐渐以无损 (完美) 质量呈现。设置为 80 或更低的值可最充分地利用可用带宽。
+
+“最小图像质量”值不能超过“最大初始图像质量”值。
+
+可以使用“最大帧速率”值限制每秒更新屏幕的次数，从而管理每个用户使用的平均带宽。可指定每秒 1 帧至每秒 120 帧之间的值。默认值为 30。较高的值会占用更多的带宽，但更稳定，支持更顺畅地传输变化图像，例如视频。较低的值占用的带宽较低，但稳定性较差。
+
+如果要使用客户端而不是主机中的“最小图像质量”、“最大初始图像质量”、“最大帧速率”和“禁用无损构建”值，请设置“使用客户端中的图像设置”。目前，仅零客户端固件 3.5 和更高版本在客户端支持这些设置。
+
+这些图像质量值仅适用于软主机，对软客户端不起作用。
+
+禁用或未配置此设置时，使用默认值。如果在运行时更改这些设置，它们将立即生效。</string>
+			<string id="String_Policy_Configure_frame_556" >配置帧速率与图像质量首选项</string>
+			<string id="String_Explain_Configure_the_frame_557" >将帧速率和图像质量首选项配置为从 0 (最高帧速率) 到 100 (最高图像质量) 之间的值。如果禁用或未配置此策略，则默认设置为 50。
+
+较高的值 (最大: 100) 意味着您希望获得较高的图像质量，而可以容忍不连续的帧速率；较低的值 (最小: 0) 意味着您希望获得流畅的体验，而可以容忍较低的图像质量。
+
+该设置可以与“配置 PCoIP 图像质量级别”GPO 一起使用，以便确定最大初始图像质量级别和最小图像质量级别。虽然“帧速率和图像质量首选项”可以调整每个帧的图像质量级别，但不能超出“配置 PCoIP 图像质量级别”GPO 配置的最大/最小质量级别阈值。
+
+在运行时更改此策略后，所做的更改可以立即生效。</string>
+			<string id="String_Policy_Enable_access_to_560" >允许从 vSphere 控制台中访问 PCoIP 会话</string>
+			<string id="String_Explain_Determines_whether_561" >确定是否允许 vSphere Client 控制台显示活动 PCoIP 会话以及将输入发送到桌面。
+
+默认情况下，如果客户端通过 PCoIP 连接，vSphere Client 控制台屏幕为空白且控制台无法发送输入。此默认设置可确保当 PCoIP 远程会话处于活动状态时，恶意用户无法查看用户桌面或从本地向主机进行输入。
+
+该设置仅适用于代理。
+
+禁用或未配置此设置时，不允许进行控制台访问。启用此设置后，控制台将显示 PCoIP 会话并允许控制台输入。
+
+如果启用该设置，只有在 Windows 7 虚拟机硬件为 v8 或更高版本时，控制台才会显示在 Windows 7 系统上运行的 PCoIP 会话。硬件 v8 仅在 ESX 5.0 和更高版本上可用。与此相反，无论虚拟机硬件版本为何，都允许从控制台向 Windows 7 系统进行输入。
+
+在 Windows XP 或 Windows Vista 系统中，无论虚拟机硬件版本为何，控制台都会显示 PCoIP 会话。</string>
+			<string id="String_Policy_Turn_on_PCoIP_user_563" >开启 PCoIP 用户默认输入语言同步</string>
+			<string id="String_Explain_Determines_whether_564" >确定 PCoIP 会话中用户的默认输入语言是否与 PCoIP 客户端端点的默认输入语言同步。启用此设置时，允许同步。禁用或未配置此设置时，禁止同步。
+
+该设置仅适用于代理。</string>
+			<string id="String_Policy_Use_alternate_key_566" >使用备用键发送安全注意序列</string>
+			<string id="String_Explain_Specifies_an_alternate_567" >指定一个用于发送安全注意序列 (SAS) 的备用键，而不是指定 Insert 键。
+
+您可以使用该设置在 PCoIP 会话期间从 View 桌面启动的虚拟机中保留 Ctrl+Alt+Ins 按键序列。
+
+例如，用户可从 PCoIP 桌面启动 vSphere Client，并打开 vCenter Server 中虚拟机的控制台。如果在 vCenter Server 虚拟机的客户机操作系统中使用了 Ctrl+Alt+Ins 序列，则会将 Ctrl+Alt+Del SAS 发送至虚拟机。该设置允许通过 Ctrl+Alt+备用键序列将 Ctrl+Alt+Del SAS 发送到 PCoIP 桌面。
+
+如果启用该设置，您必须从下拉菜单中选择一个备用键。不能启用此设置但不指定任何值。
+
+禁用或未配置此设置时，Ctrl+Alt+Ins 按键序列用作 SAS。
+
+该设置仅适用于代理，对客户端无效。</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Home_569" >主页</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_End_570" >End</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Page_Up_571" >Page Up</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Page_Down_572" >Page Down</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Backspace_573" >Backspace</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Tab_574" >选项卡</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Print_Screen_575" >Print Screen</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Scroll_Lock_576" >Scroll Lock</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Right_Arrow_577" >右箭头</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Left_Arrow_578" >左箭头</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Down_Arrow_579" >下箭头</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Up_Arrow_580" >上箭头</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Keypad_581" >小键盘 /</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Keypad_582" >小键盘 *</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Keypad_583" >小键盘 -</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Keypad_584" >小键盘 +</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Keypad_Enter_585" >小键盘 Enter</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Keypad_1_End_586" >小键盘 1 End</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Keypad_2_Down_587" >小键盘 2 下箭头</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Keypad_3_PageDn_588" >小键盘 3 PageDn</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Keypad_4_Left_589" >小键盘 4 左箭头</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Keypad_5_590" >小键盘 5</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Keypad_6_Right_591" >小键盘 6 右箭头</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Keypad_7_Home_592" >小键盘 7 Home</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Keypad_8_Up_593" >小键盘 8 上箭头</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Keypad_9_PageUp_594" >小键盘 9 PageUp</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Keypad_0_Insert_595" >小键盘 0 Insert</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_Keypad_Delete_596" >小键盘 . 删除</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_597" >- _</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_598" >= +</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_599" >[ {</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_600" >] }</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_601" >\ |</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_602" >; :</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_603" >' &quot;</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_604" >` ~</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_605" >, &lt;</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_606" >. &gt;</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_607" >/ ?</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_a_A_608" >a A</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_b_B_609" >b B</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_c_C_610" >c C</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_d_D_611" >d D</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_e_E_612" >e E</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_f_F_613" >f F</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_g_G_614" >g G</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_h_H_615" >h H</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_i_I_616" >i I</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_j_J_617" >j J</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_k_K_618" >k K</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_l_L_619" >l L</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_m_M_620" >m M</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_n_N_621" >n N</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_o_O_622" >o O</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_p_P_623" >p P</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_q_Q_624" >q Q</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_r_R_625" >r R</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_s_S_626" >s S</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_t_T_627" >t T</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_u_U_628" >u U</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_v_V_629" >v V</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_w_W_630" >w W</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_x_X_631" >x X</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_y_Y_632" >y Y</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_z_Z_633" >z Z</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_1_634" >1 !</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_2_635" >2 @</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_3_636" >3 #</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_4_637" >4 $</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_5_638" >5 %</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_6_639" >6 ^</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_7_640" >7 &amp;</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_8_641" >8 *</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_9_642" >9 (</string>
+			<string id="String_Policy_DropList_Select_Use_alternate_key_0_643" >0 )</string>
+			<string id="String_Policy_Disable_sending_645" >禁止在用户按 Ctrl+Alt+Del 时发送 CAD</string>
+			<string id="String_Explain_When_this_policy_646" >如果启用该策略，用户必须按 Ctrl+Alt+Insert 而不是 Ctrl+Alt+Del 以在 PCoIP 会话期间将安全注意序列 (SAS) 发送到桌面。
+
+当用户按 Ctrl+Alt+Del 锁定客户端端点时，如果一个 SAS 被发送到主机和客户机，他们一定会感到困惑。这种情况下，您可能希望启用此设置。
+
+该设置仅适用于代理，对客户端无效。
+
+如果未配置或禁用该策略，用户可以按 Ctrl+Alt+Del 或 Ctrl+Alt+Insert 以将 SAS 发送到桌面。</string>
+			<string id="String_Policy_Configure_the_PCoIP_648" >配置 PCoIP 传输标头</string>
+			<string id="String_Explain_Configures_the_649" >配置 PCoIP 传输标头。
+
+PCoIP 传输标头是添加到所有 PCoIP UDP 数据包的 32 位标头 (只有在两端均启用/支持传输标头时)。在处理网络拥塞问题时，网络设备可以通过 PCoIP 传输标头做出更好的优先级/Qos 决策。默认情况下传输标头处于启用状态。
+
+传输会话的优先级决定了在 PCoIP 传输标头中报告的 PCoIP 会话优先级。网络设备可以根据指定的传输会话优先级做出更好的优先级/Qos 决策。PCoIP 代理和客户端进行协商来确定传输会话的优先级值。如果代理指定了传输会话优先级值 (高、中或低)，则会话使用代理指定的会话优先级。如果仅客户端指定了传输会话优先级 (高、中或低)，则会话使用客户端指定的会话优先级。如果代理和客户端均未指定传输会话优先级 (或指定了“未定义的优先级”)，则会话使用中优先级 (默认值)。</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_High_Priority_651" >高优先级</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_Medium_Priority_652" >中优先级 (默认)</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_Low_Priority_653" >低优先级</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_Undefined_Priority_654" >未定义的优先级</string>
+			<string id="String_Policy_Configure_PCoIP_656" >配置 PCoIP 事件日志详细级别</string>
+			<string id="String_Explain_This_policy_enables_657" >该策略允许配置从 0 (最不详细) 到 3 (最详细) 的 PCoIP 事件日志详细级别。
+
+如果该策略为“已禁用”或“未配置”，则默认事件日志详细级别设置为 2。如果该策略为“已配置”，则该设置控制上述详细级别。
+
+如果在活动 PCoIP 会话期间修改该设置，将会立即生效。</string>
+			<string id="String_Policy_Configure_PCoIP_660" >配置 PCoIP 事件日志清理时间 (天)</string>
+			<string id="String_Explain_This_policy_enables_661" >该策略允许配置 PCoIP 事件日志清理时间 (天)。
+
+如果该策略为“已配置”，则该设置控制日志文件清理时间 (天)，即，如果设置为非零值 n，则自动 (并无提示) 删除早于 n 天的日志文件；如果设置为 0，则表示不按时间清理文件。如果该策略为“已禁用”或“未配置”，则默认事件日志清理时间 (天) 设置为 7。
+
+在会话启动时，将执行一次日志文件清理；在运行下一个会话时，才会应用对该设置进行的任何更改。</string>
+			<string id="String_Policy_Configure_PCoIP_664" >配置 PCoIP 事件日志清理大小 (MB)</string>
+			<string id="String_Explain_This_policy_enables_665" >该策略允许配置 PCoIP 事件日志清理大小 (MB)。
+
+如果该策略为“已配置”，则该设置控制日志文件清理大小 (MB)，即，如果设置为非零值 m，则自动 (并无提示) 删除超过 m MB 的日志文件；如果设置为 0，则表示不按大小清理文件。如果该策略为“已禁用”或“未配置”，则默认事件日志清理大小 (MB) 设置为 100。
+
+在会话启动时，将执行一次日志文件清理；在运行下一个会话时，才会应用对该设置进行的任何更改。</string>
+		</stringTable>
+		<presentationTable ><!--Storage for Presentation Definitions-->
+
+			<presentation id="Policy_Configure_the_maximum_162" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_maximum_165" spinStep="100" spin="true" defaultValue="900000" >将 PCoIP 会话带宽 (kbps) 设置为:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_166" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_PCoIP_169" spinStep="1" spin="true" defaultValue="1200" >将 PCoIP MTU 大小 (字节) 设置为:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_170" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_PCoIP_173" spinStep="1" spin="true" defaultValue="0" >将 PCoIP 会话带宽下限 (kbps) 设置为:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_180" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_PCoIP_183" spinStep="1" spin="true" defaultValue="500" >将音频 BW 限制 (kbps) 设置为:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_SSL_connections_184" >
+				<checkBox refId="Policy_CheckBox_Element_Configure_SSL_connections_187" >禁用到 VMware View 5.1 和更低版本的连接。</checkBox>
+				<dropdownList refId="Policy_DropList_Element_Configure_SSL_connections_188" defaultItem="2" >服务器如何选择为版本高于 VMware View 5.1 的组件提供的证书:</dropdownList>
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_connections_192" >
+					<label >从中搜索证书的计算机帐户证书存储的名称:</label>
+					<defaultValue >MY</defaultValue>
+				</textBox>
+				<dropdownList refId="Policy_DropList_Element_Configure_SSL_connections_193" defaultItem="0" >在验证证书时强制实施的最小密钥长度 (1024、2048 或 4096):</dropdownList>
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_connections_197" >
+					<label >从中搜索证书颁发机构证书的计算机帐户证书存储的名称:</label>
+					<defaultValue >ROOT</defaultValue>
+				</textBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_SSL_connections_198" >服务器指示客户端请求 View 连接服务器的证书</checkBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_SSL_connections_199" >强制实施 AES-256 或更强的密码进行 SSL 连接协商</checkBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_200" >
+				<text >必须启用至少一个加密算法。(请参见“解释”)</text>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_203" >禁用 Salsa20-256-round12 加密</checkBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_204" >禁用 AES-128-GCM 加密</checkBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_205" >禁用 AES-256-GCM 加密</checkBox>
+			</presentation>
+			<presentation id="Policy_Configure_SSL_protocols_206" >
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_protocols_209" >
+					<label >配置 SSL 协议</label>
+					<defaultValue >TLS1.1:TLS1.2</defaultValue>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Configure_SSL_cipher_list_207" >
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_cipher_list_210" >
+					<label >配置 SSL 密码列表</label>
+					<defaultValue >ECDHE-RSA-AES256-GCM-SHA384:AES256-SHA256:AES256-SHA:ECDHE-RSA-AES128-GCM-SHA256:AES128-SHA256:AES128-SHA:@STRENGTH</defaultValue>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_210" >
+				<text >有关授权字符串格式和示例，请参阅“解释”选项卡。</text>
+				<comboBox refId="Policy_Combo_Element_Configure_PCoIP_213" noSort="true" >
+					<label >输入 USB 授权表 (最多 10 个规则):</label>
+					<default >23XXXXXX</default>
+					<suggestion >23XXXXXX</suggestion>
+					<suggestion >2203XXXX</suggestion>
+				</comboBox>
+				<text >有关取消授权字符串格式和示例，请参阅“解释”选项卡。</text>
+				<comboBox refId="Policy_Combo_Element_Configure_PCoIP_214" noSort="true" >
+					<label >输入 USB 取消授权表 (最多 10 个规则):</label>
+					<suggestion >2203XXXX</suggestion>
+				</comboBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_TCP_215" >
+				<text >设置要绑定到的 TCP 代理端口和重试范围大小。</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_TCP_218" spinStep="1" spin="true" defaultValue="4172" >选择一个要侦听并绑定到的 TCP 端口:</decimalTextBox>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_TCP_219" spinStep="1" spin="true" defaultValue="1" >设置重试端口范围大小:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_UDP_220" >
+				<text >设置 UDP 端口和重试范围大小。</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_UDP_223" spinStep="1" spin="true" defaultValue="4172" >选择一个 UDP 端口:</decimalTextBox>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_UDP_224" spinStep="1" spin="true" defaultValue="10" >设置重试端口范围大小:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_225" >
+				<dropdownList refId="Policy_DropList_Element_Configure_PCoIP_228" defaultItem="0" >虚拟通道设置:</dropdownList>
+				<text >只有在选择 2 时，以下设置才是必需和适用的。</text>
+				<text >有关字符串格式和示例，请参阅“解释”选项卡。</text>
+				<textBox refId="Policy_TextBox_Element_Configure_PCoIP_232" >
+					<label >输入授权的虚拟通道列表:</label>
+				</textBox>
+				<text >只有在选择 3 时，以下设置才是必需和适用的。</text>
+				<text >有关字符串格式和示例，请参阅“解释”选项卡。</text>
+				<textBox refId="Policy_TextBox_Element_Configure_PCoIP_233" >
+					<label >输入取消授权的虚拟通道列表:</label>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_294" >
+				<text >有关示例值，请参阅“解释”选项卡。</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_297" spinStep="10" spin="true" defaultValue="40" >设置“最小图像质量”值 (默认值: 40):</decimalTextBox>
+				<text >设置“最大初始图像质量”值</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_298" spinStep="10" spin="true" defaultValue="80" >(默认值: 80):</decimalTextBox>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_299" spinStep="1" spin="true" defaultValue="30" >设置“最大帧速率”值 (默认值: 30):</decimalTextBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_300" >使用零客户端中的图像设置 (如果可用)</checkBox>
+				<text >(默认值: 已禁用；不适用于软客户端)</text>
+			</presentation>
+			<presentation id="Policy_Configure_frame_301" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_frame_304" spinStep="1" spin="true" defaultValue="50" >将 PCoIP 帧速率与质量因子设置为:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Use_alternate_key_311" >
+				<text >使用备用键而不是 Insert 键发送安全注意</text>
+				<dropdownList refId="Policy_DropList_Element_Use_alternate_key_314" >序列 (SAS)</dropdownList>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_393" >
+				<dropdownList refId="Policy_DropList_Element_Configure_the_PCoIP_396" defaultItem="3" >传输会话优先级</dropdownList>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_401" >
+				<text >有关示例值，请参阅“解释”选项卡。</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_404" spinStep="1" spin="true" defaultValue="2" >设置事件日志详细级别值 (默认为 2):</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_405" >
+				<text >有关示例值，请参阅“解释”选项卡。</text>
+				<text >设置事件日志清理时间值 (天) (默认为 7，0 表示不</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_408" spinStep="1" spin="true" defaultValue="7" >按时间清理):</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_409" >
+				<text >有关示例值，请参阅“解释”选项卡。</text>
+				<text >设置事件日志清理大小值 (MB) (默认为 100，0 表示不</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_412" spinStep="1" spin="true" defaultValue="100" >按大小清理):</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_maximum_416" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_maximum_419" spinStep="100" spin="true" defaultValue="900000" >将 PCoIP 会话带宽 (kbps) 设置为:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_420" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_PCoIP_423" spinStep="1" spin="true" defaultValue="1200" >将 PCoIP MTU 大小 (字节) 设置为:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_424" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_PCoIP_427" spinStep="1" spin="true" defaultValue="0" >将 PCoIP 会话带宽下限 (kbps) 设置为:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_434" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_PCoIP_437" spinStep="1" spin="true" defaultValue="500" >将音频 BW 限制 (kbps) 设置为:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_SSL_connections_438" >
+				<checkBox refId="Policy_CheckBox_Element_Configure_SSL_connections_441" >禁用到 VMware View 5.1 和更低版本的连接。</checkBox>
+				<dropdownList refId="Policy_DropList_Element_Configure_SSL_connections_442" defaultItem="2" >服务器如何选择为版本高于 VMware View 5.1 的组件提供的证书:</dropdownList>
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_connections_446" >
+					<label >从中搜索证书的计算机帐户证书存储的名称:</label>
+					<defaultValue >MY</defaultValue>
+				</textBox>
+				<dropdownList refId="Policy_DropList_Element_Configure_SSL_connections_447" defaultItem="0" >在验证证书时强制实施的最小密钥长度 (1024、2048 或 4096):</dropdownList>
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_connections_451" >
+					<label >从中搜索证书颁发机构证书的计算机帐户证书存储的名称:</label>
+					<defaultValue >ROOT</defaultValue>
+				</textBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_SSL_connections_452" >服务器指示客户端请求 View 连接服务器的证书</checkBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_SSL_connections_453" >强制实施 AES-256 或更强的密码进行 SSL 连接协商</checkBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_454" >
+				<text >必须启用至少一个加密算法。(请参见“解释”)</text>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_457" >禁用 Salsa20-256-round12 加密</checkBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_458" >禁用 AES-128-GCM 加密</checkBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_459" >禁用 AES-256-GCM 加密</checkBox>
+			</presentation>
+			<presentation id="Policy_Configure_SSL_protocols_460" >
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_protocols_463" >
+					<label >配置 SSL 协议</label>
+					<defaultValue >TLS1.1:TLS1.2</defaultValue>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Configure_SSL_cipher_list_461" >
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_cipher_list_462" >
+					<label >配置 SSL 密码列表</label>
+					<defaultValue >ECDHE-RSA-AES256-GCM-SHA384:AES256-SHA256:AES256-SHA:ECDHE-RSA-AES128-GCM-SHA256:AES128-SHA256:AES128-SHA:@STRENGTH</defaultValue>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_464" >
+				<text >有关授权字符串格式和示例，请参阅“解释”选项卡。</text>
+				<comboBox refId="Policy_Combo_Element_Configure_PCoIP_467" noSort="true" >
+					<label >输入 USB 授权表 (最多 10 个规则):</label>
+					<default >23XXXXXX</default>
+					<suggestion >23XXXXXX</suggestion>
+					<suggestion >2203XXXX</suggestion>
+				</comboBox>
+				<text >有关取消授权字符串格式和示例，请参阅“解释”选项卡。</text>
+				<comboBox refId="Policy_Combo_Element_Configure_PCoIP_468" noSort="true" >
+					<label >输入 USB 取消授权表 (最多 10 个规则):</label>
+					<suggestion >2203XXXX</suggestion>
+				</comboBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_TCP_469" >
+				<text >设置要绑定到的 TCP 代理端口和重试范围大小。</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_TCP_472" spinStep="1" spin="true" defaultValue="4172" >选择一个要侦听并绑定到的 TCP 端口:</decimalTextBox>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_TCP_473" spinStep="1" spin="true" defaultValue="1" >设置重试端口范围大小:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_UDP_474" >
+				<text >设置 UDP 端口和重试范围大小。</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_UDP_477" spinStep="1" spin="true" defaultValue="4172" >选择一个 UDP 端口:</decimalTextBox>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_UDP_478" spinStep="1" spin="true" defaultValue="10" >设置重试端口范围大小:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_479" >
+				<dropdownList refId="Policy_DropList_Element_Configure_PCoIP_482" defaultItem="0" >虚拟通道设置:</dropdownList>
+				<text >只有在选择 2 时，以下设置才是必需和适用的。</text>
+				<text >有关字符串格式和示例，请参阅“解释”选项卡。</text>
+				<textBox refId="Policy_TextBox_Element_Configure_PCoIP_486" >
+					<label >输入授权的虚拟通道列表:</label>
+				</textBox>
+				<text >只有在选择 3 时，以下设置才是必需和适用的。</text>
+				<text >有关字符串格式和示例，请参阅“解释”选项卡。</text>
+				<textBox refId="Policy_TextBox_Element_Configure_PCoIP_487" >
+					<label >输入取消授权的虚拟通道列表:</label>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_548" >
+				<text >有关示例值，请参阅“解释”选项卡。</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_551" spinStep="10" spin="true" defaultValue="40" >设置“最小图像质量”值 (默认值: 40):</decimalTextBox>
+				<text >设置“最大初始图像质量”值</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_552" spinStep="10" spin="true" defaultValue="80" >(默认值: 80):</decimalTextBox>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_553" spinStep="1" spin="true" defaultValue="30" >设置“最大帧速率”值 (默认值: 30):</decimalTextBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_554" >使用零客户端中的图像设置 (如果可用)</checkBox>
+				<text >(默认值: 已禁用；不适用于软客户端)</text>
+			</presentation>
+			<presentation id="Policy_Configure_frame_555" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_frame_558" spinStep="1" spin="true" defaultValue="50" >将 PCoIP 帧速率与质量因子设置为:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Use_alternate_key_565" >
+				<text >使用备用键而不是 Insert 键发送安全注意</text>
+				<dropdownList refId="Policy_DropList_Element_Use_alternate_key_568" >序列 (SAS)</dropdownList>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_647" >
+				<dropdownList refId="Policy_DropList_Element_Configure_the_PCoIP_650" defaultItem="3" >传输会话优先级</dropdownList>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_655" >
+				<text >有关示例值，请参阅“解释”选项卡。</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_658" spinStep="1" spin="true" defaultValue="2" >设置事件日志详细级别值 (默认为 2):</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_659" >
+				<text >有关示例值，请参阅“解释”选项卡。</text>
+				<text >设置事件日志清理时间值 (天) (默认为 7，0 表示不</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_662" spinStep="1" spin="true" defaultValue="7" >按时间清理):</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_663" >
+				<text >有关示例值，请参阅“解释”选项卡。</text>
+				<text >设置事件日志清理大小值 (MB) (默认为 100，0 表示不</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_666" spinStep="1" spin="true" defaultValue="100" >按大小清理):</decimalTextBox>
+			</presentation>
+		</presentationTable>
+	</resources>
+</policyDefinitionResources>

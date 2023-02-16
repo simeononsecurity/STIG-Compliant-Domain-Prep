@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" >
+
+	<displayName >여기에 표시 이름 입력</displayName>
+	<description >VMware Horizon View PCOIP 클라이언트 구성 설정</description>
+	<resources >
+		<stringTable ><!--Storage for String Definitions-->
+
+			<string id="String_SupportedOn_Undefined_2" >정의되지 않음</string>
+			<string id="String_SupportedOn_Undefined_4" >정의되지 않음</string>
+			<string id="String_SupportedOn_Undefined_6" >정의되지 않음</string>
+			<string id="String_SupportedOn_Undefined_8" >정의되지 않음</string>
+			<string id="String_SupportedOn_Undefined_10" >정의되지 않음</string>
+			<string id="String_SupportedOn_Undefined_12" >정의되지 않음</string>
+			<string id="String_SupportedOn_Undefined_14" >정의되지 않음</string>
+			<string id="String_SupportedOn_Undefined_15" >정의되지 않음</string>
+			<string id="String_SupportedOn_Undefined_16" >정의되지 않음</string>
+			<string id="String_SupportedOn_Undefined_18" >정의되지 않음</string>
+			<string id="String_SupportedOn_Undefined_20" >정의되지 않음</string>
+			<string id="String_SupportedOn_Undefined_22" >정의되지 않음</string>
+			<string id="String_SupportedOn_Undefined_24" >정의되지 않음</string>
+			<string id="String_SupportedOn_Undefined_26" >정의되지 않음</string>
+			<string id="String_SupportedOn_Undefined_28" >정의되지 않음</string>
+			<string id="String_SupportedOn_Undefined_30" >정의되지 않음</string>
+			<string id="String_SupportedOn_Undefined_32" >정의되지 않음</string>
+			<string id="String_SupportedOn_Undefined_34" >정의되지 않음</string>
+			<string id="String_SupportedOn_Undefined_36" >정의되지 않음</string>
+			<string id="String_SupportedOn_Undefined_38" >정의되지 않음</string>
+			<string id="String_SupportedOn_Undefined_40" >정의되지 않음</string>
+			<string id="String_SupportedOn_Undefined_42" >정의되지 않음</string>
+			<string id="String_SupportedOn_Undefined_43" >정의되지 않음</string>
+			<string id="String_SupportedOn_Undefined_44" >정의되지 않음</string>
+			<string id="String_SupportedOn_Undefined_46" >정의되지 않음</string>
+			<string id="String_SupportedOn_Undefined_48" >정의되지 않음</string>
+			<string id="String_SupportedOn_Undefined_50" >정의되지 않음</string>
+			<string id="String_SupportedOn_Undefined_52" >정의되지 않음</string>
+			<string id="String_SupportedOn_Undefined_54" >정의되지 않음</string>
+			<string id="String_SupportedOn_Undefined_56" >정의되지 않음</string>
+			<string id="String_Cat_PCoIP_Client_Session_58" >PCoIP 클라이언트 세션 변수</string>
+			<string id="String_Cat_Not_Overridable_60" >재정의 불가능한 관리자 설정</string>
+			<string id="String_Cat_Overridable_Administrator_62" >재정의 가능한 관리자 기본값</string>
+			<string id="String_Policy_Configure_the_maximum_64" >최대 PCoIP 세션 대역폭 구성</string>
+			<string id="String_Explain_Specifies_the_maximum_65" >PCoIP 세션에서 초당 킬로비트로 최대 대역폭을 지정합니다. 대역폭은 모든 이미징, 오디오, 가상 채널, USB 및 컨트롤 PCoIP 트래픽을 포함합니다.
+
+예상되는 동시 PCoIP 세션 수를 고려하여 이 값을 끝점이 연결되는 링크의 전체 용량을 기반으로 설정합니다. 예를 들어 4Mbit/s 인터넷 연결을 통해 연결하는 단일 사용자 VDI 구성(예: 단일 PCoIP 세션)의 경우 이 값을 4Mbit로 설정(또는 다른 네트워크 트래픽에서 사용할 수 있는 양을 남겨 두기 위해 4Mbit보다 10% 적게 설정)합니다. 여러 개의 동시 PCoIP 세션이 하나의 링크를 공유할 것으로 예상되는 경우(예: 여러 VDI 사용자 또는 RDSH 구성) 이에 따라 설정을 조정하려고 할 수 있지만 이렇게 하면 각 활성 세션의 최대 대역폭이 제한됩니다.
+
+이 값을 설정하면 에이전트가 링크 용량보다 더 높은 비율로 전송하지 못하도록 하여 과도한 패킷 손실 및 열악한 사용자 환경으로 이어지는 것을 방지합니다. 이 값은 대칭형입니다. 클라이언트 및 에이전트가 클라이언트 및 에이전트 쪽에 설정된 두 값 중 더 낮은 값을 강제로 사용하도록 합니다. 예를 들어 클라이언트에서 4Mbit/s 최대 대역폭 설정이 구성되어도 에이전트가 더 낮은 비율을 사용하여 전송하도록 강제됩니다.
+
+이 설정을 사용하지 않거나 끝점에 구성되지 않은 경우 끝점은 대역폭 제약을 부과하지 않습니다. 이 설정이 구성된 경우 설정은 끝점의 최대 대역폭 제약(초당 킬로비트)으로 사용됩니다.
+
+이 설정이 구성되지 않은 경우 기본값은 초당 900000 킬로비트입니다.
+
+이 설정은 에이전트 및 클라이언트에 적용됩니다. 두 개의 끝점에서 설정이 다른 경우, 더 낮은 값이 사용됩니다.</string>
+			<string id="String_Policy_Configure_the_PCoIP_68" >PCoIP 세션 MTU 구성</string>
+			<string id="String_Explain_Specifies_the_Maximum_69" >PCoIP 세션의 UDP 패킷을 위해 MTU(최대 전송 단위) 크기를 지정합니다.
+
+MTU 크기는 IP 및 UDP 패킷 머리글을 포함합니다. TCP는 표준 MTU 발견 메커니즘을 사용하여 MTU를 설정하며 이 설정으로 영향을 받지 않습니다. 최대 MTU 크기는 1500바이트입니다. 최소 MTU 크기는 500바이트입니다. 기본값은 1200바이트입니다.
+
+일반적으로 MTU 크기를 변경할 필요가 없습니다. 비정상적인 네트워크 설치로 인해 PCoIP 패킷 조각화가 발생할 경우 이 값을 변경하십시오.
+
+이 설정은 서버 및 클라이언트에 적용됩니다. 두 개의 끝점에서 MTU 크기 설정이 다른 경우, 가장 작은 크기가 사용됩니다.
+
+이 설정이 사용되지 않도록 설정되거나 구성되지 않은 경우, 클라이언트는 서버와의 협상에서 기본값을 사용합니다.</string>
+			<string id="String_Policy_Configure_the_PCoIP_72" >PCoIP 세션 대역폭 층 구성</string>
+			<string id="String_Explain_Specifies_a_lower_73" >PCoIP 세션으로 예약된 대역폭을 위해 초당 킬로비트로 더 낮은 제한을 지정합니다.
+
+이 설정은 끝점을 위해 예상된 최소 대역폭 전송률을 구성합니다. 이 설정을 사용하여 끝점을 위해 대역폭을 예약할 경우, 세션은 대역폭을 사용할 수 있을 때까지 기다릴 필요가 없으므로 세션 응답성이 향상됩니다.
+
+모든 끝점을 위해 예약된 총 대역폭을 초과 가입하지 않았는지 확인하십시오. 구성에서 모든 연결을 위한 대역폭 층의 합계는 네트워크 용량을 초과하지 않아야 합니다.
+
+기본값은 0으로, 이는 최소 대역폭이 예약되어 있지 않음을 의미합니다. 이 설정이 사용되지 않도록 설정되거나 구성되지 않은 경우 예약된 최소 대역폭이 없습니다.
+
+이 설정은 서버 및 클라이언트에 적용되지만 설정이 구성된 끝점에만 영향을 줍니다.
+
+활성 PCoIP 세션 도중 이 설정을 수정하면 변경 사항이 즉시 적용됩니다.</string>
+			<string id="String_Policy_Enable_disable_76" >PCoIP 세션에서 오디오 사용/사용 안 함</string>
+			<string id="String_Explain_Determines_whether_77" >오디오가 PCoIP 세션에서 사용되도록 설정되었는지 확인합니다. 양 끝점에 오디오가 사용되도록 설정되어 있어야 합니다. 이 설정이 사용되도록 설정된 경우, PCoIP 오디오가 허용됩니다. 이 설정이 사용되지 않도록 설정된 경우 PCoIP 오디오가 사용되지 않도록 설정됩니다. 이 설정이 구성되지 않은 경우, 오디오가 기본적으로 사용되도록 설정됩니다.
+
+</string>
+			<string id="String_Policy_Configure_SSL_connections_79" >Security Tools에 맞도록 SSL 연결 구성</string>
+			<string id="String_Explain_Specifies_how_SSL_80" >SSL 세션 협상 연결의 설정 방법을 지정합니다.
+
+포트 스캐너를 충족하려면 이 'SSL 연결 구성' 설정을 사용하도록 설정하고 다음을 수행합니다.
+
+1. PCoIP와 함께 사용할 서버 인증서에 서명한 인증 기관의 인증서를 신뢰할 수 있는 Root 인증서 저장소에 저장합니다.
+2. 인증서 저장소에서만 인증서를 로드하도록 에이전트를 구성합니다. 로컬 시스템의 개인 저장소가 사용되는 경우 단계 1에서 다른 저장소 위치를 사용하지 않았다면 CA 인증서 저장소 이름을 &quot;ROOT&quot;(따옴표 없이) 값으로 변경하지 않은 채로 둡니다.
+
+결과 PCoIP 클라이언트는 포트 스캐너와 같은 Security Tools를 충족합니다.
+
+이 'SSL 연결 구성' 설정을 사용하지 않도록 설정하거나 구성하지 않은 경우:
+
+1. 끝점이 시스템 계정의 &quot;MY&quot; 저장소의 인증 기관 인증서 및 &quot;ROOT&quot; 저장소의 인증 기관 인증서를 사용합니다.
+2. AES-128 암호 제품군을 사용할 수 있습니다.</string>
+			<string id="String_Policy_Configure_PCoIP_85" >PCoIP 세션 암호화 알고리즘 구성</string>
+			<string id="String_Explain_Controls_the_encryption_86" >세션 협상 중 PCoIP 끝점에 의해 보급된 암호화 알고리즘을 제어합니다.
+
+확인란 중 하나를 선택하면 연결된 암호화 알고리즘이 사용되지 않도록 설정됩니다. 적어도 한 개의 알고리즘을 사용하도록 설정해야 합니다.
+
+이 설정은 에이전트 및 클라이언트 모두에 적용됩니다. 끝점은 사용하는 실제 세션 암호화 알고리즘을 협상합니다. FIPS140-2 승인 모드가 사용 설정된 경우 AES-128-GCM 암호화와 AES-256-GCM 암호화가 모두 사용 안 함으로 설정되었다면 AES-128-GCM 암호화 사용 안 함 값이 대체됩니다.
+
+전체 &quot;SSL 연결 구성&quot;이 사용되지 않도록 설정되거나 구성되지 않은 경우 Salsa-20-256round12 및 AES-128-GCM 알고리즘 모두 이 끝점에 의해 협상에 사용 가능합니다.
+
+지원되는 암호화 알고리즘을 우선 순위에 따라 나열하면 SALSA20/12-256, AES-GCM-128 및 AES-GCM-256이며, 기본적으로 지원되는 모든 암호화 알고리즘을 이 끝점에서 협상에 사용할 수 있습니다. 
+
+양쪽 끝점이 세 가지 알고리즘 모두를 지원하도록 구성되어 있고 연결에 SG(Security Gateway)가 사용되지 않는 경우에는 SALSA 20 알고리즘이 협상 및 사용됩니다. 그러나 연결에 SG가 사용되면 SALSA20은 사용하지 않도록 자동으로 설정되고 AES128이 협상 및 사용됩니다. 양쪽 끝점 중 하나 또는 SG에서 SALSA20을 사용하지 않도록 설정하고, 다른 끝점에서 AES128을 사용하지 않도록 설정하면 AES256이 협상 및 사용됩니다.</string>
+			<string id="String_Policy_Configure_SSL_protocols_91" >SSL 프로토콜 구성</string>
+			<string id="String_Explain_Configures_openssl_92" >암호화된 SSL 연결을 설정하기 전에 특정 프로토콜의 사용을 제한하는 openssl 프로토콜을 구성합니다. 프로토콜 목록은 콜론으로 구분된 하나 이상의 openssl 문자열로 구성됩니다. 모든 암호 문자열은 대소문자를 구분하지 않습니다.
+
+ 기본값은 다음과 같습니다. 
+   &quot;TLS1.0:TLS1.1:TLS1.2&quot;
+
+ 즉, TLS v1.0, TLS v1.1 및 TLS v1.2를 사용하도록 설정합니다(SSL v2.0 및 SSLv3.0는 사용 안 함). 
+
+이 설정은 에이전트 및 클라이언트 모두에 적용됩니다. 
+
+양쪽에 설정된 경우 OpenSSL 프로토콜 협상 규칙을 따릅니다.</string>
+			<string id="String_Policy_Configure_SSL_cipher_list_93" >SSL 암호 목록 구성</string>
+			<string id="String_Explain_Configures_SSL_cipher_list_94" >암호화된 SSL 연결을 설정하기 전에 암호 그룹의 사용을 제한하도록 SSL 암호 목록을 구성합니다. 이 목록은 콜론으로 구분된 하나 이상의 암호 그룹 문자열로 구성됩니다. 모든 암호 문자열은 대소문자를 구분하지 않습니다.
+
+기본값은 다음과 같습니다.
+   &quot;ECDHE-RSA-AES256-GCM-SHA384:AES256-SHA256:AES256-SHA:ECDHE-RSA-AES128-GCM-SHA256:AES128-SHA256:AES128-SHA:@STRENGTH&quot;
+
+이 항목이 구성되면 &quot;Security Tools에 맞도록 SSL 연결 구성&quot;의 &quot;SSL 연결 협상에 AES-256 또는 더 강력한 암호 적용&quot; 확인란이 무시됩니다.
+
+이 설정은 PCoIP 서버 및 PCoIP 클라이언트에 동시에 적용해야 합니다.</string>
+			<string id="String_Policy_Configure_the_Client_95" >클라이언트 PCoIP UDP 포트 구성</string>
+			<string id="String_Explain_Specifies_the_UDP_96" >소프트웨어 PCoIP 클라이언트에서 사용하는 UDP 클라이언트포트를 지정합니다. 수동으로 구성하거나 클라이언트 OS(운영 체제)에서 자동으로 결정할 수 있습니다. 이 설정은 클라이언트에만 적용됩니다.
+
+수동으로 구성하려면 UDP 포트 및 재시도 포트 범위를 모두 입력합니다. UDP 포트 값은 사용할 기본 UDP 포트를 지정합니다. UDP 포트 범위 값은 기본 포트를 사용할 수 없을 경우 시도할 추가 포트의 수를 결정합니다. 범위는 기본 포트에서 기본 포트 및 포트 범위의 합계까지 스팬합니다. 예를 들어, 기본 포트가 50002이고 포트 범위가 64인 경우, 범위는 50002에서 50066까지 스팬합니다. 기본적으로 기본 포트는 50002이고 포트 범위는 64입니다.
+
+'OS에서 자동으로 UDP 포트를 결정하도록 허용'을 선택하여 클라이언트 OS가 수동으로 설정된 값을 무시하고 다른 프로그램에서 사용하지 않는 UDP 포트를 자동으로 선택하도록 지시합니다.</string>
+			<string id="String_Policy_Configure_PCoIP_101" >PCoIP 가상 채널 구성</string>
+			<string id="String_Explain_Specifies_the_virtual_102" >PCoIP 세션에서 작동할 수 있는 가상 채널 및 작동할 수 없는 가상 채널을 지정합니다. 또한 이 설정은 PCoIP 호스트에서 클립보드 처리를 사용하지 않도록 설정할지 여부를 결정합니다.
+
+PCoIP 세션에서 사용되는 가상 채널은 가상 채널 인증 목록에 나타나야 합니다. 인증되지 않은 가상 채널 목록에 나타나는 가상 채널은 PCoIP 세션에서 사용될 수 없습니다.
+
+PCoIP 세션에서 사용하기 위해 최대 15개의 가상 채널을 지정할 수 있습니다.
+
+여러 채널 이름을 세로 막대(|) 문자로 구분하십시오. 예를 들어, mksvchan 및 vdp_rdpvcbridge 가상 채널을 허용하는 가상 채널 인증 문자열은 mksvchan|vdp_rdpvcbridge입니다.
+
+채널 이름이 세로 막대 또는 백슬래시(\) 문자를 포함할 경우, 그 앞에 백슬래시 문자를 삽입합니다. 예를 들어, 채널 이름 awk|ward\channel을 awk\|ward\\channel로 입력하십시오.
+
+인증된 가상 채널 목록이 빈 경우, 모든 가상 채널이 허용되지 않습니다. 인증되지 않은 가상 채널 목록이 빈 경우, 모든 가상 채널이 허용됩니다.
+
+가상 채널 설정은 에이전트 및 클라이언트 모두에 적용됩니다. 가상 채널을 사용하려면 에이전트 및 클라이언트 모두에서 가상 채널을 사용하도록 설정해야 합니다.
+
+가상 채널 설정에는 PCoIP 호스트에서 원격 클립보드 처리를 사용하지 않도록 설정할 수 있는 개별 확인란이 있습니다. 이 값은 에이전트에만 적용됩니다.
+
+기본적으로 클립보드 처리를 포함한 모든 가상 채널이 사용되도록 설정됩니다.</string>
+			<string id="String_Policy_DropList_Select_Configure_PCoIP_0_Disable_virtual_104" >0 - PCoIP 세션에서 가상 채널 사용 안 함</string>
+			<string id="String_Policy_DropList_Select_Configure_PCoIP_2_Disable_all_105" >2 - 다음 이외의 모든 가상 채널 사용 안 함</string>
+			<string id="String_Policy_DropList_Select_Configure_PCoIP_3_Enable_all_106" >3 - 다음 이외의 모든 가상 채널 사용</string>
+			<string id="String_Policy_Configure_PCoIP_110" >PCoIP 클라이언트 이미지 캐시 크기 정책 구성</string>
+			<string id="String_Explain_Controls_the_size_111" >PCoIP 클라이언트 이미지 캐시의 크기를 제어합니다. 클라이언트는 이미지 캐싱을 사용하여 이전에 전송된 디스플레이의 일부를 저장합니다. 이미지 캐싱은 재전송된 데이터 양을 감소시킵니다.
+
+이 설정은 View Client, View Agent 및 View 연결 서버가 View 5.0 이상 릴리스인 경우 Windows 및 Linux 클라이언트에만 적용됩니다.
+
+이 설정이 구성되지 않았거나 사용하지 않도록 설정된 경우, PCoIP는 기본 클라이언트 이미지 캐시 크기 250MB를 사용합니다.
+
+이 설정을 사용할 경우, 클라이언트 이미지 캐시 크기를 최소 50MB에서 최대 1024MB로 구성할 수 있습니다. 기본값은 250MB입니다.</string>
+			<string id="String_Policy_Configure_the_PCoIP_114" >PCoIP 전송 헤더 구성</string>
+			<string id="String_Explain_Configures_the_115" >PCoIP 전송 헤더를 구성합니다. 
+
+PCoIP 전송 헤더는 모든 PCoIP UDP 패킷에 추가(전송 헤더가 사용하도록 설정되어 있고 양쪽 모두에서 지원하는 경우에만 해당)되는 32비트 헤더입니다. PCoIP 전송 헤더는 네트워크 디바이스가 네트워크 정체를 처리할 때 더 효율적으로 우선 수위를 지정하거나 QoS를 결정할 수 있도록 지원합니다. 기본적으로 전송 헤더를 사용하도록 설정되어 있습니다.
+
+전송 세션 우선 순위는 PCoIP 전송 헤더에 보고되는 PCoIP 세션 우선 순위를 결정합니다. 네트워크 디바이스가 지정된 전송 세션 우선 순위에 따라 더 효율적으로 우선 순위를 지정하거나 QoS를 결정할 수 있도록 합니다. PCoIP 에이전트와 클라이언트가 전송 세션 우선 순위 값을 협상합니다.  에이전트가 전송 세션 우선 순위 값(높음, 중간, 낮음)을 지정한 경우 세션에서는 에이전트가 지정한 세션 우선 순위를 사용합니다. 클라이언트만 전송 세션 우선 순위(높음, 중간, 낮음)를 지정한 경우 세션에서는 클라이언트가 지정한 세션 우선 순위를 사용합니다. 에이전트나 클라이언트가 전송 세션 우선 순위를 지정하지 않은 경우(또는 '정의되지 않은 우선 순위'를 지정한 경우) 세션에서는 중간 세션 우선 순위를 사용/기본값으로 설정합니다.</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_High_Priority_117" >높은 우선 순위</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_Medium_Priority_118" >중간 우선 순위(기본값)</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_Low_Priority_119" >낮은 우선 순위</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_Undefined_Priority_120" >정의되지 않은 우선 순위</string>
+			<string id="String_Policy_Configure_PCoIP_122" >PCoIP 이벤트 로그의 자세한 표시 수준 구성</string>
+			<string id="String_Explain_This_policy_enables_123" >이 정책은 0(최대한 간단하게)에서 3(최대한 자세하게)까지 PCoIP 이벤트 로그 자세한 표시 수준을 구성할 수 있습니다.
+
+이 정책을 사용하지 않도록 설정하거나 구성하지 않은 경우, 기본 이벤트 로그 자세한 표시 수준 설정은 2입니다. 이 정책을 구성한 경우 설정은 위에 설명된 대로 자세한 표시 수준을 제어합니다.
+
+활성 PCoIP 세션 도중 이 설정을 수정하면 변경 사항이 즉시 적용됩니다.</string>
+			<string id="String_Policy_Configure_PCoIP_126" >시간(일)별 PCoIP 이벤트 로그 정리 구성</string>
+			<string id="String_Explain_This_policy_enables_127" >이 정책은 PCoIP 이벤트 로그 정리 작업을 시간(일)에 따라 구성할 수 있습니다.
+
+이 정책을 구성한 경우 설정이 시간(일)별로 로그 파일 정리를 제어합니다. 즉, n을 0이 아닌 값으로 설정하면 n일보다 오래된 로그 파일은 자동으로 삭제됩니다. 값을 0으로 설정하면 시간별 파일 정리가 없음을 나타냅니다. 이 정책이 [사용 안 함] 또는 [구성되지 않음]인 경우 시간(일)별 기본 이벤트 로그 정리 설정은 7입니다. 
+
+로그 파일 정리는 세션 시작 시 한 번 수행됩니다. 설정의 변경 사항은 다음 세션까지 적용되지 않습니다.</string>
+			<string id="String_Policy_Configure_PCoIP_130" >크기(MB)별 PCoIP 이벤트 로그 정리 구성</string>
+			<string id="String_Explain_This_policy_enables_131" >이 정책은 PCoIP 이벤트 로그 정리 작업을 크기(MB)에 따라 구성할 수 있습니다.
+
+이 정책을 구성한 경우 설정이 크기(MB)별로 로그 파일 정리를 제어합니다. 즉, m을 0이 아닌 값으로 설정하면 mMB보다 큰 로그 파일은 자동으로 삭제됩니다. 값을 0으로 설정하면 크기별 파일 정리가 없음을 나타냅니다. 이 정책이 [사용 안 함] 또는 [구성되지 않음]인 경우 크기(MB)별 기본 이벤트 로그 정리 설정은 100입니다.  
+
+로그 파일 정리는 세션 시작 시 한 번 수행됩니다. 설정의 변경 사항은 다음 세션까지 적용되지 않습니다.</string>
+			<string id="String_Policy_Configure_the_maximum_134" >최대 PCoIP 세션 대역폭 구성</string>
+			<string id="String_Explain_Specifies_the_maximum_135" >PCoIP 세션에서 초당 킬로비트로 최대 대역폭을 지정합니다. 대역폭은 모든 이미징, 오디오, 가상 채널, USB 및 컨트롤 PCoIP 트래픽을 포함합니다.
+
+예상되는 동시 PCoIP 세션 수를 고려하여 이 값을 끝점이 연결되는 링크의 전체 용량을 기반으로 설정합니다. 예를 들어 4Mbit/s 인터넷 연결을 통해 연결하는 단일 사용자 VDI 구성(예: 단일 PCoIP 세션)의 경우 이 값을 4Mbit로 설정(또는 다른 네트워크 트래픽에서 사용할 수 있는 양을 남겨 두기 위해 4Mbit보다 10% 적게 설정)합니다. 여러 개의 동시 PCoIP 세션이 하나의 링크를 공유할 것으로 예상되는 경우(예: 여러 VDI 사용자 또는 RDSH 구성) 이에 따라 설정을 조정하려고 할 수 있지만 이렇게 하면 각 활성 세션의 최대 대역폭이 제한됩니다.
+
+이 값을 설정하면 에이전트가 링크 용량보다 더 높은 비율로 전송하지 못하도록 하여 과도한 패킷 손실 및 열악한 사용자 환경으로 이어지는 것을 방지합니다. 이 값은 대칭형입니다. 클라이언트 및 에이전트가 클라이언트 및 에이전트 쪽에 설정된 두 값 중 더 낮은 값을 강제로 사용하도록 합니다. 예를 들어 클라이언트에서 4Mbit/s 최대 대역폭 설정이 구성되어도 에이전트가 더 낮은 비율을 사용하여 전송하도록 강제됩니다.
+
+이 설정을 사용하지 않거나 끝점에 구성되지 않은 경우 끝점은 대역폭 제약을 부과하지 않습니다. 이 설정이 구성된 경우 설정은 끝점의 최대 대역폭 제약(초당 킬로비트)으로 사용됩니다.
+
+이 설정이 구성되지 않은 경우 기본값은 초당 900000 킬로비트입니다.
+
+이 설정은 에이전트 및 클라이언트에 적용됩니다. 두 개의 끝점에서 설정이 다른 경우, 더 낮은 값이 사용됩니다.</string>
+			<string id="String_Policy_Configure_the_PCoIP_138" >PCoIP 세션 MTU 구성</string>
+			<string id="String_Explain_Specifies_the_Maximum_139" >PCoIP 세션의 UDP 패킷을 위해 MTU(최대 전송 단위) 크기를 지정합니다.
+
+MTU 크기는 IP 및 UDP 패킷 머리글을 포함합니다. TCP는 표준 MTU 발견 메커니즘을 사용하여 MTU를 설정하며 이 설정으로 영향을 받지 않습니다. 최대 MTU 크기는 1500바이트입니다. 최소 MTU 크기는 500바이트입니다. 기본값은 1200바이트입니다.
+
+일반적으로 MTU 크기를 변경할 필요가 없습니다. 비정상적인 네트워크 설치로 인해 PCoIP 패킷 조각화가 발생할 경우 이 값을 변경하십시오.
+
+이 설정은 서버 및 클라이언트에 적용됩니다. 두 개의 끝점에서 MTU 크기 설정이 다른 경우, 가장 작은 크기가 사용됩니다.
+
+이 설정이 사용되지 않도록 설정되거나 구성되지 않은 경우, 클라이언트는 서버와의 협상에서 기본값을 사용합니다.</string>
+			<string id="String_Policy_Configure_the_PCoIP_142" >PCoIP 세션 대역폭 층 구성</string>
+			<string id="String_Explain_Specifies_a_lower_143" >PCoIP 세션으로 예약된 대역폭을 위해 초당 킬로비트로 더 낮은 제한을 지정합니다.
+
+이 설정은 끝점을 위해 예상된 최소 대역폭 전송률을 구성합니다. 이 설정을 사용하여 끝점을 위해 대역폭을 예약할 경우, 세션은 대역폭을 사용할 수 있을 때까지 기다릴 필요가 없으므로 세션 응답성이 향상됩니다.
+
+모든 끝점을 위해 예약된 총 대역폭을 초과 가입하지 않았는지 확인하십시오. 구성에서 모든 연결을 위한 대역폭 층의 합계는 네트워크 용량을 초과하지 않아야 합니다.
+
+기본값은 0으로, 이는 최소 대역폭이 예약되어 있지 않음을 의미합니다. 이 설정이 사용되지 않도록 설정되거나 구성되지 않은 경우 예약된 최소 대역폭이 없습니다.
+
+이 설정은 서버 및 클라이언트에 적용되지만 설정이 구성된 끝점에만 영향을 줍니다.
+
+활성 PCoIP 세션 도중 이 설정을 수정하면 변경 사항이 즉시 적용됩니다.</string>
+			<string id="String_Policy_Enable_disable_146" >PCoIP 세션에서 오디오 사용/사용 안 함</string>
+			<string id="String_Explain_Determines_whether_147" >오디오가 PCoIP 세션에서 사용되도록 설정되었는지 확인합니다. 양 끝점에 오디오가 사용되도록 설정되어 있어야 합니다. 이 설정이 사용되도록 설정된 경우, PCoIP 오디오가 허용됩니다. 이 설정이 사용되지 않도록 설정된 경우 PCoIP 오디오가 사용되지 않도록 설정됩니다. 이 설정이 구성되지 않은 경우, 오디오가 기본적으로 사용되도록 설정됩니다.
+
+</string>
+			<string id="String_Policy_Configure_SSL_connections_149" >Security Tools에 맞도록 SSL 연결 구성</string>
+			<string id="String_Explain_Specifies_how_SSL_150" >SSL 세션 협상 연결의 설정 방법을 지정합니다.
+
+포트 스캐너를 충족하려면 이 'SSL 연결 구성' 설정을 사용하도록 설정하고 다음을 수행합니다.
+
+1. PCoIP와 함께 사용할 서버 인증서에 서명한 인증 기관의 인증서를 신뢰할 수 있는 Root 인증서 저장소에 저장합니다.
+2. 인증서 저장소에서만 인증서를 로드하도록 에이전트를 구성합니다. 로컬 시스템의 개인 저장소가 사용되는 경우 단계 1에서 다른 저장소 위치를 사용하지 않았다면 CA 인증서 저장소 이름을 &quot;ROOT&quot;(따옴표 없이) 값으로 변경하지 않은 채로 둡니다.
+
+결과 PCoIP 클라이언트는 포트 스캐너와 같은 Security Tools를 충족합니다.
+
+이 'SSL 연결 구성' 설정을 사용하지 않도록 설정하거나 구성하지 않은 경우:
+
+1. 끝점이 시스템 계정의 &quot;MY&quot; 저장소의 인증 기관 인증서 및 &quot;ROOT&quot; 저장소의 인증 기관 인증서를 사용합니다.
+2. AES-128 암호 제품군을 사용할 수 있습니다.</string>
+			<string id="String_Policy_Configure_PCoIP_155" >PCoIP 세션 암호화 알고리즘 구성</string>
+			<string id="String_Explain_Controls_the_encryption_156" >세션 협상 중 PCoIP 끝점에 의해 보급된 암호화 알고리즘을 제어합니다.
+
+확인란 중 하나를 선택하면 연결된 암호화 알고리즘이 사용되지 않도록 설정됩니다. 적어도 한 개의 알고리즘을 사용하도록 설정해야 합니다.
+
+이 설정은 에이전트 및 클라이언트 모두에 적용됩니다. 끝점은 사용하는 실제 세션 암호화 알고리즘을 협상합니다. FIPS140-2 승인 모드가 사용 설정된 경우 AES-128-GCM 암호화와 AES-256-GCM 암호화가 모두 사용 안 함으로 설정되었다면 AES-128-GCM 암호화 사용 안 함 값이 대체됩니다.
+
+전체 &quot;SSL 연결 구성&quot;이 사용되지 않도록 설정되거나 구성되지 않은 경우 Salsa-20-256round12 및 AES-128-GCM 알고리즘 모두 이 끝점에 의해 협상에 사용 가능합니다.
+
+지원되는 암호화 알고리즘을 우선 순위에 따라 나열하면 SALSA20/12-256, AES-GCM-128 및 AES-GCM-256이며, 기본적으로 지원되는 모든 암호화 알고리즘을 이 끝점에서 협상에 사용할 수 있습니다. 
+
+양쪽 끝점이 세 가지 알고리즘 모두를 지원하도록 구성되어 있고 연결에 SG(Security Gateway)가 사용되지 않는 경우에는 SALSA 20 알고리즘이 협상 및 사용됩니다. 그러나 연결에 SG가 사용되면 SALSA20은 사용하지 않도록 자동으로 설정되고 AES128이 협상 및 사용됩니다. 양쪽 끝점 중 하나 또는 SG에서 SALSA20을 사용하지 않도록 설정하고, 다른 끝점에서 AES128을 사용하지 않도록 설정하면 AES256이 협상 및 사용됩니다.</string>
+			<string id="String_Policy_Configure_SSL_protocols_161" >SSL 프로토콜 구성</string>
+			<string id="String_Explain_Configures_openssl_162" >암호화된 SSL 연결을 설정하기 전에 특정 프로토콜의 사용을 제한하는 openssl 프로토콜을 구성합니다. 프로토콜 목록은 콜론으로 구분된 하나 이상의 openssl 문자열로 구성됩니다. 모든 암호 문자열은 대소문자를 구분하지 않습니다.
+
+ 기본값은 다음과 같습니다. 
+   &quot;TLS1.0:TLS1.1:TLS1.2&quot;
+
+ 즉, TLS v1.0, TLS v1.1 및 TLS v1.2를 사용하도록 설정합니다(SSL v2.0 및 SSLv3.0는 사용 안 함). 
+
+이 설정은 에이전트 및 클라이언트 모두에 적용됩니다. 
+
+양쪽에 설정된 경우 OpenSSL 프로토콜 협상 규칙을 따릅니다.</string>
+			<string id="String_Policy_Configure_SSL_cipher_list_163" >SSL 암호 목록 구성</string>
+			<string id="String_Explain_Configures_SSL_cipher_list_164" >암호화된 SSL 연결을 설정하기 전에 암호 그룹의 사용을 제한하도록 SSL 암호 목록을 구성합니다. 이 목록은 콜론으로 구분된 하나 이상의 암호 그룹 문자열로 구성됩니다. 모든 암호 문자열은 대소문자를 구분하지 않습니다.
+
+기본값은 다음과 같습니다.
+   &quot;ECDHE-RSA-AES256-GCM-SHA384:AES256-SHA256:AES256-SHA:ECDHE-RSA-AES128-GCM-SHA256:AES128-SHA256:AES128-SHA:@STRENGTH&quot;
+
+이 항목이 구성되면 &quot;Security Tools에 맞도록 SSL 연결 구성&quot;의 &quot;SSL 연결 협상에 AES-256 또는 더 강력한 암호 적용&quot; 확인란이 무시됩니다.
+
+이 설정은 PCoIP 서버 및 PCoIP 클라이언트에 동시에 적용해야 합니다.</string>
+			<string id="String_Policy_Configure_the_Client_165" >클라이언트 PCoIP UDP 포트 구성</string>
+			<string id="String_Explain_Specifies_the_UDP_166" >소프트웨어 PCoIP 클라이언트에서 사용하는 UDP 클라이언트포트를 지정합니다. 수동으로 구성하거나 클라이언트 OS(운영 체제)에서 자동으로 결정할 수 있습니다. 이 설정은 클라이언트에만 적용됩니다.
+
+수동으로 구성하려면 UDP 포트 및 재시도 포트 범위를 모두 입력합니다. UDP 포트 값은 사용할 기본 UDP 포트를 지정합니다. UDP 포트 범위 값은 기본 포트를 사용할 수 없을 경우 시도할 추가 포트의 수를 결정합니다. 범위는 기본 포트에서 기본 포트 및 포트 범위의 합계까지 스팬합니다. 예를 들어, 기본 포트가 50002이고 포트 범위가 64인 경우, 범위는 50002에서 50066까지 스팬합니다. 기본적으로 기본 포트는 50002이고 포트 범위는 64입니다.
+
+'OS에서 자동으로 UDP 포트를 결정하도록 허용'을 선택하여 클라이언트 OS가 수동으로 설정된 값을 무시하고 다른 프로그램에서 사용하지 않는 UDP 포트를 자동으로 선택하도록 지시합니다.</string>
+			<string id="String_Policy_Configure_PCoIP_171" >PCoIP 가상 채널 구성</string>
+			<string id="String_Explain_Specifies_the_virtual_172" >PCoIP 세션에서 작동할 수 있는 가상 채널 및 작동할 수 없는 가상 채널을 지정합니다. 또한 이 설정은 PCoIP 호스트에서 클립보드 처리를 사용하지 않도록 설정할지 여부를 결정합니다.
+
+PCoIP 세션에서 사용되는 가상 채널은 가상 채널 인증 목록에 나타나야 합니다. 인증되지 않은 가상 채널 목록에 나타나는 가상 채널은 PCoIP 세션에서 사용될 수 없습니다.
+
+PCoIP 세션에서 사용하기 위해 최대 15개의 가상 채널을 지정할 수 있습니다.
+
+여러 채널 이름을 세로 막대(|) 문자로 구분하십시오. 예를 들어, mksvchan 및 vdp_rdpvcbridge 가상 채널을 허용하는 가상 채널 인증 문자열은 mksvchan|vdp_rdpvcbridge입니다.
+
+채널 이름이 세로 막대 또는 백슬래시(\) 문자를 포함할 경우, 그 앞에 백슬래시 문자를 삽입합니다. 예를 들어, 채널 이름 awk|ward\channel을 awk\|ward\\channel로 입력하십시오.
+
+인증된 가상 채널 목록이 빈 경우, 모든 가상 채널이 허용되지 않습니다. 인증되지 않은 가상 채널 목록이 빈 경우, 모든 가상 채널이 허용됩니다.
+
+가상 채널 설정은 에이전트 및 클라이언트 모두에 적용됩니다. 가상 채널을 사용하려면 에이전트 및 클라이언트 모두에서 가상 채널을 사용하도록 설정해야 합니다.
+
+가상 채널 설정에는 PCoIP 호스트에서 원격 클립보드 처리를 사용하지 않도록 설정할 수 있는 개별 확인란이 있습니다. 이 값은 에이전트에만 적용됩니다.
+
+기본적으로 클립보드 처리를 포함한 모든 가상 채널이 사용되도록 설정됩니다.</string>
+			<string id="String_Policy_DropList_Select_Configure_PCoIP_0_Disable_virtual_174" >0 - PCoIP 세션에서 가상 채널 사용 안 함</string>
+			<string id="String_Policy_DropList_Select_Configure_PCoIP_2_Disable_all_175" >2 - 다음 이외의 모든 가상 채널 사용 안 함</string>
+			<string id="String_Policy_DropList_Select_Configure_PCoIP_3_Enable_all_176" >3 - 다음 이외의 모든 가상 채널 사용</string>
+			<string id="String_Policy_Configure_PCoIP_180" >PCoIP 클라이언트 이미지 캐시 크기 정책 구성</string>
+			<string id="String_Explain_Controls_the_size_181" >PCoIP 클라이언트 이미지 캐시의 크기를 제어합니다. 클라이언트는 이미지 캐싱을 사용하여 이전에 전송된 디스플레이의 일부를 저장합니다. 이미지 캐싱은 재전송된 데이터 양을 감소시킵니다.
+
+이 설정은 View Client, View Agent 및 View 연결 서버가 View 5.0 이상 릴리스인 경우 Windows 및 Linux 클라이언트에만 적용됩니다.
+
+이 설정이 구성되지 않았거나 사용하지 않도록 설정된 경우, PCoIP는 기본 클라이언트 이미지 캐시 크기 250MB를 사용합니다.
+
+이 설정을 사용할 경우, 클라이언트 이미지 캐시 크기를 최소 50MB에서 최대 1024MB로 구성할 수 있습니다. 기본값은 250MB입니다.</string>
+			<string id="String_Policy_Configure_the_PCoIP_184" >PCoIP 전송 헤더 구성</string>
+			<string id="String_Explain_Configures_the_185" >PCoIP 전송 헤더를 구성합니다. 
+
+PCoIP 전송 헤더는 모든 PCoIP UDP 패킷에 추가(전송 헤더가 사용하도록 설정되어 있고 양쪽 모두에서 지원하는 경우에만 해당)되는 32비트 헤더입니다. PCoIP 전송 헤더는 네트워크 디바이스가 네트워크 정체를 처리할 때 더 효율적으로 우선 수위를 지정하거나 QoS를 결정할 수 있도록 지원합니다. 기본적으로 전송 헤더를 사용하도록 설정되어 있습니다.
+
+전송 세션 우선 순위는 PCoIP 전송 헤더에 보고되는 PCoIP 세션 우선 순위를 결정합니다. 네트워크 디바이스가 지정된 전송 세션 우선 순위에 따라 더 효율적으로 우선 순위를 지정하거나 QoS를 결정할 수 있도록 합니다. PCoIP 에이전트와 클라이언트가 전송 세션 우선 순위 값을 협상합니다.  에이전트가 전송 세션 우선 순위 값(높음, 중간, 낮음)을 지정한 경우 세션에서는 에이전트가 지정한 세션 우선 순위를 사용합니다. 클라이언트만 전송 세션 우선 순위(높음, 중간, 낮음)를 지정한 경우 세션에서는 클라이언트가 지정한 세션 우선 순위를 사용합니다. 에이전트나 클라이언트가 전송 세션 우선 순위를 지정하지 않은 경우(또는 '정의되지 않은 우선 순위'를 지정한 경우) 세션에서는 중간 세션 우선 순위를 사용/기본값으로 설정합니다.</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_High_Priority_187" >높은 우선 순위</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_Medium_Priority_188" >중간 우선 순위(기본값)</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_Low_Priority_189" >낮은 우선 순위</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_Undefined_Priority_190" >정의되지 않은 우선 순위</string>
+			<string id="String_Policy_Configure_PCoIP_192" >PCoIP 이벤트 로그의 자세한 표시 수준 구성</string>
+			<string id="String_Explain_This_policy_enables_193" >이 정책은 0(최대한 간단하게)에서 3(최대한 자세하게)까지 PCoIP 이벤트 로그 자세한 표시 수준을 구성할 수 있습니다.
+
+이 정책을 사용하지 않도록 설정하거나 구성하지 않은 경우, 기본 이벤트 로그 자세한 표시 수준 설정은 2입니다. 이 정책을 구성한 경우 설정은 위에 설명된 대로 자세한 표시 수준을 제어합니다.
+
+활성 PCoIP 세션 도중 이 설정을 수정하면 변경 사항이 즉시 적용됩니다.</string>
+			<string id="String_Policy_Configure_PCoIP_196" >시간(일)별 PCoIP 이벤트 로그 정리 구성</string>
+			<string id="String_Explain_This_policy_enables_197" >이 정책은 PCoIP 이벤트 로그 정리 작업을 시간(일)에 따라 구성할 수 있습니다.
+
+이 정책을 구성한 경우 설정이 시간(일)별로 로그 파일 정리를 제어합니다. 즉, n을 0이 아닌 값으로 설정하면 n일보다 오래된 로그 파일은 자동으로 삭제됩니다. 값을 0으로 설정하면 시간별 파일 정리가 없음을 나타냅니다. 이 정책이 [사용 안 함] 또는 [구성되지 않음]인 경우 시간(일)별 기본 이벤트 로그 정리 설정은 7입니다. 
+
+로그 파일 정리는 세션 시작 시 한 번 수행됩니다. 설정의 변경 사항은 다음 세션까지 적용되지 않습니다.</string>
+			<string id="String_Policy_Configure_PCoIP_200" >크기(MB)별 PCoIP 이벤트 로그 정리 구성</string>
+			<string id="String_Explain_This_policy_enables_201" >이 정책은 PCoIP 이벤트 로그 정리 작업을 크기(MB)에 따라 구성할 수 있습니다.
+
+이 정책을 구성한 경우 설정이 크기(MB)별로 로그 파일 정리를 제어합니다. 즉, m을 0이 아닌 값으로 설정하면 mMB보다 큰 로그 파일은 자동으로 삭제됩니다. 값을 0으로 설정하면 크기별 파일 정리가 없음을 나타냅니다. 이 정책이 [사용 안 함] 또는 [구성되지 않음]인 경우 크기(MB)별 기본 이벤트 로그 정리 설정은 100입니다.  
+
+로그 파일 정리는 세션 시작 시 한 번 수행됩니다. 설정의 변경 사항은 다음 세션까지 적용되지 않습니다.</string>
+		</stringTable>
+		<presentationTable ><!--Storage for Presentation Definitions-->
+
+			<presentation id="Policy_Configure_the_maximum_63" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_maximum_66" spinStep="100" spin="true" defaultValue="900000" >초당 킬로비트로 PCoIP 세션 대역폭 설정:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_67" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_PCoIP_70" spinStep="1" spin="true" defaultValue="1200" >PCoIP MTU 크기(바이트) 설정:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_71" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_PCoIP_74" spinStep="1" spin="true" defaultValue="0" >초당 킬로비트로 PCoIP 세션 대역폭 층 설정:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_SSL_connections_78" >
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_connections_81" >
+					<label >인증서 검색을 위한 시스템 계정의 인증서 저장소 이름:</label>
+					<defaultValue >MY</defaultValue>
+				</textBox>
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_connections_82" >
+					<label >인증 기관의 인증서 검색을 위한 시스템 계정의 인증서 저장소 이름:</label>
+					<defaultValue >ROOT</defaultValue>
+				</textBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_SSL_connections_83" >SSL 연결 협상에 AES-256 또는 더 강력한 암호 적용</checkBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_84" >
+				<text >하나 이상의 암호화 알고리즘을 사용하도록 설정해야 합니다. (설명 참조)</text>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_87" >Salsa20-256-round12 암호화 사용 안 함</checkBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_88" >AES-128-GCM 암호화 사용 안 함</checkBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_89" >AES-256-GCM 암호화 사용 안 함</checkBox>
+			</presentation>
+			<presentation id="Policy_Configure_SSL_protocols_90" >
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_protocols_93" >
+					<label >SSL 프로토콜 구성</label>
+					<defaultValue >TLS1.0:TLS1.1:TLS1.2</defaultValue>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Configure_SSL_cipher_list_91" >
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_cipher_list_94" >
+					<label >SSL 암호 목록 구성</label>
+					<defaultValue >ECDHE-RSA-AES256-GCM-SHA384:AES256-SHA256:AES256-SHA:ECDHE-RSA-AES128-GCM-SHA256:AES128-SHA256:AES128-SHA:@STRENGTH</defaultValue>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_Client_94" >
+				<text >UDP 포트 및 재시도 범위 크기를 설정합니다.</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_Client_97" spinStep="1" spin="true" defaultValue="50002" >UDP 포트 선택:</decimalTextBox>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_Client_98" spinStep="1" spin="true" defaultValue="64" >재시도 포트 범위 크기 설정:</decimalTextBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_the_Client_99" >OS에서 자동으로 UDP 포트를 결정하도록 허용</checkBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_100" >
+				<dropdownList refId="Policy_DropList_Element_Configure_PCoIP_103" defaultItem="0" >가상 채널 설정:</dropdownList>
+				<text >다음 설정은 2를 선택한 경우에만 필요하며 해당됩니다.</text>
+				<text >문자열 형식 및 예제는 [설명] 탭을 참조하십시오.</text>
+				<textBox refId="Policy_TextBox_Element_Configure_PCoIP_107" >
+					<label >인증된 가상 채널 목록 입력:</label>
+				</textBox>
+				<text >다음 설정은 3을 선택한 경우에만 필요하며 해당됩니다.</text>
+				<text >문자열 형식 및 예제는 [설명] 탭을 참조하십시오.</text>
+				<textBox refId="Policy_TextBox_Element_Configure_PCoIP_108" >
+					<label >인증되지 않은 가상 채널 목록 입력:</label>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_109" >
+				<text >이미지 캐싱 및 값에 대한 설명은 [설명] 탭을 참조하십시오.</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_112" spinStep="50" spin="true" defaultValue="250" >이미지 캐시 크기(메가바이트) 설정(기본값: 250MB):</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_113" >
+				<dropdownList refId="Policy_DropList_Element_Configure_the_PCoIP_116" defaultItem="3" >전송 세션 우선 순위</dropdownList>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_121" >
+				<text >예제 값은 [설명] 탭을 참조하십시오.</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_124" spinStep="1" spin="true" defaultValue="2" >이벤트 로그의 자세한 표시 수준 값 설정(기본값: 2):</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_125" >
+				<text >예제 값은 [설명] 탭을 참조하십시오.</text>
+				<text >시간 값(일)별 이벤트 로그 정리 설정(기본값: 7, 시간별</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_128" spinStep="1" spin="true" defaultValue="7" >정리가 없는 경우: 0):</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_129" >
+				<text >예제 값은 [설명] 탭을 참조하십시오.</text>
+				<text >크기 값(MB)별 이벤트 로그 정리 설정(기본값: 100, 크기별</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_132" spinStep="1" spin="true" defaultValue="100" >정리가 없는 경우: 0):</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_maximum_133" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_maximum_136" spinStep="100" spin="true" defaultValue="900000" >초당 킬로비트로 PCoIP 세션 대역폭 설정:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_137" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_PCoIP_140" spinStep="1" spin="true" defaultValue="1200" >PCoIP MTU 크기(바이트) 설정:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_141" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_PCoIP_144" spinStep="1" spin="true" defaultValue="0" >초당 킬로비트로 PCoIP 세션 대역폭 층 설정:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_SSL_connections_148" >
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_connections_151" >
+					<label >인증서 검색을 위한 시스템 계정의 인증서 저장소 이름:</label>
+					<defaultValue >MY</defaultValue>
+				</textBox>
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_connections_152" >
+					<label >인증 기관의 인증서 검색을 위한 시스템 계정의 인증서 저장소 이름:</label>
+					<defaultValue >ROOT</defaultValue>
+				</textBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_SSL_connections_153" >SSL 연결 협상에 AES-256 또는 더 강력한 암호 적용</checkBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_154" >
+				<text >하나 이상의 암호화 알고리즘을 사용하도록 설정해야 합니다. (설명 참조)</text>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_157" >Salsa20-256-round12 암호화 사용 안 함</checkBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_158" >AES-128-GCM 암호화 사용 안 함</checkBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_159" >AES-256-GCM 암호화 사용 안 함</checkBox>
+			</presentation>
+			<presentation id="Policy_Configure_SSL_protocols_160" >
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_protocols_163" >
+					<label >SSL 프로토콜 구성</label>
+					<defaultValue >TLS1.0:TLS1.1:TLS1.2</defaultValue>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Configure_SSL_cipher_list_161" >
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_cipher_list_164" >
+					<label >SSL 암호 목록 구성</label>
+					<defaultValue >ECDHE-RSA-AES256-GCM-SHA384:AES256-SHA256:AES256-SHA:ECDHE-RSA-AES128-GCM-SHA256:AES128-SHA256:AES128-SHA:@STRENGTH</defaultValue>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_Client_164" >
+				<text >UDP 포트 및 재시도 범위 크기를 설정합니다.</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_Client_167" spinStep="1" spin="true" defaultValue="50002" >UDP 포트 선택:</decimalTextBox>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_Client_168" spinStep="1" spin="true" defaultValue="64" >재시도 포트 범위 크기 설정:</decimalTextBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_the_Client_169" >OS에서 자동으로 UDP 포트를 결정하도록 허용</checkBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_170" >
+				<dropdownList refId="Policy_DropList_Element_Configure_PCoIP_173" defaultItem="0" >가상 채널 설정:</dropdownList>
+				<text >다음 설정은 2를 선택한 경우에만 필요하며 해당됩니다.</text>
+				<text >문자열 형식 및 예제는 [설명] 탭을 참조하십시오.</text>
+				<textBox refId="Policy_TextBox_Element_Configure_PCoIP_177" >
+					<label >인증된 가상 채널 목록 입력:</label>
+				</textBox>
+				<text >다음 설정은 3을 선택한 경우에만 필요하며 해당됩니다.</text>
+				<text >문자열 형식 및 예제는 [설명] 탭을 참조하십시오.</text>
+				<textBox refId="Policy_TextBox_Element_Configure_PCoIP_178" >
+					<label >인증되지 않은 가상 채널 목록 입력:</label>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_179" >
+				<text >이미지 캐싱 및 값에 대한 설명은 [설명] 탭을 참조하십시오.</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_182" spinStep="50" spin="true" defaultValue="250" >이미지 캐시 크기(메가바이트) 설정(기본값: 250MB):</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_183" >
+				<dropdownList refId="Policy_DropList_Element_Configure_the_PCoIP_186" defaultItem="3" >전송 세션 우선 순위</dropdownList>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_191" >
+				<text >예제 값은 [설명] 탭을 참조하십시오.</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_194" spinStep="1" spin="true" defaultValue="2" >이벤트 로그의 자세한 표시 수준 값 설정(기본값: 2):</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_195" >
+				<text >예제 값은 [설명] 탭을 참조하십시오.</text>
+				<text >시간 값(일)별 이벤트 로그 정리 설정(기본값: 7, 시간별</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_198" spinStep="1" spin="true" defaultValue="7" >정리가 없는 경우: 0):</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_199" >
+				<text >예제 값은 [설명] 탭을 참조하십시오.</text>
+				<text >크기 값(MB)별 이벤트 로그 정리 설정(기본값: 100, 크기별</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_202" spinStep="1" spin="true" defaultValue="100" >정리가 없는 경우: 0):</decimalTextBox>
+			</presentation>
+		</presentationTable>
+	</resources>
+</policyDefinitionResources>
+

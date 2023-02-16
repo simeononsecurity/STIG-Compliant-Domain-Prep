@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="UNCPath_GPO_Define">VMware Horizon UNC Path Redirection</string>
+      <string id="UNCPathRedirection_Enabled">Enable UNC Path Redirection</string>
+      <string id="UNCPathRedirection_FilterRule">UNC Path Redirection Filter Rule</string>
+      <string id="UNCPathRedirection_Enabled_Description">This setting determines whether a UNC Path can be redirected. "Not Configured" or Disabled setting means feature is not enabled. Default is "Not Configured".</string>
+      <string id="UNCPathRedirection_FilterRule_Description">For all UNC Paths that match the rules, specify the UNC Path that should be redirected.
+For example, if you set Agent Rules to .*\.mycompany\.com, all UNC Paths that have ".mycompany.com" in them are redirected to a remote desktop or App session. You can further specify which Horizon Connection server to use by setting Broker Hostname, and you can specify which desktop or App to use by setting Remote Item to the display name of the pool, as shown in Horizon Administrator Console.
+If you set Client Rules to .*\.mycompany\.com, all UNC paths that have ".mycompany.com" in them are redirected from remote desktop or App session to the Windows-based client and opened in the default app on the client.
+
+Note
+
+When setting multiple rules, please split each rule with a semicolon and manual wrap is not supported.</string>
+      <string id="ADMXMigrator_NoSupportedOn">ADMX Migrator encountered a policy that does not have a supportedOn value.</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="UNCPathRedirectionEnabled" />
+      <presentation id="UNCPathRedirectionFilterRule">
+        <textBox refId="brokerHostname">
+          <label>Broker Hostname</label>
+        </textBox>
+        <textBox refId="remoteItem">
+          <label>Remote Item</label>
+        </textBox>
+        <text>Client Rules</text>
+          <multiTextBox refId="clientRules" />
+        <text>Agent Rules</text>
+          <multiTextBox refId="agentRules" />
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

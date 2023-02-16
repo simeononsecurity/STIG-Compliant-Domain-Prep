@@ -1,0 +1,582 @@
+﻿<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName>
+  </displayName>
+  <description>
+  </description>
+  <resources>
+    <stringTable>
+      <string id="Product_CatName">序列 COM</string>
+      <string id="LocalSettingsPriority_PolicyName">本機設定優先順序</string>
+      <string id="LocalSettingsPriority_PolicyExplain">若啟用此原則設定，則本機程式設定將優先於原則設定。
+
+若停用或未設定此原則設定，則原則設定將優先於本機程式設定。
+
+在每種設定類型的範圍內，電腦的設定集永遠優先於使用者的設定集。
+若針對電腦設定此原則設定，則其優先於針對使用者設定的原則設定。</string>
+      <string id="DisableFunctionality_PolicyName">停用功能</string>
+      <string id="DisableFunctionality_PolicyExplain">若啟用此原則設定，則將不會建立用戶端的連線、不會重新導向連接埠，也不會顯示「系統匣」功能表圖示。
+
+若停用此原則設定，序列 COM 將以一般模式運作。
+
+若未設定此原則設定，則由本機程式設定來決定停用功能。</string>
+      <string id="RedirectAll_PolicyName">自動連線所有連接埠</string>
+      <string id="RedirectAll_PolicyExplain">如果啟用此原則設定，則所有用戶端 COM 連接埠將自動連線 (即使未設定個別 GPO)。如果為部分連接埠設定個別 GPO 設定，則會使用個別的連接埠 GPO 設定。
+
+如果停用或未設定此原則設定，則會由個別的連接埠 GPO 或本機程式設定來決定自動連線功能。</string>
+      <string id="EnableEventLog_PolicyName">啟用 Windows 事件記錄功能</string>
+      <string id="EnableEventLog_PolicyExplain">如果啟用此原則設定，不同的序列埠相關事件將寫入 Windows 事件記錄的應用程式記錄類別。
+
+如果停用或未設定此原則設定，則沒有任何記錄檔記錄會寫入 Windows 事件檢視器的應用程式部分。
+
+支援下列事件:
+5 - 正在嘗試建立與用戶端 PC 的連線。
+10 - 代理程式和用戶端之間的連線已建立。
+20 - 代理程式和用戶端之間的連線已關閉。
+30 - 初始連接埠列舉 (用戶端 PC 上可用且可用於連線的序列埠清單)。
+40 - 已連線。連接埠已連線。
+41 - 已連線。連接埠已被佔用 (在工作階段重新連線時)。連接埠會再次變為可讀取/可寫入。
+50 - 已中斷連線。連接埠已中斷連線。
+51 - 已中斷連線。連接埠已被佔用 (偵測到工作階段中斷連線時)。連接埠保持作用中狀態，但不可讀取/不可寫入。
+60 – 錯誤
+
+連接埠項目格式:
+&lt;來源連接埠名稱&gt; 分隔符號 &lt;目的地連接埠名稱&gt; 分隔符號 &lt;硬體識別碼&gt; 分隔符號 &lt;裝置說明&gt;
+
+&lt;來源連接埠名稱&gt; – COM 連接埠的名稱，如用戶端 PC 上所顯示的名稱，例如 COM2
+&lt;目的地連接埠名稱&gt; – 虛擬 COM 連接埠在遠端桌面工作階段中顯示的名稱，例如 COM15
+&lt;硬體識別碼&gt; 和 &lt;說明&gt; – 父系裝置內容 (如果用戶端 PC 上的序列埠實際上是 USB 或其他某些裝置)
+分隔符號 - 事件資料格式分隔符號字串
+
+範例 (逗號字元用作分隔符號):
+COM20,COM28,USB\VID_067B&amp;PID_2303&amp;REV_0400,Prolific USB-to-Serial Comm Port</string>
+      <string id="EventLogTableSeparator_PolicyName">啟用事件資料格式分隔符號</string>
+      <string id="EventLogTableSeparator_PolicyExplain">啟用時，此原則會定義用於資料欄位的資料列分隔符號的字串。
+	  
+預設分隔符號為 Tab 字元。但可以將其變更為任何其他字元，例如逗號、分號、空格或任何其他自訂字元，甚至是字串。</string>
+	  <string id="EventLogTableSeparatorType_TAB_combo_txt">Tab</string>
+	  <string id="EventLogTableSeparatorType_SPACE_combo_txt">空格</string>
+	  <string id="EventLogTableSeparatorType_custom_combo_txt">自訂字串</string>
+      <string id="PortIsolationMode_PolicyName">COM 連接埠隔離模式</string>
+      <string id="PortIsolationMode_PolicyExplain">如果選擇「完全隔離」模式，則虛擬序列埠為可見且僅可在使用者工作階段內存取。在此模式下，COM 連接埠名稱可以在不同的使用者工作階段中具有相同的名稱。重要: 系統服務 (例如 spoolsrv.exe) 在此類情況下無法存取隔離的序列埠。
+
+如果選擇「隔離已停用」模式，則虛擬序列埠為全域可見。任何連接埠皆可從任何工作階段存取。限制: 連接埠名稱必須對每個使用者而言是唯一的 (因此，連接埠不能在不同的使用者工作階段中具有相同的名稱)。重要: 系統服務 (例如 spoolsrv.exe) 可以存取任何序列埠。
+
+如果未設定此原則設定，則序列重新導向會在「完全隔離」模式中運作。</string>
+      <string id="PortIsolationMode_Full_Isolation_combo_txt">完全隔離</string>
+      <string id="PortIsolationMode_Isolation_Disabled_combo_txt">隔離已停用</string>
+      <string id="LockConfig_PolicyName">鎖定組態</string>
+      <string id="LockConfig_PolicyExplain">若啟用此原則設定，則包含程式設定的使用者介面會遭到鎖定，而使用者無法變更「系統匣」功能表中的設定。
+
+若停用此原則設定，則使用者將能存取包含程式設定的使用者介面。
+
+若未設定此原則設定，則由本機程式設定決定是否封鎖組態。
+
+若針對電腦設定此原則設定，則其優先於針對使用者設定的原則設定。</string>
+      <string id="BandwidthLimit_PolicyName">頻寬限制</string>
+      <string id="BandwidthLimit_PolicyExplain">若啟用此原則設定，則代理程式和所有用戶端之間的資料傳輸速度將受到指定的每秒 KB 值限制。「0」值表示停用速度限制
+
+若停用此原則設定，則將停用速度限制。
+
+若未設定此原則設定，則由本機程式設定來決定速度限制。</string>
+      <string id="BandwidthLimit_PartName">頻寬限制 (以每秒 KB 為單位):</string>
+
+	  <string id="AllowDenyPortFiltersList_PolicyName">允許/拒絕連接埠篩選器</string>
+	  <string id="AllowDenyPortFiltersList_PolicyExplain">如果啟用此原則，則會使用允許和拒絕資料夾，來決定是否允許在用戶端偵測到每個特定的 COM 連接埠時進行重新導向。
+
+如果不允許某些連接埠進行重新導向，則代理程式端會對其進行威脅，就像用戶端上甚至不存在連接埠一樣。
+
+原則是包含規則清單的多行字串。
+
+範例:
+  USB:067B:2303:*
+  USBPATH:1-4
+  WINDEVID:*ACPI*
+  PORTNAME:COM3
+  PORTNAME:COM5
+
+語法:
+  USB:[*|VID[:*|:PID[:*|:REV]]]
+    VID - 裝置 HardwareID 中的十六進位數字 VID (廠商識別碼) 值
+    PID - 裝置 HardwareID 中的十六進位數字 PID (產品識別碼) 值
+    REV - 裝置 HardwareID 中的十六進位數字 REV (修訂版本) 值
+    當 VID、PID、REV 等於「*」時 - 表示任何值。
+	
+  USBPATH:[N1[-N2[...[-N8]]]]
+    Nx - 用於識別 USB 連接埠的數值 (範圍 1-127)。	
+  
+  WINDEVID:[HwId|*|?]
+    HwId - 裝置 HardwareID 的完整或部分值 (萬用字元 * 和 ? 受支援)。 不區分大小寫。
+
+  PORTNAME:[PortName|*|?]
+    PortName - 序列埠名稱的完整或部分值 (萬用字元是 * 和 ?受支援)。 不區分大小寫。
+
+範例:
+  USB:067B:2303:400 - 符合具有指定 VID、PID 和修訂版本的 USB 裝置。 USB\VID_067B&amp;PID_2303&amp;REV_0400
+  USB:067B:2303:* - 符合具有指定 VID 和 PID 以及任何修訂版本的任何 USB 裝置。 USB\VID_067B&amp;PID_2303
+  USB:067B:* - 符合具有指定 VID 和任何 PID 以及任何修訂版本的任何 USB 裝置。 USB\VID_067B
+  USB:* - 比對任何 USB 裝置
+  
+  USBPATH:1-2-1 - 比對實際插入裝置的 USB 連接埠的識別碼  
+
+  WINDEVID:*  - 比對任何 HardwareID 字串
+  WINDEVID:*ACPI* - 比對含有 ACPI 子字串的 HardwareID 字串
+  
+  PORTNAME:COM3 - 僅比對「COM3」序列埠
+  PORTNAME:*M3 - 比對名稱以「M3」結尾的序列埠。 例如 COM3、VCOM3。
+  PORTNAME:*M3* - 符合名稱中含有「M3」子字串的序列埠。例如 COM3、COM33、VCOM333。
+  PORTNAME:/dev/ttys* - 符合所有「/dev/ttys」裝置。例如 /dev/ttyS0、/dev/ttyS5。
+
+備註:
+  允許清單具有較高的優先順序。因此，如果裝置與拒絕清單相符，則會從重新導向中排除該裝置。 但是，如果同時裝置與允許清單相符，則允許裝置進行重新導向。
+	  </string>
+	  <string id="AllowDenyPortFiltersList_PartName">允許清單</string>
+	  <string id="DenyDenyPortFiltersList_PartName">拒絕清單</string>
+		
+      <string id="PortSettings_CatName">PortSettings</string>
+      <string id="PortSettings1_PolicyName">PortSettings1</string>
+      <string id="PortSettings2_PolicyName">PortSettings2</string>
+      <string id="PortSettings3_PolicyName">PortSettings3</string>
+      <string id="PortSettings4_PolicyName">PortSettings4</string>
+      <string id="PortSettings5_PolicyName">PortSettings5</string>
+      <string id="PortSettings_PolicyExplain">此原則設定用於設定其重新導向所使用的某些連接埠參數:
+
+「來源連接埠號碼」- 從用戶端重新導向的 COM 連接埠號碼 (例如，2 表示 COM2)。
+
+「來源連接埠裝置」- 依預設，從用戶端重新導向的序列埠裝置的名稱。此外，複雜的序列裝置比對支援特殊語法。
+
+附註: 此參數的優先順序高於來源連接埠號碼。
+
+通常由裝置名稱來識別來源連接埠 (例如，Windows 的「COM5」，或 Linux 的「/dev/ttySerial0」)。無論如何，都支援特殊的比對語法，以方便依 USB 裝置內容、USB 連接埠識別碼等來識別來源序列裝置。如需更多詳細資料，請參閱〈允許/拒絕篩選器〉一節。
+
+「目的地虛擬連接埠號碼」- 虛擬 COM 連接埠號碼，在代理程式端建立並對應至用戶端上的 COM 連接埠。
+
+「自動連線」- 若設定此旗標，則連接埠會在插入用戶端時自動重新導向至代理程式端。
+
+「IgnoreDsr」- 若設定此旗標，則系統會忽略 DSR 訊號。
+
+「關閉連接埠前暫停」- 疑難排解設定。使用者關閉虛擬 COM 連接埠的等候時間 (以毫秒為單位)。對於某些 USB-COM 介面卡是必要選項。
+
+使用「傳送資料前暫停」- 如果設定此旗標，則在連接埠開啟後將會先暫停再傳送資料。檢視值「傳送資料前暫停」
+
+「傳送資料前暫停」- 疑難排解設定。虛擬 COM 連接埠將資料傳輸至實體端之前的等待時間 (以毫秒為單位)。這是某些特定序列裝置 (Olivetti 讀卡機) 的必要項目。
+
+「Serial2USBModeChangeEnabled」- 疑難排解設定。修正 GlobalSat BU353 GPS 介面卡 (及部分其他 Prolific USB-COM 介面卡) 的特定問題。
+
+「停用等候遮罩的錯誤」- 疑難排解設定。停用序列 COM 遮罩中的「錯誤」值。請參閱「http://msdn.microsoft.com/en-us/library/windows/desktop/aa363479(v=vs.85).aspx」。對於某些軟體是必要選項。
+
+「HandleBtDisappear」- 疑難排解設定。支援 BlueTooth COM 連接埠特定行為。
+
+「UsbToComTroubleShooting」- 疑難排解設定。修正 USB-COM 介面卡的某些特定問題。
+
+
+「使用網路延遲補償」- 疑難排解設定。使用補償功能可避免網路延遲的影響。
+
+「補償層級」- 疑難排解設定。使用 SpinEdit 選取網路延遲補償層級。找出您的通訊應用程式對遠端序列裝置運作穩定的最低層級。
+
+「使用固定傳輸速率」- 如果設定此旗標，則系統會使用「每秒位元」中指定的值，而不是由序列通訊應用程式設定的傳輸速率。
+
+「每秒位元」- 固定傳輸速率值 (單位為每秒位元) (若設定「使用固定傳輸速率」則套用)。
+
+「使用固定行控制」- 如果設定此旗標，則系統會使用「資料位元」、「同位」和「停止位元」中指定的值，而不是由序列通訊應用程式設定的值。
+
+「資料位元」- 固定資料位元值 (若設定「使用固定行控制」則套用) [值介於 5 到 8]。
+
+「同位」- 固定同位值 (若設定「使用固定行控制」則套用)。
+
+「停止位元」- 固定停止位元值 (若設定「使用固定行控制」則套用)。
+
+「使用固定流量控制」- 如果設定此旗標，則系統會使用「流量控制」中指定的值，而不是由序列通訊應用程式設定的值。
+
+「流量控制」- 固定停止位元值 (若設定「使用固定流量控制」則套用)。
+
+
+若啟用此原則設定，則系統會在連接埠重新導向期間使用其參數。
+
+若停用或未設定此原則設定，系統將使用本機程式設定中指定的參數來進行連接埠重新導向。
+
+若針對電腦設定此原則設定，則其優先於針對使用者設定的原則設定。</string>
+      <string id="SrcPort_PartName">來源連接埠號碼:</string>
+      <string id="SrcPort_PartName2">來源連接埠裝置:</string>
+      <string id="DstVirtPort_PartName">目的地虛擬連接埠號碼:</string>
+      <string id="Autoconnect_PartName">自動連線</string>
+      <string id="Troubleshooting_PartName">疑難排解:</string>
+      <string id="IgnoreDsr_PartName">IgnoreDsr</string>
+      <string id="PauseBeforeClosePort_PartName">關閉連接埠前暫停 (以毫秒為單位):</string>
+      <string id="UsePauseBeforeSendData_PartName">使用「傳送資料前暫停」:</string>
+      <string id="PauseBeforeSendData_PartName">傳送資料前暫停 (以毫秒為單位):</string>
+      <string id="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</string>
+      <string id="DisableErrorsInWaitMask_PartName">停用等候遮罩的錯誤</string>
+      <string id="HandleBtDisappear_PartName">HandleBtDisappear</string>
+      <string id="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</string>
+      <string id="UseFixedBaudRate_PartName">使用固定傳輸速率</string>
+      <string id="FixedBaudRate_PartName">固定傳輸速率值 (單位為每秒位元) (若設定「使用固定傳輸速率」則套用)。</string>
+      <string id="UseFixedLineControl_PartName">使用固定行控制</string>
+      <string id="FixedDataBits_PartName">固定資料位元值 (若設定「使用固定行控制」則套用) [值介於 5 到 8]。</string>
+      <string id="Parity_No_combo_txt">否</string>
+      <string id="Parity_Odd_combo_txt">奇數</string>
+      <string id="Parity_Even_combo_txt">偶數</string>
+      <string id="Parity_Mark_combo_txt">標記</string>
+      <string id="Parity_Space_combo_txt">空格</string>
+      <string id="StopBits_1bit_combo_txt">1 位元</string>
+      <string id="StopBits_15bit_combo_txt">1.5 位元</string>
+      <string id="StopBits_2bits_combo_txt">2 位元</string>
+      <string id="UseFixedFlowControl_PartName">使用固定流量控制</string>
+      <string id="Flow_Hardware_combo_txt">硬體</string>
+      <string id="Flow_XonXoff_combo_txt">Xon/Xoff</string>
+      <string id="Flow_None_combo_txt">無</string>
+      <string id="ADMXMigrator_UnresolvedString">ADMX Migrator 遇到不在來源 ADM 字串表格中的字串。</string>
+      <string id="ADMXMigrator_NoSupportedOn">ADMX Migrator 遇到沒有 supportedOn 值的原則。</string>
+      <string id="SUPPORTED_WindowsXP">至少是 Microsoft Windows XP Professional 或 Windows Server 2003 系列</string>
+      <string id="UseMultiplicator_PartName">使用網路延遲補償</string>
+      <string id="MultiplicatorValue_PartName">補償層級值 (若設定「使用網路延遲補償」則套用) [值介於 1 到 10]。</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="LocalSettingsPriority_PolicyName" />
+      <presentation id="DisableFunctionality_PolicyName" />
+      <presentation id="EnableEventLog_PolicyName" />
+	  <presentation id="EventLogTableSeparator_PolicyName">
+		<dropdownList refId="EventLogTableSeparatorType_Enum" noSort="true">事件資料格式分隔符號:</dropdownList>
+        <textBox refId="EventLogTableSeparatorType_custom_Text">
+            <label>自訂字串:</label>
+        </textBox>
+	  </presentation>
+      <presentation id="RedirectAll_PolicyName" />
+      <presentation id="PortIsolationMode_PolicyName">
+        <dropdownList refId="PortIsolationMode_Enum" noSort="true">COM 連接埠隔離模式:</dropdownList>
+      </presentation>
+      <presentation id="LockConfig_PolicyName" />
+      <presentation id="BandwidthLimit_PolicyName">
+        <decimalTextBox refId="BandwidthLimit_PartName" defaultValue="0" spinStep="1024">頻寬限制 (以每秒 KB 為單位):</decimalTextBox>
+      </presentation>
+      <presentation id="AllowDenyPortFiltersList_PolicyName">
+		  <text>允許清單</text>
+		  <multiTextBox refId="AllowPortFiltersList_PartName" />
+		  <text></text>
+		  <text>拒絕清單</text>
+		  <multiTextBox refId="DenyPortFiltersList_PartName" />
+      </presentation>
+      <presentation id="PortSettings1_PolicyName">
+        <decimalTextBox refId="SrcPort_PartName">來源連接埠號碼:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>來源連接埠裝置:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">目的地虛擬連接埠號碼:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">自動連線</checkBox>
+        <text>
+        </text>
+        <text>疑難排解:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">關閉連接埠前暫停 (以毫秒為單位):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">使用「傳送資料前暫停」:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">傳送資料前暫停 (以毫秒為單位):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">停用等候遮罩的錯誤</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">使用網路延遲補償</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">補償層級:</decimalTextBox>
+        <text>
+        </text>
+        <text>固定設定:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">使用固定傳輸速率</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">每秒位元:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">使用固定行控制</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">資料位元:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">同位:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">停止位元:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">使用固定流量控制</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">流量控制:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings2_PolicyName">
+        <decimalTextBox refId="SrcPort_PartName">來源連接埠號碼:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>來源連接埠裝置:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">目的地虛擬連接埠號碼:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">自動連線</checkBox>
+        <text>
+        </text>
+        <text>疑難排解:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">關閉連接埠前暫停 (以毫秒為單位):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">使用「傳送資料前暫停」:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">傳送資料前暫停 (以毫秒為單位):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">停用等候遮罩的錯誤</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">使用網路延遲補償</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">補償層級:</decimalTextBox>
+        <text>
+        </text>
+        <text>固定設定:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">使用固定傳輸速率</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">每秒位元:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">使用固定行控制</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">資料位元:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">同位:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">停止位元:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">使用固定流量控制</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">流量控制:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings3_PolicyName">
+        <decimalTextBox refId="SrcPort_PartName">來源連接埠號碼:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>來源連接埠裝置:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">目的地虛擬連接埠號碼:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">自動連線</checkBox>
+        <text>
+        </text>
+        <text>疑難排解:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">關閉連接埠前暫停 (以毫秒為單位):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">使用「傳送資料前暫停」:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">傳送資料前暫停 (以毫秒為單位):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">停用等候遮罩的錯誤</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">使用網路延遲補償</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">補償層級:</decimalTextBox>
+        <text>
+        </text>
+        <text>固定設定:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">使用固定傳輸速率</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">每秒位元:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">使用固定行控制</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">資料位元:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">同位:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">停止位元:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">使用固定流量控制</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">流量控制:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings4_PolicyName">
+        <decimalTextBox refId="SrcPort_PartName">來源連接埠號碼:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>來源連接埠裝置:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">目的地虛擬連接埠號碼:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">自動連線</checkBox>
+        <text>
+        </text>
+        <text>疑難排解:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">關閉連接埠前暫停 (以毫秒為單位):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">使用「傳送資料前暫停」:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">傳送資料前暫停 (以毫秒為單位):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">停用等候遮罩的錯誤</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">使用網路延遲補償</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">補償層級:</decimalTextBox>
+        <text>
+        </text>
+        <text>固定設定:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">使用固定傳輸速率</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">每秒位元:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">使用固定行控制</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">資料位元:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">同位:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">停止位元:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">使用固定流量控制</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">流量控制:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings5_PolicyName">
+        <decimalTextBox refId="SrcPort_PartName">來源連接埠號碼:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>來源連接埠裝置:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">目的地虛擬連接埠號碼:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">自動連線</checkBox>
+        <text>
+        </text>
+        <text>疑難排解:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">關閉連接埠前暫停 (以毫秒為單位):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">使用「傳送資料前暫停」:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">傳送資料前暫停 (以毫秒為單位):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">停用等候遮罩的錯誤</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">使用網路延遲補償</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">補償層級:</decimalTextBox>
+        <text>
+        </text>
+        <text>固定設定:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">使用固定傳輸速率</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">每秒位元:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">使用固定行控制</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">資料位元:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">同位:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">停止位元:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">使用固定流量控制</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">流量控制:</dropdownList>
+      </presentation>
+      <presentation id="LocalSettingsPriority_PolicyName_1" />
+      <presentation id="LockConfig_PolicyName_1" />
+      <presentation id="PortSettings1_PolicyName_1">
+        <decimalTextBox refId="SrcPort_PartName">來源連接埠號碼:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>來源連接埠裝置:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">目的地虛擬連接埠號碼:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">自動連線</checkBox>
+        <text>
+        </text>
+        <text>疑難排解:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">關閉連接埠前暫停 (以毫秒為單位):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">使用「傳送資料前暫停」:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">傳送資料前暫停 (以毫秒為單位):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">停用等候遮罩的錯誤</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">使用網路延遲補償</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">補償層級:</decimalTextBox>
+        <text>
+        </text>
+        <text>固定設定:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">使用固定傳輸速率</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">每秒位元:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">使用固定行控制</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">資料位元:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">同位:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">停止位元:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">使用固定流量控制</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">流量控制:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings2_PolicyName_1">
+        <decimalTextBox refId="SrcPort_PartName">來源連接埠號碼:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>來源連接埠裝置:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">目的地虛擬連接埠號碼:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">自動連線</checkBox>
+        <text>
+        </text>
+        <text>疑難排解:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">關閉連接埠前暫停 (以毫秒為單位):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">使用「傳送資料前暫停」:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">傳送資料前暫停 (以毫秒為單位):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">停用等候遮罩的錯誤</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">使用網路延遲補償</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">補償層級:</decimalTextBox>
+        <text>
+        </text>
+        <text>固定設定:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">使用固定傳輸速率</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">每秒位元:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">使用固定行控制</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">資料位元:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">同位:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">停止位元:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">使用固定流量控制</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">流量控制:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings3_PolicyName_1">
+        <decimalTextBox refId="SrcPort_PartName">來源連接埠號碼:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>來源連接埠裝置:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">目的地虛擬連接埠號碼:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">自動連線</checkBox>
+        <text>
+        </text>
+        <text>疑難排解:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">關閉連接埠前暫停 (以毫秒為單位):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">使用「傳送資料前暫停」:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">傳送資料前暫停 (以毫秒為單位):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">停用等候遮罩的錯誤</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">使用網路延遲補償</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">補償層級:</decimalTextBox>
+        <text>
+        </text>
+        <text>固定設定:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">使用固定傳輸速率</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">每秒位元:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">使用固定行控制</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">資料位元:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">同位:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">停止位元:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">使用固定流量控制</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">流量控制:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings4_PolicyName_1">
+        <decimalTextBox refId="SrcPort_PartName">來源連接埠號碼:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>來源連接埠裝置:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">目的地虛擬連接埠號碼:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">自動連線</checkBox>
+        <text>
+        </text>
+        <text>疑難排解:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">關閉連接埠前暫停 (以毫秒為單位):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">使用「傳送資料前暫停」:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">傳送資料前暫停 (以毫秒為單位):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">停用等候遮罩的錯誤</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">使用網路延遲補償</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">補償層級:</decimalTextBox>
+        <text>
+        </text>
+        <text>固定設定:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">使用固定傳輸速率</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">每秒位元:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">使用固定行控制</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">資料位元:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">同位:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">停止位元:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">使用固定流量控制</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">流量控制:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings5_PolicyName_1">
+        <decimalTextBox refId="SrcPort_PartName">來源連接埠號碼:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>來源連接埠裝置:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">目的地虛擬連接埠號碼:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">自動連線</checkBox>
+        <text>
+        </text>
+        <text>疑難排解:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">關閉連接埠前暫停 (以毫秒為單位):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">使用「傳送資料前暫停」:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">傳送資料前暫停 (以毫秒為單位):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">停用等候遮罩的錯誤</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">使用網路延遲補償</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">補償層級:</decimalTextBox>
+        <text>
+        </text>
+        <text>固定設定:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">使用固定傳輸速率</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">每秒位元:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">使用固定行控制</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">資料位元:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">同位:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">停止位元:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">使用固定流量控制</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">流量控制:</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

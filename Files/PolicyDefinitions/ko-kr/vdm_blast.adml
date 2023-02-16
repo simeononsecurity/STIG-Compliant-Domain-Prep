@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                           revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="BLAST_CAT_LABEL">VMware Blast</string>
+      <string id="BLAST_CAT_EXPLAIN">Blast 프로토콜을 구성하는 정책입니다.</string>
+      <string id="BLAST_OPTIMIZER_LABEL">Blast Optimizer</string>
+      <string id="BLAST_OPTIMIZER_EXPLAIN">Blast 사용자가 더 나은 사용자 환경 또는 리소스 효율성을 제공하는 기본값 중에서 선택할 수 있는 단일 구성입니다.
+값 5: (기본값) Blast의 기본 설정을 사용합니다.
+값이 5보다 큼: encoderGlobalQualityLevel, 대역폭 기울기 및 인코더 maxFPS에 대한 Blast 기본값을 늘려 사용자 환경을 개선합니다.
+값이 5보다 작음: encoderGlobalQualityLevel, 대역폭 기울기 및 인코더 maxFPS에 대한 Blast 기본값을 줄여 리소스 효율성을 개선합니다.</string>
+      <string id="BLAST_MAX_SESSION_BW_LABEL">최대 세션 대역폭</string>
+      <string id="BLAST_MAX_SESSION_BW_EXPLAIN">원격 세션에 대해 Blast 프로토콜에서 사용할 수 있는 최대 대역폭을 초당 킬로비트로 지정합니다. 대역폭에는 모든 이미지, 오디오, 가상 채널, USB 및 Blast 제어 트래픽이 포함됩니다.</string>
+      <string id="BLAST_MIN_SESSION_BW_LABEL">최소 세션 대역폭</string>
+      <string id="BLAST_MIN_SESSION_BW_EXPLAIN">원격 세션에서 Blast 프로토콜에 대해 예약된 최소 대역폭을 초당 킬로비트로 지정합니다.</string>
+      <string id="BLAST_MAX_BANDWIDTH_KBPS_PER_MEGAPIXEL_SLOPE_LABEL">최대 세션 대역폭 kbit/s 메가픽셀 경사</string>
+      <string id="BLAST_MAX_BANDWIDTH_KBPS_PER_MEGAPIXEL_SLOPE_EXPLAIN">원격 세션에 대해 Blast 프로토콜에서 사용할 수 있는 원격 화면 해상도의 메가픽셀당 kbps의 경사를 지정합니다. kbit/s = TotalScreenMegaPixels * 경사</string>
+      <string id="BLAST_MAX_FPS_LABEL">최대 프레임 속도</string>
+      <string id="BLAST_MAX_FPS_EXPLAIN">초당 화면 업데이트 수를 제한하여 사용자당 소비한 평균 대역폭을 관리하는 최대 프레임 속도 값입니다.</string>
+      <string id="BLAST_UDP_LABEL">UDP 프로토콜</string>
+      <string id="BLAST_UDP_EXPLAIN">이 설정을 사용하도록 설정하거나 이 설정이 구성되어 있지 않은 경우 Blast에서 UDP를 사용하여 사용자 환경을 개선하기로 결정하면 Blast 세션 트래픽이 UDP를 통해 수행될 수 있습니다. 설정을 사용하지 않도록 설정하면 Blast 세션 트래픽이 TCP를 통해 수행됩니다.</string>
+      <string id="BLAST_CURSOR_WARPING_LABEL">커서 이동</string>
+      <string id="BLAST_CURSOR_WARPING_EXPLAIN">이 설정을 사용하도록 설정하면 커서 이동 기능이 사용하도록 설정됩니다. 이 기능을 사용하도록 설정하고 마우스가 절대 모드에 있을 때 원격 에이전트가 갑작스러운 커서 움직임을 감지하면 클라이언트에서 로컬 커서를 움직여 반영합니다. 그렇지 않으면 원격 에이전트의 갑작스러운 커서 움직임이 클라이언트에서 무시됩니다. 커서 이동 기능은 기본적으로 사용되지 않도록 설정됩니다.</string>
+      <!--
+        NOTE FOR TRANSLATORS: the collection of BLAST_DSCP_..._EXPLAIN strings that follow
+	BLAST_DSP_ACTIVATE_LABEL all cite this "DSCP Marking" string in their second paragraph.
+	Whatever translation you apply to this string needs to be applied to those _EXPLAIN
+	strings too.
+      -->
+      <string id="BLAST_DSCP_ACTIVATE_LABEL">DSCP 표시</string>
+      <string id="BLAST_DSCP_ACTIVATE_EXPLAIN">사용하도록 설정되거나 구성되지 않은 경우 Blast Agent, Client 및 Secure Gateway에서 전송된 네트워크 트래픽에 Differentiated Services Code Point 값을 지정할 수 있습니다.  사용하지 않도록 설정되면 DSCP 표시가 수행되지 않습니다.</string>
+      <string id="BLAST_DSCP_AGENT_OUT_TCP4_LABEL">에이전트의 DSCP, TCP/IPv4</string>
+      <string id="BLAST_DSCP_AGENT_OUT_TCP4_EXPLAIN">TCP/IPv4를 통해 Blast Agent에서 전송된 네트워크 트래픽에 Differentiated Services Code Point 값이 배치될 수 있습니다.
+
+이 설정은 DSCP 표시 설정에서 허용하는 경우에만 적용됩니다.</string>
+      <string id="BLAST_DSCP_AGENT_OUT_UDP4_LABEL">에이전트의 DSCP, UDP/IPv4</string>
+      <string id="BLAST_DSCP_AGENT_OUT_UDP4_EXPLAIN">UDP/IPv4를 통해 Blast Agent에서 전송된 네트워크 트래픽에 Differentiated Services Code Point 값이 배치될 수 있습니다.
+
+이 설정은 DSCP 표시 설정에서 허용하는 경우에만 적용됩니다.</string>
+      <string id="BLAST_DSCP_AGENT_OUT_TCP6_LABEL">에이전트의 DSCP, TCP/IPv6</string>
+      <string id="BLAST_DSCP_AGENT_OUT_TCP6_EXPLAIN">TCP/IPv6를 통해 Blast Agent에서 전송된 네트워크 트래픽에 Differentiated Services Code Point 값이 배치될 수 있습니다.
+
+이 설정은 DSCP 표시 설정에서 허용하는 경우에만 적용됩니다.</string>
+      <string id="BLAST_DSCP_AGENT_OUT_UDP6_LABEL">에이전트의 DSCP, UDP/IPv6</string>
+      <string id="BLAST_DSCP_AGENT_OUT_UDP6_EXPLAIN">UDP/IPv6를 통해 Blast Agent에서 전송된 네트워크 트래픽에 Differentiated Services Code Point 값이 배치될 수 있습니다.
+
+이 설정은 DSCP 표시 설정에서 허용하는 경우에만 적용됩니다.</string>
+      <string id="BLAST_DSCP_CLIENT_OUT_TCP4_LABEL">클라이언트의 DSCP, TCP/IPv4</string>
+      <string id="BLAST_DSCP_CLIENT_OUT_TCP4_EXPLAIN">TCP/IPv4를 통해 Blast Client에서 전송된 네트워크 트래픽에 Differentiated Services Code Point 값이 배치될 수 있습니다.
+
+이 설정은 DSCP 표시 설정에서 허용하는 경우에만 적용됩니다.</string>
+      <string id="BLAST_DSCP_CLIENT_OUT_UDP4_LABEL">클라이언트의 DSCP, UDP/IPv4</string>
+      <string id="BLAST_DSCP_CLIENT_OUT_UDP4_EXPLAIN">UDP/IPv4를 통해 Blast Client에서 전송된 네트워크 트래픽에 Differentiated Services Code Point 값이 배치될 수 있습니다.
+
+이 설정은 DSCP 표시 설정에서 허용하는 경우에만 적용됩니다.</string>
+      <string id="BLAST_DSCP_CLIENT_OUT_TCP6_LABEL">클라이언트의 DSCP, TCP/IPv6</string>
+      <string id="BLAST_DSCP_CLIENT_OUT_TCP6_EXPLAIN">TCP/IPv6를 통해 Blast Client에서 전송된 네트워크 트래픽에 Differentiated Services Code Point 값이 배치될 수 있습니다.
+
+이 설정은 DSCP 표시 설정에서 허용하는 경우에만 적용됩니다.</string>
+      <string id="BLAST_DSCP_CLIENT_OUT_UDP6_LABEL">클라이언트의 DSCP, UDP/IPv6</string>
+      <string id="BLAST_DSCP_CLIENT_OUT_UDP6_EXPLAIN">UDP/IPv6를 통해 Blast Client에서 전송된 네트워크 트래픽에 Differentiated Services Code Point 값이 배치될 수 있습니다.
+
+이 설정은 DSCP 표시 설정에서 허용하는 경우에만 적용됩니다.</string>
+      <string id="BLAST_DSCP_BSG_DOWN_TCP4_LABEL">BSG에서 클라이언트로의 DSCP, TCP/IPv4</string>
+      <string id="BLAST_DSCP_BSG_DOWN_TCP4_EXPLAIN">TCP/IPv4를 통해 Blast 보안 게이트웨이에서 Blast Client로 전송된 네트워크 트래픽에 Differentiated Services Code Point 값이 배치될 수 있습니다.
+
+이 설정은 DSCP 표시 설정에서 허용하는 경우에만 적용됩니다.</string>
+      <string id="BLAST_DSCP_BSG_DOWN_UDP4_LABEL">BSG에서 클라이언트로의 DSCP, UDP/IPv4</string>
+      <string id="BLAST_DSCP_BSG_DOWN_UDP4_EXPLAIN">UDP/IPv4를 통해 Blast 보안 게이트웨이에서 Blast Client로 전송된 네트워크 트래픽에 Differentiated Services Code Point 값이 배치될 수 있습니다. 
+
+이 설정은 DSCP 표시 설정에서 허용하는 경우에만 적용됩니다.</string>
+      <string id="BLAST_DSCP_BSG_DOWN_TCP6_LABEL">BSG에서 클라이언트로의 DSCP, TCP/IPv6</string>
+      <string id="BLAST_DSCP_BSG_DOWN_TCP6_EXPLAIN">TCP/IPv6를 통해 Blast 보안 게이트웨이에서 Blast Client로 전송된 네트워크 트래픽에 Differentiated Services Code Point 값이 배치될 수 있습니다.
+
+이 설정은 DSCP 표시 설정에서 허용하는 경우에만 적용됩니다.</string>
+      <string id="BLAST_DSCP_BSG_DOWN_UDP6_LABEL">BSG에서 클라이언트로의 DSCP, UDP/IPv6</string>
+      <string id="BLAST_DSCP_BSG_DOWN_UDP6_EXPLAIN">UDP/IPv6를 통해 Blast 보안 게이트웨이에서 Blast Client로 전송된 네트워크 트래픽에 Differentiated Services Code Point 값이 배치될 수 있습니다.
+
+이 설정은 DSCP 표시 설정에서 허용하는 경우에만 적용됩니다.</string>
+      <string id="BLAST_DSCP_BSG_UP_TCP4_LABEL">BSG에서 에이전트로의 DSCP, TCP/IPv4</string>
+      <string id="BLAST_DSCP_BSG_UP_TCP4_EXPLAIN">TCP/IPv4를 통해 Blast 보안 게이트웨이에서 Blast Agent로 전송된 네트워크 트래픽에 Differentiated Services Code Point 값이 배치될 수 있습니다.
+
+이 설정은 DSCP 표시 설정에서 허용하는 경우에만 적용됩니다.</string>
+      <string id="BLAST_DSCP_BSG_UP_UDP4_LABEL">BSG에서 에이전트로의 DSCP, UDP/IPv4</string>
+      <string id="BLAST_DSCP_BSG_UP_UDP4_EXPLAIN">UDP/IPv4를 통해 Blast 보안 게이트웨이에서 Blast Agent로 전송된 네트워크 트래픽에 Differentiated Services Code Point 값이 배치될 수 있습니다.
+
+이 설정은 DSCP 표시 설정에서 허용하는 경우에만 적용됩니다.</string>
+      <string id="BLAST_DSCP_BSG_UP_TCP6_LABEL">BSG에서 에이전트로의 DSCP, TCP/IPv6</string>
+      <string id="BLAST_DSCP_BSG_UP_TCP6_EXPLAIN">TCP/IPv6를 통해 Blast 보안 게이트웨이에서 Blast Agent로 전송된 네트워크 트래픽에 Differentiated Services Code Point 값이 배치될 수 있습니다.
+
+이 설정은 DSCP 표시 설정에서 허용하는 경우에만 적용됩니다.</string>
+      <string id="BLAST_DSCP_BSG_UP_UDP6_LABEL">BSG에서 에이전트로의 DSCP, UDP/IPv6</string>
+      <string id="BLAST_DSCP_BSG_UP_UDP6_EXPLAIN">UDP/IPv6를 통해 Blast 보안 게이트웨이에서 Blast Agent로 전송된 네트워크 트래픽에 Differentiated Services Code Point 값이 배치될 수 있습니다.
+
+이 설정은 DSCP 표시 설정에서 허용하는 경우에만 적용됩니다.</string>
+      <string id="BLAST_ENCODER_IMAGE_CACHE_SIZE_LABEL">인코더 이미지 캐시 크기(KB)</string>
+      <string id="BLAST_ENCODER_IMAGE_CACHE_SIZE_EXPLAIN">인코더 이미지 캐시의 최대 크기(단위: 킬로바이트)입니다.
+
+캐시의 최종 크기는 해당 구성의 최소값 및 클라이언트의 연결된 구성에 따라 선택되며 Horizon Agent에서 사용 가능한 RAM의 절반을 초과할 수 없습니다.</string>
+      <string id="BLAST_ENCODER_CPU_CONTROLLER_LABEL">인코더 CPU 컨트롤러</string>
+      <string id="BLAST_ENCODER_CPU_CONTROLLER_EXPLAIN">이 정책 설정을 사용하도록 설정하거나 구성하지 않으면 초당 인코더 프레임의 최대 제한이 최근 평균 시스템 CPU 사용량에 따라 동적으로 스케일 다운 또는 스케일 업됩니다. 인코더 CPU 사용량을 줄이기 위해 이 제한을 얼마나 낮출 수 있는지는 [인코더 CPU 컨트롤러 최소 프레임 속도] 설정에 의해 제어됩니다.
+
+이 정책 설정을 사용하지 않도록 설정하면 높은 시스템 CPU 사용량으로 인해 초당 인코더 프레임의 최대 제한이 최대 프레임 속도 설정에서 스케일 다운되지 않습니다.</string>
+      <string id="BLAST_ENCODER_CPU_CONTROLLER_MIN_FPS_LABEL">인코더 CPU 컨트롤러 최소 프레임 속도</string>
+      <string id="BLAST_ENCODER_CPU_CONTROLLER_MIN_FPS_EXPLAIN">시스템 CPU 사용량이 높을 때 인코더 CPU 사용량을 줄이기 위해 인코더 CPU 컨트롤러가 초당 인코더 프레임의 최대 제한을 낮출 수 있는 최소 프레임 속도입니다. [최대 프레임 속도] 설정을 초과할 수 없습니다.</string>
+      <string id="BLAST_H264_ENCODE_LABEL">H.264</string>
+      <string id="BLAST_H264_ENCODE_EXPLAIN">이 정책 설정을 사용하도록 설정하거나 이를 구성하지 않은 경우 H.264 인코딩이 원격 데스크톱에 사용됩니다. 이 정책 설정을 사용하지 않도록 설정하면 JPEG/PNG가 인코딩에 사용됩니다.</string>
+      <string id="BLAST_HEVC_ENCODE_LABEL">HEVC</string>
+      <string id="BLAST_HEVC_ENCODE_EXPLAIN">이 정책 설정을 사용하도록 설정하거나 구성하지 않으면 데스크톱의 원격 사용에 대해 HEVC 인코딩이 허용됩니다. 이 정책 설정을 사용하지 않도록 설정하면 H.264 또는 JPEG/PNG가 인코딩에 사용됩니다.</string>
+      <string id="BLAST_PNG_ENCODE_LABEL">PNG</string>
+      <string id="BLAST_PNG_ENCODE_EXPLAIN">이 정책 설정을 사용하도록 설정하거나 이를 구성하지 않은 경우 PNG 인코딩을 원격 세션에 사용할 수 있습니다. 이 정책 설정을 사용하지 않도록 설정하면 JPEG/PNG 모드에서 JPEG만 인코딩에 사용됩니다. H.264 인코더가 활성인 상태에서는 이 정책이 적용되지 않습니다.</string>
+      <string id="BLAST_SCREEN_BLANK_LABEL">화면 공백 표시</string>
+      <string id="BLAST_SCREEN_BLANK_EXPLAIN">이 정책 설정을 사용하도록 설정하거나 이를 구성하지 않는 경우 데스크톱에 활성 세션이 있으면 데스크톱 가상 시스템의 콘솔이 비어 있는 화면을 표시합니다. 이 정책 설정을 사용하지 않도록 설정하면 가상 시스템의 콘솔이 사용자가 볼 수 있는 데스크톱을 표시합니다.</string>
+      <string id="BLAST_COOKIE_CLEANUP_LABEL">쿠키 정리 간격</string>
+      <string id="BLAST_COOKIE_CLEANUP_EXPLAIN">간격은 비활성 세션이 정리되는 빈도를 제어합니다. 이 작업은 세션과 연관된 쿠키를 삭제하여 수행됩니다.</string>
+      <string id="BLAST_COOKIE_CLEANUP_INTERVAL_LABEL">간격(ms)</string>
+      <string id="BLAST_ENCODER_GLOBAL_QUALITY_LABEL">Blast 인코더 글로벌 품질</string>
+      <string id="BLAST_ENCODER_GLOBAL_QUALITY_EXPLAIN">이 설정은 모든 Blast 인코더에서 원격 디스플레이 이미지 품질 수준을 제어합니다. 선택한 수준은 모든 코덱에 매핑됩니다. 즉, 이 설정은 선택한 값에 따라 H.264의 최대 QP 값, Blast 코덱의 최대 QP 값 및 적응형 인코더의 낮은 JPEG 품질을 업데이트합니다.
+인코더 글로벌 품질 수준은 [1-5] 범위의 값을 사용합니다. 값이 낮을수록 품질이 낮고 값이 높을수록 품질이 높습니다. 예를 들어 화면에서 스크롤할 때와 같이 화면 영역이 자주 변경되는 경우 품질 수준이 높을수록 더 많은 대역폭이 사용되며 지연 시간이 길어질 수 있습니다.
+기본값은 1(균형 상태)입니다. 품질 매핑은 해당 인코더 QP 값으로 재정의할 수 있습니다.</string>
+      <string id="BLAST_ENCODER_GLOBAL_QUALITY_LEVEL">Blast 인코더 글로벌 품질 수준</string>
+      <string id="BLAST_ENCODER_INTEL_H264_LABEL">Intel HW 인코더 H264</string>
+      <string id="BLAST_ENCODER_INTEL_H264_EXPLAIN">이 정책 설정을 사용하도록 설정하거나 구성하지 않으면 원격 세션에 H.264 압축을 사용하는 Intel HW 인코딩을 사용할 수 있습니다. 이 정책 설정을 사용하지 않도록 설정하면 H.264용 Intel HW 인코더를 사용할 수 없으며 가능한 다음 코덱이 기본으로 사용됩니다</string>
+      <string id="BLAST_ENCODER_INTEL_HEVC_LABEL">Intel HW 인코더 HEVC</string>
+      <string id="BLAST_ENCODER_INTEL_HEVC_EXPLAIN">이 정책 설정을 사용하도록 설정하거나 구성하지 않으면 원격 세션에 HEVC 압축을 사용하는 Intel HW 인코딩을 사용할 수 있습니다. 이 정책 설정을 사용하지 않도록 설정하면 HEVC용 Intel HW 인코더를 사용할 수 없으며 가능한 다음 코덱이 기본으로 사용됩니다</string>
+      <string id="BLAST_DISPLAY_QUALITY_LABEL">적응형 인코더 이미지 품질</string>
+      <string id="BLAST_DISPLAY_QUALITY_EXPLAIN">이러한 설정은 적응형 인코더(JPEG/PNG)를 사용할 때 원격 디스플레이의 이미지 품질을 제어합니다.
+이미지 품질 프로파일에는 낮음과 높음 두 가지가 있습니다.  낮음 프로파일은 스크롤하는 경우와 같이 화면 영역이 자주 변경될 때 사용됩니다.  높음 프로파일은 화면에서 덜 변경되는 영역을 미세 조정하여 더 나은 최종 이미지를 생성하는 데 사용됩니다.
+예를 들어 화면에서 스크롤할 때와 같이 화면 영역이 자주 변경되는 경우 품질이 높을수록 더 많은 대역폭이 사용되며 지연 시간이 길어질 수 있습니다.</string>
+      <string id="BLAST_DISPLAY_QUALITY_JPEG_QUAL_LOW">낮은 JPEG 품질</string>
+      <string id="BLAST_DISPLAY_QUALITY_JPEG_QUAL_MID">중간 JPEG 품질</string>
+      <string id="BLAST_DISPLAY_QUALITY_JPEG_QUAL_HIGH">높은 JPEG 품질</string>
+      <string id="BLAST_CODEC_QUALITY_LABEL">Blast 코덱 품질</string>
+      <string id="BLAST_CODEC_QUALITY_EXPLAIN">이러한 설정은 Blast 코덱 압축을 사용할 때 원격 디스플레이의 이미지 품질을 제어합니다. QP(양자화 매개 변수)는 결과 이미지가 양자화되는 수준, 즉 손실 압축되는 수준을 제어합니다.
+- 최소 QP는 양자화의 하한, 즉 최고의 품질을 설정합니다.
+- 최대 QP는 양자화의 상한 즉, 최저의 품질을 설정합니다.
+이러한 양자화 값은 [1, 8] 범위를 차지하며 약 [20, 88] 범위의 JPEG 품질 값으로 매핑합니다. 이 양자화는 텍스트가 아닌 영역에만 적용되므로 텍스트 압축과 관련이 없습니다.
+최대 또는 최소 QP에 대해 0 값을 설정하면 구성은 각각 낮은 JPEG 품질 구성과 높은 JPEG 품질 구성으로 대체될 것입니다. 기본 동작입니다.</string>
+      <string id="BLAST_CODEC_QP_MAX">Blast 코덱 최대 QP</string>
+      <string id="BLAST_CODEC_QP_MIN">Blast 코덱 최소 QP</string>
+      <string id="BLAST_H264_QUALITY_LABEL">H.264 품질</string>
+      <string id="BLAST_H264_QUALITY_EXPLAIN">이러한 설정은 H.264 압축 사용 시 원격 디스플레이의 이미지 품질을 제어합니다. QP(Quantization Parameter)는 결과 이미지가 양자화되는 수준 즉, 손실 압축되는 수준을 제어합니다.
+- 최소 QP는 양자화의 하한 즉, 최고의 품질을 설정합니다.
+- 최대 QP는 양자화의 상한 즉, 최저의 품질을 설정합니다.
+더 많은 변경은 급격한 효과를 가져다줄 수 있으므로 이 값을 기본값에서 +/- 5 범위 내로 유지할 것을 권장합니다.</string>
+      <string id="BLAST_H264_QUALITY_MAX_QP">H.264 최대 QP</string>
+      <string id="BLAST_H264_QUALITY_MIN_QP">H.264 최소 QP</string>
+      <string id="BLAST_H264_COLOR_ACCURACY_LABEL">H.264 높은 색상 정확도</string>
+      <string id="BLAST_H264_COLOR_ACCURACY_EXPLAIN">이 정책 설정을 사용하도록 설정한 경우 4:2:0 대신 YUV 4:4:4 색상 공간을 사용하여, H.264 인코딩을 사용할 때 향상된 색상 정확도가 요청됩니다.
+높은 색상 정확도는 RGB에서 YUV로 변환할 때 크로마가 서브샘플링되지 않는다는 것을 의미합니다.
+이로 인해 고해상도를 사용하거나 여러 대의 모니터를 사용할 때 성능이 저하될 수 있습니다.</string>
+
+      <string id="BLAST_HEVC_COLOR_ACCURACY_LABEL">HEVC 높은 색상 정확도</string>
+      <string id="BLAST_HEVC_COLOR_ACCURACY_EXPLAIN">이 정책 설정을 사용하도록 설정한 경우 4:2:0 대신 YUV 4:4:4 색상 공간을 사용하여, HEVC 인코딩을 사용할 때 향상된 색상 정확도가 요청됩니다.
+높은 색상 정확도는 RGB에서 YUV로 변환할 때 크로마가 서브샘플링되지 않는다는 것을 의미합니다.
+이 정책을 적용하려면 HEVC 4:4:4의 클라이언트 측 하드웨어 가속이 필요합니다.</string>
+
+      <string id="BLAST_HIGHER_FIDELITY_COLOR_LABEL">H.264, HEVC 더 높은 충실도 색상</string>
+      <string id="BLAST_HIGHER_FIDELITY_COLOR_EXPLAIN">이 정책 설정을 사용하도록 설정하면 HEVC 또는 H.264와 YUV 4:4:4 색상 공간을 사용할 때 전체 루마/크로마 범위 및 최적화된 변환 매트릭스가 요청됩니다. 전체 범위는 입력 RGB 범위가 변환 전에 감소하지 않음을 의미합니다.
+HDTV 매트릭스는 SDR 컨텐츠에 사용되고 UHDTV 매트릭스는 HDR 컨텐츠에 사용됩니다.
+이 정책이 구성되지 않으면 기본적으로 사용하도록 설정되어 있습니다.
+이 정책을 적용하려면 이 기능에 대한 클라이언트 지원이 필요합니다.</string>
+
+      <string id="BLAST_HTTP_LABEL">HTTP 서비스</string>
+      <string id="BLAST_HTTP_EXPLAIN">이러한 설정은 Blast HTTP 서비스를 제어합니다. 사용되는 포트 번호는 방화벽 설정과 일치해야 합니다.</string>
+      <string id="BLAST_HTTP_PORTS_SECURE_LABEL">보안(HTTPS) 포트</string>
+      <string id="BLAST_AUDIO_LABEL">오디오 재생</string>
+      <string id="BLAST_AUDIO_EXPLAIN">이 설정은 오디오 재생이 원격 데스크톱에 허용되는지를 제어합니다. 오디오 재생은 기본적으로 사용하도록 설정됩니다.</string>
+      <string id="KEYBOARD_LOCALE_SYNC_LABEL">키보드 로케일 동기화</string>
+      <string id="KEYBOARD_LOCALE_SYNC_EXPLAIN">세션 사용자에 대한 키보드 로케일 목록 및 기본 키보드 로케일이 클라이언트 끝점의 데이터와 동기화되는지 여부를 결정합니다. 이 설정이 사용되도록 설정된 경우, 동기화가 허용됩니다. 이 설정이 사용되지 않도록 설정되거나 구성되지 않은 경우, 동기화가 허용되지 않습니다.
+
+이 설정은 에이전트에만 적용됩니다.</string>
+      <string id="BLAST_SUPPORTEDON_EMPTY"></string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="BLAST_OPTIMIZER_LABEL">
+        <decimalTextBox refId="BLAST_OPTIMIZER_LABEL" defaultValue="5">Blast Optimizer</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_MAX_SESSION_BW_LABEL">
+        <decimalTextBox refId="BLAST_MAX_SESSION_BW_LABEL" defaultValue="2147483647">최대 세션 대역폭</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_MIN_SESSION_BW_LABEL">
+        <decimalTextBox refId="BLAST_MIN_SESSION_BW_LABEL" defaultValue="256">최소 세션 대역폭</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_MAX_BANDWIDTH_KBPS_PER_MEGAPIXEL_SLOPE_LABEL">
+        <decimalTextBox refId="BLAST_MAX_BANDWIDTH_KBPS_PER_MEGAPIXEL_SLOPE_LABEL" defaultValue="6200">최대 세션 대역폭 kbit/s 메가픽셀 경사</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_MAX_FPS_LABEL">
+        <decimalTextBox refId="BLAST_MAX_FPS_LABEL" defaultValue="30">최대 프레임 속도</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_UDP_LABEL" />
+      <presentation id="BLAST_CURSOR_WARPING_LABEL" />
+      <presentation id="BLAST_DSCP_ACTIVATE_LABEL" />
+      <presentation id="BLAST_DSCP_AGENT_OUT_TCP4_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_AGENT_OUT_TCP4_LABEL" defaultValue="">DSCP 값</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_AGENT_OUT_UDP4_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_AGENT_OUT_UDP4_LABEL" defaultValue="">DSCP 값</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_AGENT_OUT_TCP6_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_AGENT_OUT_TCP6_LABEL" defaultValue="">DSCP 값</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_AGENT_OUT_UDP6_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_AGENT_OUT_UDP6_LABEL" defaultValue="">DSCP 값</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_CLIENT_OUT_TCP4_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_CLIENT_OUT_TCP4_LABEL" defaultValue="">DSCP 값</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_CLIENT_OUT_UDP4_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_CLIENT_OUT_UDP4_LABEL" defaultValue="">DSCP 값</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_CLIENT_OUT_TCP6_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_CLIENT_OUT_TCP6_LABEL" defaultValue="">DSCP 값</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_CLIENT_OUT_UDP6_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_CLIENT_OUT_UDP6_LABEL" defaultValue="">DSCP 값</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_BSG_DOWN_TCP4_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_BSG_DOWN_TCP4_LABEL" defaultValue="">DSCP 값</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_BSG_DOWN_UDP4_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_BSG_DOWN_UDP4_LABEL" defaultValue="">DSCP 값</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_BSG_DOWN_TCP6_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_BSG_DOWN_TCP6_LABEL" defaultValue="">DSCP 값</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_BSG_DOWN_UDP6_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_BSG_DOWN_UDP6_LABEL" defaultValue="">DSCP 값</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_BSG_UP_TCP4_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_BSG_UP_TCP4_LABEL" defaultValue="">DSCP 값</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_BSG_UP_UDP4_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_BSG_UP_UDP4_LABEL" defaultValue="">DSCP 값</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_BSG_UP_TCP6_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_BSG_UP_TCP6_LABEL" defaultValue="">DSCP 값</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DSCP_BSG_UP_UDP6_LABEL">
+        <decimalTextBox refId="BLAST_DSCP_BSG_UP_UDP6_LABEL" defaultValue="">DSCP 값</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_ENCODER_IMAGE_CACHE_SIZE_LABEL">
+        <decimalTextBox refId="BLAST_ENCODER_IMAGE_CACHE_SIZE_LABEL" defaultValue="256000">인코더 이미지 캐시 크기(KB)</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_ENCODER_CPU_CONTROLLER_LABEL" />
+      <presentation id="BLAST_ENCODER_CPU_CONTROLLER_MIN_FPS_LABEL">
+        <decimalTextBox refId="BLAST_ENCODER_CPU_CONTROLLER_MIN_FPS_LABEL" defaultValue="5">인코더 CPU 컨트롤러 최소 프레임 속도</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_H264_ENCODE_LABEL" />
+      <presentation id="BLAST_HEVC_ENCODE_LABEL" />
+      <presentation id="BLAST_PNG_ENCODE_LABEL" />
+      <presentation id="BLAST_SCREEN_BLANK_LABEL" />
+      <presentation id="BLAST_COOKIE_CLEANUP_LABEL">
+        <decimalTextBox refId="BLAST_COOKIE_CLEANUP_INTERVAL_LABEL" defaultValue="1000">간격(ms)</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_ENCODER_GLOBAL_QUALITY_LABEL">
+        <decimalTextBox refId="BLAST_ENCODER_GLOBAL_QUALITY_LEVEL" defaultValue="1">인코더 글로벌 품질 수준</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_DISPLAY_QUALITY_LABEL">
+        <decimalTextBox refId="BLAST_DISPLAY_QUALITY_JPEG_QUAL_LOW" defaultValue="25">낮은 JPEG 품질</decimalTextBox>
+        <decimalTextBox refId="BLAST_DISPLAY_QUALITY_JPEG_QUAL_MID" defaultValue="35">중간 JPEG 품질</decimalTextBox>
+        <decimalTextBox refId="BLAST_DISPLAY_QUALITY_JPEG_QUAL_HIGH" defaultValue="90">높은 JPEG 품질</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_ENCODER_INTEL_H264_LABEL" />
+      <presentation id="BLAST_ENCODER_INTEL_HEVC_LABEL" />
+      <presentation id="BLAST_CODEC_QUALITY_LABEL">
+        <decimalTextBox refId="BLAST_CODEC_QP_MAX" defaultValue="0">Blast 코덱 최대 QP</decimalTextBox>
+        <decimalTextBox refId="BLAST_CODEC_QP_MIN" defaultValue="0">Blast 코덱 최소 QP</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_H264_QUALITY_LABEL">
+        <decimalTextBox refId="BLAST_H264_QUALITY_MAX_QP" defaultValue="36">H.264 최대 QP</decimalTextBox>
+        <decimalTextBox refId="BLAST_H264_QUALITY_MIN_QP" defaultValue="10">H.264 최소 QP</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_H264_COLOR_ACCURACY_LABEL" />
+      <presentation id="BLAST_HEVC_COLOR_ACCURACY_LABEL" />
+      <presentation id="BLAST_HIGHER_FIDELITY_COLOR_LABEL" />
+      <presentation id="BLAST_HTTP_LABEL">
+        <decimalTextBox refId="BLAST_HTTP_PORTS_SECURE_LABEL" defaultValue="22443">보안(HTTPS) 포트</decimalTextBox>
+      </presentation>
+      <presentation id="BLAST_AUDIO_LABEL" />
+      <presentation id="KEYBOARD_LOCALE_SYNC_LABEL" />
+      <presentation id="SERVER_HTMLACCESS_PRINT_STATE" />
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

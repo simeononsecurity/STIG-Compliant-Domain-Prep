@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="unknown_0">VMware Horizon URL 重新導向</string>
+      <string id="unknown_2">IE 原則: 防止使用者變更 URL 重新導向外掛程式載入行為</string>
+      <string id="unknown_6">IE 原則: 自動啟用 URL 重新導向外掛程式</string>
+      <string id="unknown_4">已啟用 URL 重新導向 IP 規則</string>
+      <string id="unknown_8">URL 重新導向已啟用</string>
+      <string id="unknown_12">URL 重新導向通訊協定「https」</string>
+      <string id="unknown_10">URL 重新導向通訊協定「http」</string>
+      <string id="unknown_15">URL 重新導向通訊協定「...」</string>
+      <string id="unknown_3">決定使用者是否可停用 URL 內容重新導向。</string>
+      <string id="unknown_5">此設定決定是否啓用或停用 IP 規則。依預設為未設定狀態。啟用 IP 規則後，系統將支援指定的 IP/IP 範圍篩選和 DNS-Resolve，這表示您可以在用戶端規則或代理程式規則中新增 IP/IP 範圍，若輸入的 URL 位址不符合 URL 規則，將解析為符合 IP/IP 範圍的 IP 位址。
+例如，如果您將 IP 規則設定為啟用，並將代理程式規則設定為 HTTPS 中的「*\.mycompany\.com;22.22.22.22;10.10.1.2-10.10.12.20」，且 IP 位址為「https://22.22.22.22」，則系統將重新導向位於 IP 範圍「10.10.1.2-10.10.12.20」內的所有 IP，以及解析為 IP 範圍「10.10.1.2-10.10.12.20」或 IP「22.22.22.22」的所有 URL。
+
+注意
+
+IP 規則目前僅適用於 Internet Explorer。</string>
+      <string id="unknown_7">決定新安裝的 Internet Explorer 外掛程式是否會自動啟用。</string>
+      <string id="unknown_9">決定此功能是否會開啟。此設定依預設不會設定。即使已安裝元件，您仍可使用此設定來停用功能。</string>
+      <string id="HelpString">針對所有使用此通訊協定的 URL，指定應重新導向的 URL。
+例如，若您將代理程式規則設定為 .*\.mycompany\.com，則其中包含「mycompany.com」的所有 URL 會重新導向至遠端桌面平台或遠端應用程式。您可以透過設定 [代理主機名稱] 來進一步指定要使用的連線伺服器，並且可以透過將 [遠端項目] 設定為集區的顯示名稱，來指定要使用的桌面平台或應用程式集區，如 View Administrator 中所示。
+如果您將用戶端規則設定為 .*\.mycompany\.com，則其中包含「mycompany.com」的所有 URL 會重新導向至 Windows 用戶端，並在用戶端上的預設瀏覽器中開啟。
+
+注意
+
+最佳做法是為 HTTP 通訊協定和 HTTPS 通訊協定設定相同的規則。如此一來，若使用者在 Internet Explorer 中輸入部分 URL，例如 mycompany.com，則當該網站從 HTTP 自動重新導向至 HTTPS 時，URL 內容重新導向功能將會如預期般運作。在這種情況下，若您為 HTTPS 設定規則，但並未針對 HTTP 設定規則，則使用者輸入的部分 URL 不會進行重新導向。設定多個規則時，請使用分號分隔每個規則，並且不支援手動換行。</string>
+      <string id="ADMXMigrator_UnresolvedString">ADMX Migrator 遇到不在來源 ADM 字串表格中的字串。</string>
+      <string id="ADMXMigrator_NoSupportedOn">ADMX Migrator 遇到沒有 supportedOn 值的原則。</string>
+      <string id="ExtensionInstallForcelist">安裝 URL 內容重新導向功能中所需的 Chrome 擴充功能。</string>
+      <string id="ExtensionInstallForcelist_Explain">如果啟用此原則，將會以無訊息方式自動安裝 URL 內容重新導向所需的 Chrome 擴充功能。此安裝也包含必要權限的授與。若無管理員權限，則無法反轉此安裝。
+
+如果此原則停用或未設定，則不會自動安裝 URL 內容重新導向所需的 Chrome 擴充功能。因此，在從 Google Chrome 線上應用程式商店手動安裝此擴充功能之前，即使設定了重新導向規則集，URL 內容重新導向也無法在 Chrome 瀏覽器中運作。
+
+此原則依預設會設為未設定。</string>
+      <string id="UrlRedirectionProtocol_WhitelistSring">URL 重新導向白名單組態</string>
+      <string id="UrlRedirectionProtocol_WhitelistExplain">此設定會決定 URL 中通訊協定所支援的應用程式，稱為白名單。
+依預設支援下列應用程式:
+- iexplore.exe: Internet Explorer 瀏覽器
+- chrome.exe: Chrome 瀏覽器
+- firefox.exe: Firefox 瀏覽器
+- msedge.exe: Microsoft Edge(Chromium)
+- outlook.exe: Microsoft Outlook
+- lync.exe: 商務用 Skype
+- skype.exe: Skype
+- wmplayer.exe: Windows Media Player
+
+您可以透過 URL 重新導向白名單組態來修改預設支援的應用程式。
+
+例如，將白名單設為以下時:
+chrome
+outlook.exe
+skype.exe
+
+URL 內容重新導向中僅支援 Chrome 瀏覽器、Microsoft Outlook 和 Skype。</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="IEpolicyPreventusersfromchangingURLRedirectionpluginloadingbehavior" />
+      <presentation id="IEpolicyAutomaticallyenableURLRedirectionplugin" />
+      <presentation id="UrlRedirectionEnabled" />
+      <presentation id="UrlRedirectionIPRulesEnabled" />
+      <presentation id="UrlRedirectionProtocol_http">
+        <textBox refId="brokerHostname">
+          <label>代理主機名稱</label>
+        </textBox>
+        <textBox refId="remoteItem">
+          <label>遠端項目</label>
+        </textBox>
+        <text>用戶端規則</text>
+          <multiTextBox refId="clientRules" />
+        <text>代理程式規則</text>
+          <multiTextBox refId="agentRules" />
+      </presentation>
+      <presentation id="UrlRedirectionProtocol_https">
+        <textBox refId="brokerHostname">
+          <label>代理主機名稱</label>
+        </textBox>
+        <textBox refId="remoteItem">
+          <label>遠端項目</label>
+        </textBox>
+        <text>用戶端規則</text>
+          <multiTextBox refId="clientRules" />
+        <text>代理程式規則</text>
+          <multiTextBox refId="agentRules" />
+      </presentation>
+      <presentation id="UrlRedirectionProtocol_">
+        <textBox refId="brokerHostname">
+          <label>代理主機名稱</label>
+        </textBox>
+        <textBox refId="remoteItem">
+          <label>遠端項目</label>
+        </textBox>
+        <text>用戶端規則</text>
+          <multiTextBox refId="clientRules" />
+        <text>代理程式規則</text>
+          <multiTextBox refId="agentRules" />
+      </presentation>
+      <presentation id="UrlRedirectionProtocol_Whitelist">
+        <text>白名單</text>
+        <multiTextBox refId="whitelist" />
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

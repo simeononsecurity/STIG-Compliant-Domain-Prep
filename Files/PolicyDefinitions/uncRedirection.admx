@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitions revision="1.0" schemaVersion="1.0">
+  <policyNamespaces>
+    <target prefix="vdm_uncRedirection" namespace="VMware.Policies.vdm_uncRedirection" />
+    <using prefix="windows" namespace="Microsoft.Policies.Windows" />
+  </policyNamespaces>
+  <resources minRequiredRevision="1.0" />
+  <supportedOn>
+    <definitions>
+      <definition name="SUPPORTED_NotSpecified" displayName="$(string.ADMXMigrator_NoSupportedOn)" />
+    </definitions>
+  </supportedOn>
+  <categories>
+    <category name="VMwareHorizonUNCPathRedirection" displayName="$(string.UNCPath_GPO_Define)" />
+  </categories>
+  <policies>
+    <policy name="UNCPathRedirectionEnabled" class="Machine" displayName="$(string.UNCPathRedirection_Enabled)" explainText="$(string.UNCPathRedirection_Enabled_Description)" presentation="$(presentation.UNCPathRedirectionEnabled)" key="SOFTWARE\Policies\VMware, Inc.\VMware VDM\UNCRedirection" valueName="Enabled">
+      <parentCategory ref="VMwareHorizonUNCPathRedirection" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="UNCPathRedirectionFilterRule" class="Machine" displayName="$(string.UNCPathRedirection_FilterRule)" explainText="$(string.UNCPathRedirection_FilterRule_Description)" presentation="$(presentation.UNCPathRedirectionFilterRule)" key="SOFTWARE\Policies\VMware, Inc.\VMware VDM\UNCRedirection\filterRule">
+      <parentCategory ref="VMwareHorizonUNCPathRedirection" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <elements>
+        <text id="brokerHostname" valueName="brokerHostname" />
+        <text id="remoteItem" valueName="remoteItem" />
+        <multiText id="clientRules" valueName="clientRules" maxLength="32767" />
+        <multiText id="agentRules" valueName="agentRules" maxLength="32767" />
+      </elements>
+    </policy>
+  </policies>
+</policyDefinitions>

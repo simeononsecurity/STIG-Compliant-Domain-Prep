@@ -104,7 +104,7 @@ Los algoritmos de cifrado compatibles (por orden de preferencia) son SALSA20/12-
 
 Si ambos endpoints están configurados para admitir los 3 algoritmos y la conexión no usa una puerta de enlace de seguridad (SG), se negociará y se usará el algoritmo SALSA20.  Sin embargo, si la conexión usa una SG, SALSA20 se deshabilita automáticamente, y se negociará y se usará AES128. Si el endpoint o la SG deshabilitan SALSA20 y el endpoint también deshabilita AES128, se negociará y se usará AES256.</string>
 			<string id="String_Policy_Configure_SSL_protocols_91" >Configurar protocolos SSL</string>
-			<string id="String_Explain_Configures_openssl_92" >Configura los protocolos openssl para limitar el uso de ciertos protocolos antes de establecer una conexión SSL cifrada. La lista de protocolos cuenta con una o varias cadenas de protocolos openssl separadas por dos puntos. Tenga en cuenta que todas las cadenas de cifrado distinguen entre mayúsculas y minúsculas.
+			<string id="String_Explain_Configures_openssl_92" >Configura los protocolos openssl para limitar el uso de ciertos protocolos antes de establecer una conexión SSL cifrada. La lista de protocolos cuenta con una o varias cadenas de protocolos openssl separadas por dos puntos. Tenga en cuenta que las cadenas de cifrado no distinguen entre mayúsculas y minúsculas.
 
  El valor predeterminado es: 
    &quot;TLS1.0:TLS1.1:TLS1.2&quot;
@@ -115,7 +115,7 @@ Este ajuste se aplica tanto al agente como al cliente.
 
 Si está configurada en ambos lados, se seguirá la regla de negociación del protocolo OpenSSL.</string>
 			<string id="String_Policy_Configure_SSL_cipher_list_93" >Configurar lista de cifrado SSL</string>
-			<string id="String_Explain_Configures_SSL_cipher_list_94" >Configura la lista de cifrado SSL para restringir el uso del conjunto de claves de cifrado antes de establecer una conexión SSL cifrada. La lista consta de una o varias cadenas del conjunto de claves de cifrado separadas por dos puntos. Tenga en cuenta que todas las cadenas de cifrado distinguen entre mayúsculas y minúsculas.
+			<string id="String_Explain_Configures_SSL_cipher_list_94" >Configura la lista de cifrado SSL para restringir el uso del conjunto de claves de cifrado antes de establecer una conexión SSL cifrada. La lista consta de una o varias cadenas del conjunto de claves de cifrado separadas por dos puntos. Tenga en cuenta que las cadenas de cifrado no distinguen entre mayúsculas y minúsculas.
 
 El valor predeterminado es:
    &quot;ECDHE-RSA-AES256-GCM-SHA384:AES256-SHA256:AES256-SHA:ECDHE-RSA-AES128-GCM-SHA256:AES128-SHA256:AES128-SHA:@STRENGTH&quot;
@@ -251,7 +251,7 @@ Los algoritmos de cifrado compatibles (por orden de preferencia) son SALSA20/12-
 
 Si ambos endpoints están configurados para admitir los 3 algoritmos y la conexión no usa una puerta de enlace de seguridad (SG), se negociará y se usará el algoritmo SALSA20.  Sin embargo, si la conexión usa una SG, SALSA20 se deshabilita automáticamente, y se negociará y se usará AES128. Si el endpoint o la SG deshabilitan SALSA20 y el endpoint también deshabilita AES128, se negociará y se usará AES256.</string>
 			<string id="String_Policy_Configure_SSL_protocols_161" >Configurar protocolos SSL</string>
-			<string id="String_Explain_Configures_openssl_162" >Configura los protocolos openssl para limitar el uso de ciertos protocolos antes de establecer una conexión SSL cifrada. La lista de protocolos cuenta con una o varias cadenas de protocolos openssl separadas por dos puntos. Tenga en cuenta que todas las cadenas de cifrado distinguen entre mayúsculas y minúsculas.
+			<string id="String_Explain_Configures_openssl_162" >Configura los protocolos openssl para limitar el uso de ciertos protocolos antes de establecer una conexión SSL cifrada. La lista de protocolos cuenta con una o varias cadenas de protocolos openssl separadas por dos puntos. Tenga en cuenta que las cadenas de cifrado no distinguen entre mayúsculas y minúsculas.
 
  El valor predeterminado es: 
    &quot;TLS1.0:TLS1.1:TLS1.2&quot;
@@ -262,7 +262,7 @@ Este ajuste se aplica tanto al agente como al cliente.
 
 Si está configurada en ambos lados, se seguirá la regla de negociación del protocolo OpenSSL.</string>
 			<string id="String_Policy_Configure_SSL_cipher_list_163" >Configurar lista de cifrado SSL</string>
-			<string id="String_Explain_Configures_SSL_cipher_list_164" >Configura la lista de cifrado SSL para restringir el uso del conjunto de claves de cifrado antes de establecer una conexión SSL cifrada. La lista consta de una o varias cadenas del conjunto de claves de cifrado separadas por dos puntos. Tenga en cuenta que todas las cadenas de cifrado distinguen entre mayúsculas y minúsculas.
+			<string id="String_Explain_Configures_SSL_cipher_list_164" >Configura la lista de cifrado SSL para restringir el uso del conjunto de claves de cifrado antes de establecer una conexión SSL cifrada. La lista consta de una o varias cadenas del conjunto de claves de cifrado separadas por dos puntos. Tenga en cuenta que las cadenas de cifrado no distinguen entre mayúsculas y minúsculas.
 
 El valor predeterminado es:
    &quot;ECDHE-RSA-AES256-GCM-SHA384:AES256-SHA256:AES256-SHA:ECDHE-RSA-AES128-GCM-SHA256:AES128-SHA256:AES128-SHA:@STRENGTH&quot;

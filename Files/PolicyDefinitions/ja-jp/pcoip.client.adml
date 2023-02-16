@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" >
+
+	<displayName >ここに表示名を入力</displayName>
+	<description >VMware Horizon View PCoIP クライアントの設定</description>
+	<resources >
+		<stringTable ><!--Storage for String Definitions-->
+
+			<string id="String_SupportedOn_Undefined_2" >未定義</string>
+			<string id="String_SupportedOn_Undefined_4" >未定義</string>
+			<string id="String_SupportedOn_Undefined_6" >未定義</string>
+			<string id="String_SupportedOn_Undefined_8" >未定義</string>
+			<string id="String_SupportedOn_Undefined_10" >未定義</string>
+			<string id="String_SupportedOn_Undefined_12" >未定義</string>
+			<string id="String_SupportedOn_Undefined_14" >未定義</string>
+			<string id="String_SupportedOn_Undefined_15" >未定義</string>
+			<string id="String_SupportedOn_Undefined_16" >未定義</string>
+			<string id="String_SupportedOn_Undefined_18" >未定義</string>
+			<string id="String_SupportedOn_Undefined_20" >未定義</string>
+			<string id="String_SupportedOn_Undefined_22" >未定義</string>
+			<string id="String_SupportedOn_Undefined_24" >未定義</string>
+			<string id="String_SupportedOn_Undefined_26" >未定義</string>
+			<string id="String_SupportedOn_Undefined_28" >未定義</string>
+			<string id="String_SupportedOn_Undefined_30" >未定義</string>
+			<string id="String_SupportedOn_Undefined_32" >未定義</string>
+			<string id="String_SupportedOn_Undefined_34" >未定義</string>
+			<string id="String_SupportedOn_Undefined_36" >未定義</string>
+			<string id="String_SupportedOn_Undefined_38" >未定義</string>
+			<string id="String_SupportedOn_Undefined_40" >未定義</string>
+			<string id="String_SupportedOn_Undefined_42" >未定義</string>
+			<string id="String_SupportedOn_Undefined_43" >未定義</string>
+			<string id="String_SupportedOn_Undefined_44" >未定義</string>
+			<string id="String_SupportedOn_Undefined_46" >未定義</string>
+			<string id="String_SupportedOn_Undefined_48" >未定義</string>
+			<string id="String_SupportedOn_Undefined_50" >未定義</string>
+			<string id="String_SupportedOn_Undefined_52" >未定義</string>
+			<string id="String_SupportedOn_Undefined_54" >未定義</string>
+			<string id="String_SupportedOn_Undefined_56" >未定義</string>
+			<string id="String_Cat_PCoIP_Client_Session_58" >PCoIP クライアントのセッション変数</string>
+			<string id="String_Cat_Not_Overridable_60" >上書き不可の管理者設定</string>
+			<string id="String_Cat_Overridable_Administrator_62" >上書き可能な管理者デフォルト</string>
+			<string id="String_Policy_Configure_the_maximum_64" >PCoIP セッションの最大バンド幅の設定</string>
+			<string id="String_Explain_Specifies_the_maximum_65" >PCoIP セッションの最大バンド幅をキロビット/秒単位で指定します。このバンド幅には、イメージ、オーディオ、仮想チャネル、USB、および制御 PCoIP のすべてのトラフィックが含まれます。
+
+この値は、想定される同時並行の PCoIP セッションの数を考慮し、エンドポイントが接続されるリンクの合計容量に基づいて設定します。たとえば、4 メガビット/秒のインターネット接続を介して接続される単一ユーザーの VDI 構成 (単一の PCoIP セッションなど) では、この値を 4 メガビット (または他のネットワーク トラフィックを許容するために、そこから 10% 引いた値) に設定します。複数の VDI ユーザーまたは RDSH 構成など、複数の同時並行 PCoIP セッションでリンクを共有することを想定している場合には、設定を適宜調整する必要がありますが、この操作を行うと、各アクティブ セッションの最大バンド幅が制限されます。
+
+この値を設定すると、エージェントがリンク容量よりも高い速度での送信を試行して、過剰なパケット損失が発生したり、ユーザーの操作性が低下したりすることがなくなります。この値は対称型です。クライアント側とエージェント側で設定されている 2 つの値のうち、小さい方の値がクライアントとエージェントで強制的に使用されます。たとえば、最大バンド幅を 4 メガビット/秒に設定すると、それがクライアント側で行われた設定でも、エージェントは強制的にそれ以下の速度で送信するようになります。
+
+エンドポイント上でこの設定を無効にするか、設定しない場合、エンドポイントはバンド幅を制限しません。この設定を構成する場合、その設定はエンドポイントの最大バンド幅制限としてキロビット/秒単位で使用されます。
+
+この設定が構成されていない場合のデフォルト値は、900000 キロビット/秒になります。
+
+この設定は、エージェントとクライアントに適用されます。2 つのエンドポイントの設定が異なる場合は、小さい方の値が使用されます。</string>
+			<string id="String_Policy_Configure_the_PCoIP_68" >PCoIP セッションの最大 MTU の設定</string>
+			<string id="String_Explain_Specifies_the_Maximum_69" >PCoIP セッションでの UDP パケットの最大転送ユニット (MTU) サイズを指定します。
+
+この MTU サイズには、IP および UDP のパケット ヘッダーが含まれます。TCP では MTU の設定に標準の MTU 検出メカニズムが使用されるため、この設定による影響を受けません。最大 MTU サイズは 1500 バイトです。最小 MTU サイズは 500 バイトです。デフォルト値は 1200 バイトです。
+
+通常、MTU サイズを変更する必要はありません。PCoIP パケットの断片化の原因となる、通常と異なるネットワーク設定を使用する場合は、この値を変更してください。
+
+この設定は、サーバとクライアントに適用されます。2 つのエンドポイントの MTU サイズ設定が異なる場合は、小さい方のサイズが使用されます。
+
+この設定を無効にするか、設定しない場合、クライアントではサーバとのネゴシエーションにデフォルト値が使用されます。</string>
+			<string id="String_Policy_Configure_the_PCoIP_72" >PCoIP セッションのバンド幅下限の設定</string>
+			<string id="String_Explain_Specifies_a_lower_73" >PCoIP セッションによって予約されるバンド幅の下限をキロビット/秒単位で指定します。
+
+この設定では、エンドポイントのバンド幅で期待される最小送信速度が構成されます。この設定を使用してエンドポイントのバンド幅を予約すると、バンド幅が使用可能になるまで待つ必要がなくなるため、セッションの応答性が向上します。
+
+すべてのエンドポイントの合計予約バンド幅を過剰にサブスクライブしないように注意してください。また、構成内の全接続のバンド幅下限の合計がネットワークの容量を超えないように注意してください。
+
+デフォルト値は 0 です。これは、最小バンド幅が予約されないことを意味します。この設定を無効にするか、設定しない場合、最小バンド幅は予約されません。
+
+この設定はサーバとクライアントに適用されますが、構成されたエンドポイントにのみ影響します。
+
+この設定をアクティブ PCoIP セッション中に変更すると、変更が直ちに反映されます。</string>
+			<string id="String_Policy_Enable_disable_76" >PCoIP セッションでオーディオを有効または無効にする</string>
+			<string id="String_Explain_Determines_whether_77" >PCoIP セッションでオーディオを有効にするかどうかを指定します。両方のエンドポイントでオーディオが有効になっている必要があります。この設定を有効にすると、PCoIP オーディオが許可されます。この設定を無効にすると、PCoIP オーディオが無効になります。この設定を構成しないと、デフォルトでオーディオが有効になります。
+
+</string>
+			<string id="String_Policy_Configure_SSL_connections_79" >Security Tools の要件を満たすために SSL 接続を設定</string>
+			<string id="String_Explain_Specifies_how_SSL_80" >SSL セッションのネゴシエーション接続の確立方法を指定します。
+
+ポート スキャナの要件を満たすには、この「SSL 接続を設定」を有効にして、次の操作を行います。
+
+1. 信頼されたルート証明書ストアに、サーバ証明書で署名され、PCoIP で使用する認証局の証明書を保存します。
+2. 証明書ストアから証明書を読み込むようにエージェントを構成します。ローカル マシンの個人用ストアを使用する場合、手順 1 で別の場所を使用していなければ、CA 証明書ストアの名前 (ROOT) を変更せず、そのまま使用します。
+
+PCoIP クライアントがポート スキャナなどの Security Tools の要件を満たすようになります。
+
+この「SSL 接続を設定」を無効にするか、設定しない場合、次の処理が行われます。
+
+1. エンドポイントが、マシン アカウントの MY ストアにある認証局の証明書と ROOT ストアにある認証局の証明書を保存します。
+2. AES-128 暗号スイートが使用可能になります。</string>
+			<string id="String_Policy_Configure_PCoIP_85" >PCoIP セッション暗号化アルゴリズムの設定</string>
+			<string id="String_Explain_Controls_the_encryption_86" >セッション ネゴシエーション中に PCoIP エンドポイントによってアドバタイズされる暗号化アルゴリズムを制御します。
+
+いずれかのチェック ボックスをオンにすると、関連付けられた暗号化アルゴリズムが無効になります。1 つ以上のアルゴリズムを有効にする必要があります。
+
+この設定はエージェントとクライアントの両方に適用されます。エンドポイントは、使用される実際のセッション暗号化アルゴリズムをネゴシエートします。FIPS140-2 承認モードが有効であると、AES-128-GCM 暗号化と AES-256-GCM 暗号化の両方が無効である場合に、「AES-128-GCM 暗号化を無効にする」の値がオーバーライドされます。
+
+「SSL 接続を設定」全体を無効にするか、設定しない場合、このエンドポイントによるネゴシエーションに Salsa20-256round12 と AES-128-GCM の両方のアルゴリズムを使用できます。
+
+サポートされている暗号化アルゴリズムは、SALSA20/12-256、AES-GCM-128、AES-GCM-256 (優先順位順) です。デフォルトでは、サポートされているすべての暗号化アルゴリズムを、このエンドポイントのネゴシエーションに使用できます。
+
+両方のエンドポイントが 3 つすべてのアルゴリズムをサポートするように構成され、接続でセキュリティ ゲートウェイ (SG) が使用されない場合は、SALSA20 アルゴリズムがネゴシエートされ使用されます。ただし、接続で SG が使用される場合は SALSA20 が自動的に無効になり、AES128 がネゴシエートされ使用されます。一方のエンドポイントまたは SG が SALSA20 を無効に、もう一方のエンドポイントが AES128 を無効にすると、AES256 がネゴシエートされ使用されます。</string>
+			<string id="String_Policy_Configure_SSL_protocols_91" >SSL プロトコルの設定</string>
+			<string id="String_Explain_Configures_openssl_92" >SSL 暗号化接続を確立する前に、特定のプロトコルの使用を制限する openssl プロトコルを構成します。プロトコル リストは、コロンで区切られた 1 つ以上の openssl プロトコル文字列で構成されています。暗号文字列で大文字と小文字は区別されません。
+
+ デフォルト値は次のとおりです。
+   &quot;TLS1.0:TLS1.1:TLS1.2&quot;
+
+ 意味: TLS v1.0、TLS v1.1、TLS v1.2 が有効です (SSL v2.0 と SSLv3.0 は無効です)。
+
+この設定はエージェントとクライアントの両方に適用されます。
+
+両側で設定すると、OpenSSL プロトコルのネゴシエーション ルールが使用されます。</string>
+			<string id="String_Policy_Configure_SSL_cipher_list_93" >SSL 暗号リストの設定</string>
+			<string id="String_Explain_Configures_SSL_cipher_list_94" >SSL 暗号化接続を確立する前に、暗号の使用を制限する SSL 暗号リストを構成します。このリストは、コロンで区切られた 1 つ以上の暗号文字列で構成されています。暗号文字列で大文字と小文字は区別されません。
+
+デフォルト値は次のとおりです。
+   &quot;ECDHE-RSA-AES256-GCM-SHA384:AES256-SHA256:AES256-SHA:ECDHE-RSA-AES128-GCM-SHA256:AES128-SHA256:AES128-SHA:@STRENGTH&quot;
+
+この項目を設定すると、「Security Tools の要件を満たすために SSL 接続を設定」の「SSL 接続ネゴシエーションに AES-256 以上の暗号を強制する」が無視されます。
+
+この設定は、PCoIP Server と PCoIP クライアントに同時に適用する必要があります。</string>
+			<string id="String_Policy_Configure_the_Client_95" >クライアントの PCoIP UDP ポートの設定</string>
+			<string id="String_Explain_Specifies_the_UDP_96" >ソフトウェア PCoIP クライアントによって使用される UDP クライアント ポートを指定します。この値は手動で設定することも、クライアントのオペレーティング システム (OS) で自動判別することもできます。この設定はクライアントにのみ適用されます。
+
+手動で設定するには、UDP ポートと再試行のポート範囲の両方を入力します。UDP ポートの値によって、使用されるベース UDP ポートが指定されます。UDP ポート範囲の値によって、ベース ポートが使用可能でない場合に使用を試行する追加ポートの数が指定されます。この範囲は、ベース ポートから、ベース ポートにポート範囲を加えた数値までになります。たとえば、ベース ポートが 50002 でポート範囲が 64 の場合、範囲は 50002 から 50066 までになります。デフォルトでは、ベース ポートは 50002、ポート範囲は 64 です。
+
+「OS が UDP ポートを自動的に判別」をオンにすると、クライアント OS は手動で設定された値を無視し、他のプログラムが使用していない UDP ポートを自動的に選択します。</string>
+			<string id="String_Policy_Configure_PCoIP_101" >PCoIP 仮想チャネルの設定</string>
+			<string id="String_Explain_Specifies_the_virtual_102" >PCoIP セッションで動作できる仮想チャネルと動作できない仮想チャネルを指定します。この設定によって、PCoIP ホスト上でのクリップボードの処理を無効にするかどうかも指定されます。
+
+PCoIP セッションで使用される仮想チャネルは、許可仮想チャネル リストに表示されている必要があります。不許可仮想チャネル リストに表示されている仮想チャネルは、PCoIP セッションでは使用できません。
+
+PCoIP セッションで使用する仮想チャネルを 15 まで指定できます。
+
+複数のチャネル名は縦棒 (|) 文字で区切ります。たとえば、mksvchan と vdp_rdpvcbridge の仮想チャネル許可文字列は、mksvchan|vdp_rdpvcbridge です。
+
+チャネル名に縦棒文字またはバックスラッシュ (\) 文字が含まれる場合は、その前にバックスラッシュ文字を入れてください。たとえば、チャネル名 awk|ward\channel は awk\|ward\\channel として入力します。
+
+許可仮想チャネル リストが空の場合は、すべての仮想チャネルが禁止されます。不許可仮想チャネル リストが空の場合は、すべての仮想チャネルが許可されます。
+
+仮想チャネルの設定はエージェントとクライアントの両方に適用されます。仮想チャネルを使用するには、エージェントとクライアントの両方で仮想チャネルを有効にする必要があります。
+
+仮想チャネルの設定には、PCoIP ホスト上でのクリップボードのリモート処理を無効にできるチェック ボックスが別にあります。この値はエージェントにのみ適用されます。
+
+デフォルトでは、クリップボードの処理を含め、すべての仮想チャネルが有効です。</string>
+			<string id="String_Policy_DropList_Select_Configure_PCoIP_0_Disable_virtual_104" >0 - PCoIP セッションで仮想チャネルを無効にする</string>
+			<string id="String_Policy_DropList_Select_Configure_PCoIP_2_Disable_all_105" >2 - 次を除くすべての仮想チャネルを無効にする</string>
+			<string id="String_Policy_DropList_Select_Configure_PCoIP_3_Enable_all_106" >3 - 次を除くすべての仮想チャネルを有効にする</string>
+			<string id="String_Policy_Configure_PCoIP_110" >PCoIP クライアントのイメージ キャッシュ サイズ ポリシーの設定</string>
+			<string id="String_Explain_Controls_the_size_111" >PCoIP クライアントのイメージ キャッシュのサイズを制御します。クライアントは、イメージ キャッシュを使用して以前に送信された表示の一部を保存します。イメージ キャッシュにより、再送されるデータ量が削減されます。
+
+この設定は、View Client、View Agent、View Connection Server が View 5.0 以降のリリースの場合に Windows および Linux クライアントにのみ適用されます。
+
+この設定を構成しないか、無効にすると、PCoIP はデフォルトのクライアント イメージ キャッシュ サイズである 250MB を使用します。
+
+この設定を有効にすると、クライアントのイメージ キャッシュサイズを最小 50 MB から最大 1024 MB まで設定できます。デフォルト値は 250 MB です。</string>
+			<string id="String_Policy_Configure_the_PCoIP_114" >PCoIP 転送ヘッダーを設定</string>
+			<string id="String_Explain_Configures_the_115" >PCoIP 転送ヘッダーを構成します。
+
+PCoIP 転送ヘッダーは、すべての PCoIP UDP パケットに追加される 32 ビット長のヘッダーです (転送ヘッダーが有効にされ、両側でサポートされる場合に限ります)。PCoIP 転送ヘッダーによって、ネットワーク デバイスは、ネットワークの輻輳を処理するときに、より良い優先順位/QoS 決定を行うことができます。デフォルトでは、転送ヘッダーは有効になっています。
+
+転送セッションの優先度は、PCoIP 転送ヘッダーでレポートされる PCoIP セッション優先度を決定します。ネットワーク デバイスは、指定した転送セッション優先度に基づいてより良い優先順位/QoS 決定を行います。転送セッション優先度値は、PCoIP エージェントとクライアントによって取り決められます。エージェントが転送セッション優先度値 (高、中、低) を指定している場合、セッションはエージェント指定のセッション優先度を使用します。クライアントが転送セッション優先度値 (高、中、低) を指定している場合、セッションはクライアント指定のセッション優先度を使用します。エージェントもクライアントも転送セッション優先度を指定していない場合、あるいは未定義の優先度を指定している場合は、セッションはデフォルト値の中優先度を使用します。</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_High_Priority_117" >高優先度</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_Medium_Priority_118" >中優先度 (デフォルト)</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_Low_Priority_119" >低優先度</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_Undefined_Priority_120" >未定義の優先度</string>
+			<string id="String_Policy_Configure_PCoIP_122" >PCoIP イベント ログの詳細度の設定</string>
+			<string id="String_Explain_This_policy_enables_123" >PCoIP イベント ログの詳細度を 0 (最も簡素) から 3 (最も詳細) の範囲で設定できます。
+
+このポリシーを無効にするか、設定しない場合、イベント ログの詳細度のデフォルト値は 2 です。このポリシーを有効にすると、前述のように詳細度レベルを制御できます。
+
+この設定をアクティブ PCoIP セッション中に変更すると、変更が直ちに反映されます。</string>
+			<string id="String_Policy_Configure_PCoIP_126" >時間 (日数) に基づく PCoIP イベント ログ クリーンアップの設定</string>
+			<string id="String_Explain_This_policy_enables_127" >時間 (日数) に基づく PCoIP イベント ログ クリーンアップの設定を有効にします。
+
+このポリシーを有効にすると、ログ ファイルのクリーンアップを時間 (日数) で制御できます。たとえば、0 以外の n を設定すると、n 日を経過したログ ファイルは自動的に削除されます。0 を設定すると、時間でファイルのクリーンアップは実行されません。このポリシーを無効にするか、設定しない場合、時間 (日数) に基づくイベント ログ クリーンアップのデフォルト値は 7 です。
+
+ログ ファイルのクリーンアップは、セッション起動時に 1 回実行されます。設定に行った変更は、次のセッションまで適用されません。</string>
+			<string id="String_Policy_Configure_PCoIP_130" >サイズ (MB) に基づく PCoIP イベント ログ クリーンアップの設定</string>
+			<string id="String_Explain_This_policy_enables_131" >サイズ (MB) に基づく PCoIP イベント ログ クリーンアップの設定を有効にします。
+
+このポリシーを有効にすると、ログ ファイルのクリーンアップをサイズ (MB) で制御できます。たとえば、0 以外の n を設定すると、n MB を超えたログ ファイルは自動的に削除されます。0 を設定すると、サイズでファイルのクリーンアップは実行されません。このポリシーを無効にするか、設定しない場合、サイズ (MB) に基づくイベント ログ クリーンアップのデフォルト値は 100 です。
+
+ログ ファイルのクリーンアップは、セッション起動時に 1 回実行されます。設定に行った変更は、次のセッションまで適用されません。</string>
+			<string id="String_Policy_Configure_the_maximum_134" >PCoIP セッションの最大バンド幅の設定</string>
+			<string id="String_Explain_Specifies_the_maximum_135" >PCoIP セッションの最大バンド幅をキロビット/秒単位で指定します。このバンド幅には、イメージ、オーディオ、仮想チャネル、USB、および制御 PCoIP のすべてのトラフィックが含まれます。
+
+この値は、想定される同時並行の PCoIP セッションの数を考慮し、エンドポイントが接続されるリンクの合計容量に基づいて設定します。たとえば、4 メガビット/秒のインターネット接続を介して接続される単一ユーザーの VDI 構成 (単一の PCoIP セッションなど) では、この値を 4 メガビット (または他のネットワーク トラフィックを許容するために、そこから 10% 引いた値) に設定します。複数の VDI ユーザーまたは RDSH 構成など、複数の同時並行 PCoIP セッションでリンクを共有することを想定している場合には、設定を適宜調整する必要がありますが、この操作を行うと、各アクティブ セッションの最大バンド幅が制限されます。
+
+この値を設定すると、エージェントがリンク容量よりも高い速度での送信を試行して、過剰なパケット損失が発生したり、ユーザーの操作性が低下したりすることがなくなります。この値は対称型です。クライアント側とエージェント側で設定されている 2 つの値のうち、小さい方の値がクライアントとエージェントで強制的に使用されます。たとえば、最大バンド幅を 4 メガビット/秒に設定すると、それがクライアント側で行われた設定でも、エージェントは強制的にそれ以下の速度で送信するようになります。
+
+エンドポイント上でこの設定を無効にするか、設定しない場合、エンドポイントはバンド幅を制限しません。この設定を構成する場合、その設定はエンドポイントの最大バンド幅制限としてキロビット/秒単位で使用されます。
+
+この設定が構成されていない場合のデフォルト値は、900000 キロビット/秒になります。
+
+この設定は、エージェントとクライアントに適用されます。2 つのエンドポイントの設定が異なる場合は、小さい方の値が使用されます。</string>
+			<string id="String_Policy_Configure_the_PCoIP_138" >PCoIP セッションの最大 MTU の設定</string>
+			<string id="String_Explain_Specifies_the_Maximum_139" >PCoIP セッションでの UDP パケットの最大転送ユニット (MTU) サイズを指定します。
+
+この MTU サイズには、IP および UDP のパケット ヘッダーが含まれます。TCP では MTU の設定に標準の MTU 検出メカニズムが使用されるため、この設定による影響を受けません。最大 MTU サイズは 1500 バイトです。最小 MTU サイズは 500 バイトです。デフォルト値は 1200 バイトです。
+
+通常、MTU サイズを変更する必要はありません。PCoIP パケットの断片化の原因となる、通常と異なるネットワーク設定を使用する場合は、この値を変更してください。
+
+この設定は、サーバとクライアントに適用されます。2 つのエンドポイントの MTU サイズ設定が異なる場合は、小さい方のサイズが使用されます。
+
+この設定を無効にするか、設定しない場合、クライアントではサーバとのネゴシエーションにデフォルト値が使用されます。</string>
+			<string id="String_Policy_Configure_the_PCoIP_142" >PCoIP セッションのバンド幅下限の設定</string>
+			<string id="String_Explain_Specifies_a_lower_143" >PCoIP セッションによって予約されるバンド幅の下限をキロビット/秒単位で指定します。
+
+この設定では、エンドポイントのバンド幅で期待される最小送信速度が構成されます。この設定を使用してエンドポイントのバンド幅を予約すると、バンド幅が使用可能になるまで待つ必要がなくなるため、セッションの応答性が向上します。
+
+すべてのエンドポイントの合計予約バンド幅を過剰にサブスクライブしないように注意してください。また、構成内の全接続のバンド幅下限の合計がネットワークの容量を超えないように注意してください。
+
+デフォルト値は 0 です。これは、最小バンド幅が予約されないことを意味します。この設定を無効にするか、設定しない場合、最小バンド幅は予約されません。
+
+この設定はサーバとクライアントに適用されますが、構成されたエンドポイントにのみ影響します。
+
+この設定をアクティブ PCoIP セッション中に変更すると、変更が直ちに反映されます。</string>
+			<string id="String_Policy_Enable_disable_146" >PCoIP セッションでオーディオを有効または無効にする</string>
+			<string id="String_Explain_Determines_whether_147" >PCoIP セッションでオーディオを有効にするかどうかを指定します。両方のエンドポイントでオーディオが有効になっている必要があります。この設定を有効にすると、PCoIP オーディオが許可されます。この設定を無効にすると、PCoIP オーディオが無効になります。この設定を構成しないと、デフォルトでオーディオが有効になります。
+
+</string>
+			<string id="String_Policy_Configure_SSL_connections_149" >Security Tools の要件を満たすために SSL 接続を設定</string>
+			<string id="String_Explain_Specifies_how_SSL_150" >SSL セッションのネゴシエーション接続の確立方法を指定します。
+
+ポート スキャナの要件を満たすには、この「SSL 接続を設定」を有効にして、次の操作を行います。
+
+1. 信頼されたルート証明書ストアに、サーバ証明書で署名され、PCoIP で使用する認証局の証明書を保存します。
+2. 証明書ストアから証明書を読み込むようにエージェントを構成します。ローカル マシンの個人用ストアを使用する場合、手順 1 で別の場所を使用していなければ、CA 証明書ストアの名前 (ROOT) を変更せず、そのまま使用します。
+
+PCoIP クライアントがポート スキャナなどの Security Tools の要件を満たすようになります。
+
+この「SSL 接続を設定」を無効にするか、設定しない場合、次の処理が行われます。
+
+1. エンドポイントが、マシン アカウントの MY ストアにある認証局の証明書と ROOT ストアにある認証局の証明書を保存します。
+2. AES-128 暗号スイートが使用可能になります。</string>
+			<string id="String_Policy_Configure_PCoIP_155" >PCoIP セッション暗号化アルゴリズムの設定</string>
+			<string id="String_Explain_Controls_the_encryption_156" >セッション ネゴシエーション中に PCoIP エンドポイントによってアドバタイズされる暗号化アルゴリズムを制御します。
+
+いずれかのチェック ボックスをオンにすると、関連付けられた暗号化アルゴリズムが無効になります。1 つ以上のアルゴリズムを有効にする必要があります。
+
+この設定はエージェントとクライアントの両方に適用されます。エンドポイントは、使用される実際のセッション暗号化アルゴリズムをネゴシエートします。FIPS140-2 承認モードが有効であると、AES-128-GCM 暗号化と AES-256-GCM 暗号化の両方が無効である場合に、「AES-128-GCM 暗号化を無効にする」の値がオーバーライドされます。
+
+「SSL 接続を設定」全体を無効にするか、設定しない場合、このエンドポイントによるネゴシエーションに Salsa20-256round12 と AES-128-GCM の両方のアルゴリズムを使用できます。
+
+サポートされている暗号化アルゴリズムは、SALSA20/12-256、AES-GCM-128、AES-GCM-256 (優先順位順) です。デフォルトでは、サポートされているすべての暗号化アルゴリズムを、このエンドポイントのネゴシエーションに使用できます。
+
+両方のエンドポイントが 3 つすべてのアルゴリズムをサポートするように構成され、接続でセキュリティ ゲートウェイ (SG) が使用されない場合は、SALSA20 アルゴリズムがネゴシエートされ使用されます。ただし、接続で SG が使用される場合は SALSA20 が自動的に無効になり、AES128 がネゴシエートされ使用されます。一方のエンドポイントまたは SG が SALSA20 を無効に、もう一方のエンドポイントが AES128 を無効にすると、AES256 がネゴシエートされ使用されます。</string>
+			<string id="String_Policy_Configure_SSL_protocols_161" >SSL プロトコルの設定</string>
+			<string id="String_Explain_Configures_openssl_162" >SSL 暗号化接続を確立する前に、特定のプロトコルの使用を制限する openssl プロトコルを構成します。プロトコル リストは、コロンで区切られた 1 つ以上の openssl プロトコル文字列で構成されています。暗号文字列で大文字と小文字は区別されません。
+
+ デフォルト値は次のとおりです。
+   &quot;TLS1.0:TLS1.1:TLS1.2&quot;
+
+ 意味: TLS v1.0、TLS v1.1、TLS v1.2 が有効です (SSL v2.0 と SSLv3.0 は無効です)。
+
+この設定はエージェントとクライアントの両方に適用されます。
+
+両側で設定すると、OpenSSL プロトコルのネゴシエーション ルールが使用されます。</string>
+			<string id="String_Policy_Configure_SSL_cipher_list_163" >SSL 暗号リストの設定</string>
+			<string id="String_Explain_Configures_SSL_cipher_list_164" >SSL 暗号化接続を確立する前に、暗号の使用を制限する SSL 暗号リストを構成します。このリストは、コロンで区切られた 1 つ以上の暗号文字列で構成されています。暗号文字列で大文字と小文字は区別されません。
+
+デフォルト値は次のとおりです。
+   &quot;ECDHE-RSA-AES256-GCM-SHA384:AES256-SHA256:AES256-SHA:ECDHE-RSA-AES128-GCM-SHA256:AES128-SHA256:AES128-SHA:@STRENGTH&quot;
+
+この項目を設定すると、「Security Tools の要件を満たすために SSL 接続を設定」の「SSL 接続ネゴシエーションに AES-256 以上の暗号を強制する」が無視されます。
+
+この設定は、PCoIP Server と PCoIP クライアントに同時に適用する必要があります。</string>
+			<string id="String_Policy_Configure_the_Client_165" >クライアントの PCoIP UDP ポートの設定</string>
+			<string id="String_Explain_Specifies_the_UDP_166" >ソフトウェア PCoIP クライアントによって使用される UDP クライアント ポートを指定します。この値は手動で設定することも、クライアントのオペレーティング システム (OS) で自動判別することもできます。この設定はクライアントにのみ適用されます。
+
+手動で設定するには、UDP ポートと再試行のポート範囲の両方を入力します。UDP ポートの値によって、使用されるベース UDP ポートが指定されます。UDP ポート範囲の値によって、ベース ポートが使用可能でない場合に使用を試行する追加ポートの数が指定されます。この範囲は、ベース ポートから、ベース ポートにポート範囲を加えた数値までになります。たとえば、ベース ポートが 50002 でポート範囲が 64 の場合、範囲は 50002 から 50066 までになります。デフォルトでは、ベース ポートは 50002、ポート範囲は 64 です。
+
+「OS が UDP ポートを自動的に判別」をオンにすると、クライアント OS は手動で設定された値を無視し、他のプログラムが使用していない UDP ポートを自動的に選択します。</string>
+			<string id="String_Policy_Configure_PCoIP_171" >PCoIP 仮想チャネルの設定</string>
+			<string id="String_Explain_Specifies_the_virtual_172" >PCoIP セッションで動作できる仮想チャネルと動作できない仮想チャネルを指定します。この設定によって、PCoIP ホスト上でのクリップボードの処理を無効にするかどうかも指定されます。
+
+PCoIP セッションで使用される仮想チャネルは、許可仮想チャネル リストに表示されている必要があります。不許可仮想チャネル リストに表示されている仮想チャネルは、PCoIP セッションでは使用できません。
+
+PCoIP セッションで使用する仮想チャネルを 15 まで指定できます。
+
+複数のチャネル名は縦棒 (|) 文字で区切ります。たとえば、mksvchan と vdp_rdpvcbridge の仮想チャネル許可文字列は、mksvchan|vdp_rdpvcbridge です。
+
+チャネル名に縦棒文字またはバックスラッシュ (\) 文字が含まれる場合は、その前にバックスラッシュ文字を入れてください。たとえば、チャネル名 awk|ward\channel は awk\|ward\\channel として入力します。
+
+許可仮想チャネル リストが空の場合は、すべての仮想チャネルが禁止されます。不許可仮想チャネル リストが空の場合は、すべての仮想チャネルが許可されます。
+
+仮想チャネルの設定はエージェントとクライアントの両方に適用されます。仮想チャネルを使用するには、エージェントとクライアントの両方で仮想チャネルを有効にする必要があります。
+
+仮想チャネルの設定には、PCoIP ホスト上でのクリップボードのリモート処理を無効にできるチェック ボックスが別にあります。この値はエージェントにのみ適用されます。
+
+デフォルトでは、クリップボードの処理を含め、すべての仮想チャネルが有効です。</string>
+			<string id="String_Policy_DropList_Select_Configure_PCoIP_0_Disable_virtual_174" >0 - PCoIP セッションで仮想チャネルを無効にする</string>
+			<string id="String_Policy_DropList_Select_Configure_PCoIP_2_Disable_all_175" >2 - 次を除くすべての仮想チャネルを無効にする</string>
+			<string id="String_Policy_DropList_Select_Configure_PCoIP_3_Enable_all_176" >3 - 次を除くすべての仮想チャネルを有効にする</string>
+			<string id="String_Policy_Configure_PCoIP_180" >PCoIP クライアントのイメージ キャッシュ サイズ ポリシーの設定</string>
+			<string id="String_Explain_Controls_the_size_181" >PCoIP クライアントのイメージ キャッシュのサイズを制御します。クライアントは、イメージ キャッシュを使用して以前に送信された表示の一部を保存します。イメージ キャッシュにより、再送されるデータ量が削減されます。
+
+この設定は、View Client、View Agent、View Connection Server が View 5.0 以降のリリースの場合に Windows および Linux クライアントにのみ適用されます。
+
+この設定を構成しないか、無効にすると、PCoIP はデフォルトのクライアント イメージ キャッシュ サイズである 250MB を使用します。
+
+この設定を有効にすると、クライアントのイメージ キャッシュサイズを最小 50 MB から最大 1024 MB まで設定できます。デフォルト値は 250 MB です。</string>
+			<string id="String_Policy_Configure_the_PCoIP_184" >PCoIP 転送ヘッダーを設定</string>
+			<string id="String_Explain_Configures_the_185" >PCoIP 転送ヘッダーを構成します。
+
+PCoIP 転送ヘッダーは、すべての PCoIP UDP パケットに追加される 32 ビット長のヘッダーです (転送ヘッダーが有効にされ、両側でサポートされる場合に限ります)。PCoIP 転送ヘッダーによって、ネットワーク デバイスは、ネットワークの輻輳を処理するときに、より良い優先順位/QoS 決定を行うことができます。デフォルトでは、転送ヘッダーは有効になっています。
+
+転送セッションの優先度は、PCoIP 転送ヘッダーでレポートされる PCoIP セッション優先度を決定します。ネットワーク デバイスは、指定した転送セッション優先度に基づいてより良い優先順位/QoS 決定を行います。転送セッション優先度値は、PCoIP エージェントとクライアントによって取り決められます。エージェントが転送セッション優先度値 (高、中、低) を指定している場合、セッションはエージェント指定のセッション優先度を使用します。クライアントが転送セッション優先度値 (高、中、低) を指定している場合、セッションはクライアント指定のセッション優先度を使用します。エージェントもクライアントも転送セッション優先度を指定していない場合、あるいは未定義の優先度を指定している場合は、セッションはデフォルト値の中優先度を使用します。</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_High_Priority_187" >高優先度</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_Medium_Priority_188" >中優先度 (デフォルト)</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_Low_Priority_189" >低優先度</string>
+			<string id="String_Policy_DropList_Select_Configure_the_PCoIP_Undefined_Priority_190" >未定義の優先度</string>
+			<string id="String_Policy_Configure_PCoIP_192" >PCoIP イベント ログの詳細度の設定</string>
+			<string id="String_Explain_This_policy_enables_193" >PCoIP イベント ログの詳細度を 0 (最も簡素) から 3 (最も詳細) の範囲で設定できます。
+
+このポリシーを無効にするか、設定しない場合、イベント ログの詳細度のデフォルト値は 2 です。このポリシーを有効にすると、前述のように詳細度レベルを制御できます。
+
+この設定をアクティブ PCoIP セッション中に変更すると、変更が直ちに反映されます。</string>
+			<string id="String_Policy_Configure_PCoIP_196" >時間 (日数) に基づく PCoIP イベント ログ クリーンアップの設定</string>
+			<string id="String_Explain_This_policy_enables_197" >時間 (日数) に基づく PCoIP イベント ログ クリーンアップの設定を有効にします。
+
+このポリシーを有効にすると、ログ ファイルのクリーンアップを時間 (日数) で制御できます。たとえば、0 以外の n を設定すると、n 日を経過したログ ファイルは自動的に削除されます。0 を設定すると、時間でファイルのクリーンアップは実行されません。このポリシーを無効にするか、設定しない場合、時間 (日数) に基づくイベント ログ クリーンアップのデフォルト値は 7 です。
+
+ログ ファイルのクリーンアップは、セッション起動時に 1 回実行されます。設定に行った変更は、次のセッションまで適用されません。</string>
+			<string id="String_Policy_Configure_PCoIP_200" >サイズ (MB) に基づく PCoIP イベント ログ クリーンアップの設定</string>
+			<string id="String_Explain_This_policy_enables_201" >サイズ (MB) に基づく PCoIP イベント ログ クリーンアップの設定を有効にします。
+
+このポリシーを有効にすると、ログ ファイルのクリーンアップをサイズ (MB) で制御できます。たとえば、0 以外の n を設定すると、n MB を超えたログ ファイルは自動的に削除されます。0 を設定すると、サイズでファイルのクリーンアップは実行されません。このポリシーを無効にするか、設定しない場合、サイズ (MB) に基づくイベント ログ クリーンアップのデフォルト値は 100 です。
+
+ログ ファイルのクリーンアップは、セッション起動時に 1 回実行されます。設定に行った変更は、次のセッションまで適用されません。</string>
+		</stringTable>
+		<presentationTable ><!--Storage for Presentation Definitions-->
+
+			<presentation id="Policy_Configure_the_maximum_63" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_maximum_66" spinStep="100" spin="true" defaultValue="900000" >PCoIP セッションのバンド幅をキロビット/秒単位で設定:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_67" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_PCoIP_70" spinStep="1" spin="true" defaultValue="1200" >PCoIP MTU のサイズをバイト単位で設定:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_71" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_PCoIP_74" spinStep="1" spin="true" defaultValue="0" >PCoIP セッションのバンド幅下限をキロビット/秒単位で設定:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_SSL_connections_78" >
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_connections_81" >
+					<label >マシン アカウントで証明書の検索に使用する証明書ストアの名前:</label>
+					<defaultValue >MY</defaultValue>
+				</textBox>
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_connections_82" >
+					<label >マシン アカウントで認証局証明書の検索に使用する証明書ストアの名前:</label>
+					<defaultValue >ROOT</defaultValue>
+				</textBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_SSL_connections_83" >SSL 接続ネゴシエーションに AES-256 以上の暗号を強制する</checkBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_84" >
+				<text >1 つ以上の暗号化アルゴリズムを有効にする必要があります。(説明を参照)</text>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_87" >Salsa20-256-round12 暗号化を無効にする</checkBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_88" >AES-128-GCM 暗号化を無効にする</checkBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_89" >AES-256-GCM 暗号化を無効にする</checkBox>
+			</presentation>
+			<presentation id="Policy_Configure_SSL_protocols_90" >
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_protocols_93" >
+					<label >SSL プロトコルの設定</label>
+					<defaultValue >TLS1.0:TLS1.1:TLS1.2</defaultValue>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Configure_SSL_cipher_list_91" >
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_cipher_list_94" >
+					<label >SSL 暗号リストの設定</label>
+					<defaultValue >ECDHE-RSA-AES256-GCM-SHA384:AES256-SHA256:AES256-SHA:ECDHE-RSA-AES128-GCM-SHA256:AES128-SHA256:AES128-SHA:@STRENGTH</defaultValue>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_Client_94" >
+				<text >UDP ポートと再試行範囲のサイズを設定します。</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_Client_97" spinStep="1" spin="true" defaultValue="50002" >UDP ポートを選択:</decimalTextBox>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_Client_98" spinStep="1" spin="true" defaultValue="64" >再試行ポート範囲のサイズを設定:</decimalTextBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_the_Client_99" >OS が UDP ポートを自動的に判別</checkBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_100" >
+				<dropdownList refId="Policy_DropList_Element_Configure_PCoIP_103" defaultItem="0" >仮想チャネルの設定:</dropdownList>
+				<text >以下の設定は、2 を選択した場合にのみ必要で、適用可能です。</text>
+				<text >文字列の形式と例については、[説明] タブを参照してください。</text>
+				<textBox refId="Policy_TextBox_Element_Configure_PCoIP_107" >
+					<label >許可仮想チャネル リストを入力:</label>
+				</textBox>
+				<text >以下の設定は、3 を選択した場合にのみ必要で、適用可能です。</text>
+				<text >文字列の形式と例については、[説明] タブを参照してください。</text>
+				<textBox refId="Policy_TextBox_Element_Configure_PCoIP_108" >
+					<label >不許可仮想チャネル リストを入力:</label>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_109" >
+				<text >イメージ キャッシュと値の説明については、[説明] タブを参照してください。</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_112" spinStep="50" spin="true" defaultValue="250" >イメージ キャッシュ サイズを MB 単位で設定 (デフォルト 250 MB):</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_113" >
+				<dropdownList refId="Policy_DropList_Element_Configure_the_PCoIP_116" defaultItem="3" >転送セッションの優先度</dropdownList>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_121" >
+				<text >例の値については、[説明] タブを参照してください。</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_124" spinStep="1" spin="true" defaultValue="2" >イベント ログの詳細度の値を設定 (デフォルト値: 2):</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_125" >
+				<text >例の値については、[説明] タブを参照してください。</text>
+				<text >時間に基づくイベント ログ クリーンアップを設定 (デフォルト値は 7、0 は</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_128" spinStep="1" spin="true" defaultValue="7" >時間に基づくクリーンアップを行わない):</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_129" >
+				<text >例の値については、[説明] タブを参照してください。</text>
+				<text >サイズ (MB) に基づくイベント ログ クリーンアップを設定 (デフォルト値は 100、0 は</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_132" spinStep="1" spin="true" defaultValue="100" >サイズに基づくクリーンアップを行わない):</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_maximum_133" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_maximum_136" spinStep="100" spin="true" defaultValue="900000" >PCoIP セッションのバンド幅をキロビット/秒単位で設定:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_137" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_PCoIP_140" spinStep="1" spin="true" defaultValue="1200" >PCoIP MTU のサイズをバイト単位で設定:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_141" >
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_PCoIP_144" spinStep="1" spin="true" defaultValue="0" >PCoIP セッションのバンド幅下限をキロビット/秒単位で設定:</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_SSL_connections_148" >
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_connections_151" >
+					<label >マシン アカウントで証明書の検索に使用する証明書ストアの名前:</label>
+					<defaultValue >MY</defaultValue>
+				</textBox>
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_connections_152" >
+					<label >マシン アカウントで認証局証明書の検索に使用する証明書ストアの名前:</label>
+					<defaultValue >ROOT</defaultValue>
+				</textBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_SSL_connections_153" >SSL 接続ネゴシエーションに AES-256 以上の暗号を強制する</checkBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_154" >
+				<text >1 つ以上の暗号化アルゴリズムを有効にする必要があります。(説明を参照)</text>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_157" >Salsa20-256-round12 暗号化を無効にする</checkBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_158" >AES-128-GCM 暗号化を無効にする</checkBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_PCoIP_159" >AES-256-GCM 暗号化を無効にする</checkBox>
+			</presentation>
+			<presentation id="Policy_Configure_SSL_protocols_160" >
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_protocols_163" >
+					<label >SSL プロトコルの設定</label>
+					<defaultValue >TLS1.0:TLS1.1:TLS1.2</defaultValue>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Configure_SSL_cipher_list_161" >
+				<textBox refId="Policy_TextBox_Element_Configure_SSL_cipher_list_164" >
+					<label >SSL 暗号リストの設定</label>
+					<defaultValue >ECDHE-RSA-AES256-GCM-SHA384:AES256-SHA256:AES256-SHA:ECDHE-RSA-AES128-GCM-SHA256:AES128-SHA256:AES128-SHA:@STRENGTH</defaultValue>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_Client_164" >
+				<text >UDP ポートと再試行範囲のサイズを設定します。</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_Client_167" spinStep="1" spin="true" defaultValue="50002" >UDP ポートを選択:</decimalTextBox>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_the_Client_168" spinStep="1" spin="true" defaultValue="64" >再試行ポート範囲のサイズを設定:</decimalTextBox>
+				<checkBox refId="Policy_CheckBox_Element_Configure_the_Client_169" >OS が UDP ポートを自動的に判別</checkBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_170" >
+				<dropdownList refId="Policy_DropList_Element_Configure_PCoIP_173" defaultItem="0" >仮想チャネルの設定:</dropdownList>
+				<text >以下の設定は、2 を選択した場合にのみ必要で、適用可能です。</text>
+				<text >文字列の形式と例については、[説明] タブを参照してください。</text>
+				<textBox refId="Policy_TextBox_Element_Configure_PCoIP_177" >
+					<label >許可仮想チャネル リストを入力:</label>
+				</textBox>
+				<text >以下の設定は、3 を選択した場合にのみ必要で、適用可能です。</text>
+				<text >文字列の形式と例については、[説明] タブを参照してください。</text>
+				<textBox refId="Policy_TextBox_Element_Configure_PCoIP_178" >
+					<label >不許可仮想チャネル リストを入力:</label>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_179" >
+				<text >イメージ キャッシュと値の説明については、[説明] タブを参照してください。</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_182" spinStep="50" spin="true" defaultValue="250" >イメージ キャッシュ サイズを MB 単位で設定 (デフォルト 250 MB):</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_the_PCoIP_183" >
+				<dropdownList refId="Policy_DropList_Element_Configure_the_PCoIP_186" defaultItem="3" >転送セッションの優先度</dropdownList>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_191" >
+				<text >例の値については、[説明] タブを参照してください。</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_194" spinStep="1" spin="true" defaultValue="2" >イベント ログの詳細度の値を設定 (デフォルト値: 2):</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_195" >
+				<text >例の値については、[説明] タブを参照してください。</text>
+				<text >時間に基づくイベント ログ クリーンアップを設定 (デフォルト値は 7、0 は</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_198" spinStep="1" spin="true" defaultValue="7" >時間に基づくクリーンアップを行わない):</decimalTextBox>
+			</presentation>
+			<presentation id="Policy_Configure_PCoIP_199" >
+				<text >例の値については、[説明] タブを参照してください。</text>
+				<text >サイズ (MB) に基づくイベント ログ クリーンアップを設定 (デフォルト値は 100、0 は</text>
+				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_202" spinStep="1" spin="true" defaultValue="100" >サイズに基づくクリーンアップを行わない):</decimalTextBox>
+			</presentation>
+		</presentationTable>
+	</resources>
+</policyDefinitionResources>
+

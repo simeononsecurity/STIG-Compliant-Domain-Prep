@@ -39,6 +39,11 @@ Notas:
 </string>
       <string id="OneToOneMapping">Asignación una a una</string>
       <string id="PredefinedMapping">Asignación definida</string>
+      <string id="EnableHighPerformanceCDR">Habilitar la optimización del rendimiento</string>
+      <string id="EnableHighPerformanceCDRExplain">Esta opción determina si la optimización del rendimiento está habilitada para el redireccionamiento de controladores de cliente. Si este ajuste está habilitado, tendrá un mayor rendimiento en escenarios como la copia de archivos o carpetas desde unidades compartidas.
+
+Este ajuste está deshabilitado de forma predeterminada.
+      </string>
     </stringTable>
     <presentationTable>
        <presentation id="IsDriveLetterNeeded"/>
@@ -61,6 +66,7 @@ Notas:
        <presentation id="DriveLetterMappingTable">
          <listBox refId="DriveLetterMappingTable">Definir tabla de asignación de letras de unidad:</listBox>
        </presentation>
+       <presentation id="EnableHighPerformanceCDR"/>
     </presentationTable>
   </resources>
 </policyDefinitionResources>

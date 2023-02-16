@@ -7,6 +7,10 @@
       <string id="CertCheckMode_NoSecurity">Sin seguridad</string>
       <string id="CertCheckMode_WarnButAllow">Avisar pero permitir</string>
       <string id="CertCheckMode_FullSecurity">Seguridad total</string>
+      <string id="ProtocolConnectionCertCheckMode_TP">Verificación por huella digital</string>
+      <string id="ProtocolConnectionCertCheckMode_TPORPKI">Verificación por PKI o huella digital</string>
+      <string id="ProtocolConnectionCertCheckMode_PKIANDTP">Verificación por huella digital y PKI</string>
+      <string id="ProtocolConnectionCertCheckMode_PKI">Verificación por PKI</string>
       <string id="EnableTicketSSLAuth_Enable">Habilitar</string>
       <string id="EnableTicketSSLAuth_Disable">Deshabilitar</string>
       <string id="EnableTicketSSLAuth_Enforce">Forzar</string>
@@ -17,6 +21,9 @@
       <string id="AppSessionReconnectBehavior_Ask">Solicitar volver a conectarse a las aplicaciones abiertas</string>
       <string id="AppSessionReconnectBehavior_Always">Volver a conectarse automáticamente a las aplicaciones abiertas</string>
       <string id="AppSessionReconnectBehavior_Never">No solicitar volver a conectarse y no conectarse automáticamente</string>
+      <string id="AllSessionsDisconnectedBehavior_Quit">Salir</string>
+      <string id="AllSessionsDisconnectedBehavior_Logoff">Cerrar sesión</string>
+      <string id="AllSessionsDisconnectedBehavior_Keep">Mantener el cliente en estado actual</string>
       <string id="ColorDepth_8bit">8 bits</string>
       <string id="ColorDepth_15bit">15 bits</string>
       <string id="ColorDepth_16bit">16 bits</string>
@@ -53,12 +60,24 @@ Ejemplo: vid-0781_pid-554c(exintf:01;exintf:02);vid-0781_pid-9999(exintf:02)</st
 Sintaxis: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx | *&gt;&gt;[;...]
 
 Por ejemplo: vid-0781_pid-554c;vid-0781_pid-9999</string>
+      <string id="ExcludeVidPidRel">Excluir un dispositivo Vid/Pid/Rel</string>
+      <string id="ExcludeVidPidRelExplain">Evitar que se reenvíe un dispositivo con un identificador de proveedor, identificador de producto y número de versión específicos.
+
+Sintaxis: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx&gt;_rel-&lt;xxxx | *&gt;&gt;[;...]
+
+Por ejemplo: vid-0781_pid-554c_rel-0100;vid-0781_pid-9999_rel-0010</string>
       <string id="IncludeVidPid">Incluir un dispositivo Vid/Pid</string>
       <string id="IncludeVidPidExplain">Incluir un dispositivo con identificadores de proveedor y de producto específicos que pueda reenviarse.
 
 Sintaxis: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx | *&gt;&gt;[;...]
 
 Por ejemplo: vid-0781_pid-554c;vid-0781_pid-9999</string>
+      <string id="IncludeVidPidRel">Incluir un dispositivo Vid/Pid/Rel</string>
+      <string id="IncludeVidPidRelExplain">Incluir un dispositivo con un identificador de proveedor, identificador de producto y número de versión específicos que se puede reenviar.
+
+Sintaxis: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx&gt;_rel-&lt;xxxx | *&gt;&gt;[;...]
+
+Por ejemplo: vid-0781_pid-554c_rel-0100;vid-0781_pid-9999_rel-0010</string>
       <string id="ExcludeFamily">Excluir familia de dispositivos</string>
       <string id="ExcludeFamilyExplain">Evitar que una familia de dispositivos se reenvíe.
 
@@ -71,6 +90,18 @@ Ejemplo: bluetooth;entrada de audio</string>
 Sintaxis: &lt;nombre de la familia&gt;[;...]
 
 Ejemplo: almacenamiento;salida de audio</string>
+      <string id="ExAutoRedirectVidPid">Evitar conexión automática de dispositivo Vid/Pid</string>
+      <string id="ExAutoRedirectVidPidExplain">Evita que un dispositivo con un identificador de proveedor y de producto específicos se reenvíe automáticamente.
+
+Sintaxis: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx | *&gt;&gt;[;...]
+
+Por ejemplo: vid-0781_pid-554c;vid-0781_pid-9999</string>
+      <string id="ExAutoRedirectFamily">Evitar conexión automática de familia de dispositivos</string>
+      <string id="ExAutoRedirectFamilyExplain">Evita que una familia de dispositivos se reenvíe automáticamente.
+
+Sintaxis: &lt;nombre-familia&gt;[;...]
+
+Por ejemplo: storage;hid</string>
       <string id="ExcludeAllDevices">Excluir todos los dispositivos</string>
       <string id="ExcludeAllDevicesExplain">Bloquear todos los dispositivos a no ser que se incluyan mediante la regla de filtrado de inclusión.
 
@@ -114,6 +145,8 @@ Por defecto: bloquear el reenvío</string>
       <string id="AllowDataSharing">Permitir el uso compartido de datos</string>
       <string id="AllowDataSharingExplain">VMware recopila datos de los sistemas de cliente para priorizar la compatibilidad entre el hardware y el software. Si su empresa participa en el programa, VMware recibirá datos anónimos sobre su entorno.
 Esta propiedad está habilitada de forma predeterminada.</string>
+      <string id="AllowPluginUpdate">Permitir al usuario final instalar o actualizar el complemento</string>
+      <string id="AllowPluginUpdateExplain">Cuando este GPO está habilitado, la interfaz de usuario de Horizon Client siempre mostrará el cuadro de diálogo de instalación del complemento cuando sea necesario instalarlo o actualizarlo. Cuando este GPO está deshabilitado, Horizon Client no mostrará el cuadro de diálogo de instalación del complemento. Si el GPO se establece en Sin configurar, el usuario tendrá la opción de controlar esta opción en la interfaz de usuario del cliente.</string>
       <string id="AllowResolutionDpiSync">Guardar resolución y PPP en el servidor</string>
       <string id="AllowResolutionDpiSyncExplain">Si se habilita, Horizon Client guardará automáticamente el valor de la resolución y el PPP del escritorio en el servidor. Con este GPO, cada vez que un usuario con una configuración personalizada, supongamos que su nombre es Julia, inicia el escritorio remoto, la configuración personalizada se aplicará automáticamente. Los usuarios que no hayan establecido una configuración personalizada seguirán viendo la configuración predeterminada, que debe coincidir con la resolución y los PPP del hardware local. Si el GPO se estableció en otro sistema con la misma configuración de monitor, Julia también podrá ver su configuración personalizada en ese sistema.
 
@@ -163,12 +196,12 @@ Advertencia: Active Directory almacena esta contraseña en texto sin formato</st
       <string id="LockedGuestSize">Tamaño de invitado bloqueado</string>
       <string id="LockedGuestWidth">Anchura de invitado bloqueada </string>
       <string id="LockedGuestHeight">Altura de invitado bloqueada</string>
-      <string id="LockedGuestSizeExplain">Determina la resolución de pantalla del escritorio remoto. Una vez habilitado el ajuste, se deshabilita la función de autoajuste del escritorio remoto.
+      <string id="LockedGuestSizeExplain">Determina la resolución de pantalla del escritorio remoto. Una vez habilitada la opción, se deshabilitará la función de autoajuste del escritorio remoto.
 
-Tamaño mínimo de pantalla: 640 x 480
-Tamaño máximo de pantalla: 4096 x 4096
+Tamaño mínimo de pantalla: 640x480
+Tamaño máximo de pantalla: 4096x4096
 
-Nota: este ajuste no afecta a las conexiones RDP</string>
+Nota: Este ajuste no se aplica a las conexiones RDP</string>
       <string id="NonInteractive">Suprimir mensajes de error (solo con secuencia de comandos total)</string>
       <string id="NonInteractiveExplain">Determina si los mensajes de error se muestran durante el inicio de sesión.
 
@@ -215,12 +248,14 @@ Si se establece en 'Sí', NTLM se podrá utilizar cuando el cliente no pueda rec
       <string id="ServersAlwaysUseNTLMExplain">Si esta opción está habilitada, la opción Iniciar de sesión como usuario actual siempre usará la autenticación NTLM para los servidores de la lista.
 
 El formato del nombre de los servidores es FQDN (nombre de dominio completo)</string>
-      <string id="IgnoreRevocation">Ignorar problemas de revocación de certificados</string>
-      <string id="IgnoreRevocationExplain">Determina si se ignoran los errores asociados a un certificado de servidor revocado.
+      <string id="DoNotCheckCertRevocationStatus">No comprobar el estado de revocación del certificado</string>
+      <string id="DoNotCheckCertRevocationStatusExplain">Determina si se debe comprobar el estado de revocación del certificado. Cuando este GPO está habilitado, Horizon Client tratará el certificado del servidor como válido aunque el certificado enviado por el servidor se haya revocado o se sepa que la comprobación de revocación del certificado es imposible (por ejemplo, si la conexión a Internet es limitada).
 
-Estos errores se producen cuando el certificado enviado por el servidor se revoca o si el cliente no puede verificar su estado de revocación.
+Este ajuste está deshabilitado de forma predeterminada.</string>
+      <string id="StrictCertRevocationCheck">Comprobación de revocación del certificado estricta</string>
+      <string id="StrictCertRevocationCheckExplain">Cuando este GPO está habilitado, Horizon Client no se conectará a los servidores si no puede verificar el estado de revocación del certificado. Cuando esta opción está deshabilitada, el cliente comprobará la revocación, pero no bloqueará una conexión en función del estado de revocación. El GPO &quot;DoNotCheckCertRevocationStatus&quot; tiene prioridad sobre este GPO, así que no los use juntos.
 
-Este ajuste está deshabilitado por defecto.</string>
+Este ajuste está deshabilitado de forma predeterminada.</string>
       <string id="CertCheckMode">Modo de verificación de certificados</string>
       <string id="CertCheckModeExplain">Configura el comportamiento de verificación de certificados de Horizon Client.
 
@@ -229,8 +264,21 @@ Cuando esta propiedad se establece en &quot;Sin seguridad&quot;, no se comprueba
 Cuando esta propiedad se establece en &quot;Avisar pero permitir&quot;, se avisa al usuario pero se le permite continuar si el certificado del servidor está autofirmado. Si el certificado del servidor está autofirmado, su nombre no puede coincidir con el del servidor. Este es el valor por defecto.
 
 Cuando esta propiedad se establece en &quot;Seguridad total&quot;, se informa al usuario de todos los certificados de error y no se le permite conectarse al servidor.</string>
-      <string id="AllowConnectionViaAnSslProxy">Configura el comportamiento de comprobación del certificado del proxy SSL de Horizon Client</string>
-      <string id="AllowConnectionViaAnSslProxyExplain">Esta opción determina si los usuarios pueden conectarse a una autorización virtual a través de un proxy SSL. Si no se configura, el usuario final puede cambiar la configuración de forma manual. El cliente está configurado de forma predeterminada para bloquear las conexiones Blast y de túnel del proxy SSL.</string>
+      <string id="ProtocolConnectionCertCheckMode">Modo de verificación del certificado de conexión de protocolo</string>
+      <string id="ProtocolConnectionCertCheckModeExplain">Esta opción determina el modo de comprobación del certificado para las conexiones Blast y Tunnel.
+De forma predeterminada, se realiza la verificación por huella digital.
+
+Cuando esta propiedad se establece en &quot;Verificación por huella digital&quot;, si se produce un error en la verificación por la huella digital de certificado, se bloqueará la conexión con la autorización virtual.
+
+ 
+
+Cuando esta propiedad se establece en &quot;Verificación por PKI o huella digital&quot;, los errores de huella digital de certificado recurrirán a la verificación por certificado PKI. Si se produce un error en la comprobación del certificado PKI, se bloqueará la conexión con la autorización virtual.
+
+Si esta propiedad está establecida en 'Verificación por huella digital y PKI', el cliente usará la verificación tanto por huella digital y como por PKI. Si se produce un error en la huella digital de certificado o en la autenticación de certificado PKI, se bloqueará la conexión con la autorización virtual.
+
+Cuando esta propiedad se establece en &quot;Verificación por PKI&quot;, si se produce un error en la autenticación por certificado PKI, se bloqueará la conexión con la autorización virtual.
+
+</string>
       <string id="EnableSmartCardSSO">Habilitar Single Sign-On para autenticación de tarjetas inteligentes</string>
       <string id="EnableSmartCardSSOExplain">Habilita Single Sign-On para la autenticación de tarjetas inteligentes. Es necesario que Horizon Client almacene temporalmente en la memoria el PIN encriptado de la tarjeta inteligente antes de enviarlo al servidor de conexión de View.</string>
       <string id="EnableJumplist">Habilitar integración de lista de accesos directos</string>
@@ -246,17 +294,20 @@ Habilitar: habilitar SSL, permitir escritorios no compatibles con SSL como reser
 Deshabilitar: deshabilitar SSL
 Forzar: habilitar SSL, rechazar conexión con escritorios no compatibles con SSL</string>
       <string id="SSLCipherList">Configura algoritmos de cifrado y protocolos SSL</string>
-      <string id="SSLCipherListExplain">Configura la lista de cifrado para restringir el uso de ciertos protocolos y algoritmos criptográficos antes de establecer una conexión SSL cifrada. La lista de cifrado consta de una o más cadenas de cifrado separadas por dos puntos. Tenga en cuenta que todas las cadenas de cifrado distinguen entre mayúsculas y minúsculas.
-
-Si se habilita la función, el valor por defecto es:
+      <string id="SSLCipherListExplain">Configurar protocolos SSL y conjuntos de cifrado permite especificar los protocolos y algoritmos criptográficos antes de establecer una conexión SSL cifrada. La lista de cifrado consta de una o más cadenas de cifrado separadas por dos puntos. Tenga en cuenta que todas las cadenas de cifrado distinguen entre mayúsculas y minúsculas.
+Si se habilita la función, el valor predeterminados es:
    'TLSv1.1:TLSv1.2:!aNULL:kECDH+AESGCM:ECDH+AESGCM:RSA+AESGCM:kECDH+AES:ECDH+AES:RSA+AES'
+Significado: TLS 1.1 y TLS 1.2 están habilitados. Los conjuntos de claves de cifrado usan ECDHE, ECDH y RSA con AES de 128 o 256 bits, con preferencia por el modo GCM. No se admiten SSL 2.0, SSL 3.0 ni TLS 1.0.
 
-Significado: TLS v1.1 y TLS v1.2 están habilitados (SSL v2.0, SSL v3.0 y TLS v1.0 están deshabilitados). Los conjuntos de claves de cifrado usan ECDHE, ECDH y RSA con AES de 128 o 256 bits y se prefiere el modo GCM.
+Configure los algoritmos de firma para TLS v1.2. Introduzca una lista de algoritmos de firma separados por dos puntos en orden de preferencia descendente, con el formato algoritmo+hash.
+Tenga en cuenta que los nombres de algoritmo y hash distinguen entre mayúsculas y minúsculas. Por ejemplo: RSA+SHA256:ECDSA+SHA256
+Si no se establece esta opción, se establecerá de forma predeterminada todos los algoritmos de firma compatibles con la biblioteca OpenSSL.
 
-SSL v2.0, SSL v3.0 y TLS v1.0 ya no son protocolos aprobados y se deshabilitarán permanentemente.
+Configurar grupos compatibles establece los grupos de curva elíptica compatibles. Introduzca una lista de curvas separadas por dos puntos. Tenga en cuenta que los nombres de curva distinguen entre mayúsculas y minúsculas. Por ejemplo: P-256:P-384
+Si esta opción no está configurada y se proporcionan conjuntos de cifrado ECDHE, se establecerá de forma predeterminada todos los algoritmos de firma compatibles con la biblioteca OpenSSL.
 
 Vínculo de referencia para la configuración:
-http://www.openssl.org/docs/apps/ciphers.html#</string>
+https://kb.vmware.com/s/article/85640</string>
       <string id="VMwareViewRdpSettings">Configuración de RDP</string>
       <string id="VMwareViewBrowserRedirection">Redireccionamiento de navegador de VMware</string>
       <string id="ColorDepth">Profundidad de color</string>
@@ -351,6 +402,18 @@ Además de habilitar este ajuste, también debe verificar que se cumplen las sig
       <string id="HelpURLExplain">Especifica una URL alternativa de la que Horizon Client puede obtener páginas de ayuda. Esta propiedad está diseñada para su uso en entornos que no dispongan de acceso a Internet y que, por tanto, no puedan acceder al sistema de ayuda alojado de forma remota.</string>
       <string id="AutoUpdateAllowed">Habilitar la actualización en línea de Horizon Client</string>
       <string id="AutoUpdateAllowedExplain">Determina si se puede utilizar la función de actualización en línea. Está habilitada de forma predeterminada en Horizon Client 4.6.</string>
+      <string id="AutoUpdateMessagePopUp">Mensajes emergentes de actualización</string>
+      <string id="AutoUpdateMessagePopUpExplain">Especifica si se mostrará automáticamente un mensaje emergente al usuario final cuando haya una versión más reciente de Horizon Client. Este ajuste está deshabilitado de forma predeterminada.
+
+Este GPO es compatible con Horizon Client 8.1 y versiones posteriores.</string>
+      <string id="AutoCheckForUpdate">Buscar actualizaciones automáticamente</string>
+      <string id="AutoCheckForUpdateExplain">Especifica si se habilitará la búsqueda automática de actualizaciones de software de Horizon Client. Esta configuración está habilitada de forma predeterminada.
+
+Este GPO se admite en Horizon Client 8.1 y versiones posteriores.</string>
+      <string id="AutoUpdateAllowSkip">Permitir que el usuario omita la actualización de Horizon Client</string>
+      <string id="AutoUpdateAllowSkipExplain">Especifica si el usuario final puede seleccionar la opción &quot;Omitir&quot; en la ventana de actualización de Horizon Client. Si el usuario selecciona &quot;Omitir&quot;, no verá la comunicación de actualización hasta la próxima actualización de Horizon Client.
+
+Este GPO se admite en Horizon Client 8.1 y versiones posteriores.</string>
       <string id="AutoUpdateURL">URL de actualización en línea de Horizon Client</string>
       <string id="AutoUpdateURLExplain">Especifica una URL de la que Horizon Client puede obtener actualizaciones. Esta propiedad está diseñada para definir un servidor de actualización específico. Si no se habilita, se usa el servidor de actualización oficial de VMware.</string>
       <string id="BlockMultipleInstances">Bloquear el uso de varias instancias de Horizon Client por sesión de Windows</string>
@@ -365,16 +428,10 @@ Además de habilitar este ajuste, también debe verificar que se cumplen las sig
       <string id="RedirectAudioCaptureExplain">Especifica si se redirecciona el dispositivo de entrada de audio predeterminado desde el cliente a la sesión remota. Desactivado por defecto.</string>
       <string id="connectUSBOnInsert">Conectar dispositivos USB al escritorio o la aplicación remota al enchufarlos</string>
       <string id="connectUSBOnInsertExplain">Conecta automáticamente al escritorio o la aplicación remota con los que está trabajando el usuario los dispositivos USB al enchufarlos al host.</string>
-      <string id="RedirectSmartCardsInLocalMode">Redireccionar lectores de tarjetas inteligentes en el modo local</string>
-      <string id="RedirectSmartCardsInLocalModeExplain">Determina si los lectores de tarjetas inteligentes se redireccionan automáticamente a escritorios del modo local. Los lectores se comparten con la máquina cliente. Este ajuste está habilitado por defecto.</string>
-      <string id="ReplicationStartupDelay">Retrasar el inicio de replicaciones cuando se inicie Horizon Client con el modo local</string>
-      <string id="ReplicationStartupDelayExplain">Retrasar todas las replicaciones este número de segundos después de que se inicie Horizon Client con el modo local. Las replicaciones continúan con su programación normal tras este retraso. El retraso por defecto es 900 segundos (15 minutos).</string>
-      <string id="LocalModeExitBehavior">Comportamiento de salida por defecto de escritorios del modo local</string>
-      <string id="LocalModeExitBehaviorExplain">Determina el comportamiento de salida por defecto de escritorios que se ejecutan en el modo local. El comportamiento de salida por defecto es iniciar un apagado del invitado.</string>
       <string id="DisableToastNotifications">Deshabilitar notificaciones del sistema</string>
-      <string id="DisableToastNotificationsExplain">Este ajuste deshabilita las notificaciones del sistema de Horizon Client. Habilite este ajuste si no desea que el usuario vea notificaciones del sistema en la esquina de su pantalla. Tenga en cuenta que habilitar este objeto de directiva de grupo (GPO) provocará que el usuario no vea una advertencia de 5 minutos restantes cuando esté activada la función de tiempo de espera de sesión agotado.</string>
+      <string id="DisableToastNotificationsExplain">Esta opción deshabilita las notificaciones del sistema desde Horizon Client. Habilite esta opción si no desea que el usuario vea notificaciones del sistema en la esquina de la pantalla. Tenga en cuenta que si se habilita este GPO, el usuario no verá la notificación cuando Horizon Client esté oculto. Este ajuste está deshabilitado de forma predeterminada.</string>
       <string id="EnableRelativeMouse">Habilitar ratón relativo</string>
-      <string id="EnableRelativeMouseExplain">Este ajuste habilita el mouse relativo de Horizon Client para escritorios PCoIP. habilite este ajuste si desea que el usuario use siempre el modo de mouse relativo con escritorios PCoIP. El modo de mouse relativo mejora el comportamiento del mouse para determinadas aplicaciones gráficas y juegos. Si el escritorio remoto no es compatible con el mouse relativo, este ajuste no se utiliza. El ajuste está deshabilitado por defecto.</string>
+      <string id="EnableRelativeMouseExplain">Esta opción habilita el mouse relativo de Horizon Client para escritorios PCoIP o Blast. Habilite esta opción si desea que el usuario utilice siempre el modo de mouse relativo con escritorios PCoIP o Blast. El modo de mouse relativo mejora el comportamiento del mouse en juegos y aplicaciones gráficas. Si el escritorio remoto no admite el mouse relativo, no se usará esta opción. Este ajuste está deshabilitado de forma predeterminada.</string>
       <string id="DisableDisconnectMessages">Deshabilitar mensajes de desconexión de escritorio</string>
       <string id="DisableDisconnectMessagesExplain">Determina si se deben deshabilitar mensajes que normalmente se muestran al desconectarse el escritorio. Estos mensajes se muestran por defecto. Este ajuste no se aplica a la desconexión iniciada por parte del usuario de la interfaz de usuario de Horizon Client.</string>
       <string id="DisallowClientInformationPassthrough">Deshabilitar la transmisión de información de cliente en una sesión anidada</string>
@@ -387,6 +444,8 @@ Cuando se habilita, el cliente oculta totalmente la página de compartir del cli
 Si no se configura este ajuste, está deshabilitado por defecto.</string>
       <string id="AppSessionReconnectBehavior">Comportamiento de reanudación de sesiones de la aplicación desconectadas</string>
       <string id="AppSessionReconnectBehaviorExplain">Este ajuste permite forzar un comportamiento determinado en relación a la función automática de reanudación de sesiones de la aplicación. Las 3 opciones disponibles para este GPO reflejan las opciones disponibles en la página de configuración del cliente de Windows. Está deshabilitado por defecto, lo que significa que el usuario puede elegir el comportamiento.</string>
+      <string id="AllSessionsDisconnectedBehavior">Comportamiento del cliente cuando se desconectan todas las sesiones</string>
+      <string id="AllSessionsDisconnectedBehaviorExplain">Esta opción permite personalizar el comportamiento del cliente cuando se desconectan todas las sesiones. Puede configurar el cliente para que se cierre, para que cierre la sesión de Connection Server o simplemente para mantener el cliente en el estado actual cuando se desconectan todas las sesiones. Cuando esta opción no está configurada, el cliente se comportará de la forma predeterminada. </string>
       <string id="ForceFloatingLanguageBarOff">Ocultar siempre la barra flotante de idioma (IME) remota para aplicaciones alojadas</string>
       <string id="ForceFloatingLanguageBarOffExplain">Este ajuste oculta forzosamente la barra de idioma de las sesiones de aplicación. Cuando se habilita, nunca se muestra la barra de idioma flotante en una sesión de aplicación remota, independientemente de si está habilitada la función de IME local. Cuando se deshabilita, la barra solo se muestra si está deshabilitada la función de IME local. Este valor está deshabilitado por defecto.</string>
       <string id="DisableFileRedirection">Deshabilitar la opción de abrir archivos locales en aplicaciones alojadas</string>
@@ -469,10 +528,33 @@ Este GPO se admite en Horizon Client 5.0 y versiones posteriores.</string>
       <string id="AllowDisplayScalingExplain">Este ajuste permite configurar la escala de pantalla en todas las sesiones de aplicaciones y escritorios.</string>
       <string id="AutoSyncToggleKeys">Sincronizar automáticamente las teclas Bloq Num, Bloq mayús y Bloq Despl</string>
       <string id="AutoSyncToggleKeysExplain">Cuando está habilitada, esta opción sincroniza automáticamente las teclas Bloq Num, Bloq mayús y Bloq Despl del dispositivo físico y el escritorio virtual. Cuando no está habilitada, el escritorio virtual solo actualiza el estado de esas teclas si el usuario lo cambia mientras está en el escritorio virtual. </string>
+      <string id="AllowBlastCodec">Permitir descodificación BlastCodec</string>
+      <string id="AllowBlastCodecExplain">Este ajuste permite configurar la descodificación BlastCodec para el protocolo Blast. Cuando se habilita, se permite el uso de la descodificación BlastCodec. Cuando se deshabilita, la descodificación BlastCodec nunca se utiliza. Si no está configurada, el usuario puede elegir si desea habilitar la descodificación BlastCodec.</string>
+      <string id="AllowH264">Permitir la descodificación H.264</string>
+      <string id="AllowH264Explain">Este ajuste permite configurar la descodificación H.264 para el protocolo Blast. Cuando se habilita, se permite el uso de la descodificación H.264. Cuando se deshabilita, la descodificación H.264 no se utiliza nunca. Si no está configurada, el usuario puede elegir si desea habilitar la descodificación H.264.</string>
+      <string id="AllowH264YUV444">Permitir alta precisión de color de H.264</string>
+      <string id="AllowH264YUV444Explain">Este ajuste permite configurar el modo de alta precisión de color de H.264. Solo se aplicará si H.264 también está habilitado.</string>
       <string id="AllowHEVC">Permitir la descodificación HEVC</string>
       <string id="AllowHEVCExplain">Este ajuste permite configurar la descodificación HEVC (también conocida como H.265) para el protocolo Blast. Cuando se habilita, la descodificación HEVC se convierte en la opción de preferencia. Cuando se deshabilita, la descodificación HEVC no se utiliza nunca. Si no está configurada, el usuario puede elegir si desea habilitar la descodificación HEVC.</string>
+      <string id="AllowHDR">Permitir la descodificación HDR</string>
+      <string id="AllowHDRExplain">Este ajuste permite configurar la codificación HDR (alto rango dinámico) a través del protocolo Blast. Si esta opción está habilitada, la máquina agente activará HDR en el escritorio si está disponible y la máquina cliente podrá visualizarlo.</string>
+      <string id="EnableWindowOptimizations">Habilitar optimizaciones de ventanas de Horizon Client</string>
+      <string id="EnableWindowOptimizationsExplain">Esta opción habilita optimizaciones que reducen el uso de la CPU cuando la ventana de Horizon Client no está totalmente visible.  Esta opción está habilitada de forma predeterminada.</string>
+      <string id="DecodeCapsProbingMode">Configurar el modo de sondeo del descodificador de hardware</string>
+      <string id="ProbingMode_NORMAL">Sondear cuando se inicie Horizon Client</string>
+      <string id="ProbingMode_LEGACY">Sondear cuando se inicien escritorios o aplicaciones de Horizon</string>
+      <string id="ProbingMode_OFF">No sondear el hardware de descodificación</string>
+      <string id="DecodeCapsProbingModeExplain">Al habilitar esta directiva, el administrador puede configurar cuándo Horizon Client sondeará las capacidades de descodificación de hardware.
+
+Si esta directiva no está habilitada, Horizon Client utilizará de forma predeterminada &quot;Sondear cuando se inicie Horizon Client&quot;.</string>
+      <string id="DecoderImageCacheSize">Tamaño en caché de imagen del descodificador (KB)</string>
+      <string id="DecoderImageCacheSizeExplain">Tamaño máximo de la memoria caché de imágenes del decodificador en kilobytes.
+
+El tamaño final de la memoria caché se elegirá en función del mínimo de esta configuración o de la configuración asociada del agente, y no puede superar la mitad de la RAM disponible en Horizon Agent.</string>
       <string id="AllowBlastThroughProxy">Permitir que las conexiones de Blast utilicen la configuración de proxy del sistema operativo</string>
       <string id="AllowBlastThroughProxyExplain">Esta opción permite configurar el uso del proxy para la conexión Blast. Cuando está habilitada, Blast se puede conectar a través de un proxy. Cuando se deshabilita, el proxy del sistema no se utiliza. Si no se configura, el usuario puede elegir si desea utilizar el proxy del sistema. Esta propiedad está deshabilitada de forma predeterminada.</string>
+      <string id="AllowSplitMksWindowExplain">Esta opción permite habilitar la ventana de MKS dividida. Cuando está habilitada, la ventana de MKS se dividirá por monitor. Cuando está deshabilitada, la ventana de MKS aparecerá como un cuadro de límite con todos los monitores. Cuando no está configurada, la ventana de MKS dividida estará habilitada.</string>
+      <string id="AllowSplitMksWindow">Habilitar ventana de MKS dividida</string>
       <string id="BrowserRedirUseCache">Habilitar la memoria caché para el redireccionamiento del navegador</string>
       <string id="BrowserRedirUseCacheExplain">Si se habilita, el historial de exploración, incluidas las cookies, se almacenará en el cliente. Si se deshabilita este ajuste, no se borrará la memoria caché, que se reutilizará una vez que se habilite de nuevo.
 
@@ -483,6 +565,35 @@ Esta propiedad está habilitada de forma predeterminada.</string>
       <string id="BrowserRedirEnableMediaStreamExplain">Si se habilita, las páginas redireccionadas que usen WebRTC tendrán acceso a la cámara y al micrófono del cliente. Esta propiedad está habilitada de forma predeterminada.</string>
       <string id="MouseMoveMaxLatencyMsec">Configurar la latencia máxima para la fusión del mouse</string>
       <string id="MouseMoveMaxLatencyMsecExplain">Este ajuste permite configurar la latencia máxima permitida al fusionar eventos de movimiento del mouse (en milisegundos). Se aceptan como válidos los valores entre 0 y 50 (el valor 0 deshabilita la fusión de eventos de movimiento del mouse). La fusión de eventos de movimiento del mouse puede reducir el uso del ancho de banda de cliente a agente, pero puede agregar una latencia reducida al movimiento del mouse. Esta propiedad está deshabilitada de forma predeterminada.</string>
+      <string id="VMwareViewPrintRedirection">VMware Integrated Printing</string>
+      <string id="PrintRedir_SISActive">Permitir el redireccionamiento de impresoras locales de capa 1 a la sesión interna</string>
+      <string id="PrintRedir_SISActive_detail">Este ajuste determina si se redireccionan las impresoras locales de capa 1 a la sesión interna.
+
+VMware admite la ejecución de Horizon Client dentro de un escritorio remoto de Horizon. Este ajuste, comúnmente conocida como &quot;modo anidado&quot;, implica tres capas y dos saltos.
+
+Capa 0 (endpoint): equipo físico donde está instalado Horizon Client
+Capa 1 (escritorio remoto de primer salto): el escritorio remoto en el que están instalados tanto Horizon Client como Horizon Agent
+Capa 2 (aplicación o escritorio remotos de segundo salto): la aplicación publicada o el escritorio publicado a los que se conecta el cliente de segundo salto
+
+Cuando se habilita, las impresoras locales de capa 1 se redireccionan a la sesión interna.
+Cuando no está configurada o está deshabilitada, las impresoras locales de capa 1 no se redireccionan a la sesión interna.
+
+Este ajuste no está configurado de forma predeterminada.
+</string>
+      <string id="PrintRedir_MaxTxRate">Limitar la velocidad de transmisión (KBps)</string>
+      <string id="PrintRedir_MaxTxRate_detail">Este ajuste limita la velocidad de transmisión de todos los trabajos de impresión al número especificado en KBps.
+La velocidad de transmisión mínima permitida es 200 KBps. Cuando no se configura o se deshabilita, la velocidad de transmisión no estará limitada.
+La velocidad de transmisión máxima permitida es 4000 KBps. Si se establece un valor mayor que ese, la velocidad de transmisión no estará limitada.
+
+</string>
+      <string id="PrintRedir_lp_setting">No redireccionar impresoras de cliente</string>
+      <string id="PrintRedir_lp_setting_detail">Este ajuste de directiva permite administrar si se redireccionan o no las impresoras de los clientes.
+
+Si habilita este ajuste de directiva, no se redireccionará ninguna de las impresoras cliente.
+Si deshabilita o no configura este ajuste de directiva, se redireccionarán todas las impresoras cliente.
+
+Este ajuste no está configurado de forma predeterminada.
+</string>
     </stringTable>
     <presentationTable>
       <presentation id="ExcludePath">
@@ -512,9 +623,19 @@ Esta propiedad está habilitada de forma predeterminada.</string>
           <label>Excluir un dispositivo Vid/Pid</label>
         </textBox>
       </presentation>
+      <presentation id="ExcludeVidPidRel">
+        <textBox refId="ExcludeVidPidRel">
+          <label>Excluir un dispositivo Vid/Pid/Rel</label>
+        </textBox>
+      </presentation>
       <presentation id="IncludeVidPid">
         <textBox refId="IncludeVidPid">
           <label>Incluir un dispositivo Vid/Pid</label>
+        </textBox>
+      </presentation>
+      <presentation id="IncludeVidPidRel">
+        <textBox refId="IncludeVidPidRel">
+          <label>Incluir un dispositivo Vid/Pid/Rel</label>
         </textBox>
       </presentation>
       <presentation id="ExcludeFamily">
@@ -525,6 +646,16 @@ Esta propiedad está habilitada de forma predeterminada.</string>
       <presentation id="IncludeFamily">
         <textBox refId="IncludeFamily">
           <label>Incluir familia de dispositivos</label>
+        </textBox>
+      </presentation>
+      <presentation id="ExAutoRedirectVidPid">
+        <textBox refId="ExAutoRedirectVidPid">
+          <label>Evitar conexión automática de dispositivo Vid/Pid</label>
+        </textBox>
+      </presentation>
+      <presentation id="ExAutoRedirectFamily">
+        <textBox refId="ExAutoRedirectFamily">
+          <label>Evitar conexión automática de familia de dispositivos</label>
         </textBox>
       </presentation>
       <presentation id="ExcludeAllDevices" />
@@ -548,11 +679,14 @@ Esta propiedad está habilitada de forma predeterminada.</string>
       <presentation id="ServersAlwaysUseNTLM">
         <listBox refId="ServersAlwaysUseNTLM">Utilizar siempre NTLM para servidores</listBox>
       </presentation>
-      <presentation id="IgnoreRevocation" />
+      <presentation id="DoNotCheckCertRevocationStatus" />
+      <presentation id="StrictCertRevocationCheck" />
       <presentation id="CertCheckMode">
-        <dropdownList refId="CertCheckMode" defaultItem="1">Modo de verificación de certificados</dropdownList>
+       <dropdownList refId="CertCheckMode" defaultItem="1">Modo de verificación de certificados</dropdownList>
       </presentation>
-      <presentation id="AllowConnectionViaAnSslProxy"/>
+      <presentation id="ProtocolConnectionCertCheckMode">
+       <dropdownList refId="ProtocolConnectionCertCheckMode" defaultItem="3">Modo de verificación del certificado de conexión de protocolo</dropdownList>
+      </presentation>
       <presentation id="EnableSmartCardSSO" />
       <presentation id="EnableJumplist" />
       <presentation id="AllowCmdLineCredentials" />
@@ -561,8 +695,16 @@ Esta propiedad está habilitada de forma predeterminada.</string>
       </presentation>
       <presentation id="SSLCipherList">
         <textBox refId="SSLCipherList">
-          <label>Configura algoritmos de cifrado y protocolos SSL</label>
+          <label>Configura protocolos SSL y conjuntos de cifrado</label>
           <defaultValue>TLSv1.1:TLSv1.2:!aNULL:kECDH+AESGCM:ECDH+AESGCM:RSA+AESGCM:kECDH+AES:ECDH+AES:RSA+AES</defaultValue>
+        </textBox>
+        <textBox refId="SSLSignatureAlgorithms">
+          <label>Configura la extensión de algoritmos de firma</label>
+          <defaultValue></defaultValue>
+        </textBox>
+        <textBox refId="SSLSupportedGroups">
+          <label>Configura la extensión de grupos compatibles</label>
+          <defaultValue></defaultValue>
         </textBox>
       </presentation>
       <presentation id="ServerURL">
@@ -605,6 +747,9 @@ Esta propiedad está habilitada de forma predeterminada.</string>
       <presentation id="AppSessionReconnectBehavior">
         <dropdownList refId="AppSessionReconnectBehavior" defaultItem="0">Comportamiento de reanudación de sesiones de la aplicación desconectadas</dropdownList>
       </presentation>
+      <presentation id="AllSessionsDisconnectedBehavior">
+        <dropdownList refId="AllSessionsDisconnectedBehavior" defaultItem="0">Comportamiento del cliente cuando todas las sesiones se desconectan</dropdownList>
+      </presentation>
       <presentation id="UnauthenticatedAccessEnabled" />
       <presentation id="ErrorFooterTextFile">
         <textBox refId="ErrorFooterTextFile">
@@ -629,6 +774,9 @@ Esta propiedad está habilitada de forma predeterminada.</string>
         </textBox>
       </presentation>
       <presentation id="AutoUpdateAllowed" />
+      <presentation id="AutoUpdateMessagePopUp" />
+      <presentation id="AutoCheckForUpdate" />
+      <presentation id="AutoUpdateAllowSkip" />
       <presentation id="AutoUpdateURL">
         <textBox refId="AutoUpdateURL">
           <label>URL de actualización en línea de Horizon Client</label>
@@ -636,10 +784,6 @@ Esta propiedad está habilitada de forma predeterminada.</string>
       </presentation>
       <presentation id="BlockMultipleInstances" />
       <presentation id="ListSmartCardCertsOnly" />
-      <presentation id="RedirectSmartCardsInLocalMode" />
-      <presentation id="ReplicationStartupDelay">
-        <decimalTextBox refId="ReplicationStartupDelay">Retrasar el inicio de replicaciones cuando se inicie Horizon Client con el modo local</decimalTextBox>
-      </presentation>
       <presentation id="DisableToastNotifications" />
       <presentation id="EnableRelativeMouse" />
       <presentation id="DisableDisconnectMessages" />
@@ -655,6 +799,7 @@ Esta propiedad está habilitada de forma predeterminada.</string>
         <dropdownList refId="UngrabDesktopModifierKey" defaultItem="0" noSort="true">Tecla modificadora para liberar el foco de entrada:</dropdownList>
         <dropdownList refId="SecondUngrabDesktopModifierKey" defaultItem="0" noSort="true">Segunda tecla modificadora para liberar el foco de entrada:</dropdownList>
         <dropdownList refId="UngrabDesktopFunctionKey" defaultItem="0">Tecla de función para liberar el foco de entrada:</dropdownList>
+        <checkBox refId="MinimizeToTaskbar">Minimizar el escritorio virtual de pantalla completa después del foco de entrada de versión</checkBox>
       </presentation>
       <presentation id="HotkeyGrabDesktop">
         <dropdownList refId="GrabDesktopModifierKey" defaultItem="0" noSort="true">Tecla modificadora para asignar el foco de entrada:</dropdownList>
@@ -682,16 +827,12 @@ Esta propiedad está habilitada de forma predeterminada.</string>
       </presentation>
       <presentation id="HideDesktopMenu">
         <dropdownList refId="HideHelpDesktopMenu" defaultItem="0">Ocultar Ayuda</dropdownList>
-        <dropdownList refId="HideSupportInformationDesktopMenu" defaultItem="0">Ocultar Información de soporte técnico</dropdownList>
-        <dropdownList refId="HideEnableRelativeMouseDesktopMenu" defaultItem="0">Ocultar Habilitar ratón relativo</dropdownList>
-        <dropdownList refId="HideShareFoldersDesktopMenu" defaultItem="0">Ocultar Compartir carpetas</dropdownList>
-        <dropdownList refId="HideAllowDisplayScalingDesktopMenu" defaultItem="0">Ocultar Permitir ajustar escala de pantalla</dropdownList>
+        <dropdownList refId="HideSettingsDesktopMenu" defaultItem="0">Ocultar Configuración</dropdownList>
         <dropdownList refId="HideResetDesktopDesktopMenu" defaultItem="0">Ocultar Restablecer escritorio</dropdownList>
         <dropdownList refId="HideRestartDesktopDesktopMenu" defaultItem="0">Ocultar Reiniciar escritorio</dropdownList>
         <dropdownList refId="HideConnectUSBDeviceDesktopMenu" defaultItem="0">Ocultar Conectar dispositivo USB</dropdownList>
       </presentation>
       <presentation id="HideNotificationMenu">
-        <dropdownList refId="HideSharingNotificationMenu" defaultItem="0">Ocultar Compartir</dropdownList>
         <dropdownList refId="HideSettingsNotificationMenu" defaultItem="0">Ocultar Configuración</dropdownList>
       </presentation>
       <presentation id="ColorDepth">
@@ -743,11 +884,20 @@ Esta propiedad está habilitada de forma predeterminada.</string>
       <presentation id="EnableTicketSSLAuth_1">
         <dropdownList refId="EnableTicketSSLAuth" defaultItem="0">Habilitar canal de marco con cifrado SSL</dropdownList>
       </presentation>
-      <presentation id="IgnoreRevocation_1" />
+      <presentation id="DoNotCheckCertRevocationStatus_1" />
+      <presentation id="StrictCertRevocationCheck_1" />
       <presentation id="SSLCipherList_1">
         <textBox refId="SSLCipherList">
           <label>Configura algoritmos de cifrado y protocolos SSL</label>
           <defaultValue>TLSv1.1:TLSv1.2:!aNULL:kECDH+AESGCM:ECDH+AESGCM:RSA+AESGCM:kECDH+AES:ECDH+AES:RSA+AES</defaultValue>
+        </textBox>
+        <textBox refId="SSLSignatureAlgorithms">
+          <label>Configura la extensión de algoritmos de firma</label>
+          <defaultValue></defaultValue>
+        </textBox>
+        <textBox refId="SSLSupportedGroups">
+          <label>Configura la extensión de grupos compatibles</label>
+          <defaultValue></defaultValue>
         </textBox>
       </presentation>
       <presentation id="ServerURL_1">
@@ -790,6 +940,9 @@ Esta propiedad está habilitada de forma predeterminada.</string>
       <presentation id="AppSessionReconnectBehavior_1">
         <dropdownList refId="AppSessionReconnectBehavior" defaultItem="0">Comportamiento de reanudación de sesiones de la aplicación desconectadas</dropdownList>
       </presentation>
+      <presentation id="AllSessionsDisconnectedBehavior_1">
+        <dropdownList refId="AllSessionsDisconnectedBehavior" defaultItem="0">Comportamiento del cliente cuando todas las sesiones se desconectan</dropdownList>
+      </presentation>
       <presentation id="UnauthenticatedAccessEnabled_1" />
       <presentation id="UnauthenticatedAccessAccount_1">
         <textBox refId="UnauthenticatedAccessAccount">
@@ -797,6 +950,7 @@ Esta propiedad está habilitada de forma predeterminada.</string>
         </textBox>
       </presentation>
       <presentation id="AllowDataSharing" />
+      <presentation id="AllowPluginUpdate" />
       <presentation id="AllowResolutionDpiSync" />
       <presentation id="EnableShade" />
       <presentation id="InitialPinState" />
@@ -804,9 +958,6 @@ Esta propiedad está habilitada de forma predeterminada.</string>
       <presentation id="EnableMMR" />
       <presentation id="AlwaysOnTop" />
       <presentation id="AutomaticallyInstallShortcuts" />
-      <presentation id="LocalModeExitBehavior">
-        <dropdownList refId="LocalModeExitBehavior" defaultItem="0">Comportamiento de salida por defecto de escritorios del modo local</dropdownList>
-      </presentation>
       <presentation id="AutomaticallyInstallShortcuts_1" />
       <presentation id="DisableToastNotifications_1" />
       <presentation id="EnableRelativeMouse_1" />
@@ -816,11 +967,26 @@ Esta propiedad está habilitada de forma predeterminada.</string>
       <presentation id="ForceFloatingLanguageBarOff_1" />
       <presentation id="AllowDisplayScaling" />
       <presentation id="AutoSyncToggleKeys" />
+      <presentation id="AllowBlastCodec" />
+      <presentation id="AllowH264" />
+      <presentation id="AllowH264YUV444" />
       <presentation id="AllowHEVC" />
+      <presentation id="AllowHDR" />
+      <presentation id="EnableWindowOptimizations" />
+      <presentation id="DecodeCapsProbingMode">
+        <dropdownList refId="DecodeCapsProbingMode" defaultItem="0" noSort="true">Cuándo sondear capacidades de descodificación de hardware:</dropdownList>
+      </presentation>
+      <presentation id="DecoderImageCacheSize">
+        <decimalTextBox refId="DecoderImageCacheSize" defaultValue="256000">Tamaño en caché de imagen del descodificador (KB)</decimalTextBox>
+      </presentation>
       <presentation id="AllowBlastThroughProxy" />
+      <presentation id="AllowSplitMksWindow" />
       <presentation id="ForceUserAffinity" />
       <presentation id="MouseMoveMaxLatencyMsec">
         <decimalTextBox refId="MouseMoveMaxLatencyMsec">Latencia máxima para fusión del mouse</decimalTextBox>
+      </presentation>
+      <presentation id="MaxTxRate">
+        <decimalTextBox refId="MaxTxRate" defaultValue="500">Velocidad de transmisión máxima</decimalTextBox>
       </presentation>
     </presentationTable>
   </resources>

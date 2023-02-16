@@ -73,5 +73,15 @@
         <list id="DriveLetterMappingTable" key="Software\Policies\VMware, Inc.\VMware tsdr\DriveLetterMappingTable" explicitValue="true" />
       </elements>
     </policy>
+    <policy name="EnableHighPerformanceCDR" class="Both" displayName="$(string.EnableHighPerformanceCDR)" explainText="$(string.EnableHighPerformanceCDRExplain)" presentation="$(presentation.EnableHighPerformanceCDR)" key="Software\Policies\VMware, Inc.\VMware tsdr" valueName="PerThreadCacheDisabled">
+      <parentCategory ref="VMwareViewCDR" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <string>false</string>
+      </enabledValue>
+      <disabledValue>
+        <string>true</string>
+      </disabledValue>
+    </policy>
   </policies>
 </policyDefinitions>

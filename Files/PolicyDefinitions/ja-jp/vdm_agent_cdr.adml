@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="VMwareViewCDR">VMware Horizon Client ドライブのリダイレクト</string>
+      <string id="IsDriveLetterNeeded">リダイレクトされたデバイスとドライブ文字を表示</string>
+      <string id="IsDriveLetterNeededExplain">CDR (クライアント ドライブのリダイレクト) でドライブ文字を有効にするかどうかを設定します。これはデフォルトでは有効になっています。</string>
+      <string id="InitDriveLetterTimeout">ドライブ文字の初期化のタイムアウト</string>
+      <string id="InitDriveLetterTimeoutExplain">正しいドライブ文字の処理を Windows エクスプローラが待機するタイムアウト値を設定します。この設定を無効にするか、設定しない場合、デフォルトで 5 秒が設定されます。</string>
+      <string id="VMwareViewCDRDeviceFiltering">デバイスのフィルタリング</string>
+	  <string id="ExcludeVidPid">Vid/Pid デバイスを除外する</string>
+      <string id="ExcludeVidPidExplain">指定したベンダー ID と製品 ID のデバイスを転送から除外します。
+
+構文: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx | *&gt;&gt;[;...]
+
+例: vid-0781_pid-554c;vid-0781_pid-9999</string>
+      <string id="IncludeVidPid">Vid/Pid デバイスを含める</string>
+      <string id="IncludeVidPidExplain">転送可能な、指定したベンダー ID と製品 ID のデバイスを含めます。
+
+構文: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx | *&gt;&gt;[;...]
+
+例: vid-0781_pid-554c;vid-0781_pid-9999</string>
+      <string id="DriveLetterMapping">ドライブ文字のマッピング モードを設定</string>
+      <string id="DriveLetterMappingExplain">この GPO は、ドライブ文字のマッピング モードを構成するためのものです。現在、2 つのモードがサポートされています。
+- 1 対 1 のマッピング: 同じクライアントのドライブ文字をエージェントにマッピングします。
+- 定義されたマッピング: 定義されたマッピング テーブルに従って、クライアントのドライブ文字をエージェントにマッピングします。
+
+
+注:
+- この GPO は、GPO「リダイレクトされたデバイスとドライブ文字を表示」が無効になっていない場合に有効です。
+- サポートされている両方のモードで、ドライブ文字に競合がある場合 (マッピングされたドライブ文字がエージェントですでに使用されている場合など) は、「Z」から「A」へと逆順に検索され、最初に使用可能な文字が適用されます。使用可能なドライブ文字がない場合、ドライブ文字は割り当てられません。
+      </string>
+      <string id="DriveLetterMappingTable">ドライブ文字のマッピング テーブルを定義</string>
+      <string id="DriveLetterMappingTableExplain">ドライブ文字のマッピング テーブルを定義
+- クライアント ドライブ文字 (値名): クライアントで使用されるドライブ文字。
+- エージェント ドライブ文字 (値): エージェントで使用されるドライブ文字。
+</string>
+      <string id="OneToOneMapping">1 対 1 のマッピング</string>
+      <string id="PredefinedMapping">定義されたマッピング</string>
+      <string id="EnableHighPerformanceCDR">パフォーマンスの最適化を有効にする</string>
+      <string id="EnableHighPerformanceCDRExplain">この設定は、クライアント ドライバ リダイレクトのパフォーマンス最適化を有効にするかどうかを決定します。この設定を有効にすると、共有ドライブからのファイル/フォルダのコピーなどのシナリオでパフォーマンスが向上します。
+
+デフォルトでは、この設定は無効です。
+      </string>
+    </stringTable>
+    <presentationTable>
+       <presentation id="IsDriveLetterNeeded"/>
+       <presentation id="InitDriveLetterTimeout">
+         <decimalTextBox refId="InitDriveLetterTimeout" defaultValue="5000">タイムアウト (ミリ秒):</decimalTextBox>
+       </presentation>
+	   <presentation id="ExcludeVidPid">
+         <textBox refId="ExcludeVidPid">
+           <label>Vid/Pid デバイスを除外する</label>
+         </textBox>
+       </presentation>
+       <presentation id="IncludeVidPid">
+         <textBox refId="IncludeVidPid">
+           <label>Vid/Pid デバイスを含める</label>
+         </textBox>
+       </presentation>
+       <presentation id="DriveLetterMapping">
+         <dropdownList refId="DriveLetterMappingDropdown" defaultItem="0" noSort="true">ドライブ文字のマッピング モードを設定:</dropdownList>
+       </presentation>
+       <presentation id="DriveLetterMappingTable">
+         <listBox refId="DriveLetterMappingTable">ドライブ文字のマッピング テーブルを定義:</listBox>
+       </presentation>
+       <presentation id="EnableHighPerformanceCDR"/>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

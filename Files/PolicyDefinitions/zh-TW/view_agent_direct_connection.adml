@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+
+   <displayName>VMware Horizon View Agent Direct Connection</displayName>
+   <description>VMware Horizon View Agent Direct Connection 組態設定</description>
+   <resources>
+
+      <stringTable>
+
+         <string id="Agent_Direct_Connect_Config">View Agent Direct-Connection 組態</string>
+
+         <string id="Agent_Direct_Connect_Authentication">驗證</string>
+
+         <string id="Agent_Direct_Connect_Authentication_lacu">以目前使用者身分登入</string>
+
+         <string id="Agent_Direct_Connect_Protocols">通訊協定和網路設定</string>
+
+         <string id="HTTPS_Port">HTTPS 連接埠號碼</string>
+
+         <string id="HTTPS_Port_Desc">View Agent Connect 用來接聽傳入 View Client HTTPS 連線的 TCP 連接埠號碼。若未設定或停用此原則，則系統會使用預設值 443。
+
+注意: 若您變更連接埠號碼，則可能需要重新設定桌面防火牆以允許連接埠上的傳入連線。</string>
+
+         <string id="Session_Timeout">工作階段逾時</string>
+
+         <string id="Session_Timeout_Desc">決定使用者在使用 View Client 登入後，可讓工作階段保持開啟多久的時間。此值以分鐘為單位進行設定，若未設定或停用此原則，則預設值為 600 分鐘。當桌面工作階段逾時，即終止工作階段，並且會中斷 View Client 與桌面的連線。</string>
+
+         <string id="Disclaimer_Enabled">免責聲明已啟用</string>
+
+         <string id="Disclaimer_Enabled_Desc">登入時顯示讓使用者接受的免責聲明文字。若有「免責聲明文字」則顯示該段文字，否則顯示 GPO「設定\Windows 設定\安全性設定\本機原則\安全性選項」中「互動式登入: 給登入使用者的訊息本文」的文字。此功能的預設設定為停用。</string>
+
+         <string id="Disclaimer_Text">免責聲明文字</string>
+
+         <string id="Disclaimer_Text_Desc">當 View Client 使用者登入時顯示的免責聲明文字，需要設定「免責聲明已啟用」原則。若未指定文字，預設值是採用 Windows 原則「設定\Windows 設定\安全性設定\本機原則\安全性選項」中「互動式登入: 給登入使用者的訊息本文」的值。</string>
+
+         <string id="Applications_Enabled">應用程式已啟用</string>
+
+         <string id="Applications_Enabled_Desc">支援在遠端桌面工作階段主機上啟動應用程式。此功能的預設設定為啟用。</string>
+
+         <string id="Client_autoconnect_setting">用戶端設定: AutoConnect</string>
+
+         <string id="Client_autoconnect_setting_Desc">傳送到 View Client 的 AutoConnect 設定。若設定此原則，則會覆寫任何儲存的用戶端喜好設定。依預設沒有設定任何值。啟用此原則會將值設為 true，停用此原則會將值設為 false。</string>
+
+         <string id="Client_alwaysconnect_setting">用戶端設定: AlwaysConnect</string>
+
+         <string id="Client_alwaysconnect_setting_Desc">傳送到 View Client 的 AlwaysConnect 設定。若設定此原則，則會覆寫任何儲存的用戶端喜好設定。依預設沒有設定任何值。啟用此原則會將值設為 true，停用此原則會將值設為 false。</string>
+
+         <string id="Client_screensize_setting">用戶端設定: ScreenSize</string>
+
+         <string id="Client_screensize_setting_Desc">傳送到 View Client 的 ScreenSize 設定。若啟用此原則，則會覆寫任何儲存的用戶端喜好設定。若未設定或停用此原則，則系統會使用用戶端喜好設定。</string>
+
+         <string id="External_PCoIP_port">外部 PCoIP 連接埠</string>
+
+         <string id="External_PCoIP_port_Desc">傳送給 View Client 的連接埠號碼，做為用於 PCoIP 通訊協定的目的地 TCP/UDP 連接埠號碼。數字前的 + 字元表示用於 HTTPS 之連接埠號碼中的相對數字。僅在外部公開的連接埠號碼不符合服務正在接聽的連接埠時才需要設定此值，此情況通常在 NAT 環境中發生。依預設沒有設定任何值。</string>
+
+         <string id="External_RDP_Port">外部 RDP 連接埠</string>
+
+         <string id="External_RDP_Port_Desc">傳送給 View Client 的連接埠號碼，做為用於 RDP 通訊協定的目的地 TCP 連接埠號碼。數字前的 + 字元表示用於 HTTPS 之連接埠號碼中的相對數字。僅在外部公開的連接埠號碼不符合服務正在接聽的連接埠時才需要設定此值，此情況通常在 NAT 環境中發生。依預設沒有設定任何值。</string>
+
+         <string id="External_Blast_port">外部 Blast 連接埠</string>
+
+         <string id="External_Blast_port_Desc">傳送給 View Client 的連接埠號碼，做為用於 Blast 通訊協定的目的地 TCP 連接埠號碼。數字前的 + 字元表示用於 HTTPS 之連接埠號碼中的相對數字。僅在外部公開的連接埠號碼不符合服務正在接聽的連接埠時才需要設定此值，此情況通常在 NAT 環境中發生。依預設沒有設定任何值。</string>
+
+         <string id="External_IP">外部 IP 位址</string>
+
+         <string id="External_IP_Desc">傳送給 View Client 的 IP v4 位址，做為用於次要通訊協定 (RDP、PCoIP、架構通道、Blast...) 的目的地 IP 位址。僅在外部公開的連接埠號碼不符合桌面平台機器的位址時才需要設定此值，此情況通常在 NAT 環境中發生。依預設沒有設定任何值。</string>
+
+         <string id="External_Framework_Channel_port">外部架構通道連接埠</string>
+
+         <string id="External_Framework_Channel_port_Desc">傳送給 View Client 的連接埠號碼，做為用於架構通道通訊協定的目的地 TCP 連接埠號碼。數字前的 + 字元表示用於 HTTPS 之連接埠號碼中的相對數字。僅在外部公開的連接埠號碼不符合服務正在接聽的連接埠時才需要設定此值，此情況通常在 NAT 環境中發生。依預設沒有設定任何值。</string>
+
+         <string id="USB_Enabled">USB 已啟用</string>
+
+         <string id="USB_Enabled_Desc">決定桌面平台是否可以使用連線至用戶端系統的 USB 裝置。預設值為啟用。若基於安全理由而想避免使用外部裝置，請將設定變更為停用。</string>
+
+         <string id="MMR_Enabled">多媒體重新導向 (MMR) 已啟用</string>
+
+         <string id="MMR_Enabled_Desc">決定是否啟用用戶端系統的 MMR。MMR 是一種 Microsoft DirectShow 篩選器，會將 View 桌面平台上特定轉碼器中的多媒體資料直接透過 TCP 通訊端轉送給用戶端系統。當播放時，該資料便會在用戶端系統上直接解碼。預設值為停用。
+
+如果用戶端系統的視訊顯示硬體不支援重疊，則 MMR 無法正確運作。用戶端系統的資源可能不足以處理本機多媒體解碼。</string>
+
+         <string id="Reset_Enabled">重設已啟用</string>
+
+         <string id="Reset_Enabled_Desc">已驗證 View Client 可以執行作業系統層級重新開機作業的能力。預設設定為停用。</string>
+
+         <string id="USB_AutoConnect">USB 自動連線</string>
+
+         <string id="USB_AutoConnect_Desc">將外掛的 USB 裝置連線至桌面平台。若設定此原則，則會覆寫任何儲存的用戶端喜好設定。依預設沒有設定任何值。</string>
+
+         <string id="Client_Cred_Cache_Timeout">用戶端認證快取逾時</string>
+
+         <string id="Client_Cred_Cache_Timeout_Desc">View Client 應允許使用者使用已儲存密碼的時間長度 (以分鐘為單位)。0 表示從不，-1 表示永久。若此設定設為有效值，則 View Client 將提供讓使用者儲存其密碼的選項。預設為 0 (從不)。</string>
+
+         <string id="User_Idle_Timeout">使用者閒置逾時</string>
+
+         <string id="User_Idle_Timeout_Desc">使用者可閒置的最長時間 (以秒為單位)，超過此時間後服務將採取措施來保護工作階段。值 -1 表示永不將工作階段視為閒置。預設值為 900 秒 (15 分鐘)。</string>
+
+         <string id="Client_Session_Timeout">用戶端工作階段逾時</string>
+
+         <string id="Client_Session_Timeout_Desc">若未連線用戶端，可將工作階段維持使用中的最長時間 (以秒為單位)。預設值為 36000 秒 (10 小時)。</string>
+
+         <string id="X509_Cert_Auth">X509 憑證驗證</string>
+
+         <string id="X509_Cert_Auth_Desc">決定是否停用、允許或需要智慧卡 X.509 憑證驗證。</string>
+
+         <string id="Disabled">已停用</string>
+
+         <string id="Allowed">允許</string>
+
+         <string id="Required">必要</string>
+
+         <string id="X509_SSL_Cert_Auth_Enabled">X509 SSL 憑證驗證已啟用</string>
+
+         <string id="X509_SSL_Cert_Auth_Enabled_Desc">決定是否從 View Client 透過直接 SSL 連線啟用智慧卡 X.509 憑證驗證。如果透過中繼 SSL 終止點處理 X.509 憑證驗證，則不需要此項目。若變更此值，則必須重新啟動 View Agent。</string>
+
+         <string id="Client_Config_NVP">用戶端設定名稱值組</string>
+
+         <string id="Client_Config_NVP_Desc">傳遞給用戶端的值清單，使用「名稱=值」的格式，例如 clientCredentialCacheTimeout=1440。</string>
+
+         <string id="Default_Protocol">預設通訊協定</string>
+
+         <string id="Default_Protocol_Desc">View Client 用來連線至桌面平台的預設顯示通訊協定，若未設定該值則預設值為 BLAST。</string>
+
+<!-- begin: log on as current user -->
+
+         <string id="gssapi_allow_legacy_clients">允許舊版用戶端</string>
+         <string id="gssapi_allow_legacy_clients_Desc">如果停用，5.5 版之前的用戶端將無法使用「以目前使用者身分登入」進行驗證。
+
+如果未設定，則會允許舊版用戶端。</string>
+
+         <string id="gssapi_allow_ntlm">允許 NTLM 後援</string>
+         <string id="gssapi_allow_ntlm_Desc">如果啟用，則在用戶端無法連線至網域控制站時，即會允許從 Kerberos 到 NTLM 驗證的後援。
+
+如果未設定，則不允許 NTLM 後援。</string>
+
+         <string id="gssapi_require_cbt">需要通道繫結</string>
+         <string id="gssapi_require_cbt_Desc">如果停用，則不需要通道繫結。
+
+附註: 舊版用戶端不支援通道繫結，如果啟用了對舊版用戶端的支援，則 5.5 版之前的用戶端將不會使用通道繫結。
+
+如果未設定，則需要通道繫結。</string>
+
+<!-- end: log on as current user -->
+
+      </stringTable>
+
+      <presentationTable>
+
+         <presentation id="HTTPS_Port">
+            <textBox refId="HTTPS_Port_TB">
+               <label>HTTPS 連接埠號碼</label>
+               <defaultValue>443</defaultValue>
+            </textBox>
+         </presentation>
+
+         <presentation id="Session_Timeout">
+            <textBox refId="Session_Timeout_TB">
+               <label>工作階段逾時</label>
+               <defaultValue>600</defaultValue>
+            </textBox>
+         </presentation>
+
+         <presentation id="Disclaimer_Text">
+            <textBox refId="Disclaimer_Text_TB">
+               <label>免責聲明文字</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Client_screensize_setting">
+            <textBox refId="Client_screensize_setting_TB">
+               <label>用戶端設定: ScreenSize</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="External_PCoIP_port">
+            <textBox refId="External_PCoIP_port_TB">
+               <label>外部 PCoIP 連接埠</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="External_RDP_Port">
+            <textBox refId="External_RDP_Port_TB">
+               <label>外部 RDP 連接埠</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="External_Blast_port">
+            <textBox refId="External_Blast_port_TB">
+               <label>外部 Blast 連接埠</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="External_IP">
+            <textBox refId="External_IP_TB">
+               <label>外部 IP 位址</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="External_Framework_Channel_port">
+            <textBox refId="External_Framework_Channel_port_TB">
+               <label>外部架構通道連接埠</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Client_Cred_Cache_Timeout">
+            <textBox refId="Client_Cred_Cache_Timeout_TB">
+               <label>用戶端認證快取逾時</label>
+               <defaultValue>0</defaultValue>
+            </textBox>
+         </presentation>
+
+         <presentation id="User_Idle_Timeout">
+            <textBox refId="User_Idle_Timeout_TB">
+               <label>使用者閒置逾時</label>
+               <defaultValue>900</defaultValue>
+            </textBox>
+         </presentation>
+
+         <presentation id="Client_Session_Timeout">
+            <textBox refId="Client_Session_Timeout_TB">
+               <label>用戶端工作階段逾時</label>
+               <defaultValue>36000</defaultValue>
+            </textBox>
+         </presentation>
+
+         <presentation id="X509_Cert_Auth">
+            <dropdownList refId="X509_Cert_Auth_DDL" defaultItem="0">X509 憑證驗證</dropdownList>
+         </presentation>
+
+         <presentation id="Client_Config_NVP">
+            <listBox refId="Client_Config_NVP_list">用戶端設定名稱值組</listBox>
+         </presentation>
+
+         <presentation id="Default_Protocol">
+            <textBox refId="Default_Protocol_TB">
+               <label>預設通訊協定</label>
+               <defaultValue>BLAST</defaultValue>
+            </textBox>
+         </presentation>
+      </presentationTable>
+   </resources>
+</policyDefinitionResources>

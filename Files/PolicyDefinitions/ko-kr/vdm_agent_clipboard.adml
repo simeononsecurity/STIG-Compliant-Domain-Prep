@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="VMwareViewClipboard">클립보드 리디렉션</string>
+      <string id="SUPPORTED_VERSION"></string>
+      <string id="SERVER_CLIPBOARD_STATE">클립보드 리디렉션 구성</string>
+      <string id="CLIPBOARD_STATE_DISABLE_BOTH">양방향으로 사용 안 함</string>
+      <string id="CLIPBOARD_STATE_ENABLE_BOTH">양방향으로 사용</string>
+      <string id="CLIPBOARD_STATE_ENABLE_CLIENT_2_SERVER">클라이언트에서 서버로만 사용</string>
+      <string id="CLIPBOARD_STATE_ENABLE_SERVER_2_CLIENT">서버에서 클라이언트로만 사용</string>
+      <string id="SERVER_CLIPBOARD_STATE_EXPLAIN">클립보드 리디렉션이 허용되는 방향을 결정합니다. 다음 값 중 하나를 선택할 수 있습니다.
+
+-양방향으로 사용 안 함
+-양방향으로 사용
+-클라이언트에서 서버로만 사용(즉, 클라이언트 시스템에서 View 데스크톱으로만 복사 및 붙여넣기 허용)
+-서버에서 클라이언트로만 사용(즉, View 데스크톱에서 클라이언트 시스템으로만 복사 및 붙여넣기 허용)
+
+이 설정은 서버(View 데스크톱)에만 적용됩니다.
+
+이 설정을 사용하지 않거나 이를 구성하지 않은 경우 기본값은 '클라이언트에서 서버로만 사용'입니다.</string>
+      <string id="SERVER_CLIPBOARD_SIZE">서버의 클립보드 메모리 크기</string>
+      <string id="SERVER_CLIPBOARD_SIZE_EXPLAIN">다음 설정은 서버의 클립보드 메모리 크기 값을 나타냅니다.
+
+서버의 클립보드 메모리 크기는 선택한 바이트 또는 킬로바이트 단위로 표시됩니다. 구성되지 않은 경우 메모리 크기는 킬로바이트 단위입니다.
+
+클라이언트에도 클립보드 메모리 크기 값이 지정되어 있으나 항상 킬로바이트 단위입니다.
+
+세션이 설정되고 나면:
+-서버의 클립보드 메모리 크기 값이 클라이언트에 전송됩니다.
+- 그런 다음 클라이언트에서 최소 클라이언트 및 서버 값을 확인하여 유효한 클립보드 메모리 크기 값이 결정됩니다.</string>
+      <string id="CLIPBOARD_FINE_GRAIN_LABEL">클립보드 미세 조정 구성</string>
+      <string id="CLIPBOARD_FINE_GRAIN_EXPLAIN">미세 조정 클립보드 설정을 사용되도록 설정할지 여부를 결정합니다. 이 설정이 사용되도록 설정되면 서버의 클립보드 메모리 크기가 바이트 단위입니다. 이 설정이 사용되도록 설정되지 않으면 서버의 클립보드 메모리 크기가 킬로바이트 단위입니다.
+
+이 설정은 에이전트에만 적용됩니다.</string>
+      <string id="String_Policy_DropList_Select_clipboard_size_unit_kilobytes" >킬로바이트</string>
+      <string id="String_Policy_DropList_Select_clipboard_size_unit_bytes" >바이트</string>
+      <string id="SERVER_CLIPBOARD_AUDIT">클립보드 감사 구성</string>
+      <string id="CLIPBOARD_AUDIT_DISABLE_BOTH">양방향으로 사용 안 함</string>
+      <string id="CLIPBOARD_AUDIT_ENABLE_ONLY_CLIENT_TO_SERVER">클라이언트에서 서버로만 사용</string>
+      <string id="CLIPBOARD_AUDIT_ENABLE_ONLY_SERVER_TO_CLIENT">서버에서 클라이언트로만 사용</string>
+      <string id="CLIPBOARD_AUDIT_ENABLE_BOTH">양방향으로 사용</string>
+      <string id="SERVER_CLIPBOARD_AUDIT_BLOCK_CLIPBOARD">클라이언트가 감사를 지원하지 않을 때 클라이언트 측으로의 클립보드 리디렉션을 차단할지 여부</string>
+      <string id="SERVER_CLIPBOARD_AUDIT_EXPLAIN">클립보드 감사를 허용할 방향을 결정합니다. 다음 값 중 하나를 선택할 수 있습니다.
+
+-양방향으로 사용 안 함
+-클라이언트에서 서버로만 사용 설정(즉, 클라이언트 측에서 에이전트 측으로 복사된 클립보드 데이터 정보가 기록됩니다.)
+-서버에서 클라이언트로만 사용 설정(즉, 에이전트 측에서 클라이언트 측으로 복사된 클립보드 데이터 정보가 기록됩니다.)
+-양방향으로 사용
+
+이 설정은 서버(View 데스크톱)에만 적용됩니다.
+
+이 설정이 사용되지 않도록 설정되거나 구성되지 않은 경우 기본값은 '양방향으로 사용 안 함'입니다.</string>
+      <string id="SERVER_CLIPBOARD_AUDIT_BLOCK_CLIPBOARD_EXPLAIN">Horizon Client가 감사 기능을 지원하지 않을 경우 클라이언트에 대한 클립보드 리디렉션을 차단할지 결정합니다.
+
+클립보드 리디렉션의 동작을 선택할 수 있습니다.
+
+-Horizon Agent에서는 감사가 사용되도록 설정되어 있으나 Horizon Client에서는 그렇지 않을 경우 에이전트-클라이언트 클립보드 리디렉션 통과 허용
+-Horizon Agent에서는 감사가 사용되도록 설정되어 있으나 Horizon Client에서는 그렇지 않을 경우 에이전트-클라이언트 클립보드 리디렉션 차단
+
+이 설정은 감사를 사용하도록 설정한 후에만 적용될 수 있습니다.</string>
+      <string id="String_Policy_DropList_Select_Configure_clipboard_Audit_Pass_Through">통과</string>
+      <string id="String_Policy_DropList_Select_Configure_clipboard_Audit_Block">차단</string>
+      <string id="SERVER_FILE_TRANSFER_STATE">파일 전송 구성</string>
+      <string id="FILE_TRANSFER_STATE_DISABLE_BOTH">업로드 및 다운로드 모두 사용 안 함</string>
+      <string id="FILE_TRANSFER_STATE_ENABLE_BOTH">업로드 및 다운로드 모두 사용</string>
+      <string id="FILE_TRANSFER_STATE_ENABLE_UPLOAD">파일 업로드만 사용</string>
+      <string id="FILE_TRANSFER_STATE_ENABLE_DOWNLOAD">파일 다운로드만 사용</string>
+      <string id="SERVER_FILE_TRANSFER_STATE_EXPLAIN">에이전트와 HTML Access 간 파일 전송을 결정합니다. 다음 값 중 하나를 선택할 수 있습니다.
+
+-업로드 및 다운로드 모두 사용 안 함
+-업로드 및 다운로드 모두 사용
+-파일 업로드만 사용(즉, 클라이언트 시스템에서 View 데스크톱으로 파일 업로드 허용)
+-파일 다운로드만 사용(즉, View 데스크톱에서 클라이언트 시스템으로 다운로드 허용)
+
+이 설정은 서버(View 데스크톱)에만 적용됩니다.
+
+이 설정이 사용되지 않도록 설정되거나 구성되지 않은 경우 기본값은 '파일 업로드만 사용' 설정입니다.</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING">클립보드 리디렉션 형식 구성</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_EXPLAIN">이 설정은 각 데이터 형식(파일/텍스트/서식 있는 텍스트/이미지/Microsoft Office 텍스트/Microsoft Office 텍스트 효과/Microsoft 차트 및 스마트 아트)에 대해 필터를 사용하도록 설정할지 여부를 결정합니다. 각 필터의 상태는 다음과 같습니다.
+
+-사용 안 함
+-사용
+
+이 설정은 에이전트에만 적용되며 기본적으로 구성되지 않습니다.
+
+이 설정을 구성하지 않거나 사용하지 않도록 설정하면 &quot;클립보드 리디렉션&quot;에 대한 필터가 모든 형식에 대해 '사용 안 함'으로 설정됩니다.</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_ENABLED">활성화됨</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_DISABLED">비활성화됨</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="SERVER_CLIPBOARD_STATE">
+        <dropdownList refId="SERVER_CLIPBOARD_STATE" defaultItem="1">클립보드 리디렉션 구성</dropdownList>
+      </presentation>
+      <presentation id="SERVER_CLIPBOARD_SIZE">
+        <dropdownList refId="Policy_DropList_Clipboard_Fine_Grained" defaultItem="1" >클립보드 메모리 크기 단위 선택</dropdownList>
+        <decimalTextBox refId="SERVER_CLIPBOARD_SIZE" defaultValue="1024" spinStep="100">서버의 클립보드 메모리 크기</decimalTextBox>
+      </presentation>
+      <presentation id="SERVER_CLIPBOARD_AUDIT">
+        <dropdownList refId="SERVER_CLIPBOARD_AUDIT" defaultItem="0">클립보드 감사 구성</dropdownList>
+      </presentation>
+      <presentation id="SERVER_CLIPBOARD_AUDIT_BLOCK_CLIPBOARD">
+        <dropdownList refId="Policy_DropList_Element_Configure_clipboard" defaultItem="0">클라이언트에서 감사를 지원하지 않는 경우 클립보드 동작 구성</dropdownList>
+      </presentation>
+      <presentation id="CLIPBOARD_FINE_GRAIN_LABEL" />
+      <presentation id="SERVER_FILE_TRANSFER_STATE">
+        <dropdownList refId="SERVER_FILE_TRANSFER_STATE" defaultItem="3">파일 전송 구성</dropdownList>
+      </presentation>
+      <presentation id="CLIPBOARD_FORMAT_FILTERING">
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_FILE_IN" defaultItem="0">수신 클립보드 데이터에서 파일 및 폴더 필터링:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_FILE_OUT" defaultItem="0">송신 클립보드 데이터에서 파일 및 폴더 필터링:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_TEXT_IN" defaultItem="0">수신 클립보드 데이터에서 텍스트 필터링:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_TEXT_OUT" defaultItem="0">송신 클립보드 데이터에서 텍스트 필터링:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_RTF_IN" defaultItem="0">수신 클립보드 데이터에서 서식 있는 텍스트 형식 데이터 필터링:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_RTF_OUT" defaultItem="0">송신 클립보드 데이터에서 서식 있는 텍스트 형식 데이터 필터링:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_IMAGE_IN" defaultItem="0">수신 클립보드 데이터에서 이미지 필터링:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_IMAGE_OUT" defaultItem="0">송신 클립보드 데이터에서 이미지 필터링:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_IN" defaultItem="0">수신 클립보드 데이터에서 Microsoft Office 텍스트 데이터 필터링:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_OUT" defaultItem="0">송신 클립보드 데이터에서 Microsoft Office 텍스트 데이터 필터링:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_CHART_IN" defaultItem="0">수신 클립보드 데이터에서 Microsoft 차트 및 스마트 아트 데이터 필터링:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_CHART_OUT" defaultItem="0">송신 클립보드 데이터에서 Microsoft 차트 및 스마트 아트 데이터 필터링:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_IN" defaultItem="0">수신 클립보드 데이터에서 Microsoft 텍스트 효과 데이터 필터링:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_OUT" defaultItem="0">송신 클립보드 데이터에서 Microsoft 텍스트 효과 데이터 필터링:</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

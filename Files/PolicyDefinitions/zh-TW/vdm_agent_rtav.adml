@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="VMwareViewClientRTAV">View RTAV 組態</string>
+      <string id="VMwareViewClientRTAVWebcam">View RTAV 網路攝影機設定</string>
+      <string id="VMwareViewRTAVMicrophone">View RTAV 麥克風設定</string>
+      <string id="WebcamMaxResWidth">解析度 - 最大影像寬度 (以像素為單位)</string>
+      <string id="WebcamMaxResWidthExplain">從網路攝影機擷取之影像畫面的最大寬度 (以像素為單位)</string>
+      <string id="WebcamMaxResHeight">解析度 - 最大影像高度 (以像素為單位)</string>
+      <string id="WebcamMaxResHeightExplain">從網路攝影機擷取之影像畫面的最大高度 (以像素為單位)</string>
+      <string id="WebcamMaxFrameRate">每秒的最大畫面數</string>
+      <string id="WebcamMaxFrameRateExplain">網路攝影機每秒可擷取的最大畫面數。
+最小 = 1，最大 = 30</string>
+      <string id="WebcamDefaultResWidth">解析度 - 預設影像解析度寬度 (以像素為單位)</string>
+      <string id="WebcamDefaultResWidthExplain">設定預設影像解析度寬度。若未設定，則預設值為 320。若使用者未定義解析度值，便會使用此值</string>
+      <string id="WebcamDefaultResHeight">解析度 - 預設影像解析度高度 (以像素為單位)</string>
+      <string id="WebcamDefaultResHeightExplain">設定預設影像解析度高度。若未設定，則預設值為 240。若使用者未定義解析度值，便會使用此值</string>
+      <string id="VMwareViewAgent">VMware View Agent 組態</string>
+      <string id="ADMXMigrator_UnresolvedString">ADMX Migrator 遇到不在來源 ADM 字串表格中的字串。</string>
+      <string id="ADMXMigrator_NoSupportedOn">ADMX Migrator 遇到沒有 supportedOn 值的原則。</string>
+      <string id="MicrophoneSampleRate">取樣速率 - 錄製音訊裝置取樣速率</string>
+      <string id="MicrophoneSampleRateExplain">設定從端點到 RDSH 桌面平台和 RDSH 遠端應用程式的錄製音訊裝置取樣速率。
+重要: 當工作階段已連線時，不應變更此 GPO 設定。需要重新開機，此設定才能生效。</string>
+      <string id="SampleRate8K">8000</string>
+      <string id="SampleRate16K">16000</string>
+      <string id="SampleRate48K">48000</string>
+      <string id="DisableRTAV">停用麥克風或網路攝影機</string>
+      <string id="DisableRTAVExplain">停用麥克風或網路攝影機
+
+注意:「停用麥克風」和「停用網路攝影機」僅在使用 Windows 用戶端時生效。此外，用戶端和代理程式都必須為 2209 版和更新版本。</string>
+      <string id="DisableMicAndWebcam">停用麥克風和網路攝影機</string>
+      <string id="DisableWebcam">停用網路攝影機</string>
+      <string id="DisableMic">停用麥克風</string>
+      <string id="ForceNV">硬體加速 - 啟用此選項可將 Nvidia 硬體加速用於網路攝影機視訊轉碼器</string>
+      <string id="ForceNVExplain">啟用此選項可在偵測到指定的 GPU 並與 FFmpeg 相容的情況下，將 Nvidia 硬體加速用於網路攝影機視訊轉碼器</string>
+      <string id="ForceQSV">硬體加速 - 啟用此選項可將 Intel QSV 用於網路攝影機視訊轉碼器</string>
+      <string id="ForceQSVExplain">啟用此選項可在偵測到指定的 GPU 並與 FFmpeg 相容的情況下，將 Intel QSV 用於網路攝影機視訊轉碼器</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="WebcamMaxFrameRate">
+        <decimalTextBox refId="WebcamMaxFrameRate" defaultValue="15">每秒的最大畫面數</decimalTextBox>
+      </presentation>
+      <presentation id="WebcamMaxResHeight">
+        <decimalTextBox refId="WebcamMaxResHeight" defaultValue="0">解析度 - 最大影像高度 (以像素為單位)</decimalTextBox>
+      </presentation>
+      <presentation id="WebcamMaxResWidth">
+        <decimalTextBox refId="WebcamMaxResWidth" defaultValue="0">解析度 - 最大影像寬度 (以像素為單位)</decimalTextBox>
+      </presentation>
+      <presentation id="WebcamDefaultResHeight">
+        <decimalTextBox refId="WebcamDefaultResHeight" defaultValue="0">解析度 - 預設影像解析度高度 (以像素為單位)</decimalTextBox>
+      </presentation>
+      <presentation id="WebcamDefaultResWidth">
+        <decimalTextBox refId="WebcamDefaultResWidth" defaultValue="0">解析度 - 預設影像解析度寬度 (以像素為單位)</decimalTextBox>
+      </presentation>
+      <presentation id="MicrophoneSampleRate">
+        <dropdownList refId="MicrophoneSampleRateList" defaultItem="0" noSort="true">取樣速率 - 錄製音訊裝置取樣速率</dropdownList>
+      </presentation>
+      <presentation id="DisableRTAV">
+        <dropdownList refId="RTAVDisableComponentList" defaultItem="0" noSort="true">停用麥克風或網路攝影機</dropdownList>
+      </presentation>
+      <presentation id="ForceNV" />
+      <presentation id="ForceQSV" />
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

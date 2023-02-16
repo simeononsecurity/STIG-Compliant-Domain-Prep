@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" >
+
+	<displayName >여기에 표시 이름 입력</displayName>
+	<description >클라이언트, 서버 및 에이전트에 대한 VMware Horizon View 일반 구성 설정</description>
+	<resources >
+		<stringTable ><!--Storage for String Definitions-->
+
+			<string id="Undefined" >정의되지 않음</string>
+
+			<string id="View_Common_Config" >VMware View 일반 구성</string>
+
+			<string id="Log_Config" >로그 구성</string>
+
+			<string id="Perf_alarms" >성능 알람</string>
+
+			<string id="Security_Config" >보안 구성</string>
+
+			<string id="Enable_extended_logging" >확장된 로깅 사용</string>
+
+			<string id="Enable_extended_logging_Desc" >추적 및 디버그 이벤트가 로그 파일에 포함되었는지 확인합니다.</string>
+
+			<string id="Log_event_disk_threshhold" >로그 및 이벤트의 디스크 임계값(MB 단위)</string>
+
+			<string id="Log_event_disk_threshhold_Desc" >로그 및 이벤트를 위한 최소의 남은 디스크 공간 임계값을 지정합니다. 값이 지정되지 않으면 기본값 200이 적용됩니다. 이 값에 도달하면 이벤트 로깅이 중지됩니다.</string>
+
+			<string id="Override_the_default_Windows_Event_Gen" >기본 View Windows 이벤트 생성 재정의</string>
+
+			<string id="Override_the_default_Windows_Event_Gen_Desc" >다음 값이 지원됩니다.
+    0 = View 이벤트에 대해서만 이벤트 로그 항목이 생성됩니다(로그 메시지에 대한 이벤트 로그 항목은 생성되지 않음).
+    1 = 이벤트 로그 항목이 4.5(및 이하) 호환성 모드에서 생성됩니다. 이벤트 로그 항목이 표준 View 이벤트에 대해 생성되지 않습니다. 이벤트 로그 항목이 로그 파일 텍스트만 기준으로 합니다.
+    2 = 이벤트 로그 항목이 View 이벤트도 포함하여 4.5 이하 호환성 모드에서 생성됩니다.</string>
+
+			<string id="Production_Logs_Duration" >운영 로그 보관 일수</string>
+
+			<string id="Production_Logs_Duration_Desc" >로그 파일이 시스템에 유지되는 일수를 지정합니다. 설정된 값이 없는 경우, 기본값이 적용되며 7일간만 로그 파일이 보관됩니다.</string>
+
+			<string id="Max_Debug_logs" >최대 디버그 로그 수</string>
+
+			<string id="Max_Debug_logs_Desc" >시스템에 유지할 최대 디버그 로그 파일 수를 지정합니다(기본값 10). 로그 파일이 최대 크기에 도달할 경우, 더 이상의 항목이 추가되지 않고 새 로그 파일이 생성됩니다. 이전 로그 파일 수가 이 값에 도달할 경우, 가장 오래된 로그 파일이 삭제됩니다.</string>
+
+			<string id="Max_Debug_logs_size" >최대 디버그 로그 크기(MB 단위)</string>
+
+			<string id="Max_Debug_logs_size_Desc" >로그 파일이 닫히고 새 로그 파일이 생성되기 전에 디버그 로그가 도달할 수 있는 최대 크기(MB 단위)를 지정합니다. (기본값 10MB)</string>
+
+			<string id="Log_Dir" >로그 디렉토리</string>
+
+			<string id="Log_Dir_Desc" >로그 파일의 디렉토리에 대한 전체 경로입니다. 이 위치를 쓸 수 없는 경우, 기본 위치가 사용됩니다. 클라이언트 로그 파일의 경우 클라이언트 이름을 갖는 추가 디렉토리가 로그에 대해 생성됩니다.</string>
+
+			<string id="Send_logs_to_Syslog_Svr" >Syslog 서버로 로그 전송</string>
+
+			<string id="Send_logs_to_Syslog_Svr_Desc" >View Server 로그를 사용하도록 설정하고 VMware LogInsight와 같은 Syslog Server로 전송하도록 설정합니다. 안전하지 않은 네트워크에서는 이 기능을 사용하지 않는 것이 좋습니다.
+Format:LogLevel|ServerFQDNorIP[|PortNumber(default is 514)], example Debug|192.0.2.2</string>
+
+			<string id="CPU_Mem_Sampling_Interval" >CPU 및 메모리 샘플링 간격(초 단위)</string>
+
+			<string id="CPU_Mem_Sampling_Interval_Desc" >CPU 및 메모리가 폴링되는 간격을 지정합니다. 샘플링 간격이 줄어들면 로그에 기록되는 출력 수준이 훨씬 높아질 수 있습니다.</string>
+
+			<string id="Overall_CPU_usage" >로그 정보를 발행하기 위한 전체 CPU 사용률</string>
+
+			<string id="Overall_CPU_usage_Desc" >시스템의 전체 CPU 사용이 로깅되는 임계값입니다. 여러 프로세서를 사용할 수 있는 경우, 이 백분율은 조합된 사용량을 나타냅니다.</string>
+
+			<string id="Overall_memory_usage" >로그 정보를 발행하기 위한 전체 메모리 사용률</string>
+
+			<string id="Overall_memory_usage_Desc" >커밋된 전체 시스템 메모리 사용(프로세스에서 할당하고 운영 체제가 물리적 메모리 및/또는 페이지 파일의 페이지 슬롯을 커밋한 메모리)이 로깅되는 임계값입니다.</string>
+
+			<string id="Process_CPU_usage" >로그 정보를 발행하기 위한 프로세스 CPU 사용률</string>
+
+			<string id="Process_CPU_usage_Desc" >임의 개별 프로세스의 CPU 사용량이 로깅되는 임계값입니다.</string>
+
+			<string id="Process_memory_usage" >로그 정보를 발행하기 위한 프로세스 메모리 사용률</string>
+
+			<string id="Process_memory_usage_Desc" >임의 개별 프로세스의 메모리 사용량이 로깅되는 임계값입니다.</string>
+
+			<string id="Processes_to_check" >와일드 카드 및 제외를 허용하여 쉼표로 구분된 이름 목록을 확인하는 프로세스</string>
+
+			<string id="Processes_to_check_Desc" >검토할 하나 이상의 프로세스 이름과 일치하는 쉼표로 구분된 쿼리 목록입니다. 목록을 필터링하려면 각 쿼리 내에 0개 이상의 문자에 해당하는 별표(*), 정확히 1개의 문자에 해당하는 물음표(?), 해당 쿼리에서 생성된 모든 결과를 제외하기 위해 쿼리에 접두사로 사용할 수 있는 느낌표(!) 와일드카드를 사용할 수 있습니다. 예: '!*sys,ws*' - 'ws'로 시작하는 모든 프로세스를 선택하지만 'sys'로 끝나는 모든 프로세스는 제외합니다.</string>
+
+			<string id="Type_of_certificate_revocation" >인증서 해지 검사 유형</string>
+
+			<string id="Type_of_certificate_revocation_Desc" >완료할 인증서 해지 검사 유형을 없음, EndCertificateOnly, WholeChain 또는 WholeChainButRoot 중에서 선택합니다. 기본값은 WholeChainButRoot입니다.</string>
+
+			<string id="None" >없음</string>
+
+			<string id="End_Cert_Only" >EndCertificateOnly</string>
+
+			<string id="Whole_Chain" >WholeChain</string>
+
+			<string id="Whole_Chain_But_Root" >WholeChainButRoot</string>
+
+			<string id="Only_use_cached_revocation_URL" >캐시된 해지 URL만 사용</string>
+
+			<string id="Only_use_cached_revocation_URL_Desc" >인증서 해지 검사는 캐시된 URL에만 액세스합니다. 구성되어 있지 않은 경우 기본값은 false입니다.</string>
+
+			<string id="Revocation_URL_check_timeout" >해지 URL 검사 시간 초과(밀리초)</string>
+
+			<string id="Revocation_URL_check_timeout_Desc" >모든 해지 URL 연결 검색에서의 누적 시간 초과(밀리초)입니다. 구성되어 있지 않거나 0으로 설정된 값은 Microsoft 기본 처리가 사용됨을 의미합니다.</string>
+
+			<string id="Global_Max_Dump_Count" >프로그램에서 덤프 수 구성 오류</string>
+
+			<string id="Global_Max_Dump_Count_Desc" >값을 임의의 숫자 값으로 설정하여 덤프를 특정 양으로 제한할 수 있습니다. 이 제한된 양은 각 프로세스/사용자별로 적용됩니다. 0으로 설정하면 덤프가 생성되지 않습니다. 설정되지 않은 경우 덤프 생성에 기본 제한이 적용됩니다. (기본값은 128 또는 다른 프로세스에 따라 제한 없음)</string>
+			<string id="Global_Dump_Type" >프로그램에서 덤프 유형 구성 오류</string>
+
+			<string id="DumpType_Full" >전체</string>
+
+			<string id="DumpType_Mini" >미니</string>
+
+			<string id="Global_Dump_Type_Desc" >사용자는 값을 [전체 덤프] 또는 [미니 덤프]로 설정할 수 있습니다. [전체 덤프]와 [미니 덤프]의 차이점은 [덤프]에 포함된 메모리입니다. 전체 덤프 크기에 대한 특성입니다. 미니 덤프에는 스택 추적을 생성하고 기본 문제 해결 단계를 수행하는 데 충분한 정보가 여전히 포함되어 있습니다. 미니 덤프에는 전체 메모리가 포함되어 있지 않으므로 전체 덤프 없이 일부 개체 또는 개체 이름에 대한 정보를 추출할 수 없습니다. [미니 덤프]로 설정하면 미니 덤프가 생성됩니다. 설정되지 않은 경우 기본적으로 전체 덤프가 생성됩니다.</string>
+		</stringTable>
+
+		<presentationTable ><!--Storage for Presentation Definitions-->
+
+			<presentation id="Log_event_disk_threshhold" >
+				<decimalTextBox refId="Log_event_disk_threshhold_DecimalBox_1" defaultValue="200" >로그 및 이벤트의 디스크 임계값(MB 단위)</decimalTextBox>
+			</presentation>
+
+			<presentation id="Override_the_default_Windows_Event_Gen" >
+				<decimalTextBox refId="Override_the_default_Windows_Event_Gen_DecimalBox" defaultValue="0" >기본 View Windows 이벤트 생성 재정의</decimalTextBox>
+			</presentation>
+
+			<presentation id="Production_Logs_Duration" >
+				<decimalTextBox refId="Production_Logs_Duration_DecimalBox" defaultValue="7" >운영 로그 보관 일수</decimalTextBox>
+			</presentation>
+
+			<presentation id="Max_Debug_logs" >
+				<decimalTextBox refId="Max_Debug_logs_DecimalBox" defaultValue="10" >최대 디버그 로그 수</decimalTextBox>
+			</presentation>
+
+			<presentation id="Max_Debug_logs_size" >
+				<decimalTextBox refId="Max_Debug_logs_size_DecimalBox" defaultValue="10" >최대 디버그 로그 크기(MB 단위)</decimalTextBox>
+			</presentation>
+
+			<presentation id="Log_Dir" >
+				<textBox refId="Log_Dir_TextBox" >
+					<label >로그 디렉토리</label>
+				</textBox>
+			</presentation>
+
+			<presentation id="Send_logs_to_Syslog_Svr" >
+				<textBox refId="Send_logs_to_Syslog_Svr_TextBox" >
+					<label >Syslog 서버로 로그 전송</label>
+				</textBox>
+			</presentation>
+
+			<presentation id="CPU_Mem_Sampling_Interval" >
+				<decimalTextBox refId="CPU_Mem_Sampling_Interval_DecimalBox" defaultValue="60" >CPU 및 메모리 샘플링 간격(초 단위)</decimalTextBox>
+			</presentation>
+
+			<presentation id="Overall_CPU_usage" >
+				<decimalTextBox refId="Overall_CPU_usage_DecimalBox" defaultValue="90" >로그 정보를 발행하기 위한 전체 CPU 사용률</decimalTextBox>
+			</presentation>
+
+			<presentation id="Overall_memory_usage" >
+				<decimalTextBox refId="Overall_memory_usage_DecimalBox" defaultValue="75" >로그 정보를 발행하기 위한 전체 메모리 사용률</decimalTextBox>
+			</presentation>
+
+			<presentation id="Process_CPU_usage" >
+				<decimalTextBox refId="Process_CPU_usage_DecimalBox" defaultValue="90" >로그 정보를 발행하기 위한 프로세스 CPU 사용률</decimalTextBox>
+			</presentation>
+
+			<presentation id="Process_memory_usage" >
+				<decimalTextBox refId="Process_memory_usage_DecimalBox" defaultValue="75" >로그 정보를 발행하기 위한 프로세스 메모리 사용률</decimalTextBox>
+			</presentation>
+
+			<presentation id="Processes_to_check" >
+				<textBox refId="Processes_to_check_TextBox" >
+					<label >와일드 카드 및 제외를 허용하여 쉼표로 구분된 이름 목록을 확인하는 프로세스</label>
+				</textBox>
+			</presentation>
+
+			<presentation id="Type_of_certificate_revocation" >
+				<dropdownList refId="Type_of_certificate_revocation_DropDown" defaultItem="3" >인증서 해지 검사 유형</dropdownList>
+			</presentation>
+
+			<presentation id="Revocation_URL_check_timeout" >
+				<decimalTextBox refId="Revocation_URL_check_timeout_DecimalBox" defaultValue="0" >해지 URL 검사 시간 초과(밀리초)</decimalTextBox>
+			</presentation>
+
+			<presentation id="Global_Max_Dump_Count" >
+				<decimalTextBox refId="Global_Max_Dump_Count_DecimalBox" defaultValue="" >생성할 최대 덤프 파일 수</decimalTextBox>
+			</presentation>
+
+			<presentation id="Global_Dump_Type" >
+				<dropdownList refId="Global_Dump_Type_DropDown" defaultItem="" >생성할 덤프 파일 유형</dropdownList>
+			</presentation>
+
+		</presentationTable>
+
+	</resources>
+
+</policyDefinitionResources>

@@ -10,9 +10,9 @@
       <string id="persistence_setting_detail">Ce paramètre détermine si les paramètres de propriété de l'imprimante seront conservés ou non.
 
 Lorsqu'elle est activée, la modification de la propriété de l'imprimante côté agent n'est pas conservée après la déconnexion ou la fermeture de la session par l'utilisateur, elle n'est donc pas permanente.
-Par exemple, si un utilisateur modifie le format papier de l'imprimante de « Letter » à « A4 » pendant la session, la prochaine fois que l'utilisateur se reconnecte, le format papier est rétabli sur « Letter » et la modification « A4 » n'est pas conservée. 
+Par exemple, si un utilisateur modifie le format papier de l'imprimante de « Letter » à « A4 » pendant la session, la prochaine fois que l'utilisateur se reconnecte, le format papier est rétabli sur « Letter » et la modification « A4 » n'est pas conservée.
 
-Lorsqu'elle n'est pas configurée ou qu'elle est désactivée, la modification de la propriété de l'imprimante côté agent est conservée après la déconnexion ou la fermeture de la session par l'utilisateur. Elle est donc permanente.
+Lorsqu'elle n'est pas configurée ou qu'elle est désactivée, la modification de la propriété de l'imprimante côté agent est conservée après la déconnexion ou la fermeture de la session par l'utilisateur, elle est donc permanente.
 Par exemple, si un utilisateur modifie le format papier de l'imprimante de « Letter » à « A4 » pendant la session, la prochaine fois que l'utilisateur se reconnecte, le format papier est toujours « A4 », car la modification est conservée.
 
 Ce GPO n'est pas configuré par défaut.
@@ -31,8 +31,11 @@ Ce paramètre n'est pas configuré par défaut.
 
 Si vous activez ce paramètre de stratégie, il n'est pas possible d'utiliser l'impression basée sur l'emplacement.
 
-Si vous désactivez ou ne configurez pas ce paramètre de stratégie, il est possible d'utiliser l'impression basée sur l'emplacement.</string>
-	  <string id="lp_setting">Ne pas rediriger les imprimantes clientes</string>
+Si vous désactivez ou ne configurez pas ce paramètre de stratégie, il est possible d'utiliser l'impression basée sur l'emplacement.
+
+Ce paramètre n'est pas configuré par défaut.
+</string>
+      <string id="lp_setting">Ne pas rediriger les imprimantes clientes</string>
       <string id="lp_setting_detail">Ce paramètre de stratégie permet de gérer la redirection éventuelle des imprimantes clientes.
 
 Si vous activez ce paramètre de stratégie, les imprimantes clientes ne sont pas toutes redirigées.
@@ -40,11 +43,33 @@ Si vous désactivez ou ne configurez pas ce paramètre de stratégie, les imprim
 
 Ce paramètre n'est pas configuré par défaut.
 </string>
+      <string id="DefaultPrinter">Ne pas modifier l'imprimante par défaut</string>
+      <string id="DefaultPrinter_detail">Ce paramètre détermine si VMware Integrated Printing modifie l'imprimante par défaut dans les sessions distantes.
+
+Par défaut, si une imprimante basée sur l'emplacement est configurée comme imprimante par défaut, elle est définie comme imprimante par défaut dans les sessions distantes. Si aucune imprimante basée sur l'emplacement n'est configurée comme imprimante par défaut, l'imprimante cliente par défaut est définie comme telle dans les sessions distantes et remplace toute imprimante sélectionnée dans l'image de la VM. Vous pouvez utiliser ce paramètre pour remplacer ce comportement.
+
+Si vous activez ce paramètre, VMware Integrated Printing ne modifie pas l'imprimante par défaut dans les sessions distantes.
+Si vous désactivez ou ne configurez pas ce paramètre, VMware Integrated Printing modifie l'imprimante par défaut dans les sessions distantes. Il s'agit du comportement par défaut.
+
+Ce paramètre n'est pas configuré par défaut.
+
+</string>
       <string id="DriverMapping">Mappage de pilote</string>
-      <string id="DriverMapping_detail">Ce paramètre permet à l'utilisateur de créer automatiquement une imprimante virtuelle avec un pilote différent.
-Par exemple : « A » =&gt;« a ; b ; c ; d »
-La liste de pilotes candidats « a ; b ; c ; d » sera tentée une par une jusqu'à ce que la création automatique de l'imprimante réussisse. En cas d'échec pour tous les candidats, la liste revient au « pilote d'impression EMF de VMware ».
+      <string id="DriverMapping_detail">Ce paramètre s'applique au client Windows/Linux/Mac. Il permet à l'utilisateur de créer automatiquement une imprimante virtuelle avec un autre pilote du client.
+
+Vous pouvez ajouter un mappage de pilote, modifier ou supprimer un mappage existant. Lors de l'ajout d'un mappage, entrez le nom du pilote d'imprimante client dans la colonne « Nom de la valeur », puis entrez les noms de pilotes de serveur à mapper dans la colonne « Valeur ».
+
+Vous pouvez spécifier un ou plusieurs noms de pilotes de serveur dans la colonne « Valeur ». Lorsque vous spécifiez plusieurs noms de pilotes de serveur, séparez chaque nom de pilote par un point-virgule, par exemple « DriverA; DriverB; DriverC; DriverD ».
+
+Tous les pilotes de serveur spécifiés sont testés un par un jusqu'à la création de l'imprimante redirigée. Si Horizon ne peut créer aucune imprimante redirigée à l'aide d'un pilote de serveur spécifié, l'option « Pilote d'impression EMF de VMware » est utilisée pour créer une imprimante redirigée pour le client Windows, alors que l'option « Pilote d'imprimante PostScript de VMware » est utilisée pour créer une imprimante redirigée pour le client Linux/Mac.
       </string>
+      <string id="MaxTxRate">Limiter le débit de transmission (Kbits/s)</string>
+      <string id="MaxTxRate_detail">Ce paramètre limite le débit de transmission de toutes les tâches d'impression au nombre spécifié en Kbits/s.
+
+Le débit de transmission minimal autorisé est de 1 600 Kbits/s. Lorsque cette option n'est pas configurée ou est désactivée, le débit de transmission n'est pas limité.
+Le débit de transmission maximal autorisé est de 32 000 Kbits/s. Lorsqu'il est supérieur à cette valeur, le débit de transmission n'est pas limité.
+
+</string>
       <string id="printer_creation_setting">Sélection du pilote d'imprimante</string>
       <string id="printer_creation_setting_detail">Sélection du pilote d'imprimante.
 
@@ -59,11 +84,19 @@ Si vous choisissez la troisième option « Utiliser d'abord NPD, puis UPD », 
 
 Si vous choisissez la quatrième option « Utiliser d'abord UPD, puis NPD », le pilote d'imprimante universel sera utilisé en premier et, si le pilote d'imprimante universel n'existe pas, le pilote d'imprimante natif sera utilisé.
 
+Pilote d'impression universel préféré :
+Options relatives au pilote d'impression universel préféré.
+
+Si vous choisissez la première option « Pilote EMF universel de VMware », le pilote EMF est utilisé.
+
+Si vous choisissez la deuxième option « Pilote XPS universel de VMware », le pilote XPS est utilisé.
 </string>
       <string id="printer_creation_setting_npd">Toujours utiliser NPD</string>
       <string id="printer_creation_setting_upd">Toujours utiliser UPD</string>
       <string id="printer_creation_setting_npd_upd">Utiliser d'abord NPD, puis UPD</string>
       <string id="printer_creation_setting_upd_npd">Utiliser d'abord UPD, puis NPD</string>
+      <string id="preferredEMF">Pilote EMF universel de VMware</string>
+      <string id="preferredXPS">Pilote XPS universel de VMware</string>
       <string id="printer_filter">Spécifier un filtre pour rediriger des imprimantes clientes</string>
       <string id="printer_filter_desc">Règle qui filtre les imprimantes clientes qui y correspondent dans la redirection d'imprimante. Les attributs pris en charge sont les noms d'imprimante, les noms de pilote d'imprimante et les noms de fournisseur de pilotes. Les opérateurs pris en charge sont AND, OR et NOT. Le schéma de recherche pris en charge est une expression régulière en dialecte JavaScript (ECMAScript).
 Par défaut, la règle est vide, ce qui signifie que toutes les imprimantes clientes seront redirigées.
@@ -86,22 +119,22 @@ Lorsque l'option « Imprimer directement » est sélectionnée, l'option d'imp
 
 Lorsque l'option « Aperçu avant impression » est sélectionnée, l'option d'impression par défaut à partir de l'interface utilisateur d'impression est « Aperçu avant impression ».
 </string>
-
       <string id="print_directly">Imprimer directement</string>
       <string id="print_to_preview">Aperçu avant impression</string>
-      <string id="printer_name_schema">Nom de l'imprimante pour les agents RDSH</string>
-      <string id="printer_name_schema_desc">Ce paramètre détermine la convention de dénomination des imprimantes lorsque vous utilisez VMware Integrated Printing dans RDSH.
-Lorsque cette stratégie est activée, le schéma de nom d'imprimante valide doit commencer par « %P ». En outre, seuls les suffixes suivants sont pris en charge.
+      <string id="printer_name_schema">Schéma de nom d'imprimante</string>
+      <string id="printer_name_schema_desc">Ce paramètre détermine la convention de dénomination des imprimantes lorsque vous utilisez VMware Integrated Printing.
+Lorsque ce paramètre est activé, vous pouvez modifier le schéma de nom d'imprimante pour les agents VDI et RDSH.
+Le schéma de nom d'imprimante valide doit être au format « %P* ». Le symbole astérisque représente la partie configurable. Vous pouvez utiliser les variables suivantes dans la partie configurable.
 %S : ID de session
 %C : nom de la machine cliente
 
-Lorsque cette stratégie n'est pas configurée ou désactivée, les imprimantes virtuelles dans RDSH utilisent l'ID de session comme suffixe.
-Exemple : PDFCreator (v2), ici PDFCreator est le nom de l'imprimante cliente, 2 est l'ID de session.
-Lorsque cette stratégie est activée, l'utilisateur peut remplacer le schéma de nom d'imprimante dans RDSH par « %P (%C) », et le nom de la machine cliente est utilisé comme suffixe pour le nom de l'imprimante.
-Exemple : PDFCreator (client-pc). Dans cet exemple, PDFCreator est le nom de l'imprimante cliente et client-pc est le nom de la machine cliente.
+Si ce paramètre est activé, mais que le schéma de nom d'imprimante est vide ou non valide, le schéma de nom d'imprimante par défaut est utilisé.
+Par exemple, %P%S, %P2%S (uniquement les nombres compris entre %P et %S) ou « / » contenus dans le schéma, ils sont tous non valides
+
+Lorsque ce paramètre n'est pas configuré ou qu'il est désactivé, les agents VDI utilisent « %P (vdi) » comme schéma de nom d'imprimante, les agents RDSH utilisent « %P (v%S) » comme schéma de nom d'imprimante.
 
 Ce paramètre n'est pas configuré par défaut.
-      </string>
+</string>
 
       <string id="DefaultSetting">Paramètres par défaut des imprimantes UPD</string>
       <string id="DefaultSetting_desc">Cette stratégie détermine s'il convient d'activer les paramètres par défaut pour les imprimantes UPD.
@@ -110,6 +143,7 @@ Lorsque cette stratégie n'est pas configurée ou désactivée, les paramètres 
 
 Cette stratégie n'est pas configurée par défaut.
       </string>
+
       <string id="none">Aucun</string>
       <string id="duplex_vertical">Retourner sur les bords longs</string>
       <string id="duplex_horizontal">Retourner sur les bords courts</string>
@@ -145,6 +179,7 @@ Cette stratégie n'est pas configurée par défaut.
       </presentation>
       <presentation id="PrinterCreationSetting">
           <dropdownList refId="printer_creation_setting_list" defaultItem="2" noSort="true">Choix de création d'imprimante :</dropdownList>
+          <dropdownList refId="preferred_upd" defaultItem="0" noSort="true">UPD préféré :</dropdownList>
       </presentation>
       <presentation id="PrintPreviewSetting">
         <checkBox refId="disable_print_choice">Désactiver les choix d'impression</checkBox>
@@ -156,12 +191,15 @@ Cette stratégie n'est pas configurée par défaut.
           <defaultValue></defaultValue>
         </textBox>
       </presentation>
-       <presentation id="printer_name_schema">
-          <textBox refId="printer_name_schema_textbox">
-             <label>Schéma de nom d'imprimante</label>
-             <defaultValue>%P (v%S)</defaultValue>
-          </textBox>
-       </presentation>
+      <presentation id="printer_name_schema">
+        <textBox refId="printer_name_schema_textbox">
+          <label>Schéma de nom d'imprimante</label>
+          <defaultValue></defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="MaxTxRate">
+        <decimalTextBox refId="MaxTxRate" defaultValue="32000">Débit de transmission maximal (Kbits/s)</decimalTextBox>
+      </presentation>
       <presentation id="DefaultSetting">
         <dropdownList refId="DefaultDuplex" defaultItem="0" noSort="true">Duplex :</dropdownList>
         <checkBox refId="IsDuplexLocked">Toujours utiliser le paramètre duplex par défaut</checkBox>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="print_redir">VMware Integrated Printing</string>
+      <string id="SUPPORTED_NotSpecified">指定されていません</string>
+      <string id="persistence_setting">プリンタ プロパティのパーシステンスを無効にする</string>
+      <string id="persistence_setting_detail">プリンタ プロパティの設定を維持するかどうかを設定します。
+
+有効にした場合、ユーザーがセッションを切断またはログアウトすると、エージェント側で行ったプリンタ プロパティの変更は破棄されます。この変更は永続的ではありません。
+たとえば、セッション中にユーザーがプリンタの用紙サイズをレターから A4 に変更した場合、次に接続したときに用紙サイズはレターに戻ります。A4 への変更は維持されません。
+
+この設定を行わないか、無効にした場合、ユーザーがセッションを切断またはログアウトした後も、エージェント側で行ったプリンタ プロパティの変更は維持されます。この変更は永続的になります。
+たとえば、セッション中にユーザーがプリンタの用紙サイズをレターから A4 に変更した場合、次に接続したときに用紙サイズは A4 のままになります。変更は維持されます。
+
+デフォルトでは、この GPO は構成されていません。
+</string>
+      <string id="nondesktopclient_setting">デスクトップ以外のクライアントでプリンタ リダイレクトを無効にする</string>
+      <string id="nondesktopclient_setting_detail">この設定により、VMware Integrated Printing がデスクトップ以外のクライアント エンドポイントでサポートされるかどうかが決まります。
+
+有効にすると、VMware Integrated Printing がデスクトップ以外のクライアント エンドポイントでサポートされません。
+構成しないか、無効にすると、VMware Integrated Printing がデスクトップ以外のクライアント エンドポイントでサポートされます。
+
+デフォルトでは、この設定は構成されていません。
+</string>
+      <string id="lbp_setting">LBP を無効にする</string>
+      <string id="lbp_setting_detail">このポリシー設定では、ロケーション ベースの印刷 (LBP) を管理します。
+
+このポリシー設定を有効にした場合、ロケーション ベースの印刷は使用できません。
+
+このポリシー設定を無効、または設定しない場合、ロケーション ベースの印刷を使用できます。
+
+デフォルトでは、この設定は構成されていません。
+</string>
+      <string id="lp_setting">クライアント プリンタをリダイレクトしない</string>
+      <string id="lp_setting_detail">このポリシー設定では、クライアント プリンタのリダイレクトを許可するかどうかを管理できます。
+
+このポリシー設定を有効にすると、どのクライアント プリンタもリダイレクトされません。
+このポリシー設定を行わないか、無効にした場合、すべてのクライアント プリンタがリダイレクトされます。
+
+デフォルトでは、この設定は構成されていません。
+</string>
+      <string id="DefaultPrinter">デフォルト プリンタを変更しない</string>
+      <string id="DefaultPrinter_detail">この設定では、リモート セッションで VMware Integrated Printing にデフォルト プリンタの変更を許可するかどうかを設定します。
+
+デフォルトでは、ロケーションベースのプリンタがデフォルト プリンタとして構成されている場合、そのプリンタがリモート セッションのデフォルト プリンタとして設定されます。ロケーションベースのプリンタがデフォルト プリンタとして構成されていない場合、デフォルトのクライアント プリンタがリモート セッションのデフォルト プリンタとして設定され、仮想マシン イメージで選択されたプリンタが上書きされます。この設定を使用すると、この動作を上書きできます。
+
+この設定を有効にした場合、VMware Integrated Printing はリモート セッションのデフォルト プリンタを変更しません。
+この設定を無効にするか、構成しない場合、VMware Integrated Printing はリモート セッションのデフォルト プリンタを変更します。これがデフォルトの動作です。
+
+デフォルトでは、この設定は構成されていません。
+
+</string>
+      <string id="DriverMapping">ドライバのマッピング</string>
+      <string id="DriverMapping_detail">この設定は、Windows/Linux/Mac クライアントに適用されます。これにより、クライアントから別のドライバで仮想プリンタを自動的に作成できます。
+
+ドライバ マッピングの追加、既存のマッピングの編集または削除を行うことができます。マッピングを追加する場合は、[値の名前] 列にクライアント プリンタ ドライバ名を入力し、[値] 列にマッピングするサーバ ドライバ名を入力します。
+
+[値] 列には、1 つ以上のサーバ ドライバ名を指定できます。複数のサーバ ドライバ名を指定する場合は、「DriverA; DriverB; DriverC; DriverD」のように各ドライバ名をセミコロンで区切ります。
+
+リダイレクトされたプリンタが正常に作成されるまで、指定されたすべてのサーバ ドライバが 1 つずつ試行されます。Horizon が、指定されたサーバ ドライバを使用してリダイレクトされたプリンタを作成できない場合、VMware EMF プリンタ ドライバが Windows クライアントのリダイレクト プリンタの作成に使用され、VMware PostScript プリンタ ドライバが Linux/Mac クライアントのリダイレクト プリンタの作成に使用されます。
+      </string>
+      <string id="MaxTxRate">送信レートの制限 (Kbps)</string>
+      <string id="MaxTxRate_detail">この設定を使用すると、すべての印刷ジョブの送信レートが指定の値 (Kbps) に制限されます。
+許可される最小送信レートは 1600 Kbps です。構成しないか、無効にすると、送信レートは制限されません。許可される最大送信レートは 32000 Kbps です。この値よりも大きい場合、送信レートは制限されません。
+
+</string>
+      <string id="printer_creation_setting">プリンタ ドライバの選択</string>
+      <string id="printer_creation_setting_detail">プリンタ ドライバを選択します。
+
+プリンタの作成の選択:
+使用するプリンタ ドライバのオプション。ユニバーサル プリンタ ドライバ (UPD) またはネイティブ プリンタ ドライバ (NPD) を設定します。
+
+最初のオプション「NPD を常に使用」を選択した場合、リダイレクトされたプリンタにネイティブ プリンタ ドライバが常に使用されます。
+
+2 番目のオプション「UPD を常に使用」を選択した場合、リダイレクトされたプリンタにはユニバーサル プリンタ ドライバが常に使用されます。
+
+3 番目のオプション「最初に NPD を使用、次に UPD を使用」を選択した場合、最初にネイティブ プリンタ ドライバが使用されます。ネイティブ プリンタ ドライバがない場合、ユニバーサル プリンタ ドライバが使用されます。
+
+4 番目のオプション「最初に UPD を使用、次に NPD を使用」を選択した場合、最初にユニバーサル プリンタ ドライバが使用されます。ユニバーサル プリンタ ドライバがない場合、ネイティブ プリンタ ドライバが使用されます。
+
+優先ユニバーサル プリンタ ドライバ:
+優先ユニバーサル プリンタ ドライバに関するオプション。
+
+最初のオプション (VMware ユニバーサル EMF ドライバ) を選択すると、EMF ドライバが使用されます。
+
+2 番目のオプション (VMware ユニバーサル XPS ドライバ) を選択すると、XPS ドライバが使用されます。
+</string>
+      <string id="printer_creation_setting_npd">NPD を常に使用</string>
+      <string id="printer_creation_setting_upd">UPD を常に使用</string>
+      <string id="printer_creation_setting_npd_upd">最初に NPD を使用、次に UPD を使用</string>
+      <string id="printer_creation_setting_upd_npd">最初に UPD を使用、次に NPD を使用</string>
+      <string id="preferredEMF">VMware ユニバーサル EMF ドライバ</string>
+      <string id="preferredXPS">VMware ユニバーサル XPS ドライバ</string>
+      <string id="printer_filter">クライアント プリンタのリダイレクトに適用するフィルタを指定します。</string>
+      <string id="printer_filter_desc">プリンタ リダイレクトで条件に一致するクライアント プリンタを除外するルールです。使用可能な属性は、プリンタ名、プリンタのドライバ名、ドライバ ベンダー名です。使用可能な演算子は、AND、OR、NOT です。使用可能な検索パターンは正規表現と JavaScript の標準 (ECMAScript) です。
+デフォルトでは、ルールは空で、すべてのクライアント プリンタがリダイレクトされます。
+
+例:
+(DriverName= &quot;DrName1&quot; OR VendorName=&quot;VeName1&quot;) AND NOT PrinterName= &quot;PrNa.? e&quot;</string>
+      <string id="print_preview_setting">印刷プレビュー設定</string>
+      <string id="print_preview_setting_detail">印刷プレビューには 2 つの設定があります。
+
+最初の設定では、印刷のターゲットが有効かどうかを決定します。デフォルトでは構成されていません。
+
+この設定を有効にすると、エンドユーザーは印刷のターゲットを選択できなくなります。
+
+この設定を無効にするか、選択を解除した場合、エンドユーザーはターゲットの印刷、印刷プレビューまたは直接印刷を選択できます。
+
+
+2 番目の設定では、デフォルトのターゲットの印刷オプションを指定します。デフォルトでは構成されていません。つまり、直接印刷が使用されます。
+
+直接印刷を選択すると、印刷 UI のデフォルトの印刷オプションは「直接印刷」になります。
+
+「印刷プレビュー」オプションを選択すると、印刷 UI のデフォルトの印刷オプションは「印刷プレビュー」になります。
+</string>
+      <string id="print_directly">直接印刷</string>
+      <string id="print_to_preview">印刷プレビュー</string>
+      <string id="printer_name_schema">プリンタ名のスキーマ</string>
+      <string id="printer_name_schema_desc">この設定により、VMware Integrated Printing を使用するときのプリンタの命名規則が決まります。
+この設定を有効にすると、VDI および RDSH エージェントのプリンタ名スキーマを変更できます。
+有効なプリンタ名スキーマは「%P*」の形式です。アスタリスクは設定可能な部分を表します。設定可能な部分では、次の変数を使用できます。
+%S: セッション ID
+%C: クライアント マシン名
+
+この設定が有効でも、プリンタ名スキーマが空か無効な場合は、デフォルトのプリンタ名スキーマが使用されます。
+
+例: %P%S、%P2%S (%P ～ %S の数字のみ)、またはスキーマに含まれる「/」は、すべて無効です
+
+この設定を行わないか、無効にした場合、VDI エージェントはプリンタ名スキーマとして「%P (vdi)」を使用します。RDSH エージェントは、プリンタ名スキーマとして「%P (v%S)」を使用します。
+
+デフォルトでは、この設定は構成されていません。
+</string>
+
+      <string id="DefaultSetting">UPD プリンタのデフォルト設定</string>
+      <string id="DefaultSetting_desc">このポリシーでは、UPD プリンタのデフォルト設定を有効にするかどうかを指定します。
+このポリシーを有効にすると、UPD プリンタにデフォルト設定のグループを定義できます。可能であれば、これは UPD プリンタの初期設定として使用されます。印刷設定ごとに、印刷で常にデフォルト設定を使用するかどうかを指定するチェックボックスがあります。
+このポリシーを構成しないか、無効にした場合、UPD プリンタのデフォルト設定は有効になりません。デフォルトでは、このポリシーは構成されていません。</string>
+
+      <string id="none">なし</string>
+      <string id="duplex_vertical">長辺を反転</string>
+      <string id="duplex_horizontal">短辺を反転</string>
+
+      <string id="bw">白/黒</string>
+      <string id="color">カラー</string>
+
+      <string id="lossless_comp">ロスレス圧縮</string>
+      <string id="high_quality_comp">高品質な圧縮</string>
+      <string id="optimized_comp">最適化された圧縮</string>
+      <string id="no_image_comp">画像なし</string>
+
+       <string id="MaxDPI">UPD プリンタの最大 DPI</string>
+       <string id="MaxDPI_detail">このポリシーは UPD プリンタの最大 DPI を指定します。その結果、UPD プリンタの DPI オプションとデフォルトの DPI が変更される可能性があります。
+
+このポリシーを有効にすると、UPD プリンタの最大 DPI レベルまたは X 軸の最大 DPI 値を指定するために使用されます。クライアント プリンタの機能によっては、UPD プリンタで DPI レベルまたは DPI 値がサポートされる場合があります。
+プリンタが DPI レベルをサポートしている場合、UPD プリンタの DPI オプションとデフォルトの DPI は最大 DPI レベル以下になります。
+プリンタが DPI 値をサポートし、X 軸の最小 DPI が X 軸の最大 DPI 以下の場合、UPD プリンタの DPI オプションとデフォルトの DPI は X 軸 の最大 DPI 以下になります。
+プリンタが DPI 値をサポートし、X 軸の最小 DPI が X 軸 の最大 DPI よりも大きい場合、UPD プリンタの DPI オプションはクライアント プリンタの DPI オプションと同じになります。UPD プリンタのデフォルトの DPI は、X 軸の最小 DPI になります。
+
+このポリシーが構成されていないか、無効になっている場合、UPD プリンタの DPI オプションとデフォルトの DPI は変更されません。
+
+デフォルトでは、このポリシーは構成されていません。
+       </string>
+       <string id="DPI_draft">ドラフト</string>
+       <string id="DPI_low">低</string>
+       <string id="DPI_medium">中</string>
+       <string id="DPI_high">高</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="DriverMapping">
+         <listBox refId="printer_driver_mapping">プリンタとドライバのマッピング:</listBox>
+      </presentation>
+      <presentation id="PrinterCreationSetting">
+          <dropdownList refId="printer_creation_setting_list" defaultItem="2" noSort="true">プリンタの作成の選択:</dropdownList>
+          <dropdownList refId="preferred_upd" defaultItem="0" noSort="true">優先 UPD:</dropdownList>
+      </presentation>
+      <presentation id="PrintPreviewSetting">
+        <checkBox refId="disable_print_choice">印刷の選択肢を無効にする</checkBox>
+        <dropdownList refId="default_choice_list" defaultItem="0" noSort="true">印刷のターゲットのデフォルトを選択:</dropdownList>
+      </presentation>
+      <presentation id="printer_filter">
+        <textBox refId="printer_filter_textbox">
+          <label>プリンタのフィルタ</label>
+          <defaultValue></defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="printer_name_schema">
+        <textBox refId="printer_name_schema_textbox">
+          <label>プリンタ名のスキーマ</label>
+          <defaultValue></defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="MaxTxRate">
+        <decimalTextBox refId="MaxTxRate" defaultValue="32000">最大送信レート (kbps)</decimalTextBox>
+      </presentation>
+      <presentation id="DefaultSetting">
+        <dropdownList refId="DefaultDuplex" defaultItem="0" noSort="true">デュプレックス:</dropdownList>
+        <checkBox refId="IsDuplexLocked">デフォルトのデュプレックス設定を常に使用</checkBox>
+        <dropdownList refId="DefaultColor" defaultItem="0" noSort="true">カラー:</dropdownList>
+        <checkBox refId="IsColorLocked">デフォルトのカラー設定を常に使用</checkBox>
+        <dropdownList refId="DefaultImageCompLevel" defaultItem="0" noSort="true">圧縮レベル:</dropdownList>
+        <checkBox refId="IsCompLevelLocked">デフォルトの圧縮レベル設定を常に使用</checkBox>
+      </presentation>
+      <presentation id="MaxDPI">
+        <dropdownList refId="MaxDPILevel" defaultItem="2" noSort="true">最大 DPI レベル</dropdownList>
+        <decimalTextBox refId="MaxDPIValue" defaultValue="600">最大 DPI (X)</decimalTextBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

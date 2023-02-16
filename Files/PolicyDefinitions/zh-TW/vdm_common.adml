@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" >
+
+	<displayName >在這裡輸入顯示名稱</displayName>
+	<description >適用於用戶端、伺服器和代理程式的 VMware Horizon View 一般組態設定</description>
+	<resources >
+		<stringTable ><!--Storage for String Definitions-->
+
+			<string id="Undefined" >未定義</string>
+
+			<string id="View_Common_Config" >VMware View 一般組態</string>
+
+			<string id="Log_Config" >記錄組態</string>
+
+			<string id="Perf_alarms" >效能警示</string>
+
+			<string id="Security_Config" >安全性組態</string>
+
+			<string id="Enable_extended_logging" >啟用延伸記錄</string>
+
+			<string id="Enable_extended_logging_Desc" >決定記錄檔中是否包含追蹤和偵錯事件</string>
+
+			<string id="Log_event_disk_threshhold" >記錄和事件的磁碟臨界值 (MB)</string>
+
+			<string id="Log_event_disk_threshhold_Desc" >指定記錄和事件的最小剩餘磁碟空間臨界值。若未指定值，則會套用預設值 200。當達到此值時，事件記錄會停止。</string>
+
+			<string id="Override_the_default_Windows_Event_Gen" >覆寫預設的 View Windows 事件產生</string>
+
+			<string id="Override_the_default_Windows_Event_Gen_Desc" >支援下列值:
+    0 = 僅針對 View 事件產生事件記錄項目 (記錄訊息不會產生事件記錄項目)
+    1 = 在 4.5 (及更早版本) 相容模式中產生事件記錄項目。標準 View 事件不會產生事件記錄項目。系統僅根據記錄檔文字產生事件記錄項目。2 = 在 4.5 (及更早版本) 相容模式中產生事件記錄項目，同時包含 View 事件。</string>
+
+			<string id="Production_Logs_Duration" >生產記錄的保留天數</string>
+
+			<string id="Production_Logs_Duration_Desc" >指定記錄檔保留在系統上的天數。若未設定值，則會套用預設值且記錄檔將僅保留 7 天。</string>
+
+			<string id="Max_Debug_logs" >偵錯記錄的數目上限</string>
+
+			<string id="Max_Debug_logs_Desc" >指定要保留在系統上的偵錯記錄檔數目上限 (預設值為 10)。當記錄檔到達其大小上限時，則不會新增其他項目而且會建立新的記錄檔。當先前的記錄檔數目到達此值時，則會刪除最舊的記錄檔。</string>
+
+			<string id="Max_Debug_logs_size" >偵錯記錄大小上限 (MB)</string>
+
+			<string id="Max_Debug_logs_size_Desc" >指定偵錯記錄可到達的大小上限 (MB)，記錄檔超過此上限後會關閉並建立新的記錄檔。(預設值為 10 MB)</string>
+
+			<string id="Log_Dir" >記錄目錄</string>
+
+			<string id="Log_Dir_Desc" >記錄檔目錄的完整路徑。如果無法寫入該位置，則會使用預設位置。請注意，若是用戶端記錄檔，則會為記錄建立具有用戶端名稱的額外目錄。</string>
+
+			<string id="Send_logs_to_Syslog_Svr" >傳送記錄到 Syslog 伺服器</string>
+
+			<string id="Send_logs_to_Syslog_Svr_Desc" >啟用並設定為將 View Server 記錄傳送至 Syslog 伺服器，例如 VMware LogInsight。不建議在不安全的網路上使用此功能。
+格式: LogLevel|ServerFQDNorIP[|PortNumber(預設值為 514)]，例如 Debug|192.0.2.2</string>
+
+			<string id="CPU_Mem_Sampling_Interval" >CPU 和記憶體取樣間隔 (以秒為單位)</string>
+
+			<string id="CPU_Mem_Sampling_Interval_Desc" >指定輪詢 CPU 和記憶體的間隔。請注意，低取樣間隔可能會導致寫入記錄的輸出量過高。</string>
+
+			<string id="Overall_CPU_usage" >要發出記錄資訊的總體 CPU 使用率百分比</string>
+
+			<string id="Overall_CPU_usage_Desc" >記錄系統總體 CPU 使用率的臨界值。請注意，當有多個處理器可使用時，此百分比表示合併的使用率。</string>
+
+			<string id="Overall_memory_usage" >要發出記錄資訊的總體記憶體使用率百分比</string>
+
+			<string id="Overall_memory_usage_Desc" >記錄總體已認可系統記憶體使用率 (已由處理程序配置，而且作業系統已在分頁檔中認可實體記憶體和/或分頁插槽的記憶體) 的臨界值。</string>
+
+			<string id="Process_CPU_usage" >要發出記錄資訊的處理程序 CPU 使用率百分比</string>
+
+			<string id="Process_CPU_usage_Desc" >記錄任何個別處理程序之 CPU 使用率的臨界值。</string>
+
+			<string id="Process_memory_usage" >要發出記錄資訊的處理程序記憶體使用百分比</string>
+
+			<string id="Process_memory_usage_Desc" >記錄任何個別處理程序之記憶體使用率的臨界值。</string>
+
+			<string id="Processes_to_check" >要檢查處理程序的名稱清單，以逗號分隔且允許萬用字元和排除項目</string>
+
+			<string id="Processes_to_check_Desc" >對應於要檢查之一或多個程序名稱的查詢清單 (以逗號分隔)。若要篩選清單，您可以在每個查詢中使用下列萬用字元: 星號 (*) 會比對零或多個字元，問號 (?)僅會比對單一字元，而驚嘆號 (!)可用作查詢的首碼，以排除該查詢所產生的任何結果。例如: 「! *sys,ws*」 - 選取開頭為「ws」的所有處理程序，並排除結尾為「sys」的所有處理程序。</string>
+
+			<string id="Type_of_certificate_revocation" >憑證撤銷檢查的類型</string>
+
+			<string id="Type_of_certificate_revocation_Desc" >選取要完成的憑證撤銷檢查類型，無、EndCertificateOnly、WholeChain 或 WholeChainButRoot。預設值為 WholeChainButRoot。</string>
+
+			<string id="None" >無</string>
+
+			<string id="End_Cert_Only" >EndCertificateOnly</string>
+
+			<string id="Whole_Chain" >WholeChain</string>
+
+			<string id="Whole_Chain_But_Root" >WholeChainButRoot</string>
+
+			<string id="Only_use_cached_revocation_URL" >僅使用快取撤銷 URL</string>
+
+			<string id="Only_use_cached_revocation_URL_Desc" >憑證撤銷檢查只能存取快取 URL。如果未設定，則預設為 false。</string>
+
+			<string id="Revocation_URL_check_timeout" >撤銷 URL 檢查逾時 (毫秒數)</string>
+
+			<string id="Revocation_URL_check_timeout_Desc" >所有撤銷 URL 線擷取的累積逾時 (以毫秒為單位)。未設定或將值設為 0 代表使用 Microsoft 預設處理。</string>
+
+			<string id="Global_Max_Dump_Count" >設定程式發生錯誤時的傾印計數</string>
+
+			<string id="Global_Max_Dump_Count_Desc" >透過將值設定為任何數值，可將傾印限制為特定數量。此限制數量會對每個處理程序/使用者產生作用。設定為 0 時，系統將不會建立任何傾印。如果未設定，則在建立傾印時會套用預設的限制。(根據不同的處理程序，預設值為 128 或無限制)</string>
+			<string id="Global_Dump_Type" >設定程式發生錯誤時的傾印類型</string>
+
+			<string id="DumpType_Full" >完整</string>
+
+			<string id="DumpType_Mini" >小型</string>
+
+			<string id="Global_Dump_Type_Desc" >使用者可以將值設定為「完整傾印」或「小型傾印」。「完整傾印」和「小型傾印」之間的差異在於傾印中包含的記憶體。這歸因於完整傾印的大小。小型傾印仍包含足夠的資訊，可產生堆疊追蹤及執行基本的疑難排解步驟。小型傾印不包含完整記憶體，因此在沒有完整傾印的情況下，我們無法擷取某些物件或物件名稱的相關資訊。設定為「小型傾印」時，將會建立小型傾印。如果未設定，則依預設會建立完整傾印。</string>
+		</stringTable>
+
+		<presentationTable ><!--Storage for Presentation Definitions-->
+
+			<presentation id="Log_event_disk_threshhold" >
+				<decimalTextBox refId="Log_event_disk_threshhold_DecimalBox_1" defaultValue="200" >記錄和事件的磁碟臨界值 (MB)</decimalTextBox>
+			</presentation>
+
+			<presentation id="Override_the_default_Windows_Event_Gen" >
+				<decimalTextBox refId="Override_the_default_Windows_Event_Gen_DecimalBox" defaultValue="0" >覆寫預設的 View Windows 事件產生</decimalTextBox>
+			</presentation>
+
+			<presentation id="Production_Logs_Duration" >
+				<decimalTextBox refId="Production_Logs_Duration_DecimalBox" defaultValue="7" >生產記錄的保留天數</decimalTextBox>
+			</presentation>
+
+			<presentation id="Max_Debug_logs" >
+				<decimalTextBox refId="Max_Debug_logs_DecimalBox" defaultValue="10" >偵錯記錄的數目上限</decimalTextBox>
+			</presentation>
+
+			<presentation id="Max_Debug_logs_size" >
+				<decimalTextBox refId="Max_Debug_logs_size_DecimalBox" defaultValue="10" >偵錯記錄大小上限 (MB)</decimalTextBox>
+			</presentation>
+
+			<presentation id="Log_Dir" >
+				<textBox refId="Log_Dir_TextBox" >
+					<label >記錄目錄</label>
+				</textBox>
+			</presentation>
+
+			<presentation id="Send_logs_to_Syslog_Svr" >
+				<textBox refId="Send_logs_to_Syslog_Svr_TextBox" >
+					<label >傳送記錄到 Syslog 伺服器</label>
+				</textBox>
+			</presentation>
+
+			<presentation id="CPU_Mem_Sampling_Interval" >
+				<decimalTextBox refId="CPU_Mem_Sampling_Interval_DecimalBox" defaultValue="60" >CPU 和記憶體取樣間隔 (以秒為單位)</decimalTextBox>
+			</presentation>
+
+			<presentation id="Overall_CPU_usage" >
+				<decimalTextBox refId="Overall_CPU_usage_DecimalBox" defaultValue="90" >要發出記錄資訊的總體 CPU 使用率百分比</decimalTextBox>
+			</presentation>
+
+			<presentation id="Overall_memory_usage" >
+				<decimalTextBox refId="Overall_memory_usage_DecimalBox" defaultValue="75" >要發出記錄資訊的總體記憶體使用率百分比</decimalTextBox>
+			</presentation>
+
+			<presentation id="Process_CPU_usage" >
+				<decimalTextBox refId="Process_CPU_usage_DecimalBox" defaultValue="90" >要發出記錄資訊的處理程序 CPU 使用率百分比</decimalTextBox>
+			</presentation>
+
+			<presentation id="Process_memory_usage" >
+				<decimalTextBox refId="Process_memory_usage_DecimalBox" defaultValue="75" >要發出記錄資訊的處理程序記憶體使用百分比</decimalTextBox>
+			</presentation>
+
+			<presentation id="Processes_to_check" >
+				<textBox refId="Processes_to_check_TextBox" >
+					<label >要檢查處理程序的名稱清單，以逗號分隔且允許萬用字元和排除項目</label>
+				</textBox>
+			</presentation>
+
+			<presentation id="Type_of_certificate_revocation" >
+				<dropdownList refId="Type_of_certificate_revocation_DropDown" defaultItem="3" >憑證撤銷檢查的類型</dropdownList>
+			</presentation>
+
+			<presentation id="Revocation_URL_check_timeout" >
+				<decimalTextBox refId="Revocation_URL_check_timeout_DecimalBox" defaultValue="0" >撤銷 URL 檢查逾時 (毫秒數)</decimalTextBox>
+			</presentation>
+
+			<presentation id="Global_Max_Dump_Count" >
+				<decimalTextBox refId="Global_Max_Dump_Count_DecimalBox" defaultValue="" >要建立的傾印檔案上限</decimalTextBox>
+			</presentation>
+
+			<presentation id="Global_Dump_Type" >
+				<dropdownList refId="Global_Dump_Type_DropDown" defaultItem="" >要建立的傾印檔案類型</dropdownList>
+			</presentation>
+
+		</presentationTable>
+
+	</resources>
+
+</policyDefinitionResources>

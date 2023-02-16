@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="VMwareViewDnD">Arrastrar y soltar</string>
+      <string id="SUPPORTED_VERSION"></string>
+      <string id="SERVER_DND_STATE">Configurar la dirección de la función de arrastrar y soltar</string>
+      <string id="DND_STATE_DISABLE_BOTH">Deshabilitado en ambas direcciones</string>
+      <string id="DND_STATE_ENABLE_CLIENT_2_SERVER">Habilitado solo del cliente al agente</string>
+      <string id="DND_STATE_ENABLE_SERVER_2_CLIENT">Habilitado solo del agente al cliente</string>
+      <string id="DND_STATE_ENABLE_BOTH">Habilitado en ambas direcciones</string>
+      <string id="SERVER_DND_STATE_EXPLAIN">Determina la dirección en la que se permite arrastrar y soltar. Puede seleccionar uno de los siguientes valores:
+
+-Deshabilitado en ambas direcciones
+-Habilitado solo del agente al cliente (es decir, permite arrastrar y soltar únicamente desde el sistema del agente al del cliente).
+-Habilitado solo del cliente al agente (es decir, permite arrastrar y soltar únicamente desde el sistema del cliente al del agente).
+- Habilitado en ambas direcciones
+
+Este ajuste se aplica únicamente al agente.
+Cuando este ajuste está deshabilitado o no está configurado, el valor predeterminado es 'Habilitado solo del cliente al agente'.</string>
+      <string id="SERVER_DND_FORMAT_STATE">Configurar formatos de la función de arrastrar y soltar</string>
+      <string id="SERVER_DND_FORMAT_STATE_EXPLAIN">Este ajuste determina qué opción de &quot;Arrastrar y soltar&quot; se permite para cada formato (Archivo/Texto/Texto enriquecido/Imagen/Formato HTML/Contenido de archivo). Los valores de las opciones son:
+
+-Deshabilitado en ambas direcciones
+-Habilitado solo del agente al cliente
+-Habilitado solo del cliente al agente
+-Habilitado en ambas direcciones
+
+Este ajuste se aplica solo al agente y no está configurado de forma predeterminada.
+
+Si el ajuste no está configurado o está deshabilitado, la opción de &quot;arrastrar y soltar&quot; usará el valor &quot;Habilitado en ambas direcciones&quot; para todos los formatos.</string>
+      <string id="String_Policy_DropList_Select_DnD_size_unit_bytes" >Bytes</string>
+      <string id="String_Policy_DropList_Select_DnD_size_unit_kilobytes" >Kilobytes</string>
+      <string id="String_Policy_DropList_Select_DnD_size_unit_megabytes" >Megabytes</string>
+      <string id="SERVER_DND_SIZE">Configurar el umbral de tamaño de arrastrar y soltar</string>
+      <string id="SERVER_DND_SIZE_EXPLAIN">La función de arrastrar y soltar permite arrastrar varios tipos de datos, incluidos texto sin formato, texto enriquecido, imágenes, archivos, carpetas, etc. Este ajuste determina el tamaño máximo que se puede arrastrar de tipos de datos comunes que no sean archivos ni carpetas.
+
+La unidad de tamaño de los datos que se pueden arrastrar se puede configurar en bytes, kilobytes y megabytes.
+
+El valor de tamaño deseado se configura en &quot;Umbral de tamaño de arrastrar y soltar&quot;. Los rangos de datos efectivos para unidades de tamaño diferentes son:
+- Bytes: 1 ~ 1023
+- Kilobytes: 1 ~ 1023
+- Megabytes: 1 ~ 16 (el tamaño máximo de datos que se pueden arrastrar y soltar es de 16 megabytes)
+
+Este ajuste solo se aplica al agente.
+
+Si el ajuste no está configurado o está deshabilitado, se establecerá un umbral predeterminado de 1 megabyte.</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="SERVER_DND_STATE">
+        <dropdownList refId="SERVER_DND_STATE" defaultItem="2">Configurar la función de arrastrar y soltar</dropdownList>
+      </presentation>
+      <presentation id="SERVER_DND_FORMAT_STATE">
+        <dropdownList refId="SERVER_DND_FILE_STATE" defaultItem="3">Opción para el formato de archivo:</dropdownList>
+        <dropdownList refId="SERVER_DND_TEXT_STATE" defaultItem="3">Opción para el formato de texto:</dropdownList>
+        <dropdownList refId="SERVER_DND_RTF_STATE" defaultItem="3">Opción para el formato de texto enriquecido:</dropdownList>
+        <dropdownList refId="SERVER_DND_IMAGE_STATE" defaultItem="3">Opción para el formato de imagen:</dropdownList>
+        <dropdownList refId="SERVER_DND_HTML_STATE" defaultItem="3">Opción para el formato HTML:</dropdownList>
+        <dropdownList refId="SERVER_DND_FILE_CONTENT_STATE" defaultItem="3">Opción para el formato de contenido de archivo:</dropdownList>
+      </presentation>
+      <presentation id="SERVER_DND_SIZE">
+        <dropdownList refId="Policy_DropList_DnD_Size_Unit" defaultItem="2" >Elegir la unidad de tamaño de la función de arrastrar y soltar</dropdownList>
+        <decimalTextBox refId="SERVER_DND_SIZE" defaultValue="1">Umbral de tamaño de arrastrar y soltar</decimalTextBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

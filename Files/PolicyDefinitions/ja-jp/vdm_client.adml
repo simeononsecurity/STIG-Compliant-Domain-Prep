@@ -1,0 +1,993 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="CertCheckMode_NoSecurity">セキュリティなし</string>
+      <string id="CertCheckMode_WarnButAllow">警告するが許可する</string>
+      <string id="CertCheckMode_FullSecurity">フル セキュリティ</string>
+      <string id="ProtocolConnectionCertCheckMode_TP">サムプリントの検証</string>
+      <string id="ProtocolConnectionCertCheckMode_TPORPKI">サムプリントまたは PKI の検証</string>
+      <string id="ProtocolConnectionCertCheckMode_PKIANDTP">PKI とサムプリントの検証</string>
+      <string id="ProtocolConnectionCertCheckMode_PKI">PKI 検証</string>
+      <string id="EnableTicketSSLAuth_Enable">有効にする</string>
+      <string id="EnableTicketSSLAuth_Disable">無効にする</string>
+      <string id="EnableTicketSSLAuth_Enforce">強制</string>
+      <string id="DesktopLayout_FullScreen">全画面表示</string>
+      <string id="DesktopLayout_WindowLarge">ウィンドウ - 大</string>
+      <string id="DesktopLayout_WindowSmall">ウィンドウ - 小</string>
+      <string id="DesktopLayout_MultiMonitor">マルチモニタ</string>
+      <string id="AppSessionReconnectBehavior_Ask">再接続を要求し、アプリケーションを開く</string>
+      <string id="AppSessionReconnectBehavior_Always">自動的に再接続し、アプリケーションを開く</string>
+      <string id="AppSessionReconnectBehavior_Never">再接続の要求も自動再接続もしない</string>
+      <string id="AllSessionsDisconnectedBehavior_Quit">終了</string>
+      <string id="AllSessionsDisconnectedBehavior_Logoff">ログオフ</string>
+      <string id="AllSessionsDisconnectedBehavior_Keep">クライアントの現在の状態を維持する</string>
+      <string id="ColorDepth_8bit">8 ビット</string>
+      <string id="ColorDepth_15bit">15 ビット</string>
+      <string id="ColorDepth_16bit">16 ビット</string>
+      <string id="ColorDepth_24bit">24 ビット</string>
+      <string id="ColorDepth_32bit">32 ビット</string>
+      <string id="AudioRedirectionMode_PlayInVM">仮想マシンで実行 (VoIP USB サポートに必要)</string>
+      <string id="AudioRedirectionMode_RedirectToClient">クライアントにリダイレクト</string>
+      <string id="AudioRedirectionMode_DisableAudio">オーディオを無効にする</string>
+      <string id="KeyboardHookMode_ApplyKeyCombinationsLocal">キーの組み合わせをローカルに適用</string>
+      <string id="KeyboardHookMode_SendKeyCombinationsToVM">キーの組み合わせを仮想マシンに送信</string>
+      <string id="LocalModeExitBehavior_Shutdown">シャットダウン</string>
+      <string id="LocalModeExitBehavior_Suspend">サスペンド</string>
+      <string id="VMwareViewClientUSB">View の USB 構成</string>
+      <string id="VMwareViewClientOnlySetting">エージェントで構成できない設定</string>
+      <string id="ExcludePath">パスを除外する</string>
+      <string id="ExcludePathExplain">指定したハブまたはポート パスのデバイスを転送から除外します。</string>
+      <string id="IncludePath">パスを含める</string>
+      <string id="IncludePathExplain">指定したハブまたはポート パスのデバイスを転送に追加します。</string>
+      <string id="SplitExcludeVidPid">Vid/Pid デバイスを分割から除外する</string>
+      <string id="SplitExcludeVidPidExplain">ベンダー ID と製品 ID で指定した複合デバイスのコンポーネント デバイスを別のデバイスとして扱わず、フィルタリングの対象外にします。
+
+構文: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx|*&gt;&gt;[;...]
+
+例: vid-0781_pid-554c;vid-0781_pid-9999</string>
+      <string id="SplitVidPid">Vid/Pid デバイスを分割する</string>
+      <string id="SplitVidPidExplain">フィルタリングで、ベンダーと製品 ID で指定された複合デバイスのコンポーネント デバイスを個別のデバイスとして扱います。
+
+構文: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx|*&gt;(exintf:xx[;exintf:xx])&gt;[;...]
+
+例: vid-0781_pid-554c(exintf:01;exintf:02);vid-0781_pid-9999(exintf:02)</string>
+      <string id="ExcludeVidPid">Vid/Pid デバイスを除外する</string>
+      <string id="ExcludeVidPidExplain">指定したベンダー ID と製品 ID のデバイスを転送から除外します。
+
+構文: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx | *&gt;&gt;[;...]
+
+例: vid-0781_pid-554c;vid-0781_pid-9999</string>
+      <string id="ExcludeVidPidRel">Vid/Pid/Rel デバイスを除外する</string>
+      <string id="ExcludeVidPidRelExplain">指定したベンダー ID 、製品 ID、リリース番号のデバイスを転送から除外します。
+
+構文: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx&gt;_rel-&lt;xxxx | *&gt;&gt;[;...]
+
+例: vid-0781_pid-554c_rel-0100;vid-0781_pid-9999_rel-0010</string>
+      <string id="IncludeVidPid">Vid/Pid デバイスを含める</string>
+      <string id="IncludeVidPidExplain">転送可能な、指定したベンダー ID と製品 ID のデバイスを含めます。
+
+構文: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx | *&gt;&gt;[;...]
+
+例: vid-0781_pid-554c;vid-0781_pid-9999</string>
+      <string id="IncludeVidPidRel">Vid/Pid/Rel デバイスを含める</string>
+      <string id="IncludeVidPidRelExplain">指定したベンダー ID 、製品 ID、リリース番号のデバイスを転送に含めます。
+
+構文: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx&gt;_rel-&lt;xxxx | *&gt;&gt;[;...]
+
+例: vid-0781_pid-554c_rel-0100;vid-0781_pid-9999_rel-0010</string>
+      <string id="ExcludeFamily">デバイス ファミリを除外する</string>
+      <string id="ExcludeFamilyExplain">デバイス ファミリを転送から除外します。
+
+構文: &lt;family-name&gt;[;...]
+
+例: bluetooth;audio-in</string>
+      <string id="IncludeFamily">デバイス ファミリを含める</string>
+      <string id="IncludeFamilyExplain">デバイス ファミリを転送に追加します。
+
+構文: &lt;family-name&gt;[;...]
+
+例: storage;audio-out</string>
+      <string id="ExAutoRedirectVidPid">自動接続の Vid/Pid デバイスを除外する</string>
+      <string id="ExAutoRedirectVidPidExplain">指定したベンダー ID と製品 ID のデバイスを自動転送から除外します。
+
+構文: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx | *&gt;&gt;[;...]
+
+例: vid-0781_pid-554c;vid-0781_pid-9999</string>
+      <string id="ExAutoRedirectFamily">自動接続のデバイス ファミリを除外する</string>
+      <string id="ExAutoRedirectFamilyExplain">デバイス ファミリを自動転送から除外します。
+
+構文: &lt;family-name&gt;[;...]
+
+例: storage;hid</string>
+      <string id="ExcludeAllDevices">すべてのデバイスを除外する</string>
+      <string id="ExcludeAllDevicesExplain">追加フィルタ ルールで追加されない限り、すべてのデバイスをブロックします。
+
+デフォルト: すべてのデバイスを許可</string>
+      <string id="VMwareViewAgentToClientUSB">クライアントがダウンロード可能な設定のみ</string>
+      <string id="AllowHID">その他の入力デバイスを許可する</string>
+      <string id="AllowHIDExplain">HID 起動可能なデバイス、キーボードおよびマウス デバイス以外の入力デバイスの転送を許可します。
+
+デフォルト: 転送を許可</string>
+      <string id="AllowHIDBootable">HID 起動可能なデバイスを許可する</string>
+      <string id="AllowHIDBootableExplain">起動可能な入力デバイス (HID 起動可能なデバイス) の転送を許可します。
+
+デフォルト: 転送を許可</string>
+      <string id="AllowAudioIn">オーディオ入力デバイスを許可する</string>
+      <string id="AllowAudioInExplain">オーディオ入力デバイスの転送を許可します。
+
+デフォルト: 転送を許可</string>
+      <string id="AllowAudioOut">オーディオ出力デバイスを許可する</string>
+      <string id="AllowAudioOutExplain">オーディオ出力デバイスの転送を許可します。
+
+デフォルト: 転送をブロック</string>
+      <string id="AllowKeyboardMouse">キーボードおよびマウス デバイスを許可する</string>
+      <string id="AllowKeyboardMouseExplain">キーボードおよびマウス デバイスの転送を許可します。
+
+デフォルト: 転送をブロック</string>
+      <string id="AllowVideo">ビデオ デバイスを許可する</string>
+      <string id="AllowVideoExplain">ビデオ デバイスの転送を許可します。
+
+デフォルト: 転送を許可</string>
+      <string id="AllowSmartcard">スマート カードを許可する</string>
+      <string id="AllowSmartcardExplain">スマートカード デバイスの転送を許可します。
+
+デフォルト: 転送をブロック</string>
+      <string id="AllowAutoDeviceSplitting">自動デバイス分割を許可する</string>
+      <string id="AllowAutoDeviceSplittingExplain">複合デバイスのコンポーネント デバイスを自動的に個別のデバイスとして扱いません。</string>
+      <string id="DisableRemoteConfig">リモート構成を無効にする</string>
+      <string id="DisableRemoteConfigExplain">リモート構成のダウンロードを無効にします。</string>
+      <string id="AllowDevDescFailsafe">デバイス記述子のフェイルセーフ動作を許可する</string>
+      <string id="AllowDevDescFailsafeExplain">デバイス記述子のフェイルセーフ動作を有効にします。記述子の取得に失敗した場合、デバイスはブロックされません。</string>
+      <string id="VMwareViewClient">VMware Horizon Client の設定</string>
+      <string id="AllowDataSharing">データの共有を許可する</string>
+      <string id="AllowDataSharingExplain">VMware は、クライアント システムで情報を収集し、ハードウェアとソフトウェアの互換性を優先度付けします。プログラムに参加すると、VMware は、お客様の環境に関する匿名データを受け取ります。
+デフォルトでは、このプロパティは有効です。</string>
+      <string id="AllowPluginUpdate">エンド ユーザーにプラグインのインストールまたはアップグレードを許可する</string>
+      <string id="AllowPluginUpdateExplain">この GPO を有効にした場合、プラグインのインストールまたはアップグレードが必要になると、Horizon Client ユーザー インターフェイスにプラグインのインストール ダイアログが表示されます。この GPO を無効にすると、Horizon Client にプラグインのインストール ダイアログは表示されません。GPO が「未構成」に設定されている場合、ユーザーは、クライアント ユーザー インターフェイスでこの設定を制御するオプションを使用できます。</string>
+      <string id="AllowResolutionDpiSync">解像度と DPI をサーバに保存</string>
+      <string id="AllowResolutionDpiSyncExplain">有効にすると、Horizon Client はデスクトップの解像度と DPI スケーリングをサーバに自動的に保存します。この GPO を使用すると、カスタム設定が指定されているユーザー (たとえば、Jane という名前のユーザー) がリモート デスクトップを起動するたびに、カスタム設定が自動的に適用されます。カスタム設定が設定されていないユーザーには、ローカル ハードウェアの解像度と DPI に一致するデフォルト設定が表示されます。同じモニター構成の別のシステムで GPO が設定されている場合、Jane にはそのシステムのカスタム設定も表示されます。
+
+デフォルトでは、このプロパティは無効です。</string>
+      <string id="EnableShade">シェードを有効にする</string>
+      <string id="EnableShadeExplain">Horizon Client ウィンドウの上部でシェード メニュー バーを有効にするかどうかを設定します。
+
+このプロパティは、デフォルトで有効になっています。</string>
+      <string id="InitialPinState">シェードを固定する</string>
+      <string id="InitialPinStateExplain">Horizon Client ウィンドウの上部にシェードを固定するかどうかを設定します。固定すると、メニュー バーの自動非表示が行われません。注: シェードが無効な場合、このプロパティは無効です。
+
+このプロパティは、デフォルトで有効になっています。</string>
+      <string id="DisableSpanChecks">スパン時にモニター アライメントをチェックしない</string>
+      <string id="DisableSpanChecksExplain">デフォルトでは、画面を組み合わせたときに正確な長方形にならない場合 (左側と右側のモニターの高さが一致していないか、上下のモニターの幅が一致していない場合)、クライアント デスクトップは複数のモニターをスパンしません。
+
+このプロパティを設定すると、このルールが上書きされます。このプロパティは、デフォルトで無効になっています。</string>
+      <string id="EnableMMR">マルチメディアのアクセラレーションを有効にする</string>
+      <string id="EnableMMRExplain">クライアントでマルチメディア リダイレクト (MMR) を有効にするかどうかを指定します。MMR は、TCP ソケットを介してリモート システムの固有のコーデックからマルチメディア データをクライアントに直接転送する Microsoft DirectShow フィルタです。その後、データはクライアント上で直接デコードされ、そこで再生されます。クライアントがローカル マルチメディア デコーディングを処理するために十分なリソースを持たない場合は、管理者は MMR を無効にできます。
+
+注: Horizon Client のビデオ ディスプレイ ハードウェアでオーバーレイがサポートされていない場合は、MMR が正しく機能しません。MMR ポリシーは、オフライン デスクトップ セッションに適用されません。</string>
+      <string id="AlwaysOnTop">常に最前面</string>
+      <string id="AlwaysOnTopExplain">Horizon Client ウィンドウが常に最前面に表示されるかどうかを指定します。
+
+デフォルトでは、無効になっています。</string>
+      <string id="AutomaticallyInstallShortcuts">Horizon Server の構成時にショートカットを自動的にインストールする</string>
+      <string id="AutomaticallyInstallShortcutsExplain">このポリシーでは、サーバで作成されたショートカットを Horizon Client に自動的にインストールするかどうかを設定します。有効にした場合、ユーザーにプロンプトが表示されず、ショートカットが自動的にインストールされます。無効にした場合、ショートカットはインストールされません。設定しない場合、ショートカットのインストールを確認するプロンプトが表示されます。</string>
+      <string id="HideClientAfterLaunchSession">[アイテムの起動後にセレクタを非表示] チェックボックスのデフォルト値</string>
+      <string id="HideClientAfterLaunchSessionExplain">[アイテムの起動後にセレクタを非表示] チェックボックスをデフォルトでオンにするかどうかを設定します。
+
+この設定は、デフォルトで無効になっています。</string>
+      <string id="VMwareViewClientScripting">スクリプト定義</string>
+      <string id="ServerURL">サーバ URL</string>
+      <string id="ServerURLExplain">ログイン時に Horizon Client が使用する URL を設定します。例: https://view1.example.com</string>
+      <string id="UserName">ログイン ユーザー名</string>
+      <string id="UserNameExplain">ログイン時に Horizon Client が使用するユーザー名を指定します。</string>
+      <string id="DomainName">ログイン ドメイン名</string>
+      <string id="DomainNameExplain">ログイン時に Horizon Client が使用する NETBIOS ドメインを設定します。例: EXAMPLE</string>
+      <string id="Password">ログイン パスワード</string>
+      <string id="PasswordExplain">ログイン時に Horizon Client が使用するパスワードを設定します。
+
+警告: Active Directory では、このパスワードはプレーン テキストで保存されます。</string>
+      <string id="DesktopName">選択するデスクトップ名</string>
+      <string id="DesktopNameExplain">ログイン時に Horizon Client が使用するデフォルト デスクトップを指定します。</string>
+      <string id="DesktopLayout">デスクトップ レイアウト</string>
+      <string id="DesktopLayoutExplain">デスクトップの起動時に、Horizon Client ウィンドの表示状態を設定します。</string>
+      <string id="FullScreen">全画面表示</string>
+      <string id="Window">ウィンドウ</string>
+      <string id="MultiMonitor">マルチモニタ</string>
+      <string id="LockedGuestSize">ロックしたゲストのサイズ</string>
+      <string id="LockedGuestWidth">ロックしたゲストの幅 </string>
+      <string id="LockedGuestHeight">ロックしたゲストの高さ</string>
+      <string id="LockedGuestSizeExplain">リモート デスクトップのスクリーン解像度を決定します。この設定を有効にすると、リモート デスクトップの自動調整機能が無効になります。
+
+最小画面サイズ: 640 x 480
+最大画面サイズ: 4096 x 4096
+
+注: この設定は RDP 接続には適用されません</string>
+      <string id="NonInteractive">エラー メッセージを表示しない (完全にスクリプト化されている場合のみ)</string>
+      <string id="NonInteractiveExplain">ログイン時にエラー メッセージが表示されるかどうかを設定します。
+
+注: このプロパティは、ログイン プロセスが完全にスクリプト化され、必要なログイン情報がすべてポリシーで設定されている場合にのみ適用されます。
+
+注: アカウントに無効なログイン情報が入力され、ログインに失敗した場合は、ユーザーに通知されず、Horizon Client wswc.exe プロセスが自動的に終了します。</string>
+      <string id="SingleAutoConnect">起動アイテムが 1 つしかない場合に自動的に接続する</string>
+      <string id="SingleAutoConnectExplain">デスクトップまたはアプリケーションがログイン ユーザーのみに許可されている場合、自動的に接続します。</string>
+      <string id="VMwareViewClientSecurity">セキュリティ設定</string>
+      <string id="VMwareViewClientSecurityNTLM">NTLM の設定</string>
+      <string id="LogInAsCurrentUser_Display">現在のユーザーとしてログインするためのオプションを表示する</string>
+      <string id="LogInAsCurrentUser_DisplayExplain">Windows Horizon Client に [現在のユーザーとしてログイン] チェックボックスを表示するかどうかを設定します。
+
+この設定は、デフォルトで有効になっています。
+
+このオプションを「オフ」に設定すると、ユーザーは [現在のユーザーとしてログイン] チェック ボックスのデフォルト値を上書きできなくなります。</string>
+      <string id="LogInAsCurrentUser">[現在のユーザーとしてログイン] チェック ボックスのデフォルト値</string>
+      <string id="LogInAsCurrentUserExplain">[現在のユーザーとしてログイン] チェックボックスをデフォルトでオンにするかどうかを設定します。
+
+この設定は、デフォルトで無効になっています。</string>
+      <string id="EnableRecursiveUnlock">クライアント マシンのロックを解除するときにリモート セッションのロックを解除します</string>
+      <string id="EnableRecursiveUnlockExplain">このポリシーは「再帰的なロックの解除」と呼ばれる機能を制御し、クライアント マシンのロックが解除された後ですべてのリモート セッションのロックを解除します。この機能はユーザーが「現在のユーザーとしてログイン」機能を使用して View Server にログインした場合にのみ適用されます。
+
+この設定は、デフォルトで有効になっています。</string>
+      <string id="BrokersTrustedForDelegation">委任に対して信頼されるサーバ</string>
+      <string id="BrokersTrustedForDelegationExplain">認証情報の委任を許可された View Connection Server のリストを設定します。これは「現在のユーザーとしてログイン」で使用されます。
+
+サーバ名の形式は、サービス プリンシパル名 (SPN) です。
+
+デフォルトでは、すべてのサーバが信頼されています。</string>
+      <string id="AllowNTLMAuthentication">NTLM 認証を許可</string>
+      <string id="AllowFallBack_YES">はい</string>
+      <string id="AllowFallBack_NO">いいえ</string>
+      <string id="AllowNTLMAuthenticationExplain">この設定を有効にすると、「現在のユーザーとしてログイン」で NTLM 認証が許可されます。
+
+「未構成」の場合、GPO「サーバに NTLM を常に使用」にあるサーバで NTLM 認証が許可されます。
+
+「無効」の場合、サーバで NTLM 認証は使用されません。
+
+Kerberos から NTLM へのフォールバックを許可:
+「いいえ」に設定すると、GPO「サーバに NTLM を常に使用」にあるサーバでのみ NTLM が使用されます。
+「はい」に設定すると、クライアントがサーバの Kerberos チケットを取得できない場合に NTLM が使用されます。</string>
+      <string id="ServersAlwaysUseNTLM">サーバに NTLM を常に使用</string>
+      <string id="ServersAlwaysUseNTLMExplain">この設定を有効にすると、リストにあるサーバの「現在のユーザーとしてログイン」で常に NTLM 認証が使用されます。
+
+サーバ名の形式は完全修飾ドメイン名 (FQDN) です</string>
+      <string id="DoNotCheckCertRevocationStatus">証明書失効ステータスを確認しない</string>
+      <string id="DoNotCheckCertRevocationStatusExplain">証明書失効ステータスを確認するかどうかを決定します。この GPO を有効にすると、インターネット接続が制限されている場合など、サーバによって送信された証明書が失効しているか、証明書の失効チェックが不可能な場合でも、Horizon Client はサーバの証明書を有効として扱います。
+
+デフォルトでは、この設定は無効です。</string>
+      <string id="StrictCertRevocationCheck">厳密な証明書失効チェック</string>
+      <string id="StrictCertRevocationCheckExplain">この GPO を有効にすると、Horizon Client は、証明書の失効ステータスを確認できない場合にサーバへの接続を拒否します。この設定を無効にすると、クライアントは失効を確認しますが、失効ステータスに基づいて接続がブロックされることはありません。「DoNotCheckCertRevocationStatus」GPO は、この GPO より優先されます。これらを一緒に使用しないでください。
+
+デフォルトでは、この設定は無効です。</string>
+      <string id="CertCheckMode">証明書検証モード</string>
+      <string id="CertCheckModeExplain">Horizon Client の証明書検証動作を構成します。
+
+このプロパティを「セキュリティなし」に設定すると、証明書の検証が実行されません。
+
+このプロパティを「警告するが許可する」に設定すると、ユーザーは警告されますが、サーバ証明書が自己署名の場合には処理を続行できます。サーバ証明書が自己署名の場合、証明書名がサーバ名と一致しなくても構いません。これがデフォルト値です。
+
+このプロパティを「フル セキュリティ」を設定すると、すべての証明書エラーがユーザーに通知され、サーバに接続できなくなります。</string>
+      <string id="ProtocolConnectionCertCheckMode">プロトコル接続証明書検証モード</string>
+      <string id="ProtocolConnectionCertCheckModeExplain">この設定は、Blast およびトンネル接続の証明書確認モードを決定します。
+デフォルトでは、サムプリントの検証が実行されます。
+
+このプロパティが「サムプリントの検証」に設定されている場合、証明書サムプリントの検証に失敗すると、仮想エンタイトルメントへの接続がブロックされます。
+
+このプロパティを「サムプリントまたは PKI の検証」に設定した場合、証明書サムプリントの検証でエラーが発生すると、PKI 証明書の検証に戻ります。PKI 証明書の確認に失敗すると、仮想エンタイトルメントへの接続がブロックされます。
+
+このプロパティが「PKI とサムプリントの検証」に設定されている場合、クライアントは PKI とサムプリントの両方を検証します。証明書サムプリントまたは PKI 証明書の認証に失敗すると、仮想エンタイトルメントへの接続がブロックされます。
+
+このプロパティが「PKI 検証」に設定されている場合、PKI 証明書認証が失敗すると、仮想エンタイトルメントへの接続がブロックされます。
+
+</string>
+      <string id="EnableSmartCardSSO">スマート カード認証のシングル サインオンを有効にする</string>
+      <string id="EnableSmartCardSSOExplain">スマート カード認証のシングル サインオンを有効にします。この機能を使用するには、View Connection Server に送信する前に、Horizon Client がスマート カードの暗号化された PIN をメモリに格納する必要があります。</string>
+      <string id="EnableJumplist">ジャンプ リストの統合を有効にする</string>
+      <string id="EnableJumplistExplain">Windows 7 以降のタスクバーにある Horizon Client のアイコンにジャンプ リストを追加し、最近使用した View Connection Server とリモート デスクトップに簡単に接続できるようにします。この機能は、デフォルトで有効になっています。</string>
+      <string id="AllowCmdLineCredentials">コマンド ラインの認証情報を許可する</string>
+      <string id="AllowCmdLineCredentialsExplain">パスワードまたは PIN などの認証情報をコマンド ライン パラメータに指定できます。
+
+この設定は、デフォルトで有効になっています。</string>
+      <string id="EnableTicketSSLAuth">SSL 暗号化フレームワーク チャネルを有効にする</string>
+      <string id="EnableTicketSSLAuthExplain">SSL 暗号化フレームワーク チャネルを有効にします。
+
+有効: SSL を有効にします。SSL がサポートされていないデスクトップへのフォールバックを許可します。
+無効: SSL を無効にします。
+強制: SSL を有効にし、SSL がサポートされていないデスクトップへの接続を拒否します。</string>
+      <string id="SSLCipherList">SSL プロトコルと暗号化アルゴリズムを設定する</string>
+      <string id="SSLCipherListExplain">SSL プロトコルと暗号化スイートを構成し、暗号化された SSL 接続を確立する前に暗号化アルゴリズムとプロトコルを指定できるようにします。暗号リストは、コロンで区切られた 1 つ以上の暗号文字列で構成されています。暗号文字列で大文字と小文字は区別されます。
+この機能が有効な場合、デフォルト値は次のとおりです。
+   'TLSv1.1:TLSv1.2:!aNULL:kECDH+AESGCM:ECDH+AESGCM:RSA+AESGCM:kECDH+AES:ECDH+AES:RSA+AES'
+意味: TLS v1.1 と TLS v1.2 が有効です。暗号化スイートは、128 または 256 ビット AES の ECDHE、ECDH、RSA を使用します。GCM モードを優先します。SSL v2.0、SSL v3.0、TLS v1.0 はサポートされていません。
+
+署名アルゴリズムを構成し、TLS v1.2 の署名アルゴリズムを指定します。コロンで区切られた署名アルゴリズムのリストを入力します。アルゴリズムは、優先順位の高い順に、アルゴリズム+ハッシュの形式で入力します。
+アルゴリズムとハッシュ名は大文字と小文字が区別されます。例: RSA+SHA256:ECDSA+SHA256
+このオプションが設定されていない場合、デフォルト値は OpenSSL ライブラリでサポートされているすべての署名アルゴリズムになります。
+
+サポートされているグループを構成し、サポートされる楕円曲線グループを設定します。コロンで区切られた曲線のリストを入力します。曲線名は大文字と小文字が区別されます。例: P-256:P-384
+このオプションが設定されず、ECDHE 暗号化スイートが指定された場合、デフォルト値は OpenSSL ライブラリでサポートされているすべての署名アルゴリズムになります。
+
+構成の参照リンク:
+https://kb.vmware.com/s/article/85640</string>
+      <string id="VMwareViewRdpSettings">RDP の設定</string>
+      <string id="VMwareViewBrowserRedirection">VMware Browser リダイレクト</string>
+      <string id="ColorDepth">色の深度</string>
+      <string id="ColorDepthExplain">リモート デスクトップの色の深度を設定します。
+
+24 ビット カラーの Windows XP システムの場合、[コンピュータの構成]、[管理者用テンプレート]、[Windows コンポーネント]、[ターミナル サービス] の順に移動し、最大色深度を制限するポリシーを有効にして、24 ビットに設定する必要があります。</string>
+      <string id="AudioRedirectionMode">オーディオのリダイレクト</string>
+      <string id="AudioRedirectionModeExplain">リモート デスクトップで再生されるオーディオ情報をリダイレクトするかどうかを指定します。このプロパティを有効にすると、次の設定が使用可能になります。
+
+  * オーディオを無効にする - オーディオなし
+  * 仮想マシンで実行 (VoIP USB サポートに必要) - リモート デスクトップ内でオーディオが再生されます。クライアントでサウンドを再生するには、共有 USB オーディオ デバイスが必要です。
+  * クライアントにリダイレクト - オーディオがクライアントにリダイレクトされます。これがデフォルトのモードです。
+
+注: このプロパティは、RDP オーディオにのみ適用されます。MMR 経由でリダイレクトされたオーディオはクライアントで再生されます。</string>
+      <string id="KeyboardHookMode">Windows キーの組み合わせのリダイレクト</string>
+      <string id="KeyboardHookModeExplain">Windows キーの組み合わせを適用する場所を指定します。</string>
+      <string id="DisableWallpaper">デスクトップの背景</string>
+      <string id="DisableWallpaperExplain">クライアントがリモート デスクトップに接続したときにデスクトップの背景を表示するかどうかを指定します。</string>
+      <string id="DisableFullWindowDrag">ドラッグ中にウィンドウの内容を表示</string>
+      <string id="DisableFullWindowDragExplain">ユーザーがフォルダを新しい場所までドラッグしたときに、フォルダの内容を表示するかどうかを指定します。</string>
+      <string id="DisableMenuAnimations">メニューとウィンドウのアニメーション</string>
+      <string id="DisableMenuAnimationsExplain">クライアントがリモート コンピュータに接続したときのメニューとウィンドウの操作を指定します。</string>
+      <string id="DisableTheming">テーマ</string>
+      <string id="DisableThemingExplain">クライアントがリモート デスクトップに接続したときにテーマを表示するかどうかを指定します。</string>
+      <string id="DisableCursorShadow">カーソルのシャドウ</string>
+      <string id="DisableCursorShadowExplain">リモート デスクトップでカーソルの下にシャドウを表示するかどうかを指定します。</string>
+      <string id="FontSmoothing">フォント スムージング</string>
+      <string id="FontSmoothingExplain">(Windows Vista 以降) リモート デスクトップでフォントにアンチエイリアシングを適用するかどうかを指定します。</string>
+      <string id="DesktopComposition">デスクトップ コンポジション</string>
+      <string id="DesktopCompositionExplain">(Windows Vista 以降) リモート デスクトップでデスクトップ コンポジションを有効にするかどうかを指定します。
+
+デスクトップ コンポジションを有効にすると、従来のバージョンの Microsoft Windows とは異なる描画方法が採用され、各ウィンドウ上のコンテンツは直接画面やプライマリ ディスプレイ デバイスに描画されません。その代わりに、描画はビデオ メモリのオフスクリーン サーフェスにリダイレクトされ、その後、デスクトップ イメージにレンダリングされ、ディスプレイに表示されます。</string>
+      <string id="RedirectDrives">ドライブをリダイレクト</string>
+      <string id="RedirectDrivesExplain">クライアントがリモート コンピュータに接続したときに、ローカル ディスク ドライブを自動的にリダイレクトするかどうかを指定します。</string>
+      <string id="RedirectPrinters">プリンタをリダイレクト</string>
+      <string id="RedirectPrintersExplain">クライアントがリモート デスクトップに接続したときに、ローカル プリンタを自動的にリダイレクトするかどうかを指定します。</string>
+      <string id="RedirectPorts">シリアル ポートをリダイレクト</string>
+      <string id="RedirectPortsExplain">クライアントがリモート デスクトップに接続したときに、ローカル COM ポートを自動的にリダイレクトするかどうかを指定します。</string>
+      <string id="RedirectSmartcards">スマート カードをリダイレクト</string>
+      <string id="RedirectSmartcardsExplain">クライアントがリモート デスクトップに接続したときに、ローカル スマート カードを自動的にリダイレクトするかどうかを指定します。</string>
+      <string id="RedirectClipboard">クリップボードをリダイレクト</string>
+      <string id="RedirectClipboardExplain">クライアントがリモート デスクトップに接続したときに、ローカル クリップボード情報を自動的にリダイレクトするかどうかを指定します。</string>
+      <string id="RedirectPlugAndPlayDevices">サポートされているプラグアンドプレイ デバイスをリダイレクト</string>
+      <string id="ExplainRedirectPlugAndPlayDevices">クライアントがリモート デスクトップに接続したときに、ローカル プラグアンドプレイおよび POS デバイスを自動的にリダイレクトするかどうかを指定します。この動作は、View Agent の USB リダイレクト コンポーネントで管理されるリダイレクトとは異なります。</string>
+      <string id="ShadowBitmap">ビットマップのシャドウ</string>
+      <string id="ShadowBitmapExplain">シャドウ ビットマップを使用するかどうかを指定します。
+
+注: 全画面モードではシャドウ ビットマップは常に無効になります。全画面モードの場合、このプロパティは無効です。</string>
+      <string id="CachePersistenceActive">ビットマップのキャッシュ/キャッシュの保持を有効にする</string>
+      <string id="CachePersistenceActiveExplain">ビットマップ キャッシュの保持を使用するかどうかを指定します。キャッシュの保持を使用すると、パフォーマンスは向上しますが、追加のディスク容量が必要になります。</string>
+      <string id="EnableCompression">圧縮を有効にする</string>
+      <string id="EnableCompressionExplain">RDP データの圧縮を使用するかどうかを指定します。デフォルトでは、有効です。</string>
+      <string id="BitmapCacheSize">8 bpp ビットマップのメモリ内ビットマップ キャッシュ サイズ (KB 単位)</string>
+      <string id="BitmapCacheSizeExplain">8 bpp のカラー設定で使用する、RAM の ビットマップ キャッシュ サイズをキロバイト（KB） 単位で指定します。ScaleBitmapCachesByBPP が true (デフォルト) の場合、指定したキャッシュ サイズに ピクセルあたりのサイズ（バイト単位）を掛けると、実際のメモリ キャッシュ サイズになります。
+
+このプロパティを有効にした場合には、サイズを KB 単位で入力します。</string>
+      <string id="BitmapVirtualCacheSize">8 bpp ビットマップのビットマップ キャッシュ ファイル サイズ (MB 単位)</string>
+      <string id="BitmapVirtualCacheSizeExplain">8 bpp カラー設定に使用する保持ビットマップ キャッシュ ファイルのサイズを MB 単位で指定します。
+
+このプロパティを有効にした場合、ファイル サイズを MB 単位で入力します。有効な値は 1 から 32 までです。</string>
+      <string id="BitmapVirtualCache16BppSize">16 bpp ビットマップのビットマップ キャッシュ ファイル サイズ (MB 単位)</string>
+      <string id="BitmapVirtualCache16BppSizeExplain">15/16 bpp カラー設定に使用する保持ビットマップ キャッシュ ファイルのサイズを MB 単位で指定します。
+
+このプロパティを有効にした場合、ファイル サイズを MB 単位で入力します。有効な値は 1 から 32 までです。</string>
+      <string id="BitmapVirtualCache24BppSize">24 bpp ビットマップのビットマップ キャッシュ ファイル サイズ (MB 単位)</string>
+      <string id="BitmapVirtualCache24BppSizeExplain">24 bpp カラー設定に使用する保持ビットマップ キャッシュ ファイルのサイズを MB 単位で指定します。
+
+このプロパティを有効にした場合、ファイル サイズを MB 単位で入力します。有効な値は 1 から 32 までです。</string>
+      <string id="BitmapVirtualCache32BppSize">32 bpp ビットマップのビットマップ キャッシュ ファイル サイズ (MB 単位)</string>
+      <string id="BitmapVirtualCache32BppSizeExplain">32 bpp カラー設定に使用する保持ビットマップ キャッシュ ファイルのサイズを MB 単位で指定します。
+
+このプロパティを有効にした場合、ファイル サイズを MB 単位で入力します。有効な値は 1 から 32 までです。</string>
+      <string id="noTSCAddins">サードパーティのターミナル サービス プラグインを無効にする</string>
+      <string id="noTSCAddinsExplain">このプロパティを true に設定すると、通常の RDP プラグインとしてインストールされているサードパーティのターミナル サービス プラグインが検査されません。この設定は、USB リダイレクトなどの View 固有のプラグインには適用されません。このポリシーを設定しない場合、サードパーティ プラグインの検出と使用がデフォルトで有効になります。</string>
+      <string id="DisableTimeZoneForwarding">タイム ゾーンの転送を無効にする</string>
+      <string id="DisableTimeZoneForwardingExplain">接続されたクライアントのタイムゾーンと View デスクトップのタイム ゾーンを同期するかどうかを指定します。有効にした場合、View Agent 設定ポリシーの「タイム ゾーンの同期を無効にする」プロパティが無効に設定されていない場合に限り、このプロパティが適用されます。
+
+このプロパティは、デフォルトで無効になっています。</string>
+      <string id="AutomaticInputFocus">仮想デスクトップ ウィンドウ内の入力を自動フォーカス</string>
+      <string id="AutomaticInputFocusExplain">仮想デスクトップ ウィンドウが最前面に表示されるときに、入力が自動的に仮想デスクトップの位置に移ります。つまり、フォーカスはウィンドウのフレームにはないため、ユーザーはデスクトップ ウィンドウ内を 1 回クリックしてフォーカスを移動する必要がありません。</string>
+      <string id="EnableCredSspSupport">資格情報のセキュリティ サービス プロバイダを有効にする</string>
+      <string id="EnableCredSspSupportExplain">View デスクトップ接続がネットワーク レベル認証（NLA）を使用するかどうかを指定します。Windows Vista では、リモート デスクトップ接続にはデフォルトで NLA が必要です。
+
+ゲスト OS でリモート デスクトップ接続に NLA が必要な場合は、この設定を有効にする必要があります。有効にしないと、Horizon Client は View デスクトップに接続できません。
+
+この設定を有効にするだけでなく、次の条件が満たされていることも確認する必要があります。
+   1) クライアントとゲスト OS が両方とも NLA をサポートしていること。
+   2) View Connection Server インスタンスで直接クライアント接続が有効になっていること。トンネル接続は NLA ではサポートされていません。</string>
+      <string id="TunnelProxyBypass">トンネル プロキシ バイパス アドレス リスト</string>
+      <string id="TunnelProxyBypassExplain">特定の文字列で始まるトンネル アドレスにプロキシ サーバを使用しません。複数のエントリを区切る場合には、セミコロン (;) を使用します。</string>
+      <string id="HelpURL">Horizon Client オンライン ヘルプの URL</string>
+      <string id="HelpURLExplain">Horizon Client がヘルプ ページを取得できる代替 URL を指定します。このプロパティは、インターネットにアクセスできないためにリモートのヘルプ システムを取得できない環境で使用するためのものです。</string>
+      <string id="AutoUpdateAllowed">Horizon Client オンライン アップデートを有効にする</string>
+      <string id="AutoUpdateAllowedExplain">オンライン アップデート機能を使用するかどうかを指定します。Horizon Client 4.6 以降では、デフォルトで有効になっています。</string>
+      <string id="AutoUpdateMessagePopUp">アップデートを通知するポップアップ メッセージ</string>
+      <string id="AutoUpdateMessagePopUpExplain">Horizon Client の新しいバージョンが利用できるときに、エンド ユーザーにポップアップ メッセージを自動的に表示するかどうかを指定します。デフォルトでは、この設定は無効です。
+
+この GPO は、Horizon Client 8.1 以降でサポートされます。</string>
+      <string id="AutoCheckForUpdate">アップデートの自動確認</string>
+      <string id="AutoCheckForUpdateExplain">Horizon Client ソフトウェア アップデートの自動確認を有効にするかどうかを指定します。デフォルトでは、この設定は有効です。
+
+この GPO は、Horizon Client 8.1 以降でサポートされます。</string>
+      <string id="AutoUpdateAllowSkip">Horizon Client のアップデートのスキップをユーザーに許可する</string>
+      <string id="AutoUpdateAllowSkipExplain">エンド ユーザーが Horizon Client のアップデート ウィンドウで [スキップ] オプションを選択できるかどうかを指定します。ユーザーが [スキップ] を選択すると、Horizon Client の次のアップデートがリリースされるまで、アップデートの通知は表示されません。
+
+この GPO は、Horizon Client 8.1 以降でサポートされます。</string>
+      <string id="AutoUpdateURL">Horizon Client オンライン アップデートの URL</string>
+      <string id="AutoUpdateURLExplain">Horizon Client がアップデートを取得する URL を指定します。このプロパティは、特定のアップデート サーバを定義するために設計されています。有効でない場合、VMware 公式のアップデート サーバが使用されます。</string>
+      <string id="BlockMultipleInstances">各 Windows セッションで複数の Horizon Client インスタンスをブロックする</string>
+      <string id="BlockMultipleInstancesExplain">このポリシーは、各 Windows セッションで複数の Horizon Client インスタンスをブロックします。「有効」に設定した場合、Horizon Client がシングルトン インスタンス モードで実行され、ユーザーは複数の Horizon Client インスタンスを起動できなくなります。無効に設定した場合、ユーザーは複数の Horizon Client インスタンスを開くことができます。デフォルトでは、この設定は無効です。</string>
+      <string id="ListSmartCardCertsOnly">ログイン時はスマート カード証明書のみを表示する</string>
+      <string id="ListSmartCardCertsOnlyExplain">このポリシーを使って、ユーザー ストアおよびシステム ストアのすべての証明書を表示させるか、スマート カードの証明書のみを表示させるかを指定します。[有効] に設定すると、証明書選択ダイアログ ボックスにはスマート カードのみが表示され、他の証明書はすべてフィルタリングされて非表示になります。[無効] に設定すると、証明書選択ダイアログ ボックスにはすべてのタイプの証明書が表示されます。デフォルトでは、この設定は無効です。</string>
+      <string id="connectUSBOnStartup">起動時にすべての USB デバイスをデスクトップまたはリモート アプリケーションに接続する</string>
+      <string id="connectUSBOnStartupExplain">デスクトップまたはリモート アプリケーションの起動時に、ホストで使用可能なすべての USB デバイスをデスクトップまたはリモート アプリケーションに自動的に接続します。</string>
+      <string id="EnableAutoReconnect">RDP の自動再接続を有効にする</string>
+      <string id="EnableAutoReconnectExplain">RDP プロトコルで接続エラーが発生したときに、RDP クライアント コンポーネントがデスクトップとの再接続を自動的に試みるかどうかを指定します。この設定は、デフォルトで無効になっています。[デスクトップへのへの安全なトンネル接続を使用する] オプションが有効な場合、この設定は無効になります。</string>
+      <string id="RedirectAudioCapture">オーディオ キャプチャのリダイレクトを有効にする</string>
+      <string id="RedirectAudioCaptureExplain">デフォルトのオーディオ入力デバイスをクライアントからリモート セッションにリダイレクトするかどうかを指定します。デフォルトはオフです。</string>
+      <string id="connectUSBOnInsert">USB デバイスが挿入されたときにデスクトップまたはリモート アプリケーションに接続する</string>
+      <string id="connectUSBOnInsertExplain">ホストに USB デバイスが挿入されたときに、ユーザーが現在使用しているデスクトップまたはリモート アプリケーションに USB デバイスを自動的に接続します。</string>
+      <string id="DisableToastNotifications">トースト通知を無効にする</string>
+      <string id="DisableToastNotificationsExplain">Horizon Client からのトースト通知を無効にします。画面の端にトースト通知を表示しないようにするには、この設定を有効にします。この GPO を有効にすると、Horizon Client が非表示のときにユーザーには通知が表示されません。デフォルトでは、この設定は無効です。</string>
+      <string id="EnableRelativeMouse">相対マウスを有効にする</string>
+      <string id="EnableRelativeMouseExplain">Horizon Client から PCoIP または Blast デスクトップの相対マウスを有効にします。PCoIP または Blast デスクトップで常に相対マウス モードを使用する場合には、この設定を有効にします。相対マウスモードにより、特定のグラフィックス アプリケーションやゲームでマウスの動作が改善されます。リモート デスクトップで相対マウスがサポートされていない場合、この設定は使用されません。デフォルトでは、この設定は無効です。</string>
+      <string id="DisableDisconnectMessages">デスクトップ切断メッセージを無効にする</string>
+      <string id="DisableDisconnectMessagesExplain">通常、デスクトップの切断時に表示されるメッセージを無効にするかどうかを指定します。これらのメッセージはデフォルトで表示されます。ユーザーが開始した接続を Horizon Client ユーザー インターフェイスから切断した場合、この設定は適用されません。</string>
+      <string id="DisallowClientInformationPassthrough">ネストされたセッションでクライアント情報の通過を許可しない</string>
+      <string id="DisallowClientInformationPassthroughExplain">Horizon Client で、クライアント情報がネストされたセッションを通過しないようにするかどうかを指定します。有効にした場合、Horizon Client が Horizon セッションの内部で実行されていれば、仮想マシンのデバイス情報ではなく実際の物理クライアント情報を送信します。この設定は、クライアント情報 (デバイス名とドメイン、クライアント タイプ、IP アドレス、MAC アドレス) に適用されます。この設定はデフォルトで無効になっており、クライアント情報がネストされたセッションを通過することを許可します。</string>
+      <string id="DisableSharing">ファイルとフォルダを共有しない</string>
+      <string id="DisableSharingExplain">リモート セッションとクライアント間でのファイルとフォルダの共有を無効にします。
+
+「有効」に設定すると、クライアントはクライアント共有ページを完全に非表示にし、ファイル リダイレクトも無効にします。
+
+この設定を行わないと、デフォルト値は「無効」になります。</string>
+      <string id="AppSessionReconnectBehavior">切断されたアプリケーション セッションを再開するときの動作</string>
+      <string id="AppSessionReconnectBehaviorExplain">この設定を使用すると、アプリケーション セッションの自動再開機能の特定の動作を強制的に実行できます。この GPO で使用可能な 3 つのオプションは、Windows クライアント設定ページのオプションに対応しています。デフォルトでは、この設定は無効で、ユーザーは動作を選択できます。</string>
+      <string id="AllSessionsDisconnectedBehavior">すべてのセッションが切断されたときのクライアントの動作</string>
+      <string id="AllSessionsDisconnectedBehaviorExplain">この設定により、すべてのセッションが切断されたときのクライアントの動作をカスタマイズできます。すべてのセッションが切断されたときに、クライアントを終了したり、Connection Server からログオフするように構成できます。また、クライアントの現在の状態を維持するように構成することもできます。この設定が構成されていない場合、クライアントはデフォルトの方法で動作します。</string>
+      <string id="ForceFloatingLanguageBarOff">ホスト型アプリケーションでリモートのフロート表示言語 (IME) バーを常に非表示にする</string>
+      <string id="ForceFloatingLanguageBarOffExplain">アプリケーション セッションでフロート表示言語バーを強制的にオフにします。有効にすると、ローカルで IME 機能が有効かどうかにかかわらず、リモート アプリケーション セッションでフロート表示言語バーが必ず非表示になります。無効にすると、ローカルで IME 機能が無効になっている場合にのみ、フロート表示言語バーが表示されます。この設定は、デフォルトで無効になっています。</string>
+      <string id="DisableFileRedirection">ホスト型アプリケーションでローカル ファイルを開くことができないようにします。</string>
+      <string id="DisableFileRedirectionExplain">Horizon Client が、ホスト型アプリケーションによってサポートされるファイル拡張子のローカル ハンドラを登録するかどうかを指定します。ポリシーを有効にすると、Horizon Client はファイル拡張子のハンドラを登録しません。ユーザーは設定を上書きできません。ポリシーを無効にすると、Horizon Client はファイル拡張子のハンドラを常に登録します。デフォルトでは、ファイル拡張子のハンドラが登録されますが、ユーザーは Horizon Client UI でこの機能を無効にできます。</string>
+      <string id="KeyboardHotkeys">修飾ファンクション キーの表示</string>
+      <string id="KeyboardHotkeysExplain">設定した場合、この GPO がキーの組み合わせを設定します。デスクトップ セッション (PCoIP または BLAST) で入力が有効になると、クライアント マシンの表示設定が変更されます。設定しない場合、エンド ユーザーがマウスの使用を無効にするか、Ctrl + Alt キーを押しながら Windows + P キーを押して表示設定を変更する必要があります。この GPO は、アプリケーション セッションに適用されません。</string>
+      <string id="DisplaySwitchModifierKey">スイッチ修飾キーを表示:</string>
+      <string id="DisplaySwitchFunctionKey">スイッチ ファンクション キーを表示:</string>
+      <string id="KEY_NONE">&lt;無効&gt;</string>
+      <string id="KEY_SHIFT">Shift</string>
+      <string id="KEY_CTRL">Ctrl</string>
+      <string id="KEY_ALT">Alt</string>
+      <string id="KEY_F1">F1</string>
+      <string id="KEY_F2">F2</string>
+      <string id="KEY_F3">F3</string>
+      <string id="KEY_F4">F4</string>
+      <string id="KEY_F5">F5</string>
+      <string id="KEY_F6">F6</string>
+      <string id="KEY_F7">F7</string>
+      <string id="KEY_F8">F8</string>
+      <string id="KEY_F9">F9</string>
+      <string id="KEY_F10">F10</string>
+      <string id="KEY_F11">F11</string>
+      <string id="KEY_F12">F12</string>
+      <string id="KEY_H">H</string>
+      <string id="KEY_I">I</string>
+      <string id="KEY_J">J</string>
+      <string id="KEY_K">K</string>
+      <string id="KEY_L">L</string>
+      <string id="KEY_M">M</string>
+      <string id="KEY_N">N</string>
+
+      <string id="HotkeyUngrabDesktop">入力フォーカスを解除するホットキーの組み合わせ</string>
+      <string id="HotkeyUngrabDesktopExplain">このポリシーは、PCoIP または Blast を使用したデスクトップ セッションの入力フォーカスを解放するためのホットキーの組み合わせを設定します。ホットキーは、1 つまたは 2 つの修飾子キーと 1 つのファンクション キーで構成されます。このポリシーが無効になっているか、または構成されていない場合、ユーザーは Ctrl + Alt を使用するか、デスクトップ ウィンドウの外側をクリックしてフォーカスを解除できます。</string>
+      <string id="UngrabDesktopModifierKey">入力フォーカスを解除するための修飾子キー:</string>
+      <string id="SecondUngrabDesktopModifierKey">入力フォーカスを解除するための 2 番目の修飾子キー:</string>
+      <string id="UngrabDesktopFunctionKey">入力フォーカスを解除するためのファンクション キー:</string>
+
+      <string id="HotkeyGrabDesktop">入力フォーカスを有効にするためのホットキーの組み合わせ</string>
+      <string id="HotkeyGrabDesktopExplain">このポリシーは、PCoIP または Blast を使用した、最後に使用されたデスクトップ セッションの入力フォーカスを有効にするためのホットキーの組み合わせを設定します。ホットキーは、1 つまたは 2 つの修飾子キーと 1 つの文字キーで構成されます。このポリシーが無効になっているか、または構成されていない場合、ユーザーはデスクトップ ウィンドウの内側をクリックしてフォーカスを有効にできます。</string>
+      <string id="GrabDesktopModifierKey">入力フォーカスを有効にするための修飾子キー:</string>
+      <string id="SecondGrabDesktopModifierKey">入力フォーカスを有効にするための 2 番目の修飾子キー:</string>
+      <string id="GrabDesktopLetterKey">入力フォーカスを有効にするための文字キー:</string>
+
+      <string id="HIDE_MENU_YES">はい</string>
+      <string id="HIDE_MENU_NO">いいえ</string>
+      <string id="HideToolBarMenu">クライアントのツールバー メニューで項目を非表示にする</string>
+      <string id="HideToolBarMenuExplain">これらの設定は、クライアント ランチャーのメイン画面の最上位に表示されるツールバーで項目を非表示にするかどうかを制御します。デフォルトでは、ポリシーは無効で、Horizon Client は、すべての項目を表示します。
+
+この GPO は、Horizon Client 5.0 以降でサポートされます。</string>
+      <string id="HideDesktopContextMenu">デスクトップのコンテキスト メニューの項目を非表示にする</string>
+      <string id="HideDesktopContextMenuExplain">これらの設定は、クライアント ランチャー ページでデスクトップの右クリック コンテキスト メニューの項目を非表示にするかどうかを制御します。デフォルトでは、ポリシーは無効で、Horizon Client は、すべての項目を表示します。
+
+この GPO は、Horizon Client 5.0 以降でサポートされます。</string>
+      <string id="HideAppContextMenu">アプリケーション コンテキスト メニューの項目を非表示にする</string>
+      <string id="HideAppContextMenuExplain">これらの設定は、クライアント ランチャー ページでアプリケーションの右クリック コンテキスト メニューの項目を非表示にするかどうかを制御します。デフォルトでは、ポリシーは無効で、Horizon Client は、すべての項目を表示します。
+
+この GPO は、Horizon Client 5.0 以降でサポートされます。</string>
+      <string id="HideDesktopMenu">デスクトップ ツールバーの項目を非表示にする</string>
+      <string id="HideDesktopMenuExplain">これらの設定は、全画面表示の仮想デスクトップの上部に表示されるデスクトップ ツールバーで項目を非表示にするかどうかを制御します。デフォルトでは、ポリシーは無効で、Horizon Client は、すべての項目を表示します。
+
+この GPO は、Horizon Client 5.0 以降でサポートされます。</string>
+      <string id="HideNotificationMenu">システム トレイ メニューの項目を非表示にする</string>
+      <string id="HideNotificationMenuExplain">これらの設定は、ローカルの Windows 画面の下部に表示されるシステム トレイ メニューで項目を非表示にするかどうかを制御します。デフォルトでは、ポリシーは無効で、Horizon Client は、すべての項目を表示します。
+
+この GPO は、Horizon Client 5.0 以降でサポートされます。</string>
+      <string id="CustomErrorScreenFooter">カスタム エラー画面のフッター</string>
+      <string id="CustomErrorScreenFooterExplain">プレーン テキスト ファイルの場所を指定します。有効にした場合、指定したファイルのテキストがすべてのエラー メッセージの下に表示されます。
+
+この GPO は、Horizon Client 5.0 以降でサポートされます。</string>
+      <string id="UnauthenticatedAccessEnabled">サーバに対する非認証アクセスを有効にする</string>
+      <string id="UnauthenticatedAccessEnabledExplain">ユーザーが Horizon Client からアプリケーションにアクセスするときに、認証情報の入力を要求するかどうかを指定します。有効にすると、サーバから常に非認証アクセスが要求されます。ただし、非認証アクセスが使用できない場合には、クライアントが他の認証方法にフォールバックする場合があります。無効にすると、アプリケーションにログインしてアクセスするときに、認証情報の入力が常に要求されます。設定しない場合、ユーザーは Horizon Client ユーザー インターフェイスから非認証アクセスを有効にできます。</string>
+      <string id="ForceUserAffinity">同じサーバに接続するときに既存のクライアント インスタンスを使用する</string>
+      <string id="ForceUserAffinityExplain">この設定は、ユーザーが指定したサーバにすでに接続しているときに、既存の Horizon Client インスタンスに接続を追加するかどうかを制御します。未構成の場合、この設定はデフォルトで無効になります。</string>
+      <string id="UnauthenticatedAccessAccount">非認証アクセスに使用するアカウント</string>
+      <string id="UnauthenticatedAccessAccountExplain">サーバに匿名でログインするときに Horizon Client が使用するアカウントを設定します。設定しない場合、ユーザーはアカウントを選択できます。</string>
+      <string id="ADMXMigrator_UnresolvedString">ADMX Migrator が、元の ADM 文字列テーブルにない文字列を検出しました。</string>
+      <string id="VDMClient_SupportedOn_Empty"></string>
+      <string id="AllowDisplayScaling">ディスプレイのスケーリングを許可する</string>
+      <string id="AllowDisplayScalingExplain">この設定を使用すると、すべてのデスクトップおよびアプリケーション セッションのディスプレイ スケーリングを設定できます。</string>
+      <string id="AutoSyncToggleKeys">キーパッド、スクロール、Caps Lock キーを自動的に同期する</string>
+      <string id="AutoSyncToggleKeysExplain">有効にすると、この設定により、物理デバイスのキーパッド、スクロール、および Caps Lock キーが、自動的に仮想デスクトップと同期します。有効にしないと、仮想デスクトップは、ユーザーが仮想デスクトップ内でこれらのキーの状態を変更した場合にのみ、これらのキーの状態を更新します。</string>
+      <string id="AllowBlastCodec">BlastCodec デコードを許可する</string>
+      <string id="AllowBlastCodecExplain">この設定を使用すると、Blast プロトコルに BlastCodec デコードを設定できます。有効にすると、BlastCodec デコードの使用が許可されます。無効にすると、BlastCodec デコードは使用されません。設定しない場合、ユーザーは BlastCodec デコードを有効にするかどうかを選択できます。</string>
+      <string id="AllowH264">H.264 デコードを許可する</string>
+      <string id="AllowH264Explain">この設定を使用すると、Blast プロトコルに H.264 デコードを設定できます。有効にすると、H.264 デコードの使用が許可されます。無効にすると、H.264 デコードは使用されません。設定しない場合、ユーザーは H.264 デコードを有効にするかどうかを選択できます。</string>
+      <string id="AllowH264YUV444">H.264 ハイカラー精度を許可する</string>
+      <string id="AllowH264YUV444Explain">この設定を使用すると、H.264 にハイカラー精度モードを構成できます。この設定を有効にするには、H.264 も有効にする必要があります。</string>
+      <string id="AllowHEVC">HEVC デコードを許可する</string>
+      <string id="AllowHEVCExplain">この設定を使用すると、Blast プロトコルに HEVC デコード (H.265 とも呼ばれる) を設定できます。有効にすると、HEVC デコードは、推奨オプションになります。無効にすると、HEVC デコードは使用されません。設定しない場合、ユーザーは HEVC デコードを有効にするかどうかを選択できます。</string>
+      <string id="AllowHDR">HDR デコードを許可する</string>
+      <string id="AllowHDRExplain">この設定を使用すると、Blast プロトコル経由で HDR (High Dynamic Range) エンコードを構成できます。この設定を有効にした場合、クライアント マシンが HDR に対応し、表示可能であれば、エージェント マシンがデスクトップで HDR を有効にします。</string>
+      <string id="EnableWindowOptimizations">Horizon Client ウィンドウの最適化を有効にする</string>
+      <string id="EnableWindowOptimizationsExplain">この設定を使用すると、最適化が有効になり、Horizon Client ウィンドウが完全に表示されない場合に CPU の使用量が低減されます。未構成の場合、この設定はデフォルトで有効になります。</string>
+      <string id="DecodeCapsProbingMode">ハードウェア デコーダの検知モードの構成</string>
+      <string id="ProbingMode_NORMAL">Horizon Client の起動時に検知</string>
+      <string id="ProbingMode_LEGACY">Horizon デスクトップ/アプリケーションの起動時に検知</string>
+      <string id="ProbingMode_OFF">ハードウェア デコーダ機能を検知しない</string>
+      <string id="DecodeCapsProbingModeExplain">このポリシーを有効にすると、管理者は、Horizon Client がハードウェア デコード機能を検知するタイミングを構成できます。
+
+このポリシーが有効になっていない場合、「Horizon Client の起動時に検知」がデフォルトになります。</string>
+      <string id="DecoderImageCacheSize">デコーダ イメージ キャッシュ サイズ (KB)</string>
+      <string id="DecoderImageCacheSizeExplain">デコーダ イメージ キャッシュの最大サイズ (KB)。
+
+キャッシュの最終サイズは、この構成またはエージェント関連構成の最小値に基づいて選択されます。また、Horizon Agent で使用可能な RAM の半分を超えることはできません。</string>
+      <string id="AllowBlastThroughProxy">Blast 接続でオペレーティング システムのプロキシ設定を使用することを許可</string>
+      <string id="AllowBlastThroughProxyExplain">この設定により、Blast 接続のプロキシ使用を構成できます。有効にすると、Blast はプロキシ経由で接続できます。無効にすると、システム プロキシは使用されません。構成されていない場合、ユーザーはシステム プロキシを使用するかどうかを選択できます。デフォルトでは、このプロパティは無効です。</string>
+      <string id="AllowSplitMksWindowExplain">この設定により、mks ウィンドウの分割を有効にできます。有効にすると、mks ウィンドウがモニターごとに分割されます。無効にすると、mks ウィンドウはすべてのモニターの境界ボックスになります。構成しない場合、mks ウィンドウの分割が有効になります。</string>
+      <string id="AllowSplitMksWindow">mks ウィンドウの分割を有効化</string>
+      <string id="BrowserRedirUseCache">ブラウザ リダイレクトのキャッシュを有効にする</string>
+      <string id="BrowserRedirUseCacheExplain">有効にすると、Cookie を含む参照履歴がクライアントに保存されます。この設定を無効にしても、キャッシュはクリアされません。設定を無効にした後に再度有効にすると、再利用されます。
+
+デフォルトでは、このプロパティは有効です。</string>
+      <string id="BrowserRedirIgnoreCertErrors">ブラウザ リダイレクトの証明書エラーを無視する</string>
+      <string id="BrowserRedirIgnoreCertErrorsExplain">有効にすると、リダイレクトされたページで発生したすべての証明書エラーが無視され、処理が続行します。デフォルトでは、このプロパティは無効です。</string>
+      <string id="BrowserRedirEnableMediaStream">ブラウザ リダイレクトで WebRTC カメラとマイクへのアクセスを有効にする</string>
+      <string id="BrowserRedirEnableMediaStreamExplain">有効にすると、WebRTC を使用してリダイレクトされたページからクライアントのカメラとマイクにアクセスできるようになります。デフォルトでは、このプロパティは有効です。</string>
+      <string id="MouseMoveMaxLatencyMsec">マウス一体化の最大遅延の設定</string>
+      <string id="MouseMoveMaxLatencyMsecExplain">この設定を使用すると、マウス移動イベントの一体化時に許容される最大遅延をミリ秒単位で設定できます。0 ～ 50 の値が有効です。0 に設定すると、マウス移動イベントの一体化が無効になります。マウス移動イベントを一体化すると、クライアントとエージェントの間のバンド幅の使用量が少なくなりますが、マウスの動きが少し遅れる可能性があります。デフォルトでは、このプロパティは無効です。</string>
+      <string id="VMwareViewPrintRedirection">VMware Integrated Printing</string>
+      <string id="PrintRedir_SISActive">L1 ローカル プリンタから内部セッションへのリダイレクトを許可する</string>
+      <string id="PrintRedir_SISActive_detail">この設定は、L1 ローカル プリンタを内部セッションにリダイレクトするかどうかを指定します。
+
+VMware は、Horizon リモート デスクトップ内での Horizon Client の実行をサポートします。この構成は、一般に「ネスト モード」といい、3 つのレイヤーと 2 つのホップが関係します。
+
+L0 (エンドポイント): Horizon Client がインストールされている物理マシン
+L1 (最初のホップのリモート デスクトップ): Horizon Client と Horizon Agent の両方がインストールされているリモート デスクトップ
+L2 (2 番目のホップのリモート デスクトップ/アプリケーション): 2 番目のホップのクライアントが接続する公開デスクトップ/公開アプリケーション
+
+有効になっている場合、L1 ローカル プリンタが内部セッションにリダイレクトされます。
+この設定を行わないか、無効にした場合、L1 ローカル プリンタは内部セッションにリダイレクトされません。
+
+デフォルトでは、この設定は構成されていません。
+</string>
+      <string id="PrintRedir_MaxTxRate">送信レートの制限 (KBps)</string>
+      <string id="PrintRedir_MaxTxRate_detail">この設定を使用すると、すべての印刷ジョブの送信レートが指定の値 (KBps) に制限されます。
+許可される最小送信レートは 200 KBps です。構成しないか、無効にすると、送信レートは制限されません。
+許可される最大送信レートは 4000 KBps です。この値よりも大きい場合、送信レートは制限されません。
+
+</string>
+      <string id="PrintRedir_lp_setting">クライアント プリンタをリダイレクトしない</string>
+      <string id="PrintRedir_lp_setting_detail">このポリシー設定では、クライアント プリンタのリダイレクトを許可するかどうかを管理できます。
+
+このポリシー設定を有効にすると、どのクライアント プリンタもリダイレクトされません。
+このポリシー設定を行わないか、無効にした場合、すべてのクライアント プリンタがリダイレクトされます。
+
+デフォルトでは、この設定は構成されていません。
+</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="ExcludePath">
+        <textBox refId="ExcludePath">
+          <label>パスを除外する</label>
+        </textBox>
+      </presentation>
+      <presentation id="IncludePath">
+        <textBox refId="IncludePath">
+          <label>パスを含める</label>
+        </textBox>
+      </presentation>
+      <presentation id="DisableRemoteConfig" />
+      <presentation id="AllowDevDescFailsafe" />
+      <presentation id="SplitExcludeVidPid">
+        <textBox refId="SplitExcludeVidPid">
+          <label>Vid/Pid デバイスを分割から除外する</label>
+        </textBox>
+      </presentation>
+      <presentation id="SplitVidPid">
+        <textBox refId="SplitVidPid">
+          <label>Vid/Pid デバイスを分割する</label>
+        </textBox>
+      </presentation>
+      <presentation id="ExcludeVidPid">
+        <textBox refId="ExcludeVidPid">
+          <label>Vid/Pid デバイスを除外する</label>
+        </textBox>
+      </presentation>
+      <presentation id="ExcludeVidPidRel">
+        <textBox refId="ExcludeVidPidRel">
+          <label>Vid/Pid/Rel デバイスを除外する</label>
+        </textBox>
+      </presentation>
+      <presentation id="IncludeVidPid">
+        <textBox refId="IncludeVidPid">
+          <label>Vid/Pid デバイスを含める</label>
+        </textBox>
+      </presentation>
+      <presentation id="IncludeVidPidRel">
+        <textBox refId="IncludeVidPidRel">
+          <label>Vid/Pid/Rel デバイスを含める</label>
+        </textBox>
+      </presentation>
+      <presentation id="ExcludeFamily">
+        <textBox refId="ExcludeFamily">
+          <label>デバイス ファミリを除外する</label>
+        </textBox>
+      </presentation>
+      <presentation id="IncludeFamily">
+        <textBox refId="IncludeFamily">
+          <label>デバイス ファミリを含める</label>
+        </textBox>
+      </presentation>
+      <presentation id="ExAutoRedirectVidPid">
+        <textBox refId="ExAutoRedirectVidPid">
+          <label>自動接続の Vid/Pid デバイスを除外する</label>
+        </textBox>
+      </presentation>
+      <presentation id="ExAutoRedirectFamily">
+        <textBox refId="ExAutoRedirectFamily">
+          <label>自動接続のデバイス ファミリを除外する</label>
+        </textBox>
+      </presentation>
+      <presentation id="ExcludeAllDevices" />
+      <presentation id="AllowHID" />
+      <presentation id="AllowHIDBootable" />
+      <presentation id="AllowAudioIn" />
+      <presentation id="AllowAudioOut" />
+      <presentation id="AllowKeyboardMouse" />
+      <presentation id="AllowVideo" />
+      <presentation id="AllowSmartcard" />
+      <presentation id="AllowAutoDeviceSplitting" />
+      <presentation id="LogInAsCurrentUser_Display" />
+      <presentation id="LogInAsCurrentUser" />
+      <presentation id="EnableRecursiveUnlock" />
+      <presentation id="BrokersTrustedForDelegation">
+        <listBox refId="BrokersTrustedForDelegation">委任に対して信頼されるサーバ</listBox>
+      </presentation>
+      <presentation id="AllowNTLMAuthentication">
+      <dropdownList refId="AllowNTLMAuthentication" defaultItem="1" noSort="true">Kerberos から NTLM へのフォールバックを許可</dropdownList>
+      </presentation>
+      <presentation id="ServersAlwaysUseNTLM">
+        <listBox refId="ServersAlwaysUseNTLM">サーバに NTLM を常に使用</listBox>
+      </presentation>
+      <presentation id="DoNotCheckCertRevocationStatus" />
+      <presentation id="StrictCertRevocationCheck" />
+      <presentation id="CertCheckMode">
+       <dropdownList refId="CertCheckMode" defaultItem="1">証明書検証モード</dropdownList>
+      </presentation>
+      <presentation id="ProtocolConnectionCertCheckMode">
+       <dropdownList refId="ProtocolConnectionCertCheckMode" defaultItem="3">プロトコル接続証明書検証モード</dropdownList>
+      </presentation>
+      <presentation id="EnableSmartCardSSO" />
+      <presentation id="EnableJumplist" />
+      <presentation id="AllowCmdLineCredentials" />
+      <presentation id="EnableTicketSSLAuth">
+        <dropdownList refId="EnableTicketSSLAuth" defaultItem="0">SSL 暗号化フレームワーク チャネルを有効にする</dropdownList>
+      </presentation>
+      <presentation id="SSLCipherList">
+        <textBox refId="SSLCipherList">
+          <label>SSL プロトコルと暗号化スイートを構成します</label>
+          <defaultValue>TLSv1.1:TLSv1.2:!aNULL:kECDH+AESGCM:ECDH+AESGCM:RSA+AESGCM:kECDH+AES:ECDH+AES:RSA+AES</defaultValue>
+        </textBox>
+        <textBox refId="SSLSignatureAlgorithms">
+          <label>署名アルゴリズム拡張を構成します</label>
+          <defaultValue></defaultValue>
+        </textBox>
+        <textBox refId="SSLSupportedGroups">
+          <label>サポートされているグループ拡張を構成します</label>
+          <defaultValue></defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="ServerURL">
+        <textBox refId="ServerURL">
+          <label>サーバ URL</label>
+        </textBox>
+      </presentation>
+      <presentation id="UserName">
+        <textBox refId="UserName">
+          <label>ログイン ユーザー名</label>
+        </textBox>
+      </presentation>
+      <presentation id="DomainName">
+        <textBox refId="DomainName">
+          <label>ログイン ドメイン名</label>
+        </textBox>
+      </presentation>
+      <presentation id="Password">
+        <textBox refId="Password">
+          <label>ログイン パスワード</label>
+        </textBox>
+      </presentation>
+      <presentation id="DesktopName">
+        <textBox refId="DesktopName">
+          <label>選択するデスクトップ名</label>
+        </textBox>
+      </presentation>
+      <presentation id="DesktopLayout">
+        <dropdownList refId="DesktopLayout" defaultItem="0">デスクトップ レイアウト</dropdownList>
+      </presentation>
+      <presentation id="LockedGuestSize">
+        <decimalTextBox refId="LockedGuestWidth" defaultValue="1600">ロックしたゲストの幅 </decimalTextBox>
+        <decimalTextBox refId="LockedGuestHeight" defaultValue="1200">ロックしたゲストの高さ</decimalTextBox>
+      </presentation>
+      <presentation id="NonInteractive" />
+      <presentation id="SingleAutoConnect" />
+      <presentation id="noTSCAddins" />
+      <presentation id="connectUSBOnStartup" />
+      <presentation id="connectUSBOnInsert" />
+      <presentation id="AppSessionReconnectBehavior">
+        <dropdownList refId="AppSessionReconnectBehavior" defaultItem="0">切断されたアプリケーション セッションを再開するときの動作</dropdownList>
+      </presentation>
+      <presentation id="AllSessionsDisconnectedBehavior">
+        <dropdownList refId="AllSessionsDisconnectedBehavior" defaultItem="0">すべてのセッションが切断されたときのクライアントの動作</dropdownList>
+      </presentation>
+      <presentation id="UnauthenticatedAccessEnabled" />
+      <presentation id="ErrorFooterTextFile">
+        <textBox refId="ErrorFooterTextFile">
+          <label>エラー フッター テキスト ファイルの場所</label>
+        </textBox>
+      </presentation>
+      <presentation id="UnauthenticatedAccessAccount">
+        <textBox refId="UnauthenticatedAccessAccount">
+          <label>非認証アクセスに使用するアカウント</label>
+        </textBox>
+      </presentation>
+      <presentation id="DisableTimeZoneForwarding" />
+      <presentation id="AutomaticInputFocus" />
+      <presentation id="TunnelProxyBypass">
+        <textBox refId="TunnelProxyBypass">
+          <label>トンネル プロキシ バイパス アドレス リスト</label>
+        </textBox>
+      </presentation>
+      <presentation id="HelpURL">
+        <textBox refId="HelpURL">
+          <label>Horizon Client オンライン ヘルプの URL</label>
+        </textBox>
+      </presentation>
+      <presentation id="AutoUpdateAllowed" />
+      <presentation id="AutoUpdateMessagePopUp" />
+      <presentation id="AutoCheckForUpdate" />
+      <presentation id="AutoUpdateAllowSkip" />
+      <presentation id="AutoUpdateURL">
+        <textBox refId="AutoUpdateURL">
+          <label>Horizon Client オンライン アップデートの URL</label>
+        </textBox>
+      </presentation>
+      <presentation id="BlockMultipleInstances" />
+      <presentation id="ListSmartCardCertsOnly" />
+      <presentation id="DisableToastNotifications" />
+      <presentation id="EnableRelativeMouse" />
+      <presentation id="DisableDisconnectMessages" />
+      <presentation id="HideClientAfterLaunchSession" />
+      <presentation id="DisallowClientInformationPassthrough" />
+      <presentation id="ForceFloatingLanguageBarOff" />
+      <presentation id="DisableFileRedirection" />
+      <presentation id="KeyboardHotkeys">
+        <dropdownList refId="DisplaySwitchModifierKey" defaultItem="1">スイッチ修飾キーを表示:</dropdownList>
+        <dropdownList refId="DisplaySwitchFunctionKey" defaultItem="1">スイッチ ファンクション キーを表示:</dropdownList>
+      </presentation>
+      <presentation id="HotkeyUngrabDesktop">
+        <dropdownList refId="UngrabDesktopModifierKey" defaultItem="0" noSort="true">入力フォーカスを解除するための修飾子キー:</dropdownList>
+        <dropdownList refId="SecondUngrabDesktopModifierKey" defaultItem="0" noSort="true">入力フォーカスを解除するための 2 番目の修飾子キー:</dropdownList>
+        <dropdownList refId="UngrabDesktopFunctionKey" defaultItem="0">入力フォーカスを解除するためのファンクション キー:</dropdownList>
+        <checkBox refId="MinimizeToTaskbar">入力フォーカスの解除後に全画面表示の仮想デスクトップを最小化</checkBox>
+      </presentation>
+      <presentation id="HotkeyGrabDesktop">
+        <dropdownList refId="GrabDesktopModifierKey" defaultItem="0" noSort="true">入力フォーカスを有効にするための修飾子キー:</dropdownList>
+        <dropdownList refId="SecondGrabDesktopModifierKey" defaultItem="0" noSort="true">入力フォーカスを有効にするための 2 番目の修飾子キー:</dropdownList>
+        <dropdownList refId="GrabDesktopFunctionKey" defaultItem="0">入力フォーカスを有効にするための文字キー:</dropdownList>
+      </presentation>
+      <presentation id="HideToolBarMenu">
+        <dropdownList refId="HideFavoritesToolbar" defaultItem="0">お気に入りの切り替えを非表示にする</dropdownList>
+        <dropdownList refId="HideSettingsToolbar" defaultItem="0">設定の歯車を非表示にする</dropdownList>
+      </presentation>
+      <presentation id="HideDesktopContextMenu">
+        <dropdownList refId="HideResetDesktopDesktopContext" defaultItem="0">[デスクトップのリセット] を非表示にする</dropdownList>
+        <dropdownList refId="HideRestartDesktopDesktopContext" defaultItem="0">[デスクトップの再起動] を非表示にする</dropdownList>
+        <dropdownList refId="HideDisplayDesktopContext" defaultItem="0">[ディスプレイ] を非表示にする</dropdownList>
+        <dropdownList refId="HideSettingsDesktopContext" defaultItem="0">[設定] を非表示にする</dropdownList>
+        <dropdownList refId="HideCreateShortcutToDesktopDesktopContext" defaultItem="0">[デスクトップへのショートカットを作成] を非表示にする</dropdownList>
+        <dropdownList refId="HideAddToStartMenuDesktopContext" defaultItem="0">[スタート メニューに追加] を非表示にする</dropdownList>
+        <dropdownList refId="HideMarkAsFavoriteDesktopContext" defaultItem="0">[お気に入りとしてマーク] を非表示にする</dropdownList>
+      </presentation>
+      <presentation id="HideAppContextMenu">
+        <dropdownList refId="HideSettingsAppContext" defaultItem="0">[設定] を非表示にする</dropdownList>
+        <dropdownList refId="HideCreateShortcutToDesktopAppContext" defaultItem="0">[デスクトップへのショートカットを作成] を非表示にする</dropdownList>
+        <dropdownList refId="HideAddToStartMenuAppContext" defaultItem="0">[スタート メニューに追加] を非表示にする</dropdownList>
+        <dropdownList refId="HideMarkAsFavoriteAppContext" defaultItem="0">[お気に入りとしてマーク] を非表示にする</dropdownList>
+      </presentation>
+      <presentation id="HideDesktopMenu">
+        <dropdownList refId="HideHelpDesktopMenu" defaultItem="0">[ヘルプ] を非表示にする</dropdownList>
+        <dropdownList refId="HideSettingsDesktopMenu" defaultItem="0">[設定] を非表示にする</dropdownList>
+        <dropdownList refId="HideResetDesktopDesktopMenu" defaultItem="0">[デスクトップのリセット] を非表示にする</dropdownList>
+        <dropdownList refId="HideRestartDesktopDesktopMenu" defaultItem="0">[デスクトップの再起動] を非表示にする</dropdownList>
+        <dropdownList refId="HideConnectUSBDeviceDesktopMenu" defaultItem="0">[USB デバイスを接続] を非表示にする</dropdownList>
+      </presentation>
+      <presentation id="HideNotificationMenu">
+        <dropdownList refId="HideSettingsNotificationMenu" defaultItem="0">[設定] を非表示にする</dropdownList>
+      </presentation>
+      <presentation id="ColorDepth">
+        <dropdownList refId="ColorDepth" defaultItem="0">色の深度</dropdownList>
+      </presentation>
+      <presentation id="DisableWallpaper" />
+      <presentation id="DisableFullWindowDrag" />
+      <presentation id="DisableMenuAnimations" />
+      <presentation id="DisableTheming" />
+      <presentation id="DisableCursorShadow" />
+      <presentation id="FontSmoothing" />
+      <presentation id="DesktopComposition" />
+      <presentation id="AudioRedirectionMode">
+        <dropdownList refId="AudioRedirectionMode" defaultItem="0">オーディオのリダイレクト</dropdownList>
+      </presentation>
+      <presentation id="RedirectDrives" />
+      <presentation id="RedirectPrinters" />
+      <presentation id="RedirectPorts" />
+      <presentation id="RedirectSmartcards" />
+      <presentation id="RedirectClipboard" />
+      <presentation id="RedirectPlugAndPlayDevices" />
+      <presentation id="ShadowBitmap" />
+      <presentation id="CachePersistenceActive" />
+      <presentation id="EnableCompression" />
+      <presentation id="KeyboardHookMode">
+        <dropdownList refId="KeyboardHookMode" defaultItem="0">Windows キーの組み合わせのリダイレクト</dropdownList>
+      </presentation>
+      <presentation id="EnableCredSspSupport" />
+      <presentation id="BitmapCacheSize">
+        <decimalTextBox refId="BitmapCacheSize">8 bpp ビットマップのメモリ内ビットマップ キャッシュ サイズ (KB 単位)</decimalTextBox>
+      </presentation>
+      <presentation id="BitmapVirtualCacheSize">
+        <decimalTextBox refId="BitmapVirtualCacheSize">8 bpp ビットマップのビットマップ キャッシュ ファイル サイズ (MB 単位)</decimalTextBox>
+      </presentation>
+      <presentation id="BitmapVirtualCache16BppSize">
+        <decimalTextBox refId="BitmapVirtualCache16BppSize">16 bpp ビットマップのビットマップ キャッシュ ファイル サイズ (MB 単位)</decimalTextBox>
+      </presentation>
+      <presentation id="BitmapVirtualCache24BppSize">
+        <decimalTextBox refId="BitmapVirtualCache24BppSize">24 bpp ビットマップのビットマップ キャッシュ ファイル サイズ (MB 単位)</decimalTextBox>
+      </presentation>
+      <presentation id="BitmapVirtualCache32BppSize">
+        <decimalTextBox refId="BitmapVirtualCache32BppSize">32 bpp ビットマップのビットマップ キャッシュ ファイル サイズ (MB 単位)</decimalTextBox>
+      </presentation>
+      <presentation id="EnableAutoReconnect" />
+      <presentation id="RedirectAudioCapture" />
+      <presentation id="LogInAsCurrentUser_Display_1" />
+      <presentation id="LogInAsCurrentUser_1" />
+      <presentation id="EnableRecursiveUnlock_1" />
+      <presentation id="EnableTicketSSLAuth_1">
+        <dropdownList refId="EnableTicketSSLAuth" defaultItem="0">SSL 暗号化フレームワーク チャネルを有効にする</dropdownList>
+      </presentation>
+      <presentation id="DoNotCheckCertRevocationStatus_1" />
+      <presentation id="StrictCertRevocationCheck_1" />
+      <presentation id="SSLCipherList_1">
+        <textBox refId="SSLCipherList">
+          <label>SSL プロトコルと暗号化アルゴリズムを設定する</label>
+          <defaultValue>TLSv1.1:TLSv1.2:!aNULL:kECDH+AESGCM:ECDH+AESGCM:RSA+AESGCM:kECDH+AES:ECDH+AES:RSA+AES</defaultValue>
+        </textBox>
+        <textBox refId="SSLSignatureAlgorithms">
+          <label>署名アルゴリズム拡張を構成します</label>
+          <defaultValue></defaultValue>
+        </textBox>
+        <textBox refId="SSLSupportedGroups">
+          <label>サポートされているグループ拡張を構成します</label>
+          <defaultValue></defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="ServerURL_1">
+        <textBox refId="ServerURL">
+          <label>サーバ URL</label>
+        </textBox>
+      </presentation>
+      <presentation id="UserName_1">
+        <textBox refId="UserName">
+          <label>ログイン ユーザー名</label>
+        </textBox>
+      </presentation>
+      <presentation id="DomainName_1">
+        <textBox refId="DomainName">
+          <label>ログイン ドメイン名</label>
+        </textBox>
+      </presentation>
+      <presentation id="Password_1">
+        <textBox refId="Password">
+          <label>ログイン パスワード</label>
+        </textBox>
+      </presentation>
+      <presentation id="DesktopName_1">
+        <textBox refId="DesktopName">
+          <label>選択するデスクトップ名</label>
+        </textBox>
+      </presentation>
+      <presentation id="DesktopLayout_1">
+        <dropdownList refId="DesktopLayout" defaultItem="0">デスクトップ レイアウト</dropdownList>
+      </presentation>
+      <presentation id="LockedGuestSize_1">
+        <decimalTextBox refId="LockedGuestWidth" defaultValue="1600">ロックしたゲストの幅 </decimalTextBox>
+        <decimalTextBox refId="LockedGuestHeight" defaultValue="1200">ロックしたゲストの高さ</decimalTextBox>
+      </presentation>
+      <presentation id="NonInteractive_1" />
+      <presentation id="SingleAutoConnect_1" />
+      <presentation id="noTSCAddins_1" />
+      <presentation id="connectUSBOnStartup_1" />
+      <presentation id="connectUSBOnInsert_1" />
+      <presentation id="AppSessionReconnectBehavior_1">
+        <dropdownList refId="AppSessionReconnectBehavior" defaultItem="0">切断されたアプリケーション セッションを再開するときの動作</dropdownList>
+      </presentation>
+      <presentation id="AllSessionsDisconnectedBehavior_1">
+        <dropdownList refId="AllSessionsDisconnectedBehavior" defaultItem="0">すべてのセッションが切断されたときのクライアントの動作</dropdownList>
+      </presentation>
+      <presentation id="UnauthenticatedAccessEnabled_1" />
+      <presentation id="UnauthenticatedAccessAccount_1">
+        <textBox refId="UnauthenticatedAccessAccount">
+          <label>非認証アクセスに使用するアカウント</label>
+        </textBox>
+      </presentation>
+      <presentation id="AllowDataSharing" />
+      <presentation id="AllowPluginUpdate" />
+      <presentation id="AllowResolutionDpiSync" />
+      <presentation id="EnableShade" />
+      <presentation id="InitialPinState" />
+      <presentation id="DisableSpanChecks" />
+      <presentation id="EnableMMR" />
+      <presentation id="AlwaysOnTop" />
+      <presentation id="AutomaticallyInstallShortcuts" />
+      <presentation id="AutomaticallyInstallShortcuts_1" />
+      <presentation id="DisableToastNotifications_1" />
+      <presentation id="EnableRelativeMouse_1" />
+      <presentation id="DisableDisconnectMessages_1" />
+      <presentation id="HideClientAfterLaunchSession_1" />
+      <presentation id="DisableSharing" />
+      <presentation id="ForceFloatingLanguageBarOff_1" />
+      <presentation id="AllowDisplayScaling" />
+      <presentation id="AutoSyncToggleKeys" />
+      <presentation id="AllowBlastCodec" />
+      <presentation id="AllowH264" />
+      <presentation id="AllowH264YUV444" />
+      <presentation id="AllowHEVC" />
+      <presentation id="AllowHDR" />
+      <presentation id="EnableWindowOptimizations" />
+      <presentation id="DecodeCapsProbingMode">
+        <dropdownList refId="DecodeCapsProbingMode" defaultItem="0" noSort="true">ハードウェア デコード機能を検知するタイミング:</dropdownList>
+      </presentation>
+      <presentation id="DecoderImageCacheSize">
+        <decimalTextBox refId="DecoderImageCacheSize" defaultValue="256000">デコーダ イメージ キャッシュ サイズ (KB)</decimalTextBox>
+      </presentation>
+      <presentation id="AllowBlastThroughProxy" />
+      <presentation id="AllowSplitMksWindow" />
+      <presentation id="ForceUserAffinity" />
+      <presentation id="MouseMoveMaxLatencyMsec">
+        <decimalTextBox refId="MouseMoveMaxLatencyMsec">マウス一体化の最大遅延</decimalTextBox>
+      </presentation>
+      <presentation id="MaxTxRate">
+        <decimalTextBox refId="MaxTxRate" defaultValue="500">最大送信レート</decimalTextBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

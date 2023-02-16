@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="print_redir">VMware Integrated Printing</string>
+      <string id="SUPPORTED_NotSpecified">지정되지 않음</string>
+      <string id="persistence_setting">프린터 속성 지속성 사용 안 함</string>
+      <string id="persistence_setting_detail">이 설정에서는 프린터 속성 설정을 유지할지 결정합니다.
+
+이 정책 설정을 사용하도록 설정하면 사용자가 세션 연결을 끊거나 세션에서 로그오프한 후에 에이전트 측의 프린터 속성 변경이 유지되지 않습니다. 즉 영구적으로 적용되지 않습니다.
+예를 들어 사용자가 세션 동안 프린터 용지 크기를 &quot;Letter&quot;에서 &quot;A4&quot;로 변경하면 다음번에 사용자가 다시 연결할 때 용지 크기는 &quot;Letter&quot;로 되돌아가고 &quot;A4&quot;로 변경한 사항은 유지되지 않습니다.
+
+이 정책 설정을 구성하지 않거나 사용하지 않도록 설정하면 사용자가 세션 연결을 끊거나 세션에서 로그오프한 후에 에이전트 측의 프린터 속성 변경이 유지됩니다.
+예를 들어 사용자가 세션 동안 프린터 용지 크기를 &quot;Letter&quot;에서 &quot;A4&quot;로 변경하면 다음번에 사용자가 다시 연결할 때 용지 크기는 여전히 &quot;A4&quot;로 유지됩니다.
+
+이 GPO는 기본적으로 구성되어 있지 않습니다.
+</string>
+      <string id="nondesktopclient_setting">비데스크톱 클라이언트에 대해 프린터 리디렉션 사용 안 함</string>
+      <string id="nondesktopclient_setting_detail">이 설정은 비데스크톱 클라이언트 끝점에 대해 VMware Integrated Printing이 지원되는지 여부를 결정합니다.
+
+사용하도록 설정하면 비데스크톱 클라이언트 끝점에 대해 VMware Integrated Printing이 지원되지 않습니다.
+이 옵션을 구성하지 않거나 사용하지 않도록 설정하면 비데스크톱 클라이언트 끝점에 대해 VMware Integrated Printing이 지원됩니다.
+
+이 설정은 기본적으로 구성되어 있지 않습니다.
+</string>
+      <string id="lbp_setting">LBP 사용 안 함</string>
+      <string id="lbp_setting_detail">이 정책 설정을 사용하여 LBP(위치 기반 인쇄)를 사용할지 여부를 관리할 수 있습니다.
+
+이 정책 설정을 사용하도록 설정하면 위치 기반 인쇄를 사용할 수 없습니다.
+이 정책 설정을 사용하지 않도록 설정하거나 구성하지 않으면 위치 기반 인쇄를 사용할 수 있습니다.
+
+이 설정은 기본적으로 구성되어 있지 않습니다.
+</string>
+      <string id="lp_setting">클라이언트 프린터를 리디렉션하지 않음</string>
+      <string id="lp_setting_detail">이 정책 설정으로 클라이언트 프린터를 리디렉션할지 여부를 관리할 수 있습니다.
+
+이 정책 설정을 사용하도록 설정하면 모든 클라이언트 프린터가 리디렉션되지 않습니다.
+이 정책 설정을 사용하지 않도록 설정하거나 구성하지 않으면 모든 클라이언트 프린터가 리디렉션됩니다.
+
+이 설정은 기본적으로 구성되어 있지 않습니다.
+</string>
+      <string id="DefaultPrinter">기본 프린터 변경 안 함</string>
+      <string id="DefaultPrinter_detail">이 설정은 VMware Integrated Printing이 원격 세션의 기본 프린터를 변경할지 여부를 결정합니다.
+
+기본적으로 위치 기반 프린터가 기본 프린터로 구성된 경우 해당 프린터는 원격 세션에서 기본 프린터로 설정됩니다. 기본 프린터로 구성된 위치 기반 프린터가 없는 경우 기본 클라이언트 프린터가 원격 세션에서 기본 프린터로 설정되고 VM 이미지에서 선택된 모든 프린터를 덮어씁니다. 이 설정을 사용하여 이 동작을 재정의할 수 있습니다.
+
+이 설정을 사용하도록 설정하면 VMware Integrated Printing은 원격 세션의 기본 프린터를 변경하지 않습니다.
+이 설정을 사용하지 않도록 설정하거나 구성하지 않으면 VMware Integrated Printing은 원격 세션의 기본 프린터를 변경합니다. 기본 동작입니다.
+
+이 설정은 기본적으로 구성되어 있지 않습니다.
+
+</string>
+      <string id="DriverMapping">드라이버 매핑</string>
+      <string id="DriverMapping_detail">이 설정은 Windows/Linux/Mac 클라이언트에 적용됩니다. 이를 통해 사용자는 클라이언트와 다른 드라이버를 사용하여 가상 프린터를 자동으로 생성할 수 있습니다.
+
+드라이버 매핑을 추가하거나 기존 매핑을 편집하거나 제거할 수 있습니다. 매핑을 추가할 때 클라이언트 프린터 드라이버 이름을 &quot;값 이름&quot; 열에 입력한 다음, &quot;값&quot; 열에 매핑할 서버 드라이버 이름을 입력합니다.
+
+&quot;값&quot; 열에 서버 드라이버 이름을 하나 이상 지정할 수 있습니다. 서버 드라이버 이름을 여러 개 지정하는 경우 각 드라이버 이름을 세미콜론으로 구분하여 &quot;DriverA; DriverB; DriverC; DriverD&quot;와 같이 입력합니다.
+
+리디렉션된 프린터가 생성될 때까지 지정된 모든 서버 드라이버가 하나씩 시도됩니다. Horizon에서 지정된 서버 드라이버를 사용하여 리디렉션된 프린터를 생성할 수 없는 경우, &quot;VMware EMF 인쇄 드라이버&quot;는 Windows 클라이언트용으로 리디렉션된 프린터를 생성하는 데 사용되고 &quot;VMware PostScript 프린터 드라이버&quot;는 Linux/Mac 클라이언트용 리디렉션된 프린터를 생성하는 데 사용됩니다.
+      </string>
+      <string id="MaxTxRate">전송률 제한(KBps)</string>
+      <string id="MaxTxRate_detail">이 설정은 모든 인쇄 작업의 전송률을 지정된 KBps로 제한합니다.
+허용되는 최소 전송률은 1600KBps입니다. 구성되지 않거나 사용하지 않도록 설정된 경우 전송률이 제한되지 않습니다.
+허용되는 최대 전송률은 32000KBps입니다. 이 속도보다 큰 경우에는 전송률이 제한되지 않습니다.
+
+</string>
+      <string id="printer_creation_setting">프린터 드라이버 선택</string>
+      <string id="printer_creation_setting_detail">프린터 드라이버 선택 옵션입니다.
+
+프린터 생성 선택 사항:
+UPD(범용 프린터 드라이버) 또는 NPD(기본 프린터 드라이버)와 같은 사용되는 프린터 드라이버에 대한 옵션입니다.
+
+첫 번째 옵션인 &quot;항상 NPD 사용&quot;을 선택하면 리디렉션된 프린터에 대해 항상 기본 프린터 드라이버가 사용됩니다.
+
+두 번째 옵션인 &quot;항상 UPD 사용&quot;을 선택하면 리디렉션된 프린터에 대해 항상 범용 프린터 드라이버가 사용됩니다.
+
+세 번째 옵션인 &quot;NPD 사용 후 UPD 사용&quot;을 선택하면 기본 프린터 드라이버가 먼저 사용되고, 기본 프린터 드라이버가 없는 경우에는 범용 프린터 드라이버가 사용됩니다.
+
+네 번째 옵션인 &quot;UPD 사용 후 NPD 사용&quot;을 선택하면 범용 프린터 드라이버가 먼저 사용되고, 범용 프린터 드라이버가 없는 경우에는 기본 프린터 드라이버가 사용됩니다.
+
+기본 설정 범용 인쇄 드라이버:
+기본 설정 범용 인쇄 드라이버에 대한 옵션입니다.
+
+첫 번째 옵션인 &quot;VMware 범용 EMF 드라이버&quot;를 선택하면 EMF 드라이버가 사용됩니다.
+
+두 번째 옵션 &quot;VMware 범용 XPS 드라이버&quot;를 선택하면 XPS 드라이버가 사용됩니다.
+</string>
+      <string id="printer_creation_setting_npd">항상 NPD 사용</string>
+      <string id="printer_creation_setting_upd">항상 UPD 사용</string>
+      <string id="printer_creation_setting_npd_upd">NPD 사용 후 UPD 사용</string>
+      <string id="printer_creation_setting_upd_npd">UPD 사용 후 NPD 사용</string>
+      <string id="preferredEMF">VMware 범용 EMF 드라이버</string>
+      <string id="preferredXPS">VMware 범용 XPS 드라이버</string>
+      <string id="printer_filter">클라이언트 프린터 리디렉션 시 필터 지정</string>
+      <string id="printer_filter_desc">프린터 리디렉션에서 일치하는 클라이언트 프린터를 필터링하여 제외하는 규칙입니다. 지원되는 특성은 프린터 이름, 프린터 드라이버 이름 및 드라이버 벤더 이름입니다. 지원되는 연산자는 AND, OR 및 NOT입니다. 지원되는 검색 패턴은 JavaScript 언어(ECMAScript)로 나타낸 정규식입니다.
+기본적으로 이 규칙은 비어 있으며 이는 모든 클라이언트 프린터가 리디렉션됨을 의미합니다.
+
+예:
+(DriverName= &quot;DrName1&quot; OR VendorName=&quot;VeName1&quot;) AND NOT PrinterName= &quot;PrNa.?e&quot;</string>
+      <string id="print_preview_setting">인쇄 미리 보기 설정</string>
+      <string id="print_preview_setting_detail">인쇄 미리 보기에 대한 두 가지 설정이 있습니다.
+
+첫 번째 설정은 인쇄 대상을 사용하도록 설정할지 여부를 결정합니다. 이 옵션은 기본적으로 구성되어 있지 않습니다.
+
+이 설정을 선택하면 최종 사용자는 인쇄 대상을 선택할 수 없습니다.
+
+이 설정을 선택하지 않거나 구성하지 않으면 최종 사용자는 인쇄 대상, 인쇄 미리 보기를 선택하거나 직접 인쇄할 수 있습니다.
+
+
+두 번째 설정은 기본 인쇄 대상 옵션을 결정합니다. 기본적으로 구성되어 있지 않습니다. 즉, 직접 인쇄 옵션이 사용됩니다.
+
+&quot;직접 인쇄&quot; 옵션이 선택되면 인쇄 UI의 기본 인쇄 옵션은 &quot;직접 인쇄&quot;입니다.
+
+&quot;인쇄 미리 보기&quot; 옵션이 선택되면 인쇄 UI의 기본 인쇄 옵션은 &quot;인쇄 미리 보기&quot;입니다.
+</string>
+      <string id="print_directly">직접 인쇄</string>
+      <string id="print_to_preview">인쇄 미리 보기</string>
+      <string id="printer_name_schema">프린터 이름 스키마</string>
+      <string id="printer_name_schema_desc">이 설정은 VMware Integrated Printing을 사용할 때 프린터 이름 지정 규칙을 결정합니다.
+이 설정을 사용하도록 설정하면 VDI 및 RDSH 에이전트에 대한 프린터 이름 스키마를 변경할 수 있습니다.
+올바른 프린터 이름 스키마는 &quot;%P*&quot; 형식이어야 합니다. 별표 표시는 구성 가능한 부분을 나타냅니다. 구성 가능한 부분에서 다음 변수를 사용할 수 있습니다.
+%S: 세션 ID
+%C: 클라이언트 시스템 이름
+
+이 설정을 사용하도록 설정했지만 프린터 이름 스키마가 비어 있거나 잘못된 경우 기본 프린터 이름 스키마가 사용됩니다.
+
+예: %P%S, %P2%S(%P과(와) %S 사이의 숫자만) 또는 스키마에 포함된 &quot;/&quot;는 모두 유효하지 않습니다.
+
+이 설정을 구성하지 않거나 사용하지 않도록 지정하면 VDI 에이전트는 &quot;%P(vdi)&quot;을(를) 프린터 이름 스키마로 사용하고 RDSH 에이전트는 &quot;%P(v%S)&quot;을(를) 프린터 이름 스키마로 사용합니다.
+
+이 설정은 기본적으로 구성되어 있지 않습니다.
+</string>
+
+      <string id="DefaultSetting">UPD 프린터에 대한 기본 설정</string>
+      <string id="DefaultSetting_desc">이 정책은 UPD 프린터에 대한 기본 설정을 사용하도록 설정할지 여부를 지정합니다.
+이 정책을 사용하도록 설정하면 UPD 프린터에 대해 기본 설정 그룹을 정의할 수 있습니다. 해당되는 경우 UPD 프린터의 초기 설정으로 사용됩니다. 각 인쇄 설정에 대해 기본 설정이 인쇄에 항상 사용되는지 여부를 결정하는 확인란이 표시됩니다.
+이 정책을 구성하지 않거나 사용하지 않도록 설정하면 UPD 프린터에 대해 기본 설정이 사용되지 않도록 설정됩니다.
+
+이 정책은 기본적으로 구성되어 있지 않습니다.
+      </string>
+
+      <string id="none">없음</string>
+      <string id="duplex_vertical">긴 쪽에서 뒤집기</string>
+      <string id="duplex_horizontal">짧은 쪽에서 뒤집기</string>
+
+      <string id="bw">흑백</string>
+      <string id="color">색상</string>
+
+      <string id="lossless_comp">무손실 압축</string>
+      <string id="high_quality_comp">고품질 압축</string>
+      <string id="optimized_comp">최적화된 압축</string>
+      <string id="no_image_comp">이미지 없음</string>
+
+       <string id="MaxDPI">UPD 프린터의 최대 DPI</string>
+       <string id="MaxDPI_detail">이 정책은 UPD 프린터의 최대 DPI를 지정합니다. 그 결과 UPD 프린터의 DPI 옵션 및 기본 DPI가 변경될 수 있습니다.
+
+이 정책을 사용하도록 설정하면 UPD 프린터의 최대 DPI 수준 또는 최대 X축 DPI 값을 지정하는 데 사용됩니다. 클라이언트 프린터의 기능에 따라 UPD 프린터가 DPI 수준 또는 DPI 값을 지원할 수 있습니다.
+프린터가 DPI 수준을 지원하는 경우 UPD 프린터의 DPI 옵션 및 기본 DPI가 최대 DPI 수준보다 높지 않습니다.
+프린터가 DPI 값을 지원하고 가장 낮은 X축 DPI가 최대 X축 DPI보다 높지 않으면 UPD 프린터의 DPI 옵션 및 기본 DPI가 최대 X축 DPI보다 높지 않습니다.
+프린터가 DPI 값을 지원하고 가장 낮은 X축 DPI가 최대 X축 DPI보다 높은 경우 UPD 프린터의 DPI 옵션이 클라이언트 프린터의 DPI 옵션과 동일합니다. UPD 프린터의 기본 DPI는 가장 낮은 X축 DPI입니다.
+
+이 정책을 구성하지 않거나 사용하지 않도록 설정하면 UPD 프린터의 DPI 옵션 및 기본 DPI가 변경되지 않습니다.
+
+이 정책은 기본적으로 구성되어 있지 않습니다.
+       </string>
+       <string id="DPI_draft">임시 보관함</string>
+       <string id="DPI_low">낮음</string>
+       <string id="DPI_medium">중간</string>
+       <string id="DPI_high">높음</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="DriverMapping">
+         <listBox refId="printer_driver_mapping">프린터 드라이버 매핑:</listBox>
+      </presentation>
+      <presentation id="PrinterCreationSetting">
+          <dropdownList refId="printer_creation_setting_list" defaultItem="2" noSort="true">프린터 생성 선택 사항:</dropdownList>
+          <dropdownList refId="preferred_upd" defaultItem="0" noSort="true">기본 설정 UPD:</dropdownList>
+      </presentation>
+      <presentation id="PrintPreviewSetting">
+        <checkBox refId="disable_print_choice">인쇄 선택 사항 사용 안 함</checkBox>
+        <dropdownList refId="default_choice_list" defaultItem="0" noSort="true">인쇄 대상 기본 선택 사항:</dropdownList>
+      </presentation>
+      <presentation id="printer_filter">
+        <textBox refId="printer_filter_textbox">
+          <label>프린터 필터</label>
+          <defaultValue></defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="printer_name_schema">
+        <textBox refId="printer_name_schema_textbox">
+          <label>프린터 이름 스키마</label>
+          <defaultValue></defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="MaxTxRate">
+        <decimalTextBox refId="MaxTxRate" defaultValue="32000">최대 전송률(kbps)</decimalTextBox>
+      </presentation>
+      <presentation id="DefaultSetting">
+        <dropdownList refId="DefaultDuplex" defaultItem="0" noSort="true">양면:</dropdownList>
+        <checkBox refId="IsDuplexLocked">항상 기본 양면 설정 사용</checkBox>
+        <dropdownList refId="DefaultColor" defaultItem="0" noSort="true">색상:</dropdownList>
+        <checkBox refId="IsColorLocked">항상 기본색 설정 사용</checkBox>
+        <dropdownList refId="DefaultImageCompLevel" defaultItem="0" noSort="true">압축 수준:</dropdownList>
+        <checkBox refId="IsCompLevelLocked">항상 기본 압축 수준 설정 사용</checkBox>
+      </presentation>
+      <presentation id="MaxDPI">
+        <dropdownList refId="MaxDPILevel" defaultItem="2" noSort="true">최대 DPI 수준</dropdownList>
+        <decimalTextBox refId="MaxDPIValue" defaultValue="600">최대 DPI(X)</decimalTextBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

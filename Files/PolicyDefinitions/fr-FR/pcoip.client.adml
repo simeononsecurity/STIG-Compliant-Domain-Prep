@@ -104,7 +104,7 @@ Les algorithmes de chiffrement pris en charge, par ordre de préférence, sont S
 
 Si les deux points de terminaison sont configurés pour prendre en charge ces 3 algorithmes et que la connexion n'utilise pas de passerelle de sécurité, l'algorithme SALSA20 est négocié et utilisé. En revanche, si la connexion utilise une passerelle de sécurité, l'algorithme SALSA20 est désactivé automatiquement et c'est l'algorithme AES128 qui est négocié et utilisé. Si l'un des points de terminaison ou la passerelle de sécurité désactive l'algorithme SALSA20 et que l'un des points de terminaison désactive l'algorithme AES128, c'est l'algorithme AES256 qui est alors négocié et utilisé.</string>
 			<string id="String_Policy_Configure_SSL_protocols_91" >Configurer des protocoles SSL</string>
-			<string id="String_Explain_Configures_openssl_92" >Configure le protocole openssl pour limiter l'utilisation de certains protocoles avant l'établissement d'une connexion SSL chiffrée. La liste de protocoles est composée d'une ou de plusieurs chaînes de protocole openssl séparées par deux points. Notez que toutes les chaînes de chiffrement ne sont pas sensibles à la casse.
+			<string id="String_Explain_Configures_openssl_92" >Configure le protocole openssl pour limiter l'utilisation de certains protocoles avant l'établissement d'une connexion SSL chiffrée. La liste de protocoles est composée d'une ou de plusieurs chaînes de protocole openssl séparées par deux points. Notez que toutes les chaînes de chiffrement sont insensibles à la casse.
 
  La valeur par défaut est : 
    &quot;TLS1.0:TLS1.1:TLS1.2&quot;
@@ -115,7 +115,7 @@ Ce paramètre s'applique à la fois à l'agent et au client.
 
 S'il est défini des deux côtés, la règle de négociation du protocole OpenSSL est suivie.</string>
 			<string id="String_Policy_Configure_SSL_cipher_list_93" >Configurer la liste de chiffrements SSL</string>
-			<string id="String_Explain_Configures_SSL_cipher_list_94" >Configure la liste de chiffrements pour limiter l'utilisation de la suite de chiffrements avant l'établissement d'une connexion SSL chiffrée. La liste se compose d'une ou de plusieurs chaînes de la suite de chiffrement séparées par deux points. Notez que toutes les chaînes de chiffrement ne sont pas sensibles à la casse.
+			<string id="String_Explain_Configures_SSL_cipher_list_94" >Configure la liste de chiffrements pour limiter l'utilisation de la suite de chiffrements avant l'établissement d'une connexion SSL chiffrée. La liste se compose d'une ou de plusieurs chaînes de la suite de chiffrement séparées par deux points. Notez que toutes les chaînes de chiffrement sont insensibles à la casse.
 
 La valeur par défaut est la suivante :
    &quot;ECDHE-RSA-AES256-GCM-SHA384:AES256-SHA256:AES256-SHA:ECDHE-RSA-AES128-GCM-SHA256:AES128-SHA256:AES128-SHA:@STRENGTH&quot;
@@ -251,7 +251,7 @@ Les algorithmes de chiffrement pris en charge, par ordre de préférence, sont S
 
 Si les deux points de terminaison sont configurés pour prendre en charge ces 3 algorithmes et que la connexion n'utilise pas de passerelle de sécurité, l'algorithme SALSA20 est négocié et utilisé. En revanche, si la connexion utilise une passerelle de sécurité, l'algorithme SALSA20 est désactivé automatiquement et c'est l'algorithme AES128 qui est négocié et utilisé. Si l'un des points de terminaison ou la passerelle de sécurité désactive l'algorithme SALSA20 et que l'un des points de terminaison désactive l'algorithme AES128, c'est l'algorithme AES256 qui est alors négocié et utilisé.</string>
 			<string id="String_Policy_Configure_SSL_protocols_161" >Configurer des protocoles SSL</string>
-			<string id="String_Explain_Configures_openssl_162" >Configure le protocole openssl pour limiter l'utilisation de certains protocoles avant l'établissement d'une connexion SSL chiffrée. La liste de protocoles est composée d'une ou de plusieurs chaînes de protocole openssl séparées par deux points. Notez que toutes les chaînes de chiffrement ne sont pas sensibles à la casse.
+			<string id="String_Explain_Configures_openssl_162" >Configure le protocole openssl pour limiter l'utilisation de certains protocoles avant l'établissement d'une connexion SSL chiffrée. La liste de protocoles est composée d'une ou de plusieurs chaînes de protocole openssl séparées par deux points. Notez que toutes les chaînes de chiffrement sont insensibles à la casse.
 
  La valeur par défaut est : 
    &quot;TLS1.0:TLS1.1:TLS1.2&quot;
@@ -262,7 +262,7 @@ Ce paramètre s'applique à la fois à l'agent et au client.
 
 S'il est défini des deux côtés, la règle de négociation du protocole OpenSSL est suivie.</string>
 			<string id="String_Policy_Configure_SSL_cipher_list_163" >Configurer la liste de chiffrements SSL</string>
-			<string id="String_Explain_Configures_SSL_cipher_list_164" >Configure la liste de chiffrements pour limiter l'utilisation de la suite de chiffrements avant l'établissement d'une connexion SSL chiffrée. La liste se compose d'une ou de plusieurs chaînes de la suite de chiffrement séparées par deux points. Notez que toutes les chaînes de chiffrement ne sont pas sensibles à la casse.
+			<string id="String_Explain_Configures_SSL_cipher_list_164" >Configure la liste de chiffrements pour limiter l'utilisation de la suite de chiffrements avant l'établissement d'une connexion SSL chiffrée. La liste se compose d'une ou de plusieurs chaînes de la suite de chiffrement séparées par deux points. Notez que toutes les chaînes de chiffrement sont insensibles à la casse.
 
 La valeur par défaut est la suivante :
    &quot;ECDHE-RSA-AES256-GCM-SHA384:AES256-SHA256:AES256-SHA:ECDHE-RSA-AES128-GCM-SHA256:AES128-SHA256:AES128-SHA:@STRENGTH&quot;

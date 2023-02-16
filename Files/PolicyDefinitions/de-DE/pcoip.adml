@@ -197,7 +197,7 @@ Unterstützte Verschlüsselungsalgorithmen sind in der bevorzugten Reihenfolge S
 
 Wenn beide Endpunkte für die Unterstützung aller drei Algorithmen konfiguriert sind und die Verbindung kein Sicherheitsgateway (SG) verwendet, wird der Algorithmus SALSA20 ausgehandelt und verwendet.  Wenn die Verbindung dennoch ein SG verwendet, wird SALSA20 automatisch deaktiviert und AES128 wird ausgehandelt und verwendet. Wenn der Endpunkt oder das SG entweder SALSA20 deaktiviert oder der Endpunkt AES128 deaktiviert, wird AES256 ausgehandelt und verwendet.</string>
 			<string id="String_Policy_Configure_SSL_protocols_207" >SSL-Protokolle konfigurieren</string>
-			<string id="String_Explain_Configures_openssl_208" >Konfiguriert die OpenSSL-Protokolle, um die Verwendung bestimmter Protokolle zu unterbinden, bevor eine verschlüsselte SSL-Verbindung hergestellt wird. Die Protokollliste besteht aus einer oder mehreren OpenSSL-Zeichenfolgen, die durch Doppelpunkte voneinander getrennt werden. Beachten Sie, dass für alle Verschlüsselungszeichenfolgen die Groß-/Kleinschreibung zu beachten ist.
+			<string id="String_Explain_Configures_openssl_208" >Konfiguriert die OpenSSL-Protokolle, um die Verwendung bestimmter Protokolle zu unterbinden, bevor eine verschlüsselte SSL-Verbindung hergestellt wird. Die Protokollliste besteht aus einer oder mehreren OpenSSL-Zeichenfolgen, die durch Doppelpunkte voneinander getrennt werden. Beachten Sie, dass für alle Verschlüsselungszeichenfolgen die Groß-/Kleinschreibung nicht zu beachten ist.
 
  Der Standardwert lautet: 
    &quot;TLS1.1:TLS1.2&quot;
@@ -208,7 +208,7 @@ Diese Einstellung gilt sowohl für den Agenten als auch für den Client.
 
 Wenn dies auf beiden Seiten so festgelegt ist, wird die Regel für die OpenSSL-Protokollaushandlung angewendet.</string>
 			<string id="String_Policy_Configure_SSL_cipher_list_209" >SSL-Verschlüsselungsliste konfigurieren</string>
-			<string id="String_Explain_Configures_SSL_cipher_list_210" >Konfiguriert die SSL-Verschlüsselungsliste, um die Verwendung der Verschlüsselungs-Suite zu beschränken, bevor eine verschlüsselte SSL-Verbindung hergestellt wird. Die Verschlüsselungsliste besteht aus einer oder mehreren Zeichenfolgen der Verschlüsselungs-Suite, die durch Doppelpunkte voneinander getrennt werden. Beachten Sie, dass für alle Verschlüsselungszeichenfolgen die Groß-/Kleinschreibung zu beachten ist.
+			<string id="String_Explain_Configures_SSL_cipher_list_210" >Konfiguriert die SSL-Verschlüsselungsliste, um die Verwendung der Verschlüsselungs-Suite zu beschränken, bevor eine verschlüsselte SSL-Verbindung hergestellt wird. Die Verschlüsselungsliste besteht aus einer oder mehreren Zeichenfolgen der Verschlüsselungs-Suite, die durch Doppelpunkte voneinander getrennt werden. Beachten Sie, dass für alle Verschlüsselungszeichenfolgen die Groß-/Kleinschreibung nicht zu beachten ist.
 
 Der Standardwert lautet:
    „ECDHE-RSA-AES256-GCM-SHA384:AES256-SHA256:AES256-SHA:ECDHE-RSA-AES128-GCM-SHA256:AES128-SHA256:AES128-SHA:@STRENGTH“
@@ -288,59 +288,6 @@ Standardmäßig sind alle virtuellen Kanäle aktiviert, einschließlich der Zwis
 			<string id="String_Policy_DropList_Select_Configure_PCoIP_0_Disable_virtual_229" >0 - Virtuelle Kanäle in PCoIP-Sitzungen deaktivieren</string>
 			<string id="String_Policy_DropList_Select_Configure_PCoIP_2_Disable_all_230" >2 - Alle virtuellen Kanäle deaktivieren außer</string>
 			<string id="String_Policy_DropList_Select_Configure_PCoIP_3_Enable_all_231" >3 - Alle virtuellen Kanäle aktivieren außer</string>
-			<string id="String_Policy_Configure_clipboard_235" >Zwischenablagenumleitung konfigurieren</string>
-			<string id="String_Explain_Determines_the_236" >Bestimmt die Richtung, in der die Zwischenablagenumleitung zulässig ist. Sie können aus folgenden Werten auswählen:
-
-– Nur Client zu Agent aktiviert (d. h., es sind nur Kopier- und Einfügevorgänge vom Clientsystem zum View-Desktop möglich)
-– In beiden Richtungen deaktiviert
-– In beiden Richtungen aktiviert
-– Nur Agent zu Client aktiviert (d. h., es sind nur Kopier- und Einfügevorgänge vom View-Desktop zum Clientsystem möglich)
-
-Die Zwischenablageumleitung wird als virtueller Kanal implementiert. Wenn virtuelle Kanäle deaktiviert sind, funktioniert die Zwischenablageumleitung nicht.
-
-Diese Einstellung gilt nur für den Agenten.
-
-Wenn diese Einstellung deaktiviert oder nicht konfiguriert ist, lautet der Standardwert „Nur Client zu Agent aktiviert“.</string>
-			<string id="String_Policy_DropList_Select_Configure_clipboard_Disabled_in_both_238" >In beiden Richtungen deaktiviert</string>
-			<string id="String_Policy_DropList_Select_Configure_clipboard_Enabled_in_both_239" >In beiden Richtungen aktiviert</string>
-			<string id="String_Policy_DropList_Select_Configure_clipboard_Enabled_client_240" >Nur Client zu Agent aktiviert</string>
-			<string id="String_Policy_DropList_Select_Configure_clipboard_Enabled_agent_to_241" >Nur Agent zu Client aktiviert</string>
-			<string id="String_Policy_Configure_clipboard_243" >Zwischenspeichergröße auf dem Server konfigurieren</string>
-			<string id="String_Explain_This_setting_indicates_244" >Diese Einstellungen geben den Wert der Zwischenspeichergröße des Servers an.
-
-Die Zwischenspeichergröße auf dem Server wird – je nach Auswahl – in Kilobyte oder Byte angegeben. Die Speichergröße wird in Kilobyte angegeben, wenn sie nicht konfiguriert ist.
-
-Der Client verfügt ebenfalls über einen Wert für die Zwischenspeichergröße. Dieser wird immer in Kilobyte angezeigt.
-
-Nach der Einrichtung der Sitzung gilt Folgendes:
-– Der Zwischenspeichergrößenwert des Servers wird an den Client gesendet.
-– Beim Client wird dann der effektive Wert der Zwischenspeichergröße aus den Mindestwerten für Client und Server bestimmt.</string>
-			<string id="String_Policy_Filter_text_out_247" >Text aus eingehenden Zwischenablagedaten herausfiltern</string>
-			<string id="String_Explain_Determines_whether_248" >Legt fest, ob die Textdaten aus den vom Client an den Agent übergebenen Zwischenablagedaten herausgefiltert werden. Ist dieses Kontrollkästchen aktiviert, werden die Daten herausgefiltert, andernfalls werden sie beibehalten.</string>
-			<string id="String_Policy_Filter_Rich_Text_251" >RTF-Daten aus eingehenden Zwischenablagedaten herausfiltern</string>
-			<string id="String_Explain_Determines_whether_252" >Legt fest, ob die RTF-Daten aus den vom Client an den Agent übergebenen Zwischenablagedaten herausgefiltert werden. Ist dieses Kontrollkästchen aktiviert, werden die Daten herausgefiltert, andernfalls werden sie beibehalten.</string>
-			<string id="String_Policy_Filter_images_out_255" >Bilder aus eingehenden Zwischenablagedaten herausfiltern</string>
-			<string id="String_Explain_Determines_whether_256" >Legt fest, ob die Bilddaten aus den vom Client an den Agent übergebenen Zwischenablagedaten herausgefiltert werden. Ist dieses Kontrollkästchen aktiviert, werden die Daten herausgefiltert, andernfalls werden sie beibehalten.</string>
-			<string id="String_Policy_Filter_Microsoft_259" >Microsoft Office-Textdaten aus eingehenden Zwischenablagedaten herausfiltern</string>
-			<string id="String_Explain_Determines_whether_260" >Legt fest, ob die Daten im Microsoft Office-Textformat (BIFF12-Format) aus den vom Client an den Agent übergebenen Zwischenablagedaten herausgefiltert werden. Ist dieses Kontrollkästchen aktiviert, werden die Daten herausgefiltert, andernfalls werden sie beibehalten.</string>
-			<string id="String_Policy_Filter_Microsoft_263" >Microsoft Chart- und SmartArt-Daten aus eingehenden Zwischenablagedaten herausfiltern</string>
-			<string id="String_Explain_Determines_whether_264" >Legt fest, ob die Microsoft Office-Diagrammdaten und Smart Art-Daten (Art::GVML ClipFormat) aus den vom Client an den Agent übergebenen Zwischenablagedaten herausgefiltert werden. Ist dieses Kontrollkästchen aktiviert, werden die Daten herausgefiltert, andernfalls werden sie beibehalten.</string>
-			<string id="String_Policy_Filter_Microsoft_267" >Microsoft-Texteffektdaten aus eingehenden Zwischenablagedaten herausfiltern</string>
-			<string id="String_Explain_Determines_whether_268" >Legt fest, ob die Daten mit Microsoft Office-Texteffekten (HTML-Format) aus den vom Client an den Agent übergebenen Zwischenablagedaten herausgefiltert werden. Ist dieses Kontrollkästchen aktiviert, werden die Daten herausgefiltert, andernfalls werden sie beibehalten.</string>
-			<string id="String_Policy_Filter_text_out_271" >Text aus ausgehenden Zwischenablagedaten herausfiltern</string>
-			<string id="String_Explain_Determines_whether_272" >Legt fest, ob die Textdaten aus den vom Agent an den Client gesendeten Zwischenablagedaten herausgefiltert werden. Ist dieses Kontrollkästchen aktiviert, werden die Daten herausgefiltert, andernfalls werden sie beibehalten.</string>
-			<string id="String_Policy_Filter_Rich_Text_275" >RTF-Daten aus ausgehenden Zwischenablagedaten herausfiltern</string>
-			<string id="String_Explain_Determines_whether_276" >Legt fest, ob die RTF-Daten aus den vom Agent an den Client gesendeten Zwischenablagedaten herausgefiltert werden. Ist dieses Kontrollkästchen aktiviert, werden die Daten herausgefiltert, andernfalls werden sie beibehalten.</string>
-			<string id="String_Policy_Filter_images_out_279" >Bilder aus ausgehenden Zwischenablagedaten herausfiltern</string>
-			<string id="String_Explain_Determines_whether_280" >Legt fest, ob die Bilddaten aus den vom Agent an den Client gesendeten Zwischenablagedaten herausgefiltert werden. Ist dieses Kontrollkästchen aktiviert, werden die Daten herausgefiltert, andernfalls werden sie beibehalten.</string>
-			<string id="String_Policy_Filter_Microsoft_283" >Microsoft Office-Textdaten aus ausgehenden Zwischenablagedaten herausfiltern</string>
-			<string id="String_Explain_Determines_whether_284" >Legt fest, ob die Daten im Microsoft Office-Textformat (BIFF12-Format) aus den vom Agent an den Client gesendeten Zwischenablagedaten herausgefiltert werden. Ist dieses Kontrollkästchen aktiviert, werden die Daten herausgefiltert, andernfalls werden sie beibehalten.</string>
-			<string id="String_Policy_Filter_Microsoft_287" >Microsoft Chart- und SmartArt-Daten aus ausgehenden Zwischenablagedaten herausfiltern</string>
-			<string id="String_Explain_Determines_whether_288" >Legt fest, ob die Microsoft Office-Diagrammdaten und Smart Art-Daten (Art::GVML ClipFormat) aus den vom Agent an den Client gesendeten Zwischenablagedaten herausgefiltert werden.
- Ist dieses Kontrollkästchen aktiviert, werden die Daten herausgefiltert, andernfalls werden sie beibehalten.</string>
-			<string id="String_Policy_Filter_Microsoft_291" >Microsoft-Texteffektdaten aus ausgehenden Zwischenablagedaten herausfiltern</string>
-			<string id="String_Explain_Determines_whether_292" >Legt fest, ob die Daten mit Microsoft Office-Texteffekten (HTML-Format) aus den vom Agenten an den Client gesendeten Zwischenablagedaten herausgefiltert werden.
- Ist dieses Kontrollkästchen aktiviert, werden die Daten herausgefiltert, andernfalls werden sie beibehalten.</string>
 			<string id="String_Policy_Configure_PCoIP_295" >Stufen der PCoIP-Bildqualität konfigurieren</string>
 			<string id="String_Explain_Controls_how_PCoIP_296" >Steuert die PCoIP-Bilddarstellung während einer Netzwerküberlastung. Das Zusammenwirken der Werte von „Mindestqualität für Bilder“, „Maximale anfängliche Bildqualität“ und „Maximale Frame-Rate“ ermöglicht eine genaue Steuerung in Umgebungen mit begrenzter Netzwerkbandbreite.
 
@@ -614,7 +561,7 @@ Unterstützte Verschlüsselungsalgorithmen sind in der bevorzugten Reihenfolge S
 
 Wenn beide Endpunkte für die Unterstützung aller drei Algorithmen konfiguriert sind und die Verbindung kein Sicherheitsgateway (SG) verwendet, wird der Algorithmus SALSA20 ausgehandelt und verwendet.  Wenn die Verbindung dennoch ein SG verwendet, wird SALSA20 automatisch deaktiviert und AES128 wird ausgehandelt und verwendet. Wenn der Endpunkt oder das SG entweder SALSA20 deaktiviert oder der Endpunkt AES128 deaktiviert, wird AES256 ausgehandelt und verwendet.</string>
 			<string id="String_Policy_Configure_SSL_protocols_461" >SSL-Protokolle konfigurieren</string>
-			<string id="String_Explain_Configures_openssl_462" >Konfiguriert die OpenSSL-Protokolle, um die Verwendung bestimmter Protokolle zu unterbinden, bevor eine verschlüsselte SSL-Verbindung hergestellt wird. Die Protokollliste besteht aus einer oder mehreren OpenSSL-Zeichenfolgen, die durch Doppelpunkte voneinander getrennt werden. Beachten Sie, dass für alle Verschlüsselungszeichenfolgen die Groß-/Kleinschreibung zu beachten ist.
+			<string id="String_Explain_Configures_openssl_462" >Konfiguriert die OpenSSL-Protokolle, um die Verwendung bestimmter Protokolle zu unterbinden, bevor eine verschlüsselte SSL-Verbindung hergestellt wird. Die Protokollliste besteht aus einer oder mehreren OpenSSL-Zeichenfolgen, die durch Doppelpunkte voneinander getrennt werden. Beachten Sie, dass für alle Verschlüsselungszeichenfolgen die Groß-/Kleinschreibung nicht zu beachten ist.
 
  Der Standardwert lautet: 
    &quot;TLS1.1:TLS1.2&quot;
@@ -625,7 +572,7 @@ Diese Einstellung gilt sowohl für den Agenten als auch für den Client.
 
 Wenn dies auf beiden Seiten so festgelegt ist, wird die Regel für die OpenSSL-Protokollaushandlung angewendet.</string>
 			<string id="String_Policy_Configure_SSL_cipher_list_463" >SSL-Verschlüsselungsliste konfigurieren</string>
-			<string id="String_Explain_Configures_SSL_cipher_list_464" >Konfiguriert die SSL-Verschlüsselungsliste, um die Verwendung der Verschlüsselungs-Suite zu beschränken, bevor eine verschlüsselte SSL-Verbindung hergestellt wird. Die Verschlüsselungsliste besteht aus einer oder mehreren Zeichenfolgen der Verschlüsselungs-Suite, die durch Doppelpunkte voneinander getrennt werden. Beachten Sie, dass für alle Verschlüsselungszeichenfolgen die Groß-/Kleinschreibung zu beachten ist.
+			<string id="String_Explain_Configures_SSL_cipher_list_464" >Konfiguriert die SSL-Verschlüsselungsliste, um die Verwendung der Verschlüsselungs-Suite zu beschränken, bevor eine verschlüsselte SSL-Verbindung hergestellt wird. Die Verschlüsselungsliste besteht aus einer oder mehreren Zeichenfolgen der Verschlüsselungs-Suite, die durch Doppelpunkte voneinander getrennt werden. Beachten Sie, dass für alle Verschlüsselungszeichenfolgen die Groß-/Kleinschreibung nicht zu beachten ist.
 
 Der Standardwert lautet:
    „ECDHE-RSA-AES256-GCM-SHA384:AES256-SHA256:AES256-SHA:ECDHE-RSA-AES128-GCM-SHA256:AES128-SHA256:AES128-SHA:@STRENGTH“
@@ -705,83 +652,6 @@ Standardmäßig sind alle virtuellen Kanäle aktiviert, einschließlich der Zwis
 			<string id="String_Policy_DropList_Select_Configure_PCoIP_0_Disable_virtual_483" >0 - Virtuelle Kanäle in PCoIP-Sitzungen deaktivieren</string>
 			<string id="String_Policy_DropList_Select_Configure_PCoIP_2_Disable_all_484" >2 - Alle virtuellen Kanäle deaktivieren außer</string>
 			<string id="String_Policy_DropList_Select_Configure_PCoIP_3_Enable_all_485" >3 - Alle virtuellen Kanäle aktivieren außer</string>
-			<string id="String_Policy_Configure_clipboard_489" >Zwischenablagenumleitung konfigurieren</string>
-			<string id="String_Policy_Configure_clipboard_668" >Zwischenablagenüberwachung konfigurieren</string>
-			<string id="String_Policy_Whether_block_clipboard_674">Gibt an, ob die Zwischenablagenumleitung zur Clientseite blockiert wird, wenn der Client die Überwachung nicht unterstützt.</string>
-			<string id="String_Explain_Determines_the_490" >Bestimmt die Richtung, in der die Zwischenablagenumleitung zulässig ist. Sie können aus folgenden Werten auswählen:
-
-– Nur Client zu Agent aktiviert (d. h., es sind nur Kopier- und Einfügevorgänge vom Clientsystem zum View-Desktop möglich)
-– In beiden Richtungen deaktiviert
-– In beiden Richtungen aktiviert
-– Nur Agent zu Client aktiviert (d. h., es sind nur Kopier- und Einfügevorgänge vom View-Desktop zum Clientsystem möglich)
-
-Die Zwischenablageumleitung wird als virtueller Kanal implementiert. Wenn virtuelle Kanäle deaktiviert sind, funktioniert die Zwischenablageumleitung nicht.
-
-Diese Einstellung gilt nur für den Agenten.
-
-Wenn diese Einstellung deaktiviert oder nicht konfiguriert ist, lautet der Standardwert „Nur Client zu Agent aktiviert“.</string>
-			<string id="String_Explain_Determines_the_669" >Bestimmt die Richtung, in der die Zwischenablagenüberwachung zulässig ist. Sie können einen der folgenden Werte auswählen:
-
-– In beiden Richtungen deaktiviert
-– Nur von Client zu Server aktiviert (Bei dieser Option werden Informationen von Zwischenablagedaten, die von der Client- zur Agent-Seite kopiert werden, aufgezeichnet.)
-– Nur von Server zu Client aktiviert (Bei dieser Option werden Informationen von Zwischenablagedaten, die von der Agent- zur Client-Seite kopiert werden, aufgezeichnet.)
-- In beiden Richtungen aktiviert
-
-Diese Einstellung bezieht sich nur auf den Server (View-Desktop).
-
-Wenn diese Einstellung deaktiviert oder nicht konfiguriert ist, ist standardmäßig der Wert „In beiden Richtungen deaktiviert“ festgelegt.</string>
-            <string id="String_Explain_Determines_the_675">Legt fest, ob die Zwischenablagenumleitung zum Client blockiert wird, wenn Horizon Client die Überwachungsfunktion nicht unterstützt.
-
-Sie können das Verhalten der Zwischenablagenumleitung auswählen:
-
-– Lassen Sie die Zwischenablagenumleitung vom Agenten zum Client passieren, wenn die Überwachung in Horizon Agent aktiviert ist, jedoch nicht in Horizon Client.
-– Blockieren Sie die Zwischenablagenumleitung vom Agenten zum Client, wenn die Überwachung in Horizon Agent aktiviert ist, jedoch nicht in Horizon Client.
-
-Diese Einstellung wird erst nach dem Aktivieren der Überwachung wirksam.</string>
-			<string id="String_Policy_DropList_Select_Configure_clipboard_Disabled_in_both_492" >In beiden Richtungen deaktiviert</string>
-			<string id="String_Policy_DropList_Select_Configure_clipboard_Enabled_in_both_493" >In beiden Richtungen aktiviert</string>
-			<string id="String_Policy_DropList_Select_Configure_clipboard_Enabled_client_494" >Nur Client zu Agent aktiviert</string>
-			<string id="String_Policy_DropList_Select_Configure_clipboard_Enabled_agent_to_495" >Nur Agent zu Client aktiviert</string>
-			<string id="String_Policy_DropList_Select_Configure_clipboard_Audit_Pass_Through_671" >Passthrough</string>
-			<string id="String_Policy_DropList_Select_Configure_clipboard_Audit_Block_672" >Blockieren</string>
-			<string id="String_Policy_DropList_Select_clipboard_size_unit_kilobytes" >Kilobyte</string>
-			<string id="String_Policy_DropList_Select_clipboard_size_unit_bytes" >Byte</string>
-			<string id="String_Policy_Configure_clipboard_497" >Zwischenspeichergröße auf dem Server konfigurieren</string>
-			<string id="String_Explain_This_setting_indicates_498" >Diese Einstellungen geben den Wert der Zwischenspeichergröße des Servers an.
-
-Die Zwischenspeichergröße auf dem Server wird – je nach Auswahl – in Kilobyte oder Byte angegeben. Die Speichergröße wird in Kilobyte angegeben, wenn sie nicht konfiguriert ist.
-
-Der Client verfügt ebenfalls über einen Wert für die Zwischenspeichergröße. Dieser wird immer in Kilobyte angezeigt.
-
-Nach der Einrichtung der Sitzung gilt Folgendes:
-– Der Zwischenspeichergrößenwert des Servers wird an den Client gesendet.
-– Beim Client wird dann der effektive Wert der Zwischenspeichergröße aus den Mindestwerten für Client und Server bestimmt.</string>
-			<string id="String_Policy_Filter_text_out_501" >Text aus eingehenden Zwischenablagedaten herausfiltern</string>
-			<string id="String_Explain_Determines_whether_502" >Legt fest, ob die Textdaten aus den vom Client an den Agent übergebenen Zwischenablagedaten herausgefiltert werden. Ist dieses Kontrollkästchen aktiviert, werden die Daten herausgefiltert, andernfalls werden sie beibehalten.</string>
-			<string id="String_Policy_Filter_Rich_Text_505" >RTF-Daten aus eingehenden Zwischenablagedaten herausfiltern</string>
-			<string id="String_Explain_Determines_whether_506" >Legt fest, ob die RTF-Daten aus den vom Client an den Agent übergebenen Zwischenablagedaten herausgefiltert werden. Ist dieses Kontrollkästchen aktiviert, werden die Daten herausgefiltert, andernfalls werden sie beibehalten.</string>
-			<string id="String_Policy_Filter_images_out_509" >Bilder aus eingehenden Zwischenablagedaten herausfiltern</string>
-			<string id="String_Explain_Determines_whether_510" >Legt fest, ob die Bilddaten aus den vom Client an den Agent übergebenen Zwischenablagedaten herausgefiltert werden. Ist dieses Kontrollkästchen aktiviert, werden die Daten herausgefiltert, andernfalls werden sie beibehalten.</string>
-			<string id="String_Policy_Filter_Microsoft_513" >Microsoft Office-Textdaten aus eingehenden Zwischenablagedaten herausfiltern</string>
-			<string id="String_Explain_Determines_whether_514" >Legt fest, ob die Daten im Microsoft Office-Textformat (BIFF12-Format) aus den vom Client an den Agent übergebenen Zwischenablagedaten herausgefiltert werden. Ist dieses Kontrollkästchen aktiviert, werden die Daten herausgefiltert, andernfalls werden sie beibehalten.</string>
-			<string id="String_Policy_Filter_Microsoft_517" >Microsoft Chart- und SmartArt-Daten aus eingehenden Zwischenablagedaten herausfiltern</string>
-			<string id="String_Explain_Determines_whether_518" >Legt fest, ob die Microsoft Office-Diagrammdaten und Smart Art-Daten (Art::GVML ClipFormat) aus den vom Client an den Agent übergebenen Zwischenablagedaten herausgefiltert werden. Ist dieses Kontrollkästchen aktiviert, werden die Daten herausgefiltert, andernfalls werden sie beibehalten.</string>
-			<string id="String_Policy_Filter_Microsoft_521" >Microsoft-Texteffektdaten aus eingehenden Zwischenablagedaten herausfiltern</string>
-			<string id="String_Explain_Determines_whether_522" >Legt fest, ob die Daten mit Microsoft Office-Texteffekten (HTML-Format) aus den vom Client an den Agent übergebenen Zwischenablagedaten herausgefiltert werden. Ist dieses Kontrollkästchen aktiviert, werden die Daten herausgefiltert, andernfalls werden sie beibehalten.</string>
-			<string id="String_Policy_Filter_text_out_525" >Text aus ausgehenden Zwischenablagedaten herausfiltern</string>
-			<string id="String_Explain_Determines_whether_526" >Legt fest, ob die Textdaten aus den vom Agent an den Client gesendeten Zwischenablagedaten herausgefiltert werden. Ist dieses Kontrollkästchen aktiviert, werden die Daten herausgefiltert, andernfalls werden sie beibehalten.</string>
-			<string id="String_Policy_Filter_Rich_Text_529" >RTF-Daten aus ausgehenden Zwischenablagedaten herausfiltern</string>
-			<string id="String_Explain_Determines_whether_530" >Legt fest, ob die RTF-Daten aus den vom Agent an den Client gesendeten Zwischenablagedaten herausgefiltert werden. Ist dieses Kontrollkästchen aktiviert, werden die Daten herausgefiltert, andernfalls werden sie beibehalten.</string>
-			<string id="String_Policy_Filter_images_out_533" >Bilder aus ausgehenden Zwischenablagedaten herausfiltern</string>
-			<string id="String_Explain_Determines_whether_534" >Legt fest, ob die Bilddaten aus den vom Agent an den Client gesendeten Zwischenablagedaten herausgefiltert werden. Ist dieses Kontrollkästchen aktiviert, werden die Daten herausgefiltert, andernfalls werden sie beibehalten.</string>
-			<string id="String_Policy_Filter_Microsoft_537" >Microsoft Office-Textdaten aus ausgehenden Zwischenablagedaten herausfiltern</string>
-			<string id="String_Explain_Determines_whether_538" >Legt fest, ob die Daten im Microsoft Office-Textformat (BIFF12-Format) aus den vom Agent an den Client gesendeten Zwischenablagedaten herausgefiltert werden. Ist dieses Kontrollkästchen aktiviert, werden die Daten herausgefiltert, andernfalls werden sie beibehalten.</string>
-			<string id="String_Policy_Filter_Microsoft_541" >Microsoft Chart- und SmartArt-Daten aus ausgehenden Zwischenablagedaten herausfiltern</string>
-			<string id="String_Explain_Determines_whether_542" >Legt fest, ob die Microsoft Office-Diagrammdaten und Smart Art-Daten (Art::GVML ClipFormat) aus den vom Agent an den Client gesendeten Zwischenablagedaten herausgefiltert werden.
- Ist dieses Kontrollkästchen aktiviert, werden die Daten herausgefiltert, andernfalls werden sie beibehalten.</string>
-			<string id="String_Policy_Filter_Microsoft_545" >Microsoft-Texteffektdaten aus ausgehenden Zwischenablagedaten herausfiltern</string>
-			<string id="String_Explain_Determines_whether_546" >Legt fest, ob die Daten mit Microsoft Office-Texteffekten (HTML-Format) aus den vom Agenten an den Client gesendeten Zwischenablagedaten herausgefiltert werden.
- Ist dieses Kontrollkästchen aktiviert, werden die Daten herausgefiltert, andernfalls werden sie beibehalten.</string>
 			<string id="String_Policy_Configure_PCoIP_549" >Stufen der PCoIP-Bildqualität konfigurieren</string>
 			<string id="String_Explain_Controls_how_PCoIP_550" >Steuert die PCoIP-Bilddarstellung während einer Netzwerküberlastung. Das Zusammenwirken der Werte von „Mindestqualität für Bilder“, „Maximale anfängliche Bildqualität“ und „Maximale Frame-Rate“ ermöglicht eine genaue Steuerung in Umgebungen mit begrenzter Netzwerkbandbreite.
 
@@ -945,53 +815,6 @@ Der Bereinigung der Protokolldateien wird immer beim Start einer Sitzung durchge
 Wenn diese Richtlinie konfiguriert ist, steuert die Einstellung die Bereinigung von Protokolldateien nach Größe in MB. Eine Einstellung von m (größer null) legt dabei fest, dass Protokolldateien, die größer als m MB sind, automatisch im Hintergrund gelöscht werden. Mit der Einstellung 0 wird keine Bereinigung nach Größe durchgeführt. Wenn diese Richtlinie deaktiviert oder nicht konfiguriert ist, gilt für die Ereignisprotokollbereinigung nach Größe in MB standardmäßig der Wert 100.
 
 Der Bereinigung der Protokolldateien wird immer beim Start einer Sitzung durchgeführt. Jede Änderung dieser Einstellung wird erst bei der folgenden Sitzung wirksam.</string>
-            <string id="Policy_Configure_clipboard_667" >Zwischenablagenüberwachung konfigurieren</string>
-			<string id="CLIPBOARD_AUDIT_DISABLE_BOTH">In beiden Richtungen deaktiviert</string>
-			<string id="CLIPBOARD_AUDIT_ENABLE_ONLY_CLIENT_TO_SERVER">Aktiviert, nur Client zu Server</string>
-			<string id="CLIPBOARD_AUDIT_ENABLE_ONLY_SERVER_TO_CLIENT">Aktiviert, nur Server zu Client</string>
-			<string id="CLIPBOARD_AUDIT_ENABLE_BOTH">In beiden Richtungen aktiviert</string>
-			<string id="String_Policy_Configure_DnD_678" >„Drag &amp; Drop“-Richtung konfigurieren</string>
-			<string id="String_Explain_Determines_the_679" >Bestimmt die Richtung, in der „Drag &amp; Drop“ zulässig ist. Sie können einen der folgenden Werte auswählen:
-
-– In beiden Richtungen deaktiviert
-– Nur Agent zu Client aktiviert (dadurch ist der „Drag &amp; Drop“-Vorgang nur vom Agent zum Clientsystem zulässig)
-– Nur Client zu Agent aktiviert (dadurch ist der „Drag &amp; Drop“-Vorgang nur vom Clientsystem zum Agent zulässig)
-– In beiden Richtungen aktiviert
-
-Diese Einstellung bezieht sich nur auf den Agent.
-
-Wenn diese Einstellung deaktiviert oder nicht konfiguriert ist, lautet der Standardwert „Nur Client zu Agent aktiviert“.</string>
-			<string id="String_Policy_DropList_Select_Configure_DnD_Disabled_in_both_681" >In beiden Richtungen deaktiviert</string>
-			<string id="String_Policy_DropList_Select_Configure_DnD_Enabled_client_to_682" >Nur Client zu Agent aktiviert</string>
-			<string id="String_Policy_DropList_Select_Configure_DnD_Enabled_agent_to_683" >Nur Agent zu Client aktiviert</string>
-			<string id="String_Policy_DropList_Select_Configure_DnD_Enabled_in_both_684" >In beiden Richtungen aktiviert</string>
-			<string id="String_Policy_Configure_DnD_Format_State_686">„Drag &amp; Drop“-Formate konfigurieren</string>
-			<string id="String_Explain_Determines_DnD_Format_687">Durch diese Einstellung wird festgelegt, welche „Drag &amp; Drop“-Option für das jeweilige Format (Datei/Text/Rich Text/Image/HTML/Dateiinhalt) zulässig ist. Die Werte für die Optionen sind:
-
-– In beiden Richtungen deaktiviert
-– Nur Agent zu Client aktiviert
-– Nur Client zu Agent aktiviert
-– In beiden Richtungen aktiviert
-
-Diese Einstellung gilt nur für den Agent, sie ist nicht standardmäßig konfiguriert.
-
-Wenn die Einstellung nicht konfiguriert oder deaktiviert ist, wird für alle Formate die „Drag &amp; Drop“-Option in beide Richtungen aktiviert.</string>
-			<string id="String_Policy_Configure_DnD_Size_Threshold_697">Schwellenwert für „Drag &amp; Drop“-Größe konfigurieren</string>
-			<string id="String_Explain_DnD_Size_Threshold_698">„Drag &amp; Drop“ unterstützt das Ziehen verschiedener Datentypen, einschließlich Klartext, Rich Text, Image, Dateien, Ordner. Durch diese Einstellung wird die Größenbeschränkung für das Ziehen allgemeiner Datentypen bestimmt, die nicht Dateien oder Ordner sind.
-
-Die Einheit der Datengröße zum Ziehen kann in Byte, Kilobyte und Megabyte konfiguriert werden.
-
-Der Wert für die gewünschte Größe wird unter „Schwellenwert für ‚Drag &amp; Drop‘-Größe“ konfiguriert. Die effektiven Datenbereiche für unterschiedliche Größeneinheiten sind:
-  – Byte: 1–1023
-  – Kilobyte: 1–1023
-  – Megabyte: 1–16 (maximale „Drag &amp; Drop“-Datengröße beträgt 16 MB)
-
-Diese Einstellung gilt nur für den Agent.
-
-Wenn die Einstellung nicht konfiguriert oder deaktiviert ist, wird ein standardmäßiger Schwellenwert von 1 MB festgelegt.</string>
-			<string id="String_Policy_DropList_Select_DnD_size_unit_bytes" >Byte</string>
-			<string id="String_Policy_DropList_Select_DnD_size_unit_kilobytes" >Kilobyte</string>
-			<string id="String_Policy_DropList_Select_DnD_size_unit_megabytes" >Megabyte</string>
 		</stringTable>
 		<presentationTable ><!--Storage for Presentation Definitions-->
 
@@ -1076,49 +899,6 @@ Wenn die Einstellung nicht konfiguriert oder deaktiviert ist, wird ein standardm
 				<textBox refId="Policy_TextBox_Element_Configure_PCoIP_233" >
 					<label >Liste nicht autorisierter virtueller Kanäle eingeben:</label>
 				</textBox>
-			</presentation>
-			<presentation id="Policy_Configure_clipboard_234" >
-				<dropdownList refId="Policy_DropList_Element_Configure_clipboard_237" defaultItem="2" >Zwischenablagenumleitung konfigurieren</dropdownList>
-			</presentation>
-			<presentation id="Policy_Configure_clipboard_242" >
-				<dropdownList refId="Policy_DropList_Clipboard_Fine_Grained_Defaults" defaultItem="1" >Maßeinheit für die Zwischenspeichergröße auswählen</dropdownList>
-				<decimalTextBox refId="Policy_Numeric_ElementConfigure_clipboard_245" spinStep="100" spin="true" defaultValue="1024" >Zwischenspeichergröße auf dem Server konfigurieren</decimalTextBox>
-			</presentation>
-			<presentation id="Policy_Filter_text_out_246" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_text_out_249" >Text aus eingehenden Zwischenablagedaten herausfiltern</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_Rich_Text_250" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_Rich_Text_253" >RTF-Daten aus eingehenden Zwischenablagedaten herausfiltern</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_images_out_254" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_images_out_257" >Bilder aus eingehenden Zwischenablagedaten herausfiltern</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_Microsoft_258" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_Microsoft_261" >Microsoft Office-Textdaten aus eingehenden Zwischenablagedaten herausfiltern</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_Microsoft_262" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_Microsoft_265" >Microsoft Chart- und SmartArt-Daten aus eingehenden Zwischenablagedaten herausfiltern</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_Microsoft_266" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_Microsoft_269" >Microsoft-Texteffektdaten aus eingehenden Zwischenablagedaten herausfiltern</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_text_out_270" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_text_out_273" >Text aus ausgehenden Zwischenablagedaten herausfiltern</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_Rich_Text_274" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_Rich_Text_277" >RTF-Daten aus ausgehenden Zwischenablagedaten herausfiltern</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_images_out_278" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_images_out_281" >Bilder aus ausgehenden Zwischenablagedaten herausfiltern</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_Microsoft_282" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_Microsoft_285" >Microsoft Office-Textdaten aus ausgehenden Zwischenablagedaten herausfiltern</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_Microsoft_286" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_Microsoft_289" >Microsoft Chart- und SmartArt-Daten aus ausgehenden Zwischenablagedaten herausfiltern</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_Microsoft_290" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_Microsoft_293" >Microsoft-Texteffektdaten aus ausgehenden Zwischenablagedaten herausfiltern</checkBox>
 			</presentation>
 			<presentation id="Policy_Configure_PCoIP_294" >
 				<text >Siehe Registerkarte „Erläuterung“ für Beispielwerte.</text>
@@ -1235,52 +1015,6 @@ Wenn die Einstellung nicht konfiguriert oder deaktiviert ist, wird ein standardm
 					<label >Liste nicht autorisierter virtueller Kanäle eingeben:</label>
 				</textBox>
 			</presentation>
-			<presentation id="Policy_Configure_clipboard_488" >
-				<dropdownList refId="Policy_DropList_Element_Configure_clipboard_491" defaultItem="2" >Zwischenablagenumleitung konfigurieren</dropdownList>
-			</presentation>
-            <presentation id="Policy_Whether_block_clipboard_676" >
-				<dropdownList refId="Policy_DropList_Element_Configure_clipboard_670" defaultItem="0" >Zwischenablagenverhalten konfigurieren, wenn Client die Überwachung nicht unterstützt</dropdownList>
-			</presentation>
-			<presentation id="Policy_Configure_clipboard_496" >
-				<dropdownList refId="Policy_DropList_Clipboard_Fine_Grained" defaultItem="1" >Maßeinheit für die Zwischenspeichergröße auswählen</dropdownList>
-				<decimalTextBox refId="Policy_Numeric_ElementConfigure_clipboard_499" spinStep="100" spin="true" defaultValue="1024" >Zwischenspeichergröße auf dem Server konfigurieren</decimalTextBox>
-			</presentation>
-			<presentation id="Policy_Filter_text_out_500" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_text_out_503" >Text aus eingehenden Zwischenablagedaten herausfiltern</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_Rich_Text_504" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_Rich_Text_507" >RTF-Daten aus eingehenden Zwischenablagedaten herausfiltern</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_images_out_508" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_images_out_511" >Bilder aus eingehenden Zwischenablagedaten herausfiltern</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_Microsoft_512" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_Microsoft_515" >Microsoft Office-Textdaten aus eingehenden Zwischenablagedaten herausfiltern</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_Microsoft_516" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_Microsoft_519" >Microsoft Chart- und SmartArt-Daten aus eingehenden Zwischenablagedaten herausfiltern</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_Microsoft_520" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_Microsoft_523" >Microsoft-Texteffektdaten aus eingehenden Zwischenablagedaten herausfiltern</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_text_out_524" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_text_out_527" >Text aus ausgehenden Zwischenablagedaten herausfiltern</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_Rich_Text_528" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_Rich_Text_531" >RTF-Daten aus ausgehenden Zwischenablagedaten herausfiltern</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_images_out_532" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_images_out_535" >Bilder aus ausgehenden Zwischenablagedaten herausfiltern</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_Microsoft_536" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_Microsoft_539" >Microsoft Office-Textdaten aus ausgehenden Zwischenablagedaten herausfiltern</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_Microsoft_540" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_Microsoft_543" >Microsoft Chart- und SmartArt-Daten aus ausgehenden Zwischenablagedaten herausfiltern</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_Microsoft_544" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_Microsoft_547" >Microsoft-Texteffektdaten aus ausgehenden Zwischenablagedaten herausfiltern</checkBox>
-			</presentation>
 			<presentation id="Policy_Configure_PCoIP_548" >
 				<text >Siehe Registerkarte „Erläuterung“ für Beispielwerte.</text>
 				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_551" spinStep="10" spin="true" defaultValue="40" >Wert für „Mindestqualität für Bilder“ festlegen (Standardwert: 40):</decimalTextBox>
@@ -1313,24 +1047,6 @@ Wenn die Einstellung nicht konfiguriert oder deaktiviert ist, wird ein standardm
 				<text >Siehe Registerkarte „Erläuterung“ für Beispielwerte.</text>
 				<text >Wert für Ereignisprotokollbereinigung nach Größe in MB festlegen (Standard: 100, 0 für</text>
 				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_666" spinStep="1" spin="true" defaultValue="100" >keine Bereinigung nach Größe):</decimalTextBox>
-			</presentation>
-			<presentation id="SERVER_CLIPBOARD_AUDIT">
-				<dropdownList refId="SERVER_CLIPBOARD_AUDIT" defaultItem="0">Zwischenablagenüberwachung konfigurieren</dropdownList>
-			</presentation>
-			<presentation id="Policy_Configure_DnD_677" >
-				<dropdownList refId="Policy_DropList_Element_Configure_DnD_680" defaultItem="1" >„Drag &amp; Drop“-Richtung konfigurieren</dropdownList>
-			</presentation>
-			<presentation id="Policy_Configure_DnD_Format_688">
-				<dropdownList refId="Policy_DropList_Element_Configure_DnD_File_State_689" defaultItem="3">Option für Dateiformat:</dropdownList>
-				<dropdownList refId="Policy_DropList_Element_Configure_DnD_Text_State_690" defaultItem="3">Option für Textformat:</dropdownList>
-				<dropdownList refId="Policy_DropList_Element_Configure_DnD_RTF_State_691" defaultItem="3">Option für Rich-Text-Format:</dropdownList>
-				<dropdownList refId="Policy_DropList_Element_Configure_DnD_Image_State_692" defaultItem="3">Option für Image-Format:</dropdownList>
-				<dropdownList refId="Policy_DropList_Element_Configure_DnD_HTML_State_694" defaultItem="3">Option für HTML-Format:</dropdownList>
-				<dropdownList refId="Policy_DropList_Element_Configure_DnD_File_Content_State_695" defaultItem="3">Option für Dateiinhaltsformat:</dropdownList>
-			</presentation>
-			<presentation id="Policy_Configure_DnD_Size_Threshold_699">
-				<dropdownList refId="Policy_DropList_DnD_Size_Unit" defaultItem="2" >Einheit für „Drag &amp; Drop“-Größe auswählen</dropdownList>
-				<decimalTextBox refId="Policy_DnD_Size_Value_700" defaultValue="1">Schwellenwert für „Drag &amp; Drop“-Größe</decimalTextBox>
 			</presentation>
 		</presentationTable>
 	</resources>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
 
    <displayName>VMware Horizon View Agent</displayName>
@@ -50,15 +50,17 @@ Hinweis: Dieses GPO hat niedrigere Priorität als die unter „%ProgramData%\VMw
 
          <string id="Local_Reader_Access">Zugriff auf lokale Lesegeräte</string>
 
-         <string id="True_SSO_Configuration">True-SSO-Konfiguration</string>
+         <string id="True_SSO_Configuration">True SSO-Konfiguration</string>
+
+         <string id="Whfb_Certificate_Redirection">WHFB-Zertifikatsumleitung</string>
+
+         <string id="Whfb_Certificate_Allowed_Applications">Liste der zulässigen ausführbaren Dateien</string>
+
+         <string id="Whfb_Certificate_Allowed_Applications_Desc">Liste der ausführbaren Dateien, die ein umgeleitetes WHFB-Zertifikat verwenden dürfen</string>
 
          <string id="View_USB_Configuration">View USB-Konfiguration</string>
 
          <string id="Client_Downloadable_only_settings">Einstellungen für nur Download zum Client</string>
-
-         <string id="VMware_CIT">VMware Client IP-Transparenz</string>
-
-         <string id="VMware_FlashMMR">VMware FlashMMR</string>
 
          <string id="VMware_MediaProviderProxy">VMware Virtualization Pack für Skype for Business</string>
 
@@ -104,7 +106,7 @@ Aus Sicherheitsgründen sind solche Tickets nur im angegebenen Zeitraum gültig.
 
          <string id="RDPVcBridgeUnsupportedClients">Nicht unterstützte RDPVcBridge-Clients</string>
 
-       <string id="RDPVcBridgeUnsupportedClients_Desc">Eine kommagetrennte Liste von Horizon Client-Typen, die RDPVcBridge nicht unterstützen.</string>
+         <string id="RDPVcBridgeUnsupportedClients_Desc">Eine kommagetrennte Liste von Horizon Client-Typen, die RDPVcBridge nicht unterstützen.</string>
 
          <string id="Disable_Time_Zone_sync">Zeitzonensynchronisierung deaktivieren</string>
 
@@ -122,9 +124,9 @@ Diese Eigenschaft wird nur für Sitzungen mit dem PCoIP-Protokoll angewendet. Di
 
          <string id="DpiSync_Desc">Passt die systemweite DPI-Einstellung für die Remotesitzung an. Wenn diese Eigenschaft aktiviert oder nicht konfiguriert ist, wird die systemweite DPI-Einstellung der Remotesitzung dem Wert der entsprechenden DPI-Einstellung des Clientbetriebssystems angepasst. Wenn diese Eigenschaft deaktiviert ist, wird die systemweite DPI-Einstellung für die Remotesitzung nicht geändert.</string>
 
-         <string id="DpiSyncPerConnection">DPI-Synchronisierung pro Verbindung</string>
+         <string id="DpiSyncPerMonitor">DPI-Synchronisierung pro Monitor</string>
 
-         <string id="DpiSyncPerConnection_Desc">Passt die Monitor-DPI-Einstellung für die erneute Verbindung mit der Remotesitzung an. Wenn diese Eigenschaft aktiviert ist, wird die Monitor-DPI-Einstellung für die erneute Verbindung mit der Remotesitzung an den Wert der entsprechenden DPI-Einstellung des Clientbetriebssystems angepasst. Wenn diese Eigenschaft deaktiviert oder nicht konfiguriert ist, wird die Monitor-DPI-Einstellung für die erneute Verbindung mit der Remotesitzung nicht geändert.</string>
+         <string id="DpiSyncPerMonitor_Desc">Passt die DPI-Einstellung bei mehreren Monitoren während einer Remotesitzung an. Wenn diese Option aktiviert oder nicht konfiguriert ist, ändert sich die DPI-Einstellung in allen Monitoren, sodass sie während einer Remotesitzung mit der DPI-Einstellung des Client-Betriebssystems übereinstimmt. Wenn die DPI-Einstellung angepasst ist, wird die angepasste DPI-Einstellung abgeglichen. Wenn diese Option deaktiviert ist, müssen die Benutzer die Verbindung trennen und eine Verbindung zu einer neuen Remotesitzung herstellen, damit die DPI-Änderungen für alle Monitore wirksam werden.</string>
 
          <string id="DisallowCollaboration">Zusammenarbeit deaktivieren</string>
 
@@ -151,6 +153,10 @@ Diese Eigenschaft wird nur für Sitzungen mit dem PCoIP-Protokoll angewendet. Di
          <string id="CollaborationEmailInviteDelimiter_Desc">Mit dieser Einstellung werden die Trennzeichen für mehrere E-Mail-Adressen in mailto:-Links konfiguriert. Wenn diese Richtlinie nicht konfiguriert wird, ist der Standardwert zum Trennen von E-Mail-Adressen „;“ (Semikolon ohne Leerzeichen). So wird die Kompatibilität mit den gängigen E-Mail-Clients gewährleistet.
 
 Wenn bei Ihrem Standard-E-Mail-Client Probleme mit diesem Trennzeichen auftreten, können Sie es mit anderen Kombinationen versuchen, beispielsweise „, “ (Komma plus ein Leerzeichen) oder „; “ (Semikolon plus ein Leerzeichen). Dieser Wert wird vor der Platzierung im mailto:-Link URI-verschlüsselt, also verwenden Sie für diesen Eintrag keinen URI-verschlüsselten Wert.</string>
+
+         <string id="CollaborationClipboardIncludeOutlookURL">Outlook-formatierte URL in den Zwischenablagetext einschließen</string>
+
+         <string id="CollaborationClipboardIncludeOutlookURL_Desc">Wenn diese Einstellung aktiviert ist, wird eine für Outlook formatierte Einladungs-URL in den Einladungstext in der Zwischenablage aufgenommen. Aktivieren Sie diese Einstellung, wenn Sie erwarten, dass Endbenutzer den Einladungstext aus der Zwischenablage in eine E-Mail einfügen. Diese Einstellung ist standardmäßig deaktiviert.</string>
 
          <string id="CollaborationServerURLs">In Einladungsnachrichten enthaltene Server-URLs</string>
 
@@ -181,6 +187,14 @@ Wenn Sie die Werte festlegen, sollte die erste Spalte die URL mit einem optional
          <string id="SSO_retry_timeout">Zeitraum für die Wiederholung der Single-Sign-On-Anmeldung</string>
 
          <string id="SSO_retry_timeout_Desc">Legt den Zeitraum in Millisekunden fest, nach dem erneut versucht wird, eine Single-Sign-On-Anmeldung durchzuführen. Mit dem Wert 0 wird keine erneute Single-Sign-On-Anmeldung durchgeführt. Der Standardwert beträgt 5000 Millisekunden.</string>
+
+         <string id="Win10PhysicalAgentAudioOption">Audiooption für physischen Remote-Desktop-Computer bei einer Einzelsitzung unter Windows 10</string>
+
+         <string id="Win10PhysicalAgentAudioOption_Desc">Gibt an, welche Audiogeräte für den physischen Remote-Desktop-Computer bei einer Horizon-Sitzung unter Windows 10 verwendet werden sollen. Standardmäßig werden Audiogeräte verwendet, die mit einem Horizon Client-Endpunkt verbunden sind.</string>
+
+         <string id="UseClientAudioDevice">Mit einem Horizon Client-Endpunkt verbundene Audiogeräte verwenden</string>
+
+         <string id="UsePhysicalMachineAudioDevice">Mit einem physischen Remote-Desktop eines Horizon-Endpunkts unter Windows 10 verbundene Audiogeräte verwenden</string>
 
          <string id="VDI_idle_time_till_disconnect">Leerlaufzeit bis zum Trennen (VDI)</string>
 
@@ -288,7 +302,18 @@ o = Agenteneinstellung hat Vorrang vor der Clienteinstellung
 
 Beispiel: m:vid-0781_pid-554c;vid-0781_pid-9999</string>
 
-         <string id="Include_Vid_Pid">Vid/Pid-Gerät einschließen</string>
+         <string id="Exclude_Vid_Pid_Rel">Vid-/Pid-/Rel-Gerät ausschließen</string>
+
+         <string id="Exclude_Vid_Pid_Rel_Desc">Schließt ein Gerät mit einer bestimmten Hersteller-ID, Produkt-ID und Versionsnummer von der Weiterleitung aus.
+
+Syntax: {m|o}:&lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx&gt;_rel-&lt;xxxx|*&gt;&gt;[;...]
+merge-flag:
+m = Client-Einstellung wird mit der Agent-Einstellung verknüpft
+o = Agent-Einstellung hat Vorrang vor der Client-Einstellung
+
+Beispiel: m:vid-0781_pid-554c_rel-0100;vid-0781_pid-9999_rel-0010</string>
+
+         <string id="Include_Vid_Pid">Vid-/Pid-Gerät einschließen</string>
 
          <string id="Include_Vid_Pid_Desc">Legt für ein Gerät mit einer bestimmten Hersteller- und Produkt-ID fest, dass es weitergeleitet werden kann.
 
@@ -299,6 +324,18 @@ m = Clienteinstellung wird mit der Agenteneinstellung verknüpft
 o = Agenteneinstellung hat Vorrang vor der Clienteinstellung
 
 Beispiel: o:vid-0781_pid-554c;vid-0781_pid-9999</string>
+
+         <string id="Include_Vid_Pid_Rel">Vid-/Pid-/Rel-Gerät einschließen</string>
+
+         <string id="Include_Vid_Pid_Rel_Desc">Schließt ein Gerät mit einer bestimmten Hersteller-ID, Produkt-ID und Versionsnummer ein, das weitergeleitet werden kann.
+
+Syntax: {m|o}:&lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx&gt;_rel-&lt;xxxx|*&gt;&gt;[;...]
+
+merge-flag:
+m = Client-Einstellung wird mit der Agent-Einstellung verknüpft
+o = Agent-Einstellung hat Vorrang vor der Client-Einstellung
+
+Beispiel: o:vid-0781_pid-554c_rel-0100;vid-0781_pid-9999_rel-0010</string>
 
          <string id="Exclude_device_family">Gerätefamilie ausschließen</string>
 
@@ -329,6 +366,37 @@ Beispiel: m:storage;audio-out</string>
          <string id="Exclude_all_Desc">Blockiert alle Geräte, solange sie nicht über eine Filterregel eingeschlossen werden.
 
 Standard: Alle Geräte sind zulässig</string>
+
+         <string id="HidOpt_Include_Vid_Pid">HID-Optimierung Vid/Pid-Gerät einbeziehen</string>
+
+         <string id="HidOpt_Include_Vid_Pid_Desc">Legt für ein HID-Gerät mit einer bestimmten Hersteller- und Produkt-ID fest, dass es optimiert werden kann.
+
+Syntax: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx|*&gt;&gt;[;...]
+
+Beispiel: vid-056a_pid-0302;vid-046d_pid-c628</string>
+
+         <string id="Exclude_Auto_Vid_Pid">Verbindung für Vid/Pid-Gerät automatisch ausschließen</string>
+
+         <string id="Exclude_Auto_Vid_Pid_Desc">Schließt ein Gerät mit einer bestimmten Anbieter- und Produkt-ID von der automatischen Weiterleitung aus.
+
+Syntax: {m|o}:&lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx|*&gt;&gt;[;...]
+merge-flag:
+m = Clienteinstellung wird mit der Agenteneinstellung verknüpft
+o = Agenteneinstellung hat Vorrang vor der Clienteinstellung
+
+Beispiel: m:vid-0781_pid-554c;vid-0781_pid-9999</string>
+
+         <string id="Exclude_auto_device_family">Verbindungsgeräte-Familie automatisch ausschließen</string>
+
+         <string id="Exclude_auto_device_family_Desc">Schließt eine Familie mit Geräten von der automatischen Weiterleitung aus.
+
+Syntax: {m|o}:&lt;Familienname&gt;[;...]
+
+merge-flag:
+m = Clienteinstellung wird mit der Agenteneinstellung verknüpft
+o = Agenteneinstellung hat Vorrang vor der Clienteinstellung
+
+Beispiel: o:storage;hid</string>
 
          <string id="Exclude_Vid_Pid_from_Split">Vid/Pid-Gerät vom Splitten ausschließen</string>
 
@@ -407,18 +475,6 @@ Standard: Weiterleitung ist blockiert</string>
 
          <string id="Allow_Auto_Device_Splitting_Desc">Schließt die Komponentengeräte von Verbundgeräten von der automatischen Behandlung als separate Geräte aus.</string>
 
-         <string id="Enable_flash_MMR">Flash-Multimedia-Umleitung aktivieren</string>
-
-         <string id="Enable_flash_MMR_Desc">Legt fest, ob die Flash-Multimedia-Umleitung (FlashMMR) auf dem Agenten aktiviert ist. FlashMMR leitet Flash-Multimediadaten von den angegebenen URLs über den TCP-Kanal an den Client weiter und ruft den lokalen Flash-Player zur Wiedergabe direkt auf dem Client auf. Mit aktivierter Flash-Multimedia-Umleitung wird bei der Flash-Wiedergabe die Inanspruchnahme von CPU und Netzwerkbandbreite auf dem Agenten erheblich reduziert.</string>
-
-         <string id="Min_rect_size_to_enable_flash_MMR">Mindestgröße des Rechtecks zur Aktivierung von FlashMMR</string>
-
-         <string id="Min_rect_size_to_enable_flash_MMR_Desc">Die Mindestgröße des Rechtecks zur Aktivierung von FlashMMR wird in der Form „Breite,Höhe“ angegeben, z. B. „200,300“. Die Einheit für die Größe ist „Pixel“. Die Flash-Umleitung wird nur aktiviert, wenn sowohl die Breite wie die Höhe gleich oder größer als die entsprechenden Werte im GPO sind. Wenn dieses GPO nicht konfiguriert ist, wird für die Rechteckgröße das Wertepaar „320,200“ verwendet.</string>
-
-         <string id="FlashMMRUrlList">Host-URL-Liste zur Aktivierung von FlashMMR</string>
-
-         <string id="FlashMMRUrlList_Desc">Legt die URL-Listen zur Aktivierung von FlashMMR fest. Der Name der Hosts muss entweder mit dem Präfix „http://“ oder „https://“ (z. B. „http://www.youtube.com“) oder mit einem Platzhalterzeichen (z. B. „https://*.youtube.com“) angegeben werden. Geben Sie die Host-URL in die Spalte „Wertname“ ein, die Spalte „Wert“ wird ignoriert.</string>
-
          <string id="ShowVMWMediaProviderProxyIcon">Symbol anzeigen</string>
 
          <string id="ShowVMWMediaProviderProxyIcon_Desc">Zeigt das Symbol für das Virtualization Pack für Skype for Business an. Diese Richtlinie ist standardmäßig aktiviert. Das Symbol wird nicht angezeigt, wenn die Richtlinie „Symbol anzeigen“ für das Virtualization Pack für Skype for Business deaktiviert ist und Sie die Anrufstatistik oder Nachrichten nicht anzeigen können.</string>
@@ -449,10 +505,6 @@ Diese Richtlinie ist standardmäßig nicht konfiguriert. </string>
 
          <string id="DisableAECExtendedFilter_Desc">Wenn diese Option aktiviert ist, verwendet VMware Virtualization Pack für Skype for Business den erweiterten Filter für die akustische Echounterdrückung nicht. Standardmäßig verwendet VMware Virtualization Pack für Skype for Business den erweiterten Filter für die akustische Echounterdrückung. Dieser Filter ermöglicht eine bessere Echo- und Rückkopplungsunterdrückung. Die Einstellung eignet sich besonders für Szenarios, in denen sich Mikrofon und Lautsprecher des Horizon Client-System nahe beieinander befinden.</string>
 
-         <string id="Enable_CIT">Aktivieren</string>
-
-         <string id="Enable_CIT_Desc">VMware Client IP-Transparenz aktivieren Die Einstellung wird nach der nächsten Anmeldung wirksam.</string>
-
          <string id="Proxy_default_ie_autodetect">Proxy-Einstellungen automatisch erkennen</string>
 
          <string id="Proxy_default_ie_autodetect_Desc">Standard-IE-Verbindungseinstellung. Mit dieser Einstellung wird die automatische Erkennung der Einstellungen unter „Internetoptionen/LAN-Einstellungen“ eingeschaltet.</string>
@@ -471,10 +523,6 @@ Diese Richtlinie ist standardmäßig nicht konfiguriert. </string>
 
          <string id="Use_Default">Standardwert für Java-Proxy-Server verwenden</string>
 
-         <string id="FlashMMRUrlListEnableType">Verwendung der FlashMMR-URL-Liste festlegen</string>
-
-         <string id="FlashMMRUrlListEnableType_Desc">Definiert die Art der Regel (Positivliste oder Schwarze Liste) zur Aktivierung/Deaktivierung von FlashMMR. Wenn die Positivliste angewendet wird, kann FlashMMR nur für die URLs in der URL-Liste aktiviert werden. Bei Verwendung einer Schwarzen Liste ist FlashMMR für die URLs in der URL-Liste deaktiviert. Standardmäßig wird eine Positivliste verwendet.</string>
-
          <string id="Enable_white_list">Positivliste aktivieren</string>
 
          <string id="Enable_black_list">Schwarze Liste aktivieren</string>
@@ -483,7 +531,7 @@ Diese Richtlinie ist standardmäßig nicht konfiguriert. </string>
 
          <string id="Enable_HTML5_FEATURES">VMware HTML5-Funktionen aktivieren</string>
 
-         <string id="Enable_HTML5_FEATURES_Desc">VMware HTML5-Funktionen aktivieren. Die Richtlinie muss auf „Aktiviert“ oder „Nicht konfiguriert“ festgelegt sein, damit die VMware HTML5 Multimedia-, die Geolocation- oder Browserumleitung bzw. die Medienoptimierung für Microsoft Teams verwendet werden kann.  Wenn diese Richtlinie auf „Deaktiviert“ festgelegt ist, kann keine VMware HTML5-Funktion verwendet werden. Die Einstellung wird nach der nächsten Anmeldung wirksam.</string>
+         <string id="Enable_HTML5_FEATURES_Desc">VMware HTML5-Funktionen aktivieren. Wenn diese Richtlinie auf „Aktiviert“ festgelegt ist, können VMware HTML5 Multimedia-Umleitung, Geolocation-Umleitung, Browser-Umleitung oder Medienoptimierung für Microsoft Teams verwendet werden.  Wenn diese Richtlinie auf „Deaktiviert“ festgelegt ist, kann keine VMware HTML5-Funktion verwendet werden. Die Einstellung wird nach der nächsten Anmeldung wirksam.</string>
 
          <string id="HTML5FEATURES_Disable_AudoDetect_Intranet">Automatische Intranet-Erkennung deaktivieren</string>
 
@@ -513,15 +561,27 @@ Hinweis: Diese Richtlinie muss auf „Aktiviert“ festgelegt sein, wenn (1) der
 
          <string id="HTML5MMR_Enable_Edge_Chromium_Desc">Diese Richtlinie wird nur verwendet, wenn die VMware HTML5 Multimedia-Umleitung aktiviert ist. Wenn sie nicht konfiguriert ist, lautet der Standardwert wie die Einstellung für „VMware HTML5 Multimedia-Umleitung aktivieren“. </string>
 
+         <string id="HTML5MMR_Auto_Adjust_Visual_Effect">Visuelle Effekte von Fenstern automatisch anpassen</string>
+
+         <string id="HTML5MMR_Auto_Adjust_Visual_Effect_Desc">Diese Richtlinie wird verwendet, um die visuellen Effekte des Fensters automatisch für die VMware HTML5 Multimedia-Umleitung anzupassen. Wenn die Richtlinie weder konfiguriert noch aktiviert ist, wird keine automatische Anpassung der visuellen Effekte von Fenstern durchgeführt.</string>
+
          <string id="VMware_GEO_REDIR">VMware Geolocation-Umleitung</string>
 
          <string id="Enable_GEO_REDIR">VMware Geolocation-Umleitung aktivieren</string>
 
          <string id="Enable_GEO_REDIR_Desc">Aktivieren Sie die VMware Geolocation-Umleitungsfunktion. Die Einstellung wird nach der nächsten Anmeldung wirksam.</string>
 
+         <string id="Enable_GEO_REDIR_For_Chrome">VMware Geolocation-Umleitung für Chrome Browser aktivieren</string>
+
+         <string id="Enable_GEO_REDIR_For_Chrome_Desc">VMware Geolocation-Umleitungsfunktion für Chrome Browser aktivieren. Die Einstellung wird nach der nächsten Anmeldung wirksam.</string>
+
+         <string id="Enable_GEO_REDIR_For_Edge_Chromium">VMware Geolocation-Umleitung für Microsoft Edge-Browser (Chromium) aktivieren</string>
+
+         <string id="Enable_GEO_REDIR_For_Edge_Chromium_Desc">VMware Geolocation-Umleitungsfunktion für Microsoft Edge-Browser (Chromium) aktivieren. Die Einstellung wird nach der nächsten Anmeldung wirksam.</string>
+
          <string id="GeoRedirUrlList">Aktivieren Sie die URL-Liste für die VMware Geolocation-Umleitung.</string>
 
-         <string id="GeoRedirUrlList_Desc">Gibt die URL-Liste zum Aktivieren der Geolocation-Umleitungsfunktion an. Geben Sie das URL-Muster in der Spalte „Wertname“ an, wie z. B. „https://www.youtube.com/*“. Die Spalte „Wert“ sollte leer sein und ist für die zukünftige Verwendung vorgesehen. Diese URL-Liste wird von der (1) VMware Horizon Geolocation-Umleitungserweiterung für Chrome-Browser in allen RDSH- und VDI-Umgebungen sowie vom (2) VMware Horizon Geolocation-Umleitungs-Plug-In für Internet Explorer in RDSH- und Windows 7 VDI-Umgebungen verwendet.</string>
+         <string id="GeoRedirUrlList_Desc">Gibt die URL-Liste zum Aktivieren der Geolocation-Umleitungsfunktion an. Geben Sie das URL-Muster in der Spalte „Wertname“ an, wie z. B. „https://www.youtube.com/*“. Die Spalte „Wert“ sollte leer sein und ist für die zukünftige Verwendung vorgesehen. Diese URL-Liste wird von der (1) VMware Horizon Geolocation-Umleitungserweiterung für Chrome- und Microsoft Edge (Chromium)-Browser in allen RDSH- und VDI-Umgebungen sowie vom (2) VMware Horizon Geolocation-Umleitungs-Plug-In für Internet Explorer in RDSH- und Windows 7 VDI-Umgebungen verwendet.</string>
 
          <string id="GeoRedirDistanceDelta">Mindestentfernung zum Melden von Standort-Updates festlegen</string>
 
@@ -532,6 +592,14 @@ Hinweis: Diese Richtlinie muss auf „Aktiviert“ festgelegt sein, wenn (1) der
          <string id="Enable_BROWSER_REDIR">VMware Browserumleitung aktivieren</string>
 
          <string id="Enable_BROWSER_REDIR_Desc">Aktivieren Sie die Funktion „VMware Browserumleitung“. Die Einstellung wird nach der nächsten Anmeldung wirksam.</string>
+
+         <string id="Enable_BROWSER_REDIR_For_Chrome">VMware Browserumleitung für Chrome Browser aktivieren</string>
+
+         <string id="Enable_BROWSER_REDIR_For_Chrome_Desc">VMware Browser-Umleitungsfunktion für Chrome Browser aktivieren. Die Einstellung wird nach der nächsten Anmeldung wirksam.</string>
+
+         <string id="Enable_BROWSER_REDIR_For_Edge_Chromium">VMware Browser-Umleitungsfunktion für Microsoft Edge-Browser (Chromium) aktivieren</string>
+
+         <string id="Enable_BROWSER_REDIR_For_Edge_Chromium_Desc">VMware Browser-Umleitungsfunktion für Microsoft Edge-Browser (Chromium) aktivieren. Die Einstellung wird nach der nächsten Anmeldung wirksam.</string>
 
          <string id="BrowserRedirFallbackWhitelistErr">Automatisches Fallback nach einem Whitelist-Verstoß aktivieren</string>
 
@@ -553,24 +621,46 @@ Hinweis: Diese Richtlinie muss auf „Aktiviert“ festgelegt sein, wenn (1) der
 
          <string id="Enable_Teams_Redir">Medienoptimierung für Microsoft Teams aktivieren</string>
 
-         <string id="Enable_Teams_Redir_Desc">Medienoptimierung für Microsoft Teams aktivieren. Die Richtlinie muss auf „Aktiviert“ festgelegt sein, damit die Medienoptimierung für Microsoft Teams angewendet werden kann. Die Einstellung wird nach der nächsten Anmeldung wirksam.</string>
+         <string id="Enable_Teams_Redir_Desc">Diese Einstellung wird zum Aktivieren oder Deaktivieren der Microsoft Teams-Optimierung verwendet.
+
+Wenn Horizon Agent installiert ist, wird ein teamsEnabled-Registrierungsschlüssel auf dem Agenten erstellt, der die Microsoft Teams-Optimierung ermöglicht.  Standardmäßig können Benutzer die Microsoft Teams-Optimierung nutzen oder nicht nutzen, indem sie die Einstellung „Medienoptimierung für WebRTC-basierte Anwendungen“ in Horizon Client konfigurieren.
+
+Wenn diese Richtlinie auf „Aktiviert“ festgelegt ist, ist die Microsoft Teams-Optimierung aktiviert. Wenn diese Option und die Option „Clientseitige WebRTC-Optimierung erzwingen“ aktiviert sind, wird die Teams-Medienoptimierung auf dem Endpunkt erzwungen und alle Client-Einstellungen oder andere Verwaltungsrichtlinien (z. B. Benutzerrichtlinien auf Chrome-Ebene für Chrome-Client) werden ignoriert. Wenn diese Option aktiviert ist und die Option „Clientseitige WebRTC-Optimierung erzwingen“ deaktiviert ist, hat der Benutzer die Möglichkeit, Microsoft Teams-Optimierung zu verwenden oder nicht zu verwenden, indem er die Einstellung „Medienoptimierung für WebRTC-basierte Anwendungen“ von Horizon Client konfiguriert.
+
+Wenn für die Richtlinie „Deaktiviert“ festgelegt wurde, ist Microsoft Teams-Optimierung deaktiviert und kann nicht verwendet werden. Die Horizon Client-Einstellung „Medienoptimierung für WebRTC-basierte Anwendungen“ hat keine Auswirkungen.
+
+Standardmäßig ist diese Richtlinie auf „Nicht konfiguriert“ festgelegt. Wenn die Richtlinie jedoch geändert und dann wieder in „Nicht konfiguriert“ geändert wird, wird der teamsEnabled-Registrierungsschlüssel entfernt, und Microsoft Teams-Optimierung wird nicht verwendet.
+
+Die Einstellung wird nach der nächsten Anmeldung wirksam.</string>
+
+         <string id="Enable_Electron_App_Redir">Medienoptimierung für allgemeine Electron Apps aktivieren</string>
+
+         <string id="Enable_Electron_App_Redir_Desc">Diese Einstellung wird zum Aktivieren oder Deaktivieren der Electron-App-Optimierung verwendet.
+
+Bei „Aktiviert“ oder „Nicht konfiguriert“ ist Electron-App-Optimierung aktiviert. Wenn Sie außerdem erzwingen möchten, dass der Endbenutzer die Optimierung verwendet (sofern auf dem Endpunkt unterstützt), wählen Sie „Aktiviert“ und dann „Clientseitige WebRTC-Optimierung erzwingen“ aus. „Nicht konfiguriert“ berücksichtigt die Clienteinstellung, sofern verfügbar.
+Details:
+Wenn diese Option aktiviert ist und die Option „Clientseitige WebRTC-Optimierung erzwingen“ deaktiviert ist, hat der Benutzer die Möglichkeit, Electron-App-Optimierung zu verwenden oder nicht zu verwenden, indem er die Einstellung „Medienoptimierung für WebRTC-basierte Anwendungen“ von Horizon Client konfiguriert. Wenn diese Option aktiviert ist, wird die Electron-App-Medienoptimierung für die Endpunkt- und Client-Einstellung erzwungen, oder eine andere Administratorrichtlinie (z. B. die Benutzerrichtlinie auf Chrome-Ebene für Chrome Client) wird ignoriert.
+Die Standardeinstellung für die Electron-App-Optimierungseinstellung ist „Nicht konfiguriert“, wodurch Electron-App-Optimierung aktiviert wird und der Benutzer die Einstellung „Medienoptimierung für WebRTC-basierte Anwendungen“ konfigurieren kann.
+Bei „Deaktiviert“ ist Electron-App-Optimierung deaktiviert und kann nicht verwendet werden. Die Horizon Client-Einstellung „Medienoptimierung für WebRTC-basierte Anwendungen“ hat keine Auswirkungen.
+
+Die Einstellung wird nach der nächsten Anmeldung wirksam.</string>
 
          <string id="Enable_AEC_Teams_Redir">Akustische Software-Echounterdrückung zur Medienoptimierung für Microsoft Teams aktivieren</string>
 
          <string id="Enable_AEC_Teams_Redir_Desc">Mit dieser Einstellung können Sie die akustische Software-Echounterdrückung (Software Acoustic Echo Cancellation, AEC) zur Medienoptimierung für Microsoft Teams konfigurieren.
 
-Wenn „Aktiviert“, ist AEC in der Software aktiviert. Aktivieren Sie „Empfohlenen AEC-Algorithmus verwenden“, um eine optimale Audioqualität und -leistung zu erzielen. Deaktivieren Sie „Empfohlenen AEC-Algorithmus verwenden“, um einen AEC-Algorithmus zu verwenden, der weniger CPU verwendet, aber die Audioqualität beeinträchtigt. Diese Option ist nützlich für Low-End-Prozessoren mit geringer Gleitkommaleistung. Die Verwendung des empfohlenen AEC-Algorithmus wird dringend empfohlen und ist in den meisten Fällen ideal.
+Wenn „Aktiviert“, ist AEC in der Software aktiviert. Aktivieren Sie „Empfohlenen AEC-Algorithmus verwenden“, um eine optimale Audioqualität und -leistung zu erzielen. Deaktivieren Sie „Empfohlenen AEC-Algorithmus verwenden“, um einen AEC-Algorithmus zu verwenden, der zwar weniger CPU verwendet, aber die Audioqualität beeinträchtigt. Diese Option ist nützlich für Low-End-Prozessoren mit geringer Gleitkommaleistung. Die Verwendung des empfohlenen AEC-Algorithmus wird dringend empfohlen und ist in den meisten Fällen bestens geeignet.
 
 Wenn „Deaktiviert“, wird AEC in der Software deaktiviert und nicht mehr verwendet.
 
-Wenn „Nicht konfiguriert“, wird AEC in der Software unter Verwendung des empfohlenen Algorithmus aktiviert. Bei Verwendung eines Windows-Clients wird Software-AEC verwendet, wenn Hardware-AEC nicht verfügbar ist. Wenn Hardware-AEC verfügbar ist (z. B. wenn das Headset über integriertes AEC verfügt), wird Software-AEC nicht verwendet. Bei Verwendung eines Nicht-Windows-Clients wird Software-AEC unabhängig davon verwendet, ob Hardware-AEC verfügbar ist.</string>
+Wenn „Nicht konfiguriert“, wird AEC in der Software unter Verwendung des empfohlenen Algorithmus aktiviert. Bei Verwendung eines Windows-Clients wird Software-AEC verwendet, wenn Hardware-AEC nicht verfügbar ist. Wenn Hardware-AEC verfügbar ist (z. B. wenn das Headset über integrierte AEC verfügt), wird Software-AEC nicht verwendet. Bei Verwendung eines Nicht-Windows-Clients wird Software-AEC unabhängig davon verwendet, ob Hardware-AEC verfügbar ist.</string>
 
          <string id="Enable_Datachannel_Teams_Redir">Datenkanal für Medienoptimierung für Microsoft Teams aktivieren</string>
          <string id="Enable_Datachannel_Teams_Redir_Desc">Diese Einstellung wird verwendet, um den Datenkanal für die Medienoptimierung für Microsoft Teams zu aktivieren oder zu deaktivieren.
 
-Wenn „Aktiviert“, kann der Datenkanal für die Medienoptimierung für Microsoft Teams verwendet werden, und Funktionen, die den Datenkanal benötigen, sind verfügbar (z. B. Live-Beschriftungen).
+Wenn „Aktiviert“, kann der Datenkanal für die Medienoptimierung für Microsoft Teams verwendet werden, und Funktionen, die den Datenkanal benötigen, sind verfügbar (z. B. Liveuntertitel).
 
-Wenn „Deaktiviert“, kann der Datenkanal nicht für die Medienoptimierung für Microsoft Teams verwendet werden, und Funktionen, die den Datenkanal erfordern, sind nicht verfügbar.
+Wenn „Deaktiviert“, kann der Datenkanal nicht für die Medienoptimierung für Microsoft Teams verwendet werden, und Funktionen, die den Datenkanal benötigen, sind nicht verfügbar.
 
 Wenn „Nicht konfiguriert“, ist der Datenkanal aktiviert.</string>
 
@@ -580,23 +670,25 @@ Wenn „Nicht konfiguriert“, ist der Datenkanal aktiviert.</string>
 
          <string id="Enable_Sharing_Client_Screen_InAppSession">Aktivieren Sie die Freigabe des Client-Desktopbildschirms, während Sie den Fernzugriff auf die Anwendung Microsoft Teams im Anwendungsfreigabemodus erlauben</string>
 
-         <string id="Enable_Sharing_Client_Screen_InAppSession_Desc">Während des Fernzugriffs für die Microsoft Teams-Anwendung wird die Bildschirmfreigabefunktion auf dem Bildschirm „Client-Desktop“ anstelle des Bildschirms des Remote-Desktops verwendet. Wählen Sie „deaktiviert“, um die Funktion „Bildschirmfreigabe“ im Anwendungsfreigabemodus zu deaktivieren. Wenn Sie „Nicht konfiguriert“ auswählen, wird die Bildschirmfreigabe standardmäßig den Bildschirm „Client-Desktop“ freigeben.</string>
-
-         <string id="VMware_DeviceBridge">VMware-Gerätebrücke</string>
-
-         <string id="Disable_DeviceBridge_BAS">Gerätebrücken-BAS-Plug-in deaktivieren</string>
-
-         <string id="Disable_DeviceBridge_BAS_Desc">Deaktiviert die vom BAS-System unterstützten Fingerscanner. Die Einstellung wird nach der nächsten Anmeldung wirksam.</string>
+         <string id="Enable_Sharing_Client_Screen_InAppSession_Desc">Während des Fernzugriffs für die Microsoft Teams-Anwendung wird die Bildschirmfreigabefunktion auf dem Bildschirm „Client-Desktop“ anstelle des Bildschirms des Remote-Desktops verwendet. Wählen Sie „deaktiviert“, um die Funktion „Bildschirmfreigabe“ im Anwendungsfreigabemodus zu deaktivieren. Wenn Sie „Aktiviert“ oder „Nicht konfiguriert“ wählen, kann die Bildschirmfreigabefunktion den Client-Desktopbildschirm freigeben.</string>
 
          <string id="Enable_E911">E911 für Microsoft Teams aktivieren</string>
 
          <string id="Enable_E911_Desc">Während Microsoft Teams im optimierten Modus ausgeführt wird, sendet der Client E911-Daten an Microsoft. Um die Freigabe von E911-Daten für Microsoft zu deaktivieren, wählen Sie „Deaktiviert“ aus. Bei Auswahl von „Aktiviert“ oder „Nicht konfiguriert“ werden die E911-Daten für Microsoft freigegeben.</string>
 
+         <string id="Enable_HID">Aktivieren mithilfe der Schaltfläche „Client-HID-Geräte“ für Microsoft Teams</string>
+
+         <string id="Enable_HID_Desc">Während Microsoft Teams im optimierten Modus ausgeführt wird, kann der Benutzer über die Schaltfläche „Client-HID-Geräte“ mit Microsoft Teams interagieren. Um die Unterstützung von Client-HID-Geräten zu deaktivieren, wählen Sie „Deaktiviert“ aus. Bei Auswahl von „Aktiviert“ oder „Nicht konfiguriert“ wird die Unterstützung von Client-HID-Geräten zugelassen.</string>
+
+         <string id="Enable_Background_Effects">Hintergrundeffekte für Microsoft Teams aktivieren</string>
+
+         <string id="Enable_Background_Effects_Desc">Während Microsoft Teams im optimierten Modus ausgeführt wird, können Benutzer einen virtuellen Hintergrund für Anrufe und Meetings auswählen. Um die Unterstützung für Hintergrundeffekte zu deaktivieren, wählen Sie „Deaktiviert“ aus. Bei Auswahl von „Aktiviert“ oder „Nicht konfiguriert“ wird die Unterstützung von Hintergrundeffekten zugelassen.</string>
+
          <string id="VMware_AppTap_Config">VMware AppTap-Konfiguration</string>
 
          <string id="ProcessIgnoreList">Zu ignorierende Prozesse beim Erkennen einer leeren Anwendungssitzung</string>
 
-         <string id="ProcessIgnoreList_Desc">Gibt die Liste der Prozesse an, die ignoriert werden sollen, wenn leere Anwendungssitzungen erkannt werden. Sie können entweder einen Prozessdateinamen oder einen vollständigen Pfad angeben. Diese Werte werden unter Berücksichtigung der Groß-/Kleinschreibung ausgewertet. Umgebungsvariablen sind in Pfaden nicht zulässig. UNC-Netzwerkpfade sind zulässig (z. B. \\vmware\temp\app.exe).</string>
+         <string id="ProcessIgnoreList_Desc">Gibt die Liste der Prozesse an, die ignoriert werden sollen, wenn leere Anwendungssitzungen erkannt werden. Sie können entweder einen Prozessdateinamen oder einen vollständigen Pfad angeben. Diese Werte werden ohne Berücksichtigung der Groß-/Kleinschreibung ausgewertet. Umgebungsvariablen sind in Pfaden nicht zulässig. UNC-Netzwerkpfade sind zulässig (z. B. \\vmware\temp\app.exe).</string>
 
          <string id="VDI_disconnect_time_till_logoff">Zeitlimit für getrennte Sitzung (VDI)</string>
 
@@ -606,6 +698,42 @@ Wenn „Nie“ ausgewählt ist, werden keine getrennten VDI-Desktop-Sitzungen au
 Eine ähnliche Einstellung ist in View-Verbindungsserver-Administrator vorhanden. Sie befindet sich in den Desktop-Pool-Einstellungen und heißt „Nach Trennung automatisch abmelden“. Wenn sowohl diese Einstellung als auch die View-Verbindungsserver-Administrator-Einstellung konfiguriert sind, hat der hier ausgewählte Wert Vorrang.
 Wenn Sie beispielsweise „Nie“ auswählen, wird verhindert, dass eine getrennte Sitzung (auf diesem Computer) abgemeldet wird, unabhängig davon, was über View-Verbindungsserver-Administrator festgelegt ist.</string>
 
+         <string id="RDS_idle_time_till_disconnect">RDS-Leerlaufzeit bis zum Trennen der Verbindung</string>
+
+         <string id="RDS_idle_time_till_disconnect_Desc">Gibt den Zeitraum an, nach dem eine inaktive Remotedesktopdienste-Sitzung automatisch getrennt wird.
+Wenn „Nie“ ausgewählt ist, werden keine Remotedesktopdienste-Sitzungen auf diesem Computer getrennt.</string>
+
+         <string id="RDS_disconnect_time_till_logoff">RDS-Verbindungsunterbrechungszeit bis zur Abmeldung</string>
+
+         <string id="RDS_disconnect_time_till_logoff_Desc">Gibt den Zeitraum an, nach dem eine getrennte Remotedesktopdienste-Sitzung automatisch abgemeldet wird.
+Wenn „Nie“ ausgewählt ist, werden keine getrennten Remotedesktopdienste-Sitzungen auf diesem Computer abgemeldet.</string>
+
+         <string id="RDS_active_time_till_disconnect">RDS-Verbindungszeit bis zum Trennen der Verbindung</string>
+
+         <string id="RDS_active_time_till_disconnect_Desc">Gibt die maximale Zeit an, die eine Remotedesktopdienste-Sitzung aktiv sein kann, bevor sie automatisch getrennt wird.
+Wenn „Nie“ ausgewählt ist, werden keine Remotedesktopdienste-Sitzungen auf diesem Computer getrennt.</string>
+
+         <string id="RDS_end_session_time_limit">RDS-Sitzung beenden, wenn Zeitlimit erreicht ist</string>
+
+         <string id="RDS_end_session_time_limit_Desc">Gibt an, ob eine Remotedesktopdienste-Sitzung, bei der die Zeit abgelaufen ist, beendet werden soll, anstatt die Verbindung zu trennen.
+Wenn diese Option eingestellt ist, wird die Sitzung beendet (der Benutzer wird abgemeldet und die Sitzung wird vom Server gelöscht), nachdem die Zeitlimits für aktive oder inaktive Sitzungen erreicht wurden. Standardmäßig werden Remotedesktopdienste-Sitzungen getrennt, nachdem deren Zeitlimit erreicht wurde.</string>
+
+         <string id="RDS_threshold_connecting_session">Schwellenwert für die Verbindungssitzung</string>
+
+         <string id="RDS_threshold_connecting_session_Desc">Gibt die maximale Anzahl an Sitzungen an, die sich gleichzeitig bei der RDSH-Maschine anmelden können, wobei wiederaufgenommene Verbindungen ausgenommen werden.
+
+Bei aktivierter Option wird der Sitzungsschwellenwert zunächst auf 20 festgelegt, sollte jedoch je nach Anwendungsfall geändert werden. Bei Auswahl von 0 wird der Schwellenwert für die Verbindungssitzung deaktiviert.
+
+Diese Richtlinie ist standardmäßig deaktiviert. Wenn die Richtlinie nicht konfiguriert ist, wird der Schwellenwert für die Verbindungssitzung deaktiviert.</string>
+
+         <string id="RDS_threshold_load_index">Schwellenwert für Ladeindex</string>
+
+         <string id="RDS_threshold_load_index_Desc">Gibt den Mindestladeindex an, ab dem die RDSH-Maschine mit der Ablehnung von Sitzungsanmeldungen beginnt, wobei wiederaufgenommene Verbindungen ausgenommen werden.
+
+Bei aktivierter Option wird der Auslastungsschwellenwert zunächst auf 0 festgelegt, sollte jedoch je nach Anwendungsfall geändert werden. Bei Auswahl von 0 wird der Schwellenwert für den Ladeindex deaktiviert.
+
+Diese Richtlinie ist standardmäßig deaktiviert. Wenn die Richtlinie nicht konfiguriert ist, wird der Schwellenwert für den Ladeindex deaktiviert.</string>
+
          <string id="Prewarm_disconnect_time_till_logoff">Zeitlimit für Vorwärmsitzung</string>
 
          <string id="Prewarm_disconnect_time_till_logoff_Desc">Gibt den Zeitraum an, nach dem sich eine Vorwärmsitzung automatisch abmeldet.</string>
@@ -614,7 +742,12 @@ Wenn Sie beispielsweise „Nie“ auswählen, wird verhindert, dass eine getrenn
 
          <string id="EnableUWPOnRDSH_Desc">Mit dieser Richtlinie wird festgelegt, ob UWP-Anwendungen auf RDSH-Farmen mit einer Betriebssystemversion, die UWP-Anwendungen unterstützt, gescannt und gestartet werden können. Diese Richtlinie gilt nicht für Desktop-Betriebssystemplattformen wie VDI-App-Remoting. Wenn diese Option aktiviert ist, können UWP-Anwendungen als gehostete Apps von RDSH-Farmen verwendet werden. Sie müssen den wsnm-Dienst oder den RDSH-Server neu starten, damit das GPO wirksam wird. In der VMware-Dokumentation finden Sie Informationen zu den unterstützten Plattformen und darüber, ob diese Einstellung standardmäßig aktiviert oder deaktiviert ist.</string>
 
-         <string id="TIME_NEVER">Nie</string>
+        <string id="HandleLegalNoticeInWindow">Rechtliche Hinweise im Fenster umleiten</string>
+
+        <string id="HandleLegalNoticeInWindow_Desc">Wenn diese Richtlinie aktiviert ist, werden rechtliche Hinweise an den Horizon Client in einem Fenster mit der angegebenen Größe umgeleitet. Die Breite und Höhe in dieser Richtlinie werden in Pixel angegeben. Bei Monitoren mit hohen DPI-Werten werden die Größen auf der Grundlage der DPI-Werte multipliziert. Diese Funktionalität wird nur für RDSH-gehostete Anwendungen unterstützt.
+Diese Richtlinie ist standardmäßig deaktiviert. Der RDSH-Server und der View Client müssen neu gestartet werden, damit das GPO wirksam wird.</string>
+
+        <string id="TIME_NEVER">Nie</string>
 
          <string id="TIME_1MIN">1 Minute</string>
 
@@ -659,7 +792,52 @@ Wenn Sie beispielsweise „Nie“ auswählen, wird verhindert, dass eine getrenn
          <string id="EnableBatStatRedir">Aktivieren der Akkustandsumleitung</string>
 
          <string id="EnableBatStatRedir_Desc">Mit dieser Richtlinie wird festgelegt, ob der Akkustand umgeleitet wird. Ist diese Richtlinie nicht konfiguriert, ist die Akkustandsumleitung aktiviert.</string>
+         <string id="VMware_Watermark">Wasserzeichen</string>
+         <string id="VMware_Watermark_Config">Konfiguration des Wasserzeichens</string>
+         <string id="Desktop_Watermark_Configuration_Desc">Mit dieser Einstellung können Sie ein Wasserzeichen konfigurieren, das auf Ihrem virtuellen Desktop angezeigt wird. Im Bereich „Text“ können Sie festlegen, was im Wasserzeichen angezeigt werden soll. Optionen:
 
+%ViewClient_IP_Address%
+%ViewClient_Broker_UserName%
+%ViewClient_Broker_DomainName%
+%COMPUTERNAME%
+%USERDOMAIN%
+%USERNAME%
+%ViewClient_ConnectTime%   – Datum in Monat/Tag/Jahr
+%ViewClient_ConnectTicks%  – Zeit in Stunde:Minute:Sekunde
+
+Beispiel für „Text“:
+%USERDOMAIN%\%USERNAME%
+%COMPUTERNAME% am %ViewClient_ConnectTime%
+%ViewClient_IP_Address%
+
+Die Zeichenbegrenzung für den „Text“ beträgt 256 Zeichen und ist nach der Erweiterung auf 1.024 Zeichen begrenzt.
+
+„Image Layout“ (Bildlayout) gibt das Layout des Wasserzeichens an. Unterstützt werden „Tile“ (Kachel), „Multiple“ (Mehrere) und „Center“ (Zentriert). „Multiple“ (Mehrere) zeigt das Wasserzeichen in der Mitte und in den Ecken an. Diese Einstellung wird für App-Sitzungen ignoriert, und als Layout wird immer eine Kachel angezeigt.
+Mit „Text Rotation“ (Textdrehung) können Sie einen Rotationswinkel für den Text des Wasserzeichens auswählen.
+Mit „Opacity“ (Deckkraft) können Sie die Transparenz des Textes festlegen.
+„Margin“ (Rand) legt die Entfernung zwischen dem Wasserzeichen und dem Rand des virtuellen Desktopbildschirms fest. Diese Einstellung gilt nur für das Kachel-Layout.
+„Textfarbe“ gibt die Farbe des Wasserzeichentexts unter Verwendung der durch Leerzeichen getrennten RGB-Farbwerte im Dezimalformat an, und die Textkontur wird in kontrastierender Farbe dargestellt. Standardmäßig wird der Text in Weiß und der Umriss in Schwarz dargestellt.
+„Schriftgröße“ gibt die Größe des Wasserzeichentexts an. Wenn dieser Wert 0 ist, wird die Standardschriftgröße angewendet.
+„Aktualisierungsintervall“ gibt das Intervall in Sekunden an, in dem das Wasserzeichen aktualisiert wird. Wenn 0 angegeben wird, wird die Aktualisierung des Wasserzeichens deaktiviert. Der Höchstwert beträgt 86400 Sekunden (24 Stunden).
+</string>
+         <string id="Tile">Kachel</string>
+         <string id="Multiple">Mehrere</string>
+         <string id="Center">Zentriert</string>
+         <string id="TextColor">Textfarbe</string>
+         <string id="FontSize">Schriftgröße</string>
+         <string id="RefreshInterval">Aktualisierungsintervall</string>
+         <string id="BlockScreenCapture">Bildschirmaufnahmen blockieren</string>
+         <string id="BlockScreenCapture_Desc">Legt fest, ob der Endbenutzer von seinem Endpunkt aus Bildschirmfotos von seinem virtuellen Desktop oder seiner Remoteanwendung aufnehmen kann. Diese Einstellung kann nur auf dem Horizon Client 2106 und höher für Windows und für Mac erzwungen werden. Die Standardeinstellung ist deaktiviert, sodass der Endbenutzer Bildschirmfotos von seinem Gerät erstellen kann.
+
+Aktivieren: Verhindert, dass Endbenutzer von ihren Windows- oder macOS-Geräten aus Bildschirmfotos des virtuellen Desktops oder virtueller Anwendungen erstellen.
+
+Deaktivieren: Ermöglicht es Endbenutzern, Bildschirmfotos von ihrem Endpunkt aus zu erstellen.</string>
+         <string id="AntiKeyLogger">Keylogger-Blockierung</string>
+         <string id="AntiKeyLogger_Desc">Legt fest, ob der Endpunkt die Kommunikation zwischen der Tastatur und dem Horizon Client verschlüsselt, um Keylogger-Malware auf dem Endpunkt zu verhindern. Die anfängliche Verbindung mit dem Horizon Server ist unabhängig von der GPO-Einstellung auf der virtuellen Maschine immer geschützt. Nach der anfänglichen Authentifizierung bestimmt diese Einstellung, ob alle Eingaben auf dem Endpunkt verschlüsselt sind. Diese Einstellung kann nur auf dem Horizon Client 2111 für Mac und Horizon Client 2203 für Windows oder höher erzwungen werden. Die Standardeinstellung ist deaktiviert.
+
+Aktivieren: Verschlüsseln Sie alle Tastatureingaben zwischen der Tastatur und dem Horizon Client.
+
+Deaktivieren: Tastaturbefehle werden am Endpunkt normal übermittelt.</string>
       </stringTable>
 
       <presentationTable>
@@ -687,7 +865,6 @@ Wenn Sie beispielsweise „Nie“ auswählen, wird verhindert, dass eine getrenn
                <label>Ausnahmen für Anmeldedatenfilter</label>
             </textBox>
          </presentation>
-
          <presentation id="RDPVcBridgeUnsupportedClients">
             <textBox refId="RDPVcBridgeUnsupportedClients_TB">
                <label>Nicht unterstützte RDPVcBridge-Clients</label>
@@ -708,6 +885,18 @@ Wenn Sie beispielsweise „Nie“ auswählen, wird verhindert, dass eine getrenn
 
          <presentation id="SSO_retry_timeout">
             <decimalTextBox refId="SSO_retry_timeout_DB" defaultValue="5000">Zeitraum für die Wiederholung der Single-Sign-On-Anmeldung</decimalTextBox>
+         </presentation>
+
+         <presentation id="RDS_threshold_connecting_session">
+            <decimalTextBox refId="RDS_threshold_connecting_session_DB" defaultValue="20">Schwellenwert für die Verbindungssitzung</decimalTextBox>
+         </presentation>
+
+         <presentation id="RDS_threshold_load_index">
+            <decimalTextBox refId="RDS_threshold_load_index_DB" defaultValue="0">Schwellenwert für Ladeindex</decimalTextBox>
+         </presentation>
+
+         <presentation id="Win10PhysicalAgentAudioOption">
+            <dropdownList refId="Win10PhysicalAgentAudioOption_DDL" defaultItem="0">Audiooption für physischen Remote-Desktop-Computer bei einer Einzelsitzung unter Windows 10</dropdownList>
          </presentation>
 
          <presentation id="Accept_SSL_encr_framework_channel">
@@ -743,15 +932,31 @@ Wenn Sie beispielsweise „Nie“ auswählen, wird verhindert, dass eine getrenn
             <decimalTextBox refId="Cert_min_validity_DB" defaultValue="10">Für ein Zertifikat erforderliche Mindestgültigkeitsdauer</decimalTextBox>
          </presentation>
 
+         <presentation id="WhfbCertificateAllowedApplicationsList">
+            <multiTextBox refId="Whfb_Certificate_Allowed_Applications_list_TB">Liste der zulässigen ausführbaren Dateien</multiTextBox>
+         </presentation>
+
          <presentation id="Exclude_Vid_Pid">
             <textBox refId="Exclude_Vid_Pid_TB">
                <label>Vid/Pid-Gerät ausschließen</label>
             </textBox>
          </presentation>
 
+         <presentation id="Exclude_Vid_Pid_Rel">
+            <textBox refId="Exclude_Vid_Pid_Rel_TB">
+               <label>Vid-/Pid-/Rel-Gerät ausschließen</label>
+            </textBox>
+         </presentation>
+
          <presentation id="Include_Vid_Pid">
             <textBox refId="Include_Vid_Pid_TB">
-               <label>Vid/Pid-Gerät einschließen</label>
+               <label>Vid-/Pid-Gerät einschließen</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Include_Vid_Pid_Rel">
+            <textBox refId="Include_Vid_Pid_Rel_TB">
+               <label>Vid-/Pid-/Rel-Gerät einschließen</label>
             </textBox>
          </presentation>
 
@@ -764,6 +969,24 @@ Wenn Sie beispielsweise „Nie“ auswählen, wird verhindert, dass eine getrenn
          <presentation id="Include_device_family">
             <textBox refId="Include_device_family_TB">
                <label>Gerätefamilie einschließen</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="HidOpt_Include_Vid_Pid">
+            <textBox refId="HidOpt_Include_Vid_Pid_TB">
+               <label>HID-Optimierung Vid/Pid-Gerät einbeziehen</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Exclude_Auto_Vid_Pid">
+            <textBox refId="Exclude_Auto_Vid_Pid_TB">
+               <label>Verbindung für Vid/Pid-Gerät automatisch ausschließen</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Exclude_auto_device_family">
+            <textBox refId="Exclude_auto_device_family_TB">
+               <label>Verbindungsgeräte-Familie automatisch ausschließen</label>
             </textBox>
          </presentation>
 
@@ -811,18 +1034,8 @@ Wenn Sie beispielsweise „Nie“ auswählen, wird verhindert, dass eine getrenn
             <dropdownList refId="Allow_Auto_Device_Splitting_DDL" defaultItem="0">Autom. Gerätesplitten zulassen</dropdownList>
          </presentation>
 
-         <presentation id="Min_rect_size_to_enable_flash_MMR">
-            <textBox refId="Min_rect_size_to_enable_flash_MMR_TB">
-               <label>Mindestgröße des Rechtecks zur Aktivierung von FlashMMR</label>
-            </textBox>
-         </presentation>
-
          <presentation id="Accept_SSL_encr_framework_channel_2">
             <dropdownList refId="Accept_SSL_encr_framework_channel_2_DDL" defaultItem="0">SSL-verschlüsselten Framework-Kanal akzeptieren</dropdownList>
-         </presentation>
-
-         <presentation id="FlashMMRUrlList">
-            <listBox refId="FlashMMRUrlList_list">Host-URL-Liste zur Aktivierung von FlashMMR</listBox>
          </presentation>
 
          <presentation id="Default_proxy_server">
@@ -833,10 +1046,6 @@ Wenn Sie beispielsweise „Nie“ auswählen, wird verhindert, dass eine getrenn
 
          <presentation id="Update_Java_Proxy">
             <dropdownList refId="Update_Java_Proxy_DDL" defaultItem="2">Proxy-Server für Java-Applet festlegen</dropdownList>
-         </presentation>
-
-         <presentation id="FlashMMRUrlListEnableType">
-            <dropdownList refId="FlashMMRUrlListEnableType_DDL" defaultItem="1">Verwendung der FlashMMR-URL-Liste festlegen</dropdownList>
          </presentation>
 
          <presentation id="HTML5MMRUrlList">
@@ -889,15 +1098,51 @@ Wenn Sie beispielsweise „Nie“ auswählen, wird verhindert, dass eine getrenn
             <dropdownList refId="VDI_disconnect_time_till_logoff_minutes" noSort="true" defaultItem="0">Zeitüberschreitung zum Trennen</dropdownList>
          </presentation>
 
+         <presentation id="RDS_idle_time_till_disconnect">
+            <dropdownList refId="RDS_idle_time_till_disconnect_milliseconds" noSort="true" defaultItem="0">Zeitüberschreitung beim RDS-Leerlauf</dropdownList>
+         </presentation>
+
+         <presentation id="RDS_disconnect_time_till_logoff">
+            <dropdownList refId="RDS_disconnect_time_till_logoff_milliseconds" noSort="true" defaultItem="0">Zeitüberschreitung beim Trennen der RDS-Verbindung</dropdownList>
+         </presentation>
+
+         <presentation id="RDS_active_time_till_disconnect">
+            <dropdownList refId="RDS_active_time_till_disconnect_milliseconds" noSort="true" defaultItem="0">Zeitüberschreitung bei RDS-Verbindung</dropdownList>
+         </presentation>
+
          <presentation id="Prewarm_disconnect_time_till_logoff">
             <dropdownList refId="Prewarm_disconnect_time_till_logoff_minutes" noSort="true" defaultItem="5">Zeitüberschreitung beim Vorwärmen</dropdownList>
          </presentation>
 
-         <presentation id="Video_Cpu_Overuse_Threshold">
+         <presentation id ="watermark_configuration">
+            <multiTextBox refId="Text">Text</multiTextBox>
+            <dropdownList refId="ImageFit" noSort="true" defaultItem="0">Bildlayout</dropdownList>
+            <decimalTextBox refId="Rotation" defaultValue="45">Textdrehung</decimalTextBox>
+            <decimalTextBox refId="Opacity" defaultValue="50">Deckkraft</decimalTextBox>
+            <decimalTextBox refId="Margin" defaultValue="50">Rand</decimalTextBox>
+            <textBox refId="TextColor">
+               <label>Textfarbe</label>
+               <defaultValue>255 255 255</defaultValue>
+            </textBox>
+            <decimalTextBox refId="FontSize" defaultValue="0">Schriftgröße</decimalTextBox>
+            <decimalTextBox refId="RefreshInterval" defaultValue="0">Aktualisierungsintervall</decimalTextBox>
+         </presentation>
+
+        <presentation id="AppSignInWindow">
+            <decimalTextBox refId="app_sign_in_window_width" defaultValue="800" spinStep="2">Breite des Fensters „Rechtlicher Hinweis“: </decimalTextBox>
+            <decimalTextBox refId="app_sign_in_window_height" defaultValue="600" spinStep="2">Höhe des Fensters „Rechtlicher Hinweis“: </decimalTextBox>
+        </presentation>
+        <presentation id="Video_Cpu_Overuse_Threshold">
             <decimalTextBox refId="Video_Cpu_Overuse_Threshold_data" defaultValue="85">Schwellenwert für Video-CPU-Überauslastung</decimalTextBox>
          </presentation>
          <presentation id="Webrtc_Recommended_AEC">
             <checkBox refId="Webrtc_Recommended_AEC_CB" defaultChecked="true"> Empfohlenen AEC-Algorithmus verwenden </checkBox>
+         </presentation>
+         <presentation id="Force_Enable_Teams_Redir">
+            <checkBox refId="Force_Enable_Teams_Redir_Value" defaultChecked="false"> Clientseitige WebRTC-Optimierung erzwingen </checkBox>
+         </presentation>
+         <presentation id="Force_Enable_Electron_App_Redir">
+            <checkBox refId="Force_Enable_Electron_App_Redir_Value" defaultChecked="false"> Clientseitige WebRTC-Optimierung erzwingen </checkBox>
          </presentation>
       </presentationTable>
    </resources>

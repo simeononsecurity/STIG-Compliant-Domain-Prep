@@ -16,7 +16,7 @@
 Syntax: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx | *&gt;&gt;[;...]
 
 Beispiel: vid-0781_pid-554c;vid-0781_pid-9999</string>
-      <string id="IncludeVidPid">Vid/Pid-Gerät einschließen</string>
+      <string id="IncludeVidPid">Vid-/Pid-Gerät einschließen</string>
       <string id="IncludeVidPidExplain">Legt für ein Gerät mit einer bestimmten Hersteller- und Produkt-ID fest, dass es weitergeleitet werden kann.
 
 Syntax: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx | *&gt;&gt;[;...]
@@ -39,6 +39,11 @@ Hinweise:
 </string>
       <string id="OneToOneMapping">Eins-zu-Eins-Zuordnung</string>
       <string id="PredefinedMapping">Definierte Zuordnung</string>
+      <string id="EnableHighPerformanceCDR">Leistungsoptimierung aktivieren</string>
+      <string id="EnableHighPerformanceCDRExplain">Diese Einstellung legt fest, ob die Leistungsoptimierung für die Client-Treiberumleitung aktiviert ist. Bei aktivierter Einstellung ist die Leistung bei Szenarien wie dem Kopieren von Dateien/Ordnern über freigegebene Laufwerke höher.
+
+Diese Einstellung ist standardmäßig deaktiviert.
+      </string>
     </stringTable>
     <presentationTable>
        <presentation id="IsDriveLetterNeeded"/>
@@ -52,7 +57,7 @@ Hinweise:
        </presentation>
        <presentation id="IncludeVidPid">
          <textBox refId="IncludeVidPid">
-           <label>Vid/Pid-Gerät einschließen</label>
+           <label>Vid-/Pid-Gerät einschließen</label>
          </textBox>
        </presentation>
        <presentation id="DriveLetterMapping">
@@ -61,6 +66,7 @@ Hinweise:
        <presentation id="DriveLetterMappingTable">
          <listBox refId="DriveLetterMappingTable">Zuordnungstabelle für Laufwerkbuchstaben definieren:</listBox>
        </presentation>
+       <presentation id="EnableHighPerformanceCDR"/>
     </presentationTable>
   </resources>
 </policyDefinitionResources>

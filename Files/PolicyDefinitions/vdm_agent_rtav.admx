@@ -18,23 +18,16 @@
     <category name="VMwareViewClientRTAVWebcam" displayName="$(string.VMwareViewClientRTAVWebcam)">
       <parentCategory ref="VMwareViewClientRTAV" />
     </category>
+    <category name="VMwareViewRTAVMicrophone" displayName="$(string.VMwareViewRTAVMicrophone)">
+      <parentCategory ref="VMwareViewClientRTAV" />
+    </category>
   </categories>
   <policies>
-    <policy name="DisableRTAV" class="Machine" displayName="$(string.DisableRTAV)" explainText="$(string.DisableRTAVExplain)" presentation="$(presentation.DisableRTAV)" key="Software\Policies\VMware, Inc.\VMware VDM\Agent\RTAV" valueName="DisableRTAV">
-      <parentCategory ref="VMwareViewClientRTAV" />
-      <supportedOn ref="SUPPORTED_NotSpecified" />
-      <enabledValue>
-        <string>true</string>
-      </enabledValue>
-      <disabledValue>
-        <string>false</string>
-      </disabledValue>
-    </policy>
     <policy name="WebcamMaxFrameRate" class="Machine" displayName="$(string.WebcamMaxFrameRate)" explainText="$(string.WebcamMaxFrameRateExplain)" presentation="$(presentation.WebcamMaxFrameRate)" key="Software\Policies\VMware, Inc.\VMware VDM\Agent\RTAV">
       <parentCategory ref="VMwareViewClientRTAVWebcam" />
       <supportedOn ref="SUPPORTED_NotSpecified" />
       <elements>
-        <decimal id="WebcamMaxFrameRate" valueName="WebcamMaxFrameRate" minValue="1" maxValue="25" />
+        <decimal id="WebcamMaxFrameRate" valueName="WebcamMaxFrameRate" minValue="1" maxValue="30" />
       </elements>
     </policy>
     <policy name="WebcamMaxResHeight" class="Machine" displayName="$(string.WebcamMaxResHeight)" explainText="$(string.WebcamMaxResHeightExplain)" presentation="$(presentation.WebcamMaxResHeight)" key="Software\Policies\VMware, Inc.\VMware VDM\Agent\RTAV">
@@ -63,6 +56,72 @@
       <supportedOn ref="SUPPORTED_NotSpecified" />
       <elements>
         <decimal id="WebcamDefaultResWidth" valueName="WebcamDefaultResWidth" minValue="0" />
+      </elements>
+    </policy>
+    <policy name="ForceNV" class="Both" displayName="$(string.ForceNV)" explainText="$(string.ForceNVExplain)" presentation="$(presentation.ForceNV)" key="Software\Policies\VMware, Inc.\VMware VDM\Agent\RTAV" valueName="forceNV">
+      <parentCategory ref="VMwareViewClientRTAVWebcam" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="ForceQSV" class="Both" displayName="$(string.ForceQSV)" explainText="$(string.ForceQSVExplain)" presentation="$(presentation.ForceQSV)" key="Software\Policies\VMware, Inc.\VMware VDM\Agent\RTAV" valueName="forceQSV">
+      <parentCategory ref="VMwareViewClientRTAVWebcam" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <enabledValue>
+        <string>true</string>
+      </enabledValue>
+      <disabledValue>
+        <string>false</string>
+      </disabledValue>
+    </policy>
+    <policy name="MicrophoneSampleRate" class="Both" displayName="$(string.MicrophoneSampleRate)" explainText="$(string.MicrophoneSampleRateExplain)" presentation="$(presentation.MicrophoneSampleRate)" key="Software\Policies\VMware, Inc.\VMware VDM\Agent\RTAV" >
+      <parentCategory ref="VMwareViewRTAVMicrophone" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <elements>
+        <enum id="MicrophoneSampleRateList" valueName="MicrophoneSampleRate" required="true">
+          <item displayName="$(string.SampleRate8K)">
+            <value>
+              <decimal value="8000" />
+            </value>
+          </item>
+          <item displayName="$(string.SampleRate16K)">
+            <value>
+              <decimal value="16000" />
+            </value>
+          </item>
+          <item displayName="$(string.SampleRate48K)">
+            <value>
+              <decimal value="48000" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="DisableRTAV" class="Both" displayName="$(string.DisableRTAV)" explainText="$(string.DisableRTAVExplain)" presentation="$(presentation.DisableRTAV)" key="Software\Policies\VMware, Inc.\VMware VDM\Agent\RTAV" >
+      <parentCategory ref="VMwareViewClientRTAV" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <elements>
+        <enum id="RTAVDisableComponentList" valueName="DisableRTAV" required="true">
+          <item displayName="$(string.DisableMicAndWebcam)">
+            <value>
+              <string>true</string>
+            </value>
+          </item>
+          <item displayName="$(string.DisableMic)">
+            <value>
+              <string>disableAudio</string>
+            </value>
+          </item>
+          <item displayName="$(string.DisableWebcam)">
+            <value>
+              <string>disableVideo</string>
+            </value>
+          </item>
+        </enum>
       </elements>
     </policy>
   </policies>

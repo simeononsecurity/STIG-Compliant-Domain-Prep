@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
 
    <displayName>VMware Horizon View Agent</displayName>
@@ -52,13 +52,15 @@ Note: This GPO has lower priority than the filtering rules that are installed in
 
          <string id="True_SSO_Configuration">True SSO Configuration</string>
 
+         <string id="Whfb_Certificate_Redirection">Whfb Certificate Redirection</string>
+
+         <string id="Whfb_Certificate_Allowed_Applications">List of allowed executables</string>
+
+         <string id="Whfb_Certificate_Allowed_Applications_Desc">List of executables that are allowed to use redirected Whfb Certificate</string>
+
          <string id="View_USB_Configuration">View USB Configuration</string>
 
          <string id="Client_Downloadable_only_settings">Client Downloadable only Settings</string>
-
-         <string id="VMware_CIT">VMware Client IP Transparency</string>
-
-         <string id="VMware_FlashMMR">VMware FlashMMR</string>
 
          <string id="VMware_MediaProviderProxy">VMware Virtualization Pack for Skype for Business</string>
 
@@ -104,7 +106,7 @@ For security reasons, these tickets are only valid within the specified time per
 
          <string id="RDPVcBridgeUnsupportedClients">RDPVcBridge Unsupported Clients</string>
 
-       <string id="RDPVcBridgeUnsupportedClients_Desc">A comma separated list of horizon client types which do not support RDPVcBridge.</string>
+         <string id="RDPVcBridgeUnsupportedClients_Desc">A comma separated list of horizon client types which do not support RDPVcBridge.</string>
 
          <string id="Disable_Time_Zone_sync">Disable Time Zone Synchronization</string>
 
@@ -122,9 +124,9 @@ This property only applies to sessions using the PCoIP protocol. This property i
 
          <string id="DpiSync_Desc">Adjusts the system-wide DPI setting for the remote session. When enabled or not configured, sets the system-wide DPI setting for the remote session to match the corresponding DPI setting on the Client operating system. When disabled, never changes the system-wide DPI setting for the remote session.</string>
 
-         <string id="DpiSyncPerConnection">DPI Synchronization Per Connection</string>
+         <string id="DpiSyncPerMonitor">DPI Synchronization Per Monitor</string>
 
-         <string id="DpiSyncPerConnection_Desc">Adjusts the monitor DPI setting for reconnecting to the remote session. When enabled, sets the monitor DPI setting for reconnecting to the remote session to match the corresponding DPI setting on the Client operating system. When disabled or not configured, never changes the monitor DPI setting for reconnecting to the remote session.</string>
+         <string id="DpiSyncPerMonitor_Desc">Adjusts the DPI setting in multiple monitors during a remote session. When enabled or not configured, the DPI setting in all monitors changes to match the client operating system’s DPI setting during a remote session. If the DPI setting is customized, the customized DPI setting is matched. When disabled, users must disconnect and connect to a new remote session to make DPI changes take effect in all monitors.</string>
 
          <string id="DisallowCollaboration">Turn off collaboration</string>
 
@@ -151,6 +153,10 @@ This property only applies to sessions using the PCoIP protocol. This property i
          <string id="CollaborationEmailInviteDelimiter_Desc">This setting configures the separator used for multiple e-mail addresses in mailto: links. When this policy is not configured, the value defaults to ";" (semicolon without a space) to separate e-mail addresses to ensure best compatibility with mainstream e-mail clients.
 
 If your default e-mail client has problems with this separator, you can try other combinations such as ", " (comma plus one space) or "; " (semicolon plus one space). This value will be URI-encoded before being placed in the mailto: link, so do not set this entry to a URI-encoded value.</string>
+
+         <string id="CollaborationClipboardIncludeOutlookURL">Include Outlook-formatted URL in clipboard text</string>
+
+         <string id="CollaborationClipboardIncludeOutlookURL_Desc">When this setting is enabled, an Outlook-formatted invitation URL is included in clipboard invitation text. Enable this setting if you expect end users to paste clipboard invitation text into an e-mail. This setting is disabled by default.</string>
 
          <string id="CollaborationServerURLs">Server URLs to include in invitation message</string>
 
@@ -182,6 +188,14 @@ When setting the values, the first column should include the URL with an optiona
 
          <string id="SSO_retry_timeout_Desc">Specifies the time in milliseconds after which single sign-on is retried. Set to 0 to disable single sign-on retry. The default value is 5000 milliseconds.</string>
 
+         <string id="Win10PhysicalAgentAudioOption">Audio option for single session Windows 10 physical Remote Desktop machine</string>
+
+         <string id="Win10PhysicalAgentAudioOption_Desc">Specifies which audio devices to use in the Horizon Windows 10 physical Remote Desktop machine session. The default is to use audio devices attached to Horizon Client endpoint.</string>
+
+         <string id="UseClientAudioDevice">Use audio devices attached to Horizon Client endpoint</string>
+
+         <string id="UsePhysicalMachineAudioDevice">Use audio devices attached to Horizon Windows 10 physical Remote Desktop endpoint</string>
+
          <string id="VDI_idle_time_till_disconnect">Idle Time Until Disconnect (VDI)</string>
 
          <string id="VDI_idle_time_till_disconnect_Desc">Specifies the amount of time after which a VDI Desktop session will disconnect due to user inactivity.
@@ -190,7 +204,7 @@ Note: If the desktop pool or machine is configured to logoff automatically after
 
          <string id="Accept_SSL_encr_framework_channel">Accept SSL encrypted framework channel</string>
 
-         <string id="Accept_SSL_encr_framework_channel_Desc">Accept SSL encrypted framework channel 
+         <string id="Accept_SSL_encr_framework_channel_Desc">Accept SSL encrypted framework channel
 
 Enable: Enable SSL, allow legacy clients to connect without SSL
 Disable: Disable SSL
@@ -288,6 +302,17 @@ o=Agent setting will override client setting
 
 For example: m:vid-0781_pid-554c;vid-0781_pid-9999</string>
 
+         <string id="Exclude_Vid_Pid_Rel">Exclude Vid/Pid/Rel Device</string>
+
+         <string id="Exclude_Vid_Pid_Rel_Desc">Exclude a device with a specified Vendor ID, Product ID and Release Number from being forwarded.
+
+Syntax: {m|o}:&lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx&gt;_rel-&lt;xxxx|*&gt;&gt;[;...]
+merge-flag:
+m=Client setting will merge with agent setting
+o=Agent setting will override client setting
+
+For example: m:vid-0781_pid-554c_rel-0100;vid-0781_pid-9999_rel-0010</string>
+
          <string id="Include_Vid_Pid">Include Vid/Pid Device</string>
 
          <string id="Include_Vid_Pid_Desc">Include a device with a specified Vendor ID and Product ID that can be forwarded.
@@ -299,6 +324,18 @@ m=Client setting will merge with agent setting
 o=Agent setting will override client setting
 
 For example: o:vid-0781_pid-554c;vid-0781_pid-9999</string>
+
+         <string id="Include_Vid_Pid_Rel">Include Vid/Pid/Rel Device</string>
+
+         <string id="Include_Vid_Pid_Rel_Desc">Include a device with a specified Vendor ID, Product ID, and Release Number that can be forwarded.
+
+Syntax: {m|o}:&lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx&gt;_rel-&lt;xxxx|*&gt;&gt;[;...]
+
+merge-flag:
+m=Client setting will merge with agent setting
+o=Agent setting will override client setting
+
+For example: o:vid-0781_pid-554c_rel-0100;vid-0781_pid-9999_rel-0010</string>
 
          <string id="Exclude_device_family">Exclude Device Family</string>
 
@@ -329,6 +366,37 @@ For example: m:storage;audio-out</string>
          <string id="Exclude_all_Desc">Block all devices unless they are included via Include filter rule.
 
 Default: Allow all devices</string>
+
+         <string id="HidOpt_Include_Vid_Pid">Include HID Optimization Vid/Pid Device</string>
+
+         <string id="HidOpt_Include_Vid_Pid_Desc">Include a HID device with a specified Vendor ID and Product ID that can be optimized.
+
+Syntax: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx|*&gt;&gt;[;...]
+
+For example: vid-056a_pid-0302;vid-046d_pid-c628</string>
+
+         <string id="Exclude_Auto_Vid_Pid">Exclude Automatically Connection Vid/Pid Device</string>
+
+         <string id="Exclude_Auto_Vid_Pid_Desc">Exclude a device with a specified Vendor ID and Product ID from being automatically forwarded.
+
+Syntax: {m|o}:&lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx|*&gt;&gt;[;...]
+merge-flag:
+m=Client setting will merge with agent setting
+o=Agent setting will override client setting
+
+For example: m:vid-0781_pid-554c;vid-0781_pid-9999</string>
+
+         <string id="Exclude_auto_device_family">Exclude Automatically Connection Device Family</string>
+
+         <string id="Exclude_auto_device_family_Desc">Exclude a family of devices from being automatically forwarded.
+
+Syntax: {m|o}:&lt;family-name&gt;[;...]
+
+merge-flag:
+m=Client setting will merge with agent setting
+o=Agent setting will override client setting
+
+For example: o:storage;hid</string>
 
          <string id="Exclude_Vid_Pid_from_Split">Exclude Vid/Pid Device from Split</string>
 
@@ -406,18 +474,6 @@ Default: Block Forwarding</string>
 
          <string id="Allow_Auto_Device_Splitting_Desc">Exclude the component devices of any composite device from being automatically treated as separate devices.</string>
 
-         <string id="Enable_flash_MMR">Enable flash multi-media redirection</string>
-
-         <string id="Enable_flash_MMR_Desc">Specifies if flash multi-media redirection (FlashMMR) is enable on the agent. FlashMMR forwards flash multi-media data from specific urls through TCP channel to the client, and invoke local flash player play directly on client side. With FlashMMR enabled the CPU &amp; network bandwidth will be greatly reduced on agent side during flash playing.</string>
-
-         <string id="Min_rect_size_to_enable_flash_MMR">Minimum rect size to enable FlashMMR</string>
-
-         <string id="Min_rect_size_to_enable_flash_MMR_Desc">Minimum rect size to enable FlashMMR, size will be represented as 'width,height' string, for example '200,300'. The unit of the size is pixel. Only both width and height equal or larger than the value in GPO will the flash redirection will be enabled. If this GPO is not configured, size(320,200) will be used.</string>
-
-         <string id="FlashMMRUrlList">Hosts Url list to enable FlashMMR</string>
-
-         <string id="FlashMMRUrlList_Desc">Specifies the url lists to enable FlashMMR. The hosts name should be orgnized with prefix 'http://' or 'https://', for example: 'http://www.youtube.com'; or with wildcard char (*) for example: 'https://*.youtube.com'. Please fill host url in value name column, value column will be ignored.</string>
-
          <string id="ShowVMWMediaProviderProxyIcon">Show Icon</string>
 
          <string id="ShowVMWMediaProviderProxyIcon_Desc">Displays the icon for Virtualization Pack for Skype for Business. This policy is enabled by default. The icon does not appear if the Show Icon policy for Virtualization Pack for Skype for Business is disabled and you cannot view the call statistics or messages.</string>
@@ -442,10 +498,6 @@ Default: Block Forwarding</string>
 
          <string id="DisableAECExtendedFilter_Desc">When enabled, VMware Virtualization Pack for Skype for Business will not use extended filter for acoustic echo cancellation. By default, VMware Virtualization Pack for Skype for Business uses extended filter for acoustic echo cancellation. This filter provides better echo and feedback cancellation. It is particularly effective in scenarios when Horizon Client system’s microphone and speaker are close to each other.</string>
 
-         <string id="Enable_CIT">Enable</string>
-
-         <string id="Enable_CIT_Desc">Enable VMware Client IP Transparency. The setting takes effect at next logon.</string>
-
          <string id="Proxy_default_ie_autodetect">Default auto detect proxy</string>
 
          <string id="Proxy_default_ie_autodetect_Desc">Default IE connection setting. It turns on automactially detect settings in Internet Properties, Local Area Network Settings</string>
@@ -464,10 +516,6 @@ Default: Block Forwarding</string>
 
          <string id="Use_Default">Use the default value for Java proxy</string>
 
-         <string id="FlashMMRUrlListEnableType">Definition for FlashMMR url list usage</string>
-
-         <string id="FlashMMRUrlListEnableType_Desc">Define white/black list rule to enable/disable FlashMMR. If white list rule is taking effect, only urls in url list FlashMMR will be enabled; if black list rule is using, only urls in url list FlashMMR is disabled. By default, white list rule is taking effect.</string>
-
          <string id="Enable_white_list">Enable white list</string>
 
          <string id="Enable_black_list">Enable black list</string>
@@ -476,7 +524,7 @@ Default: Block Forwarding</string>
 
          <string id="Enable_HTML5_FEATURES">Enable VMware HTML5 Features</string>
 
-         <string id="Enable_HTML5_FEATURES_Desc">Enable VMware HTML5 Features. It is required that the policy is set to "Enabled" or "Not Configured" to use VMware HTML5 Multimedia Redirection, Geolocation Redirection, Browser Redirection, or Media Optimization for Microsoft Teams.  If this policy is set to "Disabled", none of the VMware HTML5 features can be used. The setting takes effect at next logon.</string>
+         <string id="Enable_HTML5_FEATURES_Desc">Enable VMware HTML5 Features. If this policy is set to "Enabled", VMware HTML5 Multimedia Redirection, Geolocation Redirection, Browser Redirection, or Media Optimization for Microsoft Teams can be used.  If this policy is set to "Disabled", none of the VMware HTML5 features can be used. The setting takes effect at next logon.</string>
 
          <string id="HTML5FEATURES_Disable_AudoDetect_Intranet">Disable Automatically Detect Intranet</string>
 
@@ -506,15 +554,27 @@ Note: It is required that this policy is "Enabled" when (1) Edge browser is enab
 
          <string id="HTML5MMR_Enable_Edge_Chromium_Desc">This policy is only used when the VMware HTML5 Multimedia Redirection is "enabled". If not configured, the default value will be the same as the "Enable VMware HTML5 Multimedia Redirection" enablement. </string>
 
+         <string id="HTML5MMR_Auto_Adjust_Visual_Effect">Automatically adjust windows visual effect</string>
+
+         <string id="HTML5MMR_Auto_Adjust_Visual_Effect_Desc">This policy is used to adjust window's visual effect automatically for the VMware HTML5 Multimedia Redirection. If not configured or disabled, the windows visual effect will not be adjusted automatcially.</string>
+
          <string id="VMware_GEO_REDIR">VMware Geolocation Redirection</string>
 
          <string id="Enable_GEO_REDIR">Enable VMware Geolocation Redirection</string>
 
          <string id="Enable_GEO_REDIR_Desc">Enable VMware Geolocation Redirection feature. The setting takes effect at next logon.</string>
 
+         <string id="Enable_GEO_REDIR_For_Chrome">Enable VMware Geolocation Redirection for Chrome Browser</string>
+
+         <string id="Enable_GEO_REDIR_For_Chrome_Desc">Enable VMware Geolocation Redirection feature for Chrome Browser. The setting takes effect at next logon.</string>
+
+         <string id="Enable_GEO_REDIR_For_Edge_Chromium">Enable VMware Geolocation Redirection for Microsoft Edge (Chromium) Browser</string>
+
+         <string id="Enable_GEO_REDIR_For_Edge_Chromium_Desc">Enable VMware Geolocation Redirection feature for Microsoft Edge (Chromium) Browser. The setting takes effect at next logon.</string>
+
          <string id="GeoRedirUrlList">Enable URL list for VMware Geolocation Redirection.</string>
 
-         <string id="GeoRedirUrlList_Desc">Specifies the url list to enable the Geolocation Redirection feature. Specify the url pattern in the "Value name" column, e.g "https://www.youtube.com/*". The "Value" column should be empty and it is reserved for the future use. This url list will be used by (1) VMware Horizon Geolocation Redirection extension for Chrome browser on all RDSH and VDI environments, and by (2) VMware Horizon Geolocation Redirection plugin for Internet Explorer on RDSH and Windows 7 VDI environments.</string>
+         <string id="GeoRedirUrlList_Desc">Specifies the url list to enable the Geolocation Redirection feature. Specify the url pattern in the "Value name" column, e.g "https://www.youtube.com/*". The "Value" column should be empty and it is reserved for the future use. This url list will be used by (1) VMware Horizon Geolocation Redirection extension for Google Chrome and Microsoft Edge (Chromium) browser on all RDSH and VDI environments, and by (2) VMware Horizon Geolocation Redirection plugin for Internet Explorer on RDSH and Windows 7 VDI environments.</string>
 
          <string id="GeoRedirDistanceDelta">Set the minimum distance for which to report location updates</string>
 
@@ -525,6 +585,14 @@ Note: It is required that this policy is "Enabled" when (1) Edge browser is enab
          <string id="Enable_BROWSER_REDIR">Enable VMware Browser Redirection</string>
 
          <string id="Enable_BROWSER_REDIR_Desc">Enable VMWare Browser Redirection feature. The setting takes effect at next logon.</string>
+
+         <string id="Enable_BROWSER_REDIR_For_Chrome">Enable VMware Browser Redirection for Chrome Browser</string>
+
+         <string id="Enable_BROWSER_REDIR_For_Chrome_Desc">Enable VMware Browser Redirection feature for Chrome Browser. The setting takes effect at next logon.</string>
+
+         <string id="Enable_BROWSER_REDIR_For_Edge_Chromium">Enable VMware Browser Redirection feature for Microsoft Edge (Chromium) Browser</string>
+
+         <string id="Enable_BROWSER_REDIR_For_Edge_Chromium_Desc">Enable VMware Browser Redirection feature for Microsoft Edge (Chromium) Browser. The setting takes effect at next logon.</string>
 
          <string id="BrowserRedirFallbackWhitelistErr">Enable automatic fallback after a whitelist violation</string>
 
@@ -546,7 +614,29 @@ Note: It is required that this policy is "Enabled" when (1) Edge browser is enab
 
          <string id="Enable_Teams_Redir">Enable Media Optimization for Microsoft Teams</string>
 
-         <string id="Enable_Teams_Redir_Desc">Enable Media Optimization for Microsoft Teams. It is required that the policy is set to "Enabled" to apply Media Optimization for Microsoft Teams. The setting takes effect at next logon.</string>
+         <string id="Enable_Teams_Redir_Desc">This setting is used to enable or disable Microsoft Teams Optimization.
+
+When Horizon Agent is installed, a teamsEnabled registry key is created on the agent which enables Microsoft Teams Optimization.  By default, the user has the option to use or not use Microsoft Teams Optimization by configuring the "Media Optimization for WebRTC based applications" setting in Horizon client.
+
+If this policy is "Enabled", Microsoft Teams Optimization is enabled. If enabled and "Force client side WebRTC optimization" is checked, Teams Media Optimization is forced on the end point and any client setting or any other Admin Policy (e.g. Chrome level User policy for Chrome Client) is ignored. If enabled and "Force client side WebRTC optimization" is unchecked, the user has the option to use or not use Microsoft Teams Optimization by configuring the Horizon client "Media Optimization for WebRTC based applications" setting.
+
+If this policy is "Disabled", Microsoft Teams Optimization is disabled and cannot be used. The Horizon client "Media Optimization for WebRTC based applications" setting will not have any effect.
+
+By default, this policy is "Not Configured", but if the policy is changed and then changed back to "Not Configured", it will remove the teamsEnabled registry key, and Microsoft Teams Optimization will not be used.
+
+The setting takes effect at next logon.</string>
+
+         <string id="Enable_Electron_App_Redir">Enable Media Optimization for general Electron Apps</string>
+
+         <string id="Enable_Electron_App_Redir_Desc">This setting is used to enable or disable Electron App Optimization.
+
+If "Enabled" or "Not Configured", Electron App Optimization is enabled. In addition, if you want to force end user to use Optimization (if supported on end point), choose "Enabled" and select "Force client side WebRTC optimization". "Not Configured" will honor client setting if available.
+Details:
+If enabled and if  "Force client side WebRTC optimization" is unchecked, the user has the option to use or not use Electron App Optimization by configuring the Horizon client "Media Optimization for WebRTC based applications" setting. If checked, Electron App Media Optimization is forced on end point and client setting or any other Admin Policy (e.g. Chrome level User policy for Chrome Client) is ignored.
+By default, the Electron App Optimization setting is "Not Configured", enabling Electron App Optimization and allowing the user to configure the "Media Optimization for WebRTC based applications" setting.
+If "Disabled", Electron App Optimization is disabled and cannot be used. The Horizon client "Media Optimization for WebRTC based applications" setting will not have any effect.
+
+The setting takes effect at next logon.</string>
 
          <string id="Enable_AEC_Teams_Redir">Enable software acoustic echo cancellation for Media Optimization for Microsoft Teams</string>
 
@@ -573,17 +663,19 @@ If "Not Configured", the data channel is enabled.</string>
 
          <string id="Enable_Sharing_Client_Screen_InAppSession">Enable sharing the client desktop screen while remoting the Microsoft Teams application in application sharing mode</string>
 
-         <string id="Enable_Sharing_Client_Screen_InAppSession_Desc">While remoting the Microsoft Teams application, the screen share feature will share the client desktop screen instead of the remote desktop screen. Select "Disabled" to disable the screen share feature in application sharing mode. If you select "Not Configured", the screen share will share the client desktop screen by default.</string>
-
-         <string id="VMware_DeviceBridge">VMware Device Bridge</string>
-
-         <string id="Disable_DeviceBridge_BAS">Disable Device Bridge BAS Plugin</string>
-
-         <string id="Disable_DeviceBridge_BAS_Desc">Disable finger scanners supported by BAS system. The setting takes effect at next logon.</string>
+         <string id="Enable_Sharing_Client_Screen_InAppSession_Desc">While remoting the Microsoft Teams application, the screen share feature will share the client desktop screen instead of the remote desktop screen. Select "Disabled" to disable the screen share feature in application sharing mode. If "Enabled" or "Not Configured", the screen share feature can share the client desktop screen.</string>
 
          <string id="Enable_E911">Enable E911 for Microsoft Teams</string>
 
          <string id="Enable_E911_Desc">While Microsoft Teams runs in optimized mode, the client will send E911 data to Microsoft. To disable sharing E911 data with Microsoft, select "Disabled". If "Enabled" or "Not Configured", client E911 data will be shared with Microsoft.</string>
+
+         <string id="Enable_HID">Enable using client HID devices button for Microsoft Teams</string>
+
+         <string id="Enable_HID_Desc">While Microsoft Teams runs in optimized mode, user can use client HID devices button to interact with Microsoft Teams. To disable client HID devices support, select "Disabled". If "Enabled" or "Not Configured", client HID devices support will be allowed.</string>
+
+         <string id="Enable_Background_Effects">Enable background effects for Microsoft Teams</string>
+
+         <string id="Enable_Background_Effects_Desc">While Microsoft Teams runs in optimized mode, users can select a virtual background for calls and meetings. To disable background effects support, select "Disabled". If "Enabled" or "Not Configured", background effects support will be allowed.</string>
 
          <string id="VMware_AppTap_Config">VMware AppTap Configuration</string>
 
@@ -599,6 +691,42 @@ If "Never" is selected, disconnected VDI Desktop sessions on this machine will n
 A similar setting exists in View Connection Server Administrator, it can be found in Desktop Pool Settings and is named "Automatically logoff after disconnect". If both this setting and the View Connection Server Administrator setting are configured, the value selected here takes precedence.
 For example, selecting "Never" here will prevent a disconnected session (on this machine) from ever logging off, regardless of what is set on View Connection Server Administrator.</string>
 
+         <string id="RDS_idle_time_till_disconnect">RDS Idle Time Until Disconnect</string>
+
+         <string id="RDS_idle_time_till_disconnect_Desc">Specifies the amount of time after which an idle Remote Desktop Services session will automatically disconnect.
+If "Never" is selected, Remote Desktop Services sessions on this machine will never disconnect.</string>
+
+         <string id="RDS_disconnect_time_till_logoff">RDS Disconnected Time Until Logoff</string>
+
+         <string id="RDS_disconnect_time_till_logoff_Desc">Specifies the amount of time after which a disconnected Remote Desktop Services session will automatically log off.
+If "Never" is selected, disconnected Remote Desktop Services sessions on this machine will never log off.</string>
+
+         <string id="RDS_active_time_till_disconnect">RDS Connection Time Until Disconnect</string>
+
+         <string id="RDS_active_time_till_disconnect_Desc">Specifies the maximum amount of time that a Remote Desktop Services session can be active before it is automatically disconnected.
+If "Never" is selected, Remote Desktop Services sessions on this machine will never disconnect.</string>
+
+         <string id="RDS_end_session_time_limit">RDS End Session When Time Limit Reached</string>
+
+         <string id="RDS_end_session_time_limit_Desc">Specifies whether to end a Remote Desktop Services session that has timed out instead of disconnecting.
+If set, the session will be ended (the user is logged off and the session is deleted from the server) after time limits for active or idle sessions have been reached. By default, Remote Desktop Services sessions are disconnected after reaching their time limits.</string>
+
+         <string id="RDS_threshold_connecting_session">Connecting Session Threshold</string>
+
+         <string id="RDS_threshold_connecting_session_Desc">Specifies the maximum number of sessions that can concurrently log onto the RDSH machine, exempting reconnecting sessions.
+
+If enabled, the session threshold value is initially set to 20 but should be changed according to use case. If 0 is selected, then the connecting session threshold is disabled.
+
+This policy is disabled by default, so if the policy is not configured, then the connecting session threshold will be disabled.</string>
+
+         <string id="RDS_threshold_load_index">Load Index Threshold</string>
+
+         <string id="RDS_threshold_load_index_Desc">Specifies the minimum load index at which the RDSH machine will start denying session logons, exempting reconnecting sessions.
+
+If enabled, the load threshold value is initially set to 0 but should be changed according to use case. If 0 is selected, then the load index threshold is disabled.
+
+This policy is disabled by default, so if the policy is not configured, then the load index threshold will be disabled.</string>
+
          <string id="Prewarm_disconnect_time_till_logoff">Prewarm Session Time Limit</string>
 
          <string id="Prewarm_disconnect_time_till_logoff_Desc">Specifies the amount of time after which a prewarm session will automatically log off.</string>
@@ -607,7 +735,12 @@ For example, selecting "Never" here will prevent a disconnected session (on this
 
          <string id="EnableUWPOnRDSH_Desc">This policy controls whether UWP applications can be scanned and launched on RDSH farms with an operating system version that supports UWP applications. This policy does not apply to desktop OS platforms, such as VDI app remoting. When enabled, UWP applications can be used as Hosted Apps from RDSH farms. Need to restart wsnm service or restart RDSH server to make the GPO take effect. Refer to VMware documentation for supported platforms and whether this setting is enabled or disabled by default.</string>
 
-         <string id="TIME_NEVER">Never</string>
+        <string id="HandleLegalNoticeInWindow">Redirect legal notice messages as a window</string>
+
+        <string id="HandleLegalNoticeInWindow_Desc">When enabled, this policy will redirect legal notices to the Horizon client in a window with the specified size. The width and height in this policy are specified in pixels. For high DPI monitors, the sizes will be multiplied based on the DPI. This functionality is only supported for RDSH Hosted Apps.
+This policy is disabled by default. Need to restart RDSH server and View client to make the GPO take effect.</string>
+
+        <string id="TIME_NEVER">Never</string>
 
          <string id="TIME_1MIN">1 minute</string>
 
@@ -652,7 +785,52 @@ For example, selecting "Never" here will prevent a disconnected session (on this
          <string id="EnableBatStatRedir">Enable Battery State Redirection</string>
 
          <string id="EnableBatStatRedir_Desc">This policy controls whether battery state redirection is enabled. When this policy is not configured, battery state redirection is enabled.</string>
+         <string id="VMware_Watermark">Watermark</string>
+         <string id="VMware_Watermark_Config">Watermark Configuration</string>
+         <string id="Desktop_Watermark_Configuration_Desc">This setting enables you to configure a watermark to appear on your virtual desktop. In the "Text" area you can set what will be displayed in the watermark. Options are:
 
+%ViewClient_IP_Address%
+%ViewClient_Broker_UserName%
+%ViewClient_Broker_DomainName%
+%COMPUTERNAME%
+%USERDOMAIN%
+%USERNAME%
+%ViewClient_ConnectTime%   - Date in month/day/year
+%ViewClient_ConnectTicks%  - Time in hour:minute:second
+
+Here is an example for "Text":
+%USERDOMAIN%\%USERNAME%
+%COMPUTERNAME% on %ViewClient_ConnectTime%
+%ViewClient_IP_Address%
+
+The character limit for the "Text" is 256 characters, and it's limited to 1024 characters after expansion.
+
+"Image Layout" specifies the layout of the watermark. We support Tile, Multiple and Center. Multiple puts the watermark in the center and in each corner. For APP sessions, this setting is ignored and the layout will always be Tile.
+"Text Rotation" allows you to select a rotation angle for the watermark text.
+"Opacity" lets you chose the transparency of the text.
+"Margin" specifies the distance between the watermark and the edge of the virtual desktop screen, it only applies to the Tile layout.
+"Text Color" specifies the color of the watermark text using space-separeted RGB color values in decimal, and the text outline is rendered in contrasting color. By default, the text is rendered in white and the outline is in black.
+"Font Size" specifies the size of the watermark text. When this value is 0, the default font size will be applied.
+"Refresh Interval" specifies the interval in seconds the watermark is refreshed. When 0 is specified, the watermark update is disabled. The maximum is 86400 seconds (24 hours).
+</string>
+         <string id="Tile">Tile</string>
+         <string id="Multiple">Multiple</string>
+         <string id="Center">Center</string>
+         <string id="TextColor">Text Color</string>
+         <string id="FontSize">Font Size</string>
+         <string id="RefreshInterval">Refresh Interval</string>
+         <string id="BlockScreenCapture">Screen-capture Blocking</string>
+         <string id="BlockScreenCapture_Desc">Determines whether the end user can take screenshots of their virtual desktop or remote app from their end point. This setting can only be enforced on the Horizon Client for Windows and Horizon Client for Mac 2106 and later. Default is disabled, allowing the end user to take screenshots from their device.
+
+Enable: Blocks end users from taking screenshots of the virtual desktop or virtual applications from their Windows or macOS devices.
+
+Disable: Allows end users to take screenshots from their endpoint.</string>
+         <string id="AntiKeyLogger">Keylogger Blocking</string>
+         <string id="AntiKeyLogger_Desc">Determines if the end point encrypts the communication between the keyboard and the Horizon Client to avoid key logging malware on the end point. The initial connection to the Horizon server is always protected, regardless of the GPO setting in the virtual machine. After the initial authentication, this setting determines if all typing on the end point is encrypted. This setting can only be enforced on the Horizon Client for Mac 2111 and Horizon Client for Windows 2203 or later. Default is disabled.
+
+Enable: Encrypt all keystrokes between the keyboard and the Horizon Client.
+
+Disable: Keystrokes are communicated normally on the end point.</string>
       </stringTable>
 
       <presentationTable>
@@ -680,7 +858,6 @@ For example, selecting "Never" here will prevent a disconnected session (on this
                <label>Credential Filter Exceptions</label>
             </textBox>
          </presentation>
-
          <presentation id="RDPVcBridgeUnsupportedClients">
             <textBox refId="RDPVcBridgeUnsupportedClients_TB">
                <label>RDPVcBridge Unsupported Clients</label>
@@ -701,6 +878,18 @@ For example, selecting "Never" here will prevent a disconnected session (on this
 
          <presentation id="SSO_retry_timeout">
             <decimalTextBox refId="SSO_retry_timeout_DB" defaultValue="5000">Single sign-on retry timeout</decimalTextBox>
+         </presentation>
+
+         <presentation id="RDS_threshold_connecting_session">
+            <decimalTextBox refId="RDS_threshold_connecting_session_DB" defaultValue="20">Connecting Session Threshold Value</decimalTextBox>
+         </presentation>
+
+         <presentation id="RDS_threshold_load_index">
+            <decimalTextBox refId="RDS_threshold_load_index_DB" defaultValue="0">Load Index Threshold Value</decimalTextBox>
+         </presentation>
+
+         <presentation id="Win10PhysicalAgentAudioOption">
+            <dropdownList refId="Win10PhysicalAgentAudioOption_DDL" defaultItem="0">Audio option for single session Windows 10 physical Remote Desktop machine</dropdownList>
          </presentation>
 
          <presentation id="Accept_SSL_encr_framework_channel">
@@ -736,15 +925,31 @@ For example, selecting "Never" here will prevent a disconnected session (on this
             <decimalTextBox refId="Cert_min_validity_DB" defaultValue="10">Minimum validity period required for a certificate</decimalTextBox>
          </presentation>
 
+         <presentation id="WhfbCertificateAllowedApplicationsList">
+            <multiTextBox refId="Whfb_Certificate_Allowed_Applications_list_TB">List of allowed executables</multiTextBox>
+         </presentation>
+
          <presentation id="Exclude_Vid_Pid">
             <textBox refId="Exclude_Vid_Pid_TB">
                <label>Exclude Vid/Pid Device</label>
             </textBox>
          </presentation>
 
+         <presentation id="Exclude_Vid_Pid_Rel">
+            <textBox refId="Exclude_Vid_Pid_Rel_TB">
+               <label>Exclude Vid/Pid/Rel Device</label>
+            </textBox>
+         </presentation>
+
          <presentation id="Include_Vid_Pid">
             <textBox refId="Include_Vid_Pid_TB">
                <label>Include Vid/Pid Device</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Include_Vid_Pid_Rel">
+            <textBox refId="Include_Vid_Pid_Rel_TB">
+               <label>Include Vid/Pid/Rel Device</label>
             </textBox>
          </presentation>
 
@@ -757,6 +962,24 @@ For example, selecting "Never" here will prevent a disconnected session (on this
          <presentation id="Include_device_family">
             <textBox refId="Include_device_family_TB">
                <label>Include Device Family</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="HidOpt_Include_Vid_Pid">
+            <textBox refId="HidOpt_Include_Vid_Pid_TB">
+               <label>Include HID Optimization Vid/Pid Device</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Exclude_Auto_Vid_Pid">
+            <textBox refId="Exclude_Auto_Vid_Pid_TB">
+               <label>Exclude Automatically Connection Vid/Pid Device</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Exclude_auto_device_family">
+            <textBox refId="Exclude_auto_device_family_TB">
+               <label>Exclude Automatically Connection Device Family</label>
             </textBox>
          </presentation>
 
@@ -804,18 +1027,8 @@ For example, selecting "Never" here will prevent a disconnected session (on this
             <dropdownList refId="Allow_Auto_Device_Splitting_DDL" defaultItem="0">Allow Auto Device Splitting</dropdownList>
          </presentation>
 
-         <presentation id="Min_rect_size_to_enable_flash_MMR">
-            <textBox refId="Min_rect_size_to_enable_flash_MMR_TB">
-               <label>Minimum rect size to enable FlashMMR</label>
-            </textBox>
-         </presentation>
-
          <presentation id="Accept_SSL_encr_framework_channel_2">
             <dropdownList refId="Accept_SSL_encr_framework_channel_2_DDL" defaultItem="0">Accept SSL encrypted framework channel</dropdownList>
-         </presentation>
-
-         <presentation id="FlashMMRUrlList">
-            <listBox refId="FlashMMRUrlList_list">Hosts Url list to enable Flashmmr</listBox>
          </presentation>
 
          <presentation id="Default_proxy_server">
@@ -826,10 +1039,6 @@ For example, selecting "Never" here will prevent a disconnected session (on this
 
          <presentation id="Update_Java_Proxy">
             <dropdownList refId="Update_Java_Proxy_DDL" defaultItem="2">Set proxy for Java applet</dropdownList>
-         </presentation>
-
-         <presentation id="FlashMMRUrlListEnableType">
-            <dropdownList refId="FlashMMRUrlListEnableType_DDL" defaultItem="1">Definition for FlashMMR url list usage</dropdownList>
          </presentation>
 
          <presentation id="HTML5MMRUrlList">
@@ -882,15 +1091,51 @@ For example, selecting "Never" here will prevent a disconnected session (on this
             <dropdownList refId="VDI_disconnect_time_till_logoff_minutes" noSort="true" defaultItem="0">Disconnect Timeout</dropdownList>
          </presentation>
 
+         <presentation id="RDS_idle_time_till_disconnect">
+            <dropdownList refId="RDS_idle_time_till_disconnect_milliseconds" noSort="true" defaultItem="0">RDS Idle Timeout</dropdownList>
+         </presentation>
+
+         <presentation id="RDS_disconnect_time_till_logoff">
+            <dropdownList refId="RDS_disconnect_time_till_logoff_milliseconds" noSort="true" defaultItem="0">RDS Disconnect Timeout</dropdownList>
+         </presentation>
+
+         <presentation id="RDS_active_time_till_disconnect">
+            <dropdownList refId="RDS_active_time_till_disconnect_milliseconds" noSort="true" defaultItem="0">RDS Connection Timeout</dropdownList>
+         </presentation>
+
          <presentation id="Prewarm_disconnect_time_till_logoff">
             <dropdownList refId="Prewarm_disconnect_time_till_logoff_minutes" noSort="true" defaultItem="5">Prewarm Timeout</dropdownList>
          </presentation>
 
-         <presentation id="Video_Cpu_Overuse_Threshold">
+         <presentation id ="watermark_configuration">
+            <multiTextBox refId="Text">Text</multiTextBox>
+            <dropdownList refId="ImageFit" noSort="true" defaultItem="0">Image Layout</dropdownList>
+            <decimalTextBox refId="Rotation" defaultValue="45">Text Rotation</decimalTextBox>
+            <decimalTextBox refId="Opacity" defaultValue="50">Opacity</decimalTextBox>
+            <decimalTextBox refId="Margin" defaultValue="50">Margin</decimalTextBox>
+            <textBox refId="TextColor">
+               <label>Text Color</label>
+               <defaultValue>255 255 255</defaultValue>
+            </textBox>
+            <decimalTextBox refId="FontSize" defaultValue="0">Font Size</decimalTextBox>
+            <decimalTextBox refId="RefreshInterval" defaultValue="0">Refresh Interval</decimalTextBox>
+         </presentation>
+
+        <presentation id="AppSignInWindow">
+            <decimalTextBox refId="app_sign_in_window_width" defaultValue="800" spinStep="2">Legal notice window width: </decimalTextBox>
+            <decimalTextBox refId="app_sign_in_window_height" defaultValue="600" spinStep="2">Legal notice window height: </decimalTextBox>
+        </presentation>
+        <presentation id="Video_Cpu_Overuse_Threshold">
             <decimalTextBox refId="Video_Cpu_Overuse_Threshold_data" defaultValue="85">Video CPU overuse threshold</decimalTextBox>
          </presentation>
          <presentation id="Webrtc_Recommended_AEC">
             <checkBox refId="Webrtc_Recommended_AEC_CB" defaultChecked="true"> Use recommended AEC algorithm </checkBox>
+         </presentation>
+         <presentation id="Force_Enable_Teams_Redir">
+            <checkBox refId="Force_Enable_Teams_Redir_Value" defaultChecked="false"> Force client side WebRTC optimization </checkBox>
+         </presentation>
+         <presentation id="Force_Enable_Electron_App_Redir">
+            <checkBox refId="Force_Enable_Electron_App_Redir_Value" defaultChecked="false"> Force client side WebRTC optimization </checkBox>
          </presentation>
       </presentationTable>
    </resources>

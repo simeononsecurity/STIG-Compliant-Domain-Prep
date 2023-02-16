@@ -1,0 +1,255 @@
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName>
+  </displayName>
+  <description>
+  </description>
+  <resources>
+    <stringTable>
+      <string id="Root_CatName">掃描器重新導向</string>
+      <string id="DisableFunctionality_PolicyName">停用功能</string>
+      <string id="DisableFunctionality_PolicyExplain">此原則設定用於停用掃描器重新導向功能。
+
+若啟用此原則設定，掃描器將無法重新導向且不會顯示在掃描器功能表中。
+
+若停用或未設定此原則設定，則掃描器重新導向將正常運作且掃描器會顯示在掃描器功能表中。</string>
+      <string id="LockConfig_PolicyName">鎖定組態</string>
+      <string id="LockConfig_PolicyExplain">此原則設定用於鎖定程式的使用者介面設定。
+
+若啟用此原則設定，則包含程式設定的使用者介面會遭到鎖定，而使用者無法變更「系統匣」功能表中的設定。
+
+若停用或未設定此原則設定，則使用者將可存取包含程式設定的使用者介面。</string>
+      <string id="HideWebcam_PolicyName">隱藏網路攝影機</string>
+      <string id="HideWebcam_PolicyExplain_COMP">目前使用的網路攝影機可重新導向至 VMware Agent 端，且可當作用來擷取影像的虛擬掃描器。
+此原則設定可防止網路攝影機顯示在使用者介面的掃描器選取功能表中。
+
+若啟用此原則設定，則會對此電腦的所有使用者啟用網路攝影機隱藏模式。
+
+若停用此原則設定，則會對此電腦的所有使用者停用網路攝影機隱藏模式。
+
+此外，此原則設定也會覆寫此電腦所有使用者的類似原則設定，且使用者將無法透過設定介面變更網路攝影機隱藏模式。
+
+若未設定此原則設定，則由類似的使用者原則設定或透過設定介面來決定網路攝影機隱藏模式。</string>
+      <string id="HideWebcam_PolicyExplain_USER">目前使用的網路攝影機可重新導向至 VMware Agent 端，且可當作用來擷取影像的虛擬掃描器。
+此原則設定可防止網路攝影機顯示在使用者介面的掃描器選取功能表中。
+
+若啟用此原則設定，則由此原則設定指派使用者的網路攝影機隱藏模式。
+
+若停用或未設定此原則設定，則將停用網路攝影機隱藏模式。
+
+即便已啟用原則設定，使用者仍可以隨時透過設定介面來變更網路攝影機隱藏模式。
+
+如果對電腦使用此原則設定，則系統會覆寫針對此電腦所有使用者的原則設定。在這種情況下，使用者將無法透過設定介面來變更網路攝影機隱藏模式。</string>
+      <string id="DefaultColorMode_PolicyName">預設色彩模式</string>
+      <string id="DefaultColorMode_PolicyExplain">此原則允許覆寫預設的掃描色彩模式 (例如彩色或灰階)。
+如果掃描應用程式在掃描時未顯示 [掃描喜好設定] 對話方塊，且不允許在內部設定色彩模式的情況下非常實用。
+      </string>
+      <string id="DefaultColorMode_DropDownListName">色彩模式:</string>
+      <string id="DefaultColorMode_BlackAndWhite">黑白</string>
+      <string id="DefaultColorMode_Grayscale">灰階</string>
+      <string id="DefaultColorMode_Color">彩色</string>
+	  <string id="DefaultResolution_PolicyName">預設解析度</string>
+      <string id="DefaultResolution_PolicyExplain">此原則允許覆寫預設的掃描解析度 (以 DPI 為單位)。</string>
+      <string id="DefaultDuplex_PolicyName">預設雙面</string>
+      <string id="DefaultDuplex_PolicyExplain">此原則允許覆寫預設的掃描模式 (單面或雙面)。
+設定「雙面」時請務必注意，因為掃描應用程式應支援雙面掃描，並向掃描程式要求兩個頁面。
+      </string>
+      <string id="DefaultDuplex_DropDownListName">雙面模式:</string>
+      <string id="DefaultDuplex_Simplex">單面</string>
+      <string id="DefaultDuplex_Duplex">雙面</string>
+	  <string id="DefaultAutoRotate_PolicyName">預設自動旋轉</string>
+      <string id="DefaultAutoRotate_PolicyExplain">僅 TWAIN。此原則允許覆寫預設的頁面自動旋轉模式 (已啟用或已停用)。
+啟用時，邏輯依靠掃描器驅動程式內的智慧功能來自動旋轉影像，以放置於正確位置。例如掃描器驅動程式可決定頁面是否旋轉 (90 或 180 度，順時針或逆時針)。
+      </string>
+      <string id="DefaultAutoRotate_DropDownListName">預設自動旋轉:</string>
+      <string id="DefaultAutoRotate_Disabled">已停用</string>
+      <string id="DefaultAutoRotate_Enabled">已啟用</string>
+	  <string id="DefaultAutoDeskew_PolicyName">預設自動轉正</string>
+      <string id="DefaultAutoDeskew_PolicyExplain">僅 TWAIN。此原則允許覆寫預設的頁面自動轉正模式 (已啟用或已停用)。
+啟用時，邏輯依靠掃描器驅動程式內的智慧功能來自動拉直影像。
+</string>
+      <string id="DefaultAutoDeskew_DropDownListName">預設自動轉正:</string>
+      <string id="DefaultAutoDeskew_Disabled">已停用</string>
+      <string id="DefaultAutoDeskew_Enabled">已啟用</string>
+	  <string id="DefaultAutoBorderDetection_PolicyName">預設自動邊界偵測</string>
+      <string id="DefaultAutoBorderDetection_PolicyExplain">僅 TWAIN。此原則允許複寫預設的頁面自動邊界偵測模式 (已啟用或已停用)。
+啟用時，邏輯依靠掃描器驅動程式內的智慧功能來自動偵測掃描的影像邊界，並相應地裁切影像。
+</string>
+      <string id="DefaultAutoBorderDetection_DropDownListName">預設自動邊界偵測:</string>
+      <string id="DefaultAutoBorderDetection_Disabled">已停用</string>
+      <string id="DefaultAutoBorderDetection_Enabled">已啟用</string>
+      <string id="DefaultScanner_PolicyName">預設掃描器</string>
+      <string id="DefaultScanners_PolicyExplain_COMP">此原則設定用於集中化管理掃描器自動選取。
+系統會使用下列自動選取模式:
+「無」- 不自動選取掃描器；
+「自動選取」- 自動選取連接的掃描器；
+「最近使用」- 自動選取上次使用的掃描器；
+「指定」- 由 [指定的掃描器] 欄位內容決定選取的掃描器。
+
+若啟用此原則設定，此原則設定會覆寫此電腦所有使用者的掃描器自動選取模式，且使用者將無法透過設定介面變更自動選取模式。
+此外，此原則設定也會覆寫此電腦所有使用者的類似原則設定。
+
+若停用或未設定此原則設定，則由使用者的類似原則設定或透過設定介面來決定自動選取模式。</string>
+      <string id="DefaultScanners_PolicyExplain_USER">此原則設定用於集中化管理掃描器自動選取。
+系統會使用下列自動選取模式:
+「無」- 不自動選取掃描器；
+「自動選取」- 自動選取連接的掃描器；
+「最近使用」- 自動選取上次使用的已連接掃描器；
+「指定」- 由 [指定的掃描器] 欄位內容決定選取的掃描器。
+
+若啟用此原則設定，則由此原則設定來設定使用者的掃描器自動選取模式。
+
+若停用或未設定此原則設定，則將使用「自動選取」模式。
+
+即便已啟用原則設定，使用者仍可以隨時透過設定介面來變更自動選取模式。
+
+如果對電腦使用此原則設定，則系統會覆寫針對此電腦所有使用者的原則設定。在這種情況下，使用者將無法透過設定介面來變更自動選取模式。</string>
+      <string id="TWAINScanners_Caption">針對 TWAIN 掃描器:
+
+</string>
+      <string id="WIAScanners_Caption">針對 WIA 掃描器:
+
+</string>
+      <string id="Scanners_SelectionMode_DropDownListName">選取模式:</string>
+      <string id="Scanners_SelectionMode_None">無</string>
+      <string id="Scanners_SelectionMode_Auto">自動選取</string>
+      <string id="Scanners_SelectionMode_Last">最近使用</string>
+      <string id="Scanners_SelectionMode_Specified">指定</string>
+      <string id="Scanners_Specified_EditName">指定的掃描器:</string>
+      <string id="Compression_PolicyName">壓縮</string>
+      <string id="Compression_PolicyExplain">此原則設定用於設定將影像傳輸到代理程式端期間的影像壓縮率。
+系統會使用下列壓縮模式:
+「停用」- 停用影像壓縮；
+「不失真」- 使用不失真 (zlib) 壓縮時，影像畫質不會下降；
+「JPEG」- 使用 JPEG 壓縮時品質會下降。影像畫質等級可以在 [JPEG 壓縮品質] 欄位中指定。
+
+若啟用此原則設定，則由此原則設定來設定使用者的壓縮模式。
+
+若停用或未設定此原則設定，則將使用「JPEG」壓縮模式。
+
+即便已啟用原則設定，使用者仍可以隨時透過設定介面來變更壓縮模式。</string>
+      <string id="Compression_Mode_DropDownListName">壓縮模式:</string>
+      <string id="Compression_Mode_Disable">停用</string>
+      <string id="Compression_Mode_Lossless">不失真</string>
+      <string id="Compression_Mode_JPEG">JPEG</string>
+      <string id="Compression_JPEGQuality_NumericName">JPEG 壓縮品質:</string>
+      <string id="ADMXMigrator_UnresolvedString">ADMX Migrator 遇到不在來源 ADM 字串表格中的字串。</string>
+      <string id="ADMXMigrator_NoSupportedOn">ADMX Migrator 遇到沒有 supportedOn 值的原則。</string>
+      <string id="SUPPORTED_WindowsXP">至少是 Microsoft Windows XP Professional 或 Windows Server 2003 系列</string>
+	  <string id="BandwidthLimit_PolicyName">BandwidthLimit</string>
+	  <string id="BandwidthLimit_PolicyExplain">此原則設定會指定將掃描的資料傳輸至使用者工作階段時允許的最大頻寬 (以 KB/秒為單位)。
+若為零或未指定，則無限制。</string>
+	  <string id="BandwidthLimit_NumericName">限制 KB/秒:</string>
+	  <string id="UseVendorUI_PolicyName">TWAIN 掃描器內容對話方塊位置</string>
+      <string id="UseVendorUI_PolicyExplain">此原則可讓您指定 [TWAIN 掃描內容] 對話方塊將顯示在代理程式端還是用戶端上。
+若是代理程式，則 [VMware 掃描器內容] 對話方塊會顯示在代理程式端。
+若是用戶端，則會在用戶端上顯示原生廠商掃描器 TWAIN 對話方塊。
+      </string>
+      <string id="UseVendorUI_DropDownListName">TWAIN 掃描器內容對話方塊位置:</string>
+      <string id="UseVendorUI_Server">代理程式</string>
+      <string id="UseVendorUI_Wks">用戶端</string>
+	  <string id="ForceTwainDialog_PolicyName">強制執行 TWAIN 掃描內容對話方塊</string>
+      <string id="ForceTwainDialog_PolicyExplain_USER">此原則可讓您即使在掃描應用程式並未顯示掃描對話方塊時，仍強制顯示 [TWAIN 掃描內容] 對話方塊。</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="DisableFunctionality_PolicyName" />
+      <presentation id="LockConfig_PolicyName" />
+      <presentation id="HideWebcam_PolicyName" />
+      <presentation id="DefaultColorMode_PolicyName">
+        <dropdownList refId="DefaultColorMode_DropDownListName" noSort="true" defaultItem="2">色彩模式:</dropdownList>
+      </presentation>
+	  <presentation id="DefaultResolution_PolicyName">
+        <decimalTextBox refId="DefaultResolution_TextBoxName" noSort="true"  defaultValue="150">解析度:</decimalTextBox>
+      </presentation>
+      <presentation id="DefaultDuplex_PolicyName">
+        <dropdownList refId="DefaultDuplex_DropDownListName" noSort="true" defaultItem="1">雙面模式:</dropdownList>
+      </presentation>
+	  <presentation id="DefaultAutoRotate_PolicyName">
+        <dropdownList refId="DefaultAutoRotate_DropDownListName" noSort="true" defaultItem="1">預設自動旋轉:</dropdownList>
+      </presentation>
+	  <presentation id="DefaultAutoDeskew_PolicyName">
+        <dropdownList refId="DefaultAutoDeskew_DropDownListName" noSort="true" defaultItem="1">預設自動轉正:</dropdownList>
+      </presentation>
+	  <presentation id="DefaultAutoBorderDetection_PolicyName">
+        <dropdownList refId="DefaultAutoBorderDetection_DropDownListName" noSort="true" defaultItem="1">預設自動邊界偵測:</dropdownList>
+      </presentation>
+      <presentation id="DefaultScanner_PolicyName">
+        <text>針對 TWAIN 掃描器:
+
+</text>
+        <dropdownList refId="Scanners_SelectionMode_DropDownListName" noSort="true" defaultItem="1">選取模式:</dropdownList>
+        <textBox refId="Scanners_Specified_EditName">
+          <label>指定的掃描器:</label>
+          <defaultValue>
+          </defaultValue>
+        </textBox>
+        <text>
+        </text>
+        <text>針對 WIA 掃描器:
+
+</text>
+        <dropdownList refId="Scanners_SelectionMode_DropDownListName_1" noSort="true" defaultItem="1">選取模式:</dropdownList>
+        <textBox refId="Scanners_Specified_EditName_1">
+          <label>指定的掃描器:</label>
+          <defaultValue>
+          </defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="Compression_PolicyName">
+        <dropdownList refId="Compression_Mode_DropDownListName" noSort="true" defaultItem="2">壓縮模式:</dropdownList>
+        <decimalTextBox refId="Compression_JPEGQuality_NumericName" defaultValue="80">JPEG 壓縮品質:</decimalTextBox>
+      </presentation>
+	   <presentation id="Compression_PolicyName_1">
+        <dropdownList refId="Compression_Mode_DropDownListName_1" noSort="true" defaultItem="2">壓縮模式:</dropdownList>
+        <decimalTextBox refId="Compression_JPEGQuality_NumericName_1" defaultValue="80">JPEG 壓縮品質:</decimalTextBox>
+      </presentation>
+      <presentation id="HideWebcam_PolicyName_1" />
+      <presentation id="DefaultColorMode_PolicyName_1">
+        <dropdownList refId="DefaultColorMode_DropDownListName" noSort="true" defaultItem="2">色彩模式:</dropdownList>
+      </presentation>
+	   <presentation id="DefaultResolution_PolicyName_1">
+        <decimalTextBox refId="DefaultResolution_TextBoxName" noSort="true" defaultItem="1">解析度:</decimalTextBox>
+      </presentation>
+      <presentation id="DefaultDuplex_PolicyName_1">
+        <dropdownList refId="DefaultDuplex_DropDownListName" noSort="true" defaultItem="1">雙面模式:</dropdownList>
+      </presentation>
+	  <presentation id="DefaultAutoRotate_PolicyName_1">
+        <dropdownList refId="DefaultAutoRotate_DropDownListName" noSort="true" defaultItem="1">預設自動旋轉:</dropdownList>
+      </presentation>
+	  <presentation id="DefaultAutoDeskew_PolicyName_1">
+        <dropdownList refId="DefaultAutoDeskew_DropDownListName" noSort="true" defaultItem="1">預設自動轉正:</dropdownList>
+      </presentation>
+	  <presentation id="DefaultAutoBorderDetection_PolicyName_1">
+        <dropdownList refId="DefaultAutoBorderDetection_DropDownListName" noSort="true" defaultItem="1">預設自動邊界偵測:</dropdownList>
+      </presentation>
+      <presentation id="DefaultScanner_PolicyName_1">
+        <text>針對 TWAIN 掃描器:
+
+</text>
+        <dropdownList refId="Scanners_SelectionMode_DropDownListName" noSort="true" defaultItem="1">選取模式:</dropdownList>
+        <textBox refId="Scanners_Specified_EditName">
+          <label>指定的掃描器:</label>
+          <defaultValue>
+          </defaultValue>
+        </textBox>
+        <text>
+        </text>
+        <text>針對 WIA 掃描器:
+
+</text>
+        <dropdownList refId="Scanners_SelectionMode_DropDownListName_1" noSort="true" defaultItem="1">選取模式:</dropdownList>
+        <textBox refId="Scanners_Specified_EditName_1">
+          <label>指定的掃描器:</label>
+          <defaultValue>
+          </defaultValue>
+        </textBox>
+      </presentation>
+	   <presentation id="BandwidthLimit_PolicyName">
+        <decimalTextBox refId="BandwidthLimit_NumericName" defaultValue="0">限制 KB/秒:</decimalTextBox>
+      </presentation>
+	  <presentation id="UseVendorUI_PolicyName">
+        <dropdownList refId="UseVendorUI_DropDownListName" noSort="true" defaultItem="0">對話方塊位置:</dropdownList>
+      </presentation>
+	  <presentation id="ForceTwainDialog_PolicyName" />
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

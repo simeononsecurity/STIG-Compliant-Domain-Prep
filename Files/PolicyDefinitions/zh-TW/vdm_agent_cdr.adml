@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="VMwareViewCDR">VMware Horizon Client 用戶端磁碟機重新導向</string>
+      <string id="IsDriveLetterNeeded">顯示含有磁碟機代號的重新導向裝置</string>
+      <string id="IsDriveLetterNeededExplain">此設定決定是否啟用 CDR (用戶端磁碟機重新導向) 的磁碟機代號。依預設為啟用。</string>
+      <string id="InitDriveLetterTimeout">磁碟機代號初始化逾時</string>
+      <string id="InitDriveLetterTimeoutExplain">此設定決定等待 Windows 檔案總管完成正確磁碟機代號處理的逾時值。當此設定為 [已停用] 或 [未設定] 時，依預設將其設定為 5 秒。</string>
+      <string id="VMwareViewCDRDeviceFiltering">裝置篩選</string>
+	  <string id="ExcludeVidPid">排除 Vid/Pid 裝置</string>
+      <string id="ExcludeVidPidExplain">將具有指定廠商識別碼和產品識別碼的裝置排除在轉送之外。
+
+語法: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx | *&gt;&gt;[;...]
+
+例如: vid-0781_pid-554c;vid-0781_pid-9999</string>
+      <string id="IncludeVidPid">納入 Vid/Pid 裝置</string>
+      <string id="IncludeVidPidExplain">納入具有指定廠商識別碼和產品識別碼且可以轉送的裝置。
+
+語法: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx | *&gt;&gt;[;...]
+
+例如: vid-0781_pid-554c;vid-0781_pid-9999</string>
+      <string id="DriveLetterMapping">設定磁碟機代號對應模式</string>
+      <string id="DriveLetterMappingExplain">此 GPO 用來設定磁碟機代號對應模式，目前支援兩個模式。
+- 一對一對應: 將相同的用戶端磁碟機代號對應至代理程式。
+- 定義的對應: 根據定義的對應表，將用戶端磁碟機代號對應至代理程式。
+
+
+附註:
+- 當 GPO「顯示含有磁碟機代號的重新導向裝置」未停用時，此 GPO 即有效。
+- 針對這兩個支援的模式，當磁碟機代號發生衝突時 (例如要對應的磁碟機代號已在代理程式中使用)，將改用「Z」到「A」逆向排序的第一個可用字母。如果沒有磁碟機代號可供使用，將不會指派任何磁碟機代號。
+      </string>
+      <string id="DriveLetterMappingTable">定義磁碟機代號對應表</string>
+      <string id="DriveLetterMappingTableExplain">定義磁碟機代號對應表
+- 用戶端磁碟機代號 (值名稱): 在用戶端使用的磁碟機代號。
+- 代理程式磁碟機代號 (值): 要在代理程式使用的磁碟機代號。
+</string>
+      <string id="OneToOneMapping">一對一對應</string>
+      <string id="PredefinedMapping">定義的對應</string>
+      <string id="EnableHighPerformanceCDR">啟用效能最佳化</string>
+      <string id="EnableHighPerformanceCDRExplain">此設定會決定是否為用戶端驅動程式重新導向啟用效能最佳化。如果啟用此設定，則在從共用磁碟機複製檔案/資料夾等案例上，其效能會更高。
+
+此設定依預設為停用。
+      </string>
+    </stringTable>
+    <presentationTable>
+       <presentation id="IsDriveLetterNeeded"/>
+       <presentation id="InitDriveLetterTimeout">
+         <decimalTextBox refId="InitDriveLetterTimeout" defaultValue="5000">逾時 (以毫秒為單位):</decimalTextBox>
+       </presentation>
+	   <presentation id="ExcludeVidPid">
+         <textBox refId="ExcludeVidPid">
+           <label>排除 Vid/Pid 裝置</label>
+         </textBox>
+       </presentation>
+       <presentation id="IncludeVidPid">
+         <textBox refId="IncludeVidPid">
+           <label>納入 Vid/Pid 裝置</label>
+         </textBox>
+       </presentation>
+       <presentation id="DriveLetterMapping">
+         <dropdownList refId="DriveLetterMappingDropdown" defaultItem="0" noSort="true">設定磁碟機代號對應模式:</dropdownList>
+       </presentation>
+       <presentation id="DriveLetterMappingTable">
+         <listBox refId="DriveLetterMappingTable">定義磁碟機代號對應表:</listBox>
+       </presentation>
+       <presentation id="EnableHighPerformanceCDR"/>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

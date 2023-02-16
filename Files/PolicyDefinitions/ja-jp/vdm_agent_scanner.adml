@@ -1,0 +1,253 @@
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName>
+  </displayName>
+  <description>
+  </description>
+  <resources>
+    <stringTable>
+      <string id="Root_CatName">スキャナ リダイレクト</string>
+      <string id="DisableFunctionality_PolicyName">機能を無効にする</string>
+      <string id="DisableFunctionality_PolicyExplain">このポリシー設定は、スキャン リダイレクト機能を無効にする場合に使用します。
+
+このポリシー設定を有効にすると、スキャナがリダイレクトされず、スキャナ メニューに表示されません。
+
+このポリシー設定が無効な場合、または構成されていない場合、スキャナ リダイレクトが機能し、スキャナ メニューにスキャナが表示されます。</string>
+      <string id="LockConfig_PolicyName">構成をロックする</string>
+      <string id="LockConfig_PolicyExplain">このポリシー設定は、プログラムの設定ユーザー インターフェイスをロックする場合に使用します。
+
+このポリシー設定を有効にすると、プログラムの設定を含むユーザー インターフェイスがロックされ、ユーザーはトレイ メニューで設定を変更できなくなります。
+
+このポリシー設定が無効な場合、または構成されていない場合、ユーザーはプログラムの設定を含むユーザー インターフェイスにアクセスできます。</string>
+      <string id="HideWebcam_PolicyName">Web カメラを非表示</string>
+      <string id="HideWebcam_PolicyExplain_COMP">現在、Web カメラを VMware Agent 側にリダイレクトし、イメージ キャプチャの仮想スキャナとして使用できます。
+このポリシー設定を使用すると、ユーザー インターフェイスのスキャナ選択メニューに Web カメラが表示されなくなります。
+
+このポリシー設定を有効にすると、このコンピュータのすべてのユーザーで Web カメラ非表示モードが有効になります。
+
+このポリシー設定を無効にすると、このコンピュータのすべてのユーザーで Web カメラ非表示モードが無効になります。
+
+また、このポリシー設定を使用すると、このコンピュータのすべてのユーザーに対して、類似したポリシー設定の上書きが行われます。ユーザーは、設定インターフェイスを使用して Web カメラ非表示モードを変更できなくなります。
+
+このポリシーを構成しない場合、類似したユーザー ポリシー設定または設定インターフェイスによって Web カメラ非表示モードが決まります。</string>
+      <string id="HideWebcam_PolicyExplain_USER">現在、Web カメラを VMware Agent 側にリダイレクトし、イメージ キャプチャの仮想スキャナとして使用できます。
+このポリシー設定を使用すると、ユーザー インターフェイスのスキャナ選択メニューに Web カメラが表示されなくなります。
+
+このポリシー設定を有効にすると、このポリシーに従ってユーザーの Web カメラ非表示モードが設定されます。
+
+このポリシー設定が無効な場合、または構成されていない場合、Web カメラ非表示モードが無効になります。
+
+このポリシー設定が有効な場合でも、ユーザーは設定インターフェイスを使用して Web カメラ非表示モードをいつでも変更できます。
+
+このポリシー設定をコンピュータに使用すると、そのコンピュータのすべてのユーザーのポリシー設定が上書きされます。この場合、ユーザーは設定インターフェイスで Web カメラの非表示モードを変更できません。</string>
+      <string id="DefaultColorMode_PolicyName">デフォルトのカラー モード</string>
+      <string id="DefaultColorMode_PolicyExplain">このポリシーを使用すると、デフォルトのスキャン カラー モード (カラーまたはグレースケールなど) を上書きできます。
+これは、スキャン アプリケーションの実行時にスキャンの設定ダイアログを表示せず、カラー モードの設定を内部的に許可しない場合に便利です。</string>
+      <string id="DefaultColorMode_DropDownListName">カラー モード:</string>
+      <string id="DefaultColorMode_BlackAndWhite">白黒</string>
+      <string id="DefaultColorMode_Grayscale">グレースケール</string>
+      <string id="DefaultColorMode_Color">カラー</string>
+	  <string id="DefaultResolution_PolicyName">デフォルトの解像度</string>
+      <string id="DefaultResolution_PolicyExplain">このポリシーを使用すると、デフォルトのスキャン解像度 (DPI) を変更できます。</string>
+      <string id="DefaultDuplex_PolicyName">デフォルトのデュプレックス</string>
+      <string id="DefaultDuplex_PolicyExplain">このポリシーを使用すると、デフォルトのスキャン モード (シンプレックスまたはデュプレックス) を変更できます。
+スキャン アプリケーションがデュプレックス スキャンをサポートし、スキャナから 2 ページを要求するため、デュプレックスを設定する場合には注意してください。</string>
+      <string id="DefaultDuplex_DropDownListName">デュプレックス モード:</string>
+      <string id="DefaultDuplex_Simplex">シンプレックス</string>
+      <string id="DefaultDuplex_Duplex">デュプレックス</string>
+	  <string id="DefaultAutoRotate_PolicyName">デフォルトの自動回転</string>
+      <string id="DefaultAutoRotate_PolicyExplain">TWAIN のみ。このポリシーを使用すると、デフォルトのページ自動回転モード (有効または無効) を変更できます。
+有効にすると、スキャナ ドライバのインテリジェント機能により、画像を自動的に回転し、正しい位置に表示します。つまり、ページの回転 (90 度または 180 度、CW または CCW) が必要かどうかをスキャナ ドライバが判断します。
+      </string>
+      <string id="DefaultAutoRotate_DropDownListName">デフォルトの自動回転:</string>
+      <string id="DefaultAutoRotate_Disabled">無効</string>
+      <string id="DefaultAutoRotate_Enabled">有効</string>
+	  <string id="DefaultAutoDeskew_PolicyName">デフォルトの自動デスキュー</string>
+      <string id="DefaultAutoDeskew_PolicyExplain">TWAIN のみ。このポリシーを使用すると、デフォルトのページ自動デスキュー モード (有効または無効) を変更できます。
+有効にすると、スキャナ ドライバのインテリジェント機能により、画像の斜行補正を自動的に行います。
+      </string>
+      <string id="DefaultAutoDeskew_DropDownListName">デフォルトの自動デスキュー:</string>
+      <string id="DefaultAutoDeskew_Disabled">無効</string>
+      <string id="DefaultAutoDeskew_Enabled">有効</string>
+	  <string id="DefaultAutoBorderDetection_PolicyName">デフォルトの境界自動検出</string>
+      <string id="DefaultAutoBorderDetection_PolicyExplain">TWAIN のみ。このポリシーを使用すると、デフォルトのページ境界自動検出モード (有効または無効) を変更できます。
+有効にすると、スキャナ ドライバのインテリジェント機能により、スキャン画像の境界を自動的に検出し、画像をトリミングします。
+      </string>
+      <string id="DefaultAutoBorderDetection_DropDownListName">デフォルトの境界自動検出:</string>
+      <string id="DefaultAutoBorderDetection_Disabled">無効</string>
+      <string id="DefaultAutoBorderDetection_Enabled">有効</string>
+      <string id="DefaultScanner_PolicyName">デフォルト スキャナ</string>
+      <string id="DefaultScanners_PolicyExplain_COMP">このポリシー設定は、スキャナの自動選択を集中管理する場合に使用します。
+以下の自動選択モードが使用されます。
+なし - スキャナは自動的に選択されません。
+自動選択 - 接続されているスキャナを自動的に選択します。
+前回の選択 - 前回使用されたスキャナを自動的に選択します。
+指定 - [スキャナを指定] フィールドの値に従ってスキャナを選択します。
+
+このポリシー設定を有効にすると、このコンピュータのすべてのユーザーのスキャナ自動選択モードがこのポリシー設定で上書きされ、ユーザーは設定インターフェイスで自動選択モードが選択できなくなります。
+また、このポリシー設定を使用すると、このコンピュータのすべてのユーザーに対して、類似したポリシー設定の上書きが行われます。
+
+このポリシー設定が無効な場合、または構成されていない場合、類似したユーザー ポリシー設定または設定インターフェイスによって、自動選択モードが決まります。</string>
+      <string id="DefaultScanners_PolicyExplain_USER">このポリシー設定は、スキャナの自動選択を集中管理する場合に使用します。
+次の自動選択モードが使用されます。
+なし - スキャナは自動的に選択されません。
+自動選択 - 接続されているスキャナを自動的に選択します。
+前回の選択 - 前回使用されたスキャナを自動的に選択します。
+指定 - [スキャナを指定] フィールドの値に従ってスキャナを選択します。
+
+このポリシー設定を有効にすると、このポリシーに従ってユーザーのスキャナ自動選択モードが設定されます。
+
+このポリシー設定が無効な場合、または構成されていない場合、自動選択モードが使用されます。
+
+このポリシー設定が有効な場合でも、ユーザーは設定インターフェイスを使用して自動選択モードをいつでも変更できます。
+
+このポリシー設定をコンピュータに使用すると、そのコンピュータのすべてのユーザーのポリシー設定が上書きされます。この場合、ユーザーは設定インターフェイスで自動選択モードを変更できません。</string>
+      <string id="TWAINScanners_Caption">TWAIN スキャナ:
+
+</string>
+      <string id="WIAScanners_Caption">WIA スキャナ:
+
+</string>
+      <string id="Scanners_SelectionMode_DropDownListName">選択モード:</string>
+      <string id="Scanners_SelectionMode_None">なし</string>
+      <string id="Scanners_SelectionMode_Auto">自動選択</string>
+      <string id="Scanners_SelectionMode_Last">前回の選択</string>
+      <string id="Scanners_SelectionMode_Specified">指定</string>
+      <string id="Scanners_Specified_EditName">スキャナを指定:</string>
+      <string id="Compression_PolicyName">圧縮</string>
+      <string id="Compression_PolicyExplain">このポリシーは、エージェント側への画像転送時の画像圧縮率を設定する場合に使用します。
+次の圧縮モードが使用されます。
+無効 - 画像圧縮が無効になります。
+ロスレス - 画質が低下しないロスレス (zlib) 圧縮を使用します。
+JPEG - 品質の低下がある JPEG 圧縮を使用します。画質レベルは [JPEG 圧縮品質] フィールドで指定します。
+
+このポリシー設定を有効にすると、このポリシーに従ってユーザーの圧縮モードが設定されます。
+
+このポリシー設定が無効な場合、または構成されていない場合は、JPEG 圧縮モードが使用されます。
+
+このポリシー設定が有効な場合でも、ユーザーは設定インターフェイスを使用して圧縮モードをいつでも変更できます。</string>
+      <string id="Compression_Mode_DropDownListName">圧縮モード:</string>
+      <string id="Compression_Mode_Disable">無効</string>
+      <string id="Compression_Mode_Lossless">ロスレス</string>
+      <string id="Compression_Mode_JPEG">JPEG</string>
+      <string id="Compression_JPEGQuality_NumericName">JPEG 圧縮品質:</string>
+      <string id="ADMXMigrator_UnresolvedString">ADMX Migrator が、元の ADM 文字列テーブルにない文字列を検出しました。</string>
+      <string id="ADMXMigrator_NoSupportedOn">ADMX Migrator が、supportedOn 値が設定されていないポリシーを検出しました。</string>
+      <string id="SUPPORTED_WindowsXP">Microsoft Windows XP Professional または Windows Server 2003 ファミリ以降</string>
+	  <string id="BandwidthLimit_PolicyName">BandwidthLimit</string>
+	  <string id="BandwidthLimit_PolicyExplain">このポリシー設定では、スキャンされたデータをユーザー セッションに転送するときに使用できる最大バンド幅 (KB/秒) を指定します。
+0 を指定するか値を設定しない場合、制限はありません。</string>
+	  <string id="BandwidthLimit_NumericName">制限 (KB/秒):</string>
+	  <string id="UseVendorUI_PolicyName">TWAIN スキャナのプロパティ ダイアログの場所</string>
+      <string id="UseVendorUI_PolicyExplain">このポリシーでは、TWAIN スキャンのプロパティ ダイアログが表示されるのがエージェント側かクライアント側かを指定できます。
+エージェントの場合、VMware スキャナのプロパティ ダイアログはエージェント側に表示されます。
+クライアントの場合、ネイティブ ベンダーのスキャナの TWAIN ダイアログがクライアント側に表示されます。
+      </string>
+      <string id="UseVendorUI_DropDownListName">TWAIN スキャナのプロパティ ダイアログの場所:</string>
+      <string id="UseVendorUI_Server">エージェント</string>
+      <string id="UseVendorUI_Wks">クライアント</string>
+	  <string id="ForceTwainDialog_PolicyName">[TWAIN スキャンのプロパティ] ダイアログを強制表示</string>
+      <string id="ForceTwainDialog_PolicyExplain_USER">このポリシーでは、スキャン アプリケーションでスキャン ダイアログが表示されない場合でも、TWAIN スキャンのプロパティ ダイアログを強制的に表示できます。</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="DisableFunctionality_PolicyName" />
+      <presentation id="LockConfig_PolicyName" />
+      <presentation id="HideWebcam_PolicyName" />
+      <presentation id="DefaultColorMode_PolicyName">
+        <dropdownList refId="DefaultColorMode_DropDownListName" noSort="true" defaultItem="2">カラー モード:</dropdownList>
+      </presentation>
+	  <presentation id="DefaultResolution_PolicyName">
+        <decimalTextBox refId="DefaultResolution_TextBoxName" noSort="true"  defaultValue="150">解像度:</decimalTextBox>
+      </presentation>
+      <presentation id="DefaultDuplex_PolicyName">
+        <dropdownList refId="DefaultDuplex_DropDownListName" noSort="true" defaultItem="1">デュプレックス モード:</dropdownList>
+      </presentation>
+	  <presentation id="DefaultAutoRotate_PolicyName">
+        <dropdownList refId="DefaultAutoRotate_DropDownListName" noSort="true" defaultItem="1">デフォルトの自動回転:</dropdownList>
+      </presentation>
+	  <presentation id="DefaultAutoDeskew_PolicyName">
+        <dropdownList refId="DefaultAutoDeskew_DropDownListName" noSort="true" defaultItem="1">デフォルトの自動デスキュー:</dropdownList>
+      </presentation>
+	  <presentation id="DefaultAutoBorderDetection_PolicyName">
+        <dropdownList refId="DefaultAutoBorderDetection_DropDownListName" noSort="true" defaultItem="1">デフォルトの境界自動検出:</dropdownList>
+      </presentation>
+      <presentation id="DefaultScanner_PolicyName">
+        <text>TWAIN スキャナ:
+
+</text>
+        <dropdownList refId="Scanners_SelectionMode_DropDownListName" noSort="true" defaultItem="1">選択モード:</dropdownList>
+        <textBox refId="Scanners_Specified_EditName">
+          <label>スキャナを指定:</label>
+          <defaultValue>
+          </defaultValue>
+        </textBox>
+        <text>
+        </text>
+        <text>WIA スキャナ:
+
+</text>
+        <dropdownList refId="Scanners_SelectionMode_DropDownListName_1" noSort="true" defaultItem="1">選択モード:</dropdownList>
+        <textBox refId="Scanners_Specified_EditName_1">
+          <label>スキャナを指定:</label>
+          <defaultValue>
+          </defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="Compression_PolicyName">
+        <dropdownList refId="Compression_Mode_DropDownListName" noSort="true" defaultItem="2">圧縮モード:</dropdownList>
+        <decimalTextBox refId="Compression_JPEGQuality_NumericName" defaultValue="80">JPEG 圧縮品質:</decimalTextBox>
+      </presentation>
+	   <presentation id="Compression_PolicyName_1">
+        <dropdownList refId="Compression_Mode_DropDownListName_1" noSort="true" defaultItem="2">圧縮モード:</dropdownList>
+        <decimalTextBox refId="Compression_JPEGQuality_NumericName_1" defaultValue="80">JPEG 圧縮品質:</decimalTextBox>
+      </presentation>
+      <presentation id="HideWebcam_PolicyName_1" />
+      <presentation id="DefaultColorMode_PolicyName_1">
+        <dropdownList refId="DefaultColorMode_DropDownListName" noSort="true" defaultItem="2">カラー モード:</dropdownList>
+      </presentation>
+	   <presentation id="DefaultResolution_PolicyName_1">
+        <decimalTextBox refId="DefaultResolution_TextBoxName" noSort="true" defaultItem="1">解像度:</decimalTextBox>
+      </presentation>
+      <presentation id="DefaultDuplex_PolicyName_1">
+        <dropdownList refId="DefaultDuplex_DropDownListName" noSort="true" defaultItem="1">デュプレックス モード:</dropdownList>
+      </presentation>
+	  <presentation id="DefaultAutoRotate_PolicyName_1">
+        <dropdownList refId="DefaultAutoRotate_DropDownListName" noSort="true" defaultItem="1">デフォルトの自動回転:</dropdownList>
+      </presentation>
+	  <presentation id="DefaultAutoDeskew_PolicyName_1">
+        <dropdownList refId="DefaultAutoDeskew_DropDownListName" noSort="true" defaultItem="1">デフォルトの自動デスキュー:</dropdownList>
+      </presentation>
+	  <presentation id="DefaultAutoBorderDetection_PolicyName_1">
+        <dropdownList refId="DefaultAutoBorderDetection_DropDownListName" noSort="true" defaultItem="1">デフォルトの境界自動検出:</dropdownList>
+      </presentation>
+      <presentation id="DefaultScanner_PolicyName_1">
+        <text>TWAIN スキャナ:
+
+</text>
+        <dropdownList refId="Scanners_SelectionMode_DropDownListName" noSort="true" defaultItem="1">選択モード:</dropdownList>
+        <textBox refId="Scanners_Specified_EditName">
+          <label>スキャナを指定:</label>
+          <defaultValue>
+          </defaultValue>
+        </textBox>
+        <text>
+        </text>
+        <text>WIA スキャナ:
+
+</text>
+        <dropdownList refId="Scanners_SelectionMode_DropDownListName_1" noSort="true" defaultItem="1">選択モード:</dropdownList>
+        <textBox refId="Scanners_Specified_EditName_1">
+          <label>スキャナを指定:</label>
+          <defaultValue>
+          </defaultValue>
+        </textBox>
+      </presentation>
+	   <presentation id="BandwidthLimit_PolicyName">
+        <decimalTextBox refId="BandwidthLimit_NumericName" defaultValue="0">制限 (KB/秒):</decimalTextBox>
+      </presentation>
+	  <presentation id="UseVendorUI_PolicyName">
+        <dropdownList refId="UseVendorUI_DropDownListName" noSort="true" defaultItem="0">ダイアログの場所:</dropdownList>
+      </presentation>
+	  <presentation id="ForceTwainDialog_PolicyName" />
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

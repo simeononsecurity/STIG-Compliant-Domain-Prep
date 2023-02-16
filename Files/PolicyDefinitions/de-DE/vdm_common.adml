@@ -96,10 +96,16 @@ Format: Protokollebene|Server-FQDNoderIP[|Portnummer(Standard:514)], Beispiel: D
 
 			<string id="Revocation_URL_check_timeout_Desc" >Die kumulative Zeitüberschreitung für alle Abrufe von Sperr-URLs in Millisekunden. Bei einem nicht konfigurierten Wert oder bei einem Wert von 0 wird die Microsoft-Standardbehandlung durchgeführt.</string>
 
-			<string id="Global_Max_Dump_Count" >Konfigurieren der Speicherabbilderstellung bei Programmfehler</string>
+			<string id="Global_Max_Dump_Count" >Speicherabbildanzahl bei Programmfehler konfigurieren</string>
 
-			<string id="Global_Max_Dump_Count_Desc" >Speicherabbilder können auf eine bestimmte Anzahl begrenzt werden, indem der Wert auf einen beliebigen numerischen Wert festgelegt wird. Wenn der Wert auf 0 gesetzt ist, werden keine Speicherabbilder erstellt. Wenn diese Option nicht eingestellt ist, wird kein Grenzwert für die Speicherabbilderstellung festgelegt.</string>
+			<string id="Global_Max_Dump_Count_Desc" >Speicherabbilder können auf eine bestimmte Anzahl begrenzt werden, indem der Wert auf einen beliebigen numerischen Wert festgelegt wird. Diese begrenzte Menge wird pro Vorgang/Benutzer wirksam. Wenn der Wert auf 0 gesetzt ist, werden keine Speicherabbilder erstellt. Wenn diese Option nicht eingestellt ist, wird der Standardgrenzwert für die Speicherabbilderstellung festgelegt. (Standard ist 128 oder keine Begrenzung je nach Vorgang)</string>
+			<string id="Global_Dump_Type" >Speicherabbildtyp bei Programmfehler konfigurieren</string>
 
+			<string id="DumpType_Full" >Voll</string>
+
+			<string id="DumpType_Mini" >Mini</string>
+
+			<string id="Global_Dump_Type_Desc" >Der Benutzer kann den Wert als vollständiges Speicherabbild oder Minispeicherabbild festlegen. Der Unterschied zwischen einem vollständigen Speicherabbild und einem Mini-Speicherabbild ist der Arbeitsspeicher, der im Speicherabbild enthalten ist. Dies ist auf die Größe des vollständigen Speicherabbilds zurückzuführen. Das Mini-Speicherabbild enthält immer noch genügend Informationen, um eine Stapelüberwachung zu erstellen und grundlegende Fehlerbehebungsschritte durchzuführen. Das Mini-Speicherabbild enthält keinen vollständigen Arbeitsspeicher, sodass keine Informationen zu einigen Objekten oder Objektnamen ohne das vollständige Speicherabbild extrahiert werden können. Wenn Sie „Mini-Speicherabbild“ festlegen, wird ein Mini-Speicherabbild erstellt. Wenn Sie nichts festlegen, wird standardmäßig das vollständige Speicherabbild erstellt.</string>
 		</stringTable>
 
 		<presentationTable ><!--Storage for Presentation Definitions-->
@@ -172,6 +178,10 @@ Format: Protokollebene|Server-FQDNoderIP[|Portnummer(Standard:514)], Beispiel: D
 
 			<presentation id="Global_Max_Dump_Count" >
 				<decimalTextBox refId="Global_Max_Dump_Count_DecimalBox" defaultValue="" >Maximal zu erstellende Speicherabbilddateien</decimalTextBox>
+			</presentation>
+
+			<presentation id="Global_Dump_Type" >
+				<dropdownList refId="Global_Dump_Type_DropDown" defaultItem="" >Typ der zu erstellenden Speicherabbilddateien</dropdownList>
 			</presentation>
 
 		</presentationTable>

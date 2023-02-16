@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="VMwareViewClipboard">Zwischenablagenumleitung</string>
+      <string id="SUPPORTED_VERSION"></string>
+      <string id="SERVER_CLIPBOARD_STATE">Zwischenablagenumleitung konfigurieren</string>
+      <string id="CLIPBOARD_STATE_DISABLE_BOTH">In beiden Richtungen deaktiviert</string>
+      <string id="CLIPBOARD_STATE_ENABLE_BOTH">In beiden Richtungen aktiviert</string>
+      <string id="CLIPBOARD_STATE_ENABLE_CLIENT_2_SERVER">Nur von Client zu Server aktiviert</string>
+      <string id="CLIPBOARD_STATE_ENABLE_SERVER_2_CLIENT">Nur von Server zu Client aktiviert</string>
+      <string id="SERVER_CLIPBOARD_STATE_EXPLAIN">Legt die Richtung fest, in der die Zwischenablagenumleitung zulässig ist. Sie können zwischen folgenden Werten wählen:
+
+– In beiden Richtungen deaktiviert
+– In beiden Richtungen aktiviert
+– Nur von Client zu Server aktiviert (d. h., es sind nur Kopier- und Einfügevorgänge vom Clientsystem zum View-Desktop möglich)
+– Nur von Server zu Client aktiviert (d. h., es sind nur Kopier- und Einfügevorgänge vom View-Desktop zum Clientsystem möglich)
+
+Diese Einstellung gilt nur für den Server (View-Desktop).
+
+Wenn diese Einstellung deaktiviert oder nicht konfiguriert ist, gilt die Standardeinstellung „Nur von Client zu Server aktiviert“.</string>
+      <string id="SERVER_CLIPBOARD_SIZE">Zwischenspeichergröße auf dem Server</string>
+      <string id="SERVER_CLIPBOARD_SIZE_EXPLAIN">Diese Einstellungen geben den Wert der Zwischenspeichergröße des Servers an.
+
+Die Zwischenspeichergröße auf dem Server wird – je nach Auswahl – in Kilobyte oder Byte angegeben. Die Speichergröße wird in Kilobyte angegeben, wenn sie nicht konfiguriert ist.
+
+Der Client verfügt ebenfalls über einen Wert für die Zwischenspeichergröße. Dieser wird immer in Kilobyte angezeigt.
+
+Nach der Einrichtung der Sitzung gilt Folgendes:
+– Der Zwischenspeichergrößenwert des Servers wird an den Client gesendet.
+– Beim Client wird dann der effektive Wert der Zwischenspeichergröße aus den Mindestwerten für Client und Server bestimmt.</string>
+      <string id="CLIPBOARD_FINE_GRAIN_LABEL">Zwischenspeichergröße in Byte</string>
+      <string id="CLIPBOARD_FINE_GRAIN_EXPLAIN">Legt fest, ob die Zwischenspeichergröße in Byte oder Kilobyte angegeben wird. Wenn diese Einstellung aktiviert ist, wird die Zwischenspeichergröße auf dem Server in Byte angezeigt. Wenn diese Einstellung deaktiviert ist, wird die Zwischenspeichergröße auf dem Server in Kilobyte angezeigt.
+
+Diese Einstellung gilt nur für den Agenten.</string>
+      <string id="String_Policy_DropList_Select_clipboard_size_unit_kilobytes" >Kilobyte</string>
+      <string id="String_Policy_DropList_Select_clipboard_size_unit_bytes" >Byte</string>
+      <string id="SERVER_CLIPBOARD_AUDIT">Zwischenablagenüberwachung konfigurieren</string>
+      <string id="CLIPBOARD_AUDIT_DISABLE_BOTH">In beiden Richtungen deaktiviert</string>
+      <string id="CLIPBOARD_AUDIT_ENABLE_ONLY_CLIENT_TO_SERVER">Nur von Client zu Server aktiviert</string>
+      <string id="CLIPBOARD_AUDIT_ENABLE_ONLY_SERVER_TO_CLIENT">Nur von Server zu Client aktiviert</string>
+      <string id="CLIPBOARD_AUDIT_ENABLE_BOTH">In beiden Richtungen aktiviert</string>
+      <string id="SERVER_CLIPBOARD_AUDIT_BLOCK_CLIPBOARD">Gibt an, ob die Zwischenablagenumleitung zur Clientseite blockiert wird, wenn der Client die Überwachung nicht unterstützt</string>
+      <string id="SERVER_CLIPBOARD_AUDIT_EXPLAIN">Bestimmt die Richtung, in der die Zwischenablagenüberwachung zulässig ist. Sie können einen der folgenden Werte auswählen:
+
+– In beiden Richtungen deaktiviert
+– Nur von Client zu Server aktiviert (Bei dieser Option werden Informationen von Zwischenablagedaten, die von der Client- zur Agent-Seite kopiert werden, aufgezeichnet.)
+– Nur von Server zu Client aktiviert (Bei dieser Option werden Informationen von Zwischenablagedaten, die von der Agent- zur Client-Seite kopiert werden, aufgezeichnet.)
+- In beiden Richtungen aktiviert
+
+Diese Einstellung bezieht sich nur auf den Server (View-Desktop).
+
+Wenn diese Einstellung deaktiviert oder nicht konfiguriert ist, ist standardmäßig der Wert „In beiden Richtungen deaktiviert“ festgelegt.</string>
+      <string id="SERVER_CLIPBOARD_AUDIT_BLOCK_CLIPBOARD_EXPLAIN">Legt fest, ob die Zwischenablagenumleitung zum Client blockiert wird, wenn Horizon Client die Überwachungsfunktion nicht unterstützt.
+
+Sie können das Verhalten der Zwischenablagenumleitung auswählen:
+
+– Lassen Sie die Zwischenablagenumleitung vom Agenten zum Client passieren, wenn die Überwachung in Horizon Agent aktiviert ist, jedoch nicht in Horizon Client.
+– Blockieren Sie die Zwischenablagenumleitung vom Agenten zum Client, wenn die Überwachung in Horizon Agent aktiviert ist, jedoch nicht in Horizon Client.
+
+Diese Einstellung wird erst nach dem Aktivieren der Überwachung wirksam.</string>
+      <string id="String_Policy_DropList_Select_Configure_clipboard_Audit_Pass_Through">Passthrough</string>
+      <string id="String_Policy_DropList_Select_Configure_clipboard_Audit_Block">Blockieren</string>
+      <string id="SERVER_FILE_TRANSFER_STATE">Dateiübertragung konfigurieren</string>
+      <string id="FILE_TRANSFER_STATE_DISABLE_BOTH">Upload und Download deaktiviert</string>
+      <string id="FILE_TRANSFER_STATE_ENABLE_BOTH">Upload und Download aktiviert</string>
+      <string id="FILE_TRANSFER_STATE_ENABLE_UPLOAD">Nur Dateiupload aktiviert</string>
+      <string id="FILE_TRANSFER_STATE_ENABLE_DOWNLOAD">Nur Dateidownload aktiviert</string>
+      <string id="SERVER_FILE_TRANSFER_STATE_EXPLAIN">Legt die Dateiübertragung zwischen Agent und HTML Access fest. Sie können zwischen folgenden Werten wählen:
+
+– Upload und Download deaktiviert
+– Upload und Download aktiviert
+– Nur Dateiupload aktiviert (d. h., es ist nur das Hochladen von Dateien vom Clientsystem zum View-Desktop möglich)
+– Nur Dateidownload aktiviert (d. h., es ist nur das Herunterladen von Dateien vom View-Desktop zum Clientsystem möglich)
+
+Diese Einstellung gilt nur für den Server (View-Desktop).
+
+Wenn diese Einstellung deaktiviert oder nicht konfiguriert ist, gilt die Standardeinstellung „Nur Dateiupload aktiviert“.</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING">Formate für Zwischenablagenumleitung konfigurieren</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_EXPLAIN">Diese Einstellung legt fest, ob ein Filter für jedes Datenformat aktiviert ist (Datei/Text/Rich Text/Bild/Microsoft Office-Text/Microsoft Office-Texteffekte/Microsoft Office Chart und Smart Art). Der Status für jeden Filter lautet:
+
+– Deaktiviert
+– Aktiviert
+
+Diese Einstellung gilt nur für den Agent, sie ist standardmäßig nicht konfiguriert.
+
+Wenn die Einstellung nicht konfiguriert oder deaktiviert ist, sind die Filter für die „Zwischenablagenumleitung“ für alle Formate „Deaktiviert“.</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_ENABLED">Aktiviert</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_DISABLED">Deaktiviert</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="SERVER_CLIPBOARD_STATE">
+        <dropdownList refId="SERVER_CLIPBOARD_STATE" defaultItem="1">Zwischenablagenumleitung konfigurieren</dropdownList>
+      </presentation>
+      <presentation id="SERVER_CLIPBOARD_SIZE">
+        <dropdownList refId="Policy_DropList_Clipboard_Fine_Grained" defaultItem="1" >Maßeinheit für die Zwischenspeichergröße auswählen</dropdownList>
+        <decimalTextBox refId="SERVER_CLIPBOARD_SIZE" defaultValue="1024" spinStep="100">Zwischenspeichergröße auf dem Server</decimalTextBox>
+      </presentation>
+      <presentation id="SERVER_CLIPBOARD_AUDIT">
+        <dropdownList refId="SERVER_CLIPBOARD_AUDIT" defaultItem="0">Zwischenablagenüberwachung konfigurieren</dropdownList>
+      </presentation>
+      <presentation id="SERVER_CLIPBOARD_AUDIT_BLOCK_CLIPBOARD">
+        <dropdownList refId="Policy_DropList_Element_Configure_clipboard" defaultItem="0">Zwischenablagenverhalten konfigurieren, wenn Client die Überwachung nicht unterstützt</dropdownList>
+      </presentation>
+      <presentation id="CLIPBOARD_FINE_GRAIN_LABEL" />
+      <presentation id="SERVER_FILE_TRANSFER_STATE">
+        <dropdownList refId="SERVER_FILE_TRANSFER_STATE" defaultItem="3">Dateiübertragung konfigurieren</dropdownList>
+      </presentation>
+      <presentation id="CLIPBOARD_FORMAT_FILTERING">
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_FILE_IN" defaultItem="0">Dateien und Ordner aus eingehenden Zwischenablagedaten filtern:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_FILE_OUT" defaultItem="0">Dateien und Ordner aus ausgehenden Zwischenablagedaten filtern:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_TEXT_IN" defaultItem="0">Text aus eingehenden Zwischenablagedaten herausfiltern:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_TEXT_OUT" defaultItem="0">Text aus ausgehenden Zwischenablagedaten herausfiltern:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_RTF_IN" defaultItem="0">RTF-Daten aus eingehenden Zwischenablagedaten herausfiltern:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_RTF_OUT" defaultItem="0">RTF-Daten aus ausgehenden Zwischenablagedaten herausfiltern:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_IMAGE_IN" defaultItem="0">Bilder aus eingehenden Zwischenablagedaten herausfiltern:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_IMAGE_OUT" defaultItem="0">Bilder aus ausgehenden Zwischenablagedaten herausfiltern:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_IN" defaultItem="0">Microsoft Office-Textdaten aus eingehenden Zwischenablagedaten herausfiltern:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_OUT" defaultItem="0">Microsoft Office-Textdaten aus ausgehenden Zwischenablagedaten herausfiltern:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_CHART_IN" defaultItem="0">Microsoft Chart- und SmartArt-Daten aus eingehenden Zwischenablagedaten herausfiltern:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_CHART_OUT" defaultItem="0">Microsoft Chart- und SmartArt-Daten aus ausgehenden Zwischenablagedaten herausfiltern:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_IN" defaultItem="0">Microsoft-Texteffektdaten aus eingehenden Zwischenablagedaten herausfiltern:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_OUT" defaultItem="0">Microsoft-Texteffektdaten aus ausgehenden Zwischenablagedaten herausfiltern:</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

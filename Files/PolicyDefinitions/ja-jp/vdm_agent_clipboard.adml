@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="VMwareViewClipboard">クリップボード リダイレクト</string>
+      <string id="SUPPORTED_VERSION"></string>
+      <string id="SERVER_CLIPBOARD_STATE">クリップボード リダイレクトの構成</string>
+      <string id="CLIPBOARD_STATE_DISABLE_BOTH">どちらの方向も無効にする</string>
+      <string id="CLIPBOARD_STATE_ENABLE_BOTH">どちらの方向も有効にする</string>
+      <string id="CLIPBOARD_STATE_ENABLE_CLIENT_2_SERVER">クライアントからサーバへのみ有効にする</string>
+      <string id="CLIPBOARD_STATE_ENABLE_SERVER_2_CLIENT">サーバからクライアントへのみ有効にする</string>
+      <string id="SERVER_CLIPBOARD_STATE_EXPLAIN">クリップボード リダイレクトを許可する方向を設定します。次のいずれかの値を選択できます。
+
+- どちらの方向も無効にする
+- どちらの方向も有効にする
+- クライアントからサーバへのみ有効にする (クライアント システムから View デスクトップへのコピーおよび貼り付けのみが許可されます。)
+- サーバからクライアントへのみ有効にする (View デスクトップからクライアント システムへのコピーおよび貼り付けのみが許可されます。)
+
+この設定はサーバ (View デスクトップ) にのみ適用されます。
+
+この設定を無効にするか、設定しない場合、「クライアントからサーバへのみ有効にする」がデフォルト値になります。</string>
+      <string id="SERVER_CLIPBOARD_SIZE">サーバのクリップボード メモリ サイズ</string>
+      <string id="SERVER_CLIPBOARD_SIZE_EXPLAIN">この設定では、サーバのクリップボード メモリ サイズの値を指定します。
+
+サーバのクリップボード メモリ サイズの単位にバイトまたは KB を選択します。設定しない場合、メモリ サイズは KB 単位になります。
+
+クライアントのクリップボード メモリ サイズは常に KB 単位になります。
+
+セッションの設定後:
+- サーバのクリップボード メモリ サイズがクライアントに送信されます。
+- クライアントで、クライアントとサーバの最小値から有効なクリップボード メモリ サイズが決まります。</string>
+      <string id="CLIPBOARD_FINE_GRAIN_LABEL">クリップボードの単位設定</string>
+      <string id="CLIPBOARD_FINE_GRAIN_EXPLAIN">クリップボードの単位設定を有効にするかどうかを指定します。この設定を有効にした場合、サーバのクリップボード メモリ サイズはバイト単位になります。この設定を無効にした場合、サーバのクリップボード メモリ サイズは KB 単位になります。
+
+この設定は、エージェントにのみ適用されます。</string>
+      <string id="String_Policy_DropList_Select_clipboard_size_unit_kilobytes" >KB</string>
+      <string id="String_Policy_DropList_Select_clipboard_size_unit_bytes" >バイト</string>
+      <string id="SERVER_CLIPBOARD_AUDIT">クリップボード監査の設定</string>
+      <string id="CLIPBOARD_AUDIT_DISABLE_BOTH">どちらの方向も無効</string>
+      <string id="CLIPBOARD_AUDIT_ENABLE_ONLY_CLIENT_TO_SERVER">クライアントからサーバへのみ有効にする</string>
+      <string id="CLIPBOARD_AUDIT_ENABLE_ONLY_SERVER_TO_CLIENT">サーバからクライアントへのみ有効にする</string>
+      <string id="CLIPBOARD_AUDIT_ENABLE_BOTH">どちらの方向も有効</string>
+      <string id="SERVER_CLIPBOARD_AUDIT_BLOCK_CLIPBOARD">クライアントが監査をサポートしていないときに、クライアント側へのクリップボードのリダイレクトをブロックするかどうかを設定します</string>
+      <string id="SERVER_CLIPBOARD_AUDIT_EXPLAIN">クリップボード監査を許可する方向を決定します。次のいずれかの値を選択できます。
+
+- どちらの方向も無効
+- クライアントからサーバの方向のみ有効 (クリップボードのデータがクライアント側からエージェント側にコピーされます)
+- サーバからクライアントへの方向のみ有効 (クリップボードのデータがエージェント側からクライアント側にコピーされます)。
+- どちらの方向も有効
+
+この設定はサーバ (View デスクトップ) にのみ適用されます。
+
+この設定を無効にするか、設定しない場合は、デフォルト値として「どちらの方向も無効にする」が使用されます。</string>
+      <string id="SERVER_CLIPBOARD_AUDIT_BLOCK_CLIPBOARD_EXPLAIN">Horizon Client が監査機能をサポートしていないときに、クライアントへのクリップボードのリダイレクトをブロックするかどうかを決定します。
+
+クリップボード リダイレクトの動作を選択できます。
+
+- 監査が Horizon Agent で有効に設定され、Horizon Client で有効でない場合、エージェントからクライアントへのクリップボード リダイレクトを許可します。
+- 監査が Horizon Agent で有効に設定され、Horizon Client で有効でない場合、エージェントからクライアントへのリダイレクトをブロックします。
+
+この設定は、監査を有効にした後にのみ適用されます。</string>
+      <string id="String_Policy_DropList_Select_Configure_clipboard_Audit_Pass_Through">許可</string>
+      <string id="String_Policy_DropList_Select_Configure_clipboard_Audit_Block">ブロック</string>
+      <string id="SERVER_FILE_TRANSFER_STATE">ファイル転送を設定</string>
+      <string id="FILE_TRANSFER_STATE_DISABLE_BOTH">アップロードとダウンロードの両方を無効にする</string>
+      <string id="FILE_TRANSFER_STATE_ENABLE_BOTH">アップロードとダウンロードの両方を有効にする</string>
+      <string id="FILE_TRANSFER_STATE_ENABLE_UPLOAD">ファイルのアップロードのみを有効にする</string>
+      <string id="FILE_TRANSFER_STATE_ENABLE_DOWNLOAD">ファイルのダウンロードのみを有効にする</string>
+      <string id="SERVER_FILE_TRANSFER_STATE_EXPLAIN">エージェントと HTML Access の間のファイル転送を設定します。次のいずれかの値を選択できます。
+
+- アップロードとダウンロードの両方を無効にする
+- アップロードとダウンロードの両方を有効にする
+- ファイルのアップロードのみを有効にする (クライアント システムから View デスクトップへのファイルのアップロードが許可されます。)
+- ファイルのダウンロードのみを有効にする (View デスクトップからクライアント システムへのファイルのダウンロードが許可されます。)
+
+この設定はサーバ (View デスクトップ) にのみ適用されます。
+
+この設定が無効または構成されていない場合、デフォルト値は「ファイルのアップロードのみを有効にする」です。</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING">クリップボード リダイレクトの形式を設定</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_EXPLAIN">この設定は、データ形式 (ファイル/テキスト/リッチ テキスト/イメージ/Microsoft Office テキスト/Microsoft Office のテキスト エフェクト/Microsoft Office チャートおよび Smart Art データ) ごとにフィルタを有効にするかどうかを指定します。各フィルタのステータスは次のとおりです。
+
+- 無効
+- 有効
+
+この設定はエージェントにのみ適用されます。デフォルトでは構成されていません。
+
+構成されていない場合、または無効になっている場合、クリップボード リダイレクトのフィルタはすべての形式で無効になります。</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_ENABLED">有効</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_DISABLED">無効</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="SERVER_CLIPBOARD_STATE">
+        <dropdownList refId="SERVER_CLIPBOARD_STATE" defaultItem="1">クリップボード リダイレクトの構成</dropdownList>
+      </presentation>
+      <presentation id="SERVER_CLIPBOARD_SIZE">
+        <dropdownList refId="Policy_DropList_Clipboard_Fine_Grained" defaultItem="1" >クリップボード メモリ サイズの単位の選択</dropdownList>
+        <decimalTextBox refId="SERVER_CLIPBOARD_SIZE" defaultValue="1024" spinStep="100">サーバのクリップボード メモリ サイズ</decimalTextBox>
+      </presentation>
+      <presentation id="SERVER_CLIPBOARD_AUDIT">
+        <dropdownList refId="SERVER_CLIPBOARD_AUDIT" defaultItem="0">クリップボード監査の設定</dropdownList>
+      </presentation>
+      <presentation id="SERVER_CLIPBOARD_AUDIT_BLOCK_CLIPBOARD">
+        <dropdownList refId="Policy_DropList_Element_Configure_clipboard" defaultItem="0">クライアントが監査をサポートしていない場合のクリップボードの動作を構成します</dropdownList>
+      </presentation>
+      <presentation id="CLIPBOARD_FINE_GRAIN_LABEL" />
+      <presentation id="SERVER_FILE_TRANSFER_STATE">
+        <dropdownList refId="SERVER_FILE_TRANSFER_STATE" defaultItem="3">ファイル転送を設定</dropdownList>
+      </presentation>
+      <presentation id="CLIPBOARD_FORMAT_FILTERING">
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_FILE_IN" defaultItem="0">受信するクリップボード データからファイルとフォルダを除外:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_FILE_OUT" defaultItem="0">送信するクリップボード データからファイルとフォルダを除外:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_TEXT_IN" defaultItem="0">受信するクリップボード データからテキストを除外:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_TEXT_OUT" defaultItem="0">送信するクリップボード データからテキストを除外:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_RTF_IN" defaultItem="0">受信するクリップボード データからリッチ テキスト形式のデータを除外:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_RTF_OUT" defaultItem="0">送信するクリップボード データからリッチ テキスト形式のデータを除外:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_IMAGE_IN" defaultItem="0">受信するクリップボード データからイメージを除外:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_IMAGE_OUT" defaultItem="0">送信するクリップボード データからイメージを除外:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_IN" defaultItem="0">受信するクリップボード データから Microsoft Office テキスト データを除外:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_OUT" defaultItem="0">送信するクリップボード データから Microsoft Office テキスト データを除外:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_CHART_IN" defaultItem="0">受信するクリップボード データから Microsoft Office チャートおよび Smart Art データを除外:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_CHART_OUT" defaultItem="0">送信するクリップボード データから Microsoft Office チャートおよび Smart Art データを除外:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_IN" defaultItem="0">受信するクリップボード データから Microsoft Office のテキスト エフェクト データを除外:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_OUT" defaultItem="0">送信するクリップボード データから Microsoft Office のテキスト エフェクト データを除外:</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

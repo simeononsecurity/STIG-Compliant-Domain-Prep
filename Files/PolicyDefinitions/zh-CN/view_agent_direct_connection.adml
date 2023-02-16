@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+
+   <displayName>VMware Horizon View Agent 直接连接</displayName>
+   <description>VMware Horizon View Agent 直接连接配置设置</description>
+   <resources>
+
+      <stringTable>
+
+         <string id="Agent_Direct_Connect_Config">View Agent Direct-Connection 配置</string>
+
+         <string id="Agent_Direct_Connect_Authentication">身份验证</string>
+
+         <string id="Agent_Direct_Connect_Authentication_lacu">以当前用户身份登录</string>
+
+         <string id="Agent_Direct_Connect_Protocols">协议和网络设置</string>
+
+         <string id="HTTPS_Port">HTTPS 端口号</string>
+
+         <string id="HTTPS_Port_Desc">View Agent 在其中侦听入站 View Client HTTPS 连接的 TCP 端口号。如果此策略未配置或被禁用，则使用 443 的默认值。
+
+注意: 如果更改端口号，您可能需要重新配置桌面防火墙，以允许与端口建立入站连接。</string>
+
+         <string id="Session_Timeout">会话超时</string>
+
+         <string id="Session_Timeout_Desc">确定在通过 View Client 登录后，用户能够将会话保持多长时间。该值以分钟为单位进行设置，如果此策略未配置或被禁用，则默认值为 600 分钟。当桌面会话超时时，该会话将终止且 View Client 与桌面之间的连接断开。</string>
+
+         <string id="Disclaimer_Enabled">已启用免责声明</string>
+
+         <string id="Disclaimer_Enabled_Desc">在登录时显示用户需要接受的免责声明文本。显示在‘免责声明文本’(如果存在) 或 GPO‘Configuration\Windows Settings\Security Settings\Local Policies\Security Options’中的文本‘交互式登录: 尝试登录的用户的消息文本’。此策略的默认设置为禁用。</string>
+
+         <string id="Disclaimer_Text">免责声明文本</string>
+
+         <string id="Disclaimer_Text_Desc">用户登录时向 View Client 用户显示的免责声明文本，需要设置已启用免责声明策略。如果未指定文本，默认为使用 Windows 策略‘Configuration\Windows Settings\Security Settings\Local Policies\Security Options’中的值‘交互式登录: 尝试登录的用户的消息文本’。</string>
+
+         <string id="Applications_Enabled">已启用的应用程序</string>
+
+         <string id="Applications_Enabled_Desc">支持应用程序在远程桌面会话主机上启动。此功能的默认设置为启用。</string>
+
+         <string id="Client_autoconnect_setting">客户端设置: AutoConnect</string>
+
+         <string id="Client_autoconnect_setting_Desc">向 View Client 发送 AutoConnect 设置。如果已设置此策略，则它将覆盖保存的任何客户端首选项。默认情况下未设置值。启用此策略将把值设置为 True，禁用此策略将把值设置为 False。</string>
+
+         <string id="Client_alwaysconnect_setting">客户端设置: AlwaysConnect</string>
+
+         <string id="Client_alwaysconnect_setting_Desc">向 View Client 发送 AlwaysConnect 设置。如果已设置此策略，则它将覆盖保存的任何客户端首选项。默认情况下未设置值。启用此策略将把值设置为 True，禁用此策略将把值设置为 False。</string>
+
+         <string id="Client_screensize_setting">客户端设置: ScreenSize</string>
+
+         <string id="Client_screensize_setting_Desc">向 View Client 发送 ScreenSize 设置。如果已启用此策略，则它将覆盖保存的任何客户端首选项。如果此策略未配置或被禁用，将使用客户端首选项。</string>
+
+         <string id="External_PCoIP_port">外部 PCoIP 端口</string>
+
+         <string id="External_PCoIP_port_Desc">发送到 View Client 的端口号，作为用于 PCoIP 协议的目标 TCP/UDP 端口号。数字前面的‘+’字符表示用于 HTTPS 的端口号中的相对数字。仅在对外部显示的端口号与服务侦听的端口不匹配时设置此值，通常这种情况出现于 NAT 环境。默认情况下未设置值。</string>
+
+         <string id="External_RDP_Port">外部 RDP 端口</string>
+
+         <string id="External_RDP_Port_Desc">发送到 View Client 的端口号，作为用于 RDP 协议的目标 TCP 端口号。数字前面的‘+’字符表示用于 HTTPS 的端口号中的相对数字。仅在对外部显示的端口号与服务侦听的端口不匹配时设置此值，通常这种情况出现于 NAT 环境。默认情况下未设置值。</string>
+
+         <string id="External_Blast_port">外部 Blast 端口</string>
+
+         <string id="External_Blast_port_Desc">发送到 View Client 的端口号，作为用于 Blast 协议的目标 TCP 端口号。数字前面的‘+’字符表示用于 HTTPS 的端口号中的相对数字。仅在对外部显示的端口号与服务侦听的端口不匹配时设置此值，通常这种情况出现于 NAT 环境。默认情况下未设置值。</string>
+
+         <string id="External_IP">外部 IP 地址</string>
+
+         <string id="External_IP_Desc">发送到 View Client 的 IP v4 地址，作为用于辅助协议 (RDP、PCoIP、框架通道和 Blast 等等) 的目标 IP 地址。仅在对外部显示的地址与桌面计算机的地址不匹配时设置此值，通常这种情况出现于 NAT 环境。默认情况下未设置值。</string>
+
+         <string id="External_Framework_Channel_port">外部框架通道端口</string>
+
+         <string id="External_Framework_Channel_port_Desc">发送到 View Client 的端口号，作为用于框架通道协议的目标 TCP 端口号。数字前面的‘+’字符表示用于 HTTPS 的端口号中的相对数字。仅在对外部显示的端口号与服务侦听的端口不匹配时设置此值，通常这种情况出现于 NAT 环境。默认情况下未设置值。</string>
+
+         <string id="USB_Enabled">已启用 USB</string>
+
+         <string id="USB_Enabled_Desc">确定桌面是否可以使用 USB 设备连接客户端系统。默认值为启用。如果出于安全因素阻止使用外部设备，请将设置更改为禁用。</string>
+
+         <string id="MMR_Enabled">多媒体重定向 (MMR) 已启用</string>
+
+         <string id="MMR_Enabled_Desc">确定是否为客户端系统启用 MMR。MMR 是一种 Microsoft DirectShow 筛选器，可直接通过 TCP 套接字将多媒体数据从 View 桌面中的特定编解码器转发至客户端系统。随后，直接在播放数据的客户端系统中解码数据。默认值为禁用。
+
+如果客户端系统的视频显示硬件不支持覆盖功能，MMR 将无法正常运行。客户端系统可能没有足够的资源处理本地多媒体解码。</string>
+
+         <string id="Reset_Enabled">已启用重置</string>
+
+         <string id="Reset_Enabled_Desc">经过身份验证的 View Client 执行操作系统级别重新引导的功能。默认设置为禁用。</string>
+
+         <string id="USB_AutoConnect">自动连接 USB</string>
+
+         <string id="USB_AutoConnect_Desc">插入 USB 设备时将其连接到桌面。如果已设置此策略，则它将覆盖保存的任何客户端首选项。默认情况下未设置值。</string>
+
+         <string id="Client_Cred_Cache_Timeout">客户端凭据缓存超时</string>
+
+         <string id="Client_Cred_Cache_Timeout_Desc">View Client 允许用户在多长时间内 (以分钟为单位) 使用保存的密码。0 表示从不，-1 表示永久。如果该设置设为有效值，则 View Client 将为用户提供保存其密码的选项。默认值为 0 (从不)。</string>
+
+         <string id="User_Idle_Timeout">用户空闲超时</string>
+
+         <string id="User_Idle_Timeout_Desc">在服务采取措施保护会话之前用户可以保持空闲状态的最长时间 (以秒为单位)。值为 -1 表示会话始终不被视为处于空闲状态。默认值为 900 秒 (15 分钟)。</string>
+
+         <string id="Client_Session_Timeout">客户端会话超时</string>
+
+         <string id="Client_Session_Timeout_Desc">客户端未连接时会话将保持活跃状态的最长时间 (以秒为单位)。默认值为 36000 秒 (10 小时)。</string>
+
+         <string id="X509_Cert_Auth">X509 证书身份验证</string>
+
+         <string id="X509_Cert_Auth_Desc">确定是已禁用、允许还是需要进行智能卡 X.509 证书身份验证。</string>
+
+         <string id="Disabled">已禁用</string>
+
+         <string id="Allowed">已允许</string>
+
+         <string id="Required">必需</string>
+
+         <string id="X509_SSL_Cert_Auth_Enabled">X509 SSL 证书身份验证已启用</string>
+
+         <string id="X509_SSL_Cert_Auth_Enabled_Desc">确定是否启用通过 View Client 的直接 SSL 连接进行智能卡 X.509 证书身份验证。如果通过中间 SSL 端点处理 X.509 证书身份验证，则无需使用此设置。如果此值更改，必须重新启动 View Agent。</string>
+
+         <string id="Client_Config_NVP">客户端配置名称值对</string>
+
+         <string id="Client_Config_NVP_Desc">以 name=value e.g. clientCredentialCacheTimeout=1440 为格式传递至客户端的值列表。</string>
+
+         <string id="Default_Protocol">默认协议</string>
+
+         <string id="Default_Protocol_Desc">View Client 连接桌面所使用的默认显示协议，如果未设置此值，则默认值为 BLAST。</string>
+
+<!-- begin: log on as current user -->
+
+         <string id="gssapi_allow_legacy_clients">允许旧版客户端</string>
+         <string id="gssapi_allow_legacy_clients_Desc">如果禁用，版本 5.5 之前的客户端将无法使用“以当前用户身份登录”进行身份验证。
+
+如果未设置，则将允许使用旧版客户端。</string>
+
+         <string id="gssapi_allow_ntlm">允许 NTLM 回退</string>
+         <string id="gssapi_allow_ntlm_Desc">如果启用，当客户端无法访问域控制器时，将允许从 Kerberos 身份验证回退到 NTLM 身份验证。
+
+如果未设置，则将不允许 NTLM 回退。</string>
+
+         <string id="gssapi_require_cbt">需要通道绑定</string>
+         <string id="gssapi_require_cbt_Desc">如果禁用，则不需要通道绑定。
+
+注意: 旧版客户端不支持通道绑定。如果启用对旧版客户端的支持，则版本 5.5 之前的客户端将不会使用通道绑定。
+
+如果未设置，则需要通道绑定。</string>
+
+<!-- end: log on as current user -->
+
+      </stringTable>
+
+      <presentationTable>
+
+         <presentation id="HTTPS_Port">
+            <textBox refId="HTTPS_Port_TB">
+               <label>HTTPS 端口号</label>
+               <defaultValue>443</defaultValue>
+            </textBox>
+         </presentation>
+
+         <presentation id="Session_Timeout">
+            <textBox refId="Session_Timeout_TB">
+               <label>会话超时</label>
+               <defaultValue>600</defaultValue>
+            </textBox>
+         </presentation>
+
+         <presentation id="Disclaimer_Text">
+            <textBox refId="Disclaimer_Text_TB">
+               <label>免责声明文本</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Client_screensize_setting">
+            <textBox refId="Client_screensize_setting_TB">
+               <label>客户端设置: ScreenSize</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="External_PCoIP_port">
+            <textBox refId="External_PCoIP_port_TB">
+               <label>外部 PCoIP 端口</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="External_RDP_Port">
+            <textBox refId="External_RDP_Port_TB">
+               <label>外部 RDP 端口</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="External_Blast_port">
+            <textBox refId="External_Blast_port_TB">
+               <label>外部 Blast 端口</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="External_IP">
+            <textBox refId="External_IP_TB">
+               <label>外部 IP 地址</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="External_Framework_Channel_port">
+            <textBox refId="External_Framework_Channel_port_TB">
+               <label>外部框架通道端口</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Client_Cred_Cache_Timeout">
+            <textBox refId="Client_Cred_Cache_Timeout_TB">
+               <label>客户端凭据缓存超时</label>
+               <defaultValue>0</defaultValue>
+            </textBox>
+         </presentation>
+
+         <presentation id="User_Idle_Timeout">
+            <textBox refId="User_Idle_Timeout_TB">
+               <label>用户空闲超时</label>
+               <defaultValue>900</defaultValue>
+            </textBox>
+         </presentation>
+
+         <presentation id="Client_Session_Timeout">
+            <textBox refId="Client_Session_Timeout_TB">
+               <label>客户端会话超时</label>
+               <defaultValue>36000</defaultValue>
+            </textBox>
+         </presentation>
+
+         <presentation id="X509_Cert_Auth">
+            <dropdownList refId="X509_Cert_Auth_DDL" defaultItem="0">X509 证书身份验证</dropdownList>
+         </presentation>
+
+         <presentation id="Client_Config_NVP">
+            <listBox refId="Client_Config_NVP_list">客户端配置名称值对</listBox>
+         </presentation>
+
+         <presentation id="Default_Protocol">
+            <textBox refId="Default_Protocol_TB">
+               <label>默认协议</label>
+               <defaultValue>BLAST</defaultValue>
+            </textBox>
+         </presentation>
+      </presentationTable>
+   </resources>
+</policyDefinitionResources>

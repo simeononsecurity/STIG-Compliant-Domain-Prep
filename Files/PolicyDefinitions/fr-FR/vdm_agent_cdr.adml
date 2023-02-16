@@ -39,6 +39,11 @@ Remarques :
 </string>
       <string id="OneToOneMapping">Mappage un à un</string>
       <string id="PredefinedMapping">Mappage défini</string>
+      <string id="EnableHighPerformanceCDR">Activer l'optimisation des performances</string>
+      <string id="EnableHighPerformanceCDRExplain">Ce paramètre détermine si l'optimisation des performances est activée pour la redirection de pilote client. Si le paramètre est activé, il présente des performances plus élevées dans des scénarios tels que la copie de fichiers/dossiers à partir de lecteurs partagés.
+
+Ce paramètre est désactivé par défaut.
+      </string>
     </stringTable>
     <presentationTable>
        <presentation id="IsDriveLetterNeeded"/>
@@ -61,6 +66,7 @@ Remarques :
        <presentation id="DriveLetterMappingTable">
          <listBox refId="DriveLetterMappingTable">Définir la table de mappage de lettre de lecteur :</listBox>
        </presentation>
+       <presentation id="EnableHighPerformanceCDR"/>
     </presentationTable>
   </resources>
 </policyDefinitionResources>

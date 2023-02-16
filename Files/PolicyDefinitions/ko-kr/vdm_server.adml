@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" >
+
+	<displayName >여기에 표시 이름 입력</displayName>
+	<description >VMware Horizon View Server 구성 설정</description>
+	<resources >
+		<stringTable >
+
+			<string id="Undefined" >정의되지 않음</string>
+
+			<string id="View_Server_Config" >VMware View Server 구성</string>
+
+			<string id="Pwd_Auth_Mode" >Windows 암호 인증 모드</string>
+
+			<string id="Pwd_Auth_Mode_Desc" >Windows 암호 인증 모드를 선택합니다.
+
+KerberosOnly: Kerberos를 사용하여 인증합니다.
+KerberosWithFallbackToNTLM: Kerberos를 사용하여 인증하지만 실패 시 NTLM 사용으로 폴백합니다.
+레거시: NTLM을 사용하여 인증하지만 실패 시 Kerberos 사용으로 폴백합니다. 레거시 NT 도메인 컨트롤러를 지원하는 데 사용됩니다.
+
+기본값은 KerberosOnly입니다.</string>
+
+			<string id="Kerberos_Only" >KerberosOnly</string>
+
+			<string id="Kerberos_With_NTLM_Fallback" >KerberosWithFallbackToNTLM</string>
+
+			<string id="Legacy" >레거시</string>
+
+			<string id="Trusted_Domain_Enumeration" >신뢰된 도메인의 재귀적 열거</string>
+
+			<string id="Trusted_Domain_Enumeration_Desc" >서버가 상주하는 도메인이 신뢰하는 모든 도메인이 열거되는지 확인합니다. 완전한 신뢰 체인을 설정하기 위해 각 신뢰된 도메인에서 신뢰하는 도메인 또한 열거되고 모든 신뢰된 도메인을 찾을 때까지 프로세스가 재귀적으로 계속됩니다. 로그인 시 모든 신뢰된 도메인을 클라이언트에 사용할 수 있도록 이 정보가 View 연결 서버에 전달됩니다.
+
+이 속성은 기본적으로 사용하도록 설정됩니다. 사용되지 않도록 설정된 경우, 직접 신뢰된 도메인만 열거되며 원격 도메인 컨트롤러에 연결되지 않습니다.
+
+참고: 복합 도메인 관계를 가진 환경에서(예: 포리스트의 도메인 사이에서 신뢰된 여러 포리스트 구조를 사용) 이 프로세스 완료에는 몇 분이 걸릴 수 있습니다.</string>
+
+			<string id="Enumerate_Forest_Trust_Child_Domains" >포리스트 신뢰 하위 도메인 열거</string>
+
+			<string id="Enumerate_Forest_Trust_Child_Domains_Desc" >포리스트 신뢰의 하위 도메인이 열거되는지 여부를 결정합니다.
+
+구성되어 있지 않은 경우 기본값은 true입니다.</string>
+
+		</stringTable>
+
+		<presentationTable ><!--Storage for Presentation Definitions-->
+
+			<presentation id="Windows_Pwd_Auth_Mode" >
+				<dropdownList refId="Windows_Pwd_Auth_Mode_DropDown_1" defaultItem="0" >Windows 암호 인증 모드</dropdownList>
+			</presentation>
+
+		</presentationTable>
+
+	</resources>
+
+</policyDefinitionResources>

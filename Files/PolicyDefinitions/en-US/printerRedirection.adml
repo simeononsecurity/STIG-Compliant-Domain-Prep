@@ -10,7 +10,7 @@
       <string id="persistence_setting_detail">This setting determines whether the printer property settings will be kept or not.
 
 When it is enabled, the printer property change on the agent side will not be kept after user disconnect or logoff the session, hence not persistent.
-E.g. If a user changes printer paper size from "Letter" to "A4" during the session, the next time when the user reconnects, the paper size will be reverted to "Letter", and the "A4" change is not persisted. 
+E.g. If a user changes printer paper size from "Letter" to "A4" during the session, the next time when the user reconnects, the paper size will be reverted to "Letter", and the "A4" change is not persisted.
 
 When it is not configured or disabled, the printer property change on the agent side will be kept after user disconnect or logoff the session, hence persistent.
 E.g. If a user changes printer paper size from "Letter" to "A4" during the session, the next time when the user reconnects, the paper size will still be "A4", as change is kept.
@@ -29,9 +29,11 @@ This setting is not configured by default.
       <string id="lbp_setting_detail">This policy setting allows you to manage whether use location-based printing (LBP) or not.
 
 If you enable this policy setting, location-based printing is unable to use.
+If you disable or do not configure this policy setting, location-based printing is able to use.
 
-If you disable or do not configure this policy setting, location-based printing is able to use.</string>
-	  <string id="lp_setting">Do not redirect client printer(s)</string>
+This setting is not configured by default.
+</string>
+      <string id="lp_setting">Do not redirect client printer(s)</string>
       <string id="lp_setting_detail">This policy setting allows you to manage whether redirect client printer(s) or not.
 
 If you enable this policy setting, all client printer(s) will not be redirected.
@@ -39,11 +41,32 @@ If you disable or do not configure this policy setting, all client printer(s) wi
 
 This setting is not configured by default.
 </string>
+      <string id="DefaultPrinter">Do not change default printer</string>
+      <string id="DefaultPrinter_detail">This setting determines whether VMware Integrated Printing changes the default printer in the remote sessions.
+
+By default, if any location-based printer is configured as default printer, that printer is set as default printer in the remote sessions. If none of location-based printers is configured to default printer, default client printer is set as default printer in the remote sessions and overwrites any printer selected in the VM image. You can use this setting to override this behavior.
+
+If you enable this setting, VMware Integrated Printing does not change the default printer in remote sessions.
+If you disable or do not configure this setting, VMware Integrated Printing changes the default printer in remote sessions. This is the default behavior.
+
+This setting is not configured by default.
+
+</string>
       <string id="DriverMapping">Driver Mapping</string>
-      <string id="DriverMapping_detail">This setting allows user to autocreate virtual printer with a different driver.
-For example: "A" =>"a; b; c; d"
-The candidate driver list "a;b;c;d" will be tried one by one until the printer autocreation succeeded. If failed for all the candidates, it fallback to the "VMware EMF Print Driver".
+      <string id="DriverMapping_detail">This setting applies for Windows/Linux/Mac client. It allows user to auto-create virtual printer with a different driver from client.
+
+You can add a driver mapping, edit or remove an existing mapping. When adding a mapping, enter the client printer driver name in "Value name" column and then enter server driver names to be mapped in "Value" column.
+
+You can specify one or multiple server driver names in "Value" column. When you specify multiple server driver names, seperate each driver name by semicolon like "DriverA; DriverB; DriverC; DriverD".
+
+All specified server drivers will be tried one by one until redirected printer is created successfully. If Horizon can't create redirected printer using any specified server driver, "VMware EMF Print Driver" will be used to create redirected printer for Windows client, and "VMware PostScript Printer Driver" will be used to create redirected printer for Linux/Mac client.
       </string>
+      <string id="MaxTxRate">Limit Tx rate(Kbps)</string>
+      <string id="MaxTxRate_detail">This setting limits the Tx rate of all print jobs to the specified number in Kbps.
+The minimum allowed Tx rate is 1600Kbps. When not configured or disabled, the Tx rate is not limited.
+The maximum allowed Tx rate is 32000Kbps. When greater than that, the Tx rate is not limited.
+
+</string>
       <string id="printer_creation_setting">Printer Driver Selection</string>
       <string id="printer_creation_setting_detail">Printer Driver Selection.
 
@@ -58,11 +81,19 @@ If you choose the third option "Use NPD First, then UPD", native printer driver 
 
 If you choose the fourth option "Use UPD First, then NPD", universal printer driver will be used first, if universal printer driver does not exist, native printer driver will be used.
 
+Preferred Universal Print Driver:
+Options about preferred universal print driver.
+
+If you choose the first option "VMware Universal EMF Driver", the EMF driver will be used.
+
+If you choose the second option "VMware Universal XPS Driver", the XPS driver will be used.
 </string>
       <string id="printer_creation_setting_npd">Always Use NPD</string>
       <string id="printer_creation_setting_upd">Always Use UPD</string>
       <string id="printer_creation_setting_npd_upd">Use NPD First, then UPD</string>
       <string id="printer_creation_setting_upd_npd">Use UPD First, then NPD</string>
+      <string id="preferredEMF">VMware Universal EMF Driver</string>
+      <string id="preferredXPS">VMware Universal XPS Driver</string>
       <string id="printer_filter">Specify a filter in redirecting client printers</string>
       <string id="printer_filter_desc">A rule that filters out any client printer which matches it in the printer redirection. Supported attributes are printer names, printer driver names, and driver vendor names. Supported operators are AND, OR and NOT. Supported searching pattern is regular expression in JavaScript dialect (ECMAScript).
 By default, the rule is empty which means all client printers will be redirected.
@@ -85,22 +116,22 @@ When the option "print directly" is selected, the default print option from prin
 
 When the option "print preview" is selected, the default print option from print UI is "print preview".
 </string>
-
       <string id="print_directly">Print directly</string>
       <string id="print_to_preview">Print preview</string>
-      <string id="printer_name_schema">Printer Name for RDSH Agents</string>
-      <string id="printer_name_schema_desc">This setting determines the printer naming convention when you use VMware Integrated Printing in RDSH.
-When this policy is enabled, valid printer name schema should be started by "%P". And only following suffixes are supported.
+      <string id="printer_name_schema">Printer Name Schema</string>
+      <string id="printer_name_schema_desc">This setting determines the printer naming convention when you use VMware Integrated Printing.
+When this setting is enabled, you can change printer name schema for VDI and RDSH agents.
+Valid printer name schema should be in "%P*" format. The asterisk mark represents the configurable part. Following variables can be used in the configurable part.
 %S: session id
 %C: client machine name
 
-When this policy is not configured or disabled, the virtual printers in RDSH use session id as suffix.
-Example: PDFCreator (v2), here PDFCreator is client printer name, 2 is session id.
-When this policy is enabled, user can change printer name schema in RDSH to "%P (%C)", then client machine name will be used as suffix of printer name.
-Example: PDFCreator (client-pc), here PDFCreator is client printer name, client-pc is client machine name.
+If this setting is enabled but printer name schema is empty or invalid, default printer name schema will be used.
+E.g. %P%S, %P2%S(only numbers between %P and %S) or "/" contained in schema, they are all invalid
+
+When this setting is not configured or disabled, VDI agents use "%P (vdi)" as printer name schema, RDSH agents use "%P (v%S)" as printer name schema.
 
 This setting is not configured by default.
-      </string>
+</string>
 
       <string id="DefaultSetting">Default settings for UPD printers</string>
       <string id="DefaultSetting_desc">This policy determines whether to enable default settings for UPD printers.
@@ -109,6 +140,7 @@ When this policy is not configured or disabled, default settings are not enabled
 
 This policy is not configured by default.
       </string>
+
       <string id="none">None</string>
       <string id="duplex_vertical">Flip On Long Edge</string>
       <string id="duplex_horizontal">Flip On Short Edge</string>
@@ -121,6 +153,22 @@ This policy is not configured by default.
       <string id="optimized_comp">Optimized Compression</string>
       <string id="no_image_comp">No Image</string>
 
+       <string id="MaxDPI">Max DPI for UPD printers</string>
+       <string id="MaxDPI_detail">This policy specifies max DPI for UPD printers, as a result DPI options and default DPI of UPD printers may be changed.
+
+When this policy is enabled, it is used to specify max DPI level or max X-axis DPI value for UPD printers. Depending on client printer's capability, UPD printer may support DPI level or DPI value.
+When printer supports DPI level, DPI options and default DPI of UPD printer will be no higher than max DPI level.
+When printer supports DPI value and lowest X-axis DPI is no higher than max X-axis DPI, DPI options and default DPI of UPD printer will be no higher than max X-axis DPI.
+When printer supports DPI value and lowest X-axis DPI is higher than max X-axis DPI, DPI options of UPD printer will be same as DPI options of client printer. Default DPI of UPD printer will be lowest X-axis DPI.
+
+When this policy is not configured or disabled, DPI options and default DPI of UPD printers are not changed.
+
+This policy is not configured by default.
+       </string>
+       <string id="DPI_draft">Draft</string>
+       <string id="DPI_low">Low</string>
+       <string id="DPI_medium">Medium</string>
+       <string id="DPI_high">High</string>
     </stringTable>
     <presentationTable>
       <presentation id="DriverMapping">
@@ -128,6 +176,7 @@ This policy is not configured by default.
       </presentation>
       <presentation id="PrinterCreationSetting">
           <dropdownList refId="printer_creation_setting_list" defaultItem="2" noSort="true">Printer Creation Choices:</dropdownList>
+          <dropdownList refId="preferred_upd" defaultItem="0" noSort="true">Preferred UPD:</dropdownList>
       </presentation>
       <presentation id="PrintPreviewSetting">
         <checkBox refId="disable_print_choice">Disable Print Choice</checkBox>
@@ -139,12 +188,15 @@ This policy is not configured by default.
           <defaultValue></defaultValue>
         </textBox>
       </presentation>
-       <presentation id="printer_name_schema">
-          <textBox refId="printer_name_schema_textbox">
-             <label>Printer Name Schema</label>
-             <defaultValue>%P (v%S)</defaultValue>
-          </textBox>
-       </presentation>
+      <presentation id="printer_name_schema">
+        <textBox refId="printer_name_schema_textbox">
+          <label>Printer Name Schema</label>
+          <defaultValue></defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="MaxTxRate">
+        <decimalTextBox refId="MaxTxRate" defaultValue="32000">MaxTxRate(kbps)</decimalTextBox>
+      </presentation>
       <presentation id="DefaultSetting">
         <dropdownList refId="DefaultDuplex" defaultItem="0" noSort="true">Duplex:</dropdownList>
         <checkBox refId="IsDuplexLocked">Always use default duplex setting</checkBox>
@@ -152,7 +204,11 @@ This policy is not configured by default.
         <checkBox refId="IsColorLocked">Always use default color setting</checkBox>
         <dropdownList refId="DefaultImageCompLevel" defaultItem="0" noSort="true">Compression Level:</dropdownList>
         <checkBox refId="IsCompLevelLocked">Always use default compression level setting</checkBox>
-      </presentation>       
+      </presentation>
+      <presentation id="MaxDPI">
+        <dropdownList refId="MaxDPILevel" defaultItem="2" noSort="true">Max DPI Level</dropdownList>
+        <decimalTextBox refId="MaxDPIValue" defaultValue="600">Max DPI (X)</decimalTextBox>
+      </presentation>
     </presentationTable>
   </resources>
 </policyDefinitionResources>

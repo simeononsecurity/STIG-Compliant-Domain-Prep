@@ -39,6 +39,11 @@ Notes :
 </string>
       <string id="OneToOneMapping">One to one mapping</string>
       <string id="PredefinedMapping">Defined mapping</string>
+      <string id="EnableHighPerformanceCDR">Enable performance optimization</string>
+      <string id="EnableHighPerformanceCDRExplain">This setting determines if performance optimization is enabled for Client Driver Redirection. If the setting is enabled, it has higher performance on scenarios like files/folders copy from shared drives.
+
+This setting is disabled by default.
+      </string>
     </stringTable>
     <presentationTable>
        <presentation id="IsDriveLetterNeeded"/>
@@ -61,6 +66,7 @@ Notes :
        <presentation id="DriveLetterMappingTable">
          <listBox refId="DriveLetterMappingTable">Define drive letter mapping table:</listBox>
        </presentation>
+       <presentation id="EnableHighPerformanceCDR"/>
     </presentationTable>
   </resources>
 </policyDefinitionResources>

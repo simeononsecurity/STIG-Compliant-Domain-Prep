@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="VMwareViewClipboard">剪贴板重定向</string>
+      <string id="SUPPORTED_VERSION"></string>
+      <string id="SERVER_CLIPBOARD_STATE">配置剪贴板重定向</string>
+      <string id="CLIPBOARD_STATE_DISABLE_BOTH">双向禁用</string>
+      <string id="CLIPBOARD_STATE_ENABLE_BOTH">双向启用</string>
+      <string id="CLIPBOARD_STATE_ENABLE_CLIENT_2_SERVER">仅启用客户端到服务器</string>
+      <string id="CLIPBOARD_STATE_ENABLE_SERVER_2_CLIENT">仅启用服务器到客户端</string>
+      <string id="SERVER_CLIPBOARD_STATE_EXPLAIN">确定允许剪贴板重定向的方向。您可以选择以下值之一:
+
+- 双向禁用
+- 双向启用
+- 仅启用客户端到服务器 (即，仅允许从客户端系统复制并粘贴到 View 桌面。)
+- 仅启用服务器到客户端 (即，仅允许从 View 桌面复制并粘贴到客户端系统。)
+
+该设置仅适用于服务器 (View 桌面)。
+
+如果禁用或未配置该设置，则默认值为“仅启用客户端到服务器”。</string>
+      <string id="SERVER_CLIPBOARD_SIZE">服务器上的剪贴板内存大小</string>
+      <string id="SERVER_CLIPBOARD_SIZE_EXPLAIN">这些设置指示服务器的剪贴板内存大小值。
+
+服务器上的剪贴板内存大小以字节或千字节为单位，依选择而定。如果未配置，则内存大小以千字节为单位。
+
+客户端上也有一个剪贴板内存大小值，但此值始终以千字节为单位。
+
+在建立会话后:
+- 服务器中的剪贴板内存大小值将发送到客户端。
+- 然后，在客户端查找最小的客户端和服务器值以确定有效的剪贴板内存大小值。</string>
+      <string id="CLIPBOARD_FINE_GRAIN_LABEL">剪贴板细粒度配置</string>
+      <string id="CLIPBOARD_FINE_GRAIN_EXPLAIN">确定是否启用细粒度的剪贴板设置。启用此设置时，服务器上的剪贴板内存大小以字节为单位。禁用此设置时，服务器上的剪贴板内存大小以千字节为单位。
+
+该设置仅适用于代理。</string>
+      <string id="String_Policy_DropList_Select_clipboard_size_unit_kilobytes" >千字节</string>
+      <string id="String_Policy_DropList_Select_clipboard_size_unit_bytes" >字节</string>
+      <string id="SERVER_CLIPBOARD_AUDIT">配置剪贴板审核</string>
+      <string id="CLIPBOARD_AUDIT_DISABLE_BOTH">双向禁用</string>
+      <string id="CLIPBOARD_AUDIT_ENABLE_ONLY_CLIENT_TO_SERVER">仅启用客户端到服务器</string>
+      <string id="CLIPBOARD_AUDIT_ENABLE_ONLY_SERVER_TO_CLIENT">仅启用服务器到客户端</string>
+      <string id="CLIPBOARD_AUDIT_ENABLE_BOTH">双向启用</string>
+      <string id="SERVER_CLIPBOARD_AUDIT_BLOCK_CLIPBOARD">客户端不支持审核时，是否阻止将剪贴板重定向到客户端</string>
+      <string id="SERVER_CLIPBOARD_AUDIT_EXPLAIN">确定允许执行剪贴板审核的方向。您可以选择以下值之一:
+
+-双向禁用
+-仅启用客户端到服务器 (即，将记录从客户端复制到代理端的剪贴板数据信息。)-仅启用服务器到客户端 (即，将记录从代理端复制到客户端的剪贴板数据信息。)-双向启用
+
+此设置仅适用于服务器 (View 桌面)。
+禁用或未配置此设置时，默认值为“双向禁用”。</string>
+      <string id="SERVER_CLIPBOARD_AUDIT_BLOCK_CLIPBOARD_EXPLAIN">确定 Horizon Client 不支持审核功能时，是否阻止将剪贴板重定向到客户端。
+
+您可以选择剪贴板重定向的行为:
+
+-在 Horizon Agent 中启用了审核功能，但未在 Horizon Client 中启用该功能时，允许代理到客户端剪贴板重定向通过
+-在 Horizon Agent 中启用了审核功能，但未在 Horizon Client 中启用该功能时，阻止代理到客户端剪贴板重定向
+
+仅在启用审核功能后，此设置才可生效。</string>
+      <string id="String_Policy_DropList_Select_Configure_clipboard_Audit_Pass_Through">通过</string>
+      <string id="String_Policy_DropList_Select_Configure_clipboard_Audit_Block">阻止</string>
+      <string id="SERVER_FILE_TRANSFER_STATE">配置文件传输</string>
+      <string id="FILE_TRANSFER_STATE_DISABLE_BOTH">禁用上载和下载</string>
+      <string id="FILE_TRANSFER_STATE_ENABLE_BOTH">启用上载和下载</string>
+      <string id="FILE_TRANSFER_STATE_ENABLE_UPLOAD">仅启用文件上载</string>
+      <string id="FILE_TRANSFER_STATE_ENABLE_DOWNLOAD">仅启用文件下载</string>
+      <string id="SERVER_FILE_TRANSFER_STATE_EXPLAIN">确定代理和 HTML Access 之间的文件传输。您可以选择以下值之一:
+
+- 禁用上载和下载
+- 启用上载和下载
+- 仅启用文件上载 (即，允许将文件从客户端系统上载到 View 桌面。)
+- 仅启用文件下载 (即，允许将文件从 View 桌面下载到客户端系统。)
+
+此设置仅适用于服务器 (View 桌面)。
+
+如果禁用或未配置此设置，则默认值为“仅启用文件上载”。</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING">配置剪贴板重定向格式</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_EXPLAIN">此设置确定是否为每种数据格式 (文件/文本/富文本/图像/Microsoft Office 文本/Microsoft Office 文字效果/Microsoft Office 图表和 Smart Art) 启用筛选器。每个筛选器的状态为:
+
+- 已禁用
+- 已启用
+
+此设置仅适用于代理，默认情况下不配置此设置。
+
+如果未配置或禁用此设置，则所有格式的“剪贴板重定向”筛选器都将为“已禁用”。</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_ENABLED">已启用</string>
+      <string id="CLIPBOARD_FORMAT_FILTERING_DISABLED">已禁用</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="SERVER_CLIPBOARD_STATE">
+        <dropdownList refId="SERVER_CLIPBOARD_STATE" defaultItem="1">配置剪贴板重定向</dropdownList>
+      </presentation>
+      <presentation id="SERVER_CLIPBOARD_SIZE">
+        <dropdownList refId="Policy_DropList_Clipboard_Fine_Grained" defaultItem="1" >选择剪贴板内存大小的单位</dropdownList>
+        <decimalTextBox refId="SERVER_CLIPBOARD_SIZE" defaultValue="1024" spinStep="100">服务器上的剪贴板内存大小</decimalTextBox>
+      </presentation>
+      <presentation id="SERVER_CLIPBOARD_AUDIT">
+        <dropdownList refId="SERVER_CLIPBOARD_AUDIT" defaultItem="0">配置剪贴板审核</dropdownList>
+      </presentation>
+      <presentation id="SERVER_CLIPBOARD_AUDIT_BLOCK_CLIPBOARD">
+        <dropdownList refId="Policy_DropList_Element_Configure_clipboard" defaultItem="0">配置客户端不支持审核时的剪贴板行为</dropdownList>
+      </presentation>
+      <presentation id="CLIPBOARD_FINE_GRAIN_LABEL" />
+      <presentation id="SERVER_FILE_TRANSFER_STATE">
+        <dropdownList refId="SERVER_FILE_TRANSFER_STATE" defaultItem="3">配置文件传输</dropdownList>
+      </presentation>
+      <presentation id="CLIPBOARD_FORMAT_FILTERING">
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_FILE_IN" defaultItem="0">从传入的剪贴板数据中筛选文件和文件夹:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_FILE_OUT" defaultItem="0">从传出的剪贴板数据中筛选文件和文件夹:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_TEXT_IN" defaultItem="0">从传入的剪贴板数据中筛选掉文本:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_TEXT_OUT" defaultItem="0">从传出的剪贴板数据中筛选掉文本:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_RTF_IN" defaultItem="0">从传入的剪贴板数据中筛选掉富文本格式数据:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_RTF_OUT" defaultItem="0">从传出的剪贴板数据中筛选掉富文本格式数据:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_IMAGE_IN" defaultItem="0">从传入的剪贴板数据中筛选掉图像:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_IMAGE_OUT" defaultItem="0">从传出的剪贴板数据中筛选掉图像:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_IN" defaultItem="0">从传入的剪贴板数据中筛选掉 Microsoft Office 文本数据:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_OUT" defaultItem="0">从传出的剪贴板数据中筛选掉 Microsoft Office 文本数据:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_CHART_IN" defaultItem="0">从传入的剪贴板数据中筛选掉 Microsoft 图表和 Smart Art 数据:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_CHART_OUT" defaultItem="0">从传出的剪贴板数据中筛选掉 Microsoft 图表和 Smart Art 数据:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_IN" defaultItem="0">从传入的剪贴板数据中筛选掉 Microsoft 文字效果数据:</dropdownList>
+        <dropdownList refId="CLIPBOARD_FORMAT_FILTERING_MSO_TEXT_EFFECTS_OUT" defaultItem="0">从传出的剪贴板数据中筛选掉 Microsoft 文字效果数据:</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

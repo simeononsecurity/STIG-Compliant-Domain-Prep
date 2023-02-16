@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="VMwareViewCDR">VMware Horizon Client 드라이브 리디렉션</string>
+      <string id="IsDriveLetterNeeded">드라이브 문자를 사용하여 리디렉션된 디바이스 표시</string>
+      <string id="IsDriveLetterNeededExplain">이 설정은 CDR(클라이언트 드라이브 리디렉션)의 드라이브 문자를 사용할지 여부를 결정합니다. 이 기능은 기본적으로 사용되도록 설정됩니다.</string>
+      <string id="InitDriveLetterTimeout">드라이브 문자 초기화에 대한 시간 초과</string>
+      <string id="InitDriveLetterTimeoutExplain">이 설정은 Windows 탐색기가 올바른 드라이브 문자 처리를 마칠 때까지 기다리는 시간 초과 값을 결정합니다. 이 설정을 사용하지 않도록 설정하거나 구성하지 않으면 기본적으로 5초로 구성됩니다.</string>
+      <string id="VMwareViewCDRDeviceFiltering">디바이스 필터링</string>
+	  <string id="ExcludeVidPid">Vid/Pid 디바이스 제외</string>
+      <string id="ExcludeVidPidExplain">지정된 벤더 ID 및 제품 ID를 갖는 디바이스를 전달하지 않도록 제외합니다.
+
+구문: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx | *&gt;&gt;[;...]
+
+예: vid-0781_pid-554c;vid-0781_pid-9999</string>
+      <string id="IncludeVidPid">Vid/Pid 디바이스 포함</string>
+      <string id="IncludeVidPidExplain">지정된 벤더 ID 및 제품 ID를 갖는 디바이스를 전달할 수 있도록 포함합니다.
+
+구문: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx | *&gt;&gt;[;...]
+
+예: vid-0781_pid-554c;vid-0781_pid-9999</string>
+      <string id="DriveLetterMapping">드라이브 문자 매핑 모드 구성</string>
+      <string id="DriveLetterMappingExplain">이 GPO는 드라이브 문자 매핑 모드를 구성하기 위한 것으로, 현재 두 가지 모드가 지원됩니다.
+- 일대일 매핑: 동일한 클라이언트 드라이브 문자를 에이전트에 매핑합니다.
+- 정의된 매핑: 정의된 매핑 테이블에 따라 클라이언트 드라이브 문자를 에이전트에 매핑합니다.
+
+
+참고:
+- 이 GPO는 GPO &quot;드라이브 문자를 사용하여 리디렉션된 디바이스 표시&quot;를 사용하지 않도록 설정하는 경우에 유효합니다.
+- 지원되는 두 모드에서 드라이브 문자가 충돌하는 경우(예: 매핑된 드라이브 문자가 에이전트에서 이미 사용되고 있는 경우) 'Z'에서 'A' 순서로 사용 가능한 첫 번째 문자를 대신 사용합니다. 사용할 수 있는 드라이브 문자가 없는 경우 드라이브 문자가 할당되지 않습니다.
+      </string>
+      <string id="DriveLetterMappingTable">드라이브 문자 매핑 테이블 정의</string>
+      <string id="DriveLetterMappingTableExplain">드라이브 문자 매핑 테이블 정의
+- 클라이언트 드라이브 문자(값 이름): 클라이언트에서 사용되는 드라이브 문자입니다.
+- 에이전트 드라이브 문자(값): 에이전트에서 사용할 드라이브 문자입니다.
+</string>
+      <string id="OneToOneMapping">일대일 매핑</string>
+      <string id="PredefinedMapping">정의된 매핑</string>
+      <string id="EnableHighPerformanceCDR">성능 최적화 사용</string>
+      <string id="EnableHighPerformanceCDRExplain">이 설정은 클라이언트 드라이버 리디렉션에 대해 성능 최적화를 사용하도록 설정할지 여부를 결정합니다. 이 설정을 사용하도록 설정하면 공유 드라이브에서 파일/폴더 복사와 같은 시나리오에서 더 높은 성능을 얻을 수 있습니다.
+
+이 설정은 기본적으로 사용하지 않도록 설정됩니다.      </string>
+    </stringTable>
+    <presentationTable>
+       <presentation id="IsDriveLetterNeeded"/>
+       <presentation id="InitDriveLetterTimeout">
+         <decimalTextBox refId="InitDriveLetterTimeout" defaultValue="5000">시간 초과(밀리초):</decimalTextBox>
+       </presentation>
+	   <presentation id="ExcludeVidPid">
+         <textBox refId="ExcludeVidPid">
+           <label>Vid/Pid 디바이스 제외</label>
+         </textBox>
+       </presentation>
+       <presentation id="IncludeVidPid">
+         <textBox refId="IncludeVidPid">
+           <label>Vid/Pid 디바이스 포함</label>
+         </textBox>
+       </presentation>
+       <presentation id="DriveLetterMapping">
+         <dropdownList refId="DriveLetterMappingDropdown" defaultItem="0" noSort="true">드라이브 문자 매핑 모드 구성:</dropdownList>
+       </presentation>
+       <presentation id="DriveLetterMappingTable">
+         <listBox refId="DriveLetterMappingTable">드라이브 문자 매핑 테이블 정의:</listBox>
+       </presentation>
+       <presentation id="EnableHighPerformanceCDR"/>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

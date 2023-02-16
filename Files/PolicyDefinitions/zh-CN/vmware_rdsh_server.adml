@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<policyDefinitionResources
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	revision="1.0"
+	schemaVersion="1.0"
+	xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+
+<displayName>在此处输入显示名称</displayName>
+
+<description>在此处输入描述</description>
+
+<resources>
+
+<stringTable>
+
+<string id="CASCADIA_APP_COMPATIBILITY">应用程序兼容性</string>
+
+<string id="CASCADIA_APP_COMPATIBILITY_Help">控制 RD 会话主机服务器上的应用程序兼容性设置</string>
+
+<string id="CASCADIA_ENABLE_IP_VIRTUALIZATION">开启远程桌面 IP 虚拟化</string>
+
+<string id="CASCADIA_ENABLE_IP_VIRTUALIZATION_EXPLAIN">该策略设置指定是否开启远程桌面 IP 虚拟化。默认情况下，远程桌面 IP 虚拟化处于关闭状态。如果启用该策略设置，远程桌面 IP 虚拟化将开启。可以选择应用该设置的模式。如果使用“按程序”模式，必须输入使用虚拟 IP 地址的程序的列表。将每个程序在单独行中列出 (程序之间不输入任何空行)。例如:
+
+explorer.exe
+mstsc.exe
+
+如果禁用或不配置该策略设置，远程桌面 IP 虚拟化将关闭。</string>
+
+<string id="CASCADIA_ENABLE_SESSION_MODE_IP_VIRTUALIZATION">每会话</string>
+
+<string id="CASCADIA_ENABLE_PRPGRAM_MODE_IP_VIRTUALIZATION">每程序</string>
+
+<string id="CASCADIA_NET_ID_IP_VIRTUALIZATION">选择用于远程桌面 IP 虚拟化的网络适配器。</string>
+
+<string id="CASCADIA_NET_ID_IP_VIRTUALIZATION_EXPLAIN">该策略设置指定与用于虚拟 IP 地址的网络适配器对应的 IP 地址和网络掩码。IP 地址和网络掩码应以“无类别域间路由”表示法输入；例如 192.0.2.96/24。如果启用该策略设置，则使用指定的 IP 地址和网络掩码选择用于虚拟 IP 地址的网络适配器。如果禁用或不配置该策略设置，远程桌面 IP 虚拟化将关闭。必须配置网络适配器才能使远程桌面 IP 虚拟化正常工作。</string>
+
+<string id="CASCADIA_NOT_USE_SERVER_IP_WITH_IP_VIRTUALIZATION">虚拟 IP 地址不可用时不使用远程桌面会话主机服务器 IP 地址</string>
+
+<string id="CASCADIA_NOT_USE_SERVER_IP_WITH_IP_VIRTUALIZATION_EXPLAIN">该策略设置指定当虚拟 IP 地址不可用时，会话是否使用远程桌面会话主机服务器的 IP 地址。如果启用该策略设置，则当虚拟 IP 不可用时，不使用 RD 会话主机服务器的 IP 地址。会话将没有网络连接。如果禁用或不配置该策略设置，则当虚拟 IP 不可用时，将使用 RD 会话主机服务器的 IP 地址。</string>
+
+<string id="CASCADIA_ENABLE_DFSS">关闭公平份额 CPU 调度</string>
+
+<string id="CASCADIA_ENABLE_DFSS_EXPLAIN">公平份额 CPU 调度基于会话数量和每个会话内的处理器时间需求，跨同一 RD 会话主机服务器上的所有远程桌面服务会话动态分发处理器时间。如果启用此策略设置，公平份额 CPU 调度将关闭。如果禁用或未配置此策略设置，将开启公平份额 CPU 调度。</string>
+
+<string id="CASCADIA_DISABLE_MSI">关闭 Windows Installer RDS 兼容性</string>
+
+<string id="CASCADIA_DISABLE_MSI_EXPLAIN">该策略设置指定对于完全安装的应用程序，Windows Installer RDS 兼容性是否在每个用户的基础上运行。Windows Installer 允许一次运行 msiexec 进程的一个实例。默认情况下，Windows Installer RDS 兼容性为启用状态。如果启用该策略设置，Windows Installer RDS 兼容性将关闭，一次只能有一个 msiexec 进程的实例运行。如果禁用或不配置该策略设置，Windows Installer RDS 兼容性将开启，多个按用户应用程序安装请求将按照这些请求的接收顺序由 msiexec 进程排队和处理。</string>
+
+</stringTable>
+
+<presentationTable>
+	<presentation id="CASCADIA_NET_ID_IP_VIRTUALIZATION">
+		<textBox refId="CASCADIA_NET_ID_IP_VIRTUALIZATION">
+		<label>定义 IP 地址和网络掩码，它们与用于远程桌面 IP 虚拟化的网络适配器相对应:</label>
+		</textBox>
+		<text>格式是 [IP 地址]/[网络掩码]。例如: 192.0.2.96/24</text>
+		</presentation>
+		<presentation id="CASCADIA_ENABLE_IP_VIRTUALIZATION">
+		<dropdownList refId="CASCADIA_ENABLE_IP_VIRTUALIZATION" noSort="true" defaultItem="0">开启远程桌面 IP 虚拟化模式:</dropdownList>
+		<multiTextBox refId="CASCADIA_ENABLE_IP_VIRTUALIZATION_EDIT">向这些程序分配 IP 虚拟地址:</multiTextBox>
+		<text>如果列出多个程序，将每个程序在单独行中列出 (程序之间不输入任何空行)。例如:</text>
+		<text>explorer.exe
+		mstsc.exe</text>
+	</presentation>
+</presentationTable>
+</resources>
+</policyDefinitionResources>

@@ -1,4 +1,4 @@
-<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+﻿<policyDefinitionResources revision="1.0" schemaVersion="1.0">
   <displayName>
   </displayName>
   <description>
@@ -23,6 +23,39 @@ Si no se configura esta configuración de directiva, la función de deshabilitac
       <string id="RedirectAll_PolicyExplain">Si se habilita esta configuración de directiva, todos los puertos COM de cliente se conectarán automáticamente (aunque no se configure ningún GPO individual). Si hay una configuración de GPO individual configurada para algunos de los puertos, se utilizará la configuración de GPO del puerto individual.
 
 Si esta configuración de directiva está deshabilitada o no está configurada, la función de conexión automática se determinará mediante la configuración del programa local o el GPO del puerto individual.</string>
+      <string id="EnableEventLog_PolicyName">Habilitar la funcionalidad Registro de eventos de Windows</string>
+      <string id="EnableEventLog_PolicyExplain">Si esta configuración de directiva está habilitada, se escribirán diferentes eventos relacionados con el puerto serie en la categoría Registro de aplicaciones del Registro de eventos de Windows.
+
+Si esta configuración de directiva está deshabilitada o no está configurada, no se escribirá ningún registro en la parte Aplicación del Visor de eventos de Windows.
+
+Se admiten los siguientes eventos:
+5 - Intentando establecer una conexión con el PC cliente.
+10 - Se establece la conexión entre los lados de agente y cliente.
+20 - La conexión entre el agente y el cliente está cerrada.
+30 - La enumeración de puertos inicial (la lista de puertos serie disponibles en el equipo cliente y disponibles para la conexión).
+40 - Conectado. Se conectó el puerto.
+41 - Conectado. El puerto está ocupado (mientras se vuelve a conectar la sesión). El puerto se puede leer/grabar de nuevo.
+50 - Desconectado. El puerto se desconectó.
+51 - Desconectado. El puerto está ocupado (mientras se detecta la desconexión de la sesión). El puerto permanece activo, pero no se puede leer ni escribir.
+60 - Error
+
+El formato de la entrada del elemento de puerto:
+&lt;Nombre de puerto de origen&gt; DELIMETER &lt;Nombre de puerto de destino&gt; DELIMETER &lt;ID de hardware&gt; DELIMITER &lt;Descripción del dispositivo&gt;
+
+&lt;Nombre de puerto de origen&gt;: el nombre del puerto COM, tal como aparece en el equipo cliente, por ejemplo COM2
+&lt;Nombre del puerto de destino&gt;: el nombre del puerto COM virtual, tal como aparece en la sesión de escritorio remoto, por ejemplo COM15
+&lt;ID de hardware&gt; y &lt;Descripción&gt;: las propiedades del dispositivo principal (en caso de que el puerto serie del PC cliente sea en realidad un dispositivo USB o de otro tipo)
+DELIMETER - Cadena de separación de formato de datos de evento
+
+Ejemplo (el carácter de coma se utiliza como DELIMITADOR):
+COM20, COM28, USB \ VID_067B &amp; PID_2303 &amp; REV_0400, Prolific USB-to-Serial Comm Port</string>
+      <string id="EventLogTableSeparator_PolicyName">Habilitar el separador de formato de datos de eventos</string>
+      <string id="EventLogTableSeparator_PolicyExplain">Cuando está habilitada, esta directiva define la cadena que se utilizará como separador de filas para los campos de datos.
+
+El separador predeterminado es el carácter de tabulación. Sin embargo, es posible cambiarlo a cualquier otro carácter, como una coma, un punto y coma, un espacio o cualquier otro carácter o incluso una cadena.</string>
+	  <string id="EventLogTableSeparatorType_TAB_combo_txt">Tabulación</string>
+	  <string id="EventLogTableSeparatorType_SPACE_combo_txt">Espacio</string>
+	  <string id="EventLogTableSeparatorType_custom_combo_txt">Cadena personalizada</string>
       <string id="PortIsolationMode_PolicyName">Modo de aislamiento del puerto COM</string>
       <string id="PortIsolationMode_PolicyExplain">Si se selecciona el modo &quot;Aislamiento completo&quot;, los puertos serie virtuales solo son visibles y accesibles en las sesiones de usuario. En este modo, los puertos COM pueden tener los mismos nombres en diferentes sesiones de usuario. Importante: Los servicios de sistema (como spoolsrv.exe) no pueden acceder a puertos serie aislados en ese caso.
 
@@ -52,29 +85,49 @@ Si no se configura esta configuración de directiva, el límite de velocidad se 
 
 En caso de que no se permita el redireccionamiento de algún puerto, el lado del agente lo amenazará como si el puerto no exista en el lado cliente.
 
-Las listas utilizan las propiedades del dispositivo USB principal del puerto COM.
+La directiva es una cadena de varias líneas que contiene una lista de reglas.
+
+Ejemplo:
+  USB:067B:2303:*
+  USBPATH:1-4
+  WINDEVID:*ACPI*
+  PORTNAME:COM3
+  PORTNAME:COM5
 
 Sintaxis:
   USB:[*|VID[:*|:PID[:*|:REV]]]
-    VID: valor numérico hexadecimal de VID (ID de proveedor) del HardwareID del dispositivo
-    PID: valor numérico hexadecimal de PID (ID de producto) del HardwareID del dispositivo
-    REV: valor numérico hexadecimal de REV (Revisión) del HardwareID del dispositivo
+    VID - Valor numérico hexadecimal de VID (identificador de proveedor) del HardwareID del dispositivo
+    PID - Valor numérico hexadecimal de PID (identificador de producto) del HardwareID del dispositivo
+    REV - Valor numérico hexadecimal de REV (Revisión) del HardwareID del dispositivo
     Cuando VID, PID, REV es igual a &quot;*&quot;, significa cualquier valor.
+	
+  USBPATH:[N1[-N2[...[-N8]]]]
+    Nx - Valor numérico (rango 1-127) que identifica el puerto USB.	
   
   WINDEVID:[HwId|*|?]
     HwId: valor completo o parcial del HardwareID del dispositivo (los caracteres comodín * y ? están permitidos). No se distingue entre mayúsculas y minúsculas.
+
+  PORTNAME:[PortName|*|?]
+    PortName: valor completo o parcial del nombre de puerto serie (los caracteres comodín * y ? están permitidos). No se distingue entre mayúsculas y minúsculas.
 
 Ejemplos:
   USB:067B:2303:400 - Coincide con el dispositivo USB con el valor especificado para VID, PID y REV. USB\VID_067B&amp;PID_2303&amp;REV_0400
   USB:067B:2303:* - Coincide con cualquier dispositivo USB con los valores especificados para VID y PID, y cualquier valor de REV. USB\VID_067B&amp;PID_2303
   USB:067B:* - Coincide con cualquier dispositivo USB con el valor especificado para VID y cualquier valor de PID y REV. USB\VID_067B
   USB:* - Coincide con cualquier dispositivo USB
+  
+  USBPATH:1-2-1 - Coincide con el identificador del puerto USB donde está conectado físicamente el dispositivo  
 
- WINDEVID:* - Coincide con cualquier cadena de HardwareID
+  WINDEVID:* - Coincide con cualquier cadena de HardwareID
   WINDEVID:*ACPI* - Coincide con una cadena de HardwareID que contiene la subcadena ACPI
+  
+PORTNAME:COM3 - Solo coincide con el puerto serie &quot;COM3&quot;.
+  PORTNAME:*M3 - Coincide con los puertos serie con los nombres que terminan en &quot;M3&quot;. P. ej. COM3, VCOM3.
+  PORTNAME:*M3* - coincide con los puertos serie con nombres que contienen la subcadena &quot;M3&quot;. P. ej. COM3, COM33, VCOM333.
+  PORTNAME:/dev/ttys* - coincide con todos los dispositivos &quot;/dev/ttys&quot;. P. ej. /dev/ttyS0, /dev/ttyS5.
 
 Observaciones:
-  La lista de permitidos tiene más prioridad. Por lo tanto, si el dispositivo coincide con la lista de no permitidos, el dispositivo se excluirá del redireccionamiento. Sin embargo, si al mismo tiempo el dispositivo coincide con la lista de permitidos, se permitirá el redireccionamiento del dispositivo.
+  La lista de permitidos tiene mayor prioridad. Por lo tanto, si el dispositivo coincide con la lista de no permitidos, el dispositivo se excluirá del redireccionamiento. Sin embargo, si al mismo tiempo el dispositivo coincide con la lista de permitidos, se permitirá el redireccionamiento del dispositivo.
 	  </string>
 	  <string id="AllowDenyPortFiltersList_PartName">Lista de permitidos</string>
 	  <string id="DenyDenyPortFiltersList_PartName">Lista de no permitidos</string>
@@ -88,7 +141,11 @@ Observaciones:
       <string id="PortSettings_PolicyExplain">Este ajuste de directiva sirve para configurar determinados parámetros de puerto utilizados para su redireccionamiento: 
 
 &quot;Número de puerto origen&quot;: número de puerto COM redireccionado desde el lado del cliente (p. ej., 2 significa COM2).
-&quot;Dispositivo de puerto origen&quot;: nombre del dispositivo del puerto serie redireccionado desde el lado cliente (p. ej., &quot;COM5&quot; para Windows, o &quot;/ dev/ttySerial0&quot; para Linux). Este parámetro tiene mayor prioridad que Número de puerto origen.
+&quot;Dispositivo de puerto de origen&quot;: de forma predeterminada, el nombre del dispositivo de puerto serie redireccionado desde el cliente. Además, se admite una sintaxis especial para la coincidencia de dispositivos serie complejos.
+
+Nota: Este parámetro tiene mayor prioridad que el número de puertos de origen.
+
+El puerto de origen suele identificarse por el nombre del dispositivo (por ejemplo, &quot;COM5&quot; para Windows o &quot;/dev/ttySerial0&quot; para Linux). De todos modos, se admite una sintaxis de coincidencia especial para identificar el dispositivo serie de origen mediante las propiedades del dispositivo USB, el identificador de puerto USB, etc. Consulte la sección Permitir/denegar filtros para obtener más información.
 
 &quot;Número de puerto de destino virtual&quot;: número de puerto COM virtual creado en el lado del agente y que se corresponde con el puerto COM del lado del cliente.
 
@@ -167,7 +224,7 @@ Si se configura esta configuración de directiva para el equipo, tiene prioridad
       <string id="Flow_XonXoff_combo_txt">Xactivado/Xdesactivado</string>
       <string id="Flow_None_combo_txt">Ninguno</string>
       <string id="ADMXMigrator_UnresolvedString">ADMX Migrator encontró una cadena no presente en la tabla de cadenas ADM de origen.</string>
-      <string id="ADMXMigrator_NoSupportedOn">ADMX Migrator encontró una cadena que no contiene un valor On compatible.</string>
+      <string id="ADMXMigrator_NoSupportedOn">ADMX Migrator encontró una directiva que no contiene un valor On compatible.</string>
       <string id="SUPPORTED_WindowsXP">Familia Windows Server 2003 o Microsoft Windows XP Professional como mínimo</string>
       <string id="UseMultiplicator_PartName">Usar compensación de latencia de red</string>
       <string id="MultiplicatorValue_PartName">Valor de nivel de compensación (se aplica si se establece un valor para la opción &quot;Usar compensación de latencia de red&quot;) [del 1 a 10].</string>
@@ -175,6 +232,13 @@ Si se configura esta configuración de directiva para el equipo, tiene prioridad
     <presentationTable>
       <presentation id="LocalSettingsPriority_PolicyName" />
       <presentation id="DisableFunctionality_PolicyName" />
+      <presentation id="EnableEventLog_PolicyName" />
+	  <presentation id="EventLogTableSeparator_PolicyName">
+		<dropdownList refId="EventLogTableSeparatorType_Enum" noSort="true">Separador de formato de datos de eventos:</dropdownList>
+        <textBox refId="EventLogTableSeparatorType_custom_Text">
+            <label>Cadena personalizada:</label>
+        </textBox>
+	  </presentation>
       <presentation id="RedirectAll_PolicyName" />
       <presentation id="PortIsolationMode_PolicyName">
         <dropdownList refId="PortIsolationMode_Enum" noSort="true">Modo de aislamiento del puerto COM:</dropdownList>

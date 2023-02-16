@@ -1,0 +1,582 @@
+﻿<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName>
+  </displayName>
+  <description>
+  </description>
+  <resources>
+    <stringTable>
+      <string id="Product_CatName">직렬 COM</string>
+      <string id="LocalSettingsPriority_PolicyName">로컬 설정 우선 순위</string>
+      <string id="LocalSettingsPriority_PolicyExplain">이 정책 설정이 사용되도록 설정되면 로컬 프로그램 설정이 정책 설정보다 우선적으로 적용됩니다.
+
+이 정책 설정이 사용되지 않도록 설정되거나 구성되지 않으면 정책 설정이 로컬 프로그램 설정보다 우선적으로 적용됩니다.
+
+각 설정 유형 범위 내에서 컴퓨터에 대해 지정된 설정이 항상 사용자에 대해 지정된 설정보다 우선합니다.
+이 정책 설정이 컴퓨터에 대해 설정된 경우 사용자에 대해 지정된 정책 설정보다 우선적으로 적용됩니다.</string>
+      <string id="DisableFunctionality_PolicyName">기능 사용 안 함</string>
+      <string id="DisableFunctionality_PolicyExplain">이 정책 설정이 사용되도록 설정되면 클라이언트 측과의 연결이 설정되지 않고 포트는 리디렉션되지 않고 트레이 메뉴 아이콘이 표시되지 않습니다.
+
+이 정책 설정이 사용되지 않도록 설정되면 직렬 COM이 일반 모드로 작동합니다.
+
+이 정책 설정이 구성되지 않으면 기능 사용 안 함은 로컬 프로그램 설정에 따라 결정됩니다.</string>
+      <string id="RedirectAll_PolicyName">모든 포트를 자동으로 연결</string>
+      <string id="RedirectAll_PolicyExplain">이 정책 설정이 사용되도록 설정되면 개별 GPO가 구성되지 않은 경우에도 모든 클라이언트 COM 포트가 자동으로 연결됩니다. 일부 포트에 대해 개별 GPO 설정이 구성된 경우 개별 포트 GPO 설정이 사용됩니다.
+
+이 정책 설정이 사용되지 않도록 설정되거나 구성되지 않으면 자동 연결 기능은 개별 포트 GPO 또는 로컬 프로그램 설정에 따라 결정됩니다.</string>
+      <string id="EnableEventLog_PolicyName">Windows 이벤트 로그 기능 사용</string>
+      <string id="EnableEventLog_PolicyExplain">이 정책 설정을 사용하도록 지정하면 다른 직렬 포트 관련 이벤트가 Windows 이벤트 로그의 애플리케이션 로그 범주에 기록됩니다.
+
+이 정책 설정을 사용하지 않도록 지정하거나 구성하지 않으면 Windows 이벤트 뷰어의 애플리케이션 부분에 로그 레코드가 기록되지 않습니다.
+
+지원되는 이벤트는 다음과 같습니다.
+5 - 클라이언트 PC와 연결을 설정하려고 합니다.
+10 - 에이전트와 클라이언트 측 간의 연결이 설정되었습니다.
+20 - 에이전트 측과 클라이언트 측 간의 연결이 닫힙니다.
+30 - 초기 포트 열거(클라이언트 PC에서 사용할 수 있고 연결에 사용할 수 있는 직렬 포트 목록).
+40 - 연결되었습니다. 포트가 연결되었습니다.
+41 - 연결되었습니다. 세션이 다시 연결된 동안 포트가 사용됩니다. 포트가 다시 읽기/쓰기 가능 상태가 됩니다.
+50 - 연결이 해제되었습니다. 포트의 연결이 해제되었습니다.
+51 - 연결이 해제되었습니다. 세션 연결 해제가 감지되는 동안 포트가 사용됩니다. 포트는 활성 상태로 유지되지만 읽기/쓰기는 가능하지 않습니다.
+60 - 오류
+
+포트 항목의 형식:
+&lt;소스 포트 이름&gt; 구분 기호 &lt;대상 포트 이름&gt; 구분 기호 &lt;하드웨어 ID&gt; 구분 기호 &lt;디바이스 설명&gt;
+
+&lt;소스 포트 이름&gt; – COM 포트의 이름으로, 클라이언트 PC에 표시됨(예: COM2)
+&lt;대상 포트 이름&gt; – 원격 데스크톱 세션에 표시되는 가상 COM 포트의 이름(예: COM15)
+&lt;하드웨어 ID&gt; 및 &lt;설명&gt; - 상위 디바이스 속성(클라이언트 PC의 직렬 포트가 실제로 USB 또는 다른 디바이스인 경우)
+구분 기호 - 이벤트 데이터 형식 구분 기호 문자열
+
+예(쉼표 문자는 구분 기호로 사용됨):
+COM20,COM28,USB VID_067B&amp;PID_2303&amp;REV_0400,Prolific USB-직렬 통신 포트</string>
+      <string id="EventLogTableSeparator_PolicyName">이벤트 데이터 형식 구분 기호 사용</string>
+      <string id="EventLogTableSeparator_PolicyExplain">사용하도록 설정되면 이 정책은 데이터 필드의 행 구분 기호로 사용되는 문자열을 정의합니다.
+	  
+기본 구분 기호는 탭-문자입니다. 그러나 쉼표, 세미콜론, 공백 또는 기타 사용자 지정 문자 또는 문자열과 같은 다른 문자로 변경할 수 있습니다.</string>
+	  <string id="EventLogTableSeparatorType_TAB_combo_txt">탭</string>
+	  <string id="EventLogTableSeparatorType_SPACE_combo_txt">공백</string>
+	  <string id="EventLogTableSeparatorType_custom_combo_txt">사용자 지정 문자열</string>
+      <string id="PortIsolationMode_PolicyName">COM 포트 분리 모드</string>
+      <string id="PortIsolationMode_PolicyExplain">&quot;전체 분리&quot; 모드를 선택한 경우 사용자 세션 내에서만 가상 직렬 포트가 표시되고 이에 액세스할 수 있습니다. 이 모드에서는 COM 포트 이름이 서로 다른 사용자 세션에서 동일할 수 있습니다. 중요: 시스템 서비스(예: spoolsrv.exe)는 이러한 경우에 분리된 직렬 포트에 액세스할 수 없습니다.
+
+&quot;분리 사용 안 함&quot; 모드를 선택한 경우 가상 직렬 포트가 전역으로 표시됩니다. 모든 세션에서 모든 포트에 액세스할 수 있습니다. 제한: 포트 이름은 모든 사용자에게 고유해야 합니다(따라서 서로 다른 사용자 세션에서 포트 이름이 같을 수 없음). 중요: 시스템 서비스(예: spoolsrv.exe)는 모든 직렬 포트에 액세스할 수 있습니다.
+
+이 정책 설정이 구성되지 않은 경우 직렬 리디렉션이 &quot;전체 분리&quot; 모드로 작동합니다.</string>
+      <string id="PortIsolationMode_Full_Isolation_combo_txt">전체 분리</string>
+      <string id="PortIsolationMode_Isolation_Disabled_combo_txt">분리 사용 안 함</string>
+      <string id="LockConfig_PolicyName">구성 잠금</string>
+      <string id="LockConfig_PolicyExplain">이 정책 설정이 사용되도록 설정되면 프로그램 설정을 포함하는 사용자 인터페이스가 잠기고 사용자는 트레이 메뉴에서 설정을 변경할 수 없습니다.
+
+이 정책 설정이 사용되지 않도록 설정되면 사용자가 프로그램 설정을 포함하는 사용자 인터페이스에 액세스할 수 있습니다.
+
+이 정책 설정이 구성되지 않으면 구성 차단은 로컬 프로그램 설정에 따라 결정됩니다.
+
+이 정책 설정이 컴퓨터에 대해 구성된 경우 사용자에 대해 구성된 정책 설정보다 우선적으로 적용됩니다.</string>
+      <string id="BandwidthLimit_PolicyName">대역폭 제한</string>
+      <string id="BandwidthLimit_PolicyExplain">이 정책 설정이 사용되도록 설정되면 에이전트와 모든 클라이언트 간의 데이터 전송 속도는 지정된 초당 킬로바이트 수로 제한됩니다. &quot;0&quot; 값은 속도 제한을 사용하지 않도록 설정합니다.
+
+이 정책 설정을 사용하지 않도록 설정하면 속도 제한이 사용되지 않도록 설정됩니다.
+
+이 정책 설정이 구성되지 않으면 속도 제한은 로컬 프로그램 설정에 따라 결정됩니다.</string>
+      <string id="BandwidthLimit_PartName">대역폭 제한(킬로바이트/초):</string>
+
+	  <string id="AllowDenyPortFiltersList_PolicyName">포트 필터 허용/거부</string>
+	  <string id="AllowDenyPortFiltersList_PolicyExplain">이 정책을 사용하도록 설정하면 클라이언트 측에서 감지된 모든 특정 COM 포트가 리디렉션에 허용되는지 여부를 결정하기 위해 허용 및 거부 필터가 사용됩니다.
+
+일부 포트가 리디렉션에 허용되지 않는 경우 에이전트 측은 마치 해당 포트가 클라이언트 측에 존재하지 않는 것처럼 위협합니다.
+
+정책은 규칙 목록이 포함된 여러 줄 문자열입니다.
+
+예:
+  USB:067B:2303:*
+  USBPATH:1-4
+  WINDEVID:*ACPI*
+  포트 이름:COM3
+  포트 이름:COM5
+
+구문:
+  USB:[*|VID[:*|:PID[:*|:REV]]]
+    VID - 디바이스 HardwareID의 16진수 숫자 VID(벤더 ID) 값
+    PID - 디바이스 HardwareID의 16진수 숫자 PID(제품 ID) 값
+    REV - 디바이스 HardwareID의 16진수 숫자 REV(개정) 값
+    VID, PID, REV가 &quot;*&quot;인 경우 - 모든 값을 의미합니다.
+	
+  USBPATH:[N1[-N2[...[-N8]]]]
+    Nx - USB 포트를 식별하는 숫자 값(1-127 범위)입니다.	
+  
+  WINDEVID:[HwId|*|?]
+    HwId - 디바이스 HardwareID의 전체 또는 부분 값(와일드카드 문자 * 및 ?가 지원됨). 대/소문자를 구분하지 않습니다.
+
+  PORTNAME:[PortName|*|?]
+    PortName - 직렬 포트 이름의 전체 또는 부분 값(와일드카드 문자 * 및 ? 지원됨). 대/소문자를 구분하지 않습니다.
+
+예제:
+  USB:067B:2303:400 - 지정된 VID, PID 및 수정 버전이 있는 USB 디바이스와 일치합니다. USB\VID_067B&amp;PID_2303&amp;REV_0400
+  USB:067B:2303:* - 지정된 VID, PID 및 임의 수정 버전이 있는 임의 USB 디바이스와 일치합니다. USB\VID_067B&amp;PID_2303
+  USB:067B:* - 지정된 VID, 임의 PID 및 임의 수정 버전이 있는 임의 USB 디바이스와 일치합니다. USB\VID_067B
+  USB:* - 임의 USB 디바이스와 일치
+  
+  USBPATH:1-2-1 - 디바이스를 물리적으로 꽂는 USB 포트의 식별자와 일치  
+
+  WINDEVID:*  - 임의 HardwareID 문자열과 일치
+  WINDEVID:*ACPI* - ACPI 하위 문자열을 포함하는 HardwareID 문자열과 일치
+  
+  PORTNAME:COM3 - &quot;COM3&quot; 직렬  포트와만 일치
+  PORTNAME:*M3 - &quot;M3&quot;으로 끝나는 이름의 직렬 포트와 일치. 예: COM3, VCOM3.
+  PORTNAME:*M3* - 이름에 &quot;M3&quot; 하위 문자열이 포함된 직렬 포트와 일치. 예: COM3, COM33, VCOM333.
+  PORTNAME:/dev/ttys* - 모든 &quot;/dev/ttys&quot; 디바이스와 일치. 예: /dev/ttyS0, /dev/ttyS5.
+
+주의:
+  허용 목록의 우선 순위가 높습니다. 따라서 디바이스가 거부 목록과 일치하는 경우 디바이스는 리디렉션에서 제외됩니다. 그러나 디바이스가 동시에 허용 목록과 일치하는 경우 디바이스가 리디렉션에 허용됩니다.
+	  </string>
+	  <string id="AllowDenyPortFiltersList_PartName">허용 목록</string>
+	  <string id="DenyDenyPortFiltersList_PartName">거부 목록</string>
+		
+      <string id="PortSettings_CatName">PortSettings</string>
+      <string id="PortSettings1_PolicyName">PortSettings1</string>
+      <string id="PortSettings2_PolicyName">PortSettings2</string>
+      <string id="PortSettings3_PolicyName">PortSettings3</string>
+      <string id="PortSettings4_PolicyName">PortSettings4</string>
+      <string id="PortSettings5_PolicyName">PortSettings5</string>
+      <string id="PortSettings_PolicyExplain">이 정책 설정은 해당 리디렉션에 사용되는 특정 포트 매개 변수를 구성하는 데 사용됩니다.
+
+&quot;소스 포트 번호&quot; - 클라이언트 측에서 리디렉션된 COM 포트 번호입니다(예: 2는 COM2 의미).
+
+&quot;소스 포트 디바이스&quot; - 기본적으로 클라이언트 측에서 리디렉션되는 직렬 포트 디바이스의 이름입니다. 또한 복잡한 직렬 디바이스 일치에 대해 특수 구문이 지원됩니다.
+
+참고: 이 매개 변수는 소스 포트 번호보다 우선 순위가 더 높습니다.
+
+소스 포트는 일반적으로 디바이스 이름(예: Windows의 경우 &quot;COM5&quot;, Linux의 경우 &quot;/dev/ttySerial0&quot;)으로 식별됩니다. 단, USB 디바이스 속성, USB 포트 식별자 등을 통해 소스 직렬 디바이스를 식별하기 위해 일치하는 특수 구문이 지원됩니다. 자세한 내용은 필터 허용/거부 섹션을 참조하십시오.
+
+&quot;대상 가상 포트 번호&quot; - 에이전트 측에서 생성되고 클라이언트 측의 COM 포트에 해당하는 가상 COM 포트 번호입니다.
+
+&quot;Autoconnect&quot; - 이 플래그가 설정되면 포트가 클라이언트 측에 연결될 때 자동으로 에이전트 측으로 리디렉션됩니다.
+
+&quot;IgnoreDsr&quot; - 이 플래그가 설정되면 DSR 신호가 무시됩니다.
+
+&quot;포트 닫기 전 일시 중지&quot; - 설정 문제 해결. 사용자가 가상 COM 포트를 닫은 후에 대기할 시간(ms)입니다. 일부 USB-COM 어댑터에 필요합니다.
+
+&quot;데이터 전송 전 일시 중지 사용&quot; - 이 플래그가 설정되면 포트 열기가 사용된 후, 데이터를 전송하기 전에 일시 중지됩니다. 값 &quot;데이터 전송 전 일시 중지&quot;를 참조하십시오.
+
+&quot;데이터 전송 전 일시 중지&quot; - 설정 문제 해결. 가상 COM 포트가 데이터를 실제 환경으로 전송하기 전에 대기할 시간(ms)입니다. 일부 특정 직렬 디바이스(Olivetti 카드 판독기)에 필요합니다.
+
+&quot;Serial2USBModeChangeEnabled&quot; - 설정 문제 해결. GlobalSat BU353 GPS 어댑터(및 기타 Prolific USB-COM 어댑터)의 특정 문제를 해결합니다.
+
+&quot;대기 마스크의 오류 사용 안 함&quot; - 설정 문제 해결. 직렬 COM 마스크에서 &quot;오류&quot; 값을 사용하지 않도록 설정합니다. &quot;http://msdn.microsoft.com/en-us/library/windows/desktop/aa363479(v=vs.85).aspx&quot;를 참조하십시오. 일부 소프트웨어에 필요합니다.
+
+&quot;HandleBtDisappear&quot; - 설정 문제 해결. BlueTooth COM 포트 특정 동작을 지원합니다.
+
+&quot;UsbToComTroubleShooting&quot; - 설정 문제 해결. USB-COM 어댑터의 일부 특정 문제를 해결합니다.
+
+
+&quot;네트워크 지연 시간 보상 사용&quot; - 문제 해결 설정. 보상 기능을 사용하여 네트워크 지연으로 인한 영향을 방지합니다.
+
+&quot;보상 수준&quot; - 문제 해결 설정. spinedit를 사용하여 네트워크 지연 시간 보상 수준을 선택합니다. 통신 애플리케이션이 원격 직렬 디바이스에서 안정적으로 작동하는 최소 수준을 확인합니다.
+
+&quot;고정 전송 속도 사용&quot; - 이 플래그를 설정하면 직렬 통신 애플리케이션에서 설정된 전송 속도 대신 &quot;초당 비트 수&quot;에 지정된 값이 사용됩니다.
+
+&quot;초당 비트 수&quot; - 고정 전송 속도 값(초당 비트 수)(&quot;고정 전송 속도 사용&quot;이 설정되면 적용됨)
+
+&quot;고정 회선 제어 사용&quot; - 이 플래그를 설정하면 직렬 통신 애플리케이션에서 설정된 값 대신 &quot;데이터 비트&quot;, &quot;패리티&quot;, &quot;중지 비트&quot;에 지정된 값이 사용됩니다.
+
+&quot;데이터 비트&quot; - 고정 데이터 비트 값(&quot;고정 회선 제어 사용&quot;이 설정되면 적용됨)[5~8 범위의 값]
+
+&quot;패리티&quot; - 고정 패리티 값(&quot;고정 회선 제어 사용&quot;이 설정되면 적용됨)
+
+&quot;중지 비트&quot; - 고정 중지 비트 값(&quot;고정 회선 제어 사용&quot;이 설정되면 적용됨)
+
+&quot;고정 흐름 제어 사용&quot; - 이 플래그를 설정하면 직렬 통신 애플리케이션에서 설정된 값 대신 &quot;흐름 제어&quot;에 지정된 값이 사용됩니다.
+
+&quot;흐름 제어&quot; - 고정 중지 비트 값(&quot;고정 흐름 제어 사용&quot;이 설정되면 적용됨)
+
+
+이 정책 설정이 사용되도록 설정되면 포트 리디렉션 동안 해당 매개 변수가 사용됩니다.
+
+이 정책 설정이 사용되지 않도록 설정되거나 구성되지 않으면 로컬 프로그램 설정에 지정된 매개 변수가 포트 리디렉션에 사용됩니다.
+
+이 정책 설정이 컴퓨터에 대해 구성된 경우 사용자에 대해 구성된 정책 설정보다 우선적으로 적용됩니다.</string>
+      <string id="SrcPort_PartName">소스 포트 번호:</string>
+      <string id="SrcPort_PartName2">소스 포트 디바이스:</string>
+      <string id="DstVirtPort_PartName">대상 가상 포트 번호:</string>
+      <string id="Autoconnect_PartName">Autoconnect</string>
+      <string id="Troubleshooting_PartName">문제 해결:</string>
+      <string id="IgnoreDsr_PartName">IgnoreDsr</string>
+      <string id="PauseBeforeClosePort_PartName">포트 닫기 전 일시 중지(밀리초):</string>
+      <string id="UsePauseBeforeSendData_PartName">데이터 전송 전 일시 중지 사용:</string>
+      <string id="PauseBeforeSendData_PartName">데이터 전송 전 일시 중지(밀리초):</string>
+      <string id="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</string>
+      <string id="DisableErrorsInWaitMask_PartName">대기 마스크의 오류 사용 안 함</string>
+      <string id="HandleBtDisappear_PartName">HandleBtDisappear</string>
+      <string id="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</string>
+      <string id="UseFixedBaudRate_PartName">고정 전송 속도 사용</string>
+      <string id="FixedBaudRate_PartName">고정 전송 속도 값(초당 비트 수)(&quot;고정 전송 속도 사용&quot;이 설정되면 적용됨)</string>
+      <string id="UseFixedLineControl_PartName">고정 회선 제어 사용</string>
+      <string id="FixedDataBits_PartName">고정 데이터 비트 값(&quot;고정 회선 제어 사용&quot;이 설정되면 적용됨)[5~8 범위의 값]</string>
+      <string id="Parity_No_combo_txt">번호</string>
+      <string id="Parity_Odd_combo_txt">홀수</string>
+      <string id="Parity_Even_combo_txt">짝수</string>
+      <string id="Parity_Mark_combo_txt">표시</string>
+      <string id="Parity_Space_combo_txt">공간</string>
+      <string id="StopBits_1bit_combo_txt">1비트</string>
+      <string id="StopBits_15bit_combo_txt">1.5비트</string>
+      <string id="StopBits_2bits_combo_txt">2비트</string>
+      <string id="UseFixedFlowControl_PartName">고정 흐름 제어 사용</string>
+      <string id="Flow_Hardware_combo_txt">하드웨어</string>
+      <string id="Flow_XonXoff_combo_txt">Xon/Xoff</string>
+      <string id="Flow_None_combo_txt">없음</string>
+      <string id="ADMXMigrator_UnresolvedString">ADMX 마이그레이터에서 소스 ADM 문자열 표에 없는 문자열이 발생했습니다.</string>
+      <string id="ADMXMigrator_NoSupportedOn">ADMX 마이그레이터에서 supportedOn 값이 없는 정책이 발견되었습니다.</string>
+      <string id="SUPPORTED_WindowsXP">Microsoft Windows XP Professional 또는 Windows Server 2003 제품군 이상</string>
+      <string id="UseMultiplicator_PartName">네트워크 지연 시간 보상 사용</string>
+      <string id="MultiplicatorValue_PartName">보상 수준 값(&quot;네트워크 지연 시간 보상 사용&quot;이 설정된 경우 적용됨) [1에서 10 사이의 값].</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="LocalSettingsPriority_PolicyName" />
+      <presentation id="DisableFunctionality_PolicyName" />
+      <presentation id="EnableEventLog_PolicyName" />
+	  <presentation id="EventLogTableSeparator_PolicyName">
+		<dropdownList refId="EventLogTableSeparatorType_Enum" noSort="true">이벤트 데이터 형식 구분 기호:</dropdownList>
+        <textBox refId="EventLogTableSeparatorType_custom_Text">
+            <label>사용자 지정 문자열:</label>
+        </textBox>
+	  </presentation>
+      <presentation id="RedirectAll_PolicyName" />
+      <presentation id="PortIsolationMode_PolicyName">
+        <dropdownList refId="PortIsolationMode_Enum" noSort="true">COM 포트 분리 모드:</dropdownList>
+      </presentation>
+      <presentation id="LockConfig_PolicyName" />
+      <presentation id="BandwidthLimit_PolicyName">
+        <decimalTextBox refId="BandwidthLimit_PartName" defaultValue="0" spinStep="1024">대역폭 제한(킬로바이트/초):</decimalTextBox>
+      </presentation>
+      <presentation id="AllowDenyPortFiltersList_PolicyName">
+		  <text>허용 목록</text>
+		  <multiTextBox refId="AllowPortFiltersList_PartName" />
+		  <text></text>
+		  <text>거부 목록</text>
+		  <multiTextBox refId="DenyPortFiltersList_PartName" />
+      </presentation>
+      <presentation id="PortSettings1_PolicyName">
+        <decimalTextBox refId="SrcPort_PartName">소스 포트 번호:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>소스 포트 디바이스:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">대상 가상 포트 번호:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">Autoconnect</checkBox>
+        <text>
+        </text>
+        <text>문제 해결:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">포트 닫기 전 일시 중지(밀리초):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">데이터 전송 전 일시 중지 사용:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">데이터 전송 전 일시 중지(밀리초):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">대기 마스크의 오류 사용 안 함</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">네트워크 지연 시간 보상 사용</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">보상 수준:</decimalTextBox>
+        <text>
+        </text>
+        <text>고정 설정:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">고정 전송 속도 사용</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">초당 비트 수:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">고정 회선 제어 사용</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">데이터 비트:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">패리티:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">중지 비트:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">고정 흐름 제어 사용</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">흐름 제어:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings2_PolicyName">
+        <decimalTextBox refId="SrcPort_PartName">소스 포트 번호:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>소스 포트 디바이스:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">대상 가상 포트 번호:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">Autoconnect</checkBox>
+        <text>
+        </text>
+        <text>문제 해결:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">포트 닫기 전 일시 중지(밀리초):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">데이터 전송 전 일시 중지 사용:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">데이터 전송 전 일시 중지(밀리초):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">대기 마스크의 오류 사용 안 함</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">네트워크 지연 시간 보상 사용</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">보상 수준:</decimalTextBox>
+        <text>
+        </text>
+        <text>고정 설정:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">고정 전송 속도 사용</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">초당 비트 수:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">고정 회선 제어 사용</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">데이터 비트:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">패리티:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">중지 비트:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">고정 흐름 제어 사용</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">흐름 제어:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings3_PolicyName">
+        <decimalTextBox refId="SrcPort_PartName">소스 포트 번호:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>소스 포트 디바이스:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">대상 가상 포트 번호:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">Autoconnect</checkBox>
+        <text>
+        </text>
+        <text>문제 해결:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">포트 닫기 전 일시 중지(밀리초):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">데이터 전송 전 일시 중지 사용:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">데이터 전송 전 일시 중지(밀리초):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">대기 마스크의 오류 사용 안 함</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">네트워크 지연 시간 보상 사용</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">보상 수준:</decimalTextBox>
+        <text>
+        </text>
+        <text>고정 설정:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">고정 전송 속도 사용</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">초당 비트 수:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">고정 회선 제어 사용</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">데이터 비트:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">패리티:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">중지 비트:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">고정 흐름 제어 사용</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">흐름 제어:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings4_PolicyName">
+        <decimalTextBox refId="SrcPort_PartName">소스 포트 번호:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>소스 포트 디바이스:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">대상 가상 포트 번호:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">Autoconnect</checkBox>
+        <text>
+        </text>
+        <text>문제 해결:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">포트 닫기 전 일시 중지(밀리초):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">데이터 전송 전 일시 중지 사용:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">데이터 전송 전 일시 중지(밀리초):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">대기 마스크의 오류 사용 안 함</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">네트워크 지연 시간 보상 사용</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">보상 수준:</decimalTextBox>
+        <text>
+        </text>
+        <text>고정 설정:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">고정 전송 속도 사용</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">초당 비트 수:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">고정 회선 제어 사용</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">데이터 비트:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">패리티:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">중지 비트:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">고정 흐름 제어 사용</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">흐름 제어:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings5_PolicyName">
+        <decimalTextBox refId="SrcPort_PartName">소스 포트 번호:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>소스 포트 디바이스:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">대상 가상 포트 번호:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">Autoconnect</checkBox>
+        <text>
+        </text>
+        <text>문제 해결:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">포트 닫기 전 일시 중지(밀리초):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">데이터 전송 전 일시 중지 사용:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">데이터 전송 전 일시 중지(밀리초):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">대기 마스크의 오류 사용 안 함</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">네트워크 지연 시간 보상 사용</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">보상 수준:</decimalTextBox>
+        <text>
+        </text>
+        <text>고정 설정:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">고정 전송 속도 사용</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">초당 비트 수:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">고정 회선 제어 사용</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">데이터 비트:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">패리티:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">중지 비트:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">고정 흐름 제어 사용</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">흐름 제어:</dropdownList>
+      </presentation>
+      <presentation id="LocalSettingsPriority_PolicyName_1" />
+      <presentation id="LockConfig_PolicyName_1" />
+      <presentation id="PortSettings1_PolicyName_1">
+        <decimalTextBox refId="SrcPort_PartName">소스 포트 번호:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>소스 포트 디바이스:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">대상 가상 포트 번호:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">Autoconnect</checkBox>
+        <text>
+        </text>
+        <text>문제 해결:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">포트 닫기 전 일시 중지(밀리초):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">데이터 전송 전 일시 중지 사용:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">데이터 전송 전 일시 중지(밀리초):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">대기 마스크의 오류 사용 안 함</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">네트워크 지연 시간 보상 사용</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">보상 수준:</decimalTextBox>
+        <text>
+        </text>
+        <text>고정 설정:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">고정 전송 속도 사용</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">초당 비트 수:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">고정 회선 제어 사용</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">데이터 비트:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">패리티:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">중지 비트:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">고정 흐름 제어 사용</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">흐름 제어:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings2_PolicyName_1">
+        <decimalTextBox refId="SrcPort_PartName">소스 포트 번호:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>소스 포트 디바이스:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">대상 가상 포트 번호:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">Autoconnect</checkBox>
+        <text>
+        </text>
+        <text>문제 해결:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">포트 닫기 전 일시 중지(밀리초):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">데이터 전송 전 일시 중지 사용:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">데이터 전송 전 일시 중지(밀리초):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">대기 마스크의 오류 사용 안 함</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">네트워크 지연 시간 보상 사용</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">보상 수준:</decimalTextBox>
+        <text>
+        </text>
+        <text>고정 설정:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">고정 전송 속도 사용</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">초당 비트 수:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">고정 회선 제어 사용</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">데이터 비트:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">패리티:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">중지 비트:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">고정 흐름 제어 사용</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">흐름 제어:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings3_PolicyName_1">
+        <decimalTextBox refId="SrcPort_PartName">소스 포트 번호:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>소스 포트 디바이스:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">대상 가상 포트 번호:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">Autoconnect</checkBox>
+        <text>
+        </text>
+        <text>문제 해결:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">포트 닫기 전 일시 중지(밀리초):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">데이터 전송 전 일시 중지 사용:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">데이터 전송 전 일시 중지(밀리초):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">대기 마스크의 오류 사용 안 함</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">네트워크 지연 시간 보상 사용</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">보상 수준:</decimalTextBox>
+        <text>
+        </text>
+        <text>고정 설정:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">고정 전송 속도 사용</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">초당 비트 수:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">고정 회선 제어 사용</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">데이터 비트:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">패리티:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">중지 비트:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">고정 흐름 제어 사용</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">흐름 제어:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings4_PolicyName_1">
+        <decimalTextBox refId="SrcPort_PartName">소스 포트 번호:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>소스 포트 디바이스:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">대상 가상 포트 번호:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">Autoconnect</checkBox>
+        <text>
+        </text>
+        <text>문제 해결:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">포트 닫기 전 일시 중지(밀리초):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">데이터 전송 전 일시 중지 사용:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">데이터 전송 전 일시 중지(밀리초):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">대기 마스크의 오류 사용 안 함</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">네트워크 지연 시간 보상 사용</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">보상 수준:</decimalTextBox>
+        <text>
+        </text>
+        <text>고정 설정:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">고정 전송 속도 사용</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">초당 비트 수:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">고정 회선 제어 사용</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">데이터 비트:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">패리티:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">중지 비트:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">고정 흐름 제어 사용</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">흐름 제어:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings5_PolicyName_1">
+        <decimalTextBox refId="SrcPort_PartName">소스 포트 번호:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>소스 포트 디바이스:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">대상 가상 포트 번호:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">Autoconnect</checkBox>
+        <text>
+        </text>
+        <text>문제 해결:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">포트 닫기 전 일시 중지(밀리초):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">데이터 전송 전 일시 중지 사용:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">데이터 전송 전 일시 중지(밀리초):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">대기 마스크의 오류 사용 안 함</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">네트워크 지연 시간 보상 사용</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">보상 수준:</decimalTextBox>
+        <text>
+        </text>
+        <text>고정 설정:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">고정 전송 속도 사용</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">초당 비트 수:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">고정 회선 제어 사용</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">데이터 비트:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">패리티:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">중지 비트:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">고정 흐름 제어 사용</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">흐름 제어:</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

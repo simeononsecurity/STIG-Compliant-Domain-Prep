@@ -1,0 +1,1148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions">
+
+   <displayName>VMware Horizon View Agent</displayName>
+   <description>VMware Horizon View Agent の構成</description>
+   <resources>
+      <stringTable>
+
+         <string id="SUPPORTED_Windows10_1607_VM">Windows 10 / Windows Server 2016 VDI バージョン 1607 以降の仮想マシン</string>
+
+         <string id="Agent_Configuration">エージェントの構成</string>
+
+         <string id="Collaboration">共同作業</string>
+
+         <string id="Agent_Security">エージェントのセキュリティ</string>
+
+         <string id="Unity_Touch_Hosted_Apps">Unity Touch およびホスト型アプリケーション</string>
+
+         <string id="Unity_Filter">Unity フィルタ ルール リスト</string>
+
+         <string id="Unity_Filter_Rules_Desc">このポリシーでは、ホスト型アプリケーションのリモート処理でウィンドウのフィルタ ルールを指定します。カスタム アプリケーションをサポートするため、Horizon Agent でフィルタ ルールが使用されます。ウィンドウの背景が黒く表示されたり、ドロップダウン ウィンドウのサイズに問題がある場合には、この GPO を使用してください。
+
+ルールを設定する場合、まず最初に、ルールを適用するウィンドウの特性を決めます。次のように多くの特性を指定できます。
+
+1. Window のクラス名。カスタム ルールでは classname=XYZ で指定します。
+2. 製品の会社。company=XYZ で指定します。
+3. 製品名。product=XYZ で指定します。
+4. 製品のメジャー バージョン。major=XYZ で指定します。
+5. 製品のマイナー バージョン。minor=XYZ で指定します。
+6. 製品のビルド番号。build=XYZ で指定します。
+7. 製品のリビジョン番号。revision=XYZ で指定します。
+
+優先特性として Window のクラス名のみを使用するのが最も一般的です (例: classname=CustomClassName)。ただし、特定の 1 つの製品にのみルールを適用する必要がある場合は、複数の特性を使用します。これらの特性は、実行ファイルの [プロパティ] ウィンドウで確認できます。また、特殊文字を含め、大文字と小文字を完全に一致させる必要があります。複数の特性を使用した場合、ウィンドウにルールが適用されるように、すべてを一致させる必要があります。
+
+特定の特性を作成したら、次にアクションを選択します。アクションは、action=block または action=map のいずれかにする必要があります。action=block を使用すると、Horizon Agent はクライアントにウィンドウのリモート制御を許可しません。これは、クライアントに表示されるウィンドウが大きすぎる場合や、通常のウィンドウ フォーカス動作と競合する場合に使用します。action=map を使用すると、Horizon Agent はハードコード タイプとしてウィンドウを扱います。
+
+action=map を設定した場合は、ウィンドウをマッピングするタイプも指定する必要があります。この設定を行うには、type=XYZ を使用します。使用可能なタイプ値は次のとおりです。normal、panel、dialog、tooltip、splash、toolbar、dock、desktop、widget、combobox、startscreen、sidepanel、taskbar、metrofullscreen、metrodocked
+
+以下に、アプリケーションの誤動作を修正する場合のルールの設定例を 2 つ示します。
+
+1. リモート制御を許可しないウィンドウを除外する。
+   - MyClassName というクラス名のウィンドウをすべてブロックするには、ルール classname=MyClassName;action=block を使用します。
+   - 製品 MyProduct からのウィンドウをすべてブロックするには、ルール product=MyProduct;action=block を使用します。
+2. ウィンドウを正しいタイプにマッピングする。ウィンドウが誤ったタイプにマッピングされているかの判断は難しいため、この操作は通常、VMware のサポートから指示された場合にのみ行います。
+   - カスタム クラスを combo box タイプにマッピングするには、ルール classname=MyClassName;action=map;type=combobox を使用します。
+
+注: この GPO は、%ProgramData%\VMware\RdeServer\Unity Filters にインストールされているフィルタリング ルールよりも優先度が低くなります。</string>
+
+         <string id="Smartcard_Redirection">Smartcard リダイレクト</string>
+
+         <string id="Local_Reader_Access">ローカル リーダー アクセス</string>
+
+         <string id="True_SSO_Configuration">True SSO の構成</string>
+
+         <string id="Whfb_Certificate_Redirection">Whfb 証明書のリダイレクト</string>
+
+         <string id="Whfb_Certificate_Allowed_Applications">許可された実行ファイルのリスト</string>
+
+         <string id="Whfb_Certificate_Allowed_Applications_Desc">リダイレクトされた Whfb 証明書の使用が許可されている実行ファイルのリスト</string>
+
+         <string id="View_USB_Configuration">View の USB 構成</string>
+
+         <string id="Client_Downloadable_only_settings">クライアントがダウンロード可能な設定のみ</string>
+
+         <string id="VMware_MediaProviderProxy">VMware Virtualization Pack for Skype for Business</string>
+
+         <string id="Recursive_Domain_Enumeration">信頼されるドメインを繰り返し列挙する</string>
+
+         <string id="Recursive_Domain_Enumeration_Desc">サーバが含まれるドメインによって信頼されるドメインをすべて列挙するかどうかを指定します。完全な信頼チェーンを確立するために、信頼される側の各ドメインによって信頼されるドメインも列挙され、信頼されるすべてのドメインが検索されるまでプロセスが再帰的に続行します。クライアントがログイン時に信頼されるすべてのドメインを使用できるように、この情報は View Connection Server に渡されます。
+
+デフォルトでは、このプロパティは有効です。無効にすると、直接信頼されるドメインのみが列挙され、リモート ドメイン コントローラには接続されません。
+
+注: ドメイン関係が複雑な環境 (フォレスト内のドメイン間で信頼を持つ複数のフォレスト構造を使用する環境など) では、このプロセスが完了するまでに数分かかる場合があります。</string>
+
+         <string id="Force_MMR_to_use_overlay">MMR でソフトウェア オーバーレイを強制的に使用する</string>
+
+         <string id="Force_MMR_to_use_overlay_Desc">パフォーマンスを向上させるため、MMR がビデオ再生時にハードウェア オーバーレイの使用を試みます。ただし、複数のディスプレイを使用している場合、ハードウェア オーバーレイは 1 つのディスプレイ (プライマリ ディスプレイまたは WMP が開始されているディスプレイ) でのみ有効になります。WMP を別のディスプレイにドラッグすると、ビデオは黒色の四角形で表示されます。すべてのディスプレイで動作するソフトウェア オーバーレイを MMR で強制的に使用する場合は、このオプションを使用します。</string>
+
+         <string id="Enable_multi_media_acceleration">マルチメディアのアクセラレーションを有効にする</string>
+
+         <string id="Enable_multi_media_acceleration_Desc">エージェントでマルチメディア リダイレクト (MMR) を有効にするかどうかを指定します。MMR は、TCP ソケットを介してリモート システムの固有のコーデックからマルチメディア データをクライアントに直接転送する Microsoft DirectShow フィルタです。その後、データはクライアント上で直接デコードされ、そこで再生されます。クライアントがローカル マルチメディア デコーディングの処理に十分なリソースを持たない場合は、管理者は MMR を無効にできます。
+
+注: View Client のビデオ ディスプレイ ハードウェアでオーバーレイがサポートされていない場合は、MMR が正しく機能しません。MMR ポリシーは、オフライン デスクトップ セッションに適用されません。</string>
+
+         <string id="AllowDirectRDP">ダイレクト RDP を許可</string>
+
+         <string id="AllowDirectRDP_Desc">View 以外のクライアントが RDP を使用して View デスクトップに直接接続できるかどうかを指定します。無効にすると、エージェントでは View Client または View Portal 経由での View 管理接続のみが許可されます。
+
+デフォルトでは、このプロパティは有効です。</string>
+
+         <string id="AllowSingleSignon">シングル サインオンを許可</string>
+
+         <string id="AllowSingleSignon_Desc">シングル サインオン (SSO) を使用して、ユーザーを View デスクトップに接続するかどうかを指定します。有効にすると、View Client または View Portal 経由で接続するときにのみ認証情報の入力が必要になります。無効にすると、リモート接続の確立時に再度認証を行う必要があります。
+
+このプロパティを使用するには、デスクトップに View Agent のセキュアな認証コンポーネントがインストールされ、デフォルトで有効である必要があります。</string>
+
+         <string id="ConnectionTicketTimeout">接続チケットのタイムアウト</string>
+
+         <string id="ConnectionTicketTimeout_Desc">View 接続チケットの有効期間を秒単位で指定します。この接続チケットは、View Client が View Agent に接続するときに、検証とシングル サインオンのために使用されます。
+
+セキュリティ上の理由から、指定された時間が経過するとチケットは無効になります。このプロパティを明示的に設定しない場合、デフォルトの 900 秒が適用されます。</string>
+
+         <string id="CredentialFilterExceptions">認証情報フィルタの例外</string>
+
+         <string id="CredentialFilterExceptions_Desc">エージェントの CredentialFilter の読み込みを許可しない実行ファイル名を指定するセミコロン区切りのリスト。ファイル名にパスとサフィックスを付けないでください。</string>
+
+         <string id="RDPVcBridgeUnsupportedClients">RDPVcBridge でサポートされていないクライアント</string>
+
+         <string id="RDPVcBridgeUnsupportedClients_Desc">RDPVcBridge をサポートしない Horizon Client タイプのカンマ区切りリスト。</string>
+
+         <string id="Disable_Time_Zone_sync">タイムゾーンの同期を無効にする</string>
+
+         <string id="Disable_Time_Zone_sync_Desc">View デスクトップのタイムゾーンを接続されたクライアントと同期するかどうかを指定します。有効にすると、View Client 構成ポリシーの「タイムゾーン転送を無効にする」プロパティが無効に設定されていない場合にのみ、このプロパティが適用されます。
+
+デフォルトでは、このプロパティは無効です。</string>
+
+         <string id="Toggle_Display_Settings_Control">画面設定の制御を切り替える</string>
+
+         <string id="Toggle_Display_Settings_Control_Desc">View Client の接続中に、コントロール パネルの [画面] アプレットの [設定] ページを無効にするかどうかを指定します。
+
+このプロパティは、PCoIP プロトコルを使用するセッションにのみ適用されます。デフォルトでは、このプロパティは有効です。</string>
+
+         <string id="DpiSync">DPI の同期</string>
+
+         <string id="DpiSync_Desc">リモート セッションに関するシステム全体の DPI 設定を調整します。有効にした場合、または構成しない場合、リモート セッションに関するシステム全体の DPI 設定は、クライアント オペレーティング システムの対応する DPI 設定と一致するように設定されます。無効にすると、リモート セッションに関するシステム全体の DPI 設定は変更されません。</string>
+
+         <string id="DpiSyncPerMonitor">モニターごとの DPI 同期</string>
+
+         <string id="DpiSyncPerMonitor_Desc">リモート セッションで複数のモニターの DPI 設定を調整します。有効にした場合または構成しない場合、リモート セッション中に、すべてのモニターの DPI 設定がクライアント オペレーティング システムの DPI 設定に合わせて変更されます。DPI 設定がカスタマイズされている場合は、カスタマイズされた DPI 設定と一致します。無効にした場合、ユーザーは切断して新しいリモート セッションに接続し、すべてのモニターで DPI の変更を有効にする必要があります。</string>
+
+         <string id="DisallowCollaboration">共同作業をオフにする</string>
+
+         <string id="DisallowCollaboration_Desc">View Agent 仮想マシンで共同作業を許可するかどうかを設定します。有効にした場合、共同作業機能がすべてオフになります。無効にするか、設定しない場合、この機能はプール レベルで制御されます。この設定を有効にするには、View Agent マシンの再起動が必要です。</string>
+
+         <string id="AllowCollaborationInviteByIM">IM での共同作業者の招待を許可する</string>
+
+         <string id="AllowCollaborationInviteByIM_Desc">ユーザーがインストール済みのインスタント メッセージ (IM) アプリケーションで共同作業の招待状を送信できるかどうかを設定します。無効にした場合、IM アプリケーションがインストールされている場合でも、ユーザーは IM で招待状を送信できません。デフォルトでは、この設定は有効です。</string>
+
+         <string id="AllowCollaborationInviteByEmail">E メールでの共同作業者の招待を許可する</string>
+
+         <string id="AllowCollaborationInviteByEmail_Desc">ユーザーがインストール済みのメール アプリケーションで共同作業の招待状を送信できるかどうかを設定します。無効にした場合、メール アプリケーションがインストールされている場合でも、ユーザーは E メールで招待状を送信できません。デフォルトでは、この設定は有効です。</string>
+
+         <string id="AllowCollaborationControlPassing">共同作業者へのコントロールの移動を許可する</string>
+
+         <string id="AllowCollaborationControlPassing_Desc">この設定は、共同作業の実行中に他の共同作業者への入力コントロールの移動をユーザーに許可するかどうかを設定します。デフォルトでは、この設定は有効です。</string>
+
+         <string id="MaxCollaboratorCount">招待する共同作業者の最大数</string>
+
+         <string id="MaxCollaboratorCount_Desc">ユーザーが自身のセッションに招待できる共同作業者の最大数を設定します。デフォルトの最大数は 5 です。</string>
+
+         <string id="CollaborationEmailInviteDelimiter">「mailto:」リンク内の複数のメール アドレスに使用する区切り文字</string>
+
+         <string id="CollaborationEmailInviteDelimiter_Desc">この設定では、「mailto:」リンク内の複数のメール アドレスに使用する区切り文字を設定します。このポリシーを設定しない場合、一般的なメール クライアントで最もよく使用される区切り文字の「;」(セミコロンで空白なし) がデフォルトの設定になります。
+
+ご使用のメール クライアントでこの区切り文字が問題となる場合は、「, 」 (コンマで空白あり) や「; 」(セミコロンで空白あり) など別の文字を試してみてください。この値は、「mailto:」リンクに配置される前に URI エンコードが行われるため、このエントリは URI エンコードした値に設定しないでください。</string>
+
+         <string id="CollaborationClipboardIncludeOutlookURL">クリップボード テキストに Outlook 形式の URL を含める</string>
+
+         <string id="CollaborationClipboardIncludeOutlookURL_Desc">この設定が有効になっていると、クリップボードの招待テキストに Outlook 形式の招待 URL が含まれます。エンド ユーザーがクリップボードの招待テキストを E メールに貼り付けることを想定している場合は、この設定を有効にします。デフォルトでは、この設定は無効です。</string>
+
+         <string id="CollaborationServerURLs">招待状メッセージに含めるサーバの URL</string>
+
+         <string id="CollaborationServerURLs_Desc">この設定により、共同作業の招待状に含めるデフォルトの URL を上書きできます。内部 URL と外部 URL が異なる、ポッドごとに URL が異なるなど、ご使用の環境で使用しているサーバが複数ある場合に、この値を設定することを推奨しています。
+
+値を設定する場合、1 番目のカラムには URL にオプションのポートを付けて入力し (「horizon-ca.corp.int」、「horizon-ca.corp.int:2323」など)、2 番目のカラムには URL の簡単な説明を入れます (「California Pod」、「Corporate Network」など)。この説明が使用されるのは、リストに複数のサーバがある場合のみです。</string>
+
+         <string id="UnAuthenticatedAccessEnabled">非認証アクセスを有効にする</string>
+
+         <string id="UnAuthenticatedAccessEnabled_Desc">この設定は非認証アクセス機能を有効にします。この変更を有効にするには、システムを再起動する必要があります。デフォルトでは、非認証アクセスは有効です。</string>
+
+         <string id="CommandsToRunOnConnect">接続時に実行するコマンド</string>
+
+         <string id="CommandsToRunOnConnect_Desc">セッションに初めて接続するときに実行されるコマンドのリスト。</string>
+
+         <string id="CommandsToRunOnReconnect">再接続時に実行するコマンド</string>
+
+         <string id="CommandsToRunOnReconnect_Desc">セッションから切断されて再接続するときに実行されるコマンドのリスト。</string>
+
+         <string id="CommandsToRunOnDisconnect">切断時に実行するコマンド</string>
+
+         <string id="CommandsToRunOnDisconnect_Desc">セッションから切断されたときに実行されるコマンドのリスト。</string>
+
+         <string id="ShowDiskActivityIcon">ディスク アクティビティ アイコンの表示</string>
+
+         <string id="ShowDiskActivityIcon_Desc">システム トレイにディスク アクティビティのアイコンを表示します。複数のプロセスで使用できない System Trace NT Kernel Logger を使用します。他の目的で必要になる場合には無効にしてください。デフォルトは有効です。</string>
+
+         <string id="SSO_retry_timeout">シングル サインオンの再試行タイムアウト</string>
+
+         <string id="SSO_retry_timeout_Desc">シングル サインオンの再試行期間をミリ秒単位で指定します。シングル サインオンの再試行を無効にするには、0 に設定します。デフォルト値は 5,000 ミリ秒です。</string>
+
+         <string id="Win10PhysicalAgentAudioOption">単一セッションの Windows 10 物理リモート デスクトップ マシンのオーディオ オプション</string>
+
+         <string id="Win10PhysicalAgentAudioOption_Desc">Horizon の Windows 10 物理リモート デスクトップ マシン セッションで使用するオーディオ デバイスを指定します。デフォルトでは、Horizon Client エンドポイントに接続されているオーディオ デバイスが使用されます。</string>
+
+         <string id="UseClientAudioDevice">Horizon Client エンドポイントに接続されているオーディオ デバイスを使用</string>
+
+         <string id="UsePhysicalMachineAudioDevice">Horizon の Windows 10 物理リモート デスクトップ エンドポイントに接続されているオーディオ デバイスを使用</string>
+
+         <string id="VDI_idle_time_till_disconnect">切断までのアイドル時間 (VDI)</string>
+
+         <string id="VDI_idle_time_till_disconnect_Desc">ユーザーが非アクティブであるために VDI デスクトップ セッションが切断されるまでの時間を指定します。
+この設定が無効である場合や構成されていない場合、VDI デスクトップ セッションは切断されなくなります。[なし] を選択すると、同じ効果を得られます。
+注: デスクトップ プールまたはマシンが切断後に自動的にログアウトするように構成されている場合に、これらの設定が適用されます。</string>
+
+         <string id="Accept_SSL_encr_framework_channel">SSL 暗号化フレームワーク チャネルを受け入れる</string>
+
+         <string id="Accept_SSL_encr_framework_channel_Desc">SSL 暗号化フレームワーク チャネルを受け入れる
+
+有効: SSL を有効にします。SSL を使用しないレガシー クライアントとの接続を許可します。
+無効: SSL を無効にします。
+強制: SSL を有効にし、レガシー クライアントとの接続を拒否します。</string>
+
+         <string id="Enable">有効にする</string>
+
+         <string id="Disable">無効にする</string>
+
+         <string id="Enforce">強制</string>
+
+         <string id="Allow_smartcard_local_access">アプリケーションにローカル スマート カード リーダーへのアクセスを許可する</string>
+
+         <string id="Allow_smartcard_local_access_Desc">有効にすると、スマート カード リダイレクト機能がインストールされていても、アプリケーションはすべてのローカル スマート カード リーダーにアクセスできます。
+
+リモート デスクトップ サービス ロールが有効な場合、この設定は RDP または RDSH ホストに適用されません。
+
+有効にすると、デスクトップでローカル リーダーの存在が監視されます。検出されると、スマートカード リダイレクトが無効になり、ローカル リーダーへのアクセスが許可されます。ユーザーが次回セッションに接続するまで、リダイレクトは無効になります。
+
+注: ローカル アクセスを有効にすると、アプリケーションはクライアントのリモート リーダーにアクセスできなくなります。
+
+デフォルトでは、この設定は無効です。</string>
+
+         <string id="Local_Reader_Name">ローカル リーダー名</string>
+
+         <string id="Local_Reader_Name_Desc">ローカル アクセスを有効にするために監視するローカル リーダーの名前を指定します。デフォルトでは、ローカル アクセスを有効にするにはリーダーにカードが挿入されている必要があります。「スマート カードの挿入が必要」設定を使用すると、この要件を無効にできます。
+
+
+デフォルトでは、すべてのリーダーでこの機能が有効です。</string>
+
+         <string id="Require_an_inserted_smart_card">スマート カードの挿入が必要</string>
+
+         <string id="Require_an_inserted_smart_card_Desc">有効にすると、ローカル リーダーにカードが挿入されている場合にのみ、ローカル リーダー アクセスが有効になります。無効にすると、ローカル リーダーが検出されている間、ローカル アクセスが有効になります。
+
+デフォルトでは、この設定は有効です。</string>
+
+         <string id="Disable_true_SSO">True SSO を無効にする</string>
+
+         <string id="Disable_true_SSO_Desc">このオプションを有効にすると、この機能がエージェントで無効になります。</string>
+
+         <string id="Cert_wait_timeout">証明書待機タイムアウト</string>
+
+         <string id="Cert_wait_timeout_Desc">エージェントに到着する証明書のタイムアウトを秒単位で指定します。</string>
+
+         <string id="Min_key_size">キーの最小サイズ</string>
+
+         <string id="Min_key_size_Desc">使用するキーの最小サイズ</string>
+
+         <string id="All_key_sizes">すべてのキー サイズ</string>
+
+         <string id="All_key_sizes_Desc">使用可能なすべてのキー サイズ。最大で 5 つのサイズを指定できます。例: 1024,2048,3072,4096</string>
+
+         <string id="Keys_to_precreate">事前に作成されるキーの数</string>
+
+         <string id="Keys_to_precreate_Desc">RDSH 環境で事前に作成されるキーの数</string>
+
+         <string id="Cert_min_validity">証明書の検証に必要な最小期間</string>
+
+         <string id="Cert_min_validity_Desc">ユーザーの再接続で証明書が再利用される場合に証明書の検証に必要な最小期間 (分)。</string>
+
+         <string id="Enable_Unity_Touch">Unity Touch を有効にする</string>
+
+         <string id="Enable_Unity_Touch_Desc">このポリシーでは、View Agent で Unity Touch 機能を有効にするかどうかを指定します。デフォルトでは、Unity Touch は有効です。
+
+Windows 10 で Unity Touch が有効になっている場合、View Agent でユニバーサル Windows プラットフォーム (UWP) アプリケーションの Unity Touch サポートを有効にするかをサブポリシーに指定します。デフォルトでは、UWP で Unity Touch がサポートされます。Unity Touch ポリシーが未構成の場合、Windows 10 の UWP で Unity Touch がサポートされます。</string>
+
+         <string id="Enable_system_tray_redir">ホスト型アプリケーションのシステム トレイのリダイレクトを有効にする</string>
+
+         <string id="Enable_system_tray_redir_Desc">このポリシーでは、ホスト型アプリケーションのリモート処理で、システム トレイのリダイレクトを有効にするかどうかを指定します。デフォルトでは、システム トレイのリダイレクトは有効です。</string>
+
+         <string id="Enable_user_prof_customization">ホスト型アプリケーションでユーザー プロファイルのカスタマイズを有効にする</string>
+
+         <string id="Enable_user_prof_customization_Desc">このポリシーでは、ホスト型アプリケーションのリモート処理でユーザー プロファイルのカスタマイズを実行するかどうかを指定します。有効にすると、ユーザー プロファイルが生成され、Windows テーマがカスタマイズされます。さらに、登録済みのスタートアップ アプリケーションが実行されます。デフォルト値は無効です。</string>
+
+         <string id="AllowTinyOrOffscreenWindows">空またはオフスクリーン ウィンドウの更新を送信する</string>
+
+         <string id="AllowTinyOrOffscreenWindows_Desc">このポリシーでは、Horizon Client が空またはオフスクリーン ウィンドウの更新を受信するかどうかを指定します。この値を無効にすると、2x2 ピクセル未満のウィンドウまたは完全なオフスクリーン ウィンドウに関する情報は Horizon Client に送信されません。デフォルトでは、この設定は無効です。</string>
+
+         <string id="MinimalHookingModeEnabled">Windows フックの使用を制限する</string>
+
+         <string id="MinimalHookingModeEnabled_Desc">このポリシーでは、ホスト型アプリケーションのリモート処理または Unity Touch の使用時に大半のフックを無効にします。これは、OS レベルのフックを設定すると互換性の問題またはパフォーマンス上の問題が発生するアプリケーションで使用します。たとえば、この設定を有効にすると、大半の Windows Active Accessibility とインプロセス フックが使用できなくなります。デフォルトでは、このポリシーは無効です。すべての優先フックが使用されます。</string>
+
+         <string id="LaunchAppWhenArgsAreDifferent">引数が異なる場合にのみ、ホスト型アプリケーションの新規インスタンスを起動する</string>
+
+         <string id="LaunchAppWhenArgsAreDifferent_Desc">このポリシーは、ホスト型アプリケーションが起動されたが、切断されたプロトコル セッション内でそのアプリケーションの既存インスタンスがすでに実行中の場合の動作を制御します。無効にすると、アプリケーションの既存インスタンスがアクティベーションされます。有効にすると、コマンドラインのパラメータが一致する場合にのみ、アプリケーションの既存インスタンスはアクティベーションされます。このポリシーのデフォルト値は無効です。</string>
+
+         <string id="Exclude_Vid_Pid">Vid/Pid デバイスを除外する</string>
+
+         <string id="Exclude_Vid_Pid_Desc">指定したベンダー ID と製品 ID のデバイスを転送から除外します。
+
+構文: {m|o}:&lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx|*&gt;&gt;[;...]
+merge-flag:
+m=クライアントの設定がエージェントの設定にマージされます。
+o=エージェントの設定でクライアントの設定が上書きされます。
+
+例: m:vid-0781_pid-554c;vid-0781_pid-9999</string>
+
+         <string id="Exclude_Vid_Pid_Rel">Vid/Pid/Rel デバイスを除外する</string>
+
+         <string id="Exclude_Vid_Pid_Rel_Desc">指定したベンダー ID 、製品 ID、リリース番号のデバイスを転送から除外します。
+
+構文: {m|o}:&lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx&gt;_rel-&lt;xxxx|*&gt;&gt;[;...]
+merge-flag:
+m=クライアントの設定がエージェントの設定にマージされます。
+o=エージェントの設定でクライアントの設定が上書きされます。
+
+例: m:vid-0781_pid-554c_rel-0100;vid-0781_pid-9999_rel-0010</string>
+
+         <string id="Include_Vid_Pid">Vid/Pid デバイスを含める</string>
+
+         <string id="Include_Vid_Pid_Desc">転送可能な、指定したベンダー ID と製品 ID のデバイスを含めます。
+
+構文: {m|o}:&lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx|*&gt;&gt;[;...]
+
+merge-flag:
+m=クライアントの設定がエージェントの設定にマージされます。
+o=エージェントの設定でクライアントの設定が上書きされます。
+
+例: o:vid-0781_pid-554c;vid-0781_pid-9999</string>
+
+         <string id="Include_Vid_Pid_Rel">Vid/Pid/Rel デバイスを含める</string>
+
+         <string id="Include_Vid_Pid_Rel_Desc">指定したベンダー ID 、製品 ID、リリース番号のデバイスを転送に含めます。
+
+構文: {m|o}:&lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx&gt;_rel-&lt;xxxx|*&gt;&gt;[;...]
+
+merge-flag:
+m=クライアントの設定がエージェントの設定にマージされます。
+o=エージェントの設定でクライアントの設定が上書きされます。
+
+例: o:vid-0781_pid-554c_rel-0100;vid-0781_pid-9999_rel-0010</string>
+
+         <string id="Exclude_device_family">デバイス ファミリを除外する</string>
+
+         <string id="Exclude_device_family_Desc">デバイス ファミリを転送から除外します。
+
+構文: {m|o}:&lt;family-name&gt;[;...]
+
+merge-flag:
+m=クライアントの設定がエージェントの設定にマージされます。
+o=エージェントの設定でクライアントの設定が上書きされます。
+
+例: o:bluetooth;audio-in</string>
+
+         <string id="Include_device_family">デバイス ファミリを含める</string>
+
+         <string id="Include_device_family_Desc">転送可能なデバイス ファミリを含めます。
+
+構文: {m|o}:&lt;family-name&gt;[;...]
+
+merge-flag:
+m=クライアントの設定がエージェントの設定にマージされます。
+o=エージェントの設定でクライアントの設定が上書きされます。
+
+例: m:storage;audio-out</string>
+
+         <string id="Exclude_all">すべてのデバイスを除外する</string>
+
+         <string id="Exclude_all_Desc">追加フィルタ ルールで追加されない限り、すべてのデバイスをブロックします。
+
+デフォルト: すべてのデバイスを許可</string>
+
+         <string id="HidOpt_Include_Vid_Pid">HID 最適化 Vid/Pid デバイスを含める</string>
+
+         <string id="HidOpt_Include_Vid_Pid_Desc">指定したベンダー ID と製品 ID を持つ最適化可能な HID デバイスを含めます。
+
+構文: &lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx|*&gt;&gt;[;...]
+
+例: vid-056a_pid-0302;vid-046d_pid-c628</string>
+
+         <string id="Exclude_Auto_Vid_Pid">自動接続の Vid/Pid デバイスを除外する</string>
+
+         <string id="Exclude_Auto_Vid_Pid_Desc">指定したベンダー ID と製品 ID のデバイスを自動転送から除外します。
+
+構文: {m|o}:&lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx|*&gt;&gt;[;...]
+merge-flag:
+m=クライアントの設定がエージェントの設定にマージされます。
+o=エージェントの設定でクライアントの設定が上書きされます。
+
+例: m:vid-0781_pid-554c;vid-0781_pid-9999</string>
+
+         <string id="Exclude_auto_device_family">自動接続のデバイス ファミリを除外する</string>
+
+         <string id="Exclude_auto_device_family_Desc">デバイス ファミリを自動転送から除外します。
+
+構文: {m|o}:&lt;family-name&gt;[;...]
+
+merge-flag:
+m=クライアントの設定がエージェントの設定にマージされます。
+o=エージェントの設定でクライアントの設定が上書きされます。
+
+例: o:storage;hid</string>
+
+         <string id="Exclude_Vid_Pid_from_Split">Vid/Pid デバイスを分割から除外する</string>
+
+         <string id="Exclude_Vid_Pid_from_Split_Desc">ベンダー ID と製品 ID で指定した複合デバイスのコンポーネント デバイスを別のデバイスとして扱わず、フィルタリングの対象外にします。
+
+構文: {m|o}:&lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx|*&gt;&gt;[;...]
+merge-flag:
+m=クライアントの設定がエージェントの設定にマージされます。
+o=エージェントの設定でクライアントの設定が上書きされます。
+
+例: o:vid-0781_pid-554c;vid-0781_pid-9999</string>
+
+         <string id="Split_Vid_Pid_Device">Vid/Pid デバイスを分割する</string>
+
+         <string id="Split_Vid_Pid_Device_Desc">ベンダー ID と製品 ID で指定した複合デバイスのコンポーネント デバイスを別のデバイスとして扱い、フィルタリングの対象にします。
+
+構文: {m|o}:&lt;vid-&lt;xxxx&gt;_pid-&lt;xxxx|*&gt;(exintf:xx[;exintf:xx])&gt;[;...]
+merge-flag:
+m=クライアントの設定がエージェントの設定にマージされます。
+o=エージェントの設定でクライアントの設定が上書きされます。
+
+例: o:vid-0781_pid-554c(exintf:01;exintf:02);vid-0781_pid-9999(exintf:02)</string>
+
+         <string id="Allow_other_input_devices">その他の入力デバイスを許可する</string>
+
+         <string id="Allow_other_input_devices_Desc">HID 起動可能なデバイス、キーボードおよびマウス デバイス以外の入力デバイスの転送を許可します。
+
+デフォルト: 転送を許可</string>
+
+         <string id="Allow_Default">許可 - デフォルトのクライアント設定</string>
+
+         <string id="Allow_Override">許可 - クライアント設定を上書きします。</string>
+
+         <string id="Disable_Default">無効 - デフォルトのクライアント設定</string>
+
+         <string id="Disable_Override">無効 - クライアント設定を上書きします。</string>
+
+         <string id="Allow_HID_Bootable">HID 起動可能なデバイスを許可する</string>
+
+         <string id="Allow_HID_Bootable_Desc">起動可能な入力デバイス (HID 起動可能なデバイス) の転送を許可します。
+
+デフォルト: 転送を許可</string>
+
+         <string id="Allow_Audio_Input_devices">オーディオ入力デバイスを許可する</string>
+
+         <string id="Allow_Audio_Input_devices_Desc">オーディオ入力デバイスの転送を許可します。
+
+デフォルト: 転送を許可</string>
+
+         <string id="Allow_Audio_Output_devices">オーディオ出力デバイスを許可する</string>
+
+         <string id="Allow_Audio_Output_devices_Desc">オーディオ出力デバイスの転送を許可します。
+
+デフォルト: 転送をブロック</string>
+
+         <string id="Allow_keyboard_mouse">キーボードおよびマウス デバイスを許可する</string>
+
+         <string id="Allow_keyboard_mouse_Desc">キーボードおよびマウス デバイスの転送を許可します。
+
+デフォルト: 転送をブロック</string>
+
+         <string id="Allow_Video_Devices">ビデオ デバイスを許可する</string>
+
+         <string id="Allow_Video_Devices_Desc">ビデオ デバイスの転送を許可します。
+
+デフォルト: 転送を許可</string>
+
+         <string id="Allow_Smart_Cards">スマート カードを許可する</string>
+
+         <string id="Allow_Smart_Cards_Desc">スマートカード デバイスの転送を許可します。
+
+デフォルト: 転送をブロック</string>
+
+         <string id="Allow_Auto_Device_Splitting">自動デバイス分割を許可する</string>
+
+         <string id="Allow_Auto_Device_Splitting_Desc">複合デバイスのコンポーネント デバイスを自動的に個別のデバイスとして扱いません。</string>
+
+         <string id="ShowVMWMediaProviderProxyIcon">アイコンの表示</string>
+
+         <string id="ShowVMWMediaProviderProxyIcon_Desc">Virtualization Pack for Skype for Business のアイコンを表示します。このポリシーは、デフォルトで有効になっています。Virtualization Pack for Skype for Business の「アイコンの表示」ポリシーが無効になっている場合、アイコンは表示されず、呼び出しの統計情報やメッセージを確認できません。</string>
+
+         <string id="ShowVMWMediaProviderProxyMessages">メッセージの表示</string>
+
+         <string id="ShowVMWMediaProviderProxyMessages_Desc">Virtualization Pack for Skype for Business のメッセージを表示します。このポリシーは、デフォルトで有効になっています。Virtualization Pack for Skype for Business の「アイコンの表示」ポリシーまたは「メッセージの表示」ポリシーが無効になっている場合、メッセージは表示されません。</string>
+
+         <string id="SetVMWMediaProviderProxyForceNonOptimizedEnvVar">Skype for Business を強制的に非最適化モードで実行する</string>
+
+         <string id="SetVMWMediaProviderProxyForceNonOptimizedOptions_Desc">外部接続を自動検出にすることで、Horizon Client の接続で Skype for Business を強制的に非最適化モードで実行できます。Horizon Client が外部ゲートウェイを介して接続している場合、外部接続と判断されます。このシナリオでは、環境変数 ViewClient_Broker_GatewayType が存在し、ViewClient_Broker_GatewayLocation が external に設定されています。「外部接続を自動的に検出」が設定されている場合、外部接続と判断されると、Virtualization Pack for Skype for Business がフォールバック モードに戻ります。
+
+また、Horizon Agent がインストールされているマシンで接続時に表示される環境変数の名前を設定すると、Horizon Client の接続で Skype for Business を強制的に非最適化モードで実行できます。変数名を設定した場合、Virtualization Pack for Skype for Business はフォールバック モードに戻ります。たとえば、ネットワークの外部から F5 ロード バランサを使用して Horizon Client マシンが接続するときに、リモート デスクトップ エージェント マシンに ViewClient_F5_APM 環境変数が設定されている場合、非最適化モードで強制的に実行するには、この値を ViewClient_F5_APM に設定します。
+
+いずれかの設定が構成され、条件を満たしている場合、Virtualization Pack for Skype for Business はフォールバック モードに戻ります。
+
+デフォルトでは、このポリシーは構成されていません。</string>
+
+         <string id="EnableDetectProxySettings">プロキシ設定の検出を有効にする</string>
+
+         <string id="EnableDetectProxySettings_Desc">有効にすると、VMware Virtualization Pack for Skype for Business は、Horizon Client システムでプロキシ設定を検出し、その設定をメディア トラフィックに使用します。Horizon Client システムにプロキシ設定が存在しない場合、VMware Virtualization Pack for Skype for Business は直接接続を使用します。このポリシーを有効にすると、Horizon Client システムがプロキシ サーバを使用する際の遅延が減少します。</string>
+
+         <string id="SuppressMinorVersionMismatchWarning">マイナー バージョン不一致の警告を表示しない</string>
+
+         <string id="SuppressMinorVersionMismatchWarning_Desc">Horizon Client システムと Horizon デスクトップで、VMware Virtualization Pack for Skype for Business の API マイナー バージョンが一致していないと、通知領域に警告が表示されます。この GPO を有効にすると、この警告が表示されなくなります。API マイナー バージョンが一致しない場合、Skype for Business での通話は最適化されますが、Virtualization Pack の最新の機能が使用できない可能性があります。</string>
+
+         <string id="DisableAECExtendedFilter">VMware Virtualization Pack for Skype for Business でアコーステック エコー キャンセレーションの拡張フィルタを無効にする</string>
+
+         <string id="DisableAECExtendedFilter_Desc">有効にすると、VMware Virtualization Pack for Skype for Business は、アコーステック エコー キャンセレーションに拡張フィルタを使用しません。デフォルトでは、VMware Virtualization Pack for Skype for Business は、アコーステック エコー キャンセレーションに拡張フィルタを使用します。このフィルタを使用すると、エコーとフィードバックのキャンセレーションが向上します。これは、Horizon Client システムのマイクとスピーカーが接近している場合に特に効果的です。</string>
+
+         <string id="Proxy_default_ie_autodetect">デフォルトの自動検出プロキシ</string>
+
+         <string id="Proxy_default_ie_autodetect_Desc">デフォルトの IE 接続設定。[インターネットのプロパティ] の [ローカル エリア ネットワークの設定] の [設定を自動的に検出する] をオンにします。</string>
+
+         <string id="Default_proxy_server">デフォルトのプロキシ サーバ</string>
+
+         <string id="Default_proxy_server_Desc">プロキシ サーバのデフォルトの IE 接続設定。[インターネットのプロパティ] の [ローカル エリア ネットワークの設定] で使用するプロキシ サーバを指定します。</string>
+
+         <string id="Update_Java_Proxy">Java アプレットのプロキシを設定する</string>
+
+         <string id="Update_Java_Proxy_Desc">ブラウザの設定を迂回して直接接続するように Java プロキシを設定します。Java アプレットでクライアント IP アドレスの透過性を使用してネットワークをリダイレクトするように、Java プロキシを設定します。デフォルトで、Java プロキシの設定を元の設定に戻します。</string>
+
+         <string id="Use_Client_IP">Java プロキシにクライアント IP アドレスの透過性を使用する</string>
+
+         <string id="Use_Direct_Connect">Java プロキシに直接接続を使用する</string>
+
+         <string id="Use_Default">Java プロキシにデフォルト値を使用する</string>
+
+         <string id="Enable_white_list">ホワイト リストを有効にする</string>
+
+         <string id="Enable_black_list">ブラック リストを有効にする</string>
+
+         <string id="VMware_HTML5_FEATURES">VMware HTML5 機能</string>
+
+         <string id="Enable_HTML5_FEATURES">VMware HTML5 機能を有効にする</string>
+
+         <string id="Enable_HTML5_FEATURES_Desc">VMware HTML5 機能を有効にします。このポリシーが「有効」に設定されている場合、VMware HTML5 マルチメディア リダイレクト、位置情報リダイレクト、ブラウザ リダイレクト、Microsoft Teams のメディア最適化を使用できます。このポリシーが「無効」に設定されている場合、VMware HTML5 機能は使用できません。この設定は、次回のログインで有効になります。</string>
+
+         <string id="HTML5FEATURES_Disable_AudoDetect_Intranet">イントラネットの自動検出を無効にする</string>
+
+         <string id="HTML5FEATURES_Disable_AudoDetect_Intranet_Desc">このポリシーが「有効」の場合は、イントラネット設定の「ほかのゾーンにないローカル (イントラネット) のサイトをすべて含める」と「プロキシ サーバを使用しないサイトをすべて含める」が次回ログイン時に無効になります。このポリシーが「無効」の場合は、IE のローカル イントラネット ゾーンに変更は加えられません。
+
+注: 次の場合は、このポリシーを「有効」に設定する必要があります。(1) Edge ブラウザが VMware HTML5 マルチメディア リダイレクトで有効になっている (2) 位置情報リダイレクトが有効になっている。</string>
+
+         <string id="VMware_HTML5MMR">VMware HTML5 マルチメディア リダイレクト</string>
+
+         <string id="Enable_HTML5_MMR">VMware HTML5 マルチメディア リダイレクトを有効にする</string>
+
+         <string id="Enable_HTML5_MMR_Desc">VMware HTML5 マルチメディア リダイレクトを有効にします。この設定は、次回のログインで有効になります。</string>
+
+         <string id="HTML5MMRUrlList">VMware HTML5 マルチメディア リダイレクトの URL リストを有効にします。</string>
+
+         <string id="HTML5MMRUrlList_Desc">VMware HTML5 マルチメディア リダイレクトを有効にする URL リストを指定します。「値名」カラムに URL パターンを指定します (「https://www.youtube.com/*」など)。「値」カラムは空白にしてください。今後使用するために予約されています。</string>
+
+         <string id="HTML5MMR_Enable_Chrome">VMware HTML5 マルチメディア リダイレクトでの Chrome ブラウザを有効にする</string>
+
+         <string id="HTML5MMR_Enable_Chrome_Desc">このポリシーは、VMware HTML5 マルチメディア リダイレクトが「有効」になっている場合にのみ使用されます。設定していない場合、デフォルト値は「VMware HTML5 マルチメディア リダイレクトを有効にする」の設定と同じになります。</string>
+
+         <string id="HTML5MMR_Enable_Edge">VMware HTML5 マルチメディア リダイレクトでの以前のバージョンの Microsoft Edge ブラウザを有効にする</string>
+
+         <string id="HTML5MMR_Enable_Edge_Desc">このポリシーは、VMware HTML5 マルチメディア リダイレクトが「有効」になっている場合にのみ使用されます。設定していない場合、デフォルト値は「VMware HTML5 マルチメディア リダイレクトを有効にする」の設定と同じになります。</string>
+
+         <string id="HTML5MMR_Enable_Edge_Chromium">VMware HTML5 マルチメディア リダイレクトでの Microsoft Edge (Chromium) ブラウザを有効にする</string>
+
+         <string id="HTML5MMR_Enable_Edge_Chromium_Desc">このポリシーは、VMware HTML5 マルチメディア リダイレクトが「有効」になっている場合にのみ使用されます。設定していない場合、デフォルト値は「VMware HTML5 マルチメディア リダイレクトを有効にする」の設定と同じになります。</string>
+
+         <string id="HTML5MMR_Auto_Adjust_Visual_Effect">ウィンドウの視覚効果を自動的に調整</string>
+
+         <string id="HTML5MMR_Auto_Adjust_Visual_Effect_Desc">このポリシーは、VMware HTML5 マルチメディア リダイレクトのウィンドウの視覚効果を自動的に調整するために使用されます。この設定を無効にするか、構成しない場合、ウィンドウの視覚効果は自動的に調整されません。</string>
+
+         <string id="VMware_GEO_REDIR">VMware 位置情報リダイレクト</string>
+
+         <string id="Enable_GEO_REDIR">VMware 位置情報リダイレクトを有効にする</string>
+
+         <string id="Enable_GEO_REDIR_Desc">VMware 位置情報リダイレクト機能を有効にします。この設定は、次回のログインで有効になります。</string>
+
+         <string id="Enable_GEO_REDIR_For_Chrome">Chrome ブラウザで VMware 位置情報リダイレクトを有効にする</string>
+
+         <string id="Enable_GEO_REDIR_For_Chrome_Desc">Chrome ブラウザで VMware 位置情報リダイレクト機能を有効にします。この設定は、次回のログインで有効になります。</string>
+
+         <string id="Enable_GEO_REDIR_For_Edge_Chromium">Microsoft Edge (Chromium) ブラウザで VMware 位置情報リダイレクトを有効にする</string>
+
+         <string id="Enable_GEO_REDIR_For_Edge_Chromium_Desc">Microsoft Edge (Chromium) ブラウザで VMware 位置情報リダイレクト機能を有効にします。この設定は、次回のログインで有効になります。</string>
+
+         <string id="GeoRedirUrlList">VMware 位置情報リダイレクトの URL リストを有効にします。</string>
+
+         <string id="GeoRedirUrlList_Desc">位置情報リダイレクト機能を有効にする URL リストを指定します。「値名」カラムに URL パターンを指定します (「https://www.youtube.com/*」など)。「値」カラムは空白にしてください。今後使用するために予約されています。この URL リストは次の機能で使用されます。(1) VMware Horizon 位置情報リダイレクト拡張機能 (すべての RDSH および VDI 環境の Google Chrome および Microsoft Edge (Chromium) ブラウザ) (2) VMware Horizon 位置情報リダイレクト プラグイン (RDSH および Windows 7 VDI 環境の Internet Explorer)</string>
+
+         <string id="GeoRedirDistanceDelta">位置情報の更新をレポートする最小距離を設定する</string>
+
+         <string id="GeoRedirDistanceDelta_Desc">エージェントに新しい位置情報をレポートする必要がある場合に、クライアントの位置情報とエージェントに最後にレポートされた更新情報との間の最小距離を指定します。デフォルトの最小距離は 75 メートルです。</string>
+
+         <string id="VMware_BROWSER_REDIR">VMware Browser リダイレクト</string>
+
+         <string id="Enable_BROWSER_REDIR">VMware Browser リダイレクトを有効にする</string>
+
+         <string id="Enable_BROWSER_REDIR_Desc">VMware Browser リダイレクト機能を有効にします。この設定は、次回のログインで有効になります。</string>
+
+         <string id="Enable_BROWSER_REDIR_For_Chrome">Chrome ブラウザで VMware Browser リダイレクトを有効にする</string>
+
+         <string id="Enable_BROWSER_REDIR_For_Chrome_Desc">Chrome ブラウザで VMware Browser リダイレクト機能を有効にします。この設定は、次回のログインで有効になります。</string>
+
+         <string id="Enable_BROWSER_REDIR_For_Edge_Chromium">Microsoft Edge (Chromium) ブラウザで VMware Browser リダイレクト機能を有効にする</string>
+
+         <string id="Enable_BROWSER_REDIR_For_Edge_Chromium_Desc">Microsoft Edge (Chromium) ブラウザで VMware Browser リダイレクト機能を有効にします。この設定は、次回のログインで有効になります。</string>
+
+         <string id="BrowserRedirFallbackWhitelistErr">ホワイトリスト違反後に自動フォールバックを有効にする</string>
+
+         <string id="BrowserRedirFallbackWhitelistErr_Desc">有効にした場合、どのリストにも含まれていない URL をカスタム アドレス バーに入力するか、この URL に他のホワイトリストの URL から移動しようとすると、タブのリダイレクトが停止し、エージェントで問題の URL の取得と表示が行われます。[VMware Browser リダイレクトの URL リストを有効にする] で設定されていない URL に移動すると、この設定に関係なく、すぐにエージェントで取得とレンダリングが行われます。</string>
+
+         <string id="BrowserRedirShowErrPage">自動フォールバック前にエラー情報のページを表示する</string>
+
+         <string id="BrowserRedirShowErrPage_Desc">この設定は、[ホワイトリスト違反後に自動フォールバックを有効にする] が有効で、ホワイトリスト違反がある場合にのみ使用されます。この場合、この設定を有効にすると、ページが 5 秒間隔で表示され、その後、タブに自動的に戻り、エージェントで違反の原因となった URL が取得され、表示されます。この設定を無効にすると、ユーザーに 5 秒間隔の警告が表示されることなく、直接エージェント側のレンダリングに戻ります。</string>
+
+         <string id="BrowserRedirUrlList">VMware Browser リダイレクトの URL リストを有効にする</string>
+
+         <string id="BrowserRedirUrlList_Desc">Browser リダイレクト機能の URL をすべて指定します。これらの URL にアクセスするには、Chrome のアドレス バーまたはカスタム アドレス バーに URL を入力します。これらの URL には、リスト内の別の URL から移動することも、エージェント側のレンダリング ページから移動することもできます。「値名」カラムに URL パターンを指定します (「https://www.youtube.com/*」など)。「値」カラムは空白にしてください。今後使用するために予約されています。</string>
+
+         <string id="BrowserRedirNavUrlList">VMware Browser リダイレクトのナビゲーション URL リストを有効にする</string>
+
+         <string id="BrowserRedirNavUrlList_Desc">ユーザーがカスタム アドレス バーに URL を直接入力するか、他のリストの URL から移動できる URL を指定します。URL を Chrome のアドレス バーに直接入力しても、これらの URL にアクセスすることはできません。また、エージェント側のレンダリング ページからも移動できません。「値名」カラムに URL パターンを指定します (「https://www.youtube.com/*」など)。「値」カラムは空白にしてください。今後使用するために予約されています。</string>
+
+         <string id="VMware_WebRTC_REDIR_FEATURES">VMware WebRTC リダイレクト機能</string>
+
+         <string id="Enable_Teams_Redir">Microsoft Teams でメディア最適化を有効にする</string>
+
+         <string id="Enable_Teams_Redir_Desc">この設定は、Microsoft Teams の最適化を有効または無効にするために使用されます。
+
+Horizon Agent がインストールされると、teamsEnabled レジストリ キーがエージェントに作成され、Microsoft Teams 最適化が有効にします。デフォルトでは、ユーザーは Horizon Client で「WebRTC ベース アプリケーションのメディア最適化」設定を構成して、Microsoft Teams 最適化を使用するかどうかを選択できます。
+
+このポリシーが「有効」の場合、Microsoft Teams 最適化が有効になります。この設定が有効で、[クライアント側の WebRTC 最適化を強制] チェックボックスがオンになっている場合、エンドポイントで Teams のメディア最適化が強制され、クライアントの設定やその他の管理者ポリシー (Chrome クライアントの Chrome レベルのユーザー ポリシーなど) は無視されます。この設定が有効で、[クライアント側の WebRTC 最適化を強制] チェックボックスがオフになっている場合、ユーザーは Horizon Client の「WebRTC ベース アプリケーションのメディア最適化」設定を構成して、Microsoft Teams の最適化を使用するかどうかを選択できます。
+
+このポリシーが「無効」の場合、Microsoft Teams の最適化は無効になり、使用できません。Horizon Client の「WebRTC ベース アプリケーションのメディア最適化」設定は何の影響も及ぼしません。
+
+このポリシーのデフォルトは「未構成」ですが、ポリシーを変更してから「未構成」に戻すと、teamsEnabled レジストリ キーが削除され、Microsoft Teams 最適化は使用されません。
+
+この設定は、次回のログインで有効になります。</string>
+
+         <string id="Enable_Electron_App_Redir">一般的な Electron アプリケーションのメディア最適化を有効にする</string>
+
+         <string id="Enable_Electron_App_Redir_Desc">この設定は、Electron アプリケーションの最適化を有効または無効にするために使用されます。
+
+「有効」または「未構成」の場合、Electron アプリケーションの最適化が有効になります。また、エンド ユーザーに最適化の使用を強制する場合 (エンドポイントでサポートされている場合) は、[有効] を選択し、[クライアント側の WebRTC 最適化を強制] を選択します。「未構成」の場合はクライアントの設定が適用されます (可能な場合)。
+詳細:
+この設定が有効で、[クライアント側の WebRTC 最適化を強制] チェックボックスがオフになっている場合、ユーザーは Horizon Client の「WebRTC ベース アプリケーションのメディア最適化」設定を構成して、Electron アプリケーションの最適化を使用するかどうかを選択できます。オンになっている場合、Electron アプリケーションのメディア最適化がエンドポイントとクライアントの設定で強制されるか、その他の管理者ポリシー (Chrome クライアントの Chrome レベルのユーザー ポリシーなど) は無視されます。
+デフォルトでは、Electron アプリケーションの最適化設定は「未構成」で、Electron アプリケーションの最適化が有効になっています。ユーザーは「WebRTC ベース アプリケーションのメディア最適化」設定を構成できます。
+「無効」の場合、Electron アプリケーションの最適化は無効になり、使用できません。Horizon Client の「WebRTC ベース アプリケーションのメディア最適化」設定は何の影響も及ぼしません。
+
+この設定は、次回のログインで有効になります。</string>
+
+         <string id="Enable_AEC_Teams_Redir">Microsoft Teams のメディア最適化でソフトウェア アコーステック エコー キャンセレーションを有効にする</string>
+
+         <string id="Enable_AEC_Teams_Redir_Desc">この設定は、Microsoft Teams のメディア最適化にソフトウェア アコーステック エコー キャンセレーション (AEC) を構成する場合に使用します。
+
+「有効」の場合、ソフトウェアで AEC は有効になっています。最適なオーディオ品質とパフォーマンスを得るには、[推奨の AEC アルゴリズムを使用] をオンにします。使用する CPU 量が少なく、オーディオ品質が低下する AEC アルゴリズムを使用する場合は、[推奨の AEC アルゴリズムを使用] を選択解除します。このオプションは、浮動小数点演算能力の低いロー エンドのプロセッサに役立ちます。推奨の AEC アルゴリズムの使用を強く推奨します。ほとんどの場合、これは最適なアルゴリズムになります。
+
+「無効」の場合、ソフトウェアで AEC は無効になり、使用されません。
+
+「未構成」の場合、ソフトウェアで AEC が有効になり、推奨のアルゴリズムが使用されます。Windows クライアントでハードウェア AEC が使用できない場合は、ソフトウェア AEC が使用されます。ハードウェア AEC が使用可能な場合 (ヘッドセットに AEC が組み込まれている場合など)、ソフトウェア AEC は使用されません。Windows 以外のクライアントの場合は、ハードウェア AEC が使用できかどうかに関係なく、ソフトウェア AEC が使用されます。</string>
+
+         <string id="Enable_Datachannel_Teams_Redir">Microsoft Teams のメディア最適化でデータ チャネルを有効にする</string>
+         <string id="Enable_Datachannel_Teams_Redir_Desc">この設定は、Microsoft Teams のメディア最適化にデータ チャネルを有効または無効にする場合に使用します。
+
+「有効」にすると、Microsoft Teams のメディア最適化でデータ チャネルを使用できます。また、データ チャネルを必要とする機能 (ライブ キャプションなど) も使用できます。
+
+「無効」にすると、Microsoft Teams のメディア最適化でデータ チャネルを使用できません。また、データ チャネルを必要とする機能は使用できなくなります。
+
+「未構成」の場合、データ チャネルが有効になります。</string>
+
+         <string id="Video_Cpu_Overuse_Threshold">CPU 過剰使用しきい値の構成</string>
+
+         <string id="Video_Cpu_Overuse_Threshold_Desc">CPU 使用率がしきい値を超えると、送信ビデオの解像度が低下し、クライアントの CPU 使用率が低下します。デフォルトのしきい値は 85 です。ビデオ通話中のクライアント CPU の使用率を減らすには、このポリシーを「有効」に設定し、85 より小さい値を設定します。デフォルトのしきい値 (85) を使用するには、このポリシーを「無効」または「未構成」に設定します。CPU の過剰使用を検出しない場合は、このポリシーを「有効」に設定して、値を 0 に設定します。この設定は、次回のログインで有効になります。</string>
+
+         <string id="Enable_Sharing_Client_Screen_InAppSession">アプリケーション共有モードで Microsoft Teams アプリケーションをリモートから使用しているときに、クライアント デスクトップ画面の共有を有効にします</string>
+
+         <string id="Enable_Sharing_Client_Screen_InAppSession_Desc">リモートから Microsoft Teams アプリケーションを使用している場合、画面共有機能は、リモート デスクトップ画面ではなく、クライアントのデスクトップ画面を共有します。アプリケーション共有モードで画面共有機能を無効にするには、[無効] を選択します。[有効] または [未構成] を選択すると、画面共有機能はクライアントのデスクトップ画面を共有します。</string>
+
+         <string id="Enable_E911">Microsoft Teams で E911 を有効にする</string>
+
+         <string id="Enable_E911_Desc">Microsoft Teams が最適化モードで実行されている間、クライアントは E911 データを Microsoft に送信します。Microsoft との E911 データの共有を無効にするには、[無効] を選択します。[有効] または [未構成] を選択すると、クライアント E911 データは Microsoft と共有されます。</string>
+
+         <string id="Enable_HID">Microsoft Teams でクライアント HID デバイスのボタンの使用を有効にする</string>
+
+         <string id="Enable_HID_Desc">Microsoft Teams が最適化モードで実行されている間、ユーザーはクライアント HID デバイスのボタンを使用して Microsoft Teams を操作できます。クライアント HID デバイスのサポートを無効にするには、[無効] を選択します。[有効] または [未構成] の場合、クライアント HID デバイスのサポートは許可されます。</string>
+
+         <string id="Enable_Background_Effects">Microsoft Teams の背景効果を有効にする</string>
+
+         <string id="Enable_Background_Effects_Desc">Microsoft Teams が最適化モードで実行されている間、ユーザーは、通話または会議で仮想背景を選択できます。背景効果のサポートを無効にするには、[無効] を選択します。[有効] または [未構成] の場合、背景効果のサポートは許可されます。</string>
+
+         <string id="VMware_AppTap_Config">VMware AppTap の設定</string>
+
+         <string id="ProcessIgnoreList">空のアプリケーション セッションを検出したときに無視するプロセス</string>
+
+         <string id="ProcessIgnoreList_Desc">空のアプリケーション セッションを検出したときに無視するプロセスのリストを指定します。プロセスのファイル名または完全パスのいずれかを指定できます。これらの値は、大文字と小文字を区別しないで評価されます。パス内に環境変数を使用することはできません。UNC ネットワーク パスは使用できます (\\vmware\temp\app.exe など)。</string>
+
+         <string id="VDI_disconnect_time_till_logoff">切断されたセッションの時間制限 (VDI)</string>
+
+         <string id="VDI_disconnect_time_till_logoff_Desc">切断された VDI デスクトップ セッションが自動的にログオフされるまでの時間を指定します。
+[なし] が選択されている場合、このマシンの切断された VDI デスクトップ セッションはログオフされません。[直ちに実行] が選択されている場合、切断されたセッションは直ちにログオフされます。
+
+View Connection Server Administrator にも同様の設定が存在しており、デスクトップ プールの設定に、[切断後に自動的にログアウト] という設定があります。この設定と View Connection Server Administrator の設定の両方が構成されている場合は、ここで選択した値が優先されます。
+たとえば、ここで [なし] を選択すると、View Connection Server Administrator で何が設定されていても、(このマシンでの) 切断されたセッションはログオフされなくなります。</string>
+
+         <string id="RDS_idle_time_till_disconnect">切断までの RDS アイドル時間</string>
+
+         <string id="RDS_idle_time_till_disconnect_Desc">リモート デスクトップ サービス セッションが自動的に切断されるまでの時間を指定します。
+[なし] が選択されている場合、このマシンのリモート デスクトップ サービス セッションは切断されません。</string>
+
+         <string id="RDS_disconnect_time_till_logoff">切断された RDS がログアウトするまでの時間</string>
+
+         <string id="RDS_disconnect_time_till_logoff_Desc">切断されたリモート デスクトップ サービス セッションが自動的にログオフされるまでの時間を指定します。
+[なし] が選択されている場合、このマシンの切断されたリモート デスクトップ サービス セッションはログオフされません。</string>
+
+         <string id="RDS_active_time_till_disconnect">RDS 接続が切断されるまでの時間</string>
+
+         <string id="RDS_active_time_till_disconnect_Desc">リモート デスクトップ サービス セッションの最大持続時間を指定します。この時間が経過すると、セッションが自動的に切断されます。
+[なし] が選択されている場合、このマシンのリモート デスクトップ サービス セッションは切断されません。</string>
+
+         <string id="RDS_end_session_time_limit">時間制限に達した RDS セッションの終了</string>
+
+         <string id="RDS_end_session_time_limit_Desc">切断ではなくタイムアウトしたリモート デスクトップ サービス セッションを終了するかどうかを指定します。
+設定すると、アクティブまたはアイドル セッションの時間制限に達すると、セッションが終了します (ユーザーはログオフされ、サーバからセッションが削除されます)。デフォルトでは、制限時間に達したリモート デスクトップ サービス セッションが切断されます。</string>
+
+         <string id="RDS_threshold_connecting_session">接続セッションのしきい値</string>
+
+         <string id="RDS_threshold_connecting_session_Desc">RDSH マシンに同時にログインできるセッションの最大数を指定します。再接続セッションは除きます。
+
+有効にすると、セッションのしきい値は 20 に設定されますが、この値はユースケースに応じて変更する必要があります。0 を選択すると、接続セッションのしきい値が無効になります。
+
+このポリシーはデフォルトで無効になっているため、ポリシーを構成しないと、接続セッションのしきい値は無効になります。</string>
+
+         <string id="RDS_threshold_load_index">ロード インデックスしきい値</string>
+
+         <string id="RDS_threshold_load_index_Desc">RDSH マシンがセッション ログインの拒否を開始する最小のロード インデックスを指定します。再接続セッションは除外されます。
+
+有効にすると、ロードのしきい値は 0 に設定されますが、この値はユースケースに応じて変更する必要があります。0 を選択すると、ロード インデックスのしきい値が無効になります。
+
+このポリシーはデフォルトで無効になっているため、ポリシーを構成しないと、ロード インデックスのしきい値は無効になります。</string>
+
+         <string id="Prewarm_disconnect_time_till_logoff">ウォームアップ セッションの時間制限</string>
+
+         <string id="Prewarm_disconnect_time_till_logoff_Desc">ウォームアップ セッションが自動的にログアウトされるまでの時間を指定します。</string>
+
+         <string id="EnableUWPOnRDSH">RDSH プラットフォームで UWP サポートを有効にする</string>
+
+         <string id="EnableUWPOnRDSH_Desc">このポリシーは、UWP アプリケーションをサポートするオペレーティング システム バージョンの RDSH ファームで UWP アプリケーションをスキャンし、起動するかどうかを制御します。このポリシーは、VDI App Remoting などのデスクトップ OS プラットフォームには適用されません。有効にすると、UWP アプリケーションは RDSH ファームのホスト型アプリケーションとして使用されます。GPO を有効にするには、wsnm サービスを再開するか、RDSH サーバを再起動する必要があります。サポートされているプラットフォームと、この設定がデフォルトで有効かどうかについては、VMware のドキュメントを参照してください。</string>
+
+        <string id="HandleLegalNoticeInWindow">法的通知メッセージをウィンドウとしてリダイレクト</string>
+
+        <string id="HandleLegalNoticeInWindow_Desc">このポリシーを有効にすると、Horizon Client の指定サイズのウィンドウに法的通知を表示します。このポリシーの幅と高さはピクセル単位で指定します。高 DPI モニターの場合、サイズは DPI の倍数になります。この機能は、RDSH ホスト型アプリケーションでのみサポートされます。
+デフォルトでは、このポリシーは無効です。GPO を有効にするには、RDSH サーバと View Client を再起動する必要があります。</string>
+
+        <string id="TIME_NEVER">なし</string>
+
+         <string id="TIME_1MIN">1 分間</string>
+
+         <string id="TIME_5MIN">5 分間</string>
+
+         <string id="TIME_10MIN">10 分間</string>
+
+         <string id="TIME_15MIN">15 分間</string>
+
+         <string id="TIME_30MIN">30 分間</string>
+
+         <string id="TIME_1HR">1 時間</string>
+
+         <string id="TIME_2HR">2 時間</string>
+
+         <string id="TIME_3HR">3 時間</string>
+
+         <string id="TIME_6HR">6 時間</string>
+
+         <string id="TIME_8HR">8 時間</string>
+
+         <string id="TIME_10HR">10 時間</string>
+
+         <string id="TIME_12HR">12 時間</string>
+
+         <string id="TIME_18HR">18 時間</string>
+
+         <string id="TIME_1D">1 日</string>
+
+         <string id="TIME_2D">2 日</string>
+
+         <string id="TIME_3D">3 日</string>
+
+         <string id="TIME_4D">4 日</string>
+
+         <string id="TIME_5D">5 日</string>
+
+         <string id="TIME_1W">1 週間</string>
+
+         <string id="TIME_IMMEDIATELY">直ちに実行</string>
+
+         <string id="EnableBatStatRedir">バッテリ状態のリダイレクトを有効にする</string>
+
+         <string id="EnableBatStatRedir_Desc">このポリシーは、バッテリ状態のリダイレクトを有効にするかどうかを制御します。このポリシーを使用しない場合、バッテリ状態のリダイレクトが有効になります。</string>
+         <string id="VMware_Watermark">ウォーターマーク</string>
+         <string id="VMware_Watermark_Config">ウォーターマークの設定</string>
+         <string id="Desktop_Watermark_Configuration_Desc">仮想デスクトップに表示されるウォーターマークを設定できます。[テキスト] 領域では、ウォーターマークに表示される内容を設定できます。オプションは次のとおりです。
+
+%ViewClient_IP_Address%
+%ViewClient_Broker_UserName%
+%ViewClient_Broker_DomainName%
+%COMPUTERNAME%
+%USERDOMAIN%
+%USERNAME%
+%ViewClient_ConnectTime%   - Date in month/day/year
+%ViewClient_ConnectTicks%  - Time in hour:minute:second
+
+[テキスト] の例:
+%USERDOMAIN%\%USERNAME%
+%COMPUTERNAME% on %ViewClient_ConnectTime%
+%ViewClient_IP_Address%
+
+テキストの上限は 256 文字です。拡張後の文字数の上限は 1024 文字です。
+
+[イメージ レイアウト] には、ウォーターマークのレイアウトを指定します。タイル、マルチ、中央をサポートします。マルチの場合、ウォーターマークは中央と各コーナーに配置されます。アプリケーション セッションの場合、この設定は無視され、レイアウトは常にタイル表示になります。
+[テキストの回転] では、ウォーターマークの回転角度を選択できます。
+[不透明度] では、テキストの透明度を選択できます。
+[マージン] には、仮想デスクトップ画面の境界とウォーターマークとの距離を指定します。これはタイル レイアウトにのみ適用されます。
+[テキスト色] には、ウォーターマーク テキストの色を 10 進数のスペース区切りの RGB カラー値で指定します。テキストの外枠は対照的な色でレンダリングされます。デフォルトでは、テキストは白、外枠は黒で表示されます。
+[フォント サイズ] には、ウォーターマーク テキストのサイズを指定します。この値が 0 の場合、デフォルトのフォント サイズが適用されます。
+[更新間隔] は、ウォーターマークが更新される間隔を秒単位で指定します。0 を指定すると、ウォーターマークの更新は無効になります。最大値は 86,400 秒 (24 時間) です。
+</string>
+         <string id="Tile">タイル</string>
+         <string id="Multiple">マルチ</string>
+         <string id="Center">センター</string>
+         <string id="TextColor">テキスト色</string>
+         <string id="FontSize">フォント サイズ</string>
+         <string id="RefreshInterval">更新間隔</string>
+         <string id="BlockScreenCapture">スクリーン キャプチャのブロック</string>
+         <string id="BlockScreenCapture_Desc">エンド ユーザーがエンドポイントから仮想デスクトップまたはリモート アプリケーションのスクリーンショットを取得できるかどうかを設定します。この設定は、Horizon Client for Windows および Horizon Client for Mac 2106 以降にのみ適用できます。デフォルトは無効です。エンド ユーザーはデバイスからスクリーンショットを取得できます。
+
+有効: エンド ユーザーは Windows または macOS デバイスから仮想デスクトップまたは仮想アプリケーションのスクリーンショットを取得できません。
+
+無効:エンド ユーザーはエンドポイントからスクリーンショットを取得できます。</string>
+         <string id="AntiKeyLogger">キーロガー ブロック</string>
+         <string id="AntiKeyLogger_Desc">エンドポイントでのキー ログ マルウェアの攻撃を回避するために、エンド ポイントがキーボードと Horizon Client 間の通信を暗号化するかどうかを決定します。仮想マシンの GPO 設定に関係なく、Horizon Server への最初の接続は常に保護されます。最初の認証後は、この設定により、エンドポイントでのキー入力を暗号化するどうかが決まります。この設定を適用できるのは、Horizon Client 2111 for Mac 以降と Horizon Client 2203 for Windows 以降のみです。デフォルトでは無効になっています。
+
+有効: キーボードと Horizon Client 間のすべてのキーストロークを暗号化します。
+
+無効: エンドポイントでキーストロークは通常どおり送信されます。</string>
+      </stringTable>
+
+      <presentationTable>
+
+         <presentation id="MaxCollaboratorCount">
+            <decimalTextBox refId="MaxCollaboratorCount_DB" defaultValue="5">最大</decimalTextBox>
+         </presentation>
+
+         <presentation id="CollaborationEmailInviteDelimiter">
+            <textBox refId="CollaborationEmailInviteDelimiter_TB">
+               <label>メール アドレスを区切るための区切り文字</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="CollaborationServerURLs">
+            <listBox refId="CollaborationServerURLs_list">外部サーバ の URL と名前のリスト</listBox>
+         </presentation>
+
+         <presentation id="ConnectionTicketTimeout">
+            <decimalTextBox refId="ConnectionTicketTimeout_DB" defaultValue="120">接続チケットのタイムアウト</decimalTextBox>
+         </presentation>
+
+         <presentation id="CredentialFilterExceptions">
+            <textBox refId="CredentialFilterExceptions_TB">
+               <label>認証情報フィルタの例外</label>
+            </textBox>
+         </presentation>
+         <presentation id="RDPVcBridgeUnsupportedClients">
+            <textBox refId="RDPVcBridgeUnsupportedClients_TB">
+               <label>RDPVcBridge でサポートされていないクライアント</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="CommandsToRunOnConnect">
+            <listBox refId="CommandsToRunOnConnect_list">コマンド</listBox>
+         </presentation>
+
+         <presentation id="CommandsToRunOnReconnect">
+            <listBox refId="CommandsToRunOnReconnect_list">コマンド</listBox>
+         </presentation>
+
+         <presentation id="CommandsToRunOnDisconnect">
+            <listBox refId="CommandsToRunOnDisconnect_list">コマンド</listBox>
+         </presentation>
+
+         <presentation id="SSO_retry_timeout">
+            <decimalTextBox refId="SSO_retry_timeout_DB" defaultValue="5000">シングル サインオンの再試行タイムアウト</decimalTextBox>
+         </presentation>
+
+         <presentation id="RDS_threshold_connecting_session">
+            <decimalTextBox refId="RDS_threshold_connecting_session_DB" defaultValue="20">接続セッションのしきい値</decimalTextBox>
+         </presentation>
+
+         <presentation id="RDS_threshold_load_index">
+            <decimalTextBox refId="RDS_threshold_load_index_DB" defaultValue="0">ロード インデックスのしきい値</decimalTextBox>
+         </presentation>
+
+         <presentation id="Win10PhysicalAgentAudioOption">
+            <dropdownList refId="Win10PhysicalAgentAudioOption_DDL" defaultItem="0">単一セッションの Windows 10 物理リモート デスクトップ マシンのオーディオ オプション</dropdownList>
+         </presentation>
+
+         <presentation id="Accept_SSL_encr_framework_channel">
+            <dropdownList refId="Accept_SSL_encr_framework_channel_DDL" defaultItem="0">SSL 暗号化フレームワーク チャネルを受け入れる</dropdownList>
+         </presentation>
+
+         <presentation id="Local_Reader_Name">
+            <textBox refId="Local_Reader_Name_TB">
+               <label>ローカル リーダー名</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Cert_wait_timeout">
+            <decimalTextBox refId="Cert_wait_timeout_DB" defaultValue="40">証明書待機タイムアウト</decimalTextBox>
+         </presentation>
+
+         <presentation id="Min_key_size">
+            <decimalTextBox refId="Min_key_size_DB" defaultValue="1024">キーの最小サイズ</decimalTextBox>
+         </presentation>
+
+         <presentation id="All_key_sizes">
+            <textBox refId="All_key_sizes_TB">
+               <label>すべてのキー サイズ</label>
+                  <defaultValue>2048</defaultValue>
+            </textBox>
+         </presentation>
+
+         <presentation id="Keys_to_precreate">
+            <decimalTextBox refId="Keys_to_precreate_DB" defaultValue="5">事前に作成されるキーの数</decimalTextBox>
+         </presentation>
+
+         <presentation id="Cert_min_validity">
+            <decimalTextBox refId="Cert_min_validity_DB" defaultValue="10">証明書の検証に必要な最小期間</decimalTextBox>
+         </presentation>
+
+         <presentation id="WhfbCertificateAllowedApplicationsList">
+            <multiTextBox refId="Whfb_Certificate_Allowed_Applications_list_TB">許可された実行ファイルのリスト</multiTextBox>
+         </presentation>
+
+         <presentation id="Exclude_Vid_Pid">
+            <textBox refId="Exclude_Vid_Pid_TB">
+               <label>Vid/Pid デバイスを除外する</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Exclude_Vid_Pid_Rel">
+            <textBox refId="Exclude_Vid_Pid_Rel_TB">
+               <label>Vid/Pid/Rel デバイスを除外する</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Include_Vid_Pid">
+            <textBox refId="Include_Vid_Pid_TB">
+               <label>Vid/Pid デバイスを含める</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Include_Vid_Pid_Rel">
+            <textBox refId="Include_Vid_Pid_Rel_TB">
+               <label>Vid/Pid/Rel デバイスを含める</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Exclude_device_family">
+            <textBox refId="Exclude_device_family_TB">
+               <label>デバイス ファミリを除外する</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Include_device_family">
+            <textBox refId="Include_device_family_TB">
+               <label>デバイス ファミリを含める</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="HidOpt_Include_Vid_Pid">
+            <textBox refId="HidOpt_Include_Vid_Pid_TB">
+               <label>HID 最適化 Vid/Pid デバイスを含める</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Exclude_Auto_Vid_Pid">
+            <textBox refId="Exclude_Auto_Vid_Pid_TB">
+               <label>自動接続の Vid/Pid デバイスを除外する</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Exclude_auto_device_family">
+            <textBox refId="Exclude_auto_device_family_TB">
+               <label>自動接続のデバイス ファミリを除外する</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Exclude_Vid_Pid_from_Split">
+            <textBox refId="Exclude_Vid_Pid_from_Split_TB">
+               <label>Vid/Pid デバイスを分割から除外する</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Split_Vid_Pid_Device">
+            <textBox refId="Split_Vid_Pid_Device_TB">
+               <label>Vid/Pid デバイスを分割する</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Allow_other_input_devices">
+            <dropdownList refId="Allow_other_input_devices_DDL" defaultItem="0">その他の入力デバイスを許可する</dropdownList>
+         </presentation>
+
+         <presentation id="Allow_HID_Bootable">
+            <dropdownList refId="Allow_HID_Bootable_DDL" defaultItem="0">HID 起動可能なデバイスを許可する</dropdownList>
+         </presentation>
+
+         <presentation id="Allow_Audio_Input_devices">
+            <dropdownList refId="Allow_Audio_Input_devices_DDL" defaultItem="0">オーディオ入力デバイスを許可する</dropdownList>
+         </presentation>
+
+         <presentation id="Allow_Audio_Output_devices">
+            <dropdownList refId="Allow_Audio_Output_devices_DDL" defaultItem="0">オーディオ出力デバイスを許可する</dropdownList>
+         </presentation>
+
+         <presentation id="Allow_keyboard_mouse">
+            <dropdownList refId="Allow_keyboard_mouse_DDL" defaultItem="0">キーボードおよびマウス デバイスを許可する</dropdownList>
+         </presentation>
+
+         <presentation id="Allow_Video_Devices">
+            <dropdownList refId="Allow_Video_Devices_DDL" defaultItem="0">ビデオ デバイスを許可する</dropdownList>
+         </presentation>
+
+         <presentation id="Allow_Smart_Cards">
+            <dropdownList refId="Allow_Smart_Cards_DDL" defaultItem="0">スマート カードを許可する</dropdownList>
+         </presentation>
+
+         <presentation id="Allow_Auto_Device_Splitting">
+            <dropdownList refId="Allow_Auto_Device_Splitting_DDL" defaultItem="0">自動デバイス分割を許可する</dropdownList>
+         </presentation>
+
+         <presentation id="Accept_SSL_encr_framework_channel_2">
+            <dropdownList refId="Accept_SSL_encr_framework_channel_2_DDL" defaultItem="0">SSL 暗号化フレームワーク チャネルを受け入れる</dropdownList>
+         </presentation>
+
+         <presentation id="Default_proxy_server">
+            <textBox refId="Default_proxy_server_TB">
+               <label>デフォルトのプロキシ サーバ</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="Update_Java_Proxy">
+            <dropdownList refId="Update_Java_Proxy_DDL" defaultItem="2">Java アプレットのプロキシを設定する</dropdownList>
+         </presentation>
+
+         <presentation id="HTML5MMRUrlList">
+            <listBox refId="HTML5MMRUrlList_list">VMware HTML5 マルチメディア リダイレクトを有効にする URL リスト。</listBox>
+         </presentation>
+
+         <presentation id="GeoRedirUrlList">
+            <listBox refId="GeoRedirUrlList_list">VMware 位置情報リダイレクト機能を有効にする URL リスト。</listBox>
+         </presentation>
+
+         <presentation id="GeoRedirDistanceDelta">
+            <textBox refId="GeoRedirDistanceDelta_value">
+               <label>最小距離 (メートル)</label>
+               <defaultValue>75</defaultValue>
+            </textBox>
+         </presentation>
+
+         <presentation id="BrowserRedirUrlList">
+            <listBox refId="BrowserRedirUrlList_list">VMware Browser リダイレクト機能を有効にする URL リスト。</listBox>
+         </presentation>
+
+         <presentation id="BrowserRedirNavUrlList">
+            <listBox refId="BrowserRedirNavUrlList_list">VMware Browser リダイレクト機能でナビゲーションを有効にする URL リスト。</listBox>
+         </presentation>
+
+         <presentation id="SetForceNonOptimizedOptions">
+            <checkBox refId="AUTO_DETECT_EXTERNAL_CONNECTIONS_CHKBOX">外部接続を自動的に検出</checkBox>
+            <textBox refId="SetForceNonOptimizedEnvVar_TB">
+               <label>環境変数の名前:</label>
+            </textBox>
+         </presentation>
+
+         <presentation id="UnityFilterRules_Filter">
+            <listBox refId="UnityFilterRules_FilterList">Unity フィルタ ルール</listBox>
+         </presentation>
+
+         <presentation id="Enable_Unity_Touch">
+            <checkBox refId="Enabled_UWP_For_UnityTouch_CB" defaultChecked="true">Windows 10 のユニバーサル Windows プラットフォーム (UWP) アプリケーションで Unity Touch サポートを有効にします。</checkBox>
+         </presentation>
+
+         <presentation id="ProcessIgnoreList">
+            <multiTextBox refId="ProcessIgnoreList_TB">空のアプリケーションを検出したときに無視するプロセス</multiTextBox>
+         </presentation>
+
+         <presentation id="VDI_idle_time_till_disconnect">
+            <dropdownList refId="VDI_idle_time_till_disconnect_minutes" noSort="true" defaultItem="0">アイドル タイムアウト</dropdownList>
+         </presentation>
+
+         <presentation id="VDI_disconnect_time_till_logoff">
+            <dropdownList refId="VDI_disconnect_time_till_logoff_minutes" noSort="true" defaultItem="0">切断タイムアウト</dropdownList>
+         </presentation>
+
+         <presentation id="RDS_idle_time_till_disconnect">
+            <dropdownList refId="RDS_idle_time_till_disconnect_milliseconds" noSort="true" defaultItem="0">RDS アイドル タイムアウト</dropdownList>
+         </presentation>
+
+         <presentation id="RDS_disconnect_time_till_logoff">
+            <dropdownList refId="RDS_disconnect_time_till_logoff_milliseconds" noSort="true" defaultItem="0">RDS 切断タイムアウト</dropdownList>
+         </presentation>
+
+         <presentation id="RDS_active_time_till_disconnect">
+            <dropdownList refId="RDS_active_time_till_disconnect_milliseconds" noSort="true" defaultItem="0">RDS 接続タイムアウト</dropdownList>
+         </presentation>
+
+         <presentation id="Prewarm_disconnect_time_till_logoff">
+            <dropdownList refId="Prewarm_disconnect_time_till_logoff_minutes" noSort="true" defaultItem="5">ウォームアップ タイムアウト</dropdownList>
+         </presentation>
+
+         <presentation id ="watermark_configuration">
+            <multiTextBox refId="Text">テキスト</multiTextBox>
+            <dropdownList refId="ImageFit" noSort="true" defaultItem="0">イメージ レイアウト</dropdownList>
+            <decimalTextBox refId="Rotation" defaultValue="45">テキストの回転</decimalTextBox>
+            <decimalTextBox refId="Opacity" defaultValue="50">不透明度</decimalTextBox>
+            <decimalTextBox refId="Margin" defaultValue="50">マージン</decimalTextBox>
+            <textBox refId="TextColor">
+               <label>テキスト色</label>
+               <defaultValue>255 255 255</defaultValue>
+            </textBox>
+            <decimalTextBox refId="FontSize" defaultValue="0">フォント サイズ</decimalTextBox>
+            <decimalTextBox refId="RefreshInterval" defaultValue="0">更新間隔</decimalTextBox>
+         </presentation>
+
+        <presentation id="AppSignInWindow">
+            <decimalTextBox refId="app_sign_in_window_width" defaultValue="800" spinStep="2">法的通知ウィンドウの幅: </decimalTextBox>
+            <decimalTextBox refId="app_sign_in_window_height" defaultValue="600" spinStep="2">法的通知ウィンドウの高さ: </decimalTextBox>
+        </presentation>
+        <presentation id="Video_Cpu_Overuse_Threshold">
+            <decimalTextBox refId="Video_Cpu_Overuse_Threshold_data" defaultValue="85">ビデオ CPU 過剰使用しきい値</decimalTextBox>
+         </presentation>
+         <presentation id="Webrtc_Recommended_AEC">
+            <checkBox refId="Webrtc_Recommended_AEC_CB" defaultChecked="true">推奨の AEC アルゴリズムを使用</checkBox>
+         </presentation>
+         <presentation id="Force_Enable_Teams_Redir">
+            <checkBox refId="Force_Enable_Teams_Redir_Value" defaultChecked="false"> クライアント側の WebRTC 最適化を強制</checkBox>
+         </presentation>
+         <presentation id="Force_Enable_Electron_App_Redir">
+            <checkBox refId="Force_Enable_Electron_App_Redir_Value" defaultChecked="false"> クライアント側の WebRTC 最適化を強制</checkBox>
+         </presentation>
+      </presentationTable>
+   </resources>
+</policyDefinitionResources>

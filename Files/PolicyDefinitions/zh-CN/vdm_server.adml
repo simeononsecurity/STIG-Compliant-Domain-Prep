@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" >
+
+	<displayName >在此处输入显示名称</displayName>
+	<description >VMware Horizon View Server 配置设置</description>
+	<resources >
+		<stringTable >
+
+			<string id="Undefined" >未定义</string>
+
+			<string id="View_Server_Config" >VMware View Server 配置</string>
+
+			<string id="Pwd_Auth_Mode" >Windows 密码身份验证模式</string>
+
+			<string id="Pwd_Auth_Mode_Desc" >选择 Windows 密码身份验证模式。
+
+KerberosOnly: 使用 Kerberos 进行身份验证。
+KerberosWithFallbackToNTLM: 使用 Kerberos 进行身份验证，但在失败时回退至使用 NTLM。
+Legacy: 使用 NTLM 进行身份验证，但在失败时回退至使用 Kerberos。用于支持旧版 NT 域控制器。
+
+默认值为 KerberosOnly。</string>
+
+			<string id="Kerberos_Only" >KerberosOnly</string>
+
+			<string id="Kerberos_With_NTLM_Fallback" >KerberosWithFallbackToNTLM</string>
+
+			<string id="Legacy" >旧版</string>
+
+			<string id="Trusted_Domain_Enumeration" >受信任域的递归枚举</string>
+
+			<string id="Trusted_Domain_Enumeration_Desc" >确定是否枚举服务器所在域信任的每个域。要建立完整的信任链，系统还将枚举每个受信任域所信任的域。该进程会继续递归，直到发现所有受信任的域为止。此信息将传送到 View 连接服务器，以确保登录后客户端可使用所有受信任的域。
+
+默认情况下启用此属性。如果禁用此属性，将只枚举直接受信任的域，且不会连接到远程域控制器。
+
+注意: 在域关系复杂的环境中 (如在林中的多个域之间使用多个受信任的林结构)，此过程需要几分钟才能完成。</string>
+
+			<string id="Enumerate_Forest_Trust_Child_Domains" >枚举林信任子域</string>
+
+			<string id="Enumerate_Forest_Trust_Child_Domains_Desc" >确定是否枚举林信任的子域。
+
+如果未配置，默认为 True。</string>
+
+		</stringTable>
+
+		<presentationTable ><!--Storage for Presentation Definitions-->
+
+			<presentation id="Windows_Pwd_Auth_Mode" >
+				<dropdownList refId="Windows_Pwd_Auth_Mode_DropDown_1" defaultItem="0" >Windows 密码身份验证模式</dropdownList>
+			</presentation>
+
+		</presentationTable>
+
+	</resources>
+
+</policyDefinitionResources>

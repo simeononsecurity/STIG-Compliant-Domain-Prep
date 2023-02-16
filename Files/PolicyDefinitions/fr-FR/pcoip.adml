@@ -194,7 +194,7 @@ Les algorithmes de chiffrement pris en charge, par ordre de préférence, sont S
 
 Si les deux points de terminaison sont configurés pour prendre en charge ces 3 algorithmes et que la connexion n'utilise pas de passerelle de sécurité, l'algorithme SALSA20 est négocié et utilisé. En revanche, si la connexion utilise une passerelle de sécurité, l'algorithme SALSA20 est désactivé automatiquement et c'est l'algorithme AES128 qui est négocié et utilisé. Si l'un des points de terminaison ou la passerelle de sécurité désactive l'algorithme SALSA20 et que l'un des points de terminaison désactive l'algorithme AES128, c'est l'algorithme AES256 qui est alors négocié et utilisé.</string>
 			<string id="String_Policy_Configure_SSL_protocols_207" >Configurer des protocoles SSL</string>
-			<string id="String_Explain_Configures_openssl_208" >Configure le protocole openssl pour limiter l'utilisation de certains protocoles avant l'établissement d'une connexion SSL chiffrée. La liste de protocoles est composée d'une ou de plusieurs chaînes de protocole openssl séparées par deux points. Notez que toutes les chaînes de chiffrement ne sont pas sensibles à la casse.
+			<string id="String_Explain_Configures_openssl_208" >Configure le protocole openssl pour limiter l'utilisation de certains protocoles avant l'établissement d'une connexion SSL chiffrée. La liste de protocoles est composée d'une ou de plusieurs chaînes de protocole openssl séparées par deux points. Notez que toutes les chaînes de chiffrement sont insensibles à la casse.
 
  La valeur par défaut est : 
    &quot;TLS1.1:TLS1.2&quot;
@@ -205,7 +205,7 @@ Ce paramètre s'applique à la fois à l'agent et au client.
 
 S'il est défini des deux côtés, la règle de négociation du protocole OpenSSL est suivie.</string>
 			<string id="String_Policy_Configure_SSL_cipher_list_209" >Configurer la liste de chiffrements SSL</string>
-			<string id="String_Explain_Configures_SSL_cipher_list_210" >Configure la liste de chiffrements pour limiter l'utilisation de la suite de chiffrements avant l'établissement d'une connexion SSL chiffrée. La liste se compose d'une ou de plusieurs chaînes de la suite de chiffrement séparées par deux points. Notez que toutes les chaînes de chiffrement ne sont pas sensibles à la casse.
+			<string id="String_Explain_Configures_SSL_cipher_list_210" >Configure la liste de chiffrements pour limiter l'utilisation de la suite de chiffrements avant l'établissement d'une connexion SSL chiffrée. La liste se compose d'une ou de plusieurs chaînes de la suite de chiffrement séparées par deux points. Notez que toutes les chaînes de chiffrement sont insensibles à la casse.
 
 La valeur par défaut est la suivante :
    &quot;ECDHE-RSA-AES256-GCM-SHA384:AES256-SHA256:AES256-SHA:ECDHE-RSA-AES128-GCM-SHA256:AES128-SHA256:AES128-SHA:@STRENGTH&quot;
@@ -285,59 +285,6 @@ Par défaut, tous les canaux virtuels sont activés, notamment le traitement du 
 			<string id="String_Policy_DropList_Select_Configure_PCoIP_0_Disable_virtual_229" >0 - Désactiver les canaux virtuels dans les sessions PCoIP</string>
 			<string id="String_Policy_DropList_Select_Configure_PCoIP_2_Disable_all_230" >2 - Désactiver tous les canaux virtuels autres que</string>
 			<string id="String_Policy_DropList_Select_Configure_PCoIP_3_Enable_all_231" >3 - Activer tous les canaux virtuels autres que</string>
-			<string id="String_Policy_Configure_clipboard_235" >Configurer la redirection du Presse-papiers</string>
-			<string id="String_Explain_Determines_the_236" >Détermine le sens dans lequel la redirection du Presse-papiers est autorisée. Vous pouvez sélectionner l'une de ces valeurs :
-
-- Activé uniquement du client vers l'agent (c'est-à-dire autoriser les fonctions Copier et Coller uniquement du système client vers le poste de travail View.)
-- Désactivé dans les deux sens
-- Activé dans les deux sens
-- Activé uniquement de l'agent vers le client (c'est-à-dire autoriser les fonctions Copier et Coller uniquement du poste de travail View vers le système client.)
-
-La redirection du Presse-papiers est mise en œuvre sous forme de canal virtuel. Si des canaux virtuels sont désactivés, la redirection du Presse-papiers ne fonctionne pas.
-
-Ce paramètre ne s'applique qu'à l'agent.
-
-Lorsque ce paramètre est désactivé ou non configuré, la valeur par défaut est Activé uniquement de client vers agent.</string>
-			<string id="String_Policy_DropList_Select_Configure_clipboard_Disabled_in_both_238" >Désactivé dans les deux sens</string>
-			<string id="String_Policy_DropList_Select_Configure_clipboard_Enabled_in_both_239" >Activé dans les deux sens</string>
-			<string id="String_Policy_DropList_Select_Configure_clipboard_Enabled_client_240" >Activé uniquement du client vers l'agent</string>
-			<string id="String_Policy_DropList_Select_Configure_clipboard_Enabled_agent_to_241" >Activé uniquement de l'agent vers le client</string>
-			<string id="String_Policy_Configure_clipboard_243" >Configurer la taille de la mémoire du Presse-papiers sur le serveur</string>
-			<string id="String_Explain_This_setting_indicates_244" >Ces paramètres indiquent la valeur de la taille de la mémoire du Presse-papiers du serveur.
-
-La taille de la mémoire du Presse-papiers sur le serveur est définie en octets ou en kilo-octets. La taille de la mémoire est définie en kilo-octets si elle n'est pas configurée.
-
-Le client dispose également d'une valeur pour la taille de la mémoire du Presse-papiers, mais elle est toujours en kilo-octets.
-
-Après la configuration de la session :
-- La valeur de la taille de la mémoire du Presse-papiers du serveur est envoyée au client.
-- Puis, sur le client, la valeur de la taille de la mémoire du Presse-papiers effective est déterminée en recherchant les valeurs minimales du client et du serveur.</string>
-			<string id="String_Policy_Filter_text_out_247" >Filtrer le texte des données de Presse-papiers entrantes</string>
-			<string id="String_Explain_Determines_whether_248" >Détermine si les données textuelles sont filtrées des données de Presse-papiers allant du client vers l'agent. Lorsque cette case est cochée, les données sont filtrées, sinon elles ne le sont pas.</string>
-			<string id="String_Policy_Filter_Rich_Text_251" >Filtrer les données au format RTF des données de Presse-papiers entrantes</string>
-			<string id="String_Explain_Determines_whether_252" >Détermine si les données au format RTF sont filtrées des données de Presse-papiers allant du client vers l'agent. Lorsque cette case est cochée, les données sont filtrées, sinon elles ne le sont pas.</string>
-			<string id="String_Policy_Filter_images_out_255" >Filtrer les images des données de Presse-papiers entrantes</string>
-			<string id="String_Explain_Determines_whether_256" >Détermine si les données d'image sont filtrées des données de Presse-papiers allant du client vers l'agent. Lorsque cette case est cochée, les données sont filtrées, sinon elles ne le sont pas.</string>
-			<string id="String_Policy_Filter_Microsoft_259" >Filtrer les données texte Microsoft Office des données de Presse-papiers entrantes</string>
-			<string id="String_Explain_Determines_whether_260" >Détermine si les données au format texte Microsoft Office (format BIFF12) sont filtrées des données de Presse-papiers allant du client vers l'agent. Lorsque cette case est cochée, les données sont filtrées, sinon elles ne le sont pas.</string>
-			<string id="String_Policy_Filter_Microsoft_263" >Filtrer les données Microsoft Chart and Smart Art des données de Presse-papiers entrantes</string>
-			<string id="String_Explain_Determines_whether_264" >Détermine si les données Microsoft Office Chart and Smart Art (Art::GVML ClipFormat) sont filtrées des données de Presse-papiers allant du client vers l'agent. Lorsque cette case est cochée, les données sont filtrées, sinon elles ne le sont pas.</string>
-			<string id="String_Policy_Filter_Microsoft_267" >Filtrer les données Microsoft Text Effects des données de Presse-papiers entrantes</string>
-			<string id="String_Explain_Determines_whether_268" >Détermine si les données Microsoft Office Text Effects (format HTML) sont filtrées des données de Presse-papiers allant du client vers l'agent. Lorsque cette case est cochée, les données sont filtrées, sinon elles ne le sont pas.</string>
-			<string id="String_Policy_Filter_text_out_271" >Filtrer le texte des données de Presse-papiers sortantes</string>
-			<string id="String_Explain_Determines_whether_272" >Détermine si les données textuelles sont filtrées des données de Presse-papiers envoyées depuis l'agent vers le client. Lorsque cette case est cochée, les données sont filtrées, sinon elles ne le sont pas.</string>
-			<string id="String_Policy_Filter_Rich_Text_275" >Filtrer les données au format RTF des données de Presse-papiers sortantes</string>
-			<string id="String_Explain_Determines_whether_276" >Détermine si les données au format RTF sont filtrées des données de Presse-papiers envoyées depuis l'agent vers le client. Lorsque cette case est cochée, les données sont filtrées, sinon elles ne le sont pas.</string>
-			<string id="String_Policy_Filter_images_out_279" >Filtrer les images des données de Presse-papiers sortantes</string>
-			<string id="String_Explain_Determines_whether_280" >Détermine si les données d'image sont filtrées des données de Presse-papiers envoyées depuis l'agent vers le client. Lorsque cette case est cochée, les données sont filtrées, sinon elles ne le sont pas.</string>
-			<string id="String_Policy_Filter_Microsoft_283" >Filtrer les données de texte Microsoft Office des données de Presse-papiers sortantes</string>
-			<string id="String_Explain_Determines_whether_284" >Détermine si les données au format texte Microsoft Office (format BIFF12) sont filtrées des données de Presse-papiers envoyées depuis l'agent vers le client. Lorsque cette case est cochée, les données sont filtrées, sinon elles ne le sont pas.</string>
-			<string id="String_Policy_Filter_Microsoft_287" >Filtrer les données Microsoft Chart and Smart Art des données de Presse-papiers sortantes</string>
-			<string id="String_Explain_Determines_whether_288" >Détermine si les données Microsoft Office Chart and Smart Art (Art::GVML ClipFormat) sont filtrées des données de Presse-papiers envoyées depuis l'agent vers le client.
- Lorsque cette case est cochée, les données sont filtrées, sinon elles ne le sont pas.</string>
-			<string id="String_Policy_Filter_Microsoft_291" >Filtrer les données Microsoft Text Effects des données de Presse-papiers sortantes</string>
-			<string id="String_Explain_Determines_whether_292" >Détermine si les données Microsoft Office Text Effects (format HTML) sont filtrées des données de Presse-papiers envoyées depuis l'agent vers le client.
- Lorsque cette case est cochée, les données sont filtrées, sinon elles ne le sont pas.</string>
 			<string id="String_Policy_Configure_PCoIP_295" >Configurer des niveaux de qualité d'image PCoIP</string>
 			<string id="String_Explain_Controls_how_PCoIP_296" >Contrôle comment PCoIP rend les images lors de périodes de surcharge du réseau. Les valeurs Qualité d'image minimale, Qualité d'image initiale maximale et Fréquence d'image maximale interagissent pour contrôler précisément des environnements contraints en termes de bande passante réseau.
 
@@ -608,7 +555,7 @@ Les algorithmes de chiffrement pris en charge, par ordre de préférence, sont S
 
 Si les deux points de terminaison sont configurés pour prendre en charge ces 3 algorithmes et que la connexion n'utilise pas de passerelle de sécurité, l'algorithme SALSA20 est négocié et utilisé. En revanche, si la connexion utilise une passerelle de sécurité, l'algorithme SALSA20 est désactivé automatiquement et c'est l'algorithme AES128 qui est négocié et utilisé. Si l'un des points de terminaison ou la passerelle de sécurité désactive l'algorithme SALSA20 et que l'un des points de terminaison désactive l'algorithme AES128, c'est l'algorithme AES256 qui est alors négocié et utilisé.</string>
 			<string id="String_Policy_Configure_SSL_protocols_461" >Configurer des protocoles SSL</string>
-			<string id="String_Explain_Configures_openssl_462" >Configure le protocole openssl pour limiter l'utilisation de certains protocoles avant l'établissement d'une connexion SSL chiffrée. La liste de protocoles est composée d'une ou de plusieurs chaînes de protocole openssl séparées par deux points. Notez que toutes les chaînes de chiffrement ne sont pas sensibles à la casse.
+			<string id="String_Explain_Configures_openssl_462" >Configure le protocole openssl pour limiter l'utilisation de certains protocoles avant l'établissement d'une connexion SSL chiffrée. La liste de protocoles est composée d'une ou de plusieurs chaînes de protocole openssl séparées par deux points. Notez que toutes les chaînes de chiffrement sont insensibles à la casse.
 
  La valeur par défaut est : 
    &quot;TLS1.1:TLS1.2&quot;
@@ -619,7 +566,7 @@ Ce paramètre s'applique à la fois à l'agent et au client.
 
 S'il est défini des deux côtés, la règle de négociation du protocole OpenSSL est suivie.</string>
 			<string id="String_Policy_Configure_SSL_cipher_list_463" >Configurer la liste de chiffrements SSL</string>
-			<string id="String_Explain_Configures_SSL_cipher_list_464" >Configure la liste de chiffrements pour limiter l'utilisation de la suite de chiffrements avant l'établissement d'une connexion SSL chiffrée. La liste se compose d'une ou de plusieurs chaînes de la suite de chiffrement séparées par deux points. Notez que toutes les chaînes de chiffrement ne sont pas sensibles à la casse.
+			<string id="String_Explain_Configures_SSL_cipher_list_464" >Configure la liste de chiffrements pour limiter l'utilisation de la suite de chiffrements avant l'établissement d'une connexion SSL chiffrée. La liste se compose d'une ou de plusieurs chaînes de la suite de chiffrement séparées par deux points. Notez que toutes les chaînes de chiffrement sont insensibles à la casse.
 
 La valeur par défaut est la suivante :
    &quot;ECDHE-RSA-AES256-GCM-SHA384:AES256-SHA256:AES256-SHA:ECDHE-RSA-AES128-GCM-SHA256:AES128-SHA256:AES128-SHA:@STRENGTH&quot;
@@ -699,83 +646,6 @@ Par défaut, tous les canaux virtuels sont activés, notamment le traitement du 
 			<string id="String_Policy_DropList_Select_Configure_PCoIP_0_Disable_virtual_483" >0 - Désactiver les canaux virtuels dans les sessions PCoIP</string>
 			<string id="String_Policy_DropList_Select_Configure_PCoIP_2_Disable_all_484" >2 - Désactiver tous les canaux virtuels autres que</string>
 			<string id="String_Policy_DropList_Select_Configure_PCoIP_3_Enable_all_485" >3 - Activer tous les canaux virtuels autres que</string>
-			<string id="String_Policy_Configure_clipboard_489" >Configurer la redirection du Presse-papiers</string>
-			<string id="String_Policy_Configure_clipboard_668" >Configurer l'audit du Presse-papiers</string>
-			<string id="String_Policy_Whether_block_clipboard_674">Bloquer la redirection du Presse-papiers du côté client lorsque le client ne prend pas en charge l'audit</string>
-			<string id="String_Explain_Determines_the_490" >Détermine le sens dans lequel la redirection du Presse-papiers est autorisée. Vous pouvez sélectionner l'une de ces valeurs :
-
-- Activé uniquement du client vers l'agent (c'est-à-dire autoriser les fonctions Copier et Coller uniquement du système client vers le poste de travail View.)
-- Désactivé dans les deux sens
-- Activé dans les deux sens
-- Activé uniquement de l'agent vers le client (c'est-à-dire autoriser les fonctions Copier et Coller uniquement du poste de travail View vers le système client.)
-
-La redirection du Presse-papiers est mise en œuvre sous forme de canal virtuel. Si des canaux virtuels sont désactivés, la redirection du Presse-papiers ne fonctionne pas.
-
-Ce paramètre ne s'applique qu'à l'agent.
-
-Lorsque ce paramètre est désactivé ou non configuré, la valeur par défaut est Activé uniquement de client vers agent.</string>
-			<string id="String_Explain_Determines_the_669" >Détermine le sens dans lequel l'audit du Presse-papiers est autorisé. Vous pouvez sélectionner l'une de ces valeurs :
-
--Désactivé dans les deux sens
--Activé uniquement du client vers le serveur (en d'autres termes, les informations du Presse-papiers copiées du côté client au côté agent seront enregistrées)
--Activé uniquement du serveur vers le client (en d'autres termes, les informations du Presse-papiers copiées du côté agent au côté client seront enregistrées)
--Activé dans les deux sens
-
-Ce paramètre s'applique au serveur (poste de travail View) uniquement.
-
-Lorsque ce paramètre est désactivé ou qu'il n'est pas configuré, la valeur par défaut est « Désactivé dans les deux sens ».</string>
-            <string id="String_Explain_Determines_the_675">Détermine s'il faut bloquer la redirection du Presse-papiers pour le client si le client Horizon ne prend pas en charge la fonctionnalité d'audit.
-
-Vous pouvez sélectionner le comportement de la redirection du Presse-papiers :
-
--Laisser la redirection du Presse-papiers de l'agent vers le client traverser si l'audit est activé dans Horizon Agent, mais pas dans Horizon Client
--Bloquer la redirection du Presse-papiers de l'agent vers le client si l'audit est activé dans Horizon Agent, mais pas dans Horizon Client
-
-Ce paramètre ne peut entrer en vigueur qu'après l'activation de l'audit.</string>
-			<string id="String_Policy_DropList_Select_Configure_clipboard_Disabled_in_both_492" >Désactivé dans les deux sens</string>
-			<string id="String_Policy_DropList_Select_Configure_clipboard_Enabled_in_both_493" >Activé dans les deux sens</string>
-			<string id="String_Policy_DropList_Select_Configure_clipboard_Enabled_client_494" >Activé uniquement du client vers l'agent</string>
-			<string id="String_Policy_DropList_Select_Configure_clipboard_Enabled_agent_to_495" >Activé uniquement de l'agent vers le client</string>
-			<string id="String_Policy_DropList_Select_Configure_clipboard_Audit_Pass_Through_671" >Traverser</string>
-			<string id="String_Policy_DropList_Select_Configure_clipboard_Audit_Block_672" >Bloquer</string>
-			<string id="String_Policy_DropList_Select_clipboard_size_unit_kilobytes" >kilo-octets</string>
-			<string id="String_Policy_DropList_Select_clipboard_size_unit_bytes" >octets</string>
-			<string id="String_Policy_Configure_clipboard_497" >Configurer la taille de la mémoire du Presse-papiers sur le serveur</string>
-			<string id="String_Explain_This_setting_indicates_498" >Ces paramètres indiquent la valeur de la taille de la mémoire du Presse-papiers du serveur.
-
-La taille de la mémoire du Presse-papiers sur le serveur est définie en octets ou en kilo-octets. La taille de la mémoire est définie en kilo-octets si elle n'est pas configurée.
-
-Le client dispose également d'une valeur pour la taille de la mémoire du Presse-papiers, mais elle est toujours en kilo-octets.
-
-Après la configuration de la session :
-- La valeur de la taille de la mémoire du Presse-papiers du serveur est envoyée au client.
-- Puis, sur le client, la valeur de la taille de la mémoire du Presse-papiers effective est déterminée en recherchant les valeurs minimales du client et du serveur.</string>
-			<string id="String_Policy_Filter_text_out_501" >Filtrer le texte des données de Presse-papiers entrantes</string>
-			<string id="String_Explain_Determines_whether_502" >Détermine si les données textuelles sont filtrées des données de Presse-papiers allant du client vers l'agent. Lorsque cette case est cochée, les données sont filtrées, sinon elles ne le sont pas.</string>
-			<string id="String_Policy_Filter_Rich_Text_505" >Filtrer les données au format RTF des données de Presse-papiers entrantes</string>
-			<string id="String_Explain_Determines_whether_506" >Détermine si les données au format RTF sont filtrées des données de Presse-papiers allant du client vers l'agent. Lorsque cette case est cochée, les données sont filtrées, sinon elles ne le sont pas.</string>
-			<string id="String_Policy_Filter_images_out_509" >Filtrer les images des données de Presse-papiers entrantes</string>
-			<string id="String_Explain_Determines_whether_510" >Détermine si les données d'image sont filtrées des données de Presse-papiers allant du client vers l'agent. Lorsque cette case est cochée, les données sont filtrées, sinon elles ne le sont pas.</string>
-			<string id="String_Policy_Filter_Microsoft_513" >Filtrer les données texte Microsoft Office des données de Presse-papiers entrantes</string>
-			<string id="String_Explain_Determines_whether_514" >Détermine si les données au format texte Microsoft Office (format BIFF12) sont filtrées des données de Presse-papiers allant du client vers l'agent. Lorsque cette case est cochée, les données sont filtrées, sinon elles ne le sont pas.</string>
-			<string id="String_Policy_Filter_Microsoft_517" >Filtrer les données Microsoft Chart and Smart Art des données de Presse-papiers entrantes</string>
-			<string id="String_Explain_Determines_whether_518" >Détermine si les données Microsoft Office Chart and Smart Art (Art::GVML ClipFormat) sont filtrées des données de Presse-papiers allant du client vers l'agent. Lorsque cette case est cochée, les données sont filtrées, sinon elles ne le sont pas.</string>
-			<string id="String_Policy_Filter_Microsoft_521" >Filtrer les données Microsoft Text Effects des données de Presse-papiers entrantes</string>
-			<string id="String_Explain_Determines_whether_522" >Détermine si les données Microsoft Office Text Effects (format HTML) sont filtrées des données de Presse-papiers allant du client vers l'agent. Lorsque cette case est cochée, les données sont filtrées, sinon elles ne le sont pas.</string>
-			<string id="String_Policy_Filter_text_out_525" >Filtrer le texte des données de Presse-papiers sortantes</string>
-			<string id="String_Explain_Determines_whether_526" >Détermine si les données textuelles sont filtrées des données de Presse-papiers envoyées depuis l'agent vers le client. Lorsque cette case est cochée, les données sont filtrées, sinon elles ne le sont pas.</string>
-			<string id="String_Policy_Filter_Rich_Text_529" >Filtrer les données au format RTF des données de Presse-papiers sortantes</string>
-			<string id="String_Explain_Determines_whether_530" >Détermine si les données au format RTF sont filtrées des données de Presse-papiers envoyées depuis l'agent vers le client. Lorsque cette case est cochée, les données sont filtrées, sinon elles ne le sont pas.</string>
-			<string id="String_Policy_Filter_images_out_533" >Filtrer les images des données de Presse-papiers sortantes</string>
-			<string id="String_Explain_Determines_whether_534" >Détermine si les données d'image sont filtrées des données de Presse-papiers envoyées depuis l'agent vers le client. Lorsque cette case est cochée, les données sont filtrées, sinon elles ne le sont pas.</string>
-			<string id="String_Policy_Filter_Microsoft_537" >Filtrer les données de texte Microsoft Office des données de Presse-papiers sortantes</string>
-			<string id="String_Explain_Determines_whether_538" >Détermine si les données au format texte Microsoft Office (format BIFF12) sont filtrées des données de Presse-papiers envoyées depuis l'agent vers le client. Lorsque cette case est cochée, les données sont filtrées, sinon elles ne le sont pas.</string>
-			<string id="String_Policy_Filter_Microsoft_541" >Filtrer les données Microsoft Chart and Smart Art des données de Presse-papiers sortantes</string>
-			<string id="String_Explain_Determines_whether_542" >Détermine si les données Microsoft Office Chart and Smart Art (Art::GVML ClipFormat) sont filtrées des données de Presse-papiers envoyées depuis l'agent vers le client.
- Lorsque cette case est cochée, les données sont filtrées, sinon elles ne le sont pas.</string>
-			<string id="String_Policy_Filter_Microsoft_545" >Filtrer les données Microsoft Text Effects des données de Presse-papiers sortantes</string>
-			<string id="String_Explain_Determines_whether_546" >Détermine si les données Microsoft Office Text Effects (format HTML) sont filtrées des données de Presse-papiers envoyées depuis l'agent vers le client.
- Lorsque cette case est cochée, les données sont filtrées, sinon elles ne le sont pas.</string>
 			<string id="String_Policy_Configure_PCoIP_549" >Configurer des niveaux de qualité d'image PCoIP</string>
 			<string id="String_Explain_Controls_how_PCoIP_550" >Contrôle comment PCoIP rend les images lors de périodes de surcharge du réseau. Les valeurs Qualité d'image minimale, Qualité d'image initiale maximale et Fréquence d'image maximale interagissent pour contrôler précisément des environnements contraints en termes de bande passante réseau.
 
@@ -939,53 +809,6 @@ Le nettoyage du fichier journal est exécuté une fois au démarrage de la sessi
 Lorsque cette stratégie est Configuré, le paramètre contrôle le nettoyage du fichier journal en fonction de la taille en Mo, c'est-à-dire pour un paramètre différent de zéro de m, les fichiers journaux supérieurs à m Mo sont automatiquement (et en mode silencieux) supprimés ; un paramètre de 0 indique qu'il n'y a pas de nettoyage de fichier en fonction de la taille. Lorsque cette stratégie est Désactivé ou Non configuré, la valeur par défaut du nettoyage du journal des événements en fonction de la taille en Mo est de 100. 
 
 Le nettoyage du fichier journal est exécuté une fois au démarrage de la session ; toute modification du paramètre sera appliquée lors de la prochaine session.</string>
-            <string id="Policy_Configure_clipboard_667" >Configurer l'audit du Presse-papiers</string>
-			<string id="CLIPBOARD_AUDIT_DISABLE_BOTH">Désactivé dans les deux sens</string>
-			<string id="CLIPBOARD_AUDIT_ENABLE_ONLY_CLIENT_TO_SERVER">Activé uniquement du client vers le serveur</string>
-			<string id="CLIPBOARD_AUDIT_ENABLE_ONLY_SERVER_TO_CLIENT">Activé uniquement du serveur vers le client</string>
-			<string id="CLIPBOARD_AUDIT_ENABLE_BOTH">Activé dans les deux sens</string>
-			<string id="String_Policy_Configure_DnD_678" >Configurer le sens du glisser-déposer</string>
-			<string id="String_Explain_Determines_the_679" >Détermine le sens dans lequel le glisser-déposer est autorisé. Vous pouvez sélectionner l'une de ces valeurs :
-
-- Désactivé dans les deux sens
-- Activé uniquement de l'agent vers le client (c'est-à-dire, autoriser le glisser-déposer uniquement de l'agent vers le système client.)
-- Activé uniquement du client vers l'agent (c'est-à-dire, autoriser le glisser-déposer uniquement du système client vers l'agent.)
-- Activé dans les deux sens
-
-Ce paramètre s'applique à l'agent uniquement.
-
-Lorsque ce paramètre est désactivé ou non configuré, la valeur par défaut est Activé uniquement de client vers agent.</string>
-			<string id="String_Policy_DropList_Select_Configure_DnD_Disabled_in_both_681" >Désactivé dans les deux sens</string>
-			<string id="String_Policy_DropList_Select_Configure_DnD_Enabled_client_to_682" >Activé uniquement du client vers l'agent</string>
-			<string id="String_Policy_DropList_Select_Configure_DnD_Enabled_agent_to_683" >Activé uniquement de l'agent vers le client</string>
-			<string id="String_Policy_DropList_Select_Configure_DnD_Enabled_in_both_684" >Activé dans les deux sens</string>
-			<string id="String_Policy_Configure_DnD_Format_State_686">Configurer les formats de glisser-déposer</string>
-			<string id="String_Explain_Determines_DnD_Format_687">Ce paramètre détermine quelle option de « Glisser-déposer » est autorisée pour chaque format (Fichier/Texte/Texte enrichi/Image/Format HTML/Contenu de fichier). Les valeurs des options sont les suivantes :
-
-- Désactivé dans les deux sens
-- Activé uniquement de l'agent vers le client
-- Activé uniquement du client vers l'agent
-- Activé dans les deux sens
-
-Ce paramètre s'applique à l'agent uniquement, il n'est pas configuré par défaut.
-
-Lorsque le paramètre n'est pas configuré ou est désactivé, l'option de « Glisser-déposer » est « Activé dans les deux sens » pour tous les formats.</string>
-			<string id="String_Policy_Configure_DnD_Size_Threshold_697">Configurer le seuil de taille du glisser-déposer</string>
-			<string id="String_Explain_DnD_Size_Threshold_698">Le glisser-déposer prend en charge le glissement de différents types de données, y compris le texte brut, le texte enrichi, les images, les fichiers, les dossiers, etc. Ce paramètre détermine la limite de taille pour le glissement des types de données communs autres que des fichiers et des dossiers.
-
-L'unité de la taille des données de déplacement peut être configurée en octets, en kilo-octets et en mégaoctets.
-
-La valeur de taille souhaitée est configurée dans « Seuil de taille du glisser-déposer ». Les plages de données effectives pour l'unité de taille différente sont :
-  - Octets : 1 à 1 023
-  - Kilo-octets : 1 à 1 023
-  - Mégaoctets : 1 à 16 (La taille de données maximale pour le glisser-déplacer est de 16 mégaoctets)
-
-Ce paramètre s'applique à l'agent uniquement.
-
-Lorsque le paramètre n'est pas configuré ou est désactivé, un seuil par défaut de 1 mégaoctet est défini.</string>
-			<string id="String_Policy_DropList_Select_DnD_size_unit_bytes" >Octets</string>
-			<string id="String_Policy_DropList_Select_DnD_size_unit_kilobytes" >Kilo-octets</string>
-			<string id="String_Policy_DropList_Select_DnD_size_unit_megabytes" >Mégaoctets</string>
 		</stringTable>
 		<presentationTable ><!--Storage for Presentation Definitions-->
 
@@ -1070,49 +893,6 @@ Lorsque le paramètre n'est pas configuré ou est désactivé, un seuil par déf
 				<textBox refId="Policy_TextBox_Element_Configure_PCoIP_233" >
 					<label >Entrer la liste des canaux virtuels interdits :</label>
 				</textBox>
-			</presentation>
-			<presentation id="Policy_Configure_clipboard_234" >
-				<dropdownList refId="Policy_DropList_Element_Configure_clipboard_237" defaultItem="2" >Configurer la redirection du Presse-papiers</dropdownList>
-			</presentation>
-			<presentation id="Policy_Configure_clipboard_242" >
-				<dropdownList refId="Policy_DropList_Clipboard_Fine_Grained_Defaults" defaultItem="1" >Choisir l'unité de la taille de la mémoire du Presse-papiers</dropdownList>
-				<decimalTextBox refId="Policy_Numeric_ElementConfigure_clipboard_245" spinStep="100" spin="true" defaultValue="1024" >Configurer la taille de la mémoire du Presse-papiers sur le serveur</decimalTextBox>
-			</presentation>
-			<presentation id="Policy_Filter_text_out_246" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_text_out_249" >Filtrer le texte des données de Presse-papiers entrantes</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_Rich_Text_250" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_Rich_Text_253" >Filtrer les données au format RTF des données de Presse-papiers entrantes</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_images_out_254" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_images_out_257" >Filtrer les images des données de Presse-papiers entrantes</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_Microsoft_258" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_Microsoft_261" >Filtrer les données texte Microsoft Office des données de Presse-papiers entrantes</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_Microsoft_262" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_Microsoft_265" >Filtrer les données Microsoft Chart and Smart Art des données de Presse-papiers entrantes</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_Microsoft_266" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_Microsoft_269" >Filtrer les données Microsoft Text Effects des données de Presse-papiers entrantes</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_text_out_270" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_text_out_273" >Filtrer le texte des données de Presse-papiers sortantes</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_Rich_Text_274" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_Rich_Text_277" >Filtrer les données au format RTF des données de Presse-papiers sortantes</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_images_out_278" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_images_out_281" >Filtrer les images des données de Presse-papiers sortantes</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_Microsoft_282" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_Microsoft_285" >Filtrer les données de texte Microsoft Office des données de Presse-papiers sortantes</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_Microsoft_286" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_Microsoft_289" >Filtrer les données Microsoft Chart and Smart Art des données de Presse-papiers sortantes</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_Microsoft_290" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_Microsoft_293" >Filtrer les données Microsoft Text Effects des données de Presse-papiers sortantes</checkBox>
 			</presentation>
 			<presentation id="Policy_Configure_PCoIP_294" >
 				<text >Consultez l'onglet Explication pour voir des exemples de valeur.</text>
@@ -1229,52 +1009,6 @@ Lorsque le paramètre n'est pas configuré ou est désactivé, un seuil par déf
 					<label >Entrer la liste des canaux virtuels interdits :</label>
 				</textBox>
 			</presentation>
-			<presentation id="Policy_Configure_clipboard_488" >
-				<dropdownList refId="Policy_DropList_Element_Configure_clipboard_491" defaultItem="2" >Configurer la redirection du Presse-papiers</dropdownList>
-			</presentation>
-            <presentation id="Policy_Whether_block_clipboard_676" >
-				<dropdownList refId="Policy_DropList_Element_Configure_clipboard_670" defaultItem="0" >Configurer le comportement du Presse-papiers si le client ne prend pas en charge l'audit</dropdownList>
-			</presentation>
-			<presentation id="Policy_Configure_clipboard_496" >
-				<dropdownList refId="Policy_DropList_Clipboard_Fine_Grained" defaultItem="1" >Choisir l'unité de la taille de la mémoire du Presse-papiers</dropdownList>
-				<decimalTextBox refId="Policy_Numeric_ElementConfigure_clipboard_499" spinStep="100" spin="true" defaultValue="1024" >Configurer la taille de la mémoire du Presse-papiers sur le serveur</decimalTextBox>
-			</presentation>
-			<presentation id="Policy_Filter_text_out_500" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_text_out_503" >Filtrer le texte des données de Presse-papiers entrantes</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_Rich_Text_504" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_Rich_Text_507" >Filtrer les données au format RTF des données de Presse-papiers entrantes</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_images_out_508" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_images_out_511" >Filtrer les images des données de Presse-papiers entrantes</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_Microsoft_512" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_Microsoft_515" >Filtrer les données texte Microsoft Office des données de Presse-papiers entrantes</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_Microsoft_516" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_Microsoft_519" >Filtrer les données Microsoft Chart and Smart Art des données de Presse-papiers entrantes</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_Microsoft_520" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_Microsoft_523" >Filtrer les données Microsoft Text Effects des données de Presse-papiers entrantes</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_text_out_524" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_text_out_527" >Filtrer le texte des données de Presse-papiers sortantes</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_Rich_Text_528" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_Rich_Text_531" >Filtrer les données au format RTF des données de Presse-papiers sortantes</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_images_out_532" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_images_out_535" >Filtrer les images des données de Presse-papiers sortantes</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_Microsoft_536" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_Microsoft_539" >Filtrer les données de texte Microsoft Office des données de Presse-papiers sortantes</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_Microsoft_540" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_Microsoft_543" >Filtrer les données Microsoft Chart and Smart Art des données de Presse-papiers sortantes</checkBox>
-			</presentation>
-			<presentation id="Policy_Filter_Microsoft_544" >
-				<checkBox refId="Policy_CheckBox_Element_Filter_Microsoft_547" >Filtrer les données Microsoft Text Effects des données de Presse-papiers sortantes</checkBox>
-			</presentation>
 			<presentation id="Policy_Configure_PCoIP_548" >
 				<text >Consultez l'onglet Explication pour voir des exemples de valeur.</text>
 				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_551" spinStep="10" spin="true" defaultValue="40" >Définissez la valeur Qualité d'image minimale (valeur par défaut : 40) :</decimalTextBox>
@@ -1307,24 +1041,6 @@ Lorsque le paramètre n'est pas configuré ou est désactivé, un seuil par déf
 				<text >Consultez l'onglet Explication pour voir des exemples de valeur.</text>
 				<text >Définissez la valeur du nettoyage du journal des événements en fonction de la taille en Mo (100 par défaut, 0 pour aucun</text>
 				<decimalTextBox refId="Policy_Numeric_ElementConfigure_PCoIP_666" spinStep="1" spin="true" defaultValue="100" >nettoyage en fonction de la taille) :</decimalTextBox>
-			</presentation>
-			<presentation id="SERVER_CLIPBOARD_AUDIT">
-				<dropdownList refId="SERVER_CLIPBOARD_AUDIT" defaultItem="0">Configurer l'audit du Presse-papiers</dropdownList>
-			</presentation>
-			<presentation id="Policy_Configure_DnD_677" >
-				<dropdownList refId="Policy_DropList_Element_Configure_DnD_680" defaultItem="1" >Configurer le sens du glisser-déposer</dropdownList>
-			</presentation>
-			<presentation id="Policy_Configure_DnD_Format_688">
-				<dropdownList refId="Policy_DropList_Element_Configure_DnD_File_State_689" defaultItem="3">Option pour le format de fichier :</dropdownList>
-				<dropdownList refId="Policy_DropList_Element_Configure_DnD_Text_State_690" defaultItem="3">Option pour le format de texte :</dropdownList>
-				<dropdownList refId="Policy_DropList_Element_Configure_DnD_RTF_State_691" defaultItem="3">Option pour le format RTF :</dropdownList>
-				<dropdownList refId="Policy_DropList_Element_Configure_DnD_Image_State_692" defaultItem="3">Option pour le format d'image :</dropdownList>
-				<dropdownList refId="Policy_DropList_Element_Configure_DnD_HTML_State_694" defaultItem="3">Option pour le format HTML :</dropdownList>
-				<dropdownList refId="Policy_DropList_Element_Configure_DnD_File_Content_State_695" defaultItem="3">Option pour le format de contenu de fichier :</dropdownList>
-			</presentation>
-			<presentation id="Policy_Configure_DnD_Size_Threshold_699">
-				<dropdownList refId="Policy_DropList_DnD_Size_Unit" defaultItem="2" >Choisir l'unité de la taille du glisser-déposer</dropdownList>
-				<decimalTextBox refId="Policy_DnD_Size_Value_700" defaultValue="1">Seuil de taille du glisser-déposer</decimalTextBox>
 			</presentation>
 		</presentationTable>
 	</resources>

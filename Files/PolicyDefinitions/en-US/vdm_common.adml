@@ -96,10 +96,16 @@ Format:LogLevel|ServerFQDNorIP[|PortNumber(default is 514)], example Debug|192.0
 
 			<string id="Revocation_URL_check_timeout_Desc" >The cumulative timeout across all revocation URL wire retrievals in milliseconds. Not configured or value set to 0 means that Microsoft default handling is used.</string>
 
-			<string id="Global_Max_Dump_Count" >Configure dump creation on program error</string>
+			<string id="Global_Max_Dump_Count" >Configure dump count on program error</string>
 
-			<string id="Global_Max_Dump_Count_Desc" >Dumps can be limited to a specific amount by setting the value to any numerical value. When set to 0 no dumps will be created. If unset no limit is set on dump creation.</string>
+			<string id="Global_Max_Dump_Count_Desc" >Dumps can be limited to a specific amount by setting the value to any numerical value. This limited amount takes effect per process/user. When set to 0 no dumps will be created. If unset default limit is applied on dump creation. (default is 128 or no limit according to different processes)</string>
+			<string id="Global_Dump_Type" >Configure dump type on program error</string>
 
+			<string id="DumpType_Full" >Full</string>
+
+			<string id="DumpType_Mini" >Mini</string>
+
+			<string id="Global_Dump_Type_Desc" >User can set the value as Full Dump or Mini Dump. The difference between a Full Dump and Mini Dump is the memory included in the Dump. This attributes to the size of the full dump. The mini dump still contains enough information to produce a stack trace and perform basic troubleshooting steps. The mini dump does not contain full memory so we cannot extract information about some objects or object names without the full dump. When set to Mini Dump then mini dump will be created. If unset then full dump will be created by default.</string>
 		</stringTable>
 
 		<presentationTable ><!--Storage for Presentation Definitions-->
@@ -172,6 +178,10 @@ Format:LogLevel|ServerFQDNorIP[|PortNumber(default is 514)], example Debug|192.0
 
 			<presentation id="Global_Max_Dump_Count" >
 				<decimalTextBox refId="Global_Max_Dump_Count_DecimalBox" defaultValue="" >Maximum dump files to be created</decimalTextBox>
+			</presentation>
+
+			<presentation id="Global_Dump_Type" >
+				<dropdownList refId="Global_Dump_Type_DropDown" defaultItem="" >Type of dump files to be created</dropdownList>
 			</presentation>
 
 		</presentationTable>

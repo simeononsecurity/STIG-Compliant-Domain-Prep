@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" >
+
+	<displayName >ここに表示名を入力</displayName>
+	<description >VMware Horizon View Server の構成</description>
+	<resources >
+		<stringTable >
+
+			<string id="Undefined" >未定義</string>
+
+			<string id="View_Server_Config" >VMware View Server の構成</string>
+
+			<string id="Pwd_Auth_Mode" >Windows パスワード認証モード</string>
+
+			<string id="Pwd_Auth_Mode_Desc" >Windows パスワード認証モードを選択します。
+
+KerberosOnly: Kerberos で認証を行います。
+KerberosWithFallbackToNTLM: Kerberos で認証を行いますが、失敗した場合には NTLM にフォールバックします。
+レガシー: NTLM で認証を行いますが、失敗した場合には Kerberos にフォールバックします。レガシー NT ドメイン コントローラのサポートに使用されます。
+
+デフォルトは KerberosOnly です。</string>
+
+			<string id="Kerberos_Only" >KerberosOnly</string>
+
+			<string id="Kerberos_With_NTLM_Fallback" >KerberosWithFallbackToNTLM</string>
+
+			<string id="Legacy" >レガシー</string>
+
+			<string id="Trusted_Domain_Enumeration" >信頼されるドメインを繰り返し列挙する</string>
+
+			<string id="Trusted_Domain_Enumeration_Desc" >サーバが含まれるドメインによって信頼されるドメインをすべて列挙するかどうかを指定します。完全な信頼チェーンを確立するために、信頼される側の各ドメインによって信頼されるドメインも列挙され、信頼されるすべてのドメインが検索されるまでプロセスが再帰的に続行します。クライアントがログイン時に信頼されるすべてのドメインを使用できるように、この情報は View Connection Server に渡されます。
+
+デフォルトでは、このプロパティは有効です。無効にすると、直接信頼されるドメインのみが列挙され、リモート ドメイン コントローラには接続されません。
+
+注: ドメイン関係が複雑な環境 (フォレスト内のドメイン間で信頼を持つ複数のフォレスト構造を使用する環境など) では、このプロセスが完了するまでに数分かかる場合があります。</string>
+
+			<string id="Enumerate_Forest_Trust_Child_Domains" >フォレストの信頼の子ドメインを列挙する</string>
+
+			<string id="Enumerate_Forest_Trust_Child_Domains_Desc" >フォレストの信頼の子ドメインを列挙するかどうかを指定します。
+
+未構成の場合、デフォルトは true になります。</string>
+
+		</stringTable>
+
+		<presentationTable ><!--Storage for Presentation Definitions-->
+
+			<presentation id="Windows_Pwd_Auth_Mode" >
+				<dropdownList refId="Windows_Pwd_Auth_Mode_DropDown_1" defaultItem="0" >Windows パスワード認証モード</dropdownList>
+			</presentation>
+
+		</presentationTable>
+
+	</resources>
+
+</policyDefinitionResources>

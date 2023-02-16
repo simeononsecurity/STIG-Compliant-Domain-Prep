@@ -1,0 +1,255 @@
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName>
+  </displayName>
+  <description>
+  </description>
+  <resources>
+    <stringTable>
+      <string id="Root_CatName">스캐너 리디렉션</string>
+      <string id="DisableFunctionality_PolicyName">기능 사용 안 함</string>
+      <string id="DisableFunctionality_PolicyExplain">이 정책 설정은 스캐너 리디렉션 기능을 사용하지 않도록 설정하는 데 사용됩니다.
+
+이 정책 설정이 사용되도록 설정되면 스캐너를 리디렉션할 수 없고 해당 스캐너가 스캐너 메뉴에 나타나지 않습니다.
+
+이 정책 설정이 사용되지 않도록 설정되거나 구성되지 않으면 스캐너 리디렉션이 작동하고 스캐너가 스캐너 메뉴에 나타납니다.</string>
+      <string id="LockConfig_PolicyName">구성 잠금</string>
+      <string id="LockConfig_PolicyExplain">이 정책 설정은 프로그램의 설정 사용자 인터페이스를 잠그는 데 사용됩니다.
+
+이 정책 설정이 사용되도록 설정되면 프로그램 설정을 포함하는 사용자 인터페이스가 잠기고 사용자는 트레이 메뉴에서 설정을 변경할 수 없습니다.
+
+이 정책 설정이 사용되지 않도록 설정되거나 구성되지 않으면 사용자가 프로그램 설정을 포함하는 사용자 인터페이스에 액세스할 수 있습니다.</string>
+      <string id="HideWebcam_PolicyName">웹캠 숨기기</string>
+      <string id="HideWebcam_PolicyExplain_COMP">현재 웹캠은 VMware Agent 측으로 리디렉션할 수 있으며 이미지를 캡처하기 위한 가상 스캐너로 사용할 수 있습니다.
+이 정책 설정은 웹캠이 사용자 인터페이스의 스캐너 선택 메뉴에 나타나지 않도록 합니다.
+
+이 정책 설정을 사용하도록 설정하면 이 컴퓨터의 모든 사용자에 대해 웹캠 숨김 모드가 사용되도록 설정됩니다.
+
+이 정책 설정을 사용하지 않도록 설정하면 이 컴퓨터의 모든 사용자에 대해 웹캠 숨김 모드가 사용되지 않도록 설정됩니다.
+
+또한 이 정책 설정은 이 컴퓨터의 모든 사용자에 대한 유사한 정책 설정을 재정의하고 사용자는 설정 인터페이스를 통해 웹캠 숨김 모드를 변경할 수 없게 됩니다.
+
+이 정책 설정이 구성되지 않으면 웹캠 숨김 모드는 비슷한 사용자 정책 설정 또는 설정 인터페이스를 통해 결정됩니다.</string>
+      <string id="HideWebcam_PolicyExplain_USER">현재 웹캠은 VMware Agent 측으로 리디렉션할 수 있으며 이미지를 캡처하기 위한 가상 스캐너로 사용할 수 있습니다.
+이 정책 설정은 웹캠이 사용자 인터페이스의 스캐너 선택 메뉴에 나타나지 않도록 합니다.
+
+이 정책 설정이 사용되도록 설정되면 사용자에 대한 웹캠 숨김 모드가 이 정책 설정에 의해 할당됩니다.
+
+이 정책 설정이 사용되지 않도록 설정되거나 구성되지 않으면 웹캠 숨김 모드가 사용되지 않도록 설정됩니다.
+
+사용자는 이 정책 설정이 사용되도록 설정되어 있더라도 언제든지 설정 인터페이스를 통해 웹캠 숨김 모드를 변경할 수 있습니다.
+
+이 정책 설정이 컴퓨터에 사용되면 이 컴퓨터의 모든 사용자에 대한 정책 설정을 재정의합니다. 이 경우 사용자는 설정 인터페이스를 통해 웹캠 숨김 모드를 변경할 수 없게 됩니다.</string>
+      <string id="DefaultColorMode_PolicyName">기본 색상 모드</string>
+      <string id="DefaultColorMode_PolicyExplain">이 정책에서는 기본 스캔 색상 모드(예: 컬러 또는 흑백)를 재정의할 수 있습니다.
+이 정책은 스캔 애플리케이션이 [스캔 환경설정] 대화상자를 표시하지 않고 스캔을 진행하며, 내부적으로 색상 모드를 구성하도록 허용하지 않을 때 매우 유용합니다.
+      </string>
+      <string id="DefaultColorMode_DropDownListName">색상 모드:</string>
+      <string id="DefaultColorMode_BlackAndWhite">흑백</string>
+      <string id="DefaultColorMode_Grayscale">회색조</string>
+      <string id="DefaultColorMode_Color">색상</string>
+	  <string id="DefaultResolution_PolicyName">기본 해상도</string>
+      <string id="DefaultResolution_PolicyExplain">이 정책은 기본 스캔 해상도(DPI)를 재정의할 수 있습니다.</string>
+      <string id="DefaultDuplex_PolicyName">기본 양면</string>
+      <string id="DefaultDuplex_PolicyExplain">이 정책에서는 기본 스캔 모드(단면 또는 양면)를 재정의할 수 있습니다.
+스캔 애플리케이션이 양면 스캔을 지원하고 스캐너에서 2페이지를 요청해야 하기 때문에 &quot;양면&quot;을 설정할 때는 주의하십시오.
+      </string>
+      <string id="DefaultDuplex_DropDownListName">양면 모드:</string>
+      <string id="DefaultDuplex_Simplex">단면</string>
+      <string id="DefaultDuplex_Duplex">양면</string>
+	  <string id="DefaultAutoRotate_PolicyName">기본 자동 회전</string>
+      <string id="DefaultAutoRotate_PolicyExplain">TWAIN만 해당합니다. 이 정책은 기본 페이지 자동 회전 모드(사용 또는 사용 안 함)를 재정의할 수 있습니다.
+사용하도록 설정되면 논리는 스캐너 드라이버 내의 지능형 기능에 따라 자동으로 이미지를 올바른 위치로 회전합니다. 즉, 스캐너 드라이버는 페이지를 회전(90도 또는 180도, 시계 방향(CW) 또는 시계 반대 방향(CCW))해야 할지 여부를 결정합니다.
+      </string>
+      <string id="DefaultAutoRotate_DropDownListName">기본 자동 회전:</string>
+      <string id="DefaultAutoRotate_Disabled">사용 안 함</string>
+      <string id="DefaultAutoRotate_Enabled">사용</string>
+	  <string id="DefaultAutoDeskew_PolicyName">기본 자동 기울이기 취소</string>
+      <string id="DefaultAutoDeskew_PolicyExplain">TWAIN만 해당합니다. 이 정책은 기본 페이지 자동 기울이기 취소 모드(사용 또는 사용 안 함)를 재정의할 수 있습니다.
+사용하도록 설정되면 논리는 스캐너 드라이버 내의 지능형 기능에 따라 자동으로 이미지를 정정합니다.
+      </string>
+      <string id="DefaultAutoDeskew_DropDownListName">기본 자동 기울이기 취소:</string>
+      <string id="DefaultAutoDeskew_Disabled">사용 안 함</string>
+      <string id="DefaultAutoDeskew_Enabled">사용</string>
+	  <string id="DefaultAutoBorderDetection_PolicyName">기본 자동 테두리 감지</string>
+      <string id="DefaultAutoBorderDetection_PolicyExplain">TWAIN만 해당합니다. 이 정책은 기본 페이지 자동 테두리 감지 모드(사용 또는 사용 안 함)를 재정의할 수 있습니다.
+사용하도록 설정하면 논리는 스캐너 드라이버의 지능형 기능에 따라 자동으로 스캔된 이미지 테두리를 감지하고 그에 따라 이미지를 자릅니다.
+      </string>
+      <string id="DefaultAutoBorderDetection_DropDownListName">기본 자동 테두리 감지:</string>
+      <string id="DefaultAutoBorderDetection_Disabled">사용 안 함</string>
+      <string id="DefaultAutoBorderDetection_Enabled">사용</string>
+      <string id="DefaultScanner_PolicyName">기본 스캐너</string>
+      <string id="DefaultScanners_PolicyExplain_COMP">이 정책 설정은 스캐너 자동 선택 중앙 관리에 사용됩니다.
+다음 자동 선택 모드가 사용됩니다.
+&quot;없음&quot; - 스캐너를 자동으로 선택하지 않습니다.
+&quot;자동 선택&quot; - 연결된 스캐너를 자동으로 선택합니다.
+&quot;마지막 사용&quot; - 마지막으로 사용된 스캐너를 자동으로 선택합니다.
+&quot;지정됨&quot; - &quot;지정된 스캐너&quot; 필드의 내용에 따라 선택한 스캐너가 결정됩니다.
+
+이 정책 설정이 사용되도록 설정되면 이 컴퓨터의 모든 사용자에 대한 스캐너 자동 선택 모드가 이 정책 설정에 의해 재정의되므로 사용자는 설정 인터페이스를 통해 자동 선택 모드를 변경할 수 없게 됩니다.
+또한 이 정책 설정은 이 컴퓨터의 모든 사용자에 대한 비슷한 정책 설정을 재정의합니다.
+
+이 정책 설정이 사용되지 않도록 설정되거나 구성되지 않으면 자동 선택 모드는 사용자에 대한 비슷한 정책 설정 또는 설정 인터페이스를 통해 결정됩니다.</string>
+      <string id="DefaultScanners_PolicyExplain_USER">이 정책 설정은 스캐너 자동 선택 중앙 관리에 사용됩니다.
+다음 자동 선택 모드가 사용됩니다.
+&quot;없음&quot; - 스캐너를 자동으로 선택하지 않습니다.
+&quot;자동 선택&quot; - 연결된 스캐너를 자동으로 선택합니다.
+&quot;마지막 사용&quot; - 마지막으로 사용된 연결되어 있는 스캐너를 자동으로 선택합니다.
+&quot;지정됨&quot; - &quot;지정된 스캐너&quot; 필드의 내용에 따라 선택한 스캐너가 결정됩니다.
+
+이 정책 설정이 사용되도록 설정되면 사용자에 대한 스캐너 자동 선택 모드가 이 정책 설정에 따라 설정됩니다.
+
+이 정책 설정이 사용되지 않도록 설정되거나 구성되지 않으면 &quot;자동 선택&quot; 모드가 사용됩니다.
+
+사용자는 이 정책 설정이 사용되도록 설정되어 있더라도 언제든지 설정 인터페이스를 통해 자동 선택 모드를 변경할 수 있습니다.
+
+이 정책 설정이 컴퓨터에 사용되면 이 컴퓨터의 모든 사용자에 대한 정책 설정을 재정의합니다. 이 경우 사용자는 설정 인터페이스를 통해 자동 선택 모드를 변경할 수 없게 됩니다.</string>
+      <string id="TWAINScanners_Caption">TWAIN 스캐너:
+
+</string>
+      <string id="WIAScanners_Caption">WIA 스캐너:
+
+</string>
+      <string id="Scanners_SelectionMode_DropDownListName">선택 모드:</string>
+      <string id="Scanners_SelectionMode_None">없음</string>
+      <string id="Scanners_SelectionMode_Auto">자동 선택</string>
+      <string id="Scanners_SelectionMode_Last">마지막 사용</string>
+      <string id="Scanners_SelectionMode_Specified">지정됨</string>
+      <string id="Scanners_Specified_EditName">지정된 스캐너:</string>
+      <string id="Compression_PolicyName">압축</string>
+      <string id="Compression_PolicyExplain">이 정책 설정은 에이전트 측으로 전송하는 동안 이미지 압축 비율을 설정하는 데 사용됩니다.
+다음 압축 모드가 사용됩니다.
+&quot;사용 안 함&quot; - 이미지 압축을 사용하지 않도록 설정합니다.
+&quot;무손실&quot; - 이미지 품질이 떨어지지 않는 무손실(zlib) 압축을 사용합니다.
+&quot;JPEG&quot; - 품질이 떨어지는 JPEG 압축을 사용합니다. 이미지 품질 수준은 &quot;JPEG 압축 품질&quot; 필드에 지정됩니다.
+
+이 정책 설정이 사용되도록 설정되면 사용자에 대한 압축 모드가 이 정책 설정에 따라 설정됩니다.
+
+이 정책 설정이 사용되지 않도록 설정되거나 구성되지 않으면 &quot;JPEG&quot; 압축 모드가 사용됩니다.
+
+사용자는 이 정책 설정이 사용되도록 설정되어 있더라도 언제든지 설정 인터페이스를 통해 압축 모드를 변경할 수 있습니다.</string>
+      <string id="Compression_Mode_DropDownListName">압축 모드:</string>
+      <string id="Compression_Mode_Disable">사용 안 함</string>
+      <string id="Compression_Mode_Lossless">무손실</string>
+      <string id="Compression_Mode_JPEG">JPEG</string>
+      <string id="Compression_JPEGQuality_NumericName">JPEG 압축 품질:</string>
+      <string id="ADMXMigrator_UnresolvedString">ADMX 마이그레이터에서 소스 ADM 문자열 표에 없는 문자열이 발생했습니다.</string>
+      <string id="ADMXMigrator_NoSupportedOn">ADMX 마이그레이터에서 supportedOn 값이 없는 정책이 발견되었습니다.</string>
+      <string id="SUPPORTED_WindowsXP">Microsoft Windows XP Professional 또는 Windows Server 2003 제품군 이상</string>
+	  <string id="BandwidthLimit_PolicyName">BandwidthLimit</string>
+	  <string id="BandwidthLimit_PolicyExplain">이 정책 설정에서는 스캔한 데이터를 사용자 세션으로 전송하기 위한 최대 허용 대역폭(초당 KB)을 지정합니다. 
+0을 지정하거나 아무 값도 지정하지 않으면 무제한으로 설정됩니다.</string>
+	  <string id="BandwidthLimit_NumericName">제한 KB/초:</string>
+	  <string id="UseVendorUI_PolicyName">TWAIN 스캐너 속성 대화상자 위치</string>
+      <string id="UseVendorUI_PolicyExplain">이 정책을 통해 TWAIN 스캔 속성 대화상자가 에이전트 측 또는 클라이언트 측에 표시되는지 여부를 지정할 수 있습니다.
+에이전트인 경우 에이전트 측에 VMware 스캐너 속성 대화상자가 나타납니다.
+클라이언트인 경우 클라이언트 측에 기본 벤더 스캐너 TWAIN 대화상자가 나타납니다.
+      </string>
+      <string id="UseVendorUI_DropDownListName">TWAIN 스캐너 속성 대화상자 위치:</string>
+      <string id="UseVendorUI_Server">에이전트</string>
+      <string id="UseVendorUI_Wks">클라이언트</string>
+	  <string id="ForceTwainDialog_PolicyName">TWAIN 스캔 속성 대화상자 강제 실행</string>
+      <string id="ForceTwainDialog_PolicyExplain_USER">이 정책을 통해 스캔 애플리케이션에서 스캔 대화상자를 표시하지 않더라도 TWAIN 스캔 속성 대화상자가 강제로 표시할 수 있습니다.</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="DisableFunctionality_PolicyName" />
+      <presentation id="LockConfig_PolicyName" />
+      <presentation id="HideWebcam_PolicyName" />
+      <presentation id="DefaultColorMode_PolicyName">
+        <dropdownList refId="DefaultColorMode_DropDownListName" noSort="true" defaultItem="2">색상 모드:</dropdownList>
+      </presentation>
+	  <presentation id="DefaultResolution_PolicyName">
+        <decimalTextBox refId="DefaultResolution_TextBoxName" noSort="true"  defaultValue="150">해상도:</decimalTextBox>
+      </presentation>
+      <presentation id="DefaultDuplex_PolicyName">
+        <dropdownList refId="DefaultDuplex_DropDownListName" noSort="true" defaultItem="1">양면 모드:</dropdownList>
+      </presentation>
+	  <presentation id="DefaultAutoRotate_PolicyName">
+        <dropdownList refId="DefaultAutoRotate_DropDownListName" noSort="true" defaultItem="1">기본 자동 회전:</dropdownList>
+      </presentation>
+	  <presentation id="DefaultAutoDeskew_PolicyName">
+        <dropdownList refId="DefaultAutoDeskew_DropDownListName" noSort="true" defaultItem="1">기본 자동 기울이기 취소:</dropdownList>
+      </presentation>
+	  <presentation id="DefaultAutoBorderDetection_PolicyName">
+        <dropdownList refId="DefaultAutoBorderDetection_DropDownListName" noSort="true" defaultItem="1">기본 자동 테두리 감지:</dropdownList>
+      </presentation>
+      <presentation id="DefaultScanner_PolicyName">
+        <text>TWAIN 스캐너:
+
+</text>
+        <dropdownList refId="Scanners_SelectionMode_DropDownListName" noSort="true" defaultItem="1">선택 모드:</dropdownList>
+        <textBox refId="Scanners_Specified_EditName">
+          <label>지정된 스캐너:</label>
+          <defaultValue>
+          </defaultValue>
+        </textBox>
+        <text>
+        </text>
+        <text>WIA 스캐너:
+
+</text>
+        <dropdownList refId="Scanners_SelectionMode_DropDownListName_1" noSort="true" defaultItem="1">선택 모드:</dropdownList>
+        <textBox refId="Scanners_Specified_EditName_1">
+          <label>지정된 스캐너:</label>
+          <defaultValue>
+          </defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="Compression_PolicyName">
+        <dropdownList refId="Compression_Mode_DropDownListName" noSort="true" defaultItem="2">압축 모드:</dropdownList>
+        <decimalTextBox refId="Compression_JPEGQuality_NumericName" defaultValue="80">JPEG 압축 품질:</decimalTextBox>
+      </presentation>
+	   <presentation id="Compression_PolicyName_1">
+        <dropdownList refId="Compression_Mode_DropDownListName_1" noSort="true" defaultItem="2">압축 모드:</dropdownList>
+        <decimalTextBox refId="Compression_JPEGQuality_NumericName_1" defaultValue="80">JPEG 압축 품질:</decimalTextBox>
+      </presentation>
+      <presentation id="HideWebcam_PolicyName_1" />
+      <presentation id="DefaultColorMode_PolicyName_1">
+        <dropdownList refId="DefaultColorMode_DropDownListName" noSort="true" defaultItem="2">색상 모드:</dropdownList>
+      </presentation>
+	   <presentation id="DefaultResolution_PolicyName_1">
+        <decimalTextBox refId="DefaultResolution_TextBoxName" noSort="true" defaultItem="1">해상도:</decimalTextBox>
+      </presentation>
+      <presentation id="DefaultDuplex_PolicyName_1">
+        <dropdownList refId="DefaultDuplex_DropDownListName" noSort="true" defaultItem="1">양면 모드:</dropdownList>
+      </presentation>
+	  <presentation id="DefaultAutoRotate_PolicyName_1">
+        <dropdownList refId="DefaultAutoRotate_DropDownListName" noSort="true" defaultItem="1">기본 자동 회전:</dropdownList>
+      </presentation>
+	  <presentation id="DefaultAutoDeskew_PolicyName_1">
+        <dropdownList refId="DefaultAutoDeskew_DropDownListName" noSort="true" defaultItem="1">기본 자동 기울이기 취소:</dropdownList>
+      </presentation>
+	  <presentation id="DefaultAutoBorderDetection_PolicyName_1">
+        <dropdownList refId="DefaultAutoBorderDetection_DropDownListName" noSort="true" defaultItem="1">기본 자동 테두리 감지:</dropdownList>
+      </presentation>
+      <presentation id="DefaultScanner_PolicyName_1">
+        <text>TWAIN 스캐너:
+
+</text>
+        <dropdownList refId="Scanners_SelectionMode_DropDownListName" noSort="true" defaultItem="1">선택 모드:</dropdownList>
+        <textBox refId="Scanners_Specified_EditName">
+          <label>지정된 스캐너:</label>
+          <defaultValue>
+          </defaultValue>
+        </textBox>
+        <text>
+        </text>
+        <text>WIA 스캐너:
+
+</text>
+        <dropdownList refId="Scanners_SelectionMode_DropDownListName_1" noSort="true" defaultItem="1">선택 모드:</dropdownList>
+        <textBox refId="Scanners_Specified_EditName_1">
+          <label>지정된 스캐너:</label>
+          <defaultValue>
+          </defaultValue>
+        </textBox>
+      </presentation>
+	   <presentation id="BandwidthLimit_PolicyName">
+        <decimalTextBox refId="BandwidthLimit_NumericName" defaultValue="0">제한 KB/초:</decimalTextBox>
+      </presentation>
+	  <presentation id="UseVendorUI_PolicyName">
+        <dropdownList refId="UseVendorUI_DropDownListName" noSort="true" defaultItem="0">대화상자 위치:</dropdownList>
+      </presentation>
+	  <presentation id="ForceTwainDialog_PolicyName" />
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

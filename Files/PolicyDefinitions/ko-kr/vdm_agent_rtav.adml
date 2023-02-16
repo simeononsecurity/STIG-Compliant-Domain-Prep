@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="VMwareViewClientRTAV">View RTAV 구성</string>
+      <string id="VMwareViewClientRTAVWebcam">View RTAV 웹캠 설정</string>
+      <string id="VMwareViewRTAVMicrophone">View RTAV 마이크 설정</string>
+      <string id="WebcamMaxResWidth">해상도 - 최대 이미지 너비(픽셀 단위)</string>
+      <string id="WebcamMaxResWidthExplain">웹캠에서 캡처할 때 이미지 프레임의 픽셀 단위 최대 너비</string>
+      <string id="WebcamMaxResHeight">해상도 - 최대 이미지 높이(픽셀 단위)</string>
+      <string id="WebcamMaxResHeightExplain">웹캠에서 캡처할 때 이미지 프레임의 픽셀 단위 최대 높이</string>
+      <string id="WebcamMaxFrameRate">초당 최대 프레임</string>
+      <string id="WebcamMaxFrameRateExplain">웹캠에서 프레임을 캡처할 수 있는 초당 최대 속도입니다.
+최소 = 1 및 최대 = 30</string>
+      <string id="WebcamDefaultResWidth">해상도 - 기본 이미지 해상도 너비(픽셀 단위)</string>
+      <string id="WebcamDefaultResWidthExplain">기본 이미지 해상도 너비를 설정합니다. 설정하지 않으면 기본값은 320입니다. 사용자가 해상도 값을 정의하지 않은 경우에 사용됩니다.</string>
+      <string id="WebcamDefaultResHeight">해상도 - 기본 이미지 해상도 높이(픽셀 단위)</string>
+      <string id="WebcamDefaultResHeightExplain">기본 이미지 해상도 높이를 설정합니다. 설정하지 않으면 기본값은 240입니다. 사용자가 해상도 값을 정의하지 않은 경우에 사용됩니다.</string>
+      <string id="VMwareViewAgent">VMware View Agent 구성</string>
+      <string id="ADMXMigrator_UnresolvedString">ADMX 마이그레이터에서 소스 ADM 문자열 표에 없는 문자열이 발생했습니다.</string>
+      <string id="ADMXMigrator_NoSupportedOn">ADMX 마이그레이터에서 supportedOn 값이 없는 정책이 발견되었습니다.</string>
+      <string id="MicrophoneSampleRate">샘플링 속도 - 오디오 녹음 디바이스 샘플링 속도</string>
+      <string id="MicrophoneSampleRateExplain">끝점에서 RDSH 데스크톱 및 RDSH 원격 애플리케이션으로의 녹음 오디오 디바이스 샘플링 속도를 설정하십시오.
+중요: 연결된 세션이 있는 경우 이 GPO 설정을 변경하면 안 됩니다. 이 설정을 적용하려면 재부팅이 필요합니다.</string>
+      <string id="SampleRate8K">8000</string>
+      <string id="SampleRate16K">16000</string>
+      <string id="SampleRate48K">48000</string>
+      <string id="DisableRTAV">마이크 또는 웹캠 사용 안 함</string>
+      <string id="DisableRTAVExplain">마이크 또는 웹캠 사용 안 함
+
+참고: &quot;마이크 사용 안 함&quot; 및 &quot;웹캠 사용 안 함&quot;은 Windows 클라이언트를 사용할 때만 적용됩니다. 또한 클라이언트와 에이전트 모두 버전 2209 이상이어야 합니다.</string>
+      <string id="DisableMicAndWebcam">마이크 및 웹캠 사용 안 함</string>
+      <string id="DisableWebcam">웹캠 사용 안 함</string>
+      <string id="DisableMic">마이크 사용 안 함</string>
+      <string id="ForceNV">하드웨어 가속 - 웹캠 비디오 코덱에 대해 Nvidia 하드웨어 가속을 사용하도록 설정</string>
+      <string id="ForceNVExplain">지정된 GPU가 감지되고 FFmpeg와 호환되는 경우 웹캠 비디오 코덱에 Nvidia 하드웨어 가속을 사용하도록 설정</string>
+      <string id="ForceQSV">하드웨어 가속 - 웹캠 비디오 코덱용 Intel QSV를 사용하도록 설정</string>
+      <string id="ForceQSVExplain">지정된 GPU가 감지되고 FFmpeg와 호환되는 경우 웹캠 비디오 코덱에 Intel QSV를 사용하도록 설정</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="WebcamMaxFrameRate">
+        <decimalTextBox refId="WebcamMaxFrameRate" defaultValue="15">초당 최대 프레임</decimalTextBox>
+      </presentation>
+      <presentation id="WebcamMaxResHeight">
+        <decimalTextBox refId="WebcamMaxResHeight" defaultValue="0">해상도 - 최대 이미지 높이(픽셀 단위)</decimalTextBox>
+      </presentation>
+      <presentation id="WebcamMaxResWidth">
+        <decimalTextBox refId="WebcamMaxResWidth" defaultValue="0">해상도 - 최대 이미지 너비(픽셀 단위)</decimalTextBox>
+      </presentation>
+      <presentation id="WebcamDefaultResHeight">
+        <decimalTextBox refId="WebcamDefaultResHeight" defaultValue="0">해상도 - 기본 이미지 해상도 높이(픽셀 단위)</decimalTextBox>
+      </presentation>
+      <presentation id="WebcamDefaultResWidth">
+        <decimalTextBox refId="WebcamDefaultResWidth" defaultValue="0">해상도 - 기본 이미지 해상도 너비(픽셀 단위)</decimalTextBox>
+      </presentation>
+      <presentation id="MicrophoneSampleRate">
+        <dropdownList refId="MicrophoneSampleRateList" defaultItem="0" noSort="true">샘플링 속도 - 오디오 녹음 디바이스 샘플링 속도</dropdownList>
+      </presentation>
+      <presentation id="DisableRTAV">
+        <dropdownList refId="RTAVDisableComponentList" defaultItem="0" noSort="true">마이크 또는 웹캠 사용 안 함</dropdownList>
+      </presentation>
+      <presentation id="ForceNV" />
+      <presentation id="ForceQSV" />
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

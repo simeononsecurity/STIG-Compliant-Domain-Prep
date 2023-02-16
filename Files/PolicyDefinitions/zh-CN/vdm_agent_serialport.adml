@@ -1,0 +1,581 @@
+﻿<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName>
+  </displayName>
+  <description>
+  </description>
+  <resources>
+    <stringTable>
+      <string id="Product_CatName">Serial COM</string>
+      <string id="LocalSettingsPriority_PolicyName">本地设置优先级</string>
+      <string id="LocalSettingsPriority_PolicyExplain">如果启用该策略设置，本地程序设置将优先于策略设置。
+
+如果此策略设置被禁用或未配置，策略设置将优先于本地程序设置。
+
+在每种类型设置的范围内，为计算机设置的设置始终优先于为用户设置的设置。
+如果为计算机设置了此策略设置，它将优先于为用户设置的策略设置。</string>
+      <string id="DisableFunctionality_PolicyName">禁用功能</string>
+      <string id="DisableFunctionality_PolicyExplain">如果启用该策略设置，将不与客户端建立连接，不重定向端口，且不显示托盘菜单图标。
+
+如果禁用此策略设置，Serial COM 将以正常模式运行。
+
+如果未配置此策略设置，禁用功能由本地程序设置决定。</string>
+      <string id="RedirectAll_PolicyName">自动连接所有端口</string>
+      <string id="RedirectAll_PolicyExplain">如果启用该策略设置，则将自动连接所有客户端 COM 端口 (即使未配置单独的 GPO 也是如此)。如果为某些端口配置了单独的 GPO 设置，则会使用单独的端口 GPO 设置。
+
+如果禁用或未配置此策略设置，则自动连接功能将由单独的端口 GPO 或本地程序设置确定。</string>
+      <string id="EnableEventLog_PolicyName">启用 Windows 事件日志功能</string>
+      <string id="EnableEventLog_PolicyExplain">如果启用该策略设置，则会将与串行端口相关的各种事件写入 Windows 事件日志的“应用程序日志”类别。
+
+如果禁用或未配置此策略设置，则不会将任何日志记录写入 Windows 事件查看器的“应用程序”部分。
+
+支持以下事件:
+5 - 正在尝试建立与客户端 PC 的连接。
+10 - 已建立代理与客户端之间的连接。
+20 - 代理与客户端之间的连接已关闭。
+30 - 初始端口枚举 (列出客户端 PC 上的可用串行端口和可用于连接的串行端口)。
+40 - 已连接。端口已连接。
+41 - 已连接。端口已占用 (会话重新连接时)。端口将再次变为可读/可写。
+50 - 已断开连接。端口已断开连接。
+51 - 已断开连接。端口已占用 (检测到会话断开连接时)。端口保持活动状态，但不可读/不可写。
+60 - 错误
+
+端口项条目的格式:
+&lt;源端口名称&gt; 分隔符 &lt;目标端口名称&gt; 分隔符 &lt;硬件 ID&gt; 分隔符 &lt;设备描述&gt;
+
+&lt;源端口名称&gt; – 客户端 PC 上显示的 COM 端口的名称，例如 COM2
+&lt;目标端口名称&gt; – 远程桌面会话中显示的虚拟 COM 端口的名称，例如 COM15
+&lt;硬件 ID&gt; 和 &lt;描述&gt; - 父设备属性 (如果客户端 PC 上的串行端口实际上是 USB 或一些其他设备)
+分隔符 - 事件数据格式分隔符字符串
+
+示例 (使用逗号字符作为分隔符):
+COM20,COM28,USB\VID_067B&amp;PID_2303&amp;REV_0400,Prolific USB-to-Serial Comm Port</string>
+      <string id="EventLogTableSeparator_PolicyName">启用事件数据格式分隔符</string>
+      <string id="EventLogTableSeparator_PolicyExplain">如果启用，此策略将定义用作数据字段的行分隔符的字符串。
+	  
+默认分隔符为制表符。但是，可以将其更改为任何其他字符，如逗号、分号、空格或任何其他自定义字符，甚至是字符串。</string>
+	  <string id="EventLogTableSeparatorType_TAB_combo_txt">制表符</string>
+	  <string id="EventLogTableSeparatorType_SPACE_combo_txt">空格</string>
+	  <string id="EventLogTableSeparatorType_custom_combo_txt">自定义字符串</string>
+      <string id="PortIsolationMode_PolicyName">COM 端口隔离模式</string>
+      <string id="PortIsolationMode_PolicyExplain">如果选择“完全隔离”模式，则只能在用户会话内看到和访问虚拟串行端口。在此模式下，COM 端口可以在不同的用户会话中具有相同的名称。重要信息: 在这种情况下，系统服务 (如 spoolsrv.exe) 将无法访问已隔离的串行端口。
+
+如果选择“隔离已禁用”模式，则虚拟串行端口将在全局范围内可见。可从任一会话访问任何端口。限制: 每个用户的端口名称必须是唯一的 (因此端口在不同的用户会话中不能具有相同的名称)。重要信息: 系统服务 (如 spoolsrv.exe) 可以访问任何串行端口。
+
+如果未配置该策略设置，串行重定向将在“完全隔离”模式下运行。</string>
+      <string id="PortIsolationMode_Full_Isolation_combo_txt">完全隔离</string>
+      <string id="PortIsolationMode_Isolation_Disabled_combo_txt">隔离已禁用</string>
+      <string id="LockConfig_PolicyName">锁定配置</string>
+      <string id="LockConfig_PolicyExplain">如果启用该策略设置，包含程序设置的用户界面将被锁定，用户无法更改托盘菜单中的设置。
+
+如果此策略设置被禁用，用户将可以访问包含程序设置的用户界面。
+
+如果未配置此策略设置，由本地程序设置决定是否阻止配置。
+
+如果为计算机配置了此策略设置，它将优先于为用户配置的策略设置。</string>
+      <string id="BandwidthLimit_PolicyName">带宽限制</string>
+      <string id="BandwidthLimit_PolicyExplain">如果启用该策略设置，代理和所有客户端之间的数据传输速度受指定的每秒千字节数限制。值“0”禁用速度限制
+
+如果此策略设置被禁用，将禁用速度限制。
+
+如果未配置此策略设置，速度限制由本地程序设置决定。</string>
+      <string id="BandwidthLimit_PartName">带宽限制 (以千字节/秒为单位):</string>
+
+	  <string id="AllowDenyPortFiltersList_PolicyName">允许/拒绝端口筛选器</string>
+	  <string id="AllowDenyPortFiltersList_PolicyExplain">如果启用此策略，则将使用允许和拒绝筛选器来确定是否允许对在客户端检测到的每个特定 COM 端口进行重定向。
+
+如果不允许对某些端口进行重定向，代理端将忽略该端口，就像客户端根本不存在该端口一样。
+
+策略是包含规则列表的多行字符串。
+
+示例:
+  USB:067B:2303:*
+  USBPATH:1-4
+  WINDEVID:*ACPI*
+  PORTNAME:COM3
+  PORTNAME:COM5
+
+语法:
+  USB:[*|VID[:*|:PID[:*|:REV]]]
+    VID - 来自设备硬件 ID 的十六进制数字 VID (供应商 ID) 值
+    PID - 来自设备硬件 ID 的十六进制数字 PID (产品 ID) 值
+    REV - 来自设备硬件 ID 的十六进制数字 REV (修订版) 值
+    当 VID、PID 和 REV 等于“*”时 - 表示任意值。
+	
+  USBPATH:[N1[-N2[...[-N8]]]]
+    Nx - 用于标识 USB 端口的数值 (范围为 1-127)。	
+  
+  WINDEVID:[HwId|*|?]
+    HwId - 设备硬件 ID 的全部或部分值 (支持使用通配符 * 和 ? )。不区分大小写。
+
+  PORTNAME:[PortName|*|?]
+    PortName - 串行端口名称的全部或部分值 (支持使用通配符 * 和 ?)。不区分大小写。
+
+示例:
+  USB:067B:2303:400 - 匹配具有指定 VID、PID 和修订版的 USB 设备。USB\VID_067B&amp;PID_2303&amp;REV_0400
+  USB:067B:2303:* - 匹配具有指定 VID、指定 PID 和任意修订版的任何 USB 设备。USB\VID_067B&amp;PID_2303
+  USB:067B:* - 匹配具有指定 VID、任意 PID 和任意修订版的任何 USB 设备。USB\VID_067B
+  USB:* - 匹配任意 USB 设备
+  
+  USBPATH:1-2-1 - 匹配设备实际插入的 USB 端口的识别符  
+
+  WINDEVID:*  - 匹配任意硬件 ID 字符串
+  WINDEVID:*ACPI* - 匹配包含 ACPI 子字符串的硬件 ID 字符串
+  
+  PORTNAME:COM3 - 仅匹配“COM3”串行端口
+  PORTNAME:*M3 - 匹配名称以“M3”结尾的串行端口。例如，COM3、VCOM3。
+  PORTNAME:*M3* - 匹配名称包含“M3”子字符串的串行端口。例如，COM3、COM33、VCOM333。
+  PORTNAME:/dev/ttys* - 匹配所有“/dev/ttys”设备。例如，/dev/ttyS0、/dev/ttyS5。
+
+备注:
+  允许列表具有更高的优先级。因此，如果设备与拒绝列表匹配，则将排除对该设备进行重定向。但是，如果设备同时与允许列表匹配，则允许对该设备进行重定向。
+	  </string>
+	  <string id="AllowDenyPortFiltersList_PartName">允许列表</string>
+	  <string id="DenyDenyPortFiltersList_PartName">拒绝列表</string>
+		
+      <string id="PortSettings_CatName">端口设置</string>
+      <string id="PortSettings1_PolicyName">端口设置 1</string>
+      <string id="PortSettings2_PolicyName">端口设置 2</string>
+      <string id="PortSettings3_PolicyName">端口设置 3</string>
+      <string id="PortSettings4_PolicyName">端口设置 4</string>
+      <string id="PortSettings5_PolicyName">端口设置 5</string>
+      <string id="PortSettings_PolicyExplain">此策略设置用于配置某些用于重定向的端口参数:
+
+“源端口号”- 从客户端重定向的 COM 端口号 (例如，2 代表 COM2)。
+
+“源端口设备”- 默认为从客户端重定向的串行端口设备的名称。此外，还支持使用通过特殊语法进行复杂的串行设备匹配。
+
+注意: 此参数的优先级高于“源端口号”。
+
+源端口通常由设备名称标识 (例如，对于 Windows，为“COM5”，或者对于 Linux，为“/dev/ttySerial0”)。仍然支持特殊匹配语法，以便按 USB 设备属性、USB 端口标识符等来标识源串行设备。有关更多详细信息，请参阅“允许/拒绝筛选器”部分。
+
+“目标虚拟端口号”- 在代理端创建的与客户端上的 COM 端口对应的虚拟 COM 端口号。
+
+“自动连接”- 如果设置此标记，当在客户端插入端口时，端口自动重定向至代理端。
+
+“IgnoreDsr”- 如果设置此标记，将忽略 DSR 信号。
+
+“关闭端口前暂停”- 故障排除设置。用户关闭虚拟 COM 端口后等待的时间 (以毫秒为单位)。某些 USB-COM 适配器需要该设置。
+
+“使用发送数据前暂停”- 如果设置此标记，将使用在端口打开后发送数据前暂停。请参阅值“发送数据前暂停”
+
+“发送数据前暂停”- 故障排除设置。虚拟 COM 端口将数据传输到物理端前等待的时间 (以毫秒为单位)。某些特定的串行设备 (Olivetti 读卡器) 需要该设置。
+
+“Serial2USBModeChangeEnabled”- 故障排除设置。修复 GlobalSat BU353 GPS 适配器 (和其他某些 Prolific USB-COM 适配器) 的特定问题。
+
+“等待掩码时禁用错误”- 故障排除设置。禁用串行 COM 掩码中的“错误”值。请访问“http://msdn.microsoft.com/en-us/library/windows/desktop/aa363479(v=vs.85).aspx”。某些软件需要该设置。
+
+“HandleBtDisappear”- 故障排除设置。支持 BlueTooth COM 端口特定行为。
+
+“UsbToComTroubleShooting”- 故障排除设置。修复 USB-COM 适配器的特定问题。
+
+“使用网络延迟补偿”- 故障排除设置。使用补偿功能可避免受网络延迟的影响。
+
+“补偿级别”- 故障排除设置。使用 spinedit，选择网络延迟补偿级别。找出远程串行设备可稳定运行您的应用程序的最低级别。
+
+“使用固定波特率”- 如果设置此标记，将使用在“每秒位数”中指定的值，而不使用由串行通信应用程序设置的波特率。
+
+“每秒位数”- 以每秒位数为单位的固定波特率值 (如果设置“使用固定波特率”，则应用该值)。
+
+“使用固定线路控制”- 如果设置此标记，将使用在“数据位”、“奇偶校验”和“停止位”中指定的值，而不使用由串行通信应用程序设置的值。
+
+“数据位”- 固定数据位值 (如果设置“使用固定线路控制”，则应用该值) [介于 5 到 8 之间的值]。
+
+“奇偶校验”- 固定奇偶校验值 (如果设置“使用固定线路控制”，则应用该值)。
+
+“停止位”- 固定停止位值 (如果设置“使用固定线路控制”，则应用该值)。
+
+“使用固定流量控制”- 如果设置此标记，将使用在“流量控制”中指定的值，而不使用由串行通信应用程序设置的值。
+
+“流量控制”- 固定停止位值 (如果设置“使用固定流量控制”，则应用该值)。
+
+
+如果启用该策略设置，在端口重定向过程中使用其参数。
+
+如果此策略设置被禁用或未配置，端口重定向使用在本地程序设置中指定的参数。
+
+如果为计算机配置了此策略设置，它将优先于为用户配置的策略设置。</string>
+      <string id="SrcPort_PartName">源端口号:</string>
+      <string id="SrcPort_PartName2">源端口设备:</string>
+      <string id="DstVirtPort_PartName">目标虚拟端口号:</string>
+      <string id="Autoconnect_PartName">自动连接</string>
+      <string id="Troubleshooting_PartName">故障排除:</string>
+      <string id="IgnoreDsr_PartName">IgnoreDsr</string>
+      <string id="PauseBeforeClosePort_PartName">关闭端口前暂停 (以毫秒为单位):</string>
+      <string id="UsePauseBeforeSendData_PartName">使用发送数据前暂停:</string>
+      <string id="PauseBeforeSendData_PartName">发送数据前暂停 (以毫秒为单位):</string>
+      <string id="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</string>
+      <string id="DisableErrorsInWaitMask_PartName">等待掩码时禁用错误</string>
+      <string id="HandleBtDisappear_PartName">HandleBtDisappear</string>
+      <string id="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</string>
+      <string id="UseFixedBaudRate_PartName">使用固定波特率</string>
+      <string id="FixedBaudRate_PartName">以每秒位数为单位的固定波特率值 (如果设置“使用固定波特率”，则应用该值)。</string>
+      <string id="UseFixedLineControl_PartName">使用固定线路控制</string>
+      <string id="FixedDataBits_PartName">固定数据位值 (如果设置“使用固定线路控制”，则应用该值) [介于 5 到 8 之间的值]。</string>
+      <string id="Parity_No_combo_txt">否</string>
+      <string id="Parity_Odd_combo_txt">奇数</string>
+      <string id="Parity_Even_combo_txt">偶数</string>
+      <string id="Parity_Mark_combo_txt">标记</string>
+      <string id="Parity_Space_combo_txt">空间</string>
+      <string id="StopBits_1bit_combo_txt">1 位</string>
+      <string id="StopBits_15bit_combo_txt">1.5 位</string>
+      <string id="StopBits_2bits_combo_txt">2 位</string>
+      <string id="UseFixedFlowControl_PartName">使用固定流量控制</string>
+      <string id="Flow_Hardware_combo_txt">硬件</string>
+      <string id="Flow_XonXoff_combo_txt">Xon/Xoff</string>
+      <string id="Flow_None_combo_txt">无</string>
+      <string id="ADMXMigrator_UnresolvedString">ADMX Migrator 遇到源 ADM 字符串表中不存在的字符串。</string>
+      <string id="ADMXMigrator_NoSupportedOn">ADMX Migrator 遇到没有 supportedOn 值的策略。</string>
+      <string id="SUPPORTED_WindowsXP">至少为 Microsoft Windows XP 专业版或 Windows Server 2003 系列</string>
+      <string id="UseMultiplicator_PartName">使用网络延迟补偿</string>
+      <string id="MultiplicatorValue_PartName">补偿级别值 (如果设置了“使用网络延迟补偿”，则应用该值) [值的范围从 1 到 10]。</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="LocalSettingsPriority_PolicyName" />
+      <presentation id="DisableFunctionality_PolicyName" />
+      <presentation id="EnableEventLog_PolicyName" />
+	  <presentation id="EventLogTableSeparator_PolicyName">
+		<dropdownList refId="EventLogTableSeparatorType_Enum" noSort="true">事件数据格式分隔符:</dropdownList>
+        <textBox refId="EventLogTableSeparatorType_custom_Text">
+            <label>自定义字符串:</label>
+        </textBox>
+	  </presentation>
+      <presentation id="RedirectAll_PolicyName" />
+      <presentation id="PortIsolationMode_PolicyName">
+        <dropdownList refId="PortIsolationMode_Enum" noSort="true">COM 端口隔离模式:</dropdownList>
+      </presentation>
+      <presentation id="LockConfig_PolicyName" />
+      <presentation id="BandwidthLimit_PolicyName">
+        <decimalTextBox refId="BandwidthLimit_PartName" defaultValue="0" spinStep="1024">带宽限制 (以千字节/秒为单位):</decimalTextBox>
+      </presentation>
+      <presentation id="AllowDenyPortFiltersList_PolicyName">
+		  <text>允许列表</text>
+		  <multiTextBox refId="AllowPortFiltersList_PartName" />
+		  <text></text>
+		  <text>拒绝列表</text>
+		  <multiTextBox refId="DenyPortFiltersList_PartName" />
+      </presentation>
+      <presentation id="PortSettings1_PolicyName">
+        <decimalTextBox refId="SrcPort_PartName">源端口号:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>源端口设备:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">目标虚拟端口号:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">自动连接</checkBox>
+        <text>
+        </text>
+        <text>故障排除:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">关闭端口前暂停 (以毫秒为单位):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">使用发送数据前暂停:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">发送数据前暂停 (以毫秒为单位):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">等待掩码时禁用错误</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">使用网络延迟补偿</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">补偿级别:</decimalTextBox>
+        <text>
+        </text>
+        <text>固定设置:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">使用固定波特率</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">每秒位数:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">使用固定线路控制</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">数据位:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">奇偶校验:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">停止位:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">使用固定流量控制</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">流量控制:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings2_PolicyName">
+        <decimalTextBox refId="SrcPort_PartName">源端口号:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>源端口设备:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">目标虚拟端口号:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">自动连接</checkBox>
+        <text>
+        </text>
+        <text>故障排除:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">关闭端口前暂停 (以毫秒为单位):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">使用发送数据前暂停:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">发送数据前暂停 (以毫秒为单位):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">等待掩码时禁用错误</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">使用网络延迟补偿</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">补偿级别:</decimalTextBox>
+        <text>
+        </text>
+        <text>固定设置:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">使用固定波特率</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">每秒位数:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">使用固定线路控制</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">数据位:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">奇偶校验:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">停止位:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">使用固定流量控制</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">流量控制:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings3_PolicyName">
+        <decimalTextBox refId="SrcPort_PartName">源端口号:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>源端口设备:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">目标虚拟端口号:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">自动连接</checkBox>
+        <text>
+        </text>
+        <text>故障排除:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">关闭端口前暂停 (以毫秒为单位):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">使用发送数据前暂停:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">发送数据前暂停 (以毫秒为单位):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">等待掩码时禁用错误</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">使用网络延迟补偿</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">补偿级别:</decimalTextBox>
+        <text>
+        </text>
+        <text>固定设置:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">使用固定波特率</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">每秒位数:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">使用固定线路控制</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">数据位:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">奇偶校验:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">停止位:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">使用固定流量控制</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">流量控制:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings4_PolicyName">
+        <decimalTextBox refId="SrcPort_PartName">源端口号:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>源端口设备:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">目标虚拟端口号:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">自动连接</checkBox>
+        <text>
+        </text>
+        <text>故障排除:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">关闭端口前暂停 (以毫秒为单位):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">使用发送数据前暂停:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">发送数据前暂停 (以毫秒为单位):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">等待掩码时禁用错误</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">使用网络延迟补偿</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">补偿级别:</decimalTextBox>
+        <text>
+        </text>
+        <text>固定设置:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">使用固定波特率</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">每秒位数:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">使用固定线路控制</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">数据位:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">奇偶校验:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">停止位:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">使用固定流量控制</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">流量控制:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings5_PolicyName">
+        <decimalTextBox refId="SrcPort_PartName">源端口号:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>源端口设备:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">目标虚拟端口号:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">自动连接</checkBox>
+        <text>
+        </text>
+        <text>故障排除:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">关闭端口前暂停 (以毫秒为单位):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">使用发送数据前暂停:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">发送数据前暂停 (以毫秒为单位):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">等待掩码时禁用错误</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">使用网络延迟补偿</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">补偿级别:</decimalTextBox>
+        <text>
+        </text>
+        <text>固定设置:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">使用固定波特率</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">每秒位数:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">使用固定线路控制</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">数据位:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">奇偶校验:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">停止位:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">使用固定流量控制</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">流量控制:</dropdownList>
+      </presentation>
+      <presentation id="LocalSettingsPriority_PolicyName_1" />
+      <presentation id="LockConfig_PolicyName_1" />
+      <presentation id="PortSettings1_PolicyName_1">
+        <decimalTextBox refId="SrcPort_PartName">源端口号:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>源端口设备:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">目标虚拟端口号:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">自动连接</checkBox>
+        <text>
+        </text>
+        <text>故障排除:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">关闭端口前暂停 (以毫秒为单位):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">使用发送数据前暂停:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">发送数据前暂停 (以毫秒为单位):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">等待掩码时禁用错误</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">使用网络延迟补偿</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">补偿级别:</decimalTextBox>
+        <text>
+        </text>
+        <text>固定设置:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">使用固定波特率</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">每秒位数:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">使用固定线路控制</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">数据位:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">奇偶校验:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">停止位:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">使用固定流量控制</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">流量控制:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings2_PolicyName_1">
+        <decimalTextBox refId="SrcPort_PartName">源端口号:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>源端口设备:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">目标虚拟端口号:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">自动连接</checkBox>
+        <text>
+        </text>
+        <text>故障排除:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">关闭端口前暂停 (以毫秒为单位):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">使用发送数据前暂停:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">发送数据前暂停 (以毫秒为单位):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">等待掩码时禁用错误</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">使用网络延迟补偿</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">补偿级别:</decimalTextBox>
+        <text>
+        </text>
+        <text>固定设置:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">使用固定波特率</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">每秒位数:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">使用固定线路控制</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">数据位:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">奇偶校验:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">停止位:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">使用固定流量控制</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">流量控制:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings3_PolicyName_1">
+        <decimalTextBox refId="SrcPort_PartName">源端口号:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>源端口设备:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">目标虚拟端口号:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">自动连接</checkBox>
+        <text>
+        </text>
+        <text>故障排除:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">关闭端口前暂停 (以毫秒为单位):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">使用发送数据前暂停:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">发送数据前暂停 (以毫秒为单位):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">等待掩码时禁用错误</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">使用网络延迟补偿</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">补偿级别:</decimalTextBox>
+        <text>
+        </text>
+        <text>固定设置:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">使用固定波特率</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">每秒位数:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">使用固定线路控制</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">数据位:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">奇偶校验:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">停止位:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">使用固定流量控制</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">流量控制:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings4_PolicyName_1">
+        <decimalTextBox refId="SrcPort_PartName">源端口号:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>源端口设备:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">目标虚拟端口号:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">自动连接</checkBox>
+        <text>
+        </text>
+        <text>故障排除:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">关闭端口前暂停 (以毫秒为单位):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">使用发送数据前暂停:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">发送数据前暂停 (以毫秒为单位):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">等待掩码时禁用错误</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">使用网络延迟补偿</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">补偿级别:</decimalTextBox>
+        <text>
+        </text>
+        <text>固定设置:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">使用固定波特率</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">每秒位数:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">使用固定线路控制</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">数据位:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">奇偶校验:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">停止位:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">使用固定流量控制</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">流量控制:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings5_PolicyName_1">
+        <decimalTextBox refId="SrcPort_PartName">源端口号:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>源端口设备:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">目标虚拟端口号:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">自动连接</checkBox>
+        <text>
+        </text>
+        <text>故障排除:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">关闭端口前暂停 (以毫秒为单位):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">使用发送数据前暂停:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">发送数据前暂停 (以毫秒为单位):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">等待掩码时禁用错误</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">使用网络延迟补偿</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">补偿级别:</decimalTextBox>
+        <text>
+        </text>
+        <text>固定设置:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">使用固定波特率</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">每秒位数:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">使用固定线路控制</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">数据位:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">奇偶校验:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">停止位:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">使用固定流量控制</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">流量控制:</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

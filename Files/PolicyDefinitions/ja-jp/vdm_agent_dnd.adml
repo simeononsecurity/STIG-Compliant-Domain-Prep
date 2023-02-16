@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="VMwareViewDnD">ドラッグ アンド ドロップ</string>
+      <string id="SUPPORTED_VERSION"></string>
+      <string id="SERVER_DND_STATE">ドラッグ アンド ドロップの方向を設定</string>
+      <string id="DND_STATE_DISABLE_BOTH">どちらの方向も無効</string>
+      <string id="DND_STATE_ENABLE_CLIENT_2_SERVER">クライアントからエージェントの方向のみ有効</string>
+      <string id="DND_STATE_ENABLE_SERVER_2_CLIENT">エージェントからクライアントの方向のみ有効</string>
+      <string id="DND_STATE_ENABLE_BOTH">どちらの方向も有効</string>
+      <string id="SERVER_DND_STATE_EXPLAIN">ドラッグ アンド ドロップを許可する方向を決定します。次のいずれかの値を選択できます。
+
+- どちらの方向も無効
+- エージェントからクライアントの方向のみ有効 (エージェントからクライアント システムにのみドラッグ アンド ドロップを許可します)
+- クライアントからエージェントの方向のみ有効 (クライアント システムからエージェントにのみ、ドラッグ アンド ドロップを許可します)
+- どちらの方向も有効
+
+この設定はエージェントにのみ適用されます。
+
+この設定が無効または構成されていない場合、デフォルト値は「クライアントからエージェントの方向のみ有効」です。</string>
+      <string id="SERVER_DND_FORMAT_STATE">ドラッグ アンド ドロップのフォーマットを設定</string>
+      <string id="SERVER_DND_FORMAT_STATE_EXPLAIN">この設定により、各フォーマット (ファイル/テキスト/リッチテキスト/イメージ/HTML 形式/ファイル コンテンツ) で許可されるドラッグ アンド ドロップのオプションが決まります。オプションは次のとおりです。
+
+- どちらの方向も無効
+- エージェントからクライアントの方向のみ有効
+- クライアントからエージェントの方向のみ有効
+- どちらの方向も有効
+
+この設定はエージェントにのみ適用されます。デフォルトでは構成されていません。
+
+設定が無効か、未構成の場合、ドラッグ アンド ドロップのオプションはすべてのフォーマットで「どちらの方向も有効」になります。</string>
+      <string id="String_Policy_DropList_Select_DnD_size_unit_bytes" >バイト</string>
+      <string id="String_Policy_DropList_Select_DnD_size_unit_kilobytes" >KB</string>
+      <string id="String_Policy_DropList_Select_DnD_size_unit_megabytes" >MB</string>
+      <string id="SERVER_DND_SIZE">ドラッグ アンド ドロップのサイズしきい値の設定</string>
+      <string id="SERVER_DND_SIZE_EXPLAIN">ドラッグ アンド ドロップでは、プレーン テキスト、リッチテキスト、イメージ、ファイル、フォルダなど、さまざまなデータをドラッグできます。この設定により、ファイルとフォルダ以外の共通データ タイプをドラッグする際のサイズ制限が決まります。
+
+ドラッグのデータ サイズは、バイト、KB、MB 単位で設定できます。
+
+必要なサイズは「ドラッグ アンド ドロップのサイズのしきい値」で設定します。有効なデータ範囲は、サイズの単位によって異なります。
+- バイト: 1 ～ 1023
+- KB: 1 ～ 1023
+- MB: 1 ～ 16 (ドラッグ アンド ドロップのデータ サイズの上限は 16 MB です)
+
+この設定は、エージェントにのみ適用されます。
+
+設定が無効か、未構成の場合、デフォルトのしきい値 (1 MB) が設定されます。</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="SERVER_DND_STATE">
+        <dropdownList refId="SERVER_DND_STATE" defaultItem="2">ドラッグ アンド ドロップを設定</dropdownList>
+      </presentation>
+      <presentation id="SERVER_DND_FORMAT_STATE">
+        <dropdownList refId="SERVER_DND_FILE_STATE" defaultItem="3">ファイル形式のオプション:</dropdownList>
+        <dropdownList refId="SERVER_DND_TEXT_STATE" defaultItem="3">テキスト形式のオプション:</dropdownList>
+        <dropdownList refId="SERVER_DND_RTF_STATE" defaultItem="3">リッチテキスト形式のオプション:</dropdownList>
+        <dropdownList refId="SERVER_DND_IMAGE_STATE" defaultItem="3">イメージ形式のオプション:</dropdownList>
+        <dropdownList refId="SERVER_DND_HTML_STATE" defaultItem="3">HTML 形式のオプション:</dropdownList>
+        <dropdownList refId="SERVER_DND_FILE_CONTENT_STATE" defaultItem="3">ファイル コンテンツ形式のオプション:</dropdownList>
+      </presentation>
+      <presentation id="SERVER_DND_SIZE">
+        <dropdownList refId="Policy_DropList_DnD_Size_Unit" defaultItem="2" >ドラッグ アンド ドロップのサイズ単位の選択</dropdownList>
+        <decimalTextBox refId="SERVER_DND_SIZE" defaultValue="1">ドラッグ アンド ドロップのサイズのしきい値</decimalTextBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

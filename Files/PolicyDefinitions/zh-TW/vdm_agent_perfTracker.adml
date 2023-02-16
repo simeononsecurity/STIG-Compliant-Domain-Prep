@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName></displayName>
+  <description></description>
+  <resources>
+    <stringTable>
+      <string id="perf_tracker">Performance Tracker</string>
+      <string id="perfTrackerCMD">輸入 Performance Tracker 安裝路徑並執行參數</string>
+      <string id="SUPPORTED_NotSpecified">未指定</string>
+      <string id="perf_tracker_basic_settings">Performance Tracker 基本設定</string>
+      <string id="perf_tracker_VDI_auto_start">在遠端桌面平台連線中啟用 Performance Tracker 自動啟動</string>
+      <string id="perf_tracker_remote_app_auto_start">在遠端應用程式連線中啟用 Performance Tracker 自動啟動</string>
+      <string id="perf_tracker_blast_settings">Blast 臨界值設定</string>
+      <string id="perf_tracker_PCoIP_settings">PCoIP 臨界值設定</string>
+      <string id="perf_tracker_notification_settings_detail"> 此原則設定用來調整通知設定。
+
+啟用通知:
+啟用時，系統會顯示快顯通知來警告使用者。
+
+通知自動隱藏時間:
+在自動隱藏之前會顯示快顯通知的間隔 (以秒為單位)。
+
+通知之間的最小間隔:
+警示狀態將會保留下來以避免通知快速變動的輪詢數量。此值 * 輪詢間隔 = 秒。</string>
+      <string id="perf_tracker_basic_settings_detail"> Performance Tracker 基本設定。
+
+資料重新整理的頻率:
+我們提取效能資料的頻率 (以秒為單位)。</string>
+      <string id="perf_tracker_VDI_auto_start_detail">在遠端桌面平台連線中自動啟動 (使用或不使用 Performance Tracker UI)。
+
+如果啟用，perfTracker 將會在使用者登入遠端桌面平台連線時自動啟動。
+
+如果您已在另一個位置安裝 Performace Tracker 並想要自動啟動，請在文字行中輸入新路徑。如果您想要隱藏 Performace Tracker UI，請新增「-hideUI」參數，例如 C:\installation path\VMwarePerformanceTracker.exe -hideUI</string>
+      <string id="perf_tracker_remote_app_auto_start_detail">在遠端應用程式連線中自動啟動 (使用或不使用 Performance Tracker UI)。
+
+如果啟用，perfTracker 將會在使用者登入遠端應用程式連線時自動啟動。
+
+如果您已在另一個位置安裝 Performace Tracker 並想要自動啟動，請在文字行中輸入新路徑。如果您想要隱藏 Performace Tracker UI，請新增「-hideUI」參數，例如 C:\installation path\VMwarePerformanceTracker.exe -hideUI</string>
+      <string id="perf_tracker_blast_settings_detail">Blast 臨界值設定。
+
+警告 Blast 延遲值:
+針對 Blast 延遲度量會顯示警告的值 (以毫秒為單位)。
+
+錯誤 Blast 延遲值:
+針對 Blast 延遲度量會顯示錯誤的值 (以毫秒為單位)。
+
+警告 Blast 遺失值:
+針對 Blast 遺失超過此 % 值時會顯示警告的值 (%)。
+
+錯誤 Blast 遺失值:
+針對 Blast 遺失超過此 % 值時會顯示錯誤的值 (%)。
+
+錯誤 Blast 頻寬值:
+如果可用頻寬低於此值 (以 kbps 為單位)，系統將會顯示錯誤。
+
+警告 Blast 頻寬值:
+如果可用頻寬低於此值 (以 kbps 為單位)，系統將會顯示警告。</string>
+      <string id="perf_tracker_PCoIP_settings_detail">PCoIP 臨界值設定。
+
+警告 PCoIP 延遲值:
+針對 PCoIP 延遲度量會顯示警告的值 (以毫秒為單位)。
+
+錯誤 PCoIP 延遲值:
+針對 PCoIP 延遲度量會顯示錯誤的值 (以毫秒為單位)。
+
+警告 PCoIP 遺失值:
+針對 PCoIP 遺失超過此 % 值時會顯示警告的值 (%)。
+
+錯誤 PCoIP 遺失值:
+針對 PCoIP 遺失超過此 % 值時會顯示錯誤的值 (%)。
+
+錯誤 PCoIP 頻寬值:
+如果可用頻寬低於此值 (以 kbps 為單位)，系統將會顯示錯誤。
+
+警告 PCoIP 頻寬值:
+如果可用頻寬低於此值 (以 kbps 為單位)，系統將會顯示警告。</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="perf_tracker_basic_settings">
+        <decimalTextBox refId="DataCollectionFrequency" defaultValue="5">資料重新整理的頻率</decimalTextBox>
+      </presentation>
+      <presentation id="perf_tracker_auto_start_command">
+        <textBox refId="PerfTrackerCMD">
+          <label>輸入 Performance Tracker 安裝路徑並執行參數:</label>
+          <defaultValue>C:\Program Files\VMware\VMware View\Agent\Horizon Performance Tracker\VMware.Horizon.PerformanceTracker.exe</defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="perf_tracker_blast_settings">
+        <decimalTextBox refId="WarningBlastLatencyValue" defaultValue="100">警告 Blast 延遲值</decimalTextBox>
+        <decimalTextBox refId="ErrorBlastLatencyValue" defaultValue="300">錯誤 Blast 延遲值</decimalTextBox>
+        <textBox refId="WarningBlastLossValue">
+          <label>警告 Blast 遺失值</label>
+          <defaultValue>2</defaultValue>
+        </textBox>
+        <textBox refId="ErrorBlastLossValue" defaultValue="10">
+          <label>錯誤 Blast 遺失值</label>
+          <defaultValue>10</defaultValue>
+        </textBox>
+        <decimalTextBox refId="ErrorBlastBandwidthKbValue" defaultValue="512">錯誤 Blast 頻寬值</decimalTextBox>
+        <decimalTextBox refId="WarningBlastBandwidthKbValue" defaultValue="1500">警告 Blast 頻寬值</decimalTextBox>
+      </presentation>
+      <presentation id="perf_tracker_PCoIP_settings">
+        <decimalTextBox refId="WarningPCoIPLatencyValue" defaultValue="100">警告 PCoIP 延遲值</decimalTextBox>
+        <decimalTextBox refId="ErrorPCoIPLatencyValue" defaultValue="250">錯誤 PCoIP 延遲值</decimalTextBox>
+        <textBox refId="WarningPCoIPLossValue">
+          <label>警告 PCoIP 遺失值</label>
+          <defaultValue>0.5</defaultValue>
+        </textBox>
+        <textBox refId="ErrorPCoIPLossValue">
+          <label>錯誤 PCoIP 遺失值</label>
+          <defaultValue>2</defaultValue>
+        </textBox>
+        <decimalTextBox refId="ErrorPCoIPBandwidthKbValue" defaultValue="512">錯誤 PCoIP 頻寬值</decimalTextBox>
+        <decimalTextBox refId="WarningPCoIPBandwidthKbValue" defaultValue="1500">警告 PCoIP 頻寬值</decimalTextBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

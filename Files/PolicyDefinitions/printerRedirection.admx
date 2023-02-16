@@ -3,6 +3,7 @@
   <policyNamespaces>
     <target prefix="vdm_printerRedirtion" namespace="VMware.Policies.vdm_printerRedirtion" />
     <using prefix="windows" namespace="Microsoft.Policies.Windows" />
+    <using prefix="vdm_agent_base" namespace="VMware.Policies.vdm_agent_base" />
   </policyNamespaces>
   <resources minRequiredRevision="1.0" />
   <supportedOn>
@@ -11,7 +12,9 @@
     </definitions>
   </supportedOn>
   <categories>
-    <category name="VMwarePrintRedirection" displayName="$(string.print_redir)" />
+    <category name="VMwarePrintRedirection" displayName="$(string.print_redir)">
+       <parentCategory ref="vdm_agent_base:View_Agent_Config" />
+    </category>
   </categories>
   <policies>
     <policy name="PersistenceSetting" class="Both" displayName="$(string.persistence_setting)" explainText="$(string.persistence_setting_detail)" key="Software\Policies\VMware, Inc.\VMware VDM\PrintRedir" valueName="DisablePersistence">
@@ -29,6 +32,17 @@
     <policy name="LPSetting" class="Both" displayName="$(string.lp_setting)" explainText="$(string.lp_setting_detail)" key="Software\Policies\VMware, Inc.\VMware VDM\PrintRedir" valueName="DisableClientPrinterRedir">
       <parentCategory ref="VMwarePrintRedirection" />
       <supportedOn ref="SUPPORTED_NotSpecified" />
+    </policy>
+    <policy name="DefaultPrinter" class="Both" displayName="$(string.DefaultPrinter)" explainText="$(string.DefaultPrinter_detail)" key="Software\Policies\VMware, Inc.\VMware VDM\PrintRedir" valueName="DoNotChangeDefPrinter">
+      <parentCategory ref="VMwarePrintRedirection" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+    </policy>
+    <policy name="MaxTxRate" class="Both" displayName="$(string.MaxTxRate)" explainText="$(string.MaxTxRate_detail)" presentation="$(presentation.MaxTxRate)" key="Software\Policies\VMware, Inc.\VMware VDM\PrintRedir">
+      <parentCategory ref="VMwarePrintRedirection" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+        <elements>
+         <decimal id="MaxTxRate" key="Software\Policies\VMware, Inc.\VMware VDM\PrintRedir" valueName="MaxTxRateKbps" required="true" maxValue="32000" minValue="1600" />
+        </elements>
     </policy>
     <policy name="DriverMapping" class="Both" displayName="$(string.DriverMapping)" explainText="$(string.DriverMapping_detail)" presentation="$(presentation.DriverMapping)" key="Software\Policies\VMware, Inc.\VMware VDM\PrintRedir">
       <parentCategory ref="VMwarePrintRedirection" />
@@ -63,8 +77,20 @@
             </value>
           </item>
         </enum>
+        <enum id="preferred_upd" valueName="PreferredUPD" required="true">
+          <item displayName="$(string.preferredEMF)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.preferredXPS)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+        </enum>
       </elements>
-   </policy>
+    </policy>
     <policy name="printer_filter" class="Both" displayName="$(string.printer_filter)"
             explainText="$(string.printer_filter_desc)"
             key="Software\Policies\VMware, Inc.\VMware VDM\PrintRedir"
@@ -201,5 +227,34 @@
         </boolean>
       </elements>
     </policy>
+    <policy name="MaxDPI" class="Both" displayName="$(string.MaxDPI)" explainText="$(string.MaxDPI_detail)" presentation="$(presentation.MaxDPI)" key="Software\Policies\VMware, Inc.\VMware VDM\PrintRedir">
+      <parentCategory ref="VMwarePrintRedirection" />
+      <supportedOn ref="SUPPORTED_NotSpecified" />
+      <elements>
+        <enum id="MaxDPILevel" valueName="MaxDPILevel" required="true">
+          <item displayName="$(string.DPI_draft)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.DPI_low)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.DPI_medium)">
+            <value>
+              <decimal value="3" />
+            </value>
+          </item>
+          <item displayName="$(string.DPI_high)">
+            <value>
+              <decimal value="4" />
+            </value>
+          </item>
+        </enum>
+        <decimal id="MaxDPIValue" valueName="MaxDPIValue" required="true" minValue="1" />
+      </elements>
+   </policy>
   </policies>
 </policyDefinitions>

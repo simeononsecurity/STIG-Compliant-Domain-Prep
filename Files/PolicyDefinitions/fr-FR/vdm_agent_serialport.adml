@@ -1,4 +1,4 @@
-<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+﻿<policyDefinitionResources revision="1.0" schemaVersion="1.0">
   <displayName>
   </displayName>
   <description>
@@ -23,6 +23,39 @@ Si ce paramètre de stratégie n'est pas configuré, la fonctionnalité de désa
       <string id="RedirectAll_PolicyExplain">Si ce paramètre de stratégie est activé, tous les ports COM clients sont automatiquement connectés (même si aucun GPO individuel n'est configuré). Si des paramètres GPO individuels sont configurés pour certains ports, les paramètres de GPO de port individuel sont utilisés.
 
 Si ce paramètre de stratégie est désactivé ou qu'il n'est pas configuré, la fonctionnalité de connexion automatique est déterminée par un GPO de port individuel ou par des paramètres de programme locaux.</string>
+      <string id="EnableEventLog_PolicyName">Activer la fonctionnalité Journal d'événements Windows</string>
+      <string id="EnableEventLog_PolicyExplain">Si ce paramètre de stratégie est activé, différents événements liés au port série sont écrits dans la catégorie Journal des applications du journal d'événements Windows.
+
+Si ce paramètre de stratégie est désactivé ou non configuré, aucun enregistrement de journal n'est écrit dans la partie Application de l'Observateur d'événements Windows.
+
+Les événements suivants sont pris en charge :
+5 : tentative d'établissement d'une connexion au PC client.
+10 : la connexion entre les côtés agent et client est établie.
+20 : la connexion est fermée entre les côtés agent et client.
+30 : énumération initiale des ports (liste des ports série disponibles sur le PC client et disponibles pour la connexion).
+40 : connecté. Le port a été connecté.
+41 : connecté. Le port est occupé (pendant la reconnexion de la session). Le port redevient accessible en lecture/écriture.
+50 : déconnecté. Le port s'est déconnecté.
+51 : déconnecté. Le port est occupé (pendant la détection de la déconnexion de la session). Le port reste actif, mais il n'est pas accessible en lecture/écriture.
+60 : erreur
+
+Format de l'entrée élément de port :
+&lt;Nom du port source&gt; DÉLIMITEUR &lt;Nom du port de destination&gt; DÉLIMITEUR &lt;ID de matériel&gt; DÉLIMITEUR &lt;Description du périphérique&gt;
+
+&lt;Nom du port source&gt; : nom du port COM, tel qu'il s'affiche sur le PC client, p. ex. COM2
+&lt;Nom du port de destination&gt; : nom du port COM virtuel, tel qu'il s'affiche dans la session de poste de travail distant, p. ex. COM15
+&lt;ID de matériel&gt; et &lt;Description&gt; : propriétés du périphérique parent (au cas où le port série sur le PC client est en réalité un périphérique USB ou autre)
+DÉLIMITEUR : chaîne de séparation du format des données d'événement
+
+Exemple (la virgule est utilisée comme DÉLIMITEUR) :
+COM20,COM28,USB\VID_067B&amp;PID_2303&amp;REV_0400,port de communication USB vers série Prolific</string>
+      <string id="EventLogTableSeparator_PolicyName">Activer le séparateur de format de données d'événement</string>
+      <string id="EventLogTableSeparator_PolicyExplain">Lorsqu'elle est activée, cette stratégie définit la chaîne qui est utilisée comme séparateur de ligne pour les champs de données.
+
+Le séparateur par défaut est le caractère de tabulation. Toutefois, il est possible de le remplacer par n'importe quel autre caractère, comme une virgule, un point-virgule, un espace ou tout autre caractère personnalisé, voire une chaîne.</string>
+	  <string id="EventLogTableSeparatorType_TAB_combo_txt">Onglet</string>
+	  <string id="EventLogTableSeparatorType_SPACE_combo_txt">Espace</string>
+	  <string id="EventLogTableSeparatorType_custom_combo_txt">Chaîne personnalisée</string>
       <string id="PortIsolationMode_PolicyName">Mode d'isolation du port COM</string>
       <string id="PortIsolationMode_PolicyExplain">Si le mode « Isolation complète » est choisi, les ports série virtuels sont visibles et accessibles au sein des sessions utilisateur uniquement. Dans ce mode, les noms de ports COM peuvent être identiques dans des sessions utilisateur différentes. Important : les services système (tels que spoolsrv.exe) ne peuvent pas accéder à des ports série isolés dans un tel cas.
 
@@ -52,7 +85,14 @@ Si ce paramètre de stratégie n'est pas configuré, la limitation de vitesse es
 
 Si un port n'est pas autorisé pour la redirection, le côté Agent le menacera comme si le port n'existait même pas côté Client.
 
-Les listes utilisent les propriétés du périphérique USB parent du port COM.
+La stratégie est une chaîne multiligne qui contient une liste de règles.
+
+Example :
+  USB : 067B:2303:*
+  USBPATH : 1-4
+  WINDEVID :*ACPI*
+  PORTNAME : COM3
+  PORTNAME : COM5
 
 Syntaxe :
   USB : [*|VID[:*|:PID[:*|:REV]]]
@@ -60,21 +100,34 @@ Syntaxe :
     PID - Valeur PID numérique hexadécimale (ID de produit) de l'ID de matériel du périphérique
     REV - Valeur REV numérique hexadécimale (Révision) de l'ID de matériel du périphérique
     Lorsque les valeurs VID, PID, REV sont égales à « * », cela implique toutes les valeurs.
+	
+  USBPATH:[N1[-N2[...[-N8]]]]
+    Nx : valeur numérique (plage comprise entre 1 et 127) qui identifie le port USB.	
   
   WINDEVID : [HwId|*|?]
-    HwId - valeur complète ou partielle de l'ID de matériel du périphérique (les caractères génériques * et ? sont pris en charge). Insensible à la casse.
+    HwId - valeur complète ou partielle de l'ID de matériel du périphérique (les caractères génériques * et ? sont pris en charge). Non sensible à la casse.
+
+  PORTNAME:[PortName|*|?]
+    PortName : valeur complète ou partielle du nom du port série (caractères génériques * et ? sont pris en charge). Insensible à la casse.
 
 Exemples :
   USB:067B:2303:400 - correspond au périphérique USB avec les valeurs VID, PID et Révision spécifiées. USB\VID_067B&amp;PID_2303&amp;REV_0400
   USB:067B:2303:* - correspond à tout périphérique USB avec les valeurs VID et PID spécifiées, et n'importe quelle valeur Révision. USB\VID_067B&amp;PID_2303
   USB:067B:* - correspond à tout périphérique USB avec la valeur VID spécifiée, et n'importe quelles valeurs PID et Révision. USB\VID_067B
-  USB :* - correspond à tout périphérique USB
+  USB :* - correspond à un périphérique USB quelconque
+  
+  USBPATH : 1-2-1 - correspond à l'identificateur du port USB sur lequel le périphérique est branché physiquement  
 
-  WINDEVID :*  - correspond à toute chaîne ID de matériel
+  WINDEVID :*  - correspond à une chaîne ID de matériel quelconque
   WINDEVID :*ACPI* - correspond à une chaîne ID de matériel contenant la sous-chaîne ACPI
+  
+  PORTNAME : COM3 - correspond uniquement au port série « COM3 »
+  PORTNAME :*M3 - correspond aux ports série dont les noms se terminent par « M3». Par exemple, COM3 et VCOM3.
+  PORTNAME:*M3* : correspond aux ports série dont les noms contiennent la sous-chaîne « M3 ». Par exemple, COM3, COM33 et VCOM333.
+  PORTNAME:/dev/ttys* : correspond à tous les périphériques « /dev/ttys ». Par exemple, /dev/ttyS0 et /dev/ttyS5.
 
-Remarques :
-  La liste autorisée dispose d'une priorité plus élevée. Si le périphérique correspond à la liste bloquée, il est alors exclu de la redirection. Mais si en même temps, le périphérique correspond à la liste autorisée, le périphérique est autorisé pour la redirection.
+Remarque :
+  La liste autorisée a une priorité plus élevée. Si le périphérique correspond à la liste bloquée, il est alors exclu de la redirection. Mais si en même temps, le périphérique correspond à la liste autorisée, le périphérique est autorisé pour la redirection.
 	  </string>
 	  <string id="AllowDenyPortFiltersList_PartName">Liste autorisée</string>
 	  <string id="DenyDenyPortFiltersList_PartName">Liste bloquée</string>
@@ -89,7 +142,11 @@ Remarques :
 
 « Numéro du port source » - Numéro de port COM redirigé à partir du côté client (par exemple, 2 signifie COM2).
 
-« Périphérique à port source » - Nom du périphérique à port série redirigé à partir du côté client (par exemple, « COM5 » pour Windows ou « /dev/ttySerial0 » pour Linux. Ce paramètre prévaut sur le numéro de port source.).
+« Périphérique de port source » : par défaut, nom du périphérique de port série redirigé côté client. En outre, une syntaxe spéciale est prise en charge pour une correspondance de périphérique série complexe.
+
+Remarque : ce paramètre présente une priorité supérieure à celle du numéro de port source.
+
+Le port source est généralement identifié par le nom du périphérique (par exemple, « COM5 » pour Windows ou « /dev/ttySerial0 » pour Linux). De toute façon, une syntaxe de correspondance spéciale est prise en charge afin d'identifier le périphérique série source par les propriétés du périphérique USB, l'identifiant de port USB, etc. Pour plus d'informations, reportez-vous à la section Filtres d'autorisation/de refus.
 
 Numéro du port virtuel de destination - Numéro de port COM virtuel, créé du côté agent et correspondant au port COM du côté client.
 
@@ -176,6 +233,13 @@ Si ce paramètre de stratégie est configuré pour l'ordinateur, il est priorita
     <presentationTable>
       <presentation id="LocalSettingsPriority_PolicyName" />
       <presentation id="DisableFunctionality_PolicyName" />
+      <presentation id="EnableEventLog_PolicyName" />
+	  <presentation id="EventLogTableSeparator_PolicyName">
+		<dropdownList refId="EventLogTableSeparatorType_Enum" noSort="true">Séparateur de format de données d'événement :</dropdownList>
+        <textBox refId="EventLogTableSeparatorType_custom_Text">
+            <label>Chaîne personnalisée :</label>
+        </textBox>
+	  </presentation>
       <presentation id="RedirectAll_PolicyName" />
       <presentation id="PortIsolationMode_PolicyName">
         <dropdownList refId="PortIsolationMode_Enum" noSort="true">Mode d'isolation du port COM :</dropdownList>

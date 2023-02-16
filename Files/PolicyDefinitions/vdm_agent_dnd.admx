@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitions revision="1.0" schemaVersion="1.0">
+  <policyNamespaces>
+    <target prefix="vdm_dnd" namespace="VMware.Policies.vdm_dnd" />
+    <using prefix="windows" namespace="Microsoft.Policies.Windows" />
+    <using prefix="vdm_agent_base" namespace="VMware.Policies.vdm_agent_base" />
+  </policyNamespaces>
+  <resources minRequiredRevision="1.0" />
+  <supportedOn>
+    <definitions>
+      <definition name="SUPPORTED_VERSION" displayName="$(string.SUPPORTED_VERSION)" />
+    </definitions>
+  </supportedOn>
+  <categories>
+    <category name="VMwareViewDnD" displayName="$(string.VMwareViewDnD)">
+      <parentCategory ref="vdm_agent_base:View_Agent_Config" />
+    </category>
+  </categories>
+  <policies>
+    <policy name="SERVER_DND_STATE" class="Machine" displayName="$(string.SERVER_DND_STATE)" explainText="$(string.SERVER_DND_STATE_EXPLAIN)" presentation="$(presentation.SERVER_DND_STATE)" key="Software\Policies\VMware, Inc.\VMware VDM\Agent\Drag and Drop">
+      <parentCategory ref="VMwareViewDnD" />
+      <supportedOn ref="SUPPORTED_VERSION" />
+      <enabledList>
+        <item key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config" valueName="DnDState">
+          <value>
+            <delete />
+          </value>
+        </item>
+        <item key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" valueName="pcoip.server_dnd_state">
+          <value>
+            <delete />
+          </value>
+        </item>
+        <!--To make "Group Policy Editor" can show disabled status when user disable this GPO Setting -->
+        <item key="Software\Policies\VMware, Inc.\VMware VDM\Agent\Drag and Drop" valueName="DnDState">
+          <value>
+            <string>1</string>
+          </value>
+        </item>
+      </enabledList>
+      <disabledList>
+        <!--To make "Group Policy Editor" can show disabled status when user disable this GPO Setting -->
+        <item key="Software\Policies\VMware, Inc.\VMware VDM\Agent\Drag and Drop" valueName="DnDState">
+          <value>
+            <delete />
+          </value>
+        </item>
+      </disabledList>
+      <elements>
+        <enum id="SERVER_DND_STATE" valueName="DnDState" required="true">
+          <item displayName="$(string.DND_STATE_DISABLE_BOTH)">
+            <value>
+              <string>0</string>
+            </value>
+          </item>
+          <item displayName="$(string.DND_STATE_ENABLE_CLIENT_2_SERVER)">
+            <value>
+              <string>1</string>
+            </value>
+          </item>
+          <item displayName="$(string.DND_STATE_ENABLE_SERVER_2_CLIENT)">
+            <value>
+              <string>2</string>
+            </value>
+          </item>
+          <item displayName="$(string.DND_STATE_ENABLE_BOTH)">
+            <value>
+              <string>3</string>
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="SERVER_DND_FORMAT_STATE" class="Machine" displayName="$(string.SERVER_DND_FORMAT_STATE)" explainText="$(string.SERVER_DND_FORMAT_STATE_EXPLAIN)" presentation="$(presentation.SERVER_DND_FORMAT_STATE)" key="Software\Policies\VMware, Inc.\VMware VDM\Agent\Drag and Drop">
+      <parentCategory ref="VMwareViewDnD" />
+      <supportedOn ref="SUPPORTED_VERSION" />
+      <enabledList>
+        <item key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config" valueName="DnDFileState">
+          <value>
+            <delete />
+          </value>
+        </item>
+        <item key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config" valueName="DnDTextState">
+          <value>
+            <delete />
+          </value>
+        </item>
+        <item key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config" valueName="DnDRTFState">
+          <value>
+            <delete />
+          </value>
+        </item>
+        <item key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config" valueName="DnDImageState">
+          <value>
+            <delete />
+          </value>
+        </item>
+        <item key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config" valueName="DnDHTMLState">
+          <value>
+            <delete />
+          </value>
+        </item>
+        <item key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config" valueName="DnDFileContentState">
+          <value>
+            <delete />
+          </value>
+        </item>
+        <item key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" valueName="pcoip.server_dnd_file_state">
+          <value>
+            <delete />
+          </value>
+        </item>
+        <item key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" valueName="pcoip.server_dnd_text_state">
+          <value>
+            <delete />
+          </value>
+        </item>
+        <item key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" valueName="pcoip.server_dnd_rtf_state">
+          <value>
+            <delete />
+          </value>
+        </item>
+        <item key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" valueName="pcoip.server_dnd_image_state">
+          <value>
+            <delete />
+          </value>
+        </item>
+        <item key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" valueName="pcoip.server_dnd_html_state">
+          <value>
+            <delete />
+          </value>
+        </item>
+        <item key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" valueName="pcoip.server_dnd_file_content_state">
+          <value>
+            <delete />
+          </value>
+        </item>
+        <!--To make "Group Policy Editor" can show disabled status when user disable this GPO Setting -->
+        <item key="Software\Policies\VMware, Inc.\VMware VDM\Agent\Drag and Drop" valueName="DnDTextState">
+          <value>
+            <string>3</string>
+          </value>
+        </item>
+      </enabledList>
+      <disabledList>
+        <!--To make "Group Policy Editor" can show disabled status when user disable this GPO Setting -->
+        <item key="Software\Policies\VMware, Inc.\VMware VDM\Agent\Drag and Drop" valueName="DnDTextState">
+          <value>
+            <delete />
+          </value>
+        </item>
+      </disabledList>
+      <elements>
+        <enum id="SERVER_DND_FILE_STATE" valueName="DnDFileState" required="true">
+          <item displayName="$(string.DND_STATE_DISABLE_BOTH)">
+            <value>
+              <string>0</string>
+            </value>
+          </item>
+          <item displayName="$(string.DND_STATE_ENABLE_CLIENT_2_SERVER)">
+            <value>
+              <string>1</string>
+            </value>
+          </item>
+          <item displayName="$(string.DND_STATE_ENABLE_SERVER_2_CLIENT)">
+            <value>
+              <string>2</string>
+            </value>
+          </item>
+          <item displayName="$(string.DND_STATE_ENABLE_BOTH)">
+            <value>
+              <string>3</string>
+            </value>
+          </item>
+        </enum>
+        <enum id="SERVER_DND_TEXT_STATE" valueName="DnDTextState" required="true">
+          <item displayName="$(string.DND_STATE_DISABLE_BOTH)">
+            <value>
+              <string>0</string>
+            </value>
+          </item>
+          <item displayName="$(string.DND_STATE_ENABLE_CLIENT_2_SERVER)">
+            <value>
+              <string>1</string>
+            </value>
+          </item>
+          <item displayName="$(string.DND_STATE_ENABLE_SERVER_2_CLIENT)">
+            <value>
+              <string>2</string>
+            </value>
+          </item>
+          <item displayName="$(string.DND_STATE_ENABLE_BOTH)">
+            <value>
+              <string>3</string>
+            </value>
+          </item>
+        </enum>
+        <enum id="SERVER_DND_RTF_STATE" valueName="DnDRTFState" required="true">
+          <item displayName="$(string.DND_STATE_DISABLE_BOTH)">
+            <value>
+              <string>0</string>
+            </value>
+          </item>
+          <item displayName="$(string.DND_STATE_ENABLE_CLIENT_2_SERVER)">
+            <value>
+              <string>1</string>
+            </value>
+          </item>
+          <item displayName="$(string.DND_STATE_ENABLE_SERVER_2_CLIENT)">
+            <value>
+              <string>2</string>
+            </value>
+          </item>
+          <item displayName="$(string.DND_STATE_ENABLE_BOTH)">
+            <value>
+              <string>3</string>
+            </value>
+          </item>
+        </enum>
+        <enum id="SERVER_DND_IMAGE_STATE" valueName="DnDImageState" required="true">
+          <item displayName="$(string.DND_STATE_DISABLE_BOTH)">
+            <value>
+              <string>0</string>
+            </value>
+          </item>
+          <item displayName="$(string.DND_STATE_ENABLE_CLIENT_2_SERVER)">
+            <value>
+              <string>1</string>
+            </value>
+          </item>
+          <item displayName="$(string.DND_STATE_ENABLE_SERVER_2_CLIENT)">
+            <value>
+              <string>2</string>
+            </value>
+          </item>
+          <item displayName="$(string.DND_STATE_ENABLE_BOTH)">
+            <value>
+              <string>3</string>
+            </value>
+          </item>
+        </enum>
+        <enum id="SERVER_DND_HTML_STATE" valueName="DnDHTMLState" required="true">
+          <item displayName="$(string.DND_STATE_DISABLE_BOTH)">
+            <value>
+              <string>0</string>
+            </value>
+          </item>
+          <item displayName="$(string.DND_STATE_ENABLE_CLIENT_2_SERVER)">
+            <value>
+              <string>1</string>
+            </value>
+          </item>
+          <item displayName="$(string.DND_STATE_ENABLE_SERVER_2_CLIENT)">
+            <value>
+              <string>2</string>
+            </value>
+          </item>
+          <item displayName="$(string.DND_STATE_ENABLE_BOTH)">
+            <value>
+              <string>3</string>
+            </value>
+          </item>
+        </enum>
+        <enum id="SERVER_DND_FILE_CONTENT_STATE" valueName="DnDFileContentState" required="true">
+          <item displayName="$(string.DND_STATE_DISABLE_BOTH)">
+            <value>
+              <string>0</string>
+            </value>
+          </item>
+          <item displayName="$(string.DND_STATE_ENABLE_CLIENT_2_SERVER)">
+            <value>
+              <string>1</string>
+            </value>
+          </item>
+          <item displayName="$(string.DND_STATE_ENABLE_SERVER_2_CLIENT)">
+            <value>
+              <string>2</string>
+            </value>
+          </item>
+          <item displayName="$(string.DND_STATE_ENABLE_BOTH)">
+            <value>
+              <string>3</string>
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="SERVER_DND_SIZE" class="Machine" displayName="$(string.SERVER_DND_SIZE)" explainText="$(string.SERVER_DND_SIZE_EXPLAIN)" presentation="$(presentation.SERVER_DND_SIZE)" key="Software\Policies\VMware, Inc.\VMware VDM\Agent\Drag and Drop">
+      <parentCategory ref="VMwareViewDnD" />
+      <supportedOn ref="SUPPORTED_VERSION" />
+      <enabledList>
+        <item key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config" valueName="DnDSizeUnit">
+          <value>
+            <delete />
+          </value>
+        </item>
+        <item key="SOFTWARE\Policies\VMware, Inc.\VMware Blast\Config" valueName="DnDSize">
+          <value>
+            <delete />
+          </value>
+        </item>
+        <item key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" valueName="pcoip.server_dnd_size_unit">
+          <value>
+            <delete />
+          </value>
+        </item>
+        <item key="Software\Policies\Teradici\PCoIP\pcoip_admin_defaults" valueName="pcoip.server_dnd_size">
+          <value>
+            <delete />
+          </value>
+        </item>
+        <!--To make "Group Policy Editor" can show disabled status when user disable this GPO Setting -->
+        <item key="Software\Policies\VMware, Inc.\VMware VDM\Agent\Drag and Drop" valueName="DnDSizeUnit">
+          <value>
+            <decimal value="2" />
+          </value>
+        </item>
+      </enabledList>
+      <disabledList>
+        <!--To make "Group Policy Editor" can show disabled status when user disable this GPO Setting -->
+        <item key="Software\Policies\VMware, Inc.\VMware VDM\Agent\Drag and Drop" valueName="DnDSizeUnit">
+          <value>
+            <delete />
+          </value>
+        </item>
+      </disabledList>
+      <elements>
+        <enum id="Policy_DropList_DnD_Size_Unit" valueName="DnDSizeUnit" required="true" >
+          <item displayName="$(string.String_Policy_DropList_Select_DnD_size_unit_bytes)" >
+            <value >
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.String_Policy_DropList_Select_DnD_size_unit_kilobytes)" >
+            <value >
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.String_Policy_DropList_Select_DnD_size_unit_megabytes)" >
+            <value >
+              <decimal value="2" />
+            </value>
+          </item>
+        </enum>
+        <decimal id="SERVER_DND_SIZE" valueName="DnDSize" minValue="1" maxValue="1023" />
+      </elements>
+    </policy>
+  </policies>
+</policyDefinitions>

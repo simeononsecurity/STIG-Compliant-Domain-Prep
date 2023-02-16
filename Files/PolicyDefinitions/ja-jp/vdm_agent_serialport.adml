@@ -1,0 +1,582 @@
+﻿<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName>
+  </displayName>
+  <description>
+  </description>
+  <resources>
+    <stringTable>
+      <string id="Product_CatName">シリアル COM</string>
+      <string id="LocalSettingsPriority_PolicyName">ローカル設定の優先度</string>
+      <string id="LocalSettingsPriority_PolicyExplain">このポリシー設定を有効にすると、ローカル プログラムの設定がポリシー設定よりも優先されます。
+
+このポリシー設定が無効な場合、または構成されていない場合、ポリシー設定がローカル プログラムの設定よりも優先されます。
+
+各設定タイプの範囲内であれば、コンピュータに対する設定がユーザーに対する設定よりも常に優先されます。
+このポリシー設定をコンピュータに構成すると、ユーザーに構成したポリシー設定よりも優先されます。</string>
+      <string id="DisableFunctionality_PolicyName">機能を無効にする</string>
+      <string id="DisableFunctionality_PolicyExplain">このポリシー設定を有効にすると、クライアント側の接続が確立されず、ポートがリダイレクトされません。また、トレイ メニューのアイコンも表示されません。
+
+このポリシー設定を無効にすると、シリアル COM が通常モードで機能します。
+
+このポリシーを構成しない場合、ローカル プログラムの設定で無効になる機能が決まります。</string>
+      <string id="RedirectAll_PolicyName">すべてのポートを自動的に接続</string>
+      <string id="RedirectAll_PolicyExplain">このポリシー設定を有効にすると、個々の GPO が構成されていない場合でも、すべてのクライアント COM ポートが自動的に接続されます。一部のポートに対して個別の GPO 設定が構成されている場合は、個々のポート GPO の設定が使用されます。
+
+このポリシー設定を無効にするか、構成しない場合、自動接続機能は、個々のポート GPO またはローカル プログラムの設定によって決まります。</string>
+      <string id="EnableEventLog_PolicyName">Windows イベント ログ機能を有効にする</string>
+      <string id="EnableEventLog_PolicyExplain">このポリシー設定を有効にすると、異なるシリアル ポート関連のイベントが Windows イベント ログのアプリケーション ログ カテゴリに書き込まれます。
+
+このポリシー設定が無効になっているか、構成されていない場合、Windows EventViewer のアプリケーション部分にログ レコードが書き込まれません。
+
+次のイベントがサポートされます。
+5 - クライアント PC との接続を確立しようとしています。
+10 - エージェント側とクライアント側の間で接続が確立されました。
+20 - エージェント側とクライアント側の間で接続が終了しています。
+30 - 初期ポート列挙 (クライアント PC で使用可能なシリアル ポートのリスト。接続で使用可能)。
+40 - 接続済み。ポートが接続されました。
+41 - 接続済み。ポートが占有されています (セッションの再接続中)。ポートが再び読み取り/書き込み可能になります。
+50 - 切断済み。ポートが切断されました。
+51 - 切断済み。ポートが占有されています (セッションの切断を検出)。ポートはアクティブなままですが、読み取り/書き込みはできません。
+60 - エラー
+
+ポート項目のエントリの形式:
+&lt;Source port name&gt; DELIMETER &lt;Destination port name&gt; DELIMETER &lt;Hardware ID&gt; DELIMITER &lt;Device Description&gt;
+
+&lt;Source port name&gt; – クライアント PC に表示される COM ポートの名前。例: COM2
+&lt;Destination port name&gt; – リモート デスクトップ セッションに表示される仮想 COM ポートの名前。例: COM15
+&lt;Hardware ID&gt; と &lt;Description&gt; - 親デバイスのプロパティ (クライアント PC のシリアル ポートが、USB または他のデバイスの場合)
+DELIMETER - イベント データ形式の区切り文字
+
+例 (区切り文字としてカンマを使用):
+COM20,COM28,USB\VID_067B&amp;PID_2303&amp;REV_0400,Prolific USB-to-Serial Comm Port</string>
+      <string id="EventLogTableSeparator_PolicyName">イベント データの形式区切り文字を有効にする</string>
+      <string id="EventLogTableSeparator_PolicyExplain">このポリシーを有効にすると、データ フィールドの行区切り文字に使用する文字列を定義します。
+
+デフォルトの区切り文字はタブです。ただし、カンマ、セミコロン、スペース、その他のカスタム文字、文字列など、任意の文字に変更できます。</string>
+	  <string id="EventLogTableSeparatorType_TAB_combo_txt">タブ</string>
+	  <string id="EventLogTableSeparatorType_SPACE_combo_txt">容量</string>
+	  <string id="EventLogTableSeparatorType_custom_combo_txt">カスタム文字列</string>
+      <string id="PortIsolationMode_PolicyName">COM ポートの隔離モード</string>
+      <string id="PortIsolationMode_PolicyExplain">「完全隔離」モードを選択すると、仮想シリアル ポートはユーザー セッションでのみ表示され、アクセス可能になります。このモードでは、別のユーザー セッションで同じ COM ポート名が表示される場合があります。重要: このような場合、spoolsrv.exe などのシステム サービスは隔離されたシリアル ポートにアクセスできません。
+
+「隔離無効」モードを選択すると、仮想シリアル ポートはグローバルに表示されます。どのポートもすべてのセッションからアクセスできます。制限事項: 同じ名前のポートが別のユーザー セッションに表示されないように、ユーザーごとに固有のポート名を使用する必要があります。重要: spoolsrv.exe などのシステム サービスは、すべてのシリアル ポートにアクセスできます。
+
+このポリシー設定を行わないと、シリアル リダイレクトは「完全分離」モードで動作します。</string>
+      <string id="PortIsolationMode_Full_Isolation_combo_txt">完全隔離</string>
+      <string id="PortIsolationMode_Isolation_Disabled_combo_txt">隔離無効</string>
+      <string id="LockConfig_PolicyName">ロックの構成</string>
+      <string id="LockConfig_PolicyExplain">このポリシー設定を有効にすると、プログラムの設定を含むユーザー インターフェイスがロックされ、ユーザーはトレイ メニューで設定を変更できなくなります。
+
+このポリシー設定を無効にすると、ユーザーはプログラムの設定を含むユーザー インターフェイスにアクセスできます。
+
+このポリシーを構成しないと、ブロックする構成がローカル プログラムの設定で決まります。
+
+このポリシー設定をコンピュータに構成すると、ユーザーに設定したポリシー設定よりも優先されます。</string>
+      <string id="BandwidthLimit_PolicyName">バンド幅制限</string>
+      <string id="BandwidthLimit_PolicyExplain">このポリシー設定を有効にすると、エージェントとすべてのクライアント間のデータ転送速度が、指定された kbps で制限されます。0 を指定すると、速度制限は無効になります。
+
+このポリシー設定を無効にすると、速度制限は無効になります。
+
+このポリシーを構成しない場合、速度制限はローカル プログラムの設定で決まります。</string>
+      <string id="BandwidthLimit_PartName">バンド幅制限 (キロバイト/秒):</string>
+
+	  <string id="AllowDenyPortFiltersList_PolicyName">ポート フィルタの許可/拒否</string>
+	  <string id="AllowDenyPortFiltersList_PolicyExplain">このポリシーを有効にすると、クライアント側で検出されたすべての COM ポートでリダイレクトを許可するかどうか判断するために、許可ファイルと拒否ファイルが使用されます。
+
+一部のポートでリダイレクトが許可されていないと、エージェント側は、ポートがクライアント側に存在しない場合と同様に処理します。
+
+ポリシーは、ルールのリストを含む複数行の文字列です。
+
+例:
+  USB:067B:2303:*
+  USBPATH:1-4
+  WINDEVID:*ACPI*
+  PORTNAME:COM3
+  PORTNAME:COM5
+
+構文:
+  USB:[*|VID[:*|:PID[:*|:REV]]]
+    VID - デバイスの HardwareID から取得した 16 進数の VID (ベンダー ID) 値
+    PID - デバイスの HardwareID から取得した 16 進数の PID (製品 ID) 値
+    REV - デバイスの HardwareID から取得した 16 進数の REV (リビジョン) 値
+    VID、PID、REV を &quot;*&quot; にすると、任意の値が使用されます。
+	
+  USBPATH:[N1[-N2[...[-N8]]]]
+    Nx - USB ポートを識別する数値 (1 ～ 127 の範囲)。	
+  
+  WINDEVID:[HwId|*|?]
+    HwId - デバイスの HardwareID の完全または部分的な値 (ワイルドカード文字 * および ? がサポートされます)。大文字と小文字は区別されません。
+
+  PORTNAME:[PortName|*|?]
+    PortName - シリアル ポート名の完全な値または部分的な値 (ワイルドカード文字 * および ? がサポートされます)。大文字と小文字は区別されません。
+
+例:
+  USB:067B:2303:400 - 指定された VID、PID、リビジョンの USB デバイスと一致します。USB\VID_067B&amp;PID_2303&amp;REV_0400
+  USB:067B:2303:* - 指定された VID、PID と任意のリビジョンを持つ任意の USB デバイスに一致します。USB\VID_067B&amp;PID_2303
+  USB:067B:* - 指定された VID、任意の PID、およびリビジョンを持つ任意の USB デバイスに一致します。USB\VID_067B
+  USB:* - 任意の USB デバイスに一致します
+  
+  USBPATH:1-2-1 - デバイスが物理的に接続されている USB ポートの識別子に一致します。
+
+  WINDEVID:*  - 任意の HardwareID 文字列に一致します。
+  WINDEVID:*ACPI* - ACPI サブ文字列を含む HardwareID 文字列に一致します。
+  
+  PORTNAME:COM3 - COM3 シリアル ポートにのみ一致します。
+  PORTNAME:*M3 - 名前が M3 で終わるシリアル ポートに一致します。例: COM3、VCOM3
+  PORTNAME:*M3* - 名前の一部に M3 が含まれるシリアル ポートに一致します。例: COM3、COM33、VCOM333
+  PORTNAME:/dev/ttys* - すべての /dev/ttys デバイスに一致します。例: /dev/ttyS0、/dev/ttyS5
+
+注:
+  許可リストの優先度は高くなります。そのため、デバイスが拒否リストと一致すると、デバイスはリダイレクトから除外されます。デバイスが許可リストと一致した場合は、デバイスにリダイレクトが許可されます。
+	  </string>
+	  <string id="AllowDenyPortFiltersList_PartName">許可リスト</string>
+	  <string id="DenyDenyPortFiltersList_PartName">拒否リスト</string>
+		
+      <string id="PortSettings_CatName">PortSettings</string>
+      <string id="PortSettings1_PolicyName">PortSettings1</string>
+      <string id="PortSettings2_PolicyName">PortSettings2</string>
+      <string id="PortSettings3_PolicyName">PortSettings3</string>
+      <string id="PortSettings4_PolicyName">PortSettings4</string>
+      <string id="PortSettings5_PolicyName">PortSettings5</string>
+      <string id="PortSettings_PolicyExplain">このポリシー設定は、リダイレクトに使用する特定のポート パラメータを構成する場合に使用します。
+
+「ソース ポート番号」- クライアント側からリダイレクトされる COM ポート番号 (たとえば、2 は COM2)。
+
+「ソース ポート デバイス」- デフォルトでは、クライアント側からリダイレクトされたシリアル ポート デバイスの名前。複雑なシリアル デバイス マッチングでは特別な構文がサポートされます。
+
+注: このパラメータの優先度は「ソース ポート番号」よりも高くなります。
+
+通常、ソース ポートはデバイス名で識別されます (たとえば、Windows の場合は「COM5」、Linux の場合は「/dev/ttySerial0」など)。ただし、USB デバイスのプロパティ、USB ポート識別子などを使用してソース シリアル デバイスを識別するために、特別なマッチング構文がサポートされています。詳細については、許可/拒否フィルタのセクションを参照してください。
+
+宛先の仮想ポート番号 - エージェント側で作成され、クライアント側の COM ポートに対応している仮想 COM ポート番号。
+
+自動接続 - このフラグを設定すると、クライアント側でポートに接続したときに、エージェント側に自動的にリダイレクトされます。
+
+IgnoreDsr - このフラグを設定すると、DSR 信号が無視されます。
+
+ポートを閉じる前に停止 - トラブルシューティング用の設定。ユーザーが仮想 COM ポートを閉じるまでの待機時間 (ミリ秒)一部の USB-COM アダプタで必須です。
+
+「データを送信する前に停止を使用する」 - このフラグを設定すると、ポートを開いた後データを送信する前に停止されます。「データを送信する前に停止」の値を参照
+
+「データを送信する前に停止」 - トラブルシューティング用の設定。仮想 COM ポートが物理側にデータを送信するまでの待機時間 (ミリ秒) です。特定のシリアル デバイスに必要です (Olivetti カード リーダー)。
+
+Serial2USBModeChangeEnabled - トラブルシューティング用の設定。GlobalSat BU353 GPS アダプタ (一部の他の Prolific USB-COM アダプタも含む) の特定の問題を修復します。
+
+待機マスクのエラーを無効にする - トラブルシューティング用の設定。シリアル COM マスクのエラー値を無効にします。http://msdn.microsoft.com/en-us/library/windows/desktop/aa363479(v=vs.85).aspx を参照してください。一部のソフトウェアでは必須です。
+
+HandleBtDisappear - トラブルシューティング用の設定。BlueTooth COM ポート固有の動作に対応しています。
+
+UsbToComTroubleShooting - トラブルシューティング用の設定。USB-COM アダプタの特定の問題を修復します。
+
+
+「ネットワーク遅延の補正を使用」 - トラブルシューティングの設定。補正機能を使用すると、ネットワーク遅延の影響を回避できます。
+
+「補正レベル」 - トラブルシューティングの設定。spinedit を使用して、ネットワーク遅延の補正レベルを選択します。リモート シリアル デバイスと通信アプリケーションの接続が安定する最低レベルを確認します。
+
+「固定ボー レートを使用」- このフラグを設定した場合、シリアル通信アプリケーションで設定されたボーレートではなく、「ビット/秒」で指定された値が使用されます。
+
+「ビット/秒」- ビット/秒の固定ボー レート値 (「固定ボーレートを使用」が設定されている場合に適用)。
+
+「固定ライン制御を使用」- このフラグを設定した場合、シリアル通信アプリケーションで設定された値ではなく、「データ ビット」、「パリティ」、「ストップ ビット」で指定された値が使用されます。
+
+「データビット」- 固定のデータ ビット値 (「固定ライン制御を使用」が設定されている場合に適用) [5 から 8 の値]。
+
+「パリティ」- 固定のパリティ値 (「固定ライン制御を使用」が設定されている場合に適用)。
+
+「ストップ ビット」- 固定のストップ ビット値 (「固定ライン制御を使用」が設定されている場合に適用)。
+
+「固定フロー制御を使用」- このフラグを設定した場合、シリアル通信アプリケーションで設定されたボーレートではなく、「フロー制御」で指定された値が使用されます。
+
+「フロー制御」- 固定のストップ ビット値 (「固定フロー制御を使用」が設定されている場合に適用)。
+
+
+このポリシー設定を有効にすると、ポート リダイレクトでパラメータが使用されます。
+
+このポリシー設定が無効な場合、または構成されていない場合、ローカル プログラム設定に指定したパラメータがポート リダイレクトに使用されます。
+
+このポリシー設定をコンピュータに構成すると、ユーザーに設定したポリシー設定よりも優先されます。</string>
+      <string id="SrcPort_PartName">ソース ポート番号:</string>
+      <string id="SrcPort_PartName2">ソース ポートのデバイス:</string>
+      <string id="DstVirtPort_PartName">宛先の仮想ポート番号:</string>
+      <string id="Autoconnect_PartName">自動接続</string>
+      <string id="Troubleshooting_PartName">トラブルシューティング:</string>
+      <string id="IgnoreDsr_PartName">IgnoreDsr</string>
+      <string id="PauseBeforeClosePort_PartName">ポートを閉じる前に停止 (ミリ秒):</string>
+      <string id="UsePauseBeforeSendData_PartName">データを送信する前に停止を使用する:</string>
+      <string id="PauseBeforeSendData_PartName">データを送信する前に停止 (ミリ秒):</string>
+      <string id="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</string>
+      <string id="DisableErrorsInWaitMask_PartName">待機マスクのエラーを無効にする</string>
+      <string id="HandleBtDisappear_PartName">HandleBtDisappear</string>
+      <string id="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</string>
+      <string id="UseFixedBaudRate_PartName">固定ボー レートを使用</string>
+      <string id="FixedBaudRate_PartName">ビット/秒の固定ボーレート値 (「固定ボー レートを使用」が設定されている場合に適用)。</string>
+      <string id="UseFixedLineControl_PartName">固定ライン制御を使用</string>
+      <string id="FixedDataBits_PartName">固定のデータ ビット値 (「固定ライン制御を使用」が設定されている場合に適用) [5 から 8 の値]。</string>
+      <string id="Parity_No_combo_txt">いいえ</string>
+      <string id="Parity_Odd_combo_txt">奇数</string>
+      <string id="Parity_Even_combo_txt">偶数</string>
+      <string id="Parity_Mark_combo_txt">マーク</string>
+      <string id="Parity_Space_combo_txt">容量</string>
+      <string id="StopBits_1bit_combo_txt">1 ビット</string>
+      <string id="StopBits_15bit_combo_txt">1.5 ビット</string>
+      <string id="StopBits_2bits_combo_txt">2 ビット</string>
+      <string id="UseFixedFlowControl_PartName">固定フロー制御を使用</string>
+      <string id="Flow_Hardware_combo_txt">ハードウェア</string>
+      <string id="Flow_XonXoff_combo_txt">Xon/Xoff</string>
+      <string id="Flow_None_combo_txt">なし</string>
+      <string id="ADMXMigrator_UnresolvedString">ADMX Migrator が、元の ADM 文字列テーブルにない文字列を検出しました。</string>
+      <string id="ADMXMigrator_NoSupportedOn">ADMX Migrator が、supportedOn 値が設定されていないポリシーを検出しました。</string>
+      <string id="SUPPORTED_WindowsXP">Microsoft Windows XP Professional または Windows Server 2003 ファミリ以降</string>
+      <string id="UseMultiplicator_PartName">ネットワーク遅延の補正を使用</string>
+      <string id="MultiplicatorValue_PartName">補正レベル値 (「ネットワーク遅延の補正を使用」が設定されている場合に適用) [値: 1 ～ 10]。</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="LocalSettingsPriority_PolicyName" />
+      <presentation id="DisableFunctionality_PolicyName" />
+      <presentation id="EnableEventLog_PolicyName" />
+	  <presentation id="EventLogTableSeparator_PolicyName">
+		<dropdownList refId="EventLogTableSeparatorType_Enum" noSort="true">イベント データの形式区切り文字:</dropdownList>
+        <textBox refId="EventLogTableSeparatorType_custom_Text">
+            <label>カスタム文字列:</label>
+        </textBox>
+	  </presentation>
+      <presentation id="RedirectAll_PolicyName" />
+      <presentation id="PortIsolationMode_PolicyName">
+        <dropdownList refId="PortIsolationMode_Enum" noSort="true">COM ポートの隔離モード:</dropdownList>
+      </presentation>
+      <presentation id="LockConfig_PolicyName" />
+      <presentation id="BandwidthLimit_PolicyName">
+        <decimalTextBox refId="BandwidthLimit_PartName" defaultValue="0" spinStep="1024">バンド幅制限 (キロバイト/秒):</decimalTextBox>
+      </presentation>
+      <presentation id="AllowDenyPortFiltersList_PolicyName">
+		  <text>許可リスト</text>
+		  <multiTextBox refId="AllowPortFiltersList_PartName" />
+		  <text></text>
+		  <text>拒否リスト</text>
+		  <multiTextBox refId="DenyPortFiltersList_PartName" />
+      </presentation>
+      <presentation id="PortSettings1_PolicyName">
+        <decimalTextBox refId="SrcPort_PartName">ソース ポート番号:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>ソース ポートのデバイス:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">宛先の仮想ポート番号:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">自動接続</checkBox>
+        <text>
+        </text>
+        <text>トラブルシューティング:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">ポートを閉じる前に停止 (ミリ秒):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">データを送信する前に停止を使用する:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">データを送信する前に停止 (ミリ秒):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">待機マスクのエラーを無効にする</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">ネットワーク遅延の補正を使用</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">補正レベル:</decimalTextBox>
+        <text>
+        </text>
+        <text>固定設定:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">固定ボー レートを使用</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">ビット/秒:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">固定ライン制御を使用</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">データ ビット:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">パリティ:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">ストップ ビット:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">固定フロー制御を使用</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">フロー制御:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings2_PolicyName">
+        <decimalTextBox refId="SrcPort_PartName">ソース ポート番号:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>ソース ポートのデバイス:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">宛先の仮想ポート番号:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">自動接続</checkBox>
+        <text>
+        </text>
+        <text>トラブルシューティング:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">ポートを閉じる前に停止 (ミリ秒):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">データを送信する前に停止を使用する:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">データを送信する前に停止 (ミリ秒):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">待機マスクのエラーを無効にする</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">ネットワーク遅延の補正を使用</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">補正レベル:</decimalTextBox>
+        <text>
+        </text>
+        <text>固定設定:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">固定ボー レートを使用</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">ビット/秒:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">固定ライン制御を使用</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">データ ビット:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">パリティ:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">ストップ ビット:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">固定フロー制御を使用</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">フロー制御:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings3_PolicyName">
+        <decimalTextBox refId="SrcPort_PartName">ソース ポート番号:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>ソース ポートのデバイス:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">宛先の仮想ポート番号:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">自動接続</checkBox>
+        <text>
+        </text>
+        <text>トラブルシューティング:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">ポートを閉じる前に停止 (ミリ秒):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">データを送信する前に停止を使用する:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">データを送信する前に停止 (ミリ秒):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">待機マスクのエラーを無効にする</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">ネットワーク遅延の補正を使用</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">補正レベル:</decimalTextBox>
+        <text>
+        </text>
+        <text>固定設定:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">固定ボー レートを使用</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">ビット/秒:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">固定ライン制御を使用</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">データ ビット:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">パリティ:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">ストップ ビット:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">固定フロー制御を使用</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">フロー制御:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings4_PolicyName">
+        <decimalTextBox refId="SrcPort_PartName">ソース ポート番号:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>ソース ポートのデバイス:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">宛先の仮想ポート番号:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">自動接続</checkBox>
+        <text>
+        </text>
+        <text>トラブルシューティング:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">ポートを閉じる前に停止 (ミリ秒):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">データを送信する前に停止を使用する:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">データを送信する前に停止 (ミリ秒):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">待機マスクのエラーを無効にする</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">ネットワーク遅延の補正を使用</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">補正レベル:</decimalTextBox>
+        <text>
+        </text>
+        <text>固定設定:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">固定ボー レートを使用</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">ビット/秒:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">固定ライン制御を使用</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">データ ビット:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">パリティ:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">ストップ ビット:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">固定フロー制御を使用</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">フロー制御:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings5_PolicyName">
+        <decimalTextBox refId="SrcPort_PartName">ソース ポート番号:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>ソース ポートのデバイス:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">宛先の仮想ポート番号:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">自動接続</checkBox>
+        <text>
+        </text>
+        <text>トラブルシューティング:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">ポートを閉じる前に停止 (ミリ秒):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">データを送信する前に停止を使用する:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">データを送信する前に停止 (ミリ秒):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">待機マスクのエラーを無効にする</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">ネットワーク遅延の補正を使用</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">補正レベル:</decimalTextBox>
+        <text>
+        </text>
+        <text>固定設定:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">固定ボー レートを使用</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">ビット/秒:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">固定ライン制御を使用</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">データ ビット:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">パリティ:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">ストップ ビット:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">固定フロー制御を使用</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">フロー制御:</dropdownList>
+      </presentation>
+      <presentation id="LocalSettingsPriority_PolicyName_1" />
+      <presentation id="LockConfig_PolicyName_1" />
+      <presentation id="PortSettings1_PolicyName_1">
+        <decimalTextBox refId="SrcPort_PartName">ソース ポート番号:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>ソース ポートのデバイス:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">宛先の仮想ポート番号:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">自動接続</checkBox>
+        <text>
+        </text>
+        <text>トラブルシューティング:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">ポートを閉じる前に停止 (ミリ秒):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">データを送信する前に停止を使用する:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">データを送信する前に停止 (ミリ秒):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">待機マスクのエラーを無効にする</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">ネットワーク遅延の補正を使用</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">補正レベル:</decimalTextBox>
+        <text>
+        </text>
+        <text>固定設定:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">固定ボー レートを使用</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">ビット/秒:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">固定ライン制御を使用</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">データ ビット:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">パリティ:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">ストップ ビット:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">固定フロー制御を使用</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">フロー制御:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings2_PolicyName_1">
+        <decimalTextBox refId="SrcPort_PartName">ソース ポート番号:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>ソース ポートのデバイス:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">宛先の仮想ポート番号:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">自動接続</checkBox>
+        <text>
+        </text>
+        <text>トラブルシューティング:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">ポートを閉じる前に停止 (ミリ秒):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">データを送信する前に停止を使用する:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">データを送信する前に停止 (ミリ秒):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">待機マスクのエラーを無効にする</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">ネットワーク遅延の補正を使用</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">補正レベル:</decimalTextBox>
+        <text>
+        </text>
+        <text>固定設定:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">固定ボー レートを使用</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">ビット/秒:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">固定ライン制御を使用</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">データ ビット:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">パリティ:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">ストップ ビット:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">固定フロー制御を使用</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">フロー制御:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings3_PolicyName_1">
+        <decimalTextBox refId="SrcPort_PartName">ソース ポート番号:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>ソース ポートのデバイス:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">宛先の仮想ポート番号:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">自動接続</checkBox>
+        <text>
+        </text>
+        <text>トラブルシューティング:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">ポートを閉じる前に停止 (ミリ秒):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">データを送信する前に停止を使用する:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">データを送信する前に停止 (ミリ秒):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">待機マスクのエラーを無効にする</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">ネットワーク遅延の補正を使用</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">補正レベル:</decimalTextBox>
+        <text>
+        </text>
+        <text>固定設定:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">固定ボー レートを使用</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">ビット/秒:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">固定ライン制御を使用</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">データ ビット:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">パリティ:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">ストップ ビット:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">固定フロー制御を使用</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">フロー制御:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings4_PolicyName_1">
+        <decimalTextBox refId="SrcPort_PartName">ソース ポート番号:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>ソース ポートのデバイス:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">宛先の仮想ポート番号:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">自動接続</checkBox>
+        <text>
+        </text>
+        <text>トラブルシューティング:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">ポートを閉じる前に停止 (ミリ秒):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">データを送信する前に停止を使用する:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">データを送信する前に停止 (ミリ秒):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">待機マスクのエラーを無効にする</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">ネットワーク遅延の補正を使用</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">補正レベル:</decimalTextBox>
+        <text>
+        </text>
+        <text>固定設定:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">固定ボー レートを使用</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">ビット/秒:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">固定ライン制御を使用</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">データ ビット:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">パリティ:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">ストップ ビット:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">固定フロー制御を使用</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">フロー制御:</dropdownList>
+      </presentation>
+      <presentation id="PortSettings5_PolicyName_1">
+        <decimalTextBox refId="SrcPort_PartName">ソース ポート番号:</decimalTextBox>
+        <textBox refId="SrcPort_PartName2">
+            <label>ソース ポートのデバイス:</label>
+        </textBox>
+        <decimalTextBox refId="DstVirtPort_PartName">宛先の仮想ポート番号:</decimalTextBox>
+        <checkBox refId="Autoconnect_PartName">自動接続</checkBox>
+        <text>
+        </text>
+        <text>トラブルシューティング:</text>
+        <checkBox refId="IgnoreDsr_PartName">IgnoreDsr</checkBox>
+        <decimalTextBox refId="PauseBeforeClosePort_PartName" defaultValue="0" spinStep="100">ポートを閉じる前に停止 (ミリ秒):</decimalTextBox>
+        <checkBox refId="UsePauseBeforeSendData_PartName">データを送信する前に停止を使用する:</checkBox>
+        <decimalTextBox refId="PauseBeforeSendData_PartName" defaultValue="500" spinStep="50">データを送信する前に停止 (ミリ秒):</decimalTextBox>
+        <checkBox refId="Serial2USBModeChangeEnabled_PartName">Serial2USBModeChangeEnabled</checkBox>
+        <checkBox refId="DisableErrorsInWaitMask_PartName">待機マスクのエラーを無効にする</checkBox>
+        <checkBox refId="HandleBtDisappear_PartName">HandleBtDisappear</checkBox>
+        <checkBox refId="UsbToComTroubleShooting_PartName">UsbToComTroubleShooting</checkBox>
+        <checkBox refId="UseMultiplicator_PartName">ネットワーク遅延の補正を使用</checkBox>
+        <decimalTextBox refId="MultiplicatorValue_PartName" defaultValue="1" spinStep="1">補正レベル:</decimalTextBox>
+        <text>
+        </text>
+        <text>固定設定:</text>
+        <checkBox refId="UseFixedBaudRate_PartName">固定ボー レートを使用</checkBox>
+        <decimalTextBox refId="FixedBaudRate_PartName" defaultValue="9600" spinStep="100">ビット/秒:</decimalTextBox>
+        <checkBox refId="UseFixedLineControl_PartName">固定ライン制御を使用</checkBox>
+        <decimalTextBox refId="FixedDataBits_PartName" defaultValue="8" spinStep="1">データ ビット:</decimalTextBox>
+        <dropdownList refId="FixedParity_Enum" defaultItem="0" noSort="true">パリティ:</dropdownList>
+        <dropdownList refId="FixedStopBits_Enum" defaultItem="0" noSort="true">ストップ ビット:</dropdownList>
+        <checkBox refId="UseFixedFlowControl_PartName">固定フロー制御を使用</checkBox>
+        <dropdownList refId="FixedFlowControl_Enum" defaultItem="0" noSort="true">フロー制御:</dropdownList>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>
