@@ -1,51 +1,55 @@
-######Script for Import and Setup of GPOs and Policy Definitons on Domain Controllers#####
-#Continue on error
-$ErrorActionPreference= 'silentlycontinue'
+# Continue on error
+$ErrorActionPreference = 'Continue'
 
-#Require elivation for script run
-#Requires -RunAsAdministrator
-Write-Output "Elevating priviledges for this process"
-do {} until (Elevate-Privileges SeTakeOwnershipPrivilege)
+# Elevate privileges for this process
+Write-Output "Elevating privileges for this process"
+do {
+    Start-Process -FilePath "$PSHOME\powershell.exe" -Verb RunAs
+    Start-Sleep -Seconds 1
+} until ((New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator))
 
-#Set Directory to PSScriptRoot
-if ((Get-Location).Path -NE $PSScriptRoot) { Set-Location $PSScriptRoot }
+# Set directory to PSScriptRoot
+$scriptPath = Split-Path -Parent -Path $MyInvocation.MyCommand.Definition
+Set-Location $scriptPath
 
-#Import PolicyDefinitions
-# Import to Central Store
+# Import PolicyDefinitions
+$policyDefinitionsSource = Join-Path $scriptPath 'Files\PolicyDefinitions'
+$policyDefinitionsDestination = 'C:\Windows\PolicyDefinitions'
+
 try {
-    Start-Job -ScriptBlock {
-        takeown /f C:\WINDOWS\PolicyDefinitions /r /a -ErrorAction Stop
-        icacls C:\WINDOWS\PolicyDefinitions /grant Administrators:(OI)(CI)F /t -ErrorAction Stop
-        Copy-Item -Path .\Files\PolicyDefinitions\* -Destination C:\Windows\PolicyDefinitions -Force -Recurse -ErrorAction Stop
-    } -ErrorAction Stop -AsJob -UseTransaction -Verbose
-    # Get all child items of the "C:\Windows\SYSVOL\sysvol" directory
-    $sysvolpaths = Get-ChildItem "C:\Windows\SYSVOL\sysvol" -ErrorAction Stop
-    # Iterate through each child item
-    foreach ($sysvolpath in $sysvolpaths) {
-        # Create the "PolicyDefinitions" directory if it doesn't exist
-        if (!(Test-Path "C:\Windows\SYSVOL\sysvol\$sysvolpath\Policies\PolicyDefinitions\")) {
-            New-Item "C:\Windows\SYSVOL\sysvol\$sysvolpath\Policies\PolicyDefinitions\" -Force
+    Write-Output "Copying Policy Definitions to Central Store"
+    # Take ownership of the PolicyDefinitions folder and grant full control to Administrators
+    takeown /f "$policyDefinitionsDestination" /r /a /d y | Out-Null
+    icacls "$policyDefinitionsDestination" /grant Administrators:(OI)(CI)F /t | Out-Null
+    # Copy the files to the PolicyDefinitions folder
+    Copy-Item -Path "$policyDefinitionsSource\*" -Destination $policyDefinitionsDestination -Force -Recurse -ErrorAction Stop
+    # Get all SYSVOL paths
+    $sysvolPaths = Get-ChildItem "C:\Windows\SYSVOL\sysvol" -Directory -ErrorAction Stop
+    # Copy the files to the PolicyDefinitions folder in each SYSVOL path
+    foreach ($sysvolPath in $sysvolPaths) {
+        $policyDefinitionsSysvolDestination = Join-Path $sysvolPath.FullName 'Policies\PolicyDefinitions'
+        if (!(Test-Path $policyDefinitionsSysvolDestination)) {
+            New-Item -Path $policyDefinitionsSysvolDestination -ItemType Directory -Force | Out-Null
         }
-        # Copy the files to the "PolicyDefinitions" directory
-        Copy-Item -Path "$(Get-Location)\Files\PolicyDefinitions\*" -Destination "C:\Windows\SYSVOL\sysvol\$sysvolpath\Policies\PolicyDefinitions\" -Force -Recurse
+        Copy-Item -Path "$policyDefinitionsSource\*" -Destination $policyDefinitionsSysvolDestination -Force -Recurse
     }
 } catch {
     Write-Error "An error occurred: $($_.Exception.Message)"
 }
 
+# Import GPOs into GPMC
+$gposDir = Join-Path $scriptPath 'Files\GPOs'
+$gpoCategoryDirs = Get-ChildItem -Path $gposDir -Directory
 
-#Import GPOS into GPMC
-$gposdir = "$(Get-Location)\Files\GPOs"
-Foreach ($gpocategory in Get-ChildItem $gposdir) {
-    
-    Write-Output "Importing $gpocategory GPOs"
+foreach ($gpoCategoryDir in $gpoCategoryDirs) {
+    Write-Output "Importing GPOs from $gpoCategoryDir"
+    $gpoFiles = Get-ChildItem -Path $gpoCategoryDir.FullName -File
 
-    Foreach ($gpo in (Get-ChildItem "$gposdir\$gpocategory")) {
-        $gpopath = "$gposdir\$gpocategory\$gpo"
-        Write-Output "Importing $gpo"
-        New-GPO -Name "$gpo" -Comment "Created by simeononsecurity.ch" 
-        Import-GPO -BackupGpoName "$gpo" -Path "$gpopath" -TargetName "$gpo" -CreateIfNeeded 
-        #Import-GPO -BackupGpoName "$gpo" -Path "$gpopath" -TargetName "$gpo" -MigrationTable ".\Files\Migration Table\importtable.migtable" -CreateIfNeeded 
+    foreach ($gpoFile in $gpoFiles) {
+        $gpoPath = $gpoFile.FullName
+        $gpoName = $gpoFile.BaseName
+        Write-Output "Importing $gpoName"
+        New-GPO -Name $gpoName -Comment "Created by simeononsecurity.ch"
+        Import-GPO -BackupGpoName $gpoName -Path $gpoPath -TargetName $gpoName -CreateIfNeeded
     }
 }
-
