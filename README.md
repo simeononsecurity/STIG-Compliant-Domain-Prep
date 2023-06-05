@@ -57,4 +57,5 @@ We now offer a playbook collection for this script. Please see the following:
 ```
 The script we will be using must be launched from the directory containing all the other files from the [GitHub Repository](https://github.com/simeononsecurity/STIG-Compliant-Domain-Prep)
 
+## Learn more about [Automating Windows Domain STIG Compliance](https://simeononsecurity.ch/github/stig-compliant-domain-prep/)
 
