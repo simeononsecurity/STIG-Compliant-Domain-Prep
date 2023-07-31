@@ -238,20 +238,6 @@
           </or>
       </definition>
 
-      <!--At least Windows 10 21H2-->
-      <definition name="SUPPORTED_Windows_10_0_21H2" displayName="$(string.SUPPORTED_Windows_10_0_21H2)">
-          <or>
-              <range ref="products:MicrosoftWindows" minVersionIndex="13"/>
-          </or>
-      </definition>
-
-      <!--At least Windows 10 21H2 no SERVER-->
-      <definition name="SUPPORTED_Windows_10_0_21H2_NOSERVER" displayName="$(string.SUPPORTED_Windows_10_0_21H2_NOSERVER)">
-          <or>
-              <range ref="products:MicrosoftWindows" minVersionIndex="13"/>
-          </or>
-      </definition>
-
       <!--At least Windows Threshold no ARM-->
       <definition name="SUPPORTED_Windows_10_0_NOARM" displayName="$(string.SUPPORTED_Windows_10_0_NOARM)">
           <or>
@@ -291,34 +277,6 @@
       <definition name="SUPPORTED_Windows_10_0_SERVER" displayName="$(string.SUPPORTED_Windows_10_0_SERVER)">
           <or>
               <range ref="products:MicrosoftWindows" minVersionIndex="13" maxVersionIndex="13"/>
-          </or>
-      </definition>
-
-      <!--At least Windows 11 SE -->
-      <definition name="SUPPORTED_Windows_11_0_SE" displayName="$(string.SUPPORTED_Windows_11_0_SE)">
-          <or>
-              <range ref="products:MicrosoftWindows" minVersionIndex="16" maxVersionIndex="16"/>
-          </or>
-      </definition>
-
-      <!--At least Windows 11 22H2 no SERVER -->
-      <definition name="SUPPORTED_Windows_11_0_22H2_NOSERVER" displayName="$(string.SUPPORTED_Windows_11_0_22H2_NOSERVER)">
-          <or>
-              <range ref="products:MicrosoftWindows" minVersionIndex="16" maxVersionIndex="16"/>
-          </or>
-      </definition>
-
-      <!--At least Windows 11 22H2 -->
-      <definition name="SUPPORTED_Windows_11_0_22H2" displayName="$(string.SUPPORTED_Windows_11_0_22H2)">
-          <or>
-              <range ref="products:MicrosoftWindows" minVersionIndex="16"/>
-          </or>
-      </definition>
-
-      <!--At least Windows 11 no SERVER -->
-      <definition name="SUPPORTED_Windows_11_0_NOSERVER" displayName="$(string.SUPPORTED_Windows_11_0_NOSERVER)">
-          <or>
-              <range ref="products:MicrosoftWindows" minVersionIndex="16"/>
           </or>
       </definition>
 

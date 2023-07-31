@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<policyDefinitions revision="4.7" schemaVersion="1.0">
+<policyDefinitions revision="5.0" schemaVersion="1.0">
   <policyNamespaces>
     <target prefix="firefox" namespace="Mozilla.Policies.Firefox"/>
     <using prefix="Mozilla" namespace="Mozilla.Policies"/>
   </policyNamespaces>
-  <resources minRequiredRevision="4.7"/>
+  <resources minRequiredRevision="5.0"/>
   <supportedOn>
     <definitions>
       <definition name="UNSUPPORTED" displayName="$(string.UNSUPPORTED)"/>
@@ -58,6 +58,10 @@
       <definition name="SUPPORTED_FF107" displayName="$(string.SUPPORTED_FF107)"/>
       <definition name="SUPPORTED_FF108" displayName="$(string.SUPPORTED_FF108)"/>
       <definition name="SUPPORTED_FF109" displayName="$(string.SUPPORTED_FF109)"/>
+      <definition name="SUPPORTED_FF110" displayName="$(string.SUPPORTED_FF110)"/>
+      <definition name="SUPPORTED_FF112_ONLY" displayName="$(string.SUPPORTED_FF112_ONLY)"/>
+      <definition name="SUPPORTED_FF113_ONLY" displayName="$(string.SUPPORTED_FF113_ONLY)"/>
+      <definition name="SUPPORTED_FF114" displayName="$(string.SUPPORTED_FF114)"/>
     </definitions>
   </supportedOn>
   <categories>
@@ -140,6 +144,12 @@
       <parentCategory ref="firefox"/>
     </category>
     <category displayName="$(string.PictureInPicture_group)" name="PictureInPicture">
+      <parentCategory ref="firefox"/>
+    </category>
+    <category displayName="$(string.ProxySettings_group)" name="ProxySettings">
+      <parentCategory ref="firefox"/>
+    </category>
+    <category displayName="$(string.SecurityDevices_group)" name="SecurityDevices">
       <parentCategory ref="firefox"/>
     </category>
   </categories>
@@ -2522,19 +2532,21 @@
         <list id="List" key="Software\Policies\Mozilla\Firefox\PasswordManagerExceptions" valuePrefix=""/>
       </elements>
     </policy>
-    <policy name="Proxy" class="Both" displayName="$(string.Proxy)" explainText="$(string.Proxy_Explain)" key="Software\Policies\Mozilla\Firefox\Proxy" presentation="$(presentation.Proxy)" >
-      <parentCategory ref="firefox" />
-      <supportedOn ref="SUPPORTED_FF60" />
+    <policy name="Proxy_Locked" class="Both" displayName="$(string.Proxy_Locked)" explainText="$(string.Proxy_Locked_Explain)" key="Software\Policies\Mozilla\Firefox\Proxy" valueName="Locked">
+      <parentCategory ref="ProxySettings"/>
+      <supportedOn ref="SUPPORTED_FF60"/>
+      <enabledValue>
+        <decimal value="1"/>
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0"/>
+      </disabledValue>
+    </policy>
+    <policy name="Proxy_ConnectionType" class="Both" displayName="$(string.Proxy_ConnectionType)" explainText="$(string.Proxy_ConnectionType_Explain)" key="Software\Policies\Mozilla\Firefox\Proxy" presentation="$(presentation.Proxy_ConnectionType)">
+      <parentCategory ref="ProxySettings"/>
+      <supportedOn ref="SUPPORTED_FF60"/>
       <elements>
-        <boolean id="ProxyLocked" key="Software\Policies\Mozilla\Firefox\Proxy" valueName="Locked">
-          <trueValue>
-            <decimal value="1"/>
-          </trueValue>
-          <falseValue>
-            <decimal value="0"/>
-          </falseValue>
-        </boolean>
-        <enum id="ConnectionType" valueName="Mode">
+        <enum id="Proxy_ConnectionType" valueName="Mode">
           <item displayName="$(string.NoProxy)">
             <value>
               <string>none</string>
@@ -2561,19 +2573,38 @@
             </value>
           </item>
         </enum>
-        <text id="HTTPProxy" valueName="HTTPProxy"/>
-        <boolean id="UseHTTPProxyForAllProtocols" key="Software\Policies\Mozilla\Firefox\Proxy" valueName="UseHTTPProxyForAllProtocols">
-          <trueValue>
-            <decimal value="1"/>
-          </trueValue>
-          <falseValue>
-            <decimal value="0"/>
-          </falseValue>
-        </boolean>
-        <text id="SSLProxy" valueName="SSLProxy"/>
-        <text id="FTPProxy" valueName="FTPProxy"/>
-        <text id="SOCKSProxy" valueName="SOCKSProxy"/>
-        <enum id="SOCKSVersion" valueName="SOCKSVersion">
+      </elements>
+    </policy>
+    <policy name="Proxy_HTTPProxy" class="Both" displayName="$(string.Proxy_HTTPProxy)" explainText="$(string.Proxy_HTTPProxy_Explain)" key="Software\Policies\Mozilla\Firefox\Proxy" presentation="$(presentation.Proxy_HTTPProxy)">
+      <parentCategory ref="ProxySettings"/>
+      <supportedOn ref="SUPPORTED_FF60"/>
+      <elements>
+        <text id="Proxy_HTTPProxy" valueName="HTTPProxy"/>
+      </elements>
+    </policy>
+    <policy name="Proxy_UseHTTPProxyForAllProtocols" class="Both" displayName="$(string.Proxy_UseHTTPProxyForAllProtocols)" explainText="$(string.Proxy_UseHTTPProxyForAllProtocols_Explain)" key="Software\Policies\Mozilla\Firefox\Proxy" valueName="UseHTTPProxyForAllProtocols">
+      <parentCategory ref="ProxySettings"/>
+      <supportedOn ref="SUPPORTED_FF60"/>
+      <enabledValue>
+        <decimal value="1"/>
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0"/>
+      </disabledValue>
+    </policy>
+    <policy name="Proxy_SSLProxy" class="Both" displayName="$(string.Proxy_SSLProxy)" explainText="$(string.Proxy_SSLProxy_Explain)" key="Software\Policies\Mozilla\Firefox\Proxy" presentation="$(presentation.Proxy_SSLProxy)">
+      <parentCategory ref="ProxySettings"/>
+      <supportedOn ref="SUPPORTED_FF60"/>
+      <elements>
+        <text id="Proxy_SSLProxy" valueName="SSLProxy"/>
+      </elements>
+    </policy>
+    <policy name="Proxy_SOCKSProxy" class="Both" displayName="$(string.Proxy_SOCKSProxy)" explainText="$(string.Proxy_SOCKSProxy_Explain)" key="Software\Policies\Mozilla\Firefox\Proxy" presentation="$(presentation.Proxy_SOCKSProxy)">
+      <parentCategory ref="ProxySettings"/>
+      <supportedOn ref="SUPPORTED_FF60"/>
+      <elements>
+        <text id="Proxy_SOCKSProxy" valueName="SOCKSProxy"/>
+        <enum id="Proxy_SOCKSVersion" valueName="SOCKSVersion">
           <item displayName="$(string.SOCKSVersion4)">
             <value>
               <decimal value="4"/>
@@ -2585,25 +2616,41 @@
             </value>
           </item>
         </enum>
-        <text id="AutoConfigURL" valueName="AutoConfigURL"/>
-        <text id="Passthrough" valueName="Passthrough"/>
-        <boolean id="AutoLogin" key="Software\Policies\Mozilla\Firefox\Proxy" valueName="AutoLogin">
-          <trueValue>
-            <decimal value="1"/>
-          </trueValue>
-          <falseValue>
-            <decimal value="0"/>
-          </falseValue>
-        </boolean>
-        <boolean id="UseProxyForDNS" key="Software\Policies\Mozilla\Firefox\Proxy" valueName="UseProxyForDNS">
-          <trueValue>
-            <decimal value="1"/>
-          </trueValue>
-          <falseValue>
-            <decimal value="0"/>
-          </falseValue>
-        </boolean>
       </elements>
+    </policy>
+    <policy name="Proxy_AutoConfigURL" class="Both" displayName="$(string.Proxy_AutoConfigURL)" explainText="$(string.Proxy_AutoConfigURL_Explain)" key="Software\Policies\Mozilla\Firefox\Proxy" presentation="$(presentation.Proxy_AutoConfigURL)">
+      <parentCategory ref="ProxySettings"/>
+      <supportedOn ref="SUPPORTED_FF60"/>
+      <elements>
+        <text id="Proxy_AutoConfigURL" valueName="AutoConfigURL"/>
+      </elements>
+    </policy>
+    <policy name="Proxy_Passthrough" class="Both" displayName="$(string.Proxy_Passthrough)" explainText="$(string.Proxy_Passthrough_Explain)" key="Software\Policies\Mozilla\Firefox\Proxy" presentation="$(presentation.Proxy_Passthrough)">
+      <parentCategory ref="ProxySettings"/>
+      <supportedOn ref="SUPPORTED_FF60"/>
+      <elements>
+        <text id="Proxy_Passthrough" valueName="Passthrough"/>
+      </elements>
+    </policy>
+    <policy name="Proxy_AutoLogin" class="Both" displayName="$(string.Proxy_AutoLogin)" explainText="$(string.Proxy_AutoLogin_Explain)" key="Software\Policies\Mozilla\Firefox\Proxy" valueName="AutoLogin">
+      <parentCategory ref="ProxySettings"/>
+      <supportedOn ref="SUPPORTED_FF60"/>
+      <enabledValue>
+        <decimal value="1"/>
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0"/>
+      </disabledValue>
+    </policy>
+    <policy name="Proxy_UseProxyForDNS" class="Both" displayName="$(string.Proxy_UseProxyForDNS)" explainText="$(string.Proxy_UseProxyForDNS_Explain)" key="Software\Policies\Mozilla\Firefox\Proxy" valueName="UseProxyForDNS">
+      <parentCategory ref="ProxySettings"/>
+      <supportedOn ref="SUPPORTED_FF60"/>
+      <enabledValue>
+        <decimal value="1"/>
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0"/>
+      </disabledValue>
     </policy>
     <policy name="SearchBar" class="Both" displayName="$(string.SearchBar)" explainText="$(string.SearchBar_Explain)" key="Software\Policies\Mozilla\Firefox"  presentation="$(presentation.SearchBar)">
       <parentCategory ref="firefox"/>
@@ -2647,6 +2694,13 @@
       <supportedOn ref="SUPPORTED_FF60"/>
       <elements>
         <list id="WebsiteFilter" key="Software\Policies\Mozilla\Firefox\WebsiteFilter\Exceptions" valuePrefix=""/>
+      </elements>
+    </policy>
+    <policy name="WebsiteFilter" class="Both" displayName="$(string.WebsiteFilter)" explainText="$(string.WebsiteFilter_Explain)" key="Software\Policies\Mozilla\Firefox" presentation="$(presentation.JSON)">
+      <parentCategory ref="firefox"/>
+      <supportedOn ref="SUPPORTED_FF114"/>
+      <elements>
+        <multiText id="JSON" valueName="WebsiteFilter"  maxLength="16384"/>
       </elements>
     </policy>
     <policy name="SearchEngines_1" class="Both" displayName="$(string.SearchEngines_1)" explainText="$(string.SearchEngines_Explain)" key="Software\Policies\Mozilla\Firefox\SearchEngines\Add\1" presentation="$(presentation.SearchEngine)" >
@@ -3522,6 +3576,16 @@
         <decimal value="0"/>
       </disabledValue>
     </policy>
+    <policy name="F_TrackingProtection_EmailTracking" class="Both" displayName="$(string.TrackingProtection_EmailTracking)" explainText="$(string.TrackingProtection_EmailTracking_Explain)" key="Software\Policies\Mozilla\Firefox\EnableTrackingProtection" valueName="EmailTracking">
+      <parentCategory ref="TrackingProtection"/>
+      <supportedOn ref="SUPPORTED_FF112"/>
+      <enabledValue>
+        <decimal value="1"/>
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0"/>
+      </disabledValue>
+    </policy>
     <policy name="UserMessaging_WhatsNew" class="Both" displayName="$(string.UserMessaging_WhatsNew)" explainText="$(string.UserMessaging_WhatsNew_Explain)" key="Software\Policies\Mozilla\Firefox\UserMessaging" valueName="WhatsNew">
       <parentCategory ref="UserMessaging"/>
       <supportedOn ref="SUPPORTED_FF75_ONLY"/>
@@ -3575,6 +3639,16 @@
     <policy name="UserMessaging_MoreFromMozilla" class="Both" displayName="$(string.UserMessaging_MoreFromMozilla)" explainText="$(string.UserMessaging_MoreFromMozilla_Explain)" key="Software\Policies\Mozilla\Firefox\UserMessaging" valueName="MoreFromMozilla">
       <parentCategory ref="UserMessaging"/>
       <supportedOn ref="SUPPORTED_FF98_ONLY"/>
+      <enabledValue>
+        <decimal value="1"/>
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0"/>
+      </disabledValue>
+    </policy>
+    <policy name="UserMessaging_Locked" class="Both" displayName="$(string.UserMessaging_Locked)" explainText="$(string.UserMessaging_Locked_Explain)" key="Software\Policies\Mozilla\Firefox\UserMessaging" valueName="Locked">
+      <parentCategory ref="UserMessaging"/>
+      <supportedOn ref="SUPPORTED_FF75"/>
       <enabledValue>
         <decimal value="1"/>
       </enabledValue>
@@ -3919,6 +3993,37 @@
       <supportedOn ref="SUPPORTED_FF102" />
       <elements>
         <text id="String" valueName="AppUpdatePin" required="true" />
+      </elements>
+    </policy>
+    <policy name="DisableThirdPartyModuleBlocking" class="Both" displayName="$(string.DisableThirdPartyModuleBlocking)" explainText="$(string.DisableThirdPartyModuleBlocking_Explain)" key="Software\Policies\Mozilla\Firefox" valueName="DisableThirdPartyModuleBlocking">
+      <parentCategory ref="firefox" />
+      <supportedOn ref="SUPPORTED_FF110"/>
+      <enabledValue>
+        <decimal value="1"/>
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0"/>
+      </disabledValue>
+    </policy>
+    <policy name="Containers" class="Both" displayName="$(string.Containers)" key="Software\Policies\Mozilla\Firefox" explainText="$(string.Containers_Explain)" presentation="$(presentation.JSON)">
+      <parentCategory ref="firefox"/>
+      <supportedOn ref="SUPPORTED_FF113"/>
+      <elements>
+        <multiText id="JSON" valueName="Containers"  maxLength="16384"/>
+      </elements>
+    </policy>
+    <policy name="SecurityDevices_Add" class="Both" displayName="$(string.SecurityDevices_Add)" explainText="$(string.SecurityDevices_Explain)" key="Software\Policies\Mozilla\Firefox" presentation="$(presentation.SecurityDevices)" >
+      <parentCategory ref="SecurityDevices"/>
+      <supportedOn ref="SUPPORTED_FF114"/>
+      <elements>
+        <list id="SecurityDevices" key="Software\Policies\Mozilla\Firefox\SecurityDevices\Add" valuePrefix="" explicitValue="true" expandable="true"/>
+      </elements>
+    </policy>
+    <policy name="SecurityDevices_Delete" class="Both" displayName="$(string.SecurityDevices_Delete)" explainText="$(string.SecurityDevices_Delete_Explain)" key="Software\Policies\Mozilla\Firefox" presentation="$(presentation.SecurityDevices)" >
+      <parentCategory ref="SecurityDevices"/>
+      <supportedOn ref="SUPPORTED_FF114"/>
+      <elements>
+        <list id="SecurityDevices" key="Software\Policies\Mozilla\Firefox\SecurityDevices\Delete" valuePrefix=""/>
       </elements>
     </policy>
   </policies>

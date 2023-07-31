@@ -180,13 +180,12 @@
         <list id="StartPinAppsWhenInstalled_Name" key="Software\Policies\Microsoft\Windows\Explorer\StartPinAppsWhenInstalled" valuePrefix="" additive="true" />
       </elements>
     </policy>
-    <policy name="LockedStartLayout" clientExtension="{8472C2C4-6B70-4301-A20D-A6CEA5F82B7E}" class="Both" displayName="$(string.LockedStartLayout)" explainText="$(string.LockedStartLayout_Help)" presentation="$(presentation.LockedStartLayout)" key="Software\Policies\Microsoft\Windows\Explorer" valueName="LockedStartLayout">
+    <policy name="LockedStartLayout" class="Both" displayName="$(string.LockedStartLayout)" explainText="$(string.LockedStartLayout_Help)" presentation="$(presentation.LockedStartLayout)" key="Software\Policies\Microsoft\Windows\Explorer" valueName="LockedStartLayout">
       <parentCategory ref="windows:StartMenu" />
       <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
       <elements>
          <!--This value will be stored as a REG_EXPAND_SZ. Drop the expandable attrib for a REG_SZ-->
         <text id="LockedStartLayout_Name" valueName="StartLayoutFile" expandable="true"/>
-        <boolean id="LockedStartLayout_ReapplyEveryLogon" valueName="ReapplyStartLayoutEveryLogon"/>
       </elements>
     </policy>
     <!-- Per user policy to hide power options from start and hide power button on logon UI-->
@@ -213,7 +212,7 @@
     </policy>
     <policy name="ShowOrHideMostUsedApps" class="Both" displayName="$(string.ShowOrHideMostUsedApps)" explainText="$(string.ShowOrHideMostUsedApps_Help)" presentation="$(presentation.ShowOrHideMostUsedApps)" key="Software\Policies\Microsoft\Windows\Explorer">
       <parentCategory ref="windows:StartMenu" />
-      <supportedOn ref="windows:SUPPORTED_Windows_10_0_21H2" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS7" />
       <elements>
         <enum id="ShowOrHideMostUsedAppsDropdown" valueName="ShowOrHideMostUsedApps" required="true">
           <item displayName="$(string.MFU_NotConfigured)">
@@ -232,8 +231,8 @@
             </value>
           </item>
         </enum>
-      </elements>
-    </policy>
+      </elements>        
+    </policy>      
     <policy name="NoFrequentUsedPrograms" class="Both" displayName="$(string.NoFrequentUsedPrograms)" explainText="$(string.NoFrequentUsedPrograms_Help)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoStartMenuMFUprogramsList">
       <parentCategory ref="windows:StartMenu" />
       <supportedOn ref="windows:SUPPORTED_Windows7ToXPAndWindows10" />
@@ -298,7 +297,7 @@
       <parentCategory ref="windows:StartMenu" />
       <supportedOn ref="windows:SUPPORTED_Win2k" />
     </policy>
-    <policy name="NoRun" class="Both" displayName="$(string.NoRun)" explainText="$(string.NoRun_Help)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoRun">
+    <policy name="NoRun" class="User" displayName="$(string.NoRun)" explainText="$(string.NoRun_Help)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoRun">
       <parentCategory ref="windows:StartMenu" />
       <supportedOn ref="windows:SUPPORTED_Windows_6_3To2k" />
     </policy>
@@ -306,7 +305,7 @@
       <parentCategory ref="windows:StartMenu" />
       <supportedOn ref="windows:SUPPORTED_Windows_6_3To2k" />
     </policy>
-    <policy name="NoSetTaskbar" class="Both" displayName="$(string.NoSetTaskbar)" explainText="$(string.NoSetTaskbar_Help)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoSetTaskbar">
+    <policy name="NoSetTaskbar" class="User" displayName="$(string.NoSetTaskbar)" explainText="$(string.NoSetTaskbar_Help)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoSetTaskbar">
       <parentCategory ref="windows:StartMenu" />
       <supportedOn ref="windows:SUPPORTED_Win2k" />
     </policy>
@@ -350,7 +349,7 @@
       <parentCategory ref="windows:StartMenu" />
       <supportedOn ref="windows:SUPPORTED_WindowsXP" />
     </policy>
-    <policy name="NoTrayContextMenu" class="Both" displayName="$(string.NoTrayContextMenu)" explainText="$(string.NoTrayContextMenu_Help)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoTrayContextMenu">
+    <policy name="NoTrayContextMenu" class="User" displayName="$(string.NoTrayContextMenu)" explainText="$(string.NoTrayContextMenu_Help)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoTrayContextMenu">
       <parentCategory ref="windows:StartMenu" />
       <supportedOn ref="windows:SUPPORTED_Win2k" />
     </policy>
@@ -414,7 +413,7 @@
         <decimal value="0" />
       </disabledValue>
     </policy>
-    <policy name="NoUninstallFromStart" class="Both" displayName="$(string.NoUninstallFromStart)" explainText="$(string.NoUninstallFromStart_Help)" key="Software\Policies\Microsoft\Windows\Explorer" valueName="NoUninstallFromStart">
+    <policy name="NoUninstallFromStart" class="User" displayName="$(string.NoUninstallFromStart)" explainText="$(string.NoUninstallFromStart_Help)" key="Software\Policies\Microsoft\Windows\Explorer" valueName="NoUninstallFromStart">
         <parentCategory ref="windows:StartMenu" />
         <supportedOn ref="windows:SUPPORTED_Windows8" />
         <enabledValue>
@@ -553,31 +552,9 @@
       <parentCategory ref="windows:StartMenu" />
       <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS4" />
     </policy>
-    <policy name="HideRecommendedSection" class="Both" displayName="$(string.HideRecommendedSection)" explainText="$(string.HideRecommendedSection_Help)" key="Software\Policies\Microsoft\Windows\Explorer" valueName="HideRecommendedSection">
-      <parentCategory ref="windows:StartMenu" />
-      <supportedOn ref="windows:SUPPORTED_Windows_11_0_SE" />
-    </policy>
     <policy name="DisableContextMenusInStart" class="Both" displayName="$(string.DisableContextMenusInStart)" explainText="$(string.DisableContextMenusInStart_Help)" key="Software\Policies\Microsoft\Windows\Explorer" valueName="DisableContextMenusInStart">
       <parentCategory ref="windows:StartMenu" />
       <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS4" />
-    </policy>
-    <policy name="SimplifyQuickSettings" class="Machine" displayName="$(string.SimplifyQuickSettings_DisplayName)" explainText="$(string.SimplifyQuickSettings_ExplainText)" key="Software\Policies\Microsoft\Windows\Explorer" valueName="SimplifyQuickSettings">
-      <parentCategory ref="windows:StartMenu" />
-      <supportedOn ref="windows:SUPPORTED_Windows_11_0_SE" />
-    </policy>
-    <policy name="DisableEditingQuickSettings" class="Machine" displayName="$(string.DisableEditingQuickSettings_DisplayName)" explainText="$(string.DisableEditingQuickSettings_ExplainText)" key="Software\Policies\Microsoft\Windows\Explorer" valueName="DisableEditingQuickSettings">
-      <parentCategory ref="windows:StartMenu" />
-      <supportedOn ref="windows:SUPPORTED_Windows_11_0_SE" />
-    </policy>
-    <policy name="DisableControlCenter" class="User" displayName="$(string.DisableControlCenter)" explainText="$(string.DisableControlCenter_Help)" key="Software\Policies\Microsoft\Windows\Explorer" valueName="DisableControlCenter">
-      <parentCategory ref="windows:StartMenu" />
-      <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
-      <enabledValue>
-        <decimal value="1" />
-      </enabledValue>
-      <disabledValue>
-        <decimal value="0" />
-      </disabledValue>
     </policy>
   </policies>
 </policyDefinitions>

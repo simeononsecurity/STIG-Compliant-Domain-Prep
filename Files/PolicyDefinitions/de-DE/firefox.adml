@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<policyDefinitionResources revision="4.7" schemaVersion="1.0" >
+<policyDefinitionResources revision="5.0" schemaVersion="1.0">
   <displayName/>
   <description/>
-  <resources >
-    <stringTable >
+  <resources>
+    <stringTable>
       <string id="SUPPORTED_WINXPSP2">Microsoft Windows XP SP2 oder höher</string>
       <string id="UNSUPPORTED">Nicht mehr unterstützt.</string>
       <string id="SUPPORTED_FF60">Firefox 60 oder höher, Firefox 60 ESR oder höher</string>
@@ -56,6 +56,10 @@
       <string id="SUPPORTED_FF107">Firefox 107 oder höher, Firefox 102.5 ESR oder höher</string>
       <string id="SUPPORTED_FF108">Firefox 108 oder höher, Firefox 102.6 ESR oder höher</string>
       <string id="SUPPORTED_FF109">Firefox 109 oder höher, Firefox 102.7 ESR oder höher</string>
+      <string id="SUPPORTED_FF110">Firefox 110 oder höher, Firefox 102.8 ESR oder höher</string>
+      <string id="SUPPORTED_FF112_ONLY">Firefox 112 oder höher</string>
+      <string id="SUPPORTED_FF113_ONLY">Firefox 113 oder höher</string>
+      <string id="SUPPORTED_FF114">Firefox 114 oder höher, Firefox 102.12 ESR oder höher</string>
       <string id="firefox">Firefox</string>
       <string id="Permissions_group">Berechtigungen</string>
       <string id="Camera_group">Kamera</string>
@@ -80,6 +84,8 @@
       <string id="EncryptedMediaExtensions_group">DRM-Medien Erweiterungen</string>
       <string id="PDFjs_group">PDF.js</string>
       <string id="PictureInPicture_group">Bild in Bild</string>
+      <string id="ProxySettings_group">Proxy</string>
+      <string id="SecurityDevices_group">Sicherheitsmodule</string>
       <string id="Allow">Erlaubte Seiten</string>
       <string id="AllowSession">Erlaubte Seiten (Session Only)</string>
       <string id="Block">Gesperrte Seiten</string>
@@ -128,7 +134,7 @@ Wenn diese Richtlinieneinstellung aktiviert oder nicht konfiguriert ist, können
 
 Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, wird die interne Authentifizierung in privaten Fenstern nicht benutzt.</string>
       <string id="BlockAboutAddons">Zugriff auf Add-ons Manager verhindern</string>
-      <string id="BlockAboutAddons_Explain" >Wenn Sie die Richtlinieneinstellung aktivieren, können Benutzer nicht auf den Add-on Manager oder about:addons zugreifen.
+      <string id="BlockAboutAddons_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, können Benutzer nicht auf den Add-on Manager oder about:addons zugreifen.
 
 Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, können Benutzer auf den Add-ons Manager und about:addons zugreifen.</string>
       <string id="BlockAboutConfig">Zugriff auf about:config verhindern</string>
@@ -283,13 +289,13 @@ Mozilla empfiehlt, die Telemetrie nicht zu deaktivieren. Durch Telemetrie gesamm
       <string id="DisplayBookmarksToolbar_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, wird die Lesezeichenleiste standardmäßig in der Menüleiste angezeigt, der Benutzer kann diese wieder ausblenden.
 
 Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die Lesezeichenleiste nicht in der Menüleiste angzeigt.</string>
-      <string id="DisplayBookmarksToolbar_Enum">Display Bookmarks Toolbar</string>
-      <string id="DisplayBookmarksToolbar_Enum_Explain">If this policy is enabled, the default bokmarks toolbar display can be configured.
+      <string id="DisplayBookmarksToolbar_Enum">Lesezeichen-Symbolleiste anzeigen</string>
+      <string id="DisplayBookmarksToolbar_Enum_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, kann die Standardanzeige der Lesezeichen-Symbolleiste konfiguriert werden.
 
-If this policy is disabled or not configured, the bookmarks toolbar is displayed on the new tab page by default.</string>
-      <string id="DisplayBookmarksToolbar_Always">Always</string>
-      <string id="DisplayBookmarksToolbar_Never">Never</string>
-      <string id="DisplayBookmarksToolbar_NewTab">New Tab</string>
+Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, wird die Lesezeichen-Symbolleiste standardmäßig auf der neuen Registerkarte angezeigt.</string>
+      <string id="DisplayBookmarksToolbar_Always">Immer</string>
+      <string id="DisplayBookmarksToolbar_Never">Niemals</string>
+      <string id="DisplayBookmarksToolbar_NewTab">Neuer Tab</string>
       <string id="DisplayMenuBar">Menüleiste anzeigen (Veraltet)</string>
       <string id="DisplayMenuBar_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, wird die Menüleiste standardmäßig angezeigt, der Benutzer kann diese wieder ausblenden.
 
@@ -601,6 +607,10 @@ Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werde
       <string id="WebsiteFilter_Exceptions_Explain">Wenn Sie die Richtlinieneinstellung aktivieren und der Webseiten-Filter aktiviert ist, können Sie Übereinstimmungsmuster für Webseiten angeben, die nicht blockiert werden sollen. Die Übereinstimmungsmuster sind unter https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Match_patterns dokumentiert. Es gibt eine Beschränkung von 1000 Einträgen.
 
 Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, gibt es keine Ausnahmen für den Webseiten-Filter.</string>
+      <string id="WebsiteFilter">Webseiten-Filter (JSON)</string>
+      <string id="WebsiteFilter_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, können Sie blockierte Webseiten und Ausnahmen über JSON angeben.
+
+Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, werden Webseiten nicht gefiltert.</string>
       <string id="Bookmark01">Lesezeichen 01</string>
       <string id="Bookmark02">Lesezeichen 02</string>
       <string id="Bookmark03">Lesezeichen 03</string>
@@ -745,6 +755,10 @@ Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, gelte
       <string id="TrackingProtection_Locked_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, können Nutzer keine Änderungen an den Einstellungen zum Schutz vor Aktivitätenverfolgung vornehmen.
 
 Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, kann der Nutzer Änderungen an den Einstellungen vornehmen.</string>
+      <string id="TrackingProtection_EmailTracking">E-Mail-Verfolgung</string>
+      <string id="TrackingProtection_EmailTracking_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, werden versteckte E-Mail-Pixel und Skripte auf Websites blockiert.
+
+Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, werden versteckte E-Mail-Pixel und Skripte auf Websites nicht blockiert.</string>
       <string id="RequestedLocales">Angefordertes Gebietsschema</string>
       <string id="RequestedLocalesString">Angefordertes Gebietsschema (Zeichenfolge)</string>
       <string id="RequestedLocales_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, können Sie eine Liste der angeforderten Gebietsschemata für die Anwendung in der Reihenfolge ihrer Präferenz angeben. Dadurch wird das entsprechende Sprachpaket aktiv.
@@ -754,6 +768,11 @@ Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, verwe
       <string id="SecurityDevices_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, können Sie eine Liste mit PKCS #11 Modulen definieren. Module werden mit einem Namen und einem qualifizierten Pfad benannt.
 
 Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, werden keine weiteren PKCS #11 Module installiert.</string>
+      <string id="SecurityDevices_Add">Hinzufügen</string>
+      <string id="SecurityDevices_Delete">Entfernen</string>
+      <string id="SecurityDevices_Delete_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, können Sie die Namen der zu entfernenden PKCS #11-Module angeben.
+
+Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, werden keine PKCS #11-Module entfernt.</string>
       <string id="SearchBar">Position der Suchleiste</string>
       <string id="SearchBar_Explain">Wenn Sie die Richtlinieneinstellung aktivieren, können Sie festlegen, ob die Suchleiste von der Adressleiste getrennt ist.
 
@@ -828,6 +847,10 @@ Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, werde
       <string id="UserMessaging_MoreFromMozilla_Explain">Wenn diese Richtlinieneinstellung deaktiviert ist, wird der Abschnitt "Mehr von Mozilla" in den Einstellungen nicht angezeigt.
 
 Wenn diese Richtlinieneinstellung aktiviert oder nicht konfiguriert ist, wird der Abschnitt "Mehr von Mozilla" in den Einstellungen angezeigt.</string>
+      <string id="UserMessaging_Locked">Keine Änderung der Einstellungen für die Nachrichtenübermittlung zulassen</string>
+      <string id="UserMessaging_Locked_Explain">Wenn diese Richtlinieneinstellung deaktiviert ist, können die Einstellungen für die Nachrichtenübermittlung vom Benutzer geändert werden.
+
+Wenn diese Richtlinieneinstellung aktiviert oder nicht konfiguriert ist, können die Einstellungen für die Nachrichtenübermittlung nicht vom Benutzer geändert werden.</string>
       <string id="DisabledCiphers_TLS_DHE_RSA_WITH_AES_128_CBC_SHA">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</string>
       <string id="DisabledCiphers_TLS_DHE_RSA_WITH_AES_256_CBC_SHA">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</string>
       <string id="DisabledCiphers_TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</string>
@@ -955,6 +978,56 @@ Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, wird 
       <string id="AppUpdatePin_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, können Sie eine Firefox-Version als xx. oder xx.xx. angeben und Firefox wird nicht über diese Haupt- oder Nebenversion hinaus aktualisiert.
 
 Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, wird Firefox normal aktualisiert.</string>
+      <string id="Proxy_Locked">Keine Änderung der Proxy-Einstellungen zulassen</string>
+      <string id="Proxy_Locked_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, können die Proxy-Einstellungen vom Benutzer nicht geändert werden.
+
+Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, kann der Benutzer seine Proxy-Einstellungen ändern.</string>
+      <string id="Proxy_ConnectionType">Verbindungstyp</string>
+      <string id="Proxy_ConnectionType_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, können Sie den Verbindungstyp festlegen.
+
+Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, verwendet Firefox standardmäßig den Systemproxy.</string>
+      <string id="Proxy_HTTPProxy">HTTP Proxy</string>
+      <string id="Proxy_HTTPProxy_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, können Sie den HTTP-Proxy festlegen, der verwendet wird, wenn eine manuelle Proxy-Konfiguration angegeben ist.
+
+Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, verwendet Firefox keinen HTTP-Proxy.</string>
+      <string id="Proxy_UseHTTPProxyForAllProtocols">HTTP-Proxy für HTTPS verwenden</string>
+      <string id="Proxy_UseHTTPProxyForAllProtocols_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, wird der HTTP-Proxy für HTTPS verwendet, wenn eine manuelle Proxy-Konfiguration angegeben ist.
+
+Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, verwendet Firefox keinen HTTPS-Proxy, es sei denn, er ist angegeben.</string>
+      <string id="Proxy_SSLProxy">HTTPS Proxy</string>
+      <string id="Proxy_SSLProxy_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, können Sie den HTTPS-Proxy festlegen, der verwendet wird, wenn eine manuelle Proxy-Konfiguration angegeben ist.
+
+Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, verwendet Firefox keinen HTTPS-Proxy.</string>
+      <string id="Proxy_SOCKSProxy">SOCKS Host</string>
+      <string id="Proxy_SOCKSProxy_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, können Sie den SOCKS-Host und die Version festlegen, die verwendet werden, wenn eine manuelle Proxy-Konfiguration angegeben wird.
+
+Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, verwendet Firefox keinen SOCKS-Host.</string>
+      <string id="Proxy_AutoConfigURL">URL für automatische Proxy-Konfiguration</string>
+      <string id="Proxy_AutoConfigURL_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, können Sie die URL für die automatische Proxy-Konfiguration festlegen.
+
+Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, verwendet Firefox keine URL für die automatische Proxy-Konfiguration.</string>
+      <string id="Proxy_Passthrough">Proxy Passthrough</string>
+      <string id="Proxy_Passthrough_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, werden die Proxy-Einstellungen für die angegebenen Standorte umgangen.
+
+Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, umgeht Firefox den Proxy nicht.</string>
+      <string id="Proxy_AutoLogin">Keine Aufforderung zur Authentifizierung, wenn das Passwort gespeichert ist</string>
+      <string id="Proxy_AutoLogin_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, wird Firefox nicht zur Proxy-Authentifizierung auffordern, wenn ein Kennwort gespeichert wird.
+
+Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, wird Firefox immer zur Proxy-Authentifizierung auffordern.</string>
+      <string id="Proxy_UseProxyForDNS">Proxy DNS bei Verwendung von SOCKS v5</string>
+      <string id="Proxy_UseProxyForDNS_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, wird DNS bei Verwendung von SOCKS v5 als Proxy verwendet.
+
+Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, wird DNS bei der Verwendung von SOCKS v5 nicht über einen Proxy geleitet.</string>
+      <string id="DisableThirdPartyModuleBlocking">Blockierung von Drittanbietermodulen deaktivieren</string>
+      <string id="DisableThirdPartyModuleBlocking_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, dürfen Benutzer keine Module von Drittanbietern auf der Seite about:third-party blockieren.
+
+Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, dürfen Benutzer Module von Drittanbietern auf der Seite about:third-party blockieren.</string>
+      <string id="Containers">Container</string>
+      <string id="Containers_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, können Sie JSON verwenden, um die Standardcontainer zu konfigurieren.
+
+Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, werden die integrierten Standardwerte verwendet.
+
+Ausführliche Informationen zur Erstellung der Richtlinie finden Sie unter https://github.com/mozilla/policy-templates/blob/master/README.md#containers.</string>
       <string id="Preferences_Boolean_Explain">Wenn diese Richtlinieneinstellung aktiviert ist, ist die Einstellung auf true gesperrt. Wenn diese Richtlinieneinstellung deaktiviert ist, ist die Einstellung auf false gesperrt.
 
 Für eine Beschreibung der Einstellung, siehe:
@@ -1275,6 +1348,40 @@ https://github.com/mozilla/policy-templates/blob/master/README.md#preferences (E
       </presentation>
       <presentation id="JSON">
         <multiTextBox refId="JSON"/>
+      </presentation>
+      <presentation id="Proxy_ConnectionType">
+        <dropdownList refId="Proxy_ConnectionType"/>
+      </presentation>
+      <presentation id="Proxy_HTTPProxy">
+        <textBox refId="Proxy_HTTPProxy">
+          <label>Host einschließlich Port:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Proxy_SSLProxy">
+        <textBox refId="Proxy_SSLProxy">
+          <label>Host einschließlich Port:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Proxy_SOCKSProxy">
+        <text>Host einschließlich Port:</text>
+        <textBox refId="Proxy_SOCKSProxy">
+          <label/>
+        </textBox>
+        <text>SOCKS Version:</text>
+        <dropdownList refId="Proxy_SOCKSVersion"/>
+      </presentation>
+      <presentation id="Proxy_AutoConfigURL">
+        <textBox refId="Proxy_AutoConfigURL">
+          <label>URL:</label>
+        </textBox>
+      </presentation>
+      <presentation id="Proxy_Passthrough">
+        <text>Kein Proxy für</text>
+        <textBox refId="Proxy_Passthrough">
+          <label/>
+        </textBox>
+        <text>Example: .mozilla.org, .net.nz, 192.168.1.0/24</text>
+        <text>Connections to localhost, 127.0.0.1/8, and ::1 are never proxied.</text>
       </presentation>
     </presentationTable>
   </resources>

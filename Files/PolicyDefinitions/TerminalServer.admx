@@ -154,7 +154,7 @@
            <reference ref="windows:SUPPORTED_Windows_10_0_RS7" />
            <!--reference ref="windows:SUPPORTED_Windows_10_0_2004"--> 
        </or>
-      </definition>
+      </definition>    
     </definitions>
   </supportedOn>
 
@@ -981,16 +981,6 @@
         <decimal value="0" />
       </disabledValue>
     </policy>
-    <policy name="TS_LOCATION_REDIRECTION" class="Machine" displayName="$(string.TS_LOCATION_REDIRECTION)" explainText="$(string.TS_LOCATION_REDIRECTION_EXPLAIN)" key="SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" valueName="fDisableLocationRedir">
-      <parentCategory ref="TS_REDIRECTION" />
-      <supportedOn ref="windows:SUPPORTED_Windows_10_0_21H2_NOSERVER" />
-      <enabledValue>
-        <decimal value="1" />
-      </enabledValue>
-      <disabledValue>
-        <decimal value="0" />
-      </disabledValue>
-    </policy>
     <policy name="TS_CLIENT_PRINTER" class="Machine" displayName="$(string.TS_CLIENT_PRINTER)" explainText="$(string.TS_PRINTERMAP_EXPLAIN)" key="SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" valueName="fDisableCpm">
       <parentCategory ref="TS_PRINT_REDIRECTION" />
       <supportedOn ref="windows:SUPPORTED_WindowsXP" />
@@ -1055,29 +1045,9 @@
         <decimal value="0" />
       </disabledValue>
     </policy>
-    <policy name="TS_UIA" class="Machine" displayName="$(string.TS_UIA)" explainText="$(string.TS_UIA_EXPLAIN)" key="SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" valueName="EnableUiaRedirection">
-      <parentCategory ref="TS_REDIRECTION" />
-      <supportedOn ref="windows:SUPPORTED_Windows_10_0_21H2_NOSERVER" />
-      <enabledValue>
-        <decimal value="1" />
-      </enabledValue>
-      <disabledValue>
-        <decimal value="0" />
-      </disabledValue>
-    </policy>
     <policy name="TS_WEBAUTHN" class="Machine" displayName="$(string.TS_WEBAUTHN)" explainText="$(string.TS_WEBAUTHN_EXPLAIN)" key="SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" valueName="fDisableWebAuthn">
       <parentCategory ref="TS_REDIRECTION" />
       <supportedOn ref="windows:SUPPORTED_Windows_10_0_20H1" />
-      <enabledValue>
-        <decimal value="1" />
-      </enabledValue>
-      <disabledValue>
-        <decimal value="0" />
-      </disabledValue>
-    </policy>  
-    <policy name="TS_CLIPRDR_CLOUD_CLIP_INTEGRATION" class="Machine" displayName="$(string.TS_CLIPRDR_CLOUD_CLIP_INTEGRATION)" explainText="$(string.TS_CLIPRDR_CLOUD_CLIP_INTEGRATION_EXPLAIN)" key="SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services\Client" valueName="DisableCloudClipboardIntegration">
-      <parentCategory ref="TS_CLIENT" />
-      <supportedOn ref="windows:SUPPORTED_Windows_11_0_22H2_NOSERVER" />
       <enabledValue>
         <decimal value="1" />
       </enabledValue>
