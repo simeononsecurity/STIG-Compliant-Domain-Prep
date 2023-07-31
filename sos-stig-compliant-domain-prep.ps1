@@ -33,23 +33,58 @@ try {
         }
         Copy-Item -Path "$policyDefinitionsSource\*" -Destination $policyDefinitionsSysvolDestination -Force -Recurse
     }
-} catch {
+}
+catch {
     Write-Error "An error occurred: $($_.Exception.Message)"
 }
 
 # Import GPOs into GPMC
-$gposDir = Join-Path $scriptPath 'Files\GPOs'
-$gpoCategoryDirs = Get-ChildItem -Path $gposDir -Directory
+function Import-GPOs {
+    param (
+        [string]$gposDir
+    )
 
-foreach ($gpoCategoryDir in $gpoCategoryDirs) {
-    Write-Output "Importing GPOs from $gpoCategoryDir"
-    $gpoFiles = Get-ChildItem -Path $gpoCategoryDir.FullName -File
+    try {
+        $gpoCategoryDirs = Get-ChildItem -Path "$gposDir" -Directory
 
-    foreach ($gpoFile in $gpoFiles) {
-        $gpoPath = $gpoFile.FullName
-        $gpoName = $gpoFile.BaseName
-        Write-Output "Importing $gpoName"
-        New-GPO -Name $gpoName -Comment "Created by simeononsecurity.ch"
-        Import-GPO -BackupGpoName $gpoName -Path $gpoPath -TargetName $gpoName -CreateIfNeeded
+        # Check if any GPO categories were found
+        if ($null -eq $gpoCategoryDirs) {
+            Write-Error "No GPO categories/vendors found in $gposDir"
+            return
+        }
+
+        foreach ($gpoCategoryDir in $gpoCategoryDirs) {
+
+            $gpoFiles = Get-ChildItem -Path $gpoCategoryDir.FullName -Directory
+
+            Write-Output "Importing GPOs from $($gpoFiles.FullName)"
+    
+            # Check if any GPO files were found
+            if ($null -eq $gpoFiles) {
+                Write-Warning "No GPO files found in $($gpoFiles.FullName)"
+                continue
+            }
+    
+            foreach ($gpoFile in $gpoFiles) {
+                $gpoPath = $gpoFile.FullName
+                $gpoName = $gpoFile.BaseName
+                Write-Output "Importing $gpoName"
+                New-GPO -Name $gpoName -Comment "Created by simeononsecurity.ch"
+    
+                try {
+                    Import-GPO -BackupGpoName $gpoName -Path $gpoPath -TargetName $gpoName -CreateIfNeeded -ErrorAction Stop
+                }
+                catch {
+                    Write-Error "Failed to import GPO '$gpoName': $_"
+                }
+            }
+        }
+    }
+    catch {
+        Write-Error "An unexpected error occurred: $_"
     }
 }
+
+# Import GPOs into GPMC
+$gposDir = Join-Path $scriptPath 'Files\GPOs'
+Import-GPOs -gposDir "$gposDir"
