@@ -20,7 +20,7 @@ try {
     Write-Output "Copying Policy Definitions to Central Store"
     # Take ownership of the PolicyDefinitions folder and grant full control to Administrators
     takeown /f "$policyDefinitionsDestination" /r /a /d y | Out-Null
-    icacls "$policyDefinitionsDestination" /grant Administrators:(OI)(CI)F /t | Out-Null
+    icacls "$policyDefinitionsDestination" /grant "Administrators:(OI)(CI)F" /t | Out-Null
     # Copy the files to the PolicyDefinitions folder
     Copy-Item -Path "$policyDefinitionsSource\*" -Destination $policyDefinitionsDestination -Force -Recurse -ErrorAction Stop
     # Get all SYSVOL paths
