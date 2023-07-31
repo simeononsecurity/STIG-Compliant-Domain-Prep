@@ -29,7 +29,7 @@ If you disable or do not configure this policy, a "See more results" link will b
 If you enable this policy, a "Search the Internet" link is shown when the user performs a search in the start menu search box.  This button launches the default browser with the search terms.
 
 If you disable this policy, there will not be a "Search the Internet" link when the user performs a search in the start menu search box.
-
+          
 If you do not configure this policy (default), there will not be a "Search the Internet" link on the start menu.</string>
       <string id="NoSearchFilesInStartMenu">Do not search for files</string>
       <string id="NoSearchFilesInStartMenu_Help">If you enable this policy setting the Start menu search box will not search for files.
@@ -217,7 +217,7 @@ Selecting "Not Configured", or if you disable or do not configure this policy se
 Note: configuring this policy to "Show" or "Hide" on supported versions of Windows 10 will supercede any policy setting of "Remove frequent programs list from the Start Menu" (which manages same part of Start menu but with fewer options).</string>
       <string id="MFU_NotConfigured">Not Configured</string>
       <string id="MFU_Show">Show</string>
-      <string id="MFU_Hide">Hide</string>
+      <string id="MFU_Hide">Hide</string>        
       <string id="NoFrequentUsedPrograms">Remove frequent programs list from the Start Menu</string>
       <string id="NoFrequentUsedPrograms_Help">If you enable this setting, the frequently used programs list is removed from the Start menu.
 
@@ -254,7 +254,7 @@ If you disable or do not configure this setting, the all apps list will be visib
       <string id="APPLIST_NONE">None</string>
       <string id="APPLIST_COLLAPSE">Collapse</string>
       <string id="APPLIST_COLLAPSESETTING">Collapse and disable setting</string>
-      <string id="APPLIST_REMOVESETTING">Remove and disable setting</string>
+      <string id="APPLIST_REMOVESETTING">Remove and disable setting</string>    
 
       <string id="NoNetAndDialupConnect">Remove Network Connections from Start Menu</string>
       <string id="NoNetAndDialupConnect_Help">This policy setting allows you to remove Network Connections from the Start Menu.
@@ -269,9 +269,9 @@ If you disable or do not configure this policy setting, Network Connections is a
 
 Also, see the "Disable programs on Settings menu" and "Disable Control Panel" policy settings and the policy settings in the Network Connections folder (Computer Configuration and User Configuration\Administrative Templates\Network\Network Connections).</string>
       <string id="NoPinnedPrograms">Remove pinned programs list from the Start Menu</string>
-      <string id="NoPinnedPrograms_Help">If you enable this setting, the "Pinned Programs" list is removed from the Start menu. Users cannot pin programs to the Start menu.
+      <string id="NoPinnedPrograms_Help">If you enable this setting, the "Pinned Programs" list is removed from the Start menu. Users cannot pin programs to the Start menu. 
 
-In Windows XP and Windows Vista, the Internet and email checkboxes are removed from the 'Customize Start Menu' dialog.
+In Windows XP and Windows Vista, the Internet and email checkboxes are removed from the 'Customize Start Menu' dialog. 
 
 If you disable this setting or do not configure it, the "Pinned Programs" list remains on the Start menu. Users can pin and unpin programs in the Start Menu.</string>
       <string id="NoRecentDocsHistory">Do not keep history of recently opened documents</string>
@@ -339,7 +339,7 @@ If you enable this setting, the following changes occur:
 
 (3) The user will be blocked from entering the following into the Internet Explorer Address Bar:
 
---- A UNC path: \\&lt;server&gt;\&lt;share&gt;
+--- A UNC path: \\&lt;server&gt;\&lt;share&gt; 
 
 ---Accessing local drives:  e.g., C:
 
@@ -610,7 +610,7 @@ If you enable this policy setting, the Start screen will appear on the display t
 
 If you disable or don't configure this policy setting, the Start screen will always appear on the main display when the user presses the Windows logo key. Users will still be able to open Start on other displays by pressing the Start button on that display. Also, the user will be able to configure this setting.</string>
       <string id="ForceStartSize_DisplayName">Force Start to be either full screen size or menu size</string>
-      <string id="ForceStartSize_ExplainText">If you enable this policy and set it to Start menu or full screen Start, Start will be that size and users will be unable to change the size of Start in Settings.
+      <string id="ForceStartSize_ExplainText">If you enable this policy and set it to Start menu or full screen Start, Start will be that size and users will be unable to change the size of Start in Settings. 
 
 If you disable or don’t configure this policy setting, Windows will automatically select the size based on hardware form factor and users will be able to change the size of Start in Settings.</string>
       <string id="ForceLauncherSize_Collapsed">Start menu</string>
@@ -623,30 +623,10 @@ If you enable this policy the people icon will be removed from the taskbar, the 
       <string id="HideRecentlyAddedApps_Help">This policy allows you to prevent the Start Menu from displaying a list of recently installed applications.
 
 If you enable this policy, the Start Menu will no longer display the "Recently added" list.  The corresponding setting will also be disabled in Settings.</string>
-      <string id="HideRecommendedSection">Remove Recommended section from Start Menu</string>
-      <string id="HideRecommendedSection_Help">This policy allows you to prevent the Start Menu from displaying a list of recommended applications and files.
-
-If you enable this policy setting, the Start Menu will no longer show the section containing a list of recommended files and apps.</string>
       <string id="DisableContextMenusInStart">Disable context menus in the Start Menu</string>
       <string id="DisableContextMenusInStart_Help">This policy allows you to prevent users from being able to open context menus in the Start Menu.
 
 If you enable this policy, then invocations of context menus within the Start Menu will be ignored.</string>
-      <string id="SimplifyQuickSettings_DisplayName">Simplify Quick Settings Layout</string>
-      <string id="SimplifyQuickSettings_ExplainText">If you enable this policy, Quick Settings will be reduced to only having the WiFi, Bluetooth, Accessibility, and VPN buttons; the brightness and volume sliders; and battery indicator and link to the Settings app.
-
-If you disable or don't configure this policy setting, the regular Quick Settings layout will appear whenever Quick Settings is invoked.</string>
-      <string id="DisableEditingQuickSettings_DisplayName">Disable Editing Quick Settings</string>
-      <string id="DisableEditingQuickSettings_ExplainText">If you enable this policy, the user will be unable to modify Quick Settings.
-
-If you disable or don't configure this policy setting, the user will be able to edit Quick Settings, such as pinning or unpinning buttons.</string>
-      <string id="DisableControlCenter">Remove Quick Settings</string>
-      <string id="DisableControlCenter_Help">This policy setting removes Quick Settings from the bottom right area on the taskbar.
-
-The quick settings area is located at the left of the clock in the taskbar and includes icons for current network and volume.
-
-If this setting is enabled, Quick Settings is not displayed in the quick settings area. 
-
-A reboot is required for this policy setting to take effect.</string>
     </stringTable>
     <presentationTable>
       <presentation id="NoMoreProgramsList">
@@ -663,14 +643,13 @@ A reboot is required for this policy setting to take effect.</string>
           <label>Start Layout File</label>
           <defaultValue></defaultValue>
         </textBox>
-        <checkBox refId="LockedStartLayout_ReapplyEveryLogon" defaultChecked="false">Reapply layout at every logon</checkBox>
       </presentation>
       <presentation id="ForceStartSize">
         <dropdownList refId="ForceStartSizeDropdown" noSort="true" defaultItem="0">Choose one of the following sizes</dropdownList>
       </presentation>
       <presentation id="ShowOrHideMostUsedApps">
         <dropdownList refId="ShowOrHideMostUsedAppsDropdown" noSort="true" defaultItem="1">Choose one of the following actions</dropdownList>
-      </presentation>
+      </presentation>        
     </presentationTable>
   </resources>
 </policyDefinitionResources>

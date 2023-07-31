@@ -6,8 +6,6 @@
     <string id="AntiSpywareDefender">Microsoft Defender Antivirus</string>
     <string id="AntiSpyware">Endpoint Protection</string>
     <string id="Exclusions">Exclusions</string>
-    <string id="Features">Features</string>
-    <string id="DeviceControl">Device Control</string>
     <string id="ExploitGuard">Microsoft Defender Exploit Guard</string>
     <string id="ExploitGuard_ASR">Attack Surface Reduction</string>
     <string id="ExploitGuard_ControlledFolderAccess">Controlled Folder Access</string>
@@ -95,9 +93,9 @@
     <string id="DisableLocalAdminMerge">Configure local administrator merge behavior for lists</string>
     <string id="DisableLocalAdminMerge_Explain">This policy setting controls whether or not complex list settings configured by a local administrator are merged with Group Policy settings. This setting applies to lists such as threats and Exclusions.
 
-    If you disable or do not configure this setting, unique items defined in Group Policy and in preference settings configured by the local administrator will be merged into the resulting effective policy. In the case of conflicts, Group policy Settings will override preference settings.
+    If you enable or do not configure this setting, unique items defined in Group Policy and in preference settings configured by the local administrator will be merged into the resulting effective policy. In the case of conflicts, Group policy Settings will override preference settings.
 
-    If you enable this setting, only items defined by Group Policy will be used in the resulting effective policy. Group Policy settings will override preference settings configured by the local administrator.</string>
+    If you disable this setting, only items defined by Group Policy will be used in the resulting effective policy. Group Policy settings will override preference settings configured by the local administrator.</string>
     <string id="DisableRoutinelyTakingAction">Turn off routine remediation</string>
     <string id="DisableRoutinelyTakingActionDefender_Explain">
     This policy setting allows you to configure whether Microsoft Defender Antivirus automatically takes action on all detected threats. The action to be taken on a particular threat is determined by the combination of the policy-defined action, user-defined action, and the signature-defined action.
@@ -142,15 +140,11 @@
       If you disable or do not configure this setting, the proxy will skip over this fallback step according to the order specified above.
     </string>
     <string id="RandomizeScheduleTaskTimes">Randomize scheduled task times</string>
-    <string id="RandomizeScheduleTaskTimes_Explain">This policy setting allows you to configure the scheduled scan, and the scheduled security intelligence update, start time window in hours.
+    <string id="RandomizeScheduleTaskTimes_Explain">This policy setting allows you to enable or disable randomization of the scheduled scan start time and the scheduled security intelligence update start time. This setting is used to distribute the resource impact of scanning. For example, it could be used in guest virtual machines sharing a host, to prevent multiple guest virtual machines from undertaking a disk-intensive operation at the same time.
 
-    If you disable or do not configure this setting, scheduled tasks will begin at a random time within 4 hours after the time specified in Task Scheduler.
-    If you enable this setting, you can widen, or narrow, this randomization period. Specify a randomization window of between 1 and 23 hours.</string>
-    <string id="SchedulerRandomizationTime">Configure scheduled task times randomization window</string>
-    <string id="SchedulerRandomizationTime_Explain">This policy setting allows you to configure scheduled scan start time and the scheduled security intelligence update start time window in hours.
+    If you enable or do not configure this setting, scheduled tasks will begin at a random time within an interval of 4 hours after the specified start time.
 
-    If you disable or do not configure this setting, scheduled tasks will begin at a random time within an interval of 4 hours after the specified start time.
-    If you enable this setting, you must pick a randomization window in hours. The possible randomization window interval is between 1 and 23 hours.</string>
+    If you disable this setting, scheduled tasks will begin at the specified start time.</string>
     <string id="ServiceKeepAlive">Allow antimalware service to remain running always</string>
     <string id="ServiceKeepAlive_Explain">This policy setting allows you to configure whether or not the antimalware service remains running when antivirus and antispyware security intelligence is disabled. It is recommended that this setting remain disabled.
 
@@ -245,13 +239,13 @@
 
     If you disable this setting, raw write notifications be disabled.</string>
     <string id="DisableRealtimeMonitoring">Turn off real-time protection</string>
-    <string id="DisableRealtimeMonitoringDefender_Explain">This policy turns off real-time protection in Microsoft Defender Antivirus.
+    <string id="DisableRealtimeMonitoringDefender_Explain">This policy setting turns off real-time protection prompts for known malware detection.
 
-    Real-time protection consists of always-on scanning with file and process behavior monitoring and heuristics. When real-time protection is on, Microsoft Defender Antivirus detects malware and potentially unwanted software that attempts to install itself or run on your device, and prompts you to take action on malware detections.
+    Microsoft Defender Antivirus alerts you when malware or potentially unwanted software attempts to install itself or to run on your computer.
 
-    If you enable this policy setting, real-time protection is turned off. 
+    If you enable this policy setting, Microsoft Defender Antivirus will not prompt users to take actions on malware detections.
 
-    If you either disable or do not configure this policy setting, real-time protection is turned on.</string>
+    If you disable or do not configure this policy setting, Microsoft Defender Antivirus will prompt users to take actions on malware detections.</string>
     <string id="DisableRealtimeMonitoring_Explain">
     This policy setting turns off real-time protection prompts for known malware detection.
 
@@ -390,14 +384,7 @@
       
       If you enable this setting, Microsoft Defender Antivirus enhanced notifications will not display on clients.
     </string>
-    <string id="Reporting_ServiceHealthReportInterval">Configure time interval for service health reports</string>
-    <string id="Reporting_ServiceHealthReportInterval_Explain">This policy setting configures the time interval (in minutes) for the service health reports to be sent from endpoints.
 
-    If you disable or do not configure this setting, the default value will be applied. The default value is set at 60 minutes (1 hour).
-
-    If you configure this setting to 0, no service health reports will be sent.
-
-    The maximum value allowed to be set is 14400 minutes (10 days).</string>
       <string id="Scan_AllowPause">Allow users to pause scan</string>
     <string id="Scan_AllowPause_Explain">This policy setting allows you to manage whether or not end users can pause a scan in progress.
 
@@ -425,7 +412,7 @@
     <string id="CheckForSignaturesBeforeRunningScan">Check for the latest virus and spyware security intelligence before running a scheduled scan</string>
     <string id="CheckForSignaturesBeforeRunningScan_Explain">This policy setting allows you to manage whether a check for new virus and spyware security intelligence will occur before running a scan. 
 
-    This setting applies to scheduled scans, but it has no effect on scans initiated manually from the user interface or to the ones started from the command line using "mpcmdrun -Scan".
+    This setting applies to scheduled scans as well as the command line "mpcmdrun -SigUpdate", but it has no effect on scans initiated manually from the user interface.
 
     If you enable this setting, a check for new security intelligence will occur before running a scan.
 
@@ -435,21 +422,13 @@
 
     If you enable or do not configure this setting, archive files will be scanned.
 
-    If you disable this setting, archive files will not be scanned. However, archives are always scanned during directed scans.</string>
+    If you disable this setting, archive files will not be scanned.</string>
     <string id="Scan_DisableCatchupFullScan">Turn on catch-up full scan</string>
     <string id="Scan_DisableCatchupFullScan_Explain">This policy setting allows you to configure catch-up scans for scheduled full scans. A catch-up scan is a scan that is initiated because a regularly scheduled scan was missed.  Usually these scheduled scans are missed because the computer was turned off at the scheduled time. 
 
     If you enable this setting, catch-up scans for scheduled full scans will be turned on.  If a computer is offline for two consecutive scheduled scans, a catch-up scan is started the next time someone logs on to the computer.  If there is no scheduled scan configured, there will be no catch-up scan run. 
 
     If you disable or do not configure this setting, catch-up scans for scheduled full scans will be turned off.</string>
-    <string id="Scan_ThrottleForScheduledScanOnly">CPU throttling type</string>
-    <string id="Scan_ThrottleForScheduledScanOnly_Explain">This policy setting determines whether the maximum percentage CPU utilization permitted during a scan applies only to scheduled scans, or to both scheduled and custom scans (but not real-time protection). The maximum CPU utilization limit is also referred to as CPU throttling, or a CPU usage limit.
-
-    The default value for this policy setting is True, which means CPU throttling is applied only to scheduled scans.
-
-    If you either enable or do not configure this setting, CPU throttling will apply only to scheduled scans.
-
-    If you disable this setting, CPU throttling will apply to scheduled and custom scans.</string>
     <string id="Scan_DisableCatchupQuickScan">Turn on catch-up quick scan</string>
     <string id="Scan_DisableCatchupQuickScan_Explain">This policy setting allows you to configure catch-up scans for scheduled quick scans. A catch-up scan is a scan that is initiated because a regularly scheduled scan was missed.  Usually these scheduled scans are missed because the computer was turned off at the scheduled time. 
 
@@ -457,8 +436,8 @@
 
     If you disable or do not configure this setting, catch-up scans for scheduled quick scans will be turned off.</string>
     <string id="Scan_DisableEmailScanning">Turn on e-mail scanning</string>
-    <string id="Scan_DisableEmailScanning_Explain">This policy setting allows you to configure e-mail scanning. When e-mail scanning is enabled, the engine will parse the mailbox and mail files, according to their specific format, in order to analyze the mail bodies and attachments. Several e-mail formats are currently supported, for example: pst (Outlook), dbx, mbx, mime (Outlook Express), binhex (Mac). Email scanning is not supported on modern email clients.
-    
+    <string id="Scan_DisableEmailScanning_Explain">This policy setting allows you to configure e-mail scanning. When e-mail scanning is enabled, the engine will parse the mailbox and mail files, according to their specific format, in order to analyze the mail bodies and attachments. Several e-mail formats are currently supported, for example: pst (Outlook), dbx, mbx, mime (Outlook Express), binhex (Mac).
+
     If you enable this setting, e-mail scanning will be enabled.
 
     If you disable or do not configure this setting, e-mail scanning will be disabled.</string>
@@ -468,6 +447,12 @@
     If you enable or do not configure this setting, heuristics will be enabled.
 
     If you disable this setting, heuristics will be disabled.</string>
+    <string id="Scan_DisablePackedExeScanning">Scan packed executables</string>
+    <string id="Scan_DisablePackedExeScanning_Explain">This policy setting allows you to configure scanning for packed executables. It is recommended that this type of scanning remain enabled.
+
+    If you enable or do not configure this setting, packed executables will  be scanned.
+
+    If you disable this setting, packed executables will not be scanned.</string>
     <string id="Scan_DisableRemovableDriveScanning">Scan removable drives</string>
     <string id="Scan_DisableRemovableDriveScanning_Explain">This policy setting allows you to manage whether or not to scan for malicious software and unwanted software in the contents of removable drives, such as USB flash drives, when running a full scan.
 
@@ -539,7 +524,7 @@
 
     If you enable this setting, a quick scan will run at the interval specified.
 
-    If you disable or do not configure this setting, quick scan controlled by this config will not be run.</string>
+    If you disable or do not configure this setting, a quick scan will run at a default time.</string>
     <string id="Scan_ScanOnlyIfIdle">Start the scheduled scan only when computer is on but not in use</string>
     <string id="Scan_ScanOnlyIfIdle_Explain">This policy setting allows you to configure scheduled scans to start only when your computer is on but not in use.
 
@@ -583,11 +568,11 @@
     <string id="Scan_ScheduleDay_7">Friday</string>
     <string id="Scan_ScheduleDay_8">Saturday</string>
     <string id="Scan_ScheduleQuickScantime">Specify the time for a daily quick scan</string>
-    <string id="Scan_ScheduleQuickScantime_Explain">This policy setting allows you to specify the time of day at which to perform a daily quick scan. The time value is represented as the number of minutes past midnight (00:00).  For example, 120 (0x78) is equivalent to 02:00 AM. By default, this setting is set to disabled. The schedule is based on local time on the computer where the scan is executing.
+    <string id="Scan_ScheduleQuickScantime_Explain">This policy setting allows you to specify the time of day at which to perform a daily quick scan. The time value is represented as the number of minutes past midnight (00:00).  For example, 120 (0x78) is equivalent to 02:00 AM. By default, this setting is set to  a time value of 2:00 AM. The schedule is based on local time on the computer where the scan is executing.
 
     If you enable this setting, a daily quick scan will run at the time of day specified.
 
-    If you disable or do not configure this setting, daily quick scan controlled by this config will not be run.</string>
+    If you disable or do not configure this setting, a daily quick scan will run at a default time.</string>
     <string id="Scan_ScheduleTime">Specify the time of day to run a scheduled scan</string>
     <string id="Scan_ScheduleTime_Explain">This policy setting allows you to specify the time of day at which to perform a scheduled scan. The time value is represented as the number of minutes past midnight (00:00).  For example, 120 (0x78) is equivalent to 02:00 AM. By default, this setting is set to  a time value of 2:00 AM. The schedule is based on local time on the computer where the scan is executing.
 
@@ -1047,78 +1032,6 @@
 
     Microsoft Defender Antivirus automatically determines which applications can be trusted. You can add additional trusted applications in the Configure allowed applications GP setting.
     </string>
-    <string id="DeviceControl_PolicyGroups">Define device control policy groups</string>
-    <string id="DeviceControl_PolicyGroups_Explain">
-        Please follow the device control policy groups xml schema to fill out the policy groups data. 
-        Alternatively you could use a file path containing the XML groups data.
-    </string>
-    <string id="DeviceControl_PolicyRules">Define device control policy rules</string>
-    <string id="DeviceControl_PolicyRules_Explain">
-        Please follow the device control policy rules xml schema to fill out the policy rules data.
-        Alternatively you could use a file path containing the XML rules data.
-    </string>
-    <string id="Root_PlatformUpdateChannel">Select the channel for Microsoft Defender monthly platform updates</string>
-    <string id="Root_PlatformUpdateChannel_Explain">Enable this policy to specify when devices receive Microsoft Defender platform updates during the monthly gradual rollout.​
-
-        Beta Channel: Devices set to this channel will be the first to receive new updates. Select Beta Channel to participate in identifying and reporting issues to Microsoft. Devices in the Windows Insider Program are subscribed to this channel by default. For use in (manual) test environments only and a limited number of devices.
-        Current Channel (Preview): Devices set to this channel will be offered updates earliest during the monthly gradual release cycle. Suggested for pre-production/validation environments.
-        Current Channel (Staged): Devices will be offered updates after the monthly gradual release cycle. Suggested to apply to a small, representative part of your production population (~10%).
-        Current Channel (Broad): Devices will be offered updates only after the gradual release cycle completes. Suggested to apply to a broad set of devices in your production population (~10-100%).
-        Critical - Time delay: Devices will be offered updates with a 48-hour delay. Suggested for critical environments only.
-
-        If you disable or do not configure this policy, the device will stay up to date automatically during the gradual release cycle. Suitable for most devices.
-    </string>
-    <string id="Root_EngineUpdateChannel">Select the channel for Microsoft Defender monthly engine updates</string>
-    <string id="Root_EngineUpdateChannel_Explain">Enable this policy to specify when devices receive Microsoft Defender engine updates during the monthly gradual rollout.​
-
-        Beta Channel: Devices set to this channel will be the first to receive new updates. Select Beta Channel to participate in identifying and reporting issues to Microsoft. Devices in the Windows Insider Program are subscribed to this channel by default. For use in (manual) test environments only and a limited number of devices.
-        Current Channel (Preview): Devices set to this channel will be offered updates earliest during the monthly gradual release cycle. Suggested for pre-production/validation environments.
-        Current Channel (Staged): Devices will be offered updates after the monthly gradual release cycle. Suggested to apply to a small, representative part of your production population (~10%).
-        Current Channel (Broad): Devices will be offered updates only after the gradual release cycle completes. Suggested to apply to a broad set of devices in your production population (~10-100%).
-        Critical - Time delay: Devices will be offered updates with a 48-hour delay. Suggested for critical environments only.
-
-        If you disable or do not configure this policy, the device will stay up to date automatically during the gradual release cycle. Suitable for most devices.
-    </string>
-    <string id="Root_SecurityIntelligenceUpdateChannel">Select the channel for Microsoft Defender daily security intelligence updates</string>
-    <string id="Root_SecurityIntelligenceUpdateChannel_Explain">Enable this policy to specify when devices receive Microsoft Defender security intelligence updates during the daily gradual rollout.
-
-        Current Channel (Staged): Devices will be offered updates after the release cycle. Suggested to apply to a small, representative part of production population (~10%).
-        Current Channel (Broad): Devices will be offered updates only after the gradual release cycle completes. Suggested to apply to a broad set of devices in your production population (~10-100%).
-        Critical - Time delay: Devices will be offered updates with a 48-hour delay. Suggested for critical environments only.
-
-        If you disable or do not configure this policy, the device will stay up to date automatically during the daily release cycle. Suitable for most devices.
-    </string>
-    <string id="Root_UpdateChannel_Dropdown_Beta">Beta Channel</string>
-    <string id="Root_UpdateChannel_Dropdown_Preview">Current Channel (Preview)</string>
-    <string id="Root_UpdateChannel_Dropdown_Staged">Current Channel (Staged)</string>
-    <string id="Root_UpdateChannel_Dropdown_Broad">Current Channel (Broad)</string>
-    <string id="Root_UpdateChannel_Dropdown_Delayed">Critical - Time delay</string>
-    <string id="MpEngine_DisableGradualRelease">Disable gradual rollout of Microsoft Defender updates.</string>
-    <string id="MpEngine_DisableGradualRelease_Explain">Enable this policy to disable gradual rollout of Defender updates.
-
-        Current Channel (Broad): Devices set to this channel will be offered updates last during the gradual release cycle. Best for datacenter machines that only receive limited updates.
-
-        Note: This setting applies to both monthly as well as daily Defender updates and will override any previously configured channel selections for platform and engine updates.
-
-        If you disable or do not configure this policy, the device will remain in Current Channel (Default) unless specified otherwise in specific channels for platform and engine updates. Stay up to date automatically during the gradual release cycle. Suitable for most devices.</string>
-    <string id="DeviceControl_DefaultEnforcement">Select Device Control Default Enforcement Policy</string>
-    <string id="DeviceControl_DefaultEnforcement_Explain">
-        Default Allow: Choosing this default enforcement, will Allow any operations to occur on the attached devices if no policy rules are found to match.
-        Default Deny: Choosing this default enforcement, will Deny any operations to occur on the attached devices if no policy rules are found to match.
-
-        Default Enforcement will establish what decision should be made during the Device Control access checks when none of the policy rules match.
-    </string>
-    <string id="DeviceControl_DefaultEnforcement_DefaultAllow">Default Allow</string>
-    <string id="DeviceControl_DefaultEnforcement_DefaultDeny">Default Deny</string>
-    <string id="DeviceControl_DataDuplicationRemoteLocation">Define Device Control evidence data remote location</string>
-    <string id="DeviceControl_DataDuplicationRemoteLocation_Explain">
-        Define evidence file remote location, where Device Control service will move evidence data captured.
-    </string>
-    <string id="Features_DeviceControlEnabled">Device Control</string>
-    <string id="DeviceControl_DeviceControlEnabled_Explain">
-        Enable or Disable Defender Device Control on this machine.
-        Note: You must be enrolled as E3 or E5 in order for Device Control to be enabled.
-    </string>
     </stringTable>
     <presentationTable>
     <presentation id="ProxyBypass">
@@ -1191,9 +1104,6 @@
     </presentation>
     <presentation id="Reporting_WppTracingLevel">
     <decimalTextBox refId="Reporting_WppTracingLevel" defaultValue="0">Configure WPP tracing level</decimalTextBox>
-    </presentation>
-    <presentation id="Reporting_ServiceHealthReportInterval">
-    <decimalTextBox refId="Reporting_ServiceHealthReportInterval" defaultValue="60">Configure time interval for service health reports</decimalTextBox>
     </presentation>
     <presentation id="Scan_ArchiveMaxDepth">
     <decimalTextBox refId="Scan_ArchiveMaxDepth" defaultValue="0">Specify the maximum depth to scan archive files</decimalTextBox>
@@ -1301,36 +1211,6 @@
     </presentation>
     <presentation id="Root_PUAProtection">
         <dropdownList refId="Root_PUAProtection" noSort="true" defaultItem="0"></dropdownList>
-    </presentation>
-    <presentation id="DeviceControl_PolicyGroups">
-    <textBox refId="DeviceControl_PolicyGroups">
-        <label>Define the policy groups here</label>
-    </textBox>
-    </presentation>
-    <presentation id="DeviceControl_PolicyRules">
-    <textBox refId="DeviceControl_PolicyRules">
-        <label>Define the policy rules here</label>
-    </textBox>
-    </presentation>
-    <presentation id="SchedulerRandomizationTime">
-        <decimalTextBox refId="SchedulerRandomizationTime" defaultValue="4">Specify scheduler randomization window in hours.</decimalTextBox>
-    </presentation>
-    <presentation id="PlatformUpdateChannelsDropDown">
-    <dropdownList refId="UpdateChannelsDropDown" noSort="true" defaultItem="0">Select the channel for Microsoft Defender monthly platform updates:</dropdownList>
-    </presentation>
-    <presentation id="EngineUpdateChannelsDropDown">
-    <dropdownList refId="UpdateChannelsDropDown" noSort="true" defaultItem="0">Select the channel for Microsoft Defender monthly engine updates:</dropdownList>
-    </presentation>
-    <presentation id="SecurityIntelligenceUpdateChannelsDropDown">
-    <dropdownList refId="UpdateChannelsDropDown" noSort="true" defaultItem="0">Select the channel for Microsoft Defender daily security intelligence updates:</dropdownList>
-    </presentation>
-    <presentation id="DeviceControlDefaultEnforcementDropDown">
-    <dropdownList refId="DeviceControlDefaultEnforcementDropDown" noSort="true" defaultItem="0">Select Device Control Default Enforcement Policy</dropdownList>
-    </presentation>
-    <presentation id="DeviceControl_DataDuplicationRemoteLocation">
-    <textBox refId="DeviceControl_DataDuplicationRemoteLocation">
-        <label>Define the Device Control data duplication remote location.</label>
-    </textBox>
     </presentation>
    </presentationTable>
 </resources>

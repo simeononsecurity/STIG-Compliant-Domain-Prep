@@ -14,13 +14,12 @@
       <string id="WU_SUPPORTED_Windows7_To_Win2kSP3_Or_XPSP1">Windows 7, Windows Server 2008 R2, Windows Vista, Windows Server 2003, Windows XP SP2, Windows XP SP1 , Windows 2000 SP4, Windows 2000 SP3</string>
       <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_NoWinRT">At least Windows XP Professional Service Pack 1 or Windows 2000 Service Pack 3, excluding Windows RT</string>
       <string id="WU_SUPPORTED_WindowsXPSP1_NoWinRT">At least Windows Server 2003 operating systems or Windows XP Professional with SP1, excluding Windows RT</string>
-      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">At least Windows XP Professional Service Pack 1 or At least Windows 2000 Service Pack 3 through Windows 8.1 or Windows Server 2012 R2 with most current service pack. Not supported on Windows 10 and above.</string>
-      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">At least Windows Vista through Windows 8.1 or Windows Server 2012 R2 with most current service pack. Not supported on Windows 10 and above.</string>
+      <string id="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2">At least Windows XP Professional Service Pack 1 or At least Windows 2000 Service Pack 3 through Windows 8.1 or Windows Server 2012 R2 with most current service pack</string>
+      <string id="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2">At least Windows Vista through Windows 8.1 or Windows Server 2012 R2 with most current service pack</string>
       <string id="WU_SUPPORTED_XPSP1_or_Win2kSP3_AUOption7_SUPPORTED_Server2016">Windows XP Professional Service Pack 1 or At least Windows 2000 Service Pack 3
 Option 7 only supported on servers of at least Windows Server 2016 edition​</string>
-      <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">Windows Server 2016 through Windows Server 2022, or Windows 10​</string>
       <string id="WU_SUPPORTED_Windows_Server_2019_Windows_10_0_1809">At least Windows Server 2019, or Windows 10 Version 1809​</string>
-      <string id="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004">At least Windows Server 2022, or Windows 10 Version 2004​</string>
+      <string id="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004">At least Windows Server 2022, or Windows 10 Version 2004​</string>	  
       <string id="AUDontShowUasHelp">This policy setting allows you to manage whether the 'Install Updates and Shut Down' option is displayed in the Shut Down Windows dialog box.
 
 If you enable this policy setting, 'Install Updates and Shut Down' will not appear as a choice in the Shut Down Windows dialog box, even if updates are available for installation when the user selects the Shut Down option in the Start menu.
@@ -167,11 +166,11 @@ If the status is set to Not Configured, use of Automatic Updates is not specifie
       <string id="UpdateClassPolicySource_Title">Specify source service for specific classes of Windows Updates</string>
       <string id="UpdateClassPolicySource_Help">When this policy is enabled, devices will receive Windows updates for the classes listed from the specified update source: either Windows Update or Windows Server Update Service. 
 
-        Note: To receive any updates from the Windows Server Update Service you must have properly configured an intranet Microsoft update service location via the “Specify intranet Microsoft update service location” policy.
+        Note: To receive any updates from the Windows Server Update Service you must have properly configured an intranet Microsoft update service location via the "Specify intranet Microsoft update service location" policy.
 
         If this policy is not configured or is disabled, the device will continue to detect updates per your other policy configurations. 
 
-        Note: If you are using “Do not allow deferral policies to cause scans against Windows Update” currently to ensure devices only scan against your specified server, we recommend configuring this policy instead or in addition to such.</string>
+        Note: If you are using "Do not allow deferral policies to cause scans against Windows Update" currently to ensure devices only scan against your specified server, we recommend configuring this policy instead or in addition to such.</string>
       <string id="UpdateClassPolicySourceSelectionWU">Windows Update</string>
       <string id="UpdateClassPolicySourceSelectionWSUS">Windows Server Update Services</string>
       <string id="DetectionFrequency_Help">Specifies the hours that Windows will use to determine how long to wait before checking for available updates. The exact wait time is a sum of the specific value and a random variant of 0-4 hours.
@@ -315,12 +314,6 @@ Note: This policy applies only when the intranet Microsoft update service this c
 Note: This policy is not supported on Windows RT. Setting this policy will not have any effect on Windows RT PCs.</string>
       <string id="TargetGroup_Title">Enable client-side targeting</string>
       <string id="WindowsUpdateCat">Windows Update</string>
-      <!--Category sub-folders-->
-      <string id="WindowsUpdateOffering">Manage updates offered from Windows Update</string>
-      <string id="WSUSOffering">Manage updates offered from Windows Server Update Service</string>
-      <string id="WindowsUpdateExperience">Manage end user experience</string>
-      <string id="PreSV">Legacy Policies</string>
-
       <string id="TrustedPublisher_Title">Allow signed updates from an intranet Microsoft update service location </string>
       <string id="TrustedPublisher_Help">This policy setting allows you to manage whether Automatic Updates accepts updates signed by entities other than Microsoft when the update is found on an intranet Microsoft update service location.
 
@@ -336,6 +329,7 @@ Note: This policy is not supported on Windows RT. Setting this policy will not h
 Enabling this policy will disable that functionality, and may cause connection to public services such as the Windows Store to stop working.
 
 Note: This policy applies only when this PC is configured to connect to an intranet update service using the "Specify intranet Microsoft update service location" policy.</string>
+      <string id="DeferUpdateCat">Windows Update for Business</string>
       <string id="ManagePreviewBuilds_Title">Manage preview builds</string>
       <string id="ManagePreviewBuilds_Help">Enable this policy to manage which updates you receive prior to the update being released to the world.
 
@@ -348,22 +342,18 @@ Ideal for feature explorers who want to see upcoming Windows 10 features. Your f
 Release Preview Channel (default)
 Insiders in the Release Preview Channel will have access to the upcoming release of Windows 10 prior to it being released to the world. These builds are supported by Microsoft. The Release Preview Channel is where we recommend companies preview and validate upcoming Windows 10 releases before broad deployment within their organization.
 
-Release Preview Channel, Quality Updates Only
-Ideal for those who want to validate the features and fixes coming soon to their current version. Note, released feature updates will continue to be offered in accordance with configured policies when this option is selected.
-
 Note: Preview Build enrollment requires a telemetry level setting of 2 or higher and your domain registered on insider.windows.com. For additional information on Preview Builds, see: https://aka.ms/wipforbiz
 
 If you disable or do not configure this policy, Windows Update will not offer you any pre-release updates and you will receive such content once released to the world. Disabling this policy will cause any devices currently on a pre-release build to opt out and stay on the latest Feature Update once released.</string>
       <string id="DevChannel">Dev Channel</string>
       <string id="BetaChannel">Beta Channel</string>
       <string id="ReleasePreviewChannel">Release Preview Channel</string>
-      <string id="ReleasePreviewQualityOnly">Release Preview of Quality Updates Only</string>
       <string id="DeferFeatureUpdates_Title">Select when Preview Builds and Feature Updates are received</string>
       <string id="DeferFeatureUpdates_Help">Enable this policy to specify when to receive Feature Updates.
 
-Defer Updates | This enables devices to defer taking the next Feature Update available for their current product (or a new product if specified in the Select the target Feature Update version policy). You can defer a Feature Update for up to 14 days for all pre-release channels and up to 365 days for the General Availability Channel. To learn more about the current releases, please see aka.ms/WindowsTargetVersioninfo
+Defer Updates | This enables devices to defer taking the next Feature Update available to your channel for up to 14 days for all the pre-release channels and up to 365 days for the Semi-Annual Channel. Or, if the device is updating from the Semi-Annual Channel, a version for the device to move to and/or stay on until the policy is updated or the device reaches end of service can be specified. Note: If you set both policies, the version specified will take precedence and the deferrals will not be in effect. Please see the Windows Release Information page for OS version information.
 
-Pause Updates | To prevent Feature Updates from being offered to the device, you can temporarily pause Feature Updates. This pause will remain in effect for 35 days from the specified start date or until the field is cleared. Note, Quality Updates will still be offered even if Feature Updates are paused.</string>
+Pause Updates | To prevent Feature Updates from being received on their scheduled time, you can temporarily pause Feature Updates. The pause will remain in effect for 35 days from the specified start date or until the field is cleared (Quality Updates will still be offered).</string>
       <string id="DeferQualityUpdates_Title">Select when Quality Updates are received</string>
       <string id="DeferQualityUpdates_Help">Enable this policy to specify when to receive quality updates.
 
@@ -375,15 +365,9 @@ To resume receiving Quality Updates which are paused, clear the start date field
 
 If you disable or do not configure this policy, Windows Update will not alter its behavior.</string>
       <string id="TargetReleaseVersion_Title">Select the target Feature Update version</string>
-      <string id="TargetReleaseVersion_Help">Enter the product and version as listed on the Windows Update target version page:
+      <string id="TargetReleaseVersion_Help">Enable this policy to specify a Feature Update version to be requested in subsequent scans.
 
-                        aka.ms/WindowsTargetVersioninfo
-
-The device will request that Windows Update product and version in subsequent scans.
-
-Entering a target product and clicking OK or Apply means I accept the Microsoft Software License Terms for it found at aka.ms/WindowsTargetVersioninfo. If an organization is licensing the software, I am authorized to bind the organization.
-
-If you enter an invalid value, you will remain on your current version until you correct the values to a supported product and version.</string>
+Enter version as listed in the Windows Release Information page aka.ms/ReleaseInformationPage</string>
       <string id="DisableWUfBSafeguards">Disable safeguards for Feature Updates</string>
       <string id="DisableWUfBSafeguards_Help">
           Enable this setting when Feature Updates should be deployed to devices without blocking on any safeguard holds. Safeguard holds are known compatibility issues that block the upgrade from being deployed to affected devices until the issue is resolved. Enabling this policy can allow an organization to deploy the Feature Update to devices for testing, or to deploy the Feature Update without blocking on safeguard holds.
@@ -620,8 +604,6 @@ Note: This policy applies only when the intranet Microsoft update service this c
 This policy allows you to define what Windows Update notifications users see. This policy doesn’t control how and when updates are downloaded and installed.
 
 Important: if you choose not to get update notifications and also define other Group policy so that devices aren’t automatically getting updates, neither you nor device users will be aware of critical security, quality, or feature updates, and your devices may be at risk.
-
-If you select “Apply only during active hours” in conjunction with Option 1 or 2, then notifications will only be disabled during active hours. You can set active hours by setting “Turn off auto-restart for updates during active hours” or allow the device to set active hours based on user behavior. To ensure that the device stays secure, a notification will still be shown if this option is selected once “Specify deadlines for automatic updates and restarts” deadline has been reached if configured, regardless of active hours.
       </string>
       <string id="DefaultNotification">0 (default) – Default OS Windows Update notifications</string>
       <string id="ExcludingRebootWarnings">1 – Disable all notifications, excluding restart warnings</string>
@@ -686,7 +668,7 @@ This policy will override the following policies:
         <checkBox refId="AutoUpdateAutomaticMaintenanceEnabled" defaultChecked="false">Install during automatic maintenance</checkBox>
         <dropdownList refId="AutoUpdateSchDay" defaultItem="0">Scheduled install day: </dropdownList>
         <dropdownList refId="AutoUpdateSchTime" defaultItem="3">Scheduled install time:</dropdownList>
-        <text>If you have selected “4 – Auto download and schedule the install” for your scheduled install day and specified a schedule, you also have the option to limit updating to a weekly, bi-weekly or monthly occurrence, using the options below:</text>
+        <text>If you have selected "4 – Auto download and schedule the install" for your scheduled install day and specified a schedule, you also have the option to limit updating to a weekly, bi-weekly or monthly occurrence, using the options below:</text>
         <checkBox refId="AutoUpdateSchEveryWeek" defaultChecked="true">Every week</checkBox>
         <checkBox refId="AutoUpdateSchFirstWeek" defaultChecked="false">First week of the month</checkBox>
         <checkBox refId="AutoUpdateSchSecondWeek" defaultChecked="false">Second week of the month</checkBox>
@@ -722,11 +704,13 @@ This policy will override the following policies:
         <decimalTextBox refId="DetectionFrequency_Hour2" defaultValue="22">interval (hours): </decimalTextBox>
       </presentation>
       <presentation id="RebootRelaunchTimeout_Title">
-        <text>Wait the following period before prompting again with a scheduled</text>
+        <text>Wait the following period before</text>
+        <text>prompting again with a scheduled</text>
         <decimalTextBox refId="RebootRelaunchTimeout_Minutes3" defaultValue="10">restart (minutes): </decimalTextBox>
       </presentation>
       <presentation id="RebootWarningTimeout_Title">
-        <text>Wait the following period before proceeding with a scheduled</text>
+        <text>Wait the following period before</text>
+        <text>proceeding with a scheduled</text>
         <decimalTextBox refId="RebootWarningTimeout_Minutes3" defaultValue="5">restart (minutes): </decimalTextBox>
       </presentation>
       <presentation id="RescheduleWaitTime_Title">
@@ -738,14 +722,17 @@ This policy will override the following policies:
           <label>Target group name for this computer</label>
         </textBox>
       </presentation>
+      <presentation id="IdleShutdownTimerDuration_Title">
+        <text>Wait the following period before</text>
+        <text>shutting down the service when</text>
+        <decimalTextBox refId="IdleShutdownTimerDuration_Minutes" defaultValue="10">idle (minutes): </decimalTextBox>
+      </presentation>
       <presentation id="AlwaysAutoRebootAtScheduledTime_Presentation">
-        <text>The restart timer will give users this much time to save their</text>
+        <text>The restart timer will give users</text>
+        <text>this much time to save their</text>
         <decimalTextBox refId="AlwaysAutoRebootAtScheduledTime_Minutes" defaultValue="15">work (minutes): </decimalTextBox>
       </presentation>
       <presentation id="TargetReleaseVersion">
-        <textBox refId="ProductVersionId">
-          <label>Which Windows product version would you like to receive feature updates for? e.g., Windows 10</label>
-        </textBox>
         <textBox refId="TargetReleaseVersionId">
           <label>Target Version for Feature Updates</label>
         </textBox>
@@ -812,8 +799,6 @@ This policy will override the following policies:
       </presentation>
       <presentation id="UpdateNotificationLevel_Title">
         <dropdownList refId="UpdateNotificationLevel" noSort="true" defaultItem="0">Specify the update notifications display options :</dropdownList>
-        <text></text>
-        <checkBox refId="NoUpdateNotificationsDuringActiveHours" defaultChecked="false">Apply only during active hours</checkBox>
       </presentation>
       <presentation id="ComplianceDeadline_Title">
         <text>Quality Updates</text>
