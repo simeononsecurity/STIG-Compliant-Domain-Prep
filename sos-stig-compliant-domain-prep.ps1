@@ -21,6 +21,7 @@ try {
     # Take ownership of the PolicyDefinitions folder and grant full control to Administrators
     takeown /f "$policyDefinitionsDestination" /r /a /d y | Out-Null
     icacls "$policyDefinitionsDestination" /grant "Administrators:(OI)(CI)F" /t | Out-Null
+    icacls "$policyDefinitionsDestination" /grant "Administrators:F" /t | Out-Null
     # Copy the files to the PolicyDefinitions folder
     Copy-Item -Path "$policyDefinitionsSource\*" -Destination $policyDefinitionsDestination -Force -Recurse -ErrorAction Stop
     # Get all SYSVOL paths
@@ -58,19 +59,19 @@ function Import-GPOs {
             $gpoFiles = Get-ChildItem -Path $gpoCategoryDir.FullName -Directory
 
             Write-Output "Importing GPOs from $($gpoFiles.FullName)"
-    
+
             # Check if any GPO files were found
             if ($null -eq $gpoFiles) {
                 Write-Warning "No GPO files found in $($gpoFiles.FullName)"
                 continue
             }
-    
+
             foreach ($gpoFile in $gpoFiles) {
                 $gpoPath = $gpoFile.FullName
                 $gpoName = $gpoFile.BaseName
                 Write-Output "Importing $gpoName"
                 New-GPO -Name $gpoName -Comment "Created by simeononsecurity.ch"
-    
+
                 try {
                     Import-GPO -BackupGpoName $gpoName -Path $gpoPath -TargetName $gpoName -CreateIfNeeded -ErrorAction Stop
                 }
