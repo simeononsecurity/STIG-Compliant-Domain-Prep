@@ -1,3 +1,45 @@
+<#
+.SYNOPSIS
+
+    Create a STIG complaint domain.
+
+.DESCRIPTION
+
+    Import all the GPOs provided by SimeonOnSecurity to assist in making your
+    domain compliant with all applicable STIGs and SRGs.
+
+    Note: This script should work for most, if not all, systems without issue.
+    While @SimeonOnSecurity creates, reviews, and tests each repo intensivly,
+    we can not test every possible configuration nor does @SimeonOnSecurity
+    take any responsibility for breaking your system. If something goes wrong,
+    be prepared to submit an issue. Do not run this script if you don't
+    understand what it does.
+
+.PARAMETER logFile
+
+    File name to log the output of certain operations to, in order to enable
+    easier troubleshooting in case something doesn't work as expected. The file
+    will be created within the path where the script is located.
+
+.INPUTS
+
+    None. You cannot pipe objects into sos-stig-compliant-domain-prep.ps1.
+
+.OUTPUTS
+
+    System.String. The script outputs messages of the process and what
+                   operations it is performing.
+
+.EXAMPLE
+
+    PS> .\sos-stig-compliant-domain-prep.ps1 -logFile 'YYYYmmdd_prep.log'
+
+#>
+[CmdletBinding()]
+param (
+    [string]$logFile = 'domain_prep.log'
+)
+
 # Continue on error
 $ErrorActionPreference = 'Continue'
 
@@ -11,6 +53,11 @@ do {
 # Set directory to PSScriptRoot
 $scriptPath = Split-Path -Parent -Path $MyInvocation.MyCommand.Definition
 Set-Location $scriptPath
+
+$logFilePath = Join-Path "$scriptPath" "$logFile"
+
+$startTime = Get-Date -Format "yyyy-MM-ddTHH:mmK"
+Add-Content -Path "$logFilePath" -Value "Start running script at: ${startTime}"
 
 # Import PolicyDefinitions
 $policyDefinitionsSource = Join-Path $scriptPath 'Files\PolicyDefinitions'
@@ -30,7 +77,7 @@ try {
     foreach ($sysvolPath in $sysvolPaths) {
         $policyDefinitionsSysvolDestination = Join-Path $sysvolPath.FullName 'Policies\PolicyDefinitions'
         if (!(Test-Path $policyDefinitionsSysvolDestination)) {
-            New-Item -Path $policyDefinitionsSysvolDestination -ItemType Directory -Force | Out-Null
+            New-Item -Path $policyDefinitionsSysvolDestination -ItemType Directory -Force | Out-File -FilePath "$logFilePath" -Append
         }
         Copy-Item -Path "$policyDefinitionsSource\*" -Destination $policyDefinitionsSysvolDestination -Force -Recurse
     }
@@ -41,8 +88,9 @@ catch {
 
 # Import GPOs into GPMC
 function Import-GPOs {
+    [CmdletBinding()]
     param (
-        [string]$gposDir
+        [Parameter(Mandatory=$true)][string]$gposDir
     )
 
     try {
@@ -89,3 +137,6 @@ function Import-GPOs {
 # Import GPOs into GPMC
 $gposDir = Join-Path $scriptPath 'Files\GPOs'
 Import-GPOs -gposDir "$gposDir"
+
+$endTime = Get-Date -Format "yyyy-MM-ddTHH:mmK"
+Add-Content -Path "$logFilePath" -Value "Finish running script at: ${endTime}"
