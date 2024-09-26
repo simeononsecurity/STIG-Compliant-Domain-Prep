@@ -138,4 +138,4 @@ $gposDir = Join-Path $scriptPath 'Files\GPOs'
 Import-GPOs -gposDir "$gposDir"
 
 $endTime = Get-Date -Format "yyyy-MM-ddTHH:mmK"
-Add-Content -Path "$logFilePath" -Value "Finihs running script at: ${endTime}"
+Add-Content -Path "$logFilePath" -Value "Finish running script at: ${endTime}"
