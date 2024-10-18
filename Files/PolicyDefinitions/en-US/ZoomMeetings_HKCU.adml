@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+<policyDefinitionResources revision="6.2" schemaVersion="1.0">
   <displayName>ZoomMeetings</displayName>
   <description>ZoomMeetings</description>
   <resources>
@@ -265,13 +265,13 @@ If this policy is set to true, client will will prompt confirmation when leaving
 If this policy is set to false, client will leave a meting without prompt confirmation.
 
 If this policy is not set, client will use default policy.</string>
-      <string id="AlwaysShowConnectedTime_Policy">Client will show meeting connected time</string>
-      <string id="AlwaysShowConnectedTime_Policy_Recommend">Client will show meeting connected time (Recommendation Setting)</string>
+      <string id="AlwaysShowConnectedTime_Policy">Client will show meeting timers</string>
+      <string id="AlwaysShowConnectedTime_Policy_Recommend">Client will show meeting timers (Recommendation Setting)</string>
       <string id="AlwaysShowConnectedTime_Explain">Default policy is false.
 
-If this policy is set to true, client will show meeting connected time.
+If this policy is set to true, client will show meeting timers.
 
-If this policy is set to false, client will not show meeting connected time.
+If this policy is set to false, client will not show meeting timers.
 
 If this policy is not set, client will use default policy.</string>
       <string id="MuteVoipWhenJoinMeeting_Policy">Client will mute VoIP when joining a meeting</string>
@@ -502,8 +502,8 @@ If this policy is true, client will always enable 'remember me' feature.
 If this setting is false, user needs to input credential for every time of Zoom application launch.
 
 If this policy is not set, client will use default setting or user setting.</string>
-      <string id="DisableWhiteBoard_Policy">Disable white board feature</string>
-      <string id="DisableWhiteBoard_Policy_Recommend">Disable white board feature (Recommendation Setting)</string>
+      <string id="DisableWhiteBoard_Policy">Disable white board feature(Classic)</string>
+      <string id="DisableWhiteBoard_Policy_Recommend">Disable white board feature(Classic) (Recommendation Setting)</string>
       <string id="DisableWhiteBoard_Explain">Default policy is false.
 
 If this policy is true, client will disable white board for meetings.
@@ -740,17 +740,6 @@ If this setting is true, client will append caller name for Room system.
 If this setting is false, client will not append caller name for Room system.
 
 If this policy is not set, client will use the default setting.</string>
-      <string id="EnableElevateForAdvDSCP_Policy">Set to enable elevating to support advanced DSCP marks</string>
-      <string id="EnableElevateForAdvDSCP_Policy_Recommend">Set to enable elevating to support advanced DSCP marks (Recommendation Setting)</string>
-      <string id="EnableElevateForAdvDSCP_Explain">Marks other than 56 and 40 are considered as 'Advanced DSCP', there is a limitation on Windows to set those kind of marks: only Admin user with Admin privilege can set 'advanced DSCP'. This option will try to create Zoom Meetings process with Admin privilege; if current user is the Admin, the mark will be set to the package. We highly suggest to use this option for advanced DSCP marks: EnableIndependentDataPort.
-
-Default policy is to not enable elevating for advanced DSCP marks.
-
-If this setting is true, client will create elevated video process to support advanced DSCP marks.
-
-If this setting is false, client will not create elevated video process to support advanced DSCP marks.
-
-If this policy is not set, client will use the default setting.</string>
       <string id="EnableAutoUploadDumps_Policy">Enable to send dumps to Zoom backend to improve the service</string>
       <string id="EnableAutoUploadDumps_Policy_Recommend">Enable to send dumps to Zoom backend to improve the service (Recommendation Setting)</string>
       <string id="EnableAutoUploadDumps_Explain">Default policy is no automatically uploading dumps.
@@ -821,7 +810,7 @@ If this setting is false, client will always try direct connection even there is
 If this policy is not set, client will use the default setting.</string>
       <string id="SetMessengerDoNotDropThread_Policy">Set to move messages with new replies to the bottom of the chat</string>
       <string id="SetMessengerDoNotDropThread_Policy_Recommend">Set to move messages with new replies to the bottom of the chat (Recommendation Setting)</string>
-      <string id="SetMessengerDoNotDropThread_Explain">Default policy is disabled.
+      <string id="SetMessengerDoNotDropThread_Explain">Default policy is enabled.
 
 If this setting is enabled, client will move messages with new replies to the bottom of the chat.
 
@@ -1059,6 +1048,15 @@ If this setting is enabled, client will silence system notifications when sharin
 If this setting is disabled, client will not silence system notifications when sharing desktop.
 
 If this policy is not set, client will use the default setting.</string>
+      <string id="EnableGPUAccWithSmartMode_Policy">Set to enable hardware acceleration for virtual background</string>
+      <string id="EnableGPUAccWithSmartMode_Policy_Recommend">Set to enable hardware acceleration for virtual background (Recommendation Setting)</string>
+      <string id="EnableGPUAccWithSmartMode_Explain">Default policy is enabled.
+
+If this setting is enabled, client will enable hardware acceleration for virtual background.
+
+If this setting is disabled, client will disable hardware acceleration for virtual background.
+
+If this policy is not set, client will use the default setting.</string>
       <string id="SetDevicePolicyToken_Policy">Set device policy's token from web settings</string>
       <string id="SetDevicePolicyToken_Policy_Recommend">Set device policy's token from web settings (Recommendation Setting)</string>
       <string id="SetDevicePolicyToken_Part">Set device policy's token from web settings</string>
@@ -1113,7 +1111,7 @@ If this policy is not set, client will use the default setting.</string>
       <string id="SetAudioSignalProcessType_Policy">Set to enable 'signal processing by windows audio device drivers' for windows</string>
       <string id="SetAudioSignalProcessType_Policy_Recommend">Set to enable 'signal processing by windows audio device drivers' for windows (Recommendation Setting)</string>
       <string id="SetAudioSignalProcessType_Part">Set to enable 'signal processing by windows audio device drivers' for windows</string>
-      <string id="SetAudioSignalProcessType_Explain">This policy is exactly same as the manual setting: "Settings"→"Audio" → "Signal processing by windows audio device drivers". Its default policy is 0, client will default to Auto.
+      <string id="SetAudioSignalProcessType_Explain">This policy is exactly same as the manual setting: "Settings""Audio"  "Signal processing by windows audio device drivers". Its default policy is 0, client will default to Auto.
 
 If this policy is a valid string, client will use the specified type listed as below:
 0 - Auto
@@ -1208,7 +1206,7 @@ Default policy is disabled.
 
 This policy depends on EnableClientAutoUpdate, if EnableClientAutoUpdate is disabled, AlwaysCheckLatestVersion will not work, even if it is enabled. (For msi package, EnableClientAutoUpdate is disabled by default. For exe, it is enabled)
 
-IfEnableSilentAutoUpdate is enabled(default is enabled), it's better to useSetUpdatingChannel instead of this policy.
+If EnableSilentAutoUpdate is enabled(default is enabled), it's better to use SetUpdatingChannel instead of this policy.
 
 If this policy is enabled, client will check the latest version in the background.
 
@@ -1267,7 +1265,7 @@ If this policy is not set, client will use the default setting.</string>
 
 If this policy is set, client will use to set the proxy detect interval and will enable PAC cache.
 
-If this policy is 0, client will use the hardcode detect interval 10min.
+If this policy is 0, client will use the hardcode detect interval 30 min.
 
 If this policy is not set, client will use the default setting.</string>
       <string id="SetEnrollToken4CloudMDM_Policy">Set enrollment token for cloud-based device management</string>
@@ -1424,7 +1422,7 @@ If this setting is disabled, client will not show video message button.
 If this setting is not set, client will use the default setting.</string>
       <string id="ShowProfilePhotosInChat_Policy">Set to show profile photos next to direct messages</string>
       <string id="ShowProfilePhotosInChat_Policy_Recommend">Set to show profile photos next to direct messages (Recommendation Setting)</string>
-      <string id="ShowProfilePhotosInChat_Explain">Default setting is disabled.
+      <string id="ShowProfilePhotosInChat_Explain">Default setting is enabled.
 
 If this setting is enabled, client will show profile photos next to direct messages.
 
@@ -1452,7 +1450,7 @@ If this policy is not set, client will use the default setting.</string>
       <string id="AU2_SetUpdateChannel_Policy">Set the specified update channel when auto-update feature is enabled</string>
       <string id="AU2_SetUpdateChannel_Policy_Recommend">Set the specified update channel when auto-update feature is enabled (Recommendation Setting)</string>
       <string id="AU2_SetUpdateChannel_Part">Set the specified update channel when auto-update feature is enabled</string>
-      <string id="AU2_SetUpdateChannel_Explain">Default policy is '0', client will subscribe 'Slow' as update channelwhen the auto-update feature is enabled.
+      <string id="AU2_SetUpdateChannel_Explain">Default policy is '0', client will subscribe 'Slow' as update channel when the auto-update feature is enabled.
 
 This policy depends on AU2_EnableAutoUpdate, if AU2_EnableAutoUpdate is disabled, AU2_SetUpdateChannel will not work.
 
@@ -1483,16 +1481,16 @@ If this policy is not set, client will use the default setting.</string>
       <string id="AU2_EnablePromptUpdateForAU2_Policy_Recommend">Set to prompt the user to update when exiting a meeting or webinar if an update is available (Recommendation Setting)</string>
       <string id="AU2_EnablePromptUpdateForAU2_Explain">Default setting is disabled.
 
-If this policy is enabled, client willprompt the user to update when exiting a meeting or webinar if an update is available.
+If this policy is enabled, client will prompt the user to update when exiting a meeting or webinar if an update is available.
 
-If this policy is disabled,client will notprompt the user to update when exiting a meeting or webinar if an update is available.
+If this policy is disabled, client will not prompt the user to update when exiting a meeting or webinar if an update is available.
 
 If this policy is not set, client will use the default setting.</string>
       <string id="AU2_EnableUpdateSuccessNotification_Policy">Set to show a toast indicating that an update has been successfully applied</string>
       <string id="AU2_EnableUpdateSuccessNotification_Policy_Recommend">Set to show a toast indicating that an update has been successfully applied (Recommendation Setting)</string>
       <string id="AU2_EnableUpdateSuccessNotification_Explain">Default policy is enabled.
 
-If this policy is enabled, client willshow a toast indicating that an update has been successfully applied on the next launch after an update has been applied.
+If this policy is enabled, client will show a toast indicating that an update has been successfully applied on the next launch after an update has been applied.
 
 If this policy is disabled, client will not show a toast indicating that an update has been successfully applied on the next launch after an update has been applied.
 
@@ -1503,7 +1501,7 @@ If this policy is not set, client will use the default setting.</string>
 
 If this policy is enabled, client will enable the 'Check for Updates' option.
 
-If this policy is disabled, clientwill disable the 'Check for Updates' option.
+If this policy is disabled, client will disable the 'Check for Updates' option.
 
 If this policy is not set, client will use the default setting.</string>
       <string id="DisableBroadcastBOMessage_Policy">Set to disable the ability of the host to broadcast messages to breakout rooms</string>
@@ -1662,9 +1660,9 @@ If this policy is not set, client will use the default setting.</string>
       <string id="AU2_SetUpdateSchedule_Part">Set the specified update channel when auto-update feature is enabled</string>
       <string id="AU2_SetUpdateSchedule_Explain">Default policy is empty.
 
-If this policy is empty or invalid, client can auto update itself at anytime.
+If this policy is empty or invalid, client will download the update package at anytime.
 
-If this policy is a valid string, client can auto update itself within the specified time period.
+If this policy is a valid string, client will download the update package within the specified time period.
 
 The format of this string should be HHMM-HHMM, for example: "0900-1800" means 09:00 to 18:00, "1800-0400" means 18:00 to the next day 04:00.
 
@@ -1681,6 +1679,404 @@ If this setting is not set, client will use the default setting.
 
 </string>
       <string id="SetCommand4IncomingCalls_Part">Set the commands to launch an external app or a URL for incoming calls</string>
+      <string id="SetLightAdaptionManualValue_Policy">Set the manual value of "Adjust for low light"</string>
+      <string id="SetLightAdaptionManualValue_Policy_Recommend">Set the manual value of "Adjust for low light" (Recommendation Setting)</string>
+      <string id="SetLightAdaptionManualValue_Part">Set the manual value of "Adjust for low light"</string>
+      <string id="SetLightAdaptionManualValue_Explain">Default policy is 20.
+
+This policy depends on EnableLightAdaption and EnableAutoLightAdaption, if EnableFaceBeauty is enabled and EnableAutoLightAdaption is disabled, SetLightAdaptionManualValue will take effect.
+
+If this policy is a valid integer within 0 to 100, client will use the integer as the the value of "Adjust for low light".
+
+If this policy is not set, client will use the default setting.</string>
+      <string id="SetFaceBeautyValue_Policy">Set the value of "Touch up my appearance"</string>
+      <string id="SetFaceBeautyValue_Policy_Recommend">Set the value of "Touch up my appearance" (Recommendation Setting)</string>
+      <string id="SetFaceBeautyValue_Part">Set the value of "Touch up my appearance"</string>
+      <string id="SetFaceBeautyValue_Explain">Default policy is 25.
+
+This policy depends on EnableFaceBeauty, if EnableFaceBeauty is disabled, SetFaceBeautyValue will not work.
+
+If this policy is a valid integer within 0 to 100, client will use the integer as the the value of "Touch up my appearance".
+
+If this policy is not set, client will use the default setting.</string>
+      <string id="AU2_InstallAtIdleTime_Policy">Set to enable auto update installation when idle</string>
+      <string id="AU2_InstallAtIdleTime_Policy_Recommend">Set to enable auto update installation when idle (Recommendation Setting)</string>
+      <string id="AU2_InstallAtIdleTime_Explain">Default policy is disabled.
+
+This policy depends on AU2_EnableAutoUpdate, if AU2_EnableAutoUpdate is disabled, AU2_InstallAtIdleTime will not work.
+
+If this policy is enabled, client will enable auto update installation when idle.
+
+If this policy is disabled, client will disable auto update installation when idle.
+
+If this policy is not set, client will use the default setting.</string>
+      <string id="AU2_SafeUpgradePeriod_Policy">Set to install auto updates within a specified time period</string>
+      <string id="AU2_SafeUpgradePeriod_Policy_Recommend">Set to install auto updates within a specified time period (Recommendation Setting)</string>
+      <string id="AU2_SafeUpgradePeriod_Part">Set to install auto updates within a specified time period</string>
+      <string id="AU2_SafeUpgradePeriod_Explain">Default policy is "0000-0400".
+
+This policy depends on AU2_InstallAtIdleTime, if AU2_InstallAtIdleTime is disabled, AU2_SafeUpgradePeriod will not work.
+
+If this policy is empty or invalid, client will install auto updates within the default time period when idle.
+
+If this policy is a valid string, client will install auto updates within the specified time period when idle.
+
+The format of this string should be HHMM-HHMM, for example: "0900-1800" means 09:00 to 18:00, "1800-0400" means 18:00 to the next day 04:00.
+
+If this setting is not set, client will use the default setting.</string>
+      <string id="DisableInMeetingWhiteBoard_Policy">Set to disable in-meeting whiteboard(New)</string>
+      <string id="DisableInMeetingWhiteBoard_Policy_Recommend">Set to disable in-meeting whiteboard(New) (Recommendation Setting)</string>
+      <string id="DisableInMeetingWhiteBoard_Explain">Default policy is disabled.
+
+If this policy is enabled, client will disable in-meeting whiteboard.
+
+If this policy is disabled, client will enable in-meeting whiteboard.
+
+If this policy is not set, client will use the default setting.</string>
+      <string id="HideSelfView_Policy">Set to hide self view in the meeting</string>
+      <string id="HideSelfView_Policy_Recommend">Set to hide self view in the meeting (Recommendation Setting)</string>
+      <string id="HideSelfView_Explain">Default policy is disabled.
+
+If this policy is enabled, client will hide self view in the meeting.
+
+If this policy is disabled, client will not hide self view in the meeting.
+
+If this policy is not set, client will use the default setting.</string>
+      <string id="PreproxyDetectPolicy_Policy">Set up to use the different policy to do proxy pre-detection</string>
+      <string id="PreproxyDetectPolicy_Policy_Recommend">Set up to use the different policy to do proxy pre-detection (Recommendation Setting)</string>
+      <string id="PreproxyDetectPolicy_Part">Set up to use the different policy to do proxy pre-detection</string>
+      <string id="PreproxyDetectPolicy_Explain">Default policy is 0.
+
+If this policy is 0, use the default policy to do pre-detection.
+
+If this policy is 1, use wininet to do pre-detection(In some PAC cases, it will be faster).
+
+If this policy is not set, client will use the default setting.</string>
+      <string id="SetVideoRenderingPostProcessing_Policy">Set to enable video rendering post processing</string>
+      <string id="SetVideoRenderingPostProcessing_Policy_Recommend">Set to enable video rendering post processing (Recommendation Setting)</string>
+      <string id="SetVideoRenderingPostProcessing_Part">Set to enable video rendering post processing</string>
+      <string id="SetVideoRenderingPostProcessing_Explain">This policy is exactly same as the manual setting: "Settings""Video"  "Advanced"  "Video Rendering Post Processing". Its default policy is 0, client will default to Auto.
+
+If this policy is a valid integer, client will use the specified type listed as below:
+0 - Auto
+1 - Enable
+2 - Disable
+
+If this policy is not set, client will use the default setting.</string>
+      <string id="SetVideoCapturingMethod_Policy">Set video capturing method</string>
+      <string id="SetVideoCapturingMethod_Policy_Recommend">Set video capturing method (Recommendation Setting)</string>
+      <string id="SetVideoCapturingMethod_Part">Set video capturing method</string>
+      <string id="SetVideoCapturingMethod_Explain">This policy is exactly same as the manual setting: "Settings""Video"  "Advanced"  "Video Capturing Method". Its default policy is 0, client will default to Auto.
+
+If this policy is a valid integer, client will use the specified type listed as below:
+0 - Auto
+1 - Direct Show
+2 - Media Foundation
+
+If this policy is not set, client will use the default setting.</string>
+      <string id="NotifyCMRAvailable_Policy">Set to show notification when a new recording is available</string>
+      <string id="NotifyCMRAvailable_Policy_Recommend">Set to show notification when a new recording is available (Recommendation Setting)</string>
+      <string id="NotifyCMRAvailable_Explain">Default policy is enabled.
+
+If this setting is enabled, client will show notification when a new cloud recording is available.
+
+If this setting is disabled, client will not show notification when a new cloud recording is available.
+
+If this policy is not set, client will use the default setting.</string>
+      <string id="DisableSideCar_Policy">Set to disable webinar resources</string>
+      <string id="DisableSideCar_Policy_Recommend">Set to disable webinar resources (Recommendation Setting)</string>
+      <string id="DisableSideCar_Explain">Default policy is disabled.
+
+If this setting is enabled, client will disable webinar resources.
+
+If this setting is disabled, client will not disable webinar resources.
+
+If this setting is not set, client will use the default setting.</string>
+      <string id="EnableWinExtendProtectedAuth_Policy">Set to support Windows extend protection for NTLM authentication</string>
+      <string id="EnableWinExtendProtectedAuth_Policy_Recommend">Set to support Windows extend protection for NTLM authentication (Recommendation Setting)</string>
+      <string id="EnableWinExtendProtectedAuth_Explain">Default policy is disabled.
+
+If this policy is enabled, client will support Windows extend protection for NTLM authentication.
+
+If this policy is disabled, client will not support Windows extend protection for NTLM authentication.
+
+If this policy is not set, client will use the default setting.</string>
+      <string id="AU2_UpdateChannelCandidates_Policy">Set the update channel list</string>
+      <string id="AU2_UpdateChannelCandidates_Policy_Recommend">Set the update channel list (Recommendation Setting)</string>
+      <string id="AU2_UpdateChannelCandidates_Part">Set the update channel list</string>
+      <string id="AU2_UpdateChannelCandidates_Explain">Default policy is empty.
+
+If this policy is empty or invalid, client will set Slow and Fast as the default update channel list.
+
+If this policy is a valid string, client will set the update channel list according to the string.
+
+The format of this string should be {channel id}:{channel name} and use semicolon to separate different channels, for example: "0:Slow" will add Slow to the update channel list, "0:Slow;1:Fast" will add Slow and Fast to the update channel list.
+
+The following are the two public update channels:
+"0" - Slow
+"1" - Fast
+
+Note:
+1.Slow will be added to the list even if it is not written to string.
+
+If this setting is not set, client will use the default setting.</string>
+      <string id="AU2_LimitManualUpdateVersion_Policy">Set manual check for updates to the version defined by Auto Update</string>
+      <string id="AU2_LimitManualUpdateVersion_Policy_Recommend">Set manual check for updates to the version defined by Auto Update (Recommendation Setting)</string>
+      <string id="AU2_LimitManualUpdateVersion_Explain">Default policy is disabled.
+
+This policy depends on AU2_EnableAutoUpdate and AU2_EnableManualUpdate, if AU2_EnableAutoUpdate or AU2_EnableManualUpdate is disabled, AU2_LimitManualUpdateVersion will not work.
+
+If this policy is enabled, client will set manual check for updates to the version defined by Auto Update.
+
+If this policy is disabled, client will set manual check for updates to the latest version.
+
+If this policy is not set, client will use the default setting.</string>
+      <string id="ClickToCallDefault_Policy">Set the default dialer for click-to-dial calls</string>
+      <string id="ClickToCallDefault_Policy_Recommend">Set the default dialer for click-to-dial calls (Recommendation Setting)</string>
+      <string id="ClickToCallDefault_Part">Set the default dialer for click-to-dial calls</string>
+      <string id="ClickToCallDefault_Explain">Default setting is 0.
+
+If this policy is a valid integer, client will use the specified dialer listed as below:
+0 - Zoom Phone
+1 - Zoom Contact Center
+
+If this policy is not set, client will use the default setting.</string>
+      <string id="EnableDiagnostic_Policy">Set to enable the diagnostic tool and basic detection of some services</string>
+      <string id="EnableDiagnostic_Policy_Recommend">Set to enable the diagnostic tool and basic detection of some services (Recommendation Setting)</string>
+      <string id="EnableDiagnostic_Explain">Default policy is enabled.
+
+If this setting is enabled, client will enable the diagnostic tool and basic detection of some services.
+
+If this setting is disabled, client will not enable the diagnostic tool and basic detection of some services.
+
+If this setting is not set, client will use the default setting.</string>
+      <string id="EnableZCCNativeVideo_Policy">Force to enable the native video feature of Zoom Contact Center</string>
+      <string id="EnableZCCNativeVideo_Policy_Recommend">Force to enable the native video feature of Zoom Contact Center (Recommendation Setting)</string>
+      <string id="EnableZCCNativeVideo_Explain">Default policy is disabled.
+
+If this setting is enabled, client will force to enable the native video feature of Zoom Contact Center.
+
+If this setting is disabled, client will not force to enable the native video feature of Zoom Contact Center.
+
+If this setting is not set, client will use the default setting.</string>
+      <string id="EnableZCCUnreadMessageSoundClient_Policy">Control the message notification sounds for contact center user</string>
+      <string id="EnableZCCUnreadMessageSoundClient_Policy_Recommend">Control the message notification sounds for contact center user (Recommendation Setting)</string>
+      <string id="EnableZCCUnreadMessageSoundClient_Explain">Default policy is enabled.
+
+If this setting is enabled, the message notification sounds will be enabled for contact center user.
+
+If this setting is disabled, the message notification sounds will be disabled for contact center user.
+
+If this setting is not set, client will use the default setting.</string>
+      <string id="MeshMulticastIP_Policy">Set IP address for Zoom Mesh local detection</string>
+      <string id="MeshMulticastIP_Policy_Recommend">Set IP address for Zoom Mesh local detection (Recommendation Setting)</string>
+      <string id="MeshMulticastIP_Part">Set IP address for Zoom Mesh local detection</string>
+      <string id="MeshMulticastIP_Explain">Default policy is empty.
+
+If this policy is a valid IP address, this policy will allow admins to specify a valid IP address to be a UDP multicast IP for Zoom apps to declare themselves and detect each other in their local sub-network (255.255.255.0). Admins can choose other IP addresses within the range of [224.0.0.1, 239.255.255.255].
+
+If this policy is empty or invalid, this policy will set as 224.0.0.1 by default.
+
+If this policy is not set, client will use the default setting.</string>
+      <string id="MeshMulticastPort_Policy">Set network port for for Zoom Mesh nodes</string>
+      <string id="MeshMulticastPort_Policy_Recommend">Set network port for for Zoom Mesh nodes (Recommendation Setting)</string>
+      <string id="MeshMulticastPort_Part">Set network port for for Zoom Mesh nodes</string>
+      <string id="MeshMulticastPort_Explain">Default policy is 0.
+
+If this policy is a valid port, client will use this port as the UDP multicast port to communicate with other Zoom Mesh nodes on the network.
+
+If this policy is invalid or 0, this policy will set 36699 as the default port.
+
+If this policy is not set, client will use the default setting.</string>
+      <string id="MeshListenPortRange_Policy">Set network port range for Zoom Mesh parent-child node communication</string>
+      <string id="MeshListenPortRange_Policy_Recommend">Set network port range for Zoom Mesh parent-child node communication (Recommendation Setting)</string>
+      <string id="MeshListenPortRange_Part">Set network port range for Zoom Mesh parent-child node communication</string>
+      <string id="MeshListenPortRange_Explain">Default policy is empty.
+
+If this policy is a valid port range address, the client will use this range to set up listen sockets for connection requests between Mesh parents and children nodes. The nodes will also use this range to send signals and media data.
+
+If this policy is invalid or empty, the client will use "18801-19800" as the default port range.
+
+The format of this string should be "port-port", for example: "18801-19800".
+
+If this policy is not set, client will use the default setting.</string>
+      <string id="EnableGuestMesh_Policy">Allows users to join an external Webinar as a guest through another account's local Zoom Mesh-enabled network</string>
+      <string id="EnableGuestMesh_Policy_Recommend">Allows users to join an external Webinar as a guest through another account's local Zoom Mesh-enabled network (Recommendation Setting)</string>
+      <string id="EnableGuestMesh_Explain">Default policy is disabled.
+
+If this setting is enabled, this policy will allow users (not on your account) to join an external Webinar through the local Zoom Mesh-enabled network. Other requirements must be met, such as the device having the minimum supported client version for Mesh connections and the associated account setting in the web portal also enabled.
+
+If this setting is disabled, this policy will not allow external users (not on your account) to join an external Webinar through the local Zoom Mesh-enabled network.
+
+If this policy is not set, client will use the default setting.</string>
+      <string id="DisableMultipleAccountsSwitch_Policy">Set to disable the ability to sign into multiple Zoom accounts and switch accounts</string>
+      <string id="DisableMultipleAccountsSwitch_Policy_Recommend">Set to disable the ability to sign into multiple Zoom accounts and switch accounts (Recommendation Setting)</string>
+      <string id="DisableMultipleAccountsSwitch_Explain">Default policy is disabled.
+
+If this policy is enabled, client will disable the ability to sign into multiple Zoom accounts and switch accounts.
+
+If this policy is disabled, client will not disable the ability to sign into multiple Zoom accounts and switch accounts.
+
+If this policy is not set, the client will use the default setting.</string>
+      <string id="EnableMeshNetworking_Policy">Set to enable mesh feature</string>
+      <string id="EnableMeshNetworking_Policy_Recommend">Set to enable mesh feature (Recommendation Setting)</string>
+      <string id="EnableMeshNetworking_Explain">Default policy is enabled.
+
+If this policy is enabled, this policy will allow the users to use mesh feature.
+
+If this policy is disabled, this policy will not allow the users to use mesh feature even if they have a mesh plan.
+
+If this policy is not set, the client will use the default setting.</string>
+      <string id="DisableUserSignUp_Policy">Set to hide the sign up button</string>
+      <string id="DisableUserSignUp_Policy_Recommend">Set to hide the sign up button (Recommendation Setting)</string>
+      <string id="DisableUserSignUp_Explain">Default policy is disabled.
+
+If this policy is enabled, the client will hide the sign up button on the login dialog.
+
+If this policy is disabled, the client will not hide the sign up button on the login dialog.
+
+If this policy is not set, the client will use the default setting.</string>
+      <string id="DisableZoomOnboarding_Policy">Set to hide the onboarding process for new users</string>
+      <string id="DisableZoomOnboarding_Policy_Recommend">Set to hide the onboarding process for new users (Recommendation Setting)</string>
+      <string id="DisableZoomOnboarding_Explain">Default policy is disabled.
+
+If this policy is enabled, the client will hide the onboarding process for new users.
+
+If this policy is disabled, the client will not hide the onboarding process for new users.
+
+If this policy is not set, the client will use the default setting.</string>
+      <string id="HideLogoutBtn_Policy">Set to hide 'Sign out' button</string>
+      <string id="HideLogoutBtn_Policy_Recommend">Set to hide 'Sign out' butto (Recommendation Setting)</string>
+      <string id="HideLogoutBtn_Explain">Default policy is disabled.
+
+If this policy is enabled, the client will hide the 'Sign out' button.
+
+If this policy is disabled, the client will not hide the 'Sign Out' button.
+
+If this policy is not set, the client will use the default setting.</string>
+      <string id="HideCallQueue_Policy">Set to hide 'Call Queues'</string>
+      <string id="HideCallQueue_Policy_Recommend">Set to hide 'Call Queues' (Recommendation Setting)</string>
+      <string id="HideCallQueue_Explain">Default policy is disabled.
+
+If this policy is enabled, this policy will hide the 'Call Queues' in settings.
+
+If this policy is disabled, this policy will not hide the 'Call Queues' in settings.
+
+If this policy is not set, the client will use the default setting.</string>
+      <string id="HideBlockNumber_Policy">Set to hide 'Block Number' feature</string>
+      <string id="HideBlockNumber_Policy_Recommend">Set to hide 'Block Number' feature (Recommendation Setting)</string>
+      <string id="HideBlockNumber_Explain">Default policy is disabled.
+
+If this policy is enabled, this policy will hide the 'Block Number' feature.
+
+If this policy is disabled, this policy will not hide the 'Block Number' feature.
+
+If this policy is not set, the client will use the default setting.</string>
+      <string id="DisableInMeetingZoomNotes_Policy">Disable Zoom Notes for Meetings</string>
+      <string id="DisableInMeetingZoomNotes_Policy_Recommend">Disable Zoom Notes for Meetings (Recommendation Setting)</string>
+      <string id="DisableInMeetingZoomNotes_Explain">Default policy is disabled.
+
+If this policy is enabled, this policy will disable Zoom Notes for Meetings.
+
+If this policy is disabled, this policy will not disable Zoom Notes for Meetings.
+
+If this policy is not set, the client will use the default setting.</string>
+      <string id="DisableSmartMeetingSummaries_Policy">Disable Meeting Summary with AI Companion</string>
+      <string id="DisableSmartMeetingSummaries_Policy_Recommend">Disable Meeting Summary with AI Companion (Recommendation Setting)</string>
+      <string id="DisableSmartMeetingSummaries_Explain">Default policy is disabled.
+
+If this policy is enabled, this policy will disable meeting summary with AI companion.
+
+If this policy is disabled, this policy will not disable meeting summary with AI companion.
+
+If this policy is not set, the client will use the default setting.</string>
+      <string id="DisableAICQueries_Policy">Disable AI Companion Questions</string>
+      <string id="DisableAICQueries_Policy_Recommend">Disable AI Companion Questions (Recommendation Setting)</string>
+      <string id="DisableAICQueries_Explain">Default policy is disabled.
+
+If this policy is enabled, this policy will disable AI Companion questions.
+
+If this policy is disabled, this policy will not disable AI Companion questions.
+
+If this policy is not set, the client will use the default setting.</string>
+      <string id="DisableDiscoverWhatsNew_Policy">Set to hide the 'Discover What's New' menu</string>
+      <string id="DisableDiscoverWhatsNew_Policy_Recommend">Set to hide the 'Discover What's New' menu (Recommendation Setting)</string>
+      <string id="DisableDiscoverWhatsNew_Explain">Default policy is disabled.
+
+If this policy is enabled, the client will hide the 'Discover What's New' menu.
+
+If this policy is disabled, the client will not hide the 'Discover What's New' menu.
+
+If this policy is not set, the client will use the default setting.</string>
+      <string id="EnableAutoCopyConfInvitationURL_Policy">Enable Automatically copy invite link once the meeting starts</string>
+      <string id="EnableAutoCopyConfInvitationURL_Policy_Recommend">Enable Automatically copy invite link once the meeting starts (Recommendation Setting)</string>
+      <string id="EnableAutoCopyConfInvitationURL_Explain">Default setting is disabled.
+If this setting is enabled, client will automatically copy invite link once the meeting starts.
+If this setting is disabled, client will not automatically copy invite link once the meeting starts.
+If this policy is not set, client will use the default setting.</string>
+      <string id="DisableAssignTypist_Policy">Disable Allow host to type or assign a participant to type</string>
+      <string id="DisableAssignTypist_Policy_Recommend">Disable Allow host to type or assign a participant to type(Recommendation Setting)</string>
+      <string id="DisableAssignTypist_Explain">Default setting is disabled.
+If this setting is enabled, client will disable allow host to type or assign a participant to type.
+If this setting is disabled,  client will not disable allow host to type or assign a participant to type.
+If this policy is not set, client will use the default setting.</string>
+      <string id="DisableP2PStunTraffic_Policy">Disable P2P Stun Traffic</string>
+      <string id="DisableP2PStunTraffic_Policy_Recommend">Disable P2P Stun Traffic (Recommendation Setting)</string>
+      <string id="DisableP2PStunTraffic_Explain">Default policy is disabled.
+If this policy is enabled, the client will disable p2p stun traffic.
+If this policy is disabled, the client will not disable p2p stun traffic.
+If this policy is not set, client will use the default setting.</string>
+      <string id="DisableZoomIfNotZDMManaged_Policy">Disable app if ZDM enrollment fails</string>
+      <string id="DisableZoomIfNotZDMManaged_Policy_Recommend">Disable app if ZDM enrollment fails (Recommendation Setting)</string>
+      <string id="DisableZoomIfNotZDMManaged_Explain">Default policy is disabled.
+If this policy is enabled, the client will disable the Zoom app if enrollment of this device into Zoom Device Management fails.
+If this policy is disabled, client will not disable the Zoom app if enrollment of this device into Zoom Device Management fails.
+If this policy is not set, client will use the default setting.</string>
+      <string id="KeepOnlyOneSectionOpenInChat_Policy">Keep only one section open in Team Chat</string>
+      <string id="KeepOnlyOneSectionOpenInChat_Policy_Recommend">Keep only one section open in Team Chat (Recommendation Setting)</string>
+      <string id="KeepOnlyOneSectionOpenInChat_Explain">Default policy is disabled.
+If this policy is enabled, the client only allow one section opened at a time.
+If this policy is disabled, the client will not limit sections
+If this policy is not set, the client will use the default setting.</string>
+      <string id="SeparateIMChatAndChannel_Policy">Organize chats by section</string>
+      <string id="SeparateIMChatAndChannel_Policy_Recommend">Organize chats by section (Recommendation Setting)</string>
+      <string id="SeparateIMChatAndChannel_Explain">Default policy is disabled.
+If this policy is enabled, the client organize chats by section.
+If this policy is disabled, the client will not Organize chats by section
+If this policy is not set, the client will use the default setting.</string>
+      <string id="DisableIMFileTransfer_Policy">Disable IM file transfer</string>
+      <string id="DisableIMFileTransfer_Policy_Recommend">Disable IM file transfer (Recommendation Setting)</string>
+      <string id="DisableIMFileTransfer_Explain">Default policy is disabled.
+If this policy is enabled, the client will disable IM file transfer feature when current domain is not exist in the list of AllowedIMFileTransferDomain.
+If this policy is disabled, the client will use the default setting.
+If this policy is not set, the client will use the default setting.</string>
+      <string id="AllowedIMFileTransferDomain_Policy">Allowed IM file transfer domain list</string>
+      <string id="AllowedIMFileTransferDomain_Policy_Recommend">Allowed IM file transfer domain list (Recommendation Setting)</string>
+      <string id="AllowedIMFileTransferDomain_Explain">Default policy is empty.
+If this policy is a valid string(for example:zoom1.us),and DisableIMFileTransfer is enabled, the client will only allow the domain zoom1.us to IM transfer feature. Multiple domains can be separated with &amp; (for example: zoom1.us&amp;zoom2.us)
+If this setting is empty, and DisableIMFileTransfer is enabled, client will disable IM transfer feature for all domains.
+
+If this policy is not set, client will use default setting.</string>
+      <string id="AllowedIMFileTransferDomain_Part">Allowed IM file transfer domain list</string>
+      <string id="EnableDumpTPStatInfo_Policy">Enable saving meeting statistics data to local log file</string>
+      <string id="EnableDumpTPStatInfo_Policy_Recommend">Enable saving meeting statistics data to local log file (Recommendation Setting)</string>
+      <string id="EnableDumpTPStatInfo_Explain">Default policy is disabled.
+If this setting is true, client will save meeting statistics data to local log file.
+If this setting is false, client will not save meeting statistics data to local log file.
+If this policy is not set, the client will use the default setting.</string>
+      <string id="DisableInMeetingZoomDocs_Policy">Disable Zoom Docs for Meetings</string>
+      <string id="DisableInMeetingZoomDocs_Policy_Recommend">Disable Zoom Docs for Meetings (Recommendation Setting)</string>
+      <string id="DisableInMeetingZoomDocs_Explain">Default policy is disabled.
+If this policy is enabled, this policy will disable Zoom Docs for Meetings.
+If this policy is disabled, this policy will not disable Zoom Docs for Meetings.
+If this policy is not set, the client will use the default setting.</string>
+      <string id="AllowedMeetingSurvivability_Policy">Allow the client to switch to survivable mode</string>
+      <string id="AllowedMeetingSurvivability_Policy_Recommend">Allow the client to switch to survivable mode (Recommendation Setting)</string>
+      <string id="AllowedMeetingSurvivability_Explain">Default policy is empty.
+If this policy is a valid survivability info string, the client can switch to survivable mode.
+If this policy is empty, the client does not support survivable mode.
+If this policy is not set, client will use default setting.</string>
+      <string id="AllowedMeetingSurvivability_Part">Allow the client to switch to survivable mode</string>
       <string id="ADMXMigrator_UnresolvedString">ADMX Migrator encountered a string that is not present in the source ADM string table.</string>
       <string id="ADMXMigrator_NoSupportedOn">ADMX Migrator encountered a policy that does not have a supportedOn value.</string>
     </stringTable>
@@ -1798,6 +2194,17 @@ If this setting is not set, client will use the default setting.
       </presentation>
       <presentation id="DisableUpdateTo64Bit_Policy" />
       <presentation id="DisableZoomAppsGuestAccess_Policy" />
+      <presentation id="PreproxyDetectPolicy_Policy">
+        <decimalTextBox refId="PreproxyDetectPolicy_Part" defaultValue="0" spinStep="1">Set up to use the different policy to do proxy pre-detection</decimalTextBox>
+      </presentation>
+      <presentation id="EnableWinExtendProtectedAuth_Policy" />
+      <presentation id="DisableMultipleAccountsSwitch_Policy" />
+      <presentation id="DisableUserSignUp_Policy" />
+      <presentation id="DisableZoomOnboarding_Policy" />
+      <presentation id="HideLogoutBtn_Policy" />
+      <presentation id="DisableDiscoverWhatsNew_Policy" />
+      <presentation id="DisableP2PStunTraffic_Policy" />
+      <presentation id="DisableZoomIfNotZDMManaged_Policy" />
       <presentation id="AU2_EnableAutoUpdate_Policy" />
       <presentation id="AU2_SetUpdateChannel_Policy">
         <decimalTextBox refId="AU2_SetUpdateChannel_Part" defaultValue="0" spinStep="1">Set the specified update channel when auto-update feature is enabled</decimalTextBox>
@@ -1817,6 +2224,18 @@ If this setting is not set, client will use the default setting.
           <label>Set the specified update channel when auto-update feature is enabled</label>
         </textBox>
       </presentation>
+      <presentation id="AU2_InstallAtIdleTime_Policy" />
+      <presentation id="AU2_SafeUpgradePeriod_Policy">
+        <textBox refId="AU2_SafeUpgradePeriod_Part">
+          <label>Set to install auto updates within a specified time period</label>
+        </textBox>
+      </presentation>
+      <presentation id="AU2_UpdateChannelCandidates_Policy">
+        <textBox refId="AU2_UpdateChannelCandidates_Part">
+          <label>Set the update channel list</label>
+        </textBox>
+      </presentation>
+      <presentation id="AU2_LimitManualUpdateVersion_Policy" />
       <presentation id="DisableLinkPreviewInChat_Policy" />
       <presentation id="SetMessengerDoNotDropThread_Policy" />
       <presentation id="ShowVoiceMessageButton_Policy" />
@@ -1826,6 +2245,21 @@ If this setting is not set, client will use the default setting.
       <presentation id="MuteIMNotificationWhenInMeeting_Policy" />
       <presentation id="ShowVideoMessageButton_Policy" />
       <presentation id="ShowProfilePhotosInChat_Policy" />
+      <presentation id="KeepOnlyOneSectionOpenInChat_Policy" />
+      <presentation id="SeparateIMChatAndChannel_Policy" />
+      <presentation id="DisableIMFileTransfer_Policy" />
+      <presentation id="AllowedIMFileTransferDomain_Policy">
+        <textBox refId="AllowedIMFileTransferDomain_Part">
+          <label>Allowed IM file transfer domain list</label>
+        </textBox>
+      </presentation>
+      <presentation id="EnableDumpTPStatInfo_Policy" />
+      <presentation id="DisableInMeetingZoomDocs_Policy" />
+      <presentation id="AllowedMeetingSurvivability_Policy">
+        <textBox refId="AllowedMeetingSurvivability_Part">
+          <label>Allow the client to switch to survivable mode</label>
+        </textBox>
+      </presentation>
       <presentation id="TurnOffVideoCameraOnJoin_Policy" />
       <presentation id="AutoJoinVoIP_Policy" />
       <presentation id="AutoEnableDualMonitor_Policy" />
@@ -1864,6 +2298,9 @@ If this setting is not set, client will use the default setting.
       <presentation id="DisableRemoteSupport_Policy" />
       <presentation id="EnableOriginalSound_Policy" />
       <presentation id="EnableFaceBeauty_Policy" />
+      <presentation id="SetFaceBeautyValue_Policy">
+        <decimalTextBox refId="SetFaceBeautyValue_Part" defaultValue="25" spinStep="1">Set the value of "Touch up my appearance"</decimalTextBox>
+      </presentation>
       <presentation id="DisableVirtualBkgnd_Policy" />
       <presentation id="DisableWhiteBoard_Policy" />
       <presentation id="EnableShareAudio_Policy" />
@@ -1894,7 +2331,6 @@ If this setting is not set, client will use the default setting.
       <presentation id="EnableStartMeetingWithRoomSystem_Policy" />
       <presentation id="MuteWhenLockScreen_Policy" />
       <presentation id="AppendCallerNameForRoomSystem_Policy" />
-      <presentation id="EnableElevateForAdvDSCP_Policy" />
       <presentation id="EnableTemporalDeNoise_Policy" />
       <presentation id="EnableGPUComputeUtilization_Policy" />
       <presentation id="EnableHardwareAccForVideoSend_Policy" />
@@ -1918,6 +2354,7 @@ If this setting is not set, client will use the default setting.
       </presentation>
       <presentation id="DisableVideoFilters_Policy" />
       <presentation id="EnableDoNotDisturbInSharing_Policy" />
+      <presentation id="EnableGPUAccWithSmartMode_Policy" />
       <presentation id="SetSuppressBackgroundNoiseLevel_Policy">
         <decimalTextBox refId="SetSuppressBackgroundNoiseLevel_Part" defaultValue="0" spinStep="1">Set a level for suppressing background noise</decimalTextBox>
       </presentation>
@@ -1938,6 +2375,9 @@ If this setting is not set, client will use the default setting.
       <presentation id="EnableHardwareOptimizeVideoSharing_Policy" />
       <presentation id="EnableLightAdaption_Policy" />
       <presentation id="EnableAutoLightAdaption_Policy" />
+      <presentation id="SetLightAdaptionManualValue_Policy">
+        <decimalTextBox refId="SetLightAdaptionManualValue_Part" defaultValue="20" spinStep="1">Set the manual value of "Adjust for low light"</decimalTextBox>
+      </presentation>
       <presentation id="EnableAutoReverseVirtualBkgnd_Policy" />
       <presentation id="DisableBroadcastBOMessage_Policy" />
       <presentation id="OverrideEnforceSigninIntercloud_Policy" />
@@ -1958,6 +2398,44 @@ If this setting is not set, client will use the default setting.
           <label>Set the commands to launch an external app or a URL for incoming calls</label>
         </textBox>
       </presentation>
+      <presentation id="DisableInMeetingWhiteBoard_Policy" />
+      <presentation id="HideSelfView_Policy" />
+      <presentation id="SetVideoRenderingPostProcessing_Policy">
+        <decimalTextBox refId="SetVideoRenderingPostProcessing_Part" defaultValue="0" spinStep="1">Set to enable video rendering post processing</decimalTextBox>
+      </presentation>
+      <presentation id="SetVideoCapturingMethod_Policy">
+        <decimalTextBox refId="SetVideoCapturingMethod_Part" defaultValue="0" spinStep="1">Set video capturing method</decimalTextBox>
+      </presentation>
+      <presentation id="NotifyCMRAvailable_Policy" />
+      <presentation id="DisableSideCar_Policy" />
+      <presentation id="ClickToCallDefault_Policy">
+        <decimalTextBox refId="ClickToCallDefault_Part" defaultValue="0" spinStep="1">Set the default dialer for click-to-dial calls</decimalTextBox>
+      </presentation>
+      <presentation id="EnableDiagnostic_Policy" />
+      <presentation id="EnableZCCNativeVideo_Policy" />
+      <presentation id="EnableZCCUnreadMessageSoundClient_Policy" />
+      <presentation id="EnableMeshNetworking_Policy" />
+      <presentation id="MeshMulticastIP_Policy">
+        <textBox refId="MeshMulticastIP_Part">
+          <label>Set IP address for Zoom Mesh local detection</label>
+        </textBox>
+      </presentation>
+      <presentation id="MeshMulticastPort_Policy">
+        <decimalTextBox refId="MeshMulticastPort_Part" defaultValue="36699" spinStep="0">Set network port for for Zoom Mesh nodes</decimalTextBox>
+      </presentation>
+      <presentation id="MeshListenPortRange_Policy">
+        <textBox refId="MeshListenPortRange_Part">
+          <label>Set network port range for Zoom Mesh parent-child node communication</label>
+        </textBox>
+      </presentation>
+      <presentation id="EnableGuestMesh_Policy" />
+      <presentation id="HideCallQueue_Policy" />
+      <presentation id="HideBlockNumber_Policy" />
+      <presentation id="DisableInMeetingZoomNotes_Policy" />
+      <presentation id="DisableSmartMeetingSummaries_Policy" />
+      <presentation id="DisableAICQueries_Policy" />
+      <presentation id="EnableAutoCopyConfInvitationURL_Policy" />
+      <presentation id="DisableAssignTypist_Policy" />
       <presentation id="EnableClientAutoUpdate_Policy_Recommend" />
       <presentation id="DisableCreatingDesktopShortcut_Policy_Recommend" />
       <presentation id="AutoStartAfterReboot_Policy_Recommend" />
@@ -2071,6 +2549,17 @@ If this setting is not set, client will use the default setting.
       </presentation>
       <presentation id="DisableUpdateTo64Bit_Policy_Recommend" />
       <presentation id="DisableZoomAppsGuestAccess_Policy_Recommend" />
+      <presentation id="PreproxyDetectPolicy_Policy_Recommend">
+        <decimalTextBox refId="PreproxyDetectPolicy_Part" defaultValue="0" spinStep="1">Set up to use the different policy to do proxy pre-detection</decimalTextBox>
+      </presentation>
+      <presentation id="EnableWinExtendProtectedAuth_Policy_Recommend" />
+      <presentation id="DisableMultipleAccountsSwitch_Policy_Recommend" />
+      <presentation id="DisableUserSignUp_Policy_Recommend" />
+      <presentation id="DisableZoomOnboarding_Policy_Recommend" />
+      <presentation id="HideLogoutBtn_Policy_Recommend" />
+      <presentation id="DisableDiscoverWhatsNew_Policy_Recommend" />
+      <presentation id="DisableP2PStunTraffic_Policy_Recommend" />
+      <presentation id="DisableZoomIfNotZDMManaged_Policy_Recommend" />
       <presentation id="AU2_EnableAutoUpdate_Policy_Recommend" />
       <presentation id="AU2_SetUpdateChannel_Policy_Recommend">
         <decimalTextBox refId="AU2_SetUpdateChannel_Part" defaultValue="0" spinStep="1">Set the specified update channel when auto-update feature is enabled</decimalTextBox>
@@ -2090,6 +2579,18 @@ If this setting is not set, client will use the default setting.
           <label>Set the specified update channel when auto-update feature is enabled</label>
         </textBox>
       </presentation>
+      <presentation id="AU2_InstallAtIdleTime_Policy_Recommend" />
+      <presentation id="AU2_SafeUpgradePeriod_Policy_Recommend">
+        <textBox refId="AU2_SafeUpgradePeriod_Part">
+          <label>Set to install auto updates within a specified time period</label>
+        </textBox>
+      </presentation>
+      <presentation id="AU2_UpdateChannelCandidates_Policy_Recommend">
+        <textBox refId="AU2_UpdateChannelCandidates_Part">
+          <label>Set the update channel list</label>
+        </textBox>
+      </presentation>
+      <presentation id="AU2_LimitManualUpdateVersion_Policy_Recommend" />
       <presentation id="DisableLinkPreviewInChat_Policy_Recommend" />
       <presentation id="SetMessengerDoNotDropThread_Policy_Recommend" />
       <presentation id="ShowVoiceMessageButton_Policy_Recommend" />
@@ -2099,6 +2600,21 @@ If this setting is not set, client will use the default setting.
       <presentation id="MuteIMNotificationWhenInMeeting_Policy_Recommend" />
       <presentation id="ShowVideoMessageButton_Policy_Recommend" />
       <presentation id="ShowProfilePhotosInChat_Policy_Recommend" />
+      <presentation id="KeepOnlyOneSectionOpenInChat_Policy_Recommend" />
+      <presentation id="SeparateIMChatAndChannel_Policy_Recommend" />
+      <presentation id="DisableIMFileTransfer_Policy_Recommend" />
+      <presentation id="AllowedIMFileTransferDomain_Policy_Recommend">
+        <textBox refId="AllowedIMFileTransferDomain_Part">
+          <label>Allowed IM file transfer domain list</label>
+        </textBox>
+      </presentation>
+      <presentation id="EnableDumpTPStatInfo_Policy_Recommend" />
+      <presentation id="DisableInMeetingZoomDocs_Policy_Recommend" />
+      <presentation id="AllowedMeetingSurvivability_Policy_Recommend">
+        <textBox refId="AllowedMeetingSurvivability_Part">
+          <label>Allow the client to switch to survivable mode</label>
+        </textBox>
+      </presentation>
       <presentation id="TurnOffVideoCameraOnJoin_Policy_Recommend" />
       <presentation id="AutoJoinVoIP_Policy_Recommend" />
       <presentation id="AutoEnableDualMonitor_Policy_Recommend" />
@@ -2137,6 +2653,9 @@ If this setting is not set, client will use the default setting.
       <presentation id="DisableRemoteSupport_Policy_Recommend" />
       <presentation id="EnableOriginalSound_Policy_Recommend" />
       <presentation id="EnableFaceBeauty_Policy_Recommend" />
+      <presentation id="SetFaceBeautyValue_Policy_Recommend">
+        <decimalTextBox refId="SetFaceBeautyValue_Part" defaultValue="25" spinStep="1">Set the value of "Touch up my appearance"</decimalTextBox>
+      </presentation>
       <presentation id="DisableVirtualBkgnd_Policy_Recommend" />
       <presentation id="DisableWhiteBoard_Policy_Recommend" />
       <presentation id="EnableShareAudio_Policy_Recommend" />
@@ -2167,7 +2686,6 @@ If this setting is not set, client will use the default setting.
       <presentation id="EnableStartMeetingWithRoomSystem_Policy_Recommend" />
       <presentation id="MuteWhenLockScreen_Policy_Recommend" />
       <presentation id="AppendCallerNameForRoomSystem_Policy_Recommend" />
-      <presentation id="EnableElevateForAdvDSCP_Policy_Recommend" />
       <presentation id="EnableTemporalDeNoise_Policy_Recommend" />
       <presentation id="EnableGPUComputeUtilization_Policy_Recommend" />
       <presentation id="EnableHardwareAccForVideoSend_Policy_Recommend" />
@@ -2191,6 +2709,7 @@ If this setting is not set, client will use the default setting.
       </presentation>
       <presentation id="DisableVideoFilters_Policy_Recommend" />
       <presentation id="EnableDoNotDisturbInSharing_Policy_Recommend" />
+      <presentation id="EnableGPUAccWithSmartMode_Policy_Recommend" />
       <presentation id="SetSuppressBackgroundNoiseLevel_Policy_Recommend">
         <decimalTextBox refId="SetSuppressBackgroundNoiseLevel_Part" defaultValue="0" spinStep="1">Set a level for suppressing background noise</decimalTextBox>
       </presentation>
@@ -2211,6 +2730,9 @@ If this setting is not set, client will use the default setting.
       <presentation id="EnableHardwareOptimizeVideoSharing_Policy_Recommend" />
       <presentation id="EnableLightAdaption_Policy_Recommend" />
       <presentation id="EnableAutoLightAdaption_Policy_Recommend" />
+      <presentation id="SetLightAdaptionManualValue_Policy_Recommend">
+        <decimalTextBox refId="SetLightAdaptionManualValue_Part" defaultValue="20" spinStep="1">Set the manual value of "Adjust for low light"</decimalTextBox>
+      </presentation>
       <presentation id="EnableAutoReverseVirtualBkgnd_Policy_Recommend" />
       <presentation id="DisableBroadcastBOMessage_Policy_Recommend" />
       <presentation id="OverrideEnforceSigninIntercloud_Policy_Recommend" />
@@ -2231,6 +2753,44 @@ If this setting is not set, client will use the default setting.
           <label>Set the commands to launch an external app or a URL for incoming calls</label>
         </textBox>
       </presentation>
+      <presentation id="DisableInMeetingWhiteBoard_Policy_Recommend" />
+      <presentation id="HideSelfView_Policy_Recommend" />
+      <presentation id="SetVideoRenderingPostProcessing_Policy_Recommend">
+        <decimalTextBox refId="SetVideoRenderingPostProcessing_Part" defaultValue="0" spinStep="1">Set to enable video rendering post processing</decimalTextBox>
+      </presentation>
+      <presentation id="SetVideoCapturingMethod_Policy_Recommend">
+        <decimalTextBox refId="SetVideoCapturingMethod_Part" defaultValue="0" spinStep="1">Set video capturing method</decimalTextBox>
+      </presentation>
+      <presentation id="NotifyCMRAvailable_Policy_Recommend" />
+      <presentation id="DisableSideCar_Policy_Recommend" />
+      <presentation id="ClickToCallDefault_Policy_Recommend">
+        <decimalTextBox refId="ClickToCallDefault_Part" defaultValue="0" spinStep="1">Set the default dialer for click-to-dial calls</decimalTextBox>
+      </presentation>
+      <presentation id="EnableDiagnostic_Policy_Recommend" />
+      <presentation id="EnableZCCNativeVideo_Policy_Recommend" />
+      <presentation id="EnableZCCUnreadMessageSoundClient_Policy_Recommend" />
+      <presentation id="MeshMulticastIP_Policy_Recommend">
+        <textBox refId="MeshMulticastIP_Part">
+          <label>Set IP address for Zoom Mesh local detection</label>
+        </textBox>
+      </presentation>
+      <presentation id="EnableMeshNetworking_Policy_Recommend" />
+      <presentation id="MeshMulticastPort_Policy_Recommend">
+        <decimalTextBox refId="MeshMulticastPort_Part" defaultValue="36699" spinStep="0">Set network port for for Zoom Mesh nodes</decimalTextBox>
+      </presentation>
+      <presentation id="MeshListenPortRange_Policy_Recommend">
+        <textBox refId="MeshListenPortRange_Part">
+          <label>Set network port range for Zoom Mesh parent-child node communication</label>
+        </textBox>
+      </presentation>
+      <presentation id="EnableGuestMesh_Policy_Recommend" />
+      <presentation id="HideCallQueue_Policy_Recommend" />
+      <presentation id="HideBlockNumber_Policy_Recommend" />
+      <presentation id="DisableInMeetingZoomNotes_Policy_Recommend" />
+      <presentation id="DisableSmartMeetingSummaries_Policy_Recommend" />
+      <presentation id="DisableAICQueries_Policy_Recommend" />
+      <presentation id="EnableAutoCopyConfInvitationURL_Policy_Recommend" />
+      <presentation id="DisableAssignTypist_Policy_Recommend" />
     </presentationTable>
   </resources>
 </policyDefinitionResources>
