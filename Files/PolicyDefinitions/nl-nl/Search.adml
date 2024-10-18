@@ -300,6 +300,23 @@ Als deze instelling is ingeschakeld, hebben zoekopdrachten en Cortana toegang to
       <string id="DisableSearch_ExplainText">Als u dit beleid inschakelt, wordt de gebruikersinterface voor zoeken uitgeschakeld, samen met alle toegangspunten, zoals sneltoetsen, touchpad-bewegingen en typen om te zoeken in het menu Start. Het zoekvak van het menu Start en de knop Zoektaakbalk worden ook verborgen.
 
 Als u deze beleidsinstelling uitschakelt of niet configureert, kan de gebruiker de zoekinterface openen en worden de verschillende toegangspunten weergegeven.</string>
+      <string id="ConfigureSearchOnTaskbarMode">Configureert zoeken op de taakbalk</string>
+      <string id="ConfigureSearchOnTaskbarMode_Help">Met deze beleidsinstelling kunt u zoeken op de taakbalk configureren.
+
+Als u deze beleidsinstelling inschakelt en instelt op verbergen, wordt zoeken op de taakbalk standaard verborgen. Gebruikers kunnen dit niet wijzigen in Instellingen.
+
+Als u deze beleidsinstelling inschakelt en instelt op alleen het zoekpictogram, wordt het zoekpictogram standaard op de taakbalk weergegeven. Gebruikers kunnen dit niet wijzigen in Instellingen.
+
+Als u deze beleidsinstelling inschakelt en instelt op zoekpictogram en -label, worden het zoekpictogram en het zoeklabel standaard op de taakbalk weergegeven. Gebruikers kunnen dit niet wijzigen in Instellingen.
+
+Als u deze beleidsinstelling inschakelt en instelt op het zoekvak, wordt het zoekvak standaard op de taakbalk weergegeven. Gebruikers kunnen dit niet wijzigen in Instellingen.
+
+Als u deze beleidsinstelling uitschakelt of niet configureert, wordt zoeken op de taakbalk geconfigureerd volgens de standaardinstellingen voor uw Windows-editie. Gebruikers kunnen de zoekfunctie op de taakbalk wijzigen in Instellingen.
+      </string>
+      <string id="SearchOnTaskbarModeEnum_Hidden">Verbergen</string>
+      <string id="SearchOnTaskbarModeEnum_SearchIconOnly">Alleen zoekpictogram</string>
+      <string id="SearchOnTaskbarModeEnum_SearchIconAndLabel">Zoekpictogram en -label</string>
+      <string id="SearchOnTaskbarModeEnum_SearchBox">Zoekvak</string>
     </stringTable>
     <presentationTable>
       <presentation id="RichAttachmentPreviews">
@@ -388,6 +405,9 @@ Als u deze beleidsinstelling uitschakelt of niet configureert, kan de gebruiker 
       </presentation>
       <presentation id="AllowCortanaAAD">
         <dropdownList refId="AllowCortanaAAD_Dropdown" noSort="true" defaultItem="0">Cortana in AAD-instelling</dropdownList>
+      </presentation>
+      <presentation id="ConfigureSearchOnTaskbarMode">
+        <dropdownList refId="ConfigureSearchOnTaskbarMode_Dropdown" noSort="true" defaultItem="0">Zoeken op de taakbalk</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

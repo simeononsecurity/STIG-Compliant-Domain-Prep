@@ -56,5 +56,13 @@
         </boolean>
       </elements>
     </policy>
+    <policy name="HideUnsupportedHardwareNotifications" class="Machine"
+            displayName="$(string.HideUnsupportedHardwareNotifications)"
+            explainText="$(string.HideUnsupportedHardwareNotificationsExplain)"
+            key="Software\Microsoft\Windows\CurrentVersion\Policies\System"
+            valueName="HideUnsupportedHardwareNotifications">
+      <parentCategory ref="windows:System" />
+      <supportedOn ref="windows:SUPPORTED_Windows_11_0_NOSERVER" />
+    </policy>
   </policies>
 </policyDefinitions>

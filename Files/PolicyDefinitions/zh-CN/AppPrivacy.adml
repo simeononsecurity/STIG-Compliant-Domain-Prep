@@ -129,6 +129,21 @@
 
 如果在设备上应用此组策略对象时某个应用处于打开状态，则员工必须重新启动该应用或设备才能将策略更改应用到该应用。
       </string>
+      <string id="LetAppsAccessHumanPresence_Name">允许 Windows 应用访问状态感应</string>
+      <string id="LetAppsAccessHumanPresence_Explain">此策略设置指定 Windows 应用是否能够访问存在感测。
+
+你可以为所有应用指定默认设置，也可以通过指定程序包系列名称按应用设置。可以通过使用 Get-AppPackage Windows PowerShell cmdlet 来获取应用的程序包系列名称。按应用设置将覆盖默认设置。
+
+如果你选择“由用户控制”选项，则你组织中的员工可以在设备上使用“设置”&gt;“隐私”来决定是否允许 Windows 应用访问存在感测。
+
+如果你选择“强制允许”选项，则将允许 Windows 应用访问存在感测，并且你组织中的员工无法更改此项设置。
+
+如果你选择“强制拒绝”选项，则不允许 Windows 应用访问存在感测，并且你组织中的员工无法更改此项设置。
+
+如果禁用或未配置此策略设置，你组织中的员工可以在设备上使用“设置”&gt;“隐私”来决定是否允许 Windows 应用访问存在感测。
+
+如果在设备上应用此组策略对象时某个应用处于打开状态，则员工必须重新启动该应用或设备才能将策略更改应用到该应用。
+      </string>
       <string id="LetAppsAccessLocation_Name">允许 Windows 应用访问位置</string>
       <string id="LetAppsAccessLocation_Explain">此策略设置指定 Windows 应用是否能够访问位置。
 
@@ -440,6 +455,15 @@
         <text>强制拒绝这些特定应用(使用程序包系列名称):</text>
         <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_ForceDenyTheseApps_List"/>
       </presentation>
+      <presentation id="LetAppsAccessHumanPresence">
+        <dropdownList refId="LetAppsAccessHumanPresence_Enum" noSort="true" defaultItem="0">所有应用的默认设置:</dropdownList>
+        <text>由用户控制这些特定应用(使用程序包系列名称):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_UserInControlOfTheseApps_List"/>
+        <text>强制允许这些特定应用(使用程序包系列名称):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_ForceAllowTheseApps_List"/>
+        <text>强制拒绝这些特定应用(使用程序包系列名称):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_ForceDenyTheseApps_List"/>
+      </presentation>
       <presentation id="LetAppsAccessLocation">
         <dropdownList refId="LetAppsAccessLocation_Enum" noSort="true" defaultItem="0">所有应用的默认设置:</dropdownList>
         <text>由用户控制这些特定应用(使用程序包系列名称):</text>
@@ -525,18 +549,18 @@
         <dropdownList refId="LetAppsAccessTrustedDevices_Enum" noSort="true" defaultItem="0">所有应用的默认设置:</dropdownList>
         <text>由用户控制这些特定应用(使用程序包系列名称):</text>
         <multiTextBox refId="LetAppsAccessTrustedDevices_UserInControlOfTheseApps_List"/>
-        <text>强制允许这些特定应用(使用程序包系列名称):</text>
+        <text>强制允许这些特定应用(使用包系列名称):</text>
         <multiTextBox refId="LetAppsAccessTrustedDevices_ForceAllowTheseApps_List"/>
-        <text>强制拒绝这些特定应用(使用程序包系列名称):</text>
+        <text>强制拒绝这些特定应用(使用包系列名称):</text>
         <multiTextBox refId="LetAppsAccessTrustedDevices_ForceDenyTheseApps_List"/>
       </presentation>
       <presentation id="LetAppsRunInBackground">
         <dropdownList refId="LetAppsRunInBackground_Enum" noSort="true" defaultItem="0">所有应用的默认设置:</dropdownList>
         <text>由用户控制这些特定应用(使用程序包系列名称):</text>
         <multiTextBox refId="LetAppsRunInBackground_UserInControlOfTheseApps_List"/>
-        <text>强制允许这些特定应用(使用包系列名称):</text>
+        <text>强制允许这些特定应用(使用程序包系列名称):</text>
         <multiTextBox refId="LetAppsRunInBackground_ForceAllowTheseApps_List"/>
-        <text>强制拒绝这些特定应用(使用包系列名称):</text>
+        <text>强制拒绝这些特定应用(使用程序包系列名称):</text>
         <multiTextBox refId="LetAppsRunInBackground_ForceDenyTheseApps_List"/>
       </presentation>
       <presentation id="LetAppsGetDiagnosticInfo">

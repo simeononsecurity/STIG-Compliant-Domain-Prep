@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2015 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>voer hier de weergegeven naam in</displayName>
+  <description>typ hier een beschrijving</description>
+  <resources>
+    <stringTable>
+      <string id="AccountNotifications">Accountmeldingen</string>
+      <string id="DisableAccountNotifications">Accountmeldingen uitschakelen in Start</string>
+      <string id="DisableAccountNotificationsExplain">
+            Met dit beleid kunt u voorkomen dat windows meldingen weergeeft voor Microsoft-account (MSA) en lokale gebruikers in Start (gebruikerstegel).
+
+Meldingen omvatten het ophalen van gebruikers naar: opnieuw verifiëren; een back-up van het apparaat maken; cloudopslagquota beheren en hun Microsoft 365 of XBOX-abonnement beheren.
+
+Als u deze beleidsinstelling inschakelt, verzendt Windows geen accountgerelateerde meldingen voor lokale en MSA-gebruikers naar de gebruikerstegel in Start.
+
+Als u deze beleidsinstelling uitschakelt of niet configureert, verzendt Windows accountgerelateerde meldingen voor lokale en MSA-gebruikers naar de gebruikerstegel in Start.
+
+U hoeft niet opnieuw op te starten of de service opnieuw op te starten om deze beleidsinstelling van kracht te laten worden.
+      </string>
+    </stringTable>
+  </resources>
+</policyDefinitionResources>

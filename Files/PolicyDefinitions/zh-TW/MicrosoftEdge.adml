@@ -338,12 +338,12 @@
       <string id="SetDefaultSearchEngine_Explain">此原則設定使您能夠為您的員工設定預設搜索引擎。您的員工可以隨時更改預設搜尋引擎。
 
 重要
-該設定只能用於加入網域或註冊了 MDM 的裝置。若要了解更多信息，請參閱 Microsoft 瀏覽器副檔名原則（又名 .ms/browserpolicy）。
+該設定只能用於加入網域或註冊了 MDM 的裝置。若要了解更多信息，請參閱 Microsoft 瀏覽器副檔名原則（aka.ms/browserpolicy）。
 
-如果您啟用該設定，您則可以為您的員工選擇一個預設的搜索引擎。如果啟用該設定，您也必須通過添加一個連結（至少要包含其簡短名稱和該搜索引擎的 https: 網址）到 OpenSearch XML 檔案將預設引擎添加至“設置預設搜索引擎”設定。若要了解更多有關創建 OpenSearch XML 檔案的信息，請參閱“了解 OpenSearch 標準 (https://msdn.microsoft.com/en-us/library/dd163546.aspx) 主題。使用此格式指定要添加的連結：&lt;https://fabrikam.com/opensearch.xml&gt;
+如果您啟用該設定，您則可以為您的員工選擇一個預設的搜索引擎。如果啟用該設定，您也必須通過添加一個連結（至少要包含其簡短名稱和該搜索引擎的 https: 網址）到 OpenSearch XML 檔案將預設引擎添加至“設置預設搜索引擎”設定。若要了解更多有關創建 OpenSearch XML 檔案的信息，請參閱“了解 OpenSearch 標準” (https://msdn.microsoft.com/en-us/library/dd163546.aspx) 主題。使用此格式指定要添加的連結：&lt;https://fabrikam.com/opensearch.xml&gt;
 
 注
-如果您希望您的員工對每個市場都使用預設的 Microsoft Edge 設定，您可以將該字串設定為 EDGEDEFAULT 。如果您希望您的員工使用 Microsoft Bing 作為預設搜索引擎，您可以將字串設定為 EDGEBING。
+如果您希望您的員工對每個市場都使用預設的 Microsoft Edge 設定，您可以將該字串設定為 EDGEDEFAULT。如果您希望您的員工使用 Microsoft Bing 作為預設搜索引擎，您可以將字串設定為 EDGEBING。
 
 員工可以隨時變更預設搜索引擎，除非您停用“允許搜索引擎個性化”設定，該操作可限制任何變更。
 

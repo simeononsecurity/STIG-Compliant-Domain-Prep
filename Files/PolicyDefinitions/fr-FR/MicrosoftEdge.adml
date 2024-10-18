@@ -283,12 +283,12 @@ Si vous désactivez ce paramètre ou si vous ne le configurez pas, tous les cook
       <string id="CookiesList_Block_None">Autoriser tous les cookies (par défaut)</string>
       <string id="CookiesList_Block_ThirdParty">Bloquer les cookies tiers uniquement</string>
       <string id="CookiesList_Block_All">Bloquer tous les cookies</string>
-      <string id="EnterpriseModeSiteList">Configurer la liste des sites en Mode entreprise</string>
-      <string id="EnterpriseModeSiteList_Explain">Ce paramètre de stratégie vous permet de configurer si le Mode entreprise et la liste des sites en Mode entreprise sont utilisés afin de résoudre des problèmes de compatibilité courants liés à des applications héritées.
+      <string id="EnterpriseModeSiteList">Configurer la liste des sites en mode Entreprise</string>
+      <string id="EnterpriseModeSiteList_Explain">Ce paramètre de stratégie vous permet de configurer si le mode Entreprise et la liste des sites en mode Entreprise sont utilisés afin de résoudre des problèmes de compatibilité courants liés à des applications héritées.
 
-Si vous activez ce paramètre, Microsoft Edge recherche le fichier XML de la liste des sites en Mode entreprise. Ce fichier inclut les sites et les domaines à afficher à l’aide d’Internet Explorer 11 et du Mode entreprise.
+Si vous activez ce paramètre, Microsoft Edge recherche le fichier XML de la liste des sites en mode Entreprise. Ce fichier inclut les sites et les domaines à afficher à l’aide d’Internet Explorer 11 et du mode Entreprise.
 
-Si vous désactivez ce paramètre ou si vous ne le configurez pas, Microsoft Edge n’utilisera pas le fichier XML de la liste des sites en Mode entreprise. Dans ce cas, les employés peuvent rencontrer des problèmes de compatibilité lorsqu’ils utilisent des applications héritées.</string>
+Si vous désactivez ce paramètre ou si vous ne le configurez pas, Microsoft Edge n’utilisera pas le fichier XML de la liste des sites en mode Entreprise. Dans ce cas, les employés peuvent rencontrer des problèmes de compatibilité lorsqu’ils utilisent des applications héritées.</string>
       <string id="AllowExtensions">Autoriser les extensions</string>
       <string id="AllowExtensions_Explain">Ce paramètre vous permet de décider si les employés peuvent charger des extensions dans Microsoft Edge.
 
@@ -392,7 +392,7 @@ Stratégie liée : Autoriser le contenu web dans une page de nouvel onglet</str
       <string id="ShowMessageWhenOpeningSitesInInternetExplorer_Show_ContinueInEdge">Afficher le lien Poursuivre dans Microsoft Edge</string>
       <string id="ShowMessageWhenOpeningSitesInInternetExplorer_Hide_ContinueInEdge">Masquer le lien Poursuivre dans Microsoft Edge</string>
       <string id="ShowMessageWhenOpeningSitesInInternetExplorer">Afficher un message lors de l’ouverture d’un site dans Internet Explorer</string>
-      <string id="ShowMessageWhenOpeningSitesInInternetExplorer_Explain">Vous pouvez configurer Microsoft Edge pour ouvrir automatiquement un site dans Internet Explorer 11 et choisir d'afficher une notification avant l'ouverture du site. Si vous souhaitez afficher une notification, vous devez activer Configurer la liste des sites en Mode entreprise ou Envoyer tous les sites intranet vers Internet Explorer 11 ou les deux.
+      <string id="ShowMessageWhenOpeningSitesInInternetExplorer_Explain">Vous pouvez configurer Microsoft Edge pour ouvrir automatiquement un site dans Internet Explorer 11 et choisir d'afficher une notification avant l'ouverture du site. Si vous souhaitez afficher une notification, vous devez activer Configurer la liste des sites en mode Entreprise ou Envoyer tous les sites intranet vers Internet Explorer 11 ou les deux.
 
 Si cette option est activée, la notification apparaît sur une nouvelle page. Si vous souhaitez que les utilisateurs continuent dans Microsoft Edge, sélectionnez l'option Afficher Poursuivre dans Microsoft Edge dans la liste déroulante, sous Options.
 
@@ -400,7 +400,7 @@ Si cette option est désactivé ou n'est pas configurée, le comportement de l'a
 
 Paramètre par défaut : désactivé ou non configuré
 Stratégies liées :
-- Configurer la liste des sites en Mode entreprise 
+- Configurer la liste des sites en mode Entreprise 
 - Envoyer tous les sites intranet vers Internet Explorer 11</string>
       <string id="PreventAccessToAboutFlagsInMicrosoftEdge">Empêcher l’accès à la page about:flags dans Microsoft Edge</string>
       <string id="PreventAccessToAboutFlagsInMicrosoftEdge_Explain">Ce paramètre vous permet de décider si les employés peuvent accéder à la page about:flags, utilisée pour modifier les paramètres de développeur et activer les fonctionnalités expérimentales.

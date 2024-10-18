@@ -150,7 +150,7 @@ Hvis du aktiverer og deretter deaktiverer denne policyinnstillingen, kan brukern
       </string>
       <string id="DefaultIndexedPaths">Standardindekserte baner</string>
       <string id="DefaultIndexedPaths_Explain">Hvis denne policyen er aktivert, kan du angi en liste over baner som skal indekseres som standard. Brukeren kan overstyre disse banene og utelate dem fra indeksering.</string>
-      <string id="DefaultIndexedPaths_User_Explain">Hvis denne policyen er aktivert, kan du angi en liste over baner som skal indekseres som standard. Brukeren kan overstyre disse banene og utelate dem fra indeksering. Per bruker vil denne policyinnstillingen bare virke hvis en protokollbehandling som refererer til et SID-basert brukeromfang, for eksempel MAPI, angis. Filsystembaner som ikke refererer til en spesifikk SID, inkluderes ikke for indeksering hvis disse bare er angitt i gruppepolicyen under Brukerkonfigurasjon." Hvis du vil inkludere en filsystembane for indeksering, må du angi filsystembanen som skal indekseres, under gruppepolicyen Datamaskinkonfigurasjon.</string>
+      <string id="DefaultIndexedPaths_User_Explain">Hvis du aktiverer denne policyen, kan du angi en liste over baner som skal indekseres som standard. Brukeren kan overstyre disse banene og utelate dem fra indeksering. På brukerbasis vil denne policyinnstillingen bare fungere hvis en protokollbehandler som refererer til et SID-basert brukerområde, for eksempel MAPI, er angitt. Filsystembaner som ikke refererer til en bestemt SID, inkluderes ikke for indeksering hvis disse bare er angitt i gruppepolicy under Brukerkonfigurasjon. Hvis du vil inkludere en filsystembane for indeksering, angir du filsystembanen som skal indekseres under datamaskinkonfigurasjonen gruppepolicy.</string>
       <string id="DefaultExcludedPaths">Standardutelatte baner</string>
       <string id="DefaultExcludedPaths_Explain">Hvis denne policyen er aktivert, kan du angi en liste over baner som skal utelates fra indeksering som standard. Brukeren kan overstyre disse banene og inkludere dem for indeksering.</string>
       <string id="DefaultExcludedPaths_User_Explain">Hvis denne policyen er aktivert, kan du angi en liste over baner som skal utelates fra indeksering som standard. Brukeren kan overstyre disse banene og inkludere dem for indeksering. Per bruker vil denne policyinnstillingen bare virke hvis en protokollbehandling som refererer til et SID-basert brukeromfang, for eksempel MAPI, angis. Filsystembaner som ikke refererer til en spesifikk SID, utelates ikke fra indeksering hvis disse bare er angitt i gruppepolicyen under Brukerkonfigurasjon. Hvis du vil hindre at en filsystembane indekseres, må du angi filsystembanen som skal indekseres, under gruppepolicyen Datamaskinkonfigurasjon.</string>
@@ -300,6 +300,23 @@ Hvis policyinnstillingen er aktivert, har søk og Cortana tilgang til stedsinfor
       <string id="DisableSearch_ExplainText">Hvis du aktiverer denne policyen, deaktiveres søkegrensesnittet sammen med alle inngangspunkter, for eksempel hurtigtaster, styreplatebevegelser og type-til-søk i Start-meny. Søkeboksen og knappen Søk på oppgavelinjen i Start-meny skjules også.
 
 Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, kan brukeren åpne søkegrensesnittet og de ulike inngangspunktene vises.</string>
+      <string id="ConfigureSearchOnTaskbarMode">Konfigurerer søk på oppgavelinjen</string>
+      <string id="ConfigureSearchOnTaskbarMode_Help">Med denne policyinnstillingen kan du konfigurere søk på oppgavelinjen.
+
+Hvis du aktiverer denne policyinnstillingen og angir at den skal skjules, skjules søk på oppgavelinjen som standard. Brukere kan ikke endre det i Innstillinger.
+
+Hvis du aktiverer denne policyinnstillingen og bare angir den til søkeikon, vises søkeikonet på oppgavelinjen som standard. Brukere kan ikke endre det i Innstillinger.
+
+Hvis du aktiverer denne policyinnstillingen og angir den til søkeikon og etikett, vises søkeikonet og etiketten som standard på oppgavelinjen. Brukere kan ikke endre det i Innstillinger.
+
+Hvis du aktiverer denne policyinnstillingen og setter den til søkeboks, vises søkeboksen på oppgavelinjen som standard. Brukere kan ikke endre det i Innstillinger.
+
+Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, konfigureres søk på oppgavelinjen i henhold til standardinnstillingene for Windows-utgaven. Brukere kan endre søk på oppgavelinjen i Innstillinger.
+      </string>
+      <string id="SearchOnTaskbarModeEnum_Hidden">Skjul</string>
+      <string id="SearchOnTaskbarModeEnum_SearchIconOnly">Bare søkeikon</string>
+      <string id="SearchOnTaskbarModeEnum_SearchIconAndLabel">Søkeikon og -etikett</string>
+      <string id="SearchOnTaskbarModeEnum_SearchBox">Søkeboks</string>
     </stringTable>
     <presentationTable>
       <presentation id="RichAttachmentPreviews">
@@ -388,6 +405,9 @@ Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, kan bruke
       </presentation>
       <presentation id="AllowCortanaAAD">
         <dropdownList refId="AllowCortanaAAD_Dropdown" noSort="true" defaultItem="0">Cortana i AAD-innstilling</dropdownList>
+      </presentation>
+      <presentation id="ConfigureSearchOnTaskbarMode">
+        <dropdownList refId="ConfigureSearchOnTaskbarMode_Dropdown" noSort="true" defaultItem="0">Søk på oppgavelinjen</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

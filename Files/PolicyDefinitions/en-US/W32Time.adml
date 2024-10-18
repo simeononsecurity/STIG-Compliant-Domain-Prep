@@ -12,7 +12,7 @@ If this policy setting is enabled, W32time Service on target machines use the se
 For more details on individual parameters, combinations of parameter values as well as definitions of flags, see https://go.microsoft.com/fwlink/?linkid=847809.
 
         FrequencyCorrectRate
-This parameter controls the rate at which the W32time corrects the local clock's frequency. Lower values cause slower corrections; larger values cause more frequent corrections. Default: 4 (scalar).
+This parameter controls the rate at which the W32time corrects the local clock's frequency. Lower values cause larger corrections; larger values cause smaller corrections. Default: 4 (scalar).
 
         HoldPeriod
 This parameter indicates how many consistent time samples the client computer must receive in a series before subsequent time samples are evaluated as potential spikes. Default: 5
@@ -30,7 +30,7 @@ If a time sample is received that indicates a time in the past (as compared to t
 If a time sample is received that indicates a time in the future (as compared to the client computer's local clock) that has a time difference greater than the MaxPosPhaseCorrection value, the time sample is discarded. Default: 172,800 seconds.
 
         PhaseCorrectRate
-This parameter controls how quickly W32time corrects the client computer's local clock difference to match time samples that are accepted as accurate from the NTP server. Lower values cause the clock to correct more slowly; larger values cause the clock to correct more quickly. Default: 7 (scalar).
+This parameter controls how quickly W32time corrects the client computer's local clock difference to match time samples that are accepted as accurate from the NTP server. Lower values cause the clock to correct more quickly; larger values cause the clock to correct more slowly. Default: 7 (scalar).
 
         PollAdjustFactor
 This parameter controls how quickly W32time changes polling intervals. When responses are considered to be accurate, the polling interval lengthens automatically. When responses are considered to be inaccurate, the polling interval shortens automatically. Default: 5 (scalar).

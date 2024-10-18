@@ -259,6 +259,36 @@
         <multiText id="LetAppsAccessGraphicsCaptureWithoutBorder_ForceAllowTheseApps_List" valueName="LetAppsAccessGraphicsCaptureWithoutBorder_ForceAllowTheseApps" />
         <multiText id="LetAppsAccessGraphicsCaptureWithoutBorder_ForceDenyTheseApps_List" valueName="LetAppsAccessGraphicsCaptureWithoutBorder_ForceDenyTheseApps" />
       </elements>
+    </policy><policy name="LetAppsAccessHumanPresence"
+            class="Machine"
+            displayName="$(string.LetAppsAccessHumanPresence_Name)"
+            explainText="$(string.LetAppsAccessHumanPresence_Explain)"
+            presentation="$(presentation.LetAppsAccessHumanPresence)"
+            key="Software\Policies\Microsoft\Windows\AppPrivacy">
+      <parentCategory ref="AppPrivacy" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0"/>
+      <elements>
+        <enum id="LetAppsAccessHumanPresence_Enum" valueName="LetAppsAccessHumanPresence">
+          <item displayName="$(string.UserInControl)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.ForceAllow)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.ForceDeny)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+        </enum>
+        <multiText id="LetAppsAccessHumanPresence_UserInControlOfTheseApps_List" valueName="LetAppsAccessHumanPresence_UserInControlOfTheseApps" />
+        <multiText id="LetAppsAccessHumanPresence_ForceAllowTheseApps_List" valueName="LetAppsAccessHumanPresence_ForceAllowTheseApps" />
+        <multiText id="LetAppsAccessHumanPresence_ForceDenyTheseApps_List" valueName="LetAppsAccessHumanPresence_ForceDenyTheseApps" />
+      </elements>
     </policy>
     <policy name="LetAppsAccessLocation"
             class="Machine"

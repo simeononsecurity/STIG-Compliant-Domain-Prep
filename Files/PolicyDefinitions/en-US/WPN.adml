@@ -104,6 +104,18 @@
 
           No reboots or service restarts are required for this policy setting to take effect.
       </string>
+      <string id="ExpandedToastNotifications">Turn on multiple expanded toast notifications in action center</string>
+      <string id="ExpandedToastNotificationsExplain">
+          This policy setting turns on multiple expanded toast notifications in action center.
+
+          If you enable this policy setting, the first three notifications of each application will be expanded by default in action center.
+
+          If you disable or do not configure this policy setting, only the first notification of each application will be expanded by default in action center.
+
+          Windows 10 only. This will be immediately deprecated for Windows 11.
+
+          No reboots or service restarts are required for this policy setting to take effect.
+      </string>
     </stringTable>
     <presentationTable>
       <presentation id="QuietHoursBeginTimePicker">

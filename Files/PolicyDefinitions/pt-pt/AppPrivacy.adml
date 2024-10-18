@@ -129,6 +129,21 @@ Se desativar ou não configurar esta definição de política, os colaboradores 
 
 Se uma aplicação estiver aberta quando este objeto de Política de Grupo for aplicado num dispositivo, os colaboradores devem reiniciar a aplicação ou dispositivo para que as alterações de política sejam aplicadas à aplicação da aplicação.
       </string>
+      <string id="LetAppsAccessHumanPresence_Name">Permitir que as aplicações do Windows acedam à deteção de presença</string>
+      <string id="LetAppsAccessHumanPresence_Explain">Esta definição de política especifica se as aplicações do Windows podem aceder à deteção de presença.
+
+Pode especificar uma predefinição para todas as aplicações ou uma definição por aplicação ao especificar um Nome da Família de Pacotes. Pode obter o Nome da Família de Pacotes de uma aplicação ao utilizar o cmdlet do Windows PowerShell Get-AppPackage. Uma definição por aplicação substitui a predefinição.
+
+Se escolher a opção "O utilizador tem o controlo", os colaboradores da sua organização podem decidir se as aplicações do Windows podem aceder à deteção de presença ao utilizar Definições e Privacidade no dispositivo.
+
+Se escolher a opção "Forçar Permissão", as aplicações do Windows podem aceder à deteção de presença, mas os colaboradores da sua organização não podem fazer alterações.
+
+Se escolher a opção "Forçar Negação", as aplicações do Windows não podem aceder à deteção de presença e os colaboradores da sua organização não podem fazer alterações.
+
+Se desativar ou não a configurar esta definição de política, os colaboradores da sua organização podem decidir se as aplicações do Windows podem aceder à deteção de presença ao utilizar Definições e Privacidade no dispositivo.
+
+Se uma aplicação estiver aberta quando este objeto de Política de Grupo for aplicado a um dispositivo, os colaboradores têm de reiniciar a aplicação ou o dispositivo para que as alterações de política sejam aplicadas à aplicação.
+      </string>
       <string id="LetAppsAccessLocation_Name">Permitir que as aplicações do Windows acedam à localização</string>
       <string id="LetAppsAccessLocation_Explain">Esta definição de política especifica se as aplicações do Windows podem aceder à localização.
 
@@ -440,6 +455,15 @@ Caso uma aplicação esteja aberta quando este objeto de Política de Grupo for 
         <text>Forçar a negação destas aplicações específicas (utilizar Nomes da Família de Pacotes):</text>
         <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_ForceDenyTheseApps_List"/>
       </presentation>
+      <presentation id="LetAppsAccessHumanPresence">
+        <dropdownList refId="LetAppsAccessHumanPresence_Enum" noSort="true" defaultItem="0">Predefinição para todas as aplicações:</dropdownList>
+        <text>Dar ao utilizador o controlo destas aplicações específicas (utilizar Nomes da Família de Pacotes):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_UserInControlOfTheseApps_List"/>
+        <text>Forçar a permissão destas aplicações específicas (utilizar Nomes da Família de Pacotes):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_ForceAllowTheseApps_List"/>
+        <text>Forçar a negação destas aplicações específicas (utilizar Nomes da Família de Pacotes):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_ForceDenyTheseApps_List"/>
+      </presentation>
       <presentation id="LetAppsAccessLocation">
         <dropdownList refId="LetAppsAccessLocation_Enum" noSort="true" defaultItem="0">Predefinição para todas as aplicações:</dropdownList>
         <text>Dar ao utilizador o controlo destas aplicações específicas (utilizar Nomes da Família de Pacotes):</text>
@@ -545,7 +569,7 @@ Caso uma aplicação esteja aberta quando este objeto de Política de Grupo for 
         <multiTextBox refId="LetAppsGetDiagnosticInfo_UserInControlOfTheseApps_List"/>
         <text>Forçar a permissão destas aplicações específicas (utilizar Nomes da Família de Pacotes):</text>
         <multiTextBox refId="LetAppsGetDiagnosticInfo_ForceAllowTheseApps_List"/>
-        <text>Forçar a negação destas aplicações específicas (utilizar Nomes da Família de Pacotes):</text>
+        <text>Forçar negação destas aplicações específicas (utilizar Nomes da Família de Pacotes):</text>
         <multiTextBox refId="LetAppsGetDiagnosticInfo_ForceDenyTheseApps_List"/>
       </presentation>
       <presentation id="LetAppsAccessGazeInput">
@@ -569,7 +593,7 @@ Caso uma aplicação esteja aberta quando este objeto de Política de Grupo for 
         <multiTextBox refId="LetAppsAccessBackgroundSpatialPerception_UserInControlOfTheseApps_List"/>
         <text>Forçar a permissão destas aplicações específicas (utilizar Nomes da Família de Pacotes):</text>
         <multiTextBox refId="LetAppsAccessBackgroundSpatialPerception_ForceAllowTheseApps_List"/>
-        <text>Forçar negação destas aplicações específicas (utilizar Nomes da Família de Pacotes):</text>
+        <text>Forçar a negação destas aplicações específicas (utilizar Nomes da Família de Pacotes):</text>
         <multiTextBox refId="LetAppsAccessBackgroundSpatialPerception_ForceDenyTheseApps_List"/>
       </presentation>
     </presentationTable>

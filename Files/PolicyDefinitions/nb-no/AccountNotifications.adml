@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2015 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>skriv inn visningsnavn her</displayName>
+  <description>skriv inn beskrivelse her</description>
+  <resources>
+    <stringTable>
+      <string id="AccountNotifications">Kontovarsler</string>
+      <string id="DisableAccountNotifications">Deaktiver kontovarsler i Start-menyen</string>
+      <string id="DisableAccountNotificationsExplain">
+            Med denne policyen kan du hindre Windows i å vise varslinger til Microsoft-konto (MSA) og lokale brukere i Start (brukerflis).
+
+Varslinger omfatter henting av brukere til: godkjenn på nytt; sikkerhetskopier enheten; administrer kvoter for skylagring i tillegg til å administrere Microsoft 365- eller XBOX-abonnementet.
+
+Hvis du aktiverer denne policyinnstillingen, sender ikke Windows kontorelaterte varsler for lokale brukere og MSA-brukere til brukerflisen på Start-meny.
+
+Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, sender Windows kontorelaterte varslinger for lokale brukere og MSA-brukere til brukerflisen på Start-meny.
+
+Ingen omstarter eller tjenester kreves for at denne policyinnstillingen skal tre i kraft.
+      </string>
+    </stringTable>
+  </resources>
+</policyDefinitionResources>

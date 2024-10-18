@@ -120,6 +120,18 @@
 
           Não são necessários reinícios de sistema ou de serviços para que esta definição de política produza efeitos.
       </string>
+      <string id="ExpandedToastNotifications">Ativar várias notificações de alerta expandidas no centro de ação</string>
+      <string id="ExpandedToastNotificationsExplain">
+          Esta definição de política ativa várias notificações de alerta expandidas no centro de ação.
+
+Se ativar esta definição de política, as três primeiras notificações de cada aplicação serão expandidas por predefinição no centro de ação.
+
+Se desativar ou não configurar esta definição de política, apenas a primeira notificação de cada aplicação será expandida por predefinição no centro de ação.
+
+só Windows 10. Isto será imediatamente preterido para Windows 11.
+
+Não são necessários reinícios ou reinícios de serviço para que esta definição de política entre em vigor.
+      </string>
     </stringTable>
     <presentationTable>
       <presentation id="QuietHoursBeginTimePicker">

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2015 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>escriba aquí el nombre</displayName>
+  <description>escriba aquí la descripción</description>
+  <resources>
+    <stringTable>
+      <string id="AccountNotifications">Notificaciones de la cuenta</string>
+      <string id="DisableAccountNotifications">Desactivar las notificaciones de cuentas en Inicio</string>
+      <string id="DisableAccountNotificationsExplain">
+            Esta directiva le permite impedir que Windows muestre notificaciones a la cuenta de Microsoft (MSA) y a los usuarios locales en Inicio (icono de usuario).
+
+Las notificaciones incluyen la obtención de usuarios a: volver a autenticar; hacer una copia de seguridad de su dispositivo; administrar cuotas de almacenamiento en la nube, así como administrar su suscripción Microsoft 365 o XBOX.
+
+Si habilita esta configuración de directiva, Windows no enviará notificaciones relacionadas con la cuenta de los usuarios locales y de MSA al icono de usuario en Inicio.
+
+Si deshabilita o no establece esta configuración de directiva, Windows enviará notificaciones relacionadas con la cuenta para los usuarios locales y de MSA al icono de usuario en Inicio.
+
+No se requieren reinicios ni reinicios de servicio para que esta configuración de directiva surta efecto.
+      </string>
+    </stringTable>
+  </resources>
+</policyDefinitionResources>

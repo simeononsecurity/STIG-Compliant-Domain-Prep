@@ -248,11 +248,11 @@ Související zásady:
       <string id="ConfigureOpenEdgeWithList_PreviousPages">Předchozí stránky</string>
       <string id="ConfigureOpenEdgeWithList_ProvisionedHomePages">Konkrétní stránka nebo stránky (výchozí)</string>
       <string id="AlwaysEnableBooksLibrary">Vždycky zobrazovat funkci Knihy v Microsoft Edgi</string>
-      <string id="AlwaysEnableBooksLibrary_Explain">Toto nastavení zásad vám pomůže rozhodnout, jestli se má zobrazovat karta Knihy, bez ohledu na nastavení země nebo oblasti zařízení v části Země nebo oblast v nastavení Windows.
- 
-Pokud toto nastavení povolíte, bude Microsoft Edge zobrazovat funkci Knihy, bez ohledu na zemi nebo oblast zařízení.
+      <string id="AlwaysEnableBooksLibrary_Explain">Toto nastavení zásad vám pomůže rozhodnout, jestli se má karta Knihy zobrazovat bez ohledu na nastavení země nebo oblasti zařízení, jak je nakonfigurovano v nastavení Windows v části Země nebo Oblast.
 
-Pokud toto nastavení zakážete nebo nenakonfigurujete, bude Microsoft Edge zobrazovat funkci Knihy jenom v zemích nebo oblastech, kde se podporuje.</string>
+Pokud toto nastavení povolíte, Microsoft Edge zobrazí knihovnu knih bez ohledu na zemi nebo oblast zařízení.
+
+Pokud toto nastavení zakážete nebo nenakonfigurujete, Microsoft Edge zobrazí knihovnu knih pouze v zemích nebo oblastech, kde je podporována.</string>
       <string id="EnableExtendedBooksTelemetry">Povolit rozšířenou telemetrii pro kartu Knihy</string>
       <string id="EnableExtendedBooksTelemetry_Explain">Nastavením této zásady můžete rozhodnout, jaký objem dat týkajících se knihy, kterou si čtete z karty Knihy v Microsoft Edgi, se odešle do Microsoftu.
 
@@ -532,9 +532,9 @@ Pokud je tato možnost zakázaná nebo není nakonfigurovaná, oznámení se zob
           <label>Zadejte adresu URL, která ukazuje na soubor, který obsahuje veškerá data ke zřizování oblíbených položek (ve formátu html). Můžete exportovat sadu oblíbených položek z Microsoft Edge a používat tento soubor html ke zřizování uživatelských počítačů.
 
 URL se dá zadat jako
-1. Umístění HTTP: http://localhost:8080/URL.html
-2. Místní síť: \\síť\sdílené_složky\URL.html
-3. Místní soubor: file:///c:\\Users\\&lt;uživatel&gt;\\Dokumenty\\URL.html nebo C:\\Users\\&lt;uživatel&gt;\\Dokumenty\\URL.html
+1. Umístění HTTP: http://localhost:8080/URLs.html
+2. Místní síť: \\síť\sdílené_složky\URLs.html
+3. Místní soubor: file:///c:\\Users\\&lt;uživatel&gt;\\Dokumenty\\URLs.html nebo C:\\Users\\&lt;uživatel&gt;\\Dokumenty\\URLs.html
           </label>
         </textBox>
       </presentation>

@@ -130,6 +130,19 @@
 
 이 설정을 설정하거나 비활성화하지 않으면 "접근성" 그룹의 동기화가 기본적으로 켜져 있고 사용자가 구성할 수 있습니다.
       </string>
+
+      <!-- Language -->
+      <string id="DisableLanguageSettingSync">언어 기본 설정 동기화 안 함</string>
+      <string id="DisableLanguageSettingSync_Help">
+        "언어 기본 설정" 그룹이 이 PC와 동기화되지 않도록 합니다. 이렇게 하면 PC 설정의 'Windows 백업' 설정 페이지에서 '언어 기본 설정' 그룹이 꺼지고 비활성화됩니다.
+
+이 정책 설정을 사용하면 "언어 기본 설정" 그룹이 동기화되지 않습니다.
+
+동기화가 기본적으로 꺼져 있지만 비활성화되지 않도록 "사용자가 언어 기본 설정 동기화를 켜도록 허용" 옵션을 사용합니다.
+
+이 설정을 설정하거나 비활성화하지 않으면 "언어 기본 설정" 그룹의 동기화가 기본적으로 켜져 있고 사용자가 구성할 수 있습니다.
+      </string>
+
     </stringTable>
     <presentationTable>
 
@@ -181,6 +194,11 @@
       <!-- AccessibilitySync -->
       <presentation id="DisableAccessibilitySettingSyncUserOverride">
         <checkBox refId="CheckBox_UserOverride">사용자가 "접근성" 동기화를 켤 수 있도록 허용합니다.</checkBox>
+      </presentation>
+
+      <!-- LanguageSync -->
+      <presentation id="DisableLanguageSettingSyncUserOverride">
+        <checkBox refId="CheckBox_UserOverride">사용자가 "언어 기본 설정"을 설정하도록 허용 동기화 중입니다.</checkBox>
       </presentation>
 
     </presentationTable>

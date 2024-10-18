@@ -6,16 +6,16 @@
     <stringTable>
       <string id="MULTITASKING">マルチタスキング</string>
       <string id="MULTITASKINGHELP">Windows のマルチタスキング オプションを管理します</string>
-      <string id="BrowserAltTabBlowout">Alt + Tab キーへの Microsoft Edge タブの追加を構成</string>
-      <string id="BrowserAltTabBlowout_Help">この設定により、Alt + Tab キーへの Microsoft Edge タブの追加が制御されます。
+      <string id="BrowserAltTabBlowout">Alt-Tab にアプリ タブを含めるように構成する</string>
+      <string id="BrowserAltTabBlowout_Help">この設定では、アプリ タブをAlt+Tabに含めることを制御します。
 
-すべてのタブ、最新の 3 つまたは 5 つのタブを表示するように設定するか、Microsoft Edge のタブを表示しないように設定することもできます。
+これは、最新の 3、5、または 20 個のタブを表示するか、アプリのタブを表示しないように設定できます。
 
-「開いているウィンドウのみ」を表示するように設定されている場合、機能全体が無効になります。
+これが [ウィンドウのみを開く] を表示するように設定されている場合、機能全体が無効になります。
 </string>
-      <string id="AltTabFilter_All">開いているウィンドウと Microsoft Edge のすべてのタブ</string>
-      <string id="AltTabFilter_Five">開いているウィンドウと Microsoft Edge で最近開いた 5 つのタブ</string>
-      <string id="AltTabFilter_Three">開いているウィンドウと Microsoft Edge で最近開いた 3 つのタブ</string>
+      <string id="AltTabFilter_All">アプリでウィンドウと 20 個の最新のタブを開く</string>
+      <string id="AltTabFilter_Five">アプリでウィンドウと 5 つの最新のタブを開く</string>
+      <string id="AltTabFilter_Three">アプリでウィンドウと最新のタブを 3 つ開く</string>
       <string id="AltTabFilter_None">開いているウィンドウのみ</string>
     </stringTable>
     <presentationTable>

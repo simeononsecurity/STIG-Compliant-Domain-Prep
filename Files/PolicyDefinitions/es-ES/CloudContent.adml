@@ -86,6 +86,12 @@ Si habilitas esta Directiva, las experiencias de Windows que usan el componente 
 
 Si deshabilitas o no configuras esta Directiva, las experiencias de Windows podrán usar el contenido de estado de la cuenta de consumidor de nube.
         </string>
+      <string id="EnableOrganizationalMessagesContent">Habilitar mensajes de la organización</string>
+      <string id="EnableOrganizationalMessagesContent_Help">Los mensajes de la organización permiten a los administradores entregar mensajes a sus usuarios finales en experiencias de Windows 11 seleccionadas. Los mensajes de la organización están disponibles para los administradores a través de servicios como Microsoft Endpoint Manager.
+
+De forma predeterminada, esta directiva está deshabilitada. Si se habilita esta directiva, estas experiencias mostrarán el contenido reservado por los administradores.
+
+La habilitación de esta directiva no tendrá ningún impacto en la configuración de directiva MDM existente que rige la entrega de contenido de las experiencias de Microsoft en Windows.</string>
     </stringTable>
     <presentationTable>
       <presentation id="ConfigureWindowsSpotlight">

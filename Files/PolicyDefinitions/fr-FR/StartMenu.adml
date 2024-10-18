@@ -494,9 +494,9 @@ Consultez également le paramètre de stratégie « Masquer l’option Ajouter 
 
 Si vous désactivez ce paramètre ou si vous ne le configurez pas, le bouton « Retirer » est conservé dans le menu Démarrer simple ; par ailleurs, votre PC ne peut être retiré de sa station d’accueil.</string>
       <string id="StartMenuLogOff">Supprimer la fermeture de session dans le menu Démarrer</string>
-      <string id="StartMenuLogOff_Help">Ce paramètre de stratégie vous permet de supprimer l’élément « Fermer la session &lt;nom_utilisateur » du menu Démarrer et empêche les utilisateurs de le restaurer.
+      <string id="StartMenuLogOff_Help">Ce paramètre de stratégie vous permet de supprimer l’élément « Fermer la session &lt;nom_utilisateur&gt; du menu Démarrer et empêche les utilisateurs de le restaurer.
 
-Si vous activez ce paramètre de stratégie, l’élément Fermer la session &lt;nom_utilisateur&gt; n’apparaît pas dans le menu Démarrer. Ce paramètre de stratégie supprime également l’élément Afficher l’invite de fermeture de session des options du menu Démarrer. Par conséquent, les utilisateurs ne peuvent pas restaurer l’élément Fermer la session &lt;nom d’utilisateur&gt; dans le menu Démarrer.
+Si vous activez ce paramètre de stratégie, l’élément Fermer la session &lt;nom_utilisateur&gt; n’apparaît pas dans le menu Démarrer. Ce paramètre de stratégie supprime également l’élément Afficher l’invite de fermeture de session des options du menu Démarrer. Par conséquent, les utilisateurs ne peuvent pas restaurer l’élément Fermer la session &lt;nom_utilisateur&gt; dans le menu Démarrer.
 
 Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, les utilisateurs peuvent utiliser l’élément Afficher l’invite de fermeture de session pour ajouter et supprimer l’élément Fermer la session.
 
@@ -626,6 +626,11 @@ Si vous activez cette stratégie, le menu Démarrer n'affichera plus la liste «
       <string id="HideRecommendedSection_Help">Cette stratégie vous permet d’empêcher le menu Démarrer d’afficher la liste des applications et fichiers recommandés.
 
 Si vous activez ce paramètre de stratégie, le menu Démarrer n’affiche plus la section contenant la liste des fichiers et applications recommandés.</string>
+
+      <string id="HideRecommendedPersonalizedSites">Supprimer les recommandations de sites web personnalisées de la section de Recommandations dans le menu Démarrer</string>
+      <string id="HideRecommendedPersonalizedSites_Help">Ce paramètre de stratégie vous permet de masquer les sites web personnalisés dans la section recommandée du menu Démarrer. 
+      
+Si vous activez ce paramètre de stratégie, le menu Démarrer n’affiche plus de recommandations de site web personnalisées dans la section recommandée.</string>
       <string id="DisableContextMenusInStart">Désactiver les menus contextuels dans le menu Démarrer</string>
       <string id="DisableContextMenusInStart_Help">Cette stratégie vous permet d’empêcher les utilisateurs d’ouvrir des menus contextuels dans le menu Démarrer.
 

@@ -131,6 +131,19 @@
 
 如果未设置或禁用此设置，则默认情况下同步“辅助功能”组处于打开状态，用户可进行配置。
       </string>
+
+      <!-- Language -->
+      <string id="DisableLanguageSettingSync">不同步语言首选项设置</string>
+      <string id="DisableLanguageSettingSync_Help">
+        阻止“语言首选项”组与此电脑进行双向同步。这将关闭并禁用电脑设置中的“Windows 备份”设置页上的“语言首选项”组。
+
+如果启用此策略设置，则将不同步“语言首选项”组。
+
+使用选项“允许用户打开语言首选项同步”，以便在默认情况下关闭同步，而非禁用。
+
+如果未设置或禁用此设置，则默认情况下同步“语言首选项”组处于开启状态，且可由用户配置。
+      </string>
+
     </stringTable>
     <presentationTable>
 
@@ -182,6 +195,11 @@
       <!-- AccessibilitySync -->
       <presentation id="DisableAccessibilitySettingSyncUserOverride">
         <checkBox refId="CheckBox_UserOverride">允许用户启用“辅助功能”同步。</checkBox>
+      </presentation>
+
+      <!-- LanguageSync -->
+      <presentation id="DisableLanguageSettingSyncUserOverride">
+        <checkBox refId="CheckBox_UserOverride">允许用户启用“语言首选项”同步。</checkBox>
       </presentation>
 
     </presentationTable>

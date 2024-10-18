@@ -31,7 +31,7 @@
       </disabledValue>
     </policy>
 
-    <policy name="NoToastNotification" class="User" displayName="$(string.NoToastNotification)" explainText="$(string.NoToastNotificationExplain)"  key="SOFTWARE\Policies\Microsoft\Windows\CurrentVersion\PushNotifications" valueName="NoToastApplicationNotification">
+    <policy name="NoToastNotification" class="Both" displayName="$(string.NoToastNotification)" explainText="$(string.NoToastNotificationExplain)"  key="SOFTWARE\Policies\Microsoft\Windows\CurrentVersion\PushNotifications" valueName="NoToastApplicationNotification">
       <parentCategory ref="NotificationsCategory" />
       <supportedOn ref="windows:SUPPORTED_Windows8" />
       <enabledValue>
@@ -106,6 +106,17 @@
     <policy name="NoNotificationMirroring" class="User" displayName="$(string.NoNotificationMirroring)" explainText="$(string.NoNotificationMirroringExplain)" key="SOFTWARE\Policies\Microsoft\Windows\CurrentVersion\PushNotifications" valueName="DisallowNotificationMirroring">
       <parentCategory ref="NotificationsCategory" />
       <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+
+    <policy name="ExpandedToastNotifications" class="User" displayName="$(string.ExpandedToastNotifications)" explainText="$(string.ExpandedToastNotificationsExplain)" key="SOFTWARE\Policies\Microsoft\Windows\CurrentVersion\PushNotifications" valueName="EnableExpandedToastNotifications">
+      <parentCategory ref="NotificationsCategory" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_VB_Only_NOSERVER" />
       <enabledValue>
         <decimal value="1" />
       </enabledValue>

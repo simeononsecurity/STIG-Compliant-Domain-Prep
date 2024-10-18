@@ -129,6 +129,21 @@ Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, kö
 
 Wenn eine App geöffnet ist, wenn dieses Gruppenrichtlinienobjekt auf ein Gerät angewendet wird, müssen die Mitarbeiter die App oder das Gerät neu starten, damit die Richtlinienänderungen auf die App angewendet werden.
       </string>
+      <string id="LetAppsAccessHumanPresence_Name">Zulassen, dass Windows-Apps auf Anwesenheitserkennung zugreifen</string>
+      <string id="LetAppsAccessHumanPresence_Explain">Die Richtlinieneinstellung legt fest, ob Windows-Apps auf vertrauenswürdige Geräte zugreifen können.
+
+Sie können entweder eine Standardeinstellung für alle Apps oder eine App-spezifische Einstellung durch Angabe eines Paketfamiliennamens festlegen. Sie können den Paketfamiliennamen für eine App mithilfe des Windows PowerShell-Cmdlets Get-AppPackage abrufen. Die Standardeinstellung wird durch eine App-spezifische Einstellung überschrieben.
+
+Bei Auswahl der Option "Benutzer hat Kontrolle" können die Mitarbeiter in Ihrer Organisation entscheiden, ob Windows-Apps auf vertrauenswürdige Geräte zugreifen können, indem sie "Einstellungen &gt; Datenschutz" auf dem Gerät verwenden.
+
+Bei Auswahl der Option "Zulassen erzwingen" können Windows-Apps auf vertrauenswürdige Geräte zugreifen, wobei die Einstellung von den Mitarbeitern in Ihrer Organisation nicht geändert werden kann.
+
+Bei Auswahl der Option "Verweigern erzwingen" können Windows-Apps nicht auf vertrauenswürdige Geräte zugreifen, wobei die Einstellung von den Mitarbeitern in Ihrer Organisation nicht geändert werden kann.
+
+Wenn Sie die Richtlinieneinstellung deaktivieren oder nicht konfigurieren, können die Mitarbeiter in Ihrer Organisation entscheiden, ob Windows-Apps auf vertrauenswürdige Geräte zugreifen können, indem sie "Einstellungen &gt; Datenschutz" auf dem Gerät verwenden.
+
+Wenn eine App geöffnet ist, während dieses Gruppenrichtlinienobjekt auf ein Gerät angewendet wird, müssen die Mitarbeiter die App oder das Gerät neu starten, damit die Richtlinienänderungen auf die App angewendet werden.
+      </string>
       <string id="LetAppsAccessLocation_Name">Windows-App-Zugriff auf Positionsdaten zulassen</string>
       <string id="LetAppsAccessLocation_Explain">Die Richtlinieneinstellung legt fest, ob Windows-Apps auf Positionsdaten zugreifen können.
 
@@ -439,6 +454,15 @@ Wenn eine App geöffnet ist, während dieses Gruppenrichtlinienobjekt auf ein Ge
         <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_ForceAllowTheseApps_List"/>
         <text>Verweigern dieser Apps erzwingen (Paketfamiliennamen verwenden):</text>
         <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_ForceDenyTheseApps_List"/>
+      </presentation>
+      <presentation id="LetAppsAccessHumanPresence">
+        <dropdownList refId="LetAppsAccessHumanPresence_Enum" noSort="true" defaultItem="0">Standard für alle Apps:</dropdownList>
+        <text>Kontrolle dieser Apps an Benutzer übertragen (Paketfamiliennamen verwenden):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_UserInControlOfTheseApps_List"/>
+        <text>Zulassen dieser Apps erzwingen (Paketfamiliennamen verwenden):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_ForceAllowTheseApps_List"/>
+        <text>Verweigern dieser Apps erzwingen (Paketfamiliennamen verwenden):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_ForceDenyTheseApps_List"/>
       </presentation>
       <presentation id="LetAppsAccessLocation">
         <dropdownList refId="LetAppsAccessLocation_Enum" noSort="true" defaultItem="0">Standard für alle Apps:</dropdownList>

@@ -105,19 +105,23 @@ hvis du indstiller denne politikindstilling til "Deaktiver meddelelser om ændri
 
       <string id="AllowUpdateComplianceProcessing">Tillad opdatering af overholdelsesbehandling</string>
       <string id="AllowUpdateComplianceProcessing_Explain">
+Denne politik er forældet og vil kun virke på Windows 10 version 1809. Indstilling af denne politik har ingen effekt for andre understøttede versioner af Windows.
+
 Denne politikindstilling, i kombination med Tillad telemetri og konfigurer det kommercielle id, gør det muligt for organisationer at konfigurere enheden, så Microsoft behandler de diagnostiske Windows-data, der indsamles fra enheden, underlagt produktvilkårene på https://go.microsoft.com/fwlink/?linkid=2185086.
 Sådan aktiverer du denne adfærd:
     1. Aktiver denne politikindstilling
     2. Tilslut en Azure Active Directory-konto til enheden
     3. Indstil Tillad telemetri til værdi 1 - Påkrævet eller højere
-    4. Indstil indstillingen Konfigurer det kommercielle id for arbejdsområdet Update Compliance
+    4. Indstil indstillingen Konfigurer det kommercielle id for arbejdsområdet Opdatering overholdelse af angivne standarder
 
 Når disse politikker er konfigureret, vil diagnostiske Windows-data, indsamlet fra enheden, være underlagt Microsoft-processorforpligtelser.
-Hvis du deaktiverer eller ikke konfigurerer denne politikindstilling, vises enheder ikke i Update Compliance.
+Hvis du deaktiverer eller ikke konfigurerer denne politikindstilling, vises enheder ikke i Opdatering af overholdelse af angivne standarder.
       </string>
 
       <string id="AllowDesktopAnalyticsProcessing">Tillad behandling af skrivebordsanalyse</string>
       <string id="AllowDesktopAnalyticsProcessing_Explain">
+Denne politik er forældet og vil kun virke på Windows 10 version 1809. Indstilling af denne politik har ingen effekt for andre understøttede versioner af Windows.
+
 Denne politikindstilling, i kombination med Tillad telemetri og konfigurer det kommercielle id, gør det muligt for organisationer at konfigurere enheden, så Microsoft er behandleren af de diagnostiske Windows-data, der indsamles fra enheden, underlagt produktvilkårene på https://go.microsoft.com/fwlink/?linkid=2185086.
 Sådan aktiverer du denne adfærd:
     1. Aktiver denne politikindstilling
@@ -131,6 +135,8 @@ Denne indstilling har ingen effekt på enheder, medmindre de er korrekt tilmeldt
 
       <string id="AllowWUfBCloudProcessing">Tillad behandling af WUfB-Sky</string>
       <string id="AllowWUfBCloudProcessing_Explain">
+Denne politik er forældet og vil kun virke på Windows 10 version 1809. Indstilling af denne politik har ingen effekt for andre understøttede versioner af Windows.
+
 Denne politikindstilling konfigurerer en tilsluttet Azure Active Directory-enhed, så Microsoft er processoren af de diagnostiske Windows-data, der indsamles fra enheden, underlagt produktvilkårene på https://go.microsoft.com/fwlink/?linkid=2185086.
 Sådan aktiverer du denne adfærd:
     1. Aktiver denne politikindstilling
@@ -143,14 +149,16 @@ Hvis du deaktiverer eller ikke konfigurerer denne politikindstilling, vil enhede
 
       <string id="AllowCommercialDataPipeline">Tillad erhvervsmæssig datapipeline</string>
       <string id="AllowCommercialDataPipeline_Explain">
-AllowCommercialDataPipeline konfigurerer en Azure Active Directory-forbundet enhed, så Microsoft er processoren af Windows-diagnosedata indsamlet fra enheden, underlagt produktvilkårene på https://go.microsoft.com/fwlink/?linkid=2185086.
-Sådan aktiverer du denne adfærd:
-    1. Aktiver denne politikindstilling
+Denne politik er forældet og vil kun virke på Windows 10 version 1809. Indstilling af denne politik har ingen effekt for andre understøttede versioner af Windows.
+
+ AllowCommercialDataPipeline konfigurerer en Azure Active Directory-forbundet enhed, så Microsoft er databehandleren for diagnostiske Windows-data, der indsamles fra enheden, i henhold til produktvilkårene på https://go.microsoft.com/fwlink/?linkid=2185086.
+.Sådan aktiverer du denne adfærd:
+    1. Aktivér denne politikindstilling
     2. Tilslut en Azure Active Directory-konto til enheden
 
-Windows-diagnosedata indsamles, når politikindstillingen Tillad telemetri er indstillet til værdi 1 - Påkrævet eller højere. Konfiguration af denne indstilling ændrer ikke indsamlingsniveauet for Windows-diagnosedata, der er indstillet for enheden
-Hvis du deaktiverer eller ikke konfigurerer denne indstilling, vil Microsoft være kontrollerende for de diagnostiske Windows-data, der indsamles fra enheden og behandles i overensstemmelse med Microsofts erklæring om beskyttelse af personlige oplysninger på https://go.microsoft.com/fwlink/?LinkId=521839 medmindre du har aktiveret politikker som "Tillad opdatering af overholdelsesbehandling" eller "Tillad behandling af skrivebordsanalyse".
-Se dokumentationen på https://go.microsoft.com/fwlink/?linkid=2011107 for information om denne og andre politikker, der vil resultere i, at Microsoft behandler diagnostiske Windows-data.
+Diagnostiske Windows-data indsamles, når politikindstillingen Tillad telemetri er angivet til værdi 1 - Påkrævet eller højere. Konfiguration af denne indstilling ændrer ikke indsamlingsniveauet for diagnostiske Windows-data, der er angivet for enheden.
+Hvis du deaktiverer eller ikke konfigurerer denne indstilling, vil Microsoft være den dataansvarlige for de diagnostiske Windows-data, der indsamles fra enheden og behandles i overensstemmelse med Microsofts erklæring om beskyttelse af personlige oplysninger på https://go.microsoft.com/fwlink/?LinkId=521839 medmindre du har aktiveret politikker som "Tillad behandling i Opdatering af overholdelse af angivne standarder" eller "Tillad behandling i Desktop Analytics".
+Se dokumentationen på https://go.microsoft.com/fwlink/?linkid=2011107 for at få oplysninger om denne og andre politikker, som vil resultere i, at Microsoft behandler diagnostiske Windows-data.
       </string>
 
       <string id="LimitDiagnosticLogCollection">Begræns indsamling af diagnosticeringslogfil</string>

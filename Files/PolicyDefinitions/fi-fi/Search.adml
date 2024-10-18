@@ -304,6 +304,23 @@ Jos tämä on käytössä, haku ja Cortana voivat käyttää sijaintitietoja.</s
       <string id="DisableSearch_ExplainText">Jos otat tämän käytännön käyttöön, haun käyttöliittymä poistetaan käytöstä yhdessä sen aloituskohtien, kuten pikanäppäinten, kosketuslevyeleiden ja tyyppihaun kanssa aloitusvalikko. Myös aloitusvalikko hakukenttä ja haun tehtäväpalkki -painike piilotetaan.
 
 Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, käyttäjä pystyy avaamaan haun käyttöliittymän ja sen eri aloituskohdat näytetään.</string>
+      <string id="ConfigureSearchOnTaskbarMode">Määrittää tehtäväpalkin haun</string>
+      <string id="ConfigureSearchOnTaskbarMode_Help">Tämän käytäntöasetuksen avulla voit määrittää haun tehtäväpalkissa.
+
+Jos otat tämän käytäntöasetuksen käyttöön ja määrität sen piilotettavaksi, tehtäväpalkin haku piilotetaan oletusarvon mukaan. Käyttäjät eivät voi muuttaa sitä Asetuksissa.
+
+Jos otat tämän käytäntöasetuksen käyttöön ja määrität sen arvoksi vain hakukuvake, hakukuvake näkyy tehtäväpalkissa oletusarvon mukaan. Käyttäjät eivät voi muuttaa sitä Asetuksissa.
+
+Jos otat tämän käytäntöasetuksen käyttöön ja määrität sen arvoksi hakukuvakkeen ja selitteen, hakukuvake ja otsikko näytetään tehtäväpalkissa oletusarvon mukaan. Käyttäjät eivät voi muuttaa sitä Asetuksissa.
+
+Jos otat tämän käytäntöasetuksen käyttöön ja määrität sen arvoksi hakuruudun, hakukenttä näkyy oletusarvoisesti tehtäväpalkissa. Käyttäjät eivät voi muuttaa sitä Asetuksissa.
+
+Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, tehtäväpalkin haku määritetään Windows-version oletusasetusten mukaisesti. Käyttäjät voivat muuttaa tehtäväpalkin hakua Asetuksissa.
+      </string>
+      <string id="SearchOnTaskbarModeEnum_Hidden">Piilota</string>
+      <string id="SearchOnTaskbarModeEnum_SearchIconOnly">Pelkkä hakukuvake</string>
+      <string id="SearchOnTaskbarModeEnum_SearchIconAndLabel">Hakukuvake ja otsikko</string>
+      <string id="SearchOnTaskbarModeEnum_SearchBox">Hakukenttä</string>
     </stringTable>
     <presentationTable>
       <presentation id="RichAttachmentPreviews">
@@ -392,6 +409,9 @@ Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, k�
       </presentation>
       <presentation id="AllowCortanaAAD">
         <dropdownList refId="AllowCortanaAAD_Dropdown" noSort="true" defaultItem="0">Cortana AAD:ssä -asetus</dropdownList>
+      </presentation>
+      <presentation id="ConfigureSearchOnTaskbarMode">
+        <dropdownList refId="ConfigureSearchOnTaskbarMode_Dropdown" noSort="true" defaultItem="0">Hae tehtäväpalkista</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

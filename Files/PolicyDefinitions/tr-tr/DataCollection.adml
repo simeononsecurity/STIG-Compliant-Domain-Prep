@@ -99,17 +99,20 @@ Bu ilke ayarını "Tanılama verileri değişiklik bildirimlerini etkinleştir" 
 
       <string id="ConfigureMicrosoft365UploadEndpoint">Desktop Analytics için tanılama verileri karşıya yükleme uç noktasını yapılandır</string>
       <string id="ConfigureMicrosoft365UploadEndpoint_Explain">Bu ilke, Masaüstü Analizi programının bir parçası olarak bu cihazın tanılama verileri için karşıya yükleme bitiş noktasını ayarlar.
-          Kuruluşunuz programa katılıyorsa ve özel bir karşıya yükleme bitiş noktası yapılandırmak için talimat aldıysa bu bitiş noktasını tanımlamak için bu ayarı kullanın.
-          Bu ayarın değeri, program için katılım işleminin bir parçası olarak Microsoft tarafından sağlanır. 
+
+Kuruluşunuz programa katılıyorsa ve özel bir karşıya yükleme bitiş noktası yapılandırmak için talimat aldıysa bu bitiş noktasını tanımlamak için bu ayarı kullanın.
+Bu ayarın değeri, program için ekleme işleminin bir parçası olarak Microsoft tarafından sağlanır. 
       </string>
 
       <string id="AllowUpdateComplianceProcessing">Güncelleştirme Uyumluluğu İşlemesi'ne izin ver</string>
       <string id="AllowUpdateComplianceProcessing_Explain">
+Bu ilke kullanım dışıdır ve yalnızca Windows 10 sürüm 1809’da çalışır. Bu ilkeyi ayarlamak, Windows’un diğer desteklenen sürümlerini etkilemez.
+
 Bu ilke ayarı, Telemetriye İzin Ver ve Ticari Kimliği Yapılandır ile birlikte kuruluşların, https://go.microsoft.com/fwlink/?linkid=2185086 adresinde bulunan Ürün Koşullarına tabi olmak şartıyla bir cihazı, cihazdan toplanan Windows tanılama verisinin işlemcisi Microsoft olacak şekilde yapılandırmasına olanak sağlar.
 Bu davranışı etkinleştirmek için:
     1. Bu ilke ayarını etkinleştirin
-    2. Cihazda bir Azure Active Directory hesabına katılın
-    3. Telemetriye İzin Ver ayarını 1 - Gerekli veya üzeri olarak yapılandırın
+    2.Cihazda bir Azure Active Directory hesabına katılın
+    3.Telemetriye İzin Ver ayarını 1 - Gerekli veya üzeri olarak yapılandırın
     4. Güncelleştirme Uyumluluğu çalışma alanınız için Ticari Kimliği Yapılandır ayarını yapılandırın
 
 Bu ilkeler yapılandırıldığında, cihazdan toplanan Windows tanılama verisi Microsoft’un işlemci taahhütlerine tabi olur.
@@ -118,24 +121,28 @@ Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız cihaz
 
       <string id="AllowDesktopAnalyticsProcessing">Desktop Analytics İşlemesi'ne izin ver</string>
       <string id="AllowDesktopAnalyticsProcessing_Explain">
-Bu ilke ayarı, Telemetriye İzin Ver ve Ticari Kimliği Yapılandır ile birlikte kuruluşların, https://go.microsoft.com/fwlink/?linkid=2185086 adresinde bulunan Ürün Koşullarına tabi olmak şartıyla bir cihazı, cihazdan toplanan Windows tanılama verisi için işlemci Microsoft olacak şekilde yapılandırmasına olanak sağlar.
+Bu ilke kullanım dışıdır ve yalnızca Windows 10 sürüm 1809’da çalışır. Bu ilkeyi ayarlamak, Windows’un diğer desteklenen sürümlerini etkilemez.
+
+Bu ilke ayarı, Telemetriye İzin Ver ve Ticari Kimliği Yapılandır ile birlikte kuruluşların, https://go.microsoft.com/fwlink/?linkid=2185086 adresinde bulunan Ürün Koşullarına tabi olmak şartıyla bir cihazı, cihazdan toplanan Windows tanılama verisinin işlemcisi Microsoft olacak şekilde yapılandırmasına olanak sağlar.
 Bu davranışı etkinleştirmek için:
     1. Bu ilke ayarını etkinleştirin
-    2. Cihazda bir Azure Active Directory hesabına katılın
-    3. Telemetriye İzin Ver ayarını 1 - Gerekli veya üzeri olarak yapılandırın
+    2.Cihazda bir Azure Active Directory hesabına katılın
+    3.Telemetriye İzin Ver ayarını 1 - Gerekli veya üzeri olarak yapılandırın
     4. Masaüstü Analizi çalışma alanınız için Ticari Kimliği Yapılandır ayarını yapılandırın
 
 Bu ilkeler yapılandırıldığında, cihazdan toplanan Windows tanılama verisi Microsoft’un işlemci taahhütlerine tabi olur.
-Cihazlar Masaüstü Analizine doğru şekilde katılmadıkça bu ayarın cihazlar üzerinde etkisi olmaz. Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız cihazlar Masaüstü Analizinde görünmez.
+Bu ayar, Masaüstü Analizi’ne doğru şekilde kaydolmadıkça cihazları etkilemez. Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız cihazlar Masaüstü Analizi’nde görünmez.
       </string>
 
       <string id="AllowWUfBCloudProcessing">WUfB Bulut İşlemine İzin Ver</string>
       <string id="AllowWUfBCloudProcessing_Explain">
-Bu ilke ayarı, https://go.microsoft.com/fwlink/?linkid=2185086 adresinde bulunan Ürün Koşullarına tabi olmak şartıyla Azure Active Directory’ye katılan bir cihazı, cihazdan toplanan Windows tanılama verisinin işlemcisi Microsoft olacak şekilde yapılandırır.
+Bu ilke kullanım dışıdır ve yalnızca Windows 10 sürüm 1809’da çalışır. Bu ilkeyi ayarlamak, Windows’un diğer desteklenen sürümlerini etkilemez.
+
+Bu ilke ayarı, Telemetriye İzin Ver ve Ticari Kimliği Yapılandır ile birlikte kuruluşların, https://go.microsoft.com/fwlink/?linkid=2185086 adresinde bulunan Ürün Koşullarına tabi olmak şartıyla bir cihazı, cihazdan toplanan Windows tanılama verisinin işlemcisi Microsoft olacak şekilde yapılandırmasına olanak sağlar.
 Bu davranışı etkinleştirmek için:
     1. Bu ilke ayarını etkinleştirin
-    2. Cihazda bir Azure Active Directory hesabına katılın
-    3. Telemetriye İzin Ver ayarını 1 - Gerekli veya üzeri olarak yapılandırın
+    2.Cihazda bir Azure Active Directory hesabına katılın
+    3.Telemetriye İzin Ver ayarını 1 - Gerekli veya üzeri olarak yapılandırın
 
 Bu ilkeler yapılandırıldığında, cihazdan toplanan Windows tanılama verisi Microsoft’un işlemci taahhütlerine tabi olur.
 Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız İş İçin Windows Update dağıtım hizmetine kaydolan cihazlar, bazı dağıtım hizmeti özelliklerinin avantajlarından yararlanamaz.
@@ -143,13 +150,15 @@ Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız İş 
 
       <string id="AllowCommercialDataPipeline">Ticari veri ardışık düzenine izin ver</string>
       <string id="AllowCommercialDataPipeline_Explain">
+Bu ilke kullanım dışıdır ve yalnızca Windows 10 sürüm 1809’da çalışır. Bu ilkeyi ayarlamak, Windows’un diğer desteklenen sürümlerini etkilemez.
+
 AllowCommercialDataPipeline, https://go.microsoft.com/fwlink/?linkid=2185086 adresinde bulunan Ürün Koşullarına tabi olmak şartıyla Azure Active Directory’ye katılan bir cihazı, cihazdan toplanan Windows tanılama verisinin işlemcisi Microsoft olacak şekilde yapılandırır.
 Bu davranışı etkinleştirmek için:
     1. Bu ilke ayarını etkinleştirin
     2. Cihazda bir Azure Active Directory hesabına katılın
 
-Windows tanılama verisi, Telemetriye İzin Ver ilke ayarı 1  - Gerekli veya üzeri olarak ayarlandığında toplanır. Bu ayarı yapılandırmak cihaz için ayarlanan Windows tanılama verisi toplama düzeyini değiştirmez
-Bu ayarı devre dışı bırakırsanız veya yapılandırmazsanız, 'Güncelleştirme Uyumluluğunu İşlemeye İzin Ver' veya 'Masaüstü Analitik İşlemeye İzin Ver” gibi ilkeler etkinleştirilmedikçe Microsoft, cihazdan toplanan ve https://go.microsoft.com/fwlink/?LinkId=521839 adresindeki Microsoft gizlilik bildirimine göre işlenen Windows tanılama verisinin denetleyicisi olur.
+Windows tanılama verileri, Telemetriye İzin Ver ilkesi ayarı 1 - Gerekli veya üzerine ayarlandığında toplanır.
+Bu ayarı yapılandırmak cihaz için ayarlanan Windows tanılama verisi toplama düzeyini değiştirmez.Bu ayarı devre dışı bırakırsanız veya yapılandırmazsanız, 'Güncelleştirme Uyumluluğunu İşlemeye İzin Ver' veya 'Masaüstü Analitik İşlemeye İzin Ver” gibi ilkeler etkinleştirilmedikçe Microsoft, cihazdan toplanan ve https://go.microsoft.com/fwlink/?LinkId=521839 adresindeki Microsoft gizlilik bildirimine göre işlenen Windows tanılama verisinin denetleyicisi olur.
 Bu ilke ve Microsoft’un Windows tanılama verisinin işlemcisi olmasıyla sonuçlanan diğer ilkeler hakkında bilgi için https://go.microsoft.com/fwlink/?linkid=2011107 adresindeki belgelere göz atın.
       </string>
 

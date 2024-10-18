@@ -43,21 +43,42 @@
       <string id="ForceInstantWake_1">Tvingad på</string>
       <string id="ForceInstantWake_2">Tvingad av</string>
       <string id="ForceInstantLock_DisplayName">Framtvinga omedelbar låsning</string>
-      <string id="ForceInstantLock_ExplainText">Anger om låset ska vara tvingande av/på enligt MDM-principen. Användaren kan inte ändra den här inställningen och växlingen i gränssnittet blir nedtonad.</string>
+      <string id="ForceInstantLock_ExplainText">Anger om Lås när du lämnar ska vara tvingande av/på enligt MDM-principen. Användaren kan inte ändra den här inställningen och växlingen i gränssnittet blir nedtonad.</string>
       <string id="ForceInstantLock_0">Standard för användarval</string>
       <string id="ForceInstantLock_1">Tvingad på</string>
       <string id="ForceInstantLock_2">Tvingad av</string>
       <string id="ForceLockTimeout_DisplayName">Tidsgräns för lås</string>
-      <string id="ForceLockTimeout_ExplainText">Anger om tidsgränsen för låset ska vara tvingande enligt MDM-principen. Användaren kan inte ändra den här inställningen och växlingen i gränssnittet blir nedtonad.</string>
+      <string id="ForceLockTimeout_ExplainText">Anger om tidsgränsen för Lås när du lämnar ska vara tvingande enligt MDM-principen. Användaren kan inte ändra den här inställningen och växlingen i gränssnittet blir nedtonad.</string>
       <string id="ForceLockTimeout_0">Standard för användarval</string>
       <string id="ForceLockTimeout_1">10 sekunder</string>
       <string id="ForceLockTimeout_2">30 sekunder</string>
       <string id="ForceLockTimeout_3">2 minuter</string>
+      <string id="ForceLockTimeout_4">Direkt</string>
       <string id="ForceInstantDim_DisplayName">Framtvinga omedelbar nedtoning</string>
       <string id="ForceInstantDim_ExplainText">Anger om Uppmärksamhetsbaserad skärmdimmern framtvingas på/av enligt MDM-principen. Användaren kan inte ändra den här inställningen och växlingsknappen i användargränssnittet är nedtonad.</string>
       <string id="ForceInstantDim_0">Standardinställningar för användarval</string>
       <string id="ForceInstantDim_1">Framtvingad på</string>
       <string id="ForceInstantDim_2">Framtvingad av</string>
+      <string id="ForceDisableWakeWhenBatterySaverOn_DisplayName">Framtvinga inaktivering av aktivering när batterisparfunktionen är på</string>
+      <string id="ForceDisableWakeWhenBatterySaverOn_ExplainText">Anger om kryssrutan Inaktivera aktivering vid aktivering när batterisparfunktionen är på tvingas markeras/avmarkeras av MDM-principen. Användaren kan inte ändra den här inställningen och kryssrutan i användargränssnittet är nedtonad.</string>
+      <string id="ForceDisableWakeWhenBatterySaverOn_0">Standard för användarval</string>
+      <string id="ForceDisableWakeWhenBatterySaverOn_1">Tvingad markerad</string>
+      <string id="ForceDisableWakeWhenBatterySaverOn_2">Tvingad avmarkerad</string>
+      <string id="ForceAllowWakeWhenExternalDisplayConnected_DisplayName">Framtvinga tillåt aktivering när extern skärm är ansluten</string>
+      <string id="ForceAllowWakeWhenExternalDisplayConnected_ExplainText">Anger om kryssrutan Tillåt aktivering vid aktivering när extern bildskärms är ansluten tvingas markeras/avmarkeras av MDM-principen. Användaren kan inte ändra den här inställningen och kryssrutan i användargränssnittet är nedtonad.</string>
+      <string id="ForceAllowWakeWhenExternalDisplayConnected_0">Standard för användarval</string>
+      <string id="ForceAllowWakeWhenExternalDisplayConnected_1">Tvingad markerad</string>
+      <string id="ForceAllowWakeWhenExternalDisplayConnected_2">Tvingad avmarkerad</string>
+      <string id="ForceAllowLockWhenExternalDisplayConnected_DisplayName">Framtvinga tillåt lås när extern skärm är ansluten</string>
+      <string id="ForceAllowLockWhenExternalDisplayConnected_ExplainText">Anger om kryssrutan Tillåt lås vid ledighet när batterisparfunktionen är på tvingas markeras/avmarkeras av MDM-principen. Användaren kan inte ändra den här inställningen och kryssrutan i användargränssnittet är nedtonad.</string>
+      <string id="ForceAllowLockWhenExternalDisplayConnected_0">Standard för användarval</string>
+      <string id="ForceAllowLockWhenExternalDisplayConnected_1">Tvingad markerad</string>
+      <string id="ForceAllowLockWhenExternalDisplayConnected_2">Tvingad avmarkerad</string>
+      <string id="ForceAllowDimWhenExternalDisplayConnected_DisplayName">Framtvinga tillåt nedtoning när extern skärm är ansluten</string>
+      <string id="ForceAllowDimWhenExternalDisplayConnected_ExplainText">Anger om kryssrutan Tillåt adaptiv nedtoning när batterisparfunktionen är på tvingas markeras/avmarkeras av MDM-principen. Användaren kan inte ändra den här inställningen och kryssrutan i användargränssnittet är nedtonad.</string>
+      <string id="ForceAllowDimWhenExternalDisplayConnected_0">Standard för användarval</string>
+      <string id="ForceAllowDimWhenExternalDisplayConnected_1">Tvingad markerad</string>
+      <string id="ForceAllowDimWhenExternalDisplayConnected_2">Tvingad avmarkerad</string>
     </stringTable>
     <presentationTable>
       <presentation id="ForceInstantWake">
@@ -70,7 +91,19 @@
         <dropdownList refId="ForceLockTimeoutDropdown" noSort="true" defaultItem="1">Välj en av följande tidsgränser</dropdownList>
       </presentation>
       <presentation id="ForceInstantDim">
-        <dropdownList refId="ForceInstantDimDropDown" noSort="true" defaultItem="0">Välj en av följande åtgärder</dropdownList>
+        <dropdownList refId="ForceInstantDimDropdown" noSort="true" defaultItem="0">Välj en av följande åtgärder</dropdownList>
+      </presentation>
+      <presentation id="ForceDisableWakeWhenBatterySaverOn">
+        <dropdownList refId="ForceDisableWakeWhenBatterySaverOnDropdown" noSort="true" defaultItem="0">Välj en av följande åtgärder</dropdownList>
+      </presentation>
+      <presentation id="ForceAllowWakeWhenExternalDisplayConnected">
+        <dropdownList refId="ForceAllowWakeWhenExternalDisplayConnectedDropdown" noSort="true" defaultItem="0">Välj en av följande åtgärder</dropdownList>
+      </presentation>
+      <presentation id="ForceAllowLockWhenExternalDisplayConnected">
+        <dropdownList refId="ForceAllowLockWhenExternalDisplayConnectedDropdown" noSort="true" defaultItem="0">Välj en av följande åtgärder</dropdownList>
+      </presentation>
+      <presentation id="ForceAllowDimWhenExternalDisplayConnected">
+        <dropdownList refId="ForceAllowDimWhenExternalDisplayConnectedDropdown" noSort="true" defaultItem="0">Välj en av följande åtgärder</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

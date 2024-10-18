@@ -131,6 +131,19 @@ Utilisez l’option « Autoriser les utilisateurs à activer la synchronisation 
 
 Si vous ne définissez pas ou désactivez ce paramètre, la synchronisation du groupe « accessibilité » est activée par défaut et configurable par l’utilisateur.
       </string>
+
+      <!-- Language -->
+      <string id="DisableLanguageSettingSync">Ne pas synchroniser les paramètres des préférences linguistiques</string>
+      <string id="DisableLanguageSettingSync_Help">
+        Empêcher la synchronisation du groupe « Préférences linguistiques » avec ce PC. Cette option désactive le groupe « Préférences de langues » sur la page des paramètres « Sauvegarde Windows » dans Paramètres du PC.
+
+Si vous activez ce paramètre de stratégie, le groupe « Préférences linguistiques » n’est pas synchronisé.
+
+Utilisez l’option « Autoriser les utilisateurs à activer la synchronisation des préférences linguistiques » pour que la synchronisation soit désactivée par défaut, mais pas désactivée.
+
+Si vous ne définissez pas ou désactivez ce paramètre, la synchronisation du groupe « Préférences linguistiques » est activée par défaut et configurable par l’utilisateur.
+      </string>
+
     </stringTable>
     <presentationTable>
 
@@ -182,6 +195,11 @@ Si vous ne définissez pas ou désactivez ce paramètre, la synchronisation du g
       <!-- AccessibilitySync -->
       <presentation id="DisableAccessibilitySettingSyncUserOverride">
         <checkBox refId="CheckBox_UserOverride">Autoriser les utilisateurs à activer la synchronisation « accessibilité ».</checkBox>
+      </presentation>
+
+      <!-- LanguageSync -->
+      <presentation id="DisableLanguageSettingSyncUserOverride">
+        <checkBox refId="CheckBox_UserOverride">Autoriser les utilisateurs à activer la synchronisation des « préférences linguistiques ».</checkBox>
       </presentation>
 
     </presentationTable>

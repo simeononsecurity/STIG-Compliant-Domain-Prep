@@ -75,11 +75,11 @@
           <range ref="products:MicrosoftWindows" minVersionIndex="4" maxVersionIndex="12"/>
         </or>
       </definition>
-	  
-      <!--At least Windows 10 2004-->
-      <definition name="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004" displayName="$(string.WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004)">
+
+      <!--Windows Server 2016 through Windows Server 2022, or Windows 10-->
+      <definition name="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10" displayName="$(string.WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10)">
         <or>
-          <range ref="products:MicrosoftWindows" minVersionIndex="13"/>
+          <range ref="products:MicrosoftWindows" minVersionIndex="13" maxVersionIndex="14"/>
         </or>
       </definition>
 
@@ -90,6 +90,19 @@
         </or>
       </definition>
 
+      <!--At least Windows 10 2004-->
+      <definition name="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004" displayName="$(string.WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004)">
+        <or>
+          <range ref="products:MicrosoftWindows" minVersionIndex="13"/>
+        </or>
+      </definition>
+
+      <!--At least Windows Server 2025, Windows 10 Version 21H2, or Windows 11 Version 22H2-->
+      <definition name="WU_SUPPORTED_WinServer2025_Win1021H2_Win1122H2" displayName="$(string.WU_SUPPORTED_WinServer2025_Win1021H2_Win1122H2)">
+        <or>
+          <range ref="products:MicrosoftWindows" minVersionIndex="13"/>
+        </or>
+      </definition>
     </definitions>
   </supportedOn>
 
@@ -97,10 +110,21 @@
     <category name="WindowsUpdateCat" displayName="$(string.WindowsUpdateCat)">
       <parentCategory ref="windows:WindowsComponents" />
     </category>
-    <category name="DeferUpdateCat" displayName="$(string.DeferUpdateCat)">
+    <!--Sub-folders-->
+    <category name="WindowsUpdateOffering" displayName="$(string.WindowsUpdateOffering)">
+      <parentCategory ref="WindowsUpdateCat" />
+    </category>
+    <category name="WSUSOffering" displayName="$(string.WSUSOffering)">
+      <parentCategory ref="WindowsUpdateCat" />
+    </category>
+    <category name="WindowsUpdateExperience" displayName="$(string.WindowsUpdateExperience)">
+      <parentCategory ref="WindowsUpdateCat" />
+    </category>
+    <category name="PreSV" displayName="$(string.PreSV)">
       <parentCategory ref="WindowsUpdateCat" />
     </category>
   </categories>
+
   <policies>
     <policy name="NoAutoUpdate" class="User" displayName="$(string.NoAutoUpdate)" explainText="$(string.NoAutoUpdate_Help)" key="Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" valueName="NoAutoUpdate">
       <parentCategory ref="windows:System" />
@@ -113,7 +137,7 @@
       </disabledValue>
     </policy>
     <policy name="AUDontShowUasPolicy" class="Both" displayName="$(string.AUDontShowUasPolicy)" explainText="$(string.AUDontShowUasHelp)" key="Software\Policies\Microsoft\Windows\WindowsUpdate\AU" valueName="NoAUShutdownOption">
-      <parentCategory ref="WindowsUpdateCat" />
+      <parentCategory ref="PreSV" />
       <supportedOn ref="WU_SUPPORTED_Windows7ToXPSP2" />
       <enabledValue>
         <decimal value="1" />
@@ -123,7 +147,7 @@
       </disabledValue>
     </policy>
     <policy name="AUNoUasDefaultPolicy_User" class="User" displayName="$(string.AUNoUasDefaultPolicy)" explainText="$(string.AUNoUasDefaultHelp_User)" key="Software\Policies\Microsoft\Windows\WindowsUpdate\AU" valueName="NoAUAsDefaultShutdownOption">
-      <parentCategory ref="WindowsUpdateCat" />
+      <parentCategory ref="PreSV" />
       <supportedOn ref="WU_SUPPORTED_Windows7ToXPSP2" />
       <enabledValue>
         <decimal value="1" />
@@ -133,7 +157,7 @@
       </disabledValue>
     </policy>
     <policy name="AUNoUasDefaultPolicy_Mach" class="Machine" displayName="$(string.AUNoUasDefaultPolicy)" explainText="$(string.AUNoUasDefaultHelp_Mach)" key="Software\Policies\Microsoft\Windows\WindowsUpdate\AU" valueName="NoAUAsDefaultShutdownOption">
-      <parentCategory ref="WindowsUpdateCat" />
+      <parentCategory ref="PreSV" />
       <supportedOn ref="WU_SUPPORTED_Windows7ToXPSP2" />
       <enabledValue>
         <decimal value="1" />
@@ -143,7 +167,7 @@
       </disabledValue>
     </policy>
     <policy name="RemoveWindowsUpdate" class="User" displayName="$(string.RemoveWindowsUpdate)" explainText="$(string.RemoveWindowsUpdate_Help)" presentation="$(presentation.RemoveWindowsUpdate)" key="Software\Microsoft\Windows\CurrentVersion\Policies\WindowsUpdate" valueName="DisableWindowsUpdateAccess">
-      <parentCategory ref="WindowsUpdateCat" />
+      <parentCategory ref="WSUSOffering" />
       <supportedOn ref="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2" />
       <enabledValue>
         <decimal value="1" />
@@ -167,7 +191,7 @@
       </elements>
     </policy>
     <policy name="AutoUpdateCfg" class="Machine" displayName="$(string.AutoUpdateCfg)" explainText="$(string.AutoUpdateCfg_Help)" presentation="$(presentation.AutoUpdateCfg)" key="Software\Policies\Microsoft\Windows\WindowsUpdate\AU" valueName="NoAutoUpdate">
-      <parentCategory ref="WindowsUpdateCat" />
+      <parentCategory ref="WindowsUpdateExperience" />
       <supportedOn ref="WU_SUPPORTED_XPSP1_or_Win2kSP3_AUOption7_SUPPORTED_Server2016" />
       <enabledValue>
         <decimal value="0" />
@@ -382,7 +406,7 @@
       </elements>
     </policy>
     <policy name="CorpWuURL" class="Machine" displayName="$(string.CorpWuURL)" explainText="$(string.CorpWuURL_Help)" presentation="$(presentation.CorpWuURL)" key="Software\Policies\Microsoft\Windows\WindowsUpdate">
-      <parentCategory ref="WindowsUpdateCat" />
+      <parentCategory ref="WSUSOffering" />
       <supportedOn ref="WU_SUPPORTED_Win2kSP3_Or_XPSP1_NoWinRT" />
       <enabledList>
         <item key="Software\Policies\Microsoft\Windows\WindowsUpdate\AU" valueName="UseWUServer">
@@ -419,7 +443,7 @@
       </elements>
     </policy>
     <policy name="UpdateClassPolicySource_Title" class="Machine" displayName="$(string.UpdateClassPolicySource_Title)" explainText="$(string.UpdateClassPolicySource_Help)" presentation="$(presentation.UpdateClassPolicySource_Title)" key="Software\Policies\Microsoft\Windows\WindowsUpdate">
-      <parentCategory ref="WindowsUpdateCat" />
+      <parentCategory ref="WSUSOffering" />
       <supportedOn ref="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004" />
       <enabledList>
         <item key="Software\Policies\Microsoft\Windows\WindowsUpdate\AU" valueName="UseUpdateClassPolicySource">
@@ -487,7 +511,7 @@
       </elements>
     </policy>
     <policy name="DetectionFrequency_Title" class="Machine" displayName="$(string.DetectionFrequency_Title)" explainText="$(string.DetectionFrequency_Help)" presentation="$(presentation.DetectionFrequency_Title)" key="Software\Policies\Microsoft\Windows\WindowsUpdate\AU" valueName="DetectionFrequencyEnabled">
-      <parentCategory ref="WindowsUpdateCat" />
+      <parentCategory ref="WSUSOffering" />
       <supportedOn ref="WU_SUPPORTED_Win2kSP3_Or_XPSP1_NoWinRT" />
       <enabledValue>
         <decimal value="1" />
@@ -500,7 +524,7 @@
       </elements>
     </policy>
     <policy name="ElevateNonAdmins_Title" class="Machine" displayName="$(string.ElevateNonAdmins_Title)" explainText="$(string.ElevateNonAdmins_Help)" key="Software\Policies\Microsoft\Windows\WindowsUpdate" valueName="ElevateNonAdmins">
-      <parentCategory ref="WindowsUpdateCat" />
+      <parentCategory ref="PreSV" />
       <supportedOn ref="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2" />
       <enabledValue>
         <decimal value="1" />
@@ -510,7 +534,7 @@
       </disabledValue>
     </policy>
     <policy name="ImmediateInstall_Title" class="Machine" displayName="$(string.ImmediateInstall_Title)" explainText="$(string.ImmediateInstall_Help)" key="Software\Policies\Microsoft\Windows\WindowsUpdate\AU" valueName="AutoInstallMinorUpdates">
-      <parentCategory ref="WindowsUpdateCat" />
+      <parentCategory ref="PreSV" />
       <supportedOn ref="WU_SUPPORTED_Win2kSP3_Or_XPSP1_Through_Win81_or_Server2012R2" />
       <enabledValue>
         <decimal value="1" />
@@ -520,7 +544,7 @@
       </disabledValue>
     </policy>
     <policy name="IncludeRecommendedUpdates_Title" class="Machine" displayName="$(string.IncludeRecommendedUpdates_Title)" explainText="$(string.IncludeRecommendedUpdates_Help)" key="Software\Policies\Microsoft\Windows\WindowsUpdate\AU" valueName="IncludeRecommendedUpdates">
-      <parentCategory ref="WindowsUpdateCat" />
+      <parentCategory ref="PreSV" />
       <supportedOn ref="WU_SUPPORTED_WindowsVista_Through_Win81_or_Server2012R2" />
       <enabledValue>
         <decimal value="1" />
@@ -530,7 +554,7 @@
       </disabledValue>
     </policy>
     <policy name="FeaturedSoftwareNotification_Title" class="Machine" displayName="$(string.FeaturedSoftwareNotification_Title)" explainText="$(string.FeaturedSoftwareNotification_Help)" key="Software\Policies\Microsoft\Windows\WindowsUpdate\AU" valueName="EnableFeaturedSoftware">
-      <parentCategory ref="WindowsUpdateCat" />
+      <parentCategory ref="PreSV" />
       <supportedOn ref="windows:SUPPORTED_Windows7ToVista" />
       <enabledValue>
         <decimal value="1" />
@@ -545,7 +569,7 @@
             explainText="$(string.AUPowerManagement_Help)"
             key="Software\Policies\Microsoft\Windows\WindowsUpdate"
             valueName="AUPowerManagement">
-      <parentCategory ref="WindowsUpdateCat" />
+      <parentCategory ref="PreSV" />
       <supportedOn ref="windows:SUPPORTED_Windows7ToVistaAndWindows10" />
       <enabledValue>
         <decimal value="1" />
@@ -555,7 +579,7 @@
       </disabledValue>
     </policy>
     <policy name="NoAutoRebootWithLoggedOnUsers_Title" class="Machine" displayName="$(string.NoAutoRebootWithLoggedOnUsers_Title)" explainText="$(string.NoAutoRebootWithLoggedOnUsers_Help)" key="Software\Policies\Microsoft\Windows\WindowsUpdate\AU" valueName="NoAutoRebootWithLoggedOnUsers">
-      <parentCategory ref="WindowsUpdateCat" />
+      <parentCategory ref="PreSV" />
       <supportedOn ref="windows:SUPPORTED_Win2kSP3_Or_XPSP1" />
       <enabledValue>
         <decimal value="1" />
@@ -571,7 +595,7 @@
             presentation="$(presentation.AlwaysAutoRebootAtScheduledTime_Presentation)"
             key="Software\Policies\Microsoft\Windows\WindowsUpdate\AU"
             valueName="AlwaysAutoRebootAtScheduledTime">
-      <parentCategory ref="WindowsUpdateCat" />
+      <parentCategory ref="PreSV" />
       <supportedOn ref="windows:SUPPORTED_Windows8" />
       <enabledValue>
         <decimal value="1" />
@@ -584,7 +608,7 @@
       </elements>
     </policy>
     <policy name="RebootRelaunchTimeout_Title" class="Machine" displayName="$(string.RebootRelaunchTimeout_Title)" explainText="$(string.RebootRelaunchTimeout_Help)" presentation="$(presentation.RebootRelaunchTimeout_Title)" key="Software\Policies\Microsoft\Windows\WindowsUpdate\AU" valueName="RebootRelaunchTimeoutEnabled">
-      <parentCategory ref="WindowsUpdateCat" />
+      <parentCategory ref="PreSV" />
       <supportedOn ref="WU_SUPPORTED_Windows7_To_Win2kSP3_Or_XPSP1" />
       <enabledValue>
         <decimal value="1" />
@@ -597,7 +621,7 @@
       </elements>
     </policy>
     <policy name="RebootWarningTimeout_Title" class="Machine" displayName="$(string.RebootWarningTimeout_Title)" explainText="$(string.RebootWarningTimeout_Help)" presentation="$(presentation.RebootWarningTimeout_Title)" key="Software\Policies\Microsoft\Windows\WindowsUpdate\AU" valueName="RebootWarningTimeoutEnabled">
-      <parentCategory ref="WindowsUpdateCat" />
+      <parentCategory ref="PreSV" />
       <supportedOn ref="WU_SUPPORTED_Windows7_To_Win2kSP3_Or_XPSP1" />
       <enabledValue>
         <decimal value="1" />
@@ -610,7 +634,7 @@
       </elements>
     </policy>
     <policy name="RescheduleWaitTime_Title" class="Machine" displayName="$(string.RescheduleWaitTime_Title)" explainText="$(string.RescheduleWaitTime_Help)" presentation="$(presentation.RescheduleWaitTime_Title)" key="Software\Policies\Microsoft\Windows\WindowsUpdate\AU" valueName="RescheduleWaitTimeEnabled">
-      <parentCategory ref="WindowsUpdateCat" />
+      <parentCategory ref="PreSV" />
       <supportedOn ref="WU_SUPPORTED_Windows7_To_Win2kSP3_Or_XPSP1" />
       <enabledValue>
         <decimal value="1" />
@@ -623,7 +647,7 @@
       </elements>
     </policy>
     <policy name="TargetGroup_Title" class="Machine" displayName="$(string.TargetGroup_Title)" explainText="$(string.TargetGroup_Help)" presentation="$(presentation.TargetGroup_Title)" key="Software\Policies\Microsoft\Windows\WindowsUpdate" valueName="TargetGroupEnabled">
-      <parentCategory ref="WindowsUpdateCat" />
+      <parentCategory ref="WSUSOffering" />
       <supportedOn ref="WU_SUPPORTED_Win2kSP3_Or_XPSP1_NoWinRT" />
       <enabledValue>
         <decimal value="1" />
@@ -636,7 +660,7 @@
       </elements>
     </policy>
     <policy name="TrustedPublisher_Title" class="Machine" displayName="$(string.TrustedPublisher_Title)" explainText="$(string.TrustedPublisher_Help)" key="Software\Policies\Microsoft\Windows\WindowsUpdate" valueName="AcceptTrustedPublisherCerts">
-      <parentCategory ref="WindowsUpdateCat" />
+      <parentCategory ref="WSUSOffering" />
       <supportedOn ref="WU_SUPPORTED_WindowsXPSP1_NoWinRT" />
       <enabledValue>
         <decimal value="1" />
@@ -651,7 +675,7 @@
             explainText="$(string.DoNotConnectToWindowsUpdateInternetLocations_Help)"
             key="Software\Policies\Microsoft\Windows\WindowsUpdate"
             valueName="DoNotConnectToWindowsUpdateInternetLocations">
-      <parentCategory ref="WindowsUpdateCat" />
+      <parentCategory ref="WSUSOffering" />
       <supportedOn ref="windows:SUPPORTED_Windows_6_3" />
       <enabledValue>
         <decimal value="1" />
@@ -667,7 +691,7 @@
         key="Software\Policies\Microsoft\Windows\WindowsUpdate"
         presentation="$(presentation.TargetReleaseVersion)"
         valueName="TargetReleaseVersion">
-        <parentCategory ref="DeferUpdateCat" />
+        <parentCategory ref="WindowsUpdateOffering" />
         <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
         <enabledValue>
             <decimal value="1" />
@@ -676,11 +700,12 @@
             <decimal value="0" />
         </disabledValue>
         <elements>
+          <text id="ProductVersionId" valueName="ProductVersion" maxLength="25" />
           <text id="TargetReleaseVersionId" valueName="TargetReleaseVersionInfo" maxLength="4" />
         </elements>
     </policy>
     <policy name="DisableWUfBSafeguards" class="Machine" displayName="$(string.DisableWUfBSafeguards)" explainText="$(string.DisableWUfBSafeguards_Help)" key="Software\Policies\Microsoft\Windows\WindowsUpdate" valueName="DisableWUfBSafeguards">
-      <parentCategory ref="DeferUpdateCat" />
+      <parentCategory ref="WindowsUpdateOffering" />
       <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS7" />
       <enabledValue>
         <decimal value="1" />
@@ -696,7 +721,7 @@
       key="Software\Policies\Microsoft\Windows\WindowsUpdate"
       presentation="$(presentation.ManagePreviewBuilds)"
       valueName="ManagePreviewBuildsPolicyValue">
-      <parentCategory ref="DeferUpdateCat" />
+      <parentCategory ref="WindowsUpdateOffering" />
       <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS3" />
       <enabledValue>
         <decimal value="2" />
@@ -721,6 +746,11 @@
               <decimal value="8" />
             </value>
           </item>
+          <item displayName="$(string.ReleasePreviewQualityOnly)">
+            <value>
+              <decimal value="64" />
+            </value>
+          </item>
         </enum>
       </elements>
     </policy>
@@ -731,7 +761,7 @@
         key="Software\Policies\Microsoft\Windows\WindowsUpdate"
         presentation="$(presentation.DeferFeatureUpdates)"
         valueName="DeferFeatureUpdates">
-        <parentCategory ref="DeferUpdateCat" />
+        <parentCategory ref="WindowsUpdateOffering" />
         <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
         <enabledValue>
             <decimal value="1" />
@@ -751,7 +781,7 @@
         key="Software\Policies\Microsoft\Windows\WindowsUpdate"
         presentation="$(presentation.DeferQualityUpdates)"
         valueName="DeferQualityUpdates">
-        <parentCategory ref="DeferUpdateCat" />
+        <parentCategory ref="WindowsUpdateOffering" />
         <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
         <enabledValue>
             <decimal value="1" />
@@ -770,7 +800,7 @@
         explainText="$(string.ExcludeWUDriversInQualityUpdate_Help)"
         key="Software\Policies\Microsoft\Windows\WindowsUpdate"
         valueName="ExcludeWUDriversInQualityUpdate">
-        <parentCategory ref="WindowsUpdateCat" />
+        <parentCategory ref="WindowsUpdateOffering" />
         <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
         <enabledValue>
             <decimal value="1" />
@@ -786,7 +816,7 @@
     key="Software\Policies\Microsoft\Windows\WindowsUpdate"
     presentation="$(presentation.ActiveHours_Title)"
     valueName="SetActiveHours">
-      <parentCategory ref="WindowsUpdateCat" />
+      <parentCategory ref="WindowsUpdateExperience" />
       <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledValue>
         <decimal value="1" />
@@ -1048,8 +1078,8 @@
       key="Software\Policies\Microsoft\Windows\WindowsUpdate"
       presentation="$(presentation.AutoRestartDeadline_Title)"
       valueName="SetAutoRestartDeadline">
-      <parentCategory ref="WindowsUpdateCat" />
-      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
+      <parentCategory ref="PreSV" />
+      <supportedOn ref="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10" />
       <enabledValue>
         <decimal value="1" />
       </enabledValue>
@@ -1359,7 +1389,7 @@
       explainText="$(string.DisableUXWUAccess_Help)"
       key="Software\Policies\Microsoft\Windows\WindowsUpdate"
       valueName="SetDisableUXWUAccess">
-      <parentCategory ref="WindowsUpdateCat" />
+      <parentCategory ref="WindowsUpdateExperience" />
       <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledValue>
         <decimal value="1" />
@@ -1374,7 +1404,7 @@
       explainText="$(string.DisablePauseUXAccess_Help)"
       key="Software\Policies\Microsoft\Windows\WindowsUpdate"
       valueName="SetDisablePauseUXAccess">
-      <parentCategory ref="WindowsUpdateCat" />
+      <parentCategory ref="WindowsUpdateExperience" />
       <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS5" />
       <enabledValue>
         <decimal value="1" />
@@ -1390,7 +1420,7 @@
       key="Software\Policies\Microsoft\Windows\WindowsUpdate"
       presentation="$(presentation.ActiveHoursMaxRange_Title)"
       valueName="SetActiveHoursMaxRange">
-      <parentCategory ref="WindowsUpdateCat" />
+      <parentCategory ref="WindowsUpdateExperience" />
       <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
       <enabledValue>
         <decimal value="1" />
@@ -1465,8 +1495,8 @@
       key="Software\Policies\Microsoft\Windows\WindowsUpdate"
       presentation="$(presentation.AutoRestartRequiredNotificationDismissal_Title)"
       valueName="SetAutoRestartRequiredNotificationDismissal">
-      <parentCategory ref="WindowsUpdateCat" />
-      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
+      <parentCategory ref="PreSV" />
+      <supportedOn ref="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10" />
       <enabledValue>
         <decimal value="1" />
       </enabledValue>
@@ -1495,8 +1525,8 @@
       key="Software\Policies\Microsoft\Windows\WindowsUpdate"
       presentation="$(presentation.AutoRestartNotificationConfig_Title)"
       valueName="SetAutoRestartNotificationConfig">
-      <parentCategory ref="WindowsUpdateCat" />
-      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
+      <parentCategory ref="PreSV" />
+      <supportedOn ref="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10" />
       <enabledValue>
         <decimal value="1" />
       </enabledValue>
@@ -1539,8 +1569,8 @@
       explainText="$(string.AutoRestartNotificationDisable_Help)"
       key="Software\Policies\Microsoft\Windows\WindowsUpdate"
       valueName="SetAutoRestartNotificationDisable">
-      <parentCategory ref="WindowsUpdateCat" />
-      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
+      <parentCategory ref="PreSV" />
+      <supportedOn ref="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10" />
       <enabledValue>
         <decimal value="1" />
       </enabledValue>
@@ -1555,8 +1585,8 @@
       key="Software\Policies\Microsoft\Windows\WindowsUpdate"
       presentation="$(presentation.RestartWarningSchd_Title)"
       valueName="SetRestartWarningSchd">
-      <parentCategory ref="WindowsUpdateCat" />
-      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
+      <parentCategory ref="PreSV" />
+      <supportedOn ref="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10" />
       <enabledValue>
         <decimal value="1" />
       </enabledValue>
@@ -1617,8 +1647,8 @@
       key="Software\Policies\Microsoft\Windows\WindowsUpdate"
       presentation="$(presentation.EngagedRestartTransitionSchedule_Title)"
       valueName="SetEngagedRestartTransitionSchedule">
-      <parentCategory ref="WindowsUpdateCat" />
-      <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOARM" />
+      <parentCategory ref="PreSV" />
+      <supportedOn ref="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10" />
       <enabledValue>
         <decimal value="1" />
       </enabledValue>
@@ -2286,7 +2316,7 @@
             explainText="$(string.SetEDURestart_Help)"
             key="Software\Policies\Microsoft\Windows\WindowsUpdate"
             valueName="SetEDURestart">
-      <parentCategory ref="WindowsUpdateCat" />
+      <parentCategory ref="WindowsUpdateExperience" />
       <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
       <enabledValue>
         <decimal value="1" />
@@ -2301,8 +2331,23 @@
             explainText="$(string.AllowAutoWindowsUpdateDownloadOverMeteredNetwork_Help)"
             key="Software\Policies\Microsoft\Windows\WindowsUpdate"
             valueName="AllowAutoWindowsUpdateDownloadOverMeteredNetwork">
-      <parentCategory ref="WindowsUpdateCat" />
+      <parentCategory ref="WindowsUpdateExperience" />
       <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="AllowTemporaryEnterpriseFeatureControl"
+            class="Machine"
+            displayName="$(string.AllowTemporaryEnterpriseFeatureControl_Title)"
+            explainText="$(string.AllowTemporaryEnterpriseFeatureControl_Help)"
+            key="Software\Policies\Microsoft\Windows\WindowsUpdate"
+            valueName="AllowTemporaryEnterpriseFeatureControl">
+      <parentCategory ref="WindowsUpdateExperience" />
+      <supportedOn ref="windows:SUPPORTED_Windows_11_0_22H2" />
       <enabledValue>
         <decimal value="1" />
       </enabledValue>
@@ -2316,7 +2361,7 @@
         explainText="$(string.DisableDualScan_Help)"
         key="Software\Policies\Microsoft\Windows\WindowsUpdate"
         valueName="DisableDualScan">
-      <parentCategory ref="WindowsUpdateCat" />
+      <parentCategory ref="PreSV" />
       <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS1" />
       <enabledValue>
         <decimal value="1" />
@@ -2332,7 +2377,7 @@
         key="Software\Policies\Microsoft\Windows\WindowsUpdate"
         presentation="$(presentation.UpdateNotificationLevel_Title)"
         valueName="SetUpdateNotificationLevel">
-      <parentCategory ref="WindowsUpdateCat" />
+      <parentCategory ref="WindowsUpdateExperience" />
       <supportedOn ref="WU_SUPPORTED_Windows_Server_2019_Windows_10_0_1809" />
       <enabledValue>
         <decimal value="1" />
@@ -2358,16 +2403,17 @@
             </value>
           </item>
         </enum>
+        <boolean id="NoUpdateNotificationsDuringActiveHours" valueName="NoUpdateNotificationsDuringActiveHours" />
       </elements>
     </policy>
-    <policy name="ComplianceDeadline"
+    <policy name="ComplianceDeadlineForFU"
       class="Machine"
-      displayName="$(string.ComplianceDeadline_Title)"
-      explainText="$(string.ComplianceDeadline_Help)"
+      displayName="$(string.ComplianceDeadlineForFU_Title)"
+      explainText="$(string.ComplianceDeadlineForFU_Help)"
       key="Software\Policies\Microsoft\Windows\WindowsUpdate"
-      presentation="$(presentation.ComplianceDeadline_Title)"
-      valueName="SetComplianceDeadline">
-      <parentCategory ref="WindowsUpdateCat"/>
+      presentation="$(presentation.ComplianceDeadlineForFU_Title)"
+      valueName="SetComplianceDeadlineForFU">
+      <parentCategory ref="WindowsUpdateExperience"/>
       <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS3" />
       <enabledValue>
         <decimal value="1" />
@@ -2376,8 +2422,8 @@
         <decimal value="0" />
       </disabledValue>
       <elements>
-        <enum id="ConfigureDeadlineForQualityUpdates" valueName="ConfigureDeadlineForQualityUpdates" required="true">
-          <item displayName="$(string.ComplianceDeadlineDay0)">
+          <enum id="ConfigureDeadlineForFeatureUpdates" valueName="ConfigureDeadlineForFeatureUpdates" required="true">
+              <item displayName="$(string.ComplianceDeadlineDay0)">
             <value>
               <decimal value="0"/>
             </value>
@@ -2533,7 +2579,68 @@
             </value>
           </item>
         </enum>
-        <enum id="ConfigureDeadlineForFeatureUpdates" valueName="ConfigureDeadlineForFeatureUpdates" required="true">
+        <enum id="ConfigureDeadlineGracePeriodForFeatureUpdates" valueName="ConfigureDeadlineGracePeriodForFeatureUpdates" required="true">
+          <item displayName="$(string.ComplianceDeadlineDay0)">
+            <value>
+              <decimal value="0"/>
+            </value>
+          </item>
+          <item displayName="$(string.ComplianceDeadlineDay1)">
+            <value>
+              <decimal value="1"/>
+            </value>
+          </item>
+          <item displayName="$(string.ComplianceDeadlineDay2)">
+            <value>
+              <decimal value="2"/>
+            </value>
+          </item>
+          <item displayName="$(string.ComplianceDeadlineDay3)">
+            <value>
+              <decimal value="3"/>
+            </value>
+          </item>
+          <item displayName="$(string.ComplianceDeadlineDay4)">
+            <value>
+              <decimal value="4"/>
+            </value>
+          </item>
+          <item displayName="$(string.ComplianceDeadlineDay5)">
+            <value>
+              <decimal value="5"/>
+            </value>
+          </item>
+          <item displayName="$(string.ComplianceDeadlineDay6)">
+            <value>
+              <decimal value="6"/>
+            </value>
+          </item>
+          <item displayName="$(string.ComplianceDeadlineDay7)">
+            <value>
+              <decimal value="7"/>
+            </value>
+          </item>
+        </enum>
+        <boolean id="ConfigureDeadlineNoAutoRebootForFeatureUpdates" valueName="ConfigureDeadlineNoAutoRebootForFeatureUpdates" />
+      </elements>
+    </policy>
+    <policy name="ComplianceDeadline"
+      class="Machine"
+      displayName="$(string.ComplianceDeadlineForQU_Title)"
+      explainText="$(string.ComplianceDeadlineForQU_Help)"
+      key="Software\Policies\Microsoft\Windows\WindowsUpdate"
+      presentation="$(presentation.ComplianceDeadlineForQU_Title)"
+      valueName="SetComplianceDeadlineForQU">
+      <parentCategory ref="WindowsUpdateExperience"/>
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_RS3" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+      <elements>
+        <enum id="ConfigureDeadlineForQualityUpdates" valueName="ConfigureDeadlineForQualityUpdates" required="true">
           <item displayName="$(string.ComplianceDeadlineDay0)">
             <value>
               <decimal value="0"/>
@@ -2732,49 +2839,42 @@
             </value>
           </item>
         </enum>
-        <enum id="ConfigureDeadlineGracePeriodForFeatureUpdates" valueName="ConfigureDeadlineGracePeriodForFeatureUpdates" required="true">
-          <item displayName="$(string.ComplianceDeadlineDay0)">
+        <boolean id="ConfigureDeadlineNoAutoRebootForQualityUpdates" valueName="ConfigureDeadlineNoAutoRebootForQualityUpdates" />
+      </elements>
+    </policy>
+    <policy name="AllowOptionalContent"
+            class="Machine"
+            displayName="$(string.AllowOptionalContent_Title)"
+            explainText="$(string.AllowOptionalContent_Help)"
+            key="Software\Policies\Microsoft\Windows\WindowsUpdate"
+            presentation="$(presentation.AllowOptionalContent_Title)"
+            valueName="SetAllowOptionalContent">
+      <parentCategory ref="WindowsUpdateOffering" />
+      <supportedOn ref="WU_SUPPORTED_WinServer2025_Win1021H2_Win1122H2" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+      <elements>
+        <enum id="AllowOptionalContent" valueName="AllowOptionalContent" required="true">
+          <item displayName="$(string.ReceiveOptionalContentWithAutoApproval)">
             <value>
-              <decimal value="0"/>
+              <decimal value="1" />
             </value>
           </item>
-          <item displayName="$(string.ComplianceDeadlineDay1)">
+          <item displayName="$(string.ReceiveOptionalLCUWithAutoApproval)">
             <value>
-              <decimal value="1"/>
+              <decimal value="2" />
             </value>
           </item>
-          <item displayName="$(string.ComplianceDeadlineDay2)">
+          <item displayName="$(string.ReceiveOptionalContentNeedUserApproval)">
             <value>
-              <decimal value="2"/>
-            </value>
-          </item>
-          <item displayName="$(string.ComplianceDeadlineDay3)">
-            <value>
-              <decimal value="3"/>
-            </value>
-          </item>
-          <item displayName="$(string.ComplianceDeadlineDay4)">
-            <value>
-              <decimal value="4"/>
-            </value>
-          </item>
-          <item displayName="$(string.ComplianceDeadlineDay5)">
-            <value>
-              <decimal value="5"/>
-            </value>
-          </item>
-          <item displayName="$(string.ComplianceDeadlineDay6)">
-            <value>
-              <decimal value="6"/>
-            </value>
-          </item>
-          <item displayName="$(string.ComplianceDeadlineDay7)">
-            <value>
-              <decimal value="7"/>
+              <decimal value="3" />
             </value>
           </item>
         </enum>
-        <boolean id="ConfigureDeadlineNoAutoReboot" valueName="ConfigureDeadlineNoAutoReboot" />
       </elements>
     </policy>
   </policies>

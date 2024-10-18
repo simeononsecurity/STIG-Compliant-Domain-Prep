@@ -53,11 +53,32 @@
       <string id="ForceLockTimeout_1">10 segundos</string>
       <string id="ForceLockTimeout_2">30 segundos</string>
       <string id="ForceLockTimeout_3">2 minutos</string>
+      <string id="ForceLockTimeout_4">Imediatamente</string>
       <string id="ForceInstantDim_DisplayName">Forçar Dim Instantâneo</string>
       <string id="ForceInstantDim_ExplainText">Determina se a ativação/desativação do Escurecimento da Tela com Base na Atenção é forçada pela política do MDM. O utilizador não poderá alterar esta definição e o botão de alternar na IU será acinzentado.</string>
       <string id="ForceInstantDim_0">Igual à escolha do utilizador</string>
       <string id="ForceInstantDim_1">Forçado a ativar</string>
       <string id="ForceInstantDim_2">Forçado a desativar</string>
+      <string id="ForceDisableWakeWhenBatterySaverOn_DisplayName">Forçar Desativar Reativação Quando a Poupança de Bateria Estiver Ativada</string>
+      <string id="ForceDisableWakeWhenBatterySaverOn_ExplainText">Determina se a caixa de verificação Desativar a Ativação por Aproximação Quando a Poupança de Bateria Estiver Ativada está a ser forçada como selecionada/desmarcada pela política da MDM. O utilizador não poderá alterar esta definição e a caixa de verificação na IU ficará desativada.</string>
+      <string id="ForceDisableWakeWhenBatterySaverOn_0">A predefinição é à escolha do utilizador</string>
+      <string id="ForceDisableWakeWhenBatterySaverOn_1">Seleção Forçada</string>
+      <string id="ForceDisableWakeWhenBatterySaverOn_2">Desmarcação Forçada</string>
+      <string id="ForceAllowWakeWhenExternalDisplayConnected_DisplayName">Forçar Permissão de Reativação Quando o Monitor Externo Estiver Ligado</string>
+      <string id="ForceAllowWakeWhenExternalDisplayConnected_ExplainText">Determina se a caixa de verificação Permitir Ativação por Aproximação Quando o Monitor Externo Estiver Ligado está a ser forçada como selecionada/desmarcada pela política da MDM. O utilizador não poderá alterar esta definição e a caixa de verificação na IU ficará desativada.</string>
+      <string id="ForceAllowWakeWhenExternalDisplayConnected_0">A predefinição é à escolha do utilizador</string>
+      <string id="ForceAllowWakeWhenExternalDisplayConnected_1">Seleção Forçada</string>
+      <string id="ForceAllowWakeWhenExternalDisplayConnected_2">Desmarcação Forçada</string>
+      <string id="ForceAllowLockWhenExternalDisplayConnected_DisplayName">Forçar Permitir Bloqueio Quando o Monitor Externo Estiver Ligado</string>
+      <string id="ForceAllowLockWhenExternalDisplayConnected_ExplainText">Determina se a caixa de verificação Permitir Bloqueio ao Sair Quando a Poupança de Bateria Estiver Ativada é forçada a ser verificada/desmarcada pela política da MDM. O utilizador não poderá alterar esta definição e a caixa de verificação na IU ficará desativada.</string>
+      <string id="ForceAllowLockWhenExternalDisplayConnected_0">A predefinição é à escolha do utilizador</string>
+      <string id="ForceAllowLockWhenExternalDisplayConnected_1">Seleção Forçada</string>
+      <string id="ForceAllowLockWhenExternalDisplayConnected_2">Desmarcação Forçada</string>
+      <string id="ForceAllowDimWhenExternalDisplayConnected_DisplayName">Forçar Permissão de Esbater Quando o Monitor Externo Estiver Ligado</string>
+      <string id="ForceAllowDimWhenExternalDisplayConnected_ExplainText">Determina se a caixa de verificação Permitir Obscurecimento Adaptativo Quando a Poupança de Bateria Estiver Ativada está a ser forçada como selecionada/desmarcada pela política de MDM. O utilizador não poderá alterar esta definição e a caixa de verificação na IU ficará desativada.</string>
+      <string id="ForceAllowDimWhenExternalDisplayConnected_0">A predefinição é à escolha do utilizador</string>
+      <string id="ForceAllowDimWhenExternalDisplayConnected_1">Seleção Forçada</string>
+      <string id="ForceAllowDimWhenExternalDisplayConnected_2">Desmarcação Forçada</string>
     </stringTable>
     <presentationTable>
       <presentation id="ForceInstantWake">
@@ -70,7 +91,19 @@
         <dropdownList refId="ForceLockTimeoutDropdown" noSort="true" defaultItem="1">Escolha um dos seguintes limites de tempo</dropdownList>
       </presentation>
       <presentation id="ForceInstantDim">
-        <dropdownList refId="ForceInstantDimDropDown" noSort="true" defaultItem="0">Selecione uma das seguintes ações</dropdownList>
+        <dropdownList refId="ForceInstantDimDropdown" noSort="true" defaultItem="0">Selecione uma das seguintes ações</dropdownList>
+      </presentation>
+      <presentation id="ForceDisableWakeWhenBatterySaverOn">
+        <dropdownList refId="ForceDisableWakeWhenBatterySaverOnDropdown" noSort="true" defaultItem="0">Escolher uma das seguintes ações</dropdownList>
+      </presentation>
+      <presentation id="ForceAllowWakeWhenExternalDisplayConnected">
+        <dropdownList refId="ForceAllowWakeWhenExternalDisplayConnectedDropdown" noSort="true" defaultItem="0">Escolher uma das seguintes ações</dropdownList>
+      </presentation>
+      <presentation id="ForceAllowLockWhenExternalDisplayConnected">
+        <dropdownList refId="ForceAllowLockWhenExternalDisplayConnectedDropdown" noSort="true" defaultItem="0">Escolher uma das seguintes ações</dropdownList>
+      </presentation>
+      <presentation id="ForceAllowDimWhenExternalDisplayConnected">
+        <dropdownList refId="ForceAllowDimWhenExternalDisplayConnectedDropdown" noSort="true" defaultItem="0">Escolher uma das seguintes ações</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

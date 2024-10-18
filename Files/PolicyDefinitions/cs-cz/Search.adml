@@ -300,6 +300,23 @@ Pokud bude toto nastavení povolené, budou mít vyhledávání i Cortana k info
       <string id="DisableSearch_ExplainText">Pokud tuto zásadu povolíte, uživatelské rozhraní vyhledávání se zakáže spolu se všemi jeho vstupními body, jako jsou klávesové zkratky, gesta touchpadu a funkce Napište, co hledáte v nabídce Start. Skryje se i vyhledávací pole nabídky Start a tlačítko Hledat na hlavním panelu.
 
 Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, uživatel bude moct otevřít uživatelské rozhraní vyhledávání a zobrazí se jeho různé vstupní body.</string>
+      <string id="ConfigureSearchOnTaskbarMode">Konfiguruje hledání na hlavním panelu.</string>
+      <string id="ConfigureSearchOnTaskbarMode_Help">Toto nastavení zásad umožňuje konfigurovat vyhledávání na hlavním panelu.
+
+Pokud toto nastavení zásad povolíte a nastavíte na skrytí, bude vyhledávání na hlavním panelu ve výchozím nastavení skryto. Uživatelé to nemůžou změnit v Nastavení.
+
+Pokud toto nastavení zásad povolíte a nastavíte pouze na ikonu vyhledávání, bude ikona hledání ve výchozím nastavení zobrazena na hlavním panelu. Uživatelé to nemůžou změnit v Nastavení.
+
+Pokud toto nastavení zásad povolíte a nastavíte na ikonu a popisek vyhledávání, ikona hledání a popisek se ve výchozím nastavení zobrazí na hlavním panelu. Uživatelé to nemůžou změnit v Nastavení.
+
+Pokud toto nastavení zásad povolíte a nastavíte na vyhledávací pole, vyhledávací pole se ve výchozím nastavení zobrazí na hlavním panelu. Uživatelé to nemůžou změnit v Nastavení.
+
+Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, bude vyhledávání na hlavním panelu nakonfigurováno podle výchozích nastavení pro edici Windows. Uživatelé budou moct změnit hledání na hlavním panelu v Nastavení.
+      </string>
+      <string id="SearchOnTaskbarModeEnum_Hidden">Skrýt</string>
+      <string id="SearchOnTaskbarModeEnum_SearchIconOnly">Jen ikona hledání</string>
+      <string id="SearchOnTaskbarModeEnum_SearchIconAndLabel">Ikona hledání a popisek</string>
+      <string id="SearchOnTaskbarModeEnum_SearchBox">Vyhledávací pole</string>
     </stringTable>
     <presentationTable>
       <presentation id="RichAttachmentPreviews">
@@ -388,6 +405,9 @@ Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, uživatel bude m
       </presentation>
       <presentation id="AllowCortanaAAD">
         <dropdownList refId="AllowCortanaAAD_Dropdown" noSort="true" defaultItem="0">Cortana v nastavení AAD</dropdownList>
+      </presentation>
+      <presentation id="ConfigureSearchOnTaskbarMode">
+        <dropdownList refId="ConfigureSearchOnTaskbarMode_Dropdown" noSort="true" defaultItem="0">Hledat na hlavním panelu</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

@@ -6,16 +6,16 @@
     <stringTable>
       <string id="MULTITASKING">Çok görevli</string>
       <string id="MULTITASKINGHELP">Windows Çok görevli seçeneklerini yönetir</string>
-      <string id="BrowserAltTabBlowout">Microsoft Edge sekmelerinin Alt+Sekme kısayoluna dahil edilmesini yapılandırın</string>
-      <string id="BrowserAltTabBlowout_Help">Bu ayar, Microsoft Edge sekmelerinin Alt+Sekme kısayoluna dahil edilmesini kontrol eder.
+      <string id="BrowserAltTabBlowout">Uygulama sekmelerinin Alt-Sekme tuşu bileşimine eklenmesini yapılandırın</string>
+      <string id="BrowserAltTabBlowout_Help">Bu ayar, uygulama sekmelerinin uygulama sekmesine eklenmesini Alt+Sekme.
 
-Bu özellik tüm sekmeleri veya en son 3 ya da 5 sekmeyi dahil edecek biçimde veya Microsoft Edge’den hiçbir sekmeyi göstermeyecek şekilde ayarlanabilir.
+Bu, en son 3, 5 veya 20 sekmeyi göstermek veya uygulamalardan sekme göstermek için ayarlanmış olabilir.
 
-"Yalnızca pencereleri aç" olarak ayarlanırsa tüm özellik devre dışı bırakılır.
+Bu ayar "Yalnızca pencereleri aç" olarak ayarlanırsa, tüm özellik devre dışı bırakılır.
 </string>
-      <string id="AltTabFilter_All">Pencereleri ve Microsoft Edge’deki tüm sekmeleri açın</string>
-      <string id="AltTabFilter_Five">Pencereleri ve Microsoft Edge’de son kullanılan 5 sekmeyi açın</string>
-      <string id="AltTabFilter_Three">Pencereleri ve Microsoft Edge’de son kullanılan 3 sekmeyi açın</string>
+      <string id="AltTabFilter_All">Uygulamalardaki açık pencereler ve en son açılan 20 sekme</string>
+      <string id="AltTabFilter_Five">Uygulamalardaki açık pencereler ve en son açılan 5 sekme</string>
+      <string id="AltTabFilter_Three">Uygulamalardaki açık pencereler ve en son açılan 3 sekme</string>
       <string id="AltTabFilter_None">Yalnızca pencereleri açın</string>
     </stringTable>
     <presentationTable>

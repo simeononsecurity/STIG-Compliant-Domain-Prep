@@ -105,52 +105,60 @@ Jeśli ustawisz to ustawienie zasad na wartość „Włącz powiadomienia o zmia
 
       <string id="AllowUpdateComplianceProcessing">Zezwalaj na przetwarzanie w rozwiązaniu Update Compliance</string>
       <string id="AllowUpdateComplianceProcessing_Explain">
-To ustawienie zasad w połączeniu z ustawieniem Zezwalaj na telemetrię i Konfiguruj identyfikator komercyjny umożliwia organizacjom skonfigurowanie urządzenia tak, aby firma Microsoft była procesorem danych diagnostycznych systemu Windows zbieranych z urządzenia zgodnie z warunkami produktu pod adresem https://go.microsoft.com/fwlink/?linkid=2185086.
+Te zasady są przestarzałe i będą działać tylko w systemie Windows 10 w wersji 1809. Ustawienie tych zasad nie będzie miało wpływu na inne obsługiwane wersje systemu Windows.
+
+To ustawienie zasad, w połączeniu z ustawieniem Zezwalaj na telemetrię i Konfiguruj identyfikator komercyjny, umożliwia organizacjom skonfigurowanie urządzenia tak, aby firma Microsoft była podmiotem przetwarzającym dane diagnostyczne systemu Windows zebrane z urządzenia, zgodnie z Postanowieniami dotyczącymi produktu na stronie https://go.microsoft.com/fwlink/?linkid=2185086.
 Aby włączyć to zachowanie:
-    1. Włącz to ustawienie zasad.
-    2. Dołącz konto Azure Active Directory do urządzenia
-    3. Ustaw dla parametru Zezwalaj na telemetrię wartość 1 - wymaganą lub wyższą
+    1. Włącz to ustawienie zasad
+    2. Dołącz konto usługi Azure Active Directory do urządzenia
+    3. Ustaw wartość Zezwalaj na telemetrię na wartość 1 — wymagana lub wyższa
     4. Ustaw ustawienie Konfiguruj identyfikator komercyjny dla obszaru roboczego Update Compliance
 
 Po skonfigurowaniu tych zasad dane diagnostyczne systemu Windows zebrane z urządzenia będą podlegać zobowiązaniom procesora firmy Microsoft.
-Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, urządzenia nie będą wyświetlane w Update Compliance.
+Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, urządzenia nie będą wyświetlane w obszarze Update Compliance.
       </string>
 
       <string id="AllowDesktopAnalyticsProcessing">Zezwalaj na przetwarzanie w usłudze Desktop Analytics</string>
       <string id="AllowDesktopAnalyticsProcessing_Explain">
-To ustawienie zasad w połączeniu z ustawieniem Zezwalaj na telemetrię i Konfiguruj identyfikator komercyjny umożliwia organizacjom skonfigurowanie urządzenia tak, aby firma Microsoft była procesorem danych diagnostycznych systemu Windows zbieranych z urządzenia zgodnie z warunkami produktu pod adresem https://go.microsoft.com/fwlink/?linkid=2185086.
+Te zasady są przestarzałe i będą działać tylko w systemie Windows 10 w wersji 1809. Ustawienie tych zasad nie będzie miało wpływu na inne obsługiwane wersje systemu Windows.
+
+To ustawienie zasad, w połączeniu z ustawieniem Zezwalaj na telemetrię i Konfiguruj identyfikator komercyjny, umożliwia organizacjom skonfigurowanie urządzenia tak, aby firma Microsoft była podmiotem przetwarzającym dane diagnostyczne systemu Windows zebrane z urządzenia zgodnie z Postanowieniami dotyczącymi produktu na stronie https://go.microsoft.com/fwlink/?linkid=2185086.
 Aby włączyć to zachowanie:
-    1. Włącz to ustawienie zasad.
-    2. Dołącz konto Azure Active Directory do urządzenia
-    3. Ustaw dla parametru Zezwalaj na telemetrię wartość 1 - wymaganą lub wyższą
-    4. Ustaw ustawienie Konfiguruj identyfikator komercyjny dla obszaru roboczego Desktop Analytics
+    1. Włącz to ustawienie zasad
+    2. Dołącz konto usługi Azure Active Directory do urządzenia
+    3. Ustaw wartość Zezwalaj na telemetrię na wartość 1 — wymagana lub wyższa
+    4. Ustaw ustawienie Konfiguruj identyfikator komercyjny dla obszaru roboczego usługi Desktop Analytics
 
 Po skonfigurowaniu tych zasad dane diagnostyczne systemu Windows zebrane z urządzenia będą podlegać zobowiązaniom procesora firmy Microsoft.
-To ustawienie nie ma wpływu na urządzenia, chyba że są one prawidłowo zarejestrowane w programie Desktop Analytics. Jeśli to ustawienie zasad zostanie wyłączone urządzenia nie będą wyświetlane w Update Compliance.
+To ustawienie nie ma wpływu na urządzenia, chyba że zostały prawidłowo zarejestrowane w usłudze Desktop Analytics. Jeśli to ustawienie zasad zostanie wyłączone, urządzenia nie będą wyświetlane w usłudze Desktop Analytics.
       </string>
 
       <string id="AllowWUfBCloudProcessing">Zezwalaj na przetwarzanie chmury WUfB</string>
       <string id="AllowWUfBCloudProcessing_Explain">
-To ustawienie zasad umożliwia skonfigurowanie urządzenia dołączonego do Azure Active Directory, tak aby firma Microsoft była procesorem danych diagnostycznych systemu Windows zbieranych z urządzenia zgodnie z warunkami produktu pod adresem https://go.microsoft.com/fwlink/?linkid=2185086.
+Te zasady są przestarzałe i będą działać tylko w systemie Windows 10 w wersji 1809. Ustawienie tych zasad nie będzie miało wpływu na inne obsługiwane wersje systemu Windows.
+
+To ustawienie zasad konfiguruje urządzenie dołączone do usługi Azure Active Directory tak, aby firma Microsoft była podmiotem przetwarzającym dane diagnostyczne systemu Windows zebrane z urządzenia zgodnie z Postanowieniami dotyczącymi produktu na stronie https://go.microsoft.com/fwlink/?linkid=2185086.
 Aby włączyć to zachowanie:
-    1. Włącz to ustawienie zasad.
-    2. Dołącz konto Azure Active Directory do urządzenia
-    3. Ustaw dla parametru Zezwalaj na telemetrię wartość 1 - wymaganą lub wyższą
+    1. Włącz to ustawienie zasad
+    2. Dołącz konto usługi Azure Active Directory do urządzenia
+    3. Ustaw wartość Zezwalaj na telemetrię na wartość 1 — wymagana lub wyższa
 
 Po skonfigurowaniu tych zasad dane diagnostyczne systemu Windows zebrane z urządzenia będą podlegać zobowiązaniom procesora firmy Microsoft.
-Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, urządzenia zarejestrowane w usłudze wdrażania Windows Update dla firm nie będą mogły korzystać z niektórych funkcji usługi wdrażania.
+Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, urządzenia zarejestrowane w usłudze wdrażania Windows Update dla Firm nie będą mogły korzystać z niektórych funkcji usługi wdrażania.
       </string>
 
       <string id="AllowCommercialDataPipeline">Zezwalaj na komercyjny potok danych</string>
       <string id="AllowCommercialDataPipeline_Explain">
-Element AllowCommercialDataPipeline konfiguruje urządzenie dołączone do Azure Active Directory, tak aby firma Microsoft była procesorem danych diagnostycznych systemu Windows zebranych z urządzenia zgodnie z warunkami produktu pod adresem https://go.microsoft.com/fwlink/?linkid=2185086.
-Aby włączyć to zachowanie:
-    1. Włącz to ustawienie zasad.
-    2. Dołącz konto Azure Active Directory do urządzenia
+Te zasady są przestarzałe i będą działać tylko w systemie Windows 10 w wersji 1809. Ustawienie tych zasad nie będzie miało wpływu na inne obsługiwane wersje systemu Windows.
 
-Dane diagnostyczne systemu Windows są zbierane, gdy ustawienie zasad Zezwalaj na telemetrię ma wartość 1  - wymaganą lub wyższą. Skonfigurowanie tego ustawienia nie powoduje zmiany poziomu kolekcji danych diagnostycznych systemu Windows dla urządzenia
-Jeśli wyłączysz to ustawienie albo go nie skonfigurujesz, firma Microsoft będzie kontrolerem danych diagnostycznych systemu Windows zbieranych z urządzenia i przetwarzanych zgodnie z zasadami zachowania poufności informacji firmy Microsoft pod adresem https://go.microsoft.com/fwlink/?LinkId=521839, chyba że zostaną włączone zasady, takie jak „Zezwalaj na przetwarzanie Update Compliance” lub "Zezwalaj na przetwarzanie Desktop Analytics”.
-Zobacz dokumentację pod adresem https://go.microsoft.com/fwlink/?linkid=2011107, aby uzyskać informacje na temat tych i innych zasad, które sprawią, że firma Microsoft będzie procesorem danych diagnostycznych systemu Windows.
+AllowCommercialDataPipeline konfiguruje urządzenie dołączone do usługi Azure Active Directory, aby firma Microsoft była podmiotem przetwarzającym dane diagnostyczne systemu Windows zebrane z urządzenia zgodnie z Postanowieniami dotyczącymi produktu na stronie https://go.microsoft.com/fwlink/?linkid=2185086.
+Aby włączyć to zachowanie:
+    1. Włącz to ustawienie zasad
+    2. Dołącz konto usługi Azure Active Directory do urządzenia
+
+Dane diagnostyczne systemu Windows są zbierane, gdy ustawienie zasad Zezwalaj na telemetrię jest ustawione na wartość 1 — wymagane lub wyższe. Skonfigurowanie tego ustawienia nie powoduje zmiany ustawionego poziomu zbierania danych diagnostycznych systemu Windows dla urządzenia.
+Jeśli wyłączysz to ustawienie lub go nie skonfigurujesz, firma Microsoft będzie administratorem danych diagnostycznych systemu Windows zebranych z urządzenia i przetworzonych zgodnie z zasadami zachowania poufności informacji firmy Microsoft na stronie https://go.microsoft.com/fwlink/?LinkId=521839, chyba że włączono zasady, takie jak „Zezwalaj na przetwarzanie zgodności aktualizacji” lub „Zezwalaj na przetwarzanie analizy pulpitu”.
+Zapoznaj się z dokumentacją na stronie https://go.microsoft.com/fwlink/?linkid=2011107, aby uzyskać informacje na temat tych i innych zasad, które spowodują, że firma Microsoft będzie przetwarzać dane diagnostyczne systemu Windows.
       </string>
 
       <string id="LimitDiagnosticLogCollection">Ogranicz zbieranie dzienników diagnostycznych</string>

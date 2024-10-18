@@ -99,18 +99,21 @@ Om du ställer in den här princip inställningen till ”Aktivera aviseringar f
 
       <string id="ConfigureMicrosoft365UploadEndpoint">Ange uppladdningsslutpunkt för diagnostikdata för Desktop Analytics</string>
       <string id="ConfigureMicrosoft365UploadEndpoint_Explain">Med den här principen anger du uppladdningsslutpunkten för enhetens diagnostikdata som del i Desktop Analytics-programmet.
-          Om din organisation deltar i programmet och har anvisats att konfigurera en anpassad uppladdningsslutpunkt kan du med den här inställningen ange den slutpunkten.
-          Värdet för den här inställningen tillhandahålls av Microsoft som del i registreringsprocessen för programmet. 
+
+Om din organisation deltar i programmet och har anvisats att konfigurera en anpassad uppladdningsslutpunkt kan du med den här inställningen ange den slutpunkten.
+Värdet för den här inställningen tillhandahålls av Microsoft som del i registreringsprocessen för programmet. 
       </string>
 
       <string id="AllowUpdateComplianceProcessing">Tillåt bearbetning av Uppdateringsefterlevnad</string>
       <string id="AllowUpdateComplianceProcessing_Explain">
+Den har principen är inaktuell och kommer bara att fungera med Windows 10 version 1809. Att ställa in denna policy kommer inte att ha någon effekt på andra versioner av Windows som stöds.
+
 Med den här principinställningen i kombination med Tillåt telemetri och konfigurera kommersiellt ID kan organisationer konfigurera enheten så att Microsoft är processorn för Windows-diagnostikdata som samlas in från enheten, enligt produktvillkoren på https://go.microsoft.com/fwlink/?linkid=2185086.
 Så här aktiverar du det här beteendet:
  1. Aktivera den här principinställningen
  2. Anslut ett Azure Active Directory-konto till enheten
  3. Ange Tillåt telemetri till värdet 1 – Obligatoriskt eller högre
- 4. Ange inställningen Konfigurera kommersiellt ID för din Uppdateringsefterlevnad arbetsyta
+ 4. Ange inställningen Konfigurera kommersiellt ID för din Uppdatera efterlevnadsarbetsyta
 
 När dessa principer har konfigurerats kommer Windows-diagnostikdata som samlas in från enheten att omfattas av Microsofts processoråtaganden.
 Om du inaktiverar eller låter bli att konfigurera den här principinställningen visas inte enheter i Uppdateringsefterlevnad.
@@ -118,6 +121,8 @@ Om du inaktiverar eller låter bli att konfigurera den här principinställninge
 
       <string id="AllowDesktopAnalyticsProcessing">Tillåt Desktop Analytics-bearbetning</string>
       <string id="AllowDesktopAnalyticsProcessing_Explain">
+Den har principen är inaktuell och kommer bara att fungera med Windows 10 version 1809. Att ställa in denna policy kommer inte att ha någon effekt på andra versioner av Windows som stöds.
+
 Med den här principinställningen i kombination med Tillåt telemetri och konfigurera kommersiellt ID kan organisationer konfigurera enheten så att Microsoft är processorn för Windows-diagnostikdata som samlas in från enheten, enligt produktvillkoren på https://go.microsoft.com/fwlink/?linkid=2185086.
 Så här aktiverar du det här beteendet:
  1. Aktivera den här principinställningen
@@ -131,6 +136,8 @@ När dessa principer är konfigurerade kommer Windows-diagnostikdata som samlas 
 
       <string id="AllowWUfBCloudProcessing">Tillåt WUfB moln bearbetning</string>
       <string id="AllowWUfBCloudProcessing_Explain">
+Den har principen är inaktuell och kommer bara att fungera med Windows 10 version 1809. Att ställa in denna policy kommer inte att ha någon effekt på andra versioner av Windows som stöds.
+
 Den här principinställningen konfigurerar en Azure Active Directory ansluten enhet så att Microsoft är processorn för Windows-diagnostikdata som samlas in från enheten, enligt produktvillkoren på https://go.microsoft.com/fwlink/?linkid=2185086.
 Så här aktiverar du det här beteendet:
  1. Aktivera den här principinställningen
@@ -143,14 +150,16 @@ Om du inaktiverar eller inte konfigurerar den här principinställningen kan enh
 
       <string id="AllowCommercialDataPipeline">Tillåt datapipeline för kommersiella enheter</string>
       <string id="AllowCommercialDataPipeline_Explain">
-AllowCommercialDataPipeline konfigurerar en Azure Active Directory ansluten enhet så att Microsoft är processorn för den Windows-diagnostikdata som samlas in från enheten, enligt produktvillkoren på https://go.microsoft.com/fwlink/?linkid=2185086.
+Denna policy är inaktuell och kommer bara att fungera på Windows 10 version 1809. Att konfigurera denna policy kommer inte att påverka andra versioner av Windows som stöds.
+
+AllowCommercialDataPipeline konfigurerar en Azure Active Directory-ansluten enhet så att Microsoft är personuppgiftsbiträde för de Windows-diagnostikdata som samlas in från enheten, enligt produktvillkoren på https://go.microsoft.com/fwlink/?linkid=2185086.
 Så här aktiverar du det här beteendet:
  1. Aktivera den här principinställningen
  2. Anslut ett Azure Active Directory-konto till enheten
 
-Windows-diagnostikdata samlas in när principinställningen Tillåt telemetri är inställd på värdet 1 – Obligatoriskt eller högre. Om du konfigurerar den här inställningen ändras inte Windows-diagnostikdata samlingsnivå för enheten
-Om du inaktiverar eller låter bli att konfigurera den här inställningen kommer Microsoft att vara kontrollant för Windows-diagnostikdata som samlas in från enheten och bearbetas i enlighet med Microsofts sekretesspolicy på https://go.microsoft.com/fwlink/?LinkId=521839 såvida du inte har aktiverat principer som Tillåt Uppdateringsefterlevnad bearbetning eller Tillåt Desktop Analytics bearbetning” .
-Se dokumentationen på https://go.microsoft.com/fwlink/?linkid=2011107 för information om detta och andra principer som leder till att Microsoft bearbetar Windows-diagnostikdata.
+Windows-diagnostikdata samlas in när principinställningen Tillåt telemetri är inställd på värdet 1 – Obligatoriskt eller högre. Om du konfigurerar den här inställningen ändras inte insamlingsnivån för Windows-diagnostikdata för enheten.
+Om du inaktiverar eller låter bli att konfigurera den här inställningen kommer Microsoft att vara personuppgiftsansvarig för Windows-diagnostikdata som samlas in från enheten och bearbetas i enlighet med Microsofts sekretesspolicy på https://go.microsoft.com/fwlink/?LinkId=521839 såvida du inte har aktiverat principer som "Tillåt bearbetning av Uppdateringsefterlevnad" eller "Tillåt Desktop Analytics-bearbetning".
+Se dokumentationen på https://go.microsoft.com/fwlink/?linkid=2011107 för information om detta och andra principer som leder till att Microsoft är personuppgiftsbiträde för Windows-diagnostikdata.
       </string>
 
       <string id="LimitDiagnosticLogCollection">Begränsa diagnostiklogginsamling</string>

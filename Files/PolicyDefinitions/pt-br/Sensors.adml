@@ -43,21 +43,42 @@
       <string id="ForceInstantWake_1">Forçado Ligado</string>
       <string id="ForceInstantWake_2">Forçado Desligado</string>
       <string id="ForceInstantLock_DisplayName">Forçar o bloqueio instantâneo</string>
-      <string id="ForceInstantLock_ExplainText">Determina se a opção Bloquear ao Sair será forçada a permanecer ligada/desligada pela política MDM. O usuário não poderá alterar essa configuração e o alternador na interface do usuário será ficará esmaecido.</string>
+      <string id="ForceInstantLock_ExplainText">Determina se a opção Bloqueio ao Sair será forçada a permanecer ligada/desligada pela política MDM. O usuário não poderá alterar essa configuração e o alternador na interface do usuário será ficará esmaecido.</string>
       <string id="ForceInstantLock_0">Padrão para a escolha do usuário</string>
       <string id="ForceInstantLock_1">Forçado Ligado</string>
       <string id="ForceInstantLock_2">Forçado Desligado</string>
       <string id="ForceLockTimeout_DisplayName">Tempo limite do Bloqueio</string>
-      <string id="ForceLockTimeout_ExplainText">Determina o tempo limite para Bloquear ao Sair forçado pela política MDM. O usuário não poderá alterar essa configuração e o alternador na interface do usuário ficará esmaecido.</string>
+      <string id="ForceLockTimeout_ExplainText">Determina o tempo limite para Bloqueio ao Sair forçado pela política MDM. O usuário não poderá alterar essa configuração e o alternador na interface do usuário ficará esmaecido.</string>
       <string id="ForceLockTimeout_0">Padrão para a escolha do usuário</string>
       <string id="ForceLockTimeout_1">10 segundos</string>
       <string id="ForceLockTimeout_2">30 segundos</string>
       <string id="ForceLockTimeout_3">2 minutos</string>
+      <string id="ForceLockTimeout_4">Imediato</string>
       <string id="ForceInstantDim_DisplayName">Forçar Esmaecimento Instantâneo</string>
       <string id="ForceInstantDim_ExplainText">Determina se o escurecimento de exibição baseado em atenção é ativado/desativado pela política de MDM. O usuário não poderá alterar essa configuração e a alternância na interface do usuário ficará esmaecida.</string>
       <string id="ForceInstantDim_0">O padrão é a escolha do usuário</string>
       <string id="ForceInstantDim_1">Forçado Ligado</string>
       <string id="ForceInstantDim_2">Forçado Desligado</string>
+      <string id="ForceDisableWakeWhenBatterySaverOn_DisplayName">Forçar Desabilitar Ativação Quando a Economia de Bateria Estiver Ativada</string>
+      <string id="ForceDisableWakeWhenBatterySaverOn_ExplainText">Determina se a caixa de seleção Desabilitar Ativação por Aproximação Quando a Economia de Bateria Estiver Ativada tiver marcação/desmarcação forçada pela política de MDM. O usuário não poderá alterar essa configuração e a caixa de seleção na interface do usuário ficará esmaeada.</string>
+      <string id="ForceDisableWakeWhenBatterySaverOn_0">Padrão para a escolha do usuário</string>
+      <string id="ForceDisableWakeWhenBatterySaverOn_1">Marcação Forçada</string>
+      <string id="ForceDisableWakeWhenBatterySaverOn_2">Desmarcação Forçada</string>
+      <string id="ForceAllowWakeWhenExternalDisplayConnected_DisplayName">Forçar Permitir Ativação Quando o Vídeo Externo Estiver Conectado</string>
+      <string id="ForceAllowWakeWhenExternalDisplayConnected_ExplainText">Determina se a caixa de seleção Permitir Ativação por Aproximação Quando o Vídeo Externo Estiver Conectado tiver marcação/desmarcação forçada pela política de MDM. O usuário não poderá alterar essa configuração e a caixa de seleção na interface do usuário ficará esmaeada.</string>
+      <string id="ForceAllowWakeWhenExternalDisplayConnected_0">Padrão para a escolha do usuário</string>
+      <string id="ForceAllowWakeWhenExternalDisplayConnected_1">Marcação Forçada</string>
+      <string id="ForceAllowWakeWhenExternalDisplayConnected_2">Desmarcação Forçada</string>
+      <string id="ForceAllowLockWhenExternalDisplayConnected_DisplayName">Forçar Permitir Bloqueio Quando o Vídeo Externo Estiver Conectado</string>
+      <string id="ForceAllowLockWhenExternalDisplayConnected_ExplainText">Determina se a caixa de seleção Permitir Bloqueio ao Sair Quando a Economia de Bateria Estiver Ativada tiver marcação/desmarcação forçada pela política MDM. O usuário não poderá alterar essa configuração e a caixa de seleção na interface do usuário ficará esmaeada.</string>
+      <string id="ForceAllowLockWhenExternalDisplayConnected_0">Padrão para a escolha do usuário</string>
+      <string id="ForceAllowLockWhenExternalDisplayConnected_1">Marcação Forçada</string>
+      <string id="ForceAllowLockWhenExternalDisplayConnected_2">Desmarcação Forçada</string>
+      <string id="ForceAllowDimWhenExternalDisplayConnected_DisplayName">Forçar Permitir Esmaecimento quando o Vídeo Externo Estiver Conectado</string>
+      <string id="ForceAllowDimWhenExternalDisplayConnected_ExplainText">Determina se a caixa de seleção Permitir Esmaecimento Adaptável Quando a Economia de Bateria Estiver Ativada tiver marcação/desmarcação forçada pela política de MDM. O usuário não poderá alterar essa configuração e a caixa de seleção na interface do usuário ficará esmaeada.</string>
+      <string id="ForceAllowDimWhenExternalDisplayConnected_0">Padrão para a escolha do usuário</string>
+      <string id="ForceAllowDimWhenExternalDisplayConnected_1">Marcação Forçada</string>
+      <string id="ForceAllowDimWhenExternalDisplayConnected_2">Desmarcação Forçada</string>
     </stringTable>
     <presentationTable>
       <presentation id="ForceInstantWake">
@@ -70,7 +91,19 @@
         <dropdownList refId="ForceLockTimeoutDropdown" noSort="true" defaultItem="1">Escolha um dos seguintes limites de tempo</dropdownList>
       </presentation>
       <presentation id="ForceInstantDim">
-        <dropdownList refId="ForceInstantDimDropDown" noSort="true" defaultItem="0">Escolha uma das ações a seguir</dropdownList>
+        <dropdownList refId="ForceInstantDimDropdown" noSort="true" defaultItem="0">Escolha uma das ações a seguir</dropdownList>
+      </presentation>
+      <presentation id="ForceDisableWakeWhenBatterySaverOn">
+        <dropdownList refId="ForceDisableWakeWhenBatterySaverOnDropdown" noSort="true" defaultItem="0">Escolha uma das ações a seguir</dropdownList>
+      </presentation>
+      <presentation id="ForceAllowWakeWhenExternalDisplayConnected">
+        <dropdownList refId="ForceAllowWakeWhenExternalDisplayConnectedDropdown" noSort="true" defaultItem="0">Escolha uma das ações a seguir</dropdownList>
+      </presentation>
+      <presentation id="ForceAllowLockWhenExternalDisplayConnected">
+        <dropdownList refId="ForceAllowLockWhenExternalDisplayConnectedDropdown" noSort="true" defaultItem="0">Escolha uma das ações a seguir</dropdownList>
+      </presentation>
+      <presentation id="ForceAllowDimWhenExternalDisplayConnected">
+        <dropdownList refId="ForceAllowDimWhenExternalDisplayConnectedDropdown" noSort="true" defaultItem="0">Escolha uma das ações a seguir</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

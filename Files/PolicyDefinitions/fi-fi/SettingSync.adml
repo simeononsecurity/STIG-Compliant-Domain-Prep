@@ -131,6 +131,19 @@ Jos valitset Salli käyttäjien ottaa helppokäyttöisyyden synkronointi käytt�
 
 Jos et määritä tai poista käytöstä tätä asetusta, helppokäyttötoimintojen ryhmän synkronointi on käytössä oletusarvon mukaan ja käyttäjän määritettävissä.
       </string>
+
+      <!-- Language -->
+      <string id="DisableLanguageSettingSync">Älä synkronoi kieliasetuksia</string>
+      <string id="DisableLanguageSettingSync_Help">
+        Estä Kieliasetukset-ryhmän synkronointi sekä tietokoneeseen että tietokoneesta. Tämä poistaa käytöstä kieliasetukset-ryhmän Windowsin varmuuskopioinnin asetussivulla Tietokoneen asetukset.
+
+Jos otat tämän käytäntöasetuksen käyttöön, kieliasetuksia ei synkronoida.
+
+Jos valitset Salli käyttäjien ottaa kieliasetusten synkronointi käyttöön -asetuksen, synkronointi on oletuksena pois käytöstä, mutta asetus on valittavissa.
+
+Jos et määritä tai poista käytöstä tätä asetusta, kieliasetusten synkronointi on käytössä oletusarvon mukaan ja käyttäjän määritettävissä.
+      </string>
+
     </stringTable>
     <presentationTable>
 
@@ -182,6 +195,11 @@ Jos et määritä tai poista käytöstä tätä asetusta, helppokäyttötoiminto
       <!-- AccessibilitySync -->
       <presentation id="DisableAccessibilitySettingSyncUserOverride">
         <checkBox refId="CheckBox_UserOverride">Salli käyttäjien ottaa "helppokäyttötoimintojen" synkronointi käyttöön.</checkBox>
+      </presentation>
+
+      <!-- LanguageSync -->
+      <presentation id="DisableLanguageSettingSyncUserOverride">
+        <checkBox refId="CheckBox_UserOverride">Salli käyttäjien ottaa kieliasetusten synkronointi käyttöön.</checkBox>
       </presentation>
 
     </presentationTable>

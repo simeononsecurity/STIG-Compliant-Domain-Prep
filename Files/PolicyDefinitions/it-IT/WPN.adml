@@ -120,6 +120,18 @@
 
           Per questa impostazione dei criteri non sono necessari riavvii del sistema o dei servizi.
       </string>
+      <string id="ExpandedToastNotifications">Attiva più notifiche di tipo avviso popup espanse in centro notifiche</string>
+      <string id="ExpandedToastNotificationsExplain">
+          Questa impostazione dei criteri attiva più notifiche di tipo avviso popup espanse in centro notifiche.
+
+          Se abiliti questa impostazione dei criteri, le prime tre notifiche di ogni applicazione verranno espanse per impostazione predefinita in centro notifiche.
+
+          Se disabiliti o non configuri questa impostazione dei criteri, solo la prima notifica di ogni applicazione verrà espansa per impostazione predefinita in centro notifiche. 
+
+          Solo Windows 10. Verrà immediatamente deprecato per Windows 11.
+
+          Non è necessario il riavvio o il riavvio del servizio per rendere effettiva l’impostazione dei criteri.
+      </string>
     </stringTable>
     <presentationTable>
       <presentation id="QuietHoursBeginTimePicker">

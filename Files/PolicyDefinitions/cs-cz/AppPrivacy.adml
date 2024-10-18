@@ -129,6 +129,21 @@ Pokud nastavení této zásady zakážete nebo nenakonfigurujete, zaměstnanci v
 
 Pokud je při použití tohoto objektu zásad skupiny na zařízení některá aplikace otevřená, zaměstnanci budou muset tuto aplikaci nebo zařízení restartovat, aby se změny zásad u aplikace uplatnily.
       </string>
+      <string id="LetAppsAccessHumanPresence_Name">Umožnit aplikacím přístup k detekci přítomnosti</string>
+      <string id="LetAppsAccessHumanPresence_Explain">Nastavení této zásady určuje, jestli aplikace pro Windows mají přístup k detekci přítomnosti.
+
+Můžete zadat výchozí nastavení pro všechny aplikace, nebo zadat identitu aplikace a určit tak nastavení pro jednotlivé aplikace. Identitu aplikace pro aplikaci získáte pomocí rutiny Get-AppPackage prostředí Windows PowerShell. Nastavení pro jednotlivé aplikace přepíše výchozí nastavení.
+
+Pokud zvolíte možnost Určuje uživatel, zaměstnanci ve vaší organizaci se můžou rozhodnout, jestli aplikace pro Windows budou mít přístup k detekci přítomnosti, a to v nabídce Nastavení &gt; Ochrana osobních údajů na zařízení.
+
+Pokud zvolíte možnost Vynutit povolení, aplikace pro Windows budou mít přístup k detekci přítomnosti a zaměstnanci ve vaší organizaci to nebudou moct změnit.
+
+Pokud zvolíte možnost Vynutit odepření, aplikace pro Windows nebudou mít přístup k detekci přítomnosti a zaměstnanci ve vaší organizaci to nebudou moct změnit.
+
+Pokud nastavení této zásady zakážete nebo nenakonfigurujete, zaměstnanci ve vaší organizaci se můžou rozhodnout, jestli aplikace pro Windows budou mít přístup k detekci přítomnosti, a to v nabídce Nastavení &gt; Ochrana osobních údajů na zařízení.
+
+Pokud je při použití tohoto objektu zásad skupiny na zařízení některá aplikace otevřená, zaměstnanci budou muset tuto aplikaci nebo zařízení restartovat, aby se změny zásad u aplikace uplatnily.
+      </string>
       <string id="LetAppsAccessLocation_Name">Umožnit aplikacím pro Windows přístup k informacím o poloze</string>
       <string id="LetAppsAccessLocation_Explain">Nastavení této zásady určuje, jestli aplikace pro Windows mají přístup k informacím o poloze.
 
@@ -440,6 +455,15 @@ Pokud je při použití tohoto objektu zásad skupiny některá aplikace na něk
         <text>Vynutit odepření těchto konkrétních aplikací (použít identity aplikací):</text>
         <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_ForceDenyTheseApps_List"/>
       </presentation>
+      <presentation id="LetAppsAccessHumanPresence">
+        <dropdownList refId="LetAppsAccessHumanPresence_Enum" noSort="true" defaultItem="0">Výchozí pro všechny aplikace:</dropdownList>
+        <text>Ponechat uživateli kontrolu na těmito konkrétními aplikacemi (použít identity aplikací):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_UserInControlOfTheseApps_List"/>
+        <text>Vynutit povolení těchto konkrétních aplikací (použít identity aplikací):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_ForceAllowTheseApps_List"/>
+        <text>Vynutit odepření těchto konkrétních aplikací (použít identity aplikací):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_ForceDenyTheseApps_List"/>
+      </presentation>
       <presentation id="LetAppsAccessLocation">
         <dropdownList refId="LetAppsAccessLocation_Enum" noSort="true" defaultItem="0">Výchozí pro všechny aplikace:</dropdownList>
         <text>Ponechat uživateli kontrolu na těmito konkrétními aplikacemi (použít identity aplikací):</text>
@@ -487,7 +511,7 @@ Pokud je při použití tohoto objektu zásad skupiny některá aplikace na něk
       </presentation>
       <presentation id="LetAppsAccessRadios">
         <dropdownList refId="LetAppsAccessRadios_Enum" noSort="true" defaultItem="0">Výchozí pro všechny aplikace:</dropdownList>
-        <text>Ponechat uživateli kontrolu na těmito konkrétními aplikacemi (použít identity aplikací):</text>
+        <text>Ponechat uživateli kontrolu nad těmito konkrétními aplikacemi (použít identity aplikací):</text>
         <multiTextBox refId="LetAppsAccessRadios_UserInControlOfTheseApps_List"/>
         <text>Vynutit povolení těchto konkrétních aplikací (použít identity aplikací):</text>
         <multiTextBox refId="LetAppsAccessRadios_ForceAllowTheseApps_List"/>
@@ -523,7 +547,7 @@ Pokud je při použití tohoto objektu zásad skupiny některá aplikace na něk
       </presentation>
       <presentation id="LetAppsAccessTrustedDevices">
         <dropdownList refId="LetAppsAccessTrustedDevices_Enum" noSort="true" defaultItem="0">Výchozí pro všechny aplikace:</dropdownList>
-        <text>Ponechat uživateli kontrolu nad těmito konkrétními aplikacemi (použít identity aplikací):</text>
+        <text>Ponechat uživateli kontrolu na těmito konkrétními aplikacemi (použít identity aplikací):</text>
         <multiTextBox refId="LetAppsAccessTrustedDevices_UserInControlOfTheseApps_List"/>
         <text>Vynutit povolení těchto konkrétních aplikací (použít identity aplikací):</text>
         <multiTextBox refId="LetAppsAccessTrustedDevices_ForceAllowTheseApps_List"/>
@@ -565,7 +589,7 @@ Pokud je při použití tohoto objektu zásad skupiny některá aplikace na něk
       </presentation>
       <presentation id="LetAppsAccessBackgroundSpatialPerception">
         <dropdownList refId="LetAppsAccessBackgroundSpatialPerception_Enum" noSort="true" defaultItem="0">Výchozí pro všechny aplikace:</dropdownList>
-        <text>Ponechat uživateli kontrolu na těmito konkrétními aplikacemi (použít identity aplikací):</text>
+        <text>Ponechat uživateli kontrolu nad těmito konkrétními aplikacemi (použít identity aplikací):</text>
         <multiTextBox refId="LetAppsAccessBackgroundSpatialPerception_UserInControlOfTheseApps_List"/>
         <text>Vynutit povolení těchto konkrétních aplikací (použít identity aplikací):</text>
         <multiTextBox refId="LetAppsAccessBackgroundSpatialPerception_ForceAllowTheseApps_List"/>

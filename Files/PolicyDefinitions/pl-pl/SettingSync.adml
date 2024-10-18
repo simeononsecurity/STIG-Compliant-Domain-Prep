@@ -131,6 +131,19 @@ Użyj opcji „Zezwalaj użytkownikom na włączanie synchronizacji ułatwień d
 
 Jeśli to ustawienie nie zostanie ustawione lub wyłączone, synchronizacja grupy „ułatwienia dostępu” jest domyślnie włączona i może być konfigurowana przez użytkownika.
       </string>
+
+      <!-- Language -->
+      <string id="DisableLanguageSettingSync">Nie synchronizuj ustawień preferencji językowych</string>
+      <string id="DisableLanguageSettingSync_Help">
+        Zapobiegaj synchronizowaniu grupy "preferencje językowe" z tym komputerem i z tego komputera. Spowoduje to wyłączenie i dezaktywację grupy "preferencje językowe"” na stronie ustawień "Kopia zapasowa systemu Windows" w ustawieniach komputera.
+
+Jeśli to ustawienie zasad zostanie włączone, grupa "preferencje językowe" nie zostanie zsynchronizowana.
+
+Użyj opcji Zezwalaj użytkownikom na włączanie synchronizacji "preferencji językowych", aby synchronizacja była domyślnie wyłączona, ale nie została dezaktywowana.
+
+Jeśli to ustawienie nie zostanie ustawione lub wyłączone, synchronizacja grupy "preferencje językowe" jest domyślnie włączona i może być konfigurowana przez użytkownika.
+      </string>
+
     </stringTable>
     <presentationTable>
 
@@ -182,6 +195,11 @@ Jeśli to ustawienie nie zostanie ustawione lub wyłączone, synchronizacja grup
       <!-- AccessibilitySync -->
       <presentation id="DisableAccessibilitySettingSyncUserOverride">
         <checkBox refId="CheckBox_UserOverride">Zezwalaj użytkownikom na włączanie synchronizacji „ułatwień dostępu”.</checkBox>
+      </presentation>
+
+      <!-- LanguageSync -->
+      <presentation id="DisableLanguageSettingSyncUserOverride">
+        <checkBox refId="CheckBox_UserOverride">Zezwalaj użytkownikom na włączanie synchronizacji „preferencji językowych”.</checkBox>
       </presentation>
 
     </presentationTable>

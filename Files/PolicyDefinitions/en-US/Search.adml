@@ -272,6 +272,8 @@ If you disable or do not configure this policy setting, users will get search su
 If you enable or don't configure this setting, Cortana will be allowed on the device. If you disable this setting, Cortana will be turned off. 
  
 When Cortana is off, users will still be able to use search to find things on the device.</string>
+      <string id="EnableDynamicContentInWSB">Allow search highlights</string>
+      <string id="ExplainEnableDynamicContentInWSB">Disabling this setting turns off search highlights in the start menu search box and in search home. Enabling or not configuring this setting turns on search highlights in the start menu search box and in search home.</string>
       <string id="AllowCortanaAboveLock">Allow Cortana above lock screen</string>
       <string id="ExplainAllowCortanaAboveLock">This policy setting determines whether or not the user can interact with Cortana using speech while the system is locked.
 
@@ -291,6 +293,27 @@ If this is enabled, search and Cortana can access location information.</string>
       <string id="AllowCortanainAADEnabled">Enable Cortana Page in AAD</string>
       <string id="AllowCloudSearchEnabled">Enable Cloud Search</string>
       <string id="AllowCloudSearchControlledByUser">User Selected</string>
+      <string id="DisableSearch_DisplayName">Fully disable Search UI</string>
+      <string id="DisableSearch_ExplainText">If you enable this policy, the Search UI will be disabled along with all its entry points, such as keyboard shortcuts, touchpad gestures, and type-to-search in the Start menu. The Start menu's search box and Search Taskbar button will also be hidden.
+
+If you disable or don't configure this policy setting, the user will be able to open the Search UI and its different entry points will be shown.</string>
+      <string id="ConfigureSearchOnTaskbarMode">Configures search on the taskbar</string>
+      <string id="ConfigureSearchOnTaskbarMode_Help">This policy setting allows you to configure search on the taskbar.
+
+If you enable this policy setting and set it to hide, search on taskbar will be hidden by default. Users cannot change it in Settings.
+
+If you enable this policy setting and set it to search icon only, the search icon will be displayed on the taskbar by default. Users cannot change it in Settings.
+
+If you enable this policy setting and set it to search icon and label, the search icon and label will be displayed on the taskbar by default. Users cannot change it in Settings.
+
+If you enable this policy setting and set it to search box, the search box will be displayed on the taskbar by default. Users cannot change it in Settings.
+
+If you disable or do not configure this policy setting, search on taskbar will be configured according to the defaults for your Windows edition. Users will be able to change search on taskbar in Settings.
+      </string>
+      <string id="SearchOnTaskbarModeEnum_Hidden">Hide</string>
+      <string id="SearchOnTaskbarModeEnum_SearchIconOnly">Search icon only</string>
+      <string id="SearchOnTaskbarModeEnum_SearchIconAndLabel">Search icon and label</string>
+      <string id="SearchOnTaskbarModeEnum_SearchBox">Search box</string>
     </stringTable>
     <presentationTable>
       <presentation id="RichAttachmentPreviews">
@@ -379,6 +402,9 @@ If this is enabled, search and Cortana can access location information.</string>
       </presentation>
       <presentation id="AllowCortanaAAD">
         <dropdownList refId="AllowCortanaAAD_Dropdown" noSort="true" defaultItem="0">Cortana in AAD Setting</dropdownList>
+      </presentation>
+      <presentation id="ConfigureSearchOnTaskbarMode">
+        <dropdownList refId="ConfigureSearchOnTaskbarMode_Dropdown" noSort="true" defaultItem="0">Search on the taskbar</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2015 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>buraya görünen adı girin</displayName>
+  <description>buraya açıklamayı girin</description>
+  <resources>
+    <stringTable>
+      <string id="AccountNotifications">Hesap Bildirimleri</string>
+      <string id="DisableAccountNotifications">Başlat'ta hesap bildirimlerini kapatın</string>
+      <string id="DisableAccountNotificationsExplain">
+            Bu ilke, Windows'un Başlat'ta (kullanıcı kutucuğu) Microsoft hesabına (MSA) ve yerel kullanıcılara bildirimler göstermesini engellemenizi sağlar.
+
+            Bildirimler, kullanıcıların şunları yapmasını içerir: yeniden kimlik doğrulama, cihazlarını yedekleme, bulut depolama kotalarını yönetmenin yanı sıra Microsoft 365 veya XBOX aboneliklerini yönetme.
+
+            Bu ilke ayarını etkinleştirirseniz Windows, yerel ve MSA kullanıcıları için hesapla ilgili bildirimleri Başlat'ın kullanıcı kutucuğuna göndermez.
+
+            Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız Windows, yerel ve MSA kullanıcıları için hesapla ilgili bildirimleri Başlat'ın kullanıcı kutucuğuna gönder.
+
+            Bu ilke ayarının etkili olması için yeniden başlatma veya hizmetin yeniden başlatılması gerekmez.
+      </string>
+    </stringTable>
+  </resources>
+</policyDefinitionResources>

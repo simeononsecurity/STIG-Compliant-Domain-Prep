@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2015 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>indtast det viste navn her</displayName>
+  <description>indtast beskrivelsen her</description>
+  <resources>
+    <stringTable>
+      <string id="AccountNotifications">Kontomeddelelser</string>
+      <string id="DisableAccountNotifications">Slå kontomeddelelser fra i Start</string>
+      <string id="DisableAccountNotificationsExplain">
+            Denne politik giver dig mulighed for at forhindre, at Windows viser meddelelser til Microsoft-konto (MSA) og lokale brugere i Start (brugerfelt).
+
+Meddelelser omfatter hentning af brugere til: godkend igen; sikkerhedskopiér deres enhed; administrere kvoter for skylager samt administrere deres Microsoft 365- eller XBOX-abonnement.
+
+Hvis du aktiverer denne politikindstilling, sender Windows ikke kontorelaterede meddelelser for lokale brugere og MSA-brugere til brugerfeltet i Start.
+
+Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, sender Windows kontorelaterede meddelelser til lokale brugere og MSA-brugere til brugerfeltet i Start.
+
+Der kræves ingen genstart af computeren eller tjenesten, for at denne politikindstilling kan træde i kraft.
+      </string>
+    </stringTable>
+  </resources>
+</policyDefinitionResources>

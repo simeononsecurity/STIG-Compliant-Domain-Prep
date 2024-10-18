@@ -21,6 +21,7 @@
       <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">Windows Server 2016 ~ Windows Server 2022 또는 Windows 10​</string>
       <string id="WU_SUPPORTED_Windows_Server_2019_Windows_10_0_1809">Windows Server 2019 또는 Windows 10 버전 1809 이상​</string>
       <string id="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004">Windows Server 2022 이상 또는 Windows 10 버전 2004​</string>
+      <string id="WU_SUPPORTED_WinServer2025_Win1021H2_Win1122H2">Windows Server 2025, Windows 10 버전 21H2 또는 Windows 11 버전 22H2 이상</string>
       <string id="AUDontShowUasHelp">이 정책 설정을 사용하여 Windows 종료 대화 상자에 '업데이트 설치 및 시스템 종료' 옵션을 표시할지 여부를 관리할 수 있습니다.
 
 이 정책 설정을 사용하면 사용자가 시작 메뉴에서 시스템 종료 옵션을 선택할 때 설치 가능한 업데이트가 있더라도 Windows 종료 대화 상자에 '업데이트 설치 및 시스템 종료' 옵션이 나타나지 않습니다.
@@ -628,22 +629,39 @@ aka.ms/WindowsTargetVersioninfo
       <string id="DefaultNotification">0(기본값) – 기본 OS Windows 업데이트 알림</string>
       <string id="ExcludingRebootWarnings">1 – 다시 시작 경고를 제외한 모든 알림 사용 안 함</string>
       <string id="IncludingRebootWarnings">2 – 다시 시작 경고를 포함한 모든 알림 사용 중지</string>
-      <string id="ComplianceDeadline_Title">자동 업데이트 및 다시 시작 기한 지정</string>
-      <string id="ComplianceDeadline_Help">이 정책을 사용하면 품질 및 기능 업데이트가 장치에 자동으로 설치되기 전의 일수와 필수 다시 시작이 자동으로 발생한 후 유예 기간을 지정할 수 있습니다.
+      <string id="ComplianceDeadlineForFU_Title">Specify deadline for automatic updates and restarts for feature update</string>
+      <string id="ComplianceDeadlineForFU_Help">This policy lets you specify the number of days before feature updates are installed on devices automatically, and a grace period after which required restarts occur automatically.
 
-기능 업데이트와 품질 업데이트에 대한 기한을 설정하여 규정 준수 목표를 준수하도록 설정합니다. 업데이트가 제공되는 즉시 다운로드 후 설치되며 사용 시간 외에 자동으로 다시 시작이 시도됩니다. 마감일이 지나면 사용 시간에 관계없이 다시 시작이 발생하며 사용자가 일정을 조정할 수 없게 됩니다. 마감일을 0일로 설정하면 업데이트가 제공될 때 즉시 설치되지만 장치 가용성과 네트워크 연결로 인해 당일에 마치지 못할 수도 있습니다.
+Set deadlines for feature updates and quality updates to meet your compliance goals. Updates will be downloaded and installed as soon as they are offered and automatic restarts will be attempted outside of active hours. Once the deadline has passed, restarts will occur regardless of active hours, and users will not be able to reschedule. If the deadline is set to 0 days, the update will be installed immediately upon offering, but might not finish within the day due to device availability and network connectivity.
 
-기능 업데이트 및 품질 업데이트의 유예 기간을 설정하여 업데이트가 설치된 후 사용자가 다시 시작을 관리할 수 있는 최소 시간을 보장해 주세요. 유예 기간 동안 사용자가 다시 시작을 예약할 수 있으며, 사용자가 다시 시작 일정을 선택하지 않으면 Windows가 여전히 사용 시간 외에 자동으로 다시 시작할 수 있습니다. 사용자가 이미 마감일 구성에 따라 다시 시작을 관리할 유예 기간으로 설정된 일수도보다 더 많은 기간이 있는 경우 유예 기간이 적용되지 않을 수 있습니다.
+Set a grace period for feature updates to guarantee users a minimum time to manage their restarts once updates are installed. Users will be able to schedule restarts during the grace period and Windows can still automatically restart outside of active hours if users choose not to schedule restarts. The grace period might not take effect if users already have more than the number of days set as grace period to manage their restart, based on deadline configurations.
 
-마감일과 유예 기간이 만료될 때까지 다시 시작을 지연하도록 장치를 설정할 수 있습니다.
+You can set the device to delay restarting until both the deadline and grace period have expired.
 
-이 정책을 사용하지 않거나 구성하지 않으면 장치는 업데이트를 가져오고 기본 일정에 따라 다시 시작합니다.
+If you disable or do not configure this policy, devices will get updates and will restart according to the default schedule.
 
-이 정책은 다음 정책을 우선합니다.
-1. 업데이트 설치를 위해 자동으로 다시 시작하기 전 마감일 지정
-2. 업데이트에 대해 개입형 다시 시작 전환 및 알림 일정 지정
-3. 예약된 시간에 항상 자동으로 다시 시작
-4. 자동 업데이트 구성
+This policy will override the following policies:
+1.  Specify deadline before auto restart for update installation
+2.  Specify Engaged restart transition and notification schedule for updates
+3.  Always automatically restart at the scheduled time
+4.  Configure Automatic Updates
+      </string>
+      <string id="ComplianceDeadlineForQU_Title">Specify deadline for automatic updates and restarts for quality update</string>
+      <string id="ComplianceDeadlineForQU_Help">This policy lets you specify the number of days before quality updates are installed on devices automatically, and a grace period after which required restarts occur automatically.
+
+Set deadlines for quality updates to meet your compliance goals. Updates will be downloaded and installed as soon as they are offered and automatic restarts will be attempted outside of active hours. Once the deadline has passed, restarts will occur regardless of active hours, and users will not be able to reschedule. If the deadline is set to 0 days, the update will be installed immediately upon offering, but might not finish within the day due to device availability and network connectivity.
+
+Set a grace period for quality updates to guarantee users a minimum time to manage their restarts once updates are installed. Users will be able to schedule restarts during the grace period and Windows can still automatically restart outside of active hours if users choose not to schedule restarts. The grace period might not take effect if users already have more than the number of days set as grace period to manage their restart, based on deadline configurations.
+
+You can set the device to delay restarting until both the deadline and grace period have expired.
+
+If you disable or do not configure this policy, devices will get updates and will restart according to the default schedule.
+
+This policy will override the following policies:
+1.  Specify deadline before auto restart for update installation
+2.  Specify Engaged restart transition and notification schedule for updates
+3.  Always automatically restart at the scheduled time
+4.  Configure Automatic Updates
       </string>
       <string id="ComplianceDeadlineDay0">0</string>
       <string id="ComplianceDeadlineDay1">1</string>
@@ -676,6 +694,31 @@ aka.ms/WindowsTargetVersioninfo
       <string id="ComplianceDeadlineDay28">28</string>
       <string id="ComplianceDeadlineDay29">29</string>
       <string id="ComplianceDeadlineDay30">30</string>
+
+      <string id="AllowTemporaryEnterpriseFeatureControl_Title">서비싱을 통해 도입되는 기본적으로 비활성화 상태인 기능 사용</string>
+      <string id="AllowTemporaryEnterpriseFeatureControl_Help">서비스를 통해 도입되는 기능(연간 기능 업데이트 범위 외)은 Windows 업데이트가 관리되는 장치에서 기본적으로 꺼져 있습니다*.
+
+이 정책을 "사용"으로 구성하면 설치된 최신 월간 품질 업데이트에서 제공되는 모든 기능이 켜집니다.
+
+이 정책을 "구성하지 않음" 또는 "사용 안 함"으로 설정하면 월간 품질 업데이트(서비스)를 통해 제공되는 기능이 포함된 기능 업데이트를 설치할 때까지 이러한 기능을 사용할 수 없습니다.
+
+*Windows 업데이트 관리형 장치는 비즈니스용 Windows 업데이트를 사용하는 클라우드를 통해서 또는 WSUS(Windows Server Update Services)를 사용하는 온-프레미스를 통해서 정책으로 관리되는 Windows 업데이트가 있는 장치입니다.
+      </string>
+      <string id="AllowOptionalContent_Title">선택적 업데이트 활성화</string>
+      <string id="AllowOptionalContent_Help">이 정책을 사용하면 디바이스에서 선택적 업데이트(점진적 기능 출시 포함 (CFRs) - aka.ms/AllowOptionalContent 에방문하여 자세히 알아보세요).
+
+정책이 구성된 경우
+
+• "자동으로 선택적 업데이트 수신(CFR 포함)"을 선택하면 디바이스는 구성된 품질 업데이트 지연에 따라 최신 선택적 업데이트를 자동으로 받습니다. 여기에는 선택적 누적 업데이트 및 CFR(점진적 기능 출시)이 포함됩니다.
+
+• "선택적 업데이트 자동 수신"을 선택하면 디바이스는 품질 업데이트 지연에 따라 선택적 누적 업데이트만 자동으로 받습니다.
+
+• "사용자가 수신할 업데이트를 선택할 수 있음"을 선택하면 사용자가 설정 &gt; Windows 업데이트 &gt; 고급 옵션 &gt; 선택적 업데이트를 방문하여 가져올 선택적 업데이트를 선택할 수 있습니다. 또한 사용자는 선택적 업데이트 및 점진적 기능 출시를 자동으로 수신하도록 "사용 가능한 최신 업데이트 가져오기" 토글을 사용하도록 설정할 수도 있습니다.
+      </string>
+      <string id="DonotReceiveOptionalContent">선택적 업데이트를 받지 않음</string>
+      <string id="ReceiveOptionalContentWithAutoApproval">선택적 업데이트(CFR 포함) 자동 수신</string>
+      <string id="ReceiveOptionalLCUWithAutoApproval">선택적 업데이트 자동 수신</string>
+      <string id="ReceiveOptionalContentNeedUserApproval">사용자는 수신할 선택적 업데이트를 선택할 수 있습니다.</string>
     </stringTable>
 
     <presentationTable>
@@ -817,16 +860,20 @@ aka.ms/WindowsTargetVersioninfo
         <text></text>
         <checkBox refId="NoUpdateNotificationsDuringActiveHours" defaultChecked="false">활성 시간 동안에만 적용</checkBox>
       </presentation>
-      <presentation id="ComplianceDeadline_Title">
-        <text>품질 업데이트</text>
+       <presentation id="ComplianceDeadlineForFU_Title">
+        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="2">기한(일):</dropdownList>
+        <dropdownList refId="ConfigureDeadlineGracePeriodForFeatureUpdates" noSort="true" defaultItem="7">유예 기간(일):</dropdownList>
+        <text></text>
+        <checkBox refId="ConfigureDeadlineNoAutoRebootForFeatureUpdates" defaultChecked="false">Don't auto-restart until end of grace period</checkBox>
+      </presentation>
+      <presentation id="ComplianceDeadlineForQU_Title">
         <dropdownList refId="ConfigureDeadlineForQualityUpdates" noSort="true" defaultItem="7">기한(일):</dropdownList>
         <dropdownList refId="ConfigureDeadlineGracePeriod" noSort="true" defaultItem="2">유예 기간(일):</dropdownList>
         <text></text>
-        <text>기능 업데이트</text>
-        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="7">기한(일):</dropdownList>
-        <dropdownList refId="ConfigureDeadlineGracePeriodForFeatureUpdates" noSort="true" defaultItem="2">유예 기간(일):</dropdownList>
-        <text></text>
-        <checkBox refId="ConfigureDeadlineNoAutoReboot" defaultChecked="false">유예 기간이 끝날 때까지 자동으로 다시 시작 안 함</checkBox>
+        <checkBox refId="ConfigureDeadlineNoAutoRebootForQualityUpdates" defaultChecked="false">Don't auto-restart until end of grace period</checkBox>
+      </presentation>
+      <presentation id="AllowOptionalContent_Title">
+        <dropdownList refId="AllowOptionalContent" noSort="true" defaultItem="0">사용자가 선택적 업데이트를 받는 방법을 선택합니다.</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

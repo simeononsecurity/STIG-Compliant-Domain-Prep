@@ -1,0 +1,261 @@
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName>
+  </displayName>
+  <description>
+  </description>
+  <resources>
+    <stringTable>
+      <string id="LAPS">LAPS</string>
+      <string id="LAPS_BackupDirectory">Nakonfigurovat adresář pro zálohování hesel</string>
+      <string id="LAPS_BackupDirectory_Help">Pomocí tohoto nastavení můžete nakonfigurovat, do kterého adresáře se heslo místního účtu správce zálohuje.
+
+Povolená nastavení:
+
+0=Zakázáno (heslo nebude zálohováno)
+
+1=Backup heslo pro Azure Active Directory
+
+2=Backup heslo ke službě Active Directory
+
+Pokud není toto nastavení zadáno, bude výchozí hodnota 0 (zakázáno).
+
+Pokud je toto nastavení nakonfigurované na 1 a spravované zařízení není připojené k Azure Active Directory, heslo místního správce se nespravuje.
+
+Pokud je toto nastavení nakonfigurované na 2 a spravované zařízení není připojené ke službě Active Directory, heslo místního správce se nespravuje.
+
+Pokud je toto nastavení zakázáno nebo není nakonfigurováno, heslo místního správce nebude spravováno.
+
+Další informace najdete https://go.microsoft.com/fwlink/?linkid=2188435.
+      </string>
+      <string id="LAPS_BackupDirectoryDisabled">Zakázáno</string>
+      <string id="LAPS_BackupDirectoryAzure">Azure Active Directory</string>
+      <string id="LAPS_BackupDirectoryAD">Služba Active Directory</string>
+      <string id="LAPS_PasswordSettings">Nastavení hesla</string>
+      <string id="LAPS_PasswordSettings_Help">Konfiguruje parametry hesla.
+
+Složitost hesla: které znaky se používají při generování nového hesla
+  Výchozí hodnota: Velká písmena + malá písmena + číslice + speciální znaky
+
+Délka hesla
+  Minimálně 8 znaků
+  Maximálně 64 znaků
+  Výchozí hodnota: 14 znaků
+
+Stáří hesla ve dnech
+  Minimum: 1 den (7 dní, když je adresář pro zálohování nakonfigurovaný tak, aby se Azure AD)
+  Maximálně: 365 dní
+  Výchozí hodnota: 30 dní
+
+Délka hesla
+  Minimálně 3 slova
+  Maximálně: 10 slov
+  Výchozí hodnota: 6 slov
+
+Další informace najdete https://go.microsoft.com/fwlink/?linkid=2188435.
+
+Seznam hesel převzatý z "Deep Dive: NEW Wordlists FOR RANDOM for Random Passrases" službou Electronic Hranice Foundation a používá se v rámci licence CC-BY-3.0 Attribution. Další informace najdete https://go.microsoft.com/fwlink/?linkid=2255471.
+      </string>
+      <string id="LAPS_PwdComplexity_Item_1">Velká písmena</string>
+      <string id="LAPS_PwdComplexity_Item_2">Velká písmena + malá písmena</string>
+      <string id="LAPS_PwdComplexity_Item_3">Velká písmena + malá písmena + číslice</string>
+      <string id="LAPS_PwdComplexity_Item_4">Velká písmena + malá písmena + číslice + speciální znaky</string>
+      <string id="LAPS_PwdComplexity_Item_5">Velká písmena + malá písmena + číslice + speciální znaky (lepší čitelnost)</string>
+      <string id="LAPS_PwdComplexity_Item_6">Heslo (dlouhá slova)</string>
+      <string id="LAPS_PwdComplexity_Item_7">Heslo (krátká slova)</string>
+      <string id="LAPS_PwdComplexity_Item_8">Heslo (krátká slova s jedinečnými předponami)</string>
+      <string id="LAPS_AdminName">Název účtu správce, který se má spravovat</string>
+      <string id="LAPS_AdminName_Help">Tato zásada určuje vlastní název účtu správce, u něhož se má spravovat heslo.
+
+Pokud je tato zásada povolena, služba LAPS bude spravovat heslo pro místní účet s tímto názvem.
+
+Pokud je tato zásada zakázána nebo není nakonfigurována, bude služba LAPS spravovat heslo pro účet správce, který je známý.
+
+NEPOVOLUJTE tuto zásadu pro správu předdefinovaného účtu správce, který se automaticky rozpoznává podle známého identifikátoru SID a nezávisí na názvu účtu.
+
+Další informace najdete na stránce https://go.microsoft.com/fwlink/?linkid=2188435.
+      </string>
+      <string id="LAPS_DontAllowPwdExpirationBehindPolicy">Nepovolit prodloužení platnosti hesla na dobu delší, než vyžaduje zásada</string>
+      <string id="LAPS_DontAllowPwdExpirationBehindPolicy_Help">Pokud je toto nastavení povoleno nebo není nakonfigurováno, není povolena plánovaná doba vypršení platnosti hesla delší, než je stáří hesla určené zásadou Nastavení hesla. Když se zjistí vypršení platnosti, heslo se okamžitě změní a vypršení platnosti hesla se nastaví podle zásad.
+
+Pokud je toto nastavení zakázáno, může být doba vypršení platnosti hesla delší, než vyžaduje zásada Nastavení hesel.
+
+Další informace najdete https://go.microsoft.com/fwlink/?linkid=2188435.
+      </string>
+      <string id="LAPS_ADPasswordEncryptionEnabled">Povolit šifrování hesla</string>
+      <string id="LAPS_ADPasswordEncryptionEnabled_Help">Pokud toto nastavení povolíte, spravované heslo se před odesláním do služby Active Directory zašifruje.
+
+Povolení tohoto nastavení nemá žádný vliv, pokud 1) heslo nebylo nakonfigurováno na zálohování do služby Active Directory a 2) úroveň funkčnosti domény služby Active Directory není Windows Server 2016 nebo vyšší.
+
+Pokud je toto nastavení povoleno a úroveň funkčnosti domény je Windows Server 2016 nebo vyšší, heslo spravovaného účtu se zašifruje.
+
+Pokud je toto nastavení povoleno, ale úroveň funkčnosti domény je nižší než Windows Server 2016, heslo spravovaného účtu se do adresáře nezazálohuje.
+
+Pokud je toto nastavení zakázáno, heslo spravovaného účtu se nezašifruje.
+
+Toto nastavení se ve výchozím nastavení povolí, pokud není nakonfigurované.
+
+Další informace najdete na stránce https://go.microsoft.com/fwlink/?linkid=2188435.
+      </string>
+      <string id="LAPS_ADPasswordEncryptionPrincipal">Nakonfigurovat autorizované dešifrovače hesel</string>
+      <string id="LAPS_ADPasswordEncryptionPrincipal_Help">Toto nastavení nakonfigurujte tak, aby určovalo konkrétního uživatele nebo skupinu, kteří mají oprávnění k dešifrování šifrovaných hesel.
+
+Konfigurace tohoto nastavení nemá žádný vliv, pokud není povolené šifrování hesla.
+
+Pokud je toto nastavení povolené, budou šifrovaná hesla dešifrovatelná zadanou skupinou.
+
+Pokud je toto nastavení zakázané nebo není nakonfigurované, bude zašifrovaná hesla dešifrovatelná skupinou Domain Admins (správci domény).
+
+Toto nastavení musí být nakonfigurováno s názvem kvalifikovaným pro doménu skupiny nebo uživatele nebo identifikátorem SID ve formátu řetězce. Mezi platné příklady patří:
+
+contoso\LAPSAdmins
+
+lapsadmins@contoso.com
+
+S-1-5-21-2127521184-1604012920-1887927527-35197
+
+Neuzavírejte název uživatele\název skupiny ani identifikátor SID do uvozovek ani závorek.
+
+Zadaného uživatele nebo skupinu musí spravované zařízení přeložit, jinak se hesla nebudou zálohovat.
+
+POZNÁMKA: Toto nastavení se ignoruje, pokud jsou hesla účtů režimu opravy adresářových služeb zálohována na řadiči domény. V tomto scénáři bude toto nastavení vždy ve výchozím nastavení nastaveno na skupinu Domain Admins (správci domén) domény řadiče domény.
+
+Další informace najdete na https://go.microsoft.com/fwlink/?linkid=2188435.
+      </string>
+      <string id="LAPS_ADEncryptedPasswordHistorySize">Konfigurovat velikost historie šifrovaných hesel</string>
+      <string id="LAPS_ADEncryptedPasswordHistorySize_Help">Pomocí tohoto nastavení můžete nakonfigurovat, kolik předchozích zašifrovaných hesel bude uloženo ve službě Active Directory.
+
+Konfigurace tohoto nastavení nemá žádný vliv, pokud 1) není nakonfigurováno zálohování hesel do služby Active Directory a 2) nebylo povoleno šifrování hesel.
+
+Pokud je toto nastavení povoleno, bude ve službě Active Directory uložen zadaný počet starších hesel.
+
+Pokud je toto nastavení zakázáno nebo není nakonfigurováno, nebudou ve službě Active Directory uložena žádná starší hesla.
+
+Toto nastavení má minimální povolenou hodnotu 0 hesel.
+
+Toto nastavení má maximální povolenou hodnotu 12 hesel.
+
+Další informace najdete na stránce https://go.microsoft.com/fwlink/?linkid=2188435.
+      </string>
+      <string id="LAPS_ADBackupDSRMPassword">Povolit zálohování hesel pro účty DSRM</string>
+      <string id="LAPS_ADBackupDSRMPassword_Help">Když toto nastavení povolíte, heslo účtu správce DSRM se bude spravovat a zálohovat přes službu Active Directory.
+
+Povolení tohoto nastavení nemá žádný vliv, pokud spravované zařízení není řadič domény a zároveň není povoleno šifrování hesel.
+
+Pokud je toto nastavení povolené, heslo pro účet DSRM na řadiči domény se bude zálohovat do služby Active Directory.
+
+ 
+Pokud je toto nastavení zakázané nebo není nakonfigurované, heslo pro účet DSRM na řadiči domény nebude zálohováno do služby Active Directory.
+
+Další informace najdete na https://go.microsoft.com/fwlink/?linkid=2188435.
+      </string>
+      <string id="LAPS_PostAuthenticationActions">Akce po ověření</string>
+      <string id="LAPS_PostAuthenticationActions_Help">Tato zásada konfiguruje akce po ověření, které se spustí po zjištění ověření spravovaným účtem.
+
+Poskytnutá lhůta: Určuje dobu (v hodinách), po kterou se má čekat po ověření, než se spustí zadané akce po ověření.
+
+Pokud je toto nastavení povolené a větší než nula, zadané akce po ověření se spustí po vypršení poskytnuté lhůty.
+
+Pokud je toto nastavení zakázané nebo není nakonfigurované, zadané akce po ověření se spustí po výchozí 24hodinové poskytnuté lhůtě.
+
+Pokud je toto nastavení rovno nule, nebudou spuštěny žádné akce po ověření.
+
+Akce: Určuje akce, které se mají provést po vypršení poskytnuté lhůty.
+
+Resetovat heslo: Po vypršení poskytnuté lhůty se resetuje heslo spravovaného účtu.
+
+Resetovat heslo a odhlásit spravovaný účet:Ppo vypršení poskytnuté lhůty se resetuje heslo spravovaného účtu a všechny relace interaktivního přihlášení, které používají spravovaný účet, se odhlásí.
+
+Resetovat heslo a restartovat počítač: Po vypršení poskytnuté lhůty se resetuje heslo spravovaného účtu a spravované zařízení se restartuje.
+
+Resetovat heslo, odhlásit spravovaný účet a ukončit všechny zbývající procesy: Po vypršení poskytnuté lhůty se resetuje heslo spravovaného účtu, všechny relace interaktivního přihlášení, které používají spravovaný účet, se odhlásí, a všechny zbývající procesy se ukončí.
+
+(POZNÁMKA: Po ukončení interaktivních přihlašovacích relací mohou existovat další ověřené relace používané spravovaným účtem. Jediný robustní způsob, jak zajistit, že nedochází k používání předchozího hesla, je restartovat zařízení.)
+
+Pokud je toto nastavení zakázáno nebo není nakonfigurováno, akce po ověření budou ve výchozím nastavení nastaveny na možnost „Resetovat heslo a odhlásit spravovaný účet“.
+
+Poznámka: Účet DSRM na řadičích domény nelze nakonfigurovat pro akce po ověření. Tato zásada nemá žádný vliv na řadiče domény a bude ignorována i v případě, že je nakonfigurována pro řadič domény.
+
+Další informace najdete https://go.microsoft.com/fwlink/?linkid=2188435.
+      </string>
+      <string id="PostAuthenticationActions_Item0">Zakázáno, nepodnikat žádné akce</string>
+      <string id="PostAuthenticationActions_Item1">Resetovat heslo</string>
+      <string id="PostAuthenticationActions_Item3">Resetovat heslo a odhlásit se ze spravovaného účtu</string>
+      <string id="PostAuthenticationActions_Item5">Resetovat heslo a restartovat zařízení</string>
+      <string id="PostAuthenticationActions_Item11">Resetování hesla, odhlášení spravovaného účtu a ukončení všech zbývajících procesů</string>
+      <string id="LAPS_AutomaticAccountManagementPolicy">Konfigurovat automatickou správu účtů</string>
+      <string id="LAPS_AutomaticAccountManagementPolicy_Help">Tato zásada konfiguruje možnosti zásad automatické správy účtů.
+
+Zadejte cílový účet, který chcete spravovat: Určuje, jestli se má spravovat předdefinovaný účet správce nebo vlastní účet.
+
+Automatický název účtu (nebo předpona názvu): Určuje název nebo předponu názvu, která se má použít pro spravovaný účet.
+
+Pokud je toto nastavení zásad nakonfigurované, použije ho Windows LAPS jako název účtu nebo předponu názvu cílového účtu.
+
+Pokud toto nastavení zásad není nakonfigurované, použije Windows LAPS jako název účtu nebo předponu názvu „WLapsAdmin“.
+
+Poznámka: Tento název se při konfiguraci randomizace názvů účtů považuje za předponu. Další informace najdete v komentářích níže.
+
+Povolit spravovaný účet: Určuje, jestli se má spravovaný účet povolit, nebo ne.
+
+Pokud je toto nastavení zásad nakonfigurované, Windows LAPS povolí zadaný spravovaný účet.
+
+Pokud toto nastavení zásad není nakonfigurované, Windows LAPS zakáže zadaný spravovaný účet.
+
+Poznámka: Windows LAPS bude pravidelně udržovat a střídat heslo spravovaného účtu bez ohledu na to, jestli je účet veden ve stavu povoleno\zakázáno.
+
+Náhodně zvolit název spravovaného účtu: Určuje, jestli má být název spravovaného účtu randomizován pomocí náhodné číselné přípony.
+
+Pokud je toto nastavení zásad nakonfigurované, Windows LAPS přidá ke spravovanému automatickému názvu účtu osmimístnou náhodnou číselnou příponu a pokaždé, když se heslo vystřídá, znovu náhodně zadá název spravovaného účtu.
+
+Pokud toto nastavení zásad není nakonfigurované, použije Windows LAPS spravovaný automatický název účtu podle konfigurace.
+
+Pokud je nakonfigurovaná předpona spravovaného automatického názvu účtu, použije Windows LAPS až prvních dvanáct (12) znaků tohoto názvu jako předponu náhodného názvu. Pokud spravovaný automatický název účtu není nakonfigurován, použije Windows LAPS jako předponu názvu „WLapsAdmin“.
+
+Poznámka: Účet režimu obnovení adresářové služby na řadičích domény nelze nakonfigurovat pro automatickou správu účtů. Tyto zásady nemají žádný vliv na řadiče domény a budou ignorovány i v případě, že jsou nakonfigurovány pro řadič domény.
+
+Další informace najdete na https://go.microsoft.com/fwlink/?linkid=2188435.
+      </string>
+      <string id="AutomaticAccountManagementTarget_Item0">Spravovat předdefinovaný účet správce</string>
+      <string id="AutomaticAccountManagementTarget_Item1">Spravovat vlastní účet správce</string>
+      <string id="AutomaticAccountName_Help">Zadejte název účtu nebo předponu názvu</string>
+      <string id="AutomaticAccountNameRandomization_Help">Určuje, zda má být název automatického účtu náhodný.</string>
+      <string id="SUPPORTED_Windows10">Minimálně Microsoft Windows 10 nebo novější</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="LAPS_BackupDirectory">
+        <dropdownList refId="LAPS_BackupDirectory" defaultItem="1">Záložní adresář</dropdownList>
+      </presentation>
+      <presentation id="LAPS_PasswordSettings">
+        <dropdownList refId="LAPS_PasswordComplexity" defaultItem="3">Složitost hesla</dropdownList>
+        <decimalTextBox refId="LAPS_PasswordLength" defaultValue="14">Délka hesla</decimalTextBox>
+        <decimalTextBox refId="LAPS_PasswordAgeDays" defaultValue="30">Stáří hesla (dny)</decimalTextBox>
+        <decimalTextBox refId="LAPS_PassphraseLength" defaultValue="6">Délka hesla (slova)</decimalTextBox>
+      </presentation>
+      <presentation id="LAPS_AdminName">
+        <textBox refId="TEXT_AdminAccountName">
+          <label>Název účtu správce</label>
+        </textBox>
+      </presentation>
+      <presentation id="LAPS_ADPasswordEncryptionPrincipal">
+        <textBox refId="TEXT_ADPasswordEncryptionPrincipal">
+          <label>Autorizovaný dešifrovač hesel</label>
+        </textBox>
+      </presentation>
+      <presentation id="LAPS_ADEncryptedPasswordHistorySize">
+        <decimalTextBox refId="LAPS_ADEncryptedPasswordHistorySize_INT" defaultValue="0">Velikost historie šifrovaných hesel</decimalTextBox>
+      </presentation>
+      <presentation id="LAPS_PostAuthenticationActions">
+        <decimalTextBox refId="LAPS_PostAuthenticationResetDelay_INT" defaultValue="24">Poskytnutá lhůta (v hodinách):</decimalTextBox>
+        <dropdownList refId="LAPS_PostAuthenticationActions" defaultItem="2">Akce:</dropdownList>
+      </presentation>
+      <presentation id="LAPS_AutomaticAccountManagementPolicy">
+        <dropdownList refId="LAPS_AutomaticAccountManagementTarget" defaultItem="0">Zadejte cílový účet, který chcete spravovat:</dropdownList>
+        <textBox refId="LAPS_AutomaticAccountManagementNameOrPrefix">
+          <label>Automatický název účtu (nebo předpona názvu):</label>
+        </textBox>
+        <checkBox refId="LAPS_AutomaticAccountManagementEnableAccount">Povolit spravovaný účet</checkBox>
+        <checkBox refId="LAPS_AutomaticAccountManagementRandomizeName">Náhodně zvolit název spravovaného účtu</checkBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

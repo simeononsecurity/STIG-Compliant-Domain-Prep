@@ -131,6 +131,19 @@ Gebruik de optie "Gebruikers mogen synchroniseren van toegankelijkheid inschakel
 
 Als u deze instelling niet instelt of uitschakelt, is het synchroniseren van de groep "toegankelijkheid" standaard ingeschakeld en kan door de gebruiker worden geconfigureerd.
       </string>
+
+      <!-- Language -->
+      <string id="DisableLanguageSettingSync">Instellingen voor taalvoorkeuren niet synchroniseren</string>
+      <string id="DisableLanguageSettingSync_Help">
+        Voorkomen dat de groep 'taalvoorkeuren' synchroniseert van en naar deze pc. Hiermee wordt de groep 'talenvoorkeuren' op de pagina 'Windows Back-up'-instellingen in pc-instellingen uitgeschakeld.
+
+Als u deze beleidsinstelling inschakelt, wordt de groep 'taalvoorkeuren' niet gesynchroniseerd.
+
+Gebruik de optie 'Gebruikers toestaan om de synchronisatie van taalvoorkeuren in te schakelen', zodat synchronisatie standaard is uit staat, maar niet is uitgeschakeld.
+
+Als u deze instelling niet instelt of uitschakelt, is de synchronisatie van de groep 'taalvoorkeuren' standaard ingeschakeld en kan deze door de gebruiker worden geconfigureerd.
+      </string>
+
     </stringTable>
     <presentationTable>
 
@@ -182,6 +195,11 @@ Als u deze instelling niet instelt of uitschakelt, is het synchroniseren van de 
       <!-- AccessibilitySync -->
       <presentation id="DisableAccessibilitySettingSyncUserOverride">
         <checkBox refId="CheckBox_UserOverride">Gebruikers toestaan om synchroniseren van "toegankelijkheid" in te schakelen.</checkBox>
+      </presentation>
+
+      <!-- LanguageSync -->
+      <presentation id="DisableLanguageSettingSyncUserOverride">
+        <checkBox refId="CheckBox_UserOverride">Gebruikers toestaan om de synchronisatie van 'taalvoorkeuren' in te schakelen.</checkBox>
       </presentation>
 
     </presentationTable>

@@ -86,6 +86,12 @@ Pokud tuto zásadu zakážete nebo nenakonfigurujete, kolekce Spotlight se v nas
 
             Pokud tuto zásadu zakážete nebo nenakonfigurujete, prostředí Windows budou moct obsah optimalizovaný pro cloud používat.
         </string>
+      <string id="EnableOrganizationalMessagesContent">Povolit zprávy organizace</string>
+      <string id="EnableOrganizationalMessagesContent_Help">Zprávy organizace umožňují správcům doručovat zprávy koncovým uživatelům ve vybraných prostředích Windows 11. Zprávy organizace jsou správcům k dispozici prostřednictvím služeb, jako je Microsoft Endpoint Manager.
+
+Ve výchozím nastavení je tato zásada zakázána. Pokud tuto zásadu povolíte, budou se v těchto prostředích zobrazovat obsah rezervovaný správci.
+
+Povolení této zásady nebude mít žádný vliv na existující nastavení zásad MDM, která řídí doručování obsahu od Microsoftu v prostředích Windows.</string>
     </stringTable>
     <presentationTable>
       <presentation id="ConfigureWindowsSpotlight">

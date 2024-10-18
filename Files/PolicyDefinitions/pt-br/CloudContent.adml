@@ -86,6 +86,12 @@ Se você habilitar essa política, as experiências do Windows que usam o compon
 
 Se você desabilitar ou não configurar essa política, as experiências do Windows poderão usar o conteúdo de estado da conta de consumidor na nuvem.
         </string>
+      <string id="EnableOrganizationalMessagesContent">Habilitar Mensagens Organizacionais</string>
+      <string id="EnableOrganizationalMessagesContent_Help">As mensagens organizacionais permitem que os administradores entreguem mensagens aos usuários finais em experiências selecionadas do Windows 11. As mensagens organizacionais estão disponíveis para administradores por meio de serviços como o Microsoft Endpoint Manager.
+
+Por padrão, essa política é desabilitada. Se você habilitar essa política, essas experiências mostrarão o conteúdo reservado por Administradores.
+
+A criação dessa política não terá impacto sobre as configurações de política de MDM existentes que regem a entrega de conteúdo da Microsoft em experiências do Windows.</string>
     </stringTable>
     <presentationTable>
       <presentation id="ConfigureWindowsSpotlight">

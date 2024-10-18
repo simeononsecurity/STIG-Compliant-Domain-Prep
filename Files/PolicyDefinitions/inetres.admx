@@ -885,6 +885,7 @@
                TLS 1.0 = 0x0080
                TLS 1.1 = 0x0200
                TLS 1.2 = 0x0800
+               TLS 1.3 = 0x2000
             -->
           <item displayName="$(string.Protocols_None)">
             <value>
@@ -1044,6 +1045,31 @@
           <item displayName="$(string.Protocols_SSL2_SSL3_TLS10_TLS11_TLS12)">
             <value>
               <decimal value="2728" />
+            </value>
+          </item>
+          <item displayName="$(string.Protocols_TLS13)">
+            <value>
+              <decimal value="8192" />
+            </value>
+          </item>
+          <item displayName="$(string.Protocols_TLS12_TLS13)">
+            <value>
+              <decimal value="10240" />
+            </value>
+          </item>
+          <item displayName="$(string.Protocols_TLS11_TLS12_TLS13)">
+            <value>
+              <decimal value="10752" />
+            </value>
+          </item>
+          <item displayName="$(string.Protocols_TLS10_TLS11_TLS12_TLS13)">
+            <value>
+              <decimal value="10880" />
+            </value>
+          </item>
+          <item displayName="$(string.Protocols_SSL3_TLS10_TLS11_TLS12_TLS13)">
+            <value>
+              <decimal value="10912" />
             </value>
           </item>
         </enum>
@@ -2753,6 +2779,16 @@
     <policy name="GeolocationDisable" class="Both" displayName="$(string.GeolocationDisable)" explainText="$(string.IE_ExplainGeolocationDisable)" key="Software\Policies\Microsoft\Internet Explorer\Geolocation" valueName="PolicyDisableGeolocation">
       <parentCategory ref="InternetExplorer" />
       <supportedOn ref="SUPPORTED_IE9" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="DisableFlashInIE" class="Both" displayName="$(string.DisableFlashInIE)" explainText="$(string.IE_ExplainDisableFlashInIE)" key="Software\Policies\Microsoft\Internet Explorer" valueName="DisableFlashInIE">
+      <parentCategory ref="IESF_AddOnManagement" />
+      <supportedOn ref="SUPPORTED_IE10WIN8" />
       <enabledValue>
         <decimal value="1" />
       </enabledValue>
@@ -35474,6 +35510,16 @@
         <decimal value="0" />
       </disabledValue>
     </policy>
+    <policy name="AllowLegacyURLFields" class="Both" displayName="$(string.AllowLegacyURLFields)" explainText="$(string.IE_ExplainAllowLegacyURLFields)" key="Software\Policies\Microsoft\Internet Explorer\Main" valueName="AllowLegacyURLFields">
+      <parentCategory ref="InternetExplorer" />
+      <supportedOn ref="SUPPORTED_IE7" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
     <policy name="ResetZoomForDialogInIEMode" class="Both" displayName="$(string.ResetZoomForDialogInIEMode)" explainText="$(string.IE_ExplainResetZoomForDialogInIEMode)" key="Software\Policies\Microsoft\Internet Explorer\Main\EnterpriseMode" valueName="ResetZoomForDialogInIEMode">
       <parentCategory ref="InternetExplorer" />
       <supportedOn ref="SUPPORTED_IE11" />
@@ -35486,7 +35532,7 @@
     </policy>
     <policy name="DisableInternetExplorerApp" class="Both" displayName="$(string.DisableInternetExplorerApp)" explainText="$(string.IE_ExplainDisableInternetExplorerApp)" presentation="$(presentation.NotifyDisableIEOptions)" key="Software\Policies\Microsoft\Internet Explorer\Main">
       <parentCategory ref="InternetExplorer" />
-      <supportedOn ref="SUPPORTED_IE11" />
+      <supportedOn ref="SUPPORTED_IE11WIN10" />
       <elements>
         <enum id="NotifyDisableIEOptions" valueName="NotifyDisableIEOptions"  required="true">
           <item displayName="$(string.NotifyDisableIEOptions_Never)">
@@ -35506,6 +35552,26 @@
           </item>
         </enum>
       </elements>
+    </policy>
+    <policy name="DisableIEAppDeprecationNotification" class="Both" displayName="$(string.DisableIEAppDeprecationNotification)" explainText="$(string.IE_ExplainDisableIEAppDeprecationNotification)" key="Software\Policies\Microsoft\Internet Explorer\Main" valueName="DisableIEAppNotificationPolicy">
+      <parentCategory ref="InternetExplorer" />
+      <supportedOn ref="SUPPORTED_IE11WIN10" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="JScriptReplacement" class="Both" displayName="$(string.JScriptReplacement)" explainText="$(string.IE_ExplainJScriptReplacement)" key="Software\Policies\Microsoft\Internet Explorer\Main" valueName="JScriptReplacement">
+      <parentCategory ref="InternetExplorer" />
+      <supportedOn ref="SUPPORTED_IE11" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
     </policy>
     <policy name="DefaultDomainCacheLimitInMB" class="Both" displayName="$(string.DefaultDomainCacheLimitInMB)" explainText="$(string.IE_ExplainDefaultDomainCacheLimitInMB)" presentation="$(presentation.DefaultDomainCacheLimitInMB)" key="Software\Policies\Microsoft\Internet Explorer\BrowserStorage">
       <parentCategory ref="CategoryBrowsingHistory" />

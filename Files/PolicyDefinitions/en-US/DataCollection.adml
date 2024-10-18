@@ -12,7 +12,7 @@
       <string id="AllowTelemetry_Explain">By configuring this policy setting you can adjust what diagnostic data is collected from Windows. This policy setting also restricts the user from increasing the amount of diagnostic data collection via the Settings app. The diagnostic data collected under this policy impacts the operating system and apps that are considered part of Windows and does not apply to any additional apps installed by your organization.
 
     - Diagnostic data off (not recommended). Using this value, no diagnostic data is sent from the device. This value is only supported on Enterprise, Education, and Server editions.
-    - Send required diagnostic data. This is the minimum diagnostic data necessary to keep Windows secure, up to date, and performing as expected. Using this value disables the "Optional diagnostic data" control in the Settings app.
+    - Send required diagnostic data. This is the minimum diagnostic data necessary to keep Windows secure, up to date, and performing as expected. Using this value disables the "Optional diagnostic data" control in the Settings app.
     - Send optional diagnostic data. Additional diagnostic data is collected that helps us to detect, diagnose and fix issues, as well as make product improvements. Required diagnostic data will always be included when you choose to send optional diagnostic data.  Optional diagnostic data can also include diagnostic log files and crash dumps. Use the "Limit Dump Collection" and the "Limit Diagnostic Log Collection" policies for more granular control of what optional diagnostic data is sent.
 
 If you disable or do not configure this policy setting, the device will send required diagnostic data and the end user can choose whether to send optional diagnostic data from the Settings app.
@@ -24,7 +24,7 @@ The "Configure diagnostic data opt-in settings user interface" group policy can 
       <string id="TelemetryProxy">Configure Connected User Experiences and Telemetry</string>
       <string id="TelemetryProxy_Explain">With this policy setting, you can forward Connected User Experience and Telemetry requests to a proxy server.
 
-If you enable this policy setting, you can specify the FQDN or IP address of the destination device within your organization’s network (and optionally a port number, if desired). The connection will be made over a Secure Sockets Layer (SSL) connection.  If the named proxy fails, or if you disable or do not configure this policy setting, Connected User Experience and Telemetry data will be sent to Microsoft using the default proxy configuration.
+If you enable this policy setting, you can specify the FQDN or IP address of the destination device within your organization's network (and optionally a port number, if desired). The connection will be made over a Secure Sockets Layer (SSL) connection.  If the named proxy fails, or if you disable or do not configure this policy setting, Connected User Experience and Telemetry data will be sent to Microsoft using the default proxy configuration.
 
 The format for this setting is &lt;server&gt;:&lt;port&gt; 
       </string>
@@ -69,7 +69,7 @@ If you disable or do not configure this policy setting, then device name will no
 
 If you set this policy setting to "Disable diagnostic data opt-in settings", diagnostic data settings are disabled in the Settings app.
 
-If you don’t configure this policy setting, or you set it to "Enable diagnostic data opt-in settings", end users can change the device diagnostic settings in the Settings app.
+If you don't configure this policy setting, or you set it to "Enable diagnostic data opt-in settings", end users can change the device diagnostic settings in the Settings app.
 
 Note:
 To set a limit on the amount of diagnostic data that is sent to Microsoft by your organization, use the "Allow Diagnostic Data" policy setting.
@@ -107,42 +107,63 @@ If you disable or don't configure this policy setting, the Diagnostic Data Viewe
 If your organization is participating in the program and has been instructed to configure a custom upload endpoint, then use this setting to define that endpoint.
 The value for this setting will be provided by Microsoft as part of the onboarding process for the program. 
       </string>
-      
+
       <string id="AllowUpdateComplianceProcessing">Allow Update Compliance Processing</string>
       <string id="AllowUpdateComplianceProcessing_Explain">
-          Allows IT admins to enable diagnostic data from this device to be processed by Update Compliance. 
-            The following list shows the supported values:  
-              0 (default)– Diagnostic data is not processed by Update Compliance. 
-              16 – Diagnostic data is allowed to be processed by Update Compliance. 
-            If you disable or do not configure this policy setting, diagnostic data from this device will not be processed by Update Compliance.
+This policy is deprecated and will only work on Windows 10 version 1809. Setting this policy will have no effect for other supported versions of Windows.
+
+This policy setting, in combination with the Allow Telemetry and Configure the Commercial ID, enables organizations to configure the device so that Microsoft is the processor of the Windows diagnostic data collected from the device, subject to the Product Terms at https://go.microsoft.com/fwlink/?linkid=2185086.
+To enable this behavior:
+    1. Enable this policy setting
+    2. Join an Azure Active Directory account to the device
+    3. Set Allow Telemetry to  value 1 - Required, or higher
+    4. Set the Configure the Commercial ID setting for your Update Compliance workspace
+
+When these policies are configured, Windows diagnostic data collected from the device will be subject to Microsoft processor commitments.
+If you disable or do not configure this policy setting, devices will not appear in Update Compliance.
       </string>
 
       <string id="AllowDesktopAnalyticsProcessing">Allow Desktop Analytics Processing</string>
       <string id="AllowDesktopAnalyticsProcessing_Explain">
-          Allows IT admins to enable diagnostic data from this device to be processed by Desktop Analytics. 
-            The following list shows the supported values:  
-              0 (default)– Diagnostic data is not processed by Desktop Analytics. 
-              2 – Diagnostic data is allowed to be processed by Desktop Analytics. 
-          If you disable or do not configure this policy setting, diagnostic data from this device will not be processed by Desktop Analytics. 
+This policy is deprecated and will only work on Windows 10 version 1809. Setting this policy will have no effect for other supported versions of Windows.
+
+This policy setting, in combination with the Allow Telemetry and Configure the Commercial ID, enables organizations to configure the device so that Microsoft is the processor for Windows diagnostic data collected from the device, subject to the Product Terms at https://go.microsoft.com/fwlink/?linkid=2185086.
+To enable this behavior:
+    1. Enable this policy setting
+    2. Join an Azure Active Directory account to the device
+    3. Set Allow Telemetry to value 1 - Required, or higher
+    4. Set the Configure the Commercial ID setting for your Desktop Analytics workspace
+
+When these policies are configured, Windows diagnostic data collected from the device will be subject to Microsoft processor commitments.
+This setting has no effect on devices unless they are properly enrolled in Desktop Analytics. If you disable this policy setting, devices will not appear in Desktop Analytics.
       </string>
 
       <string id="AllowWUfBCloudProcessing">Allow WUfB Cloud Processing</string>
       <string id="AllowWUfBCloudProcessing_Explain">
-          Allows IT admins to enable diagnostic data from this device to be processed by Windows Update for Business cloud. 
-            The following list shows the supported values:  
-              0 (default)– Diagnostic data is not processed by Windows Update for Business cloud.. 
-              8 – Diagnostic data is allowed to be processed by Windows Update for Business cloud.. 
-          If you disable or do not configure this policy setting, diagnostic data from this device will not be processed by Windows Update for Business cloud. 
+This policy is deprecated and will only work on Windows 10 version 1809. Setting this policy will have no effect for other supported versions of Windows.
+
+This policy setting configures an Azure Active Directory joined device so that Microsoft is the processor of the Windows diagnostic data collected from the device, subject to the Product Terms at https://go.microsoft.com/fwlink/?linkid=2185086.
+To enable this behavior:
+    1. Enable this policy setting
+    2. Join an Azure Active Directory account to the device
+    3. Set Allow Telemetry to  value 1 - Required, or higher
+
+When these policies are configured, Windows diagnostic data collected from the device will be subject to Microsoft processor commitments.
+If you disable or do not configure this policy setting, devices enrolled to the Windows Update for Business deployment service will not be able to take advantage of some deployment service features.
       </string>
 
       <string id="AllowCommercialDataPipeline">Allow commercial data pipeline</string>
-      <string id="AllowCommercialDataPipeline_Explain">AllowCommercialDataPipeline controls whether Microsoft is a processor or controller for Windows diagnostic data collected from this device.
+      <string id="AllowCommercialDataPipeline_Explain">
+This policy is deprecated and will only work on Windows 10 version 1809. Setting this policy will have no effect for other supported versions of Windows.
 
-If you enable this policy Microsoft will be the processor of Windows diagnostic data collected from the Windows device and the customer will be the controller. The device must be registered in Azure AD for this policy to succeed.
+AllowCommercialDataPipeline configures an Azure Active Directory joined device so that Microsoft is the processor of the Windows diagnostic data collected from the device, subject to the Product Terms at https://go.microsoft.com/fwlink/?linkid=2185086.
+To enable this behavior:
+    1. Enable this policy setting
+    2. Join an Azure Active Directory account to the device
 
-If you disable or don't configure this policy setting, Microsoft will be the controller of Windows diagnostic data collected from this device.
-
-This policy only controls if Microsoft is a processor for Windows diagnostic data from this device. Configuring this setting does not change whether diagnostic data is collected or the ability of the user to change the level. To configure collection level please use the "Allow Diagnostic Data" policy, and to restrict users on this device from changing the diagnostic data level please use the "Configure diagnostic data opt-in settings user interface" policy.
+Windows diagnostic data is collected when the Allow Telemetry policy setting is set to value 1  - Required or above. Configuring this setting does not change the Windows diagnostic data collection level set for the device.
+If you disable or do not configure this setting, Microsoft will be the controller of the Windows diagnostic data collected from the device and processed in accordance with Microsoft's privacy statement at https://go.microsoft.com/fwlink/?LinkId=521839 unless you have enabled policies like 'Allow Update Compliance Processing' or 'Allow Desktop Analytics Processing'.
+See the documentation at https://go.microsoft.com/fwlink/?linkid=2011107 for information on this and other policies that will result in Microsoft being the processor of Windows diagnostic data.
       </string>
 
       <string id="LimitDiagnosticLogCollection">Limit Diagnostic Log Collection</string>
@@ -154,7 +175,7 @@ If you disable or do not configure this policy setting, we may occasionally coll
       </string>
 
       <string id="LimitDumpCollection">Limit Dump Collection</string>
-      <string id="LimitDumpCollection_Explain">This policy setting limits the type of dumps that can be collected when more information is needed to troubleshoot a problem. Dumps are only sent when the device has been configured to send optional diagnostic data.
+      <string id="LimitDumpCollection_Explain">This policy setting limits the type of dumps that can be collected when more information is needed to troubleshoot a problem. Dumps are only sent when the device has been configured to send optional diagnostic data.
 
 By enabling this setting, Windows Error Reporting is limited to sending kernel mini dumps and user mode triage dumps.
 
@@ -162,19 +183,19 @@ If you disable or do not configure this policy setting, we may occasionally coll
       </string>
 
       <string id="EnableOneSettingsAuditing">Enable OneSettings Auditing</string>
-      <string id="EnableOneSettingsAuditing_Explain">This policy setting controls whether Windows records attempts to download configuration settings from the OneSettings service to the EventLog.
+      <string id="EnableOneSettingsAuditing_Explain">This policy setting controls whether Windows records attempts to connect with the OneSettings service to the EventLog.
 
-If you enable this policy, Windows will record attempts to download configuration settings from the OneSettings service to the Microsoft\Windows\Privacy-Auditing\Operational EventLog channel.
+If you enable this policy, Windows will record attempts to connect with the OneSettings service to the Microsoft\Windows\Privacy-Auditing\Operational EventLog channel.
 
-If you disable or don't configure this policy setting, Windows will not record attempts to download configuration settings from the OneSettings service to the EventLog.
+If you disable or don't configure this policy setting, Windows will not record attempts to connect with the OneSettings service to the EventLog.
       </string>
 
       <string id="DisableOneSettingsDownloads">Disable OneSettings Downloads</string>
-      <string id="DisableOneSettingsDownloads_Explain">This policy setting controls whether Windows can download configuration settings from the OneSettings service.
+      <string id="DisableOneSettingsDownloads_Explain">This policy setting controls whether Windows attempts to connect with the OneSettings service.
 
-If you enable this policy, Windows will not download configuration settings from the OneSettings service.
+If you enable this policy, Windows will not attempt to connect with the OneSettings Service.
 
-If you disable or don't configure this policy setting, Windows will periodically download configuration settings from the OneSettings service.
+If you disable or don't configure this policy setting, Windows will periodically attempt to connect with the OneSettings service to download configuration settings.
       </string>
     </stringTable>
     <presentationTable>

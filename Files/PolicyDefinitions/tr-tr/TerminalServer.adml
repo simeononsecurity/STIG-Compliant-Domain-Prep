@@ -434,16 +434,19 @@ Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız bu bildirim
 
         Bu ilke ayarını iki lisans modundan birini seçmek için kullanabilirsiniz: Kullanıcı Başına veya Cihaz Başına.
 
-        Kullanıcı Başına lisans modu, bu RD Oturumu Ana Bilgisayarı sunucusuna bağlanan her kullanıcı hesabının bir RD Lisansı sunucusundan alınan RDS Kullanıcı Başına CAL'ye sahip olmasını gerektirir.
+        Kullanıcı Başına lisans modu, bu RD Oturumu Ana Bilgisayarı sunucusuna bağlanan her kullanıcı hesabının bir RD Lisansı sunucusundan alınan RDS Kullanıcı Başına CAL'e sahip olmasını gerektirir.
 
-        Cihaz Başına lisans modu, bu RD Oturumu Ana Bilgisayarı sunucusuna bağlanan her cihazın bir RD lisansı sunucusundan alınan RDS Cihaz Başına CAL'ye sahip olmasını gerektirir.
+        Cihaz Başına lisans modu, bu RD Oturumu Ana Bilgisayarı sunucusuna bağlanan her cihazın bir RD lisansı sunucusundan alınan RDS Cihaz Başına CAL'e sahip olmasını gerektirir.
 
         Bu ilke ayarını etkinleştirirseniz belirttiğiniz Uzak Masaüstü lisans modu, Uzak Masaüstü lisans sunucusu ve RD Oturumu Ana Bilgisayarı tarafından kabul edilir.
 
         Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız lisans modu, Grup İlkesi düzeyinde belirtilmez.
+
+        Not: Kullanıcı Başına modu, Windows 11 ve üzerinde kullanım dışıdır.
       </string>
       <string id="TS_LICENSING_MODE_PER_DEVICE">Cihaz Başına</string>
       <string id="TS_LICENSING_MODE_PER_USER">Kullanıcı Başına</string>
+      <string id="TS_LICENSING_MODE_AAD_PER_USER">Kullanıcı Başına AAD</string>
       <string id="TS_LPTPORTMAP_EXPLAIN">Bu ilke ayarı, Uzak Masaüstü Hizmetleri oturumu sırasında verilerin istemci LPT bağlantı noktalarına yeniden yönlendirilmesinin engellenip engellenmeyeceğini belirtir.
 
 Kullanıcıların yerel LPT bağlantı noktalarını eşlemesini ve verileri uzak bilgisayardan yerel LPT bağlantı noktası çevre birimlerine yeniden yönlendirmesini engellemek için bu ayarı kullanabilirsiniz. Varsayılan olarak, Uzak Masaüstü Hizmetleri LPT bağlantı noktası yeniden yönlendirmesine izin verir.
@@ -814,6 +817,50 @@ Bu ilke ayarını etkinleştirirseniz kullanıcılar Uzak Masaüstü oturumunun 
 
 Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız kullanıcılar Uzak Masaüstü oturumunun içinde kendi yerel doğrulayıcılarını kullanabilir.
 </string>
+      <string id="TS_SC_CLIPBOARD_DISABLED">Sunucudan istemciye pano aktarımını devre dışı bırak</string>
+      <string id="TS_CS_CLIPBOARD_DISABLED">İstemciden sunucuya pano aktarımını devre dışı bırak</string>
+      <string id="TS_CLIPBOARD_ALLOW_TEXT">Düz metne izin ver</string>
+      <string id="TS_CLIPBOARD_ALLOW_TEXT_IMAGE">Düz metne ve resimlere izin ver</string>
+      <string id="TS_CLIPBOARD_ALLOW_TEXT_IMAGE_RTF">Düz metin, resimler ve Zengin Metin Biçimine izin ver</string>
+      <string id="TS_CLIPBOARD_ALLOW_TEXT_IMAGE_RTF_HTML">Düz metin, resimler, Zengin Metin Biçimi ve HTML'ye izin ver</string>
+      <string id="TS_SC_CLIPBOARD_RESTRICTION">Sunucudan istemciye pano aktarımını kısıtla</string>
+      <string id="TS_SC_CLIPBOARD_RESTRICTION_EXPLAIN">Bu ilke ayarı, sunucudan istemciye pano verisi aktarımını kısıtlamanıza olanak tanır.
+
+Bu ilke ayarını etkinleştirirseniz, aşağıdaki davranışlar arasından seçim yapmanız gerekir:
+
+- Sunucudan istemciye pano aktarımını devre dışı bırak.
+
+- Sunucudan istemciye düz metin kopyalamaya izin ver.
+
+- Sunucudan istemciye düz metin ve resim kopyalamaya izin ver.
+
+- Sunucudan istemciye düz metin, resim ve Zengin Metin Biçimi kopyalamaya izin ver.
+
+- Sunucudan istemciye düz metin, resim, Zengin Metin Biçimi ve HTML kopyalamaya izin ver.
+
+Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız, pano yeniden yönlendirme özelliği etkinse kullanıcılar sunucudan istemciye rastgele içerikler kopyalayabilir.
+
+Not: Bu ilke ayarı hem Bilgisayar Yapılandırması hem de Kullanıcı Yapılandırması altında görünür. Her iki ilke ayarı da yapılandırılmışsa, daha katı olan kısıtlama kullanılır.
+</string>
+      <string id="TS_CS_CLIPBOARD_RESTRICTION">İstemciden sunucuya pano aktarımını kısıtla</string>
+      <string id="TS_CS_CLIPBOARD_RESTRICTION_EXPLAIN">Bu ilke ayarı, istemciden sunucuya pano verisi aktarımını kısıtlamanıza olanak tanır.
+
+Bu ilke ayarını etkinleştirirseniz, aşağıdaki davranışlar arasından seçim yapmanız gerekir:
+
+- İstemciden sunucuya pano aktarımını devre dışı bırak.
+
+- İstemciden sunucuya düz metin kopyalamaya izin ver.
+
+- İstemciden sunucuya düz metin ve resim kopyalamaya izin ver.
+
+- İstemciden sunucuya düz metin, resim ve Zengin Metin Biçimi kopyalamaya izin ver.
+
+- İstemciden sunucuya düz metin, resim, Zengin Metin Biçimi ve HTML kopyalamaya izin ver.
+
+Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız, pano yeniden yönlendirme özelliği etkinse kullanıcılar istemciden sunucuya rastgele içerikler kopyalayabilir.
+
+Not: Bu ilke ayarı hem Bilgisayar Yapılandırması hem de Kullanıcı Yapılandırması altında görünür. Her iki ilke ayarı da yapılandırılmışsa, daha katı olan kısıtlama kullanılır.
+</string>
       <string id="TS_CLIPRDR_CLOUD_CLIP_INTEGRATION">Sunucudan istemciye veri aktarımı için bulut panosu tümleştirmesini devre dışı bırak</string>
       <string id="TS_CLIPRDR_CLOUD_CLIP_INTEGRATION_EXPLAIN">Bu ilke, pano yeniden yönlendirmesi kullanarak uzak oturumdan istemciye aktarılan verilerin istemci tarafındaki bulut panosuna eklenip eklenmeyeceğini kontrol etmenizi sağlar.
 
@@ -837,6 +884,24 @@ Bu ilke ayarını yapılandırmazsanız, hedef bilgisayardaki yerel ayar kullan�
 
 </string>
       <string id="TS_USER_AUTHENTICATION_POLICY">Ağ Düzeyi Kimlik Doğrulaması kullanarak uzak bağlantılar için kullanıcı kimlik doğrulaması iste</string>
+      <string id="TS_DISCONNECT_ON_LOCK_POLICY"> Eski kimlik doğrulaması için kilitte uzak oturumun bağlantısını kes</string>
+      <string id="TS_DISCONNECT_ON_LOCK_POLICY_EXPLAIN">Bu ilke ayarı, Uzak Masaüstü oturumu kullanıcı veya bir ilke tarafından kilitlendiğinde kullanıcı deneyimini yapılandırmanıza olanak tanır. Uzak oturumun uzak kilit ekranını gösterip göstermeyeceğini veya uzak oturum kilitlendiğinde bağlantının kesilip kesilmeyeceğini belirleyebilirsiniz. Uzak oturumun bağlantısının kesilmesi, uzak oturumun kilit ekranında bırakılmamasını ve ağ bağlantısı kaybı nedeniyle otomatik olarak yeniden bağlanamamasını sağlar.
+
+Bu ilke yalnızca uzak bilgisayarda kimlik doğrulamak için eski kimlik doğrulaması kullanıldığında geçerlidir. Eski kimlik doğrulaması, kullanıcı adı ve parola veya akıllı kartlar gibi sertifikalarla sınırlıdır. Eski kimlik doğrulaması, Microsoft Entra ID gibi Microsoft kimlik platformundan yararlanmaz. Eski kimlik doğrulaması NTLM, CredSSP, RDSTLS, TLS ve RDP temel kimlik doğrulaması protokollerini içerir.
+
+Bu ilke ayarını etkinleştirirseniz, eski kimlik doğrulamasını kullanan Uzak Masaüstü bağlantıları, uzak oturum kilitlendiğinde uzak oturumun bağlantısını keser. Kullanıcılar hazır olduklarında yeniden bağlanabilir ve istendiğinde kimlik bilgilerini yeniden girebilirler.
+
+Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız, eski kimlik doğrulamasını kullanan Uzak Masaüstü bağlantıları, uzak oturum kilitlendiğinde uzak kilit ekranını gösterir. Kullanıcılar, kullanıcı adı ve parolalarını veya sertifikalarını kullanarak uzak oturumun kilidini açabilir.
+</string>
+      <string id="TS_DISCONNECT_ON_LOCK_AAD_POLICY">Kimlik doğrulaması için kilitte uzak oturumun Microsoft kimlik platformu kes</string>
+      <string id="TS_DISCONNECT_ON_LOCK_AAD_POLICY_EXPLAIN">Bu ilke ayarı, Uzak Masaüstü oturumu kullanıcı tarafından veya bir ilke tarafından kilitlendiğinde kullanıcı deneyimini yapılandırmanıza olanak sağlar. Uzak oturum kilitlendiğinde uzak oturumun uzaktan kilit ekranını gösterip göstere gösteremyr veya bağlantıyı kesip gösteremyyebilirsiniz. Uzak oturumun bağlantısının kesilmesi, bir uzak oturumun kilit ekranında bırakılamamalarını ve ağ bağlantısı kaybı nedeniyle otomatik olarak yeniden bağlanamamalarını sağlar.
+
+Bu ilke, yalnızca uzak bilgisayarda kimlik doğrulaması yapmak Microsoft kimlik platformu kimlik doğrulaması Microsoft Entra ID kimlik sağlayıcısını kullanan bir kimlik sağlayıcısı kullanılırken geçerlidir. NtLM, CredSSP, RDSTLS, TLS ve RDP temel kimlik doğrulama protokollerini içeren Eski kimlik doğrulaması kullanılırken bu ilke geçerli değildir.
+
+Bu ilke ayarını etkinleştirirseniz veya yapılandırmazsanız uzak oturum Microsoft kimlik platformu uzak oturum kilitlendiğinde uzak oturumun bağlantısını keser. Kullanıcılar hazır olduğunda yeniden bağlanarak yapılandırıldıysa parolasız kimlik doğrulamasını kullanılabilir.
+
+Bu ilke ayarını devre dışı bırakırsanız, uzak oturum Microsoft kimlik platformu uzak kilit ekranını kullanarak Uzak Masaüstü bağlantıları görüntülenir. Kullanıcılar, kullanıcı adlarını ve parolalarını veya sertifikalarını kullanarak uzak oturumun kilidini açabilir.
+</string>
       <string id="TS_User_Help">Windows tabanlı programlar veya tam Windows masaüstü çalışan bir sunucuya erişime olanak tanıyan Uzak Masaüstü Hizmetleri teknolojilerinin yapılandırmasını denetler</string>
       <string id="TS_USER_HOME">Uzak Masaüstü Hizmetleri Kullanıcı Ana Dizini'ni ayarla</string>
       <string id="TS_USER_HOME_EXPLAIN">Uzak Masaüstü Hizmetleri'nin, bir Uzak Masaüstü Hizmetleri oturumu için kullanıcının başlangıç dizini kökü olarak belirtilen ağ paylaşımı veya yerel dizin yolunu kullanıp kullanmayacağını belirtir.
@@ -1187,21 +1252,20 @@ Not: Güvenilmeyen bir sunucudan RemoteApp ve Masaüstü Bağlantıları yoluyla
       </string>
 
 	  <string id="TS_SELECT_TRANSPORT">RDP taşıma protokollerini seç</string>
-	  <string id="TS_SELECT_TRANSPORT_EXPLAIN">Bu ilke ayarı, bu sunucuya Uzak Masaüstü Protokolü (RDP) için hangi protokollerin kullanılacağını belirtmenizi sağlar.
+	  <string id="TS_SELECT_TRANSPORT_EXPLAIN">Bu ilke ayarı, bu sunucuya erişim için hangi protokollerin Uzak Masaüstü Protokolü (RDP) kullanıca musunuz?
 
-Bu ilke ayarını etkinleştirirseniz, UDP için RDP isteyip istemediğinizi belirtmeniz gerekir.
+Bu ilke ayarını etkinleştirirseniz, RDP'nin UDP'yi kullanmasını istediğinizi belirtseniz gerekir.
 
-Şu seçeneklerden birini seçebilirsiniz: "Hem UDP hem de TCP kullan", "Yalnızca TCP kullan" veya "UDP veya TCP kullan (varsayılan)" 
+Şu seçeneklerden birini seçebilirsiniz: "UDP veya TCP (varsayılan)" veya "Yalnızca TCP kullan" 
 
-"UDP veya TCP kullan" seçeneğini belirlerseniz ve UDP bağlantısı sorunsuzsa, RDP trafiğinin büyük bir bölümü UDP'yi kullanır.
+"UDP veya TCP kullan" seçeneğini belirtirseniz ve UDP bağlantısı başarılıysa, RDP trafiğinin çoğu UDP kullanır.
 
-UDP bağlantısı sorunluysa veya "Yalnızca TCP kullan" seçeneğini belirlerseniz, RDP trafiğinin tümü TCP kullanır.
+UDP bağlantısı başarılı olmadıysa veya "Yalnızca TCP kullan" seçeneğini seçerseniz, RDP trafiğinin tümü TCP kullanır.
 
-Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız, RDP en iyi kullanıcı deneyimini sunma amacıyla en iyi protokolleri seçer.
+Bu ilke ayarını devre dışı bırakırsanız veya yapılandırmazsanız RDP en iyi kullanıcı deneyimini sağlamak için en uygun protokolleri seçmektedir.
 	  </string>
-	  <string id="TS_SELECT_TRANSPORT_UDP_AND_TCP">Hem UDP, hem de TCP kullan</string>
-	  <string id="TS_SELECT_TRANSPORT_TCP_ONLY">Yalnızca TCP kullan</string>
 	  <string id="TS_SELECT_TRANSPORT_UDP_OR_TCP">UDP veya TCP kullan</string>
+	  <string id="TS_SELECT_TRANSPORT_TCP_ONLY">Yalnızca TCP kullan</string>
 
       <string id="TS_SELECT_NETWORK_DETECT">Sunucuda ağ algılamasını seç</string>
       <string id="TS_SELECT_NETWORK_DETECT_EXPLAIN">Bu ilke ayarı, Uzak Masaüstü Protokolü'nün ağ kalitesini (bant genişliği ve gecikme süresi) nasıl algılamaya çalışacağını belirtmenizi sağlar.
@@ -1423,6 +1487,12 @@ NOT: İlke ayarı, birden fazla grafik işleme birimi (GPU) yüklü olan bir bil
       </presentation>
       <presentation id="TS_SELECT_TRANSPORT">
         <dropdownList refId="TS_SELECT_TRANSPORT_TYPE" noSort="true" defaultItem="0">Taşıma Türünü Seç</dropdownList>
+      </presentation>
+      <presentation id="TS_SC_CLIPBOARD_RESTRICTION">
+        <dropdownList refId="TS_SC_CLIPBOARD_RESTRICTION_Text" noSort="true" defaultItem="0">Sunucudan istemciye pano aktarımını kısıtla:</dropdownList>
+      </presentation>
+      <presentation id="TS_CS_CLIPBOARD_RESTRICTION">
+        <dropdownList refId="TS_CS_CLIPBOARD_RESTRICTION_Text" noSort="true" defaultItem="0">İstemciden sunucuya pano aktarımını kısıtla:</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

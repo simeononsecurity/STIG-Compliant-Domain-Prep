@@ -300,6 +300,23 @@ http://sitename/_layouts/XXXX/searchresults.aspx?SearchString=$w
       <string id="DisableSearch_ExplainText">如果启用此策略，则将禁用搜索 UI 及其所有入口点，例如键盘快捷方式、触摸板手势和“开始”菜单中的类型搜索。“开始”菜单的搜索框和搜索任务栏按钮也将隐藏。
 
 如果禁用或未配置此策略设置，则用户将能够打开搜索 UI，并且将显示其不同的入口点。</string>
+      <string id="ConfigureSearchOnTaskbarMode">在任务栏上配置搜索</string>
+      <string id="ConfigureSearchOnTaskbarMode_Help">通过此策略设置，可以在任务栏上配置搜索。
+
+如果启用此策略设置并将其设置为隐藏，则默认情况下会隐藏“在任务栏上搜索”。用户无法在“设置”中更改此项。
+
+如果启用此策略设置并将其设置为仅限搜索图标，则默认情况下，搜索图标将显示在任务栏上。用户无法在“设置”中更改此项。
+
+如果启用此策略设置并将其设置为搜索图标和标签，则默认情况下，搜索图标和标签将显示在任务栏上。用户无法在“设置”中更改此项。
+
+如果启用此策略设置并将其设置为搜索框，则默认情况下，搜索框将显示在任务栏上。用户无法在“设置”中更改此项。
+
+如果禁用或未配置此策略设置，则将根据 Windows 版本的默认设置来配置任务栏上的搜索。用户将能够在“设置”中更改任务栏上的搜索。
+      </string>
+      <string id="SearchOnTaskbarModeEnum_Hidden">隐藏</string>
+      <string id="SearchOnTaskbarModeEnum_SearchIconOnly">仅“搜索”图标</string>
+      <string id="SearchOnTaskbarModeEnum_SearchIconAndLabel">搜索图标和标签</string>
+      <string id="SearchOnTaskbarModeEnum_SearchBox">搜索框</string>
     </stringTable>
     <presentationTable>
       <presentation id="RichAttachmentPreviews">
@@ -388,6 +405,9 @@ http://sitename/_layouts/XXXX/searchresults.aspx?SearchString=$w
       </presentation>
       <presentation id="AllowCortanaAAD">
         <dropdownList refId="AllowCortanaAAD_Dropdown" noSort="true" defaultItem="0">AAD 设置中的 Cortana</dropdownList>
+      </presentation>
+      <presentation id="ConfigureSearchOnTaskbarMode">
+        <dropdownList refId="ConfigureSearchOnTaskbarMode_Dropdown" noSort="true" defaultItem="0">在任务栏上搜索</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

@@ -300,6 +300,23 @@ Si habilitas esta opción, las búsquedas y Cortana podrán acceder a la informa
       <string id="DisableSearch_ExplainText">Si habilita esta directiva, la interfaz de usuario de búsqueda se deshabilitará junto con todos sus puntos de entrada, como los métodos abreviados de teclado, los gestos del panel táctil y el tipo de búsqueda en el menú Inicio. El cuadro de búsqueda del menú Inicio y el botón De la barra de tareas de búsqueda también se ocultarán.
 
 Si deshabilita o no establece esta configuración de directiva, el usuario podrá abrir la interfaz de usuario de búsqueda y se mostrarán sus diferentes puntos de entrada.</string>
+      <string id="ConfigureSearchOnTaskbarMode">Configura la búsqueda en la barra de tareas</string>
+      <string id="ConfigureSearchOnTaskbarMode_Help">Esta configuración de directiva permite configurar la búsqueda en la barra de tareas.
+
+Si habilita esta configuración de directiva y la establece para ocultarla, la búsqueda en la barra de tareas se ocultará de forma predeterminada. Los usuarios no pueden cambiarlo en Configuración.
+
+Si habilita esta configuración de directiva y la establece solo en icono de búsqueda, el icono de búsqueda se mostrará en la barra de tareas de forma predeterminada. Los usuarios no pueden cambiarlo en Configuración.
+
+Si habilita esta configuración de directiva y la establece en icono y etiqueta de búsqueda, el icono y la etiqueta de búsqueda se mostrarán en la barra de tareas de forma predeterminada. Los usuarios no pueden cambiarlo en Configuración.
+
+Si habilita esta configuración de directiva y la establece en cuadro de búsqueda, el cuadro de búsqueda se mostrará en la barra de tareas de forma predeterminada. Los usuarios no pueden cambiarlo en Configuración.
+
+Si deshabilita o no establece esta configuración de directiva, la búsqueda en la barra de tareas se configurará de acuerdo con los valores predeterminados de la edición de Windows. Los usuarios podrán cambiar la búsqueda en la barra de tareas de Configuración.
+      </string>
+      <string id="SearchOnTaskbarModeEnum_Hidden">Ocultar</string>
+      <string id="SearchOnTaskbarModeEnum_SearchIconOnly">Solo icono de búsqueda</string>
+      <string id="SearchOnTaskbarModeEnum_SearchIconAndLabel">Icono Buscar y etiqueta de búsqueda</string>
+      <string id="SearchOnTaskbarModeEnum_SearchBox">Cuadro de búsqueda</string>
     </stringTable>
     <presentationTable>
       <presentation id="RichAttachmentPreviews">
@@ -388,6 +405,9 @@ Si deshabilita o no establece esta configuración de directiva, el usuario podr�
       </presentation>
       <presentation id="AllowCortanaAAD">
         <dropdownList refId="AllowCortanaAAD_Dropdown" noSort="true" defaultItem="0">Cortana en la configuración de AAD</dropdownList>
+      </presentation>
+      <presentation id="ConfigureSearchOnTaskbarMode">
+        <dropdownList refId="ConfigureSearchOnTaskbarMode_Dropdown" noSort="true" defaultItem="0">Buscar en la barra de tareas</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

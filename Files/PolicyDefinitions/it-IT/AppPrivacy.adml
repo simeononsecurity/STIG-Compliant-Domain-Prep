@@ -129,6 +129,21 @@ Se si disabilita o non si configura questa impostazione dei criteri, i dipendent
 
 Se un'app è aperta quando questo oggetto Criteri di gruppo viene applicato in un dispositivo, i dipendenti devono riavviare l'app o il dispositivo per applicare all'app le modifiche dei criteri.
       </string>
+      <string id="LetAppsAccessHumanPresence_Name">Consenti alle app di Windows di accedere al rilevamento della presenza</string>
+      <string id="LetAppsAccessHumanPresence_Explain">Questa impostazione dei criteri specifica se le app di Windows possono accedere al rilevamento della presenza.
+
+Puoi specificare un'impostazione predefinita per tutte le app o un'impostazione per ogni app specificando un nome della famiglia di pacchetti. Puoi ottenere il nome della famiglia di pacchetti per un'app usando il cmdlet di Windows PowerShell Get-AppPackage. Un'impostazione per ogni app sostituisce l'impostazione predefinita.
+
+Se scegli l'opzione "Controllo dell'utente", i dipendenti dell'organizzazione possono decidere se le app di Windows sono in grado di accedere al rilevamento della presenza usando Impostazioni &gt; Privacy nel dispositivo.
+
+Se scegli l'opzione "Forza Consenti", le app di Windows sono in grado di accedere al rilevamento della presenza e i dipendenti dell'organizzazione non possono modificare l'impostazione.
+
+Se scegli l'opzione "Forza Nega", le app di Windows non sono in grado di accedere al rilevamento della presenza e i dipendenti dell'organizzazione non possono modificare l'impostazione.
+
+Se disabiliti o non configuri questa impostazione dei criteri, i dipendenti dell'organizzazione possono decidere se le app di Windows sono in grado di accedere al rilevamento della presenza usando Impostazioni &gt; Privacy nel dispositivo.
+
+Se un'app è aperta quando questo oggetto Criteri di gruppo viene applicato a un dispositivo, i dipendenti devono riavviare l'app o il dispositivo per applicare all'app le modifiche dei criteri.
+      </string>
       <string id="LetAppsAccessLocation_Name">Consenti alle app di Windows di accedere alla posizione</string>
       <string id="LetAppsAccessLocation_Explain">Questa impostazione dei criteri specifica se le app di Windows possono accedere alla posizione.
 
@@ -440,6 +455,15 @@ Se un'app è aperta quando in un dispositivo viene applicato questo oggetto Crit
         <text>Forza Nega per queste specifiche app (usa i nomi delle famiglie di pacchetti):</text>
         <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_ForceDenyTheseApps_List"/>
       </presentation>
+      <presentation id="LetAppsAccessHumanPresence">
+        <dropdownList refId="LetAppsAccessHumanPresence_Enum" noSort="true" defaultItem="0">Impostazione predefinita per tutte le app:</dropdownList>
+        <text>Controllo dell'utente per queste specifiche app (usa i nomi delle famiglie di pacchetti):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_UserInControlOfTheseApps_List"/>
+        <text>Forza Consenti per queste specifiche app (usa i nomi delle famiglie di pacchetti):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_ForceAllowTheseApps_List"/>
+        <text>Forza Nega per queste specifiche app (usa i nomi delle famiglie di pacchetti):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_ForceDenyTheseApps_List"/>
+      </presentation>
       <presentation id="LetAppsAccessLocation">
         <dropdownList refId="LetAppsAccessLocation_Enum" noSort="true" defaultItem="0">Impostazione predefinita per tutte le app:</dropdownList>
         <text>Controllo dell'utente per queste specifiche app (usa i nomi delle famiglie di pacchetti):</text>
@@ -523,7 +547,7 @@ Se un'app è aperta quando in un dispositivo viene applicato questo oggetto Crit
       </presentation>
       <presentation id="LetAppsAccessTrustedDevices">
         <dropdownList refId="LetAppsAccessTrustedDevices_Enum" noSort="true" defaultItem="0">Impostazione predefinita per tutte le app:</dropdownList>
-        <text>Controllo dell'utente per queste specifiche app (usa i nomi delle famiglie di pacchetti):</text>
+        <text>Metti l’utente in controllo per queste specifiche app (usa i nomi delle famiglie di pacchetti):</text>
         <multiTextBox refId="LetAppsAccessTrustedDevices_UserInControlOfTheseApps_List"/>
         <text>Forza Consenti per queste specifiche app (usa i nomi delle famiglie di pacchetti):</text>
         <multiTextBox refId="LetAppsAccessTrustedDevices_ForceAllowTheseApps_List"/>
@@ -565,7 +589,7 @@ Se un'app è aperta quando in un dispositivo viene applicato questo oggetto Crit
       </presentation>
       <presentation id="LetAppsAccessBackgroundSpatialPerception">
         <dropdownList refId="LetAppsAccessBackgroundSpatialPerception_Enum" noSort="true" defaultItem="0">Impostazione predefinita per tutte le app:</dropdownList>
-        <text>Controllo dell'utente per queste specifiche app (usa i nomi delle famiglie di pacchetti):</text>
+        <text>Metti l’utente in controllo per queste specifiche app (usa i nomi delle famiglie di pacchetti):</text>
         <multiTextBox refId="LetAppsAccessBackgroundSpatialPerception_UserInControlOfTheseApps_List"/>
         <text>Forza Consenti per queste specifiche app (usa i nomi delle famiglie di pacchetti):</text>
         <multiTextBox refId="LetAppsAccessBackgroundSpatialPerception_ForceAllowTheseApps_List"/>

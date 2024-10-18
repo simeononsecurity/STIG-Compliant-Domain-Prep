@@ -330,29 +330,31 @@ Hinweis: Diese Richtlinieneinstellung gilt nur für die Zieldateien auf NTFS-Par
 
 Weitere Informationen finden Sie unter den Richtlinieneinstellungen "Shellshortcuts beim Zwischenspeichern auf dem Server nicht nachverfolgen" und "Beim Zuordnen von Shellshortcuts nicht die suchbasierte Methode verwenden".</string>
       <string id="NoRun">Menüeintrag "Ausführen" aus dem Startmenü entfernen</string>
-      <string id="NoRun_Help">Ermöglicht das Entfernen des Befehls "Ausführen" aus dem Startmenü, Internet Explorer und Task-Manager.
+      <string id="NoRun_Help">Ermöglicht das Entfernen des Befehls „Ausführen“ aus dem Startmenü, aus Internet Explorer und aus dem Task-Manager.
 
 Wenn Sie diese Einstellung aktivieren, werden die folgenden Änderungen vorgenommen:
 
-(1) Der Befehl "Ausführen" wird aus dem Startmenü entfernt.
+(1) Der Befehl „Ausführen“ wird aus dem Startmenü entfernt.
 
-(2) Der Befehl "Neue Aufgabe "(Ausführen)" wird aus Task-Manager entfernt.
+(2) Der Befehl „Neue Task (Ausführen)“ wird aus dem Task-Manager entfernt.
 
-(3) Der Benutzer wird daran gehindert, Folgendes in die adressleiste Internet Explorer einzugeben:
+(3) Der Benutzer kann Folgendes nicht in die Adressleiste von Internet Explorer eingeben:
 
---- Unc-Pfad: \\&lt;server&gt;\&lt;share&gt;
+--- einen UNC-Pfad: \\&lt;server&gt;\&lt;share&gt;
 
----Zugriff auf lokale Laufwerke: Beispiel: C:
+--- Zugriff auf lokale Laufwerke: z. B. „C:“
 
---- Zugriff auf lokale Ordner: z. B. \temp&gt;
+--- Zugriff auf lokale Ordner: z. B. „\temp&gt;“
 
-Außerdem können Benutzer mit erweiterten Tastaturen das Dialogfeld "Ausführen" nicht mehr anzeigen, indem sie die Anwendungstaste (die Taste mit dem Windows-Logo) + R drücken.
+Benutzer mit erweiterter Tastatur können außerdem das Dialogfeld „Ausführen“ nicht mehr über die Tastenkombination Anwendungstaste (die Taste mit dem Windows-Logo)+R aufrufen.
 
-Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, können Benutzer auf den Befehl "Ausführen" im Startmenü und in Task-Manager zugreifen und die Internet Explorer Adressleiste verwenden.
+Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, können Benutzer auf den Befehl „Ausführen“ im Startmenü und im Task-Manager zugreifen und die Adressleiste von Internet Explorer verwenden.
 
-Hinweis: Diese Einstellung betrifft nur die angegebene Schnittstelle. Es verhindert nicht, dass Benutzer andere Methoden zum Ausführen von Programmen verwenden.
 
-Hinweis: Diese Einstellung muss von Drittanbieteranwendungen mit Windows 2000-Zertifizierung oder höher eingehalten werden.</string>
+
+Hinweis: Diese Einstellung betrifft nur die angegebenen Elemente der Benutzeroberfläche. Sie verhindert nicht, dass Benutzer anderweitig Programme ausführen.
+
+Hinweis: Für die Zertifizierung von Drittanbieteranwendungen unter Windows 2000 oder höher ist das Festhalten an dieser Richtlinieneinstellung eine Voraussetzung.</string>
       <string id="NoSetFolders">Programme im Menü "Einstellungen" entfernen</string>
       <string id="NoSetFolders_Help">Mit dieser Richtlinieneinstellung können Sie Programme im Menü "Einstellungen" entfernen.
 
@@ -626,6 +628,11 @@ Wenn Sie die Richtlinie aktivieren, wird die Liste "Zuletzt hinzugefügt" nicht 
       <string id="HideRecommendedSection_Help">Mit dieser Richtlinie können Sie verhindern, dass im Startmenü eine Liste der empfohlenen Anwendungen und Dateien angezeigt wird.
 
 Wenn Sie diese Richtlinieneinstellung aktivieren, wird der Abschnitt mit empfohlenen Dateien und Apps nicht mehr im Startmenü angezeigt.</string>
+
+      <string id="HideRecommendedPersonalizedSites">Personalisierte Website-Empfehlungen aus dem Abschnitt „Empfohlen“ im Startmenü entfernen</string>
+      <string id="HideRecommendedPersonalizedSites_Help">Mit dieser Richtlinieneinstellung können Sie die personalisierten Websites im empfohlenen Abschnitt des Startmenüs ausblenden. 
+      
+Wenn Sie diese Richtlinieneinstellung aktivieren, werden im Startmenü keine personalisierten Websiteempfehlungen mehr im empfohlenen Abschnitt angezeigt.</string>
       <string id="DisableContextMenusInStart">Kontextmenüs im Startmenü deaktivieren</string>
       <string id="DisableContextMenusInStart_Help">Diese Richtlinie verhindert, dass Benutzer Kontextmenüs im Startmenü öffnen können.
 

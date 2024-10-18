@@ -129,6 +129,21 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, kan 
 
 Hvis en app er åben, når dette gruppepolitikobjekt anvendes på en enhed, skal medarbejdere genstarte appen eller enheden, for at politikændringerne kan træde i kraft i appen.
       </string>
+      <string id="LetAppsAccessHumanPresence_Name">Lad apps få adgang til tilstedeværelsesfornemmende</string>
+      <string id="LetAppsAccessHumanPresence_Explain">Denne politikindstilling angiver, om Windows-apps har adgang til tilstedeværelsesfornemmende.
+
+Du kan angive enten en standardindstilling for alle apps eller en pr. app-indstilling ved at angive et pakkefamilienavn. Du kan få pakkefamilienavnet for en app ved at bruge cmdlet Get-AppPackage Windows PowerShell. En pr. app-indstilling tilsidesætter standardindstillingen.
+
+Hvis du vælger indstillingen "Brugeren har kontrol", kan medarbejdere i din organisation bestemme, om Windows-apps har adgang til tilstedeværelsesfornemmende via Indstillinger &gt; Beskyttelse af personlige oplysninger på enheden.
+
+Hvis du vælger indstillingen "Gennemtving tilladelse", har Windows-apps adgang til tilstedeværelsesfornemmende, og medarbejdere i din organisation kan ikke ændre det.
+
+Hvis du vælger indstillingen "Gennemtving afvisning", har Windows-apps ikke adgang til tilstedeværelsesfornemmende, og medarbejdere i din organisation kan ikke ændre det.
+
+Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, kan medarbejdere i din organisation bestemme, om Windows-apps har adgang til tilstedeværelsesfornemmende via Indstillinger &gt; Beskyttelse af personlige oplysninger på enheden.
+
+Hvis en app er åben, når dette gruppepolitikobjekt anvendes på en enhed, skal medarbejdere genstarte appen eller enheden, for at politikændringerne kan træde i kraft i appen.
+      </string>
       <string id="LetAppsAccessLocation_Name">Lad Windows-apps få adgang til placering</string>
       <string id="LetAppsAccessLocation_Explain">Denne politikindstilling angiver, om Windows-apps har adgang til placering.
 
@@ -440,6 +455,15 @@ Hvis en app er åben, når dette gruppepolitikobjekt anvendes på en enhed, skal
         <text>Gennemtving afvisning af disse bestemte apps (brug pakkefamilienavne):</text>
         <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_ForceDenyTheseApps_List"/>
       </presentation>
+      <presentation id="LetAppsAccessHumanPresence">
+        <dropdownList refId="LetAppsAccessHumanPresence_Enum" noSort="true" defaultItem="0">Standard for alle apps:</dropdownList>
+        <text>Giv brugeren kontrol over disse bestemte apps (brug pakkefamilienavne):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_UserInControlOfTheseApps_List"/>
+        <text>Gennemtving tilladelse af disse bestemte apps (brug pakkefamilienavne):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_ForceAllowTheseApps_List"/>
+        <text>Gennemtving afvisning af disse bestemte apps (brug pakkefamilienavne):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_ForceDenyTheseApps_List"/>
+      </presentation>
       <presentation id="LetAppsAccessLocation">
         <dropdownList refId="LetAppsAccessLocation_Enum" noSort="true" defaultItem="0">Standard for alle apps:</dropdownList>
         <text>Giv brugeren kontrol over disse bestemte apps (brug pakkefamilienavne):</text>
@@ -464,7 +488,7 @@ Hvis en app er åben, når dette gruppepolitikobjekt anvendes på en enhed, skal
         <multiTextBox refId="LetAppsAccessMicrophone_UserInControlOfTheseApps_List"/>
         <text>Gennemtving tilladelse af disse bestemte apps (brug pakkefamilienavne):</text>
         <multiTextBox refId="LetAppsAccessMicrophone_ForceAllowTheseApps_List"/>
-        <text>Gennemtving afvisning af disse bestemte apps (brug pakkefamilienavne):</text>
+        <text>Gennemtving afvisning af disse bestemte apps (brug Pakkefamilienavne):</text>
         <multiTextBox refId="LetAppsAccessMicrophone_ForceDenyTheseApps_List"/>
       </presentation>
       <presentation id="LetAppsAccessMotion">
@@ -473,7 +497,7 @@ Hvis en app er åben, når dette gruppepolitikobjekt anvendes på en enhed, skal
         <multiTextBox refId="LetAppsAccessMotion_UserInControlOfTheseApps_List"/>
         <text>Gennemtving tilladelse af disse bestemte apps (brug pakkefamilienavne):</text>
         <multiTextBox refId="LetAppsAccessMotion_ForceAllowTheseApps_List"/>
-        <text>Gennemtving afvisning af disse bestemte apps (brug Pakkefamilienavne):</text>
+        <text>Gennemtving afvisning af disse bestemte apps (brug pakkefamilienavne):</text>
         <multiTextBox refId="LetAppsAccessMotion_ForceDenyTheseApps_List"/>
       </presentation>
       <presentation id="LetAppsAccessNotifications">

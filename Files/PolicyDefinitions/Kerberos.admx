@@ -172,15 +172,128 @@
         </enum>
       </elements>
     </policy>
+    <policy name="PKInitHashAlgorithmConfiguration" class="Machine" displayName="$(string.PKInitHashAlgorithmConfiguration)" explainText="$(string.PKInitHashAlgorithmConfiguration_explain)" key="Software\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters" presentation="$(presentation.PKInitHashAlgorithmConfiguration)" valueName="PKInitHashAlgorithmConfigurationEnabled">
+      <parentCategory ref="kerberos" />
+      <supportedOn ref="windows:SUPPORTED_Windows_11_0_22H2_NOSERVER" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+      <elements>
+        <enum id="PKInitHashAlgorithmSHA1" valueName="PKInitSHA1">
+          <item displayName="$(string.PKInitHashAlgorithm_Default)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.PKInitHashAlgorithm_Supported)">
+            <value>
+              <decimal value="3" />
+            </value>
+          </item>
+          <item displayName="$(string.PKInitHashAlgorithm_Audited)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.PKInitHashAlgorithm_NotSupported)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+        </enum>
+        <enum id="PKInitHashAlgorithmSHA256" valueName="PKInitSHA256">
+          <item displayName="$(string.PKInitHashAlgorithm_Default)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.PKInitHashAlgorithm_Supported)">
+            <value>
+              <decimal value="3" />
+            </value>
+          </item>
+          <item displayName="$(string.PKInitHashAlgorithm_Audited)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.PKInitHashAlgorithm_NotSupported)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+        </enum>
+        <enum id="PKInitHashAlgorithmSHA384" valueName="PKInitSHA384">
+          <item displayName="$(string.PKInitHashAlgorithm_Default)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.PKInitHashAlgorithm_Supported)">
+            <value>
+              <decimal value="3" />
+            </value>
+          </item>
+          <item displayName="$(string.PKInitHashAlgorithm_Audited)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.PKInitHashAlgorithm_NotSupported)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+        </enum>
+        <enum id="PKInitHashAlgorithmSHA512" valueName="PKInitSHA512">
+          <item displayName="$(string.PKInitHashAlgorithm_Default)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.PKInitHashAlgorithm_Supported)">
+            <value>
+              <decimal value="3" />
+            </value>
+          </item>
+          <item displayName="$(string.PKInitHashAlgorithm_Audited)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.PKInitHashAlgorithm_NotSupported)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
     <policy name="CloudKerberosTicketRetrievalEnabled" class="Machine" displayName="$(string.CloudKerberosTicketRetrievalEnabled)" explainText="$(string.CloudKerberosTicketRetrievalEnabled_explain)" key="Software\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters" valueName="CloudKerberosTicketRetrievalEnabled">
         <parentCategory ref="kerberos" />
-        <supportedOn ref="windows:SUPPORTED_Windows_10_0" />
+        <supportedOn ref="windows:SUPPORTED_Windows_10_0_20H1" />
         <enabledValue>
           <decimal value="1" />
         </enabledValue>
         <disabledValue>
           <decimal value="0" />
         </disabledValue>
+    </policy>
+    <policy name="DelegatedMSAEnabled" class="Machine" displayName="$(string.DelegatedMSAEnabled)" explainText="$(string.DelegatedMSAEnabled_explain)" presentation="$(presentation.DmsaRealms)" key="Software\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters" valueName="DelegatedMSAEnabled">
+        <parentCategory ref="kerberos" />
+        <supportedOn ref="windows:SUPPORTED_Windows_11_0_24H2" />
+        <enabledValue>
+          <decimal value="1" />
+        </enabledValue>
+        <disabledValue>
+          <decimal value="0" />
+        </disabledValue>
+        <elements>
+            <multiText id="DmsaRealmsList" key="Software\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters" valueName="DmsaRealms" />
+        </elements>
     </policy>
   </policies>
 </policyDefinitions>

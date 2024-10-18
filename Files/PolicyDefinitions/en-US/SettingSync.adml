@@ -112,6 +112,31 @@ If you do not set or disable this setting, syncing on metered connections is con
 
         If you do not set or disable this setting, syncing of the "Start layout" group is on by default and configurable by the user.
       </string>
+
+      <!-- Accessibility -->
+      <string id="DisableAccessibilitySettingSync">Do not sync accessibility settings</string>
+      <string id="DisableAccessibilitySettingSync_Help">
+        Prevent the "accessibility" group from syncing to and from this PC. This turns off and disables the "accessibility" group on the "Windows backup" settings page in PC settings.
+
+If you enable this policy setting, the "accessibility", group will not be synced.
+
+Use the option "Allow users to turn accessibility syncing on" so that syncing is turned off by default but not disabled.
+
+If you do not set or disable this setting, syncing of the "accessibility" group is on by default and configurable by the user.
+      </string>
+
+      <!-- Language -->
+      <string id="DisableLanguageSettingSync">Do not sync language preferences settings</string>
+      <string id="DisableLanguageSettingSync_Help">
+        Prevent the "language preferences" group from syncing to and from this PC. This turns off and disables the "languages preferences" group on the "Windows backup" settings page in PC settings.
+
+If you enable this policy setting, the "language preferences", group will not be synced.
+
+Use the option "Allow users to turn language preferences syncing on" so that syncing is turned off by default but not disabled.
+
+If you do not set or disable this setting, syncing of the "language preferences" group is on by default and configurable by the user.
+      </string>
+
     </stringTable>
     <presentationTable>
 
@@ -158,6 +183,16 @@ If you do not set or disable this setting, syncing on metered connections is con
       <!-- StartLayout -->
       <presentation id="DisableStartLayoutSettingSyncUserOverride">
         <checkBox refId="CheckBox_UserOverride">Allow users to turn "start layout" syncing on.</checkBox>
+      </presentation>
+
+      <!-- AccessibilitySync -->
+      <presentation id="DisableAccessibilitySettingSyncUserOverride">
+        <checkBox refId="CheckBox_UserOverride">Allow users to turn "acessibility" syncing on.</checkBox>
+      </presentation>
+
+      <!-- LanguageSync -->
+      <presentation id="DisableLanguageSettingSyncUserOverride">
+        <checkBox refId="CheckBox_UserOverride">Allow users to turn "language preferences" syncing on.</checkBox>
       </presentation>
 
     </presentationTable>

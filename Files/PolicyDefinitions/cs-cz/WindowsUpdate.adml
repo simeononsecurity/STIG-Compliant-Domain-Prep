@@ -21,6 +21,7 @@ Možnost 7 je podporována na serverech minimálně s edicí Windows Server 2016
       <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">Windows Server 2016 nebo Windows Server 2022 nebo Windows 10​</string>
       <string id="WU_SUPPORTED_Windows_Server_2019_Windows_10_0_1809">Minimálně Windows Server 2019 nebo Windows 10 verze 1809​</string>
       <string id="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004">Minimálně Windows Server 2022 nebo Windows 10 verze 2004​</string>
+      <string id="WU_SUPPORTED_WinServer2025_Win1021H2_Win1122H2">Minimálně Windows Server 2025, Windows 10 verze 21H2 nebo Windows 11 verze 22H2</string>
       <string id="AUDontShowUasHelp">Nastavení této zásady umožňuje určit, zda bude v dialogu pro vypnutí počítače zobrazena možnost Nainstalovat aktualizace a vypnout.
 
 Pokud toto nastavení zásad povolíte, nebude volba Nainstalovat aktualizace a vypnout zobrazena v dialogovém okně pro vypnutí počítače, ani v případě, že jsou při vypínání připraveny aktualizace k instalaci.
@@ -627,22 +628,39 @@ Pokud vyberete možnost „Použít pouze během doby aktivního používání�
       <string id="DefaultNotification">0 (výchozí) – Výchozí oznámení operačního systému o službě Windows Update</string>
       <string id="ExcludingRebootWarnings">1 – Zakázat všechna oznámení kromě upozornění na restart</string>
       <string id="IncludingRebootWarnings">2 – Zakázat všechna oznámení včetně upozornění na restart</string>
-      <string id="ComplianceDeadline_Title">Zadat lhůty pro automatické aktualizace a restartování</string>
-      <string id="ComplianceDeadline_Help">Tato zásada umožňuje určit počet dní, po jejichž uplynutí se aktualizace pro zvýšení kvality a aktualizace funkcí automaticky nainstalují na zařízení, a poskytnutou lhůtu navíc, po jejímž uplynutí automaticky dochází k požadovaným restartům.
+      <string id="ComplianceDeadlineForFU_Title">Specify deadline for automatic updates and restarts for feature update</string>
+      <string id="ComplianceDeadlineForFU_Help">This policy lets you specify the number of days before feature updates are installed on devices automatically, and a grace period after which required restarts occur automatically.
 
-Konečné termíny pro aktualizace funkcí a aktualizace pro zvýšení kvality nastavte tak, aby splňovaly vaše cíle v oblasti dodržování předpisů. Aktualizace se stáhnou a nainstalují hned, jakmile se nabídnou, a pokusí se automaticky restartovat počítač mimo dobu aktivního používání. Po vypršení konečného termínu dojde k restartování bez ohledu na dobu aktivního používání a uživatelé nebudou moct tento plán změnit. Pokud je konečný termín nastaven na hodnotu 0 dnů, aktualizace se nainstaluje hned při nabídnutí, ale nemusí se dokončit během stejného dne, a to v závislosti na dostupnosti zařízení a připojení k síti.
+Set deadlines for feature updates and quality updates to meet your compliance goals. Updates will be downloaded and installed as soon as they are offered and automatic restarts will be attempted outside of active hours. Once the deadline has passed, restarts will occur regardless of active hours, and users will not be able to reschedule. If the deadline is set to 0 days, the update will be installed immediately upon offering, but might not finish within the day due to device availability and network connectivity.
 
-Poskytnutou lhůtu navíc u aktualizací funkcí a aktualizací pro zvýšení kvality nastavte tak, aby uživatelé měli zajištěnou určitou minimální dobu pro správu restartů po instalaci aktualizací. Uživatelé si budou moct během poskytnuté lhůty naplánovat restart, a i když se rozhodnou ho nenaplánovat, systém Windows se bude moct automaticky restartovat mimo dobu aktivního používání. Poskytnutá lhůta se nemusí projevit, pokud už uživatelé mají nastaveno více dnů, než je poskytnutá lhůta pro správu restartování, a to na základě konfigurace konečného termínu.
+Set a grace period for feature updates to guarantee users a minimum time to manage their restarts once updates are installed. Users will be able to schedule restarts during the grace period and Windows can still automatically restart outside of active hours if users choose not to schedule restarts. The grace period might not take effect if users already have more than the number of days set as grace period to manage their restart, based on deadline configurations.
 
-Zařízení můžete nastavit tak, aby restartování odložilo, dokud nevyprší konečný termín i poskytnutá lhůta navíc.
+You can set the device to delay restarting until both the deadline and grace period have expired.
 
-Pokud tuto zásadu zakážete nebo nenakonfigurujete, budou zařízení přijímat aktualizace a restartovat se podle výchozího plánu.
+If you disable or do not configure this policy, devices will get updates and will restart according to the default schedule.
 
-Tato zásada přepíše následující zásady:
-1. Zadat konečný termín pro automatické restartování po instalaci aktualizace
-2. Zadat přechod restartování podle plánu a časový plán oznámení pro aktualizace
-3. Vždy automaticky restartovat v naplánovaný čas
-4. Konfigurovat automatické aktualizace
+This policy will override the following policies:
+1.  Specify deadline before auto restart for update installation
+2.  Specify Engaged restart transition and notification schedule for updates
+3.  Always automatically restart at the scheduled time
+4.  Configure Automatic Updates
+      </string>
+      <string id="ComplianceDeadlineForQU_Title">Specify deadline for automatic updates and restarts for quality update</string>
+      <string id="ComplianceDeadlineForQU_Help">This policy lets you specify the number of days before quality updates are installed on devices automatically, and a grace period after which required restarts occur automatically.
+
+Set deadlines for quality updates to meet your compliance goals. Updates will be downloaded and installed as soon as they are offered and automatic restarts will be attempted outside of active hours. Once the deadline has passed, restarts will occur regardless of active hours, and users will not be able to reschedule. If the deadline is set to 0 days, the update will be installed immediately upon offering, but might not finish within the day due to device availability and network connectivity.
+
+Set a grace period for quality updates to guarantee users a minimum time to manage their restarts once updates are installed. Users will be able to schedule restarts during the grace period and Windows can still automatically restart outside of active hours if users choose not to schedule restarts. The grace period might not take effect if users already have more than the number of days set as grace period to manage their restart, based on deadline configurations.
+
+You can set the device to delay restarting until both the deadline and grace period have expired.
+
+If you disable or do not configure this policy, devices will get updates and will restart according to the default schedule.
+
+This policy will override the following policies:
+1.  Specify deadline before auto restart for update installation
+2.  Specify Engaged restart transition and notification schedule for updates
+3.  Always automatically restart at the scheduled time
+4.  Configure Automatic Updates
       </string>
       <string id="ComplianceDeadlineDay0">0</string>
       <string id="ComplianceDeadlineDay1">1</string>
@@ -675,6 +693,31 @@ Tato zásada přepíše následující zásady:
       <string id="ComplianceDeadlineDay28">28</string>
       <string id="ComplianceDeadlineDay29">29</string>
       <string id="ComplianceDeadlineDay30">30</string>
+
+      <string id="AllowTemporaryEnterpriseFeatureControl_Title">Povolit funkce zavedené prostřednictvím údržby, které jsou ve výchozím nastavení vypnuté</string>
+      <string id="AllowTemporaryEnterpriseFeatureControl_Help">Funkce zavedené prostřednictvím údržby (mimo každoroční aktualizaci funkcí) jsou ve výchozím nastavení vypnuté pro zařízení, která mají své aktualizace Windows spravované*.
+
+Pokud je tato zásada nakonfigurovaná na „Povoleno“, budou zapnuté všechny funkce dostupné v nejnovější měsíční aktualizaci pro zvýšení kvality.
+
+Pokud je tato zásada nastavená na „Nenakonfigurováno“ nebo „Zakázáno“, zůstanou funkce, které se dodávají prostřednictvím měsíční aktualizace pro zvýšení kvality (údržby), vypnuté, dokud se nenainstaluje aktualizace funkcí, která tyto funkce obsahuje.
+
+ *Zařízení spravovaná přes Windows Update jsou zařízení, jejichž aktualizace Windows jsou spravované prostřednictvím zásad, ať už prostřednictvím cloudu pomocí Windows Update pro firmy, nebo místně s Windows Server Update Services (WSUS).
+      </string>
+      <string id="AllowOptionalContent_Title">Povolit volitelné aktualizace</string>
+      <string id="AllowOptionalContent_Help">Tato zásada umožňuje zařízením získávat volitelné aktualizace (včetně postupného uvádění funkcí (CFR) – další informace najdete na aka.ms/AllowOptionalContent)
+
+Když je zásada nakonfigurovaná
+
+• Pokud je vybraná možnost Automaticky přijímat volitelné aktualizace (včetně CFR), zařízení automaticky získává nejnovější volitelné aktualizace v souladu s nakonfigurovanými odloženími aktualizací pro zvýšení kvality. To zahrnuje volitelné kumulativní aktualizace a postupná uvádění funkcí (CFR).
+
+• Pokud je vybraná možnost Automaticky přijímat aktualizace, získává zařízení automaticky jenom volitelné kumulativní aktualizace, a to v souladu s odloženími aktualizací pro zvýšení kvality.
+
+• Pokud je vybraná možnost Uživatelé můžou vybrat, které aktualizace mají dostávat, můžou uživatelé vybrat volitelné aktualizace, které se mají získávat. Tuto volbu můžou provést v Nastavení &gt; Windows Update &gt; Upřesnit možnosti &gt; Volitelné aktualizace. Uživatelé můžou také povolit přepínač „Získejte nejnovější aktualizace hned, jak budou k dispozici“, aby automaticky dostávali volitelné aktualizace a postupná uvádění funkcí.
+      </string>
+      <string id="DonotReceiveOptionalContent">Nepřijímat volitelné aktualizace</string>
+      <string id="ReceiveOptionalContentWithAutoApproval">Automaticky přijímat volitelné aktualizace (včetně CFR)</string>
+      <string id="ReceiveOptionalLCUWithAutoApproval">Automaticky přijímat volitelné aktualizace</string>
+      <string id="ReceiveOptionalContentNeedUserApproval">Uživatelé můžou vybrat, které volitelné aktualizace se mají přijmout</string>
     </stringTable>
 
     <presentationTable>
@@ -816,16 +859,20 @@ Tato zásada přepíše následující zásady:
         <text></text>
         <checkBox refId="NoUpdateNotificationsDuringActiveHours" defaultChecked="false">Použít pouze během doby aktivního používání</checkBox>
       </presentation>
-      <presentation id="ComplianceDeadline_Title">
-        <text>Aktualizace pro zvýšení kvality</text>
+       <presentation id="ComplianceDeadlineForFU_Title">
+        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="2">Termín (dny):</dropdownList>
+        <dropdownList refId="ConfigureDeadlineGracePeriodForFeatureUpdates" noSort="true" defaultItem="7">Poskytnutá lhůta (dny):</dropdownList>
+        <text></text>
+        <checkBox refId="ConfigureDeadlineNoAutoRebootForFeatureUpdates" defaultChecked="false">Don't auto-restart until end of grace period</checkBox>
+      </presentation>
+      <presentation id="ComplianceDeadlineForQU_Title">
         <dropdownList refId="ConfigureDeadlineForQualityUpdates" noSort="true" defaultItem="7">Termín (dny):</dropdownList>
         <dropdownList refId="ConfigureDeadlineGracePeriod" noSort="true" defaultItem="2">Poskytnutá lhůta (dny):</dropdownList>
         <text></text>
-        <text>Aktualizace funkcí</text>
-        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="7">Termín (dny):</dropdownList>
-        <dropdownList refId="ConfigureDeadlineGracePeriodForFeatureUpdates" noSort="true" defaultItem="2">Poskytnutá lhůta (dny):</dropdownList>
-        <text></text>
-        <checkBox refId="ConfigureDeadlineNoAutoReboot" defaultChecked="false">Nerestartovat automaticky do konce poskytnuté lhůty</checkBox>
+        <checkBox refId="ConfigureDeadlineNoAutoRebootForQualityUpdates" defaultChecked="false">Don't auto-restart until end of grace period</checkBox>
+      </presentation>
+      <presentation id="AllowOptionalContent_Title">
+        <dropdownList refId="AllowOptionalContent" noSort="true" defaultItem="0">Vyberte, jakým způsobem uživatelé dostávají volitelné aktualizace:</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

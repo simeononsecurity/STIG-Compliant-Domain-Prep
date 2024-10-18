@@ -30,9 +30,9 @@ Formatet for denne innstillingen er &lt;server&gt;:&lt;port&gt;
       </string>
 
       <string id="CommercialId">Konfigurer kommersiell-ID</string>
-      <string id="CommercialId_Explain">Denne policy innstillingen definerer identifikatoren som brukes til å tilordne diagnose data for denne enheten entydig som tilhører en gitt organisasjon. Hvis organisasjonen deltar i et program som krever at denne enheten skal identifiseres som tilhører organisasjonen din, kan du bruke denne innstillingen til å angi denne identifikasjonen. Verdien for denne innstillingen tilbys av Microsoft som en del av den innebygde prosessen for programmet. 
+      <string id="CommercialId_Explain">Denne policyinnstillingen definerer identifikatoren som brukes til å tilordne diagnosedata for denne enheten entydig som tilhører en gitt organisasjon. Hvis organisasjonen deltar i et program som krever at denne enheten skal identifiseres som tilhører organisasjonen din, kan du bruke denne innstillingen til å angi denne identifikasjonen. Verdien for denne innstillingen tilbys av Microsoft som en del av den innebygde prosessen for programmet. 
 
-Hvis du deaktiverer denne policy innstillingen eller ikke konfigurerer den, vil ikke Microsoft kunne bruke denne identifikatoren til å knytte denne maskinen til data maskinen og diagnose data med organisasjonen.
+Hvis du deaktiverer denne policyinnstillingen eller ikke konfigurerer den, vil ikke Microsoft kunne bruke denne identifikatoren til å knytte denne maskinen til datamaskinen og diagnosedata med organisasjonen.
       </string>
 
       <string id="DisableEnterpriseAuthProxy">Konfigurer bruk av Godkjent proxy for tjenesten Tilkoblet brukeropplevelse og telemetri</string>
@@ -105,6 +105,8 @@ Hvis du angir denne policyinnstillingen til «Aktiver varsler om endringer i dia
 
       <string id="AllowUpdateComplianceProcessing">Tillat oppdatering av samsvarsbehandling</string>
       <string id="AllowUpdateComplianceProcessing_Explain">
+Denne policyen er avskrevet, og vil bare fungere på Windows 10 versjon 1809. Hvis denne policyen angis på andre støttede versjoner av Windows har det ingen effekt.
+
 Denne policyinnstillingen, i kombinasjon med Tillat telemetri og Konfigurer kommersiell ID, gjør det mulig for organisasjoner å konfigurere enheten slik at Microsoft er prosessoren til Windows-diagnosedata som er samlet inn fra enheten, underlagt produktvilkårene på https://go.microsoft.com/fwlink/?linkid=2185086.
 Slik aktiverer du denne virkemåten:
     1. Aktiver denne policyinnstillingen
@@ -118,39 +120,45 @@ Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, vises ikk
 
       <string id="AllowDesktopAnalyticsProcessing">Tillat behandling av skrivebordsanalyse</string>
       <string id="AllowDesktopAnalyticsProcessing_Explain">
-Denne policyinnstillingen, i kombinasjon med Tillat telemetri og Konfigurer kommersiell ID, gjør det mulig for organisasjoner å konfigurere enheten slik at Microsoft er prosessoren for Windows-diagnosedata som samles inn fra enheten, underlagt produktvilkårene på https://go.microsoft.com/fwlink/?linkid=2185086.
+Denne policyen er avskrevet, og vil bare fungere på Windows 10 versjon 1809. Hvis denne policyen angis på andre støttede versjoner av Windows har det ingen effekt.
+
+Denne policyinnstillingen, i kombinasjon med Tillat telemetri og Konfigurer kommersiell ID, gjør det mulig for organisasjoner å konfigurere enheten slik at Microsoft er behandler for Windows-diagnosedata som samles inn fra enheten, underlagt produktvilkårene på https://go.microsoft.com/fwlink/?linkid=2185086.
 Slik aktiverer du denne virkemåten:
     1. Aktiver denne policyinnstillingen
     2. Koble en Azure Active Directory-konto til enheten
-    3. Angi Tillat telemetri til verdi 1 – Obligatorisk eller høyere
+    3. Sett Tillat telemetri til verdi 1 – obligatorisk eller høyere
     4. Angi innstillingen Konfigurer kommersiell ID for arbeidsområdet Skrivebordsanalyse
 
-Når disse policyene er konfigurert vil Windows-diagnosedata som samles inn fra enheten være underlagt Microsofts prosessorforpliktelser.
-Denne innstillingen har ingen innvirkning på enheter med mindre de er riktig registrert i Skrivebordsanalyse. Hvis du deaktiverer denne policyinnstillingen, vises ikke enheter i Skrivebordsanalyse.
+Når disse policyene er konfigurert vil Windows-diagnosedata som innhentes fra enheten være underlagt Microsofts behandlerforpliktelser.
+Denne innstillingen har ingen effekt på enheter med mindre de er riktig registrert i Skrivebordsanalyse. Hvis du deaktiverer denne policyinnstillingen vises ikke enhetene i Skrivebordsanalyse.
       </string>
 
       <string id="AllowWUfBCloudProcessing">Tillat WUfB Sky behandling</string>
       <string id="AllowWUfBCloudProcessing_Explain">
-Denne policyinnstillingen konfigurerer en Azure Active Directory sammenføyd enhet, slik at Microsoft er prosessoren til Windows-diagnosedata som er samlet inn fra enheten, underlagt produktvilkårene på https://go.microsoft.com/fwlink/?linkid=2185086.
+Denne policyen er avskrevet, og vil bare fungere på Windows 10 versjon 1809. Hvis denne policyen angis på andre støttede versjoner av Windows har det ingen effekt.
+
+Denne policyinnstillingen konfigurerer en Azure Active Directory-tilkoblet enhet slik at Microsoft er behandler av Windows-diagnosedata som innhentes fra enheten, underlagt produktvilkårene på https://go.microsoft.com/fwlink/?linkid=2185086.
 Slik aktiverer du denne virkemåten:
     1. Aktiver denne policyinnstillingen
     2. Koble en Azure Active Directory-konto til enheten
-    3. Angi Tillat telemetri til verdi 1 – Obligatorisk eller høyere
+    3. Angi Tillat telemetri til verdi 1 – obligatorisk eller høyere
 
-Når disse policyene er konfigurert, vil Windows-diagnosedata som samles inn fra enheten være underlagt Microsofts prosessorforpliktelser.
-Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, kan ikke enheter som er registrert i distribusjonstjenesten til Windows Update for bedrifter dra nytte av enkelte funksjoner i distribusjonstjenesten.
+Når disse policyene er konfigurert vil Windows-diagnosedata som er innhentet fra enheten være underlagt Microsofts behandlerforpliktelser.
+Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen vil ikke enheter som er registrert for distribusjonstjenesten Windows Update for bedrifter kunne utnytte noen av funksjonene i distribusjonstjenesten.
       </string>
 
       <string id="AllowCommercialDataPipeline">Tillat kommersiell datapipeline</string>
       <string id="AllowCommercialDataPipeline_Explain">
-AllowCommercialDataPipeline konfigurerer en Azure Active Directory sammenkoblet enhet slik at Microsoft er prosessoren til Windows-diagnosedata som samles inn fra enheten, underlagt produktvilkårene på https://go.microsoft.com/fwlink/?linkid=2185086.
+Denne policyen er avskrevet, og vil bare fungere på Windows 10 versjon 1809. Hvis denne policyen angis på andre støttede versjoner av Windows har det ingen effekt.
+
+AllowCommercialDataPipeline konfigurerer en Azure Active Directory-sammenkoblet enhet slik at Microsoft er behandler av Windows-diagnosedata som samles inn fra enheten, underlagt produktvilkårene på https://go.microsoft.com/fwlink/?linkid=2185086.
 Slik aktiverer du denne virkemåten:
     1. Aktiver denne policyinnstillingen
     2. Koble en Azure Active Directory-konto til enheten
 
-Windows-diagnosedata samles inn når policyinnstillingen Tillat telemetri er satt til verdi 1 – obligatorisk eller høyere. Konfigurering av denne innstillingen endrer ikke det samlingsnivået for Windows-diagnosedata som er angitt for enheten
-Hvis du deaktiverer eller ikke konfigurerer denne innstillingen, vil Microsoft være kontrolleren for Windows-diagnosedata som samles inn fra enheten og behandles i samsvar med Microsofts personvernerklæring på https://go.microsoft.com/fwlink/?LinkId=521839 med mindre du har aktivert policyer som «Tillat behandling av skrivebordsanalyse» eller «Tillat behandling av skrivebordsanalyse».
-Se dokumentasjonen på https://go.microsoft.com/fwlink/?linkid=2011107 for informasjon om dette og andre policyer som vil føre til at Microsoft er prosessoren av Windows-diagnosedata.
+Winddows-diagnosedata samles inn når policyinnstillingen Tillat telemetri er satt til verdi 1 – obligatorisk eller høyere. Konfigurering av denne innstillingen endrer ikke innsamlingsnivået for Windows-diagnosedata som er angitt for enheten.
+Hvis du deaktiverer eller ikke konfigurerer denne innstillingen vil Microsoft være behandler av Windows-diagnosedata som samles inn fra enheten og behandles i samsvar med Microsofts personvernerklæring på https://go.microsoft.com/fwlink/?LinkId=521839 med mindre du har aktivert policyer som «Tillat behandling av oppdateringssamsvar» eller «Tillat behandling av skrivebordsanalyse».
+Se dokumentasjonen på https://go.microsoft.com/fwlink/?linkid=2011107 for mer informasjon om denne og andre policyer som fører til at Microsoft er behandler av Windows-diagnosedata.
       </string>
 
       <string id="LimitDiagnosticLogCollection">Begrens diagnoselogginnsamling</string>

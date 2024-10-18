@@ -105,12 +105,14 @@ Wenn Sie für diese Richtlinieneinstellung die Option "Benachrichtigungen zu Än
 
       <string id="AllowUpdateComplianceProcessing">Aktualisierung der Compliance-Verarbeitung zulassen</string>
       <string id="AllowUpdateComplianceProcessing_Explain">
-Diese Richtlinieneinstellung ermöglicht in Kombination mit „Telemetrie zulassen“ und „Kommerzielle ID konfigurieren“ Organisationen, das Gerät so zu konfigurieren, dass Microsoft der Prozessor der vom Gerät gesammelten Windows-Diagnosedaten ist, die den Produktbedingungen unter https://go.microsoft.com/fwlink/?linkid=2185086 unterliegen.
+Diese Richtlinie ist veraltet und wird nur auf Windows 10, Version 1809 funktionieren. Das Festlegen dieser Richtlinie wird keine Auswirkungen auf andere unterstützte Versionen von Windows haben.
+
+Diese Richtlinieneinstellung ermöglicht in Kombination mit „Telemetrie zulassen“ und „Kommerzielle ID konfigurieren“ Organisationen, das Gerät so zu konfigurieren, dass Microsoft der Prozessor der vom Gerät gesammelten Windows-Diagnosedaten ist, vorbehältlich den Produktbedingungen unter https://go.microsoft.com/fwlink/?linkid=2185086.
 So aktivieren Sie dieses Verhalten:
- 1. Aktivieren Sie diese Richtlinieneinstellung
- 2. Verknüpfen Sie ein Azure Active Directory-Konto mit dem Gerät
- 3. Legen Sie „Telemetrie zulassen“ auf den Wert 1 – Erforderlich oder höher
- 4 fest. Legen Sie die Einstellung „Kommerzielle ID konfigurieren“ für Ihren Arbeitsbereich „Update-Compliance“ fest
+    1. Aktivieren Sie diese Richtlinieneinstellung
+    2. Verknüpfen Sie ein Azure Active Directory-Konto mit dem Gerät
+    3. Legen Sie „Telemetrie zulassen“ auf den Wert „1 – Erforderlich“ oder höher fest.
+    4. Legen Sie die Einstellung „Kommerzielle ID konfigurieren“ für Ihren Arbeitsbereich „Update Compliance“ fest
 
 Wenn diese Richtlinien konfiguriert sind, unterliegen Windows-Diagnosedaten, die vom Gerät erfasst werden, den Verpflichtungen des Microsoft-Prozessors.
 Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werden Geräte nicht in Update Compliance angezeigt.
@@ -118,12 +120,14 @@ Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wer
 
       <string id="AllowDesktopAnalyticsProcessing">Desktopanalyseverarbeitung zulassen</string>
       <string id="AllowDesktopAnalyticsProcessing_Explain">
-Diese Richtlinieneinstellung ermöglicht in Kombination mit „Telemetrie zulassen“ und „Kommerzielle ID konfigurieren“ Organisationen, das Gerät so zu konfigurieren, dass Microsoft der Prozessor der vom Gerät gesammelten Windows-Diagnosedaten ist, die den Produktbedingungen unter https://go.microsoft.com/fwlink/?linkid=2185086 unterliegen.
+Diese Richtlinie ist veraltet und wird nur auf Windows 10, Version 1809 funktionieren. Das Festlegen dieser Richtlinie wird keine Auswirkungen auf andere unterstützte Versionen von Windows haben.
+
+Diese Richtlinieneinstellung ermöglicht in Kombination mit „Telemetrie zulassen“ und „Kommerzielle ID konfigurieren“ Organisationen, das Gerät so zu konfigurieren, dass Microsoft der Prozessor der vom Gerät gesammelten Windows-Diagnosedaten ist, vorbehältlich den Produktbedingungen unter https://go.microsoft.com/fwlink/?linkid=2185086.
 So aktivieren Sie dieses Verhalten:
- 1. Aktivieren Sie diese Richtlinieneinstellung
- 2. Verknüpfen Sie ein Azure Active Directory-Konto mit dem Gerät
- 3. Legen Sie „Telemetrie zulassen“ auf den Wert 1 – Erforderlich oder höher
- 4 fest. Legen Sie die Einstellung „Kommerzielle ID konfigurieren“ für Ihren Arbeitsbereich „Update-Compliance“ fest
+    1. Aktivieren Sie diese Richtlinieneinstellung
+    2. Verknüpfen Sie ein Azure Active Directory-Konto mit dem Gerät
+    3. Legen Sie „Telemetrie zulassen“ auf den Wert „1 – Erforderlich“ oder höher fest
+    4. Legen Sie die Einstellung „Kommerzielle ID konfigurieren“ für Ihren Arbeitsbereich „Update Compliance“ fest
 
 Wenn diese Richtlinien konfiguriert sind, unterliegen Windows-Diagnosedaten, die vom Gerät erfasst werden, den Verpflichtungen des Microsoft-Prozessors.
 Diese Einstellung hat keine Auswirkungen auf Geräte, es sei denn, sie sind ordnungsgemäß bei Desktop Analytics angemeldet. Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, werden Geräte nicht in Desktop Analytics angezeigt.
@@ -131,11 +135,13 @@ Diese Einstellung hat keine Auswirkungen auf Geräte, es sei denn, sie sind ordn
 
       <string id="AllowWUfBCloudProcessing">WUfB-Cloud-Verarbeitung erlauben</string>
       <string id="AllowWUfBCloudProcessing_Explain">
-Mit dieser Richtlinieneinstellung wird ein mit Azure Active Directory verbundenes Gerät so konfiguriert, dass Microsoft der Prozessor der vom Gerät gesammelten Windows-Diagnosedaten ist, die den Produktbedingungen unter https://go.microsoft.com/fwlink/?linkid=2185086 unterliegen.
+Diese Richtlinie ist veraltet und wird nur auf Windows 10, Version 1809 funktionieren. Das Festlegen dieser Richtlinie wird keine Auswirkungen auf andere unterstützte Versionen von Windows haben.
+
+Mit dieser Richtlinieneinstellung wird ein mit Azure Active Directory verbundenes Gerät so konfiguriert, dass Microsoft der Prozessor der vom Gerät gesammelten Windows-Diagnosedaten ist, vorbehältlich den Produktbedingungen unter https://go.microsoft.com/fwlink/?linkid=2185086.
 So aktivieren Sie dieses Verhalten:
- 1. Aktivieren Sie diese Richtlinieneinstellung
- 2. Verknüpfen Sie ein Azure Active Directory-Konto mit dem Gerät
- 3. Legen Sie „Telemetrie zulassen“ auf den Wert „1 – Erforderlich“ oder höher fest
+    1. Aktivieren Sie diese Richtlinieneinstellung
+    2. Verknüpfen Sie ein Azure Active Directory-Konto mit dem Gerät
+    3. Legen Sie „Telemetrie zulassen“ auf den Wert „1 – Erforderlich“ oder höher fest
 
 Wenn diese Richtlinien konfiguriert sind, unterliegen Windows-Diagnosedaten, die vom Gerät erfasst werden, den Verpflichtungen des Microsoft-Prozessors.
 Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, können Geräte, die beim Windows Update for Business-Bereitstellungsdienst registriert sind, einige Funktionen des Bereitstellungsdienstes nicht nutzen.
@@ -143,14 +149,16 @@ Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, kö
 
       <string id="AllowCommercialDataPipeline">Kommerzielle Datenpipeline zulassen</string>
       <string id="AllowCommercialDataPipeline_Explain">
-AllowCommercialDataPipeline konfiguriert ein mit Azure Active Directory verbundenes Gerät so, dass Microsoft der Verarbeiter der vom Gerät gesammelten Windows-Diagnosedaten ist, vorbehaltlich der Produktbedingungen unter https://go.microsoft.com/fwlink/?linkid=2185086. 
- So aktivieren Sie dieses Verhalten:
- 1. Aktivieren Sie diese Richtlinieneinstellung.
- 2. Verbinden Sie ein Azure Active Directory-Konto mit dem Gerät
+Diese Richtlinie ist veraltet und wird nur auf Windows 10, Version 1809 funktionieren. Das Festlegen dieser Richtlinie wird keine Auswirkungen auf andere unterstützte Versionen von Windows haben.
 
- Windows-Diagnosedaten werden gesammelt, wenn die Richtlinieneinstellung „Telemetrie zulassen“ auf den Wert 1 – Erforderlich oder höher gesetzt ist. Durch die Konfiguration dieser Einstellung wird die für das Gerät festgelegte Erfassungsebene für Windows-Diagnosedaten nicht geändert.
- Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, ist Microsoft der Verantwortliche für die vom Gerät erfassten Windows-Diagnosedaten, die gemäß der Datenschutzerklärung von Microsoft unter https://go.microsoft.com/fwlink/?LinkId=521839 verarbeitet werden, es sei denn, Sie haben Richtlinien wie „Update-Compliance-Verarbeitung zulassen“ oder „Desktop Analytics-Verarbeitung zulassen“ aktiviert.
-  In der Dokumentation unter https://go.microsoft.com/fwlink/?linkid=2011107 finden Sie Informationen zu dieser und anderen Richtlinien, die dazu führen, dass Microsoft der Verarbeiter von Windows-Diagnosedaten ist.
+AllowCommercialDataPipeline konfiguriert ein mit Azure Active Directory verbundenes Gerät so, dass Microsoft der Verarbeiter der vom Gerät gesammelten Windows-Diagnosedaten ist, vorbehältlich der Produktbedingungen unter https://go.microsoft.com/fwlink/?linkid=2185086.
+So aktivieren Sie dieses Verhalten:
+    1. Aktivieren Sie diese Richtlinieneinstellung.
+    2. Verbinden Sie ein Azure Active Directory-Konto mit dem Gerät
+
+Windows-Diagnosedaten werden gesammelt, wenn die Richtlinieneinstellung „Telemetrie zulassen“ auf den Wert „1 – Erforderlich“ oder höher gesetzt ist. Durch die Konfiguration dieser Einstellung wird die für das Gerät festgelegte Erfassungsebene für Windows-Diagnosedaten nicht geändert.
+ Wenn Sie diese Einstellung deaktivieren oder nicht konfigurieren, ist Microsoft der Verantwortliche für die vom Gerät erfassten Windows-Diagnosedaten, die gemäß der Datenschutzerklärung von Microsoft unter https://go.microsoft.com/fwlink/?LinkId=521839 verarbeitet werden, es sei denn, Sie haben Richtlinien wie „Update Compliance-Verarbeitung zulassen“ oder „Desktop Analytics-Verarbeitung zulassen“ aktiviert.
+ In der Dokumentation unter https://go.microsoft.com/fwlink/?linkid=2011107 finden Sie Informationen zu dieser und anderen Richtlinien, die dazu führen, dass Microsoft der Verarbeiter von Windows-Diagnosedaten ist.
       </string>
 
       <string id="LimitDiagnosticLogCollection">Diagnoseprotokollsammlung einschränken</string>

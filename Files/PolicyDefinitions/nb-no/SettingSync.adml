@@ -131,6 +131,19 @@ Bruk alternativet Tillat at brukere aktiverer synkronisering av tilgjengelighet,
 
 Hvis du ikke angir eller deaktiverer denne innstillingen, er synkronisering av tilgjengelighetsgruppen som standard på og kan konfigureres av brukeren.
       </string>
+
+      <!-- Language -->
+      <string id="DisableLanguageSettingSync">Ikke synkroniser innstillinger for språkinnstillinger</string>
+      <string id="DisableLanguageSettingSync_Help">
+        Hindre at språkinnstillinger-gruppen synkroniseres til og fra denne PCen. Dette slår av og deaktiverer språkinnstillinger-gruppen på innstillingssiden for Windows Sikkerhetskopiering i PC-innstillinger.
+
+Hvis du aktiverer denne policyinnstillingen språkinnstillinger, synkroniseres ikke gruppen.
+
+Bruk alternativet Tillat at brukere aktiverer synkronisering av språkinnstillinger, slik at synkronisering deaktiveres som standard, men ikke deaktivert.
+
+Hvis du ikke angir eller deaktiverer denne innstillingen, er synkronisering av språkinnstillinger-gruppen som standard på og kan konfigureres av brukeren.
+      </string>
+
     </stringTable>
     <presentationTable>
 
@@ -181,7 +194,12 @@ Hvis du ikke angir eller deaktiverer denne innstillingen, er synkronisering av t
 
       <!-- AccessibilitySync -->
       <presentation id="DisableAccessibilitySettingSyncUserOverride">
-        <checkBox refId="CheckBox_UserOverride">Tillat at brukere aktiverer «acessibility»-synkronisering.</checkBox>
+        <checkBox refId="CheckBox_UserOverride">Tillat at brukere aktiverer tilgjengelighet-synkronisering.</checkBox>
+      </presentation>
+
+      <!-- LanguageSync -->
+      <presentation id="DisableLanguageSettingSyncUserOverride">
+        <checkBox refId="CheckBox_UserOverride">Tillat brukere å slå synkronisering av «språkinnstillinger» på.</checkBox>
       </presentation>
 
     </presentationTable>

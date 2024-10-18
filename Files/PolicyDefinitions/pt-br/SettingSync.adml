@@ -131,6 +131,19 @@ Use a opção "Permitir que os usuários ativem a sincronização de acessibilid
 
 Se você não definir ou desabilitar essa configuração, a sincronização do grupo "acessibilidade" será ativada por padrão e configurável pelo usuário.
       </string>
+
+      <!-- Language -->
+      <string id="DisableLanguageSettingSync">Não sincronizar configurações de preferências de idioma</string>
+      <string id="DisableLanguageSettingSync_Help">
+        Impeça que o grupo "preferências de idioma" sincronize de e para este computador. Isso desativa e desabilita o grupo "preferências de idiomas" na página de configurações "Backup do Windows" no configurações do PC.
+
+Se você habilitar essa configuração de política, o grupo "preferências de idioma" não será sincronizado.
+
+Use a opção "Permitir que os usuários ativem a sincronização de preferências de idioma" para que a sincronização seja desativada por padrão, mas não desabilitada.
+
+Se você não definir ou desabilitar essa configuração, a sincronização do grupo "preferências de idioma" será ativada por padrão e configurável pelo usuário.
+      </string>
+
     </stringTable>
     <presentationTable>
 
@@ -182,6 +195,11 @@ Se você não definir ou desabilitar essa configuração, a sincronização do g
       <!-- AccessibilitySync -->
       <presentation id="DisableAccessibilitySettingSyncUserOverride">
         <checkBox refId="CheckBox_UserOverride">Permitir que os usuários ativem a sincronização de "acessibilidade".</checkBox>
+      </presentation>
+
+      <!-- LanguageSync -->
+      <presentation id="DisableLanguageSettingSyncUserOverride">
+        <checkBox refId="CheckBox_UserOverride">Permitir que os usuários ativem a sincronização de "preferências de idioma".</checkBox>
       </presentation>
 
     </presentationTable>

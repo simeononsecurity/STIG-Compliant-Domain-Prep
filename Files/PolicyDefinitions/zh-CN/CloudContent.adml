@@ -86,6 +86,12 @@
 
 如果禁用或未配置此策略，则 Windows 体验将能够使用云使用者帐户状态内容。
         </string>
+      <string id="EnableOrganizationalMessagesContent">启用组织消息</string>
+      <string id="EnableOrganizationalMessagesContent_Help">组织消息允许管理员在所选 Windows 11 体验中向最终用户传递消息。管理员可通过 Microsoft Endpoint Manager 等服务使用组织消息。
+
+默认情况下禁用此策略。如果启用此策略，这些体验将显示管理员预订的内容。
+
+启用此策略不会影响管理 Microsoft 在 Windows 体验上交付内容的现有 MDM 策略设置。</string>
     </stringTable>
     <presentationTable>
       <presentation id="ConfigureWindowsSpotlight">

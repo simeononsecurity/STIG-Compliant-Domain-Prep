@@ -62,11 +62,11 @@ Obs! Den här inställningen gäller endast Enterprise- och Education-SKU:er.</s
 
 Om du inaktiverar eller låter bli att konfigurera principen kan Windows spotlight-funktioner föreslå appar och innehåll från andra programvaruutgivare utöver appar och innehåll från Microsoft.</string>
       <string id="DisableWindowsSpotlightWindowsWelcomeExperience">Inaktivera Välkommen till Windows</string>
-      <string id="DisableWindowsSpotlightWindowsWelcomeExperience_Help">Med den här principinställningen kan du inaktivera visningen av Välkommen till Windows. Den här funktionen hjälper användare komma igång med Windows, till exempel genom att starta Microsoft Edge med en webbsida som introducerar nya funktioner.
+      <string id="DisableWindowsSpotlightWindowsWelcomeExperience_Help">Med den här principinställningen kan du inaktivera visningen av Välkommen till Windows. Den här funktionen hjälper användare registrera sig för Windows, till exempel genom att starta Microsoft Edge med en webbsida som introducerar nya funktioner.
 
 Om du aktiverar den här principen visas inte Välkommen till Windows längre när det finns uppdateringar och ändringar av Windows och dess appar.
 
-Om du inaktiverar eller låter bli att konfigurera principen visas Välkommen till Windows för att hjälpa användare komma igång med Windows och berätta om vad som är nytt och har ändrats.</string>
+Om du inaktiverar eller låter bli att konfigurera principen visas Välkommen till Windows för att hjälpa användare att registrera sig för Windows och berätta om vad som är nytt och har ändrats.</string>
       <string id="DisableCloudOptimizedContent">Inaktivera molnoptimerat innehåll</string>
       <string id="DisableCloudOptimizedContent_Help">Med den här principinställningen kan du inaktivera molnoptimerat innehåll i alla Windows-upplevelser.
 
@@ -86,6 +86,12 @@ Om du inaktiverar eller låter bli att konfigurera principen visas "Spotlight-sa
 
             Om du inaktiverar eller inte konfigurerar den här policyn kommer Windows-upplevelser att kunna använda statusinnehåll för molnkonsumentkonto.
         </string>
+      <string id="EnableOrganizationalMessagesContent">Aktivera organisationsmeddelanden</string>
+      <string id="EnableOrganizationalMessagesContent_Help">Med organisationsmeddelanden kan administratörer leverera meddelanden till slutanvändarna på de valda Windows 11-upplevelserna. Organisationsmeddelanden är tillgängliga för administratörer via tjänster som Microsoft Endpoint Manager.
+
+Som standard är den här principen inaktiverad. Om du aktiverar den här principen visas innehåll som är bokat av administratörer.
+
+Om du aktiverar den här principen påverkas inte befintliga MDM-principinställningar för leverans av innehåll från Microsoft på Windows-upplevelser.</string>
     </stringTable>
     <presentationTable>
       <presentation id="ConfigureWindowsSpotlight">

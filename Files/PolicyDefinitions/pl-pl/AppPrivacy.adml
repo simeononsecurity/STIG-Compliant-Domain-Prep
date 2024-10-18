@@ -129,6 +129,21 @@ Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane,
 
 Jeśli ten obiekt zasad grupy zostanie zastosowany do urządzenia, gdy będzie otwarta aplikacja, pracownicy będą musieli ponownie uruchomić aplikację lub urządzenie w celu zastosowania zmian zasad do aplikacji.
       </string>
+      <string id="LetAppsAccessHumanPresence_Name">Zezwalaj aplikacjom systemu Windows na dostęp do wykrywania obecności</string>
+      <string id="LetAppsAccessHumanPresence_Explain">To ustawienie zasad określa, czy aplikacje systemu Windows mogą uzyskiwać dostęp do wykrywania obecności.
+
+Można określić ustawienie domyślne dla wszystkich aplikacji lub skonfigurować je dla każdej aplikacji osobno, podając nazwę rodziny pakietów. Aby uzyskać nazwę rodziny pakietów aplikacji, można użyć polecenia cmdlet Get-AppPackage środowiska Windows PowerShell. Ustawienie na poziomie aplikacji zastępuje ustawienie domyślne.
+
+Wybranie opcji „Pod kontrolą użytkownika” umożliwi pracownikom w organizacji decydowanie, czy aplikacje systemu Windows mogą uzyskiwać dostęp do wykrywania obecności (z poziomu ekranu Ustawienia &gt; Prywatność na urządzeniu).
+
+W przypadku wybrania opcji „Wymuś zezwalanie” aplikacje systemu Windows będą mogły uzyskiwać dostęp do wykrywania obecności i pracownicy w organizacji nie będą mogli tego zmienić.
+
+W przypadku wybrania opcji „Wymuś odmowę” aplikacje systemu Windows nie będą mogły uzyskiwać dostępu do wykrywania obecności i pracownicy w organizacji nie będą mogli tego zmienić.
+
+Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, pracownicy w organizacji będą mogli decydować, czy aplikacje systemu Windows będą mogły uzyskiwać dostęp do wykrywania obecności (z poziomu ekranu Ustawienia &gt; Prywatność na urządzeniu).
+
+Jeśli ten obiekt zasad grupy zostanie zastosowany do urządzenia, gdy będzie otwarta aplikacja, pracownicy będą musieli ponownie uruchomić aplikację lub urządzenie w celu zastosowania zmian zasad do aplikacji.
+      </string>
       <string id="LetAppsAccessLocation_Name">Zezwalaj aplikacjom systemu Windows na dostęp do informacji o lokalizacji</string>
       <string id="LetAppsAccessLocation_Explain">To ustawienie zasad określa, czy aplikacje systemu Windows mogą uzyskiwać dostęp do informacji o lokalizacji.
 
@@ -440,6 +455,15 @@ Jeśli aplikacja będzie otwarta w momencie zastosowania tego obiektu zasad grup
         <text>Wymuś odmowę tym konkretnym aplikacjom (użyj nazw rodzin pakietów):</text>
         <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_ForceDenyTheseApps_List"/>
       </presentation>
+      <presentation id="LetAppsAccessHumanPresence">
+        <dropdownList refId="LetAppsAccessHumanPresence_Enum" noSort="true" defaultItem="0">Domyślne dla wszystkich aplikacji:</dropdownList>
+        <text>Pozwól użytkownikom kontrolować te konkretne aplikacje (użyj nazw rodzin pakietów):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_UserInControlOfTheseApps_List"/>
+        <text>Wymuś zezwalanie tym konkretnym aplikacjom (użyj nazw rodzin pakietów):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_ForceAllowTheseApps_List"/>
+        <text>Wymuś odmowę tym konkretnym aplikacjom (użyj nazw rodzin pakietów):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_ForceDenyTheseApps_List"/>
+      </presentation>
       <presentation id="LetAppsAccessLocation">
         <dropdownList refId="LetAppsAccessLocation_Enum" noSort="true" defaultItem="0">Domyślne dla wszystkich aplikacji:</dropdownList>
         <text>Pozwól użytkownikom kontrolować te konkretne aplikacje (użyj nazw rodzin pakietów):</text>
@@ -545,7 +569,7 @@ Jeśli aplikacja będzie otwarta w momencie zastosowania tego obiektu zasad grup
         <multiTextBox refId="LetAppsGetDiagnosticInfo_UserInControlOfTheseApps_List"/>
         <text>Wymuś zezwalanie tym konkretnym aplikacjom (użyj nazw rodzin pakietów):</text>
         <multiTextBox refId="LetAppsGetDiagnosticInfo_ForceAllowTheseApps_List"/>
-        <text>Wymuś odmowę tym konkretnym aplikacjom (użyj nazw rodzin pakietów):</text>
+        <text>Wymuś odmowę dla tych konkretnych aplikacji (użyj nazw rodzin pakietów):</text>
         <multiTextBox refId="LetAppsGetDiagnosticInfo_ForceDenyTheseApps_List"/>
       </presentation>
       <presentation id="LetAppsAccessGazeInput">
@@ -569,7 +593,7 @@ Jeśli aplikacja będzie otwarta w momencie zastosowania tego obiektu zasad grup
         <multiTextBox refId="LetAppsAccessBackgroundSpatialPerception_UserInControlOfTheseApps_List"/>
         <text>Wymuś zezwalanie tym konkretnym aplikacjom (użyj nazw rodzin pakietów):</text>
         <multiTextBox refId="LetAppsAccessBackgroundSpatialPerception_ForceAllowTheseApps_List"/>
-        <text>Wymuś odmowę dla tych konkretnych aplikacji (użyj nazw rodzin pakietów):</text>
+        <text>Wymuś odmowę tym konkretnym aplikacjom (użyj nazw rodzin pakietów):</text>
         <multiTextBox refId="LetAppsAccessBackgroundSpatialPerception_ForceDenyTheseApps_List"/>
       </presentation>
     </presentationTable>

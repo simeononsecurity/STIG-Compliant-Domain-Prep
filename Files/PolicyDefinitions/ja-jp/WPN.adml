@@ -116,6 +116,18 @@
 
           ポリシー設定を有効にするために、再起動したり、サービスを再開したりする必要はありません。
       </string>
+      <string id="ExpandedToastNotifications">アクション センターで複数の拡張トースト通知を有効にする</string>
+      <string id="ExpandedToastNotificationsExplain">
+          このポリシー設定は、アクション センターで複数の拡張トースト通知を有効にします。
+
+このポリシー設定を有効にした場合、各アプリケーションの最初の 3 つの通知が既定でアクション センターに展開されます。
+
+このポリシー設定を無効にした場合、または構成しなかった場合、既定では、アクション センターでは各アプリケーションの最初の通知のみが展開されます。
+
+Windows 10のみ。これは、Windows 11では直ちに非推奨になります。
+
+このポリシー設定を有効にするには、再起動またはサービスの再起動は必要ありません。
+      </string>
     </stringTable>
     <presentationTable>
       <presentation id="QuietHoursBeginTimePicker">

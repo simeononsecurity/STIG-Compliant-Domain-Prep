@@ -21,6 +21,7 @@
       <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">Windows Server 2016 (經由 Windows Server 2022) 或 Windows 10​</string>
       <string id="WU_SUPPORTED_Windows_Server_2019_Windows_10_0_1809">至少需要 Windows Server 2019、Windows 10 1809 版​</string>
       <string id="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004">至少需要 Windows Server 2022、Windows 10 版本 2004​</string>
+      <string id="WU_SUPPORTED_WinServer2025_Win1021H2_Win1122H2">至少需要 Windows Server 2025、Windows 10 21H2 版或 Windows 11 版本 22H2</string>
       <string id="AUDontShowUasHelp">這個原則設定允許您管理是否要在 [關閉 Windows] 對話方塊中顯示 [安裝更新並關機] 選項。
 
 如果您啟用這個原則設定，即使當使用者在 [開始] 功能表中選擇 [關機] 選項且有可用的更新可以安裝，也不會在 [關閉 Windows] 對話方塊中出現 [安裝更新並關機] 的選擇。
@@ -628,22 +629,39 @@ aka.ms/WindowsTargetVersioninfo
       <string id="DefaultNotification">0 (預設) – 預設作業系統的Windows Update 通知</string>
       <string id="ExcludingRebootWarnings">1 – 停用所有通知，排除重新開機警告</string>
       <string id="IncludingRebootWarnings">2 – 停用所有通知，包括重新開機警告</string>
-      <string id="ComplianceDeadline_Title">指定自動更新和重新啟動的期限</string>
-      <string id="ComplianceDeadline_Help">此原則可讓您指定在裝置上自動安裝品質與功能更新前的天數，以及在要求自動重新開機後的寬限期。
+      <string id="ComplianceDeadlineForFU_Title">Specify deadline for automatic updates and restarts for feature update</string>
+      <string id="ComplianceDeadlineForFU_Help">This policy lets you specify the number of days before feature updates are installed on devices automatically, and a grace period after which required restarts occur automatically.
 
-設定功能更新與品質更新的期限，以符合您的合規性目標。更新會在提供後立即下載並安裝，並將在作用中的時間外嘗試自動重新開機。一旦超過期限，無論作用中的時間為何，皆會重新開機，而使用者將無法重新排程。如果期限設定為0天，則會在提供時立即安裝更新，但可能會陰裝置的可用性和網路連線能力，而無法在一天內完成。
+Set deadlines for feature updates and quality updates to meet your compliance goals. Updates will be downloaded and installed as soon as they are offered and automatic restarts will be attempted outside of active hours. Once the deadline has passed, restarts will occur regardless of active hours, and users will not be able to reschedule. If the deadline is set to 0 days, the update will be installed immediately upon offering, but might not finish within the day due to device availability and network connectivity.
 
-設定功能更新與品質更新的寬限期，以保證使用者在安裝更新後最短的時間可以成功重新開機。使用者將能夠在寬限期期間排程重新開機，且若使用者選擇不排程重新開機，Windows 仍可在作用中的時間外自動重新開機。如果使用者已有超過設作寬限期限之天數，可成功進行重新開機，則寬限期可能不會生效。
+Set a grace period for feature updates to guarantee users a minimum time to manage their restarts once updates are installed. Users will be able to schedule restarts during the grace period and Windows can still automatically restart outside of active hours if users choose not to schedule restarts. The grace period might not take effect if users already have more than the number of days set as grace period to manage their restart, based on deadline configurations.
 
-您可以設定裝置延遲重新開機，直到期限和寬限期皆到期為止。
+You can set the device to delay restarting until both the deadline and grace period have expired.
 
-如果您停用或未設定此原則，則裝置將會收到更新，並會依照預設排程重新開機。
+If you disable or do not configure this policy, devices will get updates and will restart according to the default schedule.
 
-此原則將會覆寫下列原則:
-1. 指定更新安裝自動重新開機前的期限
-2. 指定更新的 [預定] 重新開機轉換和通知排程
-3. 一律在排定的時間自動重新開機
-4. 設定 [自動更新]
+This policy will override the following policies:
+1.  Specify deadline before auto restart for update installation
+2.  Specify Engaged restart transition and notification schedule for updates
+3.  Always automatically restart at the scheduled time
+4.  Configure Automatic Updates
+      </string>
+      <string id="ComplianceDeadlineForQU_Title">Specify deadline for automatic updates and restarts for quality update</string>
+      <string id="ComplianceDeadlineForQU_Help">This policy lets you specify the number of days before quality updates are installed on devices automatically, and a grace period after which required restarts occur automatically.
+
+Set deadlines for quality updates to meet your compliance goals. Updates will be downloaded and installed as soon as they are offered and automatic restarts will be attempted outside of active hours. Once the deadline has passed, restarts will occur regardless of active hours, and users will not be able to reschedule. If the deadline is set to 0 days, the update will be installed immediately upon offering, but might not finish within the day due to device availability and network connectivity.
+
+Set a grace period for quality updates to guarantee users a minimum time to manage their restarts once updates are installed. Users will be able to schedule restarts during the grace period and Windows can still automatically restart outside of active hours if users choose not to schedule restarts. The grace period might not take effect if users already have more than the number of days set as grace period to manage their restart, based on deadline configurations.
+
+You can set the device to delay restarting until both the deadline and grace period have expired.
+
+If you disable or do not configure this policy, devices will get updates and will restart according to the default schedule.
+
+This policy will override the following policies:
+1.  Specify deadline before auto restart for update installation
+2.  Specify Engaged restart transition and notification schedule for updates
+3.  Always automatically restart at the scheduled time
+4.  Configure Automatic Updates
       </string>
       <string id="ComplianceDeadlineDay0">0</string>
       <string id="ComplianceDeadlineDay1">1</string>
@@ -676,6 +694,31 @@ aka.ms/WindowsTargetVersioninfo
       <string id="ComplianceDeadlineDay28">28</string>
       <string id="ComplianceDeadlineDay29">29</string>
       <string id="ComplianceDeadlineDay30">30</string>
+
+      <string id="AllowTemporaryEnterpriseFeatureControl_Title">啟用透過服務引進的功能，這些功能預設為關閉</string>
+      <string id="AllowTemporaryEnterpriseFeatureControl_Help">透過服務引進的功能 (在年度功能更新以外)，在受管理其 Windows 更新的裝置上預設為關閉*。
+
+如果此原則設定為 [已啟用]，則安裝的最新每月品質更新中的所有可用功能都將開啟。
+
+如果此原則設定為 [尚未設定] 或 [已停用]，則透過每月品質更新傳送的功能 (服務) 將會維持關閉，直到安裝包含這些功能的功能更新為止。
+
+*Windows Update 受管理的裝置是透過原則來管理其 Windows 更新的裝置; 透過雲端使用商務用 Windows Update，或使用 Windows Server Update Services (WSUS) 的內部部署。
+      </string>
+      <string id="AllowOptionalContent_Title">啟用選用更新</string>
+      <string id="AllowOptionalContent_Help">此原則可讓裝置取得選擇性更新 (包括漸進式功能推出 (CFR) - 請瀏覽 visiting aka.ms/AllowOptionalContent 以深入了解)
+
+設定原則時
+
+• 若選取 [自動接收選擇性更新 (包括 CFR)]，裝置會根據設定的品質更新延遲自動取得最新的選擇性更新。這包括選擇性累積更新和漸進式功能推出 (CFR)。
+
+• 若選取 [自動接收選擇性更新]，裝置只會根據品質更新延遲，自動取得選擇性累積更新。
+
+• 若選取 [使用者可選取要接收的選擇性更新]，使用者可以瀏覽 [設定] &gt; [Windows Update] &gt; [進階選項] &gt; [選擇性更新] 以選取要取得的選擇性更新。使用者還可以啟用 [在更新推出以後，即可取得最新的更新] 切換開關，以自動接收選擇性更新和逐步推出的功能。
+      </string>
+      <string id="DonotReceiveOptionalContent">不接收選擇性更新</string>
+      <string id="ReceiveOptionalContentWithAutoApproval">自動接收選擇性更新 (包括 CFR)</string>
+      <string id="ReceiveOptionalLCUWithAutoApproval">自動接收選擇性更新</string>
+      <string id="ReceiveOptionalContentNeedUserApproval">使用者可選取要接收的選擇性更新</string>
     </stringTable>
 
     <presentationTable>
@@ -817,16 +860,20 @@ aka.ms/WindowsTargetVersioninfo
         <text></text>
         <checkBox refId="NoUpdateNotificationsDuringActiveHours" defaultChecked="false">僅於使用時間期間套用</checkBox>
       </presentation>
-      <presentation id="ComplianceDeadline_Title">
-        <text>品質更新</text>
+       <presentation id="ComplianceDeadlineForFU_Title">
+        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="2">期限 (天):</dropdownList>
+        <dropdownList refId="ConfigureDeadlineGracePeriodForFeatureUpdates" noSort="true" defaultItem="7">寬限期 (天):</dropdownList>
+        <text></text>
+        <checkBox refId="ConfigureDeadlineNoAutoRebootForFeatureUpdates" defaultChecked="false">Don't auto-restart until end of grace period</checkBox>
+      </presentation>
+      <presentation id="ComplianceDeadlineForQU_Title">
         <dropdownList refId="ConfigureDeadlineForQualityUpdates" noSort="true" defaultItem="7">期限 (天):</dropdownList>
         <dropdownList refId="ConfigureDeadlineGracePeriod" noSort="true" defaultItem="2">寬限期 (天):</dropdownList>
         <text></text>
-        <text>功能更新</text>
-        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="7">期限 (天):</dropdownList>
-        <dropdownList refId="ConfigureDeadlineGracePeriodForFeatureUpdates" noSort="true" defaultItem="2">寬限期 (天):</dropdownList>
-        <text></text>
-        <checkBox refId="ConfigureDeadlineNoAutoReboot" defaultChecked="false">在寬限期結束前不自動重新開機</checkBox>
+        <checkBox refId="ConfigureDeadlineNoAutoRebootForQualityUpdates" defaultChecked="false">Don't auto-restart until end of grace period</checkBox>
+      </presentation>
+      <presentation id="AllowOptionalContent_Title">
+        <dropdownList refId="AllowOptionalContent" noSort="true" defaultItem="0">選取使用者接收選擇性更新的方式:</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

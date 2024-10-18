@@ -66,7 +66,7 @@ Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a Windows Refl
 
 Ha engedélyezi ezt a szabályzatot, a Windows üdvözlőprogramja többé nem jelenik meg, ha a Windows vagy az alkalmazásai frissülnek vagy megváltoznak.
 
-Ha ezt a szabályzatot letiltja vagy nem konfigurálja, elindul a Windows üdvözlőprogramja, hogy segítse az új Windows-felhasználókat, ismertetve az újdonságokat, a változásokat és a javaslatokat.</string>
+Ha ezt a szabályzatot letiltja vagy nem konfigurálja, elindul a Windows üdvözlőprogramja, hogy segítse az új Windows-felhasználók hozzáadását, ismertetve az újdonságokat, a változásokat és a javaslatokat.</string>
       <string id="DisableCloudOptimizedContent">A felhőre optimalizált tartalom kikapcsolása</string>
       <string id="DisableCloudOptimizedContent_Help">Ez a házirend-beállítás lehetővé teszi, hogy kikapcsolja a felhőre optimalizált tartalmakat a Windows összes alkalmazásában.
 
@@ -86,6 +86,12 @@ Ha engedélyezi ezt a házirendet, a felhőre optimalizált tartalom ügyfélös
 
 Ha letiltja vagy nem konfigurálja ezt a házirendet, a Windows-funkciók a felhőalapú fogyasztói fiók állapottartalmának használatát is lehetővé teszik.
         </string>
+      <string id="EnableOrganizationalMessagesContent">Szervezeti üzenetek engedélyezése</string>
+      <string id="EnableOrganizationalMessagesContent_Help">A szervezeti üzenetek lehetővé teszik a rendszergazdák számára, hogy egyes Windows 11 felületeken üzeneteket kézbesíthessenek a végfelhasználóknak. A szervezeti üzeneteket a rendszergazdák például a Microsoft Endpoint Manager szolgáltatáson keresztül érhetik el.
+
+Alapértelmezés szerint ez a szabályzat le van tiltva. Ha engedélyezi ezt a szabályzatot, ezek a felületek a rendszergazdák által lefoglalt tartalmakat fogják megjeleníteni.
+
+A szabályzat engedélyezése nincs hatással a Microsoft által a Windows felületekre való tartalomkézbesítést szabályozó meglévő MDM-szabályzatbeállításokra.</string>
     </stringTable>
     <presentationTable>
       <presentation id="ConfigureWindowsSpotlight">

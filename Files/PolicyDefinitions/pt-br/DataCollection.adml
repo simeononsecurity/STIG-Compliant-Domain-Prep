@@ -105,6 +105,8 @@ Se você definir esta configuração de política como "Habilitar notificações
 
       <string id="AllowUpdateComplianceProcessing">Permitir Processamento de Conformidade da Atualização</string>
       <string id="AllowUpdateComplianceProcessing_Explain">
+Esta política foi preterida e funcionará apenas no Windows 10 versão 1809. A configuração dessa política não terá efeito para outras versões com suporte do Windows.
+
 Essa configuração de política, em combinação com Permitir Telemetria e Configurar ID Comercial, permite que as organizações configurem o dispositivo para que a Microsoft seja o processador dos dados de diagnóstico do Windows coletados do dispositivo, sujeito aos Termos do Produto em https://go.microsoft.com/fwlink/?linkid=2185086.
 Para habilitar este comportamento:
     1. Habilite esta configuração de política
@@ -118,11 +120,13 @@ Se você desabilitar ou não definir essa configuração de política, os dispos
 
       <string id="AllowDesktopAnalyticsProcessing">Permitir Processamento da Análise de Área de Trabalho</string>
       <string id="AllowDesktopAnalyticsProcessing_Explain">
+Esta política foi preterida e funcionará apenas no Windows 10 versão 1809. A configuração dessa política não terá efeito para outras versões com suporte do Windows.
+
 Essa configuração de política, em combinação com Permitir Telemetria e Configurar ID Comercial, permite que as organizações configurem o dispositivo para que a Microsoft seja o processador dos dados de diagnóstico do Windows coletados do dispositivo, sujeito aos Termos do Produto em https://go.microsoft.com/fwlink/?linkid=2185086.
 Para habilitar esse comportamento:
     1. Habilite esta configuração de política
     2. Ingresse em uma conta do Microsoft Azure AD no dispositivo
-    3. Defina Permitir Telemetria para o valor 1 - Obrigatório ou superior
+    3. Defina Permitir Telemetria para o valor 1- Obrigatório ou superior
     4. Defina a configuração Configurar ID Comercial para seu workspace de Análise de Área de Trabalho
 
 Quando essas políticas forem configuradas, os dados de diagnóstico do Windows coletados do dispositivo estarão sujeitos aos compromissos do processador da Microsoft.
@@ -131,11 +135,13 @@ Essa configuração não tem efeito nos dispositivos, a menos que estejam regist
 
       <string id="AllowWUfBCloudProcessing">Permitir Processamento de Nuvem WUfB</string>
       <string id="AllowWUfBCloudProcessing_Explain">
+Esta política foi preterida e funcionará apenas no Windows 10 versão 1809. A configuração dessa política não terá efeito para outras versões com suporte do Windows.
+
 Essa configuração de política configura um dispositivo associado ao Microsoft Azure AD para que a Microsoft seja o processador dos dados de diagnóstico do Windows coletados do dispositivo, sujeito aos Termos do Produto em https://go.microsoft.com/fwlink/?linkid=2185086.
 Para habilitar esse comportamento:
     1. Habilite esta configuração de política
-    2. Ingresse em uma conta do Microsoft Azure AD no dispositivo
-    3. Defina Permitir Telemetria para o valor 1 - Obrigatório ou superior
+    2.Ingresse em uma conta do Microsoft Azure AD no dispositivo
+    3. Defina Permitir Telemetria para o valor 1- Obrigatório ou superior
 
 Quando essas políticas forem configuradas, os dados de diagnóstico do Windows coletados do dispositivo estarão sujeitos aos compromissos do processador da Microsoft.
 Se você desabilitar ou não definir essa configuração de política, os dispositivos registrados no serviço de implantação do Windows Update para Empresas não poderão tirar proveito de alguns recursos do serviço de implantação.
@@ -143,14 +149,16 @@ Se você desabilitar ou não definir essa configuração de política, os dispos
 
       <string id="AllowCommercialDataPipeline">Permitir pipeline de dados comerciais</string>
       <string id="AllowCommercialDataPipeline_Explain">
-AllowCommercialDataPipeline configura um dispositivo associado ao Microsoft Azure AD para que a Microsoft seja o processador dos dados de diagnóstico do Windows coletados do dispositivo, sujeito aos Termos do Produto em https://go.microsoft.com/fwlink/?linkid=2185086.
-Para habilitar este comportamento:
-    1. Habilitar esta configuração de política
-    2. Ingressar em uma conta do Microsoft Azure AD no dispositivo
+Esta política foi preterida e funcionará apenas no Windows 10 versão 1809. A configuração dessa política não terá efeito para outras versões com suporte do Windows.
 
-Os dados de diagnóstico do Windows são coletados quando a configuração de política Permitir Telemetria é definida como valor 1 - Obrigatório ou superior. Definir essa configuração não altera o nível de coleta de dados de diagnóstico do Windows definido para o dispositivo
-Se você desabilitar ou não definir essa configuração, a Microsoft será o controlador dos dados de diagnóstico do Windows coletados do dispositivo e processados de acordo com a declaração de privacidade da Microsoft em https://go.microsoft.com/fwlink/?LinkId=521839 a menos que você tenha habilitado políticas como 'Permitir Processamento de Conformidade de Atualização' ou 'Permitir Processamento de Análise de Área de Trabalho”.
-Consulte a documentação em https://go.microsoft.com/fwlink/?linkid=2011107 para obter informações sobre esta e outras políticas que farão com que a Microsoft seja o processador dos dados de diagnóstico do Windows.
+AllowCommercialDataPipeline configura um dispositivo ingressado no Azure Active Directory para que a Microsoft seja o processador dos dados de diagnóstico do Windows coletados do dispositivo, sujeito aos Termos do Produto em https://go.microsoft.com/fwlink/?linkid=2185086.
+Para habilitar esse comportamento:
+    1. Habilite esta configuração de política
+    2. Ingresse uma conta do Azure Active Directory no dispositivo
+
+Os dados de diagnóstico do Windows são coletados quando a definição da política Permitir Telemetria está definida como valor 1  - Obrigatório ou superior. Definir essa configuração não altera o nível de coleta de dados de diagnóstico do Windows definido para o dispositivo.
+Se você desabilitar ou não definir essa configuração, a Microsoft será a controladora dos dados de diagnóstico do Windows coletados do dispositivo e processados de acordo com a declaração de privacidade da Microsoft em https://go.microsoft.com/fwlink/?LinkId=521839, a menos que você tenha habilitado políticas como 'Permitir  o Processamento de Conformidade de Atualizações' ou 'Permitir o Processamento de Análise de Área de Trabalho'.
+Consulte a documentação em https://go.microsoft.com/fwlink/?linkid=2011107 para obter informações sobre essa e outras políticas que resultarão no processamento de dados de diagnóstico do Windows pela Microsoft.
       </string>
 
       <string id="LimitDiagnosticLogCollection">Limitar Coleta de Logs de Diagnóstico</string>

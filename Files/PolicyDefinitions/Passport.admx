@@ -72,6 +72,14 @@
           <decimal value="0" />
         </disabledValue>
     </policy>
+    <!-- enable enhanced sign in security -->
+    <policy name="MSPassport_EnableEnhancedSignInSecurity" class="Machine" displayName="$(string.MSPassport_EnableEnhancedSignInSecurity)" explainText="$(string.MSPassport_EnableEnhancedSignInSecurityExplain)" presentation="$(presentation.MSPassport_EnableEnhancedSignInSecurityControl)" key="Software\Microsoft\Policies\PassportForWork\Biometrics">
+      <parentCategory ref="MSPassportForWorkCategory" />
+      <supportedOn ref="windows:SUPPORTED_Windows_11_0_22H2_NOSERVER" />
+      <elements>
+          <decimal id="MSPassport_EnableEnhancedSignInSecurityDataType" valueName="EnableESSwithSupportedPeripherals" minValue="0" maxValue="1" />
+      </elements>
+    </policy>
     <!-- Enable PIN recovery -->
     <policy name="MSPassport_EnablePinRecovery" class="Machine" displayName="$(string.MSPassport_EnablePinRecovery)" explainText="$(string.MSPassport_EnablePinRecoveryExplain)" key="SOFTWARE\Policies\Microsoft\PassportForWork" valueName="EnablePinRecovery">
         <parentCategory ref="MSPassportForWorkCategory" />
@@ -173,6 +181,17 @@
     </policy>
     <!-- UseCloudTrustForOnPremAuth Policy -->
     <policy name="WHFB_UseCloudTrustForOnPremAuth" class="Machine" displayName="$(string.WHFB_UseCloudTrustForOnPremAuth)" explainText="$(string.WHFB_UseCloudTrustForOnPremAuthExplain)" key="SOFTWARE\Policies\Microsoft\PassportForWork" valueName="UseCloudTrustForOnPremAuth">
+        <parentCategory ref="MSPassportForWorkCategory" />
+        <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOSERVER" />
+        <enabledValue>
+          <decimal value="1" />
+        </enabledValue>
+        <disabledValue>
+          <decimal value="0" />
+        </disabledValue>
+    </policy>
+    <!-- DisablePostLogonCredentialCaching Policy -->
+    <policy name="WHFB_DisablePostLogonCredentialCaching" class="Machine" displayName="$(string.WHFB_DisablePostLogonCredentialCaching)" explainText="$(string.WHFB_DisablePostLogonCredentialCachingExplain)" key="SOFTWARE\Policies\Microsoft\PassportForWork" valueName="DisablePostLogonCredentialCaching">
         <parentCategory ref="MSPassportForWorkCategory" />
         <supportedOn ref="windows:SUPPORTED_Windows_10_0_NOSERVER" />
         <enabledValue>

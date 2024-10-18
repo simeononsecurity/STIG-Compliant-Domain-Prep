@@ -61,7 +61,9 @@ If you enable this policy setting, you cannot add, edit, and delete words in the
 
 If you disable or do not configure this policy setting, the custom dictionary can be used by default.
 
-For Japanese Microsoft IME, [Clear auto-tuning information] works, even if this policy setting is enabled, and it clears self-tuned words from the custom dictionary.
+[Clear auto-tuning information] removes self-tuned words from the custom dictionary, even if a group policy setting is turned on. To do this, select Settings &gt; Time &amp; Language &gt; Japanese Options &gt; Microsoft IME Options. If compatibility mode is turned on, select Advanced options &gt; Dictionary/Auto-tuning &gt; [Clear auto-tuning information].
+
+[Clear input history] removes self-tuned words from the custom dictionary, even if a group policy setting is turned on. To do this, select Settings &gt; Time &amp; Language &gt; Japanese Options &gt; Microsoft IME Options &gt; Learning and Dictionary &gt; [Clear input history].
 
 This policy setting is applied to Japanese Microsoft IME.
 
@@ -116,26 +118,6 @@ If you enable this policy setting, the functionality associated with this featur
 If you disable this policy setting, the functionality associated with this feature is turned off, and the user won't be able to turn it on.
 
 If you don't configure this policy setting, it will be turned off by default, and the user can turn on and turn off the cloud candidates feature.
-
-This Policy setting applies only to Microsoft CHS Pinyin IME.</string>
-      <string id="L_TurnOnLiveSticker">Turn on Live Sticker</string>
-      <string id="L_TurnOnLiveStickerExplain">This policy setting controls the live sticker feature, which uses an online service to provide stickers online.
-
-If you enable this policy setting, the functionality associated with this feature is turned on, the user's keyboard input is sent to Microsoft to generate the live stickers, and the user won't be able to turn it off.
-
-If you disable this policy setting, the functionality associated with this feature is turned off, and the user won't be able to turn it on.
-
-If you don't configure this policy setting, it will be turned off by default, and the user can turn on and turn off the live sticker feature.
-
-This Policy setting applies only to Microsoft CHS Pinyin IME.</string>
-      <string id="L_TurnOnLexiconUpdate">Turn on lexicon update</string>
-      <string id="L_TurnOnLexiconUpdateExplain">This policy setting controls the lexicon update feature, which downloads hot and popular words lexicon to local PC.
-
-If you enable this policy setting, the functionality associated with this feature is turned on, hot and popular words lexicon can be downloaded to local PC, the user is able to turn it on or off in settings.
-
-If you disable this policy setting, the functionality associated with this feature is turned off, and the user won't be able to turn it on.
-
-If you don't configure this policy setting, it will be turned on by default, and the user can turn on and turn off the lexicon udpate feature.
 
 This Policy setting applies only to Microsoft CHS Pinyin IME.</string>
       <string id="L_ConfigureSimplifiedChineseImeVersion">Configure Simplified Chinese IME version</string>

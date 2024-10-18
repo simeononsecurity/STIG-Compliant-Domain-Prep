@@ -300,6 +300,23 @@ Se habilitado, a pesquisa e Cortana poderão acessar informações sobre o local
       <string id="DisableSearch_ExplainText">Se você habilitar essa política, a interface do usuário de Pesquisa será desabilitada juntamente com todos os seus pontos de entrada, como atalhos de teclado, gestos de touchpad e tipo de pesquisa no menu Iniciar. A menu Iniciar de pesquisa e o botão Pesquisar barra de tarefas também serão ocultados.
 
 Se você desabilitar ou não definir essa configuração de política, o usuário poderá abrir a interface do usuário de Pesquisa e seus diferentes pontos de entrada serão mostrados.</string>
+      <string id="ConfigureSearchOnTaskbarMode">Configura a pesquisa na barra de tarefas</string>
+      <string id="ConfigureSearchOnTaskbarMode_Help">Esta configuração de política permite configurar a pesquisa na barra de tarefas.
+
+Se você habilitar essa configuração de política e defini-la como oculta, a pesquisa na barra de tarefas será ocultada por padrão. Os usuários não podem alterá-lo em Configurações.
+
+Se você habilitar essa configuração de política e defini-la como somente ícone de pesquisa, o ícone de pesquisa será exibido na barra de tarefas por padrão. Os usuários não podem alterá-lo em Configurações.
+
+Se você habilitar essa configuração de política e defini-la como ícone e rótulo de pesquisa, o ícone e o rótulo da pesquisa serão exibidos na barra de tarefas por padrão. Os usuários não podem alterá-lo em Configurações.
+
+Se você habilitar essa configuração de política e defini-la como caixa de pesquisa, a caixa de pesquisa será exibida na barra de tarefas por padrão. Os usuários não podem alterá-lo em Configurações.
+
+Se você desabilitar ou não definir essa configuração de política, a pesquisa na barra de tarefas será definida de acordo com os padrões da edição do Windows. Os usuários poderão alterar a pesquisa na barra de tarefas em Configurações.
+      </string>
+      <string id="SearchOnTaskbarModeEnum_Hidden">Ocultar</string>
+      <string id="SearchOnTaskbarModeEnum_SearchIconOnly">Somente ícone de pesquisa</string>
+      <string id="SearchOnTaskbarModeEnum_SearchIconAndLabel">Pesquisar ícone e rótulo</string>
+      <string id="SearchOnTaskbarModeEnum_SearchBox">Caixa de pesquisa</string>
     </stringTable>
     <presentationTable>
       <presentation id="RichAttachmentPreviews">
@@ -388,6 +405,9 @@ Se você desabilitar ou não definir essa configuração de política, o usuári
       </presentation>
       <presentation id="AllowCortanaAAD">
         <dropdownList refId="AllowCortanaAAD_Dropdown" noSort="true" defaultItem="0">Configuração da Cortana no AAD</dropdownList>
+      </presentation>
+      <presentation id="ConfigureSearchOnTaskbarMode">
+        <dropdownList refId="ConfigureSearchOnTaskbarMode_Dropdown" noSort="true" defaultItem="0">Pesquisar na barra de tarefas</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

@@ -21,6 +21,7 @@
       <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">Windows Server 2016 到 Windows Server 2022 或 Windows 10</string>
       <string id="WU_SUPPORTED_Windows_Server_2019_Windows_10_0_1809">至少为 Windows Server 2019 或 Windows 10 版本 1809</string>
       <string id="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004">Windows Server 2022 或 Windows 10 版本 2004 及以上版本</string>
+      <string id="WU_SUPPORTED_WinServer2025_Win1021H2_Win1122H2">至少为 Windows Server 2025、Windows 10版本 21H2 或 Windows 11 版本 22H2</string>
       <string id="AUDontShowUasHelp">此策略设置允许你管理“安装更新并关机”选项是否在“关闭 Windows”对话框中显示。
 
 如果启用此策略设置，即使用户在“开始”菜单中选择“关机”选项时有更新可以安装，“安装更新并关机”选项也不会在“关闭 Windows”对话框中作为一项选择显示。
@@ -602,7 +603,7 @@ Pause Updates |若要防止向设备提供功能更新，可以暂时暂停功�
       <string id="EngagedRestartSnooze_2">2</string>
       <string id="EngagedRestartSnooze_3">3</string>
 
-      <string id="SetEDURestart_Title">更新针对电脑车重启的电源策略</string>
+      <string id="SetEDURestart_Title">更新群组设备重启电源策略</string>
       <string id="SetEDURestart_Help">对于整夜保留在电脑车上的 EDU 设备，启用此策略将跳过电源检查以便确保更新重启将在计划的安装时间外发生。</string>
 
       <string id="AllowAutoWindowsUpdateDownloadOverMeteredNetwork_Title">允许通过按流量计费的连接自动下载更新</string>
@@ -628,22 +629,39 @@ Pause Updates |若要防止向设备提供功能更新，可以暂时暂停功�
       <string id="DefaultNotification">0 (默认) – 默认 OS Windows 更新通知 </string>
       <string id="ExcludingRebootWarnings">1 – 禁止所有通知，不包括重启警告</string>
       <string id="IncludingRebootWarnings">2 – 禁止所有通知，包括重启警告</string>
-      <string id="ComplianceDeadline_Title">指定自动更新和重启的最后期限</string>
-      <string id="ComplianceDeadline_Help">此策略允许你指定在设备上自动安装质量和功能更新之前的天数，以及自动重启之前的宽限期。
+      <string id="ComplianceDeadlineForFU_Title">Specify deadline for automatic updates and restarts for feature update</string>
+      <string id="ComplianceDeadlineForFU_Help">This policy lets you specify the number of days before feature updates are installed on devices automatically, and a grace period after which required restarts occur automatically.
 
-设置功能更新和质量更新的最后期限，以达到合规性目标。将在提供更新后立即下载并安装这些更新，并且将在使用时段以外的时间尝试自动重新启动。在截止时间过后，将发生重启（不管使用时段），并且用户将无法重新安排重启时间。如果最后期限设置为 0 天，则会立即安装更新，但鉴于设备可用性和网络连接，可能无法在一天内完成。
+Set deadlines for feature updates and quality updates to meet your compliance goals. Updates will be downloaded and installed as soon as they are offered and automatic restarts will be attempted outside of active hours. Once the deadline has passed, restarts will occur regardless of active hours, and users will not be able to reschedule. If the deadline is set to 0 days, the update will be installed immediately upon offering, but might not finish within the day due to device availability and network connectivity.
 
-设置功能更新和质量更新的宽限期，以保证用户在安装更新后至少能够管理重新启动。用户将能够在宽限期期间安排重新启动时间，如果用户选择不安排重新启动时间，Windows 仍可在使用时段以外的时间自动重启。如果根据截止日期配置，用户已经超过设置为宽限期的天数来管理其重新启动，则宽限期可能不会生效。
+Set a grace period for feature updates to guarantee users a minimum time to manage their restarts once updates are installed. Users will be able to schedule restarts during the grace period and Windows can still automatically restart outside of active hours if users choose not to schedule restarts. The grace period might not take effect if users already have more than the number of days set as grace period to manage their restart, based on deadline configurations.
 
-你可以将设备设置为延迟重新启动，直到最后期限和宽限期已过期。
+You can set the device to delay restarting until both the deadline and grace period have expired.
 
-如果禁用或未配置此策略，则设备将会接收更新并根据默认日程安排重新启动。
+If you disable or do not configure this policy, devices will get updates and will restart according to the default schedule.
 
-此策略将覆盖以下策略：
-1. 指定更新安装自动重启之前的最后期限
-2. 为更新指定预定重启转换和通知日程安排
-3. 始终在安排的时间自动重启
-4. 配置自动更新
+This policy will override the following policies:
+1.  Specify deadline before auto restart for update installation
+2.  Specify Engaged restart transition and notification schedule for updates
+3.  Always automatically restart at the scheduled time
+4.  Configure Automatic Updates
+      </string>
+      <string id="ComplianceDeadlineForQU_Title">Specify deadline for automatic updates and restarts for quality update</string>
+      <string id="ComplianceDeadlineForQU_Help">This policy lets you specify the number of days before quality updates are installed on devices automatically, and a grace period after which required restarts occur automatically.
+
+Set deadlines for quality updates to meet your compliance goals. Updates will be downloaded and installed as soon as they are offered and automatic restarts will be attempted outside of active hours. Once the deadline has passed, restarts will occur regardless of active hours, and users will not be able to reschedule. If the deadline is set to 0 days, the update will be installed immediately upon offering, but might not finish within the day due to device availability and network connectivity.
+
+Set a grace period for quality updates to guarantee users a minimum time to manage their restarts once updates are installed. Users will be able to schedule restarts during the grace period and Windows can still automatically restart outside of active hours if users choose not to schedule restarts. The grace period might not take effect if users already have more than the number of days set as grace period to manage their restart, based on deadline configurations.
+
+You can set the device to delay restarting until both the deadline and grace period have expired.
+
+If you disable or do not configure this policy, devices will get updates and will restart according to the default schedule.
+
+This policy will override the following policies:
+1.  Specify deadline before auto restart for update installation
+2.  Specify Engaged restart transition and notification schedule for updates
+3.  Always automatically restart at the scheduled time
+4.  Configure Automatic Updates
       </string>
       <string id="ComplianceDeadlineDay0">0</string>
       <string id="ComplianceDeadlineDay1">1</string>
@@ -676,6 +694,31 @@ Pause Updates |若要防止向设备提供功能更新，可以暂时暂停功�
       <string id="ComplianceDeadlineDay28">28</string>
       <string id="ComplianceDeadlineDay29">29</string>
       <string id="ComplianceDeadlineDay30">30</string>
+
+      <string id="AllowTemporaryEnterpriseFeatureControl_Title">启用通过默认关闭的服务引入的功能</string>
+      <string id="AllowTemporaryEnterpriseFeatureControl_Help">对于托管 Windows 更新的设备，通过维护(在年度功能更新之外)引入的功能默认关闭*。
+
+如果此策略配置为“已启用”，则安装的最新月度质量更新中提供的所有功能都将处于启用状态。
+
+如果此策略设置为“未配置”或“已禁用”，则通过每月质量更新(维护)提供的功能将保持关闭状态，直到安装了包含这些功能的功能更新。
+
+*Windows 更新托管设备是通过策略管理其 Windows 更新的设备，无论是通过云使用适用于企业的 Windows 更新，还是在本地通过 Windows Server Update Services (WSUS)。
+      </string>
+      <string id="AllowOptionalContent_Title">启用可选更新</string>
+      <string id="AllowOptionalContent_Help">使用此策略，设备可以获取可选的更新(包括逐步功能推出 (CFP) - 访问 aka.ms/AllowOptionalContent 了解详细信息)
+
+配置策略时
+
+• 如果选择“自动接收可选更新(包括 CFP)”，设备将根据配置的质量更新延迟自动获取最新的可选更新。这包括可选的累积更新和逐步功能推出(CFP)。
+
+• 如果选择“自动接收可选更新”，设备将仅根据质量更新延迟自动获取可选的累积更新。
+
+• 如果选择“用户可以选择要接收的可选更新”，用户可以访问“设置”&gt;“Windows 更新”&gt;“高级选项”&gt;“可选更新”以选择要获取的可选更新。用户还可以启用“在最新更新可用时立即获取”开关，从而自动接收可选的更新和逐步功能推出。
+      </string>
+      <string id="DonotReceiveOptionalContent">不接收可选更新</string>
+      <string id="ReceiveOptionalContentWithAutoApproval">自动接收可选更新(包括 CPR)</string>
+      <string id="ReceiveOptionalLCUWithAutoApproval">自动接收可选更新</string>
+      <string id="ReceiveOptionalContentNeedUserApproval">用户可以选择要接收的可选更新</string>
     </stringTable>
 
     <presentationTable>
@@ -817,16 +860,20 @@ Pause Updates |若要防止向设备提供功能更新，可以暂时暂停功�
         <text></text>
         <checkBox refId="NoUpdateNotificationsDuringActiveHours" defaultChecked="false">仅在使用时段应用</checkBox>
       </presentation>
-      <presentation id="ComplianceDeadline_Title">
-        <text>质量更新</text>
+       <presentation id="ComplianceDeadlineForFU_Title">
+        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="2">最后期限(天):</dropdownList>
+        <dropdownList refId="ConfigureDeadlineGracePeriodForFeatureUpdates" noSort="true" defaultItem="7">宽限期(天):</dropdownList>
+        <text></text>
+        <checkBox refId="ConfigureDeadlineNoAutoRebootForFeatureUpdates" defaultChecked="false">Don't auto-restart until end of grace period</checkBox>
+      </presentation>
+      <presentation id="ComplianceDeadlineForQU_Title">
         <dropdownList refId="ConfigureDeadlineForQualityUpdates" noSort="true" defaultItem="7">最后期限(天):</dropdownList>
         <dropdownList refId="ConfigureDeadlineGracePeriod" noSort="true" defaultItem="2">宽限期(天):</dropdownList>
         <text></text>
-        <text>功能更新</text>
-        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="7">最后期限(天):</dropdownList>
-        <dropdownList refId="ConfigureDeadlineGracePeriodForFeatureUpdates" noSort="true" defaultItem="2">宽限期(天):</dropdownList>
-        <text></text>
-        <checkBox refId="ConfigureDeadlineNoAutoReboot" defaultChecked="false">在宽限期结束前不自动重启</checkBox>
+        <checkBox refId="ConfigureDeadlineNoAutoRebootForQualityUpdates" defaultChecked="false">Don't auto-restart until end of grace period</checkBox>
+      </presentation>
+      <presentation id="AllowOptionalContent_Title">
+        <dropdownList refId="AllowOptionalContent" noSort="true" defaultItem="0">选择用户接收可选更新的方式:</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

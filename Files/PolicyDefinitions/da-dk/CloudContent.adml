@@ -86,6 +86,12 @@ Hvis du aktiverer denne politik, vil Windows-oplevelser, der bruger klientkompon
 
 Hvis du deaktiverer eller undlader at konfigurere denne politik, kan Windows-oplevelsen bruge tilstands indhold for Cloud-forbruger kontoen.
         </string>
+      <string id="EnableOrganizationalMessagesContent">Aktivér organisationsbeskeder</string>
+      <string id="EnableOrganizationalMessagesContent_Help">Organisationsbeskeder giver administratorer mulighed for at levere beskeder til deres slutbrugere på udvalgte Windows 11-oplevelser. Organisationsbeskeder er tilgængelige for administratorer via tjenester som Microsoft Endpoint Manager.
+
+Denne politik er som standard deaktiveret. Hvis du aktiverer denne politik, viser disse oplevelser indhold, der er reserveret af administratorerne.
+
+Aktivering af denne politik har ingen indflydelse på eksisterende MDM-politikindstillinger, der styrer levering af indhold fra Microsoft på Windows-oplevelser.</string>
     </stringTable>
     <presentationTable>
       <presentation id="ConfigureWindowsSpotlight">

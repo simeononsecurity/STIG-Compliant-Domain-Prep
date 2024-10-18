@@ -131,6 +131,19 @@ Pomocí možnosti Povolit uživatelům zapnout synchronizaci přístupnosti zaji
 
 Pokud toto nastavení nenastavíte nebo zakážete, bude synchronizace skupiny přístupnosti ve výchozím nastavení zapnutá a uživatel ho bude konfigurovat.
       </string>
+
+      <!-- Language -->
+      <string id="DisableLanguageSettingSync">Nesynchronizovat nastavení jazykových předvoleb</string>
+      <string id="DisableLanguageSettingSync_Help">
+        Zabrání synchronizaci skupiny Jazykové předvolby s tímto počítačem a z tohoto počítače. Tato možnost vypne a zakáže skupinu Jazykové předvolby na stránce nastavení Zálohování Windows v nastavení počítače.
+
+Pokud toto nastavení zásad povolíte, nebude skupina Jazykové předvolby synchronizována.
+
+Pomocí možnosti Povolit uživatelům zapnout synchronizaci jazykových předvoleb zajistíte, že synchronizace bude ve výchozím nastavení vypnutá, ale nikoli zakázaná.
+
+Pokud toto nastavení nenastavíte nebo zakážete, bude synchronizace skupiny Jazykové předvolby ve výchozím nastavení zapnutá a uživatel je bude konfigurovat.
+      </string>
+
     </stringTable>
     <presentationTable>
 
@@ -182,6 +195,11 @@ Pokud toto nastavení nenastavíte nebo zakážete, bude synchronizace skupiny p
       <!-- AccessibilitySync -->
       <presentation id="DisableAccessibilitySettingSyncUserOverride">
         <checkBox refId="CheckBox_UserOverride">Povolit uživatelům zapnout synchronizaci „přístupnosti“.</checkBox>
+      </presentation>
+
+      <!-- LanguageSync -->
+      <presentation id="DisableLanguageSettingSyncUserOverride">
+        <checkBox refId="CheckBox_UserOverride">Povolí uživatelům zapnout synchronizaci jazykových předvoleb.</checkBox>
       </presentation>
 
     </presentationTable>

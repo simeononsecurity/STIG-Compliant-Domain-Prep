@@ -131,6 +131,19 @@ Använd alternativet Tillåt användare att aktivera hjälpmedelssynkronisering 
 
 Om du inte anger eller inaktiverar den här inställningen är synkronisering av gruppen Hjälpmedel aktiverat som standard och användaren kan konfigurera.
       </string>
+
+      <!-- Language -->
+      <string id="DisableLanguageSettingSync">Synkronisera inte inställningar för språkinställningar</string>
+      <string id="DisableLanguageSettingSync_Help">
+        Förhindra gruppen Språkinställningar från att synkroniseras till och från den här datorn. Detta stänger av och inaktiverar gruppen Språkinställningar på inställningssidan för Windows Säkerhetskopiering i Datorinställningar.
+
+Om du aktiverar den här principinställningen synkroniseras inte gruppen Språkinställningar.
+
+Använd alternativet Tillåt användare att aktivera synkronisering av språkinställningar så att synkronisering är inaktiverat som standard men inte inaktiverat.
+
+Om du inte anger eller inaktiverar den här inställningen är synkronisering av gruppen Språkinställningar aktiverat som standard och användaren kan konfigurera.
+      </string>
+
     </stringTable>
     <presentationTable>
 
@@ -182,6 +195,11 @@ Om du inte anger eller inaktiverar den här inställningen är synkronisering av
       <!-- AccessibilitySync -->
       <presentation id="DisableAccessibilitySettingSyncUserOverride">
         <checkBox refId="CheckBox_UserOverride">Tillåt användare att aktivera synkronisering av "acessibility".</checkBox>
+      </presentation>
+
+      <!-- LanguageSync -->
+      <presentation id="DisableLanguageSettingSyncUserOverride">
+        <checkBox refId="CheckBox_UserOverride">Tillåt användare att aktivera synkronisering av "språkinställningar".</checkBox>
       </presentation>
 
     </presentationTable>

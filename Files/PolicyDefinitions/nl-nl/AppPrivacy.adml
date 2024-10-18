@@ -131,6 +131,21 @@ Als u deze beleidsinstelling uitschakelt of niet configureert, kunnen werknemers
 
 Als er een app is geopend wanneer dit groepsbeleidobject wordt toegepast op een apparaat, moeten werknemers de app of het apparaat opnieuw starten zodat de wijzigingen van het beleid op de app worden toegepast.
       </string>
+      <string id="LetAppsAccessHumanPresence_Name">Windows-apps toegang geven tot aanwezigheidsdetectie</string>
+      <string id="LetAppsAccessHumanPresence_Explain">Met deze beleidsinstelling wordt bepaald of Windows-apps toegang krijgen tot aanwezigheidsdetectie.
+
+U kunt een standaardinstelling voor alle apps of een instelling per app opgeven door de familienaam van een pakket op te geven. U kunt de familienaam van het pakket voor een app ophalen met de Windows PowerShell-cmdlet Get-AppPackage. Een instelling per app overschrijft de standaardinstelling.
+
+Als u de optie De gebruiker bepaalt kiest, kunnen werknemers in uw organisatie op het apparaat met Instellingen &gt; Privacy bepalen of Windows-apps toegang krijgen tot aanwezigheidsdetectie.
+
+Als u de optie Toestaan afdwingen kiest, krijgen de Windows-apps toegang tot aanwezigheidsdetectie en kunnen de werknemers in uw organisatie dit niet wijzigen.
+
+Als u de optie Weigeren afdwingen kiest, krijgen de Windows-apps geen toegang tot aanwezigheidsdetectie en kunnen de werknemers in uw organisatie dit niet wijzigen.
+
+Als u deze beleidsinstelling uitschakelt of niet configureert, kunnen de werknemers in uw organisatie via Instellingen &gt; Privacy op het apparaat bepalen of Windows-apps toegang krijgen tot aanwezigheidsdetectie.
+
+Als er een app is geopend wanneer dit groepsbeleidsobject op een apparaat wordt toegepast, moeten de werknemers de app of het apparaat opnieuw starten zodat de beleidswijzigingen op de app worden toegepast.
+      </string>
       <string id="LetAppsAccessLocation_Name">Windows-apps toegang geven tot de locatie</string>
       <string id="LetAppsAccessLocation_Explain">Met deze beleidsinstelling wordt bepaald of Windows-apps toegang krijgen tot de locatie.
 
@@ -442,6 +457,15 @@ Als een app is geopend op het moment dat dit groepsbeleidsobject wordt toegepast
         <text>Weigeren forceren voor deze specifieke apps (gebruik namen van pakketfamilies):</text>
         <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_ForceDenyTheseApps_List"/>
       </presentation>
+      <presentation id="LetAppsAccessHumanPresence">
+        <dropdownList refId="LetAppsAccessHumanPresence_Enum" noSort="true" defaultItem="0">Standaard voor alle apps:</dropdownList>
+        <text>Gebruiker laten bepalen voor deze specifieke apps (gebruik namen van pakketfamilies):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_UserInControlOfTheseApps_List"/>
+        <text>Toestaan forceren voor deze specifieke apps (gebruik namen van pakketfamilies):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_ForceAllowTheseApps_List"/>
+        <text>Weigeren forceren voor deze specifieke apps (gebruik namen van pakketfamilies):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_ForceDenyTheseApps_List"/>
+      </presentation>
       <presentation id="LetAppsAccessLocation">
         <dropdownList refId="LetAppsAccessLocation_Enum" noSort="true" defaultItem="0">Standaard voor alle apps:</dropdownList>
         <text>Gebruiker laten bepalen voor deze specifieke apps (gebruik namen van pakketfamilies):</text>
@@ -500,9 +524,9 @@ Als een app is geopend op het moment dat dit groepsbeleidsobject wordt toegepast
         <dropdownList refId="LetAppsAccessAccountInfo_Enum" noSort="true" defaultItem="0">Standaard voor alle apps:</dropdownList>
         <text>Gebruiker laten bepalen voor deze specifieke apps (gebruik namen van pakketfamilies):</text>
         <multiTextBox refId="LetAppsAccessAccountInfo_UserInControlOfTheseApps_List"/>
-        <text>Toestaan forceren voor deze specifieke apps (gebruik namen van pakketfamilies):</text>
+        <text>Toestaan forceren voor deze specifieke apps (familienaam van pakket gebruiken):</text>
         <multiTextBox refId="LetAppsAccessAccountInfo_ForceAllowTheseApps_List"/>
-        <text>Weigeren forceren voor deze specifieke apps (gebruik namen van pakketfamilies):</text>
+        <text>Weigeren forceren voor deze specifieke apps (familienaam van pakket gebruiken):</text>
         <multiTextBox refId="LetAppsAccessAccountInfo_ForceDenyTheseApps_List"/>
       </presentation>
       <presentation id="LetAppsSyncWithDevices">
@@ -527,9 +551,9 @@ Als een app is geopend op het moment dat dit groepsbeleidsobject wordt toegepast
         <dropdownList refId="LetAppsAccessTrustedDevices_Enum" noSort="true" defaultItem="0">Standaard voor alle apps:</dropdownList>
         <text>Gebruiker laten bepalen voor deze specifieke apps (gebruik namen van pakketfamilies):</text>
         <multiTextBox refId="LetAppsAccessTrustedDevices_UserInControlOfTheseApps_List"/>
-        <text>Toestaan forceren voor deze specifieke apps (familienaam van pakket gebruiken):</text>
+        <text>Toestaan forceren voor deze specifieke apps (gebruik namen van pakketfamilies):</text>
         <multiTextBox refId="LetAppsAccessTrustedDevices_ForceAllowTheseApps_List"/>
-        <text>Weigeren forceren voor deze specifieke apps (familienaam van pakket gebruiken):</text>
+        <text>Weigeren forceren voor deze specifieke apps (gebruik namen van pakketfamilies):</text>
         <multiTextBox refId="LetAppsAccessTrustedDevices_ForceDenyTheseApps_List"/>
       </presentation>
       <presentation id="LetAppsRunInBackground">
@@ -545,9 +569,9 @@ Als een app is geopend op het moment dat dit groepsbeleidsobject wordt toegepast
         <dropdownList refId="LetAppsGetDiagnosticInfo_Enum" noSort="true" defaultItem="0">Standaard voor alle apps:</dropdownList>
         <text>Gebruiker laten bepalen voor deze specifieke apps (gebruik namen van pakketfamilies):</text>
         <multiTextBox refId="LetAppsGetDiagnosticInfo_UserInControlOfTheseApps_List"/>
-        <text>Toestaan forceren voor deze specifieke apps (gebruik namen van pakketfamilies):</text>
+        <text>Toestaan afdwingen voor deze specifieke apps (gebruik pakketfamilienamen):</text>
         <multiTextBox refId="LetAppsGetDiagnosticInfo_ForceAllowTheseApps_List"/>
-        <text>Weigeren forceren voor deze specifieke apps (gebruik namen van pakketfamilies):</text>
+        <text>Weigeren afdwingen voor deze specifieke apps (gebruik pakketfamilienamen):</text>
         <multiTextBox refId="LetAppsGetDiagnosticInfo_ForceDenyTheseApps_List"/>
       </presentation>
       <presentation id="LetAppsAccessGazeInput">
@@ -569,9 +593,9 @@ Als een app is geopend op het moment dat dit groepsbeleidsobject wordt toegepast
         <dropdownList refId="LetAppsAccessBackgroundSpatialPerception_Enum" noSort="true" defaultItem="0">Standaard voor alle apps:</dropdownList>
         <text>Gebruiker laten bepalen voor deze specifieke apps (gebruik namen van pakketfamilies):</text>
         <multiTextBox refId="LetAppsAccessBackgroundSpatialPerception_UserInControlOfTheseApps_List"/>
-        <text>Toestaan afdwingen voor deze specifieke apps (gebruik pakketfamilienamen):</text>
+        <text>Toestaan forceren voor deze specifieke apps (familienaam van pakket gebruiken):</text>
         <multiTextBox refId="LetAppsAccessBackgroundSpatialPerception_ForceAllowTheseApps_List"/>
-        <text>Weigeren afdwingen voor deze specifieke apps (gebruik pakketfamilienamen):</text>
+        <text>Weigeren forceren voor deze specifieke apps (familienaam van pakket gebruiken):</text>
         <multiTextBox refId="LetAppsAccessBackgroundSpatialPerception_ForceDenyTheseApps_List"/>
       </presentation>
     </presentationTable>

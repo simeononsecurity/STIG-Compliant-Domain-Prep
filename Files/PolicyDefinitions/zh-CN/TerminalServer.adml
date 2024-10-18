@@ -432,7 +432,7 @@ RD 会话主机服务器客户端与 RD 会话主机服务器断开连接后，R
 如果禁用或未配置此策略设置，则以本地管理员身份登录之后，将在 RD 会话主机服务器上显示这些通知。</string>
       <string id="TS_LICENSING_MODE">设置远程桌面授权模式</string>
       <string id="TS_LICENSING_MODE_EXPLAIN">
-        通过使用此策略设置，可以指定连接到此 RD 会话主机服务器所需的远程桌面服务客户端访问许可证 (RDS CAL) 的类型。
+        通过使用此策略设置，可以指定连接到此 RD 会话主机服务器所需的远程桌面服务客户端访问许可证(RDS CAL)的类型。
 
         可以使用此策略设置选择以下两种授权模式之一:“每用户”或“每设备”。
 
@@ -443,9 +443,12 @@ RD 会话主机服务器客户端与 RD 会话主机服务器断开连接后，R
         如果启用此策略设置，则远程桌面授权服务器和 RD 会话主机将遵守指定的远程桌面授权模式。
 
         如果禁用或未配置此策略设置，则在“组策略”级别上不指定授权模式。
+
+        注意: Windows 11 及更高版本已弃用 AAD 每用户模式。
       </string>
       <string id="TS_LICENSING_MODE_PER_DEVICE">按设备</string>
       <string id="TS_LICENSING_MODE_PER_USER">按用户</string>
+      <string id="TS_LICENSING_MODE_AAD_PER_USER">基于每个用户的 AAD</string>
       <string id="TS_LPTPORTMAP_EXPLAIN">此策略设置指定是否阻止在远程桌面服务会话期间将数据重定向到客户端 LPT 端口。
 
 使用此设置可以阻止用户映射本地 LPT 端口，并且可以阻止将数据从远程计算机重定向到本地 LPT 端口外设。默认情况下，远程桌面服务允许 LPT 端口重定向。
@@ -818,6 +821,50 @@ UI 自动化使程序可以访问大多数 UI 元素，这使您可以使用需�
 
 如果禁用或不配置此策略设置，则用户可以在远程桌面会话中使用本地身份验证器。
 </string>
+      <string id="TS_SC_CLIPBOARD_DISABLED">禁用从服务器到客户端的剪贴板传输</string>
+      <string id="TS_CS_CLIPBOARD_DISABLED">禁用从客户端到服务器的剪贴板传输</string>
+      <string id="TS_CLIPBOARD_ALLOW_TEXT">允许纯文本</string>
+      <string id="TS_CLIPBOARD_ALLOW_TEXT_IMAGE">允许纯文本和图像</string>
+      <string id="TS_CLIPBOARD_ALLOW_TEXT_IMAGE_RTF">允许纯文本、图像和 RTF 格式</string>
+      <string id="TS_CLIPBOARD_ALLOW_TEXT_IMAGE_RTF_HTML">允许纯文本、图像、RTF 格式和 HTML</string>
+      <string id="TS_SC_CLIPBOARD_RESTRICTION">限制从服务器到客户端的剪贴板传输</string>
+      <string id="TS_SC_CLIPBOARD_RESTRICTION_EXPLAIN">使用此策略设置，可以限制从服务器到客户端的剪贴板数据传输。
+
+如果启用此策略设置，则必须从以下行为中进行选择：
+
+- 禁用从服务器到客户端的剪贴板传输。
+
+- 允许从服务器到客户端的纯文本复制。
+
+- 允许从服务器复制到客户端的纯文本和图像。
+
+- 允许将纯文本、图像和 RTF 格式从服务器复制到客户端。
+
+- 允许从服务器到客户端的纯文本、图像、RTF 格式和 HTML 复制。
+
+如果禁用或未配置此策略设置，则如果启用剪贴板重定向，则用户可以将任意内容从服务器复制到客户端。
+
+注意： 此策略设置同时出现在“计算机配置”和“用户配置”中。如果同时配置了两个策略设置，则将使用更严格的限制。
+</string>
+      <string id="TS_CS_CLIPBOARD_RESTRICTION">限制从客户端到服务器的剪贴板传输</string>
+      <string id="TS_CS_CLIPBOARD_RESTRICTION_EXPLAIN">使用此策略设置，可以限制从客户端到服务器的剪贴板数据传输。
+
+如果启用此策略设置，则必须从以下行为中进行选择：
+
+- 禁用从客户端到服务器的剪贴板传输。
+
+- 允许从客户端到服务器的纯文本复制。
+
+- 允许从客户端复制到服务器的纯文本和图像。
+
+- 允许将纯文本、图像和 RTF 格式从客户端复制到服务器。
+
+- 允许从客户端到服务器的纯文本、图像、RTF 格式和 HTML 复制。
+
+如果禁用或未配置此策略设置，则如果启用剪贴板重定向，则用户可以将任意内容从客户端复制到服务器。
+
+注意： 此策略设置同时出现在“计算机配置”和“用户配置”中。如果同时配置了两个策略设置，则将使用更严格的限制。
+</string>
       <string id="TS_CLIPRDR_CLOUD_CLIP_INTEGRATION">禁用服务器到客户端数据传输的云剪贴板集成</string>
       <string id="TS_CLIPRDR_CLOUD_CLIP_INTEGRATION_EXPLAIN">使用此策略设置，可以控制是否将使用剪贴板重定向从远程会话传输到客户端的数据添加到客户端云剪贴板。
 
@@ -841,6 +888,24 @@ UI 自动化使程序可以访问大多数 UI 元素，这使您可以使用需�
 
 </string>
       <string id="TS_USER_AUTHENTICATION_POLICY">要求使用网络级别的身份验证对远程连接的用户进行身份验证</string>
+      <string id="TS_DISCONNECT_ON_LOCK_POLICY"> 在锁定时断开远程会话以进行旧身份验证</string>
+      <string id="TS_DISCONNECT_ON_LOCK_POLICY_EXPLAIN">此策略设置允许你在远程桌面会话被用户或策略锁定时配置用户体验。可以指定远程会话在远程会话锁定时是显示远程锁屏界面还是断开连接。断开远程会话的连接可确保远程会话不能保留在锁屏界面上，并且由于网络连接丢失而无法自动重新连接。
+
+仅当使用旧式身份验证对远程电脑进行身份验证时，此策略才适用。旧式身份验证仅限于用户名和密码，或智能卡等证书。旧式身份验证不会利用 Microsoft 标识平台，如 Microsoft Entra ID。旧式身份验证包括 NTLM、CredSSP、RDSTLS、TLS 和 RDP 基本身份验证协议。
+
+如果启用此策略设置，则在远程会话锁定时，使用旧式身份验证的远程桌面连接将断开远程会话的连接。用户可以在准备就绪时重新连接，并在出现提示时重新输入凭据。
+
+如果禁用或未配置此策略设置，则在远程会话锁定时，使用旧式身份验证的远程桌面连接将显示远程锁屏界面。用户可以使用其用户名和密码或证书解锁远程会话。
+</string>
+      <string id="TS_DISCONNECT_ON_LOCK_AAD_POLICY">在锁定时断开远程会话的连接以进行Microsoft 标识平台身份验证</string>
+      <string id="TS_DISCONNECT_ON_LOCK_AAD_POLICY_EXPLAIN">使用此策略设置，可以在用户或策略锁定远程桌面会话时配置用户体验。你可以指定远程会话在远程会话锁定时是显示远程锁屏界面还是断开连接。断开远程会话的连接可确保远程会话不能留在锁屏界面上，并且由于网络连接丢失而无法自动重新连接。
+
+仅当使用使用Microsoft 标识平台（如Microsoft Entra ID）对远程电脑进行身份验证的标识提供程序时，此策略才适用。使用包括 NTLM、CredSSP、RDSTLS、TLS 和 RDP 基本身份验证协议的旧身份验证时，此策略不适用。
+
+如果启用或未配置此策略设置，则在远程会话锁定时，使用Microsoft 标识平台的远程桌面连接将断开远程会话。用户可以在准备就绪后重新连接，如果已配置，则可以使用无密码身份验证。
+
+如果禁用此策略设置，则在远程会话锁定时，使用Microsoft 标识平台的远程桌面连接将显示远程锁屏界面。用户可以使用用户名和密码或证书解锁远程会话。
+</string>
       <string id="TS_User_Help">控制如何配置用于对运行基于 Windows 的程序或运行完整 Windows 桌面的服务器进行访问的远程桌面服务技术</string>
       <string id="TS_USER_HOME">设置远程桌面服务用户主目录</string>
       <string id="TS_USER_HOME_EXPLAIN">指定远程桌面服务是否使用指定的网络共享或本地目录路径作为用户远程桌面服务会话主目录的根目录。
@@ -1189,21 +1254,20 @@ UI 自动化使程序可以访问大多数 UI 元素，这使您可以使用需�
       </string>
 
 	  <string id="TS_SELECT_TRANSPORT">选择 RDP 传输协议</string>
-	  <string id="TS_SELECT_TRANSPORT_EXPLAIN">使用此策略设置，可以指定用于远程桌面协议(RDP)访问此服务器的协议。
+	  <string id="TS_SELECT_TRANSPORT_EXPLAIN">使用此策略设置，可以指定哪些协议可用于远程桌面协议 (RDP) 访问此服务器。
 
-如果启用此策略设置，则必须指定是否使用 RDP 以使用 UDP。
+如果启用此策略设置，则必须指定是否希望 RDP 使用 UDP。
 
-可以选择以下选项之一:“同时使用 UDP 和 TCP (默认)”、“仅使用 TCP”或“使用 UDP 或 TCP”
+可以选择以下选项之一：“使用 UDP 或 TCP (默认)”或“仅使用 TCP”
 
-如果选择“使用 UDP 或 TCP”并且 UDP 成功连接，则大部分 RDP 流量将使用 UDP。
+如果选择“使用 UDP 或 TCP”并且 UDP 连接成功，则大多数 RDP 流量都将使用 UDP。
 
-如果 UDP 连接不成功或者选择了“仅使用 TCP”，则所有 RDP 流量将使用 TCP。
+如果 UDP 连接不成功或选择“仅使用 TCP”，则所有 RDP 流量都将使用 TCP。
 
-如果禁用或未配置此策略设置，则 RDP 将选择最佳协议以便带来最佳用户体验。
+如果禁用或未配置此策略设置，则 RDP 将选择提供最佳用户体验的最佳协议。
 	  </string>
-	  <string id="TS_SELECT_TRANSPORT_UDP_AND_TCP">同时使用 UDP 和 TCP</string>
-	  <string id="TS_SELECT_TRANSPORT_TCP_ONLY">仅使用 TCP</string>
 	  <string id="TS_SELECT_TRANSPORT_UDP_OR_TCP">使用 UDP 或 TCP</string>
+	  <string id="TS_SELECT_TRANSPORT_TCP_ONLY">仅使用 TCP</string>
 
       <string id="TS_SELECT_NETWORK_DETECT">在服务器上选择网络检测</string>
       <string id="TS_SELECT_NETWORK_DETECT_EXPLAIN">使用此策略设置，可以指定远程桌面协议如何尝试检测网络质量(带宽和延迟)。
@@ -1425,6 +1489,12 @@ UI 自动化使程序可以访问大多数 UI 元素，这使您可以使用需�
       </presentation>
       <presentation id="TS_SELECT_TRANSPORT">
         <dropdownList refId="TS_SELECT_TRANSPORT_TYPE" noSort="true" defaultItem="0">选择传输类型</dropdownList>
+      </presentation>
+      <presentation id="TS_SC_CLIPBOARD_RESTRICTION">
+        <dropdownList refId="TS_SC_CLIPBOARD_RESTRICTION_Text" noSort="true" defaultItem="0">限制从服务器到客户端的剪贴板传输：</dropdownList>
+      </presentation>
+      <presentation id="TS_CS_CLIPBOARD_RESTRICTION">
+        <dropdownList refId="TS_CS_CLIPBOARD_RESTRICTION_Text" noSort="true" defaultItem="0">限制从客户端到服务器的剪贴板传输：</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

@@ -129,6 +129,21 @@ Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, kan ansat
 
 Er en app åpen når dette gruppepolicyobjektet brukes på en enhet, må ansatte starte appen eller enheten på nytt for at policyendringene skal tre i kraft i appen.
       </string>
+      <string id="LetAppsAccessHumanPresence_Name">La Windows-apper få tilgang til registrering av tilstedeværelse</string>
+      <string id="LetAppsAccessHumanPresence_Explain">Denne policyinnstillingen spesifiserer om Windows-apper kan få tilgang til registrering av tilstedeværelse.
+
+Du kan enten spesifisere en standardinnstilling for alle apper eller en appspesifikk innstilling, ved å spesifisere et pakkeserienavn. Du kan få pakkeserienavnet til en app ved å bruke cmdlet-en Get-AppPackage i Windows PowerShell. En appspesifikk innstilling overstyrer standardinnstillingen.
+
+Hvis du velger alternativet Brukeren har kontroll, kan ansatte i organisasjonen gå til Innstillinger &gt; Personvern på enheten for å bestemme om Windows-apper kan få tilgang til registrering av tilstedeværelse.
+
+Hvis du velger alternativet Tvungen tillatelse, kan Windows-apper få tilgang til registrering av tilstedeværelse, og ansatte i organisasjonen kan ikke endre dette.
+
+Hvis du velger alternativet Tvunget avslag, kan Windows-apper ikke få tilgang til registrering av tilstedeværelse, og ansatte i organisasjonen kan ikke endre dette.
+
+Hvis du deaktiverer eller ikke konfigurerer denne policyinnstillingen, kan ansatte i organisasjonen gå til Innstillinger &gt; Personvern på enheten for å bestemme om Windows-apper kan få tilgang til registrering av tilstedeværelse.
+
+Er en app åpen når dette gruppepolicyobjektet brukes på en enhet, må ansatte starte appen eller enheten på nytt for at policyendringene skal tre i kraft i appen.
+      </string>
       <string id="LetAppsAccessLocation_Name">Gi Windows-apper tilgang til plassering</string>
       <string id="LetAppsAccessLocation_Explain">Denne policyinnstillingen spesifiserer om Windows-apper kan få tilgang til posisjonsdata.
 
@@ -439,6 +454,15 @@ Hvis en app er åpen når dette gruppepolicyobjektet brukes på en enhet, må an
         <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_ForceAllowTheseApps_List"/>
         <text>Tvangsavslå disse bestemte appene (bruk pakkeserienavn):</text>
         <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_ForceDenyTheseApps_List"/>
+      </presentation>
+      <presentation id="LetAppsAccessHumanPresence">
+        <dropdownList refId="LetAppsAccessHumanPresence_Enum" noSort="true" defaultItem="0">Standard for alle apper:</dropdownList>
+        <text>Gi brukeren kontroll over disse bestemte appene (bruk pakkeserienavn):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_UserInControlOfTheseApps_List"/>
+        <text>Tvangstillat disse bestemte appene (bruk pakkeserienavn):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_ForceAllowTheseApps_List"/>
+        <text>Tvangsavslå disse bestemte appene (bruk pakkeserienavn):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_ForceDenyTheseApps_List"/>
       </presentation>
       <presentation id="LetAppsAccessLocation">
         <dropdownList refId="LetAppsAccessLocation_Enum" noSort="true" defaultItem="0">Standard for alle apper:</dropdownList>

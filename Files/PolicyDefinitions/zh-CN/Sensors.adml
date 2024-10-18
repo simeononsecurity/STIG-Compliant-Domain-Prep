@@ -53,11 +53,32 @@
       <string id="ForceLockTimeout_1">10 秒</string>
       <string id="ForceLockTimeout_2">30 秒</string>
       <string id="ForceLockTimeout_3">2 分钟</string>
+      <string id="ForceLockTimeout_4">即时</string>
       <string id="ForceInstantDim_DisplayName">强制即时变暗</string>
       <string id="ForceInstantDim_ExplainText">确定 MDM 策略是否强制打开/关闭“基于注意的显示器变暗”。用户将无法更改此设置，并且 UI 中的开关将灰显。</string>
       <string id="ForceInstantDim_0">默认为用户选择</string>
       <string id="ForceInstantDim_1">强制打开</string>
       <string id="ForceInstantDim_2">强制关闭</string>
+      <string id="ForceDisableWakeWhenBatterySaverOn_DisplayName">节电模式打开时强制禁用唤醒</string>
+      <string id="ForceDisableWakeWhenBatterySaverOn_ExplainText">确定 MDM 策略是否强制选中/取消选中“节电模式开启时禁用接近时唤醒”复选框。用户将无法更改此设置，UI 中的复选框将变为灰色。</string>
+      <string id="ForceDisableWakeWhenBatterySaverOn_0">默认用户选择</string>
+      <string id="ForceDisableWakeWhenBatterySaverOn_1">强制选中</string>
+      <string id="ForceDisableWakeWhenBatterySaverOn_2">强制取消选中</string>
+      <string id="ForceAllowWakeWhenExternalDisplayConnected_DisplayName">外部显示器连接时强制允许唤醒</string>
+      <string id="ForceAllowWakeWhenExternalDisplayConnected_ExplainText">确定 MDM 策略是否强制选中/取消选中“外部显示连接时允许接近时唤醒”复选框。用户将无法更改此设置，UI 中的复选框将变为灰色。</string>
+      <string id="ForceAllowWakeWhenExternalDisplayConnected_0">默认用户选择</string>
+      <string id="ForceAllowWakeWhenExternalDisplayConnected_1">强制选中</string>
+      <string id="ForceAllowWakeWhenExternalDisplayConnected_2">强制取消选中</string>
+      <string id="ForceAllowLockWhenExternalDisplayConnected_DisplayName">外部显示器连接时强制允许锁定</string>
+      <string id="ForceAllowLockWhenExternalDisplayConnected_ExplainText">确定 MDM 策略是否强制选中/取消选中“节电模式启用时允许离开时锁定”复选框。用户将无法更改此设置，UI 中的复选框将变为灰色。</string>
+      <string id="ForceAllowLockWhenExternalDisplayConnected_0">默认用户选择</string>
+      <string id="ForceAllowLockWhenExternalDisplayConnected_1">强制选中</string>
+      <string id="ForceAllowLockWhenExternalDisplayConnected_2">强制取消选中</string>
+      <string id="ForceAllowDimWhenExternalDisplayConnected_DisplayName">外部显示器连接时强制允许变暗</string>
+      <string id="ForceAllowDimWhenExternalDisplayConnected_ExplainText">确定 MDM 策略是否强制选中/取消选中“启用节电模式时允许自适应变暗”复选框。用户将无法更改此设置，UI 中的复选框将变为灰色。</string>
+      <string id="ForceAllowDimWhenExternalDisplayConnected_0">默认用户选择</string>
+      <string id="ForceAllowDimWhenExternalDisplayConnected_1">强制选中</string>
+      <string id="ForceAllowDimWhenExternalDisplayConnected_2">强制取消选中</string>
     </stringTable>
     <presentationTable>
       <presentation id="ForceInstantWake">
@@ -70,7 +91,19 @@
         <dropdownList refId="ForceLockTimeoutDropdown" noSort="true" defaultItem="1">请选择下列超时之一</dropdownList>
       </presentation>
       <presentation id="ForceInstantDim">
-        <dropdownList refId="ForceInstantDimDropDown" noSort="true" defaultItem="0">请选择下列操作之一</dropdownList>
+        <dropdownList refId="ForceInstantDimDropdown" noSort="true" defaultItem="0">请选择下列操作之一</dropdownList>
+      </presentation>
+      <presentation id="ForceDisableWakeWhenBatterySaverOn">
+        <dropdownList refId="ForceDisableWakeWhenBatterySaverOnDropdown" noSort="true" defaultItem="0">请选择下列操作之一</dropdownList>
+      </presentation>
+      <presentation id="ForceAllowWakeWhenExternalDisplayConnected">
+        <dropdownList refId="ForceAllowWakeWhenExternalDisplayConnectedDropdown" noSort="true" defaultItem="0">请选择下列操作之一</dropdownList>
+      </presentation>
+      <presentation id="ForceAllowLockWhenExternalDisplayConnected">
+        <dropdownList refId="ForceAllowLockWhenExternalDisplayConnectedDropdown" noSort="true" defaultItem="0">请选择下列操作之一</dropdownList>
+      </presentation>
+      <presentation id="ForceAllowDimWhenExternalDisplayConnected">
+        <dropdownList refId="ForceAllowDimWhenExternalDisplayConnectedDropdown" noSort="true" defaultItem="0">请选择下列操作之一</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

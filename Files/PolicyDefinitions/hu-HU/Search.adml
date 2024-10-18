@@ -300,6 +300,23 @@ Ha ez a beállítás engedélyezve van, a keresés és a Cortana hozzáférhet a
       <string id="DisableSearch_ExplainText">Ha engedélyezi ezt a szabályzatot, a keresési felhasználói felület le lesz tiltva az összes belépési pontjával együtt, például billentyűparancsok, érintőpárna kézmozdulatai és gépeléssel való keresés a Start menüben. A Start menü keresőmezője és a tálca Keresés gombja is el lesz rejtve.
 
 Ha letiltja vagy nem konfigurálja ezt a szabályzat-beállítást, a felhasználó megnyithatja a Keresési felhasználói felületet, és megjelennek annak különböző belépési pontjai.</string>
+      <string id="ConfigureSearchOnTaskbarMode">Keresés konfigurálása a tálcán</string>
+      <string id="ConfigureSearchOnTaskbarMode_Help">Ezzel a házirend-beállítással konfigurálhatja a keresést a tálcán.
+
+Ha engedélyezi ezt a házirend-beállítást, és elrejti, a tálcán való keresés alapértelmezés szerint el lesz rejtve. A felhasználók nem módosíthatják a Beállításokban.
+
+Ha engedélyezi ezt a házirend-beállítást, és csak keresés ikonra állítja be, a keresés ikon alapértelmezés szerint megjelenik a tálcán. A felhasználók nem módosíthatják a Beállításokban.
+
+Ha engedélyezi ezt a házirend-beállítást, és a keresés ikon és címke lehetőséget állítja be, a keresés ikon és címke alapértelmezés szerint megjelenik a tálcán. A felhasználók nem módosíthatják a Beállításokban.
+
+Ha engedélyezi ezt a házirend-beállítást, és keresőmezőre állítja, a keresőmező alapértelmezés szerint megjelenik a tálcán. A felhasználók nem módosíthatják a Beállításokban.
+
+Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a tálcán való keresés a Windows-kiadás alapértelmezett értékei szerint lesz konfigurálva. A felhasználók módosíthatják a keresést a tálcán a Beállításokban.
+      </string>
+      <string id="SearchOnTaskbarModeEnum_Hidden">Elrejtés</string>
+      <string id="SearchOnTaskbarModeEnum_SearchIconOnly">Csak Keresés ikon</string>
+      <string id="SearchOnTaskbarModeEnum_SearchIconAndLabel">Keresés ikon és címke</string>
+      <string id="SearchOnTaskbarModeEnum_SearchBox">Keresőmező</string>
     </stringTable>
     <presentationTable>
       <presentation id="RichAttachmentPreviews">
@@ -388,6 +405,9 @@ Ha letiltja vagy nem konfigurálja ezt a szabályzat-beállítást, a felhaszná
       </presentation>
       <presentation id="AllowCortanaAAD">
         <dropdownList refId="AllowCortanaAAD_Dropdown" noSort="true" defaultItem="0">Cortana az AAD-ben beállítás</dropdownList>
+      </presentation>
+      <presentation id="ConfigureSearchOnTaskbarMode">
+        <dropdownList refId="ConfigureSearchOnTaskbarMode_Dropdown" noSort="true" defaultItem="0">Keresés a tálcán</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

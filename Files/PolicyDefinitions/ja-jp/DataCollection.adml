@@ -105,6 +105,8 @@
 
       <string id="AllowUpdateComplianceProcessing">コンプライアンス処理の更新を許可する</string>
       <string id="AllowUpdateComplianceProcessing_Explain">
+このポリシーは非推奨であり、Windows 10 バージョン 1809 でのみ機能します。このポリシーを設定しても、サポートされている他のバージョンの Windows には影響しません。
+
 このポリシー設定は、[製品利用統計情報の許可] および [業務用 ID を構成します] と組み合わせて使用することで、組織でデバイスを構成して、Microsoft がデバイスから収集された Windows 診断データの処理者になり、https://go.microsoft.com/fwlink/?linkid=2185086 の製品条項に従うようにすることができます。
 この動作を有効にするには、以下を実行します。
     1. このポリシー設定を有効にする
@@ -118,7 +120,9 @@
 
       <string id="AllowDesktopAnalyticsProcessing">Desktop Analytics 処理を許可する</string>
       <string id="AllowDesktopAnalyticsProcessing_Explain">
-このポリシー設定は、[製品利用統計情報の許可] および [業務用 ID を構成します] と組み合わせて使用することで、組織でデバイスを構成して、Microsoft がデバイスから収集された Windows 診断データの処理者となり、https://go.microsoft.com/fwlink/?linkid=2185086 の製品条項に従うようにすることができます。
+このポリシーは非推奨であり、Windows 10 バージョン 1809 でのみ機能します。このポリシーを設定しても、サポートされている他のバージョンの Windows には影響しません。
+
+このポリシー設定は、[製品利用統計情報の許可] および [業務用 ID を構成します] と組み合わせて使用することで、組織でデバイスを構成して、Microsoft がデバイスから収集された Windows 診断データの処理者になり、https://go.microsoft.com/fwlink/?linkid=2185086 の製品条項に従うようにすることができます。
 この動作を有効にするには、以下を実行します。
     1. このポリシー設定を有効にする
     2. Azure Active Directory アカウントをデバイスに結合する
@@ -126,12 +130,14 @@
     4. [業務用 ID を構成します] で Desktop Analytics ワークスペースの設定を行う
 
 これらのポリシーを構成すると、デバイスから収集された Windows 診断データは、Microsoft の処理者のコミットメントの対象となります。
-この設定は、デバイスが Desktop Analytics に適切に登録されていない限り、デバイスに影響を与えません。このポリシー設定を無効にした場合、デバイスは Desktop Analytics に表示されません。
+この設定が Desktop Analytics に適切に登録されていない限り、デバイスには影響しません。このポリシー設定を無効にした場合、デバイスは Desktop Analytics に表示されません。
       </string>
 
       <string id="AllowWUfBCloudProcessing">WUfB クラウド処理を許可する</string>
       <string id="AllowWUfBCloudProcessing_Explain">
-このポリシー設定は、Azure Active Directory 参加済みデバイスを構成して、Microsoft がデバイスから収集された Windows 診断データの処理者となり、https://go.microsoft.com/fwlink/?linkid=2185086 の製品条項に従うようにします。
+このポリシーは非推奨であり、Windows 10 バージョン 1809 でのみ機能します。このポリシーを設定しても、サポートされている他のバージョンの Windows には影響しません。
+
+このポリシー設定では、Azure Active Directory 参加済みデバイスを構成して、Microsoft がデバイスから収集された Windows 診断データの処理者となり、https://go.microsoft.com/fwlink/?linkid=2185086 の製品条項に従うようにします。
 この動作を有効にするには、以下を実行します。
     1. このポリシー設定を有効にする
     2. Azure Active Directory アカウントをデバイスに結合する
@@ -143,12 +149,14 @@
 
       <string id="AllowCommercialDataPipeline">商用データ パイプラインを許可する</string>
       <string id="AllowCommercialDataPipeline_Explain">
-AllowCommercialDataPipeline は、Azure Active Directory 参加済みデバイスを構成して、Microsoft がデバイスから収集された Windows 診断データの処理者となり、https://go.microsoft.com/fwlink/?linkid=2185086 の製品条項に従うようにします。
+このポリシーは非推奨であり、Windows 10 バージョン 1809 でのみ機能します。このポリシーを設定しても、サポートされている他のバージョンの Windows には影響しません。
+
+AllowCommercialDataPipeline では、Azure Active Directory 参加済みデバイスを構成して、Microsoft がデバイスから収集された Windows 診断データの処理者となり、https://go.microsoft.com/fwlink/?linkid=2185086 の製品条項に従うようにします。
 この動作を有効にするには、以下を実行します。
     1. このポリシー設定を有効にする
     2. Azure Active Directory アカウントをデバイスに結合する
 
-Windows 診断データは、[利用統計情報の許可] ポリシー設定が "1 - 必須" 以上に設定されている場合に収集されます。この設定を構成しても、デバイスの Windows 診断データ収集レベルは変更されません
+Windows 診断データは、[利用統計情報の許可] ポリシー設定が "1 - 必須" 以上に設定されている場合に収集されます。この設定を構成しても、デバイスの Windows 診断データ収集レベルは変更されません。
 この設定を無効にするか構成しない場合、Microsoft はデバイスから収集された Windows 診断データの管理者となります。データは、[Update Compliance 処理を許可する] または [Desktop Analytics 処理を許可する] などのポリシーを有効にしていない限り、https://go.microsoft.com/fwlink/?LinkId=521839 の Microsoft のプライバシーに関する声明に従って処理されます。
 このポリシーおよび Microsoft が Windows 診断データの処理者になるその他のポリシーについては、https://go.microsoft.com/fwlink/?linkid=2011107 のドキュメントを参照してください。
       </string>

@@ -60,7 +60,7 @@ Notes:
           If you would like to not display printers of a certain type, enable this policy and set the number of printers to display to 0.
 
           In Windows 10 and later, only TCP/IP printers can be shown in the wizard. If you enable this policy setting, only TCP/IP printer limits are applicable. On Windows 10 only, if you disable or do not configure this policy setting, the default limit is applied.
-          
+
           In Windows 8 and later, Bluetooth printers are not shown so its limit does not apply to those versions of Windows.
       </string>
       <string id="DomainPrinters">Add Printer wizard - Network scan page (Managed network)</string>
@@ -147,7 +147,7 @@ Shared printers: 50
 If you would like to not display printers of a certain type, enable this policy and set the number of printers to display to 0.
 
 In Windows 10 and later, only TCP/IP printers can be shown in the wizard. If you enable this policy setting, only TCP/IP printer limits are applicable. On Windows 10 only, if you disable or do not configure this policy setting, the default limit is applied.
-          
+
 In Windows 8 and later, Bluetooth printers are not shown so its limit does not apply to those versions of Windows.</string>
       <string id="NonDomainPrinters">Add Printer wizard - Network scan page (Unmanaged network)</string>
       <string id="PackagePointAndPrintOnly">Only use Package Point and print</string>
@@ -278,7 +278,7 @@ By default, Windows Ultimate, Professional and Home SKUs will continue to search
 
         If you disable this policy setting or do not configure it, then all printer extensions that have been installed will be allowed to run.</string>
       <string id="MXDWUseLegacyOutputFormatMSXPS">Change Microsoft XPS Document Writer (MXDW) default output format to the legacy Microsoft XPS format (*.xps)</string>
-      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">Microsoft XPS Document Writer (MXDW) generates OpenXPS (*.oxps) files by default in Windows 10, Windows 10 and Windows Server 2022.
+      <string id="MXDWUseLegacyOutputFormatMSXPS_Help">Microsoft XPS Document Writer (MXDW) generates OpenXPS (*.oxps) files by default in Windows 10, Windows 10 and Windows Server 2025.
 
           If you enable this group policy setting, the default MXDW output format is the legacy Microsoft XPS (*.xps).
 
@@ -287,48 +287,178 @@ By default, Windows Ultimate, Professional and Home SKUs will continue to search
       <string id="SetDefaultPrinterMRUModeOff_Help">This preference allows you to change default printer management.
 
 If you enable this setting, Windows will not manage the default printer.
- 
+
 If you disable this setting, Windows will manage the default printer.
 
 If you do not configure this setting, default printer management will not change. </string>
       <string id="EnableDeviceControl">Enable Device Control Printing Restrictions</string>
       <string id="EnableDeviceControl_Help">
-          Determines whether Device Control Printing Restrictions are enforced for printing on this computer.
+Determines whether Device Control Printing Restrictions are enforced for printing on this computer.
 
-          By default, there are no restrictions to printing based on connection type or printer Make/Model.
+By default, there are no restrictions to printing based on connection type or printer Make/Model.
 
-          If you enable this setting, the computer will restrict printing to printer connections on the corporate network or approved USB-connected printers.
+If you enable this setting, the computer will restrict printing to printer connections on the corporate network or approved USB-connected printers.
 
-          If you disable this setting or do not configure it, there are no restrictions to printing based on connection type or printer Make/Model.</string>
-        <string id="ApprovedUsbPrintDevices">List of Approved USB-connected print devices</string>
-        <string id="ApprovedUsbPrintDevices_Help">
+If you disable this setting or do not configure it, there are no restrictions to printing based on connection type or printer Make/Model.</string>
+      <string id="ApprovedUsbPrintDevices">List of Approved USB-connected print devices</string>
+      <string id="ApprovedUsbPrintDevices_Help">
 
-            This setting is a component of the Device Control Printing Restrictions. To use this setting, enable Device Control Printing by enabling the "Enable Device Control Printing Restrictions" setting.
+This setting is a component of the Device Control Printing Restrictions. To use this setting, enable Device Control Printing by enabling the "Enable Device Control Printing Restrictions" setting.
 
-            When Device Control Printing is enabled, the system uses the specified list of vid/pid values to determine if the current USB connected printer is approved for local printing.
+When Device Control Printing is enabled, the system uses the specified list of vid/pid values to determine if the current USB connected printer is approved for local printing.
 
-            Type all the approved vid/pid combinations (separated by commas) that correspond to approved USB printer models. When a user tries to print to a USB printer queue the device vid/pid will be compared to the approved list.
-        </string>
-        <string id="RestrictDriverInstallationToAdministrators">Limits print driver installation to Administrators</string>
-        <string id="RestrictDriverInstallationToAdministrators_Help">
+Type all the approved vid/pid combinations (separated by commas) that correspond to approved USB printer models. When a user tries to print to a USB printer queue the device vid/pid will be compared to the approved list.
+      </string>
+      <string id="RestrictDriverInstallationToAdministrators">Limits print driver installation to Administrators</string>
+      <string id="RestrictDriverInstallationToAdministrators_Help">
 Determines whether users that aren't Administrators can install print drivers on this computer.
 
 By default, users that aren't Administrators can't install print drivers on this computer.
 
-If you enable this setting or do not configure it, the system will limit installation of print drivers to Adminstrators of this computer.
+If you enable this setting or do not configure it, the system will limit installation of print drivers to Administrators of this computer.
 
 If you disable this setting, the system won't limit installation of print drivers to this computer.
         </string>
-        <string id="RedirectionGuardPolicy">Configure Redirection Guard</string>
-        <string id="RedirectionGuardPolicy_Disabled">Redirection Guard Disabled</string>
-        <string id="RedirectionGuardPolicy_Enabled">Redirection Guard Enabled</string>
-        <string id="RedirectionGuardPolicy_AuditOnly">Redirection Guard Audit Only</string>
-        <string id="RedirectionGuardPolicy_Help">
+      <string id="CopyFilesPolicy">Manage processing of Queue-specific files</string>
+      <string id="CopyFilesPolicy_AllowAll">Allow all Queue-specfic files</string>
+      <string id="CopyFilesPolicy_Disabled">Do not allow Queue-specific files</string>
+      <string id="CopyFilesPolicy_Help">
+Manages how Queue-specific files are processed during printer installation. At printer installation time, a vendor-supplied installation application can specify a set of files, of any type, to be associated with a particular print queue. The files are downloaded to each client that connects to the print server.
+
+You can enable this setting to change the default behavior involving queue-specific files. To use this setting, select one of the options below from the "Manage processing of Queue-specific files" box.
+
+If you disable or do not configure this policy setting, the default behavior is "Limit Queue-specific files to Color profiles".
+
+--  "Do not allow Queue-specific files" specifies that no queue-specific files will be allowed/processed during print queue/printer connection installation.
+
+--  "Limit Queue-specific files to Color profiles" specifies that only queue-specific files that adhere to the standard color profile scheme will be allowed. This means entries using the Registry Key CopyFiles\ICM, containing a Directory value of COLOR and supporting mscms.dll as the Module value. "Limit Queue-specific files to Color profiles" is the default behavior.
+
+--  "Allow all Queue-specific files" specifies that all queue-specific files will be allowed/processed during print queue/printer connection installation.
+      </string>
+      <string id="CopyFilesPolicy_ICMOnly">Limit Queue-specific files to Color profiles</string>
+      <string id="DriverValidationLevel_Inbox">Require inbox signed drivers</string>
+      <string id="DriverValidationLevel_Legacy">Allow all validly signed drivers</string>
+      <string id="DriverValidationLevel_Trusted">Allow inbox and Print Drivers Trusted Store signed drivers</string>
+      <string id="DriverValidationLevel_TrustedShared">Allow inbox, Print Drivers Trusted Store, WHQL, and Trusted Publisher Store signed drivers</string>
+      <string id="DriverValidationLevel_WHQL">Allow inbox, Print Drivers Trusted Store, and WHQL signed drivers</string>
+      <string id="DriverValidationLevel">Manage Print Driver signature validation</string>
+      <string id="DriverValidationLevel_Help">
+          This policy setting controls the print driver signature validation mechanism. This policy controls the type of digital signature that is required for a print driver to be considered valid and installed on the system.
+
+          As part of this validation the catalog/embedded signature is verified and all files in the driver must be a part of the catalog or have their own embedded signature that can be used for validation.
+
+          You can enable this setting to change the default signature validation method. To use this setting, select one of the options below from the "Select the driver signature mechanism for this computer" box.
+
+          If you disable or do not configure this policy setting, the default method is "Allow all validly signed drivers".
+
+          -- "Require inbox signed drivers" specifies only drivers that are shipped as part of a Windows image are allowed on this computer.
+
+          -- "Allow inbox and PrintDrivers Trusted Store signed drivers" specifies only drivers that are shipped as part of a Windows image or drivers that are signed by certificates installed in the 'PrintDrivers' certificate store are allowed on this computer.
+
+          -- "Allow inbox, PrintDrivers Trusted Store, and WHQL signed drivers" specifies the only drivers allowed on this computer are those that are: shipped as part of a Windows image, signed by certificates installed in the 'PrintDrivers' certificate store, or signed by the Windows Hardware Quality Lab (WHQL).
+
+          -- "Allow inbox, PrintDrivers Trusted Store, WHQL, and Trusted Publishers Store signed drivers" specifies the only drivers allowed on this computer are those that are: shipped as part of a Windows image, signed by certificates installed in the 'PrintDrivers' certificate store, signed by the Windows Hardware Quality Lab (WHQL), or signed by certificates installed in the 'Trusted Publishers' certificate store.
+
+          -- "Allow all validly signed drivers" specfies that any print driver that has a valid embedded signature or can be validated against the print driver catalog can be installed on this computer.
+
+          The 'PrintDrivers' certificate store needs to be created by an administrator under the local machine store location.
+
+          The 'Trusted Publishers' certificate store can contain certificates from sources that are not related to print drivers.
+
+      </string>
+      <string id="DriverValidationLevelTitle">Select the driver signature mechanism for this computer</string>
+      <string id="DriverExclusionList">Manage Print Driver exclusion list</string>
+      <string id="DriverExclusionList_Help">
+This policy setting controls the print driver exclusion list. The exclusion list allows an administrator to curate a list of printer drivers that are not allowed to be installed on the system.
+
+This checks outranks the signature check and allows drivers that have a valid signature level for the Print Driver signature validation policy to be excluded.
+
+Entries in the exclusion list consist of a SHA256 hash (or SHA1 hash for Win7) of the INF file and/or main driver DLL file of the driver and the name of the file.
+
+If you disable or do not configure this policy setting, the registry key and values associated with this policy setting will be deleted, if currently set to a value.
+
+      </string>
+      <string id="RpcListenerPolicy">Configure RPC listener settings</string>
+      <string id="RpcOverNamedPipes">RPC over named pipes</string>
+      <string id="RpcOverTcp">RPC over TCP</string>
+      <string id="RpcOverNamedPipesAndTcp">RPC over named pipes and TCP</string>
+      <string id="RpcAuthenticationProtocol_Negotiate">Negotiate</string>
+      <string id="RpcAuthenticationProtocol_Kerberos">Kerberos</string>
+      <string id="RpcListenerPolicy_Help">
+This policy setting controls which protocols incoming RPC connections to the print spooler are allowed to use.
+
+By default, RPC over TCP is enabled and Negotiate is used for the authentication protocol.
+
+Protocols to allow for incoming RPC connections:
+    -- "RPC over named pipes": Incoming RPC connections are only allowed over named pipes
+    -- "RPC over TCP": Incoming RPC connections are only allowed over TCP (the default option)
+    -- "RPC over named pipes and TCP": Incoming RPC connections will be allowed over TCP and named pipes
+
+Authentication protocol to use for incoming RPC connections:
+    -- "Negotiate": Use the Negotiate authentication protocol (the default option)
+    -- "Kerberos": Use the Kerberos authentication protocol
+
+If you disable or do not configure this policy setting, the above defaults will be used.
+      </string>
+      <string id="RpcConnectionPolicy">Configure RPC connection settings</string>
+      <string id="RpcConnectionAuthenticationDefault">Default</string>
+      <string id="RpcConnectionAuthenticationEnabled">Authentication enabled</string>
+      <string id="RpcConnectionAuthenticationDisabled">Authentication disabled</string>
+      <string id="RpcConnectionPolicy_Help">
+This policy setting controls which protocol and protocol settings to use for outgoing RPC connections to a remote print spooler.
+
+By default, RPC over TCP is used and authentication is always enabled. For RPC over named pipes, authentication is always enabled for domain joined machines but disabled for non domain joined machines.
+
+Protocol to use for outgoing RPC connections:
+    -- "RPC over TCP": Use RPC over TCP for outgoing RPC connections to a remote print spooler
+    -- "RPC over named pipes": Use RPC over named pipes for outgoing RPC connections to a remote print spooler
+
+Use authentication for outgoing RPC over named pipes connections:
+    -- "Default": By default domain joined computers enable RPC authentication for RPC over named pipes while non domain joined computers disable RPC authentication for RPC over named pipes
+    -- "Authentication enabled": RPC authentication will be used for outgoing RPC over named pipes connections
+    -- "Authentication disabled": RPC authentication will not be used for outgoing RPC over named pipes connections
+
+If you disable or do not configure this policy setting, the above defaults will be used.
+      </string>
+      <string id="RpcTcpPortPolicy">Configure RPC over TCP port</string>
+      <string id="RpcTcpPortPolicy_Help">
+This policy setting controls which port is used for RPC over TCP for incoming connections to the print spooler and outgoing connections to remote print spoolers.
+
+By default dynamic TCP ports are used.
+
+RPC over TCP port:
+    -- The port to use for RPC over TCP. A value of 0 is the default and indicates that dynamic TCP ports will be used
+
+If you disable or do not configure this policy setting, dynamic TCP ports are used.
+      </string>
+      <string id="RpcIncomingAuthenticationLevelPolicy">Configure RPC packet level privacy setting for incoming connections</string>
+      <string id="RpcIncomingAuthenticationLevelPolicy_Help">
+This policy setting controls whether packet level privacy is enabled for RPC for incoming connections.
+
+By default packet level privacy is enabled for RPC for incoming connections.
+
+If you enable or do not configure this policy setting, packet level privacy is enabled for RPC for incoming connections.
+      </string>
+      <string id="AlwaysSendIppPageCounts">Always send job page count information for IPP printers</string>
+      <string id="AlwaysSendIppPageCounts_Help">
+Determines whether to always send page count information for accounting purposes for printers using the Microsoft IPP Class Driver.
+
+By default, pages are sent to the printer as soon as they are rendered and page count information is not sent to the printer unless pages must be reordered.
+
+If you enable this setting the system will render all print job pages up front and send the printer the total page count for the print job.
+
+If you disable this setting or do not configure it, pages are printed as soon as they are rendered and page counts are only sent when page reordering is required to process the job.
+      </string>
+      <string id="RedirectionGuardPolicy">Configure Redirection Guard</string>
+      <string id="RedirectionGuardPolicy_Disabled">Redirection Guard Disabled</string>
+      <string id="RedirectionGuardPolicy_Enabled">Redirection Guard Enabled</string>
+      <string id="RedirectionGuardPolicy_AuditOnly">Redirection Guard Audit Only</string>
+      <string id="RedirectionGuardPolicy_Help">
 Determines whether Redirection Guard is enabled for the print spooler.
 
 You can enable this setting to configure the Redirection Guard policy being applied to spooler.
 
-If you disable or do not configure this policy setting, Redirection Guard will default to being 'enabled'.
+If you disable or do not configure this policy setting, Redirection Guard will default to being 'Enabled'.
 
 If you enable this setting you may select the following options:
 
@@ -337,6 +467,18 @@ If you enable this setting you may select the following options:
 -- Disabed : Redirection Guard will not be enabled and file redirections may be used within the spooler process
 
 -- Audit   : Redirection Guard will log events as though it were enabled but will not actually prevent file redirections from being used within the spooler.
+      </string>
+      <string id="WindowsProtectedPrintPolicy">Configure Windows protected print</string>
+      <string id="WindowsProtectedPrintPolicy_Help">
+Determines whether Windows protected print is enabled on this computer.
+
+By default, Windows protected print is not enabled and there are not any restrictions on the print drivers that can be installed or print functionality.
+
+If you enable this setting, the computer will operate in Windows protected print mode which only allows printing to printers that support a subset of inbox Windows print drivers.
+
+If you disable this setting or do not configure it, there are not any restrictions on the print drivers that can be installed or print functionality.
+
+For more information, please see [insert link to web page with WPP info]
       </string>
     </stringTable>
     <presentationTable>
@@ -404,6 +546,33 @@ If you enable this setting you may select the following options:
         <textBox refId="ApprovedUsbPrintDevices_List">
           <label>vid/pid</label>
         </textBox>
+      </presentation>
+      <presentation id="CopyFilesPolicy">
+        <text>Select the method by which Queue-specific files will be processed.</text>
+        <dropdownList defaultItem="1" noSort="true" refId="CopyFilesPolicy_Enum">Manage processing of Queue-Specific files:</dropdownList>
+      </presentation>
+      <presentation id="DriverValidationLevel">
+        <dropdownList defaultItem="4" noSort="true" refId="DriverValidationLevel_Enum">Select the driver signature mechanism for this computer:</dropdownList>
+      </presentation>
+      <presentation id="DriverExclusionList">
+        <text>  </text>
+        <text>Enter a File Hash paired with the name of the file the Hash represents below.</text>
+        <text>  </text>
+        <listBox refId="Driver_ExclusionListEntry">File Hash   File Name:</listBox>
+      </presentation>
+      <presentation id="RpcListenerPolicy">
+        <text>Configure protocol options for incoming RPC connections.</text>
+        <dropdownList defaultItem="1" noSort="true" refId="RpcListenerProtocols_Enum">Protocols to allow for incoming RPC connections:</dropdownList>
+        <dropdownList defaultItem="0" noSort="true" refId="RpcAuthenticationProtocol_Enum">Authentication protocol to use for incoming RPC connections:</dropdownList>
+      </presentation>
+      <presentation id="RpcConnectionPolicy">
+        <text>Configure protocol options for outgoing RPC connections.</text>
+        <dropdownList defaultItem="0" noSort="true" refId="RpcConnectionProtocol_Enum">Protocol to use for outgoing RPC connections:</dropdownList>
+        <dropdownList defaultItem="0" noSort="true" refId="RpcConnectionAuthentication_Enum">Use authentication for outgoing RPC connections:</dropdownList>
+      </presentation>
+      <presentation id="RpcTcpPortPolicy">
+        <text>Configure port to use for RPC over TCP.</text>
+        <decimalTextBox defaultValue="0" refId="RpcTcpPort">RPC over TCP port:</decimalTextBox>
       </presentation>
       <presentation id="RedirectionGuardPolicy">
         <text>Configure options for Redirection Guard</text>

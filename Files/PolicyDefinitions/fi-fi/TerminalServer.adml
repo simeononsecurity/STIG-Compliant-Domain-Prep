@@ -436,16 +436,19 @@ Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, n�
 
         Tämän käytäntöasetuksen avulla voit valita jommankumman kahdesta käyttöoikeustilasta: käyttäjäkohtainen tai laitekohtainen.
 
-         Käyttäjäkohtainen käyttöoikeustila edellyttää, että kullakin tähän etätyöpöytäistunnon isäntäpalvelimeen yhdistettävällä käyttäjätilillä on etätyöpöydän käyttöoikeuspalvelimesta annettu RDS-käyttäjäkohtainen CAL-käyttöoikeus.
+        Käyttäjäkohtainen käyttöoikeustila edellyttää, että kullakin tähän etätyöpöytäistunnon isäntäpalvelimeen yhdistettävällä käyttäjätilillä on etätyöpöydän käyttöoikeuspalvelimesta annettu RDS-käyttäjäkohtainen CAL-käyttöoikeus.
 
-       Laitekohtainen käyttöoikeustila edellyttää, että kullakin tähän etätyöpöytäistunnon isäntäpalvelimeen yhdistettävällä laitteella on etätyöpöydän käyttöoikeuspalvelimesta annettu RDS-laitekohtainen CAL-käyttöoikeus.
+        Laitekohtainen käyttöoikeustila edellyttää, että kullakin tähän etätyöpöytäistunnon isäntäpalvelimeen yhdistettävällä laitteella on etätyöpöydän käyttöoikeuspalvelimesta annettu RDS-laitekohtainen CAL-käyttöoikeus.
 
-       Jos otat tämän käytäntöasetuksen käyttöön, etätyöpöydän käyttöoikeuspalvelin ja etätyöpöytäistunnon isäntä käyttävät määrittämääsi etätyöpöydän käyttöoikeustilaa.
+        Jos otat tämän käytäntöasetuksen käyttöön, etätyöpöydän käyttöoikeuspalvelin ja etätyöpöytäistunnon isäntä käyttävät määrittämääsi etätyöpöydän käyttöoikeustilaa.
 
         Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, käyttöoikeustilaa ei määritetä ryhmäkäytäntötasolla.
+
+        Huom. Käyttäjäkohtainen AAD on vanhentunut Windows 11:ssä ja sitä uudemmissa versioissa.
       </string>
       <string id="TS_LICENSING_MODE_PER_DEVICE">Laitekohtainen</string>
       <string id="TS_LICENSING_MODE_PER_USER">Käyttäjäkohtainen</string>
+      <string id="TS_LICENSING_MODE_AAD_PER_USER">Käyttäjäkohtainen AAD</string>
       <string id="TS_LPTPORTMAP_EXPLAIN">Tämän käytäntöasetuksen avulla voit määrittää, estetäänkö tietojen uudelleenohjaus asiakkaan LPT-portteihin etätyöpöytäpalveluiden istunnossa.
 
 Tämän asetuksen avulla voit estää käyttäjiä yhdistämästä paikallisia LPT-portteja ja ohjaamasta etätietokoneen tietoja paikallisiin LPT-portteihin liitettyihin laitteisiin. Oletusarvon mukaan etätyöpöytäpalvelut sallivat uudelleenohjauksen LPT-portteihin.
@@ -816,6 +819,50 @@ Jos otat tämän käytäntöasetuksen käyttöön, käyttäjät eivät voi käyt
 
 Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, käyttäjät voivat käyttää paikallisia todentajia etätyöpöytäistunnon sisällä.
 </string>
+      <string id="TS_SC_CLIPBOARD_DISABLED">Poista käytöstä leikepöydän siirrot palvelimesta asiakkaaseen</string>
+      <string id="TS_CS_CLIPBOARD_DISABLED">Poista käytöstä leikepöydän siirrot asiakkaasta palvelimeen</string>
+      <string id="TS_CLIPBOARD_ALLOW_TEXT">Salli pelkkä teksti</string>
+      <string id="TS_CLIPBOARD_ALLOW_TEXT_IMAGE">Salli vain teksti ja kuvat</string>
+      <string id="TS_CLIPBOARD_ALLOW_TEXT_IMAGE_RTF">Salli pelkkä teksti, kuvat ja RTF</string>
+      <string id="TS_CLIPBOARD_ALLOW_TEXT_IMAGE_RTF_HTML">Salli vain teksti, kuvat, RTF ja HTML</string>
+      <string id="TS_SC_CLIPBOARD_RESTRICTION">Rajoita leikepöydän siirtoa palvelimesta asiakkaaseen</string>
+      <string id="TS_SC_CLIPBOARD_RESTRICTION_EXPLAIN">Tämän käytäntöasetuksen avulla voit rajoittaa leikepöydän tiedonsiirtoja palvelimesta asiakkaaseen.
+
+Jos otat tämän käytäntöasetuksen käyttöön, sinun on valittava seuraavista vaihtoehdoista:
+
+- Poista leikepöydän siirrot käytöstä palvelimesta asiakkaaseen.
+
+- Salli vain teksti -muotoinen kopioiminen palvelimesta asiakkaaseen.
+
+- Salli pelkän tekstin ja kuvan kopiointi palvelimesta asiakkaaseen.
+
+- Salli vain teksti-, kuva- ja RTF-muotoinen kopioiminen palvelimesta asiakkaaseen.
+
+- Salli pelkän tekstin, kuvien, RTF:n ja HTML:n kopiointi palvelimesta asiakkaaseen.
+
+Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, käyttäjät voivat kopioida satunnaista sisältöä palvelimesta asiakkaaseen, jos leikepöydän uudelleenohjaus on käytössä.
+
+Huomautus: tämä käytäntöasetus näkyy sekä Tietokoneasetuksissa että Käyttäjäasetuksissa. Jos molemmat käytäntöasetukset määritetään, käytetään tiukempaa rajoitusta.
+</string>
+      <string id="TS_CS_CLIPBOARD_RESTRICTION">Rajoita leikepöydän siirtoa asiakkaasta palvelimeen</string>
+      <string id="TS_CS_CLIPBOARD_RESTRICTION_EXPLAIN">Tämän käytäntöasetuksen avulla voit rajoittaa leikepöydän tiedonsiirtoja asiakkaasta palvelimeen.
+
+Jos otat tämän käytäntöasetuksen käyttöön, sinun on valittava seuraavista vaihtoehdoista:
+
+- Poista leikepöydän siirrot käytöstä asiakkaasta palvelimeen.
+
+- Salli vain teksti -muotoinen kopioiminen asiakkaasta palvelimeen.
+
+- Salli pelkän tekstin ja kuvan kopiointi asiakkaasta palvelimeen.
+
+- Salli vain teksti-, kuva- ja RTF-muotoinen kopioiminen asiakkaasta palvelimeen.
+
+- Salli pelkän tekstin, kuvien, RTF:n ja HTML:n kopiointi asiakkaasta palvelimeen.
+
+Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, käyttäjät voivat kopioida satunnaista sisältöä asiakkaasta palvelimeen, jos leikepöydän uudelleenohjaus on käytössä.
+
+Huomautus: tämä käytäntöasetus näkyy sekä Tietokoneasetuksissa että Käyttäjäasetuksissa. Jos molemmat käytäntöasetukset määritetään, käytetään tiukempaa rajoitusta.
+</string>
       <string id="TS_CLIPRDR_CLOUD_CLIP_INTEGRATION">Poista käytöstä pilvipalvelun leikepöydän integrointi palvelimesta asiakaskohtaiseen tiedonsiirtoon</string>
       <string id="TS_CLIPRDR_CLOUD_CLIP_INTEGRATION_EXPLAIN">Tämän käytäntöasetuksen avulla voit määrittää, lisätäänkö etäistunnosta asiakkaalle leikepöydän uudelleenohjauksen avulla siirretyt tiedot asiakaspuolen pilvipalvelun leikepöydälle.
 
@@ -839,6 +886,24 @@ Tärkeää: jos tämä käytäntöasetus poistetaan käytöstä, suojaus on heik
 
 </string>
       <string id="TS_USER_AUTHENTICATION_POLICY">Edellytä etäkäyttäjältä verkkotason todennus</string>
+      <string id="TS_DISCONNECT_ON_LOCK_POLICY"> Katkaise etäistunto vanhan todentamisen lukituksen yhteydessä</string>
+      <string id="TS_DISCONNECT_ON_LOCK_POLICY_EXPLAIN">Tämän käytäntöasetuksen avulla voit määrittää käyttökokemuksen, kun käyttäjä tai käytäntö on lukinnut Etätyöpöytäistunnon. Voit määrittää, näyttääkö etäistunto etälukitusnäytön vai katkaiseeko se yhteyden, kun etäistunto on lukittu. Etäistunnon yhteyden katkaiseminen varmistaa, että etäistuntoa ei voi jättää lukitusnäyttöön eikä yhteyttä voi muodostaa uudelleen automaattisesti verkkoyhteyden menettämisen vuoksi.
+
+Tämä käytäntö koskee vain, kun käytetään vanhaa todentamista etätietokoneeseen todentamiseen. Vanha todentaminen on rajoitettu käyttäjänimeen ja salasanaan tai varmenteeseen, kuten älykorttiin. Vanha todentaminen ei käytä Microsoftin käyttäjätietoympäristöä, kuten Microsoft Entra ID:tä. Vanha todentaminen sisältää NTLM-, CredSSP-, RDSTLS-, TLS- ja RDP-perustodentamisprotokollat.
+
+Jos otat tämän käytäntöasetuksen käyttöön, Etätyöpöydän vanhaa todentamista käyttävät yhteydet katkaisevat etäistunnon yhteyden, kun etäistunto on lukittu. Käyttäjät voivat muodostaa yhteyden uudelleen, kun he ovat valmiita, ja antaa tunnistetietonsa uudelleen pyydettäessä.
+
+Jos poistat tämän käytäntöasetuksen käytöstä, Etätyöpöydän vanhaa todentamista käyttävät yhteydet näyttävät etäistunnon lukitusnäytön, kun etäistunto on lukittu. Käyttäjät voivat poistaa etäistunnon lukituksen käyttämällä käyttäjänimeä ja salasanaa tai varmenteita.
+</string>
+      <string id="TS_DISCONNECT_ON_LOCK_AAD_POLICY">Katkaise etäistunnon yhteys lukituksen yhteydessä Microsoftin käyttäjätietoympäristön todentamista varten</string>
+      <string id="TS_DISCONNECT_ON_LOCK_AAD_POLICY_EXPLAIN">Tämän käytäntöasetuksen avulla voit määrittää käyttökokemuksen, kun käyttäjä tai käytäntö on lukinnut Etätyöpöytä istunnon. Voit määrittää, näyttääkö etäistunto etälukitusnäytön vai katkaiseeko se yhteyden, kun etäistunto on lukittu. Etäistunnon yhteyden katkaiseminen varmistaa, että etäistuntoa ei voi jättää lukitusnäyttöön, eikä se pysty yhdistämään automaattisesti uudelleen verkkoyhteyden katkeamisen vuoksi.
+
+Tätä käytäntöä käytetään vain, kun etätietokoneessa käytetään Microsoftin käyttäjätietoympäristö, kuten Microsoft Entra ID, käyttävää tunnistetietopalvelua. Tätä käytäntöä ei käytetä käytettäessä vanhaa todennusta, joka sisältää NTLM-, CredSSP-, RDSTLS-, TLS- ja RDP-perustodennusprotokollat.
+
+Jos otat tämän käytäntöasetuksen käyttöön tai et määritä sitä, Etätyöpöytä Microsoftin käyttäjätietoympäristö käyttävät yhteydet katkaisevat etäistunnon yhteyden, kun etäistunto lukitaan. Käyttäjät voivat muodostaa yhteyden uudelleen, kun he ovat valmiita, ja voivat käyttää salasanatonta todennusta, jos se on määritetty.
+
+Jos poistat tämän käytäntöasetuksen käytöstä, Etätyöpöytä Microsoftin käyttäjätietoympäristö käyttävät yhteydet näyttävät etälukitusnäytön, kun etäistunto on lukittu. Käyttäjät voivat poistaa etäistunnon lukituksen käyttäjänimellä, salasanalla tai varmenteella.
+</string>
       <string id="TS_User_Help">Ohjaa sellaisten etätyöpöytäpalveluiden tekniikoiden määrittämistä, joiden avulla voi käyttää Windows-ohjelmia tai koko Windows-työpöytää suorittavaa palvelinta</string>
       <string id="TS_USER_HOME">Määritä etätyöpöytäpalveluiden käyttäjän kotihakemisto</string>
       <string id="TS_USER_HOME_EXPLAIN">Määrittää, käyttävätkö etätyöpöytäpalvelut käyttäjän etätyöpöytäpalveluiden istunnon kotihakemiston pääpolkuna määritettyä jaettua verkkoasemaa tai paikallista hakemistopolkua.
@@ -1189,21 +1254,20 @@ Huomautus: RemoteApp-ohjelmat, jotka asennetaan ei-luotetusta palvelimesta Remot
       </string>
 
 	  <string id="TS_SELECT_TRANSPORT">Valitse RDP-siirtoprotokollat</string>
-	  <string id="TS_SELECT_TRANSPORT_EXPLAIN">Tämän käytäntöasetuksen avulla voit määrittää, mitä protokollia voidaan käyttää muodostettaessa RDP-yhteyksiä tähän palvelimeen.
+	  <string id="TS_SELECT_TRANSPORT_EXPLAIN">Tämän käytäntöasetuksen avulla voit määrittää, mitä protokollia voidaan käyttää tämän palvelimen RDP-etäkäyttöprotokolla (RDP) -käyttöön.
 
-Jos otat tämän käytäntöasetuksen käyttöön, sinun on määritettävä myös se, käyttääkö RDP UDP:tä.
+Jos otat tämän käytäntöasetuksen käyttöön, sinun on määritettävä, käyttääkö RDP UDP:tä.
 
-Voit valita jonkin seuraavista vaihtoehdoista: Käytä UDP:tä ja TCP:tä, Käytä vain TCP:tä tai Käytä UDP:tä tai TCP:tä (oletus).
+Voit valita jonkin seuraavista vaihtoehdoista: Käytä UDP:tä tai TCP:tä (oletus) tai Käytä vain TCP:tä 
 
-Jos valitset Käytä UDP:tä tai TCP:tä -vaihtoehdon ja UDP-yhteys onnistuu, suurin osa RDP-liikenteestä käyttää UDP:tä.
+Jos valitset Käytä UDP:tä tai TCP:tä ja UDP-yhteys onnistuu, suurin osa RDP-liikenteestä käyttää UDP:tä.
 
 Jos UDP-yhteys ei onnistu tai jos valitset Käytä vain TCP:tä -vaihtoehdon, kaikki RDP-liikenne käyttää TCP:tä.
 
-Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, RDP valitsee protokollat, jotka tuottavat parhaan käyttökokemuksen.
+Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, RDP valitsee protokollat, jotka tarjoavat parhaan käyttökokemuksen.
 	  </string>
-	  <string id="TS_SELECT_TRANSPORT_UDP_AND_TCP">Käytä UDP:tä ja TCP:tä</string>
-	  <string id="TS_SELECT_TRANSPORT_TCP_ONLY">Käytä vain TCP:tä</string>
 	  <string id="TS_SELECT_TRANSPORT_UDP_OR_TCP">Käytä UDP:tä tai TCP:tä</string>
+	  <string id="TS_SELECT_TRANSPORT_TCP_ONLY">Käytä vain TCP:tä</string>
 
       <string id="TS_SELECT_NETWORK_DETECT">Valitse verkon tunnistus palvelimessa</string>
       <string id="TS_SELECT_NETWORK_DETECT_EXPLAIN">Tämän käytäntöasetuksen avulla voit määrittää, kuinka etätyöpöytäprotokolla yrittää tunnistaa verkon laadun (kaistanleveyden ja verkkoviiveen).
@@ -1425,6 +1489,12 @@ Huomautus: Jos tietokoneessa on useita grafiikkasuorittimia asennettuina, käyt�
       </presentation>
       <presentation id="TS_SELECT_TRANSPORT">
         <dropdownList refId="TS_SELECT_TRANSPORT_TYPE" noSort="true" defaultItem="0">Valitse siirtotyyppi</dropdownList>
+      </presentation>
+      <presentation id="TS_SC_CLIPBOARD_RESTRICTION">
+        <dropdownList refId="TS_SC_CLIPBOARD_RESTRICTION_Text" noSort="true" defaultItem="0">Rajoita leikepöydän siirtoa palvelimesta asiakkaaseen:</dropdownList>
+      </presentation>
+      <presentation id="TS_CS_CLIPBOARD_RESTRICTION">
+        <dropdownList refId="TS_CS_CLIPBOARD_RESTRICTION_Text" noSort="true" defaultItem="0">Rajoita leikepöydän siirtoa asiakkaasta palvelimeen:</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

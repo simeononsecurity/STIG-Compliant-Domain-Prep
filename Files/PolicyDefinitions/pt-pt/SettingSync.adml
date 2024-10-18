@@ -131,6 +131,19 @@ Utilize a opção "Permitir que os utilizadores ativem a sincronização de aces
 
 Se não definir ou desativar esta definição, a sincronização do grupo de "acessibilidade" estará ativa por predefinição e configurável pelo utilizador.
       </string>
+
+      <!-- Language -->
+      <string id="DisableLanguageSettingSync">Não sincronizar definições de preferências de idioma</string>
+      <string id="DisableLanguageSettingSync_Help">
+        Impeça o grupo "preferências de idioma" de sincronizar de e para este PC. Esta opção desliga e desativa o grupo "preferências de idioma" na página de definições "Cópia de segurança do Windows" nas definições do PC.
+
+Se ativar esta definição de política, o grupo "preferências de idioma" não será sincronizado.
+
+Utilize a opção "Permitir que os utilizadores ativem a sincronização de preferências de idioma" para que a sincronização esteja desligada por predefinição, mas não desativada.
+
+Se não definir ou desativar esta definição, a sincronização do grupo de "preferências de idioma" estará ativa por predefinição e configurável pelo utilizador.
+      </string>
+
     </stringTable>
     <presentationTable>
 
@@ -182,6 +195,11 @@ Se não definir ou desativar esta definição, a sincronização do grupo de "ac
       <!-- AccessibilitySync -->
       <presentation id="DisableAccessibilitySettingSyncUserOverride">
         <checkBox refId="CheckBox_UserOverride">Permitir que os utilizadores ativem a sincronização de "acessibilidade".</checkBox>
+      </presentation>
+
+      <!-- LanguageSync -->
+      <presentation id="DisableLanguageSettingSyncUserOverride">
+        <checkBox refId="CheckBox_UserOverride">Permitir que os utilizadores ativem a sincronização das "preferências de idioma".</checkBox>
       </presentation>
 
     </presentationTable>

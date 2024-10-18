@@ -300,6 +300,23 @@ Wenn diese Option aktiviert ist, können die Suche und Cortana auf Positionsdate
       <string id="DisableSearch_ExplainText">Wenn Sie diese Richtlinie aktivieren, wird die Benutzeroberfläche für die Suche zusammen mit allen Einstiegspunkten deaktiviert, z. B. Tastenkombinationen, Touchpadgesten und Typ-zu-Suche in der Startmenü. Das Suchfeld und die Schaltfläche "Taskleiste suchen" des Startmenü werden ebenfalls ausgeblendet.
 
 Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, kann der Benutzer die Benutzeroberfläche für die Suche öffnen, und die unterschiedlichen Einstiegspunkte werden angezeigt.</string>
+      <string id="ConfigureSearchOnTaskbarMode">Konfiguriert die Suche auf der Taskleiste</string>
+      <string id="ConfigureSearchOnTaskbarMode_Help">Mit dieser Richtlinieneinstellung können Sie die Suche auf der Taskleiste konfigurieren.
+
+Wenn Sie diese Richtlinieneinstellung aktivieren und auf "Ausblenden" festlegen, wird die Suche standardmäßig auf der Taskleiste ausgeblendet. Benutzer können dies in den Einstellungen nicht ändern.
+
+Wenn Sie diese Richtlinieneinstellung aktivieren und nur auf "Suchsymbol" festlegen, wird das Suchsymbol standardmäßig auf der Taskleiste angezeigt. Benutzer können dies in den Einstellungen nicht ändern.
+
+Wenn Sie diese Richtlinieneinstellung aktivieren und auf "Suchsymbol und Bezeichnung" festlegen, werden das Suchsymbol und die Bezeichnung standardmäßig auf der Taskleiste angezeigt. Benutzer können dies in den Einstellungen nicht ändern.
+
+Wenn Sie diese Richtlinieneinstellung aktivieren und auf "Suchfeld" festlegen, wird das Suchfeld standardmäßig auf der Taskleiste angezeigt. Benutzer können dies in den Einstellungen nicht ändern.
+
+Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, wird die Suche auf der Taskleiste gemäß den Standardeinstellungen für Ihre Windows-Edition konfiguriert. Benutzer können die Suche auf der Taskleiste in den Einstellungen ändern.
+      </string>
+      <string id="SearchOnTaskbarModeEnum_Hidden">Ausblenden</string>
+      <string id="SearchOnTaskbarModeEnum_SearchIconOnly">Nur Suchsymbol</string>
+      <string id="SearchOnTaskbarModeEnum_SearchIconAndLabel">Suchsymbol und Bezeichnung</string>
+      <string id="SearchOnTaskbarModeEnum_SearchBox">Suchfeld</string>
     </stringTable>
     <presentationTable>
       <presentation id="RichAttachmentPreviews">
@@ -388,6 +405,9 @@ Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, kan
       </presentation>
       <presentation id="AllowCortanaAAD">
         <dropdownList refId="AllowCortanaAAD_Dropdown" noSort="true" defaultItem="0">Einstellung "Cortana in AAD"</dropdownList>
+      </presentation>
+      <presentation id="ConfigureSearchOnTaskbarMode">
+        <dropdownList refId="ConfigureSearchOnTaskbarMode_Dropdown" noSort="true" defaultItem="0">Auf der Taskleiste suchen</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

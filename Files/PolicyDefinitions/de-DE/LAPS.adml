@@ -1,0 +1,260 @@
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName>
+  </displayName>
+  <description>
+  </description>
+  <resources>
+    <stringTable>
+      <string id="LAPS">LAPS</string>
+      <string id="LAPS_BackupDirectory">Kennwortsicherungsverzeichnis konfigurieren</string>
+      <string id="LAPS_BackupDirectory_Help">Verwenden Sie diese Einstellung, um zu konfigurieren, in welchem Verzeichnis das Lokale Administratorkontokennwort gesichert wird.
+
+Zulässige Einstellungen:
+
+0=Deaktiviert (Kennwort wird nicht gesichert)
+
+1=Backup kennwort, um Azure Active Directory
+
+2=Backup das Kennwort in Active Directory
+
+Wenn diese Einstellung nicht angegeben wird, wird standardmäßig 0 (deaktiviert) verwendet.
+
+Wenn diese Einstellung auf 1 konfiguriert ist und das verwaltete Gerät nicht mit Azure Active Directory verknüpft ist, wird das lokale Administratorkennwort nicht verwaltet.
+
+Wenn diese Einstellung auf 2 konfiguriert ist und das verwaltete Gerät nicht mit Active Directory verknüpft ist, wird das lokale Administratorkennwort nicht verwaltet.
+
+Wenn diese Einstellung deaktiviert oder nicht konfiguriert ist, wird das lokale Administratorkennwort nicht verwaltet.
+
+Weitere Informationen finden Sie unter https://go.microsoft.com/fwlink/?linkid=2188435.
+      </string>
+      <string id="LAPS_BackupDirectoryDisabled">Deaktiviert</string>
+      <string id="LAPS_BackupDirectoryAzure">Azure Active Directory</string>
+      <string id="LAPS_BackupDirectoryAD">Active Directory</string>
+      <string id="LAPS_PasswordSettings">Kennworteinstellungen</string>
+      <string id="LAPS_PasswordSettings_Help">Konfiguriert Kennwortparameter.
+
+Kennwortkomplexität: Welche Zeichen werden beim Generieren eines neuen Kennworts verwendet
+  Standardeinstellung: Große Buchstaben + Kleinbuchstaben + Ziffern + Sonderzeichen
+
+Kennwortlänge
+  Mindestens 8 Zeichen
+  Maximal: 64 Zeichen
+  Standardeinstellung: 14 Zeichen
+
+Kennwortalter in Tagen
+  Minimum: 1 Tag (7 Tage, wenn das Sicherungsverzeichnis als Azure AD konfiguriert ist)
+  Maximal: 365 Tage
+  Standard: 30 Tage
+
+Länge der Passphrase
+  Minimum: 3 Wörter
+  Maximal: 10 Wörter
+  Standard: 6 Wörter
+
+Weitere Informationen finden Sie unter https://go.microsoft.com/fwlink/?linkid=2188435.
+
+Passphraseliste aus "Deep Dive: NEW Wordlists for Random Passphrases" von Electronic Frontier Foundation und wird unter einer CC-BY-3.0-Namensnennungslizenz verwendet. Weitere Informationen finden Sie unter https://go.microsoft.com/fwlink/?linkid=2255471.
+      </string>
+      <string id="LAPS_PwdComplexity_Item_1">Große Buchstaben</string>
+      <string id="LAPS_PwdComplexity_Item_2">Große Buchstaben + kleine Buchstaben</string>
+      <string id="LAPS_PwdComplexity_Item_3">Große Buchstaben + kleine Buchstaben + Ziffern</string>
+      <string id="LAPS_PwdComplexity_Item_4">Große Buchstaben + kleine Buchstaben + Ziffern + Sonderzeichen</string>
+      <string id="LAPS_PwdComplexity_Item_5">Große Buchstaben + kleine Buchstaben + Zahlen + Sonderzeichen (verbesserte Lesbarkeit)</string>
+      <string id="LAPS_PwdComplexity_Item_6">Passphrase (lange Wörter)</string>
+      <string id="LAPS_PwdComplexity_Item_7">Passphrase (kurze Wörter)</string>
+      <string id="LAPS_PwdComplexity_Item_8">Passphrase (kurze Wörter mit eindeutigen Präfixen)</string>
+      <string id="LAPS_AdminName">Name des zu verwaltenden Administratorkontos</string>
+      <string id="LAPS_AdminName_Help">Mit dieser Richtlinieneinstellung wird ein benutzerdefinierter Administratorkontoname zum Verwalten des Kennworts angegeben.
+
+Wenn diese Richtlinieneinstellung aktiviert ist, verwaltet LAPS das Kennwort für ein lokales Konto mit diesem Namen.
+
+Wenn diese Richtlinieneinstellung deaktiviert oder nicht konfiguriert ist, verwaltet LAPS das Kennwort für das bekannte Administratorkonto.
+
+Aktivieren Sie diese Richtlinieneinstellung NICHT, um das integrierte Administratorkonto zu verwalten. Das integrierte Administratorkonto wird von einer bekannten SID automatisch erkannt und ist nicht vom Kontonamen abhängig.
+
+Weitere Informationen finden Sie unter https://go.microsoft.com/fwlink/?linkid=2188435.
+      </string>
+      <string id="LAPS_DontAllowPwdExpirationBehindPolicy">Kennwortablauf nicht länger zulassen als gemäß Richtlinie erforderlich</string>
+      <string id="LAPS_DontAllowPwdExpirationBehindPolicy_Help">Wenn diese Einstellung aktiviert oder nicht konfiguriert ist, ist der geplante Kennwortablauf, der länger ist als das durch die Richtlinie "Kennwort Einstellungen" festgelegte Kennwortalter, NICHT zulässig. Wenn ein solcher Ablauf erkannt wird, wird das Kennwort sofort geändert, und der Kennwortablauf wird gemäß der Richtlinie festgelegt.
+
+Wenn diese Einstellung deaktiviert ist, ist die Kennwortablaufzeit möglicherweise länger als für die Richtlinie "Kennwort Einstellungen" erforderlich.
+
+Weitere Informationen finden Sie unter https://go.microsoft.com/fwlink/?linkid=2188435.
+      </string>
+      <string id="LAPS_ADPasswordEncryptionEnabled">Kennwortverschlüsselung aktivieren</string>
+      <string id="LAPS_ADPasswordEncryptionEnabled_Help">Wenn Sie diese Einstellung aktivieren, wird das verwaltete Kennwort verschlüsselt, bevor es an Active Directory gesendet wird.
+
+Das Aktivieren dieser Einstellung hat keine Auswirkung, es sei denn, 1) das Kennwort wurde für die Sicherung in Active Directory konfiguriert, und 2) die Funktionsebene der Active Directory-Domäne befindet sich auf Windows Server 2016 oder höher.
+
+Wenn diese Einstellung aktiviert ist und die Domänenfunktionsebene mindestens Windows Server 2016 ist, wird das Kennwort des verwalteten Kontos verschlüsselt.
+
+Wenn diese Einstellung aktiviert ist und die Domänenfunktionsebene kleiner als Windows Server 2016 ist, wird das Kennwort des verwalteten Kontos nicht im Verzeichnis gesichert.
+
+Wenn diese Einstellung deaktiviert ist, wird das Kennwort des verwalteten Kontos nicht verschlüsselt.
+
+Diese Einstellung wird standardmäßig aktiviert, wenn sie nicht konfiguriert ist.
+
+Weitere Informationen finden Sie unter https://go.microsoft.com/fwlink/?linkid=2188435.
+      </string>
+      <string id="LAPS_ADPasswordEncryptionPrincipal">Autorisierten Kennwortdecryptor konfigurieren</string>
+      <string id="LAPS_ADPasswordEncryptionPrincipal_Help">Konfigurieren Sie diese Einstellung, um den bestimmten Benutzer oder die bestimmte Gruppe zu steuern, der bzw. die zum Entschlüsseln verschlüsselter Kennwörter autorisiert ist.
+
+Das Konfigurieren dieser Einstellung hat keine Auswirkungen, es sei denn, die Zugriffscodeverschlüsselung wurde aktiviert.
+
+Wenn diese Einstellung aktiviert ist, können verschlüsselte Kennwörter von der angegebenen Gruppe entschlüsselt werden.
+
+Wenn diese Einstellung deaktiviert oder nicht konfiguriert ist, können verschlüsselte Kennwörter von der Gruppe „Domänen-Admins“ entschlüsselt werden.
+
+Diese Einstellung muss entweder mit einem domänenqualifizierten Namen einer Gruppe oder eines Benutzers oder mit einer SID im Zeichenfolgenformat konfiguriert werden. Gültige Beispiele sind:
+
+contoso\LAPSAdmins
+
+lapsadmins@contoso.com
+
+S-1-5-21-2127521184-1604012920-1887927527-35197
+
+Setzen Sie den Benutzer-/Gruppennamen oder die SID nicht in einschließende Anführungszeichen oder Klammern.
+
+Der angegebene Benutzer oder die angegebene Gruppe muss vom verwalteten Gerät aufgelöst werden können, andernfalls werden Kennwörter nicht gesichert.
+
+HINWEIS: Diese Einstellung wird ignoriert, wenn Kennwörter des Kontos im Reparaturmodus für Verzeichnisdienste (Directory Services Repair Mode, DSRM) auf einem Domänencontroller gesichert werden. In diesem Szenario wird diese Einstellung standardmäßig immer auf die Gruppe „Domänenadministratoren“ der Domäne des Domänencontrollers zurückgesetzt.
+
+Weitere Informationen finden Sie unter „https://go.microsoft.com/fwlink/?linkid=2188435“.
+      </string>
+      <string id="LAPS_ADEncryptedPasswordHistorySize">Größe des verschlüsselten Kennwortverlaufs konfigurieren</string>
+      <string id="LAPS_ADEncryptedPasswordHistorySize_Help">Mithilfe dieser Einstellung können Sie konfigurieren, wie viele vorherige verschlüsselte Kennwörter in Active Directory gespeichert werden.
+
+Das Konfigurieren dieser Einstellung hat keine Auswirkungen, es sei denn, 1) das Kennwort wurde zur Sicherung in Active Directory konfiguriert, und 2) Die Kennwortverschlüsselung wurde aktiviert.
+
+Wenn diese Einstellung aktiviert ist, wird die angegebene Anzahl älterer Kennwörter in Active Directory gespeichert.
+
+Wenn diese Einstellung deaktiviert oder nicht konfiguriert ist, werden keine älteren Kennwörter in Active Directory gespeichert.
+
+Diese Einstellung weist einen zulässigen Mindestwert von 0 Kennwörtern auf.
+
+Diese Einstellung weist einen maximal zulässigen Wert von 12 Kennwörtern auf.
+
+Weitere Informationen finden Sie unter https://go.microsoft.com/fwlink/?linkid=2188435.
+      </string>
+      <string id="LAPS_ADBackupDSRMPassword">Kennwortsicherung für DSRM-Konten aktivieren</string>
+      <string id="LAPS_ADBackupDSRMPassword_Help">Wenn Sie diese Einstellung aktivieren, wird das Kennwort des DSRM-Administratorkontos verwaltet und in Active Directory gesichert.
+
+Das Aktivieren dieser Einstellung hat keine Auswirkungen, es sei denn, das verwaltete Gerät ist ein Domänencontroller, und die Kennwortverschlüsselung ist ebenfalls aktiviert.
+
+Wenn diese Einstellung aktiviert ist, wird das Kennwort für das DSRM-Administratorkonto auf dem Domänencontroller in Active Directory gesichert.
+
+Wenn diese Einstellung deaktiviert oder nicht konfiguriert ist, wird das Kennwort für das DSRM-Administratorkonto auf dem Domänencontroller nicht in Active Directory gesichert.
+
+Weitere Informationen finden Sie unter https://go.microsoft.com/fwlink/?linkid=2188435.
+      </string>
+      <string id="LAPS_PostAuthenticationActions">Aktionen nach der Authentifizierung</string>
+      <string id="LAPS_PostAuthenticationActions_Help">Mit dieser Richtlinie werden Aktionen nach der Authentifizierung konfiguriert, die nach dem Erkennen einer Authentifizierung durch das verwaltete Konto ausgeführt werden.
+
+Karenzzeit: Gibt den Zeitraum (in Stunden) an, der nach einer Authentifizierung gewartet werden soll, bevor die angegebenen Aktionen nach der Authentifizierung ausgeführt werden.
+
+Wenn diese Einstellung aktiviert ist und größer als null ist, werden die angegebenen Aktionen nach der Authentifizierung nach Ablauf des Aktivierungszeitraums ausgeführt.
+
+Wenn diese Einstellung deaktiviert oder nicht konfiguriert ist, werden die angegebenen Aktionen nach der Authentifizierung nach einer standardmäßigen 24-Stunden-Karenzzeit ausgeführt.
+
+Wenn diese Einstellung gleich Null ist, werden keine Aktionen nach der Authentifizierung ausgeführt.
+
+Aktionen: Gibt die Aktionen an, die nach Ablauf des Aktivierungszeitraums ausgeführt werden sollen.
+
+Kennwort zurücksetzen: Nach Ablauf des Aktivierungszeitraums wird das Kennwort des verwalteten Kontos zurückgesetzt.
+
+Kennwort zurücksetzen und verwaltetes Konto abmelden: Nach Ablauf des Aktivierungszeitraums wird das Kennwort des verwalteten Kontos zurückgesetzt, und alle interaktiven Anmeldesitzungen, die das verwaltete Konto verwenden, werden beendet.
+
+Kennwort zurücksetzen und neu starten: Nach Ablauf des Aktivierungszeitraums wird das Kennwort des verwalteten Kontos zurückgesetzt, und das verwaltete Gerät wird sofort neu gestartet.
+
+Kennwort zurücksetzen, verwaltetes Konto abmelden und alle verbliebenen Prozesse beenden: Nach Ablauf des Aktivierungszeitraums wird das Kennwort des verwalteten Kontos zurückgesetzt, alle interaktiven Anmeldesitzungen, die das verwaltete Konto verwenden, werden beendet, und alle verbliebenen Prozesse werden beendet.
+
+(HINWEIS: Nach dem Beenden interaktiver Anmeldesitzungen werden möglicherweise noch andere authentifizierte Sitzungen vom verwalteten Konto verwendet. Die einzige robuste Möglichkeit, um sicherzustellen, dass das vorherige Kennwort länger verwendet wird, besteht darin, das Gerät neu zu starten.)
+
+Wenn diese Einstellung deaktiviert oder nicht konfiguriert ist, werden Aktionen nach der Authentifizierung standardmäßig auf "Kennwort zurücksetzen und verwaltetes Konto abmelden" festgelegt.
+
+Hinweis: Das DSRM-Konto auf Domänencontrollern kann nicht für Aktionen nach der Authentifizierung konfiguriert werden. Diese Richtlinie hat keine Auswirkungen auf Domänencontroller und wird ignoriert, auch wenn sie für einen Domänencontroller konfiguriert ist.
+
+Weitere Informationen finden Sie unter https://go.microsoft.com/fwlink/?linkid=2188435.
+      </string>
+      <string id="PostAuthenticationActions_Item0">Deaktiviert – keine Aktionen ausführen</string>
+      <string id="PostAuthenticationActions_Item1">Kennwort zurücksetzen</string>
+      <string id="PostAuthenticationActions_Item3">Kennwort zurücksetzen und verwaltetes Konto abmelden</string>
+      <string id="PostAuthenticationActions_Item5">Kennwort zurücksetzen und Gerät neu starten</string>
+      <string id="PostAuthenticationActions_Item11">Zurücksetzen des Kennworts, Abmelden des verwalteten Kontos und Beenden aller verbleibenden Prozesse</string>
+      <string id="LAPS_AutomaticAccountManagementPolicy">Konfigurieren der automatischen Kontoverwaltung</string>
+      <string id="LAPS_AutomaticAccountManagementPolicy_Help">Diese Richtlinie konfiguriert Richtlinienoptionen für die automatische Kontoverwaltung.
+
+Geben Sie das zu verwaltende Zielkonto an: Gibt an, ob das integrierte Administratorkonto oder ein benutzerdefiniertes Konto verwaltet werden soll.
+
+Automatischer Kontoname (oder Namenspräfix): Gibt den Namen oder das Namenspräfix an, der/das für das verwaltete Konto verwendet werden soll.
+
+Wenn diese Richtlinieneinstellung konfiguriert ist, verwendet Windows LAPS sie als Kontoname oder Namenspräfix für das Zielkonto.
+
+Wenn diese Richtlinieneinstellung nicht konfiguriert ist, verwendet Windows LAPS „WLapsAdmin“ als Kontonamen oder Namenspräfix.
+
+Hinweis: Dieser Name wird als Präfix behandelt, wenn die Randomisierung des Kontonamens konfiguriert ist, siehe Kommentare unten.
+
+Aktivieren des verwalteten Kontos: Gibt an, ob das verwaltete Konto aktiviert werden soll oder nicht.
+
+Wenn diese Richtlinieneinstellung konfiguriert ist, aktiviert Windows LAPS das angegebene verwaltete Konto.
+
+Wenn diese Richtlinieneinstellung nicht konfiguriert ist, deaktiviert Windows LAPS das angegebene verwaltete Konto.
+
+Hinweis: Windows LAPS verwaltet und rotiert regelmäßig das Kennwort des verwalteten Kontos, unabhängig davon, ob das Konto im Status „Aktiviert“ oder „Deaktiviert“ gehalten wird.
+
+Den Namen des verwalteten Kontos randomisieren: Gibt an, ob der Name des verwalteten Kontos mit einem zufälligen numerischen Suffix randomisiert werden soll.
+
+Wenn diese Richtlinieneinstellung konfiguriert ist, fügt Windows LAPS dem verwalteten automatischen Kontonamen ein achtstelliges zufälliges numerisches Suffix hinzu und ordnet bei jeder Kennwortrotierung den Namen des verwalteten Kontos neu zu.
+
+Wenn diese Richtlinieneinstellung nicht konfiguriert ist, verwendet Windows LAPS den Namen des verwalteten automatischen Kontos wie konfiguriert.
+
+Wenn das Präfix für den verwalteten automatischen Kontonamen konfiguriert ist, verwendet Windows LAPS bis zu den ersten zwölf (12) Zeichen dieses Namens als Präfix für den zufälligen Namen. Wenn der Name des verwalteten automatischen Kontos nicht konfiguriert ist, verwendet Windows LAPS „WLapsAdmin“ als Namenspräfix.
+
+Hinweis: Das DSRM-Konto auf Domänencontrollern kann nicht für die automatische Kontoverwaltung konfiguriert werden. Diese Richtlinie hat keine Auswirkungen auf Domänencontroller und wird ignoriert, auch wenn sie für einen Domänencontroller konfiguriert ist.
+
+Weitere Informationen finden Sie unter https://go.microsoft.com/fwlink/?linkid=2188435.
+      </string>
+      <string id="AutomaticAccountManagementTarget_Item0">Integriertes Administratorkonto verwalten</string>
+      <string id="AutomaticAccountManagementTarget_Item1">Verwalten eines benutzerdefinierten Administratorkontos</string>
+      <string id="AutomaticAccountName_Help">Geben Sie den Kontonamen oder das Namenspräfix an.</string>
+      <string id="AutomaticAccountNameRandomization_Help">Gibt an, ob der automatische Kontoname zufällig angegeben werden soll.</string>
+      <string id="SUPPORTED_Windows10">Mindestens Microsoft Windows 10 oder höher</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="LAPS_BackupDirectory">
+        <dropdownList refId="LAPS_BackupDirectory" defaultItem="1">Sicherungsverzeichnis</dropdownList>
+      </presentation>
+      <presentation id="LAPS_PasswordSettings">
+        <dropdownList refId="LAPS_PasswordComplexity" defaultItem="3">Kennwortkomplexität</dropdownList>
+        <decimalTextBox refId="LAPS_PasswordLength" defaultValue="14">Kennwortlänge</decimalTextBox>
+        <decimalTextBox refId="LAPS_PasswordAgeDays" defaultValue="30">Kennwortalter (Tage)</decimalTextBox>
+        <decimalTextBox refId="LAPS_PassphraseLength" defaultValue="6">Länge der Passphrase (Wörter)</decimalTextBox>
+      </presentation>
+      <presentation id="LAPS_AdminName">
+        <textBox refId="TEXT_AdminAccountName">
+          <label>Administratorkontoname:</label>
+        </textBox>
+      </presentation>
+      <presentation id="LAPS_ADPasswordEncryptionPrincipal">
+        <textBox refId="TEXT_ADPasswordEncryptionPrincipal">
+          <label>Autorisierter Kennwortdecryptor</label>
+        </textBox>
+      </presentation>
+      <presentation id="LAPS_ADEncryptedPasswordHistorySize">
+        <decimalTextBox refId="LAPS_ADEncryptedPasswordHistorySize_INT" defaultValue="0">Größe des verschlüsselten Kennwortverlaufs</decimalTextBox>
+      </presentation>
+      <presentation id="LAPS_PostAuthenticationActions">
+        <decimalTextBox refId="LAPS_PostAuthenticationResetDelay_INT" defaultValue="24">Karenzzeit (Stunden):</decimalTextBox>
+        <dropdownList refId="LAPS_PostAuthenticationActions" defaultItem="2">Aktionen:</dropdownList>
+      </presentation>
+      <presentation id="LAPS_AutomaticAccountManagementPolicy">
+        <dropdownList refId="LAPS_AutomaticAccountManagementTarget" defaultItem="0">Geben Sie das zu verwaltende Zielkonto an:</dropdownList>
+        <textBox refId="LAPS_AutomaticAccountManagementNameOrPrefix">
+          <label>Automatischer Kontoname (oder Namenspräfix):</label>
+        </textBox>
+        <checkBox refId="LAPS_AutomaticAccountManagementEnableAccount">Aktivieren des verwalteten Kontos</checkBox>
+        <checkBox refId="LAPS_AutomaticAccountManagementRandomizeName">Zufälliger Name des verwalteten Kontos</checkBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>

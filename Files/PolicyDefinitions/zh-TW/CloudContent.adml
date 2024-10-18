@@ -86,6 +86,12 @@
 
 若停用或未設定此原則，Windows 體驗將可使用雲端消費者帳戶狀態內容。
         </string>
+      <string id="EnableOrganizationalMessagesContent">啟用組織訊息</string>
+      <string id="EnableOrganizationalMessagesContent_Help">組織訊息可讓系統管理員在選取的 Windows 11 體驗上，將訊息傳遞給終端使用者。系統管理員可透過 Microsoft 端點管理員 等服務取得組織訊息。
+
+預設會停用此原則。如果啟用此原則，這些體驗將會顯示系統管理員所預訂的內容。
+
+啟用此原則不會影響管理在 Windows 體驗上傳遞 Microsoft 內容的現有 MDM 原則設定。</string>
     </stringTable>
     <presentationTable>
       <presentation id="ConfigureWindowsSpotlight">

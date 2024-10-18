@@ -159,19 +159,19 @@ Se você desabilitar essa configuração, os funcionários não poderão ver sug
 
 Se você não definir essa configuração, os funcionários poderão escolher se sugestões de pesquisa serão exibidas na Barra de endereços do Microsoft Edge.</string>
       <string id="AllowSideloadingOfExtensions">Permitir Sideload da extensão</string>
-      <string id="AllowSideloadingOfExtensions_Explain">O sideload instala e executa extensões não verificadas no Microsoft Edge. Com essa política, você pode especificar se extensões não verificadas podem passar por sideload no Microsoft Edge.
+      <string id="AllowSideloadingOfExtensions_Explain">O sideload instala e executa extensões não verificadas no Microsoft Edge. Com esta política, você pode especificar se as extensões não verificadas podem ser carregadas no Microsoft Edge.
 
-Se habilitada ou não configurada, o sideload de extensões não verificadas no Microsoft Edge será permitido.
+Se habilitado ou não configurado, o sideload de extensões não verificadas no Microsoft Edge é permitido.
 
-Se desabilitada, o sideload de extensões não verificadas no Microsoft Edge não será permitido. As extensões podem ser instaladas somente por meio da Microsoft Store (incluindo a Store para Empresas), da vitrine da empresa (por exemplo, o Portal da Empresa) ou do PowerShell (usando Add-AppxPackage). Quando desabilitada, essa política não impede o sideload das extensões usando Add-AppxPackage por meio do PowerShell. Para evitar isso, no Editor de Política de Grupo, habilite Permitir o desenvolvimento de aplicativos da Microsoft Store e instalá-los a partir de um ambiente de desenvolvimento integrado (IDE), localizado em:
+Se desabilitado, o sideload de extensões não verificadas no Microsoft Edge não é permitido. As extensões podem ser instaladas apenas por meio da Microsoft Store (incluindo uma loja para empresas), vitrine corporativa (como Portal da Empresa) ou PowerShell (usando Add-AppxPackage). Quando desabilitada, esta política não impede o sideload de extensões usando Add-AppxPackage por meio do PowerShell. Para evitar isso, no Editor de Política de Grupo, ative Permitir o desenvolvimento de aplicativos da Windows Store e instalá-los a partir de um IDE (ambiente de desenvolvimento integrado), localizado em:
 
 Configuração do Computador &gt; Modelos Administrativos &gt; Componentes do Windows &gt; Implantação do Pacote de Aplicativos
 
 Versões com suporte: Microsoft Edge no Windows 10, versão 1809
-Configuração padrão: desabilitada ou não configurada
+Configuração padrão: desabilitado ou não configurado
 Políticas relacionadas:
-- Permitir o desenvolvimento de aplicativos da Microsoft Store e instalá-los a partir de um ambiente de desenvolvimento integrado (IDE)
-- Permitir instalação de todos os aplicativos confiáveis</string>
+- Permite o desenvolvimento de aplicativos da Windows Store e sua instalação a partir de um IDE (ambiente de desenvolvimento integrado)
+- Permitir que todos os aplicativos confiáveis sejam instalados​</string>
       <string id="AllowSmartScreen">Configurar o Windows Defender SmartScreen</string>
       <string id="AllowSmartScreen_Explain">Essa configuração de política permite definir se é para ativar o Windows Defender SmartScreen. O Windows Defender SmartScreen envia mensagens de aviso para ajudar a proteger seus funcionários contra potenciais golpes de phishing e software mal-intencionado. Por padrão, o Windows Defender SmartScreen é ativado.
 

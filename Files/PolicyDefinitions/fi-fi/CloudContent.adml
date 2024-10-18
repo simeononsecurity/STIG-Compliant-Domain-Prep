@@ -85,6 +85,12 @@ Jos otat käyttöön tämän käytännön, pilvipalveluiden kuluttajatilin tilas
 
 Jos poistat tämän käytännön tai et määritä sitä, Windows voi käyttää pilvipalveluiden kuluttajatilin tilasisältöä.
         </string>
+      <string id="EnableOrganizationalMessagesContent">Ota organisaation viestit käyttöön</string>
+      <string id="EnableOrganizationalMessagesContent_Help">Organisaation viestien avulla järjestelmänvalvojat voivat toimittaa viestejä käyttäjilleen valituissa Windows 11 -käyttökokemuksissa. Organisaatioviestit ovat järjestelmänvalvojien käytettävissä esimerkiksi Microsoft Endpoint Managerin kautta.
+
+Tämä käytäntö on oletusarvoisesti poissa käytöstä. Jos otat tämän käytännön käyttöön, nämä kokemukset näyttävät järjestelmänvalvojien varaaman sisällön.
+
+Tämän käytännön ottaminen käyttöön ei vaikuta olemassa oleviin MDM-käytäntöasetuksiin, jotka ohjaavat Microsoftin sisällön toimittamista Windowsissa.</string>
     </stringTable>
     <presentationTable>
       <presentation id="ConfigureWindowsSpotlight">

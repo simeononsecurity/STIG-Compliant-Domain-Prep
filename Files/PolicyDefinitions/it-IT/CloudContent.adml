@@ -84,6 +84,12 @@ Se abiliti questo criterio, le esperienze di Windows che utilizzano il component
 
 Se si disabilita o non si configura questa impostazione dei criteri, le esperienze di Windows potranno utilizzare il contenuto dello stato dell'account consumer del cloud.
         </string>
+      <string id="EnableOrganizationalMessagesContent">Abilita messaggi dell'organizzazione</string>
+      <string id="EnableOrganizationalMessagesContent_Help">I messaggi dell'organizzazione consentono agli amministratori di recapitare i messaggi agli utenti finali in determinate esperienze di Windows 11. I messaggi dell'organizzazione sono disponibili per gli amministratori tramite servizi come Microsoft Endpoint Manager.
+
+Per impostazione predefinita, questo criterio è disabilitato. Se si abilita questo criterio, queste esperienze mostreranno i contenuti prenotati dagli amministratori.
+
+L'abilitazione di questo criterio non avrà alcun impatto sulle impostazioni dei criteri MDM esistenti che regolano la distribuzione di contenuti da Microsoft nelle esperienze Windows.</string>
     </stringTable>
     <presentationTable>
       <presentation id="ConfigureWindowsSpotlight">

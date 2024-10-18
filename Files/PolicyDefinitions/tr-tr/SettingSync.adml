@@ -121,7 +121,7 @@ Bu ayarı ayarlamaz veya devre dışı bırakmazsanız, tarifeli bağlantılarda
       </string>
 
       <!-- Accessibility -->
-      <string id="DisableAccessibilitySettingSync">Erişilebilirlik ayarlarını eşitlemeyin</string>
+      <string id="DisableAccessibilitySettingSync">Erişilebilirlik ayarlarınızı eşitlemeyin</string>
       <string id="DisableAccessibilitySettingSync_Help">
         "Erişilebilirlik" grubunun bu bilgisayarla ve bu bilgisayardan eşitlenmesini önleyin. Bu, kişisel bilgisayar ayarlarındaki "Windows yedekleme" ayarlar sayfasındaki "erişilebilirlik" grubunu kapatır ve devre dışı bırakır.
 
@@ -131,6 +131,19 @@ Eşitlemenin varsayılan olarak kapatılıp devre dışı bırakılmaması için
 
 Bu ayarı belirlemez veya devre dışı bırakmazsanız, "erişilebilirlik" grubunun eşitlemesi varsayılan olarak açıktır ve kullanıcı tarafından yapılandırılabilir.
       </string>
+
+      <!-- Language -->
+      <string id="DisableLanguageSettingSync">Dil tercihleri ayarlarını eşitleme</string>
+      <string id="DisableLanguageSettingSync_Help">
+        "Dil tercihleri" grubunun bu bilgisayarla ve bu bilgisayardan eşitlenmesini önleyin. Bu, kişisel bilgisayar ayarlarındaki "Windows yedekleme" ayarlar sayfasındaki "dil tercihleri" grubunu kapatır ve devre dışı bırakır.
+
+Bu ilke ayarını etkinleştirirseniz, "dil tercihleri" grubu eşitlenmez.
+
+Eşitlemenin varsayılan olarak kapatılıp devre dışı bırakılmaması için "Kullanıcıların dil tercihleri eşitlemesini açmasına izin ver" seçeneğini kullanın.
+
+Bu ayarı belirlemez veya devre dışı bırakmazsanız, "dil tercihleri" grubunun eşitlemesi varsayılan olarak açıktır ve kullanıcı tarafından yapılandırılabilir.
+      </string>
+
     </stringTable>
     <presentationTable>
 
@@ -182,6 +195,11 @@ Bu ayarı belirlemez veya devre dışı bırakmazsanız, "erişilebilirlik" grub
       <!-- AccessibilitySync -->
       <presentation id="DisableAccessibilitySettingSyncUserOverride">
         <checkBox refId="CheckBox_UserOverride">Kullanıcıların "erişilebilirlik" eşitlemesini açmasına izin ver.</checkBox>
+      </presentation>
+
+      <!-- LanguageSync -->
+      <presentation id="DisableLanguageSettingSyncUserOverride">
+        <checkBox refId="CheckBox_UserOverride">Kullanıcıların "dil tercihleri" eşitlemeyi açmasına izin ver.</checkBox>
       </presentation>
 
     </presentationTable>

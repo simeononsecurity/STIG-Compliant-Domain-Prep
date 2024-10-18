@@ -86,6 +86,12 @@
 
 このポリシーを無効にした場合、または構成しなかった場合、Windows エクスペリエンスではクラウドコンシューマーのアカウント状態コンテンツを使用できます。
         </string>
+      <string id="EnableOrganizationalMessagesContent">組織のメッセージを有効にする</string>
+      <string id="EnableOrganizationalMessagesContent_Help">組織のメッセージを使用すると、管理者は選択した Windows 11 エクスペリエンスでエンド ユーザーにメッセージを配信できます。組織のメッセージは、Microsoft エンドポイント マネージャーなどのサービスを介して管理者が利用できます。
+
+既定では、このポリシーは無効になっています。このポリシーを有効にした場合、これらのエクスペリエンスで管理者によって予約されたコンテンツが表示されます。
+
+このポリシーを有効にしても、Windows エクスペリエンスでの Microsoft からのコンテンツの配信を管理する既存の MDM ポリシー設定には影響しません。</string>
     </stringTable>
     <presentationTable>
       <presentation id="ConfigureWindowsSpotlight">

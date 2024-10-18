@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2015 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>introduzir o nome a apresentar aqui</displayName>
+  <description>introduzir a descrição aqui</description>
+  <resources>
+    <stringTable>
+      <string id="AccountNotifications">Notificações da Conta</string>
+      <string id="DisableAccountNotifications">Desative as notificações da conta em Iniciar</string>
+      <string id="DisableAccountNotificationsExplain">
+            Esta política permite-lhe impedir que o Windows apresente notificações para a conta Microsoft (MSA) e utilizadores locais em Iniciar (mosaico de utilizador).
+
+            As notificações incluem levar os utilizadores a: autenticar novamente; fazer cópias de segurança do respetivo dispositivo; gerir quotas de armazenamento na nuvem, bem como gerir a respetiva subscrição do Microsoft 365 ou da XBOX.
+
+            Se ativar esta definição de política, o Windows não enviará notificações relacionadas com a conta para utilizadores locais e de MSA para o mosaico de utilizador em Iniciar.
+
+            Se desativar ou não configurar esta definição de política, o Windows enviará notificações relacionadas com a conta para utilizadores locais e de MSA para o mosaico de utilizador em Iniciar.
+
+            Não são necessários reinícios ou reinícios de serviço para que esta definição de política entre em vigor.
+      </string>
+    </stringTable>
+  </resources>
+</policyDefinitionResources>

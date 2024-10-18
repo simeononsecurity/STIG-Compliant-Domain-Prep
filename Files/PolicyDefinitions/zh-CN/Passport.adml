@@ -12,6 +12,8 @@
         <string id="WHFB_UseCertificateForOnPremAuth">使用证书进行本地身份验证</string>
         <!-- Add support for cloud trust deployments -->
         <string id="WHFB_UseCloudTrustForOnPremAuth">使用云信任进行本地身份验证</string>
+        <!-- Allow disablement of key cache hardening -->
+        <string id="WHFB_DisablePostLogonCredentialCaching">在登录后禁用缓存 Windows Hello 企业版凭据</string>
         <!-- DropdownList Button strings -->
         <string id="MSPassport_UsePassportForWorkExplain">Windows Hello 企业版是使用 Active Directory 或 Azure Active Directory 帐户登录到 Windows 的替代方法，可以取代密码、智能卡和虚拟智能卡。
 
@@ -111,25 +113,26 @@
 注意: 禁用此策略将在所有帐户类型的设备上阻止使用生物特征手势。
         </string>
         <string id="MSPassport_EnableEnhancedSignInSecurity">对支持的外围设备启用 ESS</string>
-        <string id="MSPassport_EnableEnhancedSignInSecurityExplain">增强的登录安全性将 Windows Hello 生物识别(面部和指纹)模板数据和匹配操作隔离到受信任的硬件或指定的内存区域，这意味着操作系统的其余部分无法访问或篡改它们。由于传感器和算法之间的通信通道也是安全的，因此恶意软件无法注入或重播数据来模拟用户登录或将用户锁定在其机器之外。虽然在 Windows 11 设备上启用了此策略，但使用 Windows Hello 进行的外部生物识别身份验证将被阻止。任何非身份验证操作功能(如相机使用)都不受影响。
+        <string id="MSPassport_EnableEnhancedSignInSecurityExplain">增强的登录安全性(ESS)将 Windows Hello 生物识别(面部和指纹)模板数据和匹配操作隔离到受信任的硬件或指定的内存区域，这意味着操作系统的其余部分无法访问或篡改它们。由于传感器和算法之间的通信通道也是安全的，因此恶意软件无法注入或重播数据来模拟用户登录或将用户锁定在其计算机之外。
 如果启用此策略，则它可能具有以下可能值:
 
-0 - 禁用增强的登录安全性(不推荐)
-将在所有系统上禁用增强的登录安全性，从而允许使用外部生物特征身份验证。如果用户在启用了增强的登录安全性的情况下注册了 Windows Hello，则当该功能被禁用时，他们将失去注册并且必须重置 PIN。届时，他们将可以选择重新注册生物特征。即使存在安全的硬件和软件组件，操作系统也不会尝试启动安全组件。
+0 - 使用外围传感器禁用增强的登录安全性
+将在具有功能强大的软件和硬件的系统上禁用 ESS。允许支持 Windows Hello 的外围设备的身份验证操作，但受当前功能限制。
 
-1 - 启用增强的登录安全性(默认并推荐，提供最高安全性)
-将在具有功能强大的软件和硬件的系统上启用增强的登录安全性，这将遵循 Windows 中的现有默认行为。增强的登录安全性不支持的任何生物识别设备(包括外围设备)的身份验证操作将被阻止，并且不适用于 Windows Hello。
+1 - 启用增强的登录安全性，不使用外围传感器(默认并推荐)
+按照 Windows 中现有的默认行为，将在具有功能的软件和硬件的系统上启用 ESS。任何外围生物识别设备的身份验证操作都将被阻止，并且不适用于 Windows Hello。
 
-如果禁用或未配置此策略，则设备上将首选增强的登录安全性。行为将与启用策略和将值设置为 1 相同。
+如果禁用或未配置此策略，则非 ESS 传感器将在 ESS 设备上被阻止。
+
         </string>
         <string id="MSPassport_EnablePinRecovery">使用PIN恢复</string>
-        <string id="MSPassport_EnablePinRecoveryExplain">PIN 恢复允许用户在忘记 PIN 时，使用 Windows Hello 企业版PIN恢复服务更换一个新的 PIN，而不会丢失任何相关凭据或证书，包括设备上与用户个人账户相关联的任何密钥。为达到这一目的，基于 Azure 的 PIN 恢复服务将存储在设备上的恢复机密加密，要求 PIN 恢复服务和设备均解密。PIN 恢复要求用户对 Azure Active Directory 进行多因子身份验证。
+        <string id="MSPassport_EnablePinRecoveryExplain">PIN 恢复允许用户在忘记 PIN 时，使用 Windows Hello 企业版 PIN 恢复服务更换一个新的 PIN，而不会丢失任何相关凭据或证书，包括设备上与用户个人帐户相关联的任何密钥。为达到这一目的，基于 Azure 的 PIN 恢复服务将存储在设备上的恢复机密加密，要求 PIN 恢复服务和设备均解密。PIN 恢复要求用户对 Azure Active Directory 进行多重身份验证。
 
 如果启用此策略设置，Windows Hello 企业版將使用 PIN 恢复服务。
 
 如果禁用或不配置此策略设置，Windows 则不创建或存储 PIN 恢复机密。若用户忘记 PIN，则需删除已有 PIN 并创建新 PIN，对任何使用旧 PIN 进行访问的服务将需要重新注册。
 
-注意：此政策仅适用于注册到 Azure Active Directory 的设备。
+注意: 此政策仅适用于注册到 Azure Active Directory 的设备。
         </string>
         <!-- Explain Text for UseCertificateForOnPremAuth -->
         <string id="WHFB_UseCertificateForOnPremAuthExplain">使用此策略设置可配置 Windows Hello 企业版，以注册用于本地身份验证的登录证书。
@@ -149,6 +152,8 @@
  
 注意：启用此策略设置和 "使用 Windows Hello 企业版" 策略设置的环境需要一个或多个 Windows Server 2016 域控制器。否则，Windows Hello 企业版身份验证将失败。
         </string>
+        <!-- Explain Text for DisablePostLogonCredentialCaching -->
+        <string id="WHFB_DisablePostLogonCredentialCachingExplain">Windows Hello 企业版凭据在登录后缓存，以便某些安全相关应用程序无提示地使用凭据，从而不中断用户体验。启用此策略可关闭此功能，移除缓存，因此明确需要用户输入。</string>
         <!-- Explain text for device unlock policy -->
         <string id="MSPassport_UseDeviceUnlock">配置设备解锁凭据</string>
         <string id="MSPassport_UseDeviceUnlock_Explain">配置要用作第一和第二解锁因子的凭据提供商 GUID （例如面部和指纹提供商 GUID）的逗号分隔列表。如果将受信任的信号提供商指定为解锁因子之一，则还应以 xml 的形式为要验证的每种信号类型配置信号规则的逗号分隔列表。

@@ -283,12 +283,12 @@ A beállítás kikapcsolásával vagy konfigurálatlanul hagyásával minden web
       <string id="CookiesList_Block_None">Minden cookie engedélyezése (alapértelmezés)</string>
       <string id="CookiesList_Block_ThirdParty">Csak a harmadik felek cookie-jainak blokkolása</string>
       <string id="CookiesList_Block_All">Minden cookie blokkolása</string>
-      <string id="EnterpriseModeSiteList">A vállalati mód webhelylistájának engedélyezése</string>
-      <string id="EnterpriseModeSiteList_Explain">Ezzel a házirend-beállítással azt adhatja meg, hogy használja-e a szervezet a vállalati módot és a vállalati mód webhelylistáját a régebbi alkalmazások esetén előforduló gyakori kompatibilitási problémák megoldására.
+      <string id="EnterpriseModeSiteList">A Nagyvállalati módú webhelyek listájának engedélyezése</string>
+      <string id="EnterpriseModeSiteList_Explain">Ezzel a házirend-beállítással azt adhatja meg, hogy használja-e a szervezet a nagyvállalati módot és a nagyvállalati módú webhelyek listáját a régebbi alkalmazások esetén előforduló gyakori kompatibilitási problémák megoldására.
 
-A beállítás bekapcsolása esetén a Microsoft Edge megkeresi a vállalati mód webhelylistáját tartalmazó XML-fájlt. Ez a fájl felsorolja azokat a webhelyeket és tartományokat, amelyeket az Internet Explorer 11-gyel, vállalati üzemmódban kell megtekinteni.
+A beállítás bekapcsolása esetén a Microsoft Edge megkeresi a nagyvállalati módú webhelyek listáját tartalmazó XML-fájlt. Ez a fájl felsorolja azokat a webhelyeket és tartományokat, amelyeket az Internet Explorer 11-gyel, vállalati üzemmódban kell megtekinteni.
 
-A beállítás kikapcsolása vagy konfigurálatlanul hagyása esetén a Microsoft Edge nem használja a vállalati mód webhelylistáját tartalmazó fájlt. Ez esetben az alkalmazottak kompatibilitási problémákat tapasztalhatnak a régebbi alkalmazások használata során.</string>
+A beállítás kikapcsolása vagy konfigurálatlanul hagyása esetén a Microsoft Edge nem használja a nagyvállalati módú webhelyek listáját tartalmazó fájlt. Ez esetben az alkalmazottak kompatibilitási problémákat tapasztalhatnak a régebbi alkalmazások használata során.</string>
       <string id="AllowExtensions">Bővítmények engedélyezése</string>
       <string id="AllowExtensions_Explain">Ezzel a beállítással megadhatja, hogy az alkalmazottak betölthetnek-e bővítményeket a Microsoft Edge-ben.
 
@@ -392,7 +392,7 @@ Kapcsolódó házirend: Webes tartalom engedélyezése az Új lapon</string>
       <string id="ShowMessageWhenOpeningSitesInInternetExplorer_Show_ContinueInEdge">A „Folytatom a Microsoft Edge-ben” hivatkozás megjelenítése</string>
       <string id="ShowMessageWhenOpeningSitesInInternetExplorer_Hide_ContinueInEdge">A „Folytatom a Microsoft Edge-ben” hivatkozás elrejtése</string>
       <string id="ShowMessageWhenOpeningSitesInInternetExplorer">Üzenet megjelenítése a webhelyek Internet Explorerben való megnyitásakor</string>
-      <string id="ShowMessageWhenOpeningSitesInInternetExplorer_Explain">Beállíthatja, hogy a Microsoft Edge automatikusan az Internet Explorer 11-ben nyissa meg a webhelyeket, és megadhatja, hogy értesítés jelenjen meg a webhelyek megnyitása előtt. Ha értesítést szeretne megjeleníteni, engedélyeznie kell A vállalati mód webhelylistájának konfigurálása vagy a Minden intranetes webhely elküldése az Internet Explorer 11-nek házirendet, vagy mindkettőt.
+      <string id="ShowMessageWhenOpeningSitesInInternetExplorer_Explain">Beállíthatja, hogy a Microsoft Edge automatikusan az Internet Explorer 11-ben nyissa meg a webhelyeket, és megadhatja, hogy értesítés jelenjen meg a webhelyek megnyitása előtt. Ha értesítést szeretne megjeleníteni, engedélyeznie kell A nagyvállalati módú webhelyek listájának konfigurálása vagy a Minden intranetes webhely elküldése az Internet Explorer 11-nek házirendet, vagy mindkettőt.
 
 Ha engedélyezi a beállítást, az értesítés megjelenik egy új lapon. Ha azt szeretné, hogy a felhasználók továbbra is a Microsoft Edge-et használják, válassza a „Folytatom a Microsoft Edge-ben beállítás” megjelenítése lehetőséget a Beállítások területen található legördülő listából.
 
@@ -400,7 +400,7 @@ Ha letiltja vagy nem konfigurálja a beállítást, az alkalmazás alapértelmez
 
 Alapértelmezett beállítás: Letiltva vagy Nincs konfigurálva
 Kapcsolódó házirendek:
-– A vállalati mód webhelylistájának konfigurálása
+– A nagyvállalati módú webhelyek listájának konfigurálása
 – Minden intranetes webhely elküldése az Internet Explorer 11-nek</string>
       <string id="PreventAccessToAboutFlagsInMicrosoftEdge">Az about:flags lap elérésének letiltása a Microsoft Edge-ben</string>
       <string id="PreventAccessToAboutFlagsInMicrosoftEdge_Explain">Ezzel a házirend-beállítással szabályozhatja, hogy a dolgozók elérhetik-e a fejlesztői beállítások megadására és a kísérleti funkciók bekapcsolására is alkalmas about:flags lapot.

@@ -43,21 +43,42 @@
       <string id="ForceInstantWake_1">Funkcja wymuszona włączona</string>
       <string id="ForceInstantWake_2">Funkcja wymuszona wyłączona</string>
       <string id="ForceInstantLock_DisplayName">Wymuś natychmiastową blokadę</string>
-      <string id="ForceInstantLock_ExplainText">Określa, czy zasady MDM wymuszają włączanie lub wyłączanie funkcji blokady podczas nieobecności. Użytkownik nie będzie mógł zmienić tego ustawienia, a przełącznik w interfejsie użytkownika będzie wyszarzony.</string>
+      <string id="ForceInstantLock_ExplainText">Określa, czy zasady MDM wymuszają włączanie lub wyłączanie funkcji blokady przy odejściu. Użytkownik nie będzie mógł zmienić tego ustawienia, a przełącznik w interfejsie użytkownika będzie wyszarzony.</string>
       <string id="ForceInstantLock_0">Domyślnie wybrane przez użytkownika</string>
       <string id="ForceInstantLock_1">Funkcja wymuszona włączona</string>
       <string id="ForceInstantLock_2">Funkcja wymuszona wyłączona</string>
       <string id="ForceLockTimeout_DisplayName">Limit czasu blokady</string>
-      <string id="ForceLockTimeout_ExplainText">Określa limit czasu dla funkcji blokady podczas nieobecności wymuszonej przez zasady MDM. Użytkownik nie będzie mógł zmienić tego ustawienia, a przełącznik w interfejsie użytkownika będzie wyszarzony.</string>
+      <string id="ForceLockTimeout_ExplainText">Określa limit czasu dla funkcji blokady przy odejściu wymuszonej przez zasady MDM. Użytkownik nie będzie mógł zmienić tego ustawienia, a przełącznik w interfejsie użytkownika będzie wyszarzony.</string>
       <string id="ForceLockTimeout_0">Domyślnie wybrane przez użytkownika</string>
       <string id="ForceLockTimeout_1">10 sekund</string>
       <string id="ForceLockTimeout_2">30 sekund</string>
       <string id="ForceLockTimeout_3">2 minuty</string>
+      <string id="ForceLockTimeout_4">Natychmiast</string>
       <string id="ForceInstantDim_DisplayName">Wymuszanie natychmiastowego przyciemnienia</string>
       <string id="ForceInstantDim_ExplainText">Określa, czy zasady MDM wymuszają włączanie lub wyłączanie funkcji przyciemniania wyświetlacza na podstawie skupienia uwagi. Użytkownik nie będzie mógł zmienić tego ustawienia, a przełącznik w interfejsie użytkownika będzie wyszarzony.</string>
       <string id="ForceInstantDim_0">Ustawienia domyślne zgodnie z wyborem użytkownika</string>
       <string id="ForceInstantDim_1">Wymuszone włączenie</string>
       <string id="ForceInstantDim_2">Wymuszone wyłączenie</string>
+      <string id="ForceDisableWakeWhenBatterySaverOn_DisplayName">Wymuś wyłączenie budzenia przy włączonym oszczędzaniu baterii</string>
+      <string id="ForceDisableWakeWhenBatterySaverOn_ExplainText">Określa, czy pole wyboru Wyłącz wybudzenie przy podejściu, gdy jest włączone oszczędzanie baterii, ma wymuszone zaznaczenie/brak zaznaczenia przez zasady MDM. Użytkownik nie będzie mógł zmienić tego ustawienia, a pole wyboru w interfejsie użytkownika będzie wyszarzone.</string>
+      <string id="ForceDisableWakeWhenBatterySaverOn_0">Domyślnie wybrane przez użytkownika</string>
+      <string id="ForceDisableWakeWhenBatterySaverOn_1">Wymuszone zaznaczenie</string>
+      <string id="ForceDisableWakeWhenBatterySaverOn_2">Wymuszone anulowanie zaznaczenia</string>
+      <string id="ForceAllowWakeWhenExternalDisplayConnected_DisplayName">Wymuś zezwalanie na wznowienie po podłączeniu monitora zewnętrznego</string>
+      <string id="ForceAllowWakeWhenExternalDisplayConnected_ExplainText">Określa, czy pole wyboru Zezwalaj na wybudzenie przy podejściu, gdy jest podłączony monitor zewnętrzny, ma wymuszone zaznaczenie/brak zaznaczenia przez zasady MDM. Użytkownik nie będzie mógł zmienić tego ustawienia, a pole wyboru w interfejsie użytkownika będzie wyszarzone.</string>
+      <string id="ForceAllowWakeWhenExternalDisplayConnected_0">Domyślnie wybrane przez użytkownika</string>
+      <string id="ForceAllowWakeWhenExternalDisplayConnected_1">Wymuszone zaznaczenie</string>
+      <string id="ForceAllowWakeWhenExternalDisplayConnected_2">Wymuszone anulowanie zaznaczenia</string>
+      <string id="ForceAllowLockWhenExternalDisplayConnected_DisplayName">Wymuś zezwalanie na blokadę po podłączeniu monitora zewnętrznego</string>
+      <string id="ForceAllowLockWhenExternalDisplayConnected_ExplainText">Określa, czy pole wyboru Zezwalaj na blokadę przy odejściu, gdy jest włączone oszczędzanie baterii, ma wymuszone zaznaczenie/brak zaznaczenia przez zasady MDM. Użytkownik nie będzie mógł zmienić tego ustawienia, a pole wyboru w interfejsie użytkownika będzie wyszarzone.</string>
+      <string id="ForceAllowLockWhenExternalDisplayConnected_0">Domyślnie wybrane przez użytkownika</string>
+      <string id="ForceAllowLockWhenExternalDisplayConnected_1">Wymuszone zaznaczenie</string>
+      <string id="ForceAllowLockWhenExternalDisplayConnected_2">Wymuszone anulowanie zaznaczenia</string>
+      <string id="ForceAllowDimWhenExternalDisplayConnected_DisplayName">Wymuś zezwalanie na przygaszenie po podłączeniu monitora zewnętrznego</string>
+      <string id="ForceAllowDimWhenExternalDisplayConnected_ExplainText">Określa, czy pole wyboru Zezwalaj na adaptacyjne przyciemnianie w przypadku włączenia oszczędzania baterii ma wymuszone zaznaczenie/brak zaznaczenia przez zasady MDM. Użytkownik nie będzie mógł zmienić tego ustawienia, a pole wyboru w interfejsie użytkownika będzie wyszarzone.</string>
+      <string id="ForceAllowDimWhenExternalDisplayConnected_0">Domyślnie wybrane przez użytkownika</string>
+      <string id="ForceAllowDimWhenExternalDisplayConnected_1">Wymuszone zaznaczenie</string>
+      <string id="ForceAllowDimWhenExternalDisplayConnected_2">Wymuszone anulowanie zaznaczenia</string>
     </stringTable>
     <presentationTable>
       <presentation id="ForceInstantWake">
@@ -70,7 +91,19 @@
         <dropdownList refId="ForceLockTimeoutDropdown" noSort="true" defaultItem="1">Wybierz jeden z następujących limitów czasu</dropdownList>
       </presentation>
       <presentation id="ForceInstantDim">
-        <dropdownList refId="ForceInstantDimDropDown" noSort="true" defaultItem="0">Wybierz jedną z następujących akcji</dropdownList>
+        <dropdownList refId="ForceInstantDimDropdown" noSort="true" defaultItem="0">Wybierz jedną z następujących akcji</dropdownList>
+      </presentation>
+      <presentation id="ForceDisableWakeWhenBatterySaverOn">
+        <dropdownList refId="ForceDisableWakeWhenBatterySaverOnDropdown" noSort="true" defaultItem="0">Wybierz jedną z następujących akcji</dropdownList>
+      </presentation>
+      <presentation id="ForceAllowWakeWhenExternalDisplayConnected">
+        <dropdownList refId="ForceAllowWakeWhenExternalDisplayConnectedDropdown" noSort="true" defaultItem="0">Wybierz jedną z następujących akcji</dropdownList>
+      </presentation>
+      <presentation id="ForceAllowLockWhenExternalDisplayConnected">
+        <dropdownList refId="ForceAllowLockWhenExternalDisplayConnectedDropdown" noSort="true" defaultItem="0">Wybierz jedną z następujących akcji</dropdownList>
+      </presentation>
+      <presentation id="ForceAllowDimWhenExternalDisplayConnected">
+        <dropdownList refId="ForceAllowDimWhenExternalDisplayConnectedDropdown" noSort="true" defaultItem="0">Wybierz jedną z następujących akcji</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

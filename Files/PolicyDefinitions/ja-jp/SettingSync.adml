@@ -120,7 +120,7 @@
       </string>
 
       <!-- Accessibility -->
-      <string id="DisableAccessibilitySettingSync">アクセシビリティ設定を同期しないでください</string>
+      <string id="DisableAccessibilitySettingSync">アクセシビリティ設定を同期しない</string>
       <string id="DisableAccessibilitySettingSync_Help">
         "accessibility" グループがこの PC と同期しないようにします。これにより、PC 設定の [Windows バックアップ] 設定ページの [アクセシビリティ] グループがオフになり、無効になります。
 
@@ -130,6 +130,19 @@
 
 この設定を設定しなかった場合、または無効にした場合、"accessibility" グループの同期は既定でオンになり、ユーザーが構成できます。
       </string>
+
+      <!-- Language -->
+      <string id="DisableLanguageSettingSync">言語設定を同期しない</string>
+      <string id="DisableLanguageSettingSync_Help">
+        [言語設定] グループがこの PC と同期しないようにします。これにより、PC 設定の [Windows バックアップ] 設定ページの [言語の基本設定] グループがオフになり、無効になります。
+
+このポリシー設定を有効にした場合、[言語設定] グループは同期されません。
+
+[ユーザーが言語設定の同期をオンにできるようにする] オプションを使用すると、同期は既定で無効になりますが、無効になりません。
+
+この設定を設定しなかった場合、または無効にした場合、既定では "言語設定" グループの同期が有効になり、ユーザーが構成できます。
+      </string>
+
     </stringTable>
     <presentationTable>
 
@@ -180,7 +193,12 @@
 
       <!-- AccessibilitySync -->
       <presentation id="DisableAccessibilitySettingSyncUserOverride">
-        <checkBox refId="CheckBox_UserOverride">ユーザーが "アクセシビリティ" 同期をオンにできるようにします。</checkBox>
+        <checkBox refId="CheckBox_UserOverride">ユーザーが [アクセシビリティ] の同期をオンにできるようにします。</checkBox>
+      </presentation>
+
+      <!-- LanguageSync -->
+      <presentation id="DisableLanguageSettingSyncUserOverride">
+        <checkBox refId="CheckBox_UserOverride">ユーザーが "言語設定" の同期をオンにすることを許可します。</checkBox>
       </presentation>
 
     </presentationTable>

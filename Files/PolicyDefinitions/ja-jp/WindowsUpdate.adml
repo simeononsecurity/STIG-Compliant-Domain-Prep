@@ -21,6 +21,7 @@
       <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">Windows Server 2016 から Windows Server 2022、または Windows 10​</string>
       <string id="WU_SUPPORTED_Windows_Server_2019_Windows_10_0_1809">Windows Server 2019 以降、または Windows 10 バージョン 1809 以降​</string>
       <string id="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004">Windows Server 2022 以降、または Windows 10 バージョン 2004 以降​</string>
+      <string id="WU_SUPPORTED_WinServer2025_Win1021H2_Win1122H2">Windows Server 2025、Windows 10 Version 21H2、または Windows 11 Version 22H2 以降</string>
       <string id="AUDontShowUasHelp">このポリシー設定で、[Windows のシャットダウン] ダイアログ ボックスに [更新をインストールしてシャットダウン] オプションを表示するかどうか管理します。
 
 このポリシー設定を有効にすると、ユーザーが [スタート] メニューの [シャットダウン] を選択したとき、インストールできる更新がある場合でも、[更新をインストールしてシャットダウン] は [Windows のシャットダウン] ダイアログ ボックスに選択肢として表示されません。
@@ -165,13 +166,13 @@ Windows 8 および Windows RT では、このポリシーが有効な場合、�
       <string id="OnlyUseSystemProxyForUpdateDetection">更新プログラムを検出するためにのみシステムプロキシを使用する (既定)</string>
       <string id="AllowUserProxyAsFallbackForUpdateDetection">システム プロキシを使用した検出が失敗した場合に、ユーザーのプロキシをフォールバックとして使用できるようにする</string>
       <string id="UpdateClassPolicySource_Title">Windows Update の特定のクラスにソースサービスを指定する</string>
-      <string id="UpdateClassPolicySource_Help">このポリシーが有効になっている場合、デバイスは、指定された更新元 (Windows Update または Windows Server Update Service) から指定されたクラスの Windows update を受信します。
+      <string id="UpdateClassPolicySource_Help">このポリシーを有効にすると、デバイスは、指定された更新元から一覧表示されたクラス (Windows Update または Windows Server Update Service) の Windows 更新プログラムを受信します。
 
-注: Windows Server Update Service から更新を受け取るには、[イントラネットの Microsoft の更新サービスの場所を指定する] ポリシーを使用してイントラネットの Microsoft 更新サービスの場所を適切に構成する必要があります。
+注: Windows Server Update サービスから更新プログラムを受け取るには、[イントラネットの Microsoft 更新サービスの場所を指定する] ポリシーを使用してイントラネットの Microsoft 更新サービスの場所を正しく構成する必要があります。
 
-このポリシーが構成されていない場合、または無効になっている場合は、デバイスは他のポリシー構成に従って更新プログラムの検出を続行します。
+このポリシーが構成されていないか、無効になっている場合、デバイスは他のポリシー構成に従って更新プログラムを引き続き検出します。
 
-注: 現在、[遅延ポリシーで Windows Update に対するスキャンを許可しない] を使用していて、指定したサーバーに対してのみデバイスがスキャンを行うことを確認している場合は、このポリシーを代わりに使用するか、またはそのように構成することをお勧めします。</string>
+注: 現在、[延期ポリシーを許可しない] を使用してWindows Updateに対するスキャンを実行し、デバイスが指定されたサーバーに対してのみスキャンされるようにする場合は、代わりに、またはこれに加えてこのポリシーを構成することをお勧めします。</string>
       <string id="UpdateClassPolicySourceSelectionWU">Windows Update</string>
       <string id="UpdateClassPolicySourceSelectionWSUS">Windows Server Update Services</string>
       <string id="DetectionFrequency_Help">利用可能な更新を確認する前の待機時間を決定するための時間を指定します。正確な待機時間は、特定の値とランダムな可変数値 (0 - 4 時間) を合計した時間になります。
@@ -628,22 +629,39 @@ Dev チャネル
       <string id="DefaultNotification">0 (既定) – 既定の OS の Windows Update 通知</string>
       <string id="ExcludingRebootWarnings">1 – 再起動警告を除くすべての通知を無効にする</string>
       <string id="IncludingRebootWarnings">2 – 再起動警告を含むすべての通知を無効にする</string>
-      <string id="ComplianceDeadline_Title">自動更新と再起動の期限を指定する</string>
-      <string id="ComplianceDeadline_Help">このポリシーでは、デバイスに品質と機能の更新プログラムを自動的にインストールするまでの日数と、必要な再起動が自動的に実行されるまでの猶予期間を指定できます。
+      <string id="ComplianceDeadlineForFU_Title">Specify deadline for automatic updates and restarts for feature update</string>
+      <string id="ComplianceDeadlineForFU_Help">This policy lets you specify the number of days before feature updates are installed on devices automatically, and a grace period after which required restarts occur automatically.
 
-コンプライアンスの目標を達成するための、機能更新プログラムと品質更新プログラムの期限を設定します。更新プログラムは提供されるとすぐにダウンロードおよびインストールされ、自動再起動はアクティブ時間外に試行されます。期限が過ぎると、アクティブ時間に関係なく再起動が行われます。ユーザーは再スケジュールすることはできません。期限が 0 日に設定されている場合、更新はオファーリングの時点ですぐにインストールされますが、デバイスの可用性とネットワーク接続のため 1 日で完了しない可能性があります。
+Set deadlines for feature updates and quality updates to meet your compliance goals. Updates will be downloaded and installed as soon as they are offered and automatic restarts will be attempted outside of active hours. Once the deadline has passed, restarts will occur regardless of active hours, and users will not be able to reschedule. If the deadline is set to 0 days, the update will be installed immediately upon offering, but might not finish within the day due to device availability and network connectivity.
 
-更新プログラムがインストールされた後の再起動を管理するための最小時間をユーザーに保証するために、機能更新プログラムと品質更新プログラムの猶予期間を設定します。ユーザーは、猶予期間中に再起動をスケジュールすることができます。また、ユーザーが再起動をスケジュールしない場合は、アクティブ時間外に Windows を自動的に再起動することもできます。猶予期間は、期限の構成に基づいて、再起動を管理するための猶予期間として設定された日数を過ぎている場合は、有効にすることはできません。
+Set a grace period for feature updates to guarantee users a minimum time to manage their restarts once updates are installed. Users will be able to schedule restarts during the grace period and Windows can still automatically restart outside of active hours if users choose not to schedule restarts. The grace period might not take effect if users already have more than the number of days set as grace period to manage their restart, based on deadline configurations.
 
-期限と猶予期間の期限が切れるまでは、再起動を延期するようにデバイスを設定できます。
+You can set the device to delay restarting until both the deadline and grace period have expired.
 
-このポリシーを無効にする場合、またはポリシーを構成しない場合は、デバイスは規定のスケジュールに従って更新プログラムを取得し、再起動されます。
+If you disable or do not configure this policy, devices will get updates and will restart according to the default schedule.
 
-このポリシーは、次のポリシーを上書きします:
-1. 更新プログラムをインストールするための自動再起動の期限を指定する
-2. 更新プログラムのための掛かり状態の再起動を移行および通知するスケジュールを指定します
-3. スケジュールされた時刻に常に自動的に再起動する
-4. 自動更新を構成する
+This policy will override the following policies:
+1.  Specify deadline before auto restart for update installation
+2.  Specify Engaged restart transition and notification schedule for updates
+3.  Always automatically restart at the scheduled time
+4.  Configure Automatic Updates
+      </string>
+      <string id="ComplianceDeadlineForQU_Title">Specify deadline for automatic updates and restarts for quality update</string>
+      <string id="ComplianceDeadlineForQU_Help">This policy lets you specify the number of days before quality updates are installed on devices automatically, and a grace period after which required restarts occur automatically.
+
+Set deadlines for quality updates to meet your compliance goals. Updates will be downloaded and installed as soon as they are offered and automatic restarts will be attempted outside of active hours. Once the deadline has passed, restarts will occur regardless of active hours, and users will not be able to reschedule. If the deadline is set to 0 days, the update will be installed immediately upon offering, but might not finish within the day due to device availability and network connectivity.
+
+Set a grace period for quality updates to guarantee users a minimum time to manage their restarts once updates are installed. Users will be able to schedule restarts during the grace period and Windows can still automatically restart outside of active hours if users choose not to schedule restarts. The grace period might not take effect if users already have more than the number of days set as grace period to manage their restart, based on deadline configurations.
+
+You can set the device to delay restarting until both the deadline and grace period have expired.
+
+If you disable or do not configure this policy, devices will get updates and will restart according to the default schedule.
+
+This policy will override the following policies:
+1.  Specify deadline before auto restart for update installation
+2.  Specify Engaged restart transition and notification schedule for updates
+3.  Always automatically restart at the scheduled time
+4.  Configure Automatic Updates
       </string>
       <string id="ComplianceDeadlineDay0">0</string>
       <string id="ComplianceDeadlineDay1">1</string>
@@ -676,6 +694,31 @@ Dev チャネル
       <string id="ComplianceDeadlineDay28">28</string>
       <string id="ComplianceDeadlineDay29">29</string>
       <string id="ComplianceDeadlineDay30">30</string>
+
+      <string id="AllowTemporaryEnterpriseFeatureControl_Title">既定でオフになっているサービスによって導入された機能を有効にする</string>
+      <string id="AllowTemporaryEnterpriseFeatureControl_Help">サービスによって導入された機能 (年間機能更新プログラム以外) は、Windows Update が管理されているデバイスでは既定でオフになっています*。
+
+このポリシーが "有効" に構成されている場合、インストールされている最新の月次品質更新プログラムで利用可能なすべての機能がオンになります。
+
+このポリシーが [未構成] または [無効] に設定されている場合、これらの機能を含む機能更新プログラムがインストールされるまで、月次品質更新プログラム (サービス) を通じて出荷される機能はオフのままになります。
+
+*Windows Update が管理されているデバイスとは、Windows Update がポリシーによって管理されているデバイスです。Windows Update for Business を使用するクラウド経由でも、Windows Server Update Services (WSUS) を使用したオンプレミスでも使用できます。
+      </string>
+      <string id="AllowOptionalContent_Title">オプションの更新プログラムを有効にする</string>
+      <string id="AllowOptionalContent_Help">このポリシーにより、デバイスはオプションの更新プログラムを取得できます (段階的な機能ロールアウト (CFR) を含む - 詳細については、aka.ms/AllowOptionalContent をご覧ください)
+
+ポリシーが構成されたとき
+
+• [オプションの更新プログラム (CFR を含む) を自動的に受信する] が選択されている場合、デバイスは、構成されている品質更新プログラムの延期に従って、最新のオプションの更新プログラムを自動的に取得します。これには、オプションのセキュリティ以外の累積的な更新プログラムと段階的な機能ロールアウト (CFR) が含まれます。
+
+• [オプションの更新プログラムを自動的に受信する] が選択されている場合、デバイスは、品質更新プログラムの延期に従って、オプションの累積的な更新プログラムのみを自動的に取得します。
+
+• [受信するオプションの更新プログラムをユーザーが選択できる] を選択した場合は、[設定] &gt; [Windows Update] &gt; [詳細オプション] &gt; [オプションの更新プログラム] にアクセスして、どのオプションの更新プログラムを取得するかをユーザーが選択できます。また、ユーザーは、[利用可能になったらすぐに最新の更新プログラムを入手する] の切り替えを有効にして、オプションの更新プログラムと段階的な機能ロールアウトを自動的に受信することもできます。
+      </string>
+      <string id="DonotReceiveOptionalContent">オプションの更新プログラムを受信しない</string>
+      <string id="ReceiveOptionalContentWithAutoApproval">オプションの更新プログラム (CFR を含む) を自動的に受信する</string>
+      <string id="ReceiveOptionalLCUWithAutoApproval">オプションの更新プログラムを自動的に受信する</string>
+      <string id="ReceiveOptionalContentNeedUserApproval">ユーザーは、受信するオプションの更新プログラムを選択できます</string>
     </stringTable>
 
     <presentationTable>
@@ -817,16 +860,20 @@ Dev チャネル
         <text></text>
         <checkBox refId="NoUpdateNotificationsDuringActiveHours" defaultChecked="false">アクティブな時間帯にのみ適用</checkBox>
       </presentation>
-      <presentation id="ComplianceDeadline_Title">
-        <text>品質更新プログラム</text>
+       <presentation id="ComplianceDeadlineForFU_Title">
+        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="2">期限 (日数):</dropdownList>
+        <dropdownList refId="ConfigureDeadlineGracePeriodForFeatureUpdates" noSort="true" defaultItem="7">猶予期間 (日数):</dropdownList>
+        <text></text>
+        <checkBox refId="ConfigureDeadlineNoAutoRebootForFeatureUpdates" defaultChecked="false">Don't auto-restart until end of grace period</checkBox>
+      </presentation>
+      <presentation id="ComplianceDeadlineForQU_Title">
         <dropdownList refId="ConfigureDeadlineForQualityUpdates" noSort="true" defaultItem="7">期限 (日数):</dropdownList>
         <dropdownList refId="ConfigureDeadlineGracePeriod" noSort="true" defaultItem="2">猶予期間 (日数):</dropdownList>
         <text></text>
-        <text>機能更新プログラム</text>
-        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="7">期限 (日数):</dropdownList>
-        <dropdownList refId="ConfigureDeadlineGracePeriodForFeatureUpdates" noSort="true" defaultItem="2">猶予期間 (日数):</dropdownList>
-        <text></text>
-        <checkBox refId="ConfigureDeadlineNoAutoReboot" defaultChecked="false">猶予期間が終了するまで自動的に再起動しない</checkBox>
+        <checkBox refId="ConfigureDeadlineNoAutoRebootForQualityUpdates" defaultChecked="false">Don't auto-restart until end of grace period</checkBox>
+      </presentation>
+      <presentation id="AllowOptionalContent_Title">
+        <dropdownList refId="AllowOptionalContent" noSort="true" defaultItem="0">オプションの更新プログラムをユーザーが受信する方法を選択する:</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

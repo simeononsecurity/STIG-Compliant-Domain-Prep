@@ -129,6 +129,21 @@ Om du inaktiverar eller låter bli att konfigurera den här principinställninge
 
 Om en app är öppen när det här grupprincipobjektet tillämpas på en enhet måste anställda starta om appen eller enheten för att principändringarna ska börja gälla för appen.
       </string>
+      <string id="LetAppsAccessHumanPresence_Name">Ge Windows-appar åtkomst till närvaroavkänning</string>
+      <string id="LetAppsAccessHumanPresence_Explain">Den här principinställningen anger om Windows-appar kan komma åt närvaroavkänning.
+
+Du kan ange antingen en standardinställning för alla appar eller en inställning per app genom att ange ett paketfamiljenamn. Du kan hämta paketfamiljenamnet för en app med hjälp av cmdleten Get-AppPackage Windows PowerShell. En inställning per app åsidosätter standardinställningen.
+
+Om du väljer alternativet "Användaren har kontroll" kan anställda i organisationen bestämma om Windows-appar kan komma åt närvaroavkänning med hjälp av Inställningar &gt; Sekretess på enheten.
+
+Om du väljer alternativet "Tvinga tillåt" får Windows-appar åtkomst till närvaroavkänning och anställda i organisationen kan inte ändra det.
+
+Om du väljer alternativet "Tvinga neka" tillåts inte Windows-appar att komma åt närvaroavkänning och anställda i din organisation kan inte ändra det.
+
+Om du inaktiverar eller inte konfigurerar den här principinställningen kan anställda i organisationen bestämma om Windows-appar kan komma åt närvaroavkänning med hjälp av Inställningar &gt; Sekretess på enheten.
+
+Om en app är öppen när det här grupprincipobjektet tillämpas på en enhet måste anställda starta om appen eller enheten för att principändringarna ska tillämpas på appen.
+      </string>
       <string id="LetAppsAccessLocation_Name">Låt Windows-appar få tillgång till positionsdata</string>
       <string id="LetAppsAccessLocation_Explain">Den här principinställningen anger om Windows-appar kan komma åt positionsdata.
 
@@ -439,6 +454,15 @@ Om en app är öppen när det här grupprincipobjektet tillämpas på en enhet m
         <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_ForceAllowTheseApps_List"/>
         <text>Tvinga neka för dessa specifika appar (använd paketfamiljenamn):</text>
         <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_ForceDenyTheseApps_List"/>
+      </presentation>
+      <presentation id="LetAppsAccessHumanPresence">
+        <dropdownList refId="LetAppsAccessHumanPresence_Enum" noSort="true" defaultItem="0">Standard för alla appar:</dropdownList>
+        <text>Låt användaren ha kontrollen över dessa specifika appar (använd paketfamiljenamn):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_UserInControlOfTheseApps_List"/>
+        <text>Tvinga tillåt för dessa specifika appar (använd paketfamiljenamn):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_ForceAllowTheseApps_List"/>
+        <text>Tvinga neka för dessa specifika appar (använd paketfamiljenamn):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_ForceDenyTheseApps_List"/>
       </presentation>
       <presentation id="LetAppsAccessLocation">
         <dropdownList refId="LetAppsAccessLocation_Enum" noSort="true" defaultItem="0">Standard för alla appar:</dropdownList>

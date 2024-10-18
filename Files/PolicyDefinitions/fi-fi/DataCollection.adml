@@ -105,52 +105,60 @@ Jos määrität tämän käytäntöasetuksen arvoksi ”Ota diagnostiikkatietoje
 
       <string id="AllowUpdateComplianceProcessing">Salli yhteensopivuuspäivityksen käsittely</string>
       <string id="AllowUpdateComplianceProcessing_Explain">
-Tämä käytäntöasetus yhdessä Salli telemetria ja Määritä kaupallinen tunnus -asetuksen kanssa mahdollistaa sen, että organisaatiot voivat määrittää laitteen niin, että Microsoft on laitteesta kerättyjen Windowsin diagnostiikkatietojen käsittelijä, https://go.microsoft.com/fwlink/?linkid=2185086.
-Voit ottaa tämän toiminnon käyttöön seuraavasti: 
-    1. Ota tämä käytäntöasetus käyttöön
-    2. Liitä Azure Active Directory -tili laitteeseen
-    3. Määritä Salli telemetria -arvoksi 1 - Pakollinen tai suurempi
-    4. Määritä päivityksen vaatimustenmukaisuuden työtilan kaupallisen tunnuksen asetus
+Tämä käytäntö on vanhentunut, ja se toimii vain Windows 10:n versiossa 1809. Tämän käytännön määrittäminen ei vaikuta muihin tuettuihin Windows-versioihin.
 
-Kun nämä käytännöt on määritetty, laitteesta kerättyihin Windowsin diagnostiikkatietoihin sovelletaan Microsoftin suoritinsitoumuksia.
-Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, laitteet eivät näy Päivityksen yhteensopivuus -kohdassa.
+Tämä käytäntöasetus yhdessä Salli telemetria- ja Määritä kaupallinen tunnus -asetusten kanssa mahdollistaa sen, että organisaatiot voivat määrittää laitteen niin, että Microsoft on laitteesta kerättyjen Windowsin diagnostiikkatietojen käsittelijä, https://go.microsoft.com/fwlink/?linkid=2185086 tuote-ehtojen mukaisesti.
+Voit ottaa tämän toiminnon käyttöön seuraavasti:
+ 1. Ota tämä käytäntöasetus käyttöön
+ 2. Liitä Azure Active Directory -tili laitteeseen
+ 3. Määritä Salli telemetria -arvoksi 1 – Pakollinen tai suurempi
+ 4. Määritä Päivityksen vaatimustenmukaisuus -työtilan Kaupallisen tunnuksen määrittäminen -asetus
+
+Kun nämä käytännöt määritetään, laitteesta kerättyihin Windowsin diagnostiikkatietoihin sovelletaan Microsoftin suoritinsitoumuksia.
+Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, laitteet eivät näy Päivitysten yhteensopivuus -kohdassa.
       </string>
 
       <string id="AllowDesktopAnalyticsProcessing">Salli Desktop Analytics -käsittely</string>
       <string id="AllowDesktopAnalyticsProcessing_Explain">
-Tämän käytäntöasetuksen sekä Salli telemetria- ja Määritä kaupallinen tunnus -asetuksen avulla organisaatiot voivat määrittää laitteen niin, että Microsoft on laitteesta kerättyjen Windowsin diagnostiikkatietojen käsittelijä, https://go.microsoft.com/fwlink/?linkid=2185086 tuote-ehtojen mukaisesti.
-Voit ottaa tämän toiminnon käyttöön seuraavasti:
-    1. Ota tämä käytäntöasetus käyttöön
-    2. Liitä Azure Active Directory-tili laitteeseen
-    3. Määritä Salli telemetria -arvoksi 1 - Pakollinen tai suurempi
-    4. Määritä Desktop Analytics -työtilasi kaupallisen tunnuksen asetus
+Tämä käytäntö on vanhentunut, ja se toimii vain Windows 10:n versiossa 1809. Tämän käytännön määrittäminen ei vaikuta muihin tuettuihin Windows-versioihin.
 
-Kun nämä käytännöt määritetään, laitteesta kerättyihin Windowsin diagnostiikkatietoihin sovelletaan Microsoftin käsittelijäsitoumuksia.
+Tämä käytäntöasetus yhdessä Salli telemetria- ja Määritä kaupallinen tunnus -asetusten kanssa mahdollistaa sen, että organisaatiot voivat määrittää laitteen niin, että Microsoft on laitteesta kerättyjen Windowsin diagnostiikkatietojen käsittelijä, https://go.microsoft.com/fwlink/?linkid=2185086 tuote-ehtojen mukaisesti.
+Voit ottaa tämän toiminnon käyttöön seuraavasti:
+ 1. Ota tämä käytäntöasetus käyttöön
+ 2. Liitä Azure Active Directory -tili laitteeseen
+ 3. Määritä Salli telemetria -arvoksi 1 – Pakollinen tai suurempi
+ 4. Määritä Desktop Analytics -työtilasi kaupallisen tunnuksen asetus
+
+Kun nämä käytännöt määritetään, laitteesta kerättyihin Windowsin diagnostiikkatiedot sovelletaan Microsoftin suoritinsitoumuksia.
 Tällä asetuksella ei ole vaikutusta laitteisiin, ellei niitä ole rekisteröity oikein Desktop Analyticsiin. Jos poistat tämän käytäntöasetuksen käytöstä, laitteet eivät näy Desktop Analyticsissa.
       </string>
 
       <string id="AllowWUfBCloudProcessing">Salli WUfB-pilvipalvelun käsittely</string>
       <string id="AllowWUfBCloudProcessing_Explain">
-Tämä käytäntöasetus määrittää Azure Active Directoryyn liitetyn laitteen niin, että Microsoft on laitteesta kerättyjen Windowsin diagnostiikkatietojen käsittelijä, sovelletaan tuote-ehtoja osoitteessa https://go.microsoft.com/fwlink/?linkid=2185086.
-Tämä toiminta:
-    1. Ota tämä käytäntöasetus käyttöön
-    2. Liitä Azure Active Directory-tili laitteeseen
-    3. Määritä Salli telemetria -arvoksi 1 - Pakollinen tai suurempi
+Tämä käytäntö on vanhentunut, ja se toimii vain Windows 10:n versiossa 1809. Tämän käytännön määrittäminen ei vaikuta muihin tuettuihin Windows-versioihin.
 
-Kun nämä käytännöt on määritetty, laitteesta kerättyihin Windowsin diagnostiikkatietoihin sovelletaan Microsoftin käsittelijäsitoumuksia.
-Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, Windows Update yrityksille -käyttöönottopalveluun rekisteröidyt laitteet eivät voi hyödyntää joitakin käyttöönottopalvelun ominaisuuksia.
+Tämä käytäntöasetus määrittää Azure Active Directoryyn liitetyn laitteen niin, että Microsoft on laitteesta kerättyjen Windowsin diagnostiikkatiedot suorittaja, https://go.microsoft.com/fwlink/?linkid=2185086 tuote-ehtojen mukaisesti.
+Voit ottaa tämän toiminnon käyttöön seuraavasti:
+ 1. Ota tämä käytäntöasetus käyttöön
+ 2. Liitä Azure Active Directory -tili laitteeseen
+ 3. Määritä Salli telemetria -asetuksen arvoksi 1 – Pakollinen tai suurempi
+
+Kun nämä käytännöt määritetään, laitteesta kerättyihin Windowsin diagnostiikkatietoihin sovelletaan Microsoftin suoritinsitoumuksia.
+Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, Windows Update for Business -käyttöönottopalveluun rekisteröidyt laitteet eivät voi hyödyntää joitakin käyttöönottopalvelun ominaisuuksia.
       </string>
 
       <string id="AllowCommercialDataPipeline">Salli kaupallisten tietojen putki</string>
       <string id="AllowCommercialDataPipeline_Explain">
-AllowCommercialDataPipeline määrittää Azure Active Directoryyn liitetyn laitteen niin, että Microsoft on laitteesta kerättyjen Windowsin diagnostiikkatietojen käsittelijä, https://go.microsoft.com/fwlink/?linkid=2185086 tuote-ehtojen mukaisesti.
-Voit ottaa tämän toiminnon käyttöön seuraavasti:
-    1. Ota tämä käytäntöasetus käyttöön
-    2. Liitä Azure Active Directory -tili laitteeseen,
+Tämä käytäntö on vanhentunut, ja se toimii vain Windows 10:n versiossa 1809. Tämän käytännön määrittäminen ei vaikuta muihin tuettuihin Windows-versioihin.
 
-Windowsin diagnostiikkatiedot kerätään, kun Salli telemetria -käytäntöasetuksen arvoksi on määritetty 1 - Pakollinen tai suurempi. Tämän asetuksen määrittäminen ei muuta laitteelle asetettua Windowsin diagnostiikkatietojen keräystasoa
-Jos poistat tämän asetuksen käytöstä tai et määritä sitä, Microsoft on laitteesta kerättyjen ja Microsoftin tietosuojalausekkeen mukaisesti käsiteltyjen Windowsin diagnostiikkatietojen rekisterinpitäjä https://go.microsoft.com/fwlink/?LinkId=521839, ellet ole ottanut käyttöön käytäntöjä, kuten Salli päivityksen yhteensopivuuden käsittely tai Salli Desktop Analytics käsittely.
-Katso https://go.microsoft.com/fwlink/?linkid=2011107 dokumentaatiosta lisätietoja tästä ja muista käytännöistä, jotka johtavat siihen, että Microsoft on Windowsin diagnostiikkatietojen käsittelijä.
+AllowCommercialDataPipeline määrittää Azure Active Directoryyn liitetyn laitteen niin, että Microsoft on laitteesta kerättyjen Windowsin diagnostiikkatiedot suorittaja, https://go.microsoft.com/fwlink/?linkid=2185086 tuote-ehtojen mukaisesti.
+Voit ottaa tämän toiminnon käyttöön seuraavasti:
+ 1. Ota tämä käytäntöasetus käyttöön
+ 2. Liitä Azure Active Directory -tili laitteeseen,
+
+Windowsin diagnostiikkatiedot kerätään, kun Salli telemetria -käytäntöasetuksen arvoksi on määritetty 1 – Pakollinen tai uudempi. Tämän asetuksen määrittäminen ei muuta laitteelle määritettyä Windowsin diagnostiikkatiedot kokoelmatasoa.
+Jos poistat tämän asetuksen käytöstä tai et määritä sitä, Microsoft on laitteesta kerättyjen ja Microsoftin tietosuojatietojen mukaisesti https://go.microsoft.com/fwlink/?LinkId=521839 käsiteltyjen Windowsin diagnostiikkatietojen rekisterinpitäjä, ellet ole ottanut käyttöön käytäntöjä, kuten Salli päivityksen yhteensopivuuden käsittely tai Salli Desktop Analytics -käsittely.
+Katso https://go.microsoft.com/fwlink/?linkid=2011107 olevasta dokumentaatiosta lisätietoja tästä ja muista käytännöistä, jotka johtavat siihen, että Microsoft on Windowsin diagnostiikkatietojen käsittelijä.
       </string>
 
       <string id="LimitDiagnosticLogCollection">Rajoita diagnostiikkalokitietojen keräämistä</string>

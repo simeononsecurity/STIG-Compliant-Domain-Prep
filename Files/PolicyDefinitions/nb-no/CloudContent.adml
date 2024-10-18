@@ -86,6 +86,12 @@ Hvis du aktiverer denne policyen, vil Windows-opplevelser som bruker Sky kompone
 
 Hvis du deaktiverer eller ikke konfigurerer denne policyen, vil Windows-opplevelser kunne bruke konto status innhold for Sky forbruker.
         </string>
+      <string id="EnableOrganizationalMessagesContent">Aktiver organisasjonsmeldinger</string>
+      <string id="EnableOrganizationalMessagesContent_Help">Med organisasjonsmeldinger kan administratorer levere meldinger til sluttbrukerne på utvalgte Windows 11-opplevelser. Organisasjonsmeldinger er tilgjengelige for administratorer via tjenester som Microsoft Endpoint Manager.
+
+Som standard deaktiveres denne policyen. Hvis du aktiverer denne policyen, viser disse opplevelsene innhold som er bestilt av administratorer.
+
+Aktivering av denne policyen har ingen innvirkning på eksisterende MDM-policyinnstillinger, som styrer levering av innhold fra Microsoft på Windows-opplevelser.</string>
     </stringTable>
     <presentationTable>
       <presentation id="ConfigureWindowsSpotlight">

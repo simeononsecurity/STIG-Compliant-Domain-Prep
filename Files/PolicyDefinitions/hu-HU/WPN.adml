@@ -120,6 +120,18 @@ Ha letiltja vagy nem konfigurálja a házirend-beállítást, minden ilyen érte
 
 A házirend-beállítás érvénybe léptetéséhez nem szükséges újraindítani sem az eszközöket, sem a szolgáltatásokat.
       </string>
+      <string id="ExpandedToastNotifications">Több kibontott bejelentési értesítés bekapcsolása a műveletközpontban</string>
+      <string id="ExpandedToastNotificationsExplain">
+          Ez a házirend-beállítás bekapcsolja a több kibontott bejelentési értesítést a műveletközpontban.
+
+       Ha engedélyezi ezt a házirend-beállítást, az egyes alkalmazások első három értesítése alapértelmezés szerint ki lesz bontva a műveletközpontban.
+
+        Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, alapértelmezés szerint az egyes alkalmazásoknak csak az első értesítései lesznek kibontva a műveletközpontban.
+
+        Csak Windows 10 esetén. Ez a Windows 11 esetében azonnal elavulttá válik.
+
+          A házirend-beállítás érvénybe lépéséhez nincs szükség újraindításra vagy rendszer-újraindításra.
+      </string>
     </stringTable>
     <presentationTable>
       <presentation id="QuietHoursBeginTimePicker">

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2015 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>itt adja meg a megjelenítendő nevet</displayName>
+  <description>itt adja meg a leírást</description>
+  <resources>
+    <stringTable>
+      <string id="AccountNotifications">Fiókértesítések</string>
+      <string id="DisableAccountNotifications">Fiókértesítések kikapcsolása a Start menüben</string>
+      <string id="DisableAccountNotificationsExplain">
+            Ezzel a szabályzattal megakadályozhatja, hogy a Windows értesítéseket jelenítsen meg a Microsoft-fiók (MSA) és a helyi felhasználók számára a Start menüben (felhasználói csempe).
+
+            Az értesítések közé tartozik a felhasználók felkérése a következőkre: ismételt hitelesítés, biztonsági másolat készítése az eszközről, a felhőtárhelykvóták kezelése, valamint a Microsoft 365- vagy Xbox-előfizetés kezelése.
+
+            Ha engedélyezi ezt a szabályzatbeállítást, a Windows nem küld fiókokkal kapcsolatos értesítéseket a helyi és az MSA-felhasználók számára a Start menü felhasználói csempéjére.
+
+            Ha letiltja vagy nem konfigurálja ezt a szabályzatbeállítást, a Windows fiókkal kapcsolatos értesítéseket küld a helyi és az MSA-felhasználók számára a Start menü felhasználói csempéjére.
+
+            A szabálybeállítás érvénybe lépéséhez nincs szükség újraindításra vagy szolgáltatás-újraindításra.
+      </string>
+    </stringTable>
+  </resources>
+</policyDefinitionResources>

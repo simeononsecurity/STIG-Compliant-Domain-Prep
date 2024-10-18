@@ -18,12 +18,15 @@ The following list shows the supported values:
 
 3 = HTTP blended with Internet Peering.
 
-99 = Simple download mode with no peering. Delivery Optimization downloads using HTTP only and does not attempt to contact the Delivery Optimization cloud services.</string>
+99 = Simple download mode with no peering. Delivery Optimization downloads using HTTP only and does not attempt to contact the Delivery Optimization cloud services.
+
+100 = Bypass mode. Windows 10: Do not use Delivery Optimization and use BITS instead. Windows 11: Deprecated, use Simple mode instead.</string>
       <string id="DownloadMode_CdnOnly">HTTP only (0)</string>
       <string id="DownloadMode_Lan">LAN (1)</string>
       <string id="DownloadMode_Group">Group (2)</string>
       <string id="DownloadMode_Internet">Internet (3)</string>
       <string id="DownloadMode_Simple">Simple (99)</string>
+      <string id="DownloadMode_Bypass">Bypass (100)</string>
       <string id="GroupId">Group ID</string>
       <string id="GroupId_Help">Group ID must be set as a GUID. This Policy specifies an arbitrary group ID that the device belongs to.
 
@@ -99,22 +102,26 @@ The recommended value to set if you allow uploads on battery is 40 (for 40%). Th
 
 The value 0 means "not-limited"; The cloud service set default value will be used.</string>
       <string id="CacheHost">Cache Server Hostname</string>
-      <string id="CacheHost_Help">This policy allows you to set one or more Delivery Optimization in Network Cache servers that will be used by your client(s).
+      <string id="CacheHost_Help">This policy allows you to set one or more Microsoft Connected Cache servers that will be used by your client(s).
 
 One or more values can be added as either fully qualified domain names (FQDN) or IP addresses. To add multiple values, separate each FQDN or IP address by commas.
       </string>
       <string id="CacheHostSource">Cache Server Hostname Source</string>
-      <string id="CacheHostSource_Help">This policy allows you to specify how your client(s) can discover Delivery Optimization in Network Cache servers dynamically.
+      <string id="CacheHostSource_Help">This policy allows you to specify how your client(s) can discover Microsoft Connected Cache servers dynamically.
 
 Options available are:
+
+0 = Disable DNS-SD.
 
 1 = DHCP Option 235.
 
 2 = DHCP Option 235 Force.
 
-For both options, the client will query DHCP Option ID 235 and use the returned value as the Cache Server Hostname. Option 2 overrides the Cache Server Hostname policy, if configured.</string>
+If this policy is not configured, the client will attempt to automatically find a cache server using DNS-SD. If set to 0, the client will not use DNS-SD to automatically find a cache server. If set to 1 or 2, the client will query DHCP Option ID 235 and use the returned value as the Cache Server Hostname. Option 2 overrides the Cache Server Hostname policy, if configured.</string>
       <string id="CacheHostSource_DHCP">DHCP Option 235</string>
       <string id="CacheHostSource_DHCP_Force">DHCP Option 235 Force</string>
+      <string id="DisallowCacheServerDownloadsOnVPN">Disallow downloads from Microsoft Connected Cache servers when the device connects via VPN</string>
+      <string id="DisallowCacheServerDownloadsOnVPN_Help">Disallow downloads from Microsoft Connected Cache servers when the device connects via VPN. By default, the device is allowed to download from Microsoft Connected Cache when connected via VPN.</string>
       <string id="GroupIdSource">Select the source of Group IDs</string>
       <string id="GroupIdSource_Help">Set this policy to restrict peer selection to a specific source.
 
@@ -130,7 +137,7 @@ Options available are:
 
 5 = AAD Tenant ID.
 
-When set, the Group ID will be assigned automatically from the selected source. If you set this policy, the GroupID policy will be ignored.
+When set, the Group ID will be assigned automatically from the selected source. This policy is ignored if the GroupID policy is also set.
 
 The options set in this policy only apply to Group (2) download mode. If Group (2) isn't set as Download mode, this policy will be ignored.
 
@@ -207,6 +214,8 @@ These options apply to both Download Mode LAN (1) and Group (2).</string>
       <string id="Time11PM">11 PM</string>
       <string id="Time12AM">12 AM</string>
       <string id="Time12PM">12 PM</string>
+      <string id="VpnKeywords">VPN Keywords</string>
+      <string id="VpnKeywords_Help">This policy allows you to set one or more keywords used to recognize VPN connections. To add multiple keywords, separate them with commas.</string>
     </stringTable>
     <presentationTable>
       <presentation id="DownloadMode">
@@ -226,16 +235,16 @@ These options apply to both Download Mode LAN (1) and Group (2).</string>
         <text>The default value is 10GB</text>
       </presentation>
       <presentation id="MaxCacheAge">
-        <decimalTextBox defaultValue="259200" refId="MaxCacheAge">Max Cache Age (in seconds):</decimalTextBox>
-        <text>The default value is 3 days</text>
+        <decimalTextBox defaultValue="604800" refId="MaxCacheAge">Max Cache Age (in seconds):</decimalTextBox>
+        <text>The default value is 7 days</text>
       </presentation>
       <presentation id="MonthlyUploadDataCap">
-        <decimalTextBox defaultValue="20" refId="MonthlyUploadDataCap">Monthly Upload Data Cap (in GB):</decimalTextBox>
-        <text>The default value is 20GB</text>
+        <decimalTextBox defaultValue="5120" refId="MonthlyUploadDataCap">Monthly Upload Data Cap (in GB):</decimalTextBox>
+        <text>The default value is 5 TB</text>
       </presentation>
       <presentation id="MinBackgroundQos">
-        <decimalTextBox defaultValue="500" refId="MinBackgroundQos">Minimum Background QoS (in KB/s):</decimalTextBox>
-        <text>The default value is 500KB/s</text>
+        <decimalTextBox defaultValue="20480" refId="MinBackgroundQos">Minimum Background QoS (in KB/s):</decimalTextBox>
+        <text>The default value is 20 MB/s</text>
       </presentation>
       <presentation id="ModifyCacheDrive">
         <textBox refId="ModifyCacheDrive">
@@ -285,6 +294,9 @@ These options apply to both Download Mode LAN (1) and Group (2).</string>
       <presentation id="CacheHostSource">
         <dropdownList defaultItem="0" noSort="true" refId="CacheHostSource">Cache Server Hostname Source:</dropdownList>
       </presentation>
+      <presentation id="DisallowCacheServerDownloadsOnVPN">
+        <checkBox defaultChecked="false" refId="DisallowCacheServerDownloadsOnVPN">Disallow download from MCC over VPN</checkBox>
+      </presentation>
       <presentation id="GroupIdSource">
         <dropdownList defaultItem="0" noSort="true" refId="GroupIdSource">Source of Group IDs:</dropdownList>
       </presentation>
@@ -306,6 +318,11 @@ These options apply to both Download Mode LAN (1) and Group (2).</string>
       </presentation>
       <presentation id="RestrictPeerSelectionBy">
         <dropdownList defaultItem="1" noSort="true" refId="RestrictPeerSelectionBy">Restrict Peer Selection By:</dropdownList>
+      </presentation>
+      <presentation id="VpnKeywords">
+        <textBox refId="VpnKeywords">
+          <label>VPN Keywords:</label>
+        </textBox>
       </presentation>
       <presentation id="SetHoursToLimitBackgroundDownloadBandwidth">
         <text/>

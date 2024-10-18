@@ -21,6 +21,7 @@ Option 7 uniquement prise en charge sur les serveurs ou au moins édition Window
       <string id="WU_SUPPORTED_Server2016_Through_Server2022_Or_Windows10">Windows Server 2016 via Windows Server 2022 ou Windows 10</string>
       <string id="WU_SUPPORTED_Windows_Server_2019_Windows_10_0_1809">Au minimum Windows Server 2019 ou Windows 10 version 1809</string>
       <string id="WU_SUPPORTED_Windows_Server_2022_Windows_10_0_2004">Au minimum Windows Server 2022 ou Windows 10 version 2004</string>
+      <string id="WU_SUPPORTED_WinServer2025_Win1021H2_Win1122H2">Au minimum Windows Server 2025, Windows 10 version 21H2 ou Windows 11 version 22H2</string>
       <string id="AUDontShowUasHelp">Ce paramètre de stratégie permet d’indiquer si l’option « Installer les mises à jour et éteindre » doit s’afficher dans la boîte de dialogue Arrêt de Windows.
 
 Si vous activez ce paramètre de stratégie, l’option « Installer les mises à jour et éteindre » n’apparaîtra pas dans la boîte de dialogue Arrêt de Windows, même si des mises à jour à installer sont disponibles lorsque l’utilisateur sélectionne l’option Arrêter dans le menu Démarrer.
@@ -628,22 +629,39 @@ Si vous sélectionnez « Appliquer uniquement pendant les heures d’activité�
       <string id="DefaultNotification">0 (par défaut) : notifications Windows Update par défaut du système d'exploitation</string>
       <string id="ExcludingRebootWarnings">1 – désactiver toutes les notifications, à l'exclusion des avertissements de redémarrage</string>
       <string id="IncludingRebootWarnings">2 – désactiver toutes les notifications, y compris les avertissements de redémarrage</string>
-      <string id="ComplianceDeadline_Title">Spécifier les dates limites pour les mises à jour et les redémarrages automatiques</string>
-      <string id="ComplianceDeadline_Help">Cette stratégie vous permet de spécifier le nombre de jours avant que les mises à jour de qualité et des fonctionnalités soient installées automatiquement sur les appareils, ainsi qu’une période de grâce après laquelle des redémarrages requis se produisent automatiquement.
+      <string id="ComplianceDeadlineForFU_Title">Specify deadline for automatic updates and restarts for feature update</string>
+      <string id="ComplianceDeadlineForFU_Help">This policy lets you specify the number of days before feature updates are installed on devices automatically, and a grace period after which required restarts occur automatically.
 
-Définissez des échéances pour les mises à jour des fonctionnalités et les mises à jour de qualité pour répondre à vos objectifs de conformité. Les mises à jour seront téléchargées et installées dès qu’elles sont disponibles, et les redémarrages automatiques seront tentés en dehors des heures d’activité. Une fois l’échéance écoulée, les redémarrages se produisent, quelles que soient les heures d’activité, et les utilisateurs ne peuvent pas replanifier. Si l’échéance est définie sur 0 jour, la mise à jour est installée immédiatement lors de l’offre, mais risque de ne pas se terminer dans la journée en raison de la disponibilité de l’appareil et de la connectivité réseau.
+Set deadlines for feature updates and quality updates to meet your compliance goals. Updates will be downloaded and installed as soon as they are offered and automatic restarts will be attempted outside of active hours. Once the deadline has passed, restarts will occur regardless of active hours, and users will not be able to reschedule. If the deadline is set to 0 days, the update will be installed immediately upon offering, but might not finish within the day due to device availability and network connectivity.
 
-Définissez une période de grâce pour les mises à jour de fonctionnalités et de qualité afin de garantir aux utilisateurs un délai minimal pour gérer leurs redémarrages une fois les mises à jour installées. Les utilisateurs pourront planifier des redémarrages au cours de la période de grâce et Windows pourra toujours redémarrer automatiquement en dehors des heures d’activité si les utilisateurs choisissent de ne pas planifier les redémarrages. La période de grâce risque de ne pas s’appliquer si les utilisateurs ont déjà dépassé le nombre de jours défini comme période de grâce pour gérer leur redémarrage, sur la base de configurations d’échéance.
+Set a grace period for feature updates to guarantee users a minimum time to manage their restarts once updates are installed. Users will be able to schedule restarts during the grace period and Windows can still automatically restart outside of active hours if users choose not to schedule restarts. The grace period might not take effect if users already have more than the number of days set as grace period to manage their restart, based on deadline configurations.
 
-Vous pouvez configurer le délai de redémarrage de l’appareil jusqu’à ce que l’échéance et la période de grâce aient expiré.
+You can set the device to delay restarting until both the deadline and grace period have expired.
 
-Si vous désactivez ou ne configurez pas cette stratégie, les appareils obtiendront des mises à jour et redémarreront selon la planification par défaut.
+If you disable or do not configure this policy, devices will get updates and will restart according to the default schedule.
 
-Cette stratégie remplacera les stratégies suivantes :
-1. Spécifier l’échéance avant le redémarrage automatique pour l’installation de la mise à jour
-2. Spécifier une transition de redémarrage commencé et une planification des notifications pour les mises à jour
-3. Toujours redémarrer automatiquement à l’heure planifiée
-4. Configurer les mises à jour automatiques
+This policy will override the following policies:
+1.  Specify deadline before auto restart for update installation
+2.  Specify Engaged restart transition and notification schedule for updates
+3.  Always automatically restart at the scheduled time
+4.  Configure Automatic Updates
+      </string>
+      <string id="ComplianceDeadlineForQU_Title">Specify deadline for automatic updates and restarts for quality update</string>
+      <string id="ComplianceDeadlineForQU_Help">This policy lets you specify the number of days before quality updates are installed on devices automatically, and a grace period after which required restarts occur automatically.
+
+Set deadlines for quality updates to meet your compliance goals. Updates will be downloaded and installed as soon as they are offered and automatic restarts will be attempted outside of active hours. Once the deadline has passed, restarts will occur regardless of active hours, and users will not be able to reschedule. If the deadline is set to 0 days, the update will be installed immediately upon offering, but might not finish within the day due to device availability and network connectivity.
+
+Set a grace period for quality updates to guarantee users a minimum time to manage their restarts once updates are installed. Users will be able to schedule restarts during the grace period and Windows can still automatically restart outside of active hours if users choose not to schedule restarts. The grace period might not take effect if users already have more than the number of days set as grace period to manage their restart, based on deadline configurations.
+
+You can set the device to delay restarting until both the deadline and grace period have expired.
+
+If you disable or do not configure this policy, devices will get updates and will restart according to the default schedule.
+
+This policy will override the following policies:
+1.  Specify deadline before auto restart for update installation
+2.  Specify Engaged restart transition and notification schedule for updates
+3.  Always automatically restart at the scheduled time
+4.  Configure Automatic Updates
       </string>
       <string id="ComplianceDeadlineDay0">0</string>
       <string id="ComplianceDeadlineDay1">1</string>
@@ -676,6 +694,31 @@ Cette stratégie remplacera les stratégies suivantes :
       <string id="ComplianceDeadlineDay28">28</string>
       <string id="ComplianceDeadlineDay29">29</string>
       <string id="ComplianceDeadlineDay30">30</string>
+
+      <string id="AllowTemporaryEnterpriseFeatureControl_Title">Activer les fonctionnalités introduites via la maintenance qui sont désactivées par défaut</string>
+      <string id="AllowTemporaryEnterpriseFeatureControl_Help">Les fonctionnalités introduites via la maintenance (en dehors de la mise à jour annuelle des fonctionnalités) sont désactivées par défaut pour les appareils dont les mises à jour Windows sont gérées*.
+
+Si cette politique est configurée sur "Activé", toutes les fonctionnalités disponibles dans la dernière mise à jour mensuelle de qualité installée seront activées..
+
+Si cette politique est définie sur « Non configuré » ou « Désactivé », les fonctionnalités fournies via une mise à jour mensuelle de la qualité (service) resteront désactivées jusqu'à ce que la mise à jour des fonctionnalités qui inclut ces fonctionnalités soit installée..
+
+ *Les appareils gérés par les mises à jour Windows sont ceux dont les mises à jour Windows sont gérées via une stratégie ; que ce soit via le cloud à l'aide de Windows Update for Business ou sur site avec Windows Server Update Services (WSUS).
+      </string>
+      <string id="AllowOptionalContent_Title">Activer les mises à jour facultatives</string>
+      <string id="AllowOptionalContent_Help">Cette stratégie permet aux appareils d’obtenir des mises à jour facultatives (y compris des déploiements de fonctionnalités progressifs (CFR) en savoir plus en consultant aka.ms/AllowOptionalContent)
+
+Lorsque la stratégie est configurée
+
+• Si « Recevoir automatiquement les mises à jour facultatives (y compris les CFR) » est sélectionné, l’appareil reçoit automatiquement les dernières mises à jour facultatives conformément aux reports de mise à jour qualité configurés. Cela inclut les mises à jour cumulatives facultatives et les déploiements progressifs de fonctionnalités (CFR). 
+
+ Si l’option « Recevoir automatiquement les mises à jour facultatives » est sélectionnée, l’appareil reçoit uniquement automatiquement les mises à jour cumulatives facultatives, conformément aux reports de mise à jour qualité. 
+
+Si l’option « Les utilisateurs peuvent sélectionner les mises à jour facultatives à recevoir » est sélectionnée, les utilisateurs peuvent sélectionner les mises à jour facultatives à obtenir en visitant Paramètres &gt; Windows Update &gt; Options avancées &gt; Mises à jour facultatives. Les utilisateurs peuvent également activer le bouton bascule « Obtenir les dernières mises à jour dès qu’elles sont disponibles » pour recevoir automatiquement des mises à jour facultatives et des déploiements de fonctionnalités progressifs.
+      </string>
+      <string id="DonotReceiveOptionalContent">Ne pas recevoir de mises à jour facultatives</string>
+      <string id="ReceiveOptionalContentWithAutoApproval">Recevoir automatiquement les mises à jour facultatives (y compris les CFR)</string>
+      <string id="ReceiveOptionalLCUWithAutoApproval">Recevoir automatiquement les mises à jour facultatives</string>
+      <string id="ReceiveOptionalContentNeedUserApproval">Les utilisateurs peuvent sélectionner les mises à jour facultatives à recevoir</string>
     </stringTable>
 
     <presentationTable>
@@ -817,16 +860,20 @@ Cette stratégie remplacera les stratégies suivantes :
         <text></text>
         <checkBox refId="NoUpdateNotificationsDuringActiveHours" defaultChecked="false">Appliquer uniquement pendant les heures d’activité</checkBox>
       </presentation>
-      <presentation id="ComplianceDeadline_Title">
-        <text>Mises à jour qualité</text>
+       <presentation id="ComplianceDeadlineForFU_Title">
+        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="2">Échéance (jours):</dropdownList>
+        <dropdownList refId="ConfigureDeadlineGracePeriodForFeatureUpdates" noSort="true" defaultItem="7">Période de grâce (jours):</dropdownList>
+        <text></text>
+        <checkBox refId="ConfigureDeadlineNoAutoRebootForFeatureUpdates" defaultChecked="false">Don't auto-restart until end of grace period</checkBox>
+      </presentation>
+      <presentation id="ComplianceDeadlineForQU_Title">
         <dropdownList refId="ConfigureDeadlineForQualityUpdates" noSort="true" defaultItem="7">Échéance (jours):</dropdownList>
         <dropdownList refId="ConfigureDeadlineGracePeriod" noSort="true" defaultItem="2">Période de grâce (jours):</dropdownList>
         <text></text>
-        <text>Mises à jour des fonctionnalités</text>
-        <dropdownList refId="ConfigureDeadlineForFeatureUpdates" noSort="true" defaultItem="7">Échéance (jours):</dropdownList>
-        <dropdownList refId="ConfigureDeadlineGracePeriodForFeatureUpdates" noSort="true" defaultItem="2">Période de grâce (jours):</dropdownList>
-        <text></text>
-        <checkBox refId="ConfigureDeadlineNoAutoReboot" defaultChecked="false">Ne pas redémarrer automatiquement avant la fin de la période de grâce</checkBox>
+        <checkBox refId="ConfigureDeadlineNoAutoRebootForQualityUpdates" defaultChecked="false">Don't auto-restart until end of grace period</checkBox>
+      </presentation>
+      <presentation id="AllowOptionalContent_Title">
+        <dropdownList refId="AllowOptionalContent" noSort="true" defaultItem="0">Sélectionnez la façon dont les utilisateurs reçoivent les mises à jour facultatives :</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

@@ -300,6 +300,23 @@ Om den aktiveras får sökfunktionen och Cortana tillgång till positionsinforma
       <string id="DisableSearch_ExplainText">Om du aktiverar den här principen inaktiveras användargränssnittet för sökning tillsammans med alla startpunkter, till exempel kortkommandon, pekplattegester och skriv-till-sökning i Start-menyn. Sökrutan i Start-menyn och knappen Sök i Aktivitetsfältet döljs också.
 
 Om du inaktiverar eller inte konfigurerar den här principinställningen kan användaren öppna användargränssnittet för sökning och dess olika startpunkter visas.</string>
+      <string id="ConfigureSearchOnTaskbarMode">Konfigurerar sökning i Aktivitetsfältet</string>
+      <string id="ConfigureSearchOnTaskbarMode_Help">Med den här principinställningen kan du konfigurera sökning i aktivitetsfältet.
+
+Om du aktiverar den här principinställningen och anger att den ska döljas kommer sökning att döljas i aktivitetsfältet som standard. Användare kan inte ändra detta under inställningarna.
+
+Om du aktiverar den här principinställningen och ställer in den på endast sökikon kommer sökikonen att visas i aktivitetsfältet som standard. Användare kan inte ändra detta under inställningarna.
+
+Om du aktiverar den här principinställningen och ställer in den på sökikon och etikett kommer sökikonen och etiketten att visas i aktivitetsfältet som standard. Användare kan inte ändra detta under inställningarna.
+
+Om du aktiverar den här principinställningen och ställer in den på sökruta kommer sökrutan att visas i aktivitetsfältet som standard. Användare kan inte ändra detta under inställningarna.
+
+Om du inaktiverar eller låter bli att konfigurera den här principinställningen konfigureras sökning i aktivitetsfältet enligt standardinställningarna för din Windows-utgåva. Användarna kommer att kunna ändra sökning i aktivitetsfältet under inställningarna.
+      </string>
+      <string id="SearchOnTaskbarModeEnum_Hidden">Dölj</string>
+      <string id="SearchOnTaskbarModeEnum_SearchIconOnly">Endast sökikon</string>
+      <string id="SearchOnTaskbarModeEnum_SearchIconAndLabel">Sökikon och etikett</string>
+      <string id="SearchOnTaskbarModeEnum_SearchBox">Sökfält</string>
     </stringTable>
     <presentationTable>
       <presentation id="RichAttachmentPreviews">
@@ -388,6 +405,9 @@ Om du inaktiverar eller inte konfigurerar den här principinställningen kan anv
       </presentation>
       <presentation id="AllowCortanaAAD">
         <dropdownList refId="AllowCortanaAAD_Dropdown" noSort="true" defaultItem="0">Inställning för Cortana i AAD</dropdownList>
+      </presentation>
+      <presentation id="ConfigureSearchOnTaskbarMode">
+        <dropdownList refId="ConfigureSearchOnTaskbarMode_Dropdown" noSort="true" defaultItem="0">Sök i Aktivitetsfältet</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

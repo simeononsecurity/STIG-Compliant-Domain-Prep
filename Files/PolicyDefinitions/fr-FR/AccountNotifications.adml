@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2015 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>entrer le nom complet ici</displayName>
+  <description>entrer la description ici</description>
+  <resources>
+    <stringTable>
+      <string id="AccountNotifications">Notifications de compte</string>
+      <string id="DisableAccountNotifications">Désactiver les notifications de compte dans Démarrer</string>
+      <string id="DisableAccountNotificationsExplain">
+            Cette stratégie vous permet d’empêcher Windows d’afficher des notifications à compte Microsoft (MSA) et aux utilisateurs locaux dans l’écran de démarrage (vignette utilisateur).
+
+Les notifications incluent l’obtention des utilisateurs à : réauthentifier ; sauvegarder leur appareil ; gérer les quotas de stockage cloud et gérer leur Microsoft 365 ou abonnement XBOX.
+
+Si vous activez ce paramètre de stratégie, Windows n’envoie pas de notifications liées au compte pour les utilisateurs locaux et MSA à la vignette de l’utilisateur dans Démarrer.
+
+Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas, Windows envoie des notifications liées au compte pour les utilisateurs locaux et MSA à la vignette de l’utilisateur dans Démarrer.
+
+Aucun redémarrage de redémarrage du service ou de redémarrage du service n’est nécessaire pour que ce paramètre de stratégie prenne effet.
+      </string>
+    </stringTable>
+  </resources>
+</policyDefinitionResources>

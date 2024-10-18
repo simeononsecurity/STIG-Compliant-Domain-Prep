@@ -300,6 +300,23 @@ Cortana가 꺼져도 사용자는 검색 기능을 사용하여 디바이스에�
       <string id="DisableSearch_ExplainText">이 정책을 사용하면 시작 메뉴 바로 가기 키, 터치 패드 제스처 및 검색 유형과 같은 모든 진입점과 함께 검색 UI가 사용하지 않도록 설정됩니다. 시작 메뉴 검색 상자와 검색 작업 표시줄 단추도 숨겨집니다.
 
 이 정책 설정을 사용하지 않거나 구성하지 않으면 사용자가 검색 UI를 열 수 있으며 다른 진입점이 표시됩니다.</string>
+      <string id="ConfigureSearchOnTaskbarMode">작업 표시줄에서 검색 구성</string>
+      <string id="ConfigureSearchOnTaskbarMode_Help">이 정책 설정을 사용하여 작업 표시줄에 검색을 구성할 수 있습니다.
+
+이 정책 설정을 사용하고 숨기기를 설정하면 기본적으로 작업 표시줄에 검색이 숨겨집니다. 사용자가 설정에서 변경할 수 없습니다.
+
+이 정책 설정을 사용하고 검색 아이콘으로만 설정하면 기본적으로 작업 표시줄에 검색 아이콘이 표시됩니다. 사용자가 설정에서 변경할 수 없습니다.
+
+이 정책 설정을 사용하고 검색 아이콘 및 레이블로 설정하면 기본적으로 작업 표시줄에 검색 아이콘과 레이블이 표시됩니다. 사용자가 설정에서 변경할 수 없습니다.
+
+이 정책 설정을 사용하고 검색창으로 설정하면 기본적으로 작업 표시줄에 검색창이 표시됩니다. 사용자가 설정에서 변경할 수 없습니다.
+
+이 정책 설정을 사용하지 않거나 구성하지 않으면 작업 표시줄에 검색이 Windows 버전의 기본값에 따라 구성됩니다. 사용자가 설정에서 작업 표시줄의 검색을 변경할 수 있습니다.
+      </string>
+      <string id="SearchOnTaskbarModeEnum_Hidden">숨기기</string>
+      <string id="SearchOnTaskbarModeEnum_SearchIconOnly">검색 아이콘만</string>
+      <string id="SearchOnTaskbarModeEnum_SearchIconAndLabel">검색 아이콘 및 레이블</string>
+      <string id="SearchOnTaskbarModeEnum_SearchBox">검색창</string>
     </stringTable>
     <presentationTable>
       <presentation id="RichAttachmentPreviews">
@@ -388,6 +405,9 @@ Cortana가 꺼져도 사용자는 검색 기능을 사용하여 디바이스에�
       </presentation>
       <presentation id="AllowCortanaAAD">
         <dropdownList refId="AllowCortanaAAD_Dropdown" noSort="true" defaultItem="0">AAD 설정의 Cortana</dropdownList>
+      </presentation>
+      <presentation id="ConfigureSearchOnTaskbarMode">
+        <dropdownList refId="ConfigureSearchOnTaskbarMode_Dropdown" noSort="true" defaultItem="0">작업 표시줄에서 검색</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

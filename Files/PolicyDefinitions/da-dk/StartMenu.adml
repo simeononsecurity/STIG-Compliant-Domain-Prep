@@ -328,7 +328,7 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, søg
 
 Bemærk! Denne politikindstilling gælder kun for destinationsfiler på NTFS-partitioner. FAT-partitioner har ikke denne funktion til sporing og søgning via id.
 
-Se også politikindstillingerne "Spor ikke Shell-genveje under gennemsøgning" og Brug ikke den søgebaserede metode, når der skal findes genveje i brugergrænsefladen".</string>
+Se også politikindstillingerne "Spor ikke Shell-genveje under gennemsøgning" og "Brug ikke den søgebaserede metode, når der skal findes genveje i brugergrænsefladen".</string>
       <string id="NoRun">Fjern menuen Kør fra menuen Start</string>
       <string id="NoRun_Help">Gør det muligt at fjerne kommandoen Kør fra menuen Start, Internet Explorer og Jobliste.
 
@@ -626,6 +626,11 @@ Hvis du aktiverer denne politik, vises listen "Senest tilføjede" ikke længere 
       <string id="HideRecommendedSection_Help">Du kan bruge denne politik til at forhindre, at menuen Start viser en liste over anbefalede programmer og filer.
 
 Hvis du aktiverer denne politikindstilling, viser menuen Start ikke længere den sektion, der indeholder en liste over anbefalede filer og apps.</string>
+
+      <string id="HideRecommendedPersonalizedSites">Fjern tilpassede webstedsanbefalinger fra sektionen Anbefalet i menuen Start</string>
+      <string id="HideRecommendedPersonalizedSites_Help">Du kan bruge denne politikindstilling til at skjule de tilpassede websteder i det anbefalede afsnit i menuen Start. 
+      
+Hvis du aktiverer denne politikindstilling, viser menuen Start ikke længere tilpassede webstedsanbefalinger i det anbefalede afsnit.</string>
       <string id="DisableContextMenusInStart">Deaktiver genvejsmenuer i menuen Start</string>
       <string id="DisableContextMenusInStart_Help">Med denne politikindstilling kan du forhindre brugere i at kunne åbne genvejsmenuer i menuen Start.
 

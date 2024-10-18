@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2015 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>введите отображаемое имя</displayName>
+  <description>введите описание</description>
+  <resources>
+    <stringTable>
+      <string id="AccountNotifications">Уведомления учетной записи</string>
+      <string id="DisableAccountNotifications">Отключить уведомления учетной записи в меню "Пуск"</string>
+      <string id="DisableAccountNotificationsExplain">
+            Эта политика позволяет запретить Windows отображать уведомления для пользователей учетная запись Майкрософт (MSA) и локальных пользователей в меню "Пуск" (плитка пользователя).
+
+Уведомления включают получение пользователей: повторная проверка подлинности; создать резервную копию устройства; управление квотами облачного хранилища, а также управление их Microsoft 365 подпиской Xbox.
+
+Если этот параметр политики включен, Windows не будет отправлять уведомления, связанные с учетной записью, локальным пользователям и пользователям MSA на плитку пользователя в меню "Пуск".
+
+Если этот параметр политики отключен или не настроен, Windows будет отправлять уведомления, связанные с учетной записью, локальным пользователям и пользователям MSA на плитку пользователя в меню "Пуск".
+
+Для вступления этого параметра политики в силу не требуется перезагрузка или перезапуск службы.
+      </string>
+    </stringTable>
+  </resources>
+</policyDefinitionResources>

@@ -355,7 +355,7 @@ Windows Vista、Windows 7、Internet Explorer 7、および Internet Explorer 8 
 
 このポリシー設定を構成しない場合、ユーザーは、インターネット接続ウィザードを自動的に開始するかどうかを選択できます。</string>
       <string id="ICWSettings">インターネット接続ウィザードの設定</string>
-      <string id="Identities">個人情報の管理: ユーザーによる個人情報の使用を規制する</string>
+      <string id="Identities">Identity Manager: ユーザーによる個人情報の使用を規制する</string>
       <string id="IDN_Always">常に IDN 形式に変換する</string>
       <string id="IDN_Intranet">イントラネット アドレスを IDN 形式に変換する</string>
       <string id="IDN_Never">IDN 形式に変換しない</string>
@@ -804,9 +804,9 @@ Microsoft エージェントとは、Microsoft Windows のインターフェイ�
 このポリシーを有効にすると、Internet Explorer の [ヘルプ] メニューから [ヒント] コマンドが削除されます。
 
 このポリシーを無効にするか、または構成しない場合、ユーザーは、ブラウザーの下側にヒントを表示できるようになります。</string>
-      <string id="IE_ExplainIdentities">個人情報管理を使用した個別の個人情報を設定できないようにします。
+      <string id="IE_ExplainIdentities">Identity Manager を使用した個別の個人情報を設定できないようにします。
 
-個人情報管理を使用すると、1 台のコンピューター上で、電子メール アカウントなどのアカウントを複数作成できます。各ユーザーの個人情報には、個別のパスワードと個別のプログラム設定が含まれています。
+Identity Manager を使用すると、1 台のコンピューター上で、電子メール アカウントなどのアカウントを複数作成できます。各ユーザーの個人情報には、個別のパスワードと個別のプログラム設定が含まれています。
 
 このポリシーを有効にすると、ユーザーは、新しい個人情報を作成したり、現在の個人情報を管理したり、または個人情報を切り替えたりすることができなくなります。また、アドレス帳の [ファイル] メニューから [ユーザーの切り替え] コマンドも削除されます。
 
@@ -3576,37 +3576,42 @@ Internet Explorer 11 以降:
 
 注意: このポリシーは、Windows 10 Version 1607 以降はサポートされていません。</string>
       <string id="Protocols_None">安全なプロトコルを使用しない</string>
-      <string id="Protocols_SSL2">SSL 2.0 のみを使用</string>
+      <string id="Protocols_SSL2">[廃止] SSL 2.0 のみを使用</string>
       <string id="Protocols_SSL3">SSL 3.0 のみを使用</string>
-      <string id="Protocols_SSL2_SSL3">SSL 2.0 および SSL 3.0 を使用</string>
+      <string id="Protocols_SSL2_SSL3">[現在不使用]SSL 2.0 と SSL 3.0 を使用する</string>
       <string id="Protocols_TLS10">TLS 1.0 のみを使用</string>
-      <string id="Protocols_SSL2_TLS10">SSL 2.0 および TLS 1.0 を使用</string>
+      <string id="Protocols_SSL2_TLS10">[現在不使用]SSL 2.0 と TLS 1.0 を使用する</string>
       <string id="Protocols_SSL3_TLS10">SSL 3.0 および TLS 1.0 を使用</string>
-      <string id="Protocols_SSL2_SSL3_TLS10">SSL 2.0、SSL 3.0、および TLS 1.0 を使用</string>
+      <string id="Protocols_SSL2_SSL3_TLS10">[現在不使用]SSL 2.0、SSL 3.0、TLS 1.0 を使用する</string>
       <string id="Protocols_TLS11">TLS 1.1 のみを使用</string>
-      <string id="Protocols_SSL2_TLS11">SSL 2.0 および TLS 1.1 を使用</string>
+      <string id="Protocols_SSL2_TLS11">[現在不使用]SSL 2.0 と TLS 1.1 を使用する</string>
       <string id="Protocols_SSL3_TLS11">SSL 3.0 および TLS 1.1 を使用</string>
-      <string id="Protocols_SSL2_SSL3_TLS11">SSL 2.0、SSL 3.0、および TLS 1.1 を使用</string>
+      <string id="Protocols_SSL2_SSL3_TLS11">[現在不使用]SSL 2.0、SSL 3.0、TLS 1.1 を使用する</string>
       <string id="Protocols_TLS10_TLS11">TLS 1.0 および TLS 1.1 を使用</string>
-      <string id="Protocols_SSL2_TLS10_TLS11">SSL 2.0、TLS 1.0、および TLS 1.1 を使用</string>
+      <string id="Protocols_SSL2_TLS10_TLS11">[現在不使用]SSL 2.0、TLS 1.0、TLS 1.1 を使用する</string>
       <string id="Protocols_SSL3_TLS10_TLS11">SSL 3.0、TLS 1.0、および TLS 1.1 を使用</string>
-      <string id="Protocols_SSL2_SSL3_TLS10_TLS11">SSL 2.0、SSL 3.0、TLS 1.0、および TLS 1.1 を使用</string>
+      <string id="Protocols_SSL2_SSL3_TLS10_TLS11">[現在不使用]SSL 2.0、SSL 3.0、TLS 1.0、TLS 1.1 を使用する</string>
       <string id="Protocols_TLS12">TLS 1.2 のみを使用</string>
-      <string id="Protocols_SSL2_TLS12">SSL 2.0 および TLS 1.2 を使用</string>
+      <string id="Protocols_SSL2_TLS12">[現在不使用]SSL 2.0 と TLS 1.2 を使用する</string>
       <string id="Protocols_SSL3_TLS12">SSL 3.0 および TLS 1.2 を使用</string>
-      <string id="Protocols_SSL2_SSL3_TLS12">SSL 2.0、SSL 3.0、および TLS 1.2 を使用</string>
+      <string id="Protocols_SSL2_SSL3_TLS12">[現在不使用]SSL 2.0、SSL 3.0、TLS 1.2 を使用する</string>
       <string id="Protocols_TLS10_TLS12">TLS 1.0 および TLS 1.2 を使用</string>
-      <string id="Protocols_SSL2_TLS10_TLS12">SSL 2.0、TLS 1.0、および TLS 1.2 を使用</string>
+      <string id="Protocols_SSL2_TLS10_TLS12">[現在不使用]SSL 2.0、TLS 1.0、TLS 1.2 を使用する</string>
       <string id="Protocols_SSL3_TLS10_TLS12">SSL 3.0、TLS 1.0、および TLS 1.2 を使用</string>
-      <string id="Protocols_SSL2_SSL3_TLS10_TLS12">SSL 2.0、SSL 3.0、TLS 1.0、および TLS 1.2 を使用</string>
+      <string id="Protocols_SSL2_SSL3_TLS10_TLS12">[現在不使用]SSL 2.0、SSL 3.0、TLS 1.0、TLS 1.2 を使用する</string>
       <string id="Protocols_TLS11_TLS12">TLS 1.1 および TLS 1.2 を使用</string>
-      <string id="Protocols_SSL2_TLS11_TLS12">SSL 2.0、TLS 1.1、および TLS 1.2 を使用</string>
+      <string id="Protocols_SSL2_TLS11_TLS12">[現在不使用]SSL 2.0、TLS 1.1、TLS 1.2 を使用する</string>
       <string id="Protocols_SSL3_TLS11_TLS12">SSL 3.0、TLS 1.1、および TLS 1.2 を使用</string>
-      <string id="Protocols_SSL2_SSL3_TLS11_TLS12">SSL 2.0、SSL 3.0、TLS 1.1、および TLS 1.2 を使用</string>
+      <string id="Protocols_SSL2_SSL3_TLS11_TLS12">[現在不使用]SSL 2.0、SSL 3.0、TLS 1.1、TLS 1.2 を使用する</string>
       <string id="Protocols_TLS10_TLS11_TLS12">TLS 1.0、TLS 1.1、および TLS 1.2 を使用</string>
-      <string id="Protocols_SSL2_TLS10_TLS11_TLS12">SSL 2.0、TLS 1.0、TLS 1.1、および TLS 1.2 を使用</string>
+      <string id="Protocols_SSL2_TLS10_TLS11_TLS12">[現在不使用]SSL 2.0、TLS 1.0、TLS 1.1、TLS 1.2 を使用する</string>
       <string id="Protocols_SSL3_TLS10_TLS11_TLS12">SSL 3.0、TLS 1.0、TLS 1.1、および TLS 1.2 を使用</string>
-      <string id="Protocols_SSL2_SSL3_TLS10_TLS11_TLS12">SSL 2.0、SSL 3.0、TLS 1.0、TLS 1.1、および TLS 1.2 を使用</string>
+      <string id="Protocols_SSL2_SSL3_TLS10_TLS11_TLS12">[現在不使用]SSL 2.0、SSL 3.0、TLS 1.0、TLS 1.1、および TLS 1.2 を使用する</string>
+      <string id="Protocols_TLS13">TLS 1.3 のみを使用する</string>
+      <string id="Protocols_TLS12_TLS13">TLS 1.2 と TLS 1.3 を使用する</string>
+      <string id="Protocols_TLS11_TLS12_TLS13">TLS 1.1、TLS 1.2、TLS 1.3 を使用する</string>
+      <string id="Protocols_TLS10_TLS11_TLS12_TLS13">TLS 1.0、TLS 1.1、TLS 1.2、TLS 1.3 を使用する</string>
+      <string id="Protocols_SSL3_TLS10_TLS11_TLS12_TLS13">SSL 3.0、TLS 1.0、TLS 1.1、TLS 1.2、TLS 1.3 を使用する</string>
       <string id="LockToolbars">すべてのツール バーをロック</string>
       <string id="MoveStopRefresh">[中止] および [更新] ボタンの位置をロック</string>
       <string id="NewTab_AboutBlank">about:blank</string>
@@ -3986,14 +3991,20 @@ Internet Explorer モードの詳細については、https://go.microsoft.com/f
 このポリシーを無効にした場合、または構成しなかった場合は、Internet Explorer モードでは拡張ホットキーは動作しません。
 
 詳細については、「https://go.microsoft.com/fwlink/?linkid=2102115」を参照してください。</string>
+      <string id="AllowLegacyURLFields">インターネット ショートカット ファイルのレガシ機能を許可する</string>
+      <string id="IE_ExplainAllowLegacyURLFields">このポリシー設定を使用すると、WorkingDirectory フィールドやプラグ可能なプロトコル処理などの無効な機能をインターネット ショートカット ファイルで使用できます。
+
+このポリシーを有効にした場合、インターネット ショートカット ファイルの無効な機能が再度有効になります。
+
+このポリシーを無効にした場合、または構成しなかった場合は、WorkingDirectory フィールドやプラグ可能なプロトコル処理などのインターネット ショートカット ファイルの一部の機能が無効になります。</string>
       <string id="ResetZoomForDialogInIEMode">Internet Explorer モードの HTML ダイアログのズームを既定にリセットする</string>
       <string id="IE_ExplainResetZoomForDialogInIEMode">このポリシー設定を使用すると、管理者は、Internet Explorer モードで HTML ダイアログのズームを既定値にリセットできます。
 
-このポリシーを有効にした場合、Internet Explorer モードの HTML ダイアログのズームは親ページから伝達されません。
+このポリシーを有効にした場合、Internet Explorer モードの HTML ダイアログのズームは親ページから引き継がれません。
 
 このポリシーを無効にした場合、または構成しなかった場合、Internet Explorer モードの HTML ダイアログのズームは、親ページのズームに基づいて設定されます。
 
-詳細については、https://go.microsoft.com/fwlink/?linkid=2102115を参照してください</string>
+詳細については、https://go.microsoft.com/fwlink/?linkid=2220107 を参照してください</string>
       <string id="DisableInternetExplorerApp">Internet Explorer 11 をスタンドアロンブラウザーとして無効にする</string>
       <string id="IE_ExplainDisableInternetExplorerApp">このポリシーを使用すると、Internet Explorer をスタンドアロン ブラウザーとして起動することを制限できます。
 
@@ -4004,17 +4015,21 @@ Internet Explorer モードの詳細については、https://go.microsoft.com/f
 - Internet Explorer 11 にリダイレクトするその他のポリシーがある場合、それらを上書きする。
 
 このポリシーを無効にした場合、または構成しなかった場合は、すべてのサイトが現在のアクティブなブラウザーの設定を使用して開かれます。注: このポリシーを有効にするには、Microsoft Edge 安定チャネルがインストールされている必要があります。</string>
+      <string id="DisableIEAppDeprecationNotification">Internet Explorer 11 の提供終了通知を非表示にする</string>
+      <string id="IE_ExplainDisableIEAppDeprecationNotification">このポリシー設定を使用すると、Internet Explorerが廃止される通知バーのアラームを表示するかどうかを管理できます。既定では、通知バーは Internet Explorer 11 に表示されます。
+
+このポリシー設定を有効にした場合、通知バーは Internet Explorer 11 に表示されません。
+
+このポリシー設定を無効にするか、未構成にした場合、通知バーは Internet Explorer 11 に表示されます。</string>
       <string id="NotifyDisableIEOptions_Never">しない</string>
       <string id="NotifyDisableIEOptions_Always">常時</string>
       <string id="NotifyDisableIEOptions_OncePerUser">ユーザーごとに 1 回</string>
-      <string id="JScriptReplacement">JScript9Legacy を MSHTML/WebOC 経由で JScript の代わりに読み込み、JScript を置換します。</string>
-      <string id="IE_ExplainJScriptReplacement">このポリシー設定では、MSHTML/WebOC/MSXML/Cscript ベースの呼び出しに対して JScript または JScript9Legacy を読み込むかどうかを指定します。
+      <string id="JScriptReplacement">JScript の代わりに JScript9Legacy を読み込んで、JScript を置き換えます。</string>
+      <string id="IE_ExplainJScriptReplacement">このポリシー設定では、JScriptまたは JScript9Legacy を読み込むかどうかを指定します。
       
-このポリシー設定を有効にした場合、JScript がインスタンス化されている場合に JScript9Legacy が読み込まれます。
+このポリシー設定を有効にした場合、または構成しなかった場合は、JScriptがインスタンス化されている場合に JScript9Legacy が読み込まれます。
 
-このポリシーを無効にすると、JScript が使用されます。
-
-このポリシーを未構成のままにすると、MSHTML は JScript9Legacy を使用し、MSXML/Cscript は JScript を使用します。</string>
+このポリシーを無効にすると、JScriptが使用されます。</string>
       <string id="VerMgmtDisable">Internet Explorer の古い ActiveX コントロールのブロックを無効する</string>
       <string id="IE_ExplainVerMgmtDisable">このポリシー設定では、Internet Explorer で特定の古い ActiveX コントロールをブロックするかどうかを決定します。イントラネット ゾーンでは、古い ActiveX コントロールがブロックされません。
 

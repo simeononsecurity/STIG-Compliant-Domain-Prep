@@ -432,20 +432,23 @@ Jeżeli to ustawienie zasad zostanie włączone, te powiadomienia nie będą wy�
 Jeżeli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, te powiadomienia będą wyświetlane na serwerze hosta sesji pulpitu zdalnego po zalogowaniu się administratora lokalnego.</string>
       <string id="TS_LICENSING_MODE">Ustaw tryb licencjonowania usług pulpitu zdalnego</string>
       <string id="TS_LICENSING_MODE_EXPLAIN">
-        To ustawienie zasad umożliwia określenie typu licencji CAL usług pulpitu zdalnego potrzebnej do nawiązania połączenia z tym serwerem hosta sesji usług pulpitu zdalnego.
+        To ustawienie zasad umożliwia określenie typu licencji dostępu klienta usług pulpitu zdalnego (RDS CAL) wymaganej do nawiązania połączenia z tym serwerem usług pulpitu zdalnego.
 
-          Za pomocą tego ustawienia zasad można wybrać jeden z dwóch trybów licencjonowania: na użytkownika lub na urządzenie.
+          Za pomocą tego ustawienia zasad można wybrać jeden z dwóch trybów licencjonowania: Na użytkownika lub Na urządzenie.
 
-          W trybie licencjonowania na użytkownika dla każdego konta użytkownika łączącego się z tym serwerem hosta sesji usług pulpitu zdalnego jest wymagana Licencja RDS CAL na użytkownika wystawiona przez serwer licencjonowania usług pulpitu zdalnego.
+          Tryb licencjonowania Na użytkownika wymaga, aby każde konto użytkownika łączące się z tym serwerem usług pulpitu zdalnego posiadało licencję RDS CAL na użytkownika wystawioną przez serwer licencjonowania usług pulpitu zdalnego.
 
-          W trybie licencjonowania na urządzenie dla każdego urządzenia łączącego się z tym serwerem hosta sesji usług pulpitu zdalnego jest wymagana Licencja RDS CAL na urządzenie wystawiona przez serwer licencjonowania usług pulpitu zdalnego.
+          Tryb licencjonowania Na urządzenie wymaga, aby każde urządzenie łączące się z tym serwerem usług pulpitu zdalnego posiadało licencję RDS CAL na urządzenie wystawioną przez serwer licencjonowania usług pulpitu zdalnego.
 
-          Jeśli to ustawienie zasad zostanie włączone, określony tryb licencjonowania usług pulpitu zdalnego będzie uznawany przez serwer licencji usług pulpitu zdalnego i hosta sesji usług pulpitu zdalnego.
+          Jeśli to ustawienie zasad zostanie włączone, wybrany tryb licencjonowania usług pulpitu zdalnego będzie uznawany przez serwer licencji usług pulpitu zdalnego i hosta sesji usług pulpitu zdalnego.
 
-          Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, tryb licencjonowania nie będzie określony na poziomie zasad grupy.
+           Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, tryb licencjonowania nie zostanie określony na poziomie zasad grupy.
+
+        Uwaga: tryb licencjonowania usługi AAD Na użytkownika jest przestarzały w przypadku systemu Windows 11 i nowszych wersji.
       </string>
       <string id="TS_LICENSING_MODE_PER_DEVICE">Na urządzenie</string>
       <string id="TS_LICENSING_MODE_PER_USER">Na użytkownika</string>
+      <string id="TS_LICENSING_MODE_AAD_PER_USER">Usługa AAD na użytkownika</string>
       <string id="TS_LPTPORTMAP_EXPLAIN">To ustawienie zasad określa, czy uniemożliwiać przekierowywanie danych do portów LPT klienta w czasie sesji usług pulpitu zdalnego.
 
 Za pomocą tego ustawienia można uniemożliwić użytkownikom mapowanie lokalnych portów LPT i przekierowywanie danych z komputera zdalnego do urządzeń peryferyjnych podłączonych do lokalnych portów LPT. Domyślnie w usługach pulpitu zdalnego jest możliwe przekierowywanie portów LPT.
@@ -816,6 +819,50 @@ Jeśli to ustawienie zasad zostanie włączone, użytkownicy nie będą mogli u�
 
 Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, użytkownicy będą mogli używać lokalnych wystawców uwierzytelnienia w sesji Pulpit zdalny.
 </string>
+      <string id="TS_SC_CLIPBOARD_DISABLED">Wyłącz transfery schowka z serwera do klienta</string>
+      <string id="TS_CS_CLIPBOARD_DISABLED">Wyłącz transfery schowka od klienta na serwer</string>
+      <string id="TS_CLIPBOARD_ALLOW_TEXT">Zezwalaj na zwykły tekst</string>
+      <string id="TS_CLIPBOARD_ALLOW_TEXT_IMAGE">Zezwalaj na zwykły tekst i obrazy</string>
+      <string id="TS_CLIPBOARD_ALLOW_TEXT_IMAGE_RTF">Zezwalaj na zwykły tekst, obrazy i tekst sformatowany rtf</string>
+      <string id="TS_CLIPBOARD_ALLOW_TEXT_IMAGE_RTF_HTML">Zezwalaj na zwykły tekst, obrazy, tekst sformatowany rtf i kod HTML</string>
+      <string id="TS_SC_CLIPBOARD_RESTRICTION">Ogranicz transfer schowka z serwera do klienta</string>
+      <string id="TS_SC_CLIPBOARD_RESTRICTION_EXPLAIN">To ustawienie zasad umożliwia ograniczenie transferów danych ze schowka z serwera do klienta.
+
+Jeśli to ustawienie zasad zostanie włączone, należy wybrać spośród następujących zachowań:
+
+- Wyłącz transfery schowka z serwera do klienta.
+
+- Zezwalaj na kopiowanie zwykłego tekstu z serwera do klienta.
+
+- Zezwalaj na kopiowanie zwykłego tekstu i obrazów z serwera do klienta.
+
+- Zezwalaj na kopiowanie zwykłego tekstu, obrazów i rtf w formacie rtf z serwera do klienta.
+
+- Zezwalaj na kopiowanie zwykłego tekstu, obrazów, tekstu sformatowania rtf i html z serwera do klienta.
+
+Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, użytkownicy będą mogli kopiować dowolną zawartość z serwera do klienta, jeśli przekierowywanie schowka jest włączone.
+
+Uwaga: to ustawienie zasad występuje zarówno w konfiguracji komputera, jak i w konfiguracji użytkownika. Jeśli oba ustawienia zasad zostaną skonfigurowane, zostanie użyte bardziej restrykcyjne ograniczenie.
+</string>
+      <string id="TS_CS_CLIPBOARD_RESTRICTION">Ogranicz transfer schowka od klienta na serwer</string>
+      <string id="TS_CS_CLIPBOARD_RESTRICTION_EXPLAIN">To ustawienie zasad umożliwia ograniczenie transferu danych schowka od klienta na serwer.
+
+Jeśli włączysz to ustawienie zasad, musisz wybrać jedno z następujących zachowań:
+
+- Wyłącz transfery schowka od klienta na serwer.
+
+- Zezwalaj na kopiowanie zwykłego tekstu od klienta na serwer.
+
+- Zezwalaj na kopiowanie zwykłego tekstu i obrazów od klienta na serwer.
+
+- Zezwalaj na kopiowanie zwykłego tekstu, obrazów tekstu sformatowanego rtf od klienta na serwer.
+
+- Zezwalaj na kopiowanie zwykłego tekstu, obrazów tekstu sformatowanego rtf i kodu HTML od klienta na serwer.
+
+Jeśli wyłączysz lub nie skonfigurujesz tego ustawienia zasad, użytkownicy będą mogli kopiować dowolną zawartość z klienta na serwer, jeśli przekierowanie schowka jest włączone.
+
+Uwaga: to ustawienie zasad pojawia się zarówno w Konfiguracji komputera, jak i Konfiguracji użytkownika. Jeśli skonfigurowane są oba ustawienia zasad, zastosowane zostanie bardziej rygorystyczne ograniczenie.
+</string>
       <string id="TS_CLIPRDR_CLOUD_CLIP_INTEGRATION">Wyłącz integrację schowka w chmurze na potrzeby transferu danych między serwerami i klientami</string>
       <string id="TS_CLIPRDR_CLOUD_CLIP_INTEGRATION_EXPLAIN">To ustawienie zasad umożliwia określenie, czy dane przesyłane z sesji zdalnej do klienta przy użyciu przekierowywania schowka są dodawane do schowka w chmurze po stronie klienta.
 
@@ -839,6 +886,24 @@ Ważne: jeśli to ustawienie zasad zostanie wyłączone, spowoduje to zmniejszen
 
 </string>
       <string id="TS_USER_AUTHENTICATION_POLICY">Wymagaj uwierzytelniania użytkowników za pomocą uwierzytelniania na poziomie sieci dla połączeń zdalnych</string>
+      <string id="TS_DISCONNECT_ON_LOCK_POLICY"> Rozłącz sesję zdalną po zablokowaniu dla starszego uwierzytelniania</string>
+      <string id="TS_DISCONNECT_ON_LOCK_POLICY_EXPLAIN">To ustawienie zasad umożliwia skonfigurowanie środowiska użytkownika, gdy sesja Pulpitu zdalnego jest zablokowana przez użytkownika lub przez zasady. Możesz określić, czy podczas blokady sesji zdalnej będzie wyświetlany ekran blokady zdalnej, czy też nastąpi rozłączenie. Rozłączenie sesji zdalnej zapewnia, że sesja zdalna nie może zostać pozostawiona na ekranie blokady i nie może automatycznie połączyć się ponownie z powodu utraty łączności sieciowej.
+
+Te zasady mają zastosowanie tylko w przypadku korzystania ze starszego uwierzytelniania do uwierzytelniania na komputerze zdalnym. Starsze uwierzytelnianie jest ograniczone do nazwy użytkownika i hasła lub certyfikatów, takich jak karty inteligentne. Starsze uwierzytelnianie nie wykorzystuje platformy tożsamości Microsoft, takiej jak Tożsamość Microsoft Entra. Starsze uwierzytelnianie obejmuje podstawowe protokoły uwierzytelniania NTLM, CredSSP, RDSTLS, TLS i RDP.
+
+Jeśli to ustawienie zasad zostanie włączone, połączenia pulpitu zdalnego używające starszego uwierzytelniania będą rozłączane, gdy sesja zdalna zostanie zablokowana. Użytkownicy mogą połączyć się ponownie, gdy będą gotowi i ponownie wprowadzić swoje poświadczenia po wyświetleniu monitu.
+
+Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, połączenia usług pulpitu zdalnego używające starszego uwierzytelniania będą wyświetlać ekran blokady zdalnej, gdy sesja zdalna zostanie zablokowana. Użytkownicy mogą odblokować sesję zdalną przy użyciu nazwy użytkownika i hasła lub certyfikatów.
+</string>
+      <string id="TS_DISCONNECT_ON_LOCK_AAD_POLICY">Rozłącz sesję zdalną przy blokadzie na potrzeby uwierzytelniania Platforma tożsamości Microsoft</string>
+      <string id="TS_DISCONNECT_ON_LOCK_AAD_POLICY_EXPLAIN">To ustawienie zasad umożliwia skonfigurowanie środowiska użytkownika, gdy sesja Pulpit zdalny jest zablokowana przez użytkownika lub przez zasady. Możesz określić, czy w sesji zdalnej będzie wyświetlany zdalny ekran blokady, czy rozłączenie po zablokowaniu sesji zdalnej. Rozłączenie sesji zdalnej gwarantuje, że sesji zdalnej nie można pozostawić na ekranie blokady i nie można ponownie nawiązać połączenia automatycznie z powodu utraty łączności sieciowej.
+
+Te zasady mają zastosowanie tylko w przypadku korzystania z dostawcy tożsamości używającego Platforma tożsamości Microsoft, takiego jak Tożsamość Microsoft Entra, do uwierzytelniania na komputerze zdalnym. Te zasady nie mają zastosowania w przypadku korzystania ze starszego uwierzytelniania, które obejmuje protokoły uwierzytelniania podstawowego NTLM, CredSSP, RDSTLS, TLS i RDP.
+
+Jeśli to ustawienie zasad zostanie włączone lub nie zostanie skonfigurowane, Pulpit zdalny połączenia korzystające z Platforma tożsamości Microsoft będą rozłączać sesję zdalną po zablokowaniu sesji zdalnej. Użytkownicy mogą ponownie nawiązać połączenie, gdy będą gotowi, i mogą używać uwierzytelniania bezhasłowego, jeśli są skonfigurowani.
+
+Jeśli to ustawienie zasad zostanie wyłączone, Pulpit zdalny połączenia korzystające z Platforma tożsamości Microsoft będą wyświetlać zdalny ekran blokady po zablokowaniu sesji zdalnej. Użytkownicy mogą odblokować sesję zdalną przy użyciu nazwy użytkownika i hasła lub certyfikatów.
+</string>
       <string id="TS_User_Help">Steruje konfiguracją technologii usług pulpitu zdalnego, które zapewniają dostęp do serwera z uruchomionymi programami opartymi na systemie Windows albo pełnym pulpitem systemu Windows</string>
       <string id="TS_USER_HOME">Ustaw katalog macierzysty użytkownika usług pulpitu zdalnego</string>
       <string id="TS_USER_HOME_EXPLAIN">Określa, czy w usługach pulpitu zdalnego używa się określonego udziału sieciowy lub ścieżki katalogu lokalnego jako katalogu głównego dla katalogu macierzystego użytkownika podczas sesji usług pulpitu zdalnego.
@@ -1189,21 +1254,20 @@ Uwaga: programy RemoteApp zainstalowane za pomocą funkcji Połączenia program�
       </string>
 
 	  <string id="TS_SELECT_TRANSPORT">Wybierz protokoły transportowe RDP</string>
-	  <string id="TS_SELECT_TRANSPORT_EXPLAIN">To ustawienie zasad umożliwia określenie, które protokoły mogą być używane w celu uzyskania dostępu do tego serwera za pomocą protokołu RDP (Remote Desktop Protocol).
+	  <string id="TS_SELECT_TRANSPORT_EXPLAIN">To ustawienie zasad umożliwia określenie, które protokoły mogą być używane na potrzeby dostępu Remote Desktop Protocol (RDP) do tego serwera.
 
-Jeżeli to ustawienie zasad zostanie włączone, należy określić, czy protokół RDP ma używać protokołu UDP.
+Jeśli to ustawienie zasad zostanie włączone, należy określić, czy protokół RDP ma używać protokołu UDP.
 
-Możesz wybrać jedną z następujących opcji: „Użyj protokołów UDP i TCP”, „Użyj tylko protokołu TCP” albo „Użyj protokołu UDP lub TCP (domyślne)” 
+Możesz wybrać jedną z następujących opcji: "Użyj protokołu UDP lub TCP (domyślnie)" lub "Użyj tylko protokołu TCP" 
 
-Jeśli wybierzesz opcję „Użyj protokołu UDP lub TCP” i połączenie UDP zostanie pomyślnie nawiązane, większość ruchu RDP będzie używać protokołu UDP.
+Wybranie opcji "Użyj protokołu UDP lub TCP" i pomyślne nawiązanie połączenia UDP spowoduje, że większość ruchu RDP będzie używać protokołu UDP.
 
-Jeżeli połączenie UDP nie zostanie pomyślnie nawiązane lub jeśli zostanie wybrana opcja „Użyj tylko protokołu TCP”, cały ruch RDP będzie używać protokołu TCP.
+Jeśli połączenie UDP nie powiedzie się lub zostanie wybrana opcja "Użyj tylko protokołu TCP", cały ruch RDP będzie używał protokołu TCP.
 
-Jeżeli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, protokół RDP wybierze optymalne protokoły zapewniające najlepszą obsługę użytkownika.
+Jeśli to ustawienie zasad zostanie wyłączone lub pozostanie nieskonfigurowane, protokół RDP będzie wybierać optymalne protokoły zapewniające najlepsze środowisko użytkownika.
 	  </string>
-	  <string id="TS_SELECT_TRANSPORT_UDP_AND_TCP">Użyj protokołów UDP i TCP</string>
-	  <string id="TS_SELECT_TRANSPORT_TCP_ONLY">Użyj tylko protokołu TCP</string>
 	  <string id="TS_SELECT_TRANSPORT_UDP_OR_TCP">Użyj protokołu UDP lub TCP</string>
+	  <string id="TS_SELECT_TRANSPORT_TCP_ONLY">Użyj tylko protokołu TCP</string>
 
       <string id="TS_SELECT_NETWORK_DETECT">Wybierz wykrywanie sieci na serwerze</string>
       <string id="TS_SELECT_NETWORK_DETECT_EXPLAIN">To ustawienie zasad umożliwia określenie, w jaki sposób protokół Remote Desktop Protocol ma podejmować próby wykrycia jakości sieci (przepustowości i opóźnienia).
@@ -1425,6 +1489,12 @@ UWAGA: To ustawienie zasad umożliwia równoważenie obciążenia procesorów gr
       </presentation>
       <presentation id="TS_SELECT_TRANSPORT">
         <dropdownList refId="TS_SELECT_TRANSPORT_TYPE" noSort="true" defaultItem="0">Wybierz typ transportu</dropdownList>
+      </presentation>
+      <presentation id="TS_SC_CLIPBOARD_RESTRICTION">
+        <dropdownList refId="TS_SC_CLIPBOARD_RESTRICTION_Text" noSort="true" defaultItem="0">Ogranicz transfer schowka z serwera do klienta:</dropdownList>
+      </presentation>
+      <presentation id="TS_CS_CLIPBOARD_RESTRICTION">
+        <dropdownList refId="TS_CS_CLIPBOARD_RESTRICTION_Text" noSort="true" defaultItem="0">Ogranicz transfer schowka od klienta na serwer:</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

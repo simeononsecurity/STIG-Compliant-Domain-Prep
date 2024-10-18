@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2015 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Anzeigenamen hier eingeben</displayName>
+  <description>Beschreibung hier eingeben</description>
+  <resources>
+    <stringTable>
+      <string id="AccountNotifications">Kontobenachrichtigungen</string>
+      <string id="DisableAccountNotifications">Kontobenachrichtigungen im Startmenü deaktivieren</string>
+      <string id="DisableAccountNotificationsExplain">
+            Mit dieser Richtlinie können Sie verhindern, dass Windows Benachrichtigungen für Microsoft-Konto (MSA) und lokale Benutzer im Startmenü (Benutzerkachel) anzeigt.
+
+Benachrichtigungen umfassen das Abrufen von Benutzern an: erneut authentifizieren; Sicherungskopie des Geräts; verwalten Sie Cloudspeicherkontingente sowie deren Microsoft 365 oder ihr XBOX-Abonnement.
+
+Wenn Sie diese Richtlinieneinstellung aktivieren, sendet Windows keine kontobezogenen Benachrichtigungen für lokale und MSA-Benutzer an die Benutzerkachel im Startmenü.
+
+Wenn Sie diese Richtlinieneinstellung deaktivieren oder nicht konfigurieren, sendet Windows kontobezogene Benachrichtigungen für lokale und MSA-Benutzer an die Benutzerkachel im Startmenü.
+
+Es sind keine Neustarts oder Dienstneustarts erforderlich, damit diese Richtlinieneinstellung wirksam wird.
+      </string>
+    </stringTable>
+  </resources>
+</policyDefinitionResources>

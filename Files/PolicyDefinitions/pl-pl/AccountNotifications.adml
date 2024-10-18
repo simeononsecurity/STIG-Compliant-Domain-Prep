@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2015 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>tutaj wprowadź wyświetlaną nazwę</displayName>
+  <description>tutaj wprowadź opis</description>
+  <resources>
+    <stringTable>
+      <string id="AccountNotifications">Powiadomienia dotyczące konta</string>
+      <string id="DisableAccountNotifications">Wyłącz powiadomienia dotyczące konta w obszarze Start</string>
+      <string id="DisableAccountNotificationsExplain">
+            Ta zasada umożliwia zapobieganie wyświetlaniu przez system Windows powiadomień dla konto Microsoft (MSA) i użytkowników lokalnych w aplikacji Start (kafelek użytkownika).
+
+Powiadomienia obejmują pobieranie użytkowników do: ponownego uwierzytelnienia; wykonaj kopię zapasową urządzenia; zarządzaj limitami magazynowania w chmurze, a także zarządzaj ich subskrypcjami Microsoft 365 lub XBOX.
+
+Jeśli to ustawienie zasad zostanie włączone, system Windows nie będzie wysyłać powiadomień dotyczących konta dla użytkowników lokalnych i msa do kafelka użytkownika w obszarze Start.
+
+Jeśli to ustawienie zasad zostanie wyłączone lub pozostanie nieskonfigurowane, system Windows będzie wysyłał powiadomienia dotyczące kont użytkowników lokalnych i msa do kafelka użytkownika w obszarze Start.
+
+Aby to ustawienie zasad zostało zastosowane, nie jest wymagane ponowne uruchomienie komputera ani ponowne uruchomienie usługi.
+      </string>
+    </stringTable>
+  </resources>
+</policyDefinitionResources>

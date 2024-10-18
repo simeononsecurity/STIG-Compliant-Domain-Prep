@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2015 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>表示名をここに入力する</displayName>
+  <description>説明をここに入力する</description>
+  <resources>
+    <stringTable>
+      <string id="AccountNotifications">アカウント通知</string>
+      <string id="DisableAccountNotifications">スタート画面でアカウント通知をオフにする</string>
+      <string id="DisableAccountNotificationsExplain">
+            このポリシーを使用すると、[スタート] (ユーザー タイル) で Microsoft アカウント (MSA) とローカル ユーザーに通知が表示されないようにすることができます。
+
+通知には、ユーザーの再認証が含まれます。デバイスをバックアップする;クラウド ストレージ クォータの管理と、Microsoft 365または XBOX サブスクリプションの管理を行います。
+
+このポリシー設定を有効にした場合、ローカルおよび MSA ユーザーのアカウント関連の通知はスタート画面のユーザー タイルに送信されません。
+
+このポリシー設定を無効にするか、未構成にした場合、ローカルおよび MSA ユーザーのアカウント関連の通知がスタート画面のユーザー タイルに送信されます。
+
+このポリシー設定を有効にするには、再起動またはサービスの再起動は必要ありません。
+      </string>
+    </stringTable>
+  </resources>
+</policyDefinitionResources>

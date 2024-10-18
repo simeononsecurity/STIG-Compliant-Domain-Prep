@@ -131,6 +131,19 @@ Használja „A felhasználók bekapcsolhatják az akadálymentességi beállít
 
 Ha letiltja vagy nem adja meg ezt a beállítást, az „akadálymentesség“ csoport alapértelmezés szerint be van kapcsolva, és a felhasználó konfigurálhatja azt.
       </string>
+
+      <!-- Language -->
+      <string id="DisableLanguageSettingSync">Ne legyenek szinkronizálva a nyelvi beállítások</string>
+      <string id="DisableLanguageSettingSync_Help">
+        A „nyelvi beállítások“ csoport és a számítógép közötti szinkronizálás megakadályozása. Ez kikapcsolja és letiltja a „nyelvi beállítások“ csoportot a Gépház „Windows biztonsági másolat“ lapján.
+
+Ha engedélyezi ezt a házirend-beállítást, a „nyelvi beállítások“ csoport szinkronizálását nem hajtja végre a rendszer.
+
+Használja „A felhasználók bekapcsolhatják a nyelvi beállítások szinkronizálását“ beállítást, ha azt szeretné, hogy a szinkronizálás alapértelmezés szerint ki legyen kapcsolva, de ne legyen letiltva.
+
+Ha letiltja vagy nem adja meg ezt a beállítást, a „nyelvi beállítások“ csoport alapértelmezés szerint be van kapcsolva, és a felhasználó konfigurálhatja azt.
+      </string>
+
     </stringTable>
     <presentationTable>
 
@@ -182,6 +195,11 @@ Ha letiltja vagy nem adja meg ezt a beállítást, az „akadálymentesség“ c
       <!-- AccessibilitySync -->
       <presentation id="DisableAccessibilitySettingSyncUserOverride">
         <checkBox refId="CheckBox_UserOverride">A felhasználók bekapcsolhatják az „Akadálymentesség” szinkronizálását.</checkBox>
+      </presentation>
+
+      <!-- LanguageSync -->
+      <presentation id="DisableLanguageSettingSyncUserOverride">
+        <checkBox refId="CheckBox_UserOverride">A felhasználók bekapcsolhatják a „nyelvi beállítások“ szinkronizálását.</checkBox>
       </presentation>
 
     </presentationTable>

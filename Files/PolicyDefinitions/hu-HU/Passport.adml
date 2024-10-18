@@ -12,6 +12,8 @@
         <string id="WHFB_UseCertificateForOnPremAuth">Tanúsítvány használata a helyszíni hitelesítéshez</string>
         <!-- Add support for cloud trust deployments -->
         <string id="WHFB_UseCloudTrustForOnPremAuth">Felhőbeli bizalmi kapcsolat használata a helyszíni hitelesítéshez</string>
+        <!-- Allow disablement of key cache hardening -->
+        <string id="WHFB_DisablePostLogonCredentialCaching">A Vállalati Windows Hello hitelesítő adatainak bejelentkezés utáni gyorsítótárazásának letiltása</string>
         <!-- DropdownList Button strings -->
         <string id="MSPassport_UsePassportForWorkExplain">A Vállalati Windows Hello szolgáltatás egy alternatív módszer, amellyel a saját Active Directory-fiókon vagy Azure Active Directory-fiókon keresztül lehet bejelentkezni a Windowsba, így nincs szükség jelszavakra, intelligens kártyákra és virtuális intelligens kártyákra.
 
@@ -111,16 +113,17 @@ Ha letiltja ezt a házirend-beállítást, a Vállalati Windows Hello nem enged�
 Megjegyzés: Ha letiltja ezt a házirendet, a felhasználó egyetlen fióktípushoz sem használhat biometrikus hitelesítési módokat az eszközön.
         </string>
         <string id="MSPassport_EnableEnhancedSignInSecurity">Az ESS engedélyezése támogatott perifériákkal</string>
-        <string id="MSPassport_EnableEnhancedSignInSecurityExplain">A fokozott bejelentkezési biztonság a Windows Hello biometrikus (arc- és ujjlenyomat) sablonadatokat és a megfeleltetési műveleteket a megbízható hardverekre vagy meghatározott memóriarégiókra különíti el, ami azt jelenti, hogy az operációs rendszer többi része nem férhet hozzá ezekhez, illetve nem manipulálhatja azokat. Mivel az érzékelők és az algoritmus közötti kommunikációs csatorna is védett, a kártevők nem tudnak adatokat bejuttatni vagy visszafejteni annak érdekében, hogy szimulálják a felhasználó bejelentkezését vagy kizárják a felhasználót a gépéről. Amíg ez a házirend engedélyezve van a Windows 11 eszközökön, a külső biometrikus hitelesítés a Windows Hello-val blokkolva lesz. A nem hitelesítéssel kapcsolatos működési funkciókat, például a kamerahasználatot ez nem érinti. 
+        <string id="MSPassport_EnableEnhancedSignInSecurityExplain">A fokozott bejelentkezési biztonság szolgáltatás mind a biometrikus sablon adatait, mind az egyező műveleteket elkülöníti megbízható hardvereken vagy meghatározott memóriarégiókon, vagyis az operációs rendszer többi része nem fér hozzájuk, és illetéktelen módosítások nem végezhetők rajtuk. Mivel az érzékelők és az algoritmus közötti kommunikációs csatorna szintén biztonságossá válik, a kártevők nem képesek injektálni vagy ismételten megjeleníteni adatokat valamely felhasználói bejelentkezés szimulálásához, illetve a felhasználó számítógépről való kizárásához.
 Ha engedélyezi ezt a házirendet, akkor a következő lehetséges értékekkel rendelkezhet:
 
-0 – Fokozott bejelentkezési biztonság letiltva (nem ajánlott)
-A fokozott bejelentkezési biztonság minden rendszeren le lesz tiltva, ami lehetővé teszi a külső biometrikus hitelesítés használatát. Ha egy felhasználó regisztrált az Windows Hello szolgáltatásba, és engedélyezve van a fokozott bejelentkezési biztonság, a funkció letiltása esetén elveszíti a regisztrációját, és alaphelyzetbe kell állítania a PIN-kódot. Ekkor lehetősége lesz arra, hogy újra biometrikusan regisztráljon. Az operációs rendszer nem kísérli meg a biztonságos összetevők elindítását, még akkor sem, ha a biztonságos hardver- és szoftverösszetevők jelen vannak.
+0 – Fokozott bejelentkezési biztonság letiltva a perifériaérzékelőkkel
+A fokozott bejelentkezési biztonság le lesz tiltva a kompatibilis szoftverrel és hardverrel rendelkező rendszereken. A periféria-Windows Hello képes eszközök hitelesítési műveletei engedélyezve lesznek, a jelenlegi funkciókorlátozások függvényében.
 
-1 – Fokozott bejelentkezési biztonság engedélyezve (alapértelmezett beállítás és ajánlott a legmagasabb biztonság érdekében)
-A fokozott bejelentkezési biztonság az erre alkalmas szoftverrel és hardverrel rendelkező rendszereken engedélyezve lesz, a Windows meglévő alapértelmezett viselkedésének megfelelően. Az olyan biometrikus eszközök hitelesítési műveletei, amelyeket a fokozott bejelentkezési biztonság nem támogat, beleértve a perifériás eszközök hitelesítési műveleteit is, le lesznek tiltva, és nem lesznek elérhetők a Windows Hello számára.
+1 – Fokozott bejelentkezési biztonság engedélyezve perifériaérzékelők nélkül (alapértelmezett és ajánlott)
+A fokozott bejelentkezési biztonság szolgáltatás lesz engedélyezve kompatibilis hardverekkel rendelkező rendszereken, így az megfelel a Windows meglévő alapértelmezett működésének. Minden biometrikus perifériaeszköz hitelesítési műveletei blokkolva lesznek, és nem érhetők el a Windows Hellóhoz.
 
-Ha letiltja vagy nem konfigurálja ezt a házirendet, akkor a fokozott bejelentkezési biztonság az eszközön előnyben részesül. A viselkedés megegyezik a házirend engedélyezésével és az 1-es érték beállításával.
+Ha letiltja vagy nem konfigurálja ezt a házirendet, a nem ESS-érzékelők le lesznek tiltva az ESS-eszközön.
+
         </string>
         <string id="MSPassport_EnablePinRecovery">PIN-helyreállítás használata</string>
         <string id="MSPassport_EnablePinRecoveryExplain">A PIN-helyreállítás lehetővé teszi, hogy a felhasználó megváltoztasson egy elfelejtett PIN-kódot a Vállalati Windows Hello PIN-helyreállítási szolgáltatásával anélkül, hogy elveszítené a hozzá tartozó hitelesítő adatokat és tanúsítványokat, ideértve az eszközön a felhasználó személyes fiókjaihoz tartozó kulcsokat is. Ehhez az Azure-alapú PIN-helyreállítási szolgáltatás titkosítja az eszközön tárolt titkos helyreállítási kódot, és a visszafejtéshez a PIN-helyreállítási szolgáltatás és az eszköz is szükséges. A PIN-helyreállításhoz a felhasználónak többfaktoros hitelesítést kell végrehajtania az Azure Active Directory szolgáltatásban.
@@ -149,6 +152,8 @@ Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a Vállalati W
 
 Megjegyzés: Egy olyan környezet, amely mindkettő házirend-beállítást engedélyezi, és „A Vállalati Windows Hello használata házirend-beállítás“ egy vagy több Windows Server 2016 rendszerű tartományvezérlőt igényel. Másképp a Vállalati Windows Hello hitelesítése meghiúsul.
         </string>
+        <!-- Explain Text for DisablePostLogonCredentialCaching -->
+        <string id="WHFB_DisablePostLogonCredentialCachingExplain">A Vállalati Windows Hello hitelesítő adatai gyorsítótárazva vannak bejelentkezés után, hogy bizonyos, biztonsággal kapcsolatos alkalmazások csendesen használják a hitelesítő adatokat, és ne zavarják meg a felhasználói élményt. A szabályzat engedélyezésével kikapcsolhatja ezt a beállítást, eltávolítva a gyorsítótárat, hogy kifejezetten felhasználói adatbevitelre legyen szükség.</string>
         <!-- Explain text for device unlock policy -->
         <string id="MSPassport_UseDeviceUnlock">Eszközfeloldási tényezők beállítása</string>
         <string id="MSPassport_UseDeviceUnlock_Explain">Az első és második feloldási tényezőként használt hitelesítőadat-szolgáltatói GUID-ek (például arc- és ujjlenyomat-felismerési szolgáltatói GUID-ek) vesszővel elválasztott listájának konfigurálása. Ha a megbízható jelszolgáltató az egyik feloldási tényező, akkor a jelszabályokból is létre kell hoznia egy xml formátumú, vesszővel elválasztott listát mindegyik ellenőrizendő jeltípushoz.

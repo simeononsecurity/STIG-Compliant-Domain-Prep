@@ -355,7 +355,7 @@
 
 如果未配置此策略设置，则用户可以决定是否自动启动“Internet 连接向导”。</string>
       <string id="ICWSettings">“Internet 连接向导”设置</string>
-      <string id="Identities">标识管理器: 禁止用户使用标识</string>
+      <string id="Identities">Identity Manager: 禁止用户使用标识</string>
       <string id="IDN_Always">始终转换成 IDN 格式</string>
       <string id="IDN_Intranet">将 Intranet 地址转换成 IDN 格式</string>
       <string id="IDN_Never">从不转换成 IDN 格式</string>
@@ -805,9 +805,9 @@ Microsoft Agent 是一个软件服务集，支持软件代理作为交互式个�
 如果启用此策略，将删除“帮助”菜单上的“每日提示”命令。
 
 如果禁用或未对此策略进行配置，则用户可以启用或禁用出现在浏览器底部的“每日提示”。</string>
-      <string id="IE_ExplainIdentities">阻止用户使用“标识管理器”来配置唯一标识。
+      <string id="IE_ExplainIdentities">阻止用户使用 Identity Manager 来配置唯一标识。
 
-使用“标识管理器”，用户可以在同一台计算机上创建多个帐户，例如电子邮件帐户。每个用户都有唯一的标识，使用不同的密码和首选程序。
+使用 Identity Manager，用户可以在同一台计算机上创建多个帐户，例如电子邮件帐户。每个用户都有唯一的标识，使用不同的密码和首选程序。
 
 如果启用此策略，用户将无法创建新标识、管理现有标识或者切换标识。“切换标识”选项将从通讯簿中的“文件”菜单上删除。
 
@@ -3574,37 +3574,42 @@ Microsoft 会收集你的浏览历史记录以改善使用页面预测快速翻�
 
 注意: 从 Windows 10 版本 1607 开始，不再支持此策略。</string>
       <string id="Protocols_None">使用不安全的协议</string>
-      <string id="Protocols_SSL2">仅使用 SSL 2.0</string>
+      <string id="Protocols_SSL2">[已过时] 仅使用 SSL 2.0</string>
       <string id="Protocols_SSL3">仅使用 SSL 3.0</string>
-      <string id="Protocols_SSL2_SSL3">使用 SSL 2.0 和 SSL 3.0</string>
+      <string id="Protocols_SSL2_SSL3">[过时]使用 SSL 2.0 和 SSL 3.0</string>
       <string id="Protocols_TLS10">仅使用 TLS 1.0</string>
-      <string id="Protocols_SSL2_TLS10">使用 SSL 2.0 和 TLS 1.0</string>
+      <string id="Protocols_SSL2_TLS10">[过时]使用 SSL 2.0 和 TLS 1.0</string>
       <string id="Protocols_SSL3_TLS10">使用 SSL 3.0 和 TLS 1.0</string>
-      <string id="Protocols_SSL2_SSL3_TLS10">使用 SSL 2.0、SSL 3.0 和 TLS 1.0</string>
+      <string id="Protocols_SSL2_SSL3_TLS10">[过时]使用 SSL 2.0、SSL 3.0 和 TLS 1.0</string>
       <string id="Protocols_TLS11">仅使用 TLS 1.1</string>
-      <string id="Protocols_SSL2_TLS11">使用 SSL 2.0 和 TLS 1.1</string>
+      <string id="Protocols_SSL2_TLS11">[过时]使用 SSL 2.0 和 TLS 1.1</string>
       <string id="Protocols_SSL3_TLS11">使用 SSL 3.0 和 TLS 1.1</string>
-      <string id="Protocols_SSL2_SSL3_TLS11">使用 SSL 2.0、SSL 3.0 和 TLS 1.1</string>
+      <string id="Protocols_SSL2_SSL3_TLS11">[过时]使用 SSL 2.0、SSL 3.0 和 TLS 1.1</string>
       <string id="Protocols_TLS10_TLS11">使用 TLS 1.0 和 TLS 1.1</string>
-      <string id="Protocols_SSL2_TLS10_TLS11">使用 SSL 2.0、TLS 1.0 和 TLS 1.1</string>
+      <string id="Protocols_SSL2_TLS10_TLS11">[过时]使用 SSL 2.0、TLS 1.0 和 TLS 1.1</string>
       <string id="Protocols_SSL3_TLS10_TLS11">使用 SSL 3.0、TLS 1.0 和 TLS 1.1</string>
-      <string id="Protocols_SSL2_SSL3_TLS10_TLS11">使用 SSL 2.0、SSL 3.0、TLS 1.0 和 TLS 1.1</string>
+      <string id="Protocols_SSL2_SSL3_TLS10_TLS11">[过时]使用 SSL 2.0、SSL 3.0、TLS 1.0 和 TLS 1.1</string>
       <string id="Protocols_TLS12">仅使用 TLS 1.2</string>
-      <string id="Protocols_SSL2_TLS12">使用 SSL 2.0 和 TLS 1.2</string>
+      <string id="Protocols_SSL2_TLS12">[过时]使用 SSL 2.0 和 TLS 1.2</string>
       <string id="Protocols_SSL3_TLS12">使用 SSL 3.0 和 TLS 1.2</string>
-      <string id="Protocols_SSL2_SSL3_TLS12">使用 SSL 2.0、SSL 3.0 和 TLS 1.2</string>
+      <string id="Protocols_SSL2_SSL3_TLS12">[过时]使用 SSL 2.0、SSL 3.0 和 TLS 1.2</string>
       <string id="Protocols_TLS10_TLS12">使用 TLS 1.0 和 TLS 1.2</string>
-      <string id="Protocols_SSL2_TLS10_TLS12">使用 SSL 2.0、TLS 1.0 和 TLS 1.2</string>
+      <string id="Protocols_SSL2_TLS10_TLS12">[过时]使用 SSL 2.0、TLS 1.0 和 TLS 1.2</string>
       <string id="Protocols_SSL3_TLS10_TLS12">使用 SSL 3.0、TLS 1.0 和 TLS 1.2</string>
-      <string id="Protocols_SSL2_SSL3_TLS10_TLS12">使用 SSL 2.0、SSL 3.0、TLS 1.0 和 TLS 1.2</string>
+      <string id="Protocols_SSL2_SSL3_TLS10_TLS12">[过时]使用 SSL 2.0、SSL 3.0、TLS 1.0 和 TLS 1.2</string>
       <string id="Protocols_TLS11_TLS12">使用 TLS 1.1 和 TLS 1.2</string>
-      <string id="Protocols_SSL2_TLS11_TLS12">使用 SSL 2.0、TLS 1.1 和 TLS 1.2</string>
+      <string id="Protocols_SSL2_TLS11_TLS12">[过时]使用 SSL 2.0、TLS 1.1 和 TLS 1.2</string>
       <string id="Protocols_SSL3_TLS11_TLS12">使用 SSL 3.0、TLS 1.1 和 TLS 1.2</string>
-      <string id="Protocols_SSL2_SSL3_TLS11_TLS12">使用 SSL 2.0、SSL 3.0、TLS 1.1 和 TLS 1.2</string>
+      <string id="Protocols_SSL2_SSL3_TLS11_TLS12">[过时]使用 SSL 2.0、SSL 3.0、TLS 1.1 和 TLS 1.2</string>
       <string id="Protocols_TLS10_TLS11_TLS12">使用 TLS 1.0、TLS 1.1 和 TLS 1.2</string>
-      <string id="Protocols_SSL2_TLS10_TLS11_TLS12">使用 SSL 2.0、TLS 1.0、TLS 1.1 和 TLS 1.2</string>
+      <string id="Protocols_SSL2_TLS10_TLS11_TLS12">[过时]使用 SSL 2.0、TLS 1.0、TLS 1.1 和 TLS 1.2</string>
       <string id="Protocols_SSL3_TLS10_TLS11_TLS12">使用 SSL 3.0、TLS 1.0、TLS 1.1 和 TLS 1.2</string>
-      <string id="Protocols_SSL2_SSL3_TLS10_TLS11_TLS12">使用 SSL 2.0、SSL 3.0、TLS 1.0、TLS 1.1 和 TLS 1.2</string>
+      <string id="Protocols_SSL2_SSL3_TLS10_TLS11_TLS12">[过时]使用 SSL 2.0、SSL 3.0、TLS 1.0、TLS 1.1 和 TLS 1.2</string>
+      <string id="Protocols_TLS13">仅使用 TLS 1.3</string>
+      <string id="Protocols_TLS12_TLS13">使用 TLS 1.2 和 TLS 1.3</string>
+      <string id="Protocols_TLS11_TLS12_TLS13">使用 TLS 1.1、TLS 1.2 和 TLS 1.3</string>
+      <string id="Protocols_TLS10_TLS11_TLS12_TLS13">使用 TLS 1.0、TLS 1.1、TLS 1.2 和 TLS 1.3</string>
+      <string id="Protocols_SSL3_TLS10_TLS11_TLS12_TLS13">使用 SSL 3.0、TLS 1.0、TLS 1.1、TLS 1.2 和 TLS 1.3</string>
       <string id="LockToolbars">锁定所有工具栏</string>
       <string id="MoveStopRefresh">锁定“停止”和“刷新”按钮的位置</string>
       <string id="NewTab_AboutBlank">about:blank</string>
@@ -3984,14 +3989,20 @@ InPrivate 筛选可帮助用户控制第三方是否可以根据用户访问的�
 如果禁用或未配置此策略，则在 Internet Explorer 模式下扩展热键将无法工作。
 
 有关详细信息，请参阅 https://go.microsoft.com/fwlink/?linkid=2102115</string>
+      <string id="AllowLegacyURLFields">允许旧功能使用 Internet 快捷方式文件</string>
+      <string id="IE_ExplainAllowLegacyURLFields">此策略设置允许在 Internet 快捷文件中使用某些已禁用的功能，如 WorkingDirectory 字段或可插入协议处理。
+
+如果启用此策略，将重新启用 Internet 快捷方式文件的禁用功能。
+
+如果禁用或未配置此策略，将禁用 Internet 快捷方式文件的某些功能，如 WorkingDirectory 字段或可插入协议处理。</string>
       <string id="ResetZoomForDialogInIEMode">在 Internet Explorer 模式下将 HTML 对话框的缩放重置为默认值</string>
       <string id="IE_ExplainResetZoomForDialogInIEMode">此策略设置允许管理员在Internet Explorer模式下将 HTML 对话框的缩放重置为默认值。
 
 如果启用此策略，则不会从其父页传播处于Internet Explorer模式的 HTML 对话框的缩放。
 
-如果禁用或未配置此策略，则将根据其父页的缩放设置在Internet Explorer模式下的 HTML 对话框的缩放。
+如果禁用或未配置此策略，则将基于其父页的缩放设置Internet Explorer模式下 HTML 对话框的缩放。
 
-有关详细信息，请参阅https://go.microsoft.com/fwlink/?linkid=2102115</string>
+有关详细信息，请参阅https://go.microsoft.com/fwlink/?linkid=2220107</string>
       <string id="DisableInternetExplorerApp">将 Internet Explorer 11 作为独立浏览器禁用</string>
       <string id="IE_ExplainDisableInternetExplorerApp">通过此策略，你可以限制 Internet Explorer 作为独立浏览器的启动。
 
@@ -4002,17 +4013,21 @@ InPrivate 筛选可帮助用户控制第三方是否可以根据用户访问的�
 - 替代任何其他重定向到 Internet Explorer 11 的策略。
 
 如果禁用或未配置此策略，则将使用当前活动的浏览器设置打开所有站点。注意: 必须安装 Microsoft Edge 稳定渠道，此策略才能生效。</string>
+      <string id="DisableIEAppDeprecationNotification">隐藏 Internet Explorer 11 停用通知</string>
+      <string id="IE_ExplainDisableIEAppDeprecationNotification">使用此策略设置，可以管理是否显示Internet Explorer即将停用的通知栏提醒。默认情况下，通知栏显示在 Internet Explorer 11 中。
+
+如果启用此策略设置，则通知栏将不会显示在 Internet Explorer 11 中。
+
+如果禁用或未配置此策略设置，则通知栏将显示在Internet Explorer 11 中。</string>
       <string id="NotifyDisableIEOptions_Never">从不</string>
       <string id="NotifyDisableIEOptions_Always">始终</string>
       <string id="NotifyDisableIEOptions_OncePerUser">每个用户配置一次</string>
-      <string id="JScriptReplacement">借助加载 JScript9Legacy 通过 MSHTML/WebOC 代替 JScript 来取代 JScript。</string>
-      <string id="IE_ExplainJScriptReplacement">此策略设置指定是否为基于 MSHTML/WebOC/MSXML/Cscript 的调用加载 JScript 或 JScript9Legacy。
+      <string id="JScriptReplacement">借助加载 JScript9Legacy 代替 JScript 来取代 JScript。</string>
+      <string id="IE_ExplainJScriptReplacement">此策略设置指定是否加载JScript或 JScript9Legacy。
+      
+如果启用或未配置此策略设置，则将在实例化JScript的情况下加载 JScript9Legacy。
 
-如果启用此策略设置，则会在实例化 JScript 的情况下加载 JScript9Legacy。
-
-如果禁用此策略，则将使用 JScript。
-
-如果未配置此策略，则 MSHTML 将使用 JScript9Legacy，MSXML/Cscript 将使用 JScript。</string>
+如果禁用此策略，则将使用JScript。</string>
       <string id="VerMgmtDisable">关闭 Internet explorer 的过时 ActiveX 控件的阻止功能</string>
       <string id="IE_ExplainVerMgmtDisable">此策略设置可确定 Internet Explorer 是否会阻止特定的过时 ActiveX 控件。过时的 ActiveX 控件在 Intranet 区域中不受阻止。
 

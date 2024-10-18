@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2015 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>kirjoita näyttönimi tähän</displayName>
+  <description>kirjoita kuvaus tähän</description>
+  <resources>
+    <stringTable>
+      <string id="AccountNotifications">Tili-ilmoitukset</string>
+      <string id="DisableAccountNotifications">Poista tili-ilmoitukset käytöstä aloitusnäytössä</string>
+      <string id="DisableAccountNotificationsExplain">
+            Tämän käytännön avulla voit estää Windowsia näyttämästä ilmoituksia Microsoft-tilille (MSA) ja paikallisille käyttäjille aloitusnäytössä (käyttäjäruutu).
+
+            Ilmoituksiin sisältyvät käyttäjien saaminen käyttämään: uudelleentodennusta; laitteidensa varmuuskopiointia; hallinnoimaan pilvitallennustilan kiintiöitä ja hallitsemaan Microsoft 365- tai XBOX-tilaustaan.
+
+            Jos otat tämän käytäntöasetuksen käyttöön, Windows ei lähetä tiliin liittyviä ilmoituksia paikallisille ja MSA-käyttäjille aloitusnäytön käyttäjäruutuun.
+
+            Jos poistat tämän käytäntöasetuksen käytöstä tai et määritä sitä, Windows lähettää tiliin liittyviä ilmoituksia paikallisille ja MSA-käyttäjille aloitusnäytön käyttäjäruutuun.
+
+            Tämän käytäntöasetuksen käyttöön ottaminen ei edellytä laitteen tai palvelun uudelleenkäynnistystä.
+      </string>
+    </stringTable>
+  </resources>
+</policyDefinitionResources>

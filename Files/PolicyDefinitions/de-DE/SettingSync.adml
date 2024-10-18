@@ -131,6 +131,19 @@ Verwenden Sie die Option "Benutzern das Aktivieren der Synchronisierung von Barr
 
 Wenn Sie diese Einstellung nicht festlegen oder deaktivieren, ist die Synchronisierung der Gruppe "Barrierefreiheit" standardmäßig aktiviert und kann vom Benutzer konfiguriert werden.
       </string>
+
+      <!-- Language -->
+      <string id="DisableLanguageSettingSync">Spracheinstellungen nicht synchronisieren</string>
+      <string id="DisableLanguageSettingSync_Help">
+        Verhindern Sie, dass die Gruppe "Spracheinstellungen" mit diesem PC synchronisiert wird. Hiermit wird die Gruppe "Spracheneinstellungen" auf der Einstellungsseite "Windows-Sicherung" in PC-Einstellungen deaktiviert.
+
+Wenn Sie diese Richtlinieneinstellung aktivieren, wird die Gruppe "Spracheinstellungen" nicht synchronisiert.
+
+Verwenden Sie die Option "Benutzern das Aktivieren der Synchronisierung von Spracheinstellungen gestatten", sodass die Synchronisierung standardmäßig deaktiviert, aber nicht deaktiviert ist.
+
+Wenn Sie diese Einstellung nicht festlegen oder deaktivieren, ist die Synchronisierung der Gruppe "Spracheinstellungen" standardmäßig aktiviert und kann vom Benutzer konfiguriert werden.
+      </string>
+
     </stringTable>
     <presentationTable>
 
@@ -181,7 +194,12 @@ Wenn Sie diese Einstellung nicht festlegen oder deaktivieren, ist die Synchronis
 
       <!-- AccessibilitySync -->
       <presentation id="DisableAccessibilitySettingSyncUserOverride">
-        <checkBox refId="CheckBox_UserOverride">Benutzern das Einschalten der Synchronisierung von „Barrierefreiheit“ ermöglichen.</checkBox>
+        <checkBox refId="CheckBox_UserOverride">Erlauben Sie Benutzern, die Synchronisierung der Barrierefreiheit zu aktivieren.</checkBox>
+      </presentation>
+
+      <!-- LanguageSync -->
+      <presentation id="DisableLanguageSettingSyncUserOverride">
+        <checkBox refId="CheckBox_UserOverride">Benutzern das Aktivieren der Synchronisierung von "Spracheinstellungen" gestatten.</checkBox>
       </presentation>
 
     </presentationTable>

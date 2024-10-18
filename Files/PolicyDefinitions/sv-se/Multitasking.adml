@@ -6,16 +6,16 @@
     <stringTable>
       <string id="MULTITASKING">Flerprogramskörning</string>
       <string id="MULTITASKINGHELP">Hanterar Windows alternativ för flerprogramskörning</string>
-      <string id="BrowserAltTabBlowout">Konfigurera hur Microsoft Edge-flikar inkluderas i Alt-Tabb</string>
-      <string id="BrowserAltTabBlowout_Help">Den här inställningen styr inkluderingen av Microsoft Edge-flikar till Alt+Tabb.
+      <string id="BrowserAltTabBlowout">Konfigurera inkludering av appflikar i Alt-Tab</string>
+      <string id="BrowserAltTabBlowout_Help">Den här inställningen styr inkluderingen av appflikar i Alt+Tabb.
 
-Det här kan ställas in så att alla flikar, de senaste 3 eller 5 flikarna och inga flikar från Microsoft Edge visas.
+Det här kan ställas in för att visa de senaste 3, 5 eller 20 flikarna eller inga flikar från appar.
 
-Om det här är inställt på att visa “Endast öppna fönster” kommer hela funktionen att inaktiveras.
+Om det här är inställt på att visa "Öppna endast fönster" inaktiveras hela funktionen.
 </string>
-      <string id="AltTabFilter_All">Öppna fönster och alla flikar i Microsoft Edge</string>
-      <string id="AltTabFilter_Five">Öppna fönster och de fem senaste flikarna i Microsoft Edge</string>
-      <string id="AltTabFilter_Three">Öppna fönster och de tre senaste flikarna i Microsoft Edge</string>
+      <string id="AltTabFilter_All">Öppna fönster och 20 senaste flikar i appar</string>
+      <string id="AltTabFilter_Five">Öppna fönster och 5 senaste flikar i appar</string>
+      <string id="AltTabFilter_Three">Öppna fönster och 3 senaste flikar i appar</string>
       <string id="AltTabFilter_None">Endast öppna fönster</string>
     </stringTable>
     <presentationTable>

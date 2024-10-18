@@ -300,6 +300,23 @@ Jeśli to ustawienie zostanie włączone, funkcja wyszukiwania i Cortana będą 
       <string id="DisableSearch_ExplainText">Jeśli te zasady zostaną włączone, interfejs użytkownika dla wyszukiwania zostanie wyłączony wraz ze wszystkimi jego funkcjami, takimi jak skróty klawiaturowe, gesty płytki dotykowej i funkcja pisz, aby wyszukać w menu Start. Pole wyszukiwania w menu Start i przycisk Wyszukaj na pasku zadań również zostaną ukryte.
 
 Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, użytkownik będzie mógł otworzyć interfejs użytkownika dla wyszukiwania i wyświetlić jego funkcje.</string>
+      <string id="ConfigureSearchOnTaskbarMode">Konfiguruje wyszukiwanie na pasku zadań</string>
+      <string id="ConfigureSearchOnTaskbarMode_Help">To ustawienie zasad umożliwia skonfigurowanie wyszukiwania na pasku zadań.
+
+Jeśli włączysz to ustawienie zasad i ustawisz je na ukrywanie, wyszukiwanie na pasku zadań będzie domyślnie ukryte. Użytkownicy nie mogą tego zmienić w Ustawieniach.
+
+Jeśli włączysz to ustawienie zasad i ustawisz je na Tylko ikona wyszukiwania, ikona wyszukiwania będzie domyślnie wyświetlana na pasku zadań. Użytkownicy nie mogą tego zmienić w Ustawieniach.
+
+Jeśli włączysz to ustawienie zasad i ustawisz je na ikonę i etykietę wyszukiwania, ikona i etykieta wyszukiwania będą domyślnie wyświetlane na pasku zadań. Użytkownicy nie mogą tego zmienić w Ustawieniach.
+
+Jeśli włączysz to ustawienie zasad i ustawisz je na pole wyszukiwania, pole wyszukiwania będzie domyślnie wyświetlane na pasku zadań. Użytkownicy nie mogą tego zmienić w Ustawieniach.
+
+Jeśli wyłączysz lub nie skonfigurujesz tego ustawienia zasad, wyszukiwanie na pasku zadań będzie skonfigurowane zgodnie z ustawieniami domyślnymi dla Twojej edycji systemu Windows. Użytkownicy będą mogli zmienić wyszukiwanie na pasku zadań w Ustawieniach.
+      </string>
+      <string id="SearchOnTaskbarModeEnum_Hidden">Ukrywanie</string>
+      <string id="SearchOnTaskbarModeEnum_SearchIconOnly">Tylko ikona wyszukiwania</string>
+      <string id="SearchOnTaskbarModeEnum_SearchIconAndLabel">Ikona i etykieta wyszukiwania</string>
+      <string id="SearchOnTaskbarModeEnum_SearchBox">Pole wyszukiwania</string>
     </stringTable>
     <presentationTable>
       <presentation id="RichAttachmentPreviews">
@@ -388,6 +405,9 @@ Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane,
       </presentation>
       <presentation id="AllowCortanaAAD">
         <dropdownList refId="AllowCortanaAAD_Dropdown" noSort="true" defaultItem="0">Ustawienie Cortany w usłudze AAD</dropdownList>
+      </presentation>
+      <presentation id="ConfigureSearchOnTaskbarMode">
+        <dropdownList refId="ConfigureSearchOnTaskbarMode_Dropdown" noSort="true" defaultItem="0">Wyszukiwanie na pasku zadań</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

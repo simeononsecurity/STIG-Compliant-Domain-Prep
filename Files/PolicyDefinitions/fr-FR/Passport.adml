@@ -12,6 +12,8 @@
         <string id="WHFB_UseCertificateForOnPremAuth">Utiliser le certificat pour l’authentification locale</string>
         <!-- Add support for cloud trust deployments -->
         <string id="WHFB_UseCloudTrustForOnPremAuth">Utiliser l’approbation cloud pour l’authentification locale</string>
+        <!-- Allow disablement of key cache hardening -->
+        <string id="WHFB_DisablePostLogonCredentialCaching">Désactiver la mise en cache des informations d’identification Windows Hello Entreprise après la connexion</string>
         <!-- DropdownList Button strings -->
         <string id="MSPassport_UsePassportForWorkExplain">Windows Hello Entreprise est une autre méthode permettant de se connecter à Windows à l’aide de votre compte Active Directory ou Azure Active Directory qui peut remplacer les mots de passe, les cartes à puce et les cartes à puce virtuelles.
 
@@ -53,14 +55,14 @@ Si vous désactivez ou ne configurez pas ce paramètre de stratégie, la longueu
 
 REMARQUE : si les conditions ci-dessus pour la longueur maximale du code confidentiel ne sont pas remplies, les valeurs par défaut seront utilisées pour les longueurs maximale et minimale du code confidentiel.
         </string>
-        <string id="MSPassport_UppercaseLetters">Exiger des lettres majuscules</string>
-        <string id="MSPassport_UppercaseLettersExplain">Utilisez ce paramètre de stratégie pour configurer l'utilisation des lettres majuscules dans le code PIN.
+        <string id="MSPassport_UppercaseLetters">Exiger des lettres capitales</string>
+        <string id="MSPassport_UppercaseLettersExplain">Utilisez ce paramètre de stratégie pour configurer l'utilisation des lettres capitales dans le code PIN.
 
-Si vous activez ce paramètre de stratégie, Windows demande à l'utilisateur d'ajouter au moins une lettre en majuscule dans votre code PIN.
+Si vous activez ce paramètre de stratégie, Windows demande à l'utilisateur d'ajouter au moins une lettre en capital dans votre code PIN.
 
-Si vous désactivez ce paramètre de stratégie, Windows n'autorise pas l'utilisateur à ajouter des lettres en majuscule dans leur code PIN.
+Si vous désactivez ce paramètre de stratégie, Windows n'autorise pas l'utilisateur à ajouter des lettres en capitales dans leur code PIN.
 
-Si vous ne configurez pas ce paramètre de stratégie, Windows autorise les lettres majuscules dans le code PIN, mais n'en impose pas.
+Si vous ne configurez pas ce paramètre de stratégie, Windows autorise les lettres capitales dans le code PIN, mais n'en impose pas.
         </string>
         <string id="MSPassport_LowercaseLetters">Exiger des lettres minuscules</string>
         <string id="MSPassport_LowercaseLettersExplain">Utilisez ce paramètre de stratégie pour configurer l'utilisation des lettres en minuscule dans le code PIN.
@@ -111,16 +113,17 @@ Si vous désactivez ce paramètre de stratégie, Windows Hello Entreprise empêc
 REMARQUE : la désactivation de cette stratégie empêche l’utilisateur d’utiliser des données biométriques sur l’appareil pour tous les types de compte.
         </string>
         <string id="MSPassport_EnableEnhancedSignInSecurity">Activer ESS avec les périphériques pris en charge</string>
-        <string id="MSPassport_EnableEnhancedSignInSecurityExplain">La sécurité de connexion renforcée isole les données des modèles biométriques (visage et empreintes digitales) de Windows Hello et les opérations de mise en correspondance du matériel de confiance ou des régions de mémoire spécifiées, ce qui signifie que le reste du système d'exploitation ne peut pas y accéder ou les altérer. Le canal de communication entre les capteurs et l'algorithme étant également sécurisé, il est impossible pour un logiciel malveillant d'injecter ou de rejouer des données afin de simuler la signature d'un utilisateur ou de verrouiller un utilisateur hors de sa machine. Lorsque cette stratégie est activée sur les appareils Windows 11, l'authentification biométrique externe avec Windows Hello sera bloquée. Toutes les fonctionnalités opérationnelles de non-authentification, telles que l'utilisation de la caméra, ne seront pas affectées. 
+        <string id="MSPassport_EnableEnhancedSignInSecurityExplain">La sécurité de connexion renforcée (ESS) isole Windows Hello données de modèle biométriques (visage et empreinte digitale) et les opérations de correspondance avec du matériel approuvé ou des régions de mémoire spécifiées, ce qui signifie que le reste du système d’exploitation ne peut pas y accéder ou les falsifier. Étant donné que le canal de communication entre les capteurs et l’algorithme est également sécurisé, il est impossible pour les programmes malveillants d’injecter ou de relire des données afin de simuler la connexion d’un utilisateur ou de verrouiller un utilisateur hors de son ordinateur.
 Si vous activez cette stratégie, elle peut avoir les valeurs possibles suivantes :
 
-0 – Sécurité de connexion renforcée désactivée (non recommandé)
-La sécurité de connexion renforcée sera désactivée sur tous les systèmes, ce qui permettra l’utilisation de l’authentification biométrique externe. Si un utilisateur s’est inscrit à Windows Hello avec la sécurité de connexion renforcée activée, lorsque la fonctionnalité est désactivée, il perdra son inscription et devra réinitialiser le code PIN. À ce stade, ils auront la possibilité de se réinscrire à la biométrie. Le système d’exploitation ne tentera pas de démarrer les composants sécurisés, même si les composants matériels et logiciels sécurisés sont présents.
+0 - Sécurité de connexion renforcée désactivée avec des capteurs périphériques
+ESS sera désactivé sur les systèmes dotés de logiciels et de matériel compatibles. Les opérations d’authentification des périphériques Windows Hello des appareils compatibles seront autorisées, sous réserve des limitations de fonctionnalités actuelles. 
 
-1 – Sécurité de connexion renforcée activée (par défaut et recommandée pour une sécurité optimale)
-La sécurité de connexion renforcée sera activée sur les systèmes dotés de logiciels et de matériels compatibles, en suivant le comportement par défaut existant dans Windows. Les opérations d’authentification de tout appareil biométrique non pris en charge par la sécurité de connexion renforcée, y compris celle des périphériques, seront bloquées et ne seront pas disponibles pour Windows Hello.
+1 : sécurité de connexion renforcée activée sans capteurs périphériques (par défaut et recommandé)
+ESS sera activé sur les systèmes dotés de logiciels et de matériel compatibles, en suivant le comportement par défaut existant dans Windows. Les opérations d’authentification de tout périphérique biométrique sont bloquées et ne sont pas disponibles pour Windows Hello.
 
-Si vous désactivez ou ne configurez pas cette stratégie, la sécurité de connexion renforcée est préférée sur l’appareil. Le comportement est identique à l’activation de la stratégie et de la définition de la valeur à 1.
+Si vous désactivez ou ne configurez pas cette stratégie, les capteurs non ESS seront bloqués sur l’appareil ESS.
+
         </string>
         <string id="MSPassport_EnablePinRecovery">Utiliser la récupération du code PIN</string>
         <string id="MSPassport_EnablePinRecoveryExplain">La récupération du code PIN permet à un utilisateur de modifier un code PIN oublié à l'aide du service de récupération de code PIN de Windows Hello Entreprise sans perdre aucune information d'identification associée ni aucun certificat, notamment les clés associées aux comptes personnels de l'utilisateur sur l'appareil. Pour ce faire, le service de récupération du code PIN Azure chiffre un secret de récupération, qui est stocké sur l'appareil et nécessite à la fois le service de récupération du code PIN et l'appareil pour le déchiffrement. Pour récupérer le code PIN, l'utilisateur doit procéder à une authentification multi-facteur Azure Active Directory.
@@ -149,6 +152,8 @@ Si vous désactivez ce paramètre de stratégie ou si vous ne le configurez pas,
  
 Remarque : un environnement qui active à la fois ce paramètre de stratégie et le paramètre de stratégie « utiliser Windows Hello entreprise » nécessite un ou plusieurs contrôleurs de domaine Windows Server 2016. Sinon, l’authentification Windows Hello entreprise échouera.
         </string>
+        <!-- Explain Text for DisablePostLogonCredentialCaching -->
+        <string id="WHFB_DisablePostLogonCredentialCachingExplain">Les informations d’identification Windows Hello Entreprise sont mises en cache après la connexion pour permettre à certaines applications liées à la sécurité de les utiliser silencieusement pour ne pas perturber l’expérience utilisateur. Activez cette politique pour désactiver cette option. En supprimant le cache, l’entrée utilisateur est explicitement nécessaire.</string>
         <!-- Explain text for device unlock policy -->
         <string id="MSPassport_UseDeviceUnlock">Configurer les facteurs de déverrouillage de l’appareil</string>
         <string id="MSPassport_UseDeviceUnlock_Explain">Configurez une liste séparée par des virgules des GUID des fournisseurs d’informations d’identification, par exemple des GUID de fournisseur de type visage et empreinte digitale, à utiliser comme premier et deuxième facteurs de déverrouillage. Si le fournisseur de signal de confiance est indiqué comme l’un des facteurs de déverrouillage, vous devez également configurer une liste séparée par des virgules des règles de signal au format xml pour chaque type de signal à vérifier.
@@ -214,7 +219,7 @@ Windows exige qu'un utilisateur verrouille et déverrouille sa session après av
             <decimalTextBox refId="MSPassport_MaximumPINLengthDataType" spin="true" spinStep="1" defaultvalue="127">Longueur maximale du code PIN</decimalTextBox>
         </presentation>
         <presentation id="MSPassport_UppercaseLettersControl">
-            <dropdownList refId="MSPassport_UppercaseLettersChoices" defaultItem="0">Lettres majuscules :</dropdownList>
+            <dropdownList refId="MSPassport_UppercaseLettersChoices" defaultItem="0">Lettres capitales :</dropdownList>
         </presentation>
         <presentation id="MSPassport_LowercaseLettersControl">
             <dropdownList refId="MSPassport_LowercaseLettersChoices" defaultItem="0">Lettres minuscules :</dropdownList>

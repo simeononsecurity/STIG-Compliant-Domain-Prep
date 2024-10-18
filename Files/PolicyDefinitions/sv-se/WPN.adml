@@ -120,6 +120,18 @@
 
           Varken datorn eller några tjänster behöver startas om för att den här principinställningen ska börja gälla.
       </string>
+      <string id="ExpandedToastNotifications">Aktivera flera utökade toast-meddelanden i åtgärdscentret</string>
+      <string id="ExpandedToastNotificationsExplain">
+          Den här principinställningen aktiverar flera utökade popup-meddelanden i åtgärdscenter.
+
+Om du aktiverar den här principinställningen visas de tre första meddelandena för varje program som standard i åtgärdscenter.
+
+Om du inaktiverar eller låter bli att konfigurera den här principinställningen visas endast det första meddelandet för varje program som standard i åtgärdscenter.
+
+endast Windows 10. Detta blir omedelbart inaktuellt för Windows 11.
+
+Inga omstarter eller tjänstomstarter krävs för att den här principinställningen ska börja gälla.
+      </string>
     </stringTable>
     <presentationTable>
       <presentation id="QuietHoursBeginTimePicker">

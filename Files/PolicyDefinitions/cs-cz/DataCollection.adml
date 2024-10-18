@@ -105,52 +105,60 @@ Pokud u této zásady nastavíte „Povolit oznámení o změně diagnostických
 
       <string id="AllowUpdateComplianceProcessing">Povolit zpracování službou Update Compliance</string>
       <string id="AllowUpdateComplianceProcessing_Explain">
-Toto nastavení zásad v kombinaci s nastavením Povolit telemetrii a Konfigurovat komerční ID umožňuje organizacím konfigurovat zařízení tak, aby byl Microsoft zpracovatelem diagnostických dat systému Windows shromážděných ze zařízení, a to v souladu s podmínkami produktu na adrese https://go.microsoft.com/fwlink/?linkid=2185086.
-Pokud chcete takové chování povolit:
-    1. Povolte toto nastavení zásad.
-    2. Připojte účet Azure Active Directory k zařízení
-    3. Nastavte možnost Povolit telemetrii na hodnotu 1 – Povinné nebo vyšší.
-    4. Nastavte nastavení Konfigurovat komerční ID pro pracovní prostor Update Compliance.
+Tato zásada je zastaralá a bude fungovat jenom na Windows 10 ve verzi 1809. Nastavení této zásady nebude mít žádný vliv na jiné podporované verze Systému Windows.
 
-Pokud jsou tyto zásady nakonfigurované, budou diagnostická data systému Windows získaná ze zařízení podléhat závazkům zpracovatele (Microsoftu).
+Toto nastavení zásad v kombinaci s možnostmi Povolit telemetrii a Konfigurovat komerční ID umožňuje organizacím konfigurovat zařízení tak, aby společnost Microsoft byla zpracovatelem diagnostických dat Windows shromážděných ze zařízení, a to v souladu s podmínkami produktu na adrese https://go.microsoft.com/fwlink/?linkid=2185086.
+Chcete-li povolit toto chování:
+    1. Povolte toto nastavení zásad
+    2. Připojte k zařízení účet Azure Active Directory
+    3. Nastavte možnost Povolit telemetrii na hodnotu 1 – Povinné nebo vyšší
+    4. Nastavte nastavení Konfigurovat komerční ID pro váš pracovní prostor Update Compliance
+
+Když se tyto zásady nakonfigurují, diagnostická data Windows shromážděná ze zařízení budou podléhat závazkům zpracovatele společnosti Microsoft.
 Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, zařízení se v Update Compliance nezobrazí.
       </string>
 
       <string id="AllowDesktopAnalyticsProcessing">Povolit zpracování službou Desktop Analytics</string>
       <string id="AllowDesktopAnalyticsProcessing_Explain">
-Toto nastavení zásad v kombinaci s nastavením Povolit telemetrii a Konfigurovat komerční ID umožňuje organizacím konfigurovat zařízení tak, aby byl Microsoft zpracovatelem diagnostických dat systému Windows shromážděných ze zařízení, a to v souladu s podmínkami produktu na adrese https://go.microsoft.com/fwlink/?linkid=2185086.
-Pokud chcete takové chování povolit:
-    1. Povolte toto nastavení zásad.
-    2. Připojte účet Azure Active Directory k zařízení
-    3. Nastavte možnost Povolit telemetrii na hodnotu 1 – Povinné nebo vyšší.
-    4. Nastavte nastavení Konfigurovat komerční ID pro pracovní prostor Desktop Analytics.
+Tato zásada je zastaralá a bude fungovat jenom na Windows 10 ve verzi 1809. Nastavení této zásady nebude mít žádný vliv na jiné podporované verze Systému Windows.
 
-Pokud jsou tyto zásady nakonfigurované, budou diagnostická data systému Windows získaná ze zařízení podléhat závazkům zpracovatele (Microsoftu).
-Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, zařízení se v Desktop Analytics nezobrazí.
+Toto nastavení zásad v kombinaci s možnostmi Povolit telemetrii a Konfigurovat komerční ID umožňuje organizacím konfigurovat zařízení tak, aby společnost Microsoft byla zpracovatelem diagnostických dat Windows shromážděných ze zařízení, a to v souladu s podmínkami produktu na adrese https://go.microsoft.com/fwlink/?linkid=2185086.
+Chcete-li povolit toto chování:
+    1. Povolte toto nastavení zásad
+    2. Připojte k zařízení účet Azure Active Directory
+    3. Nastavte možnost Povolit telemetrii na hodnotu 1 – Povinné nebo vyšší
+    4. Nastavte nastavení Konfigurovat komerční ID pro pracovní prostor Desktop Analytics
+
+Pokud jsou tyto zásady nakonfigurované, diagnostická data Windows shromážděná ze zařízení budou podléhat závazkům zpracovatele společnosti  Microsoft.
+Toto nastavení nemá žádný vliv na zařízení, pokud nejsou správně zaregistrovaná v Desktop Analytics. Pokud toto nastavení zásad zakážete, zařízení se v Desktop Analytics nezobrazí.
       </string>
 
       <string id="AllowWUfBCloudProcessing">Povolit zpracování WUfB cloudu</string>
       <string id="AllowWUfBCloudProcessing_Explain">
-Toto nastavení zásad nakonfiguruje zařízení připojené k Azure Active Directory tak, aby byl Microsoft zpracovatelem diagnostických dat systému Windows shromážděných ze zařízení, a to v souladu s podmínkami produktu na adrese https://go.microsoft.com/fwlink/?linkid=2185086.
-Pokud chcete takové chování povolit:
-    1. Povolte toto nastavení zásad.
-    2. Připojte účet Azure Active Directory k zařízení
-    3. Nastavte možnost Povolit telemetrii na hodnotu 1 – Povinné nebo vyšší.
+Tato zásada je zastaralá a bude fungovat jenom na Windows 10 ve verzi 1809. Nastavení této zásady nebude mít žádný vliv na jiné podporované verze Systému Windows.
 
-Pokud jsou tyto zásady nakonfigurované, budou diagnostická data systému Windows získaná ze zařízení podléhat závazkům zpracovatele (Microsoftu).
-Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, zařízení přihlášená ke službě nasazení Windows Update pro firmy nebudou moct využívat některé funkce služby nasazení..
+Toto nastavení zásad konfiguruje zařízení připojené k Azure Active Directory tak, aby společnost Microsoft byla zpracovatelem diagnostických dat Windows shromážděných ze zařízení, a to v souladu s podmínkami produktu uvedenými v https://go.microsoft.com/fwlink/?linkid=2185086.
+Chcete-li povolit toto chování:
+    1. Povolte toto nastavení zásad
+    2. Připojte k zařízení účet Azure Active Directory
+    3. Nastavte povolit telemetrii na hodnotu 1 – Povinné nebo vyšší
+
+Pokud jsou tyto zásady nakonfigurované, diagnostická data Windows shromážděná ze zařízení budou podléhat závazkům zpracovatele společnosti  Microsoft.
+Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, zařízení zaregistrovaná ve službě nasazení Windows Update pro firmy nebudou moci využívat některé funkce služby nasazení.
       </string>
 
       <string id="AllowCommercialDataPipeline">Povolit kanál obchodních dat</string>
       <string id="AllowCommercialDataPipeline_Explain">
-AllowCommercialDataPipeline nakonfiguruje zařízení připojené k Azure Active Directory tak, aby Microsoft byl zpracovatelem diagnostických dat systému Windows shromážděných ze zařízení, a to v souladu s podmínkami produktu na adrese https://go.microsoft.com/fwlink/?linkid=2185086.
-Pokud chcete takové chování povolit:
-    1. Povolte toto nastavení zásad.
-    2. Připojte k zařízení účet Azure Active Directory.
+Tato zásada je zastaralá a bude fungovat jenom na Windows 10 ve verzi 1809. Nastavení této zásady nebude mít žádný vliv na jiné podporované verze Systému Windows.
 
-Diagnostická data systému Windows se shromažďují, pokud je nastavení zásad Povolit telemetrii nastaveno na hodnotu 1 - Povinné nebo vyšší. Konfigurace tohoto nastavení nemění úroveň sběru diagnostických dat systému Windows nastavenou pro zařízení.
-Pokud toto nastavení zakážete nebo nenakonfigurujete, Microsoft bude správcem diagnostických dat Windows shromážděných ze zařízení a bude je zpracovávat v souladu s prohlášením společnosti Microsoft o zásadách ochrany osobních údajů na adrese https://go.microsoft.com/fwlink/?LinkId=521839, pokud nepovolíte zásady, jako je Povolit zpracování Update Compliance nebo Povolit zpracování Desktop Analytics.
-Informace o této a dalších zásadách, které budou mít za následek, že Microsoft bude zpracovatelem diagnostických dat Windows, najdete v dokumentaci na adrese https://go.microsoft.com/fwlink/?linkid=2011107.
+AllowCommercialDataPipeline nakonfiguruje zařízení připojené k Azure Active Directory tak, aby společnost Microsoft byla zpracovatelem diagnostických dat Windows shromážděných ze zařízení, v souladu s podmínkami produktu na https://go.microsoft.com/fwlink/?linkid=2185086.
+Chcete-li povolit toto chování:
+ 1. Povolte toto nastavení zásad
+    2. Připojte účet Azure Active Directory k zařízení,
+
+Diagnostická data Windows se shromáždí, když je nastavení zásady Povolit telemetrii nastavené na hodnotu 1 – Povinné nebo vyšší. Konfigurací tohoto nastavení nedojde ke změně úrovně shromažďování diagnostických dat Windows nastavené pro zařízení.
+Pokud toto nastavení zakážete nebo nenakonfigurujete, bude společnost Microsoft správcem diagnostických dat Windows shromážděných ze zařízení a zpracovaných v souladu s prohlášením společnosti Microsoft o zásadách ochrany osobních údajů na adrese https://go.microsoft.com/fwlink/?LinkId=521839, pokud jste nepovolili zásady, jako je "Povolit zpracování Update Compliance" nebo "Povolit zpracování Desktop Analytics".
+Informace o této a dalších zásadách, které budou mít za následek, že společnost Microsoft bude zpracovatelem diagnostických dat Windows, najdete v dokumentaci na adrese https://go.microsoft.com/fwlink/?linkid=2011107.
       </string>
 
       <string id="LimitDiagnosticLogCollection">Omezit shromažďování diagnostických protokolů</string>

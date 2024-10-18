@@ -105,7 +105,9 @@
 
       <string id="AllowUpdateComplianceProcessing">允許更新合規性處理</string>
       <string id="AllowUpdateComplianceProcessing_Explain">
-此原則設定與「允許遙測」和「設定商業識別碼」相結合，使組織能够設定該裝置，以便 Microsoft 是從該裝置收集的 Windows 診斷資料之處理者，並遵守以下產品條款: https://go.microsoft.com/fwlink/?linkid=2185086。
+此原則已遭取代，並且僅會在 Windows 10 版本 1809 上運作。設定此原則對於其他支援的 Microsoft 版本將不會產生作用。
+
+此原則設定與「允許遙測」和「設定商業識別碼」相結合，使組織能夠設定該裝置，以便 Microsoft 是從該裝置收集的 Windows 診斷資料之處理者，並遵守以下產品條款: https://go.microsoft.com/fwlink/?linkid=2185086。
 若要啟用此行爲:
     1. 啟用此原則設定
     2. 將 Azure Active Directory 帳戶加入裝置
@@ -118,7 +120,9 @@
 
       <string id="AllowDesktopAnalyticsProcessing">允許電腦分析處理</string>
       <string id="AllowDesktopAnalyticsProcessing_Explain">
-此原則設定與「允許遙測」和「設定商業識別碼」相結合，使組織能够設定該裝置，以便 Microsoft 是從該裝置收集的 Windows 診斷資料之處理者，並遵守以下產品條款: https://go.microsoft.com/fwlink/?linkid=2185086。
+此原則已遭取代，並且僅會在 Windows 10 版本 1809 上運作。設定此原則對於其他支援的 Microsoft 版本將不會產生作用。
+
+此原則設定與「允許遙測」和「設定商業識別碼」相結合，使組織能夠設定該裝置，以便 Microsoft 是從該裝置收集的 Windows 診斷資料之處理者，並遵守以下產品條款: https://go.microsoft.com/fwlink/?linkid=2185086。
 若要啟用此行爲:
     1. 啟用此原則設定
     2. 將 Azure Active Directory 帳戶加入裝置
@@ -131,6 +135,8 @@
 
       <string id="AllowWUfBCloudProcessing">允許 WUfB 雲端處理</string>
       <string id="AllowWUfBCloudProcessing_Explain">
+此原則已遭取代，並且僅會在 Windows 10 版本 1809 上運作。設定此原則對於其他支援的 Microsoft 版本將不會產生作用。
+
 此原則設定設定已加入 Azure Active Directory 的裝置，以便 Microsoft 是從該裝置收集的 Windows 診斷資料之處理者，並遵守以下產品條款: https://go.microsoft.com/fwlink/?linkid=2185086。
 若要啟用此行爲:
     1. 啟用此原則設定
@@ -143,12 +149,14 @@
 
       <string id="AllowCommercialDataPipeline">允許商用資料管線</string>
       <string id="AllowCommercialDataPipeline_Explain">
-AllowCommercialDataPipeline 設定已加入 Azure Active Directory 的裝置，以便 Microsoft 是從該裝置收集的 Windows 診斷資料之處理者，並遵守以下產品條款: https://go.microsoft.com/fwlink/?linkid=2185086。
+此原則已遭取代，並且僅會在 Windows 10 版本 1809 上運作。設定此原則對於其他支援的 Microsoft 版本將不會產生作用。
+
+AllowCommercialDataPipeline 會設定已加入 Azure Active Directory 的裝置，以便 Microsoft 可以處理該裝置收集的 Windows 診斷資料，並遵守以下產品條款: https://go.microsoft.com/fwlink/?linkid=2185086。
 若要啟用此行為:
     1. 啟用此原則設定
     2. 將 Azure Active Directory 帳戶加入裝置
 
-當「允許遙測」原則設定設定為值 1 - 必要或更高時，將收集 Windows 診斷資料。設定此設定不會變更裝置的 Windows 診斷資料收集層級設定
+當「允許遙測」原則設定設定為值 1 - 必要或更高時，將收集 Windows 診斷資料。設定此設定不會變更裝置的 Windows 診斷資料收集層級設定。
 如果停用或未設定此設定，則 Microsoft 將成為從裝置收集的 Windows 診斷資料之控制器，並根據 Microsoft 的隱私權聲明 (https://go.microsoft.com/fwlink/?LinkId=521839 ) 進行處理，除非您啟用了「允許更新合規性處理」或「允許電腦分析處理」等原則。
 請於 https://go.microsoft.com/fwlink/?linkid=2011107 參閱文件，了解有關這個和其他將導致 Microsoft 成為 Windows 診斷資料處理器的原則之資訊。
       </string>

@@ -131,6 +131,19 @@
 
 如果您未設定或停用這個設定，同步 [協助工具] 群組預設會開啟，而且使用者可以設定。
       </string>
+
+      <!-- Language -->
+      <string id="DisableLanguageSettingSync">不要同步語言喜好設定</string>
+      <string id="DisableLanguageSettingSync_Help">
+        防止「語言喜好設定」群組與這部電腦進行同步處理。這會關閉和停用電腦設定中 [Windows 備份] 設定頁面上的 [語言喜好設定] 群組。
+
+如果您啟用這個原則設定，將不會同步 [語言喜好設定]，群組。
+
+使用 [允許使用者開啟同步的語言喜好設定] 選項讓同步預設為關閉但不停用。
+
+如果您未設定或停用這個設定，同步 [語言喜好設定] 群組預設會開啟，而且使用者可以設定。
+      </string>
+
     </stringTable>
     <presentationTable>
 
@@ -182,6 +195,11 @@
       <!-- AccessibilitySync -->
       <presentation id="DisableAccessibilitySettingSyncUserOverride">
         <checkBox refId="CheckBox_UserOverride">允許使用者開啟 [協助工具] 同步。</checkBox>
+      </presentation>
+
+      <!-- LanguageSync -->
+      <presentation id="DisableLanguageSettingSyncUserOverride">
+        <checkBox refId="CheckBox_UserOverride">允許使用者開啟「語言喜好設定」同步處理。</checkBox>
       </presentation>
 
     </presentationTable>

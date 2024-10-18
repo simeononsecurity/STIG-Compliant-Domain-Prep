@@ -300,6 +300,23 @@ http://sitename/_layouts/XXXX/searchresults.aspx?SearchString=$w
       <string id="DisableSearch_ExplainText">如果您啟用這個原則，將會停用搜尋 UI 及其所有進入點，例如鍵盤快速鍵、觸控板手勢，以及　[開始] 功能表中的輸入以搜尋。[開始] 功能表的 [搜尋] 方塊和 [搜尋工作列] 按鈕也會隱藏。
 
 如果您停用或未設定這個原則設定，使用者可以開啟搜尋 UI，而系統會顯示其不同的進入點。</string>
+      <string id="ConfigureSearchOnTaskbarMode">設定工作列上的搜尋</string>
+      <string id="ConfigureSearchOnTaskbarMode_Help">此原則設定允許您設定工作列上的搜尋。
+
+若啟用此原則設定並將其設定為隱藏，則預設將隱藏工作列上的搜尋。使用者將無法在 [設定] 中變更它。
+
+若啟用此原則設定並將其設定為僅搜尋圖示，則搜尋圖示將預設顯示在工作列上。使用者無法在 [設定] 中變更它。
+
+若啟用此原則設定並將其設定為搜尋圖示和標籤，則搜尋圖示和標籤將預設顯示在工作列上。使用者無法在 [設定] 中變更它。
+
+若啟用此原則設定並將其設定為搜尋方塊，則搜尋方塊將預設顯示在工作列上。使用者無法在 [設定] 中變更它。
+
+若停用或未設定此原則設定，將根據 Windows 版本的預設值設定工作列上的搜尋。使用者可以在 [設定] 中變更工作列上的搜尋。
+      </string>
+      <string id="SearchOnTaskbarModeEnum_Hidden">隱藏</string>
+      <string id="SearchOnTaskbarModeEnum_SearchIconOnly">僅搜尋圖示</string>
+      <string id="SearchOnTaskbarModeEnum_SearchIconAndLabel">搜尋圖示和標籤</string>
+      <string id="SearchOnTaskbarModeEnum_SearchBox">搜尋方塊</string>
     </stringTable>
     <presentationTable>
       <presentation id="RichAttachmentPreviews">
@@ -388,6 +405,9 @@ http://sitename/_layouts/XXXX/searchresults.aspx?SearchString=$w
       </presentation>
       <presentation id="AllowCortanaAAD">
         <dropdownList refId="AllowCortanaAAD_Dropdown" noSort="true" defaultItem="0">Cortana AAD 設定</dropdownList>
+      </presentation>
+      <presentation id="ConfigureSearchOnTaskbarMode">
+        <dropdownList refId="ConfigureSearchOnTaskbarMode_Dropdown" noSort="true" defaultItem="0">在工作列上搜尋</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

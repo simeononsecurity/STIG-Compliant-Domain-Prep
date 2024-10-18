@@ -53,11 +53,32 @@
       <string id="ForceLockTimeout_1">10 saniye</string>
       <string id="ForceLockTimeout_2">30 saniye</string>
       <string id="ForceLockTimeout_3">2 dakika</string>
+      <string id="ForceLockTimeout_4">Hemen</string>
       <string id="ForceInstantDim_DisplayName">Anında Karartmayı Zorla</string>
       <string id="ForceInstantDim_ExplainText">MDM ilkesinin zorladığı Dikkat Tabanlı Ekran Karartma’nın açık/kapalı olmasını belirler. Kullanıcı, bu ayarı değiştiremez ve kullanıcı arabirimindeki düğme kullanılamaz.</string>
       <string id="ForceInstantDim_0">Varsayılan olarak kullanıcı seçimini kullanır</string>
       <string id="ForceInstantDim_1">Zorla Aç</string>
       <string id="ForceInstantDim_2">Zorla Kapat</string>
+      <string id="ForceDisableWakeWhenBatterySaverOn_DisplayName">Pil Tasarrufu Açıkken Uyandırmayı Devre Dışı Bırakmaya Zorla</string>
+      <string id="ForceDisableWakeWhenBatterySaverOn_ExplainText">Pil Tasarrufu Açıkken Yaklaşımda Uyandırmayı Devre Dışı Bırak onay kutusunun MDM ilkesi tarafından işaretlenmesine/işaretinin kaldırılmasına zorlanıp zorlanmayacağını belirler. Kullanıcı bu ayarı değiştiremez ve kullanıcı arayüzündeki onay kutusu gri olur.</string>
+      <string id="ForceDisableWakeWhenBatterySaverOn_0">Varsayılan olarak kullanıcı seçimini kullanır</string>
+      <string id="ForceDisableWakeWhenBatterySaverOn_1">Zorla İşaretlendi</string>
+      <string id="ForceDisableWakeWhenBatterySaverOn_2">Zorla İşareti Kaldırıldı</string>
+      <string id="ForceAllowWakeWhenExternalDisplayConnected_DisplayName">Dış Ekran Bağlandığında Uyandırmaya İzin Vermeye Zorla</string>
+      <string id="ForceAllowWakeWhenExternalDisplayConnected_ExplainText">Dış Ekran Bağlandığında Yaklaşımda Uyandırmaya İzin Ver onay kutusunun MDM ilkesi tarafından işaretlenmesine/işaretinin kaldırılmasına zorlanıp zorlanmayacağını belirler. Kullanıcı bu ayarı değiştiremez ve kullanıcı arayüzündeki onay kutusu gri olur.</string>
+      <string id="ForceAllowWakeWhenExternalDisplayConnected_0">Varsayılan olarak kullanıcı seçimini kullanır</string>
+      <string id="ForceAllowWakeWhenExternalDisplayConnected_1">Zorla İşaretlendi</string>
+      <string id="ForceAllowWakeWhenExternalDisplayConnected_2">Zorla İşareti Kaldırıldı</string>
+      <string id="ForceAllowLockWhenExternalDisplayConnected_DisplayName">Dış Ekran Bağlandığında Kilide İzin Vermeye Zorla</string>
+      <string id="ForceAllowLockWhenExternalDisplayConnected_ExplainText">Pil Tasarrufu Açıkken Boşta Kilitlemeye İzin Ver onay kutusunun MDM ilkesi tarafından işaretlenmesine/işaretinin kaldırılmasına zorlanıp zorlanmayacağını belirler. Kullanıcı bu ayarı değiştiremez ve kullanıcı arayüzündeki onay kutusu gri olur.</string>
+      <string id="ForceAllowLockWhenExternalDisplayConnected_0">Varsayılan olarak kullanıcı seçimini kullanır</string>
+      <string id="ForceAllowLockWhenExternalDisplayConnected_1">Zorla İşaretlendi</string>
+      <string id="ForceAllowLockWhenExternalDisplayConnected_2">Zorla İşareti Kaldırıldı</string>
+      <string id="ForceAllowDimWhenExternalDisplayConnected_DisplayName">Dış Ekran Bağlandığında Karartmaya İzin Vermeye Zorla</string>
+      <string id="ForceAllowDimWhenExternalDisplayConnected_ExplainText">Pil Tasarrufu Açıkken Uyarlamalı Karartmaya İzin Ver onay kutusunun MDM ilkesi tarafından işaretlenmesine/işaretinin kaldırılmasına zorlanıp zorlanmayacağını belirler. Kullanıcı bu ayarı değiştiremez ve kullanıcı arayüzündeki onay kutusu gri olur.</string>
+      <string id="ForceAllowDimWhenExternalDisplayConnected_0">Varsayılan olarak kullanıcı seçimini kullanır</string>
+      <string id="ForceAllowDimWhenExternalDisplayConnected_1">Zorla İşaretlendi</string>
+      <string id="ForceAllowDimWhenExternalDisplayConnected_2">Zorla İşareti Kaldırıldı</string>
     </stringTable>
     <presentationTable>
       <presentation id="ForceInstantWake">
@@ -70,7 +91,19 @@
         <dropdownList refId="ForceLockTimeoutDropdown" noSort="true" defaultItem="1">Aşağıdaki zaman aşımlarından birini seçin</dropdownList>
       </presentation>
       <presentation id="ForceInstantDim">
-        <dropdownList refId="ForceInstantDimDropDown" noSort="true" defaultItem="0">Aşağıdaki eylemlerden birini seçin</dropdownList>
+        <dropdownList refId="ForceInstantDimDropdown" noSort="true" defaultItem="0">Aşağıdaki eylemlerden birini seçin</dropdownList>
+      </presentation>
+      <presentation id="ForceDisableWakeWhenBatterySaverOn">
+        <dropdownList refId="ForceDisableWakeWhenBatterySaverOnDropdown" noSort="true" defaultItem="0">Aşağıdaki eylemlerden birini seçin</dropdownList>
+      </presentation>
+      <presentation id="ForceAllowWakeWhenExternalDisplayConnected">
+        <dropdownList refId="ForceAllowWakeWhenExternalDisplayConnectedDropdown" noSort="true" defaultItem="0">Aşağıdaki eylemlerden birini seçin</dropdownList>
+      </presentation>
+      <presentation id="ForceAllowLockWhenExternalDisplayConnected">
+        <dropdownList refId="ForceAllowLockWhenExternalDisplayConnectedDropdown" noSort="true" defaultItem="0">Aşağıdaki eylemlerden birini seçin</dropdownList>
+      </presentation>
+      <presentation id="ForceAllowDimWhenExternalDisplayConnected">
+        <dropdownList refId="ForceAllowDimWhenExternalDisplayConnectedDropdown" noSort="true" defaultItem="0">Aşağıdaki eylemlerden birini seçin</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

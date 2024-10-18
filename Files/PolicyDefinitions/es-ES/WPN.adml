@@ -119,6 +119,18 @@
 
           Para que esta configuración de directiva surta efecto, no es necesario reiniciar el equipo ni el servicio.
       </string>
+      <string id="ExpandedToastNotifications">Activar varias notificaciones del sistema expandidas en el centro de actividades</string>
+      <string id="ExpandedToastNotificationsExplain">
+          Esta configuración de directiva activa varias notificaciones del sistema expandidas en centro de actividades.
+
+Si habilita esta configuración de directiva, las tres primeras notificaciones de cada aplicación se expandirán de forma predeterminada en centro de actividades.
+
+Si deshabilita o no establece esta configuración de directiva, solo se expandirá la primera notificación de cada aplicación de forma predeterminada en centro de actividades.
+
+solo Windows 10. Esto quedará en desuso inmediatamente para Windows 11.
+
+No se requieren reinicios ni reinicios de servicio para que esta configuración de directiva surta efecto.
+      </string>
     </stringTable>
     <presentationTable>
       <presentation id="QuietHoursBeginTimePicker">

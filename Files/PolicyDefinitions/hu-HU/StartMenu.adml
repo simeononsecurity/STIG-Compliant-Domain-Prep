@@ -121,9 +121,9 @@ A Windows 2000 Professional és Windows XP Professional rendszeren az összes 16
 
 Ha engedélyezi ezt a beállítást, a Futtatás párbeszédpanelen egy jelölőnégyzet jelenik meg, lehetővé téve a felhasználók számára, hogy a 16 bites programokat egy erre kijelölt NTVDM-folyamatban futtassák. Ez a jelölőnégyzet csak akkor érhető el, ha a felhasználó 16 bites programot ad meg a Futtatás párbeszédpanelen.</string>
       <string id="NoAutoTrayNotify">Az értesítési terület karbantartásának kikapcsolása</string>
-      <string id="NoAutoTrayNotify_Help">Ez a beállítás az értesítési területre, más néven a „rendszertálcára” van hatással.
+      <string id="NoAutoTrayNotify_Help">Ez a beállítás az értesítési területre, más néven a "rendszertálcára van hatással".
 
-Az értesítési terület a tálcán található, általában a képernyő alsó részén, és az aktuális értesítéseket, valamint a számítógép óráját tartalmazza. Ez a beállítás azt határozza meg, hogy az elemek mindig kibontott, vagy mindig összecsukott állapotban jelenjenek-e meg. Alapértelmezés szerint az értesítések mindig összecsukott állapotban vannak. Az értesítés karbantartására szolgáló &lt;&lt; ikonra szokás még „francia idézőjelként” is utalni."
+Az értesítési terület a tálcán található, általában a képernyő alsó részén, és az aktuális értesítéseket, valamint a számítógép óráját tartalmazza. Ez a beállítás azt határozza meg, hogy az elemek mindig kibontott, vagy mindig összecsukott állapotban jelenjenek-e meg. Alapértelmezés szerint az értesítések mindig összecsukott állapotban vannak. Az értesítés karbantartására szolgáló &lt;&lt; ikonra szokás még "francia idézőjelként” is utalni."
 
 A beállítás engedélyezése esetén a rendszer értesítési területe kibontott állapotban jelenik meg, és megjeleníti az összes értesítést.
 
@@ -628,6 +628,11 @@ Ha engedélyezi ezt a házirendet, a Start menü nem jeleníti meg a „Legutób
       <string id="HideRecommendedSection_Help">Ezzel a házirenddel megakadályozhatja, hogy a Start menü megjelenítse az ajánlott alkalmazások és fájlok listáját.
 
 Ha engedélyezi ezt a házirend-beállítást, a Start menüben nem jelenik meg az ajánlott fájlok és alkalmazások listáját tartalmazó szakasz.</string>
+
+      <string id="HideRecommendedPersonalizedSites">Személyre szabott webhelyjavaslatok eltávolítása a Start menü Javaslatok szakaszából</string>
+      <string id="HideRecommendedPersonalizedSites_Help">Ezzel a szabályzatbeállítással elrejtheti a személyre szabott webhelyeket a Start menü Javaslatok szakaszában. 
+      
+Ha engedélyezi ezt a szabályzatbeállítást, a Start menü többé nem jelenít meg személyre szabott webhelyjavaslatokat a Javaslatok részben.</string>
       <string id="DisableContextMenusInStart">Helyi menük letiltása a Start menüben</string>
       <string id="DisableContextMenusInStart_Help">Ezzel a házirenddel megakadályozhatja, hogy a felhasználók meg tudják nyitni a helyi menüket a Start menüben.
 

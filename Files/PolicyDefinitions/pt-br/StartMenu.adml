@@ -173,9 +173,9 @@ Observação: O suporte a esta configuração de política requer programas de t
       <string id="HidePowerOptions">Remover e impedir o acesso aos comandos Desligar, Reiniciar, Suspender e Hibernar</string>
       <string id="HidePowerOptions_Help">Esta configuração de política impede que os usuários executem os comandos a seguir na tela Segurança do Windows, na tela de logon e no menu Iniciar: Desligar, Reiniciar, Suspender e Hibernar. Esta configuração de política não impede que os usuários executem programas baseados no Windows que realizam essas funções.
 
-Se você habilitar esta configuração de política, os comandos Desligar, Reiniciar, Suspender e Hibernar serão removidos do menu Iniciar. O botão Ligar/Desligar também será removido da tela Segurança do Windows, que aparece quando você pressiona CTRL+ALT+DELETE, e da tela de logon.
+Se você habilitar esta configuração de política, os comandos Desligar, Reiniciar, Suspender e Hibernar serão removidos do menu Iniciar. O botão Desligar também será removido da tela Segurança do Windows, que aparece quando você pressiona CTRL+ALT+DELETE, e da tela de logon.
 
-Se desabilitar ou não configurar esta política, o botão Ligar/Desligar e os comandos Desligar, Reiniciar, Suspender e Hibernar ficarão disponíveis no menu Iniciar. O botão Ligar/Desligar na tela Segurança do Windows também ficará disponível.</string>
+Se desabilitar ou não configurar esta política, o botão Desligar e os comandos Desligar, Reiniciar, Suspender e Hibernar ficarão disponíveis no menu Iniciar. O botão Desligar na tela Segurança do Windows também ficará disponível.</string>
       <string id="NoCommonGroups">Remover grupos de programas comuns do Menu Iniciar</string>
       <string id="NoCommonGroups_Help">Remove os itens do perfil Todos os Usuários do menu Programas no menu Iniciar.
 
@@ -509,7 +509,7 @@ Consulte também a configuração de política "Remover Fazer Logoff" em Configu
         <string id="NoUninstallFromStart_Help">Se você habilitar esta configuração, os usuários não poderão desinstalar aplicativos Iniciar.
 
 Se você desabilitar ou não definir esta configuração de política, os usuários poderão acessar o comando de desinstalação em Iniciar.</string>
-      <string id="PowerButtonAction_DisplayName">Alterar botão para ligar/desligar do Menu Iniciar</string>
+      <string id="PowerButtonAction_DisplayName">Alterar botão para desligar do Menu Iniciar</string>
       <string id="PowerButtonAction_ExplainText">Defina a ação padrão do botão de ligar e desligar no menu Iniciar.
 
 Se você habilitar esta configuração, o menu Iniciar definirá o botão de ligar e desligar para a ação escolhida e não permitirá que o usuário altere essa ação.
@@ -626,6 +626,11 @@ Se você habilitar esta política, o Menu Iniciar não exibirá a lista "Adicion
       <string id="HideRecommendedSection_Help">Esta política permite impedir que o Menu Iniciar exiba uma lista de aplicativos e arquivos recomendados.
 
 Se você habilitar essa configuração de política, o Menu Iniciar não mostrará mais a seção que contém uma lista de arquivos e aplicativos recomendados.</string>
+
+      <string id="HideRecommendedPersonalizedSites">Remover Recomendações personalizadas do site da seção Recomendado no menu Iniciar</string>
+      <string id="HideRecommendedPersonalizedSites_Help">Essa configuração de política permite ocultar os sites personalizados na seção recomendada do menu Iniciar. 
+      
+Se você habilitar essa configuração de política, o Menu Iniciar não mostrará mais recomendações personalizadas do site na seção recomendada.</string>
       <string id="DisableContextMenusInStart">Desabilitar menus de contexto no Menu Iniciar</string>
       <string id="DisableContextMenusInStart_Help">Esta política permite impedir que os usuários abram menus de contexto no Menu Iniciar.
 

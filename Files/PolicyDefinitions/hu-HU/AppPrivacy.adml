@@ -129,6 +129,21 @@ Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a szervezet al
 
 Ha egy alkalmazás akkor nyílik meg, ha egy eszközön alkalmazza ezt a csoportházirend-objektumot, az alkalmazottaknak újra kell indítaniuk az alkalmazást vagy eszközt ahhoz, hogy érvénybe lépjenek az alkalmazásra vonatkozó házirend-módosítások.
       </string>
+      <string id="LetAppsAccessHumanPresence_Name">Jelenlétérzékeléshez való hozzáférés engedélyezése a Windows-alkalmazások számára</string>
+      <string id="LetAppsAccessHumanPresence_Explain">Ezzel a házirend-beállítással megadhatja, hogy a Windows-alkalmazások hozzáférhetnek-e a jelenlétérzékeléshez.
+
+Megadhat az összes alkalmazásra érvényes alapértelmezett beállítást, vagy a csomagcsalád nevének megadásával alkalmazásonként is konfigurálhatja a viselkedést. Egy adott alkalmazáshoz a csomagcsalád nevét a Get-AppPackage Windows PowerShell parancsmaggal lehet megállapítani. Az egyes alkalmazásokra vonatkozó beállítás felülbírálja az alapértelmezett beállítást.
+
+Ha „A felhasználó döntheti el” lehetőséget választja, a dolgozók saját maguk választhatják meg az eszközön a Gépház Adatvédelem szakaszában, hogy a Windows-alkalmazások hozzáférhetnek-e a jelenlétérzékeléshez.
+
+Ha a „Mindig engedélyezve” lehetőséget választja, akkor a Windows-alkalmazások hozzáférhetnek a jelenlétérzékeléshez, és a dolgozók nem módosíthatják a beállítást.
+
+Ha a „Mindig letiltva” lehetőséget választja, akkor a Windows-alkalmazások nem férhetnek hozzá a jelenlétérzékeléshez, és a dolgozók nem módosíthatják a beállítást.
+
+Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a dolgozók saját maguk választhatják meg az eszközön a Gépház Adatvédelem szakaszában, hogy a Windows-alkalmazások hozzáférhetnek-e a jelenlétérzékeléshez.
+
+Ha egy alkalmazás meg van nyitva, amikor a csoportházirend-objektumot az eszközre alkalmazzák, a dolgozóknak a házirend-módosítás életbe lépéséhez újra kell indítaniuk az alkalmazást vagy az eszközt.
+      </string>
       <string id="LetAppsAccessLocation_Name">A Windows-alkalmazások hozzáférhetnek a tartózkodási helyhez</string>
       <string id="LetAppsAccessLocation_Explain">Ezzel a házirend-beállítással megadhatja, hogy a Windows-alkalmazások hozzáférhetnek-e a tartózkodási helyhez.
 
@@ -440,6 +455,15 @@ Ha egy alkalmazás meg van nyitva, amikor ezt a csoportházirend-objektumot az e
         <text>Tiltás kényszerítése a következő alkalmazásokhoz (a csomagcsaládok nevének használatával):</text>
         <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_ForceDenyTheseApps_List"/>
       </presentation>
+      <presentation id="LetAppsAccessHumanPresence">
+        <dropdownList refId="LetAppsAccessHumanPresence_Enum" noSort="true" defaultItem="0">Az összes alkalmazásra vonatkozó alapértelmezett beállítás:</dropdownList>
+        <text>A következő alkalmazásokat a felhasználó felügyelheti (a csomagcsaládok nevének használatával):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_UserInControlOfTheseApps_List"/>
+        <text>Engedélyezés kényszerítése a következő alkalmazásokhoz (a csomagcsaládok nevének használatával):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_ForceAllowTheseApps_List"/>
+        <text>Tiltás kényszerítése a következő alkalmazásokhoz (a csomagcsaládok nevének használatával):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_ForceDenyTheseApps_List"/>
+      </presentation>
       <presentation id="LetAppsAccessLocation">
         <dropdownList refId="LetAppsAccessLocation_Enum" noSort="true" defaultItem="0">Alapértelmezett az összes alkalmazáshoz:</dropdownList>
         <text>A következő alkalmazásokat a felhasználó felügyelheti (a csomagcsaládok nevének használatával):</text>
@@ -552,9 +576,9 @@ Ha egy alkalmazás meg van nyitva, amikor ezt a csoportházirend-objektumot az e
         <dropdownList refId="LetAppsAccessGazeInput_Enum" noSort="true" defaultItem="0">Alapértelmezett az összes alkalmazáshoz:</dropdownList>
         <text>A következő alkalmazásokat a felhasználó felügyelheti (a csomagcsaládok nevének használatával):</text>
         <multiTextBox refId="LetAppsAccessGazeInput_UserInControlOfTheseApps_List"/>
-        <text>Engedélyezés kényszerítése a következő alkalmazásokhoz (a csomagcsaládok nevének használatával):</text>
+        <text>Engedélyezés kényszerítése a következő alkalmazásoknál (a csomagcsaládok nevének használatával):</text>
         <multiTextBox refId="LetAppsAccessGazeInput_ForceAllowTheseApps_List"/>
-        <text>Tiltás kényszerítése a következő alkalmazásokhoz (a csomagcsaládok nevének használatával):</text>
+        <text>Tiltás kényszerítése a következő alkalmazásoknál (a csomagcsaládok nevének használatával):</text>
         <multiTextBox refId="LetAppsAccessGazeInput_ForceDenyTheseApps_List"/>
       </presentation>
       <presentation id="LetAppsActivateWithVoice">
@@ -567,9 +591,9 @@ Ha egy alkalmazás meg van nyitva, amikor ezt a csoportházirend-objektumot az e
         <dropdownList refId="LetAppsAccessBackgroundSpatialPerception_Enum" noSort="true" defaultItem="0">Alapértelmezett az összes alkalmazáshoz:</dropdownList>
         <text>A következő alkalmazásokat a felhasználó felügyelheti (a csomagcsaládok nevének használatával):</text>
         <multiTextBox refId="LetAppsAccessBackgroundSpatialPerception_UserInControlOfTheseApps_List"/>
-        <text>Engedélyezés kényszerítése a következő alkalmazásoknál (a csomagcsaládok nevének használatával):</text>
+        <text>Engedélyezés kényszerítése a következő alkalmazásokhoz (a csomagcsaládok nevének használatával):</text>
         <multiTextBox refId="LetAppsAccessBackgroundSpatialPerception_ForceAllowTheseApps_List"/>
-        <text>Tiltás kényszerítése a következő alkalmazásoknál (a csomagcsaládok nevének használatával):</text>
+        <text>Tiltás kényszerítése a következő alkalmazásokhoz (a csomagcsaládok nevének használatával):</text>
         <multiTextBox refId="LetAppsAccessBackgroundSpatialPerception_ForceDenyTheseApps_List"/>
       </presentation>
     </presentationTable>

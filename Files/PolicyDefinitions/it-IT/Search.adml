@@ -300,6 +300,23 @@ Se questa impostazione è abilitata, la ricerca e Cortana possono accedere a inf
       <string id="DisableSearch_ExplainText">Se si abilita questo criterio, l'interfaccia utente di ricerca verrà disabilitata insieme a tutti i relativi punti di ingresso, ad esempio i tasti di scelta rapida, i movimenti del touchpad e la modalità di ricerca nel menu Start. La casella di ricerca del menu Start e il pulsante Cerca sulla barra delle applicazioni verranno nascosti.
 
 Se si disabilita o non si configura questa impostazione dei criteri, l'utente potrà aprire l'interfaccia utente di ricerca e i relativi punti di ingresso verranno visualizzati.</string>
+      <string id="ConfigureSearchOnTaskbarMode">Configura la ricerca sulla barra delle applicazioni</string>
+      <string id="ConfigureSearchOnTaskbarMode_Help">Questa impostazione dei criteri consente di configurare la ricerca sulla barra delle applicazioni.
+
+Se si abilita questa impostazione dei criteri e la si imposta per nascondere, la ricerca sulla barra delle applicazioni verrà nascosta per impostazione predefinita. Gli utenti non possono modificarlo in Impostazioni.
+
+Se si abilita questa impostazione dei criteri e la si imposta solo sull'icona di ricerca, l'icona di ricerca verrà visualizzata sulla barra delle applicazioni per impostazione predefinita. Gli utenti non possono modificarlo in Impostazioni.
+
+Se si abilita questa impostazione dei criteri e la si imposta sull'icona di ricerca e sull'etichetta, l'icona e l'etichetta di ricerca verranno visualizzate sulla barra delle applicazioni per impostazione predefinita. Gli utenti non possono modificarlo in Impostazioni.
+
+Se si abilita questa impostazione dei criteri e la si imposta sulla casella di ricerca, la casella di ricerca verrà visualizzata sulla barra delle applicazioni per impostazione predefinita. Gli utenti non possono modificarlo in Impostazioni.
+
+Se si disabilita o non si configura questa impostazione dei criteri, la ricerca sulla barra delle applicazioni verrà configurata in base alle impostazioni predefinite per l'edizione di Windows. Gli utenti potranno modificare la ricerca sulla barra delle applicazioni in Impostazioni.
+      </string>
+      <string id="SearchOnTaskbarModeEnum_Hidden">Nascondi</string>
+      <string id="SearchOnTaskbarModeEnum_SearchIconOnly">Solo icona di ricerca</string>
+      <string id="SearchOnTaskbarModeEnum_SearchIconAndLabel">Icona ed etichetta di ricerca</string>
+      <string id="SearchOnTaskbarModeEnum_SearchBox">Casella di ricerca</string>
     </stringTable>
     <presentationTable>
       <presentation id="RichAttachmentPreviews">
@@ -388,6 +405,9 @@ Se si disabilita o non si configura questa impostazione dei criteri, l'utente po
       </presentation>
       <presentation id="AllowCortanaAAD">
         <dropdownList refId="AllowCortanaAAD_Dropdown" noSort="true" defaultItem="0">Impostazione di Cortana in AAD</dropdownList>
+      </presentation>
+      <presentation id="ConfigureSearchOnTaskbarMode">
+        <dropdownList refId="ConfigureSearchOnTaskbarMode_Dropdown" noSort="true" defaultItem="0">Cerca sulla barra delle applicazioni</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

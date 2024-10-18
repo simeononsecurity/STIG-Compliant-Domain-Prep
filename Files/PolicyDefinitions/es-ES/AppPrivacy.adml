@@ -129,6 +129,21 @@ Si deshabilita o no define la configuración de esta directiva, los empleados de
 
 Si una aplicación está abierta cuando este objeto de Directiva de grupo sea aplicado en un dispositivo, los empleados deberán reiniciar la aplicación o el dispositivo para que se apliquen los cambios de la directiva en la aplicación.
       </string>
+      <string id="LetAppsAccessHumanPresence_Name">Permitir que las aplicaciones de Windows accedan a la detección de presencia</string>
+      <string id="LetAppsAccessHumanPresence_Explain">Esta configuración de directiva especifica si las aplicaciones de Windows pueden acceder a dispositivos de confianza.
+
+Puedes especificar una configuración predeterminada para todas las aplicaciones, o bien una configuración por aplicación especificando un nombre de familia de paquete. Puedes obtener el nombre de familia de paquete de una aplicación mediante el cmdlet Get-AppPackage de Windows PowerShell. Una configuración por aplicación invalida la configuración predeterminada.
+
+Si eliges la opción "El usuario tiene el control", los empleados de tu organización podrán decidir si las aplicaciones de Windows pueden acceder a dispositivos de confianza mediante Configuración &gt; Privacidad en el dispositivo.
+
+Si eliges la opción "Forzar permiso", las aplicaciones de Windows podrán acceder a los dispositivos de confianza y los empleados de tu organización no podrán cambiarlo.
+
+Si eliges la opción "Forzar denegación", las aplicaciones de Windows no podrán acceder a dispositivos de confianza y los empleados de tu organización no podrán cambiarlo.
+
+Si deshabilitas o no estableces esta configuración de directiva, los empleados de tu organización podrán decidir si las aplicaciones de Windows pueden acceder a dispositivos de confianza mediante Configuración &gt; Privacidad en el dispositivo.
+
+Si una aplicación está abierta cuando este objeto de directiva de grupo se aplica en un dispositivo, los empleados deberán reiniciar la aplicación o el dispositivo para que los cambios de directiva se apliquen a la aplicación.
+      </string>
       <string id="LetAppsAccessLocation_Name">Permitir que las aplicaciones de Windows accedan a la ubicación</string>
       <string id="LetAppsAccessLocation_Explain">Esta configuración de directiva especifica si las aplicaciones de Windows pueden acceder a la ubicación.
 
@@ -440,6 +455,15 @@ Si una aplicación está abierta cuando se aplica este objeto de directiva de gr
         <text>Forzar denegación de estas aplicaciones específicas (usar nombres de familia de paquete):</text>
         <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_ForceDenyTheseApps_List"/>
       </presentation>
+      <presentation id="LetAppsAccessHumanPresence">
+        <dropdownList refId="LetAppsAccessHumanPresence_Enum" noSort="true" defaultItem="0">Valor predeterminado para todas las aplicaciones:</dropdownList>
+        <text>Hacer que el usuario controle estas aplicaciones específicas (usar nombres de familia de paquete):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_UserInControlOfTheseApps_List"/>
+        <text>Forzar permiso de estas aplicaciones específicas (usar nombres de familia de paquete):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_ForceAllowTheseApps_List"/>
+        <text>Forzar denegación de estas aplicaciones específicas (usar nombres de familia de paquete):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_ForceDenyTheseApps_List"/>
+      </presentation>
       <presentation id="LetAppsAccessLocation">
         <dropdownList refId="LetAppsAccessLocation_Enum" noSort="true" defaultItem="0">Valor predeterminado para todas las aplicaciones:</dropdownList>
         <text>Hacer que el usuario controle estas aplicaciones específicas (usar nombres de familia de paquete):</text>
@@ -543,9 +567,9 @@ Si una aplicación está abierta cuando se aplica este objeto de directiva de gr
         <dropdownList refId="LetAppsGetDiagnosticInfo_Enum" noSort="true" defaultItem="0">Valor predeterminado para todas las aplicaciones:</dropdownList>
         <text>Hacer que el usuario controle estas aplicaciones específicas (usar nombres de familia de paquete):</text>
         <multiTextBox refId="LetAppsGetDiagnosticInfo_UserInControlOfTheseApps_List"/>
-        <text>Forzar permiso de estas aplicaciones específicas (usar nombres de familia de paquete):</text>
+        <text>Forzar permiso de estas aplicaciones específicas (usar los nombres de familia del paquete):</text>
         <multiTextBox refId="LetAppsGetDiagnosticInfo_ForceAllowTheseApps_List"/>
-        <text>Forzar denegación de estas aplicaciones específicas (usar nombres de familia de paquete):</text>
+        <text>Forzar denegación de estas aplicaciones específicas (usar los nombres de familia del paquete):</text>
         <multiTextBox refId="LetAppsGetDiagnosticInfo_ForceDenyTheseApps_List"/>
       </presentation>
       <presentation id="LetAppsAccessGazeInput">
@@ -567,9 +591,9 @@ Si una aplicación está abierta cuando se aplica este objeto de directiva de gr
         <dropdownList refId="LetAppsAccessBackgroundSpatialPerception_Enum" noSort="true" defaultItem="0">Valor predeterminado para todas las aplicaciones:</dropdownList>
         <text>Hacer que el usuario controle estas aplicaciones específicas (usar nombres de familia de paquete):</text>
         <multiTextBox refId="LetAppsAccessBackgroundSpatialPerception_UserInControlOfTheseApps_List"/>
-        <text>Forzar permiso de estas aplicaciones específicas (usar los nombres de familia del paquete):</text>
+        <text>Forzar permiso de estas aplicaciones específicas (usar nombres de familia de paquete):</text>
         <multiTextBox refId="LetAppsAccessBackgroundSpatialPerception_ForceAllowTheseApps_List"/>
-        <text>Forzar denegación de estas aplicaciones específicas (usar los nombres de familia del paquete):</text>
+        <text>Forzar denegación de estas aplicaciones específicas (usar nombres de familia de paquete):</text>
         <multiTextBox refId="LetAppsAccessBackgroundSpatialPerception_ForceDenyTheseApps_List"/>
       </presentation>
     </presentationTable>

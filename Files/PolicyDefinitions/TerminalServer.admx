@@ -154,7 +154,7 @@
            <reference ref="windows:SUPPORTED_Windows_10_0_RS7" />
            <!--reference ref="windows:SUPPORTED_Windows_10_0_2004"--> 
        </or>
-      </definition>    
+      </definition>
     </definitions>
   </supportedOn>
 
@@ -303,6 +303,26 @@
       </elements>
     </policy>
     <policy name="TS_USER_AUTHENTICATION_POLICY" class="Machine" displayName="$(string.TS_USER_AUTHENTICATION_POLICY)" explainText="$(string.TS_USER_AUTHENTICATION_EXPLAIN)" key="SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" valueName="UserAuthentication">
+      <parentCategory ref="TS_SECURITY" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="TS_DISCONNECT_ON_LOCK_POLICY" class="Machine" displayName="$(string.TS_DISCONNECT_ON_LOCK_POLICY)" explainText="$(string.TS_DISCONNECT_ON_LOCK_POLICY_EXPLAIN)" key="SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" valueName="fDisconnectOnLockLegacy">
+      <parentCategory ref="TS_SECURITY" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+      <policy name="TS_DISCONNECT_ON_LOCK_AAD_POLICY" class="Machine" displayName="$(string.TS_DISCONNECT_ON_LOCK_AAD_POLICY)" explainText="$(string.TS_DISCONNECT_ON_LOCK_AAD_POLICY_EXPLAIN)" key="SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" valueName="fDisconnectOnLockMicrosoftIdentity">
       <parentCategory ref="TS_SECURITY" />
       <supportedOn ref="windows:SUPPORTED_WindowsVista" />
       <enabledValue>
@@ -533,6 +553,11 @@
           <item displayName="$(string.TS_LICENSING_MODE_PER_USER)">
             <value>
               <decimal value="4" />
+            </value>
+          </item>
+          <item displayName="$(string.TS_LICENSING_MODE_AAD_PER_USER)">
+            <value>
+              <decimal value="6" />
             </value>
           </item>
         </enum>
@@ -900,6 +925,72 @@
         <decimal value="0" />
       </disabledValue>
     </policy>
+    <policy name="TS_CLIENT_CLIPBOARDRESTRICTION_SC" class="Both" displayName="$(string.TS_SC_CLIPBOARD_RESTRICTION)" explainText="$(string.TS_SC_CLIPBOARD_RESTRICTION_EXPLAIN)" presentation="$(presentation.TS_SC_CLIPBOARD_RESTRICTION)" key="SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services">
+      <parentCategory ref="TS_REDIRECTION" />
+      <supportedOn ref="windows:SUPPORTED_Windows_11_0_22H2" />
+      <elements>
+        <enum id="TS_SC_CLIPBOARD_RESTRICTION_Text" valueName="SCClipLevel" required="true">
+          <item displayName="$(string.TS_SC_CLIPBOARD_DISABLED)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.TS_CLIPBOARD_ALLOW_TEXT)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.TS_CLIPBOARD_ALLOW_TEXT_IMAGE)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.TS_CLIPBOARD_ALLOW_TEXT_IMAGE_RTF)">
+            <value>
+              <decimal value="3" />
+            </value>
+          </item>
+          <item displayName="$(string.TS_CLIPBOARD_ALLOW_TEXT_IMAGE_RTF_HTML)">
+            <value>
+              <decimal value="4" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="TS_CLIENT_CLIPBOARDRESTRICTION_CS" class="Both" displayName="$(string.TS_CS_CLIPBOARD_RESTRICTION)" explainText="$(string.TS_CS_CLIPBOARD_RESTRICTION_EXPLAIN)" presentation="$(presentation.TS_CS_CLIPBOARD_RESTRICTION)" key="SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services">
+      <parentCategory ref="TS_REDIRECTION" />
+      <supportedOn ref="windows:SUPPORTED_Windows_11_0_22H2" />
+      <elements>
+        <enum id="TS_CS_CLIPBOARD_RESTRICTION_Text" valueName="CSClipLevel" required="true">
+          <item displayName="$(string.TS_CS_CLIPBOARD_DISABLED)">
+            <value>
+              <decimal value="0" />
+            </value>
+          </item>
+          <item displayName="$(string.TS_CLIPBOARD_ALLOW_TEXT)">
+            <value>
+              <decimal value="1" />
+            </value>
+          </item>
+          <item displayName="$(string.TS_CLIPBOARD_ALLOW_TEXT_IMAGE)">
+            <value>
+              <decimal value="2" />
+            </value>
+          </item>
+          <item displayName="$(string.TS_CLIPBOARD_ALLOW_TEXT_IMAGE_RTF)">
+            <value>
+              <decimal value="3" />
+            </value>
+          </item>
+          <item displayName="$(string.TS_CLIPBOARD_ALLOW_TEXT_IMAGE_RTF_HTML)">
+            <value>
+              <decimal value="4" />
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
     <policy name="TS_CLIENT_COM" class="Machine" displayName="$(string.TS_CLIENT_COM)" explainText="$(string.TS_COMPORTMAP_EXPLAIN)" key="SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" valueName="fDisableCcm">
       <parentCategory ref="TS_REDIRECTION" />
       <supportedOn ref="windows:SUPPORTED_WindowsXP" />
@@ -981,6 +1072,16 @@
         <decimal value="0" />
       </disabledValue>
     </policy>
+    <policy name="TS_LOCATION_REDIRECTION" class="Machine" displayName="$(string.TS_LOCATION_REDIRECTION)" explainText="$(string.TS_LOCATION_REDIRECTION_EXPLAIN)" key="SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" valueName="fDisableLocationRedir">
+      <parentCategory ref="TS_REDIRECTION" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_21H2_NOSERVER" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
     <policy name="TS_CLIENT_PRINTER" class="Machine" displayName="$(string.TS_CLIENT_PRINTER)" explainText="$(string.TS_PRINTERMAP_EXPLAIN)" key="SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" valueName="fDisableCpm">
       <parentCategory ref="TS_PRINT_REDIRECTION" />
       <supportedOn ref="windows:SUPPORTED_WindowsXP" />
@@ -1045,9 +1146,29 @@
         <decimal value="0" />
       </disabledValue>
     </policy>
+    <policy name="TS_UIA" class="Machine" displayName="$(string.TS_UIA)" explainText="$(string.TS_UIA_EXPLAIN)" key="SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" valueName="EnableUiaRedirection">
+      <parentCategory ref="TS_REDIRECTION" />
+      <supportedOn ref="windows:SUPPORTED_Windows_10_0_21H2_NOSERVER" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
     <policy name="TS_WEBAUTHN" class="Machine" displayName="$(string.TS_WEBAUTHN)" explainText="$(string.TS_WEBAUTHN_EXPLAIN)" key="SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" valueName="fDisableWebAuthn">
       <parentCategory ref="TS_REDIRECTION" />
       <supportedOn ref="windows:SUPPORTED_Windows_10_0_20H1" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="TS_CLIPRDR_CLOUD_CLIP_INTEGRATION" class="Machine" displayName="$(string.TS_CLIPRDR_CLOUD_CLIP_INTEGRATION)" explainText="$(string.TS_CLIPRDR_CLOUD_CLIP_INTEGRATION_EXPLAIN)" key="SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services\Client" valueName="DisableCloudClipboardIntegration">
+      <parentCategory ref="TS_CLIENT" />
+      <supportedOn ref="windows:SUPPORTED_Windows_11_0_22H2_NOSERVER" />
       <enabledValue>
         <decimal value="1" />
       </enabledValue>
@@ -2144,19 +2265,14 @@
       <supportedOn ref="windows:SUPPORTED_Windows8" />
       <elements>
         <enum id="TS_SELECT_TRANSPORT_TYPE" valueName="SelectTransport">
-          <item displayName="$(string.TS_SELECT_TRANSPORT_UDP_AND_TCP)">
+          <item displayName="$(string.TS_SELECT_TRANSPORT_UDP_OR_TCP)">
             <value>
-              <decimal value="0" />
+              <decimal value="2" />
             </value>
           </item>
           <item displayName="$(string.TS_SELECT_TRANSPORT_TCP_ONLY)">
             <value>
               <decimal value="1" />
-            </value>
-          </item>
-          <item displayName="$(string.TS_SELECT_TRANSPORT_UDP_OR_TCP)">
-            <value>
-              <decimal value="2" />
             </value>
           </item>
         </enum>

@@ -300,6 +300,23 @@ http://sitename/_layouts/XXXX/searchresults.aspx?SearchString=$w
       <string id="DisableSearch_ExplainText">Если эта политика включена, пользовательский интерфейс поиска будет отключен вместе со всеми точками входа, такими как сочетания клавиш, жесты сенсорной панели и ввод для поиска в меню "Пуск". Поле меню "Пуск" и кнопка панели задач поиска также будут скрыты.
 
 Если этот параметр политики отключен или не настроен, пользователь сможет открыть пользовательский интерфейс поиска, и будут отображаться другие точки входа.</string>
+      <string id="ConfigureSearchOnTaskbarMode">Настройка поиска на панели задач</string>
+      <string id="ConfigureSearchOnTaskbarMode_Help">Этот параметр политики позволяет настроить поиск на панели задач.
+
+Если этот параметр политики включен и задан для скрытия, поиск на панели задач по умолчанию будет скрыт. Пользователи не могут изменить его в параметрах.
+
+Если этот параметр политики включен и задан только значок поиска, значок поиска будет отображаться на панели задач по умолчанию. Пользователи не могут изменить его в параметрах.
+
+Если этот параметр политики включен и для него заданы значок поиска и метка, значок поиска и метка будут отображаться на панели задач по умолчанию. Пользователи не могут изменить его в параметрах.
+
+Если этот параметр политики включен и для него задано поле поиска, поле поиска будет отображаться на панели задач по умолчанию. Пользователи не могут изменить его в параметрах.
+
+Если этот параметр политики отключен или не настроен, поиск на панели задач будет настроен в соответствии с параметрами по умолчанию для выпуска Windows. Пользователи смогут изменять поиск на панели задач в разделе "Параметры".
+      </string>
+      <string id="SearchOnTaskbarModeEnum_Hidden">Скрыть</string>
+      <string id="SearchOnTaskbarModeEnum_SearchIconOnly">Только значок поиска</string>
+      <string id="SearchOnTaskbarModeEnum_SearchIconAndLabel">Значок и метка поиска</string>
+      <string id="SearchOnTaskbarModeEnum_SearchBox">Поле поиска</string>
     </stringTable>
     <presentationTable>
       <presentation id="RichAttachmentPreviews">
@@ -388,6 +405,9 @@ http://sitename/_layouts/XXXX/searchresults.aspx?SearchString=$w
       </presentation>
       <presentation id="AllowCortanaAAD">
         <dropdownList refId="AllowCortanaAAD_Dropdown" noSort="true" defaultItem="0">Кортана в параметрах AAD</dropdownList>
+      </presentation>
+      <presentation id="ConfigureSearchOnTaskbarMode">
+        <dropdownList refId="ConfigureSearchOnTaskbarMode_Dropdown" noSort="true" defaultItem="0">Поиск на панели задач</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

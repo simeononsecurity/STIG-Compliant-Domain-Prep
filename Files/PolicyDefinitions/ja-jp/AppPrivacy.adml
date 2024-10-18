@@ -129,6 +129,21 @@
 
 このグループ ポリシー オブジェクトがデバイスに適用されているときにアプリを開く場合、従業員は、アプリやデバイスを再起動してポリシーの変更をアプリに適用する必要があります。
       </string>
+      <string id="LetAppsAccessHumanPresence_Name">Windows アプリにプレゼンス センシングへのアクセスを許可する</string>
+      <string id="LetAppsAccessHumanPresence_Explain">このポリシー設定では、Windows アプリがプレゼンス センシングにアクセスできるかどうかを指定します。
+
+すべてのアプリに既定の設定を適用するか、パッケージ ファミリ名を指定してアプリごとの設定を適用するかを指定できます。アプリのパッケージ ファミリ名を取得するには、Get-AppPackage Windows PowerShell コマンドレットを使います。既定の設定はアプリごとの設定によって上書きされます。
+
+[ユーザーが制御] オプションを選ぶと、Windows アプリがプレゼンス センシングにアクセスできるかどうかを、組織の従業員が選ぶことができます (デバイスで [設定] &gt; [プライバシー] を使います)。
+
+[強制的に許可] オプションを選ぶと、Windows アプリはプレゼンス センシングにアクセスできます。組織の従業員はこの設定を変更することはできません。
+
+[強制的に拒否] オプションを選ぶと、Windows アプリはプレゼンス センシングにアクセスできません。組織の従業員はこの設定を変更することはできません。
+
+このポリシー設定を無効にした場合や構成しなかった場合、Windows アプリがプレゼンス センシングにアクセスできるかどうかを、組織の従業員が選ぶことができます (デバイスで [設定] &gt; [プライバシー] を使います)。
+
+このグループ ポリシー オブジェクトがデバイスに適用されているときに、アプリを開く場合、従業員は、アプリやデバイスを再起動してポリシーの変更をアプリに適用する必要があります。
+      </string>
       <string id="LetAppsAccessLocation_Name">Windows アプリで位置情報にアクセスする</string>
       <string id="LetAppsAccessLocation_Explain">このポリシー設定では、Windows アプリが位置情報にアクセスできるかどうかを指定します。
 
@@ -439,6 +454,15 @@
         <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_ForceAllowTheseApps_List"/>
         <text>これらの特定のアプリを強制的に拒否 (パッケージ ファミリ名を使用):</text>
         <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_ForceDenyTheseApps_List"/>
+      </presentation>
+      <presentation id="LetAppsAccessHumanPresence">
+        <dropdownList refId="LetAppsAccessHumanPresence_Enum" noSort="true" defaultItem="0">すべてのアプリの既定値:</dropdownList>
+        <text>ユーザーをこれらの特定のアプリで管理 (パッケージ ファミリ名を使用):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_UserInControlOfTheseApps_List"/>
+        <text>これらの特定のアプリを強制的に許可 (パッケージ ファミリ名を使用):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_ForceAllowTheseApps_List"/>
+        <text>これらの特定のアプリを強制的に拒否 (パッケージ ファミリ名を使用):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_ForceDenyTheseApps_List"/>
       </presentation>
       <presentation id="LetAppsAccessLocation">
         <dropdownList refId="LetAppsAccessLocation_Enum" noSort="true" defaultItem="0">すべてのアプリの既定値:</dropdownList>

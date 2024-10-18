@@ -129,6 +129,21 @@ Bu ilke ayarını devre dışı bıraktığınız veya yapılandırmadığınız
 
 Bir cihazda bu Grup İlkesi nesnesi uygulandığında açık olan bir uygulama varsa, ilke değişikliklerinin uygulamaya yansıması için çalışanların uygulamayı veya cihazı yeniden başlatması gerekir.
       </string>
+      <string id="LetAppsAccessHumanPresence_Name">Windows uygulamalarının kişi algılamaya erişmesine izin verme</string>
+      <string id="LetAppsAccessHumanPresence_Explain">Bu ilke ayarı Windows uygulamalarının kişi algılamaya erişip erişemeyeceğini belirtir.
+
+Bütün uygulamalar için varsayılan bir ayar veya bir Paket Aile Adı belirterek her bir uygulama için ayrı bir ayar belirleyebilirsiniz. Get-AppPackage Windows PowerShell cmdlet komutunu kullanarak uygulamalar için Paket Uygulama Adlarını alabilirsiniz. Uygulamaya özel ayarlama yapıldığında varsayılan ayar devre dışı bırakılır.
+
+"Kullanıcının denetiminde" seçeneğini seçerseniz, kuruluşunuzdaki çalışanlar Windows uygulamalarının kişi algılamaya erişip erişemeyeceğine cihaz üzerinde Ayarlar &gt; Gizlilik’i kullanarak karar verebilirler.
+
+"İzin Vermeye Zorla" seçeneğini seçerseniz, Windows uygulamalarının kişi algılamaya erişmesine izin verilir ve kuruluşunuzdaki çalışanlar bunu değiştiremezler.
+
+"Reddetmeye Zorla" seçeneğini seçerseniz, Windows uygulamalarının kişi algılamaya erişmesine izin verilmez ve kuruluşunuzdaki çalışanlar bunu değiştiremezler.
+
+Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız kuruluşunuzdaki çalışanlar Windows uygulamalarının kişi algılamaya erişip erişemeyeceğine cihaz üzerinde Ayarlar &gt; Gizlilik’i kullanarak karar verebilirler.
+
+Bu Grup İlkesi nesnesi cihazda uygulandığında açık olan uygulama varsa, ilke değişikliklerinin uygulamaya uygulanabilmesi için çalışanların uygulamayı veya cihazı yeniden başlatmaları gerekir.
+      </string>
       <string id="LetAppsAccessLocation_Name">Windows uygulamalarının konuma erişmesine izin ver</string>
       <string id="LetAppsAccessLocation_Explain">Bu ilke ayarı Windows uygulamalarının konuma erişip erişemeyeceğini belirtir.
 
@@ -440,6 +455,15 @@ Bu Grup İlkesi nesnesi cihazda uygulandığında açık olan bir uygulama varsa
         <text>Belirli uygulamaları (Paket Aile Adlarını kullanın) reddetmeye zorla:</text>
         <multiTextBox refId="LetAppsAccessGraphicsCaptureWithoutBorder_ForceDenyTheseApps_List"/>
       </presentation>
+      <presentation id="LetAppsAccessHumanPresence">
+        <dropdownList refId="LetAppsAccessHumanPresence_Enum" noSort="true" defaultItem="0">Bütün uygulamalar için varsayılan:</dropdownList>
+        <text>Belirli uygulamaların denetimini kullanıcıya ver (Paket Aile Adlarını kullanın):</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_UserInControlOfTheseApps_List"/>
+        <text>Belirli uygulamalara (Paket Aile Adlarını kullanın) izin vermeye zorla:</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_ForceAllowTheseApps_List"/>
+        <text>Belirli uygulamaları (Paket Aile Adlarını kullanın) reddetmeye zorla:</text>
+        <multiTextBox refId="LetAppsAccessHumanPresence_ForceDenyTheseApps_List"/>
+      </presentation>
       <presentation id="LetAppsAccessLocation">
         <dropdownList refId="LetAppsAccessLocation_Enum" noSort="true" defaultItem="0">Bütün uygulamalar için varsayılan:</dropdownList>
         <text>Belirli uygulamaların denetimini kullanıcıya ver (Paket Aile Adlarını kullanın):</text>
@@ -460,7 +484,7 @@ Bu Grup İlkesi nesnesi cihazda uygulandığında açık olan bir uygulama varsa
       </presentation>
       <presentation id="LetAppsAccessMicrophone">
         <dropdownList refId="LetAppsAccessMicrophone_Enum" noSort="true" defaultItem="0">Bütün uygulamalar için varsayılan:</dropdownList>
-        <text>Belirli uygulamaların denetimini kullanıcıya ver (Paket Aile Adlarını kullanın):</text>
+        <text>Belirli uygulamalarrın (Paket Aile Adlarını kullanın) denetimini kullanıcıya ver:</text>
         <multiTextBox refId="LetAppsAccessMicrophone_UserInControlOfTheseApps_List"/>
         <text>Belirli uygulamalara (Paket Aile Adlarını kullanın) izin vermeye zorla:</text>
         <multiTextBox refId="LetAppsAccessMicrophone_ForceAllowTheseApps_List"/>
@@ -478,7 +502,7 @@ Bu Grup İlkesi nesnesi cihazda uygulandığında açık olan bir uygulama varsa
       </presentation>
       <presentation id="LetAppsAccessNotifications">
         <dropdownList refId="LetAppsAccessNotifications_Enum" noSort="true" defaultItem="0">Bütün uygulamalar için varsayılan:</dropdownList>
-        <text>Belirli uygulamalarrın (Paket Aile Adlarını kullanın) denetimini kullanıcıya ver:</text>
+        <text>Belirli uygulamaların (Paket Aile Adlarını kullanın) denetimini kullanıcıya ver:</text>
         <multiTextBox refId="LetAppsAccessNotifications_UserInControlOfTheseApps_List"/>
         <text>Belirli uygulamalara (Paket Aile Adlarını kullanın) izin vermeye zorla:</text>
         <multiTextBox refId="LetAppsAccessNotifications_ForceAllowTheseApps_List"/>
@@ -543,9 +567,9 @@ Bu Grup İlkesi nesnesi cihazda uygulandığında açık olan bir uygulama varsa
         <dropdownList refId="LetAppsGetDiagnosticInfo_Enum" noSort="true" defaultItem="0">Bütün uygulamalar için varsayılan:</dropdownList>
         <text>Belirli uygulamaların (Paket Aile Adlarını kullanın) denetimini kullanıcıya ver:</text>
         <multiTextBox refId="LetAppsGetDiagnosticInfo_UserInControlOfTheseApps_List"/>
-        <text>Belirli uygulamalara (Paket Aile Adlarını kullanın) izin vermeye zorla:</text>
+        <text>Şu belirli uygulamalara (Paket Aile Adlarını kullanın) izin vermeye zorla:</text>
         <multiTextBox refId="LetAppsGetDiagnosticInfo_ForceAllowTheseApps_List"/>
-        <text>Belirli uygulamaları (Paket Aile Adlarını kullanın) reddetmeye zorla:</text>
+        <text>Şu belirli uygulamaları (Paket Aile Adlarını kullanın) reddetmeye zorla:</text>
         <multiTextBox refId="LetAppsGetDiagnosticInfo_ForceDenyTheseApps_List"/>
       </presentation>
       <presentation id="LetAppsAccessGazeInput">
@@ -565,11 +589,11 @@ Bu Grup İlkesi nesnesi cihazda uygulandığında açık olan bir uygulama varsa
       </presentation>
       <presentation id="LetAppsAccessBackgroundSpatialPerception">
         <dropdownList refId="LetAppsAccessBackgroundSpatialPerception_Enum" noSort="true" defaultItem="0">Bütün uygulamalar için varsayılan:</dropdownList>
-        <text>Belirli uygulamaların (Paket Aile Adlarını kullanın) denetimini kullanıcıya ver:</text>
+        <text>Belirli uygulamalarrın (Paket Aile Adlarını kullanın) denetimini kullanıcıya ver:</text>
         <multiTextBox refId="LetAppsAccessBackgroundSpatialPerception_UserInControlOfTheseApps_List"/>
-        <text>Şu belirli uygulamalara (Paket Aile Adlarını kullanın) izin vermeye zorla:</text>
+        <text>Belirli uygulamalara (Paket Aile Adlarını kullanın) izin vermeye zorla:</text>
         <multiTextBox refId="LetAppsAccessBackgroundSpatialPerception_ForceAllowTheseApps_List"/>
-        <text>Şu belirli uygulamaları (Paket Aile Adlarını kullanın) reddetmeye zorla:</text>
+        <text>Belirli uygulamaları (Paket Aile Adlarını kullanın) reddetmeye zorla:</text>
         <multiTextBox refId="LetAppsAccessBackgroundSpatialPerception_ForceDenyTheseApps_List"/>
       </presentation>
     </presentationTable>

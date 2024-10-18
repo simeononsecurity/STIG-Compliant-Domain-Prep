@@ -300,6 +300,23 @@ Hvis den er aktiveret, har søgning og Cortana adgang til placeringsoplysninger.
       <string id="DisableSearch_ExplainText">Hvis du aktiverer denne politik, deaktiveres søgegrænsefladen sammen med alle indtastningspunkter, f.eks. tastaturgenveje, berøringspladebevægelser og skriv-for-at-søge i menuen Start. Søgefeltet i menuen Start og knappen Søg på proceslinjen skjules også.
 
 Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, kan brugeren åbne søgegrænsefladen, og dens forskellige indtastningspunkter vises.</string>
+      <string id="ConfigureSearchOnTaskbarMode">Konfigurerer søgning på proceslinjen</string>
+      <string id="ConfigureSearchOnTaskbarMode_Help">Med denne politikindstilling kan du konfigurere søgning på proceslinjen.
+
+Hvis du aktiverer denne politikindstilling og angiver den til at skjule, skjules søgning på proceslinjen som standard. Brugerne kan ikke ændre det i Indstillinger.
+
+Hvis du aktiverer denne politikindstilling og kun indstiller den til søgeikonet, vises søgeikonet som standard på proceslinjen. Brugerne kan ikke ændre det i Indstillinger.
+
+Hvis du aktiverer denne politikindstilling og angiver den til søgeikon og -mærkat, vises søgeikonet og -mærkaten som standard på proceslinjen. Brugerne kan ikke ændre det i Indstillinger.
+
+Hvis du aktiverer denne politikindstilling og angiver den til et søgefelt, vises søgefeltet som standard på proceslinjen. Brugerne kan ikke ændre det i Indstillinger.
+
+Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, konfigureres søgning på proceslinjen i overensstemmelse med standardindstillingerne for din Udgave af Windows. Brugerne kan ændre søgning på proceslinjen i Indstillinger.
+      </string>
+      <string id="SearchOnTaskbarModeEnum_Hidden">Skjul</string>
+      <string id="SearchOnTaskbarModeEnum_SearchIconOnly">Kun søgeikon</string>
+      <string id="SearchOnTaskbarModeEnum_SearchIconAndLabel">Søgeikon og -mærkat</string>
+      <string id="SearchOnTaskbarModeEnum_SearchBox">Søgefelt</string>
     </stringTable>
     <presentationTable>
       <presentation id="RichAttachmentPreviews">
@@ -388,6 +405,9 @@ Hvis du deaktiverer eller undlader at konfigurere denne politikindstilling, kan 
       </presentation>
       <presentation id="AllowCortanaAAD">
         <dropdownList refId="AllowCortanaAAD_Dropdown" noSort="true" defaultItem="0">Indstillingen Cortana i AAD</dropdownList>
+      </presentation>
+      <presentation id="ConfigureSearchOnTaskbarMode">
+        <dropdownList refId="ConfigureSearchOnTaskbarMode_Dropdown" noSort="true" defaultItem="0">Søgning på proceslinjen</dropdownList>
       </presentation>
     </presentationTable>
   </resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2015 Microsoft Corporation  -->
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>πληκτρολογήστε εδώ το όνομα εμφάνισης</displayName>
+  <description>πληκτρολογήστε εδώ την περιγραφή</description>
+  <resources>
+    <stringTable>
+      <string id="AccountNotifications">Ειδοποιήσεις λογαριασμού</string>
+      <string id="DisableAccountNotifications">Απενεργοποίηση ειδοποιήσεων λογαριασμού στο μενού "Έναρξη"</string>
+      <string id="DisableAccountNotificationsExplain">
+            Αυτή η πολιτική σάς επιτρέπει να εμποδίσετε τα Windows να εμφανίζουν ειδοποιήσεις για Λογαριασμός Microsoft (MSA) και τοπικούς χρήστες στην Έναρξη (πλακίδιο χρήστη).
+
+Οι ειδοποιήσεις περιλαμβάνουν τη λήψη χρηστών για: επανάληψη ελέγχου ταυτότητας, δημιουργία αντιγράφων ασφαλείας της συσκευής τους, διαχειριστείτε τα όρια χώρου αποθήκευσης στο cloud, καθώς και διαχειριστείτε τα Microsoft 365 τους ή τη συνδρομή xbox.
+
+Εάν ενεργοποιήσετε αυτήν τη ρύθμιση πολιτικής, τα Windows δεν θα στέλνουν ειδοποιήσεις που σχετίζονται με λογαριασμούς για τοπικούς χρήστες και χρήστες MSA στο πλακίδιο χρήστη στην Έναρξη.
+
+Αν απενεργοποιήσετε αυτήν τη ρύθμιση πολιτικής ή δεν ρυθμίσετε τις παραμέτρους της, τα Windows θα στέλνουν ειδοποιήσεις που σχετίζονται με λογαριασμούς για τοπικούς χρήστες και χρήστες MSA στο πλακίδιο χρήστη στην Έναρξη.
+
+Δεν απαιτούνται επανεκκινήσεις ή επανεκκινήσεις υπηρεσίας για να εφαρμοστεί αυτή η ρύθμιση πολιτικής.
+      </string>
+    </stringTable>
+  </resources>
+</policyDefinitionResources>

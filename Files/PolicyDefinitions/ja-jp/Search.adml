@@ -290,7 +290,7 @@ Cortana が無効になっている場合でも、ユーザーは検索機能を
       <string id="AllowCloudSearch">クラウド検索を許可する</string>
       <string id="AllowCortanaInAADPathOOBE">AAD アカウントでの OOBE に Cortana ページを許可する</string>
       <string id="ExplainAllowCloudSearch">検索と Cortana による、OneDrive や SharePoint のようなクラウド ソースの検索を許可します</string>
-      <string id="ExplainCortanaAAD">既定の Windows セットアップ時に Cortana オプトイン ページを許可する</string>
+      <string id="ExplainCortanaAAD">既定の windows セットアップ時に Cortana オプトイン ページを許可する</string>
       <string id="AllowCloudSearchDisabled">クラウド検索を無効にする</string>
       <string id="AllowCortanainAADDisabled">AAD で Cortana ページを無効にする</string>
       <string id="AllowCortanainAADEnabled">AAD で Cortana ページを有効にする</string>
@@ -300,6 +300,23 @@ Cortana が無効になっている場合でも、ユーザーは検索機能を
       <string id="DisableSearch_ExplainText">このポリシーを有効にした場合、検索 UI は、キーボード ショートカット、タッチパッド ジェスチャ、スタート メニューでの入力検索など、すべてのエントリ ポイントと共に無効になります。スタート メニューの検索ボックスと [タスク バーの検索] ボタンも非表示になります。
 
 このポリシー設定を無効にした場合、または構成しなかった場合、ユーザーは検索 UI を開け、その異なるエントリ ポイントが表示されます。</string>
+      <string id="ConfigureSearchOnTaskbarMode">タスク バーの検索を構成します</string>
+      <string id="ConfigureSearchOnTaskbarMode_Help">このポリシー設定を使用すると、タスク バーで検索を構成できます。
+
+このポリシー設定を有効にして非表示に設定すると、タスク バーの検索は既定で非表示になります。ユーザーは [設定] で変更できません。
+
+このポリシー設定を有効にし、検索アイコンのみに設定すると、既定で検索アイコンがタスク バーに表示されます。ユーザーは [設定] で変更できません。
+
+このポリシー設定を有効にして、検索アイコンとラベルに設定すると、既定で検索アイコンとラベルがタスク バーに表示されます。ユーザーは [設定] で変更できません。
+
+このポリシー設定を有効にして検索ボックスに設定すると、既定でタスク バーに検索ボックスが表示されます。ユーザーは [設定] で変更できません。
+
+このポリシー設定を無効にした場合、または構成しなかった場合は、Windows エディションの既定値に従ってタスク バーで検索が構成されます。ユーザーは、[設定] でタスク バーの検索を変更できます。
+      </string>
+      <string id="SearchOnTaskbarModeEnum_Hidden">非表示</string>
+      <string id="SearchOnTaskbarModeEnum_SearchIconOnly">検索アイコンのみ</string>
+      <string id="SearchOnTaskbarModeEnum_SearchIconAndLabel">検索アイコンとラベル</string>
+      <string id="SearchOnTaskbarModeEnum_SearchBox">検索ボックス</string>
     </stringTable>
     <presentationTable>
       <presentation id="RichAttachmentPreviews">
@@ -388,6 +405,9 @@ Cortana が無効になっている場合でも、ユーザーは検索機能を
       </presentation>
       <presentation id="AllowCortanaAAD">
         <dropdownList refId="AllowCortanaAAD_Dropdown" noSort="true" defaultItem="0">AAD 設定での Cortana</dropdownList>
+      </presentation>
+      <presentation id="ConfigureSearchOnTaskbarMode">
+        <dropdownList refId="ConfigureSearchOnTaskbarMode_Dropdown" noSort="true" defaultItem="0">タスク バーで検索する</dropdownList>
       </presentation>
     </presentationTable>
   </resources>
